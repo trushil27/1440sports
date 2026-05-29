@@ -1,0 +1,51 @@
+# GitHub Actions fallback: run the engine on a daily cron and email the hero.
+#
+# This runs the ENGINE only (scoring + render + email) against the data already
+# committed in the repo. It does NOT do the live research refresh — for that, use
+# the Claude Code web scheduled trigger (scheduling/claude-web-trigger.md).
+#
+# To enable: move this file to .github/workflows/daily-brief.yml and add the
+# SMTP_* / EMAIL_* values as repository secrets (Settings -> Secrets -> Actions).
+
+name: Daily Hero Brief
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 06:00 UTC daily — adjust to your timezone
+  workflow_dispatch: {}    # allow manual runs
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install system libraries for PDF (WeasyPrint)
+        run: sudo apt-get update && sudo apt-get install -y libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+
+      - name: Generate and email today's hero brief
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_STARTTLS: ${{ secrets.SMTP_STARTTLS }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_CC: ${{ secrets.EMAIL_CC }}
+        run: python engine/run_daily.py
+
+      - name: Commit the new brief + history
+        run: |
+          git config user.name "1440-signals-bot"
+          git config user.email "bot@1440sports.com"
+          git add briefs/
+          git commit -m "Daily hero brief $(date -u +%F)" || echo "nothing to commit"
+          git push || echo "push skipped"
