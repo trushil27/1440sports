@@ -99,25 +99,57 @@ def send(subject: str, html_body: str, text_body: str,
 
 def email_html_wrapper(prospect_name: str, opportunity: int, band: str,
                        headline: str, inner_summary: str, date: str) -> str:
-    """A compact HTML email body summarising the brief (full brief attached)."""
+    """A compact HTML email body summarising the brief (full brief attached).
+
+    Uses the 1440 brand palette: navy #191a48 / gold #d1ae7a, serif."""
     return f"""\
-<div style="font-family:Helvetica,Arial,sans-serif;color:#14181f;max-width:640px">
-  <div style="letter-spacing:.14em;font-size:11px;text-transform:uppercase;
-              border-bottom:2px solid #14181f;padding-bottom:6px">
-    <strong>1440 Sports</strong> &middot; Daily Intelligence Brief &middot; {date}
+<div style="font-family:Georgia,'Times New Roman',serif;color:#1a1c2e;max-width:640px">
+  <div style="font-family:Arial,sans-serif;letter-spacing:.16em;font-size:11px;
+              text-transform:uppercase;color:#6b6e84;
+              border-bottom:2px solid #191a48;padding-bottom:6px">
+    <strong style="color:#191a48">1440 Sports</strong> &middot; Daily Intelligence Brief &middot; {date}
   </div>
-  <h1 style="font-size:24px;margin:16px 0 2px">{prospect_name}</h1>
-  <div style="background:#14181f;color:#fff;border-radius:6px;padding:10px 14px;
-              display:inline-block;margin:8px 0">
-    <span style="font-size:30px;font-weight:800">{opportunity}</span>
-    <span style="color:#aeb4bc"> / 100 &middot; {band}</span>
+  <h1 style="font-size:26px;font-weight:400;color:#191a48;margin:16px 0 4px">{prospect_name}</h1>
+  <div style="background:#191a48;color:#fff;border-radius:6px;padding:10px 16px;
+              display:inline-block;margin:6px 0">
+    <span style="font-size:30px;font-weight:700">{opportunity}</span>
+    <span style="color:#d1ae7a"> / 100 &middot; {band}</span>
   </div>
-  <p style="font-size:15px;font-weight:600;border-left:3px solid #d62128;
-            padding-left:12px;line-height:1.45">{headline}</p>
-  <p style="font-size:13px;line-height:1.5;color:#3a3f47">{inner_summary}</p>
-  <p style="font-size:12px;color:#5f6671">Full 2-page brief attached (PDF + HTML).</p>
-  <div style="border-top:1px solid #e3e6ea;margin-top:16px;padding-top:8px;
-              font-size:10px;color:#9aa0a6;letter-spacing:.08em;text-transform:uppercase">
+  <p style="font-size:15px;font-weight:600;border-left:3px solid #d1ae7a;
+            padding-left:12px;line-height:1.45;color:#191a48">{headline}</p>
+  <p style="font-size:13px;line-height:1.55;color:#3a3f47">{inner_summary}</p>
+  <p style="font-size:12px;color:#6b6e84">Full 2-page brief attached (PDF + HTML).</p>
+  <div style="font-family:Arial,sans-serif;border-top:1px solid #e2e0ea;margin-top:16px;
+              padding-top:8px;font-size:10px;color:#9a98aa;letter-spacing:.08em;
+              text-transform:uppercase">
     1440 Sports &middot; London &middot; Confidential
   </div>
 </div>"""
+
+
+def deliver(subject: str, html_body: str, text_body: str,
+            attachments: Optional[Dict[str, str]] = None) -> str:
+    """Unified delivery: try Microsoft Graph (HTTPS/443) first, then SMTP, else
+    dry-run. Returns 'graph', 'smtp', or 'dry-run' so callers can report it.
+
+    Graph is preferred because HTTPS is reliably open where SMTP (587) may be
+    blocked by network policy or tenant SMTP-AUTH settings.
+    """
+    try:
+        import send_graph
+        if send_graph.is_configured():
+            if send_graph.send(subject, html_body, text_body, attachments):
+                return "graph"
+    except Exception as exc:  # pragma: no cover - network/credential dependent
+        print(f"[deliver] Graph attempt failed ({exc.__class__.__name__}: {exc}); "
+              "falling back to SMTP.")
+
+    try:
+        if is_configured():
+            if send(subject, html_body, text_body, attachments):
+                return "smtp"
+    except Exception as exc:  # pragma: no cover
+        print(f"[deliver] SMTP attempt failed ({exc.__class__.__name__}: {exc}).")
+
+    print("[deliver] No working delivery channel configured. Dry-run: brief written to disk.")
+    return "dry-run"

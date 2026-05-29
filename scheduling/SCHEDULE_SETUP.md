@@ -9,33 +9,55 @@ the **secrets** (so it can send email) and the **trigger** (so it runs at 6 AM).
 
 ---
 
-## Step 1 — Add secrets (once)
+> ⚠️ **Never paste a real password/secret into this file or any file in the
+> repo.** Secrets go ONLY in the environment's **Settings → Secrets** store.
+> Anything committed to git is exposed and must be rotated.
+
+## Why Microsoft Graph, not SMTP
+
+We tested SMTP from this environment: **port 587 is blocked** (and M365 often
+disables SMTP AUTH tenant-wide), so SMTP is unreliable here. **Microsoft Graph
+sends email over HTTPS (port 443), which is open** — and it sends as your real
+mailbox via OAuth, with no SMTP dependency. Graph is the recommended path. SMTP
+remains a built-in fallback if your runner allows it.
+
+## Step 1 — One-time Azure app registration (admin)
+
+Ask whoever administers your Microsoft 365 / Azure tenant to:
+
+1. **Azure Portal → App registrations → New registration** (name e.g.
+   "1440 Daily Brief Mailer").
+2. **API permissions → Add → Microsoft Graph → Application permissions →
+   `Mail.Send`**, then **Grant admin consent**.
+3. **Certificates & secrets → New client secret** → copy the secret **value**.
+4. Note the **Directory (tenant) ID** and **Application (client) ID**.
+
+> Tip: to restrict the app to only send from your mailbox (not the whole
+> tenant), apply an Exchange **Application Access Policy** scoped to
+> trushil.jani@1440sports.com.
+
+## Step 2 — Add secrets (once) in Settings → Secrets
 
 In the Claude Code web environment for `trushil27/1440sports`
 → **Settings → Environment variables / Secrets**, add:
 
 ```
-SMTP_HOST=smtp.office365.com
-SMTP_PORT=587
-SMTP_STARTTLS=1
-SMTP_USER=trushil.jani@1440sports.com
-SMTP_PASS=<Microsoft 365 app password>
-EMAIL_FROM=trushil.jani@1440sports.com
+GRAPH_TENANT_ID=<Directory (tenant) ID>
+GRAPH_CLIENT_ID=<Application (client) ID>
+GRAPH_CLIENT_SECRET=<client secret value>
+GRAPH_SENDER=trushil.jani@1440sports.com
 EMAIL_TO=trushil.jani@1440sports.com
 ```
 
-`EMAIL_TO` is already the default in code, so the only truly required secrets are
-`SMTP_HOST/PORT/USER/PASS`. To also copy your MD automatically, set e.g.
-`EMAIL_CC=md.name@1440sports.com`.
+`EMAIL_TO` already defaults to your address in code. To copy your MD
+automatically, also add `EMAIL_CC=md.name@1440sports.com`.
 
-> **M365 app password:** Microsoft 365 → Security info → Add sign-in method →
-> App password. If your tenant disables SMTP AUTH, ask IT to enable
-> authenticated SMTP for this mailbox or provide an SMTP relay. (Gmail
-> alternative: `smtp.gmail.com` / `587` + a Google App Password.)
+(SMTP fallback, only if your environment permits port 587:
+`SMTP_HOST/PORT/STARTTLS/USER/PASS` + `EMAIL_FROM`.)
 
 ---
 
-## Step 2 — Create the 6 AM trigger (once)
+## Step 3 — Create the 6 AM trigger (once)
 
 In the same environment → **Schedules / Triggers → New scheduled session**:
 
@@ -43,7 +65,8 @@ In the same environment → **Schedules / Triggers → New scheduled session**:
 - **Time:** `06:00` (set your timezone — e.g. Europe/London or America/New_York)
 - **Cron equivalent:** `0 6 * * *`
 - **Repository / branch:** `trushil27/1440sports` · `claude/confident-cray-Q9sAc`
-- **Network policy:** allow **web access + outbound SMTP**
+- **Network policy:** allow **web access (HTTPS/443)** — Graph needs only 443,
+  which is open by default; no special SMTP port required
 - **Prompt (paste exactly):**
 
 ```
@@ -59,16 +82,18 @@ the hero brief, emails the PDF, and commits the artifacts.
 
 ---
 
-## Step 3 (optional) — verify it works now
+## Step 4 (optional) — verify it works now
 
-From a session in this repo, with the secrets set:
+From a **fresh** session in this repo (so it picks up the new secrets), with the
+Graph secrets set:
 
 ```bash
 python engine/run_daily.py            # sends today's hero to your email
 ```
 
-You should receive the email with the 2-page PDF attached within a minute.
-Without secrets it dry-runs (writes to `briefs/<date>/`, prints a notice).
+The run prints `Delivery channel: graph` on success. You should receive the
+email with the 2-page PDF attached within a minute. Without secrets it dry-runs
+(writes to `briefs/<date>/`, prints `Delivery channel: dry-run`).
 
 ---
 

@@ -134,7 +134,8 @@ def main() -> int:
             first_sentences(hero["the_case"], 3), args.date)
         text_body = generate_brief.render_markdown(hero, date=args.date)
         attachments = {k: v for k, v in paths.items() if k in ("pdf", "html")}
-        send_email.send(subject, html_body, text_body, attachments)
+        channel = send_email.deliver(subject, html_body, text_body, attachments)
+        print(f"  Delivery channel: {channel}")
 
     # Record history
     history.setdefault("last_hero", {})[hero["id"]] = args.date
