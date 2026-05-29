@@ -37,9 +37,18 @@ python engine/run_daily.py --list     # sanity-check the ranking
 python engine/run_daily.py            # render + email today's hero brief
 ```
 
-Confirm the hero, the Opportunity Score, and that the email was sent (or that
-SMTP was a dry-run — if so, report it). Commit the updated data and the new
-brief to the working branch.
+The brief is emailed to **trushil.jani@1440sports.com** (the default `EMAIL_TO`)
+with the branded 2-page PDF attached. Confirm the hero, the Opportunity Score,
+and that the email was sent (or that SMTP was a dry-run — if so, report it).
+Commit the updated data and the new brief to the working branch.
+
+Hard rules to uphold every run:
+- The PDF must be **strictly 2 pages** (the generator errors if it overflows).
+- The **decision-maker must be a verified, named individual** sourced from the
+  company site / press / reputable directory — never a generic "CMO"/"CEO". If a
+  seat is vacant or in transition, name the verified CEO and note the gap.
+- Re-check `already_present` (direct or via parent/subsidiary) before scoring any
+  new prospect, and tag each prospect `discovery: seeded|self`.
 
 ## 3. Report back
 

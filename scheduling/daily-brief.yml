@@ -11,7 +11,9 @@ name: Daily Hero Brief
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # 06:00 UTC daily — adjust to your timezone
+    # 06:00 UK time. GitHub cron is UTC: 05:00 UTC = 06:00 BST (summer).
+    # Use "0 6 * * *" if you want 06:00 UTC / 06:00 GMT (winter) instead.
+    - cron: "0 5 * * *"
   workflow_dispatch: {}    # allow manual runs
 
 jobs:

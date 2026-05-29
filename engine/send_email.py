@@ -39,7 +39,7 @@ def build_message(subject: str, html_body: str, text_body: str,
     msg = EmailMessage()
     msg["Subject"] = subject
     msg["From"] = os.environ.get("EMAIL_FROM", "briefs@1440sports.com")
-    msg["To"] = os.environ.get("EMAIL_TO", "")
+    msg["To"] = os.environ.get("EMAIL_TO", "trushil.jani@1440sports.com")
     if os.environ.get("EMAIL_CC"):
         msg["Cc"] = os.environ["EMAIL_CC"]
     msg.set_content(text_body)
@@ -76,7 +76,7 @@ def send(subject: str, html_body: str, text_body: str,
     password = os.environ["SMTP_PASS"]
     use_starttls = os.environ.get("SMTP_STARTTLS", "1") != "0"
 
-    recipients: List[str] = [r.strip() for r in os.environ["EMAIL_TO"].split(",") if r.strip()]
+    recipients: List[str] = [r.strip() for r in os.environ.get("EMAIL_TO", "trushil.jani@1440sports.com").split(",") if r.strip()]
     if os.environ.get("EMAIL_CC"):
         recipients += [r.strip() for r in os.environ["EMAIL_CC"].split(",") if r.strip()]
 

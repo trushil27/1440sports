@@ -16,13 +16,13 @@
   }
   @page {
     size: A4;
-    margin: 13mm 13mm 13mm 13mm;
+    margin: 10mm 12mm 9mm 12mm;
     @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-center { content: "{{ p.name|upper }} · {{ date_long }}"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
   }
   * { box-sizing: border-box; }
-  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9.4pt; line-height: 1.46; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
   .wrap { max-width: 100%; }
 
   /* masthead */
@@ -31,13 +31,13 @@
   .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
   .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
 
-  h1 { font-size: 33pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 2px 0 1px; }
-  .classline { font-size: 9pt; color: var(--muted); font-style: italic; margin-bottom: 10px; }
-  .lede { font-size: 10.2pt; line-height: 1.5; color: var(--ink); margin: 0 0 13px; }
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
   .lede strong { color: var(--navy); }
 
   /* score + chips strip */
-  .strip { display: flex; gap: 12px; align-items: stretch; margin: 4px 0 14px; }
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
   .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
   .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
   .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
@@ -47,30 +47,30 @@
   .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
   .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
 
-  h2 { font-family: Arial, sans-serif; font-size: 7.4pt; text-transform: uppercase; letter-spacing: .17em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 3px; margin: 13px 0 6px; font-weight: 700; }
-  p { margin: 0 0 7px; }
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
   .twocol { display: flex; gap: 16px; }
   .twocol > div { flex: 1; }
 
-  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 9px 11px; }
-  .dm .name { font-size: 12pt; color: var(--navy); }
-  .dm .role { font-family: Arial, sans-serif; font-size: 7pt; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 5px; }
-  .dm .bio { font-size: 8.6pt; }
-  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 12px; font-style: italic; font-size: 9.6pt; color: var(--navy); }
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
 
-  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; }
-  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 8px; }
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
   .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
-  .sc .val { font-family: Arial, sans-serif; font-size: 12.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
   .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
-  .sc .why { font-size: 7.4pt; color: #4a4c63; margin-top: 3px; line-height: 1.32; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
 
-  .risk { margin-bottom: 6px; font-size: 8.6pt; }
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
   .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
   .risk .rc { color: var(--navy); }
   .risk .rc b { color: var(--gold); }
 
-  .flags { margin: 2px 0 0; }
+  .flags { margin: 5px 0 0; }
   .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
   .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
   .sources li { margin-bottom: 1px; }

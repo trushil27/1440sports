@@ -16,13 +16,13 @@
   }
   @page {
     size: A4;
-    margin: 13mm 13mm 13mm 13mm;
+    margin: 10mm 12mm 9mm 12mm;
     @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-center { content: "SNAPLOGIC · 29 MAY 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
   }
   * { box-sizing: border-box; }
-  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9.4pt; line-height: 1.46; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
   .wrap { max-width: 100%; }
 
   /* masthead */
@@ -31,13 +31,13 @@
   .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
   .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
 
-  h1 { font-size: 33pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 2px 0 1px; }
-  .classline { font-size: 9pt; color: var(--muted); font-style: italic; margin-bottom: 10px; }
-  .lede { font-size: 10.2pt; line-height: 1.5; color: var(--ink); margin: 0 0 13px; }
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
   .lede strong { color: var(--navy); }
 
   /* score + chips strip */
-  .strip { display: flex; gap: 12px; align-items: stretch; margin: 4px 0 14px; }
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
   .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
   .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
   .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
@@ -47,30 +47,30 @@
   .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
   .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
 
-  h2 { font-family: Arial, sans-serif; font-size: 7.4pt; text-transform: uppercase; letter-spacing: .17em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 3px; margin: 13px 0 6px; font-weight: 700; }
-  p { margin: 0 0 7px; }
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
   .twocol { display: flex; gap: 16px; }
   .twocol > div { flex: 1; }
 
-  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 9px 11px; }
-  .dm .name { font-size: 12pt; color: var(--navy); }
-  .dm .role { font-family: Arial, sans-serif; font-size: 7pt; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 5px; }
-  .dm .bio { font-size: 8.6pt; }
-  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 12px; font-style: italic; font-size: 9.6pt; color: var(--navy); }
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
 
-  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; }
-  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 8px; }
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
   .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
-  .sc .val { font-family: Arial, sans-serif; font-size: 12.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
   .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
-  .sc .why { font-size: 7.4pt; color: #4a4c63; margin-top: 3px; line-height: 1.32; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
 
-  .risk { margin-bottom: 6px; font-size: 8.6pt; }
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
   .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
   .risk .rc { color: var(--navy); }
   .risk .rc b { color: var(--gold); }
 
-  .flags { margin: 2px 0 0; }
+  .flags { margin: 5px 0 0; }
   .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
   .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
   .sources li { margin-bottom: 1px; }
@@ -92,7 +92,7 @@
   <h1>SnapLogic</h1>
   <div class="classline">Agentic Integration / iPaaS · San Mateo, CA · Private (a16z, Microsoft, Silver Lake Waterman, Sixth Street, Capital One Ventures)</div>
 
-  <div class="lede">SnapLogic appointed a President and expanded its C-suite the same day; rival Confluent is already on the Williams livery - and SnapLogic cannot cede the enterprise-credibility stage to a competitor.</div>
+  <div class="lede">SnapLogic appointed a President and expanded its C-suite the same day, while direct rival Confluent sits on the Williams livery - SnapLogic cannot cede the enterprise-credibility stage to a competitor.</div>
 
   <div class="strip">
     <div class="scorebox"><div class="num">78</div><div class="den">Opportunity / 100</div></div>
@@ -105,10 +105,10 @@
   </div>
 
   <h2>The Case</h2>
-  <p>On 12 May 2026 SnapLogic appointed Molly Matthews (ex-Microsoft enterprise GTM) as President while promoting its CCO and CPO - a deliberate scale-up with new budget authority. Backed by a16z, Microsoft, Silver Lake Waterman, Sixth Street and Capital One Ventures, with $100M+ ARR (Aug 2025) and customers including AstraZeneca, Adobe, Verizon and Sony. The decisive signal: Confluent, a direct iPaaS rival, is an active partner on the Williams 2026 livery.</p>
+  <p>On 12 May 2026 SnapLogic appointed Molly Matthews (ex-Microsoft enterprise GTM) as President while simultaneously promoting its Chief Customer Officer and Chief People Officer - a deliberate scale-up posture carrying new budget authority and appetite for brand investment. Backed by a16z, Microsoft, Silver Lake Waterman, Sixth Street and Capital One Ventures, with $100M+ ARR confirmed in August 2025 and customers including AstraZeneca, Adobe, Verizon and Sony, the company has both the means and the motive. The decisive competitive signal: Confluent, a direct iPaaS rival, is an active partner on the Williams 2026 livery, putting a competitor on motorsport&#39;s enterprise-credibility stage in front of the exact CTO and CDO audience SnapLogic needs.</p>
 
   <h2>Why Now</h2>
-  <p>Matthews&#39;s appointment created a leadership window in which new Presidents approve first-mover brand investments; Confluent&#39;s Williams presence hardens every race. A rival-team announcement reframes the narrative before it solidifies.</p>
+  <p>Matthews&#39;s appointment created a leadership window in which new Presidents routinely approve first-mover brand investments to establish a GTM identity, and that window narrows by the week. Simultaneously, Confluent&#39;s Williams presence hardens with every race weekend, so a rival-team announcement now reframes the narrative before the competitor&#39;s association solidifies - the urgency is genuinely time-boxed.</p>
 
   <div class="flags">
 <span class="flag">new leadership</span><span class="flag">competitor on grid</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: seeded</span>
@@ -122,26 +122,26 @@
   </div>
 
   <h2>Why Aston Martin</h2>
-  <p>Aston Martin (or McLaren) places SnapLogic directly opposite Confluent&#39;s Williams partnership - turning a competitor&#39;s sponsorship into SnapLogic&#39;s urgency argument, in front of the same CTO/CDO audience.</p>
+  <p>Aston Martin (with McLaren as an alternative) places SnapLogic directly opposite Confluent&#39;s Williams partnership - turning a competitor&#39;s sponsorship into SnapLogic&#39;s own urgency argument and landing the brand in front of the same enterprise IT decision-makers. Aston Martin&#39;s premium gravitas and open integration category make it the cleanest counter-position.</p>
 
   <h2>Value to Aston Martin &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
-  <p>MODE A. Integration/automation tooling maps to a team&#39;s sprawling systems estate (sponsor data, logistics, telemetry pipelines), supporting a real technical-partner narrative rather than a logo.</p>
+  <p>MODE A. Integration and automation tooling maps to a team&#39;s sprawling systems estate - sponsor and commercial data, logistics, and telemetry pipelines that must talk to each other - so SnapLogic can support a real technical-partner narrative and a working integration rather than a logo, while the team gains genuine connectivity tooling.</p>
 
   <h2>Deal Architecture</h2>
-  <p>Associate/official partner tier on Aston Martin or McLaren: garage access, digital inventory, B2B hospitality. MINIMUM THREE YEARS (re-architected up from the original two-year proposal) at ~$3-5M/yr, calibrated to $100M+ ARR.</p>
+  <p>Associate / Official Partner tier on Aston Martin (or McLaren): garage access, digital inventory and B2B hospitality. MINIMUM THREE YEARS - re-architected up from the original two-year proposal in Brief N 009 - at ~$3-5M/yr, calibrated to $100M+ ARR, with integration-category exclusivity.</p>
 
   <div class="twocol">
     <div>
       <h2>Primary Decision-Maker</h2>
       <div class="dm">
         <div class="name">Molly Matthews</div>
-        <div class="role">President, SnapLogic (appointed May 12 2026)</div>
-        <div class="bio">Former Microsoft enterprise GTM leader with deep experience scaling commercial organisations. First major brand-investment decisions fall within her new mandate.</div>
+        <div class="role">President, SnapLogic (appointed 12 May 2026) - verified via Brief N 009</div>
+        <div class="bio">Former Microsoft enterprise GTM leader with deep experience scaling commercial organisations globally. Her first major brand-investment decisions fall squarely within her new mandate and budget authority, making her the right entry point. Co-decision-maker: the CEO for marquee spend (a founder-level CEO+President alignment is the fastest path).</div>
       </div>
     </div>
     <div>
       <h2>Opening Angle</h2>
-      <div class="quote">&#34;Your closest competitor just bought a car. Which grid slot is SnapLogic taking - for the next three years?&#34;</div>
+      <div class="quote">&#34;Molly, your closest competitor just bought a car. Which grid slot is SnapLogic taking - opposite Confluent, in front of the same CTOs - for the next three years?&#34;</div>
     </div>
   </div>
 
@@ -150,33 +150,33 @@
     <div class="sc">
       <div class="pill">Timing</div>
       <div class="val">17 <span>/ 20</span></div>
-      <div class="why">President Molly Matthews appointed May 12 2026; honeymoon window narrowing.</div>
+      <div class="why">President Molly Matthews appointed May 12 2026 alongside CCO and CPO promotions; the leadership honeymoon window is open but narrowing.</div>
     </div>
     <div class="sc">
       <div class="pill">Capacity</div>
       <div class="val">16 <span>/ 20</span></div>
-      <div class="why">$100M+ ARR (Aug 2025), a16z-backed balance sheet.</div>
+      <div class="why">$100M+ ARR (Aug 2025) on an a16z-backed balance sheet.</div>
     </div>
     <div class="sc">
       <div class="pill">Brand Fit</div>
       <div class="val">16 <span>/ 20</span></div>
-      <div class="why">Agentic integration maps to F1 precision; direct counter-narrative to Confluent.</div>
+      <div class="why">Agentic integration maps to F1 precision and forms a direct counter-narrative to Confluent on Williams.</div>
     </div>
     <div class="sc">
       <div class="pill">Urgency</div>
       <div class="val">15 <span>/ 20</span></div>
-      <div class="why">Confluent (direct iPaaS rival) is on the Williams 2026 livery.</div>
+      <div class="why">Confluent - a direct iPaaS rival - is on the Williams 2026 livery, and the association hardens every race weekend.</div>
     </div>
     <div class="sc">
       <div class="pill">Ops Fit</div>
       <div class="val">14 <span>/ 20</span></div>
-      <div class="why">MODE A: integration tooling has a credible team-systems use.</div>
+      <div class="why">MODE A: integration/automation tooling has a credible team-systems use.</div>
     </div>
   </div>
 
   <h2>Risks &amp; Counters</h2>
-  <div class="risk"><span class="rt">Budget not yet unlocked</span> &nbsp;<span class="rc">Matthews is weeks into the role; budget cycles may lag. <b>Counter:</b> Frame as a founder-level decision (CEO + President); offer a short-form LOI to hold inventory.</span></div>
-  <div class="risk"><span class="rt">Confluent exclusivity clause</span> &nbsp;<span class="rc">Williams may hold data-integration category exclusivity. <b>Counter:</b> That is the argument for a rival team - exclusivity elsewhere is a feature.</span></div>
+  <div class="risk"><span class="rt">Budget not yet unlocked</span> &nbsp;<span class="rc">Matthews is weeks into the role; formal budget cycles may lag her appointment. <b>Counter:</b> Frame as a founder-level decision requiring only CEO + President alignment, and offer a short-form LOI to hold inventory.</span></div>
+  <div class="risk"><span class="rt">Confluent exclusivity clause</span> &nbsp;<span class="rc">Williams may hold category exclusivity for data-integration vendors. <b>Counter:</b> That is precisely the argument for a rival team - exclusivity at a competitor&#39;s team becomes a feature, not a barrier.</span></div>
 
   <h2>Sources</h2>
   <ul class="sources">

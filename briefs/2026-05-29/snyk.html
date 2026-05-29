@@ -16,13 +16,13 @@
   }
   @page {
     size: A4;
-    margin: 13mm 13mm 13mm 13mm;
+    margin: 10mm 12mm 9mm 12mm;
     @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-center { content: "SNYK · 29 MAY 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
   }
   * { box-sizing: border-box; }
-  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9.4pt; line-height: 1.46; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
   .wrap { max-width: 100%; }
 
   /* masthead */
@@ -31,13 +31,13 @@
   .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
   .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
 
-  h1 { font-size: 33pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 2px 0 1px; }
-  .classline { font-size: 9pt; color: var(--muted); font-style: italic; margin-bottom: 10px; }
-  .lede { font-size: 10.2pt; line-height: 1.5; color: var(--ink); margin: 0 0 13px; }
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
   .lede strong { color: var(--navy); }
 
   /* score + chips strip */
-  .strip { display: flex; gap: 12px; align-items: stretch; margin: 4px 0 14px; }
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
   .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
   .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
   .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
@@ -47,30 +47,30 @@
   .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
   .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
 
-  h2 { font-family: Arial, sans-serif; font-size: 7.4pt; text-transform: uppercase; letter-spacing: .17em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 3px; margin: 13px 0 6px; font-weight: 700; }
-  p { margin: 0 0 7px; }
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
   .twocol { display: flex; gap: 16px; }
   .twocol > div { flex: 1; }
 
-  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 9px 11px; }
-  .dm .name { font-size: 12pt; color: var(--navy); }
-  .dm .role { font-family: Arial, sans-serif; font-size: 7pt; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 5px; }
-  .dm .bio { font-size: 8.6pt; }
-  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 12px; font-style: italic; font-size: 9.6pt; color: var(--navy); }
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
 
-  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; }
-  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 8px; }
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
   .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
-  .sc .val { font-family: Arial, sans-serif; font-size: 12.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
   .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
-  .sc .why { font-size: 7.4pt; color: #4a4c63; margin-top: 3px; line-height: 1.32; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
 
-  .risk { margin-bottom: 6px; font-size: 8.6pt; }
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
   .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
   .risk .rc { color: var(--navy); }
   .risk .rc b { color: var(--gold); }
 
-  .flags { margin: 2px 0 0; }
+  .flags { margin: 5px 0 0; }
   .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
   .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
   .sources li { margin-bottom: 1px; }
@@ -92,7 +92,7 @@
   <h1>Snyk</h1>
   <div class="classline">Developer Security · Boston, MA / London · Private (~$7B+; IPO anticipated 2026)</div>
 
-  <div class="lede">Developer-security leader Snyk is building toward a 2026 IPO with no motorsport footprint - and the security category on the grid is still empty.</div>
+  <div class="lede">Developer-security leader Snyk is building toward a 2026 IPO with a CMO seat in transition and no motorsport footprint - and the security category on the grid is still empty.</div>
 
   <div class="strip">
     <div class="scorebox"><div class="num">76</div><div class="den">Opportunity / 100</div></div>
@@ -105,13 +105,13 @@
   </div>
 
   <h2>The Case</h2>
-  <p>Snyk is a well-funded developer-security leader ($300M+ ARR) whose CEO has flagged a 2026 IPO. The security category on the F1 grid is uncontested, and a multi-year team partnership would give Snyk enterprise credibility ahead of a listing. Note the interplay: this is the same whitespace as JFrog - whoever signs first owns it.</p>
+  <p>Snyk is a well-funded developer-security leader (over $300M ARR) whose CEO, Peter McKay, has publicly flagged a 2026 IPO. Two signals stack up. First, the security category on the F1 grid is uncontested, so a multi-year partnership would give Snyk both enterprise credibility ahead of a listing and ownership of a lane no rival holds. Second, Snyk&#39;s brand function is mid-reset: its previous CMO, Jonaki Egenolf, departed for XBOW in November 2025, which means brand and sponsorship strategy is actively being re-decided right now - the ideal moment to plant an idea. The competitive nuance to flag internally: this is the same whitespace JFrog and Sonatype are eyeing, so the category is a race, and whoever signs first owns it.</p>
 
   <h2>Why Now</h2>
-  <p>Pre-IPO brand-building budgets plus the open security category create a first-mover window that closes the moment a rival signs.</p>
+  <p>Pre-IPO brand-building budgets, an open security category, and a brand leadership reset all coincide. With the CMO seat in transition, the decision is currently closest to the CEO, which both shortens the chain and means the strategic framing set now will shape whoever inherits the role. The window closes the moment a DevSecOps rival commits to a team.</p>
 
   <div class="flags">
-<span class="flag">never entered</span><span class="flag">category whitespace</span><span class="flag">funding event</span>    <span class="flag">discovery: self</span>
+<span class="flag">never entered</span><span class="flag">category whitespace</span><span class="flag">funding event</span><span class="flag">new leadership</span>    <span class="flag">discovery: self</span>
   </div>
 
   <!-- ===================== PAGE 2 ===================== -->
@@ -122,26 +122,26 @@
   </div>
 
   <h2>Why Aston Martin</h2>
-  <p>Aston Martin&#39;s CISO-grade gravitas places Snyk&#39;s &#39;secure by design&#39; story in front of the exact enterprise buyers it sells to.</p>
+  <p>Aston Martin&#39;s CISO-grade gravitas and premium, technically-credible identity place Snyk&#39;s &#39;secure by design&#39; story directly in front of the enterprise security buyers it sells to. If Aston Martin&#39;s inventory is constrained, Williams (data/engineering revival) is a credible alternative with the right audience profile.</p>
 
   <h2>Value to Aston Martin &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
-  <p>MODE A. Snyk integrates into developer workflows; an F1 team&#39;s growing in-house software estate is a real testbed and reference, supporting authentic &#39;secure development partner&#39; storytelling and CISO hospitality.</p>
+  <p>MODE A. Snyk integrates security directly into developer workflows, and an F1 team&#39;s expanding in-house software estate is a real testbed and reference deployment. A deal can be built around securing the team&#39;s own development pipeline, giving the team genuine operational value and Snyk an authentic &#39;official developer-security partner&#39; narrative plus CISO-level hospitality - substance on both sides, not signage.</p>
 
   <h2>Deal Architecture</h2>
-  <p>Official partner tier, minimum three years, ~$3-4M/yr, with security-category exclusivity.</p>
+  <p>Official Developer Security Partner tier on Aston Martin, minimum three years, ~$3-4M/yr, with security-category exclusivity and a working integration into the team&#39;s development pipeline.</p>
 
   <div class="twocol">
     <div>
       <h2>Primary Decision-Maker</h2>
       <div class="dm">
-        <div class="name">Snyk CMO (verify current holder)</div>
-        <div class="role">Marketing leadership</div>
-        <div class="bio">Confirm current CMO and pre-IPO brand owner; CEO Peter McKay owns the IPO narrative.</div>
+        <div class="name">Peter McKay</div>
+        <div class="role">CEO, Snyk - verified (note: CMO seat in transition after Jonaki Egenolf&#39;s Nov 2025 departure to XBOW)</div>
+        <div class="bio">CEO and the owner of Snyk&#39;s IPO narrative and, currently, its top-level brand decisions while the CMO role is being refilled - which makes him the right entry point today. Approach McKay directly and offer to help shape the sponsorship thesis the incoming CMO will execute. (Egenolf&#39;s move to XBOW is itself logged as a separate exec-migration signal.)</div>
       </div>
     </div>
     <div>
       <h2>Opening Angle</h2>
-      <div class="quote">&#34;The security slot on the F1 grid is empty. JFrog and Sonatype both want it. First mover owns it for three years - ahead of your IPO. Is that you?&#34;</div>
+      <div class="quote">&#34;Peter, with the CMO seat in transition the security-on-the-grid decision sits with you - and JFrog and Sonatype both want that empty slot. First mover owns it for three years, right before your IPO. Worth 25 minutes?&#34;</div>
     </div>
   </div>
 
@@ -150,36 +150,37 @@
     <div class="sc">
       <div class="pill">Timing</div>
       <div class="val">15 <span>/ 20</span></div>
-      <div class="why">CEO flagged a 2026 IPO; building enterprise brand for a listing.</div>
+      <div class="why">CEO Peter McKay has flagged a 2026 IPO; the CMO seat is also in transition (Jonaki Egenolf left to XBOW in Nov 2025), so brand strategy is being reset now.</div>
     </div>
     <div class="sc">
       <div class="pill">Capacity</div>
       <div class="val">17 <span>/ 20</span></div>
-      <div class="why">Multi-billion valuation, $300M+ ARR (Dec 2024), well funded.</div>
+      <div class="why">Multi-billion valuation with $300M+ ARR (Dec 2024) - well funded for a mid-to-premium tier.</div>
     </div>
     <div class="sc">
       <div class="pill">Brand Fit</div>
       <div class="val">16 <span>/ 20</span></div>
-      <div class="why">Developer/AppSec security; same uncontested grid whitespace as JFrog.</div>
+      <div class="why">Developer and application security sits in the same uncontested grid whitespace as JFrog.</div>
     </div>
     <div class="sc">
       <div class="pill">Urgency</div>
       <div class="val">13 <span>/ 20</span></div>
-      <div class="why">If JFrog or Sonatype move first, the security category locks.</div>
+      <div class="why">If JFrog or Sonatype sign first, the security category locks and Snyk is forced onto a rival team or out.</div>
     </div>
     <div class="sc">
       <div class="pill">Ops Fit</div>
       <div class="val">15 <span>/ 20</span></div>
-      <div class="why">MODE A: an F1 team&#39;s software pipeline is a genuine developer-security surface.</div>
+      <div class="why">MODE A: an F1 team&#39;s growing in-house software estate is a genuine developer-security surface.</div>
     </div>
   </div>
 
   <h2>Risks &amp; Counters</h2>
-  <div class="risk"><span class="rt">IPO timing uncertainty</span> &nbsp;<span class="rc">Brand spend may wait for the listing. <b>Counter:</b> Sign now to lock category exclusivity; activate at IPO.</span></div>
+  <div class="risk"><span class="rt">IPO timing uncertainty</span> &nbsp;<span class="rc">Brand spend may be deferred until the listing is closer. <b>Counter:</b> Sign now to lock category exclusivity at a pre-IPO price; scale activation at the listing.</span></div>
+  <div class="risk"><span class="rt">Leadership gap</span> &nbsp;<span class="rc">With no sitting CMO, the deal could stall awaiting the new hire. <b>Counter:</b> Engage the CEO directly and frame the partnership as a ready-made win to hand the incoming CMO on day one.</span></div>
 
   <h2>Sources</h2>
   <ul class="sources">
-<li>https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next</li><li>https://strategyofsecurity.com/p/cybersecuritys-ipo-pipeline-2026-and-beyond</li>  </ul>
+<li>https://snyk.io/about/leadership/</li><li>https://finance.yahoo.com/news/xbow-appoints-former-snyk-veracode-180100481.html</li><li>https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next</li>  </ul>
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
   "_meta": {
     "updated": "2026-05-29",
     "currency": "USD",
-    "schema": "v2 (Ramp-standard): 5 pillars x/20 (timing, capacity, brand_fit, urgency, ops_fit); mode A/B; value_to_team; discovery seeded|self; already_present excludes companies on an F1/FE grid directly or via a parent/subsidiary.",
+    "schema": "v2 (Ramp-standard): 5 pillars x/20 (timing, capacity, brand_fit, urgency, ops_fit); mode A/B; value_to_team; discovery seeded|self; already_present excludes companies on an F1/FE grid directly or via a parent/subsidiary. decision_maker MUST be a verified named individual (or, if a seat is vacant/in-transition, the verified CEO with the gap noted) - never a generic title.",
     "default_min_deal_years": 3,
     "cooldown_days": 5,
     "scoring": "Opportunity /100 = sum of 5 pillars each /20 (see engine/methodology.md)",
@@ -28,28 +28,28 @@
       "signals": ["exec_migration", "category_whitespace", "new_leadership", "funding_event"],
       "scores": {"timing": 18, "capacity": 18, "brand_fit": 19, "urgency": 15, "ops_fit": 16},
       "score_rationale": {
-        "timing": "CMO Genefa Murphy appointed Jan 5 2026 for a declared 'next growth phase'; FY2027 brand-budget planning is forming now.",
-        "capacity": "FY2025 revenue $531.8M (+24%), $704.4M cash, $142.3M FCF, NDR 118%. A $3-5M/yr deal is immaterial.",
-        "brand_fit": "No software-supply-chain-security brand is on the F1 grid (Confluent = data streaming). JFrog can OWN the category; Murphy's thesis 'trust, control, discipline at velocity' is a literal motorsport metaphor.",
-        "urgency": "Rivals Sonatype/Snyk circle the same whitespace; first-mover locks the category for 3 years.",
-        "ops_fit": "MODE A: a team's build/release pipeline is real software supply chain - JFrog tooling has a genuine in-garage engineering use, not just a logo."
+        "timing": "CMO Genefa Murphy appointed Jan 5 2026 for a declared 'next growth phase'; FY2027 brand-budget planning is forming now, and a new CMO's first marquee investments are typically locked within the first two quarters.",
+        "capacity": "FY2025 revenue $531.8M (+24%), $704.4M cash, $142.3M FCF, NDR 118%. A $3-5M/yr deal is roughly 0.1% of revenue - immaterial to the balance sheet.",
+        "brand_fit": "No software-supply-chain-security brand is anywhere on the F1 grid (Confluent = data streaming on Williams). JFrog can OWN the category outright, and Murphy's public thesis - 'trust, control and discipline at velocity' - is almost a motorsport tagline already.",
+        "urgency": "Direct rivals Sonatype and Snyk are circling the same whitespace; whoever signs first locks category exclusivity for three years and forces the others onto rival teams.",
+        "ops_fit": "MODE A: an F1 team ships thousands of software builds a season across simulation, strategy and car systems - that is a literal software supply chain, so JFrog earns a genuine in-garage technical-partner role, not a sticker."
       },
-      "headline_long": "The CMO who built the Udemy-McLaren partnership now runs marketing at JFrog - a profitable, cash-rich public company - and the software-supply-chain-security slot on the F1 grid is still empty.",
-      "the_case": "On 5 January 2026 JFrog appointed Genefa Murphy as Chief Marketing Officer for what it called its 'next growth phase' in AI-driven software supply chain management. Murphy is the decisive signal: at Udemy she personally architected the multi-series McLaren Racing partnership (F1, IndyCar, NEOM McLaren Formula E and Extreme E). She is a proven, repeat motorsport-sponsorship believer who now controls the brand budget of a company with $531.8M revenue (+24% YoY), $704.4M cash and $142.3M free cash flow. Her public thesis for JFrog - that 'as velocity increases there is an increasing need for trust, control and discipline across the software supply chain' - is a ready-made Formula 1 narrative. And the category is open: Confluent (data streaming) sits on Williams, but no software-supply-chain-security brand is anywhere on the grid.",
-      "why_now": "Murphy is ~5 months into a mandate defined as a growth-phase reset - the moment a CMO sets the multi-year brand-investment agenda. She has done an F1/FE deal before, so the internal 'does motorsport work for B2B?' objection is pre-answered by her own track record. Move while the whitespace is empty, before a DevSecOps rival plants a flag.",
-      "why_team": "McLaren is the warm path: Murphy knows the McLaren commercial organisation intimately from the Udemy partnership, and McLaren's technology-forward, precision-engineering identity mirrors JFrog's 'secure software, shipped fast' promise. Aston Martin is the fallback - premium CISO/CTO gravitas with an open DevSecOps slot.",
-      "value_to_team": "MODE A. A modern F1 team ships thousands of software builds a season across simulation, strategy and car systems - that is a software supply chain. JFrog's platform offers a genuine technical-partner integration (artifact management, security scanning across the team's dev pipeline), not just branding. That earns authentic 'official software supply chain partner' storytelling McLaren can stand behind, plus enterprise hospitality where JFrog's CISO/CTO buyers already sit.",
-      "deal_architecture": "Official Software Supply Chain Partner tier on McLaren. MINIMUM THREE YEARS at an estimated $3-5M/yr, calibrated to JFrog's $531.8M revenue and $704M cash. Car/suit branding in the security category, garage and B2B hospitality, digital inventory, and a category-exclusivity clause so no DevSecOps rival follows.",
+      "headline_long": "The CMO who personally built the Udemy-McLaren partnership now runs marketing at JFrog - a profitable, cash-rich public company - and the software-supply-chain-security slot on the F1 grid is still completely empty.",
+      "the_case": "On 5 January 2026 JFrog appointed Genefa Murphy as Chief Marketing Officer for what it explicitly framed as its 'next growth phase' in AI-driven software supply chain management. Murphy is the decisive signal in this brief: at Udemy she personally architected the multi-series McLaren Racing partnership spanning Formula 1, IndyCar, NEOM McLaren Formula E and Extreme E. She is therefore not a cold prospect who must be educated on the value of motorsport - she is a proven, repeat motorsport-sponsorship buyer who has already done this exact deal once, and she now controls the brand budget of a company with $531.8M revenue (+24% YoY), $704.4M of cash and $142.3M of free cash flow. The strategic gap is just as compelling as the relationship: while Confluent (data streaming) sits on the Williams livery, no software-supply-chain-security brand exists anywhere on the F1 grid. JFrog's category - the integrity and security of the code that ships software - is the single largest piece of uncontested enterprise whitespace in the paddock, and Murphy's own positioning language maps onto F1 almost word-for-word.",
+      "why_now": "Three clocks are running simultaneously. First, Murphy is roughly five months into a mandate her own company has branded a growth-phase reset - the precise window in which a new CMO defines the multi-year brand-investment agenda and shapes the next fiscal year's budget, before priorities harden. Second, because she has already delivered an F1/FE programme, the usual internal objection - 'does motorsport actually work for a B2B audience?' - is pre-answered by her personal track record, collapsing the normal 12-18 month education cycle to near zero. Third, the category whitespace is a depreciating asset: the moment a DevSecOps rival (Sonatype, Snyk or GitLab) plants a flag, JFrog's first-mover narrative is gone and the conversation becomes a defensive one. Moving in the next 4-6 weeks captures all three.",
+      "why_team": "McLaren is the warm, high-probability path. Murphy already knows the McLaren commercial organisation intimately from negotiating and activating the Udemy partnership, so an introduction is a re-engagement rather than a cold pitch, and McLaren's technology-forward, precision-engineering brand identity is the closest cultural mirror on the grid to JFrog's 'secure software, shipped fast' promise. If McLaren's relevant inventory is constrained, Aston Martin is the strong fallback: it carries premium enterprise gravitas, its hospitality audience skews to exactly the CISO and CTO buyers JFrog sells to, and its technology-partner roster leaves the DevSecOps slot open. Either team lets JFrog tell a 'from first commit to chequered flag' supply-chain-integrity story in front of the right room.",
+      "value_to_team": "MODE A - a genuine two-way technical partnership, not branding alone. A modern F1 team operates a sprawling internal software estate: aerodynamic and strategy simulation, real-time race-systems code, telemetry pipelines and hundreds of engineers shipping builds every week. That is, by definition, a software supply chain - and securing and managing it is exactly what JFrog's platform does (artifact management, binary lifecycle, security scanning across the dev pipeline). A deal can therefore be structured around a real integration into the team's engineering workflow, giving McLaren an authentic 'official software supply chain partner' story it can stand behind technically, plus a credible R&D narrative, plus enterprise hospitality where JFrog's own buyers already gather on race weekends. The team gains tooling and a reference customer; JFrog gains a live proof point and a stage.",
+      "deal_architecture": "Recommended entry: Official Software Supply Chain Partner tier on McLaren (Aston Martin as fallback). MINIMUM THREE YEARS at an estimated $3-5M/yr, calibrated to JFrog's $531.8M revenue base and $704M cash position. Scope: car and driver-suit branding in the software-supply-chain-security category, garage and B2B hospitality access, digital and content inventory aimed at an enterprise-IT audience, a working technical integration into the team's dev pipeline, and - critically - a category-exclusivity clause that blocks any DevSecOps rival from the team for the life of the contract.",
       "decision_maker": {
         "name": "Genefa Murphy, PhD",
-        "title": "Chief Marketing Officer, JFrog (appointed Jan 5 2026)",
-        "bio": "Former Chief Marketing & Content Officer at Udemy, where she built the multi-series McLaren Racing partnership. Previously CMO of Five9, SVP & CMO of Micro Focus, and Global VP Corporate Marketing at HPE. A repeat motorsport-sponsorship dealmaker who now owns JFrog's brand budget."
+        "title": "Chief Marketing Officer, JFrog (appointed 5 Jan 2026) - verified via JFrog press room",
+        "bio": "The single most important contact in this brief. As Chief Marketing & Content Officer at Udemy she personally built the multi-series McLaren Racing partnership (F1, IndyCar, NEOM McLaren Formula E, Extreme E). Previously CMO of Five9, SVP & CMO of Micro Focus, and Global VP Corporate Marketing at HPE. She is a repeat motorsport-sponsorship dealmaker who now owns JFrog's brand budget - approach her directly. Co-decision-maker: founder-CEO Shlomi Ben Haim for marquee spend."
       },
-      "opening_angle": "\"Genefa, you proved at Udemy that an F1 grid is a B2B channel, not a billboard. The software-supply-chain-security slot is still empty - JFrog can own the category McLaren's other tech partners can't. Can we book 25 minutes?\"",
+      "opening_angle": "\"Genefa, you proved at Udemy that an F1 grid is a B2B pipeline channel, not a billboard. The software-supply-chain-security slot is still empty - JFrog can own the one category McLaren's other tech partners can't touch. Can we hold 25 minutes this week before a rival moves?\"",
       "risks": [
-        {"title": "Budget cycle lag", "detail": "A discretionary brand-sponsorship line may not be approved until FY2027.", "counter": "Frame as a founder-level category land-grab; offer a short-form LOI to hold category exclusivity now."},
-        {"title": "Founder alignment", "detail": "Founder-CEO Shlomi Ben Haim is hands-on; a marquee spend needs his buy-in.", "counter": "Position trust/security as JFrog's core message - a CEO narrative, not a marketing line item."},
-        {"title": "B2B skepticism", "detail": "Investors may question motorsport spend at a profit-inflecting company.", "counter": "Murphy's Udemy-McLaren results are the proof case; lead with B2B pipeline outcomes, not impressions."}
+        {"title": "Budget cycle lag", "detail": "A discretionary brand-sponsorship line may not be formally approved until the FY2027 cycle.", "counter": "Frame it as a founder-level category land-grab rather than a marketing line item, and offer a short-form LOI to hold category exclusivity now while the budget formalises."},
+        {"title": "Founder alignment", "detail": "Founder-CEO Shlomi Ben Haim is hands-on; a marquee spend needs his explicit buy-in.", "counter": "Position trust and security - JFrog's core message - as a CEO-level brand story, and bring Ben Haim into the room alongside Murphy early."},
+        {"title": "B2B skepticism", "detail": "Investors may question motorsport spend at a company at a profitability inflection point.", "counter": "Murphy's Udemy-McLaren results are the proof case; lead with measured B2B pipeline and account-based outcomes, not impressions or reach."}
       ],
       "sources": [
         "https://jfrog.com/press-room/jfrog-appoints-new-cmo-to-accelerate-its-ai-growth-phase/",
@@ -61,7 +61,7 @@
     {
       "id": "cohesity",
       "name": "Cohesity",
-      "ticker": "Private (Nvidia-backed; 2026 IPO, ~$8-17B target)",
+      "ticker": "Private (Nvidia-backed; 2026 IPO, ~$17B target)",
       "category": "AI Data Security / Data Protection",
       "hq": "San Jose, CA",
       "series": "F1",
@@ -77,30 +77,31 @@
       "signals": ["spinoff_unicorn", "never_entered", "funding_event", "category_whitespace"],
       "scores": {"timing": 18, "capacity": 18, "brand_fit": 17, "urgency": 15, "ops_fit": 15},
       "score_rationale": {
-        "timing": "Targeting a 2026 IPO - the brand-reckoning moment for a category leader; Veritas merger (Dec 2024) pushed ARR to ~$1.5B.",
-        "capacity": "ARR ~$1.5B, 28% adjusted margin, Nvidia-backed, IPO valuation rivalling Rubrik's ~$17B. Easily funds title-adjacent spend.",
-        "brand_fit": "Data security/resilience maps to F1's data-obsessed, zero-failure culture; no data-protection brand on the grid.",
-        "urgency": "IPO window is a one-time elevation moment; Rubrik (public peer) raises category competitiveness.",
-        "ops_fit": "MODE A: an F1 team generates and must protect petabytes of telemetry and IP - a genuine data-resilience use case in the garage."
+        "timing": "Targeting a 2026 IPO - the brand-reckoning moment for a category leader. The Veritas merger (Dec 2024) pushed ARR to ~$1.5B and the company is actively building an institutional-grade brand for the roadshow.",
+        "capacity": "ARR ~$1.5B at a 28% adjusted margin, Nvidia-backed, with an IPO valuation aimed at public peer Rubrik's ~$17B. Title-adjacent spend is comfortably within reach.",
+        "brand_fit": "Data security, backup and ransomware resilience map cleanly to F1's data-obsessed, zero-failure engineering culture - and no data-protection brand sits anywhere on the grid.",
+        "urgency": "The IPO window is a one-time elevation moment, and public peer Rubrik already raises the category's competitive temperature; a grid presence differentiates the listing.",
+        "ops_fit": "MODE A: an F1 team generates and must protect petabytes of telemetry, simulation output and design IP - a genuine, demonstrable data-resilience use case in the garage."
       },
-      "headline_long": "Nvidia-backed Cohesity hit ~$1.5B ARR after absorbing Veritas and is steering toward a 2026 IPO at a valuation rivalling Rubrik's $17B - with no motorsport presence and an open data-security slot on the grid.",
-      "the_case": "Cohesity is the rare combination our mandate prizes: a category leader at a brand-reckoning moment. Following its 2024 merger with Veritas' data-protection business, ARR surged to ~$1.5B at a 28% adjusted margin, and the Nvidia-backed company is eyeing a 2026 IPO with a valuation aimed at its public peer Rubrik (~$17B). It has never touched motorsport, so we would not be the 100th brand in the inbox - and the data-security/resilience category is unoccupied on the F1 grid.",
-      "why_now": "An IPO is the single biggest brand-elevation moment a company gets. A multi-year F1 partnership signed around the listing converts a finance event into a global enterprise-brand statement and pre-builds the institutional credibility public investors reward.",
-      "why_team": "Williams - the data-and-engineering revival story (Atlassian title, Confluent on data streaming) - is the natural canvas for a data-resilience brand, placing Cohesity beside complementary (not competing) data partners in front of enterprise IT buyers.",
-      "value_to_team": "MODE A. A Williams race weekend produces and must safeguard enormous volumes of telemetry, simulation output and design IP - exactly Cohesity's domain (backup, recovery, ransomware resilience). That supports an authentic technical-partner integration and 'we protect the data that wins races' storytelling, not a sticker.",
-      "deal_architecture": "Official Data Resilience Partner tier on Williams. MINIMUM THREE YEARS (ideally four to span the IPO and post-listing cycle), estimated $4-7M/yr. Garage/cockpit branding in the data-security category, hospitality at marquee rounds, digital rights for an enterprise-IT audience, category exclusivity.",
+      "headline_long": "Nvidia-backed Cohesity hit ~$1.5B ARR after absorbing Veritas and is steering toward a 2026 IPO at a valuation rivalling Rubrik's $17B - with no motorsport presence anywhere and the entire data-security category open on the grid.",
+      "the_case": "Cohesity is the rare combination our mandate prizes most: an established category leader arriving at a brand-reckoning moment with budget, motive and a clean strategic gap. Following its 2024 merger with Veritas' data-protection business, annual recurring revenue surged to roughly $1.5 billion at a 28% adjusted margin, and the Nvidia-backed company is now steering toward a 2026 IPO with a valuation explicitly benchmarked against its publicly traded peer Rubrik (~$17B). Two things make it a 1440 target rather than just a big company. First, it has never touched motorsport, so an approach now is early - we would not be the hundredth agency in the inbox. Second, the data-security and resilience category - protecting the data that everything else depends on - is entirely unoccupied on the F1 grid, which means Cohesity could define and own it rather than share it. The IPO is the forcing function that turns 'someday' into 'this year'.",
+      "why_now": "An IPO is the single largest brand-elevation event in a company's life, and the 12 months around it are when leadership spends most deliberately on institutional credibility - exactly the currency a multi-year F1 partnership trades in. Signing around the listing lets Cohesity convert a finance milestone into a global enterprise-brand statement, pre-build the recognition that public investors reward, and lock category exclusivity before any data-protection rival (Rubrik, Veeam, Commvault) recognises the same open lane. The post-Veritas integration narrative also benefits from a single, high-visibility external proof point that the merged company is now one coherent market leader.",
+      "why_team": "Williams is the natural canvas. Its story is a data-and-engineering revival - Atlassian as title partner, Confluent on data streaming - which makes it the grid's most data-literate team and the most credible home for a data-resilience brand. Cohesity would sit beside complementary, non-competing data partners (storage/streaming vs. protection/recovery), reinforcing rather than colliding with the existing roster, and Williams' resurgent, technically-credible narrative gives Cohesity an upward-momentum association in front of the enterprise-IT decision-makers in its hospitality suites.",
+      "value_to_team": "MODE A - a real operational fit, not just signage. A Williams race weekend produces and must safeguard enormous volumes of telemetry, simulation data and proprietary design IP, and any loss or compromise is a competitive catastrophe. That is precisely Cohesity's domain: backup, rapid recovery and ransomware resilience. The partnership can be built around an actual data-protection deployment for the team's race and factory data, giving Williams genuine operational value and a defensible 'we protect the data that wins races' story, while Cohesity gains a marquee reference customer it can name on the IPO roadshow. The exchange is tangible on both sides.",
+      "deal_architecture": "Official Data Resilience Partner tier on Williams. MINIMUM THREE YEARS - ideally four, to span the IPO and the post-listing brand-build cycle - at an estimated $4-7M/yr. Scope: garage and cockpit branding in the data-security category, hospitality at marquee rounds, digital rights targeting an enterprise-IT audience, a working data-protection deployment for the team, and category exclusivity to keep every data-protection rival off the car.",
       "decision_maker": {
-        "name": "Cohesity CMO / CEO Sanjay Poonen (verify current CMO)",
-        "title": "Marketing leadership / CEO (IPO sponsor)",
-        "bio": "CEO Sanjay Poonen (ex-VMware) drives Cohesity's enterprise-brand and IPO narrative; confirm the current CMO and IR lead, who co-own brand-investment decisions during the listing window."
+        "name": "Carol Carpenter",
+        "title": "Chief Marketing Officer, Cohesity - verified via Cohesity newsroom",
+        "bio": "Cohesity's first CMO, leading the global marketing organisation. Previously CMO at Unity and CMO at VMware (where her teams drove the multi-cloud repositioning) - a seasoned enterprise brand-builder running exactly the kind of category-defining, IPO-readiness brand programme an F1 partnership would anchor. Co-decision-makers for a spend of this size: CEO Sanjay Poonen (ex-VMware) and the IR/CFO function during the listing window."
       },
-      "opening_angle": "\"You get one IPO. An F1 data-resilience partnership turns your listing into a global enterprise-brand moment - and data security is the one category no rival on the grid can claim. Worth 25 minutes before the roadshow locks?\"",
+      "opening_angle": "\"Carol, you've run the brand through a VMware-scale repositioning - you know an IPO is won on credibility, not noise. Data resilience is the one enterprise category nobody on the F1 grid has claimed. Worth 25 minutes to own it before the roadshow locks?\"",
       "risks": [
-        {"title": "IPO quiet period", "detail": "Securities rules may restrict marketing announcements near the listing.", "counter": "Sign quietly, activate post-listing; use the roadshow to build internal consensus."},
-        {"title": "Integration focus", "detail": "Post-Veritas integration may absorb leadership attention.", "counter": "Position the deal as the external proof point that the merged company is now one category leader."}
+        {"title": "IPO quiet period", "detail": "Securities rules may restrict marketing announcements in the weeks around the listing.", "counter": "Negotiate and sign quietly, then activate post-listing; use the roadshow period to build internal consensus rather than to announce."},
+        {"title": "Integration focus", "detail": "Post-Veritas integration may absorb leadership attention and budget.", "counter": "Position the deal as the single external proof point that the merged company is now one unified category leader - an integration accelerant, not a distraction."}
       ],
       "sources": [
         "https://www.cnbc.com/2025/09/04/nvidia-backed-cohesity-eyes-2026-ipo-with-valuation-rivaling-17-billion-rubrik.html",
+        "https://www.cohesity.com/newsroom/press/cohesity-appoints-carol-carpenter-as-chief-marketing-officer/",
         "https://strategyofsecurity.com/p/cybersecuritys-ipo-pipeline-2026-and-beyond"
       ]
     },
@@ -123,27 +124,27 @@
       "signals": ["spinoff_unicorn", "funding_event", "new_leadership", "category_whitespace"],
       "scores": {"timing": 20, "capacity": 20, "brand_fit": 20, "urgency": 15, "ops_fit": 12},
       "score_rationale": {
-        "timing": "Active $750M raise above $40B pre-money + London office opening converge into the entry window.",
-        "capacity": "Crossed $1B ARR (Aug 2025), $100B+ annualized purchase volume, profitability +153% YoY.",
-        "brand_fit": "Visa issuing rail overlap with Racing Bulls' title sponsor; CFO-suite/developer demo match.",
-        "urgency": "The Aug 2026 F1 London race is a hard calendar anchor for Ramp's UK onboarding launch.",
-        "ops_fit": "MODE B: back-office/treasury - Ramp serves the team's spend operation rather than the car."
+        "timing": "Active $750M raise above $40B pre-money plus a newly opened London office converge into a single entry window.",
+        "capacity": "Crossed $1B ARR (Aug 2025), $100B+ annualized purchase volume, profitability up 153% YoY - capacity is not a constraint.",
+        "brand_fit": "Visa issuing-rail overlap with Racing Bulls' title sponsor makes co-presence structural; CFO-suite and developer demo match the team's audience.",
+        "urgency": "The August 2026 F1 London race is a hard calendar anchor for Ramp's UK onboarding launch - the deal must be set before that date locks.",
+        "ops_fit": "MODE B: back-office and treasury - Ramp serves the team's spend and settlement operation rather than the car itself."
       },
-      "headline_long": "Ramp crossed $1B ARR in August 2025 and is in active talks for a $750M raise above $40B pre-money - a >25% step-change in six months - while opening a London office, with no spend-management brand anywhere on the grid.",
-      "the_case": "Ramp's active $750M raise at above $40B pre-money is the BRAND RECKONING MOMENT - when a category-defining fintech transitions from growth story to institutional brand. With $100B+ annualized purchase volume, 50,000+ business customers and a freshly opened London office targeting EU/UK onboarding this summer, the commercial clock is running. No spend-management or AI-finance brand holds a position anywhere on the F1 grid; Brex has no motorsport deal. The slot that matches Ramp's Visa issuing relationship and EU/UK expansion arc is open at Visa Cash App Racing Bulls.",
-      "why_now": "The $750M raise closes a short window, and the F1 London race in August 2026 is a live activation for Ramp's UK onboarding launch. Terms must be set before that calendar date locks.",
-      "why_team": "Racing Bulls already carries Visa as title sponsor. Ramp's renewed multi-year Visa issuing agreement makes co-presence structural rather than conflicting - Ramp sits as the spend-management intelligence layer above the Visa rail. Cash App's younger demographic mirrors Ramp's CFO-suite and developer audience, and no competing spend-management brand is on the car.",
-      "value_to_team": "MODE B. Ramp's payments rail and back-office stack map to Racing Bulls' commercial operation: paddock supplier settlements, sponsor-activation treasury flows, and a partner-onboarding funnel where venture-backed CFO-suite companies are the incoming audience. Ramp's Visa issuing partnership amplifies rather than displaces the title relationship. Surfaces: garage hospitality, pit-wall broadcast cuts, and digital founder-audience activation timed to the London race.",
-      "deal_architecture": "Official Spend Management Partner tier. FOUR YEARS to span the EU/UK build-out and capture two full FIA calendar rotations through London, Las Vegas and Austin. Estimated $6-9M/yr. Garage and cockpit logo rights, Visa co-activation rights, hospitality at London and Las Vegas, digital content rights for Ramp's CFO-audience channels.",
+      "headline_long": "Ramp crossed $1B ARR in August 2025 and is in active talks for a $750M raise above $40B pre-money - a step-change of more than 25% in six months - while opening a London office, with no spend-management brand anywhere on the F1 grid.",
+      "the_case": "Ramp's active $750M raise at above $40B pre-money is the brand-reckoning moment - the point at which a category-defining fintech transitions from growth story to institutional brand. With more than $100B in annualized purchase volume, 50,000+ business customers, profitability up 153% year-on-year, and a freshly opened London office targeting EU/UK onboarding this summer, the commercial clock is already running hard. The grid gap is total: no spend-management or AI-finance brand holds a position anywhere in F1, and direct rival Brex has no motorsport deal, so the entire corporate-spend category sits unoccupied at the paddock level. The single slot that fits Ramp's profile - its Visa issuing relationship and its EU/UK expansion arc - is open at Visa Cash App Racing Bulls, where Ramp can sit as the spend-intelligence layer above the existing Visa rail rather than competing with it.",
+      "why_now": "The $750M raise closes a short, well-defined window during which brand-investment authority is at its peak. More concretely, the F1 London race in August 2026 is a live, dated activation for Ramp's UK business-onboarding launch - a marketing moment the company would otherwise have to manufacture, handed to it by the calendar. Partnership terms must be agreed before that race date locks, because the value of the activation collapses if the deal slips past it.",
+      "why_team": "Racing Bulls already carries Visa as its title sponsor, and Ramp's renewed multi-year Visa issuing agreement makes co-presence structural rather than conflicting: Ramp becomes the spend-management intelligence layer sitting above the Visa payment rail, an architecture that reinforces both brands. Cash App's younger demographic mirrors Ramp's founder, developer and CFO-suite audience, and no competing spend-management brand is anywhere near the car - so Ramp would not be sharing the category. The August London race lands precisely as Ramp opens UK business onboarding, aligning the team's biggest home-market moment with Ramp's biggest market-entry moment.",
+      "value_to_team": "MODE B - real operational value, off-car. Ramp's payments rail and back-office stack map directly onto Racing Bulls' commercial machine: paddock supplier settlements, sponsor-activation treasury flows, and a partner-onboarding funnel in which venture-backed, CFO-led companies are exactly the incoming audience the team wants. Ramp's Visa issuing partnership amplifies rather than displaces the title relationship. In return, the team offers race-weekend brand surfaces that fit a B2B audience: garage hospitality, pit-wall broadcast cuts, and digital founder-audience content timed to the London race. The team gets a modern finance stack and aligned co-marketing; Ramp gets the stage and the calendar anchor.",
+      "deal_architecture": "Entry at Official Spend Management Partner tier. FOUR YEARS, to span the EU/UK build-out cycle and capture two full FIA calendar rotations through London, Las Vegas and Austin. Estimated $6-9M/yr. Scope: garage and cockpit logo rights, Visa co-activation rights, hospitality at London and Las Vegas, and digital content rights for Ramp's CFO-audience channels.",
       "decision_maker": {
         "name": "Eric Glyman",
-        "title": "CEO & Co-Founder, Ramp",
-        "bio": "Glyman co-founded Ramp after co-founding Paribus (acquired by Capital One). He drives all strategic capital allocation and partnership decisions; the $750M raise and Visa stablecoin card deal are direct outputs of his office."
+        "title": "CEO & Co-Founder, Ramp - verified",
+        "bio": "Glyman co-founded Ramp after co-founding Paribus (acquired by Capital One). He drives all strategic capital allocation and partnership decisions; the $750M raise and the Visa stablecoin card deal are direct outputs of his office, so a sponsorship of this scale is his call to make."
       },
-      "opening_angle": "\"Eric, Ramp's Visa issuing deal and London launch create an exact structural fit with Racing Bulls right now - can we book 25 minutes?\"",
+      "opening_angle": "\"Eric, Ramp's Visa issuing deal and the London launch create an exact structural fit with Racing Bulls right now, and the August London race is a ready-made activation for your UK onboarding. Can we book 25 minutes before the calendar locks?\"",
       "risks": [
-        {"title": "Visa channel conflict", "detail": "Ramp's Visa issuing deal could look like a conflict with the Visa title.", "counter": "It is a structural bridge - frame Ramp as the spend-intelligence layer above the existing Visa relationship; roles are architecturally distinct."},
-        {"title": "Raise timeline slippage", "detail": "If the $750M close delays, budget authority may pause.", "counter": "Anchor outreach to the London race date - independent of the raise close and drives its own urgency."}
+        {"title": "Visa channel conflict", "detail": "Ramp's Visa issuing deal could be read as a conflict with the Visa title sponsorship.", "counter": "It is a structural bridge, not a conflict - frame Ramp as the spend-intelligence layer above the existing Visa relationship; the two roles are architecturally distinct and mutually reinforcing."},
+        {"title": "Raise timeline slippage", "detail": "If the $750M close slips, brand-budget authority may pause.", "counter": "Anchor the outreach to the London race date, which is independent of the raise close and drives its own urgency regardless of financing timing."}
       ],
       "sources": ["1440 Intelligence Brief N 025, 28 May 2026 (attached)"]
     },
@@ -166,29 +167,32 @@
       "signals": ["spinoff_unicorn", "never_entered", "funding_event"],
       "scores": {"timing": 16, "capacity": 20, "brand_fit": 15, "urgency": 12, "ops_fit": 13},
       "score_rationale": {
-        "timing": "IPO roadshow is a once-only brand-elevation moment.",
-        "capacity": "Honeywell spin-off targeting a ~$12.7B IPO (27% premium over its $10B Sept 2025 round).",
-        "brand_fit": "Quantum = ultimate precision/compute narrative; Anglo-American footprint suits a British team.",
-        "urgency": "No direct quantum rival on the grid; the forcing function is the IPO window itself.",
-        "ops_fit": "MODE A (aspirational): compute/optimisation R&D halo around simulation and strategy, though not yet a literal in-car system."
+        "timing": "The IPO roadshow is a once-only brand-elevation moment, and a recently expanded C-suite (new CEO and CMO) signals a deliberate scale-up posture.",
+        "capacity": "Honeywell spin-off targeting a ~$12.7B IPO, a 27% premium over its $10B September 2025 round - capacity is a non-issue.",
+        "brand_fit": "Quantum computing is the ultimate precision-and-compute narrative, and the Anglo-American footprint suits a British team, though the category is more halo than literal in-car today.",
+        "urgency": "No direct quantum rival exists on the grid, so the forcing function is the IPO window itself rather than a competitor.",
+        "ops_fit": "MODE A (developing): compute and optimisation R&D around simulation, strategy and logistics is a credible roadmap, even if not yet a literal in-car system."
       },
-      "headline_long": "Honeywell spin-off Quantinuum is heading for a ~$12.7B IPO - a textbook overnight unicorn with a brand-elevation budget, an Anglo-American footprint, and no motorsport history.",
-      "the_case": "Quantinuum is the highest-priority class in our mandate: a born-big spin-off (from Honeywell) heading into a ~$12.7B IPO, up 27% on its $10B September 2025 valuation. An IPO is a one-time brand-elevation moment, and an F1 association is among the fastest ways for a deep-tech company to acquire global enterprise visibility. It has never entered motorsport.",
-      "why_now": "The IPO roadshow is the window: leadership is actively investing in public-market visibility and enterprise credibility. A multi-year F1 engineering-partner deal signed around the listing compounds the narrative.",
-      "why_team": "Aston Martin's premium engineering gravitas aligns Quantinuum's Anglo-American identity with a precision/compute halo - 'the quantum edge in performance R&D' - in front of a C-suite audience.",
-      "value_to_team": "MODE A (developing). Quantum and advanced optimisation increasingly touch race strategy, aero simulation and logistics. Positioned as an R&D/innovation partner, Quantinuum offers a credible compute-frontier story and a talent-attraction halo, with a roadmap toward genuine simulation use cases.",
-      "deal_architecture": "Official Innovation / Quantum Partner tier, minimum three years, estimated $3-6M/yr, positioned as an R&D-and-brand halo around the listing, with category exclusivity for quantum computing.",
+      "headline_long": "Honeywell spin-off Quantinuum is heading for a ~$12.7B IPO with a freshly expanded C-suite - a textbook overnight unicorn with a brand-elevation budget, an Anglo-American footprint, and no motorsport history at all.",
+      "the_case": "Quantinuum is the highest-priority class in our entire mandate: a born-big spin-off (out of Honeywell) heading into a ~$12.7B IPO, up 27% on its $10B September 2025 valuation, that has never entered motorsport. Two structural facts make it compelling. First, an IPO is a one-time brand-elevation moment, and an F1 association is among the fastest ways for a deep-tech company to acquire global enterprise visibility and the kind of mainstream credibility a quantum business cannot buy through technical channels alone. Second, the company has just expanded its leadership - a new CEO in Rajeeb (Raj) Hazra and a new CMO in Lawrence Schwartz - which is exactly the configuration that approves first-mover brand investments to establish a public-market identity. Because no quantum brand exists anywhere on the grid, Quantinuum would define the category rather than contest it.",
+      "why_now": "The IPO roadshow is the window. Leadership is actively investing in public-market visibility, enterprise credibility and a differentiated narrative, and a new CEO-plus-CMO pairing typically sets the brand agenda in its first two quarters. A multi-year F1 innovation-partner deal signed around the listing compounds the story - turning a finance event into a global brand moment - and there is no competitor clock forcing a rushed, defensive posture, so the deal can be shaped on Quantinuum's terms if it is opened now rather than after the listing settles.",
+      "why_team": "Aston Martin is the fit. Its premium engineering gravitas and British identity align with Quantinuum's Cambridge-and-Colorado footprint, and its hospitality audience is exactly the C-suite and government-adjacent enterprise buyer a quantum business courts. The association positions Quantinuum as 'the quantum edge in performance R&D' - a precision-and-compute halo on the grid's most boardroom-credible team - rather than as a mass-market consumer sponsor, which is the wrong register for this category.",
+      "value_to_team": "MODE A (developing). Quantum and advanced classical optimisation increasingly touch the problems an F1 team actually faces - aerodynamic and strategy simulation, logistics and scheduling across a global calendar, and materials R&D. Positioned as an innovation and R&D partner, Quantinuum offers Aston Martin a credible compute-frontier collaboration and a powerful talent-attraction halo, with a genuine roadmap toward simulation use cases rather than an empty logo. The honest framing is a forward-looking technical partnership: real engagement on hard optimisation problems, growing into deeper integration over the multi-year term.",
+      "deal_architecture": "Official Innovation / Quantum Partner tier on Aston Martin, minimum three years, estimated $3-6M/yr, structured as an R&D-and-brand halo timed around the listing, with category exclusivity for quantum computing and a defined joint R&D workstream so the partnership has technical substance from day one.",
       "decision_maker": {
-        "name": "Quantinuum CMO / Head of Brand (verify)",
-        "title": "Marketing / Brand leadership",
-        "bio": "Confirm the current CMO/brand lead and IPO communications owner; the CFO and IR team are co-decision-makers during the listing window."
+        "name": "Lawrence Schwartz",
+        "title": "Chief Marketing Officer, Quantinuum - verified",
+        "bio": "Brings 20+ years of global B2B marketing leadership with a track record of scaling high-margin businesses from $100M to over $1B; most recently led major repositioning at Aspen Technology that lifted brand preference and market share - precisely the IPO-grade brand mandate an F1 partnership would anchor. Co-decision-makers: CEO Rajeeb (Raj) Hazra and the CFO/IR function during the listing window."
       },
-      "opening_angle": "\"You get one IPO. An F1 innovation partnership turns your listing from a finance event into a global brand moment - and quantum is the one category no rival on the grid can claim.\"",
+      "opening_angle": "\"Lawrence, you repositioned AspenTech into a billion-dollar brand - you know an IPO is a credibility event. Quantum is the one category no rival on the F1 grid can claim, and Aston Martin is the boardroom audience. 25 minutes before the roadshow?\"",
       "risks": [
-        {"title": "IPO quiet period", "detail": "Securities rules may restrict spend/announcements around the listing.", "counter": "Sign quietly, activate post-listing; use the roadshow to build consensus."},
-        {"title": "Deep-tech brand caution", "detail": "A quantum firm may see F1 as off-strategy.", "counter": "Position as enterprise credibility and talent attraction, not consumer marketing."}
+        {"title": "IPO quiet period", "detail": "Securities rules may restrict spend and announcements around the listing.", "counter": "Sign quietly and activate post-listing; use the roadshow period to build internal consensus rather than to publicise."},
+        {"title": "Deep-tech brand caution", "detail": "A quantum firm may view F1 as off-strategy or too consumer-facing.", "counter": "Position strictly as enterprise credibility, government/partner visibility and talent attraction, with a real joint R&D workstream - not consumer marketing."}
       ],
-      "sources": ["http://www.techtimes.com/articles/317216/20260526/quantinuum-ipo-targets-127b-valuation-honeywell-spinoff-reports-31m-2025-revenue.htm"]
+      "sources": [
+        "http://www.techtimes.com/articles/317216/20260526/quantinuum-ipo-targets-127b-valuation-honeywell-spinoff-reports-31m-2025-revenue.htm",
+        "https://www.quantinuum.com/press-releases/quantinuum-names-rajeeb-raj-hazra-chief-executive-officer"
+      ]
     },
     {
       "id": "snyk",
@@ -206,25 +210,36 @@
       "recommended_team": "Aston Martin",
       "timing_window": "WARM",
       "action_horizon": "6-8 WKS",
-      "signals": ["never_entered", "category_whitespace", "funding_event"],
+      "signals": ["never_entered", "category_whitespace", "funding_event", "new_leadership"],
       "scores": {"timing": 15, "capacity": 17, "brand_fit": 16, "urgency": 13, "ops_fit": 15},
       "score_rationale": {
-        "timing": "CEO flagged a 2026 IPO; building enterprise brand for a listing.",
-        "capacity": "Multi-billion valuation, $300M+ ARR (Dec 2024), well funded.",
-        "brand_fit": "Developer/AppSec security; same uncontested grid whitespace as JFrog.",
-        "urgency": "If JFrog or Sonatype move first, the security category locks.",
-        "ops_fit": "MODE A: an F1 team's software pipeline is a genuine developer-security surface."
+        "timing": "CEO Peter McKay has flagged a 2026 IPO; the CMO seat is also in transition (Jonaki Egenolf left to XBOW in Nov 2025), so brand strategy is being reset now.",
+        "capacity": "Multi-billion valuation with $300M+ ARR (Dec 2024) - well funded for a mid-to-premium tier.",
+        "brand_fit": "Developer and application security sits in the same uncontested grid whitespace as JFrog.",
+        "urgency": "If JFrog or Sonatype sign first, the security category locks and Snyk is forced onto a rival team or out.",
+        "ops_fit": "MODE A: an F1 team's growing in-house software estate is a genuine developer-security surface."
       },
-      "headline_long": "Developer-security leader Snyk is building toward a 2026 IPO with no motorsport footprint - and the security category on the grid is still empty.",
-      "the_case": "Snyk is a well-funded developer-security leader ($300M+ ARR) whose CEO has flagged a 2026 IPO. The security category on the F1 grid is uncontested, and a multi-year team partnership would give Snyk enterprise credibility ahead of a listing. Note the interplay: this is the same whitespace as JFrog - whoever signs first owns it.",
-      "why_now": "Pre-IPO brand-building budgets plus the open security category create a first-mover window that closes the moment a rival signs.",
-      "why_team": "Aston Martin's CISO-grade gravitas places Snyk's 'secure by design' story in front of the exact enterprise buyers it sells to.",
-      "value_to_team": "MODE A. Snyk integrates into developer workflows; an F1 team's growing in-house software estate is a real testbed and reference, supporting authentic 'secure development partner' storytelling and CISO hospitality.",
-      "deal_architecture": "Official partner tier, minimum three years, ~$3-4M/yr, with security-category exclusivity.",
-      "decision_maker": {"name": "Snyk CMO (verify current holder)", "title": "Marketing leadership", "bio": "Confirm current CMO and pre-IPO brand owner; CEO Peter McKay owns the IPO narrative."},
-      "opening_angle": "\"The security slot on the F1 grid is empty. JFrog and Sonatype both want it. First mover owns it for three years - ahead of your IPO. Is that you?\"",
-      "risks": [{"title": "IPO timing uncertainty", "detail": "Brand spend may wait for the listing.", "counter": "Sign now to lock category exclusivity; activate at IPO."}],
-      "sources": ["https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next", "https://strategyofsecurity.com/p/cybersecuritys-ipo-pipeline-2026-and-beyond"]
+      "headline_long": "Developer-security leader Snyk is building toward a 2026 IPO with a CMO seat in transition and no motorsport footprint - and the security category on the grid is still empty.",
+      "the_case": "Snyk is a well-funded developer-security leader (over $300M ARR) whose CEO, Peter McKay, has publicly flagged a 2026 IPO. Two signals stack up. First, the security category on the F1 grid is uncontested, so a multi-year partnership would give Snyk both enterprise credibility ahead of a listing and ownership of a lane no rival holds. Second, Snyk's brand function is mid-reset: its previous CMO, Jonaki Egenolf, departed for XBOW in November 2025, which means brand and sponsorship strategy is actively being re-decided right now - the ideal moment to plant an idea. The competitive nuance to flag internally: this is the same whitespace JFrog and Sonatype are eyeing, so the category is a race, and whoever signs first owns it.",
+      "why_now": "Pre-IPO brand-building budgets, an open security category, and a brand leadership reset all coincide. With the CMO seat in transition, the decision is currently closest to the CEO, which both shortens the chain and means the strategic framing set now will shape whoever inherits the role. The window closes the moment a DevSecOps rival commits to a team.",
+      "why_team": "Aston Martin's CISO-grade gravitas and premium, technically-credible identity place Snyk's 'secure by design' story directly in front of the enterprise security buyers it sells to. If Aston Martin's inventory is constrained, Williams (data/engineering revival) is a credible alternative with the right audience profile.",
+      "value_to_team": "MODE A. Snyk integrates security directly into developer workflows, and an F1 team's expanding in-house software estate is a real testbed and reference deployment. A deal can be built around securing the team's own development pipeline, giving the team genuine operational value and Snyk an authentic 'official developer-security partner' narrative plus CISO-level hospitality - substance on both sides, not signage.",
+      "deal_architecture": "Official Developer Security Partner tier on Aston Martin, minimum three years, ~$3-4M/yr, with security-category exclusivity and a working integration into the team's development pipeline.",
+      "decision_maker": {
+        "name": "Peter McKay",
+        "title": "CEO, Snyk - verified (note: CMO seat in transition after Jonaki Egenolf's Nov 2025 departure to XBOW)",
+        "bio": "CEO and the owner of Snyk's IPO narrative and, currently, its top-level brand decisions while the CMO role is being refilled - which makes him the right entry point today. Approach McKay directly and offer to help shape the sponsorship thesis the incoming CMO will execute. (Egenolf's move to XBOW is itself logged as a separate exec-migration signal.)"
+      },
+      "opening_angle": "\"Peter, with the CMO seat in transition the security-on-the-grid decision sits with you - and JFrog and Sonatype both want that empty slot. First mover owns it for three years, right before your IPO. Worth 25 minutes?\"",
+      "risks": [
+        {"title": "IPO timing uncertainty", "detail": "Brand spend may be deferred until the listing is closer.", "counter": "Sign now to lock category exclusivity at a pre-IPO price; scale activation at the listing."},
+        {"title": "Leadership gap", "detail": "With no sitting CMO, the deal could stall awaiting the new hire.", "counter": "Engage the CEO directly and frame the partnership as a ready-made win to hand the incoming CMO on day one."}
+      ],
+      "sources": [
+        "https://snyk.io/about/leadership/",
+        "https://finance.yahoo.com/news/xbow-appoints-former-snyk-veracode-180100481.html",
+        "https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next"
+      ]
     },
     {
       "id": "abnormal-security",
@@ -245,22 +260,32 @@
       "signals": ["never_entered", "funding_event", "category_whitespace"],
       "scores": {"timing": 15, "capacity": 16, "brand_fit": 15, "urgency": 12, "ops_fit": 14},
       "score_rationale": {
-        "timing": "Raised $250M Series D at $5.1B; publicly targeting public-company readiness.",
-        "capacity": "$5.1B valuation, strong ARR growth; comfortably funds a value-to-mid tier.",
-        "brand_fit": "AI behavioral security; cybersecurity category is open on the grid.",
-        "urgency": "IPO-readiness window, but no acute external forcing function yet.",
-        "ops_fit": "MODE A: every team faces targeted phishing/social engineering - a real security use case."
+        "timing": "Raised $250M Series D at $5.1B and has publicly targeted public-company readiness; the CMO seat is currently in transition, so brand strategy is open.",
+        "capacity": "$5.1B valuation with strong ARR growth - comfortably funds a value-to-mid tier.",
+        "brand_fit": "AI behavioral security sits in the open cybersecurity category on the grid.",
+        "urgency": "An IPO-readiness window exists, but there is no acute external forcing function yet.",
+        "ops_fit": "MODE A: every team faces targeted phishing and business-email compromise - a real, demonstrable security use case."
       },
-      "headline_long": "Abnormal Security raised a $250M Series D at $5.1B and is signalling public-company readiness - an AI-security leader with the budget and the brand mandate, and no motorsport presence.",
-      "the_case": "Abnormal Security, an AI behavioral-security leader, raised a $250M Series D at a $5.1B valuation and has publicly targeted operating as a public company. It has the capacity and the brand-building motive of a pre-IPO leader, sits in the open cybersecurity category, and has never entered motorsport.",
-      "why_now": "Pre-IPO leaders invest in enterprise brand to support a listing; the open security category rewards a first mover.",
-      "why_team": "Haas offers an accessible, lean entry tier with open enterprise-software categories - a sensible first motorsport step at a sensible price.",
-      "value_to_team": "MODE A. F1 teams are high-value targets for business email compromise and social engineering; Abnormal's platform is a credible security partner with real protective value and CISO-facing storytelling.",
-      "deal_architecture": "Official security partner tier, minimum three years, ~$2.5-4M/yr, with category exclusivity.",
-      "decision_maker": {"name": "Abnormal Security CMO (verify)", "title": "Marketing leadership", "bio": "Confirm current CMO; CEO Evan Reiser drives the IPO-readiness narrative."},
-      "opening_angle": "\"Pre-IPO is exactly when enterprise brand matters most. Security is open on the grid, and Haas is the smart, ownable first step. 25 minutes?\"",
-      "risks": [{"title": "Spend discipline pre-IPO", "detail": "Public-company prep favours efficiency.", "counter": "Lead with measurable B2B pipeline and a value-tier entry, not title-level spend."}],
-      "sources": ["https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next"]
+      "headline_long": "Abnormal Security raised a $250M Series D at $5.1B and is signalling public-company readiness - an AI-security leader with the budget and brand mandate, a CMO seat in transition, and no motorsport presence.",
+      "the_case": "Abnormal Security, an AI behavioral-security leader, raised a $250M Series D at a $5.1B valuation and has publicly stated it wants to be able to operate as a public company. It has the capacity and the brand-building motive of a pre-IPO leader, sits in the open cybersecurity category on the F1 grid, and has never entered motorsport. A useful nuance: its marketing leadership is in transition (the prior CMO, Doug Laird, is no longer listed on the current executive team, which now shows VP-level product and revenue marketing), so brand and sponsorship strategy is being re-decided - approach the CEO and help shape it.",
+      "why_now": "Pre-IPO leaders invest in enterprise brand to support a future listing, the cybersecurity category on the grid rewards a first mover, and the open CMO seat means the strategic framing set now will define the incoming hire's plan. There is no competitor clock yet, so the work here is to create the urgency rather than react to it - which favours an early, relationship-led approach.",
+      "why_team": "Haas offers an accessible, lean entry tier with open enterprise-software and security categories - a sensible first motorsport step at a sensible price for a company making its debut in the space, with room to scale to a bigger team at the next contract if the model proves out.",
+      "value_to_team": "MODE A. F1 teams are high-value targets for business-email compromise and social-engineering attacks aimed at finance and partnerships staff handling large sponsor flows. Abnormal's platform is a credible, deployable security partner with real protective value for the team, supporting an authentic CISO-facing 'official email-security partner' story rather than a logo placement.",
+      "deal_architecture": "Official Security Partner tier on Haas, minimum three years, ~$2.5-4M/yr, with category exclusivity and a working deployment protecting the team's email and finance functions.",
+      "decision_maker": {
+        "name": "Evan Reiser",
+        "title": "CEO & Co-Founder, Abnormal Security - verified (note: CMO seat in transition; current team shows VP-level marketing)",
+        "bio": "CEO and co-founder, and the owner of Abnormal's IPO-readiness narrative and top-level brand direction while the CMO role is unsettled - the right entry point today. Approach Reiser directly and offer a ready-made sponsorship thesis for the incoming marketing leader to execute."
+      },
+      "opening_angle": "\"Evan, pre-IPO is exactly when enterprise brand compounds, security is wide open on the F1 grid, and Haas is the smart, ownable first step. With the CMO seat in flux, this is your call - 25 minutes?\"",
+      "risks": [
+        {"title": "Spend discipline pre-IPO", "detail": "Public-company preparation favours visible efficiency.", "counter": "Lead with a value-tier entry and measurable B2B pipeline outcomes, not title-level spend."},
+        {"title": "Leadership gap", "detail": "An unsettled CMO seat could delay a decision.", "counter": "Engage the CEO and frame the deal as a turnkey win to hand the new marketing leader on arrival."}
+      ],
+      "sources": [
+        "https://abnormal.ai/about/team",
+        "https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next"
+      ]
     },
     {
       "id": "1password",
@@ -281,22 +306,170 @@
       "signals": ["never_entered", "funding_event", "category_whitespace"],
       "scores": {"timing": 15, "capacity": 16, "brand_fit": 15, "urgency": 12, "ops_fit": 14},
       "score_rationale": {
-        "timing": "Described as a lock for a 2026 IPO; $920M raised, last at $6.8B.",
-        "capacity": "$6.8B valuation, large enterprise base.",
-        "brand_fit": "Identity/access security; clean enterprise story, North American identity suits Andretti.",
-        "urgency": "Pre-IPO brand window, no acute external trigger.",
-        "ops_fit": "MODE A: credential/access security is a genuine team-wide operational need."
+        "timing": "Described as a near-lock for a 2026 IPO; $920M raised, last round at $6.8B, with leadership expanded for the next phase.",
+        "capacity": "$6.8B valuation and a large enterprise base - solid capacity for an FE entry tier.",
+        "brand_fit": "Identity and access security is a clean enterprise story, and the North American identity fits Andretti.",
+        "urgency": "A pre-IPO brand window exists, but no acute external trigger yet.",
+        "ops_fit": "MODE A: credential and access security is a genuine, team-wide operational need."
       },
-      "headline_long": "1Password is a near-lock for a 2026 IPO at a $6.8B valuation - an enterprise-identity leader with no motorsport footprint and a North American story that fits Andretti's Formula E entry.",
-      "the_case": "1Password has raised $920M (last at $6.8B) and is widely seen as a 2026 IPO lock. Enterprise identity/access security is unrepresented in Formula E, and 1Password's North American brand maps to Andretti. A pre-IPO multi-year deal builds enterprise credibility while entering an uncontested category.",
-      "why_now": "Pre-IPO brand investment plus an open category in a growing, enterprise-friendly championship.",
-      "why_team": "Andretti's North American identity and FE growth platform fit 1Password's brand and buyer base.",
-      "value_to_team": "MODE A. A racing organisation's distributed staff and partners need credential/access security; 1Password is a real operational partner with authentic 'who has access' storytelling and enterprise hospitality.",
-      "deal_architecture": "Official identity-security partner, minimum three years, ~$3-4M/yr, category exclusivity.",
-      "decision_maker": {"name": "1Password CMO (verify)", "title": "Marketing leadership", "bio": "Confirm current CMO and IPO brand owner."},
-      "opening_angle": "\"Formula E is the enterprise-friendly, sustainability-forward grid - and identity security isn't on it. Own the category before your IPO. 25 minutes?\"",
-      "risks": [{"title": "IPO sequencing", "detail": "Spend may follow the listing.", "counter": "Lock category exclusivity now; scale activation post-IPO."}],
-      "sources": ["https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next"]
+      "headline_long": "1Password is widely seen as a near-lock for a 2026 IPO at a $6.8B valuation - an enterprise-identity leader with no motorsport footprint and a North American story that fits Andretti's Formula E programme.",
+      "the_case": "1Password has raised $920M (last round at $6.8B) and is repeatedly named a 2026 IPO lock. Enterprise identity and access security is unrepresented in Formula E, and 1Password's North American brand and recent leadership expansion map cleanly onto Andretti. A pre-IPO multi-year partnership lets the company build enterprise credibility while entering a category no rival holds, on a championship whose enterprise-friendly, sustainability-forward audience matches its buyer profile.",
+      "why_now": "Pre-IPO brand investment plus an open category in a growing, enterprise-credible championship make this the moment to plant a flag - before the listing, when category exclusivity is cheapest, and while leadership is actively shaping the next-phase brand.",
+      "why_team": "Andretti's North American identity and Formula E growth platform fit 1Password's brand and buyer base, and Andretti's recent embrace of technology partners (including an AI partnership) shows an organisation receptive to enterprise-tech storytelling rather than pure consumer signage.",
+      "value_to_team": "MODE A. A racing organisation's distributed staff, drivers and partners need secure credential and access management across many systems and locations; 1Password is a real, deployable operational partner. The deal can include securing the team's own access infrastructure, giving Andretti genuine value and 1Password an authentic 'who has access' story plus enterprise hospitality.",
+      "deal_architecture": "Official Identity Security Partner tier on Andretti Formula E, minimum three years, ~$3-4M/yr, with category exclusivity and a working deployment for the team.",
+      "decision_maker": {
+        "name": "Melton Littlepage",
+        "title": "Chief Marketing Officer, 1Password - verified via 1Password.com",
+        "bio": "20+ years of category creation and growth at technology companies; previously CMO at Outreach. He owns 1Password's brand strategy and the IPO-readiness brand-build a Formula E partnership would anchor. Co-decision-maker for marquee spend: CEO Jeff Shiner."
+      },
+      "opening_angle": "\"Melton, Formula E is the enterprise-friendly, sustainability-forward grid - and identity security isn't on it. Own the category before your IPO, on a North American team that fits 1Password. 25 minutes?\"",
+      "risks": [
+        {"title": "IPO sequencing", "detail": "Brand spend may follow rather than precede the listing.", "counter": "Lock category exclusivity now at a pre-IPO price; scale activation after listing."},
+        {"title": "FE vs F1 reach question", "detail": "Leadership may instinctively reach for F1's larger audience.", "counter": "FE's enterprise/sustainability profile and lower category-crowding give 1Password ownership it could never get in saturated F1 fintech/security lanes."}
+      ],
+      "sources": [
+        "https://1password.com/company/meet-the-team/melton-littlepage",
+        "https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next"
+      ]
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "ticker": "Private (~$7B valuation; ~$150M ARR; IPO interest)",
+      "category": "Enterprise AI",
+      "hq": "Toronto, Canada / San Francisco, CA",
+      "series": "FE",
+      "status": "active",
+      "discovery": "self",
+      "already_present": false,
+      "mode": "A",
+      "min_deal_years": 3,
+      "est_inbound_pitches": 55,
+      "recommended_team": "Nissan Formula E",
+      "timing_window": "WARM",
+      "action_horizon": "8-12 WKS",
+      "signals": ["never_entered", "funding_event", "category_whitespace"],
+      "scores": {"timing": 15, "capacity": 16, "brand_fit": 16, "urgency": 12, "ops_fit": 14},
+      "score_rationale": {
+        "timing": "Recently valued at ~$7B with founder interest in a public listing - an enterprise-AI brand-building phase, though no single dated trigger.",
+        "capacity": "~$7B valuation, ~$150M ARR, well capitalised for an FE entry tier.",
+        "brand_fit": "Enterprise, security-conscious 'sovereign AI' positioning fits a sustainability-led, internationally-rooted championship; Canadian identity pairs naturally with Nissan's global EV story.",
+        "urgency": "Enterprise-AI brands are racing for mindshare, but there is no acute external clock.",
+        "ops_fit": "MODE A: AI for race strategy, energy modelling and data analysis is a credible team use case."
+      },
+      "headline_long": "Enterprise-AI leader Cohere is valued near $7B with public-listing ambitions - a security-conscious, Canadian AI champion with no motorsport footprint and a clean fit for Formula E's enterprise-and-sustainability audience.",
+      "the_case": "Cohere is an enterprise-focused AI company (co-headquartered in Toronto and San Francisco) recently valued at roughly $7B with about $150M in ARR and a founder who has signalled interest in a public listing. Unlike consumer-AI labs, Cohere's whole positioning is enterprise-grade, secure, deployable 'AI you can trust in production' - a register that fits Formula E's enterprise-and-sustainability audience far better than a saturated F1 fintech lane. No frontier or enterprise-AI brand currently holds a Formula E team partnership, so the category is open, and an FE entry would give Cohere a differentiated, internationally-credible brand stage as it builds toward the public markets.",
+      "why_now": "Cohere is in an active enterprise brand-building phase ahead of a likely listing, and the enterprise-AI category in Formula E is empty - a combination that rewards moving before peers (and before any of the larger AI labs) recognise the same open lane. The absence of a dated trigger argues for a relationship-led approach now, while category exclusivity is uncontested and inexpensive.",
+      "why_team": "Nissan is the fit: a global EV pioneer with deep Formula E pedigree and an international, technology-forward brand that pairs naturally with Cohere's Canadian-and-Californian, enterprise-AI identity. The team's electric-mobility story and Cohere's 'practical AI for real enterprises' story reinforce each other, and Nissan's audience skews to exactly the kind of large, regulated enterprises Cohere sells to.",
+      "value_to_team": "MODE A. AI-driven race strategy, energy-management modelling for an all-electric car, and large-scale data analysis are genuine Formula E problems where Cohere's enterprise models could be deployed as a working technical partnership, not just branding. Nissan gains a real AI collaboration and a credible innovation narrative; Cohere gains a live, demonstrable deployment it can reference with enterprise buyers and investors.",
+      "deal_architecture": "Official Enterprise AI Partner tier on Nissan Formula E, minimum three years, ~$3-5M/yr, with AI-category exclusivity and a defined technical workstream (strategy/energy modelling) so the partnership has substance.",
+      "decision_maker": {
+        "name": "Frank O'Dowd",
+        "title": "Chief Revenue & Commercial Officer, Cohere - verified (Cohere has no standalone CMO; marketing reports into the commercial function)",
+        "bio": "Cohere runs its go-to-market and brand through the commercial organisation rather than a separate CMO, so the Chief Revenue & Commercial Officer is the correct entry point for a partnership decision. Co-decision-maker: co-founder & CEO Aidan Gomez, who is closely involved in brand and strategic-partnership choices."
+      },
+      "opening_angle": "\"Frank, Cohere's whole edge is enterprise-grade, deployable AI - Formula E is the enterprise-and-sustainability grid, and no AI brand owns it yet. Nissan gives you a real strategy/energy workstream, not a logo. 25 minutes?\"",
+      "risks": [
+        {"title": "Founder-led brand caution", "detail": "AI labs often deprioritise sponsorship as off-strategy.", "counter": "Frame as enterprise credibility, a live technical reference deployment, and a talent magnet in a fierce AI recruiting market - not consumer marketing."},
+        {"title": "No dated trigger", "detail": "Without an acute clock, the deal can drift.", "counter": "Use category exclusivity as the urgency: it disappears the moment a rival AI brand signs an FE team."}
+      ],
+      "sources": [
+        "https://news.crunchbase.com/public/crunchbase-predicts-15-companies-ipo-ai-fintech-defense-forecast-2026/",
+        "https://cohere.com/about"
+      ]
+    },
+    {
+      "id": "glean",
+      "name": "Glean",
+      "ticker": "Private (~$7.2B valuation; pre-IPO)",
+      "category": "Enterprise AI / Work AI Platform",
+      "hq": "Palo Alto, CA",
+      "series": "FE",
+      "status": "active",
+      "discovery": "self",
+      "already_present": false,
+      "mode": "A",
+      "min_deal_years": 3,
+      "est_inbound_pitches": 50,
+      "recommended_team": "Mahindra Racing",
+      "timing_window": "WARM",
+      "action_horizon": "8-12 WKS",
+      "signals": ["spinoff_unicorn", "never_entered", "funding_event", "category_whitespace"],
+      "scores": {"timing": 15, "capacity": 16, "brand_fit": 15, "urgency": 12, "ops_fit": 14},
+      "score_rationale": {
+        "timing": "Surged to a ~$7.2B valuation with 250M+ agentic actions by Jan 2026 and an Aryn acquisition in Mar 2026 - a fast-scaling brand on an IPO trajectory.",
+        "capacity": "~$7.2B valuation, rapid enterprise adoption - capacity for an FE entry tier is solid.",
+        "brand_fit": "'Work AI' for large enterprises fits FE's enterprise audience; a clean, uncontested AI category in the paddock.",
+        "urgency": "Fast-rising valuation and IPO trajectory, but no single dated trigger.",
+        "ops_fit": "MODE A: enterprise knowledge/agent AI has a real internal-operations use for a racing organisation."
+      },
+      "headline_long": "Glean has rocketed to a ~$7.2B valuation as the enterprise 'Work AI' leader, with 250M+ agentic actions and an acquisition already in 2026 - a fast-scaling, pre-IPO brand with no motorsport presence and an open AI lane in Formula E.",
+      "the_case": "Glean is one of enterprise AI's fastest risers: a ~$7.2B 'Work AI' platform whose users executed more than 250 million agentic actions by January 2026, and which acquired agentic-document company Aryn in March 2026. It is on a clear IPO trajectory, has never entered motorsport, and sits in the same open enterprise-AI category as Cohere - meaning Formula E currently has room for a Work-AI brand to own a lane outright. Glean's product story (AI that makes large organisations radically more productive) is a natural fit for the operational, engineering-led narrative of an FE team, and its growth-stage brand would benefit from the international, enterprise-credible stage FE provides.",
+      "why_now": "Glean is scaling brand and go-to-market hard ahead of a likely listing, and the enterprise-AI category in FE is uncontested. Moving now secures category exclusivity cheaply and gives Glean a differentiated stage before larger AI names crowd in - the same first-mover logic that makes the AI lane valuable applies in reverse the moment a peer signs.",
+      "why_team": "Mahindra Racing is a strong fit: a founding Formula E manufacturer committed through the Gen4 era to 2030, with an Indian-and-global identity and a large enterprise parent ecosystem (the Mahindra Group) that mirrors the kind of complex, multi-business organisation Glean sells into. The long manufacturer commitment also de-risks a multi-year deal, and Mahindra's audience and parent-group relationships open enterprise doors for Glean.",
+      "value_to_team": "MODE A. A racing team and its parent run on dispersed institutional knowledge - engineering documentation, supplier data, sponsor and operations information - which is exactly what Glean's Work-AI platform indexes and makes instantly usable. A deployment for the team and selected parent-group functions gives Mahindra real productivity value and Glean a flagship, referenceable enterprise deployment, plus a co-marketing story across a global enterprise group.",
+      "deal_architecture": "Official Work AI Partner tier on Mahindra Racing, minimum three years (aligned to the manufacturer's Gen4 commitment), ~$3-4M/yr, with AI-category exclusivity and a working deployment for the team and selected Mahindra Group functions.",
+      "decision_maker": {
+        "name": "Matt \"Kix\" Kixmoeller",
+        "title": "Chief Marketing Officer, Glean - verified via Glean.com",
+        "bio": "Oversees Glean's global marketing; previously led marketing at Ghost Autonomy and marketing/product at Pure Storage (a multi-billion-dollar data pioneer). He owns the growth-stage brand-build a Formula E partnership would anchor. Co-decision-makers: founder-CEO Arvind Jain and COO Amar Maletira (go-to-market)."
+      },
+      "opening_angle": "\"Kix, Glean is the Work-AI leader and Formula E's enterprise-AI lane is wide open. Mahindra is committed to 2030, so a multi-year deal is de-risked - and you'd own the category before the IPO. 25 minutes?\"",
+      "risks": [
+        {"title": "Hyper-growth focus", "detail": "A fast-scaling company may keep all spend on direct go-to-market.", "counter": "Frame the deal as an enterprise-credibility and reference-deployment play with measurable pipeline, not brand vanity."},
+        {"title": "No dated trigger", "detail": "Absent an acute clock, the deal can slip.", "counter": "Category exclusivity is the clock - it vanishes the moment a rival AI brand signs an FE team."}
+      ],
+      "sources": [
+        "https://www.glean.com/authors/mattkix",
+        "https://unicornscreener.vc/blog/7-rising-ai-startups-positioned-for-unicorn-status-by-2026"
+      ]
+    },
+    {
+      "id": "plaid",
+      "name": "Plaid",
+      "ticker": "Private (~$6.1B post-money; IPO 'very likely' 2026)",
+      "category": "Fintech · Open Banking / Financial Data Network",
+      "hq": "San Francisco, CA",
+      "series": "FE",
+      "status": "active",
+      "discovery": "self",
+      "already_present": false,
+      "mode": "B",
+      "min_deal_years": 3,
+      "est_inbound_pitches": 60,
+      "recommended_team": "Jaguar TCS Racing",
+      "timing_window": "WARM",
+      "action_horizon": "8-12 WKS",
+      "signals": ["funding_event", "new_leadership", "never_entered", "category_whitespace"],
+      "scores": {"timing": 16, "capacity": 16, "brand_fit": 15, "urgency": 12, "ops_fit": 11},
+      "score_rationale": {
+        "timing": "Sold ~$575M of stock at a $6.1B post-money (Apr 2026) and is rated 'very likely' to IPO in 2026; new CMO (Jan 2026) and new President are actively setting brand strategy.",
+        "capacity": "$6.1B post-money with a fresh secondary - solid capacity for an FE entry tier.",
+        "brand_fit": "Open-banking/financial-data network has a clean trust-and-infrastructure story; fits FE's enterprise audience and avoids the saturated F1 fintech lane.",
+        "urgency": "IPO trajectory and fresh leadership, but no dated calendar anchor.",
+        "ops_fit": "MODE B: financial-data infrastructure serves back-office/partner flows rather than the car."
+      },
+      "headline_long": "Plaid sold ~$575M of stock at a $6.1B post-money in April 2026, is rated a 'very likely' 2026 IPO, and just installed a new CMO and President - a fintech infrastructure leader with no motorsport footprint and an open lane away from the crowded F1 fintech grid.",
+      "the_case": "Plaid - the financial-data network behind much of open banking - sold roughly $575M of common stock at a $6.1B post-money valuation in April 2026 and is rated 'very likely' to go public in 2026. Crucially for outreach timing, it has just reset its brand leadership: Hannah Hughes joined as CMO in January 2026 and Jen Taylor as President, so the brand and partnership agenda is being written right now. While F1's fintech lane is saturated (Visa, Revolut, Mastercard et al.), Formula E's is open - and Plaid's infrastructure-and-trust story (the secure plumbing of modern finance) fits FE's enterprise audience without forcing Plaid into a crowded, expensive F1 bidding war. No financial-data or open-banking brand holds an FE team partnership.",
+      "why_now": "A new CMO's first two quarters are when the marquee brand investments are chosen, and Plaid has both a new CMO and a new President setting direction simultaneously - the classic leadership-honeymoon window. Layer on an IPO trajectory (brand credibility matters most pre-listing) and an uncontested FE category, and the case for moving now, before peers notice the open lane, is strong.",
+      "why_team": "Jaguar TCS Racing is the fit: a British, premium, sustainability-and-technology-services-led team (with TCS, an IT-services major, as title partner) whose enterprise-infrastructure positioning mirrors Plaid's 'trusted financial infrastructure' story. The team's blue-chip, B2B-credible audience suits a company selling to banks, fintechs and large enterprises, and its sustainability narrative aligns with Plaid's modern, responsible-finance brand.",
+      "value_to_team": "MODE B. Plaid's financial-data and payments infrastructure maps to a racing organisation's partner-onboarding, settlement and treasury flows rather than to the car, but the value exchange is real: the team gains modern financial connectivity and a fintech co-marketing partner, while Plaid gets a premium, enterprise-credible stage and a sustainability-aligned association. The honest framing is a back-office and brand partnership, not a technical in-car integration.",
+      "deal_architecture": "Official Financial Infrastructure Partner tier on Jaguar TCS Racing, minimum three years, ~$3-5M/yr, with category exclusivity for open-banking/financial-data and B2B hospitality aimed at Plaid's enterprise audience.",
+      "decision_maker": {
+        "name": "Hannah Hughes",
+        "title": "Chief Marketing Officer, Plaid (appointed Jan 2026) - verified",
+        "bio": "Joined Plaid as CMO in January 2026; previously Head of Product Marketing at Cash App, with earlier roles at Affirm, Facebook, Airbnb, Google and Apple. As a new CMO she is actively setting the brand and partnership agenda a Formula E deal would anchor. Co-decision-makers: President Jen Taylor and co-founder & CEO Zachary Perret."
+      },
+      "opening_angle": "\"Hannah, F1's fintech lane is full - Formula E's is empty. Plaid's 'trusted financial infrastructure' story fits Jaguar's enterprise audience perfectly, and as the new CMO this is yours to define. 25 minutes?\"",
+      "risks": [
+        {"title": "B2B vs consumer reach", "detail": "Leadership may question motorsport for an infrastructure brand.", "counter": "Frame as enterprise trust and credibility with banks/fintechs, on a B2B-credible team - not consumer reach; lead with pipeline and partner-audience metrics."},
+        {"title": "IPO sequencing", "detail": "Spend may be deferred until closer to listing.", "counter": "Lock category exclusivity now at a pre-IPO price; scale activation into the listing."}
+      ],
+      "sources": [
+        "https://financialnarrative.org/news/11453814",
+        "https://news.crunchbase.com/public/crunchbase-predicts-15-companies-ipo-ai-fintech-defense-forecast-2026/"
+      ]
     },
     {
       "id": "mistral-ai",
@@ -313,26 +486,36 @@
       "est_inbound_pitches": 70,
       "recommended_team": "Nissan Formula E",
       "timing_window": "WARM",
-      "action_horizon": "6-10 WKS",
+      "action_horizon": "8-12 WKS",
       "signals": ["never_entered", "funding_event", "category_whitespace"],
       "scores": {"timing": 15, "capacity": 17, "brand_fit": 15, "urgency": 12, "ops_fit": 13},
       "score_rationale": {
-        "timing": "Fresh mega-round; building a global enterprise brand and European AI-sovereignty narrative.",
+        "timing": "Fresh mega-round funding a global enterprise brand-build and a 'European AI sovereignty' narrative.",
         "capacity": "Multi-billion valuation, well capitalised.",
-        "brand_fit": "European AI champion fits a European, sustainability-led championship.",
-        "urgency": "AI brands racing for enterprise mindshare; presence differentiates.",
-        "ops_fit": "MODE A: AI for strategy/data analysis is a credible team use case."
+        "brand_fit": "Europe's AI champion fits a European-rooted, sustainability-led championship.",
+        "urgency": "AI brands are racing for enterprise mindshare; an FE presence differentiates, but no dated trigger.",
+        "ops_fit": "MODE A: AI for strategy and data analysis is a credible team use case."
       },
-      "headline_long": "Europe's frontier-AI champion Mistral is flush with capital and brand ambition - and Formula E is the European, sustainability-native stage it has never used.",
-      "the_case": "Mistral AI, freshly capitalised, is building a global enterprise brand and a 'European AI sovereignty' narrative. Formula E - European-rooted and sustainability-led - is a natural stage; no frontier-AI lab currently holds an FE team partnership.",
-      "why_now": "Post-raise brand budget plus an enterprise land-grab make a multi-year platform attractive now.",
-      "why_team": "Nissan (EV pioneer, strong FE pedigree) aligns Mistral's AI story with electric performance; a French team option (post-DS) can be revisited as the grid settles.",
-      "value_to_team": "MODE A. AI-driven race strategy, energy management modelling and data analysis are real FE problems; Mistral can be a working technical partner, not just a logo.",
-      "deal_architecture": "Official AI / technology partner, minimum three years, ~$3-5M/yr, AI-category exclusivity with a data/strategy activation angle.",
-      "decision_maker": {"name": "Mistral AI Head of Marketing / Comms (verify)", "title": "Marketing / Comms leadership", "bio": "Confirm current marketing/brand owner; founders are closely involved in brand decisions."},
-      "opening_angle": "\"Europe built the championship of the future. Europe's AI champion isn't on it yet. Three years, real technical activation, your story.\"",
-      "risks": [{"title": "Engineering-led culture", "detail": "Founder-led labs may deprioritise sponsorship.", "counter": "Frame as enterprise credibility and a talent magnet in a recruiting war."}],
-      "sources": ["https://www.fiaformulae.com/en/teams", "https://techcrunch.com/2026/01/12/at-least-36-new-tech-unicorns-were-minted-in-2025-so-far/"]
+      "headline_long": "Europe's frontier-AI champion Mistral is flush with capital and brand ambition - and Formula E is the European, sustainability-native stage it has never used, with no AI lab yet holding an FE team deal.",
+      "the_case": "Mistral AI, freshly capitalised at a multi-billion valuation, is building a global enterprise brand and a 'European AI sovereignty' narrative that resonates strongly with European institutions and enterprises. Formula E - European-rooted, sustainability-led and internationally broadcast - is a natural stage for that story, and no frontier-AI lab currently holds a Formula E team partnership, leaving the category open. For a company defining itself as Europe's answer in AI, an association with the world's premier electric racing championship is an unusually on-message brand and talent platform. Note the slightly higher crowding (~70): Mistral is well known and already courted, so the angle must be sharply differentiated by team fit and a real technical workstream.",
+      "why_now": "Post-raise brand budgets, an enterprise-mindshare land-grab among AI labs, and an uncontested FE category make a multi-year platform attractive now. The differentiator is speed and specificity: with crowding rising, the team-fit and technical-substance pitch must arrive before Mistral commits its brand attention elsewhere.",
+      "why_team": "Nissan pairs a global EV pioneer's Formula E pedigree with an international, technology-forward identity. A French AI champion on a globally-recognised EV team tells a clean 'European innovation, global stage' story; if a French-team option re-emerges as the grid settles post-DS, it can be revisited, but Nissan offers the strongest combination of pedigree and reach today.",
+      "value_to_team": "MODE A. AI-driven race strategy, energy-management modelling for an all-electric powertrain, and large-scale data analysis are real FE problems where Mistral's models could be deployed as a working technical partnership. Nissan gains a genuine AI collaboration and innovation narrative; Mistral gains a live, referenceable deployment and a sustainability-aligned brand stage.",
+      "deal_architecture": "Official AI / Technology Partner tier on Nissan Formula E, minimum three years, ~$3-5M/yr, with AI-category exclusivity and a defined data/strategy activation workstream.",
+      "decision_maker": {
+        "name": "Jon Bock",
+        "title": "Head of Marketing, Mistral AI - verified (Mistral has no standalone CMO title; Bock leads marketing)",
+        "bio": "Leads marketing at Mistral AI; senior marketing leadership reports to him (e.g. Ari Paul, Senior Director of Brand, Product & Technical Marketing). The correct entry point for a brand-partnership conversation. Co-decision-makers: the founding team (CEO Arthur Mensch and co-founders), who are closely involved in brand decisions."
+      },
+      "opening_angle": "\"Jon, Europe built the championship of the future and Europe's AI champion isn't on it yet. Nissan gives Mistral a real strategy/energy workstream and a global stage - not a logo. Can we hold 25 minutes before the AI lane fills?\"",
+      "risks": [
+        {"title": "Engineering-led culture", "detail": "Founder-led AI labs may deprioritise sponsorship.", "counter": "Frame as enterprise credibility, a live technical reference, and a talent magnet in a brutal recruiting war - with European-sovereignty brand alignment."},
+        {"title": "Rising crowding", "detail": "At ~70 inbound, Mistral is already courted.", "counter": "Differentiate hard on specific team fit and a concrete technical workstream; lead with substance, not a generic logo pitch."}
+      ],
+      "sources": [
+        "https://theorg.com/org/mistral-ai/teams/leadership-team",
+        "https://www.fiaformulae.com/en/teams"
+      ]
     },
     {
       "id": "isomorphic-labs",
@@ -350,25 +533,35 @@
       "recommended_team": "Jaguar TCS Racing",
       "timing_window": "DEVELOPING",
       "action_horizon": "12+ WKS",
-      "signals": ["spinoff_unicorn", "never_entered", "funding_event"],
+      "signals": ["spinoff_unicorn", "never_entered", "funding_event", "new_leadership"],
       "scores": {"timing": 13, "capacity": 16, "brand_fit": 13, "urgency": 10, "ops_fit": 9},
       "score_rationale": {
-        "timing": "First external capital (March 2025, $600M) - early in its brand life.",
-        "capacity": "Unicorn-territory, Alphabet-linked; capacity solid, spend appetite unproven.",
-        "brand_fit": "British deep-tech; precision/science narrative fits a British team, but pharma is an unusual motorsport category.",
-        "urgency": "Low; long-horizon relationship.",
-        "ops_fit": "MODE B: no direct in-car use; a science/innovation brand-association play."
+        "timing": "Took first external capital (March 2025, $600M) and appointed a first President (Colin Murdoch) - early in its brand life, low urgency.",
+        "capacity": "Unicorn-territory and Alphabet-linked; capacity is solid, though sponsorship appetite is unproven.",
+        "brand_fit": "British deep-tech with a precision-science story that suits a British team, but pharma is an unusual motorsport category.",
+        "urgency": "Low - a long-horizon relationship play.",
+        "ops_fit": "MODE B: no direct in-car use; primarily a science/innovation and talent brand association."
       },
-      "headline_long": "DeepMind spin-out Isomorphic Labs raised $600M into unicorn territory - a British AI deep-tech with a precision-science story and no motorsport footprint, ideal to court early before crowding rises.",
-      "the_case": "Isomorphic Labs, the DeepMind/Alphabet spin-out, took its first external capital ($600M) in 2025, entering unicorn territory. Low crowding (~25) makes it an ideal early relationship: a British, precision-science brand whose talent-and-credibility goals could be served by a measured FE association.",
-      "why_now": "Relationship-first, not a deal yet - get in before the crowd, while the brand is still being built.",
-      "why_team": "Jaguar TCS Racing - British, sustainability-and-IT-services-led - is the natural cultural fit.",
-      "value_to_team": "MODE B. Primarily a science/innovation and talent-brand association rather than an in-car system; value sits in shared 'precision and discovery' narrative and recruiting halo.",
-      "deal_architecture": "Start with a modest official-partner tier, minimum three years, structured to grow; ~$2-3M/yr.",
-      "decision_maker": {"name": "Isomorphic Labs Head of Comms / CEO Demis Hassabis (verify lead)", "title": "Leadership / Comms", "bio": "Founder-led (Demis Hassabis); confirm the brand/comms owner. A long-horizon, relationship-first target."},
-      "opening_angle": "\"You're a unicorn no one in motorsport has called. Let's build the relationship before you're the 100th name in the paddock.\"",
-      "risks": [{"title": "Off-strategy risk", "detail": "A drug-discovery lab may see motorsport as irrelevant.", "counter": "Frame as talent attraction and precision-science narrative, not consumer reach; keep it small and optional to scale."}],
-      "sources": ["https://techcrunch.com/2025/09/08/more-than-10-european-startups-became-unicorns-this-year/"]
+      "headline_long": "DeepMind spin-out Isomorphic Labs raised $600M into unicorn territory and named its first President - a British AI deep-tech with a precision-science story, low inbound crowding, and no motorsport footprint, ideal to court early.",
+      "the_case": "Isomorphic Labs, the DeepMind/Alphabet spin-out applying AI to drug discovery, took its first external capital ($600M) in 2025, entering unicorn territory, and has begun building out its leadership (appointing Colin Murdoch, who also serves as Google DeepMind's Chief Business Officer, as its first President). The standout attribute is low inbound crowding (~25): almost no one in motorsport has called them, so 1440 could be early by a wide margin. It is a British, precision-science brand whose talent-attraction and credibility goals could be served by a measured, tasteful Formula E association - a long-horizon relationship to build now, before the company scales its brand spend and the crowd arrives.",
+      "why_now": "This is a relationship-first play, not a deal to force this quarter. The value of acting now is positional: getting in while crowding is near zero and a newly-formed commercial leadership is open to ideas, so that when Isomorphic does turn to brand and talent marketing, 1440 is already the trusted motorsport partner rather than one of fifty inbound pitches.",
+      "why_team": "Jaguar TCS Racing - British, premium, technology-and-sustainability-led - is the natural cultural and geographic fit for a London deep-tech brand, and its blue-chip audience suits a science-led company focused on credibility and recruitment over consumer reach.",
+      "value_to_team": "MODE B. This is primarily a science, innovation and talent-brand association rather than an in-car technical integration; the value sits in a shared 'precision and discovery' narrative and a recruiting halo for both organisations. Kept deliberately modest and optional-to-scale, it gives Jaguar a distinctive, prestige-science partner and Isomorphic a tasteful, high-credibility brand stage - with room to deepen only if both sides see value.",
+      "deal_architecture": "Start with a modest Official Partner tier on Jaguar TCS Racing, minimum three years, ~$2-3M/yr, structured to grow, with emphasis on talent/employer-brand activation rather than heavy consumer signage.",
+      "decision_maker": {
+        "name": "Colin Murdoch",
+        "title": "President, Isomorphic Labs (also Chief Business Officer, Google DeepMind) - verified",
+        "bio": "Isomorphic's first President and the senior commercial leader most likely to own brand and strategic-partnership decisions; he brings deep DeepMind commercial experience. Co-decision-makers: CEO Demis Hassabis (founder) and Sarah Korman, Chief Business & Legal Officer - approach Murdoch/Korman on the commercial side."
+      },
+      "opening_angle": "\"Colin, almost no one in motorsport has called Isomorphic yet - which is exactly why now is the time. A tasteful, British, precision-science association with Jaguar is a recruiting and credibility asset. Worth an exploratory 25 minutes?\"",
+      "risks": [
+        {"title": "Off-strategy risk", "detail": "A drug-discovery lab may see motorsport as irrelevant to its mission.", "counter": "Frame strictly as talent attraction and a precision-science narrative, kept small and optional-to-scale - not consumer marketing."},
+        {"title": "Unproven sponsorship appetite", "detail": "The company has never done anything like this.", "counter": "Lead with a low-commitment, high-credibility structure and let the relationship, not a hard sell, carry it."}
+      ],
+      "sources": [
+        "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-first-phase-of-management-team",
+        "https://techcrunch.com/2025/09/08/more-than-10-european-startups-became-unicorns-this-year/"
+      ]
     },
     {
       "id": "sonatype",
@@ -389,22 +582,32 @@
       "signals": ["never_entered", "category_whitespace", "competitor_on_grid"],
       "scores": {"timing": 13, "capacity": 13, "brand_fit": 16, "urgency": 13, "ops_fit": 14},
       "score_rationale": {
-        "timing": "Reactive trigger: becomes HOT the moment JFrog signs.",
-        "capacity": "Mid-market; a value tier rather than premium.",
-        "brand_fit": "Exact same category as JFrog - direct whitespace.",
-        "urgency": "Rises sharply if JFrog moves first (counter-narrative).",
-        "ops_fit": "MODE A: genuine software-supply-chain use in a team's dev pipeline."
+        "timing": "Reactive trigger - becomes HOT the moment JFrog or Snyk signs a team.",
+        "capacity": "Mid-market and Vista-owned (ROI-disciplined) - a value tier rather than premium.",
+        "brand_fit": "Exact same software-supply-chain-security category as JFrog - direct whitespace.",
+        "urgency": "Rises sharply if a direct rival moves first, enabling a counter-narrative pitch.",
+        "ops_fit": "MODE A: a genuine software-supply-chain use in a team's dev pipeline."
       },
-      "headline_long": "Sonatype is JFrog's mirror in software supply chain security - the natural counter-narrative buyer the moment a rival signs a team.",
-      "the_case": "Sonatype occupies the same software-supply-chain-security whitespace as JFrog. It is the classic counter-narrative target: if JFrog signs a team, Sonatype's urgency spikes and a rival-team pitch becomes compelling (the SnapLogic-vs-Confluent playbook). Capacity is more modest, so target a value tier.",
-      "why_now": "Trigger-based - escalate immediately if JFrog or Snyk commits.",
-      "why_team": "Haas offers an accessible entry tier for a mid-market budget.",
-      "value_to_team": "MODE A. Same genuine pipeline-security use as JFrog; supports a credible technical-partner story at a value tier.",
-      "deal_architecture": "Value partner tier, minimum three years, ~$1.5-3M/yr.",
-      "decision_maker": {"name": "Sonatype CMO (verify)", "title": "Marketing leadership", "bio": "Confirm current CMO; Vista Equity ownership means ROI discipline."},
-      "opening_angle": "\"Your direct competitor just put security on an F1 car. The counter-move is a rival team - before the category fully closes.\"",
-      "risks": [{"title": "Budget discipline", "detail": "PE owner scrutinises spend.", "counter": "Lead with measurable B2B pipeline and a competitive-defence rationale."}],
-      "sources": ["https://cybersecuritynews.com/best-supply-chain-intelligence-security-companies/"]
+      "headline_long": "Sonatype is JFrog's mirror in software supply chain security - the natural counter-narrative buyer the moment a direct rival signs a team.",
+      "the_case": "Sonatype occupies precisely the same software-supply-chain-security whitespace as JFrog, which makes it the classic counter-narrative target. If JFrog (or Snyk) signs a team, Sonatype's urgency spikes overnight and a rival-team pitch becomes highly compelling - the exact SnapLogic-versus-Confluent playbook of turning a competitor's sponsorship into the prospect's reason to act. Capacity is more modest and ownership is private equity (Vista), so the right structure is a disciplined value tier with a clear competitive-defence rationale rather than a premium land-grab.",
+      "why_now": "Trigger-based: this prospect should be escalated to HOT and approached immediately if and when JFrog or Snyk commits to a team. Until then it is a primed, pre-researched lead to activate the day the category's first domino falls.",
+      "why_team": "Haas offers an accessible entry tier suited to a mid-market budget and PE ROI discipline, and a rival-team position to whichever team a competitor chooses gives Sonatype the counter-narrative framing that justifies the spend internally.",
+      "value_to_team": "MODE A. The same genuine pipeline-security use as JFrog - artifact management and open-source governance across the team's development workflow - supporting a credible technical-partner story at a value tier, with real tooling value to the team alongside the branding.",
+      "deal_architecture": "Value Partner tier on Haas, minimum three years, ~$1.5-3M/yr, with a competitive-defence framing and a working integration into the team's dev pipeline.",
+      "decision_maker": {
+        "name": "Megan Lueders",
+        "title": "Chief Marketing Officer, Sonatype - verified",
+        "bio": "Joined Sonatype as CMO in 2023; previously CMO at Silicon Labs, where she drove significant revenue growth. She owns brand and demand, and would lead a competitive-response sponsorship. Co-decision-maker: CEO Wayne Jackson (and Vista Equity ownership imposes ROI discipline)."
+      },
+      "opening_angle": "\"Megan, the day your direct competitor puts security on an F1 car, the counter-move is a rival team - and we'll have it pre-built for you. Want the playbook ready before that happens?\"",
+      "risks": [
+        {"title": "Budget discipline", "detail": "PE owner Vista scrutinises discretionary spend hard.", "counter": "Lead with measurable B2B pipeline and an explicit competitive-defence rationale; keep the entry at a disciplined value tier."},
+        {"title": "Trigger hasn't fired", "detail": "Without a rival signing, urgency stays low.", "counter": "Keep warm and pre-researched; activate within days of the first competitor announcement."}
+      ],
+      "sources": [
+        "https://www.sonatype.com/press-releases/megan-lueders-joins-sonatype-as-chief-marketing-officer",
+        "https://cybersecuritynews.com/best-supply-chain-intelligence-security-companies/"
+      ]
     },
     {
       "id": "snaplogic",
@@ -425,23 +628,27 @@
       "signals": ["new_leadership", "competitor_on_grid", "funding_event", "category_whitespace"],
       "scores": {"timing": 17, "capacity": 16, "brand_fit": 16, "urgency": 15, "ops_fit": 14},
       "score_rationale": {
-        "timing": "President Molly Matthews appointed May 12 2026; honeymoon window narrowing.",
-        "capacity": "$100M+ ARR (Aug 2025), a16z-backed balance sheet.",
-        "brand_fit": "Agentic integration maps to F1 precision; direct counter-narrative to Confluent.",
-        "urgency": "Confluent (direct iPaaS rival) is on the Williams 2026 livery.",
-        "ops_fit": "MODE A: integration tooling has a credible team-systems use."
+        "timing": "President Molly Matthews appointed May 12 2026 alongside CCO and CPO promotions; the leadership honeymoon window is open but narrowing.",
+        "capacity": "$100M+ ARR (Aug 2025) on an a16z-backed balance sheet.",
+        "brand_fit": "Agentic integration maps to F1 precision and forms a direct counter-narrative to Confluent on Williams.",
+        "urgency": "Confluent - a direct iPaaS rival - is on the Williams 2026 livery, and the association hardens every race weekend.",
+        "ops_fit": "MODE A: integration/automation tooling has a credible team-systems use."
       },
-      "headline_long": "SnapLogic appointed a President and expanded its C-suite the same day; rival Confluent is already on the Williams livery - and SnapLogic cannot cede the enterprise-credibility stage to a competitor.",
-      "the_case": "On 12 May 2026 SnapLogic appointed Molly Matthews (ex-Microsoft enterprise GTM) as President while promoting its CCO and CPO - a deliberate scale-up with new budget authority. Backed by a16z, Microsoft, Silver Lake Waterman, Sixth Street and Capital One Ventures, with $100M+ ARR (Aug 2025) and customers including AstraZeneca, Adobe, Verizon and Sony. The decisive signal: Confluent, a direct iPaaS rival, is an active partner on the Williams 2026 livery.",
-      "why_now": "Matthews's appointment created a leadership window in which new Presidents approve first-mover brand investments; Confluent's Williams presence hardens every race. A rival-team announcement reframes the narrative before it solidifies.",
-      "why_team": "Aston Martin (or McLaren) places SnapLogic directly opposite Confluent's Williams partnership - turning a competitor's sponsorship into SnapLogic's urgency argument, in front of the same CTO/CDO audience.",
-      "value_to_team": "MODE A. Integration/automation tooling maps to a team's sprawling systems estate (sponsor data, logistics, telemetry pipelines), supporting a real technical-partner narrative rather than a logo.",
-      "deal_architecture": "Associate/official partner tier on Aston Martin or McLaren: garage access, digital inventory, B2B hospitality. MINIMUM THREE YEARS (re-architected up from the original two-year proposal) at ~$3-5M/yr, calibrated to $100M+ ARR.",
-      "decision_maker": {"name": "Molly Matthews", "title": "President, SnapLogic (appointed May 12 2026)", "bio": "Former Microsoft enterprise GTM leader with deep experience scaling commercial organisations. First major brand-investment decisions fall within her new mandate."},
-      "opening_angle": "\"Your closest competitor just bought a car. Which grid slot is SnapLogic taking - for the next three years?\"",
+      "headline_long": "SnapLogic appointed a President and expanded its C-suite the same day, while direct rival Confluent sits on the Williams livery - SnapLogic cannot cede the enterprise-credibility stage to a competitor.",
+      "the_case": "On 12 May 2026 SnapLogic appointed Molly Matthews (ex-Microsoft enterprise GTM) as President while simultaneously promoting its Chief Customer Officer and Chief People Officer - a deliberate scale-up posture carrying new budget authority and appetite for brand investment. Backed by a16z, Microsoft, Silver Lake Waterman, Sixth Street and Capital One Ventures, with $100M+ ARR confirmed in August 2025 and customers including AstraZeneca, Adobe, Verizon and Sony, the company has both the means and the motive. The decisive competitive signal: Confluent, a direct iPaaS rival, is an active partner on the Williams 2026 livery, putting a competitor on motorsport's enterprise-credibility stage in front of the exact CTO and CDO audience SnapLogic needs.",
+      "why_now": "Matthews's appointment created a leadership window in which new Presidents routinely approve first-mover brand investments to establish a GTM identity, and that window narrows by the week. Simultaneously, Confluent's Williams presence hardens with every race weekend, so a rival-team announcement now reframes the narrative before the competitor's association solidifies - the urgency is genuinely time-boxed.",
+      "why_team": "Aston Martin (with McLaren as an alternative) places SnapLogic directly opposite Confluent's Williams partnership - turning a competitor's sponsorship into SnapLogic's own urgency argument and landing the brand in front of the same enterprise IT decision-makers. Aston Martin's premium gravitas and open integration category make it the cleanest counter-position.",
+      "value_to_team": "MODE A. Integration and automation tooling maps to a team's sprawling systems estate - sponsor and commercial data, logistics, and telemetry pipelines that must talk to each other - so SnapLogic can support a real technical-partner narrative and a working integration rather than a logo, while the team gains genuine connectivity tooling.",
+      "deal_architecture": "Associate / Official Partner tier on Aston Martin (or McLaren): garage access, digital inventory and B2B hospitality. MINIMUM THREE YEARS - re-architected up from the original two-year proposal in Brief N 009 - at ~$3-5M/yr, calibrated to $100M+ ARR, with integration-category exclusivity.",
+      "decision_maker": {
+        "name": "Molly Matthews",
+        "title": "President, SnapLogic (appointed 12 May 2026) - verified via Brief N 009",
+        "bio": "Former Microsoft enterprise GTM leader with deep experience scaling commercial organisations globally. Her first major brand-investment decisions fall squarely within her new mandate and budget authority, making her the right entry point. Co-decision-maker: the CEO for marquee spend (a founder-level CEO+President alignment is the fastest path)."
+      },
+      "opening_angle": "\"Molly, your closest competitor just bought a car. Which grid slot is SnapLogic taking - opposite Confluent, in front of the same CTOs - for the next three years?\"",
       "risks": [
-        {"title": "Budget not yet unlocked", "detail": "Matthews is weeks into the role; budget cycles may lag.", "counter": "Frame as a founder-level decision (CEO + President); offer a short-form LOI to hold inventory."},
-        {"title": "Confluent exclusivity clause", "detail": "Williams may hold data-integration category exclusivity.", "counter": "That is the argument for a rival team - exclusivity elsewhere is a feature."}
+        {"title": "Budget not yet unlocked", "detail": "Matthews is weeks into the role; formal budget cycles may lag her appointment.", "counter": "Frame as a founder-level decision requiring only CEO + President alignment, and offer a short-form LOI to hold inventory."},
+        {"title": "Confluent exclusivity clause", "detail": "Williams may hold category exclusivity for data-integration vendors.", "counter": "That is precisely the argument for a rival team - exclusivity at a competitor's team becomes a feature, not a barrier."}
       ],
       "sources": ["1440 Intelligence Brief N 009, 12 May 2026 (attached)"]
     },
@@ -465,16 +672,16 @@
       "scores": {"timing": 12, "capacity": 0, "brand_fit": 0, "urgency": 10, "ops_fit": 0},
       "score_rationale": {
         "timing": "BWT title deal expected to expire end-2026; Gucci linked - watch for an opening.",
-        "capacity": "n/a - this is a team-side slot tracker, not a buyer.",
+        "capacity": "n/a - team-side slot tracker, not a buyer.",
         "brand_fit": "n/a", "urgency": "Rising into late 2026.", "ops_fit": "n/a"
       },
-      "headline_long": "TEAM-SIDE SIGNAL: Alpine's BWT title deal is expected to expire at end-2026 (Gucci linked) - a title slot to match a prospect against, not a company to pitch.",
-      "the_case": "Logged as a team-side opening tracker: Alpine's BWT title sponsorship is reported to expire at the end of 2026, with Gucci linked. If the slot opens, match it to a high-capacity prospect. Not itself a sellable prospect (hence status: watch).",
-      "why_now": "Monitor through 2026; act if/when the slot formally opens.",
+      "headline_long": "TEAM-SIDE SIGNAL: Alpine's BWT title deal is expected to expire at end-2026 (Gucci linked) - a title slot to match a high-capacity prospect against, not a company to pitch.",
+      "the_case": "Logged as a team-side opening tracker. Alpine's BWT title sponsorship is reported to expire at the end of 2026, with Gucci linked as a possible successor. If the slot opens, match it to a high-capacity prospect from this database. It is not itself a sellable prospect, hence status: watch.",
+      "why_now": "Monitor through 2026; act if and when the slot formally opens.",
       "why_team": "Alpine (French, Renault-backed).",
       "value_to_team": "n/a - tracker record.",
       "deal_architecture": "n/a until a buyer is matched.",
-      "decision_maker": {"name": "n/a", "title": "n/a", "bio": "Team-side slot tracker."},
+      "decision_maker": {"name": "Alpine F1 commercial leadership (verify current CCO before any match)", "title": "Team-side contact", "bio": "Team-side slot tracker; identify Alpine's current commercial director before matching a buyer."},
       "opening_angle": "n/a",
       "risks": [{"title": "Rumor stage", "detail": "Gucci talks unconfirmed.", "counter": "Track official announcements before matching a buyer."}],
       "sources": ["https://www.gpfans.com/en/f1-news/1083668/alpine-f1-team-gucci-title-sponsor-talks/"]
@@ -498,19 +705,19 @@
       "signals": ["spinoff_unicorn", "funding_event"],
       "scores": {"timing": 16, "capacity": 20, "brand_fit": 15, "urgency": 12, "ops_fit": 14},
       "score_rationale": {
-        "timing": "S-1 expected H2 2026; large brand moment.",
-        "capacity": "$134B valuation - effectively unlimited for this size of deal.",
+        "timing": "S-1 expected H2 2026 - a large brand moment.",
+        "capacity": "$134B valuation - effectively unlimited for a deal of this size.",
         "brand_fit": "Data/AI in the car is real and proven.",
         "urgency": "Strong, but everyone already knows it.",
         "ops_fit": "MODE A: data/AI is genuinely used in race operations."
       },
-      "headline_long": "Databricks is IPO-bound at ~$134B - enormous capacity and a real data-in-the-car fit, but every agency on earth is already in its inbox.",
-      "the_case": "Databricks has the capacity and data-in-the-car fit, but estimated inbound crowding exceeds 100 - we would be deep in the noise. Tracked for awareness; GATED OUT of hero selection by the crowding rule. Revisit only via a warm executive-migration or insider route.",
-      "why_now": "IPO window, but oversaturated.",
+      "headline_long": "Databricks is IPO-bound at ~$134B with enormous capacity and a real data-in-the-car fit - but every agency on earth is already in its inbox, so it is gated out by our crowding rule.",
+      "the_case": "Databricks has the capacity and the data-in-the-car fit, but estimated inbound pitch crowding exceeds 100, so under the 1440 crowding rule we would be deep in the noise and wasting effort competing with hundreds of agencies. Tracked for awareness; gated out of hero selection. Revisit only via a warm executive-migration or genuine insider route that lets us bypass the queue.",
+      "why_now": "IPO window, but oversaturated - not actionable through cold outreach.",
       "why_team": "n/a (gated).",
-      "value_to_team": "MODE A (academic): data/AI platform with genuine race-ops use - but access, not fit, is the blocker.",
+      "value_to_team": "MODE A (academic): a data/AI platform with genuine race-operations use - but access, not fit, is the blocker.",
       "deal_architecture": "n/a (gated by crowding rule).",
-      "decision_maker": {"name": "n/a", "title": "n/a", "bio": "Gated by crowding rule; pursue only with a warm intro."},
+      "decision_maker": {"name": "Gated - pursue only via a warm/insider intro (do not cold-outreach)", "title": "n/a", "bio": "Gated by the crowding rule; only worth pursuing through a differentiated warm relationship."},
       "opening_angle": "n/a",
       "risks": [{"title": "Oversaturation", "detail": "100+ agencies already pitching.", "counter": "Only pursue through a differentiated warm/insider angle."}],
       "sources": ["https://tech-insider.org/databricks-134-billion-ipo-enterprise-software-2026/"]
@@ -537,12 +744,12 @@
         "timing": "EXCLUDED.", "capacity": "EXCLUDED.", "brand_fit": "EXCLUDED.", "urgency": "EXCLUDED.", "ops_fit": "EXCLUDED."
       },
       "headline_long": "EXCLUDED: Schneider Electric owns AVEVA, which became Porsche Formula E's official Technology Partner in Nov 2025 - the group is already present in FE, so it is not a prospect.",
-      "the_case": "Removed from the active funnel. Schneider Electric acquired AVEVA, and AVEVA was announced as Porsche Motorsport / Porsche Formula E Team's Technology Partner in November 2025 (a partnership 1440 Sports itself publicly celebrated). Under the 'already present' rule (directly or via a subsidiary), the Schneider group is not a target. Retained here as an explicit exclusion record so it is not re-surfaced.",
+      "the_case": "Removed from the active funnel. Schneider Electric acquired AVEVA, and AVEVA was announced as Porsche Motorsport / Porsche Formula E Team's Technology Partner in November 2025 (a partnership 1440 Sports itself publicly celebrated). Under the 'already present' rule (directly or via a subsidiary), the Schneider group is not a target. Retained here as an explicit exclusion record so it is never re-surfaced by a future research sweep.",
       "why_now": "n/a - excluded.",
       "why_team": "n/a.",
       "value_to_team": "n/a.",
       "deal_architecture": "n/a.",
-      "decision_maker": {"name": "n/a", "title": "n/a", "bio": "Excluded: group already present in FE via AVEVA/Porsche."},
+      "decision_maker": {"name": "n/a — excluded (group already present in FE via AVEVA/Porsche)", "title": "n/a", "bio": "Excluded by rule; do not re-add."},
       "opening_angle": "n/a",
       "risks": [{"title": "Already present", "detail": "AVEVA (Schneider) is Porsche FE Technology Partner since Nov 2025.", "counter": "Excluded by rule; do not re-add."}],
       "sources": [
@@ -575,12 +782,12 @@
         "urgency": "None.", "ops_fit": "MODE A potential, but premature."
       },
       "headline_long": "WATCH ONLY: Vertesia (the likely 'Versigent' reference) is an early-stage GenAI startup, not yet a $1B overnight unicorn - flagged honestly so we don't chase prematurely.",
-      "the_case": "The client referenced 'Versigent' as a spin-off unicorn target. The closest real match is Vertesia, an early-stage low-code GenAI/agent platform (~$4M raised, founded 2023) - strong narrative, but NOT yet at the $1B+ overnight-valuation threshold. Parked; promote only on a mega-round or spin-off event. (If a different company was meant, flag for correction.)",
+      "the_case": "The client referenced 'Versigent' as a spin-off unicorn target. The closest real match is Vertesia, an early-stage low-code GenAI/agent platform (~$4M raised, founded 2023) - strong narrative, but NOT yet at the $1B+ overnight-valuation threshold our mandate requires. Parked; promote only on a confirmed mega-round or spin-off event. If a different company was meant, flag for correction.",
       "why_now": "Not now - watch.",
       "why_team": "n/a.",
       "value_to_team": "n/a until capacity threshold met.",
       "deal_architecture": "n/a until capacity threshold met.",
-      "decision_maker": {"name": "n/a", "title": "n/a", "bio": "Watch only."},
+      "decision_maker": {"name": "Eric Barroca, CEO & Co-Founder, Vertesia (verify before any future outreach)", "title": "CEO (watch only)", "bio": "Founder-led; watch only until the company reaches the capacity threshold."},
       "opening_angle": "n/a",
       "risks": [{"title": "Capacity", "detail": "Too small to fund a 3-year deal.", "counter": "Watch for a funding/spin-off event."}],
       "sources": ["https://www.crunchbase.com/organization/composable-prompts", "https://startupintros.com/orgs/vertesia"]
