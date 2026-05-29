@@ -3,28 +3,29 @@
 Citations for `data/prospects.json` and `data/teams.json`, as of **2026-05-29**.
 Verify against primary sources before outreach; appointments and financials move.
 
-## JFrog (hero, N° 001)
-- JFrog appoints Genefa Murphy as CMO (eff. Jan 5 2026) — https://jfrog.com/press-room/jfrog-appoints-new-cmo-to-accelerate-its-ai-growth-phase/
-- JFrog investor release (CMO appointment) — https://investors.jfrog.com/news/news-details/2026/JFrog-Appoints-Genefa-Murphy-as-Chief-Marketing-Officer-to-Accelerate-Its-Next-Growth-Phase/default.aspx
-- JFrog Q3 2025 results — https://jfrog.com/press-room/jfrog-announces-third-quarter-2025-results/
-- JFrog FY2025: ~$531.8M revenue (+24%), $704.4M cash, $142.3M FCF — https://www.stocktitan.net/sec-filings/FROG/8-k-j-frog-ltd-reports-material-event-e7fd8e839a25.html
-- Udemy × McLaren multi-series partnership (Murphy's prior deal) — https://about.udemy.com/press-releases/udemy-and-mclaren-racings-global-partnership-to-feature-at-upcoming-tokyo-e-prix/
+## Seeded (client-provided) targets
+- **JFrog** — Murphy appointment: https://jfrog.com/press-room/jfrog-appoints-new-cmo-to-accelerate-its-ai-growth-phase/ · Q3'25 results: https://jfrog.com/press-room/jfrog-announces-third-quarter-2025-results/ · FY2025 ($531.8M rev +24%, $704.4M cash, $142.3M FCF): https://www.stocktitan.net/sec-filings/FROG/8-k-j-frog-ltd-reports-material-event-e7fd8e839a25.html · Udemy×McLaren (Murphy's prior deal): https://about.udemy.com/press-releases/udemy-and-mclaren-racings-global-partnership-to-feature-at-upcoming-tokyo-e-prix/
+- **SnapLogic** — 1440 Intelligence Brief N° 009 (12 May 2026, attached).
+- **Ramp** — 1440 Intelligence Brief N° 025 (28 May 2026, attached).
 
-## F1 / FE sponsor landscape
-- Every F1 team title sponsor 2026 (Mastercard→McLaren ~$90M/yr, Oracle→Red Bull ~$110M/yr, Revolut→Audi, Toyota→Haas) — https://rtrsports.com/en/blog/every-teams-title-sponsor-for-the-2026-formula-1-season/
-- Cadillac "not looking for a title sponsor" in 2026 debut — https://www.blackbookmotorsport.com/news/f1-cadillac-team-title-sponsor-2026-november-2025/
-- Formula E 2026 teams — https://www.fiaformulae.com/en/teams
-- FE 2025-26 season (TAG Heuer ends Porsche title; Citroën replaces Maserati; Opel for S13) — https://en.wikipedia.org/wiki/2025%E2%80%9326_Formula_E_World_Championship
-- The Race — Formula E grid / silly season — https://www.the-race.com/formula-e/
+## Self-discovered targets (engine research sweep)
+- **Cohesity** — Nvidia-backed, 2026 IPO eyeing ~$17B (Rubrik peer), ~$1.5B ARR post-Veritas: https://www.cnbc.com/2025/09/04/nvidia-backed-cohesity-eyes-2026-ipo-with-valuation-rivaling-17-billion-rubrik.html · cyber IPO pipeline: https://strategyofsecurity.com/p/cybersecuritys-ipo-pipeline-2026-and-beyond
+- **Snyk** — $300M+ ARR, CEO flagged 2026 IPO: https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next
+- **Abnormal Security** — $250M Series D at $5.1B, public-company readiness: https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next
+- **1Password** — $920M raised, last $6.8B, 2026 IPO candidate: https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next
+- **Quantinuum** — Honeywell spin-off, ~$12.7B IPO target (27% premium over $10B Sept'25): http://www.techtimes.com/articles/317216/20260526/quantinuum-ipo-targets-127b-valuation-honeywell-spinoff-reports-31m-2025-revenue.htm
+- **Mistral AI** — European AI champion, fresh capital: https://techcrunch.com/2026/01/12/at-least-36-new-tech-unicorns-were-minted-in-2025-so-far/
+- **Isomorphic Labs** — DeepMind spin-out, $600M round into unicorn territory: https://techcrunch.com/2025/09/08/more-than-10-european-startups-became-unicorns-this-year/
+- **Sonatype** — software supply chain security (JFrog mirror): https://cybersecuritynews.com/best-supply-chain-intelligence-security-companies/
 
-## Spin-off / overnight-unicorn class
-- Quantinuum (Honeywell spin-off) IPO targets ~$12.7B — http://www.techtimes.com/articles/317216/20260526/quantinuum-ipo-targets-127b-valuation-honeywell-spinoff-reports-31m-2025-revenue.htm
-- Resolve AI (ex-Splunk) hits $1B at Series A — https://techcrunch.com/2025/12/19/ex-splunk-execs-startup-resolve-ai-hits-1-billion-valuation-with-series-a/
-- Databricks ~$134B IPO (gated: oversaturated) — https://tech-insider.org/databricks-134-billion-ipo-enterprise-software-2026/
+## Team-side signals
+- F1 2026 title sponsors (Mastercard→McLaren ~$90M/yr, Oracle→Red Bull ~$110M/yr, Revolut→Audi, Toyota→Haas): https://rtrsports.com/en/blog/every-teams-title-sponsor-for-the-2026-formula-1-season/
+- **Alpine/BWT** title deal expiring end-2026, Gucci linked: https://www.gpfans.com/en/f1-news/1083668/alpine-f1-team-gucci-title-sponsor-talks/
+- **Cadillac** NOT seeking a title sponsor in 2026 debut: https://www.blackbookmotorsport.com/news/f1-cadillac-team-title-sponsor-2026-november-2025/
+- **DS Penske** — DS to EXIT Formula E at end of season (Mar 2026): https://www.fiaformulae.com/en/teams
+- FE 2025-26 season overview: https://en.wikipedia.org/wiki/2025%E2%80%9326_Formula_E_World_Championship
 
-## DevSecOps / supply-chain-security category (grid whitespace)
-- Supply chain security leaders incl. JFrog, Sonatype, Snyk, GitLab — https://cybersecuritynews.com/best-supply-chain-intelligence-security-companies/
-
-## Watchlist correction
-- "Versigent" ≈ **Vertesia** — early-stage GenAI (~$4M raised), NOT yet a $1B+
-  unicorn; parked — https://www.crunchbase.com/organization/composable-prompts , https://startupintros.com/orgs/vertesia
+## Gated / excluded / watch
+- **Databricks** ~$134B IPO (gated: >100 inbound pitches): https://tech-insider.org/databricks-134-billion-ipo-enterprise-software-2026/
+- **Schneider Electric — EXCLUDED**: owns AVEVA, which became **Porsche FE Technology Partner (Nov 2025)** — group already present. AVEVA announcement: https://www.aveva.com/en/about/news/press-releases/2025/aveva-is-announced-as-the-new-technology-partner-for-porsche-motorsport-and-porsche-formula-e-team/ · 1440's own celebration post: https://1440sports.com/1440sports-celebrates-new-aveva-x-porsche-motorsports-and-formula-e-technology-partnership/
+- **Vertesia** (likely the 'Versigent' reference) — early-stage (~$4M), NOT yet $1B: https://www.crunchbase.com/organization/composable-prompts , https://startupintros.com/orgs/vertesia

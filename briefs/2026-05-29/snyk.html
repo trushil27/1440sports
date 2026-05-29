@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>1440 Intelligence Brief — {{ p.name }}</title>
+<title>1440 Intelligence Brief — Snyk</title>
 <style>
   /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
   :root {
@@ -18,7 +18,7 @@
     size: A4;
     margin: 13mm 13mm 13mm 13mm;
     @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
-    @bottom-center { content: "{{ p.name|upper }} · {{ date_long }}"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "SNYK · 29 MAY 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
   }
   * { box-sizing: border-box; }
@@ -84,88 +84,102 @@
 
   <!-- ===================== PAGE 1 ===================== -->
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 005</span>
   </div>
-  <div class="ribbon">Intelligence Brief / N° {{ brief_no }} &nbsp;·&nbsp; {{ p.tier }}</div>
+  <div class="ribbon">Intelligence Brief / N° 005 &nbsp;·&nbsp; HOT</div>
 
-  <h1>{{ p.name }}</h1>
-  <div class="classline">{{ p.category }} · {{ p.hq }}{% if p.ticker %} · {{ p.ticker }}{% endif %}</div>
+  <h1>Snyk</h1>
+  <div class="classline">Developer Security · Boston, MA / London · Private (~$7B+; IPO anticipated 2026)</div>
 
-  <div class="lede">{{ p.headline_long }}</div>
+  <div class="lede">Developer-security leader Snyk is building toward a 2026 IPO with no motorsport footprint - and the security category on the grid is still empty.</div>
 
   <div class="strip">
-    <div class="scorebox"><div class="num">{{ p.opportunity }}</div><div class="den">Opportunity / 100</div></div>
+    <div class="scorebox"><div class="num">76</div><div class="den">Opportunity / 100</div></div>
     <div class="chips">
-      <div class="chip"><div class="k">Timing Window</div><div class="v">{{ p.timing_window }}</div></div>
-      <div class="chip"><div class="k">Series</div><div class="v">{{ p.series }}</div></div>
-      <div class="chip"><div class="k">Recommended Team</div><div class="v">{{ p.recommended_team }}</div></div>
-      <div class="chip"><div class="k">Action Horizon</div><div class="v">{{ p.action_horizon }}</div></div>
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Aston Martin</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-8 WKS</div></div>
     </div>
   </div>
 
   <h2>The Case</h2>
-  <p>{{ p.the_case }}</p>
+  <p>Snyk is a well-funded developer-security leader ($300M+ ARR) whose CEO has flagged a 2026 IPO. The security category on the F1 grid is uncontested, and a multi-year team partnership would give Snyk enterprise credibility ahead of a listing. Note the interplay: this is the same whitespace as JFrog - whoever signs first owns it.</p>
 
   <h2>Why Now</h2>
-  <p>{{ p.why_now }}</p>
+  <p>Pre-IPO brand-building budgets plus the open security category create a first-mover window that closes the moment a rival signs.</p>
 
   <div class="flags">
-    {% for s in p.signals %}<span class="flag">{{ s.replace('_',' ') }}</span>{% endfor %}
-    <span class="flag">discovery: {{ p.discovery }}</span>
+<span class="flag">never entered</span><span class="flag">category whitespace</span><span class="flag">funding event</span>    <span class="flag">discovery: self</span>
   </div>
 
   <!-- ===================== PAGE 2 ===================== -->
   <div class="page2"></div>
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 005</span>
   </div>
 
-  <h2>Why {{ p.recommended_team }}</h2>
-  <p>{{ p.why_team }}</p>
+  <h2>Why Aston Martin</h2>
+  <p>Aston Martin&#39;s CISO-grade gravitas places Snyk&#39;s &#39;secure by design&#39; story in front of the exact enterprise buyers it sells to.</p>
 
-  <h2>Value to {{ p.recommended_team }} &nbsp;<span class="mode">— <b>MODE {{ p.mode }}</b> ({{ 'tech in the car / championship' if p.mode == 'A' else 'tech serves the team operation' }})</span></h2>
-  <p>{{ p.value_to_team }}</p>
+  <h2>Value to Aston Martin &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A. Snyk integrates into developer workflows; an F1 team&#39;s growing in-house software estate is a real testbed and reference, supporting authentic &#39;secure development partner&#39; storytelling and CISO hospitality.</p>
 
   <h2>Deal Architecture</h2>
-  <p>{{ p.deal_architecture }}</p>
+  <p>Official partner tier, minimum three years, ~$3-4M/yr, with security-category exclusivity.</p>
 
   <div class="twocol">
     <div>
       <h2>Primary Decision-Maker</h2>
       <div class="dm">
-        <div class="name">{{ p.decision_maker.name }}</div>
-        <div class="role">{{ p.decision_maker.title }}</div>
-        <div class="bio">{{ p.decision_maker.bio }}</div>
+        <div class="name">Snyk CMO (verify current holder)</div>
+        <div class="role">Marketing leadership</div>
+        <div class="bio">Confirm current CMO and pre-IPO brand owner; CEO Peter McKay owns the IPO narrative.</div>
       </div>
     </div>
     <div>
       <h2>Opening Angle</h2>
-      <div class="quote">{{ p.opening_angle }}</div>
+      <div class="quote">&#34;The security slot on the F1 grid is empty. JFrog and Sonatype both want it. First mover owns it for three years - ahead of your IPO. Is that you?&#34;</div>
     </div>
   </div>
 
   <h2>Score Composition</h2>
   <div class="scoregrid">
-    {% for key, label in pillars %}
     <div class="sc">
-      <div class="pill">{{ label }}</div>
-      <div class="val">{{ p.scores[key] }} <span>/ 20</span></div>
-      <div class="why">{{ p.score_rationale[key] }}</div>
+      <div class="pill">Timing</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">CEO flagged a 2026 IPO; building enterprise brand for a listing.</div>
     </div>
-    {% endfor %}
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Multi-billion valuation, $300M+ ARR (Dec 2024), well funded.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Developer/AppSec security; same uncontested grid whitespace as JFrog.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">If JFrog or Sonatype move first, the security category locks.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE A: an F1 team&#39;s software pipeline is a genuine developer-security surface.</div>
+    </div>
   </div>
 
   <h2>Risks &amp; Counters</h2>
-  {% for r in p.risks %}
-  <div class="risk"><span class="rt">{{ r.title }}</span> &nbsp;<span class="rc">{{ r.detail }} <b>Counter:</b> {{ r.counter }}</span></div>
-  {% endfor %}
+  <div class="risk"><span class="rt">IPO timing uncertainty</span> &nbsp;<span class="rc">Brand spend may wait for the listing. <b>Counter:</b> Sign now to lock category exclusivity; activate at IPO.</span></div>
 
   <h2>Sources</h2>
   <ul class="sources">
-    {% for s in p.sources %}<li>{{ s }}</li>{% endfor %}
-  </ul>
+<li>https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next</li><li>https://strategyofsecurity.com/p/cybersecuritys-ipo-pipeline-2026-and-beyond</li>  </ul>
 </div>
 </body>
 </html>

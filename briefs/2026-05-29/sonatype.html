@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>1440 Intelligence Brief — {{ p.name }}</title>
+<title>1440 Intelligence Brief — Sonatype</title>
 <style>
   /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
   :root {
@@ -18,7 +18,7 @@
     size: A4;
     margin: 13mm 13mm 13mm 13mm;
     @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
-    @bottom-center { content: "{{ p.name|upper }} · {{ date_long }}"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "SONATYPE · 29 MAY 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
   }
   * { box-sizing: border-box; }
@@ -84,88 +84,102 @@
 
   <!-- ===================== PAGE 1 ===================== -->
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 010</span>
   </div>
-  <div class="ribbon">Intelligence Brief / N° {{ brief_no }} &nbsp;·&nbsp; {{ p.tier }}</div>
+  <div class="ribbon">Intelligence Brief / N° 010 &nbsp;·&nbsp; WARM</div>
 
-  <h1>{{ p.name }}</h1>
-  <div class="classline">{{ p.category }} · {{ p.hq }}{% if p.ticker %} · {{ p.ticker }}{% endif %}</div>
+  <h1>Sonatype</h1>
+  <div class="classline">Software Supply Chain Security · Fulton, MD · Private (Vista-backed)</div>
 
-  <div class="lede">{{ p.headline_long }}</div>
+  <div class="lede">Sonatype is JFrog&#39;s mirror in software supply chain security - the natural counter-narrative buyer the moment a rival signs a team.</div>
 
   <div class="strip">
-    <div class="scorebox"><div class="num">{{ p.opportunity }}</div><div class="den">Opportunity / 100</div></div>
+    <div class="scorebox"><div class="num">69</div><div class="den">Opportunity / 100</div></div>
     <div class="chips">
-      <div class="chip"><div class="k">Timing Window</div><div class="v">{{ p.timing_window }}</div></div>
-      <div class="chip"><div class="k">Series</div><div class="v">{{ p.series }}</div></div>
-      <div class="chip"><div class="k">Recommended Team</div><div class="v">{{ p.recommended_team }}</div></div>
-      <div class="chip"><div class="k">Action Horizon</div><div class="v">{{ p.action_horizon }}</div></div>
+      <div class="chip"><div class="k">Timing Window</div><div class="v">DEVELOPING</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Haas</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
     </div>
   </div>
 
   <h2>The Case</h2>
-  <p>{{ p.the_case }}</p>
+  <p>Sonatype occupies the same software-supply-chain-security whitespace as JFrog. It is the classic counter-narrative target: if JFrog signs a team, Sonatype&#39;s urgency spikes and a rival-team pitch becomes compelling (the SnapLogic-vs-Confluent playbook). Capacity is more modest, so target a value tier.</p>
 
   <h2>Why Now</h2>
-  <p>{{ p.why_now }}</p>
+  <p>Trigger-based - escalate immediately if JFrog or Snyk commits.</p>
 
   <div class="flags">
-    {% for s in p.signals %}<span class="flag">{{ s.replace('_',' ') }}</span>{% endfor %}
-    <span class="flag">discovery: {{ p.discovery }}</span>
+<span class="flag">never entered</span><span class="flag">category whitespace</span><span class="flag">competitor on grid</span>    <span class="flag">discovery: self</span>
   </div>
 
   <!-- ===================== PAGE 2 ===================== -->
   <div class="page2"></div>
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 010</span>
   </div>
 
-  <h2>Why {{ p.recommended_team }}</h2>
-  <p>{{ p.why_team }}</p>
+  <h2>Why Haas</h2>
+  <p>Haas offers an accessible entry tier for a mid-market budget.</p>
 
-  <h2>Value to {{ p.recommended_team }} &nbsp;<span class="mode">— <b>MODE {{ p.mode }}</b> ({{ 'tech in the car / championship' if p.mode == 'A' else 'tech serves the team operation' }})</span></h2>
-  <p>{{ p.value_to_team }}</p>
+  <h2>Value to Haas &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A. Same genuine pipeline-security use as JFrog; supports a credible technical-partner story at a value tier.</p>
 
   <h2>Deal Architecture</h2>
-  <p>{{ p.deal_architecture }}</p>
+  <p>Value partner tier, minimum three years, ~$1.5-3M/yr.</p>
 
   <div class="twocol">
     <div>
       <h2>Primary Decision-Maker</h2>
       <div class="dm">
-        <div class="name">{{ p.decision_maker.name }}</div>
-        <div class="role">{{ p.decision_maker.title }}</div>
-        <div class="bio">{{ p.decision_maker.bio }}</div>
+        <div class="name">Sonatype CMO (verify)</div>
+        <div class="role">Marketing leadership</div>
+        <div class="bio">Confirm current CMO; Vista Equity ownership means ROI discipline.</div>
       </div>
     </div>
     <div>
       <h2>Opening Angle</h2>
-      <div class="quote">{{ p.opening_angle }}</div>
+      <div class="quote">&#34;Your direct competitor just put security on an F1 car. The counter-move is a rival team - before the category fully closes.&#34;</div>
     </div>
   </div>
 
   <h2>Score Composition</h2>
   <div class="scoregrid">
-    {% for key, label in pillars %}
     <div class="sc">
-      <div class="pill">{{ label }}</div>
-      <div class="val">{{ p.scores[key] }} <span>/ 20</span></div>
-      <div class="why">{{ p.score_rationale[key] }}</div>
+      <div class="pill">Timing</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">Reactive trigger: becomes HOT the moment JFrog signs.</div>
     </div>
-    {% endfor %}
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">Mid-market; a value tier rather than premium.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Exact same category as JFrog - direct whitespace.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">Rises sharply if JFrog moves first (counter-narrative).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A: genuine software-supply-chain use in a team&#39;s dev pipeline.</div>
+    </div>
   </div>
 
   <h2>Risks &amp; Counters</h2>
-  {% for r in p.risks %}
-  <div class="risk"><span class="rt">{{ r.title }}</span> &nbsp;<span class="rc">{{ r.detail }} <b>Counter:</b> {{ r.counter }}</span></div>
-  {% endfor %}
+  <div class="risk"><span class="rt">Budget discipline</span> &nbsp;<span class="rc">PE owner scrutinises spend. <b>Counter:</b> Lead with measurable B2B pipeline and a competitive-defence rationale.</span></div>
 
   <h2>Sources</h2>
   <ul class="sources">
-    {% for s in p.sources %}<li>{{ s }}</li>{% endfor %}
-  </ul>
+<li>https://cybersecuritynews.com/best-supply-chain-intelligence-security-companies/</li>  </ul>
 </div>
 </body>
 </html>

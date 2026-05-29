@@ -64,6 +64,8 @@ def main() -> int:
     ap.add_argument("--force", help="force a prospect id as today's hero")
     ap.add_argument("--no-email", action="store_true")
     ap.add_argument("--list", action="store_true", help="print leaderboard and exit")
+    ap.add_argument("--batch", action="store_true",
+                    help="render briefs for ALL eligible prospects (no email)")
     args = ap.parse_args()
 
     today = _dt.date.fromisoformat(args.date)
@@ -82,7 +84,7 @@ def main() -> int:
         print(f"\n1440 Sports — prospect leaderboard ({args.date})\n" + "-" * 60)
         for i, p in enumerate(ranked, 1):
             e = scoring.enrich(p)
-            print(f"{i:2d}. {e['opportunity']:3d}/100  {e['band']:11s}  "
+            print(f"{i:2d}. {e['opportunity']:3d}/100  {e['tier']:13s}  "
                   f"{p['series']:3s}  {p['name']}  [{e['crowding_label']}]")
         # also show gated / parked for transparency
         gated = [p for p in prospects if not scoring.is_eligible_for_hero(p, min_years)]
@@ -92,6 +94,15 @@ def main() -> int:
                 why = ("crowding>100" if (p.get("est_inbound_pitches") or 0) > 100
                        else p.get("status", "ineligible"))
                 print(f"     {scoring.opportunity_score(p):3d}/100  {p['name']}  ({why})")
+        return 0
+
+    if args.batch:
+        out_dir = os.path.join(_BRIEFS, args.date)
+        print(f"Batch: rendering {len(ranked)} eligible briefs into {os.path.relpath(out_dir, _ROOT)}/")
+        for i, p in enumerate(ranked, 1):
+            e = scoring.enrich(p)
+            paths = generate_brief.write_brief(p, out_dir, brief_no=f"{i:03d}", date=args.date)
+            print(f"  {e['opportunity']:3d}/100 {e['tier']:13s} {p['name']:22s} -> {os.path.basename(paths.get('pdf', paths['html']))}")
         return 0
 
     if args.force:
@@ -111,15 +122,15 @@ def main() -> int:
     out_dir = os.path.join(_BRIEFS, args.date)
     paths = generate_brief.write_brief(hero, out_dir, brief_no=brief_no, date=args.date)
 
-    print(f"Hero: {hero['name']}  ({e['opportunity']}/100, {e['band']})")
+    print(f"Hero: {hero['name']}  ({e['opportunity']}/100, {e['tier']})")
     for k, v in paths.items():
         print(f"  {k.upper():4s} -> {os.path.relpath(v, _ROOT)}")
 
     # Email
     if not args.no_email:
-        subject = f"1440 Brief {brief_no} — {hero['name']} ({e['opportunity']}/100 {e['band']}) — {args.date}"
+        subject = f"1440 Brief {brief_no} — {hero['name']} ({e['opportunity']}/100 {e['tier']}) — {args.date}"
         html_body = send_email.email_html_wrapper(
-            hero["name"], e["opportunity"], e["band"], hero["headline"],
+            hero["name"], e["opportunity"], e["tier"], hero["headline_long"],
             first_sentences(hero["the_case"], 3), args.date)
         text_body = generate_brief.render_markdown(hero, date=args.date)
         attachments = {k: v for k, v in paths.items() if k in ("pdf", "html")}
@@ -129,7 +140,7 @@ def main() -> int:
     history.setdefault("last_hero", {})[hero["id"]] = args.date
     history.setdefault("log", []).append({
         "date": args.date, "brief_no": brief_no, "id": hero["id"],
-        "name": hero["name"], "opportunity": e["opportunity"], "band": e["band"],
+        "name": hero["name"], "opportunity": e["opportunity"], "tier": e["tier"],
     })
     save_history(history)
     return 0

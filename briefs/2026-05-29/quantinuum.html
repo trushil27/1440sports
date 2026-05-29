@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>1440 Intelligence Brief — {{ p.name }}</title>
+<title>1440 Intelligence Brief — Quantinuum</title>
 <style>
   /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
   :root {
@@ -18,7 +18,7 @@
     size: A4;
     margin: 13mm 13mm 13mm 13mm;
     @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
-    @bottom-center { content: "{{ p.name|upper }} · {{ date_long }}"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "QUANTINUUM · 29 MAY 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
   }
   * { box-sizing: border-box; }
@@ -84,88 +84,103 @@
 
   <!-- ===================== PAGE 1 ===================== -->
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 006</span>
   </div>
-  <div class="ribbon">Intelligence Brief / N° {{ brief_no }} &nbsp;·&nbsp; {{ p.tier }}</div>
+  <div class="ribbon">Intelligence Brief / N° 006 &nbsp;·&nbsp; HOT</div>
 
-  <h1>{{ p.name }}</h1>
-  <div class="classline">{{ p.category }} · {{ p.hq }}{% if p.ticker %} · {{ p.ticker }}{% endif %}</div>
+  <h1>Quantinuum</h1>
+  <div class="classline">Quantum Computing · Broomfield, CO / Cambridge, UK · IPO pending (~$12.7B target valuation)</div>
 
-  <div class="lede">{{ p.headline_long }}</div>
+  <div class="lede">Honeywell spin-off Quantinuum is heading for a ~$12.7B IPO - a textbook overnight unicorn with a brand-elevation budget, an Anglo-American footprint, and no motorsport history.</div>
 
   <div class="strip">
-    <div class="scorebox"><div class="num">{{ p.opportunity }}</div><div class="den">Opportunity / 100</div></div>
+    <div class="scorebox"><div class="num">76</div><div class="den">Opportunity / 100</div></div>
     <div class="chips">
-      <div class="chip"><div class="k">Timing Window</div><div class="v">{{ p.timing_window }}</div></div>
-      <div class="chip"><div class="k">Series</div><div class="v">{{ p.series }}</div></div>
-      <div class="chip"><div class="k">Recommended Team</div><div class="v">{{ p.recommended_team }}</div></div>
-      <div class="chip"><div class="k">Action Horizon</div><div class="v">{{ p.action_horizon }}</div></div>
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Aston Martin</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-8 WKS</div></div>
     </div>
   </div>
 
   <h2>The Case</h2>
-  <p>{{ p.the_case }}</p>
+  <p>Quantinuum is the highest-priority class in our mandate: a born-big spin-off (from Honeywell) heading into a ~$12.7B IPO, up 27% on its $10B September 2025 valuation. An IPO is a one-time brand-elevation moment, and an F1 association is among the fastest ways for a deep-tech company to acquire global enterprise visibility. It has never entered motorsport.</p>
 
   <h2>Why Now</h2>
-  <p>{{ p.why_now }}</p>
+  <p>The IPO roadshow is the window: leadership is actively investing in public-market visibility and enterprise credibility. A multi-year F1 engineering-partner deal signed around the listing compounds the narrative.</p>
 
   <div class="flags">
-    {% for s in p.signals %}<span class="flag">{{ s.replace('_',' ') }}</span>{% endfor %}
-    <span class="flag">discovery: {{ p.discovery }}</span>
+<span class="flag">spinoff unicorn</span><span class="flag">never entered</span><span class="flag">funding event</span>    <span class="flag">discovery: self</span>
   </div>
 
   <!-- ===================== PAGE 2 ===================== -->
   <div class="page2"></div>
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 006</span>
   </div>
 
-  <h2>Why {{ p.recommended_team }}</h2>
-  <p>{{ p.why_team }}</p>
+  <h2>Why Aston Martin</h2>
+  <p>Aston Martin&#39;s premium engineering gravitas aligns Quantinuum&#39;s Anglo-American identity with a precision/compute halo - &#39;the quantum edge in performance R&amp;D&#39; - in front of a C-suite audience.</p>
 
-  <h2>Value to {{ p.recommended_team }} &nbsp;<span class="mode">— <b>MODE {{ p.mode }}</b> ({{ 'tech in the car / championship' if p.mode == 'A' else 'tech serves the team operation' }})</span></h2>
-  <p>{{ p.value_to_team }}</p>
+  <h2>Value to Aston Martin &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A (developing). Quantum and advanced optimisation increasingly touch race strategy, aero simulation and logistics. Positioned as an R&amp;D/innovation partner, Quantinuum offers a credible compute-frontier story and a talent-attraction halo, with a roadmap toward genuine simulation use cases.</p>
 
   <h2>Deal Architecture</h2>
-  <p>{{ p.deal_architecture }}</p>
+  <p>Official Innovation / Quantum Partner tier, minimum three years, estimated $3-6M/yr, positioned as an R&amp;D-and-brand halo around the listing, with category exclusivity for quantum computing.</p>
 
   <div class="twocol">
     <div>
       <h2>Primary Decision-Maker</h2>
       <div class="dm">
-        <div class="name">{{ p.decision_maker.name }}</div>
-        <div class="role">{{ p.decision_maker.title }}</div>
-        <div class="bio">{{ p.decision_maker.bio }}</div>
+        <div class="name">Quantinuum CMO / Head of Brand (verify)</div>
+        <div class="role">Marketing / Brand leadership</div>
+        <div class="bio">Confirm the current CMO/brand lead and IPO communications owner; the CFO and IR team are co-decision-makers during the listing window.</div>
       </div>
     </div>
     <div>
       <h2>Opening Angle</h2>
-      <div class="quote">{{ p.opening_angle }}</div>
+      <div class="quote">&#34;You get one IPO. An F1 innovation partnership turns your listing from a finance event into a global brand moment - and quantum is the one category no rival on the grid can claim.&#34;</div>
     </div>
   </div>
 
   <h2>Score Composition</h2>
   <div class="scoregrid">
-    {% for key, label in pillars %}
     <div class="sc">
-      <div class="pill">{{ label }}</div>
-      <div class="val">{{ p.scores[key] }} <span>/ 20</span></div>
-      <div class="why">{{ p.score_rationale[key] }}</div>
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">IPO roadshow is a once-only brand-elevation moment.</div>
     </div>
-    {% endfor %}
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">20 <span>/ 20</span></div>
+      <div class="why">Honeywell spin-off targeting a ~$12.7B IPO (27% premium over its $10B Sept 2025 round).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Quantum = ultimate precision/compute narrative; Anglo-American footprint suits a British team.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">No direct quantum rival on the grid; the forcing function is the IPO window itself.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">MODE A (aspirational): compute/optimisation R&amp;D halo around simulation and strategy, though not yet a literal in-car system.</div>
+    </div>
   </div>
 
   <h2>Risks &amp; Counters</h2>
-  {% for r in p.risks %}
-  <div class="risk"><span class="rt">{{ r.title }}</span> &nbsp;<span class="rc">{{ r.detail }} <b>Counter:</b> {{ r.counter }}</span></div>
-  {% endfor %}
+  <div class="risk"><span class="rt">IPO quiet period</span> &nbsp;<span class="rc">Securities rules may restrict spend/announcements around the listing. <b>Counter:</b> Sign quietly, activate post-listing; use the roadshow to build consensus.</span></div>
+  <div class="risk"><span class="rt">Deep-tech brand caution</span> &nbsp;<span class="rc">A quantum firm may see F1 as off-strategy. <b>Counter:</b> Position as enterprise credibility and talent attraction, not consumer marketing.</span></div>
 
   <h2>Sources</h2>
   <ul class="sources">
-    {% for s in p.sources %}<li>{{ s }}</li>{% endfor %}
-  </ul>
+<li>http://www.techtimes.com/articles/317216/20260526/quantinuum-ipo-targets-127b-valuation-honeywell-spinoff-reports-31m-2025-revenue.htm</li>  </ul>
 </div>
 </body>
 </html>

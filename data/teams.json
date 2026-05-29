@@ -1,7 +1,7 @@
 {
   "_meta": {
     "updated": "2026-05-29",
-    "note": "Live F1 + Formula E sponsor inventory used for team/category matching. Open categories and title slots are the actionable fields.",
+    "note": "Live F1 + Formula E sponsor inventory used for team/category matching. Open categories and title slots are the actionable fields. NOTE: AVEVA (owned by Schneider Electric) is Porsche FE Technology Partner since Nov 2025 — the Schneider group is therefore 'already present' and excluded as a prospect.",
     "sources": [
       "https://rtrsports.com/en/blog/every-teams-title-sponsor-for-the-2026-formula-1-season/",
       "https://www.blackbookmotorsport.com/news/f1-cadillac-team-title-sponsor-2026-november-2025/",
@@ -19,14 +19,14 @@
     {"team": "Audi", "title_sponsor": "Revolut (Audi Revolut F1 Team)", "notable_b2b": ["Revolut (fintech)"], "open_categories": ["enterprise software"], "identity": "German engineering, new entrant"},
     {"team": "Haas", "title_sponsor": "Toyota Gazoo Racing", "notable_b2b": [], "open_categories": ["enterprise software", "data"], "identity": "lean American privateer"},
     {"team": "Cadillac", "title_sponsor": "NONE (publicly not seeking a title sponsor in 2026 debut; 'fewer, bigger, better')", "notable_b2b": ["Jim Beam (spirits)", "Tenneco (technical)"], "open_categories": ["premium technical partner", "enterprise software"], "identity": "American luxury debut, GM + TWG backed", "title_slot_status": "closed near-term by choice"},
-    {"team": "Alpine", "title_sponsor": "—", "notable_b2b": [], "open_categories": ["enterprise software", "data"], "identity": "French, Renault-backed"},
-    {"team": "Racing Bulls", "title_sponsor": "—", "notable_b2b": [], "open_categories": ["enterprise software"], "identity": "Red Bull sister team"}
+    {"team": "Alpine", "title_sponsor": "BWT (since 2022) — deal expected to EXPIRE end-2026; Gucci linked as replacement", "notable_b2b": [], "open_categories": ["title rights from 2027 (watch)", "enterprise software", "data"], "identity": "French, Renault-backed", "title_slot_status": "expiring end-2026 — track"},
+    {"team": "Visa Cash App Racing Bulls", "title_sponsor": "Visa + Cash App", "notable_b2b": ["Visa (payments rail)", "Cash App"], "open_categories": ["spend management (complements Visa, not conflicting)", "enterprise software"], "identity": "Red Bull sister team; younger demographic", "competitor_locks": []}
   ],
   "formula_e": [
-    {"team": "Porsche", "title_sponsor": "OPEN — TAG Heuer exited after 6 seasons", "notable_b2b": [], "open_categories": ["title rights", "enterprise software", "energy", "luxury tech"], "identity": "premium German performance", "title_slot_status": "OPEN"},
+    {"team": "Porsche", "title_sponsor": "TAG Heuer exited after 6 seasons; team rebranded with TDK as official technology partner", "notable_b2b": ["AVEVA (Schneider Electric — Technology Partner, since Nov 2025)", "TDK", "NetApp", "Cato Networks", "Mobil 1"], "open_categories": ["title rights (naming)"], "identity": "premium German performance", "title_slot_status": "naming open; technology category TAKEN by AVEVA", "competitor_locks": ["industrial software / digital twin (AVEVA/Schneider)"]},
     {"team": "Jaguar TCS Racing", "title_sponsor": "TCS (Tata Consultancy Services)", "notable_b2b": ["TCS", "Tech Mahindra (historic)"], "open_categories": [], "identity": "British, sustainability + IT services"},
     {"team": "Nissan", "title_sponsor": "—", "notable_b2b": ["Alpine Tech"], "open_categories": ["enterprise software", "EV tech"], "identity": "Japanese EV pioneer"},
-    {"team": "DS Penske", "title_sponsor": "—", "notable_b2b": [], "open_categories": ["enterprise software"], "identity": "Franco-American, in flux (powertrain talks unsettled)"},
+    {"team": "DS Penske", "title_sponsor": "—", "notable_b2b": [], "open_categories": ["enterprise software"], "identity": "Franco-American", "status": "DS announced (Mar 2026) it will EXIT FE at end of season — Penske entry future uncertain; do not target until resolved"},
     {"team": "Andretti", "title_sponsor": "—", "notable_b2b": [], "open_categories": ["enterprise software", "fintech"], "identity": "American motorsport brand"},
     {"team": "Envision Racing", "title_sponsor": "Envision (green tech)", "notable_b2b": [], "open_categories": ["sustainability tech"], "identity": "sustainability-first independent"},
     {"team": "Mahindra Racing", "title_sponsor": "Mahindra", "notable_b2b": [], "open_categories": ["enterprise software"], "identity": "Indian EV, founding FE team"},

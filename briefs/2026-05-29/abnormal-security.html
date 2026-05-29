@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>1440 Intelligence Brief — {{ p.name }}</title>
+<title>1440 Intelligence Brief — Abnormal Security</title>
 <style>
   /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
   :root {
@@ -18,7 +18,7 @@
     size: A4;
     margin: 13mm 13mm 13mm 13mm;
     @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
-    @bottom-center { content: "{{ p.name|upper }} · {{ date_long }}"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "ABNORMAL SECURITY · 29 MAY 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
   }
   * { box-sizing: border-box; }
@@ -84,88 +84,102 @@
 
   <!-- ===================== PAGE 1 ===================== -->
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 007</span>
   </div>
-  <div class="ribbon">Intelligence Brief / N° {{ brief_no }} &nbsp;·&nbsp; {{ p.tier }}</div>
+  <div class="ribbon">Intelligence Brief / N° 007 &nbsp;·&nbsp; WARM</div>
 
-  <h1>{{ p.name }}</h1>
-  <div class="classline">{{ p.category }} · {{ p.hq }}{% if p.ticker %} · {{ p.ticker }}{% endif %}</div>
+  <h1>Abnormal Security</h1>
+  <div class="classline">AI Email / Behavioral Security · San Francisco, CA · Private ($5.1B; IPO-track)</div>
 
-  <div class="lede">{{ p.headline_long }}</div>
+  <div class="lede">Abnormal Security raised a $250M Series D at $5.1B and is signalling public-company readiness - an AI-security leader with the budget and the brand mandate, and no motorsport presence.</div>
 
   <div class="strip">
-    <div class="scorebox"><div class="num">{{ p.opportunity }}</div><div class="den">Opportunity / 100</div></div>
+    <div class="scorebox"><div class="num">72</div><div class="den">Opportunity / 100</div></div>
     <div class="chips">
-      <div class="chip"><div class="k">Timing Window</div><div class="v">{{ p.timing_window }}</div></div>
-      <div class="chip"><div class="k">Series</div><div class="v">{{ p.series }}</div></div>
-      <div class="chip"><div class="k">Recommended Team</div><div class="v">{{ p.recommended_team }}</div></div>
-      <div class="chip"><div class="k">Action Horizon</div><div class="v">{{ p.action_horizon }}</div></div>
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Haas</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
     </div>
   </div>
 
   <h2>The Case</h2>
-  <p>{{ p.the_case }}</p>
+  <p>Abnormal Security, an AI behavioral-security leader, raised a $250M Series D at a $5.1B valuation and has publicly targeted operating as a public company. It has the capacity and the brand-building motive of a pre-IPO leader, sits in the open cybersecurity category, and has never entered motorsport.</p>
 
   <h2>Why Now</h2>
-  <p>{{ p.why_now }}</p>
+  <p>Pre-IPO leaders invest in enterprise brand to support a listing; the open security category rewards a first mover.</p>
 
   <div class="flags">
-    {% for s in p.signals %}<span class="flag">{{ s.replace('_',' ') }}</span>{% endfor %}
-    <span class="flag">discovery: {{ p.discovery }}</span>
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
   </div>
 
   <!-- ===================== PAGE 2 ===================== -->
   <div class="page2"></div>
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 007</span>
   </div>
 
-  <h2>Why {{ p.recommended_team }}</h2>
-  <p>{{ p.why_team }}</p>
+  <h2>Why Haas</h2>
+  <p>Haas offers an accessible, lean entry tier with open enterprise-software categories - a sensible first motorsport step at a sensible price.</p>
 
-  <h2>Value to {{ p.recommended_team }} &nbsp;<span class="mode">— <b>MODE {{ p.mode }}</b> ({{ 'tech in the car / championship' if p.mode == 'A' else 'tech serves the team operation' }})</span></h2>
-  <p>{{ p.value_to_team }}</p>
+  <h2>Value to Haas &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A. F1 teams are high-value targets for business email compromise and social engineering; Abnormal&#39;s platform is a credible security partner with real protective value and CISO-facing storytelling.</p>
 
   <h2>Deal Architecture</h2>
-  <p>{{ p.deal_architecture }}</p>
+  <p>Official security partner tier, minimum three years, ~$2.5-4M/yr, with category exclusivity.</p>
 
   <div class="twocol">
     <div>
       <h2>Primary Decision-Maker</h2>
       <div class="dm">
-        <div class="name">{{ p.decision_maker.name }}</div>
-        <div class="role">{{ p.decision_maker.title }}</div>
-        <div class="bio">{{ p.decision_maker.bio }}</div>
+        <div class="name">Abnormal Security CMO (verify)</div>
+        <div class="role">Marketing leadership</div>
+        <div class="bio">Confirm current CMO; CEO Evan Reiser drives the IPO-readiness narrative.</div>
       </div>
     </div>
     <div>
       <h2>Opening Angle</h2>
-      <div class="quote">{{ p.opening_angle }}</div>
+      <div class="quote">&#34;Pre-IPO is exactly when enterprise brand matters most. Security is open on the grid, and Haas is the smart, ownable first step. 25 minutes?&#34;</div>
     </div>
   </div>
 
   <h2>Score Composition</h2>
   <div class="scoregrid">
-    {% for key, label in pillars %}
     <div class="sc">
-      <div class="pill">{{ label }}</div>
-      <div class="val">{{ p.scores[key] }} <span>/ 20</span></div>
-      <div class="why">{{ p.score_rationale[key] }}</div>
+      <div class="pill">Timing</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Raised $250M Series D at $5.1B; publicly targeting public-company readiness.</div>
     </div>
-    {% endfor %}
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">$5.1B valuation, strong ARR growth; comfortably funds a value-to-mid tier.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">AI behavioral security; cybersecurity category is open on the grid.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">IPO-readiness window, but no acute external forcing function yet.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A: every team faces targeted phishing/social engineering - a real security use case.</div>
+    </div>
   </div>
 
   <h2>Risks &amp; Counters</h2>
-  {% for r in p.risks %}
-  <div class="risk"><span class="rt">{{ r.title }}</span> &nbsp;<span class="rc">{{ r.detail }} <b>Counter:</b> {{ r.counter }}</span></div>
-  {% endfor %}
+  <div class="risk"><span class="rt">Spend discipline pre-IPO</span> &nbsp;<span class="rc">Public-company prep favours efficiency. <b>Counter:</b> Lead with measurable B2B pipeline and a value-tier entry, not title-level spend.</span></div>
 
   <h2>Sources</h2>
   <ul class="sources">
-    {% for s in p.sources %}<li>{{ s }}</li>{% endfor %}
-  </ul>
+<li>https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next</li>  </ul>
 </div>
 </body>
 </html>

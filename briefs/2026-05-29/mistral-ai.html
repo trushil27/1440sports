@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>1440 Intelligence Brief — {{ p.name }}</title>
+<title>1440 Intelligence Brief — Mistral AI</title>
 <style>
   /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
   :root {
@@ -18,7 +18,7 @@
     size: A4;
     margin: 13mm 13mm 13mm 13mm;
     @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
-    @bottom-center { content: "{{ p.name|upper }} · {{ date_long }}"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "MISTRAL AI · 29 MAY 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
   }
   * { box-sizing: border-box; }
@@ -84,88 +84,102 @@
 
   <!-- ===================== PAGE 1 ===================== -->
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 009</span>
   </div>
-  <div class="ribbon">Intelligence Brief / N° {{ brief_no }} &nbsp;·&nbsp; {{ p.tier }}</div>
+  <div class="ribbon">Intelligence Brief / N° 009 &nbsp;·&nbsp; WARM</div>
 
-  <h1>{{ p.name }}</h1>
-  <div class="classline">{{ p.category }} · {{ p.hq }}{% if p.ticker %} · {{ p.ticker }}{% endif %}</div>
+  <h1>Mistral AI</h1>
+  <div class="classline">Enterprise / Frontier AI · Paris, France · Private (multi-billion EUR valuation)</div>
 
-  <div class="lede">{{ p.headline_long }}</div>
+  <div class="lede">Europe&#39;s frontier-AI champion Mistral is flush with capital and brand ambition - and Formula E is the European, sustainability-native stage it has never used.</div>
 
   <div class="strip">
-    <div class="scorebox"><div class="num">{{ p.opportunity }}</div><div class="den">Opportunity / 100</div></div>
+    <div class="scorebox"><div class="num">72</div><div class="den">Opportunity / 100</div></div>
     <div class="chips">
-      <div class="chip"><div class="k">Timing Window</div><div class="v">{{ p.timing_window }}</div></div>
-      <div class="chip"><div class="k">Series</div><div class="v">{{ p.series }}</div></div>
-      <div class="chip"><div class="k">Recommended Team</div><div class="v">{{ p.recommended_team }}</div></div>
-      <div class="chip"><div class="k">Action Horizon</div><div class="v">{{ p.action_horizon }}</div></div>
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Nissan Formula E</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
     </div>
   </div>
 
   <h2>The Case</h2>
-  <p>{{ p.the_case }}</p>
+  <p>Mistral AI, freshly capitalised, is building a global enterprise brand and a &#39;European AI sovereignty&#39; narrative. Formula E - European-rooted and sustainability-led - is a natural stage; no frontier-AI lab currently holds an FE team partnership.</p>
 
   <h2>Why Now</h2>
-  <p>{{ p.why_now }}</p>
+  <p>Post-raise brand budget plus an enterprise land-grab make a multi-year platform attractive now.</p>
 
   <div class="flags">
-    {% for s in p.signals %}<span class="flag">{{ s.replace('_',' ') }}</span>{% endfor %}
-    <span class="flag">discovery: {{ p.discovery }}</span>
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
   </div>
 
   <!-- ===================== PAGE 2 ===================== -->
   <div class="page2"></div>
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 009</span>
   </div>
 
-  <h2>Why {{ p.recommended_team }}</h2>
-  <p>{{ p.why_team }}</p>
+  <h2>Why Nissan Formula E</h2>
+  <p>Nissan (EV pioneer, strong FE pedigree) aligns Mistral&#39;s AI story with electric performance; a French team option (post-DS) can be revisited as the grid settles.</p>
 
-  <h2>Value to {{ p.recommended_team }} &nbsp;<span class="mode">— <b>MODE {{ p.mode }}</b> ({{ 'tech in the car / championship' if p.mode == 'A' else 'tech serves the team operation' }})</span></h2>
-  <p>{{ p.value_to_team }}</p>
+  <h2>Value to Nissan Formula E &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A. AI-driven race strategy, energy management modelling and data analysis are real FE problems; Mistral can be a working technical partner, not just a logo.</p>
 
   <h2>Deal Architecture</h2>
-  <p>{{ p.deal_architecture }}</p>
+  <p>Official AI / technology partner, minimum three years, ~$3-5M/yr, AI-category exclusivity with a data/strategy activation angle.</p>
 
   <div class="twocol">
     <div>
       <h2>Primary Decision-Maker</h2>
       <div class="dm">
-        <div class="name">{{ p.decision_maker.name }}</div>
-        <div class="role">{{ p.decision_maker.title }}</div>
-        <div class="bio">{{ p.decision_maker.bio }}</div>
+        <div class="name">Mistral AI Head of Marketing / Comms (verify)</div>
+        <div class="role">Marketing / Comms leadership</div>
+        <div class="bio">Confirm current marketing/brand owner; founders are closely involved in brand decisions.</div>
       </div>
     </div>
     <div>
       <h2>Opening Angle</h2>
-      <div class="quote">{{ p.opening_angle }}</div>
+      <div class="quote">&#34;Europe built the championship of the future. Europe&#39;s AI champion isn&#39;t on it yet. Three years, real technical activation, your story.&#34;</div>
     </div>
   </div>
 
   <h2>Score Composition</h2>
   <div class="scoregrid">
-    {% for key, label in pillars %}
     <div class="sc">
-      <div class="pill">{{ label }}</div>
-      <div class="val">{{ p.scores[key] }} <span>/ 20</span></div>
-      <div class="why">{{ p.score_rationale[key] }}</div>
+      <div class="pill">Timing</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Fresh mega-round; building a global enterprise brand and European AI-sovereignty narrative.</div>
     </div>
-    {% endfor %}
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Multi-billion valuation, well capitalised.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">European AI champion fits a European, sustainability-led championship.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">AI brands racing for enterprise mindshare; presence differentiates.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">MODE A: AI for strategy/data analysis is a credible team use case.</div>
+    </div>
   </div>
 
   <h2>Risks &amp; Counters</h2>
-  {% for r in p.risks %}
-  <div class="risk"><span class="rt">{{ r.title }}</span> &nbsp;<span class="rc">{{ r.detail }} <b>Counter:</b> {{ r.counter }}</span></div>
-  {% endfor %}
+  <div class="risk"><span class="rt">Engineering-led culture</span> &nbsp;<span class="rc">Founder-led labs may deprioritise sponsorship. <b>Counter:</b> Frame as enterprise credibility and a talent magnet in a recruiting war.</span></div>
 
   <h2>Sources</h2>
   <ul class="sources">
-    {% for s in p.sources %}<li>{{ s }}</li>{% endfor %}
-  </ul>
+<li>https://www.fiaformulae.com/en/teams</li><li>https://techcrunch.com/2026/01/12/at-least-36-new-tech-unicorns-were-minted-in-2025-so-far/</li>  </ul>
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>1440 Intelligence Brief — {{ p.name }}</title>
+<title>1440 Intelligence Brief — Isomorphic Labs</title>
 <style>
   /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
   :root {
@@ -18,7 +18,7 @@
     size: A4;
     margin: 13mm 13mm 13mm 13mm;
     @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
-    @bottom-center { content: "{{ p.name|upper }} · {{ date_long }}"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "ISOMORPHIC LABS · 29 MAY 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
     @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
   }
   * { box-sizing: border-box; }
@@ -84,88 +84,102 @@
 
   <!-- ===================== PAGE 1 ===================== -->
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 011</span>
   </div>
-  <div class="ribbon">Intelligence Brief / N° {{ brief_no }} &nbsp;·&nbsp; {{ p.tier }}</div>
+  <div class="ribbon">Intelligence Brief / N° 011 &nbsp;·&nbsp; DEVELOPING</div>
 
-  <h1>{{ p.name }}</h1>
-  <div class="classline">{{ p.category }} · {{ p.hq }}{% if p.ticker %} · {{ p.ticker }}{% endif %}</div>
+  <h1>Isomorphic Labs</h1>
+  <div class="classline">AI Drug Discovery · London, UK · Private (DeepMind spin-out; $600M round, unicorn)</div>
 
-  <div class="lede">{{ p.headline_long }}</div>
+  <div class="lede">DeepMind spin-out Isomorphic Labs raised $600M into unicorn territory - a British AI deep-tech with a precision-science story and no motorsport footprint, ideal to court early before crowding rises.</div>
 
   <div class="strip">
-    <div class="scorebox"><div class="num">{{ p.opportunity }}</div><div class="den">Opportunity / 100</div></div>
+    <div class="scorebox"><div class="num">61</div><div class="den">Opportunity / 100</div></div>
     <div class="chips">
-      <div class="chip"><div class="k">Timing Window</div><div class="v">{{ p.timing_window }}</div></div>
-      <div class="chip"><div class="k">Series</div><div class="v">{{ p.series }}</div></div>
-      <div class="chip"><div class="k">Recommended Team</div><div class="v">{{ p.recommended_team }}</div></div>
-      <div class="chip"><div class="k">Action Horizon</div><div class="v">{{ p.action_horizon }}</div></div>
+      <div class="chip"><div class="k">Timing Window</div><div class="v">DEVELOPING</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Jaguar TCS Racing</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">12+ WKS</div></div>
     </div>
   </div>
 
   <h2>The Case</h2>
-  <p>{{ p.the_case }}</p>
+  <p>Isomorphic Labs, the DeepMind/Alphabet spin-out, took its first external capital ($600M) in 2025, entering unicorn territory. Low crowding (~25) makes it an ideal early relationship: a British, precision-science brand whose talent-and-credibility goals could be served by a measured FE association.</p>
 
   <h2>Why Now</h2>
-  <p>{{ p.why_now }}</p>
+  <p>Relationship-first, not a deal yet - get in before the crowd, while the brand is still being built.</p>
 
   <div class="flags">
-    {% for s in p.signals %}<span class="flag">{{ s.replace('_',' ') }}</span>{% endfor %}
-    <span class="flag">discovery: {{ p.discovery }}</span>
+<span class="flag">spinoff unicorn</span><span class="flag">never entered</span><span class="flag">funding event</span>    <span class="flag">discovery: self</span>
   </div>
 
   <!-- ===================== PAGE 2 ===================== -->
   <div class="page2"></div>
   <div class="mast">
-    <img src="{{ logo_navy }}" alt="1440 Sports">
-    <span class="meta">Intelligence Brief · Confidential · N° {{ brief_no }}</span>
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 011</span>
   </div>
 
-  <h2>Why {{ p.recommended_team }}</h2>
-  <p>{{ p.why_team }}</p>
+  <h2>Why Jaguar TCS Racing</h2>
+  <p>Jaguar TCS Racing - British, sustainability-and-IT-services-led - is the natural cultural fit.</p>
 
-  <h2>Value to {{ p.recommended_team }} &nbsp;<span class="mode">— <b>MODE {{ p.mode }}</b> ({{ 'tech in the car / championship' if p.mode == 'A' else 'tech serves the team operation' }})</span></h2>
-  <p>{{ p.value_to_team }}</p>
+  <h2>Value to Jaguar TCS Racing &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B. Primarily a science/innovation and talent-brand association rather than an in-car system; value sits in shared &#39;precision and discovery&#39; narrative and recruiting halo.</p>
 
   <h2>Deal Architecture</h2>
-  <p>{{ p.deal_architecture }}</p>
+  <p>Start with a modest official-partner tier, minimum three years, structured to grow; ~$2-3M/yr.</p>
 
   <div class="twocol">
     <div>
       <h2>Primary Decision-Maker</h2>
       <div class="dm">
-        <div class="name">{{ p.decision_maker.name }}</div>
-        <div class="role">{{ p.decision_maker.title }}</div>
-        <div class="bio">{{ p.decision_maker.bio }}</div>
+        <div class="name">Isomorphic Labs Head of Comms / CEO Demis Hassabis (verify lead)</div>
+        <div class="role">Leadership / Comms</div>
+        <div class="bio">Founder-led (Demis Hassabis); confirm the brand/comms owner. A long-horizon, relationship-first target.</div>
       </div>
     </div>
     <div>
       <h2>Opening Angle</h2>
-      <div class="quote">{{ p.opening_angle }}</div>
+      <div class="quote">&#34;You&#39;re a unicorn no one in motorsport has called. Let&#39;s build the relationship before you&#39;re the 100th name in the paddock.&#34;</div>
     </div>
   </div>
 
   <h2>Score Composition</h2>
   <div class="scoregrid">
-    {% for key, label in pillars %}
     <div class="sc">
-      <div class="pill">{{ label }}</div>
-      <div class="val">{{ p.scores[key] }} <span>/ 20</span></div>
-      <div class="why">{{ p.score_rationale[key] }}</div>
+      <div class="pill">Timing</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">First external capital (March 2025, $600M) - early in its brand life.</div>
     </div>
-    {% endfor %}
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Unicorn-territory, Alphabet-linked; capacity solid, spend appetite unproven.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">British deep-tech; precision/science narrative fits a British team, but pharma is an unusual motorsport category.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">10 <span>/ 20</span></div>
+      <div class="why">Low; long-horizon relationship.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">9 <span>/ 20</span></div>
+      <div class="why">MODE B: no direct in-car use; a science/innovation brand-association play.</div>
+    </div>
   </div>
 
   <h2>Risks &amp; Counters</h2>
-  {% for r in p.risks %}
-  <div class="risk"><span class="rt">{{ r.title }}</span> &nbsp;<span class="rc">{{ r.detail }} <b>Counter:</b> {{ r.counter }}</span></div>
-  {% endfor %}
+  <div class="risk"><span class="rt">Off-strategy risk</span> &nbsp;<span class="rc">A drug-discovery lab may see motorsport as irrelevant. <b>Counter:</b> Frame as talent attraction and precision-science narrative, not consumer reach; keep it small and optional to scale.</span></div>
 
   <h2>Sources</h2>
   <ul class="sources">
-    {% for s in p.sources %}<li>{{ s }}</li>{% endfor %}
-  </ul>
+<li>https://techcrunch.com/2025/09/08/more-than-10-european-startups-became-unicorns-this-year/</li>  </ul>
 </div>
 </body>
 </html>
