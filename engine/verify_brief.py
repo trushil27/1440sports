@@ -31,6 +31,8 @@ import re
 import sys
 import urllib.request
 
+import team_fit  # noqa: E402
+
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _DATA = os.path.join(_ROOT, "data", "prospects.json")
 
@@ -45,6 +47,19 @@ GENERIC_DM = re.compile(r"^(the\s+)?(cmo|ceo|cfo|cro|president|head of|vp|"
 FIGURE = re.compile(r"\$\s?\d[\d,.]*\s?(?:bn|billion|million|thousand|b|m|k)?|\b\d[\d,.]*%",
                     re.I)
 YEAR = re.compile(r"\b(20\d{2})\b")
+# Language that asserts the prospect could OWN a category / that the grid is empty.
+EXCLUSIVITY = re.compile(
+    r"category exclusivity|exclusivity|own (the|this|it)\b|define and own|"
+    r"no .{0,50}(brand|partner|player|rival).{0,50}(grid|car|paddock)|"
+    r"entire .{0,30}category (open|unoccupied)|whitespace|"
+    r"nobody .{0,30}(claimed|owns)|unoccupied|no one (has|owns)", re.I)
+
+
+def _days_since(date_str, today: _dt.date):
+    try:
+        return (today - _dt.date.fromisoformat(str(date_str))).days
+    except (ValueError, TypeError):
+        return None
 
 
 def _norm_fig(tok: str) -> str:
@@ -70,10 +85,13 @@ def _is_shippable(p: dict) -> bool:
     return True
 
 
-def check_prospect(p: dict, today: _dt.date) -> list:
+def check_prospect(p: dict, today: _dt.date,
+                   warn_days: int = 30, block_days: int = 90,
+                   teams: list = None) -> list:
     """Return a list of (severity, code, message) findings."""
     out = []
     pid = p.get("id", "?")
+    shippable = _is_shippable(p)
 
     # 1. required fields
     for f in REQUIRED:
@@ -138,6 +156,81 @@ def check_prospect(p: dict, today: _dt.date) -> list:
     if not p.get("sources"):
         out.append((BLOCKER, "no_sources", "no `sources` citations at all"))
 
+    # 8. FRESHNESS / DECAY — facts go stale; force periodic re-verification
+    lv = p.get("last_verified")
+    age = _days_since(lv, today) if lv else None
+    if not lv:
+        out.append((WARN, "never_verified",
+                    "no `last_verified` date — re-check facts and stamp it"))
+    elif age is not None and age > block_days:
+        sev = BLOCKER if shippable else WARN
+        out.append((sev, "stale_data",
+                    f"last verified {age}d ago (> {block_days}d) — re-verify before shipping"))
+    elif age is not None and age > warn_days:
+        out.append((WARN, "aging_data",
+                    f"last verified {age}d ago (> {warn_days}d) — consider re-checking"))
+
+    # 9. CLAIM-LEVEL CITATIONS — load-bearing facts must each be bound to a source
+    key_facts = p.get("key_facts") or []
+    if shippable and not key_facts:
+        out.append((WARN, "no_key_facts",
+                    "no `key_facts` — bind each load-bearing figure/person/date to a source"))
+    srcs = set(p.get("sources", []))
+    prose = json.dumps({k: p.get(k) for k in
+                        ("headline_long", "the_case", "why_now", "score_rationale")})
+    for kf in key_facts:
+        label = kf.get("fact", "?")
+        if not kf.get("source"):
+            out.append((BLOCKER, "fact_uncited", f"key_fact '{label}' has no source"))
+        elif kf.get("source") not in srcs:
+            out.append((WARN, "fact_src_orphan",
+                        f"key_fact '{label}' cites a URL not in `sources`"))
+        # drift check: the figure should actually appear somewhere in the prose
+        val = str(kf.get("value", ""))
+        figs = [_norm_fig(t) for t in FIGURE.findall(val)]
+        prose_figs = {_norm_fig(t) for t in FIGURE.findall(prose)}
+        missing = [f for f in figs if f not in prose_figs]
+        if missing:
+            out.append((WARN, "fact_drift",
+                        f"key_fact '{label}' value {missing} not reflected in the brief prose"))
+
+    # 10. TEAM-FIT — catch a prospect pointed at a team that already has a rival
+    rec = p.get("recommended_team")
+    if rec and "(excluded)" not in rec:
+        teams = teams if teams is not None else team_fit.load_teams()
+        t = team_fit.find_team(rec, teams)
+        if t is None:
+            out.append((WARN, "team_unknown",
+                        f"recommended_team '{rec}' not found in data/teams.json inventory"))
+        else:
+            a = team_fit.assess_team(p, t)
+            # Does the prose make an exclusivity / whitespace claim?
+            claim_blob = " ".join(str(p.get(k, "")) for k in
+                                  ("headline_long", "the_case", "why_now", "why_team",
+                                   "opening_angle", "deal_architecture")) + " " + \
+                json.dumps(p.get("score_rationale", {}))
+            overclaims = bool(EXCLUSIVITY.search(claim_blob))
+            if a["conflicts"] and overclaims and shippable:
+                out.append((BLOCKER, "exclusivity_overclaim",
+                            f"'{rec}' already has a partner in this lane {a['conflicts']} "
+                            "AND the copy claims category exclusivity/whitespace — "
+                            "narrow the claim or change team"))
+            elif a["conflicts"]:
+                out.append((WARN, "team_conflict",
+                            f"'{rec}' has a partner in this lane {a['conflicts']} — "
+                            "verify there is no category clash"))
+            elif a["crowded"]:
+                out.append((INFO, "team_crowded",
+                            f"'{rec}' is adjacent-crowded {a['crowded']} — keep the "
+                            "category claim narrow"))
+            # is there a clearly better, cleaner team?
+            best = team_fit.recommend(p, teams)[0]
+            if best["team"] != a["team"] and best["score"] >= a["score"] + 4 \
+                    and not best["conflicts"]:
+                out.append((INFO, "team_suggestion",
+                            f"team-fit engine ranks '{best['team']}' higher "
+                            f"({best['score']} vs {a['score']}) — confirm '{rec}' is intended"))
+
     return out
 
 
@@ -172,6 +265,10 @@ def check_citations(p: dict) -> list:
 def verify(prospect_ids=None, net=False, today=None):
     today = today or _dt.date.today()
     data = json.load(open(_DATA, encoding="utf-8"))
+    meta = data.get("_meta", {}) if isinstance(data, dict) else {}
+    warn_days = int(meta.get("verify_warn_days", 30))
+    block_days = int(meta.get("verify_block_days", 90))
+    teams = team_fit.load_teams()
     items = data if isinstance(data, list) else data.get("prospects", data)
     findings = {}
     for p in items:
@@ -179,7 +276,8 @@ def verify(prospect_ids=None, net=False, today=None):
             continue
         if prospect_ids and p.get("id") not in prospect_ids:
             continue
-        f = check_prospect(p, today)
+        f = check_prospect(p, today, warn_days=warn_days,
+                           block_days=block_days, teams=teams)
         if net:
             f += check_citations(p)
         findings[p.get("id", "?")] = {"shippable": _is_shippable(p), "findings": f}

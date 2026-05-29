@@ -72,6 +72,14 @@ primary source** — do not trust yesterday's data or your own memory:
    wrong, fix `data/prospects.json` + `data/sources.md` and re-verify.
 4. **Do not ship if any high-risk claim is UNVERIFIED or CONTRADICTED.** Narrow
    or drop the claim instead — when in doubt, write the weaker, true sentence.
+5. **Stamp the trust fields on the hero** (the gate warns until you do):
+   - `last_verified`: today's date, once you've re-checked the facts.
+   - `key_facts`: each load-bearing figure/person/date as
+     `{fact, value, source}`, with `source` also present in `sources`.
+   - `fit_lane` / `fit_domain`: the prospect's narrow lane and broad space, so
+     the **team-fit engine** (`engine/team_fit.py`) can check the recommended
+     team. If it flags `team_conflict` / `exclusivity_overclaim`, either narrow
+     the category claim or re-point the team (the engine suggests a better one).
 
 The engine enforces a final backstop: `run_daily.py` runs the gate on the hero
 and **refuses to email** if there are blockers (override only with

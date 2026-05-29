@@ -5,8 +5,11 @@
     "schema": "v2 (Ramp-standard): 5 pillars x/20 (timing, capacity, brand_fit, urgency, ops_fit); mode A/B; value_to_team; discovery seeded|self; already_present excludes companies on an F1/FE grid directly or via a parent/subsidiary. decision_maker MUST be a verified named individual (or, if a seat is vacant/in-transition, the verified CEO with the gap noted) - never a generic title.",
     "default_min_deal_years": 3,
     "cooldown_days": 5,
+    "verify_warn_days": 30,
+    "verify_block_days": 90,
     "scoring": "Opportunity /100 = sum of 5 pillars each /20 (see engine/methodology.md)",
-    "crowding_rule": "est_inbound_pitches > 100 => excluded from hero selection"
+    "crowding_rule": "est_inbound_pitches > 100 => excluded from hero selection",
+    "trust_fields": "last_verified (ISO date a human/agent re-checked the facts), key_facts (load-bearing facts each bound to a source URL), fit_lane/fit_domain (team-fit engine inputs). See engine/verify_brief.py + engine/team_fit.py."
   },
   "prospects": [
     {
@@ -63,6 +66,9 @@
       "name": "Cohesity",
       "ticker": "Private (Nvidia-backed; 2026 IPO, valuation benchmarked vs Rubrik)",
       "category": "AI Data Security / Data Protection",
+      "fit_lane": ["backup", "recovery", "ransomware", "resilience"],
+      "fit_domain": ["data", "security", "protection", "storage"],
+      "last_verified": "2026-05-29",
       "hq": "San Jose, CA",
       "series": "F1",
       "status": "active",
@@ -102,6 +108,16 @@
       "risks": [
         {"title": "IPO quiet period", "detail": "Securities rules may restrict marketing announcements in the weeks around the listing.", "counter": "Negotiate and sign quietly, then activate post-listing; use the roadshow period to build internal consensus rather than to announce."},
         {"title": "Integration focus", "detail": "Post-Veritas integration may absorb leadership attention and budget.", "counter": "Position the deal as the single external proof point that the merged company is now one unified category leader - an integration accelerant, not a distraction."}
+      ],
+      "key_facts": [
+        {"fact": "Pro-forma ARR after Veritas combination", "value": "~$1.5B", "source": "https://www.cnbc.com/2025/09/04/nvidia-backed-cohesity-eyes-2026-ipo-with-valuation-rivaling-17-billion-rubrik.html"},
+        {"fact": "Adjusted cash-EBITDA margin", "value": "28%", "source": "https://www.cnbc.com/2025/09/04/nvidia-backed-cohesity-eyes-2026-ipo-with-valuation-rivaling-17-billion-rubrik.html"},
+        {"fact": "Veritas combination completed", "value": "10 Dec 2024", "source": "https://www.cnbc.com/2025/09/04/nvidia-backed-cohesity-eyes-2026-ipo-with-valuation-rivaling-17-billion-rubrik.html"},
+        {"fact": "Rubrik market cap (IPO benchmark peer)", "value": "~$14.5B (28 May 2026)", "source": "https://stockanalysis.com/stocks/rbrk/market-cap/"},
+        {"fact": "CMO (decision-maker), appointed 18 Feb 2025; ex-CMO Unity & VMware", "value": "Carol Carpenter", "source": "https://www.cohesity.com/newsroom/press/cohesity-appoints-carol-carpenter-as-chief-marketing-officer/"},
+        {"fact": "Headquarters (relocated 2025 from Santa Clara)", "value": "San Jose, CA", "source": "https://www.cohesity.com/newsroom/press/cohesity-celebrates-grand-opening-san-jose-hq-dec-11/"},
+        {"fact": "Recommended team's data-protection/cyber roster (clean lane)", "value": "Cadillac: IFS (ERP) + TWG (AI), no data-protection or cyber partner", "source": "https://www.autoracing1.com/pl/469169/formula-1-news-cadillac-f1-team-secures-ifs-as-official-technology-partner-ahead-of-2026-grid-debut/"},
+        {"fact": "Williams data/cyber incumbents (why Williams is crowded)", "value": "VAST Data + Keeper Security", "source": "https://www.williamsf1.com/posts/fce0ff58-774b-431e-8109-063f548aeb33/williams-racing-cybersecurity-partnership-keeper-security"}
       ],
       "sources": [
         "https://www.cnbc.com/2025/09/04/nvidia-backed-cohesity-eyes-2026-ipo-with-valuation-rivaling-17-billion-rubrik.html",
