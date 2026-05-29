@@ -28,6 +28,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import scoring          # noqa: E402
 import generate_brief   # noqa: E402
 import send_email       # noqa: E402
+import verify_brief     # noqa: E402
 
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _DATA = os.path.join(_ROOT, "data", "prospects.json")
@@ -63,6 +64,10 @@ def main() -> int:
     ap.add_argument("--date", default=_dt.date.today().isoformat())
     ap.add_argument("--force", help="force a prospect id as today's hero")
     ap.add_argument("--no-email", action="store_true")
+    ap.add_argument("--allow-unverified", action="store_true",
+                    help="email even if the fact-check gate finds blockers (NOT recommended)")
+    ap.add_argument("--verify-net", action="store_true",
+                    help="also check that every citation URL resolves before sending")
     ap.add_argument("--list", action="store_true", help="print leaderboard and exit")
     ap.add_argument("--batch", action="store_true",
                     help="render briefs for ALL eligible prospects (no email)")
@@ -125,6 +130,21 @@ def main() -> int:
     print(f"Hero: {hero['name']}  ({e['opportunity']}/100, {e['tier']})")
     for k, v in paths.items():
         print(f"  {k.upper():4s} -> {os.path.relpath(v, _ROOT)}")
+
+    # Fact-check / integrity gate — never email a brief that fails verification.
+    vfindings = verify_brief.check_prospect(hero, _dt.date.fromisoformat(args.date))
+    if args.verify_net:
+        vfindings += verify_brief.check_citations(hero)
+    blockers = [f for f in vfindings if f[0] == verify_brief.BLOCKER]
+    warns = [f for f in vfindings if f[0] == verify_brief.WARN]
+    if blockers or warns:
+        print("\n  Verification gate:")
+        for sev, code, msg in blockers + warns:
+            print(f"    {sev}  [{code}] {msg}")
+    if blockers and not args.allow_unverified:
+        print(f"\n  ❌ {len(blockers)} blocker(s) — refusing to email this brief. "
+              "Fix the data (or re-run with --allow-unverified to override).")
+        args.no_email = True
 
     # Email
     if not args.no_email:

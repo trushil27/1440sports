@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — 1Password  (N° 009)
+# 1440 INTELLIGENCE BRIEF — 1Password  (N° 008)
 *Enterprise Identity / Access Security · Toronto, Canada · Private ($6.8B; top 2026 IPO candidate) · 2026-05-29*
 
 **WARM**

@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — SnapLogic  (N° 004)
+# 1440 INTELLIGENCE BRIEF — SnapLogic  (N° 003)
 *Agentic Integration / iPaaS · San Mateo, CA · Private (a16z, Microsoft, Silver Lake Waterman, Sixth Street, Capital One Ventures) · 2026-05-29*
 
 **HOT**

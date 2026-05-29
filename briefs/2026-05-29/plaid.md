@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — Plaid  (N° 012)
+# 1440 INTELLIGENCE BRIEF — Plaid  (N° 011)
 *Fintech · Open Banking / Financial Data Network · San Francisco, CA · Private (~$6.1B post-money; IPO 'very likely' 2026) · 2026-05-29*
 
 **WARM**

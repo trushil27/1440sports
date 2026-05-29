@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — Cohere  (N° 007)
+# 1440 INTELLIGENCE BRIEF — Cohere  (N° 006)
 *Enterprise AI · Toronto, Canada / San Francisco, CA · Private (~$7B valuation; ~$150M ARR; IPO interest) · 2026-05-29*
 
 **WARM**

@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — Glean  (N° 010)
+# 1440 INTELLIGENCE BRIEF — Glean  (N° 009)
 *Enterprise AI / Work AI Platform · Palo Alto, CA · Private (~$7.2B valuation; pre-IPO) · 2026-05-29*
 
 **WARM**

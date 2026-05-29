@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — Abnormal Security  (N° 008)
+# 1440 INTELLIGENCE BRIEF — Abnormal Security  (N° 007)
 *AI Email / Behavioral Security · San Francisco, CA · Private ($5.1B; IPO-track) · 2026-05-29*
 
 **WARM**

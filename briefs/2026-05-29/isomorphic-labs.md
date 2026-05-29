@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — Isomorphic Labs  (N° 014)
+# 1440 INTELLIGENCE BRIEF — Isomorphic Labs  (N° 013)
 *AI Drug Discovery · London, UK · Private (DeepMind spin-out; $600M round, unicorn) · 2026-05-29*
 
 **DEVELOPING**

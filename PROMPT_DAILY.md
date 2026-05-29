@@ -30,11 +30,44 @@ full brief fields (`the_case`, `why_now`, `why_team`, `deal_architecture`,
 appointments against primary sources (company press room, SEC filings, reputable
 press) before scoring.
 
+## 1.5 Verify before you ship (MANDATORY — this is what protects us)
+
+A brief that reaches the MD must not contain a single claim we cannot defend.
+Before rendering, **re-verify the hero's every material claim against a live
+primary source** — do not trust yesterday's data or your own memory:
+
+1. Run the mechanical gate and fix anything it flags:
+   ```bash
+   python engine/verify_brief.py <hero-id> --net   # fields, scores, gates, citations
+   ```
+2. For the hero, **web-verify each high-risk claim** and confirm the citation
+   actually says what we claim. High-risk = anything specific and checkable:
+   - **Named people + titles** (decision-maker, CEO) — confirm name, exact
+     title, and that they're current, from company site / press / Bloomberg.
+   - **Financials** (ARR, revenue, margin, valuation, raise size) — confirm the
+     figure *and its date/basis* (pro-forma vs trailing; market caps move —
+     re-check the day you send).
+   - **Corporate facts** (HQ, ownership, merger dates, IPO timing) — beware
+     stale registered addresses vs current HQ.
+   - **Grid-occupancy claims** — before asserting "no X brand on the grid" or
+     "category whitespace / exclusivity", check the recommended team's *current*
+     partner roster (title, technology, official partners). Overclaiming
+     whitespace is a common, embarrassing error.
+3. Record the result in `briefs/<date>/<hero>-verification.md`: one line per
+   claim → source URL → `VERIFIED / CORRECTED / UNVERIFIED`. If a claim is
+   wrong, fix `data/prospects.json` + `data/sources.md` and re-verify.
+4. **Do not ship if any high-risk claim is UNVERIFIED or CONTRADICTED.** Narrow
+   or drop the claim instead — when in doubt, write the weaker, true sentence.
+
+The engine enforces a final backstop: `run_daily.py` runs the gate on the hero
+and **refuses to email** if there are blockers (override only with
+`--allow-unverified`, which you should not need).
+
 ## 2. Run the engine and ship
 
 ```bash
-python engine/run_daily.py --list     # sanity-check the ranking
-python engine/run_daily.py            # render + email today's hero brief
+python engine/run_daily.py --list                 # sanity-check the ranking
+python engine/run_daily.py --verify-net            # render + verify + email today's hero
 ```
 
 The brief is emailed to **trushil.jani@1440sports.com** (the default `EMAIL_TO`)

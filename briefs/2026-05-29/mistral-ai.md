@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — Mistral AI  (N° 011)
+# 1440 INTELLIGENCE BRIEF — Mistral AI  (N° 010)
 *Enterprise / Frontier AI · Paris, France · Private (multi-billion EUR valuation) · 2026-05-29*
 
 **WARM**
