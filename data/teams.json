@@ -6,19 +6,24 @@
       "https://rtrsports.com/en/blog/every-teams-title-sponsor-for-the-2026-formula-1-season/",
       "https://www.blackbookmotorsport.com/news/f1-cadillac-team-title-sponsor-2026-november-2025/",
       "https://www.fiaformulae.com/en/teams",
-      "https://en.wikipedia.org/wiki/2025%E2%80%9326_Formula_E_World_Championship"
+      "https://en.wikipedia.org/wiki/2025%E2%80%9326_Formula_E_World_Championship",
+      "https://www.williamsf1.com/posts/fce0ff58-774b-431e-8109-063f548aeb33/williams-racing-cybersecurity-partnership-keeper-security",
+      "https://www.vastdata.com/press-releases/atlassian-williams-racing-and-vast-data-extend-partnership-with-multi-year",
+      "https://www.autoracing1.com/pl/469169/formula-1-news-cadillac-f1-team-secures-ifs-as-official-technology-partner-ahead-of-2026-grid-debut/",
+      "https://www.mphasis.com/home/mphasis-partners-with-moneygram-haas-f1-team.html",
+      "https://www.confluent.io/press-release/confluent-and-visa-cash-app-racing-bulls-partnership/"
     ]
   },
   "f1": [
     {"team": "McLaren", "title_sponsor": "Mastercard (~$90M/yr, from 2026)", "notable_b2b": ["Dell", "Google", "Udemy (learning)", "Salesforce", "Workday"], "open_categories": ["software supply chain security", "observability"], "identity": "technology-forward precision engineering"},
     {"team": "Red Bull Racing", "title_sponsor": "Oracle (~$110M/yr)", "notable_b2b": ["Oracle (cloud/compute)"], "open_categories": [], "identity": "dominant, aggressive, performance"},
-    {"team": "Williams", "title_sponsor": "Atlassian", "notable_b2b": ["Confluent (data streaming)", "Atlassian"], "open_categories": [], "identity": "engineering revival, data-led", "competitor_locks": ["data streaming / iPaaS (Confluent)"]},
+    {"team": "Williams", "title_sponsor": "Atlassian", "notable_b2b": ["Atlassian (collaboration)", "VAST Data (data platform / storage)", "Keeper Security (cybersecurity / PAM)"], "open_categories": ["backup / recovery / ransomware-resilience (adjacent to VAST + Keeper)"], "identity": "engineering revival, data-led", "competitor_locks": ["data platform / storage (VAST Data)", "identity & access security (Keeper Security)"]},
     {"team": "Aston Martin", "title_sponsor": "Aramco", "notable_b2b": ["Cognizant", "NetApp", "SentinelOne"], "open_categories": ["agentic integration", "DevSecOps"], "identity": "premium enterprise gravitas"},
     {"team": "Mercedes", "title_sponsor": "Petronas", "notable_b2b": ["CrowdStrike", "AWS", "TeamViewer", "SAP"], "open_categories": [], "identity": "blue-chip enterprise"},
     {"team": "Ferrari", "title_sponsor": "HP", "notable_b2b": ["HP", "IBM", "Bell"], "open_categories": [], "identity": "luxury heritage"},
     {"team": "Audi", "title_sponsor": "Revolut (Audi Revolut F1 Team)", "notable_b2b": ["Revolut (fintech)"], "open_categories": ["enterprise software"], "identity": "German engineering, new entrant"},
-    {"team": "Haas", "title_sponsor": "Toyota Gazoo Racing", "notable_b2b": [], "open_categories": ["enterprise software", "data"], "identity": "lean American privateer"},
-    {"team": "Cadillac", "title_sponsor": "NONE (publicly not seeking a title sponsor in 2026 debut; 'fewer, bigger, better')", "notable_b2b": ["Jim Beam (spirits)", "Tenneco (technical)"], "open_categories": ["premium technical partner", "enterprise software"], "identity": "American luxury debut, GM + TWG backed", "title_slot_status": "closed near-term by choice"},
+    {"team": "Haas", "title_sponsor": "Toyota Gazoo Racing (TGR)", "notable_b2b": ["Mphasis (official digital partner - data/analytics/cyber/AI services)", "RUCKUS Networks (networking)", "MoneyGram (fintech)"], "open_categories": ["backup / recovery / data-resilience (Mphasis is a services integrator - possible channel, not a product rival)"], "identity": "lean American privateer", "competitor_locks": ["data & cybersecurity services (Mphasis)"]},
+    {"team": "Cadillac", "title_sponsor": "NONE (publicly not seeking a title sponsor in 2026 debut; 'fewer, bigger, better')", "notable_b2b": ["IFS (official technology partner - ERP/EAM/FSM)", "TWG AI (AI/data)", "Tenneco (technical)", "America Movil (commercial)", "Tommy Hilfiger (apparel)", "Jim Beam (spirits)"], "open_categories": ["backup / recovery / data-resilience", "cybersecurity", "observability"], "identity": "American luxury debut, GM + TWG backed", "title_slot_status": "closed near-term by choice", "note": "Debut team = greenfield tech roster. IFS runs ERP/operations; no data-protection or pure-cybersecurity partner yet, so those categories are cleanly ownable. American flag-bearer aligns with US-market (IPO) audiences."},
     {"team": "Alpine", "title_sponsor": "BWT (since 2022) — deal expected to EXPIRE end-2026; Gucci linked as replacement", "notable_b2b": [], "open_categories": ["title rights from 2027 (watch)", "enterprise software", "data"], "identity": "French, Renault-backed", "title_slot_status": "expiring end-2026 — track"},
     {"team": "Visa Cash App Racing Bulls", "title_sponsor": "Visa + Cash App", "notable_b2b": ["Visa (payments rail)", "Cash App"], "open_categories": ["spend management (complements Visa, not conflicting)", "enterprise software"], "identity": "Red Bull sister team; younger demographic", "competitor_locks": []}
   ],

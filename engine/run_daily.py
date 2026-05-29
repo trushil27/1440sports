@@ -29,6 +29,7 @@ import scoring          # noqa: E402
 import generate_brief   # noqa: E402
 import send_email       # noqa: E402
 import verify_brief     # noqa: E402
+import cadence          # noqa: E402
 
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _DATA = os.path.join(_ROOT, "data", "prospects.json")
@@ -59,6 +60,83 @@ def first_sentences(text: str, n: int = 2) -> str:
     return " ".join(parts[:n]).strip()
 
 
+def weekly_decision(prospects, today, cooldown, min_years, history, args) -> int:
+    """DECISION day: review the week's contenders across BOTH series and surface
+    the single company we should proceed with, with the runners-up for context."""
+    monday, sunday = cadence.week_bounds(today)
+    # The week's featured heroes (what the FE/F1 days surfaced).
+    featured = [r for r in history.get("log", [])
+                if monday.isoformat() <= r.get("date", "") <= today.isoformat()]
+
+    # Re-rank everything eligible, ignoring cooldown so the true best wins today.
+    ranked = scoring.rank(prospects, today=today, cooldown_days=0,
+                          min_deal_years=min_years, history={}, series=None)
+    if not ranked:
+        print("No eligible prospect for the weekly decision.")
+        return 1
+    go = ranked[0]
+    e = scoring.enrich(go)
+
+    # Verification gate — never recommend a GO we can't stand behind.
+    vf = verify_brief.check_prospect(go, today)
+    blockers = [f for f in vf if f[0] == verify_brief.BLOCKER]
+
+    # Build the decision digest (markdown + HTML).
+    lines = [f"# 1440 WEEKLY DECISION — week of {monday:%d %b %Y}", ""]
+    lines.append(f"## ✅ PROCEED: {go['name']}  ({e['opportunity']}/100 · {e['tier']})")
+    lines.append(f"- **Series / team:** {go.get('series')} · {go.get('recommended_team')}")
+    lines.append(f"- **Crowding:** {e['crowding_label']}")
+    lines.append(f"- **Why this one:** {first_sentences(go.get('the_case',''), 2)}")
+    lines.append(f"- **Opening move:** {go.get('opening_angle','').strip(chr(34))}")
+    if blockers:
+        lines.append(f"- ⚠️ **{len(blockers)} verification blocker(s) — resolve before outreach.**")
+    lines.append("\n## This week's contenders (ranked)")
+    for i, p in enumerate(ranked[:6], 1):
+        pe = scoring.enrich(p)
+        star = " ← GO" if p["id"] == go["id"] else ""
+        lines.append(f"{i}. **{pe['opportunity']}/100** {pe['tier']:13s} · {p['series']:2s} · "
+                     f"{p['name']} ({p.get('recommended_team')}){star}")
+    if featured:
+        names = ", ".join(f"{r['name']} ({r['date']})" for r in featured)
+        lines.append(f"\n## Featured in briefs this week\n{names}")
+    digest_md = "\n".join(lines)
+
+    out_dir = os.path.join(_BRIEFS, args.date)
+    os.makedirs(out_dir, exist_ok=True)
+    md_path = os.path.join(out_dir, "weekly-decision.md")
+    with open(md_path, "w", encoding="utf-8") as fh:
+        fh.write(digest_md)
+    # Also render the GO's full 2-page brief to attach.
+    brief_no = f"{len(history.get('log', [])) + 1:03d}"
+    paths = generate_brief.write_brief(go, out_dir, brief_no=brief_no, date=args.date)
+
+    print(f"\nWEEKLY DECISION ({monday:%d %b}–{sunday:%d %b}) -> PROCEED: "
+          f"{go['name']} ({e['opportunity']}/100)")
+    print(f"  Digest -> {os.path.relpath(md_path, _ROOT)}")
+    for k, v in paths.items():
+        print(f"  {k.upper():4s} -> {os.path.relpath(v, _ROOT)}")
+
+    if blockers and not args.allow_unverified:
+        print(f"  ❌ {len(blockers)} verification blocker(s) on the GO pick — not emailing.")
+        args.no_email = True
+
+    if not args.no_email:
+        html = ("<div style=\"font-family:Georgia,serif;max-width:640px;color:#1a1c2e\">"
+                + digest_md.replace("\n", "<br>") + "</div>")
+        subject = (f"1440 WEEKLY DECISION — PROCEED: {go['name']} "
+                   f"({e['opportunity']}/100) — week of {monday:%d %b}")
+        atts = {k: v for k, v in paths.items() if k in ("pdf", "html")}
+        atts["digest"] = md_path
+        channel = send_email.deliver(subject, html, digest_md, atts)
+        print(f"  Delivery channel: {channel}")
+
+    history.setdefault("log", []).append({
+        "date": args.date, "brief_no": brief_no, "id": go["id"], "name": go["name"],
+        "opportunity": e["opportunity"], "tier": e["tier"], "kind": "weekly_decision"})
+    save_history(history)
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=_dt.date.today().isoformat())
@@ -71,6 +149,10 @@ def main() -> int:
     ap.add_argument("--list", action="store_true", help="print leaderboard and exit")
     ap.add_argument("--batch", action="store_true",
                     help="render briefs for ALL eligible prospects (no email)")
+    ap.add_argument("--series", choices=["F1", "FE", "all", "auto"], default="auto",
+                    help="restrict to a championship; 'auto' uses the weekly rota (cadence.py)")
+    ap.add_argument("--decision", action="store_true",
+                    help="force a weekly DECISION-day digest (the single GO pick)")
     args = ap.parse_args()
 
     today = _dt.date.fromisoformat(args.date)
@@ -81,9 +163,26 @@ def main() -> int:
     min_years = int(meta.get("default_min_deal_years", 3))
     history = load_history()
 
+    # Resolve the day's plan from the weekly rota unless overridden.
+    plan = cadence.plan_for(today)
+    decision_day = args.decision or (args.series == "auto" and plan == cadence.DECISION)
+    if args.series in ("F1", "FE", "all"):
+        series = args.series
+    elif decision_day:
+        series = "all"
+    else:  # auto, normal day
+        series = plan  # FE or F1
+    if not args.list and not args.batch:
+        mode = "DECISION (both series)" if decision_day else cadence.LABEL.get(series, series)
+        print(f"Cadence: {today:%A} -> {mode}")
+
+    if decision_day and not args.force and not args.list and not args.batch:
+        return weekly_decision(prospects, today, cooldown, min_years, history, args)
+
     ranked = scoring.rank(prospects, today=today, cooldown_days=cooldown,
                           min_deal_years=min_years,
-                          history=history.get("last_hero", {}))
+                          history=history.get("last_hero", {}),
+                          series=None if series == "all" else series)
 
     if args.list:
         print(f"\n1440 Sports — prospect leaderboard ({args.date})\n" + "-" * 60)

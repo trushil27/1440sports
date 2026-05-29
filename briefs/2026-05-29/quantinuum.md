@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — Quantinuum  (N° 005)
+# 1440 INTELLIGENCE BRIEF — Quantinuum  (N° 006)
 *Quantum Computing · Broomfield, CO / Cambridge, UK · IPO pending (~$12.7B target valuation) · 2026-05-29*
 
 **HOT**

@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — Sonatype  (N° 012)
+# 1440 INTELLIGENCE BRIEF — Sonatype  (N° 008)
 *Software Supply Chain Security · Fulton, MD · Private (Vista-backed) · 2026-05-29*
 
 **WARM**

@@ -97,6 +97,12 @@ email with the 2-page PDF attached within a minute. Without secrets it dry-runs
 
 ---
 
+## Weekly rota
+
+The single daily trigger is series-aware (see `engine/cadence.py`): **Mon–Wed =
+Formula E**, **Thu–Sat = Formula 1**, **Sun = Decision day** (the one GO pick
+across both series). No separate triggers needed — `run_daily.py` reads the date.
+
 ## What gets delivered
 
 - **Subject:** `1440 Brief NNN — <Company> (<score>/100 <tier>) — <date>`

@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — Snyk  (N° 004)
+# 1440 INTELLIGENCE BRIEF — Snyk  (N° 005)
 *Developer Security · Boston, MA / London · Private (~$7B+; IPO anticipated 2026) · 2026-05-29*
 
 **HOT**

@@ -83,21 +83,38 @@ def _days_since(date_str: Optional[str], today: _dt.date) -> Optional[int]:
     return (today - d).days
 
 
+def in_series(prospect: Dict[str, Any], series: Optional[str]) -> bool:
+    """Series filter. 'F1' matches F1; 'FE' matches FE and FE-paddock; None/'all'
+    matches everything."""
+    if not series or series == "all":
+        return True
+    s = str(prospect.get("series", ""))
+    if series == "FE":
+        return s.startswith("FE")
+    if series == "F1":
+        return s == "F1"
+    return s == series
+
+
 def rank(prospects: List[Dict[str, Any]],
          today: Optional[_dt.date] = None,
          cooldown_days: int = 5,
          min_deal_years: int = 3,
-         history: Optional[Dict[str, str]] = None) -> List[Dict[str, Any]]:
+         history: Optional[Dict[str, str]] = None,
+         series: Optional[str] = None) -> List[Dict[str, Any]]:
     """Return eligible prospects sorted best-first.
 
     history maps prospect id -> ISO date last used as hero, so a recent hero is
-    pushed down (not removed) to keep the daily brief fresh.
+    pushed down (not removed) to keep the daily brief fresh. `series` optionally
+    restricts to one championship ('F1' or 'FE').
     """
     today = today or _dt.date.today()
     history = history or {}
     ranked = []
     for p in prospects:
         if not is_eligible_for_hero(p, min_deal_years):
+            continue
+        if not in_series(p, series):
             continue
         score = opportunity_score(p)
         est = p.get("est_inbound_pitches")

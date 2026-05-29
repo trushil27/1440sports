@@ -3,6 +3,20 @@
 You are the 1440 Sports sponsorship-signals analyst. Today's job: refresh the
 signal data with live research, then ship today's hero brief. Work in this repo.
 
+## 0. Today's focus (weekly rota)
+
+The week runs on a cadence (see `engine/cadence.py`):
+- **Mon–Wed → Formula E** signal days
+- **Thu–Sat → Formula 1** signal days
+- **Sunday → DECISION day** — no new hero; instead review the week's contenders
+  across BOTH series and surface the single company we should proceed with.
+
+`run_daily.py` selects the right mode automatically from the date. Concentrate
+your research in step 1 on **today's series** (or, on Sunday, on validating the
+week's top contenders). You can check the plan with `python -c "import sys;
+sys.path.insert(0,'engine'); import cadence, datetime as d;
+print(cadence.plan_for(d.date.today()))"`.
+
 ## 1. Refresh the signals (web research)
 
 Update `data/prospects.json` and `data/teams.json` from the last ~24-72h. Search
@@ -67,8 +81,13 @@ and **refuses to email** if there are blockers (override only with
 
 ```bash
 python engine/run_daily.py --list                 # sanity-check the ranking
-python engine/run_daily.py --verify-net            # render + verify + email today's hero
+python engine/run_daily.py --verify-net            # auto: FE/F1 hero, or Sunday's DECISION digest
 ```
+
+The run is series-aware: on FE/F1 days it ships that series' hero; on Sunday it
+emails the **weekly decision** (the single GO pick + ranked contenders across
+both series). Override if needed: `--series F1|FE|all`, or `--decision` to force
+a decision digest on any day.
 
 The brief is emailed to **trushil.jani@1440sports.com** (the default `EMAIL_TO`)
 with the branded 2-page PDF attached. Confirm the hero, the Opportunity Score,
