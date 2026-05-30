@@ -52,13 +52,36 @@ team's current partner roster) against a primary source. Log it to
 weaker true sentence — do not ship the strong unverified one.
 
 ## 3. Stamp the trust fields on the hero (in `data/prospects.json`)
+These fields make the brief trustworthy **and** fill page 1 — the template
+auto-renders three page-1 panels when (and only when) the data is present, so
+every hero should get the full set. The `cohesity` record is the worked example
+to copy the shape from.
+
 - `last_verified`: today's date, once facts are re-checked.
 - `key_facts`: each load-bearing figure/person/date as `{fact, value, source}`,
-  with `source` also present in `sources`.
-- `fit_lane` / `fit_domain`: narrow lane + broad space so `engine/team_fit.py`
-  can check the recommended team for conflicts. If it suggests a better team,
-  confirm the pick is intentional.
-Re-run `verify_brief.py <hero-id>` until clean (only INFO left).
+  with `source` also present in `sources`. **The first 6 render as the page-1
+  "Proof Points" grid** — so lead with the punchiest verified items (ARR, margin,
+  valuation, key hire, HQ, a dated event). Each `value` must also appear in the
+  prose or `verify_brief` flags `fact_drift`.
+- `fit_lane` / `fit_domain`: narrow lane + broad space. These feed
+  `engine/team_fit.py`, which checks the recommended team for conflicts **and
+  powers the page-1 "Grid Fit" panel** (recommended → PRIME/OPEN, rivals →
+  CROWDED/TAKEN with named incumbents). Keep `fit_domain` tight — drop over-broad
+  tokens (e.g. a bare `data`) that match unrelated partners. Cohesity uses lane
+  `[backup, recovery, ransomware, resilience]`, domain `[security, protection,
+  storage, cyber]`. Sanity-check the panel before shipping:
+  ```bash
+  python3 -c "import sys;sys.path.insert(0,'engine');import json,generate_brief,scoring;p=[x for x in json.load(open('data/prospects.json'))['prospects'] if x['id']=='<hero-id>'][0];[print(r['label'],r['team'],'-',r['detail']) for r in generate_brief.build_gridfit(scoring.enrich(p))]"
+  ```
+  The recommended team should read PRIME or OPEN, not CROWDED. If it reads
+  CROWDED, either the domain tokens are too broad (fix them) or the pick is
+  genuinely contested (re-point the team).
+- `thesis`: one or two crisp sentences (~30–40 words) — renders as the page-1
+  "Bottom Line" bar. Pack in the money fact + why-now + why-this-team.
+
+Re-run `verify_brief.py <hero-id>` until clean (only INFO left). All four panels
+hide automatically if their data is missing, so a half-empty page 1 means a field
+wasn't stamped — go back and add it.
 
 ## 4. Render + ship
 ```bash
