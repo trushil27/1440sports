@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Glean</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "GLEAN · 30 MAY 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 001</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 001 &nbsp;·&nbsp; WARM</div>
+
+  <h1>Glean</h1>
+  <div class="classline">Enterprise AI / Work AI Platform · Palo Alto, CA · Private (~$7.2B valuation; ~$300M ARR; pre-IPO)</div>
+
+  <div class="lede">Glean has rocketed to a ~$7.2B valuation and ~$300M ARR as the enterprise &#39;Work AI&#39; leader, with 250M+ agentic actions and an acquisition already in 2026 - a fast-scaling, pre-IPO brand with no motorsport presence and an open AI lane in Formula E.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">72</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Mahindra Racing</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Glean is one of enterprise AI&#39;s fastest risers: a &#39;Work AI&#39; platform that raised a $150M Series F at a ~$7.2B valuation (led by Wellington Management) and has reached ~$300M ARR, whose users executed more than 250 million agentic actions by January 2026, and which acquired agentic-document company Aryn in March 2026. It is on a clear IPO trajectory, has never entered motorsport, and sits in the same open enterprise-AI category as Cohere - meaning Formula E currently has room for a Work-AI brand to own a lane outright. Glean&#39;s product story (AI that makes large organisations radically more productive) is a natural fit for the operational, engineering-led narrative of an FE team, and its growth-stage brand would benefit from the international, enterprise-credible stage FE provides. Founder-CEO Arvind Jain - a Google Distinguished Engineer and a co-founder of Rubrik - gives the brand unusual technical credibility.</p>
+
+  <h2>Why Now</h2>
+  <p>Glean is scaling brand and go-to-market hard ahead of a likely listing, and the enterprise-AI category in FE is uncontested. Moving now secures category exclusivity cheaply and gives Glean a differentiated stage before larger AI names crowd in - the same first-mover logic that makes the AI lane valuable applies in reverse the moment a peer signs.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$7.2B</div><div class="pfk">Series F valuation (led by Wellington Management)</div></div>
+    <div class="pf"><div class="pfv">$150M</div><div class="pfk">Series F round size</div></div>
+    <div class="pf"><div class="pfv">~$300M</div><div class="pfk">Annual recurring revenue (May 2026)</div></div>
+    <div class="pf"><div class="pfv">Arvind Jain</div><div class="pfk">Founder &amp; CEO (ex-Google Distinguished Engineer, Rubrik co-founder)</div></div>
+    <div class="pf"><div class="pfv">Mahindra: open enterprise-software category, no Work-AI partner</div><div class="pfk">Recommended team&#39;s enterprise-AI roster (clean lane)</div></div>
+    <div class="pf"><div class="pfv">Formula E Gen4 era through 2030</div><div class="pfk">Mahindra manufacturer commitment (de-risks multi-year deal)</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Mahindra Racing<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Jaguar TCS Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Nissan</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A $7.2B &#39;Work AI&#39; leader at ~$300M ARR, scaling hard toward an IPO, can own Formula E&#39;s open enterprise-AI lane outright - and Mahindra&#39;s manufacturer commitment through 2030 de-risks a multi-year founding deal.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">spinoff unicorn</span><span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 001</span>
+  </div>
+
+  <h2>Why Mahindra Racing</h2>
+  <p>Mahindra Racing is a strong fit: a founding Formula E manufacturer committed through the Gen4 era to 2030, with an Indian-and-global identity and a large enterprise parent ecosystem (the Mahindra Group) that mirrors the kind of complex, multi-business organisation Glean sells into. The long manufacturer commitment also de-risks a multi-year deal, and Mahindra&#39;s audience and parent-group relationships open enterprise doors for Glean.</p>
+
+  <h2>Value to Mahindra Racing &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A. A racing team and its parent run on dispersed institutional knowledge - engineering documentation, supplier data, sponsor and operations information - which is exactly what Glean&#39;s Work-AI platform indexes and makes instantly usable. A deployment for the team and selected parent-group functions gives Mahindra real productivity value and Glean a flagship, referenceable enterprise deployment, plus a co-marketing story across a global enterprise group.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Work AI Partner tier on Mahindra Racing, minimum three years (aligned to the manufacturer&#39;s Gen4 commitment), ~$3-4M/yr, with AI-category exclusivity and a working deployment for the team and selected Mahindra Group functions.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Matt &#34;Kix&#34; Kixmoeller</div>
+        <div class="role">Chief Marketing Officer, Glean - verified via Glean.com</div>
+        <div class="bio">Oversees Glean&#39;s global marketing; previously led marketing at Ghost Autonomy and marketing/product at Pure Storage (a multi-billion-dollar data pioneer). He owns the growth-stage brand-build a Formula E partnership would anchor. Co-decision-makers: founder-CEO Arvind Jain and COO Amar Maletira (go-to-market).</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Kix, Glean is the Work-AI leader and Formula E&#39;s enterprise-AI lane is wide open. Mahindra is committed to 2030, so a multi-year deal is de-risked - and you&#39;d own the category before the IPO. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Surged to a ~$7.2B valuation with 250M+ agentic actions by Jan 2026 and an Aryn acquisition in Mar 2026 - a fast-scaling brand on an IPO trajectory.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">~$7.2B valuation, rapid enterprise adoption - capacity for an FE entry tier is solid.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">&#39;Work AI&#39; for large enterprises fits FE&#39;s enterprise audience; a clean, uncontested AI category in the paddock.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">Fast-rising valuation and IPO trajectory, but no single dated trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A: enterprise knowledge/agent AI has a real internal-operations use for a racing organisation.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Hyper-growth focus</span> &nbsp;<span class="rc">A fast-scaling company may keep all spend on direct go-to-market. <b>Counter:</b> Frame the deal as an enterprise-credibility and reference-deployment play with measurable pipeline, not brand vanity.</span></div>
+  <div class="risk"><span class="rt">No dated trigger</span> &nbsp;<span class="rc">Absent an acute clock, the deal can slip. <b>Counter:</b> Category exclusivity is the clock - it vanishes the moment a rival AI brand signs an FE team.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.glean.com/press/glean-raises-150m-series-f-at-7-2b-valuation-to-accelerate-enterprise-ai-agent-innovation-globally</li><li>https://cryptobriefing.com/glean-300m-arr-enterprise-ai-growth/</li><li>https://www.glean.com/authors/mattkix</li><li>https://www.fia.com/news/mahindra-racing-commits-formula-e-gen4-era-until-2030</li><li>https://unicornscreener.vc/blog/7-rising-ai-startups-positioned-for-unicorn-status-by-2026</li>  </ul>
+</div>
+</body>
+</html>
