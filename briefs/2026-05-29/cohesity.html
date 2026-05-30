@@ -70,6 +70,31 @@
   .risk .rc { color: var(--navy); }
   .risk .rc b { color: var(--gold); }
 
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
   .flags { margin: 5px 0 0; }
   .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
   .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
@@ -109,6 +134,45 @@
 
   <h2>Why Now</h2>
   <p>An IPO is the single largest brand-elevation event in a company&#39;s life, and the 12 months around it are when leadership spends most deliberately on institutional credibility - exactly the currency a multi-year F1 partnership trades in. Signing around the listing lets Cohesity convert a finance milestone into a global enterprise-brand statement, pre-build the recognition that public investors reward, and secure backup-and-resilience category exclusivity before a direct rival (Rubrik, Veeam, Commvault) claims the same adjacent lane. The post-Veritas integration narrative also benefits from a single, high-visibility external proof point that the merged company is now one coherent market leader.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$1.5B</div><div class="pfk">Pro-forma ARR after Veritas combination</div></div>
+    <div class="pf"><div class="pfv">28%</div><div class="pfk">Adjusted cash-EBITDA margin</div></div>
+    <div class="pf"><div class="pfv">10 Dec 2024</div><div class="pfk">Veritas combination completed</div></div>
+    <div class="pf"><div class="pfv">~$14.5B (28 May 2026)</div><div class="pfk">Rubrik market cap (IPO benchmark peer)</div></div>
+    <div class="pf"><div class="pfv">Carol Carpenter</div><div class="pfk">CMO (decision-maker), appointed 18 Feb 2025; ex-CMO Unity &amp; VMware</div></div>
+    <div class="pf"><div class="pfv">San Jose, CA</div><div class="pfk">Headquarters (relocated 2025 from Santa Clara)</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Cadillac<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">data platform / storage, identity &amp; access security</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Haas</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">Mphasis, RUCKUS Networks, MoneyGram</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A $1.5B-ARR, 28%-margin category leader on a clear path to a 2026 IPO needs a global visibility stage now - and the one F1 entrant with an unclaimed data-resilience lane is the grid&#39;s newest brand. Move while the pre-IPO window and the greenfield team are both open.</div>
+  </div>
 
   <div class="flags">
 <span class="flag">spinoff unicorn</span><span class="flag">never entered</span><span class="flag">funding event</span>    <span class="flag">discovery: self</span>

@@ -22,6 +22,12 @@ Abnormal Security, an AI behavioral-security leader, raised a $250M Series D at 
 ## WHY NOW
 Pre-IPO leaders invest in enterprise brand to support a future listing, the cybersecurity category on the grid rewards a first mover, and the open CMO seat means the strategic framing set now will define the incoming hire's plan. There is no competitor clock yet, so the work here is to create the urgency rather than react to it - which favours an early, relationship-led approach.
 
+## GRID FIT  *(category-whitespace check across the F1 grid)*
+- **Haas** **(recommended)** — `OPEN` · no rival in this category lane
+- **Williams** — `TAKEN` · data platform / storage, identity & access security
+- **McLaren** — `OPEN` · no rival in this category lane
+- **Red Bull Racing** — `OPEN` · no rival in this category lane
+
 ## WHY HAAS
 Haas offers an accessible, lean entry tier with open enterprise-software and security categories - a sensible first motorsport step at a sensible price for a company making its debut in the space, with room to scale to a bigger team at the next contract if the model proves out.
 

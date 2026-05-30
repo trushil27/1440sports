@@ -22,6 +22,22 @@ Cohesity is the rare combination our mandate prizes most: an established categor
 ## WHY NOW
 An IPO is the single largest brand-elevation event in a company's life, and the 12 months around it are when leadership spends most deliberately on institutional credibility - exactly the currency a multi-year F1 partnership trades in. Signing around the listing lets Cohesity convert a finance milestone into a global enterprise-brand statement, pre-build the recognition that public investors reward, and secure backup-and-resilience category exclusivity before a direct rival (Rubrik, Veeam, Commvault) claims the same adjacent lane. The post-Veritas integration narrative also benefits from a single, high-visibility external proof point that the merged company is now one coherent market leader.
 
+## PROOF POINTS  *(every figure verified to a primary source)*
+- **~$1.5B** — Pro-forma ARR after Veritas combination
+- **28%** — Adjusted cash-EBITDA margin
+- **10 Dec 2024** — Veritas combination completed
+- **~$14.5B (28 May 2026)** — Rubrik market cap (IPO benchmark peer)
+- **Carol Carpenter** — CMO (decision-maker), appointed 18 Feb 2025; ex-CMO Unity & VMware
+- **San Jose, CA** — Headquarters (relocated 2025 from Santa Clara)
+
+## GRID FIT  *(category-whitespace check across the F1 grid)*
+- **Cadillac** **(recommended)** — `PRIME LANE` · greenfield entry — partner roster being built from zero
+- **Williams** — `CROWDED` · data platform / storage, identity & access security
+- **Haas** — `CROWDED` · Mphasis, RUCKUS Networks, MoneyGram
+- **McLaren** — `OPEN` · no rival in this category lane
+
+> **BOTTOM LINE —** A $1.5B-ARR, 28%-margin category leader on a clear path to a 2026 IPO needs a global visibility stage now - and the one F1 entrant with an unclaimed data-resilience lane is the grid's newest brand. Move while the pre-IPO window and the greenfield team are both open.
+
 ## WHY CADILLAC F1 TEAM
 Cadillac is the sharpest canvas for this brand at this moment. It debuts in 2026 with a greenfield tech roster - IFS runs ERP, TWG provides AI, but no partner owns data protection, backup or cybersecurity - so Cohesity can be a FOUNDING partner and own the data-resilience category rather than share it. It compounds strategically: Cadillac is the grid's American flag-bearer and Cohesity is a US company heading into a US-market IPO, so the partnership speaks straight to the institutional investors the roadshow must win, with hospitality at the US rounds. The trade-off: a first-year team's media value is unproven - Williams is the documented fallback for a more established, data-led audience.
 

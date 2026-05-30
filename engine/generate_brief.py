@@ -6,12 +6,14 @@ Branding follows the Ramp Intelligence Brief (N 025): navy #191a48 / gold
 from __future__ import annotations
 
 import datetime as _dt
+import json
 import os
 from typing import Any, Dict
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 import scoring
+import team_fit
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _ROOT = os.path.dirname(_HERE)
@@ -26,6 +28,49 @@ PILLAR_LABELS = [
     ("urgency", "Urgency"),
     ("ops_fit", "Ops Fit"),
 ]
+
+
+def _short_roster(team: Dict[str, Any], limit: int = 3) -> str:
+    """Human-readable incumbent list for the grid-fit panel."""
+    names = list(team.get("competitor_locks", [])) or list(team.get("notable_b2b", []))
+    names = [n.split("(")[0].strip(" .") for n in names][:limit]
+    return ", ".join(names) if names else "no B2B-tech partner"
+
+
+def build_gridfit(prospect: Dict[str, Any], max_rows: int = 4):
+    """Category-whitespace check from the team-fit engine: the recommended team
+    marked as the open lane, contrasted with the most crowded alternatives in the
+    same series. Returns [] if we lack fit keywords (so the panel hides cleanly)."""
+    kw = team_fit.lanes_for(prospect)
+    if not kw["lane"]:
+        return []
+    raw = json.load(open(os.path.join(_ROOT, "data", "teams.json"), encoding="utf-8"))
+    series_key = "f1" if prospect.get("series") == "F1" else "formula_e"
+    teams = raw.get(series_key, [])
+    rec_name = prospect.get("recommended_team", "")
+    rows = []
+    for t in teams:
+        a = team_fit.assess_team(prospect, t)
+        is_rec = (t.get("team", "").lower().split()[0] in rec_name.lower())
+        if a["conflicts"]:
+            status, label = "conflict", "TAKEN"
+            detail = _short_roster(t)
+        elif is_rec and a["greenfield"]:
+            status, label = "prime", "PRIME LANE"
+            detail = "greenfield entry — partner roster being built from zero"
+        elif a["crowded"]:
+            status, label = "crowded", "CROWDED"
+            detail = _short_roster(t)
+        else:
+            status, label = "open", "OPEN"
+            detail = "no rival in this category lane"
+        rows.append({"team": t.get("team"), "recommended": is_rec, "status": status,
+                     "label": label, "detail": detail,
+                     "_w": (len(a["conflicts"]) * 2 + len(a["crowded"]))})
+    rec_rows = [r for r in rows if r["recommended"]]
+    others = sorted((r for r in rows if not r["recommended"]),
+                    key=lambda r: r["_w"], reverse=True)
+    return (rec_rows + others)[:max_rows]
 
 
 def _env() -> Environment:
@@ -53,7 +98,8 @@ def render_html(prospect: Dict[str, Any], brief_no: str = "—",
     logo_white = "file://" + _LOGO_WHITE if os.path.exists(_LOGO_WHITE) else ""
     tmpl = _env().get_template("brief.html.j2")
     return tmpl.render(p=p, brief_no=brief_no, date=date, date_long=_date_long(date),
-                       pillars=PILLAR_LABELS, logo_navy=logo_navy, logo_white=logo_white)
+                       pillars=PILLAR_LABELS, logo_navy=logo_navy, logo_white=logo_white,
+                       gridfit=build_gridfit(p))
 
 
 def render_markdown(prospect: Dict[str, Any], date: str | None = None) -> str:
@@ -77,6 +123,20 @@ def render_markdown(prospect: Dict[str, Any], date: str | None = None) -> str:
     L.append(f"- **Signals:** {', '.join(s.replace('_',' ') for s in p.get('signals', []))}\n")
     L.append("## THE CASE\n" + p["the_case"] + "\n")
     L.append("## WHY NOW\n" + p["why_now"] + "\n")
+    if p.get("key_facts"):
+        L.append("## PROOF POINTS  *(every figure verified to a primary source)*")
+        for kf in p["key_facts"][:6]:
+            L.append(f"- **{kf.get('value')}** — {kf.get('fact')}")
+        L.append("")
+    gf = build_gridfit(p)
+    if gf:
+        L.append(f"## GRID FIT  *(category-whitespace check across the {p['series']} grid)*")
+        for r in gf:
+            mark = " **(recommended)**" if r["recommended"] else ""
+            L.append(f"- **{r['team']}**{mark} — `{r['label']}` · {r['detail']}")
+        L.append("")
+    if p.get("thesis"):
+        L.append("> **BOTTOM LINE —** " + p["thesis"] + "\n")
     L.append(f"## WHY {p['recommended_team'].upper()}\n" + p["why_team"] + "\n")
     L.append(f"## VALUE TO {p['recommended_team'].upper()}\n" + p["value_to_team"] + "\n")
     L.append("## DEAL ARCHITECTURE\n" + p["deal_architecture"] + "\n")

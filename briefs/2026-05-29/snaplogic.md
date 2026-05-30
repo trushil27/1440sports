@@ -22,6 +22,12 @@ On 12 May 2026 SnapLogic appointed Molly Matthews (ex-Microsoft enterprise GTM) 
 ## WHY NOW
 Matthews's appointment created a leadership window in which new Presidents routinely approve first-mover brand investments to establish a GTM identity, and that window narrows by the week. Simultaneously, Confluent's Williams presence hardens with every race weekend, so a rival-team announcement now reframes the narrative before the competitor's association solidifies - the urgency is genuinely time-boxed.
 
+## GRID FIT  *(category-whitespace check across the F1 grid)*
+- **Aston Martin** **(recommended)** — `OPEN` · no rival in this category lane
+- **McLaren** — `OPEN` · no rival in this category lane
+- **Red Bull Racing** — `OPEN` · no rival in this category lane
+- **Williams** — `OPEN` · no rival in this category lane
+
 ## WHY ASTON MARTIN
 Aston Martin (with McLaren as an alternative) places SnapLogic directly opposite Confluent's Williams partnership - turning a competitor's sponsorship into SnapLogic's own urgency argument and landing the brand in front of the same enterprise IT decision-makers. Aston Martin's premium gravitas and open integration category make it the cleanest counter-position.
 

@@ -22,6 +22,12 @@ On 5 January 2026 JFrog appointed Genefa Murphy as Chief Marketing Officer for w
 ## WHY NOW
 Three clocks are running simultaneously. First, Murphy is roughly five months into a mandate her own company has branded a growth-phase reset - the precise window in which a new CMO defines the multi-year brand-investment agenda and shapes the next fiscal year's budget, before priorities harden. Second, because she has already delivered an F1/FE programme, the usual internal objection - 'does motorsport actually work for a B2B audience?' - is pre-answered by her personal track record, collapsing the normal 12-18 month education cycle to near zero. Third, the category whitespace is a depreciating asset: the moment a DevSecOps rival (Sonatype, Snyk or GitLab) plants a flag, JFrog's first-mover narrative is gone and the conversation becomes a defensive one. Moving in the next 4-6 weeks captures all three.
 
+## GRID FIT  *(category-whitespace check across the F1 grid)*
+- **McLaren** **(recommended)** — `OPEN` · no rival in this category lane
+- **Williams** — `TAKEN` · data platform / storage, identity & access security
+- **Red Bull Racing** — `OPEN` · no rival in this category lane
+- **Aston Martin** — `OPEN` · no rival in this category lane
+
 ## WHY MCLAREN
 McLaren is the warm, high-probability path. Murphy already knows the McLaren commercial organisation intimately from negotiating and activating the Udemy partnership, so an introduction is a re-engagement rather than a cold pitch, and McLaren's technology-forward, precision-engineering brand identity is the closest cultural mirror on the grid to JFrog's 'secure software, shipped fast' promise. If McLaren's relevant inventory is constrained, Aston Martin is the strong fallback: it carries premium enterprise gravitas, its hospitality audience skews to exactly the CISO and CTO buyers JFrog sells to, and its technology-partner roster leaves the DevSecOps slot open. Either team lets JFrog tell a 'from first commit to chequered flag' supply-chain-integrity story in front of the right room.
 

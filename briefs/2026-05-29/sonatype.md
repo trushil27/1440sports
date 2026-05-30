@@ -22,6 +22,12 @@ Sonatype occupies precisely the same software-supply-chain-security whitespace a
 ## WHY NOW
 Trigger-based: this prospect should be escalated to HOT and approached immediately if and when JFrog or Snyk commits to a team. Until then it is a primed, pre-researched lead to activate the day the category's first domino falls.
 
+## GRID FIT  *(category-whitespace check across the F1 grid)*
+- **Haas** **(recommended)** — `OPEN` · no rival in this category lane
+- **Williams** — `TAKEN` · data platform / storage, identity & access security
+- **McLaren** — `OPEN` · no rival in this category lane
+- **Red Bull Racing** — `OPEN` · no rival in this category lane
+
 ## WHY HAAS
 Haas offers an accessible entry tier suited to a mid-market budget and PE ROI discipline, and a rival-team position to whichever team a competitor chooses gives Sonatype the counter-narrative framing that justifies the spend internally.
 

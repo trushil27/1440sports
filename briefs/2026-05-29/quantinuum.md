@@ -22,6 +22,12 @@ Quantinuum is the highest-priority class in our entire mandate: a born-big spin-
 ## WHY NOW
 The IPO roadshow is the window. Leadership is actively investing in public-market visibility, enterprise credibility and a differentiated narrative, and a new CEO-plus-CMO pairing typically sets the brand agenda in its first two quarters. A multi-year F1 innovation-partner deal signed around the listing compounds the story - turning a finance event into a global brand moment - and there is no competitor clock forcing a rushed, defensive posture, so the deal can be shaped on Quantinuum's terms if it is opened now rather than after the listing settles.
 
+## GRID FIT  *(category-whitespace check across the F1 grid)*
+- **Aston Martin** **(recommended)** — `OPEN` · no rival in this category lane
+- **McLaren** — `OPEN` · no rival in this category lane
+- **Red Bull Racing** — `OPEN` · no rival in this category lane
+- **Williams** — `OPEN` · no rival in this category lane
+
 ## WHY ASTON MARTIN
 Aston Martin is the fit. Its premium engineering gravitas and British identity align with Quantinuum's Cambridge-and-Colorado footprint, and its hospitality audience is exactly the C-suite and government-adjacent enterprise buyer a quantum business courts. The association positions Quantinuum as 'the quantum edge in performance R&D' - a precision-and-compute halo on the grid's most boardroom-credible team - rather than as a mass-market consumer sponsor, which is the wrong register for this category.
 

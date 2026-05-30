@@ -22,6 +22,12 @@ Snyk is a well-funded developer-security leader (over $300M ARR) whose CEO, Pete
 ## WHY NOW
 Pre-IPO brand-building budgets, an open security category, and a brand leadership reset all coincide. With the CMO seat in transition, the decision is currently closest to the CEO, which both shortens the chain and means the strategic framing set now will shape whoever inherits the role. The window closes the moment a DevSecOps rival commits to a team.
 
+## GRID FIT  *(category-whitespace check across the F1 grid)*
+- **Aston Martin** **(recommended)** — `OPEN` · no rival in this category lane
+- **Williams** — `TAKEN` · data platform / storage, identity & access security
+- **McLaren** — `OPEN` · no rival in this category lane
+- **Red Bull Racing** — `OPEN` · no rival in this category lane
+
 ## WHY ASTON MARTIN
 Aston Martin's CISO-grade gravitas and premium, technically-credible identity place Snyk's 'secure by design' story directly in front of the enterprise security buyers it sells to. If Aston Martin's inventory is constrained, Williams (data/engineering revival) is a credible alternative with the right audience profile.
 

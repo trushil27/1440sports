@@ -22,6 +22,12 @@ Ramp's active $750M raise at above $40B pre-money is the brand-reckoning moment 
 ## WHY NOW
 The $750M raise closes a short, well-defined window during which brand-investment authority is at its peak. More concretely, the F1 London race in August 2026 is a live, dated activation for Ramp's UK business-onboarding launch - a marketing moment the company would otherwise have to manufacture, handed to it by the calendar. Partnership terms must be agreed before that race date locks, because the value of the activation collapses if the deal slips past it.
 
+## GRID FIT  *(category-whitespace check across the F1 grid)*
+- **Visa Cash App Racing Bulls** **(recommended)** — `OPEN` · no rival in this category lane
+- **Audi** — `CROWDED` · Revolut
+- **Haas** — `CROWDED` · Mphasis, RUCKUS Networks, MoneyGram
+- **McLaren** — `OPEN` · no rival in this category lane
+
 ## WHY VISA CASH APP RACING BULLS
 Racing Bulls already carries Visa as its title sponsor, and Ramp's renewed multi-year Visa issuing agreement makes co-presence structural rather than conflicting: Ramp becomes the spend-management intelligence layer sitting above the Visa payment rail, an architecture that reinforces both brands. Cash App's younger demographic mirrors Ramp's founder, developer and CFO-suite audience, and no competing spend-management brand is anywhere near the car - so Ramp would not be sharing the category. The August London race lands precisely as Ramp opens UK business onboarding, aligning the team's biggest home-market moment with Ramp's biggest market-entry moment.
 
