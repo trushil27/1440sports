@@ -1,15 +1,31 @@
 {
+  "_comment": "Signals log: the record of which hero brief was generated when. last_hero drives the rotation cooldown; log is the running history (brief_no sequential by date). Reconstructed 2026-05-30 to restore Cohesity after an earlier session reset dropped it from the log.",
   "last_hero": {
+    "cohesity": "2026-05-29",
     "glean": "2026-05-30"
   },
   "log": [
     {
-      "date": "2026-05-30",
+      "date": "2026-05-29",
       "brief_no": "001",
+      "id": "cohesity",
+      "name": "Cohesity",
+      "opportunity": 82,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "Cadillac F1 Team",
+      "note": "F1 proof brief — shipped with the MD pitch deck"
+    },
+    {
+      "date": "2026-05-30",
+      "brief_no": "002",
       "id": "glean",
       "name": "Glean",
       "opportunity": 72,
-      "tier": "WARM"
+      "tier": "WARM",
+      "series": "FE",
+      "recommended_team": "Mahindra Racing",
+      "note": "Formula E proof brief — full deep-dive dossier also at pitch/glean-deepdive.pdf"
     }
   ]
 }

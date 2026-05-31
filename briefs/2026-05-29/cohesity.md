@@ -1,4 +1,4 @@
-# 1440 INTELLIGENCE BRIEF — Cohesity  (N° 003)
+# 1440 INTELLIGENCE BRIEF — Cohesity  (N° 001)
 *AI Data Security / Data Protection · San Jose, CA · Private (Nvidia-backed; 2026 IPO, valuation benchmarked vs Rubrik) · 2026-05-29*
 
 **HOT**
