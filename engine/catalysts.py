@@ -49,6 +49,7 @@ def assess(event: Dict[str, Any], today: Optional[_dt.date] = None) -> Dict[str,
         "fresh": bool(fresh),
         "days": days,
         "promoted": bool(event.get("promoted_to")),
+        "excluded": bool(event.get("already_present")),
     }
 
 
@@ -58,7 +59,7 @@ def radar(today: Optional[_dt.date] = None, open_only: bool = False) -> List[Dic
     out = []
     for ev in load_catalysts():
         a = assess(ev, today)
-        if open_only and a["promoted"]:
+        if open_only and (a["promoted"] or a["excluded"]):
             continue
         out.append({**ev, "_assess": a})
     out.sort(key=lambda e: (e["_assess"]["fresh"], not e["_assess"]["promoted"]),
@@ -75,14 +76,19 @@ def _print(events: List[Dict[str, Any]]) -> None:
     for e in events:
         a = e["_assess"]
         flag = "🔥 FRESH" if a["fresh"] else "·  aged "
-        where = (f"→ prospect '{e['promoted_to']}'" if a["promoted"]
-                 else "ON RADAR (not yet promoted)")
+        if a["excluded"]:
+            where = "EXCLUDED — already_present on a grid (proof example)"
+        elif a["promoted"]:
+            where = f"→ prospect '{e['promoted_to']}'"
+        else:
+            where = "ON RADAR (not yet promoted)"
         print(f"{flag}  {e.get('type','?').upper():12} {e.get('name','?')}")
         print(f"          {e.get('new_valuation','?')}  ·  {e.get('series_hint','?')}"
               f"  ·  {e.get('confidence','?')}  ·  {where}")
         if not a["promoted"]:
             print(f"          TRIAGE: {e.get('triage','—')}")
-    n_open = sum(1 for e in events if not e["_assess"]["promoted"])
+    n_open = sum(1 for e in events
+                 if not e["_assess"]["promoted"] and not e["_assess"]["excluded"])
     n_fresh = sum(1 for e in events if e["_assess"]["fresh"])
     print("-" * 72)
     print(f"— {len(events)} event(s): {n_fresh} fresh, {n_open} awaiting promotion —\n")
