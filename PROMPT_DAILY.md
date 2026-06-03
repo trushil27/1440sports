@@ -25,8 +25,16 @@ for, and act on, each of these signal classes (see `engine/methodology.md`):
 1. **Executive migration** — senior leaders (CMO/CEO/President/CRO) who
    previously secured an F1 or Formula E sponsorship and have **changed company**.
    The *new* company becomes a prospect. (Seed example: Genefa Murphy → JFrog.)
-2. **Overnight $1B+ spin-offs / IPOs / mega-rounds** — companies that just
-   gained the budget and brand mandate of a unicorn (e.g. Honeywell→Quantinuum).
+2. **Born-big catalysts — overnight $1B+ unicorns (HIGHEST PRIORITY).** Companies
+   that just became a $1B+ entity via a corporate event: **spin-off, merger,
+   acquisition, carve-out or take-private** (e.g. Honeywell→Quantinuum;
+   Aptiv→Versigent). These are the most valuable and the easiest to miss — so
+   run an explicit scan every day and **log each event to `data/catalysts.json`**
+   (type, counterparty, event_date, status, new_valuation, series_hint,
+   confidence, source, `promoted_to: null`). Review the radar with
+   `python3 engine/catalysts.py --open`, triage (would they sponsor? are they
+   `already_present` via the parent?), then promote the good ones into
+   `prospects.json` with a structured `catalyst` field. See methodology §9.
 3. **Capacity but never entered F1/FE** — profitable/well-funded B2B tech with a
    genuine in-car or championship-tech use, or a clean narrative fit.
 4. **Sponsorship deals ending / open slots** — expiring team or title deals, and

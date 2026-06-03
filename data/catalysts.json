@@ -1,0 +1,59 @@
+{
+  "_meta": {
+    "what": "Catalyst radar — the 'born-big' overnight-unicorn watchlist (methodology #5, the highest-priority signal class). Spin-offs, mergers, acquisitions, carve-outs and take-privates that mint a $1B+ entity overnight: a fresh balance sheet, a brand-identity reckoning, NO existing sponsorships, and budget authority being set right now. This is the detection inbox; promising events get promoted into data/prospects.json as scored prospects.",
+    "why": "These companies are the rare combination the mandate prizes most. They are easy to miss because they did not exist (in their current form) yesterday, so we scan for them every run and log them here BEFORE they are fully scored — so none slips through.",
+    "schema": "events[]: id, name, type (spinoff|merger|acquisition|carveout|take_private), counterparty (parent/acquirer/target), event_date (ISO; announced or close), status (announced|imminent|closed), new_valuation, sector, series_hint (F1|FE|either), why_it_matters, confidence (VERIFIED|REPORTED|ESTIMATE), source, promoted_to (prospect id, or null if still on the radar), triage (next action).",
+    "freshness": "engine/scoring.py treats a catalyst as FRESH (a ranking boost) while status is announced/imminent OR the event is within CATALYST_FRESH_DAYS (~18 months). View the radar: python3 engine/catalysts.py",
+    "updated": "2026-06-03"
+  },
+  "events": [
+    {
+      "id": "versigent",
+      "name": "Versigent (Aptiv EDS spin-off)",
+      "type": "spinoff",
+      "counterparty": "Aptiv PLC (parent)",
+      "event_date": "2026-04-01",
+      "status": "closed",
+      "new_valuation": "~$17B equity (UBS sum-of-parts estimate)",
+      "sector": "EV electrical distribution systems ('the nervous system of the electric vehicle')",
+      "series_hint": "FE",
+      "why_it_matters": "Aptiv spun out its Electrical Distribution Systems business into a standalone public company (ticker VGNT), distributed to shareholders 1 Apr 2026 (1 VGNT per 3 APTV). Forecast ~$9.1-9.4B 2026 revenue, ~$300M post-deal cash. A multi-billion EV-electrical pure-play born overnight with an EV-momentum story is a natural Formula E brand-reckoning candidate. CAVEAT: it is an auto component supplier, not a SaaS buyer - triage whether it is a sponsor profile (brand/talent halo) or merely an industry supplier before promoting.",
+      "confidence": "REPORTED",
+      "source": "https://www.sec.gov/Archives/edgar/data/0002078008/000119312526096776/d51729dex991.htm",
+      "promoted_to": null,
+      "triage": "Verify it would actually sponsor (vs. just supply). If yes, score for Formula E and check already_present via Aptiv's existing motorsport ties."
+    },
+    {
+      "id": "cohesity-veritas",
+      "name": "Cohesity (Veritas data-protection merger)",
+      "type": "merger",
+      "counterparty": "Veritas data-protection business",
+      "event_date": "2024-12-10",
+      "status": "closed",
+      "new_valuation": "~$1.5B pro-forma ARR; 2026 IPO benchmarked vs Rubrik (~$14.5B)",
+      "sector": "AI data security / data protection",
+      "series_hint": "F1",
+      "why_it_matters": "The Veritas combination created a ~$1.5B-ARR category leader overnight, now steering to a 2026 IPO - the exact born-big profile. Already worked as the F1 proof brief (Cohesity -> Cadillac, 82/100).",
+      "confidence": "VERIFIED",
+      "source": "https://www.cnbc.com/2025/09/04/nvidia-backed-cohesity-eyes-2026-ipo-with-valuation-rivaling-17-billion-rubrik.html",
+      "promoted_to": "cohesity",
+      "triage": "Promoted + shipped. Example of a merger catalyst converted to a hero."
+    },
+    {
+      "id": "quantinuum-honeywell",
+      "name": "Quantinuum (Honeywell spin-off)",
+      "type": "spinoff",
+      "counterparty": "Honeywell (parent)",
+      "event_date": "2026-05-26",
+      "status": "imminent",
+      "new_valuation": "~$12.7B IPO target (27% above the $10B Sep-2025 round)",
+      "sector": "Quantum computing",
+      "series_hint": "F1",
+      "why_it_matters": "A born-big Honeywell spin-off heading into a ~$12.7B IPO with a freshly expanded C-suite - never entered motorsport. Already a scored prospect (Quantinuum -> Aston Martin, 76/100).",
+      "confidence": "REPORTED",
+      "source": "http://www.techtimes.com/articles/317216/20260526/quantinuum-ipo-targets-127b-valuation-honeywell-spinoff-reports-31m-2025-revenue.htm",
+      "promoted_to": "quantinuum",
+      "triage": "Promoted. Example of a spin-off catalyst already in the pipeline."
+    }
+  ]
+}

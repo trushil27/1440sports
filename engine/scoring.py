@@ -23,6 +23,20 @@ ELIGIBLE_SERIES = {"F1", "FE", "FE paddock"}
 CROWDING_CAP = 100          # > this many inbound pitches => gated out of hero
 SWEET_SPOT = (50, 100)      # client's target band
 
+# --- Catalyst signal: a "born-big" overnight $1B+ unicorn event (methodology #5).
+# A spin-off, merger, acquisition, carve-out or take-private that mints a
+# billion-dollar entity overnight -> fresh balance sheet, a brand-identity
+# reckoning, no existing sponsorships, and budget authority being set NOW. The
+# single highest-value class in the mandate, so a FRESH one outranks peers at the
+# same score. Detection radar: data/catalysts.json + engine/catalysts.py.
+CATALYST_SIGNALS = {
+    "spinoff_unicorn", "merger_unicorn", "acquisition_unicorn",
+    "carveout_unicorn", "take_private_unicorn", "overnight_unicorn",
+    "spinoff",  # back-compat with older tags
+}
+CATALYST_TYPES = ("spinoff", "merger", "acquisition", "carveout", "take_private")
+CATALYST_FRESH_DAYS = 548   # ~18 months: how long the born-big brand-reckoning window stays open
+
 
 def opportunity_score(prospect: Dict[str, Any]) -> int:
     """Sum the five /20 pillars into a /100 Opportunity Score."""
@@ -83,6 +97,39 @@ def _days_since(date_str: Optional[str], today: _dt.date) -> Optional[int]:
     return (today - d).days
 
 
+def catalyst_status(prospect: Dict[str, Any],
+                    today: Optional[_dt.date] = None) -> Dict[str, Any]:
+    """Detect a 'born-big' overnight-unicorn catalyst on a prospect.
+
+    Prefers the structured `catalyst` field
+    ``{type, counterparty, event_date, status, new_valuation, source}``; falls
+    back to a catalyst *signal* tag (e.g. ``spinoff_unicorn``). Returns
+    ``{has, fresh, type, label}`` where ``fresh`` means the brand-reckoning
+    window is still open: status announced/imminent, or the event is within
+    ``CATALYST_FRESH_DAYS`` of today (past OR upcoming).
+    """
+    today = today or _dt.date.today()
+    cat = prospect.get("catalyst")
+    signals = set(prospect.get("signals", []))
+    sig_hit = bool(signals & CATALYST_SIGNALS)
+
+    if isinstance(cat, dict) and (cat.get("type") or cat.get("event_date")):
+        status = str(cat.get("status", "")).lower()
+        days = _days_since(cat.get("event_date"), today)
+        fresh = (status in {"announced", "imminent"}
+                 or (days is not None and abs(days) <= CATALYST_FRESH_DAYS))
+        ctype = cat.get("type", "event")
+        val = cat.get("new_valuation", "")
+        label = f"{ctype}{(' ' + val) if val else ''}".strip()
+        return {"has": True, "fresh": bool(fresh), "type": ctype, "label": label}
+
+    if sig_hit:
+        # signal-only (no structured event): a catalyst, freshness assumed open
+        return {"has": True, "fresh": True, "type": "signal",
+                "label": "born-big / overnight unicorn"}
+    return {"has": False, "fresh": False, "type": None, "label": None}
+
+
 def in_series(prospect: Dict[str, Any], series: Optional[str]) -> bool:
     """Series filter. 'F1' matches F1; 'FE' matches FE and FE-paddock; None/'all'
     matches everything."""
@@ -121,14 +168,16 @@ def rank(prospects: List[Dict[str, Any]],
         last = _days_since(history.get(p["id"]), today)
         on_cooldown = last is not None and last < cooldown_days
         signals = set(p.get("signals", []))
-        priority_signal = int(bool(signals & {"exec_migration", "spinoff_unicorn"}))
+        cat = catalyst_status(p, today)
+        exec_mig = int("exec_migration" in signals)
         hot = int(p.get("timing_window") == "HOT")
         sort_key = (
             0 if on_cooldown else 1,
             score,
+            int(cat["fresh"]),     # a FRESH born-big catalyst outranks peers at the same score
+            exec_mig,
             -(est if est is not None else 999),
             hot,
-            priority_signal,
         )
         ranked.append((sort_key, score, p))
     ranked.sort(key=lambda t: t[0], reverse=True)
@@ -146,4 +195,8 @@ def enrich(prospect: Dict[str, Any]) -> Dict[str, Any]:
     p["opportunity"] = opportunity_score(prospect)
     p["tier"] = tier(p["opportunity"])
     p["crowding_label"] = crowding_label(prospect.get("est_inbound_pitches"))
+    cat = catalyst_status(prospect)
+    p["has_catalyst"] = cat["has"]
+    p["catalyst_fresh"] = cat["fresh"]
+    p["catalyst_label"] = cat["label"]
     return p

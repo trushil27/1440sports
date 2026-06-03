@@ -23,7 +23,9 @@ information. Lead with "who to call, why now, which team" — never a research d
 | Path | What |
 |---|---|
 | `data/prospects.json` | The prospect database + scores + trust fields. The engine's memory. |
-| `engine/scoring.py` | 5-pillar /100 model, ranking, cooldown. |
+| `data/catalysts.json` | **Catalyst radar** — the born-big / overnight-$1B+-unicorn watchlist (spin-off/merger/acquisition). Detection inbox; promote events into `prospects.json`. |
+| `engine/scoring.py` | 5-pillar /100 model, ranking, cooldown, catalyst-freshness boost. |
+| `engine/catalysts.py` | Loads the catalyst radar + freshness; `python3 engine/catalysts.py [--open]`. |
 | `engine/team_fit.py` | Matches prospect→team; flags category conflicts/crowding (fit_lane vs fit_domain). |
 | `engine/verify_brief.py` | **The trust gate** — required fields, claim-level citations, fact-drift, staleness, team-fit overclaim. BLOCKER stops a send. |
 | `engine/generate_brief.py` | Renders the 2-page brief (HTML+PDF+MD) via WeasyPrint + `templates/brief.html.j2`. |
@@ -72,6 +74,7 @@ python3 pitch/glean_dossier.py                                    # rebuild Glea
 ## Next steps / open TODOs
 
 - **Outcomes loop (the moat, not yet built):** extend `history.json` to track brief → sent? → meeting? → deal. Cheap, in-repo, no UI. Start logging early so the proprietary "which signals convert" dataset compounds. **Highest-leverage next build.**
+- **Catalyst radar (live):** the born-big/overnight-unicorn signal is now systematised — `data/catalysts.json` + `engine/catalysts.py`, with a freshness boost in scoring and a daily-scan step in `PROMPT_DAILY.md` (methodology §9). **Versigent** (Aptiv spin-off, ~$17B EV-electrical) sits on the radar awaiting triage — would it sponsor, and is it `already_present` via Aptiv? Run `python3 engine/catalysts.py --open`.
 - **On request:** when the MD names a company, run it through the engine → verified 2-page brief, + deep-dive dossier only if asked.
 - **Watching PR #1:** can subscribe to CI/review events if asked.
 - Deep-dive infra is currently per-company scripts (`pitch/glean_dossier.py`); generalize into the engine only once demand justifies it (sequencing: prove value before building infra).

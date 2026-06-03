@@ -86,8 +86,9 @@ A prospect is eligible only if ALL hold:
 1. Load `data/prospects.json` + `data/teams.json`.
 2. Recompute each Opportunity Score.
 3. Apply the gates (section 4).
-4. Rank by score; tie-break by (a) lower crowding, (b) HOT timing, (c) presence
-   of `exec_migration`/`spinoff_unicorn`.
+4. Rank by score; tie-break in order by (a) a **fresh born-big catalyst**
+   (section 9), (b) an `exec_migration` signal, (c) lower crowding, (d) HOT
+   timing. So among prospects at the same score, an overnight-unicorn wins.
 5. **Cooldown**: a prospect that was hero within the last `cooldown_days`
    (default 5) is pushed down so the daily brief stays fresh.
 6. Render the **strictly 2-page** branded brief (HTML + PDF + Markdown) and email
@@ -125,3 +126,41 @@ open title slots, and weaponising competitor-on-grid as a counter-narrative.
 refresh leadership moves, funding/IPO/spin-off events, sponsorship
 announcements/expiries, and executive migrations; update the JSON; re-score;
 ship the hero. Always cite sources and re-check `already_present` before scoring.
+
+---
+
+## 9. Catalyst radar — the "born-big" overnight-unicorn signal (highest priority)
+
+Mandate criterion #5 is the single most valuable class: a company that becomes a
+**$1B+ entity overnight** via a corporate event. These are rare and easy to miss
+(the company did not exist in its current form yesterday), yet ideal — fresh
+balance sheet, a brand-identity reckoning, **no existing sponsorships**, and
+budget authority being set *right now*.
+
+**Event types tracked** (`scoring.CATALYST_TYPES`): `spinoff`, `merger`,
+`acquisition`, `carveout`, `take_private`.
+
+**Detection radar** — `data/catalysts.json` (+ `engine/catalysts.py`): every such
+event is logged here the moment it surfaces, *before* it is fully scored, so none
+slips through. Each event carries `type`, `counterparty`, `event_date`, `status`
+(`announced|imminent|closed`), `new_valuation`, `series_hint`, a confidence tag,
+a source, and `promoted_to` (the prospect id once promoted, or `null` while still
+on the radar). View it: `python3 engine/catalysts.py` (or `--open` for events not
+yet promoted).
+
+**On a prospect**: add a structured `catalyst` object
+(`{type, counterparty, event_date, status, new_valuation, source}`). The engine
+(`scoring.catalyst_status`) treats it as **FRESH** while `status` is
+announced/imminent or the event is within `CATALYST_FRESH_DAYS` (~18 months — how
+long the brand-reckoning window stays open). A fresh catalyst:
+- is the **top tie-breaker** in hero ranking (section 5);
+- a born-big event should also score high on **Timing** (a dated mandate),
+  **Capacity** (a fresh billion-dollar balance sheet) and **Urgency** (the
+  one-time elevation window) — so it ranks well on its own merits too.
+
+**Workflow**: scan → log to `catalysts.json` → triage (would they sponsor? are
+they `already_present` via the parent?) → promote the good ones into
+`prospects.json` with a `catalyst` field and full scoring. Worked examples on the
+radar: Cohesity (Veritas *merger* → shipped F1 hero), Quantinuum (Honeywell
+*spin-off* → scored), Versigent (Aptiv *spin-off*, ~$17B — on the radar, awaiting
+triage).
