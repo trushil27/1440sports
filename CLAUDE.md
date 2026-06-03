@@ -26,6 +26,7 @@ information. Lead with "who to call, why now, which team" — never a research d
 | `data/catalysts.json` | **Catalyst radar** — the born-big / overnight-$1B+-unicorn watchlist (spin-off/merger/acquisition). Detection inbox; promote events into `prospects.json`. |
 | `engine/scoring.py` | 5-pillar /100 model, ranking, cooldown, catalyst-freshness boost. |
 | `engine/catalysts.py` | Loads the catalyst radar + freshness; `python3 engine/catalysts.py [--open]`. |
+| `engine/edgar_scan.py` | SEC EDGAR full-text detection for born-big events (10-12B/S-4/S-1); `python3 engine/edgar_scan.py`. Free; emits query URLs if SEC egress is blocked. |
 | `engine/team_fit.py` | Matches prospect→team; flags category conflicts/crowding (fit_lane vs fit_domain). |
 | `engine/verify_brief.py` | **The trust gate** — required fields, claim-level citations, fact-drift, staleness, team-fit overclaim. BLOCKER stops a send. |
 | `engine/generate_brief.py` | Renders the 2-page brief (HTML+PDF+MD) via WeasyPrint + `templates/brief.html.j2`. |

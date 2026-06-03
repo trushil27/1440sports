@@ -140,9 +140,18 @@ budget authority being set *right now*.
 **Event types tracked** (`scoring.CATALYST_TYPES`): `spinoff`, `merger`,
 `acquisition`, `carveout`, `take_private`.
 
-**Detection radar** — `data/catalysts.json` (+ `engine/catalysts.py`): every such
-event is logged here the moment it surfaces, *before* it is fully scored, so none
-slips through. Each event carries `type`, `counterparty`, `event_date`, `status`
+**Detection** — the free primary source is **SEC EDGAR full-text search**
+(`engine/edgar_scan.py`), which indexes the catalyst form types directly:
+**10-12B** (spin-offs), **S-4/425** (mergers), **S-1** (IPOs). Run it daily; it
+fetches where SEC egress is allowed and otherwise emits the exact query URLs for
+the research session to fetch. EDGAR can't filter by valuation, so it surfaces
+*candidates* — triage keeps the $1B+ ones. (Paid databases — PitchBook, CB
+Insights, Crunchbase — add exhaustive screening + private financials, but are a
+later, scale-driven cost: the marquee events are already public.)
+
+**Radar** — `data/catalysts.json` (+ `engine/catalysts.py`): every such event is
+logged here the moment it surfaces, *before* it is fully scored, so none slips
+through. Each event carries `type`, `counterparty`, `event_date`, `status`
 (`announced|imminent|closed`), `new_valuation`, `series_hint`, a confidence tag,
 a source, and `promoted_to` (the prospect id once promoted, or `null` while still
 on the radar). View it: `python3 engine/catalysts.py` (or `--open` for events not

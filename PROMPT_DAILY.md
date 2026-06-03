@@ -28,13 +28,17 @@ for, and act on, each of these signal classes (see `engine/methodology.md`):
 2. **Born-big catalysts — overnight $1B+ unicorns (HIGHEST PRIORITY).** Companies
    that just became a $1B+ entity via a corporate event: **spin-off, merger,
    acquisition, carve-out or take-private** (e.g. Honeywell→Quantinuum;
-   Aptiv→Versigent). These are the most valuable and the easiest to miss — so
-   run an explicit scan every day and **log each event to `data/catalysts.json`**
-   (type, counterparty, event_date, status, new_valuation, series_hint,
-   confidence, source, `promoted_to: null`). Review the radar with
-   `python3 engine/catalysts.py --open`, triage (would they sponsor? are they
-   `already_present` via the parent?), then promote the good ones into
-   `prospects.json` with a structured `catalyst` field. See methodology §9.
+   Aptiv→Versigent). These are the most valuable and the easiest to miss — so run
+   an explicit scan every day. **Start with the free primary source:**
+   `python3 engine/edgar_scan.py` (SEC EDGAR full-text search for the catalyst
+   form types — 10-12B spin-offs, S-4/425 mergers, S-1 IPOs). If SEC egress is
+   blocked, fetch the query URLs it prints with your web tools. Add a news sweep
+   for the same events. **Log each one to `data/catalysts.json`** (type,
+   counterparty, event_date, status, new_valuation, series_hint, confidence,
+   source, `promoted_to: null`). Review with `python3 engine/catalysts.py --open`,
+   triage (would they sponsor? are they `already_present` via the parent?), then
+   promote the good ones into `prospects.json` with a structured `catalyst`
+   field. See methodology §9.
 3. **Capacity but never entered F1/FE** — profitable/well-funded B2B tech with a
    genuine in-car or championship-tech use, or a clean narrative fit.
 4. **Sponsorship deals ending / open slots** — expiring team or title deals, and
