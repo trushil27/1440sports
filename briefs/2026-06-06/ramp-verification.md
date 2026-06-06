@@ -1,10 +1,28 @@
-# JFrog — verification log (2026-06-06)
+# Ramp — verification log (2026-06-06)
 
-Hero for 2026-06-06 (Saturday → F1). JFrog became the hero only after correcting
-a fabrication in the higher-ranked Ramp record (see below). Claims re-checked
-live before rendering.
+Shipped hero for 2026-06-06 (Saturday → F1) is **Ramp**. JFrog was the engine's
+#1 and verified clean, but the MD excluded it — so Ramp (the next fresh F1
+prospect, re-verified this session) shipped instead. Both records were checked
+live; Ramp's correction (a fabricated F1 race) is the headline.
 
-## JFrog (today's hero) — claim → status
+## Ramp (today's shipped hero) — corrected before shipping
+Re-verification found two material problems; Ramp was corrected and honestly
+re-scored 87 → 84 (still the top fresh F1 pick once JFrog was excluded):
+
+| Claim | Status | Source |
+|---|---|---|
+| Valuation "$40B+ pre-money, raise in progress (May 2026)" | **CORRECTED → ~$44B, $750M round CLOSED 4 Jun 2026** (+38% from $32B) | CNBC; TechCrunch |
+| **"August 2026 F1 London race" as a hard calendar anchor** | **FABRICATION — REMOVED.** No London race exists on the 2026 F1 calendar; the UK round is the British GP at Silverstone (3–5 Jul 2026). | formula1.com 2026 calendar |
+| `spinoff_unicorn` signal | **REMOVED** — Ramp was venture-built, not spun off | — |
+| $1B+ ARR, FCF-positive; Billhop acquisition (Mar 2026); deepened Visa partnership | **VERIFIED** | CNBC; PRNewswire |
+| CEO Eric Glyman | **VERIFIED** | CNBC |
+
+Ramp: substituted the real British GP (Silverstone, Jul 2026) as the UK-launch
+anchor; re-scored timing 20→19, brand_fit 20→19, urgency 15→14 (no one-time hard
+lock) → 84; stamped verified trust fields + real source URLs (previously cited
+only the internal brief). Gate clean (0/0); 2-page locked.
+
+## JFrog (verified, but excluded by the MD) — claim → status
 | Claim | Status | Source |
 |---|---|---|
 | Genefa Murphy CMO, effective 5 Jan 2026 | **VERIFIED** | investors.jfrog.com; JFrog press room |
