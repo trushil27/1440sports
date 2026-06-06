@@ -50,6 +50,7 @@ def assess(event: Dict[str, Any], today: Optional[_dt.date] = None) -> Dict[str,
         "days": days,
         "promoted": bool(event.get("promoted_to")),
         "excluded": bool(event.get("already_present")),
+        "ineligible": event.get("eligible") is False,
     }
 
 
@@ -59,7 +60,7 @@ def radar(today: Optional[_dt.date] = None, open_only: bool = False) -> List[Dic
     out = []
     for ev in load_catalysts():
         a = assess(ev, today)
-        if open_only and (a["promoted"] or a["excluded"]):
+        if open_only and (a["promoted"] or a["excluded"] or a["ineligible"]):
             continue
         out.append({**ev, "_assess": a})
     out.sort(key=lambda e: (e["_assess"]["fresh"], not e["_assess"]["promoted"]),
@@ -78,6 +79,8 @@ def _print(events: List[Dict[str, Any]]) -> None:
         flag = "🔥 FRESH" if a["fresh"] else "·  aged "
         if a["excluded"]:
             where = "EXCLUDED — already_present on a grid (proof example)"
+        elif a["ineligible"]:
+            where = "TRIAGED OUT — not a 1440 fit (watch only)"
         elif a["promoted"]:
             where = f"→ prospect '{e['promoted_to']}'"
         else:
@@ -88,7 +91,8 @@ def _print(events: List[Dict[str, Any]]) -> None:
         if not a["promoted"]:
             print(f"          TRIAGE: {e.get('triage','—')}")
     n_open = sum(1 for e in events
-                 if not e["_assess"]["promoted"] and not e["_assess"]["excluded"])
+                 if not e["_assess"]["promoted"] and not e["_assess"]["excluded"]
+                 and not e["_assess"]["ineligible"])
     n_fresh = sum(1 for e in events if e["_assess"]["fresh"])
     print("-" * 72)
     print(f"— {len(events)} event(s): {n_fresh} fresh, {n_open} awaiting promotion —\n")
