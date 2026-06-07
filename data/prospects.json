@@ -270,8 +270,11 @@
     {
       "id": "quantinuum",
       "name": "Quantinuum",
-      "ticker": "IPO pending (~$12.7B target valuation)",
+      "ticker": "NASDAQ: QNT (IPO'd 4 Jun 2026; ~$15.7B debut)",
       "category": "Quantum Computing",
+      "fit_lane": ["quantum computing", "quantum"],
+      "fit_domain": ["quantum", "compute", "deep tech"],
+      "last_verified": "2026-06-07",
       "hq": "Broomfield, CO / Cambridge, UK",
       "series": "F1",
       "status": "active",
@@ -282,35 +285,44 @@
       "est_inbound_pitches": 55,
       "recommended_team": "Aston Martin",
       "timing_window": "WARM",
-      "action_horizon": "6-8 WKS",
+      "action_horizon": "4-8 WKS",
       "signals": ["spinoff_unicorn", "never_entered", "funding_event"],
       "scores": {"timing": 16, "capacity": 20, "brand_fit": 15, "urgency": 12, "ops_fit": 13},
       "score_rationale": {
-        "timing": "The IPO roadshow is a once-only brand-elevation moment, and a recently expanded C-suite (new CEO and CMO) signals a deliberate scale-up posture.",
-        "capacity": "Honeywell spin-off targeting a ~$12.7B IPO, a 27% premium over its $10B September 2025 round - capacity is a non-issue.",
-        "brand_fit": "Quantum computing is the ultimate precision-and-compute narrative, and the Anglo-American footprint suits a British team, though the category is more halo than literal in-car today.",
-        "urgency": "No direct quantum rival exists on the grid, so the forcing function is the IPO window itself rather than a competitor.",
+        "timing": "Just completed the largest-ever quantum IPO (Nasdaq debut 4 Jun 2026) - the post-listing window is exactly when a newly public deep-tech company invests in institutional brand, with fresh capital to deploy.",
+        "capacity": "Raised $1.68B in the IPO at a ~$15.7B debut (after a $600M round at $10B pre-money in Sep 2025); capacity comes from the balance sheet (FY2025 revenue was a modest ~$31M).",
+        "brand_fit": "Quantum computing is the ultimate precision-and-compute narrative and the Anglo-American footprint suits a British team, though the category is more halo than literal in-car today.",
+        "urgency": "No direct quantum rival exists on the grid, so the forcing function is the just-opened post-IPO brand-elevation window rather than a competitor.",
         "ops_fit": "MODE A (developing): compute and optimisation R&D around simulation, strategy and logistics is a credible roadmap, even if not yet a literal in-car system."
       },
-      "catalyst": {"type": "spinoff", "counterparty": "Honeywell (parent)", "event_date": "2026-05-26", "status": "imminent", "new_valuation": "~$12.7B IPO target", "source": "http://www.techtimes.com/articles/317216/20260526/quantinuum-ipo-targets-127b-valuation-honeywell-spinoff-reports-31m-2025-revenue.htm"},
-      "headline_long": "Honeywell spin-off Quantinuum is heading for a ~$12.7B IPO with a freshly expanded C-suite - a textbook overnight unicorn with a brand-elevation budget, an Anglo-American footprint, and no motorsport history at all.",
-      "the_case": "Quantinuum is the highest-priority class in our entire mandate: a born-big spin-off (out of Honeywell) heading into a ~$12.7B IPO, up 27% on its $10B September 2025 valuation, that has never entered motorsport. Two structural facts make it compelling. First, an IPO is a one-time brand-elevation moment, and an F1 association is among the fastest ways for a deep-tech company to acquire global enterprise visibility and the kind of mainstream credibility a quantum business cannot buy through technical channels alone. Second, the company has just expanded its leadership - a new CEO in Rajeeb (Raj) Hazra and a new CMO in Lawrence Schwartz - which is exactly the configuration that approves first-mover brand investments to establish a public-market identity. Because no quantum brand exists anywhere on the grid, Quantinuum would define the category rather than contest it.",
-      "why_now": "The IPO roadshow is the window. Leadership is actively investing in public-market visibility, enterprise credibility and a differentiated narrative, and a new CEO-plus-CMO pairing typically sets the brand agenda in its first two quarters. A multi-year F1 innovation-partner deal signed around the listing compounds the story - turning a finance event into a global brand moment - and there is no competitor clock forcing a rushed, defensive posture, so the deal can be shaped on Quantinuum's terms if it is opened now rather than after the listing settles.",
+      "catalyst": {"type": "spinoff", "counterparty": "Honeywell (parent; + Cambridge Quantum)", "event_date": "2026-06-04", "status": "closed", "new_valuation": "~$15.7B Nasdaq debut ($1.68B raised)", "source": "https://www.cnbc.com/2026/06/04/quantinuum-qnt-stock-first-trade-ipo.html"},
+      "headline_long": "Honeywell spin-off Quantinuum just completed the largest-ever quantum IPO - listing on Nasdaq (QNT) on 4 June 2026 at a ~$15.7B debut after a $1.68B raise - a textbook born-big company with fresh capital, a brand-elevation mandate and no motorsport history at all.",
+      "the_case": "Quantinuum is the highest-priority class in our mandate: a born-big spin-off (out of Honeywell) that just completed the largest quantum-computing IPO to date - pricing at $60/share for a $1.68B upsized raise and closing its 4 June 2026 Nasdaq debut at roughly $15.7B (ticker QNT), with Honeywell and Cambridge Quantum retaining ~82%. An IPO is a one-time brand-elevation moment, and a newly public deep-tech company needs exactly the global enterprise visibility and mainstream credibility an F1 association provides - which technical channels alone cannot buy. It is freshly capitalized (it raised $600M at a $10B pre-money only in September 2025, backed by NVIDIA, JPMorgan, Quanta and others), even though FY2025 revenue was a modest ~$31M - so capacity here comes from the balance sheet, not the P&L. Because no quantum brand exists anywhere on the grid, Quantinuum would define the category rather than contest it.",
+      "why_now": "The listing just happened (4 June) - the post-IPO window is precisely when a newly public company invests in institutional credibility and a differentiated brand, with fresh capital to deploy. A multi-year F1 innovation-partner deal now compounds the moment, turning the finance milestone into a sustained global brand. There is no competitor clock, so the deal can be shaped on Quantinuum's terms - but the brand-elevation window is widest in the months right after the bell.",
       "why_team": "Aston Martin is the fit. Its premium engineering gravitas and British identity align with Quantinuum's Cambridge-and-Colorado footprint, and its hospitality audience is exactly the C-suite and government-adjacent enterprise buyer a quantum business courts. The association positions Quantinuum as 'the quantum edge in performance R&D' - a precision-and-compute halo on the grid's most boardroom-credible team - rather than as a mass-market consumer sponsor, which is the wrong register for this category.",
       "value_to_team": "MODE A (developing). Quantum and advanced classical optimisation increasingly touch the problems an F1 team actually faces - aerodynamic and strategy simulation, logistics and scheduling across a global calendar, and materials R&D. Positioned as an innovation and R&D partner, Quantinuum offers Aston Martin a credible compute-frontier collaboration and a powerful talent-attraction halo, with a genuine roadmap toward simulation use cases rather than an empty logo. The honest framing is a forward-looking technical partnership: real engagement on hard optimisation problems, growing into deeper integration over the multi-year term.",
-      "deal_architecture": "Official Innovation / Quantum Partner tier on Aston Martin, minimum three years, estimated $3-6M/yr, structured as an R&D-and-brand halo timed around the listing, with category exclusivity for quantum computing and a defined joint R&D workstream so the partnership has technical substance from day one.",
+      "deal_architecture": "Official Innovation / Quantum Partner tier on Aston Martin, minimum three years, estimated $3-6M/yr, structured as an R&D-and-brand halo, with category exclusivity for quantum computing and a defined joint R&D workstream (optimisation/simulation) so the partnership has technical substance from day one.",
       "decision_maker": {
-        "name": "Lawrence Schwartz",
-        "title": "Chief Marketing Officer, Quantinuum - verified",
-        "bio": "Brings 20+ years of global B2B marketing leadership with a track record of scaling high-margin businesses from $100M to over $1B; most recently led major repositioning at Aspen Technology that lifted brand preference and market share - precisely the IPO-grade brand mandate an F1 partnership would anchor. Co-decision-makers: CEO Rajeeb (Raj) Hazra and the CFO/IR function during the listing window."
+        "name": "Rajeeb Hazra",
+        "title": "Chief Executive Officer, Quantinuum - verified (ex-Intel); board chaired by Honeywell CEO Vimal Kapur",
+        "bio": "Rajeeb (Raj) Hazra, a former Intel executive, leads Quantinuum through its public-market debut and owns its institutional-brand agenda - the right entry point for a marquee partnership. Note: no CMO is publicly confirmed post-IPO, so brand decisions sit with the CEO and the IR/CFO function during the just-listed window; Honeywell CEO Vimal Kapur chairs the board."
       },
-      "opening_angle": "\"Lawrence, you repositioned AspenTech into a billion-dollar brand - you know an IPO is a credibility event. Quantum is the one category no rival on the F1 grid can claim, and Aston Martin is the boardroom audience. 25 minutes before the roadshow?\"",
+      "opening_angle": "\"Raj, you've just rung the Nasdaq bell - now the job is institutional credibility, and quantum is the one category no brand on the F1 grid can claim. Aston Martin is the boardroom audience. 25 minutes to own it?\"",
       "risks": [
-        {"title": "IPO quiet period", "detail": "Securities rules may restrict spend and announcements around the listing.", "counter": "Sign quietly and activate post-listing; use the roadshow period to build internal consensus rather than to publicise."},
-        {"title": "Deep-tech brand caution", "detail": "A quantum firm may view F1 as off-strategy or too consumer-facing.", "counter": "Position strictly as enterprise credibility, government/partner visibility and talent attraction, with a real joint R&D workstream - not consumer marketing."}
+        {"title": "Newly listed optics", "detail": "As a freshly public stock, leadership attention and spend are calibrated to public-market optics, and securities rules constrain messaging around the listing.", "counter": "Position as institutional-credibility brand-building - exactly what a newly public company needs - with measurable enterprise and talent outcomes, and activate after the initial lock-up noise settles."},
+        {"title": "Deep-tech brand caution", "detail": "A quantum firm may view F1 as off-strategy or too consumer-facing, and FY2025 revenue (~$31M) invites spend scrutiny.", "counter": "Position strictly as enterprise credibility, government/partner visibility and talent attraction with a real joint R&D workstream; the $1.68B just raised funds it comfortably - not consumer marketing."}
+      ],
+      "key_facts": [
+        {"fact": "Nasdaq debut market value (ticker QNT, 4 Jun 2026)", "value": "~$15.7B", "source": "https://www.cnbc.com/2026/06/04/quantinuum-qnt-stock-first-trade-ipo.html"},
+        {"fact": "IPO raise (upsized; priced at $60/share)", "value": "$1.68B", "source": "https://thequantuminsider.com/2026/06/04/quantinuum-to-debut-on-nasdaq-after-raising-1-68-billion-in-ipo/"},
+        {"fact": "CEO (ex-Intel); board chaired by Honeywell CEO Vimal Kapur", "value": "Rajeeb Hazra", "source": "https://www.cnbc.com/2026/06/04/quantinuum-qnt-stock-first-trade-ipo.html"},
+        {"fact": "Pre-IPO round (Sep 2025) at a $10B pre-money; NVIDIA, JPMorgan, Quanta", "value": "$600M", "source": "https://www.quantinuum.com/press-releases/honeywell-announces-600-million-capital-raise-for-quantinuum-at-10b-pre-money-equity-valuation-to-advance-quantum-computing-at-scale"},
+        {"fact": "Honeywell + Cambridge Quantum retain post-IPO equity", "value": "~82%", "source": "https://www.cnbc.com/2026/06/04/quantinuum-qnt-stock-first-trade-ipo.html"}
       ],
       "sources": [
-        "http://www.techtimes.com/articles/317216/20260526/quantinuum-ipo-targets-127b-valuation-honeywell-spinoff-reports-31m-2025-revenue.htm",
+        "https://www.cnbc.com/2026/06/04/quantinuum-qnt-stock-first-trade-ipo.html",
+        "https://thequantuminsider.com/2026/06/04/quantinuum-to-debut-on-nasdaq-after-raising-1-68-billion-in-ipo/",
+        "https://www.quantinuum.com/press-releases/honeywell-announces-600-million-capital-raise-for-quantinuum-at-10b-pre-money-equity-valuation-to-advance-quantum-computing-at-scale",
         "https://www.quantinuum.com/press-releases/quantinuum-names-rajeeb-raj-hazra-chief-executive-officer"
       ]
     },
@@ -803,7 +815,8 @@
       "category": "Agentic Integration / iPaaS",
       "hq": "San Mateo, CA",
       "series": "F1",
-      "status": "active",
+      "status": "needs_reverification",
+      "_flag": "QUARANTINED 2026-06-07: the record's load-bearing claim that rival 'Confluent' is on the Williams livery is FALSE - Williams' 2026 partner is Atlassian (whose product is Confluence; Confluent, the data-streaming firm, is NOT on the grid). Decision-maker bio is also wrong (Molly Matthews is ex-CEO of Pushpay, not ex-Microsoft). Status set non-active so it cannot be selected as a hero until the thesis is rebuilt around real integration-category whitespace + the verified new-President window. Honest re-score ~72, not 78.",
       "discovery": "seeded",
       "already_present": false,
       "mode": "A",

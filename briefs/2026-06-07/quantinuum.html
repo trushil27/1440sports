@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Quantinuum</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "QUANTINUUM · 07 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 008</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 008 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Quantinuum</h1>
+  <div class="classline">Quantum Computing · Broomfield, CO / Cambridge, UK · NASDAQ: QNT (IPO&#39;d 4 Jun 2026; ~$15.7B debut)</div>
+
+  <div class="lede">Honeywell spin-off Quantinuum just completed the largest-ever quantum IPO - listing on Nasdaq (QNT) on 4 June 2026 at a ~$15.7B debut after a $1.68B raise - a textbook born-big company with fresh capital, a brand-elevation mandate and no motorsport history at all.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">76</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Aston Martin</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">4-8 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Quantinuum is the highest-priority class in our mandate: a born-big spin-off (out of Honeywell) that just completed the largest quantum-computing IPO to date - pricing at $60/share for a $1.68B upsized raise and closing its 4 June 2026 Nasdaq debut at roughly $15.7B (ticker QNT), with Honeywell and Cambridge Quantum retaining ~82%. An IPO is a one-time brand-elevation moment, and a newly public deep-tech company needs exactly the global enterprise visibility and mainstream credibility an F1 association provides - which technical channels alone cannot buy. It is freshly capitalized (it raised $600M at a $10B pre-money only in September 2025, backed by NVIDIA, JPMorgan, Quanta and others), even though FY2025 revenue was a modest ~$31M - so capacity here comes from the balance sheet, not the P&amp;L. Because no quantum brand exists anywhere on the grid, Quantinuum would define the category rather than contest it.</p>
+
+  <h2>Why Now</h2>
+  <p>The listing just happened (4 June) - the post-IPO window is precisely when a newly public company invests in institutional credibility and a differentiated brand, with fresh capital to deploy. A multi-year F1 innovation-partner deal now compounds the moment, turning the finance milestone into a sustained global brand. There is no competitor clock, so the deal can be shaped on Quantinuum&#39;s terms - but the brand-elevation window is widest in the months right after the bell.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$15.7B</div><div class="pfk">Nasdaq debut market value (ticker QNT, 4 Jun 2026)</div></div>
+    <div class="pf"><div class="pfv">$1.68B</div><div class="pfk">IPO raise (upsized; priced at $60/share)</div></div>
+    <div class="pf"><div class="pfv">Rajeeb Hazra</div><div class="pfk">CEO (ex-Intel); board chaired by Honeywell CEO Vimal Kapur</div></div>
+    <div class="pf"><div class="pfv">$600M</div><div class="pfk">Pre-IPO round (Sep 2025) at a $10B pre-money; NVIDIA, JPMorgan, Quanta</div></div>
+    <div class="pf"><div class="pfv">~82%</div><div class="pfk">Honeywell + Cambridge Quantum retain post-IPO equity</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Aston Martin<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">Oracle</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+
+  <div class="flags">
+<span class="flag">spinoff unicorn</span><span class="flag">never entered</span><span class="flag">funding event</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 008</span>
+  </div>
+
+  <h2>Why Aston Martin</h2>
+  <p>Aston Martin is the fit. Its premium engineering gravitas and British identity align with Quantinuum&#39;s Cambridge-and-Colorado footprint, and its hospitality audience is exactly the C-suite and government-adjacent enterprise buyer a quantum business courts. The association positions Quantinuum as &#39;the quantum edge in performance R&amp;D&#39; - a precision-and-compute halo on the grid&#39;s most boardroom-credible team - rather than as a mass-market consumer sponsor, which is the wrong register for this category.</p>
+
+  <h2>Value to Aston Martin &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A (developing). Quantum and advanced classical optimisation increasingly touch the problems an F1 team actually faces - aerodynamic and strategy simulation, logistics and scheduling across a global calendar, and materials R&amp;D. Positioned as an innovation and R&amp;D partner, Quantinuum offers Aston Martin a credible compute-frontier collaboration and a powerful talent-attraction halo, with a genuine roadmap toward simulation use cases rather than an empty logo. The honest framing is a forward-looking technical partnership: real engagement on hard optimisation problems, growing into deeper integration over the multi-year term.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Innovation / Quantum Partner tier on Aston Martin, minimum three years, estimated $3-6M/yr, structured as an R&amp;D-and-brand halo, with category exclusivity for quantum computing and a defined joint R&amp;D workstream (optimisation/simulation) so the partnership has technical substance from day one.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Rajeeb Hazra</div>
+        <div class="role">Chief Executive Officer, Quantinuum - verified (ex-Intel); board chaired by Honeywell CEO Vimal Kapur</div>
+        <div class="bio">Rajeeb (Raj) Hazra, a former Intel executive, leads Quantinuum through its public-market debut and owns its institutional-brand agenda - the right entry point for a marquee partnership. Note: no CMO is publicly confirmed post-IPO, so brand decisions sit with the CEO and the IR/CFO function during the just-listed window; Honeywell CEO Vimal Kapur chairs the board.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Raj, you&#39;ve just rung the Nasdaq bell - now the job is institutional credibility, and quantum is the one category no brand on the F1 grid can claim. Aston Martin is the boardroom audience. 25 minutes to own it?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Just completed the largest-ever quantum IPO (Nasdaq debut 4 Jun 2026) - the post-listing window is exactly when a newly public deep-tech company invests in institutional brand, with fresh capital to deploy.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">20 <span>/ 20</span></div>
+      <div class="why">Raised $1.68B in the IPO at a ~$15.7B debut (after a $600M round at $10B pre-money in Sep 2025); capacity comes from the balance sheet (FY2025 revenue was a modest ~$31M).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Quantum computing is the ultimate precision-and-compute narrative and the Anglo-American footprint suits a British team, though the category is more halo than literal in-car today.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">No direct quantum rival exists on the grid, so the forcing function is the just-opened post-IPO brand-elevation window rather than a competitor.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">MODE A (developing): compute and optimisation R&amp;D around simulation, strategy and logistics is a credible roadmap, even if not yet a literal in-car system.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Newly listed optics</span> &nbsp;<span class="rc">As a freshly public stock, leadership attention and spend are calibrated to public-market optics, and securities rules constrain messaging around the listing. <b>Counter:</b> Position as institutional-credibility brand-building - exactly what a newly public company needs - with measurable enterprise and talent outcomes, and activate after the initial lock-up noise settles.</span></div>
+  <div class="risk"><span class="rt">Deep-tech brand caution</span> &nbsp;<span class="rc">A quantum firm may view F1 as off-strategy or too consumer-facing, and FY2025 revenue (~$31M) invites spend scrutiny. <b>Counter:</b> Position strictly as enterprise credibility, government/partner visibility and talent attraction with a real joint R&amp;D workstream; the $1.68B just raised funds it comfortably - not consumer marketing.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.cnbc.com/2026/06/04/quantinuum-qnt-stock-first-trade-ipo.html</li><li>https://thequantuminsider.com/2026/06/04/quantinuum-to-debut-on-nasdaq-after-raising-1-68-billion-in-ipo/</li><li>https://www.quantinuum.com/press-releases/honeywell-announces-600-million-capital-raise-for-quantinuum-at-10b-pre-money-equity-valuation-to-advance-quantum-computing-at-scale</li><li>https://www.quantinuum.com/press-releases/quantinuum-names-rajeeb-raj-hazra-chief-executive-officer</li>  </ul>
+</div>
+</body>
+</html>
