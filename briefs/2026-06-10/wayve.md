@@ -9,7 +9,7 @@
 
 - **Timing window:** WARM
 - **Series:** FE
-- **Recommended team:** Envision Racing
+- **Recommended team:** Nissan Formula E
 - **Action horizon:** 8-12 WKS
 - **Mode:** A (tech in the car / championship)
 - **Inbound crowding:** ~35 (EARLY - ahead of the noise)
@@ -30,21 +30,21 @@ Wayve is freshly capitalized ($1.2B in Feb 2026) and scaling fast into commercia
 - **2026-27 rollout** — London Uber robotaxi launch 2026; consumer supervised-autonomy from 2027
 
 ## GRID FIT  *(category-whitespace check across the FE grid)*
-- **Envision Racing** **(recommended)** — `PRIME LANE` · greenfield entry — partner roster being built from zero
+- **Nissan** **(recommended)** — `OPEN` · no rival in this category lane
 - **Andretti** — `CROWDED` · TWG AI, Quest Global, NAGASE
 - **Porsche** — `OPEN` · no rival in this category lane
 - **Jaguar TCS Racing** — `OPEN` · no rival in this category lane
 
 > **BOTTOM LINE —** A British embodied-AI champion ($8.6B, fresh off a $1.2B Series D) whose autonomous-mobility story maps onto Formula E's 'future of mobility' identity better than almost any brand - and no autonomy/mobility-AI brand is on the grid. The honest caveat: its buyers are automakers, so this is a brand/innovation/recruiting halo, not a B2B-pipeline play.
 
-## WHY ENVISION RACING
-Envision Racing - a sustainability-first independent with a clean (greenfield) partner roster - is the conflict-free fit for Wayve's clean-mobility-and-autonomy story, with room to own the lane outright. HONEST NOTE: this is the cleanest available FE team because our own pipeline has now filled the premium FE slots (Nissan, Mahindra, Jaguar, Porsche, Andretti). The strongest *warm-path* alternative is Nissan, which is an existing Wayve investor - a real relationship hook - but Nissan already carries a 1440 enterprise-AI prospect (Cohere), so Envision is the cleaner primary.
+## WHY NISSAN FORMULA E
+Nissan Formula E is the fit, and the hook is real: Nissan is an existing Wayve investor (it joined the February 2026 Series D), so an approach is a warm extension of a live relationship rather than a cold pitch - and a partnership lets Nissan make its own strategic autonomy bet visible on the car. Nissan carries no autonomy or mobility-AI partner, so Wayve owns the lane outright, and as a works EV manufacturer Nissan offers the deepest engineering counterpart for a real technical workstream. Envision Racing - a sustainability-first independent with a greenfield roster - is the clean-slate alternative if an independent, sustainability-led platform is preferred.
 
-## VALUE TO ENVISION RACING
-MODE A (developing) - real substance on three fronts, not signage. (1) TECHNICAL: Wayve's core competencies - embodied AI, large-scale simulation, real-time perception-and-control and sensor/data fusion - map onto an FE team's hardest problems: race-strategy optimisation under uncertainty, energy- and battery-management modelling across a stint, and high-fidelity simulation. A defined joint workstream (Wayve engineers paired with Envision's strategy and simulation group) gives genuine performance value, with room to deepen over the term. (2) COMMERCIAL FLYWHEEL: for a sustainability-first independent, a marquee, blue-chip AI name materially upgrades Envision's partner roster and commercial credibility - helping it win and keep other sponsors - while Wayve's ecosystem (Nvidia, Uber, Mercedes/Nissan/Stellantis) opens enterprise and supplier doors. (3) STORY &amp; TALENT: a shared future-of-mobility-and-sustainability content platform extends Envision's green identity, plus a co-branded recruiting programme in a brutal autonomy talent market. Envision gains performance capability, commercial pull and narrative; Wayve gains a mobility-native global stage.
+## VALUE TO NISSAN FORMULA E
+MODE A (developing) - real substance on three fronts, not signage. (1) TECHNICAL: Wayve's core competencies - embodied AI, large-scale simulation, real-time perception-and-control and sensor/data fusion - map onto a works team's hardest problems: race-strategy optimisation under uncertainty, energy- and battery-management modelling across a stint, and high-fidelity simulation. A defined joint workstream (Wayve engineers paired with Nissan's strategy and simulation group) gives genuine performance value, with room to deepen over the term. (2) STRATEGIC SHOWCASE: Nissan already holds equity in Wayve, so a visible partnership turns a balance-sheet bet into a public tech-leadership story - positioning Nissan at the front of the autonomy-plus-EV future its brand is staking out. (3) STORY &amp; TALENT: a shared future-of-mobility content platform plus a co-branded recruiting programme in a brutal autonomy talent market. Nissan gains performance capability, a differentiated innovation narrative and recruiting pull; Wayve gains a works-manufacturer global stage and deepens a strategic relationship.
 
 ## DEAL ARCHITECTURE
-Official Mobility AI Partner tier on Envision Racing (Nissan as a warm-path alternative via its existing Wayve investment), minimum three years, ~$3-5M/yr, with category exclusivity for autonomy/mobility-AI, a defined joint technical workstream (Wayve AI/simulation applied to race strategy and energy modelling), and a content/innovation-narrative programme aimed at talent and enterprise audiences.
+Official Mobility AI Partner tier on Nissan Formula E (Envision Racing as a clean-independent alternative), minimum three years, ~$3-5M/yr, with category exclusivity for autonomy/mobility-AI, a defined joint technical workstream (Wayve AI/simulation applied to race strategy and energy modelling), and a content/innovation-narrative programme aimed at talent and enterprise audiences.
 
 ## PRIMARY DECISION-MAKER
 **Alex Kendall** — Co-Founder & CEO, Wayve - verified

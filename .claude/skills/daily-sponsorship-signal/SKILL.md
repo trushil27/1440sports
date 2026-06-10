@@ -104,3 +104,17 @@ the hero and score. Push to the working branch. Do **not** open a PR unless aske
 - Don't invent a decision-maker — a verified named individual, or the verified
   CEO with the vacancy noted. Never a generic title.
 - The batch pack is for internal review only, never a customer send.
+- **`value_to_team` must be rich and specific — never vague or guessed.** Think
+  hard about how the prospect is *actually* valuable to *that racing team*, and
+  spell it out concretely: a real technical/operational workstream where one
+  exists (race strategy, energy/simulation modelling, data, supply chain), the
+  commercial/brand lift the team specifically gains, ecosystem access, content
+  and talent. If the honest answer is "mostly a brand halo," still name the
+  concrete halo mechanics — don't fall back on "brand association + hospitality."
+  A thin `value_to_team` is a defect to fix, not an acceptable MODE-B default.
+- **Never treat 1440's own prospect signals as occupying a team.** These briefs
+  are signals; the human layer has not placed/closed them. Team fit and
+  whitespace are judged ONLY against *real, verified* grid occupancy (actual
+  sponsors in `data/teams.json`). Multiple prospects may recommend the same team
+  — that is fine. Do not down-rank or re-point a team because another 1440
+  prospect is aimed there.

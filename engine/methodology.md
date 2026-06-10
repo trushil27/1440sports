@@ -118,6 +118,22 @@ categories, open categories, and `competitor_locks`. The engine recommends a tea
 by avoiding categories a direct rival owns, preferring identity fit, surfacing
 open title slots, and weaponising competitor-on-grid as a counter-narrative.
 
+**Whitespace is judged only against REAL grid occupancy.** Team fit and
+"category open" claims are based solely on *actual, verified* sponsors in
+`data/teams.json`. 1440's own generated prospect signals are NOT placements — the
+human layer has not yet reached out or closed them — so never treat a team as
+"taken" or down-rank it because another 1440 prospect is aimed there. Two
+prospects may legitimately recommend the same team; pick each one's best team on
+real merit (fit + verified relationships), independent of the rest of the pipeline.
+
+**`value_to_team` must carry real substance.** Every brief must articulate, with
+clear and specific thinking, how the prospect is genuinely valuable to *that*
+team — a concrete technical/operational workstream where one exists (e.g. race
+strategy, energy/simulation modelling, data, supply chain, security), the precise
+commercial/brand lift, ecosystem access, content and talent. Do not guess or
+write vague "brand association + hospitality" filler; a thin `value_to_team` is a
+defect. Even a brand-halo (MODE B) play must name concrete halo mechanics.
+
 ---
 
 ## 8. Daily refresh
