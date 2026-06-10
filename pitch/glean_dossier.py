@@ -153,7 +153,6 @@ agentic-document company <strong>Aryn</strong>, deepening that roadmap. {R}</p>
 
 <h2>2 · Traction &amp; Momentum</h2>
 <ul class="tight">
-  <li><strong>Revenue:</strong> ~$300M ARR by May 2026 — roughly tripled in ~15 months ($100M early 2025 → $200M Dec 2025 → $300M May 2026). {R}</li>
   <li><strong>Customers:</strong> Fortune 500 logo count nearly doubled YoY; named customers include <strong>Databricks, Samsung, Booking.com, Reddit and Pinterest</strong>. {R}</li>
   <li><strong>Capital:</strong> ~$768M raised across six rounds; backers include Sequoia, Kleiner Perkins, Lightspeed, ICONIQ, General Catalyst, Coatue and Wellington (Series F lead). {R}</li>
   <li><strong>Narrative edge:</strong> positioned as the AI that <em>pays for itself</em> amid enterprise AI-budget scrutiny — a counter-cyclical sales story that is working. {R}</li>
