@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Wayve</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "WAYVE · 10 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 012</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 012 &nbsp;·&nbsp; WARM</div>
+
+  <h1>Wayve</h1>
+  <div class="classline">Embodied AI / Autonomous Driving · London, UK · Private (~$8.6B; $1.2B Series D, Feb 2026)</div>
+
+  <div class="lede">Wayve - Britain&#39;s embodied-AI leader for autonomous driving, valued at $8.6B after a $1.2B Series D in February 2026 - is the rare brand whose &#39;future of mobility&#39; story is native to Formula E, with no autonomy or mobility-AI brand anywhere on the grid.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">73</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Envision Racing</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Wayve is the UK&#39;s embodied-AI champion for autonomous driving: founded in 2017 by CEO Alex Kendall, it raised a $1.2B Series D in February 2026 (about $1.5B including Uber&#39;s milestone tranche) at an $8.6B valuation, backed by SoftBank, Nvidia, Microsoft and Uber alongside automakers Mercedes-Benz, Nissan and Stellantis. It is launching a London Uber robotaxi service in 2026 and supervised-autonomy software in consumer vehicles from 2027. For Formula E - the championship that exists to tell the future-of-electric-mobility story - an autonomous-mobility-AI brand is an unusually native fit, and no autonomy or mobility-AI brand holds an FE partnership. The honest counterweight: Wayve&#39;s customers are automakers, reached through industry channels, so a motorsport play is a brand, innovation-narrative and recruiting halo (it is in a fierce AI talent war), not a B2B-pipeline channel.</p>
+
+  <h2>Why Now</h2>
+  <p>Wayve is freshly capitalized ($1.2B in Feb 2026) and scaling fast into commercial robotaxi launches - a brand-building inflection where a young, recruiting-hungry AI company invests in identity and talent visibility. The autonomy/mobility lane on the FE grid is empty, so moving now secures a clean, native category before a peer notices it.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$8.6B</div><div class="pfk">Valuation (Series D, 25 Feb 2026)</div></div>
+    <div class="pf"><div class="pfv">$1.2B</div><div class="pfk">Series D raise (~$1.5B incl. Uber milestone tranche)</div></div>
+    <div class="pf"><div class="pfv">Alex Kendall</div><div class="pfk">Co-founder &amp; CEO (since 2017)</div></div>
+    <div class="pf"><div class="pfv">auto + big tech</div><div class="pfk">Strategic investors incl. automakers Mercedes-Benz, Nissan, Stellantis (+ Nvidia, Microsoft, Uber, SoftBank)</div></div>
+    <div class="pf"><div class="pfv">2026-27 rollout</div><div class="pfk">London Uber robotaxi launch 2026; consumer supervised-autonomy from 2027</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Envision Racing<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Andretti</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">TWG AI, Quest Global, NAGASE</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Jaguar TCS Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A British embodied-AI champion ($8.6B, fresh off a $1.2B Series D) whose autonomous-mobility story maps onto Formula E&#39;s &#39;future of mobility&#39; identity better than almost any brand - and no autonomy/mobility-AI brand is on the grid. The honest caveat: its buyers are automakers, so this is a brand/innovation/recruiting halo, not a B2B-pipeline play.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">never entered</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 012</span>
+  </div>
+
+  <h2>Why Envision Racing</h2>
+  <p>Envision Racing - a sustainability-first independent with a clean (greenfield) partner roster - is the conflict-free fit for Wayve&#39;s clean-mobility-and-autonomy story, with room to own the lane outright. HONEST NOTE: this is the cleanest available FE team because our own pipeline has now filled the premium FE slots (Nissan, Mahindra, Jaguar, Porsche, Andretti). The strongest *warm-path* alternative is Nissan, which is an existing Wayve investor - a real relationship hook - but Nissan already carries a 1440 enterprise-AI prospect (Cohere), so Envision is the cleaner primary.</p>
+
+  <h2>Value to Envision Racing &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B. The value is a future-of-mobility brand association and an innovation/talent narrative, plus premium hospitality - not an in-car integration (FE cars are driver-raced). Envision gains a marquee embodied-AI partner that reinforces its sustainability-and-technology identity; Wayve gains a globally-broadcast, mobility-native stage to build its independent brand and recruit.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Mobility AI Partner tier on Envision Racing (Nissan as a warm-path alternative via its existing Wayve investment), minimum three years, ~$3-5M/yr, with category exclusivity for autonomy/mobility-AI and a content/innovation-narrative programme aimed at talent and enterprise audiences.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Alex Kendall</div>
+        <div class="role">Co-Founder &amp; CEO, Wayve - verified</div>
+        <div class="bio">Alex Kendall co-founded Wayve in 2017 (Cambridge PhD, a pioneer of end-to-end &#39;AV2.0&#39; learned driving) and serves as CEO, owning strategy, brand and the company&#39;s scale-up agenda - the right and direct entry point for a marquee brand decision. Co-decision-makers: the CFO/commercial leadership steering the post-Series-D scale-up.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Alex, Formula E exists to tell the future-of-mobility story - and Wayve is that story, yet no autonomy brand is on the grid. A British embodied-AI leader owning the lane, with a recruiting and innovation stage in front of the right audience. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Fresh $1.2B Series D at an $8.6B valuation (25 Feb 2026) and a 2026 London robotaxi launch - peak capital and brand momentum now.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">$8.6B valuation, ~$1.5B raised in Feb 2026 (with Uber&#39;s milestone tranche); an FE deal is immaterial.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Autonomous-mobility AI is an unusually clean fit for Formula E&#39;s future-of-mobility identity, and a British brand suits the championship - though as MODE B the value is a halo, not in-car tech.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">Fresh capital and a recruiting land-grab in autonomy, but no dated external forcing function.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">MODE B: a mobility-innovation and talent-brand association, not an in-car system (FE cars are driver-raced, not autonomous).</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Buyers are automakers, not the paddock</span> &nbsp;<span class="rc">Wayve sells AI to OEMs, so F1/FE hospitality doesn&#39;t reach its pipeline - the sponsorship logic is halo/recruiting, not B2B leads. <b>Counter:</b> Lead with brand-establishment, the talent war (autonomy recruiting is brutal) and the mobility-native narrative; keep it a relationship-and-halo play, modest and scalable.</span></div>
+  <div class="risk"><span class="rt">Automaker-investor entanglement</span> &nbsp;<span class="rc">Nissan, Mercedes and Stellantis are investors, which could complicate an independent team choice. <b>Counter:</b> Recommend the conflict-free independent (Envision); if the team prefers, the Nissan investor relationship is a ready-made warm path instead.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.cnbc.com/2026/02/24/wayve-fundraise-nvidia-microsoft.html</li><li>https://techcrunch.com/2026/02/24/self-driving-tech-startup-wayve-raises-1-2b-from-nvidia-uber-and-three-automakers/</li><li>https://wayve.ai/press/series-d/</li><li>https://wayve.ai/company/leadership-team/alex-kendall/</li>  </ul>
+</div>
+</body>
+</html>
