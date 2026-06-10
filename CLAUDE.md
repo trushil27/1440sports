@@ -63,6 +63,7 @@ information. Lead with "who to call, why now, which team" — never a research d
 - **Brand is locked** to navy/gold/Georgia + 1440 masthead.
 - **`value_to_team` must be rich and specific.** Spell out concretely how the prospect helps *that* racing team — a real technical/operational workstream where one exists, the precise commercial/brand lift, ecosystem, content, talent. Never vague or guessed; a thin section is a defect to fix (even MODE-B halo plays name concrete mechanics).
 - **Our signals are not placements.** Judge team fit / whitespace ONLY against real, verified grid occupancy (`data/teams.json`). Never treat a team as taken or re-point because another 1440 prospect is aimed there — the human layer hasn't placed them yet. Multiple prospects may recommend the same team.
+- **Leadership-tie gate.** For every prospect, check whether any senior leader was previously in the F1/FE ecosystem or structured a sponsorship deal — record in `leadership_ties` (`[]` once checked, none found). A confirmed tie is the warmest signal class (e.g. JFrog's CMO built the Udemy–McLaren deal), boosts ranking, and is surfaced by `verify_brief.py`.
 
 ## Common commands
 

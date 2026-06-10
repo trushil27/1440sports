@@ -22,8 +22,16 @@ A qualified prospect must have **at least one** of:
 3. **Financial capacity but never entered F1/FE.**
 4. **A sponsorship deal reaching its end** (re-evaluating spend).
 5. **A "born-big" spin-off / overnight $1B+ unicorn** (highest priority).
-6. **An executive-migration signal** — a dealmaker who secured an F1/FE deal
-   moves to a new company; that company inherits the thesis.
+6. **A leadership tie to motorsport (tracking gate).** For every prospect, check
+   whether any senior leader was previously part of the **F1/FE ecosystem** or
+   **structured a sponsorship deal** (e.g. a CMO who built a prior team
+   partnership). This is the warmest signal class — a proven motorsport buyer
+   inside the company pre-answers the "does motorsport work for B2B?" doubt.
+   Tracked per prospect in `leadership_ties` (`[{name, role, tie, relevance,
+   source}]`; set `[]` once checked and none found). A confirmed tie boosts hero
+   ranking and is surfaced by `verify_brief.py`. The classic case is
+   **exec-migration** — a dealmaker changes company and the new employer inherits
+   the thesis (e.g. Genefa Murphy, who built the Udemy–McLaren partnership, → JFrog).
 
 ---
 

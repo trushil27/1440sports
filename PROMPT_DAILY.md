@@ -22,9 +22,14 @@ print(cadence.plan_for(d.date.today()))"`.
 Update `data/prospects.json` and `data/teams.json` from the last ~24-72h. Search
 for, and act on, each of these signal classes (see `engine/methodology.md`):
 
-1. **Executive migration** — senior leaders (CMO/CEO/President/CRO) who
-   previously secured an F1 or Formula E sponsorship and have **changed company**.
-   The *new* company becomes a prospect. (Seed example: Genefa Murphy → JFrog.)
+1. **Leadership ties to motorsport (tracking gate — check EVERY prospect).** Does
+   any senior leader (CMO/CEO/President/CRO/board) have prior **F1/FE-ecosystem**
+   involvement or **sponsorship-deal-structuring** history? Record it in the
+   prospect's `leadership_ties` (`[]` once checked and none found — never leave it
+   unassessed). A confirmed tie is the warmest signal class and boosts ranking.
+   The classic sub-case is **executive migration** — a dealmaker who secured an
+   F1/FE deal changes company, and the new employer inherits the thesis (seed
+   example: Genefa Murphy, who built the Udemy–McLaren partnership, → JFrog).
 2. **Born-big catalysts — overnight $1B+ unicorns (HIGHEST PRIORITY).** Companies
    that just became a $1B+ entity via a corporate event: **spin-off, merger,
    acquisition, carve-out or take-private** (e.g. Honeywell→Quantinuum;

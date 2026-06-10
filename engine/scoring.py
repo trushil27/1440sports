@@ -169,13 +169,13 @@ def rank(prospects: List[Dict[str, Any]],
         on_cooldown = last is not None and last < cooldown_days
         signals = set(p.get("signals", []))
         cat = catalyst_status(p, today)
-        exec_mig = int("exec_migration" in signals)
+        exec_tie = int(bool(p.get("leadership_ties")) or "exec_migration" in signals)
         hot = int(p.get("timing_window") == "HOT")
         sort_key = (
             0 if on_cooldown else 1,
             score,
             int(cat["fresh"]),     # a FRESH born-big catalyst outranks peers at the same score
-            exec_mig,
+            exec_tie,              # a senior leader with prior F1/FE or deal-structuring history
             -(est if est is not None else 999),
             hot,
         )
@@ -199,4 +199,6 @@ def enrich(prospect: Dict[str, Any]) -> Dict[str, Any]:
     p["has_catalyst"] = cat["has"]
     p["catalyst_fresh"] = cat["fresh"]
     p["catalyst_label"] = cat["label"]
+    p["has_leadership_tie"] = bool(prospect.get("leadership_ties")) or \
+        "exec_migration" in set(prospect.get("signals", []))
     return p

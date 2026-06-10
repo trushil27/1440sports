@@ -118,3 +118,11 @@ the hero and score. Push to the working branch. Do **not** open a PR unless aske
   sponsors in `data/teams.json`). Multiple prospects may recommend the same team
   — that is fine. Do not down-rank or re-point a team because another 1440
   prospect is aimed there.
+- **Leadership-tie gate — check every prospect.** Research whether any senior
+  leader was previously part of the F1/FE ecosystem or structured a sponsorship
+  deal (CMO/CEO/President/CRO who built a prior team partnership, etc.). Record in
+  `leadership_ties` (`[{name, role, tie, relevance, source}]`; set `[]` once
+  checked and none found — never leave it unassessed). A confirmed tie is the
+  warmest signal (a proven motorsport buyer pre-answers the B2B doubt), boosts
+  ranking, and `verify_brief.py` surfaces it. JFrog (Genefa Murphy → Udemy–McLaren)
+  is the worked example.

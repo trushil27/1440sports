@@ -231,6 +231,22 @@ def check_prospect(p: dict, today: _dt.date,
                             f"team-fit engine ranks '{best['team']}' higher "
                             f"({best['score']} vs {a['score']}) — confirm '{rec}' is intended"))
 
+    # 11. LEADERSHIP TIES — tracking gate: has any senior leader prior F1/FE
+    #     ecosystem or sponsorship-deal-structuring history? A confirmed tie is the
+    #     warmest signal class (a proven motorsport buyer pre-answers the B2B doubt).
+    ties = p.get("leadership_ties")
+    if ties is None:
+        out.append((INFO, "leadership_ties_unassessed",
+                    "leadership F1/FE/deal-history gate not assessed — check each senior "
+                    "leader's background and set `leadership_ties` ([] if none found)"))
+    elif ties:
+        who = ", ".join(t.get("name", "?") for t in ties if isinstance(t, dict))
+        out.append((INFO, "leadership_tie",
+                    f"⭐ leadership tie to F1/FE/deal-structuring: {who}"))
+    else:
+        out.append((INFO, "leadership_ties_clear",
+                    "leadership checked — no prior F1/FE/deal-structuring ties found"))
+
     return out
 
 
