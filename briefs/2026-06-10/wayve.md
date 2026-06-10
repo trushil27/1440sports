@@ -5,13 +5,13 @@
 
 > Wayve - Britain's embodied-AI leader for autonomous driving, valued at $8.6B after a $1.2B Series D in February 2026 - is the rare brand whose 'future of mobility' story is native to Formula E, with no autonomy or mobility-AI brand anywhere on the grid.
 
-## OPPORTUNITY 73 / 100
+## OPPORTUNITY 74 / 100
 
 - **Timing window:** WARM
 - **Series:** FE
 - **Recommended team:** Envision Racing
 - **Action horizon:** 8-12 WKS
-- **Mode:** B (tech serves the team operation)
+- **Mode:** A (tech in the car / championship)
 - **Inbound crowding:** ~35 (EARLY - ahead of the noise)
 - **Discovery:** self
 - **Signals:** funding event, never entered, category whitespace
@@ -41,10 +41,10 @@ Wayve is freshly capitalized ($1.2B in Feb 2026) and scaling fast into commercia
 Envision Racing - a sustainability-first independent with a clean (greenfield) partner roster - is the conflict-free fit for Wayve's clean-mobility-and-autonomy story, with room to own the lane outright. HONEST NOTE: this is the cleanest available FE team because our own pipeline has now filled the premium FE slots (Nissan, Mahindra, Jaguar, Porsche, Andretti). The strongest *warm-path* alternative is Nissan, which is an existing Wayve investor - a real relationship hook - but Nissan already carries a 1440 enterprise-AI prospect (Cohere), so Envision is the cleaner primary.
 
 ## VALUE TO ENVISION RACING
-MODE B. The value is a future-of-mobility brand association and an innovation/talent narrative, plus premium hospitality - not an in-car integration (FE cars are driver-raced). Envision gains a marquee embodied-AI partner that reinforces its sustainability-and-technology identity; Wayve gains a globally-broadcast, mobility-native stage to build its independent brand and recruit.
+MODE A (developing) - real substance on three fronts, not signage. (1) TECHNICAL: Wayve's core competencies - embodied AI, large-scale simulation, real-time perception-and-control and sensor/data fusion - map onto an FE team's hardest problems: race-strategy optimisation under uncertainty, energy- and battery-management modelling across a stint, and high-fidelity simulation. A defined joint workstream (Wayve engineers paired with Envision's strategy and simulation group) gives genuine performance value, with room to deepen over the term. (2) COMMERCIAL FLYWHEEL: for a sustainability-first independent, a marquee, blue-chip AI name materially upgrades Envision's partner roster and commercial credibility - helping it win and keep other sponsors - while Wayve's ecosystem (Nvidia, Uber, Mercedes/Nissan/Stellantis) opens enterprise and supplier doors. (3) STORY &amp; TALENT: a shared future-of-mobility-and-sustainability content platform extends Envision's green identity, plus a co-branded recruiting programme in a brutal autonomy talent market. Envision gains performance capability, commercial pull and narrative; Wayve gains a mobility-native global stage.
 
 ## DEAL ARCHITECTURE
-Official Mobility AI Partner tier on Envision Racing (Nissan as a warm-path alternative via its existing Wayve investment), minimum three years, ~$3-5M/yr, with category exclusivity for autonomy/mobility-AI and a content/innovation-narrative programme aimed at talent and enterprise audiences.
+Official Mobility AI Partner tier on Envision Racing (Nissan as a warm-path alternative via its existing Wayve investment), minimum three years, ~$3-5M/yr, with category exclusivity for autonomy/mobility-AI, a defined joint technical workstream (Wayve AI/simulation applied to race strategy and energy modelling), and a content/innovation-narrative programme aimed at talent and enterprise audiences.
 
 ## PRIMARY DECISION-MAKER
 **Alex Kendall** — Co-Founder & CEO, Wayve - verified
@@ -59,7 +59,7 @@ Alex Kendall co-founded Wayve in 2017 (Cambridge PhD, a pioneer of end-to-end 'A
 - **Capacity 18/20** — $8.6B valuation, ~$1.5B raised in Feb 2026 (with Uber's milestone tranche); an FE deal is immaterial.
 - **Brand Fit 15/20** — Autonomous-mobility AI is an unusually clean fit for Formula E's future-of-mobility identity, and a British brand suits the championship - though as MODE B the value is a halo, not in-car tech.
 - **Urgency 12/20** — Fresh capital and a recruiting land-grab in autonomy, but no dated external forcing function.
-- **Ops Fit 12/20** — MODE B: a mobility-innovation and talent-brand association, not an in-car system (FE cars are driver-raced, not autonomous).
+- **Ops Fit 13/20** — MODE A (developing): not Wayve's product in the car, but its AI, simulation and data-science capabilities applied to the team's race-strategy, energy-modelling and simulation work - a real, deepenable technical workstream.
 
 ## RISKS & COUNTERS
 - **Buyers are automakers, not the paddock** — Wayve sells AI to OEMs, so F1/FE hospitality doesn't reach its pipeline - the sponsorship logic is halo/recruiting, not B2B leads. *Counter:* Lead with brand-establishment, the talent war (autonomy recruiting is brutal) and the mobility-native narrative; keep it a relationship-and-halo play, modest and scalable.
