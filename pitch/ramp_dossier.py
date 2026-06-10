@@ -63,6 +63,14 @@ HTML = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
   .thesis strong{{ color:var(--gold); }}
   .action{{ border:1px solid var(--hair); border-left:3px solid var(--navy); border-radius:0 6px 6px 0; background:#fbf8f1; padding:7px 11px; font-size:8.8pt; margin:6px 0 2px; }}
   .action b{{ color:var(--navy); font-family:Arial,sans-serif; font-size:7pt; letter-spacing:.1em; text-transform:uppercase; }}
+  .vtrend{{ margin:6px 0 2px; }}
+  .vtcap{{ font-family:Arial,sans-serif; font-size:6.6pt; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }}
+  .vt-row{{ display:flex; align-items:center; gap:8px; margin-bottom:4px; }}
+  .vt-lab{{ font-family:Arial,sans-serif; font-size:6.8pt; color:var(--muted); width:58px; text-transform:uppercase; letter-spacing:.03em; }}
+  .vt-bar{{ height:12px; background:linear-gradient(90deg, var(--navy), var(--gold)); border-radius:3px; min-width:6px; }}
+  .vt-val{{ font-family:Arial,sans-serif; font-size:8.4pt; font-weight:700; color:var(--navy); }}
+  .thermo{{ border:1px solid var(--hair); border-left:3px solid #2f7d4f; border-radius:0 6px 6px 0; background:#f6faf7; padding:7px 11px; font-size:8.4pt; margin:6px 0 2px; }}
+  .thermo b{{ color:#2f7d4f; font-family:Arial,sans-serif; font-size:7pt; letter-spacing:.08em; text-transform:uppercase; }}
   .cf{{ font-family:Arial,sans-serif; font-size:5.6pt; font-weight:700; letter-spacing:.08em; padding:1px 4px; border-radius:3px; vertical-align:middle; margin-left:2px; }}
   .cf.verified{{ background:#eaf4ec; color:#2f7d4f; border:1px solid #cfe6d6; }}
   .cf.reported{{ background:#fbf3e6; color:#9a6b1f; border:1px solid #efe0c4; }}
@@ -136,6 +144,12 @@ HTML = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
   inside relationship - the leadership-tie gate is clear), and offer a short-form LOI to hold
   spend-management category exclusivity while terms form. Owner: 1440 partner-led.
 </div>
+<div class="thermo">
+  <b>Deal read</b> &nbsp; WARM (84/100). Key dependency: a founder-level brand-spend decision
+  with no inside champion (leadership-tie gate is clear). What breaks it: Ramp keeps all spend on
+  direct go-to-market and treats motorsport as off-strategy. Mitigant: the structural Visa fit +
+  the just-closed raise. &nbsp;·&nbsp; <em>Tracked in the outcomes loop: brief → meeting → deal.</em>
+</div>
 
 <h2>1 · What Ramp Is</h2>
 <p>Ramp is a <strong>financial-operations platform</strong> - corporate cards, expense management,
@@ -148,6 +162,12 @@ software, and has extended into <strong>Ramp Stack</strong> (a platform for acco
 AI-era categories such as token/AI-spend management. {R}</p>
 
 <h2>2 · Traction &amp; Momentum</h2>
+<div class="vtrend">
+  <div class="vtcap">Valuation trajectory — ~3&times; in 18 months {V}</div>
+  <div class="vt-row"><span class="vt-lab">Early 2025</span><span class="vt-bar" style="width:30%"></span><span class="vt-val">~$15B</span></div>
+  <div class="vt-row"><span class="vt-lab">Nov 2025</span><span class="vt-bar" style="width:66%"></span><span class="vt-val">$32B</span></div>
+  <div class="vt-row"><span class="vt-lab">Jun 2026</span><span class="vt-bar" style="width:91%"></span><span class="vt-val">$44B</span></div>
+</div>
 <ul class="tight">
   <li><strong>Valuation ~3&times; in 18 months:</strong> ~$13-16B (early 2025) → $32B (Nov 2025) → <strong>$44B</strong> (Jun 2026 Series F, led by ICONIQ, GIC and Ontario Teachers'). {V}</li>
   <li><strong>Revenue:</strong> ~$1.4B in 2026; more than $1B annualized while <strong>free-cash-flow positive</strong> - rare at this growth rate. {R}</li>
@@ -205,6 +225,10 @@ valuable to Ramp, not less. The Visa structural angle is the sharpest differenti
 
 <div class="pageb"></div>
 <h2>6 · Fit Into The F1 Ecosystem — Visa Cash App Racing Bulls</h2>
+<p class="note"><strong style="color:var(--navy)">Precedent — the pattern converts:</strong>
+born-big B2B-tech companies do sign F1. DXC Technology, itself born from a ~$26B merger/spin-off,
+became a Scuderia Ferrari Team Partner (2023, logo on the SF-23). A profitable, category-leading
+fintech is an even more natural fit. {V}</p>
 <p>No spend-management or AI-finance brand holds a position anywhere in F1, and direct rival
 <strong>Brex has no motorsport deal</strong> - the entire corporate-spend category is open. {R} The slot that
 fits Ramp's profile is <strong>Visa Cash App Racing Bulls</strong>: Ramp's deepened multi-year Visa issuing
