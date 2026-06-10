@@ -183,7 +183,6 @@ AI-era categories such as token/AI-spend management. {R}</p>
   <tr><td class="k">Revenue model</td><td class="v">Interchange on card volume + software; exposed to card-spend and interest-rate cycles {E}</td></tr>
 </table>
 
-<div class="pageb"></div>
 <h2>4 · Leadership &amp; The Decision Path</h2>
 <div class="twocol">
   <div>
@@ -221,7 +220,6 @@ AI-era categories such as token/AI-spend management. {R}</p>
 but the category is contested - which makes a differentiated, CFO-credible brand stage <em>more</em>
 valuable to Ramp, not less. The Visa structural angle is the sharpest differentiator a rival can't copy.</p>
 
-<div class="pageb"></div>
 <h2>6 · Fit Into The F1 Ecosystem — Visa Cash App Racing Bulls</h2>
 <p>No spend-management or AI-finance brand holds a position anywhere in F1, and direct rival
 <strong>Brex has no motorsport deal</strong> - the entire corporate-spend category is open. {R} The slot that
