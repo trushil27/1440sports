@@ -60,6 +60,9 @@ HTML = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
   .thesis{{ background:var(--navy); border-left:4px solid var(--gold); border-radius:0 7px 7px 0; padding:10px 14px; color:#f3f1ea; margin:4px 0 2px; }}
   .thesis .k{{ font-family:Arial,sans-serif; font-size:6.4pt; font-weight:700; letter-spacing:.18em; color:var(--gold); text-transform:uppercase; }}
   .thesis p{{ font-size:10pt; line-height:1.45; margin:3px 0 0; color:#f3f1ea; }}
+  .thesis strong{{ color:var(--gold); }}
+  .action{{ border:1px solid var(--hair); border-left:3px solid var(--navy); border-radius:0 6px 6px 0; background:#fbf8f1; padding:7px 11px; font-size:8.8pt; margin:6px 0 2px; }}
+  .action b{{ color:var(--navy); font-family:Arial,sans-serif; font-size:7pt; letter-spacing:.1em; text-transform:uppercase; }}
   .cf{{ font-family:Arial,sans-serif; font-size:5.6pt; font-weight:700; letter-spacing:.08em; padding:1px 4px; border-radius:3px; vertical-align:middle; margin-left:2px; }}
   .cf.verified{{ background:#eaf4ec; color:#2f7d4f; border:1px solid #cfe6d6; }}
   .cf.reported{{ background:#fbf3e6; color:#9a6b1f; border:1px solid #efe0c4; }}
@@ -125,6 +128,13 @@ HTML = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
   Ramp's deepened Visa issuing relationship lets it sit as the spend-intelligence layer
   <em>above</em> the existing Visa rail. Move on the just-raised brand-reckoning moment.
   Opportunity score: 84/100 (HOT).</p>
+</div>
+
+<div class="action">
+  <b>Recommended action</b> &nbsp; Open CEO Eric Glyman within 6-10 weeks - ahead of the
+  British GP and Ramp's UK/EU launch this summer. Lead with the structural Visa fit (not an
+  inside relationship - the leadership-tie gate is clear), and offer a short-form LOI to hold
+  spend-management category exclusivity while terms form. Owner: 1440 partner-led.
 </div>
 
 <h2>1 · What Ramp Is</h2>
@@ -226,6 +236,12 @@ CFO-audience stage and a calendar anchor.</p>
     activation. 25 minutes before a rival notices the open lane?"</p>
   </div>
 </div>
+<p class="note" style="margin-top:6px"><strong style="color:var(--navy)">Why ~$6-9M/yr:</strong>
+mid-tier F1 partner programmes typically run ~$5-15M/yr; $6-9M positions Ramp as an Official
+(not title) partner, calibrated to its $1B+ revenue (immaterial spend) and the value of direct
+CFO/founder-audience access plus Visa co-activation, with category exclusivity carrying the
+premium. {E} Directional only - validate against Racing Bulls' actual rate card before any number
+reaches the prospect.</p>
 
 <h2>7 · Risks &amp; Counters</h2>
 <div class="risk"><span class="rt">Visa channel conflict</span> — Ramp's Visa issuing deal could read as a conflict with the Visa title. <b>Counter:</b> it is a structural bridge - Ramp is the spend-intelligence layer above the rail; the two roles are architecturally distinct and mutually reinforcing.</div>
