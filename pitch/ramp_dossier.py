@@ -163,14 +163,13 @@ AI-era categories such as token/AI-spend management. {R}</p>
 
 <h2>2 · Traction &amp; Momentum</h2>
 <div class="vtrend">
-  <div class="vtcap">Valuation trajectory — ~3&times; in 18 months {V}</div>
+  <div class="vtcap">Valuation trajectory — ~3&times; in 18 months, on a $750M Series F (Jun 2026) {V}</div>
   <div class="vt-row"><span class="vt-lab">Early 2025</span><span class="vt-bar" style="width:30%"></span><span class="vt-val">~$15B</span></div>
   <div class="vt-row"><span class="vt-lab">Nov 2025</span><span class="vt-bar" style="width:66%"></span><span class="vt-val">$32B</span></div>
   <div class="vt-row"><span class="vt-lab">Jun 2026</span><span class="vt-bar" style="width:91%"></span><span class="vt-val">$44B</span></div>
 </div>
 <ul class="tight">
-  <li><strong>Valuation ~3&times; in 18 months:</strong> ~$13-16B (early 2025) → $32B (Nov 2025) → <strong>$44B</strong> (Jun 2026 Series F, led by ICONIQ, GIC and Ontario Teachers'). {V}</li>
-  <li><strong>Revenue:</strong> ~$1.4B in 2026; more than $1B annualized while <strong>free-cash-flow positive</strong> - rare at this growth rate. {R}</li>
+  <li><strong>Growth drivers:</strong> emerging AI categories (incl. token/AI-spend management) plus Ramp Stack, its platform for accounting firms. {R}</li>
   <li><strong>Customers:</strong> 70,000+ businesses (Jun 2026, up from ~50,000 at the start of the year); ~2,200 paying $100K+ (Nov 2025, +133% YoY enterprise growth). {R}</li>
   <li><strong>Purchase volume:</strong> ~$100B+ annualized, growing ~170% YoY (Mar 2026) - its fastest in three years despite ~20&times; prior scale. {R}</li>
   <li><strong>UK/EU:</strong> acquired payments platform <strong>Billhop</strong> (Mar 2026); onboarding UK/EU businesses this summer. {V}</li>
@@ -179,8 +178,7 @@ AI-era categories such as token/AI-spend management. {R}</p>
 <h2>3 · Financial Profile <span class="note">— private company: figures are disclosures/estimates, not audited statements</span></h2>
 <table class="mtable">
   <tr><td class="k">Status</td><td class="v"><b>Private.</b> No audited public statements; figures below are company/press disclosures. {G}</td></tr>
-  <tr><td class="k">Revenue</td><td class="v"><b>~$1.4B</b> (2026); $1B+ annualized, <b>FCF-positive</b> {R}</td></tr>
-  <tr><td class="k">Valuation / last round</td><td class="v"><b>$44B</b> on a <b>$750M Series F</b> (Jun 2026), +38% over $32B six months earlier {V}</td></tr>
+  <tr><td class="k">Revenue / ARR</td><td class="v"><b>~$1.4B</b> revenue (2026); $1B+ annualized, <b>FCF-positive</b> - rare at this growth rate {R}</td></tr>
   <tr><td class="k">Profitability</td><td class="v">Underlying profitability +153% YoY (to Nov 2025); FCF-positive since ~Nov 2025 {R}</td></tr>
   <tr><td class="k">Revenue model</td><td class="v">Interchange on card volume + software; exposed to card-spend and interest-rate cycles {E}</td></tr>
 </table>
@@ -225,10 +223,6 @@ valuable to Ramp, not less. The Visa structural angle is the sharpest differenti
 
 <div class="pageb"></div>
 <h2>6 · Fit Into The F1 Ecosystem — Visa Cash App Racing Bulls</h2>
-<p class="note"><strong style="color:var(--navy)">Precedent — the pattern converts:</strong>
-born-big B2B-tech companies do sign F1. DXC Technology, itself born from a ~$26B merger/spin-off,
-became a Scuderia Ferrari Team Partner (2023, logo on the SF-23). A profitable, category-leading
-fintech is an even more natural fit. {V}</p>
 <p>No spend-management or AI-finance brand holds a position anywhere in F1, and direct rival
 <strong>Brex has no motorsport deal</strong> - the entire corporate-spend category is open. {R} The slot that
 fits Ramp's profile is <strong>Visa Cash App Racing Bulls</strong>: Ramp's deepened multi-year Visa issuing
