@@ -3,9 +3,9 @@
 
 **WARM**
 
-> Developer-security leader Snyk (~$325M ARR) is heading toward an IPO with BOTH its CEO and CMO seats in transition and no motorsport footprint - a leadership reset that is the ideal, if messy, moment to plant a category-defining grid idea before a DevSecOps rival does.
+> Developer-security leader Snyk (~$325M ARR) is now led by a CEO who is also its CFO, with the CMO seat still vacant and no motorsport footprint - a finance-first leadership reset that calls for an ROI-led grid idea before a DevSecOps rival moves.
 
-## OPPORTUNITY 72 / 100
+## OPPORTUNITY 73 / 100
 
 - **Timing window:** WARM
 - **Series:** F1
@@ -17,17 +17,17 @@
 - **Signals:** never entered, category whitespace, funding event, new leadership
 
 ## THE CASE
-Snyk is a well-funded developer-security leader - ~$325M ARR, 4,800+ customers, $435M in the bank and a clear path to break-even - on a (delayed) IPO track. The defining dynamic now is a dual leadership reset: CEO Peter McKay announced in February 2026 that he will step down once a successor is found, and the CMO seat has been vacant since Jonaki Egenolf left for XBOW in November 2025. Both brand-owning seats are being re-decided - the ideal moment to plant a sponsorship thesis the incoming leaders inherit. The strategic prize: developer/application security is uncontested on the F1 grid (the same whitespace JFrog and Sonatype eye), so a first mover owns the lane. The honest counterweight: a dual vacancy can also stall a decision, so this is a relationship-and-thesis play, not a quick close.
+Snyk is a well-funded developer-security leader - ~$325M ARR, 4,800+ customers, $435M in the bank and a clear path to break-even - on a (delayed) IPO track. The defining dynamic now is a finance-first leadership reset: after Peter McKay's departure, Ken MacAskill leads as CEO while also holding the CFO role, and the CMO seat has been vacant since Jonaki Egenolf left in November 2025. With brand decisions sitting with a CEO who is also the CFO and no marketing chief, a sponsorship must be pitched on hard ROI - measurable pipeline and enterprise credibility - and the open CMO seat is the slot whose thesis we can shape now. The strategic prize: developer/application security is uncontested on the F1 grid (the same whitespace JFrog and Sonatype eye), so a first mover owns the lane.
 
 ## WHY NOW
-Both the CEO and CMO seats are resetting at once - the rare window when the framing set now defines whatever the incoming leaders execute. Layer on the open DevSecOps category (which locks the moment a rival signs) and a pre-IPO brand rationale, and the case for planting the idea now is strong - provided it is pitched as a ready-made win for the incoming team, not a deal that needs a sitting CMO to close.
+The top of the house has just reset - a new CEO/CFO and a still-open CMO seat - so the framing set now shapes both the incoming marketing hire and how a finance-first chief evaluates the deal. Layer on the open DevSecOps category (which locks the moment a rival signs) and a pre-IPO brand rationale, and the case for planting an ROI-led idea now is strong.
 
 ## PROOF POINTS  *(every figure verified to a primary source)*
 - **~$325M** — ARR (4,800+ customers)
 - **$435M** — Cash in the bank; clear path to break-even
 - **~$7.4B** — Last primary valuation (down from $8.5B in 2021); secondary marks lower
-- **Peter McKay** — CEO stepping down once a successor is found (Feb 2026)
-- **Jonaki Egenolf** — CMO seat vacant (left for XBOW, Nov 2025)
+- **Ken MacAskill** — CEO & CFO (combined role, after Peter McKay's departure)
+- **CMO seat vacant** — No CMO on the leadership page (Egenolf left Nov 2025)
 
 ## GRID FIT  *(category-whitespace check across the F1 grid)*
 - **Aston Martin** **(recommended)** — `OPEN` · no rival in this category lane
@@ -35,7 +35,7 @@ Both the CEO and CMO seats are resetting at once - the rare window when the fram
 - **McLaren** — `OPEN` · no rival in this category lane
 - **Red Bull Racing** — `OPEN` · no rival in this category lane
 
-> **BOTTOM LINE —** A ~$325M-ARR developer-security leader with BOTH its CEO and CMO seats in transition - the rare moment to plant a category-defining grid idea that incoming leaders inherit. Developer security is uncontested on the F1 grid; Aston Martin is the CISO-credible home. A thesis-and-relationship play, not a quick close.
+> **BOTTOM LINE —** A ~$325M-ARR developer-security leader now run by a CEO who is also its CFO, with the CMO seat still open - so brand decisions sit with a finance-first chief and the pitch must be ROI-led. Developer security is uncontested on the F1 grid; Aston Martin is the CISO-credible home.
 
 ## WHY ASTON MARTIN
 Aston Martin's CISO-grade gravitas and premium, technically-credible identity place Snyk's 'secure by design' story directly in front of the enterprise security buyers it sells to. If Aston Martin's inventory is constrained, Williams (data/engineering revival) is a credible alternative with the right audience profile.
@@ -47,22 +47,22 @@ MODE A. Snyk integrates security directly into developer workflows, and an F1 te
 Official Developer Security Partner tier on Aston Martin, minimum three years, ~$3-4M/yr (calibrated to ~$325M ARR), with developer-security category exclusivity and a working integration into the team's development pipeline.
 
 ## PRIMARY DECISION-MAKER
-**Peter McKay** — CEO (stepping down, successor TBD) - verified; CMO seat also vacant (Egenolf left Nov 2025)
+**Ken MacAskill** — Chief Executive Officer & CFO, Snyk - verified via snyk.io/about/leadership
 
-Snyk's brand leadership is in a dual reset: CEO Peter McKay announced in Feb 2026 he will step down once a successor is found, and the CMO seat has been vacant since Jonaki Egenolf left for XBOW (Nov 2025). The entry point is therefore transitional - the value is to plant a ready-made sponsorship thesis now that the incoming CEO and CMO inherit on day one. Engage McKay and the board while the reset is underway; the framing set now shapes whoever lands the seats.
+Ken MacAskill leads Snyk as CEO while also holding the CFO role, having stepped up after Peter McKay's departure. The combined CEO/CFO seat means brand and sponsorship decisions sit with a finance-first chief - so the pitch must be ROI-led (measurable pipeline and credibility), not brand vanity. There is no CMO (the seat has been vacant since Jonaki Egenolf left in Nov 2025), so framing the thesis for the eventual marketing hire is part of the play. Co-decision-makers: CRO Tom Nielsen (commercial) and Chief Innovation Officer & CTO Manoj Nair (a working technical integration).
 
 ## OPENING ANGLE
-> "Peter, with both the CEO and CMO seats resetting, the smartest move is to hand your successors a ready-made win - own developer security on the F1 grid before JFrog or Sonatype do. Worth 25 minutes to shape the thesis?"
+> "Ken, you run Snyk as CEO and CFO, so you'll judge this on return, not noise: developer security is the one open lane on the F1 grid, and owning it pre-IPO is measurable enterprise credibility with the CISO buyers you sell to. 25 minutes?"
 
 ## SCORE COMPOSITION
-- **Timing 13/20** — A dual leadership reset: CEO Peter McKay announced (Feb 2026) he will step down once a successor is found, and the CMO seat is vacant (Egenolf left to XBOW, Nov 2025) - the framing set now shapes whoever inherits, though the vacuum can also stall a decision.
+- **Timing 14/20** — Leadership has reset at the top: Ken MacAskill (ex-Interim CFO) now leads as CEO & CFO after Peter McKay's departure, with the CMO seat still vacant - brand decisions sit with a finance-first chief, so framing must be ROI-led; the reset is the moment to plant the thesis.
 - **Capacity 16/20** — ~$325M ARR, 4,800+ customers and $435M in the bank with a path to break-even; valuation is ambiguous (last primary ~$7.4B in 2021; secondary marks lower).
 - **Brand Fit 16/20** — Developer and application security sits in uncontested grid whitespace (the same JFrog/Sonatype eye).
 - **Urgency 12/20** — If a DevSecOps rival signs first the category locks - but the IPO is delayed and leadership is mid-reset, so the clock is softer than it looks.
 - **Ops Fit 15/20** — MODE A: an F1 team's growing in-house software estate is a genuine developer-security surface and reference deployment.
 
 ## RISKS & COUNTERS
-- **Dual leadership vacuum** — With the CEO stepping down and the CMO seat vacant, a marquee decision could stall awaiting new hires. *Counter:* Pitch a turnkey thesis the incoming leaders inherit; pre-frame it now with McKay and the board so it's a day-one win, not a cold start.
+- **Finance-first gatekeeper, no CMO** — Brand spend sits with a CEO who is also the CFO, and there is no marketing chief to champion it - a high bar for discretionary sponsorship. *Counter:* Pitch strictly on ROI (measurable B2B pipeline + a working dev-pipeline deployment as a reference), and frame it as a ready-made win to hand the eventual CMO.
 - **IPO delayed / spend discipline** — The listing is not imminent and the path-to-break-even posture favours visible efficiency. *Counter:* Lock category exclusivity now at a pre-IPO price; the open DevSecOps lane is the asset, and it disappears the moment a rival signs.
 
 ## SOURCES
