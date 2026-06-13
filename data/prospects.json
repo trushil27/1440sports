@@ -755,8 +755,12 @@
     {
       "id": "abnormal-security",
       "name": "Abnormal Security",
-      "ticker": "Private ($5.1B; IPO-track)",
+      "ticker": "Private ($5.1B; $200M+ ARR; IPO-track)",
       "category": "AI Email / Behavioral Security",
+      "fit_lane": ["email security", "behavioral security", "business email compromise"],
+      "fit_domain": ["email", "phishing", "threat detection"],
+      "last_verified": "2026-06-13",
+      "thesis": "An AI email-security leader at $5.1B and $200M+ ARR (100%+ growth), IPO-track, with the CMO seat in transition - the moment to plant a thesis the incoming marketing hire inherits. Cybersecurity is open on the F1 grid; Haas is the lean, ownable first step, and email/finance-fraud protection is a real MODE-A deployment.",
       "hq": "San Francisco, CA",
       "series": "F1",
       "status": "active",
@@ -769,10 +773,11 @@
       "timing_window": "WARM",
       "action_horizon": "8-12 WKS",
       "signals": ["never_entered", "funding_event", "category_whitespace"],
+      "leadership_ties": [],
       "scores": {"timing": 15, "capacity": 16, "brand_fit": 15, "urgency": 12, "ops_fit": 14},
       "score_rationale": {
-        "timing": "Raised $250M Series D at $5.1B and has publicly targeted public-company readiness; the CMO seat is currently in transition, so brand strategy is open.",
-        "capacity": "$5.1B valuation with strong ARR growth - comfortably funds a value-to-mid tier.",
+        "timing": "Raised $250M Series D at $5.1B (2024) and has publicly targeted public-company readiness; the CMO seat is currently in transition (Doug Laird departed), so brand strategy is open.",
+        "capacity": "$5.1B valuation and $200M+ ARR growing 100%+ YoY ($557M raised) - comfortably funds a value-to-mid tier.",
         "brand_fit": "AI behavioral security sits in the open cybersecurity category on the grid.",
         "urgency": "An IPO-readiness window exists, but there is no acute external forcing function yet.",
         "ops_fit": "MODE A: every team faces targeted phishing and business-email compromise - a real, demonstrable security use case."
@@ -781,7 +786,7 @@
       "the_case": "Abnormal Security, an AI behavioral-security leader, raised a $250M Series D at a $5.1B valuation and has publicly stated it wants to be able to operate as a public company. It has the capacity and the brand-building motive of a pre-IPO leader, sits in the open cybersecurity category on the F1 grid, and has never entered motorsport. A useful nuance: its marketing leadership is in transition (the prior CMO, Doug Laird, is no longer listed on the current executive team, which now shows VP-level product and revenue marketing), so brand and sponsorship strategy is being re-decided - approach the CEO and help shape it.",
       "why_now": "Pre-IPO leaders invest in enterprise brand to support a future listing, the cybersecurity category on the grid rewards a first mover, and the open CMO seat means the strategic framing set now will define the incoming hire's plan. There is no competitor clock yet, so the work here is to create the urgency rather than react to it - which favours an early, relationship-led approach.",
       "why_team": "Haas offers an accessible, lean entry tier with open enterprise-software and security categories - a sensible first motorsport step at a sensible price for a company making its debut in the space, with room to scale to a bigger team at the next contract if the model proves out.",
-      "value_to_team": "MODE A. F1 teams are high-value targets for business-email compromise and social-engineering attacks aimed at finance and partnerships staff handling large sponsor flows. Abnormal's platform is a credible, deployable security partner with real protective value for the team, supporting an authentic CISO-facing 'official email-security partner' story rather than a logo placement.",
+      "value_to_team": "MODE A - real substance on three fronts. (1) TECHNICAL/SECURITY: an F1 team is a prime target for business-email-compromise and social-engineering attacks - finance and partnerships staff move large sponsor and supplier sums, and the team guards high-value design IP - so a behavioral-AI email-security deployment protecting the team's inboxes and finance workflows is genuine, deployable protection and a flagship reference. (2) COMMERCIAL: Haas's paddock audience reaches the CISO/IT buyers Abnormal sells to, so hospitality becomes a working enterprise pipeline channel, and an 'official security partner of an F1 team' badge carries real CISO credibility. (3) CONTENT & TALENT: a 'securing the team that races' narrative plus a security-engineering recruiting halo. The team gains real protection and aligned co-marketing; Abnormal gains a live reference deployment and a premium enterprise stage ahead of its IPO.",
       "deal_architecture": "Official Security Partner tier on Haas, minimum three years, ~$2.5-4M/yr, with category exclusivity and a working deployment protecting the team's email and finance functions.",
       "decision_maker": {
         "name": "Evan Reiser",
@@ -793,7 +798,18 @@
         {"title": "Spend discipline pre-IPO", "detail": "Public-company preparation favours visible efficiency.", "counter": "Lead with a value-tier entry and measurable B2B pipeline outcomes, not title-level spend."},
         {"title": "Leadership gap", "detail": "An unsettled CMO seat could delay a decision.", "counter": "Engage the CEO and frame the deal as a turnkey win to hand the new marketing leader on arrival."}
       ],
+      "key_facts": [
+        {"fact": "Valuation (Series D, Aug 2024; $250M round)", "value": "$5.1B", "source": "https://abnormal.ai/about/news/series-d-5b-valuation"},
+        {"fact": "Annual recurring revenue (100%+ YoY growth)", "value": "$200M+", "source": "https://www.cnbc.com/2024/08/06/new-funding-values-email-security-firm-abnormal-at-more-than-5-billion.html"},
+        {"fact": "Total raised (Insight, Menlo, Wellington)", "value": "$557M", "source": "https://news.crunchbase.com/cybersecurity/startup-ai-abnormal-security-funding-wellington/"},
+        {"fact": "CEO & co-founder (since 2018; ex-Twitter)", "value": "Evan Reiser", "source": "https://www.crunchbase.com/person/evan-reiser"},
+        {"fact": "CMO seat in transition (Doug Laird departed; VP-level marketing)", "value": "CMO vacant", "source": "https://abnormal.ai/about/team"}
+      ],
       "sources": [
+        "https://abnormal.ai/about/news/series-d-5b-valuation",
+        "https://www.cnbc.com/2024/08/06/new-funding-values-email-security-firm-abnormal-at-more-than-5-billion.html",
+        "https://news.crunchbase.com/cybersecurity/startup-ai-abnormal-security-funding-wellington/",
+        "https://www.crunchbase.com/person/evan-reiser",
         "https://abnormal.ai/about/team",
         "https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next"
       ]
