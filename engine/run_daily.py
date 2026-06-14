@@ -195,7 +195,8 @@ def main() -> int:
         if gated:
             print("\nGated / parked (not eligible for hero):")
             for p in gated:
-                why = ("crowding>100" if (p.get("est_inbound_pitches") or 0) > 100
+                why = ("HOLD — " + str(p.get("hold")) if p.get("hold")
+                       else "crowding>100" if (p.get("est_inbound_pitches") or 0) > 100
                        else p.get("status", "ineligible"))
                 print(f"     {scoring.opportunity_score(p):3d}/100  {p['name']}  ({why})")
         return 0

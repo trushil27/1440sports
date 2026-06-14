@@ -75,6 +75,10 @@ def is_eligible_for_hero(prospect: Dict[str, Any], min_deal_years: int = 3) -> b
     """
     if prospect.get("status") != "active":
         return False
+    if prospect.get("hold"):
+        # MD/human-layer hold: kept in the DB and still scored, but excluded
+        # from hero selection and the weekly decision until the hold is lifted.
+        return False
     if prospect.get("already_present"):
         return False
     if prospect.get("series") not in ELIGIBLE_SERIES:
