@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Coralogix</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "CORALOGIX · 14 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° ADHOC &nbsp;·&nbsp; HOT</div>
+
+  <h1>Coralogix</h1>
+  <div class="classline">Full-Stack Observability (logs / metrics / traces / APM / SIEM) · San Francisco, CA (R&amp;D in Tel Aviv) · Private ($1.6B; ~$150-200M ARR; Series F Jun 2026)</div>
+
+  <div class="lede">Coralogix raised a $200M Series F at $1.6B (Advent + CPPIB) and is running at a $150-200M ARR run-rate - a full-stack observability leader with fresh capital and a brand mandate, no motorsport presence, and an open observability lane on the F1 grid while a rival sits at McLaren.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">76</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Williams</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Coralogix, a full-stack observability platform (logs, metrics, traces, APM and cloud-security/SIEM), closed a $200M Series F at a $1.6B valuation on 3 June 2026 - led by Advent and CPPIB, $550M raised to date - while operating at a $150-200M ARR run-rate (~60% growth) and serving 5,000+ customers including IBM, Tradeweb and JFrog. That gives it fresh capital and the brand-building motive of a scaling pre-IPO leader, and it has never entered motorsport. Observability is an open, ownable lane on the grid: Williams&#39; enterprise roster is storage (VAST Data), collaboration (Atlassian) and security (Keeper) - no monitoring brand - while a direct rival, Splunk (now part of Cisco), already sits at McLaren. Co-founded and led by CEO Ariel Assaraf, Coralogix has a sitting CMO, Brian Mullen, who owns brand, partner ecosystem and strategic alliances - the precise, warm entry point.</p>
+
+  <h2>Why Now</h2>
+  <p>The Series F closed eleven days ago, so the capital and the brand mandate are live right now, and post-raise is exactly when a scaling platform invests in enterprise brand. There is also a competitor clock: Splunk-via-Cisco is already on the grid at McLaren, so claiming the open observability position - on a data-led team like Williams - is a move that both builds brand and denies the category to a rival. The decision sits with a sitting CMO (Brian Mullen) who owns alliances, so there is a clear, fast path to a yes.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$1.6B</div><div class="pfk">Valuation (Series F, 3 Jun 2026; $200M round, led by Advent and CPPIB)</div></div>
+    <div class="pf"><div class="pfv">$150-200M</div><div class="pfk">Annual revenue run-rate (~60% growth since prior round)</div></div>
+    <div class="pf"><div class="pfv">$550M</div><div class="pfk">Total funding raised to date</div></div>
+    <div class="pf"><div class="pfv">5,000+</div><div class="pfk">Customers worldwide (incl. IBM, Tradeweb, JFrog)</div></div>
+    <div class="pf"><div class="pfv">Ariel Assaraf</div><div class="pfk">CEO &amp; co-founder</div></div>
+    <div class="pf"><div class="pfv">Brian Mullen</div><div class="pfk">CMO (owns brand, partner ecosystem, strategic alliances)</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Williams<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">observability / APM, networking &amp; security</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Aston Martin</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">Eleven days after a $200M Series F at $1.6B (Advent + CPPIB) - ~60% growth to a $150-200M ARR run-rate - Coralogix has fresh capital and a brand mandate. Observability is an open, ownable lane on the F1 grid (Williams&#39; partners are storage/collaboration/security, not monitoring), and a direct rival (Splunk-via-Cisco) already sits at McLaren - so claim the category now. CMO Brian Mullen owns partnerships; this is his call.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">never entered</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+
+  <h2>Why Williams</h2>
+  <p>Williams is a data-led &#39;engineering revival&#39; team and a self-described preferred testing ground for enterprise software, with partners in storage, collaboration and security but none in observability - a distinct, unclaimed lane Coralogix could own. It is a credible, ownable stage (not title-level spend) for a $1.6B mid-cap, with a real deployment story across the team&#39;s software estate and a scale-up path if the model proves out.</p>
+
+  <h2>Value to Williams &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A with real substance on three fronts. (1) TECHNICAL / OPS: Williams runs a sprawling, mission-critical software estate - race-weekend telemetry pipelines, factory CFD/simulation systems, trackside-to-factory data links and a growing enterprise-app stack - that has to be monitored in real time; Coralogix&#39;s full-stack observability (logs, metrics, traces, APM plus SIEM) is a genuine, deployable workstream to cut mean-time-to-resolution and catch anomalies before they cost track time, sitting naturally on top of VAST&#39;s storage layer and alongside Atlassian&#39;s engineering workflow. That is a flagship &#39;we monitor the team that races&#39; reference deployment, not a logo. (2) COMMERCIAL / B2B: Williams&#39; paddock audience is dense with the CIO/CTO/SRE and platform-engineering buyers Coralogix sells to, so hospitality becomes a working enterprise-pipeline channel, while Williams gains a well-capitalised ($1.6B) observability anchor that fits its proven enterprise-software-partner pattern and helps it keep attracting blue-chip tech deals - and owning the open observability category denies it to the Splunk-via-Cisco rival at McLaren. (3) BRAND / CONTENT / TALENT: a race weekend is the ultimate real-time, low-MTTR, anomaly-detection environment - a perfect, ownable analogy for Coralogix&#39;s value prop - powering a co-developed &#39;observability under pressure&#39; content series, plus an SRE/platform-engineering recruiting halo both sides compete for. Williams gets a real monitoring deployment and aligned co-marketing; Coralogix gets a live reference and a premium B2B stage post-raise.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Observability Partner tier on Williams, minimum three years, ~$3-5M/yr, with category exclusivity in observability/APM and a working deployment monitoring the team&#39;s software estate.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Brian Mullen</div>
+        <div class="role">Chief Marketing Officer, Coralogix - verified (owns brand, partner ecosystem and strategic alliances)</div>
+        <div class="bio">CMO who leads global marketing strategy and the partner/alliances ecosystem - the natural owner of a sponsorship decision and the warm entry point. Approach Mullen with a ready-made observability-partner thesis; CEO &amp; co-founder Ariel Assaraf owns the post-raise brand narrative and is the escalation point.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Brian - you just raised $200M, observability is the one enterprise lane no one owns on the F1 grid, and your rival Splunk is already at McLaren. Williams is data-led and a proven home for software partners - claim the category before someone else does. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">Just closed a $200M Series F at $1.6B (3 Jun 2026, led by Advent and CPPIB) - ~60% growth to a $150-200M ARR run-rate - so it has fresh capital and a brand-building window right now.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">$1.6B valuation, $150-200M ARR run-rate and $550M raised - comfortably funds a value-to-mid &#39;Official Observability Partner&#39; tier (not title-level).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Observability is a distinct, open lane on the grid: Williams&#39; enterprise partners are storage (VAST), collaboration (Atlassian) and security (Keeper) - no monitoring/APM brand - and Williams is a proven &#39;testing ground for enterprise software&#39;.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">Fresh raise plus a competitor counter-clock: a direct rival (Splunk, via Cisco) already sits at McLaren, so there is real pressure to claim an observability position before the category consolidates on the grid.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A: an F1 team runs a sprawling software estate (race-weekend telemetry pipelines, factory/simulation systems, trackside-to-factory links) that needs real-time monitoring - a genuine, deployable observability use case.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Williams is already software-partner-heavy</span> &nbsp;<span class="rc">Atlassian, VAST Data, Keeper and Anthropic already populate Williams&#39; tech roster. <b>Counter:</b> Those partners sit in distinct lanes (collaboration, storage, security, AI); observability/APM is unclaimed, and Williams&#39; proven appetite for enterprise-software deals is a positive signal of fit, not a barrier.</span></div>
+  <div class="risk"><span class="rt">A rival is already on the grid</span> &nbsp;<span class="rc">Splunk (via Cisco) is McLaren&#39;s observability/security partner. <b>Counter:</b> That is the urgency, not a blocker - claim the open position on a better-fit, data-led team (Williams) now, before the category consolidates around the McLaren incumbent.</span></div>
+  <div class="risk"><span class="rt">Mid-cap spend discipline post-raise</span> &nbsp;<span class="rc">A scaling company watches discretionary spend after a raise. <b>Counter:</b> Lead with a value-to-mid Official Observability Partner tier tied to a real deployment and measurable B2B pipeline, not title-level spend.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.calcalistech.com/ctechnews/article/bkifhk6gmx</li><li>https://siliconangle.com/2026/06/03/observability-provider-coralogix-nabs-200m-investment/</li><li>https://coralogix.com/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai/</li><li>https://www.crunchbase.com/person/ariel-assaraf</li><li>https://craft.co/coralogix/executives</li><li>https://en.globes.co.il/en/article-israeli-observability-co-coralogix-raises-200m-1001544866</li>  </ul>
+</div>
+</body>
+</html>
