@@ -99,13 +99,16 @@ Commit the data edits + the day's `briefs/<date>/` folder with a message naming
 the hero and score. Push to the working branch. Do **not** open a PR unless asked.
 
 ## Guardrails
-- **Hit the signal quality bar ("the Vertiv standard") every search** — see CLAUDE.md
+- **Hit the signal quality bar every search (don't cap at any one exemplar)** — see CLAUDE.md
   operating rules. Aim for: profile-matched (electrification/electrical/energy/industrial/
   deep-tech; public + spin-offs in scope, per `data/approached.json`), a capital+identity
   inflection, a REAL team workstream (not a halo) with a sharp time-bound why-now,
   deal-capable capacity, a verified-open lane on a deliberately-chosen team (rule out
-  conflicting teams transparently), trust-complete, honest (un-inflated) scores. If it
-  can't clear the bar, show the disciplined screen-out instead of shipping a thin signal.
+  conflicting teams transparently), and a **verified named decision PATH** (the real
+  sponsorship owner — CMO/commercial — plus C-level sponsor and technical counterpart,
+  from the company's own leadership page; never just a title). Trust-complete, honest
+  (un-inflated) scores. If it can't clear the bar, show the disciplined screen-out instead
+  of shipping a thin signal. Match or beat Vertiv/Ramp/Cohesity — aim higher than the last one.
 - One signal/day — don't batch-send multiple briefs to the recipient.
 - Truth over punch: a narrowed true claim beats a bold unverified one.
 - Don't invent a decision-maker — a verified named individual, or the verified
