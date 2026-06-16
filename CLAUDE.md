@@ -57,6 +57,13 @@ information. Lead with "who to call, why now, which team" — never a research d
 
 ## Operating rules (non-negotiable)
 
+- **The signal quality bar — "the Vertiv standard" (MD-mandated 2026-06-16: deliver THIS level every search).** A great signal is not "a plausible company + a logo." Every search must aim for a hero that hits, ideally, all of:
+  1. **Profile-matched** to what 1440 actually pursues (see `data/approached.json` `profile_lessons`): electrification / electrical / energy / industrial / deep-tech lean; **public companies, spin-offs and mega-cap incumbents are in scope** (not just pre-IPO SaaS).
+  2. **A capital + identity inflection** — spin-off, newly public, mega-raise, or a peak-demand moment — so budget *and* brand-build motive crest together.
+  3. **A REAL motorsport workstream (MODE-A substance), not a halo** — something the *specific* team would actually deploy/use. Tie it to a sharp, time-bound **why-now** (e.g. F1's 2026 ~50%-electric power units; FE Gen4; a fresh catalyst).
+  4. **Deal-capable capacity** and an **ownable, verified-open category lane** on a deliberately-chosen team — do the clash-checks and **rule out conflicting teams transparently** (name why each is out).
+  5. **Trust-complete & honest:** live-verified facts, a verified **named** decision-maker (never an invented title; confirm or name the CEO with the gap noted), `leadership_ties` assessed, 0-blocker gate, strictly 2 pages, rich `value_to_team`, and **scores that aren't inflated** (say what holds it back).
+  Worked exemplar: **Vertiv → Cadillac (82, HOT)** — AI-power-supercycle inflection, real power/cooling/edge workstream, 2026-electrification why-now, greenfield PRIME-LANE team, verified CEO. If a search can't clear this bar, say so and show the disciplined screen-outs (that judgment IS the product) rather than shipping a thin signal.
 - **Re-verify, don't recall.** Before shipping any fact, check it live against a primary source. Never trust memory or prose fluency for a number/name/date.
 - **Tag confidence.** VERIFIED = primary source · REPORTED = credible secondary · GAP/ESTIMATE = explicitly not confirmed. If you can't source it, say so — never invent (e.g. the dossier flags that Glean has no public CFO rather than guessing one).
 - **The verification gate must pass.** Run `python3 engine/verify_brief.py <id> --net` before shipping. 0 blockers on shippable briefs.
