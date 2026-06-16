@@ -24,6 +24,7 @@ information. Lead with "who to call, why now, which team" — never a research d
 |---|---|
 | `data/prospects.json` | The prospect database + scores + trust fields. The engine's memory. |
 | `data/catalysts.json` | **Catalyst radar** — the born-big / overnight-$1B+-unicorn watchlist (spin-off/merger/acquisition). Detection inbox; promote events into `prospects.json`. |
+| `data/approached.json` | **Human-layer pipeline** — companies the 1440 team has ALREADY APPROACHED (do not re-pitch cold). Also encodes the calibrated targeting profile (`profile_lessons`). Check before shipping any new signal. |
 | `engine/scoring.py` | 5-pillar /100 model, ranking, cooldown, catalyst-freshness boost. |
 | `engine/catalysts.py` | Loads the catalyst radar + freshness; `python3 engine/catalysts.py [--open]`. |
 | `engine/edgar_scan.py` | SEC EDGAR full-text detection for born-big events (10-12B/S-4/S-1); `python3 engine/edgar_scan.py`. Free; emits query URLs if SEC egress is blocked. |
@@ -78,7 +79,8 @@ python3 pitch/glean_dossier.py                                    # rebuild Glea
 ## Next steps / open TODOs
 
 - **Outcomes loop (the moat, not yet built):** extend `history.json` to track brief → sent? → meeting? → deal. Cheap, in-repo, no UI. Start logging early so the proprietary "which signals convert" dataset compounds. **Highest-leverage next build.**
-- **Catalyst radar (live):** the born-big/overnight-unicorn signal is now systematised — `data/catalysts.json` + `engine/catalysts.py`, with a freshness boost in scoring and a daily-scan step in `PROMPT_DAILY.md` (methodology §9). **Versigent** (Aptiv spin-off, ~$17B EV-electrical) sits on the radar awaiting triage — would it sponsor, and is it `already_present` via Aptiv? Run `python3 engine/catalysts.py --open`.
+- **Catalyst radar (live):** the born-big/overnight-unicorn signal is now systematised — `data/catalysts.json` + `engine/catalysts.py`, with a freshness boost in scoring and a daily-scan step in `PROMPT_DAILY.md` (methodology §9). Run `python3 engine/catalysts.py --open`.
+- **Known approached targets (calibration — added 2026-06-16):** the MD shared 8 companies the human layer has already approached — **Versigent, Ramp, Planet Labs, Rippling, Five9, SLB, Cyera, nVent** — now in `data/approached.json`. **Do not re-pitch these cold.** Two lessons baked in: (1) **Versigent is REAL** = the Aptiv Electrical Distribution Systems spin-off (NYSE: VGNT, ~$17B, completed 1 Apr 2026) — NOT the small GenAI startup "Vertesia" an earlier session guessed (that record is now corrected/RESOLVED). (2) **Targeting profile is broader than 'pre-IPO unicorn'** — mature **public** companies (Five9, SLB, nVent, Planet Labs) and **spin-offs** are in scope, with a strong **industrial / electrical / energy / deep-tech** lean (motorsport-native). Widen sourcing accordingly; stop over-indexing on clean-energy/SaaS startups.
 - **On request:** when the MD names a company, run it through the engine → verified 2-page brief, + deep-dive dossier only if asked.
 - **Watching PR #1:** can subscribe to CI/review events if asked.
 - Deep-dive infra is currently per-company scripts (`pitch/glean_dossier.py`); generalize into the engine only once demand justifies it (sequencing: prove value before building infra).
