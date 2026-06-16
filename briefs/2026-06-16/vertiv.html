@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Vertiv</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "VERTIV · 16 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° ADHOC &nbsp;·&nbsp; HOT</div>
+
+  <h1>Vertiv</h1>
+  <div class="classline">Critical Digital Infrastructure — Power &amp; Thermal/Cooling · Westerville, OH · NYSE: VRT (~$2.65B Q1&#39;26 sales; $15.0B backlog; +102% YTD)</div>
+
+  <div class="lede">Vertiv - the AI-power-supercycle winner (Q1&#39;26 sales $2.65B, a $15.0B backlog up 109%, stock +102% YTD, NVIDIA partner) - has never been in motorsport, and power + cooling + edge infrastructure is a real workstream for a data-driven F1 team in its 2026 electric era.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">82</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Cadillac F1 Team</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Vertiv (NYSE: VRT) is the critical-digital-infrastructure leader - power continuity, precision cooling/thermal management and edge systems - and the clearest pick-and-shovel winner of the AI-data-centre buildout: Q1 2026 net sales of $2.65B (up 30%), a backlog of $15.0B (up 109% year-on-year), a stock up 102% year-to-date, an NVIDIA partner, and a just-completed acquisition of thermal specialist ThermoKey (12 Jun 2026) led by CEO Giordano Albertazzi. It has never touched motorsport. The fit matches the recalibrated 1440 profile precisely - a public, electrification/power-backbone company (the Versigent/nVent thread) with a genuine technical workstream, not a halo: a modern F1 team runs on compute (CFD, simulation, factory and trackside data), and Vertiv builds exactly the power and cooling that compute depends on. The why-now is sharp: F1&#39;s 2026 power units are ~50% electric and the sport&#39;s data/compute arms race is intensifying, while Cadillac - the brand-new 2026 entrant - is building its entire digital backbone from zero, with an open critical-infrastructure lane (IFS runs its ERP, TWG its AI, Tenneco its powertrain - none is power/cooling).</p>
+
+  <h2>Why Now</h2>
+  <p>Vertiv is at the crest of the AI-power supercycle - record sales, a $15.0B backlog and a stock up 102% YTD - so the capital and the appetite to build enterprise brand are peaking together, exactly the inflection moment 1440 targets. F1&#39;s 2026 electrification regs and the sport&#39;s escalating compute/data demands make a power-and-cooling partner unusually on-message right now, and Cadillac&#39;s greenfield build means the infrastructure decisions are being made today - get in before the backbone is architected, not after.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$2.65B</div><div class="pfk">Q1 2026 net sales (up 30% YoY, 23% organic)</div></div>
+    <div class="pf"><div class="pfv">$15.0B</div><div class="pfk">Backlog (up 109% YoY) - demand visibility</div></div>
+    <div class="pf"><div class="pfv">+102%</div><div class="pfk">Stock performance year-to-date 2026 (AI-power demand)</div></div>
+    <div class="pf"><div class="pfv">Giordano Albertazzi</div><div class="pfk">CEO</div></div>
+    <div class="pf"><div class="pfv">ThermoKey</div><div class="pfk">Thermal-management acquisition completed 12 Jun 2026 (heat rejection/exchange)</div></div>
+    <div class="pf"><div class="pfv">Westerville, OH</div><div class="pfk">Headquarters</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Cadillac<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">data platform / storage, identity &amp; access security</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The pick-and-shovel winner of the AI-power supercycle - power + thermal/cooling + edge infrastructure - at its peak moment ($2.65B Q1&#39;26 sales +30%, a $15.0B backlog up 109%, stock +102% YTD, NVIDIA partner, fresh ThermoKey thermal acquisition). Fits the recalibrated profile exactly: a public electrification/power-backbone leader with a REAL motorsport workstream (powering and cooling a team&#39;s compute), and F1&#39;s 2026 ~50%-electric era is the why-now. Cadillac, the greenfield 2026 entrant, has an open critical-infrastructure lane to build from zero.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">category whitespace</span><span class="flag">funding event</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+
+  <h2>Why Cadillac F1 Team</h2>
+  <p>Cadillac is the 2026 grid&#39;s only greenfield team - building its factory, data and trackside infrastructure from scratch - so Vertiv can architect the power-and-cooling backbone from day one rather than retrofit, a uniquely concrete workstream. The critical-infrastructure lane is open (IFS = ERP, TWG = AI, Tenneco = powertrain), and an American critical-infrastructure champion on the American flag-bearer team is a clean brand story for Vertiv&#39;s US-heavy investor and customer base.</p>
+
+  <h2>Value to Cadillac F1 Team &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A with real, named mechanics. (1) TECHNICAL / OPS (the core): Vertiv designs and operates the power continuity (UPS/switchgear), precision cooling and thermal management, and edge/data-centre infrastructure that a modern F1 team&#39;s compute runs on - the factory CFD/simulation clusters and data centre, plus the trackside &#39;garage&#39; edge where race-weekend power conditioning and cooling for compute and comms simply cannot drop mid-session. For Cadillac, a brand-new team, Vertiv can architect that entire digital backbone from day one (factory + trackside + edge) as a flagship &#39;the power and cooling behind the newest team on the grid&#39; reference, with its fresh ThermoKey thermal expertise mapping onto the team&#39;s own cooling-engineering culture. (2) COMMERCIAL / B2B: Vertiv sells to the hyperscalers, enterprises and data-centre operators building AI infrastructure, and the F1 paddock is dense with exactly those CIO/CTO/infrastructure buyers and the AI/cloud ecosystem (NVIDIA among them) - so team hospitality becomes a working enterprise channel, while Cadillac gains a marquee, deep-pocketed technology anchor at the company&#39;s peak-visibility moment. (3) BRAND / CONTENT / TALENT: &#39;the power and cooling behind the data that wins races&#39; ties Vertiv to the hottest tech story of 2026 (AI power) on a data-driven sport, with a co-marketing content series and a power/thermal/electrical engineering-talent halo both sides compete for. Cadillac gets its digital backbone built and a blue-chip anchor partner; Vertiv gets a live, visible reference deployment and a premium B2B stage at its peak.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Critical Infrastructure (Power &amp; Cooling) Partner on the Cadillac F1 Team, minimum three years, ~$5-8M/yr (large-cap capacity), with category exclusivity in power/cooling/critical-digital-infrastructure and a real deployment powering and cooling the team&#39;s factory, data and trackside compute.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Giordano Albertazzi</div>
+        <div class="role">CEO, Vertiv - verified (confirm CMO/brand lead before outreach)</div>
+        <div class="bio">Chief Executive, leading Vertiv through its AI-power-driven surge and the owner of a strategic, brand-defining partnership at this scale. A sponsorship of this nature would be championed at C-level and executed by the marketing organisation - route via the CEO/CMO office, and confirm the current CMO/brand lead before outreach (named here is the verified CEO).</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Giordano - F1 just went ~50% electric and runs on compute, and no one owns the power-and-cooling lane on the grid. Cadillac is building its backbone from zero - Vertiv could architect it from day one. The hottest tech story of the year, on a data-driven sport. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">At a peak capital-and-brand moment: Q1&#39;26 sales $2.65B (+30%), backlog $15.0B (up 109% YoY), stock +102% YTD, an NVIDIA partner, and it just completed the ThermoKey thermal-management acquisition (12 Jun 2026) - so the budget and the brand-build motive are both cresting now.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">19 <span>/ 20</span></div>
+      <div class="why">A large-cap riding the AI-power supercycle with a $15.0B backlog and strong cash generation - comfortably funds a top-tier multi-year partnership.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Critical power &amp; cooling / data-center infrastructure is a distinct, open lane on the F1 grid; the AI-compute and 2026 electrification narratives map cleanly onto a data-driven sport - though as B2B infrastructure the brand logic leans on the real workstream to carry it.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">The AI-power moment is peaking now, and a greenfield team (Cadillac) building its backbone from zero is a time-bound, build-it-from-the-start opportunity - though no single dated competitor trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">MODE A: power continuity (UPS), precision cooling/thermal management and edge/data-center infrastructure for a team&#39;s CFD/simulation clusters, factory data centre and trackside edge - a real, deployable workstream, especially for a brand-new team.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">B2B-infrastructure brand logic</span> &nbsp;<span class="rc">Vertiv sells to data-centre operators, not consumers, so the sponsorship rationale isn&#39;t obvious at first glance. <b>Counter:</b> F1 is now full of exactly this play (Oracle, AWS, Dell, HP, Cisco) for B2B reach, the paddock IS Vertiv&#39;s buyer base, and the real power/cooling workstream carries the logic beyond a logo.</span></div>
+  <div class="risk"><span class="rt">Large-cap, many priorities</span> &nbsp;<span class="rc">A company at peak demand may not prioritise a single-team sponsorship. <b>Counter:</b> Lead with the flagship greenfield deployment (build the newest team&#39;s backbone) as a marquee, visible proof point at the company&#39;s peak-attention moment - a reference, not just spend.</span></div>
+  <div class="risk"><span class="rt">Decision-maker to confirm</span> &nbsp;<span class="rc">The current CMO/brand lead isn&#39;t verified here. <b>Counter:</b> Anchor on the verified CEO and the C-level strategic case; confirm the marketing owner before outreach rather than naming a generic title.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://finance.biggo.com/news/dHN-YZ4BrX5PFN7BcboH</li><li>https://www.sec.gov/Archives/edgar/data/0001674101/000162828026042641/exhibit991vrt-q220266122026.htm</li><li>https://markets.financialcontent.com/observerreporter/article/bizwire-2024-3-18-vertiv-joins-the-nvidia-partner-network</li><li>https://www.vertiv.com/en-us/products/</li><li>https://rtrsports.com/en/blog/every-teams-title-sponsor-for-the-2026-formula-1-season/</li>  </ul>
+</div>
+</body>
+</html>
