@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Electra</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "ELECTRA · 16 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 019</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 019 &nbsp;·&nbsp; WARM</div>
+
+  <h1>Electra</h1>
+  <div class="classline">EV Fast-Charging Network (urban hubs) · Paris, France · Private (&gt;€1B secured; approaching unicorn; EV fast-charging)</div>
+
+  <div class="lede">France&#39;s EV fast-charging champion Electra - &gt;€1B secured, approaching unicorn, backed by EDF and SNCF - has never been in motorsport, and Formula E offers the rare case where the audience (EV-positive fans) is literally the company&#39;s customer base.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">68</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Nissan Formula E</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Electra, founded in 2021, is France&#39;s leading urban EV fast-charging network, scaling toward 2,200 stations and 15,000 charge points across nine European countries by 2030. It has secured over €1B in total capital - a €304M Series B led by Dutch pension fund PGGM plus €433M of debt from a syndicate including ING and MUFG - is backed by EDF and SNCF&#39;s investment arm, and is, in its CEO&#39;s words, approaching unicorn status. It has never touched motorsport. EV charging is the single most on-message category for an all-electric championship, and Formula E is the rare property where the audience and the customer base are the same people: FE fans are EV-positive, urban, affluent European consumers - precisely the drivers Electra needs to choose its hubs. One honest nuance: ABB is FE&#39;s series-level charging partner (it charges the race cars), a distinct technical role from Electra&#39;s public-network brand, so this is a team-level brand-and-audience play, not a race-car-charging claim. Led by co-founder and CEO Aurélien de Meaux, the right entry point.</p>
+
+  <h2>Why Now</h2>
+  <p>Electra is in an aggressive European land-grab - new markets, new cities, a race for driver mindshare against other charging networks - which is exactly when consumer-brand investment pays off, and Formula E reaches its target EV-driver audience in the very European cities it is entering. There is no hard clock, so the value of moving now is positional: lock a differentiated, on-message platform and the founder relationship while inbound interest is low (~30) and before a charging rival claims the space.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">&gt;€1B</div><div class="pfk">Total secured capital (€304M Series B led by PGGM + €433M debt syndicate)</div></div>
+    <div class="pf"><div class="pfv">€304M</div><div class="pfk">Series B equity round (led by PGGM; EDF, Eurazeo, SNCF/574 Invest backing)</div></div>
+    <div class="pf"><div class="pfv">€433M</div><div class="pfk">Debt financing (ING, MUFG, ABN AMRO, SocGen, Rabobank, Bpifrance)</div></div>
+    <div class="pf"><div class="pfv">Aurélien de Meaux</div><div class="pfk">Co-Founder &amp; CEO</div></div>
+    <div class="pf"><div class="pfv">2,200</div><div class="pfk">Target charging stations across nine European countries by 2030</div></div>
+    <div class="pf"><div class="pfv">Paris, France</div><div class="pfk">Headquarters</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Nissan<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Jaguar TCS Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">DS Penske</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">France&#39;s EV fast-charging champion - &gt;€1B secured capital (€304M Series B led by PGGM + €433M debt), approaching unicorn, backed by EDF and SNCF - scaling to 2,200 stations across nine European countries. The single most on-message category for electric racing, with a rare audience match: Formula E&#39;s EV-positive fans are Electra&#39;s exact customers. Capacity is capex-heavy, so this is a value-tier brand play; CEO Aurélien de Meaux is the entry.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 019</span>
+  </div>
+
+  <h2>Why Nissan Formula E</h2>
+  <p>Nissan&#39;s Formula E team is France-based (matching French Electra) with an EV-pioneer identity and an explicitly open &#39;EV tech&#39; category, and it races in the European host cities central to Electra&#39;s expansion - giving Electra both cultural fit and audience reach. (Per our signals-not-placements rule, Nissan is judged on real grid occupancy only; another 1440 signal aimed there in a different category does not occupy it.)</p>
+
+  <h2>Value to Nissan Formula E &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B with concrete, named mechanics - not a logo. (1) AUDIENCE / BRAND ENGINE: this is the rare sponsorship where the team&#39;s fans ARE the sponsor&#39;s customers - FE&#39;s EV-positive, urban European audience is exactly who Electra needs charging at its hubs, so activations are genuinely useful, not decorative: QR-to-charge fan offers, host-city hub activations at the European E-Prix Electra is expanding into, co-branded &#39;charge like the championship&#39; driver content, and loyalty tie-ins that convert FE fans into Electra users - a measurable acquisition channel for Electra and a fan-perk and revenue-share opportunity for Nissan. (2) COMMERCIAL: Electra&#39;s backers and partners (EDF, SNCF, fleet operators, municipalities) are the energy, transport and city decision-makers who attend FE and its host-city programmes, so team hospitality becomes a working B2B channel, while Nissan adds a fast-growing, on-message EV-infrastructure partner in an open category. (3) BRAND / CONTENT: &#39;the team that races on electricity, the network that keeps Europe charged&#39; is an ownable, sustainability-aligned co-marketing narrative across both brands&#39; European footprints. Nissan gets a fan-perk-and-acquisition partner with real activation substance; Electra gets an on-message stage in front of its exact customers in its exact expansion markets.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Value-tier Official EV-Charging Partner on Nissan Formula E, minimum three years, ~$1.5-2.5M/yr (right-sized to a capex-heavy scale-up), with category exclusivity in public EV charging and a fan-acquisition + host-city activation workstream.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Aurélien de Meaux</div>
+        <div class="role">Co-Founder &amp; CEO, Electra - verified</div>
+        <div class="bio">Co-founder and CEO, a serial French entrepreneur leading Electra&#39;s European expansion - the owner of brand and partnership decisions at this founder-led company and the right entry point. Approach him with a fan-acquisition-led thesis: FE&#39;s audience is Electra&#39;s customer, in the cities Electra is entering.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Aurélien - Formula E&#39;s fans are your customers: EV-positive, urban, European, in the exact cities you&#39;re expanding into. A charging network on the electric championship isn&#39;t a logo, it&#39;s an acquisition channel. 25 minutes before a rival network claims the lane?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Raised a €304M Series B (led by PGGM) plus €433M in debt and is aggressively expanding across Europe - active brand-building as it scales, though the last equity round is ~a year old, not a this-week event.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Over €1B secured, but much of it is debt earmarked for building stations (capex-heavy) and the valuation is still sub-unicorn - so realistically a value-tier brand deal, not a marquee spend.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">EV charging is the single most on-message category for an all-electric championship, and there is a rare direct audience match - Formula E&#39;s EV-positive fans are Electra&#39;s exact customers (note: ABB is FE&#39;s series-level race-car charging partner, a distinct technical role).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">11 <span>/ 20</span></div>
+      <div class="why">Brand-building motive as it expands into new European markets, but no dated competitor trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">MODE B: a brand-and-audience play with charging-narrative adjacency, not a team technical workstream - scored honestly.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Capacity is capex-heavy</span> &nbsp;<span class="rc">Most secured capital is debt for building stations, valuation still sub-unicorn. <b>Counter:</b> Right-size to a value-tier deal tied to a measurable fan-acquisition channel - the activation pays for itself by converting FE fans into Electra users, so it&#39;s marketing spend with a return, not discretionary signage.</span></div>
+  <div class="risk"><span class="rt">ABB is FE&#39;s charging partner</span> &nbsp;<span class="rc">ABB charges the race cars at series level, which could read as a charging conflict. <b>Counter:</b> Distinct roles: ABB is the technical race-car charger (series), Electra is a public/urban charging network (team brand) - position Electra precisely as the consumer-network brand, not a race-car-charging claim.</span></div>
+  <div class="risk"><span class="rt">Unproven sponsorship appetite</span> &nbsp;<span class="rc">A founder-led infra scale-up has never done a deal like this. <b>Counter:</b> Lead with the audience-match ROI and a low-commitment, measurable structure; let performance, not a hard sell, justify scaling.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://sifted.eu/articles/electra-304m-series-b</li><li>https://www.mobilityplaza.org/news/42089</li><li>https://www.founderstoday.news/electra-secures-304-million-equity-funding/</li><li>https://www.crunchbase.com/organization/electra-9c53</li><li>https://global.nissannews.com/en/releases/nissan-formula-e-team-announces-sponsorship-agreement-with-alpine-tech</li>  </ul>
+</div>
+</body>
+</html>
