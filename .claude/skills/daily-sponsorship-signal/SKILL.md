@@ -108,7 +108,9 @@ the hero and score. Push to the working branch. Do **not** open a PR unless aske
   sponsorship owner — CMO/commercial — plus C-level sponsor and technical counterpart,
   from the company's own leadership page; never just a title). Trust-complete, honest
   (un-inflated) scores. If it can't clear the bar, show the disciplined screen-out instead
-  of shipping a thin signal. Match or beat Vertiv/Ramp/Cohesity — aim higher than the last one.
+  of shipping a thin signal. MATCH the level of Vertiv/Ramp/Cohesity consistently every
+  search (beat only when the setup genuinely allows) — matching IS the standard; don't force
+  each signal to top the last, or you exhaust the best names within weeks.
 - One signal/day — don't batch-send multiple briefs to the recipient.
 - Truth over punch: a narrowed true claim beats a bold unverified one.
 - Don't invent a decision-maker — a verified named individual, or the verified
