@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Watershed</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "WATERSHED · 16 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° ADHOC &nbsp;·&nbsp; WARM</div>
+
+  <h1>Watershed</h1>
+  <div class="classline">Carbon Management / Sustainability Software · San Francisco, CA · Private ($1.8B; Series C 2024; carbon-management software)</div>
+
+  <div class="lede">Watershed, the $1.8B carbon-management software leader (Airbnb, FedEx, Walmart), has never been in motorsport - and Formula E, the first net-zero-certified series with Scope 1/2/3 reporting and CSRD pressure on teams, is the category it was built for.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">70</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Mahindra Racing</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Watershed is the leading enterprise carbon-management platform - measuring, reporting and reducing emissions for customers like Airbnb, FedEx, General Mills and Walmart, tracking a gigaton of emissions - valued at $1.8B after a $100M Series C led by Greenoaks (with Sequoia and Kleiner Perkins; $185M raised), and named a category leader by Verdantix in 2026. Founded in 2019 by ex-Stripe/Lyft/Google operators (co-founder Taylor Francis is the external-facing leader), it has never touched motorsport. The fit is unusually literal: Formula E is the first motorsport certified to a net-zero pathway, runs verified Scope 1/2/3 carbon accounting, and its teams face tightening FIA requirements and EU CSRD reporting - so carbon management is a real team workstream, not a halo. One honest caveat: because sustainability IS Formula E&#39;s identity, the category is contested - Envision&#39;s net-zero claims run on its own technology plus Earthly, and Nissan has Coral (ESG-AI) - so the clean opening is team-level at Mahindra Racing (an EV-sustainability conglomerate whose carbon-software lane is open: Umicore covers battery materials, Renesas chips, Tech Mahindra broad IT).</p>
+
+  <h2>Why Now</h2>
+  <p>Tightening FIA net-zero requirements and EU CSRD reporting are forcing teams to put auditable numbers behind their sustainability claims, which is exactly Watershed&#39;s product - so the team-workstream value is live now. Watershed is scaling post-Series C and investing in brand, and inbound motorsport interest is low (~30), so the value of moving now is positional: claim the carbon-software lane on a sustainability-credible team before the category - already filling across the grid - closes.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$1.8B</div><div class="pfk">Valuation (Series C, 2024; $100M round led by Greenoaks, with Sequoia and Kleiner Perkins)</div></div>
+    <div class="pf"><div class="pfv">$185M</div><div class="pfk">Total funding raised</div></div>
+    <div class="pf"><div class="pfv">Airbnb, FedEx, Walmart</div><div class="pfk">Enterprise customers (tracking ~1 gigaton of emissions)</div></div>
+    <div class="pf"><div class="pfv">Taylor Francis</div><div class="pfk">Co-Founder &amp; external-facing leader (ex-Stripe)</div></div>
+    <div class="pf"><div class="pfv">San Francisco, CA</div><div class="pfk">Headquarters</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Mahindra Racing<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">industrial software / digital twin</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Jaguar TCS Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Nissan</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The carbon-management software leader ($1.8B; Greenoaks-led Series C; customers Airbnb, FedEx, Walmart) in the category that defines Formula E - the first net-zero-certified motorsport, with Scope 1/2/3 reporting and CSRD pressure on teams. A genuine measure-and-report workstream, not a halo. Carbon is FE&#39;s most contested lane (Envision and Nissan already have partners), but it is open at Mahindra. Founder-led by Taylor Francis.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+
+  <h2>Why Mahindra Racing</h2>
+  <p>Mahindra Racing is a founding FE team backed by an Indian EV-and-renewables conglomerate with real net-zero commitments, so a verified-carbon partner is on-brand - and its carbon-software lane is open (Umicore covers battery materials, Renesas chips, Tech Mahindra general IT), unlike Envision (own net-zero tech + Earthly) or Nissan (Coral). It lets Watershed own a distinct &#39;verified net-zero&#39; position and gives Mahindra hard data behind its sustainability story.</p>
+
+  <h2>Value to Mahindra Racing &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A with concrete, named mechanics. (1) CARBON WORKSTREAM (real and deployable): Watershed measures, reports and helps cut Mahindra&#39;s full Scope 1/2/3 footprint - freight and intercontinental travel, factory and race-operations energy, car production and supply chain - turning the team&#39;s sustainability claims into auditable, FIA- and CSRD-grade numbers, identifying reduction levers (logistics routing, energy sourcing, supplier engagement) and producing the verified disclosures regulators and sponsors increasingly demand. That is substance a sustainability-led team can actually use, not a green logo. (2) COMMERCIAL / B2B: Watershed sells to the chief-sustainability-officers and CFOs of global enterprises (Airbnb, FedEx, Walmart), and the Formula E paddock and its corporate-sustainability programmes are dense with exactly those buyers - so team hospitality becomes a working enterprise pipeline, while Mahindra gains a category-leading credibility partner. (3) BRAND / CONTENT / TALENT: &#39;don&#39;t just claim it, prove it&#39; - a co-developed verified-net-zero content story (the hardest, most credible sustainability narrative in a sport built on it) plus a recruiting halo for the climate/data talent both sides want. Mahindra gets audited carbon leadership and a real data workstream; Watershed gets an on-message global stage and a flagship live deployment.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Value-tier Official Carbon-Management / Net-Zero Partner on Mahindra Racing, minimum three years, ~$1.5-2.5M/yr, with category exclusivity in carbon/ESG software and a defined Scope 1/2/3 measurement-and-reduction workstream plus verified-disclosure content.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Taylor Francis</div>
+        <div class="role">Co-Founder, Watershed - verified (external-facing leader; ex-Stripe)</div>
+        <div class="bio">Co-founder and the public, external-facing leader of Watershed (frequent spokesperson on corporate climate action) - the right entry point for a brand-partnership conversation at this founder-led company. Co-decision-makers: fellow co-founders Christian Anderson and Avi Itskovich, who lead the company alongside him.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Taylor - Formula E is the first net-zero-certified sport and its teams now face FIA and CSRD reporting they can&#39;t fake. Watershed is the product for that, and Mahindra&#39;s carbon lane is open. A real Scope 1/2/3 workstream and a &#39;prove it&#39; story - not a logo. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Raised a $100M Series C at $1.8B (2024, led by Greenoaks) and is riding a CSRD/regulatory tailwind in corporate climate action - growing, though the last round is not a this-week event.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">$1.8B valuation, $185M raised - a mid-cap that funds a value-tier partnership, not a marquee spend.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Carbon management is the category that defines Formula E&#39;s identity - but it is contested grid-wide (Envision&#39;s net-zero tech + Earthly; Nissan&#39;s Coral), so the opening is team-level at Mahindra, not pristine whitespace.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">FIA net-zero requirements and EU CSRD are tightening, which drives corporate climate spend, but there is no dated FE-specific trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE A: measuring, reporting and cutting a team&#39;s Scope 1/2/3 footprint (freight, travel, energy, car production) for its FIA/CSRD net-zero claims is a real, deployable workstream.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Carbon is FE&#39;s most contested category</span> &nbsp;<span class="rc">Sustainability is the series&#39; identity, so several teams already have carbon/sustainability partners (Envision, Nissan). <b>Counter:</b> Claim a team-level position at Mahindra, where the carbon-software lane is genuinely open - not grid-wide exclusivity; lead with the verified-data workstream as the wedge.</span></div>
+  <div class="risk"><span class="rt">Mid-cap, value-tier capacity</span> &nbsp;<span class="rc">At $1.8B, Watershed funds a value-tier deal, not a marquee spend. <b>Counter:</b> Right-size to a value tier tied to a real measurement-and-reduction workstream and measurable enterprise pipeline - marketing with a return.</span></div>
+  <div class="risk"><span class="rt">Unproven sponsorship appetite</span> &nbsp;<span class="rc">An enterprise-SaaS company has never done a motorsport deal. <b>Counter:</b> Anchor on the literal product-to-need fit (FIA/CSRD reporting) and a low-commitment, measurable structure; let the workstream, not a hard sell, carry it.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.esgdive.com/news/climate-software-startup-watershed-raises-100M-in-funding/706454/</li><li>https://trellis.net/article/fedex-general-mills-and-walmart-use-watersheds-carbon-management-software-heres-why/</li><li>https://watershed.com/blog/verdantix-green-quadrant-2026</li><li>https://tracxn.com/d/companies/watershed/__b9f6ij9vdSAyKDbUTrnE84ZDxdpnxV8xUmbo7lXrnXc</li><li>https://www.linkedin.com/in/taylor-francis-4ba49640</li>  </ul>
+</div>
+</body>
+</html>
