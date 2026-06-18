@@ -1,16 +1,19 @@
 # 1440 WEEKLY DECISION — week of 15 Jun 2026
 
-## ✅ PROCEED: Odyssey  (72/100 · WARM)  — fresh-funding pick (MD-directed)
+## ✅ PROCEED: Aumovio SE  (77/100 · HOT)  — born-big spin-off (MD-directed)
 - **Series / team:** F1 · Williams
-- **Catalyst:** $310M Series B at $1.45B, announced **17 Jun 2026** (Natural Capital, with NVIDIA, Amazon, AMD, GV, EQT, In-Q-Tel) — a live, this-week funding event.
-- **Why this one:** an AI 'world-models' / physical-simulation lab whose tech can build a team's driver-in-loop sim environments and synthetic scenario/strategy data — on-profile (physical-AI), founders with deep AV pedigree (Oliver Cameron ex-Voyage→Cruise; Jeff Hawke ex-Wayve).
-- **Honest caveat:** early research lab → unproven sponsorship appetite, frontier workstream. Scored 72/100 (WARM); right-size as an R&D/proving-ground partnership.
-- **Opening move:** Oliver - F1 is the world's most demanding simulation environment, and your world models could build driver-in-loop scenarios and synthetic data no hand-built sim can. Williams is data-led and modernising its sim. A real proving ground, fresh off your raise. 25 minutes?
+- **Catalyst (spin-off):** Continental spun off its entire automotive group as Aumovio SE, listed on Frankfurt **18 Sep 2025** (~EUR19.6B sales) — ADAS, sensors, cameras, cockpit displays/HMI, software-defined-vehicle electronics; new independent brand launched Apr 2025.
+- **Why this one:** the Versigent born-big-spin-off archetype at larger scale, on-profile (automotive electronics), with a real race-car-relevant workstream (cockpit/HMI, sensors, SDV electronics) and a strong brand-build motive as a newly independent company. `team_fit` OPEN on Williams.
+- **Decision path:** CEO Philipp von Hirschheydt → CFO Jutta Donges → cockpit/SDV engineering lead (confirm new-entity brand lead before outreach).
+- **Opening move:** You just launched Aumovio as an independent brand - and F1's 2026 cars are more electronics- and software-defined than ever. Cockpit displays, sensors, SDV systems on Williams is a real workstream and the ideal stage to build your new brand. 25 minutes?
 
-## Context: this week's strongest contenders (higher-conviction, already sent)
-1. **79/100** HOT · F1 · Cadence Design Systems (Cadillac)
-2. **79/100** HOT · FE · Infineon Technologies (Jaguar)
-3. **77/100** HOT · FE · GE Vernova (Porsche)
-4. **76/100** HOT · F1 · Eaton (Aston Martin)
+## Other fresh spin-offs / mergers on the radar (for context)
+- **Solstice Advanced Materials** (Honeywell spin-off, NASDAQ: SOLS, Oct 2025) — specialty/electronic materials; triage fit.
+- **S&P Global Mobility** spin-off (distribution ~1 Jul 2026) — automotive data/analytics.
+- **Honeywell Aerospace** spin-off (H2 2026) — aerospace (Honeywell Aerospace already in our DB).
+- **Versigent** (Aptiv EDS spin-off) — already in the human-layer pipeline (approached).
 
-> Note: replaces the earlier Ørsted pick. Odyssey is the freshest *funded* eligible name this week; honestly it is a WARM, research-stage bet — if you want the GO to be a higher-conviction proceed, Cadence/Infineon (79) are this week's best.
+## This week's higher-conviction contenders (already sent)
+Cadence (79, F1/Cadillac) · Infineon (79, FE/Jaguar) · GE Vernova (77, FE/Porsche) · Eaton (76, F1/Aston)
+
+> Replaces the earlier Odyssey pick — Aumovio is the stronger, on-profile born-big spin-off (HOT 77 vs WARM 72).
