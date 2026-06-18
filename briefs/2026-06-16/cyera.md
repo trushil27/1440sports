@@ -13,14 +13,14 @@
 - **Action horizon:** 6-10 WKS
 - **Mode:** A (tech in the car / championship)
 - **Inbound crowding:** ~45 (EARLY - ahead of the noise)
-- **Discovery:** seeded
+- **Discovery:** self
 - **Signals:** never entered, funding event, category whitespace
 
 ## THE CASE
-Cyera, the AI-data-security leader, raised a $600M Series G at a $12B valuation (Jun 2026) - tripling in ~18 months - and positions itself as the 'trust layer for enterprise AI', unifying DSPM, DLP, identity and behavioural security. NOTE: Cyera is on 1440's approached list, so this is a brief to support the human-layer outreach, not a cold signal. The fit is real: a modern F1 team guards enormous high-value design IP and sponsor/finance data, exactly what Cyera's platform secures. Cadillac - the greenfield 2026 team - lists cybersecurity as an explicitly open category, and Cyera's DSPM/data-posture lane is distinct from the endpoint/identity/network security already elsewhere on the grid. Verified decision path: CMO Naveen Palavalli (the sponsorship owner), CEO & co-founder Yotam Segev (ex-Unit 8200) as sponsor, and co-founder/CTO Tamar Bar-Ilan as the technical counterpart.
+Cyera, the AI-data-security leader, raised a $600M Series G at a $12B valuation (Jun 2026) - tripling in ~18 months - and positions itself as the 'trust layer for enterprise AI', unifying DSPM, DLP, identity and behavioural security. The fit is real: a modern F1 team guards enormous high-value design IP and sponsor/finance data, exactly what Cyera's platform secures. Cadillac - the greenfield 2026 team - lists cybersecurity as an explicitly open category, and Cyera's DSPM/data-posture lane is distinct from the endpoint/identity/network security already elsewhere on the grid. Verified decision path: CMO Naveen Palavalli (the sponsorship owner), CEO & co-founder Yotam Segev (ex-Unit 8200) as sponsor, and co-founder/CTO Tamar Bar-Ilan as the technical counterpart.
 
 ## WHY NOW
-The Series G just closed, so capital and brand appetite peak now, and the enterprise-AI data-security category is in a land-grab. Since Cyera is already approached, the timing value is to convert the relationship with a concrete, verified F1 thesis before it stalls - a data-protection workstream plus a brand stage on the greenfield American team.
+The Series G just closed, so capital and brand appetite peak now, and the enterprise-AI data-security category is in a land-grab - exactly when a category leader invests in enterprise brand. The cybersecurity lane is open on the greenfield American team, so an early, substance-led approach can claim a data-protection workstream plus a brand stage before a rival does.
 
 ## PROOF POINTS  *(every figure verified to a primary source)*
 - **$12B** — Valuation (Series G, Jun 2026; $600M round)
@@ -35,7 +35,7 @@ The Series G just closed, so capital and brand appetite peak now, and the enterp
 - **McLaren** — `TAKEN` · observability / APM, networking & security
 - **Haas** — `CROWDED` · Mphasis, RUCKUS Networks, MoneyGram
 
-> **BOTTOM LINE —** The AI-data-security leader - $12B after a $600M Series G (Jun 2026), the 'trust layer for enterprise AI' (DSPM/DLP/identity/behavioural). Already in the 1440 human-layer pipeline (approached), so this brief supports that outreach, not a cold pitch. Real workstream: an F1 team guards high-value design IP and sponsor/finance data that Cyera's platform protects. Greenfield Cadillac lists cybersecurity as an explicitly open category. Decision-maker: CMO Naveen Palavalli.
+> **BOTTOM LINE —** The AI-data-security leader - $12B after a $600M Series G (Jun 2026), the 'trust layer for enterprise AI' (DSPM/DLP/identity/behavioural). Real workstream: an F1 team guards high-value design IP and sponsor/finance data that Cyera's platform protects. Greenfield Cadillac lists cybersecurity as an explicitly open category. Decision-maker: CMO Naveen Palavalli.
 
 ## WHY CADILLAC F1 TEAM
 Cadillac is the only greenfield 2026 team, building its security posture from zero and listing cybersecurity as an explicitly open category - so Cyera can stand up data-security from day one, distinct from the endpoint/identity/network security on other teams. A real workstream protecting the new team's IP and data. (Per signals-not-placements, other 1440 signals aimed at Cadillac in different categories do not occupy the data-security lane.)
@@ -49,10 +49,10 @@ Official Data-Security Partner on the Cadillac F1 Team, minimum three years, ~$3
 ## PRIMARY DECISION-MAKER
 **Naveen Palavalli** — Chief Marketing Officer, Cyera - verified
 
-CMO and owner of brand/sponsorship - the entry point. Decision path: Palavalli (brand/sponsorship) -> CEO & co-founder Yotam Segev (ex-Unit 8200; C-level sponsor) -> co-founder/CTO Tamar Bar-Ilan (technical counterpart). (Cyera already approached by 1440 - coordinate with the human layer.)
+CMO and owner of brand/sponsorship - the entry point. Decision path: Palavalli (brand/sponsorship) -> CEO & co-founder Yotam Segev (ex-Unit 8200; C-level sponsor) -> co-founder/CTO Tamar Bar-Ilan (technical counterpart).
 
 ## OPENING ANGLE
-> "Naveen - Cadillac is building an F1 team from zero and you're the trust layer for the AI era. Securing the design IP and data that wins races is a real deployment, not a logo - and we're already in touch with your team. 25 minutes to shape it?"
+> "Naveen - Cadillac is building an F1 team from zero and you're the trust layer for the AI era. Securing the design IP and data that wins races is a real deployment, not a logo. 25 minutes to shape it?"
 
 ## SCORE COMPOSITION
 - **Timing 17/20** — Just raised a $600M Series G at $12B (Jun 2026), tripling its valuation in ~18 months - fresh capital and a peak brand-build moment.
@@ -62,8 +62,8 @@ CMO and owner of brand/sponsorship - the entry point. Decision path: Palavalli (
 - **Ops Fit 14/20** — MODE A: an F1 team holds high-value design IP and sponsor/finance data - Cyera's data-security platform is a genuine, deployable protection workstream.
 
 ## RISKS & COUNTERS
-- **Already approached** — Cyera is in 1440's human-layer pipeline. *Counter:* This brief supports that outreach - coordinate, don't duplicate; use the verified F1 thesis to advance the existing conversation.
-- **Security partly present on the grid** — Several teams already have security partners. *Counter:* Cyera's DSPM/data-security is a distinct lane (vs endpoint/identity) and open on Williams; position precisely on data, not generic 'cyber'.
+- **Security partly present on the grid** — Several teams already have security partners. *Counter:* Cyera's DSPM/data-security is a distinct lane (vs endpoint/identity/network) and open on greenfield Cadillac; position precisely on data, not generic 'cyber'.
+- **Distinct from data-resilience** — Cadillac is also a target for backup/recovery players (a different category). *Counter:* Cyera secures and governs sensitive data in place (DSPM) - complementary to backup/resilience, not a substitute; frame the lanes as distinct.
 - **Pre-IPO spend discipline** — A fast-scaling private company watches discretionary spend. *Counter:* Lead with a value-to-mid tier tied to a real deployment and measurable CISO-pipeline outcomes.
 
 ## SOURCES

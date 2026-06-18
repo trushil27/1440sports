@@ -66,11 +66,26 @@ def weekly_decision(prospects, today, cooldown, min_years, history, args) -> int
     monday, sunday = cadence.week_bounds(today)
     # The week's featured heroes (what the FE/F1 days surfaced).
     featured = [r for r in history.get("log", [])
-                if monday.isoformat() <= r.get("date", "") <= today.isoformat()]
+                if monday.isoformat() <= r.get("date", "") <= today.isoformat()
+                and r.get("kind") != "weekly_decision"]
 
-    # Re-rank everything eligible, ignoring cooldown so the true best wins today.
-    ranked = scoring.rank(prospects, today=today, cooldown_days=0,
+    # The GO is chosen from THIS WEEK's contenders (the heroes we actually surfaced),
+    # per the mandate — not a re-rank of the whole DB, which would resurface old/
+    # already-sent names. Rank the week's eligible featured heroes; fall back to the
+    # full eligible board only if the week produced none.
+    by_id = {p["id"]: p for p in prospects}
+    seen = set()
+    week_pool = []
+    for r in featured:
+        pid = r.get("id")
+        if pid and pid not in seen and pid in by_id:
+            seen.add(pid)
+            week_pool.append(by_id[pid])
+    ranked = scoring.rank(week_pool, today=today, cooldown_days=0,
                           min_deal_years=min_years, history={}, series=None)
+    if not ranked:
+        ranked = scoring.rank(prospects, today=today, cooldown_days=0,
+                              min_deal_years=min_years, history={}, series=None)
     if not ranked:
         print("No eligible prospect for the weekly decision.")
         return 1

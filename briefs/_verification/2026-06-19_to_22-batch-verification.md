@@ -3,8 +3,8 @@
 All records built on the recalibrated profile, verified live, gated (0 blockers), 2 pages each.
 WARNs across these are `cite_blocked` 403s / intended future-year refs unless noted.
 
-## Cyera → Cadillac F1 Team — 77/100 (HOT) · on-request (2026-06-16), NOT logged
-- **APPROACHED** (in `data/approached.json`): this brief *supports the existing human-layer outreach*, not a cold pitch. Cyera's prospect record is now flagged `approached: true` → excluded from auto hero/decision selection (renderable on request only).
+## Cyera → Cadillac F1 Team — 77/100 (HOT) · fresh signal (2026-06-16)
+- **Reframed as a FRESH signal per MD** (2026-06-16): removed all "already approached / in conversation" language, removed the `approached: true` flag, and removed Cyera from `data/approached.json`. It is now a normal fresh prospect, scored and selectable like any signal.
 - $12B (Series G, Jun 2026, $600M); >$1.7B raised; "trust layer for enterprise AI" (DSPM/DLP/identity/behavioural). CEO Yotam Segev (ex-Unit 8200); **CMO Naveen Palavalli = decision-maker**; CTO/co-founder Tamar Bar-Ilan.
 - Team: re-pointed off Williams (Keeper triggered an exclusivity blocker) to **Cadillac** — teams.json lists cybersecurity as explicitly open (greenfield); `team_fit` PRIME LANE. DSPM lane framed as distinct from endpoint/identity/network security already on the grid.
 
@@ -18,18 +18,21 @@ WARNs across these are `cite_blocked` 403s / intended future-year refs unless no
 - Real workstream: electrical backbone of Aston's new campus (factory, wind tunnel, simulator) + works power-unit programme + trackside; **electrical lane OPEN** at Aston (roster is compute/AI/data).
 - Decision path: **CEO Paulo Ruiz** + Global Marketing & Comms Director Camie Hanily (brand owner). Not an F1 sponsor → not already_present.
 
-## Sun 21 Jun: WEEKLY DECISION → PROCEED: Cohesity (82) · F1 · Cadillac
-- Engine's raw pick was **Ramp again**, but Ramp is now flagged `approached` (in pipeline) and excluded from auto-selection (new gate, same logic as the JFrog hold). Next-best non-approached GO = **Cohesity (82)** — fully trust-complete record. Digest + GO brief in `briefs/2026-06-21/`.
+## Sun 21 Jun: WEEKLY DECISION → PROCEED: Infineon (79) · FE · Jaguar
+- First it picked **Ramp** (now excluded — `approached`), then **Cohesity (82)** — but the MD flagged Cohesity as already sent. Root cause: the decision was re-ranking the *whole DB* and resurfacing old heroes. **Fixed the engine** so the GO is chosen from **this week's featured contenders** (Mistral/Infineon/Cadence/Eaton), per the mandate. Best of the week = **Infineon (79)**. Digest + GO brief in `briefs/2026-06-21/`.
 
 ## Mon 22 Jun (FE): GE Vernova → Porsche — 77/100 (HOT)
 - ~**$303B** electrification/power pure-play GE **spun out in 2024** (~$38B rev; Q1'26 backlog +$13B QoQ; guidance raised) — the Versigent born-big-spinoff archetype at marquee scale, on-theme for electric racing.
 - **Honestly MODE-B (ops_fit 13):** GE Vernova doesn't make race-car tech, so the team workstream is clean event/paddock power + microgrid + a verified sustainability story — real but off-car, scored accordingly (not inflated). Porsche (reigning FE champion) electrification lane OPEN.
 - Decision path: **CCO Pablo Koziner** (partnership owner) → CEO Scott Strazik. Not in motorsport → not already_present.
 
-## Engine change
-Added an `approached` eligibility gate to `scoring.is_eligible_for_hero` (mirrors `hold`):
-approached companies stay in the DB and are scored, but are excluded from auto hero/decision
-selection and shown as "approached (human-layer pipeline)" in `--list`; still renderable via
-`--force`. Flagged Ramp + Cyera.
+## Engine changes
+1. Added an `approached` eligibility gate to `scoring.is_eligible_for_hero` (mirrors `hold`):
+   approached companies stay in the DB and are scored, but are excluded from auto hero/decision
+   selection and shown as "approached (human-layer pipeline)" in `--list`; still renderable via
+   `--force`. Flagged **Ramp** (Cyera was un-flagged per the MD's reframe).
+2. `weekly_decision` now picks the GO from **this week's featured heroes** (the contenders we
+   actually surfaced) rather than re-ranking the whole DB — so it stops resurfacing old/already-
+   sent names (e.g. Cohesity). Falls back to the full eligible board only if the week produced none.
 
 ## Scores cluster 76–79 (Cohesity GO 82) — matching the bar consistently, not escalating.

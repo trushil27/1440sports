@@ -1,18 +1,16 @@
 # 1440 WEEKLY DECISION — week of 15 Jun 2026
 
-## ✅ PROCEED: Cohesity  (82/100 · HOT)
-- **Series / team:** F1 · Cadillac F1 Team
-- **Crowding:** ~45 (EARLY - ahead of the noise)
-- **Why this one:** Cohesity is the rare combination our mandate prizes most: an established category leader arriving at a brand-reckoning moment with budget, motive and a clear strategic angle. After completing its combination with Veritas' data-protection business on 10 December 2024, the merged company reported pro-forma annual recurring revenue of roughly $1.5 billion (revenue over $1.7 billion) at a 28% adjusted cash-EBITDA margin, and the Nvidia-backed company is now steering toward a 2026 IPO with a valuation its CEO has benchmarked against publicly traded peer Rubrik (a ~$14.5B market cap as of May 2026; the Sep-2025 CNBC report that framed the comparison cited Rubrik at ~$17B).
-- **Opening move:** Carol, you've run the brand through a VMware-scale repositioning - you know an IPO is won on credibility, not noise. Backup and ransomware-recovery is the one enterprise-resilience lane no brand on the F1 grid has claimed. Worth 25 minutes to own it before the roadshow locks?
+## ✅ PROCEED: Infineon Technologies  (79/100 · HOT)
+- **Series / team:** FE · Jaguar TCS Racing
+- **Crowding:** ~35 (EARLY - ahead of the noise)
+- **Why this one:** Infineon is the world's #1 automotive/power-semiconductor company (~$17.2B revenue, ~$120B market cap) and a silicon-carbide (SiC) leader - the power electronics at the heart of every EV traction inverter, where it just set new benchmarks (a 1300V module to 205C). It just raised FY26 guidance on the AI boom and improving automotive orders, and has never entered motorsport.
+- **Opening move:** Andreas - the traction inverter is the heart of an electric race car, and it runs on your silicon carbide. Jaguar is a works team with that lane open, no SiC maker committed since onsemi left with Mercedes. 'The silicon that powers the win' - real engineering, not a logo. 25 minutes?
 
 ## This week's contenders (ranked)
-1. **82/100** HOT           · F1 · Cohesity (Cadillac F1 Team) ← GO
-2. **82/100** HOT           · F1 · Vertiv (Cadillac F1 Team)
-3. **80/100** HOT           · F1 · UiPath (McLaren)
-4. **79/100** HOT           · FE · Kraken (Octopus Energy spin-out) (Jaguar TCS Racing)
-5. **79/100** HOT           · FE · Infineon Technologies (Jaguar TCS Racing)
-6. **79/100** HOT           · F1 · Cadence Design Systems (Cadillac F1 Team)
+1. **79/100** HOT           · FE · Infineon Technologies (Jaguar TCS Racing) ← GO
+2. **79/100** HOT           · F1 · Cadence Design Systems (Cadillac F1 Team)
+3. **76/100** HOT           · F1 · Eaton (Aston Martin)
+4. **74/100** WARM          · FE · Mistral AI (Nissan Formula E)
 
 ## Featured in briefs this week
-Mistral AI (2026-06-15), Infineon Technologies (2026-06-16), Cadence Design Systems (2026-06-19), Eaton (2026-06-20), Ramp (2026-06-21)
+Mistral AI (2026-06-15), Infineon Technologies (2026-06-16), Cadence Design Systems (2026-06-19), Eaton (2026-06-20)
