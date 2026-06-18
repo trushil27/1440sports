@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Cyera</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "CYERA · 16 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° ADHOC &nbsp;·&nbsp; HOT</div>
+
+  <h1>Cyera</h1>
+  <div class="classline">AI Data Security (DSPM / trust layer for AI) · New York, NY · Private ($12B; Series G Jun 2026; AI data security)</div>
+
+  <div class="lede">Cyera - the $12B AI-data-security leader and &#39;trust layer for enterprise AI&#39; - is already in 1440&#39;s outreach pipeline; this brief arms that conversation with a verified case and a real data-protection workstream for a data-driven F1 team.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">77</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Cadillac F1 Team</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Cyera, the AI-data-security leader, raised a $600M Series G at a $12B valuation (Jun 2026) - tripling in ~18 months - and positions itself as the &#39;trust layer for enterprise AI&#39;, unifying DSPM, DLP, identity and behavioural security. NOTE: Cyera is on 1440&#39;s approached list, so this is a brief to support the human-layer outreach, not a cold signal. The fit is real: a modern F1 team guards enormous high-value design IP and sponsor/finance data, exactly what Cyera&#39;s platform secures. Cadillac - the greenfield 2026 team - lists cybersecurity as an explicitly open category, and Cyera&#39;s DSPM/data-posture lane is distinct from the endpoint/identity/network security already elsewhere on the grid. Verified decision path: CMO Naveen Palavalli (the sponsorship owner), CEO &amp; co-founder Yotam Segev (ex-Unit 8200) as sponsor, and co-founder/CTO Tamar Bar-Ilan as the technical counterpart.</p>
+
+  <h2>Why Now</h2>
+  <p>The Series G just closed, so capital and brand appetite peak now, and the enterprise-AI data-security category is in a land-grab. Since Cyera is already approached, the timing value is to convert the relationship with a concrete, verified F1 thesis before it stalls - a data-protection workstream plus a brand stage on the greenfield American team.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$12B</div><div class="pfk">Valuation (Series G, Jun 2026; $600M round)</div></div>
+    <div class="pf"><div class="pfv">&gt;$1.7B</div><div class="pfk">Total raised (&gt;$1.7B), ~1,500 employees in 18 countries</div></div>
+    <div class="pf"><div class="pfv">Yotam Segev</div><div class="pfk">CEO &amp; co-founder (ex-Israeli Unit 8200)</div></div>
+    <div class="pf"><div class="pfv">Naveen Palavalli</div><div class="pfk">CMO (decision-maker)</div></div>
+    <div class="pf"><div class="pfv">trust layer for enterprise AI</div><div class="pfk">Positioning</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Cadillac<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">data platform / storage, identity &amp; access security</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">observability / APM, networking &amp; security</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Haas</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">Mphasis, RUCKUS Networks, MoneyGram</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The AI-data-security leader - $12B after a $600M Series G (Jun 2026), the &#39;trust layer for enterprise AI&#39; (DSPM/DLP/identity/behavioural). Already in the 1440 human-layer pipeline (approached), so this brief supports that outreach, not a cold pitch. Real workstream: an F1 team guards high-value design IP and sponsor/finance data that Cyera&#39;s platform protects. Greenfield Cadillac lists cybersecurity as an explicitly open category. Decision-maker: CMO Naveen Palavalli.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: seeded</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+
+  <h2>Why Cadillac F1 Team</h2>
+  <p>Cadillac is the only greenfield 2026 team, building its security posture from zero and listing cybersecurity as an explicitly open category - so Cyera can stand up data-security from day one, distinct from the endpoint/identity/network security on other teams. A real workstream protecting the new team&#39;s IP and data. (Per signals-not-placements, other 1440 signals aimed at Cadillac in different categories do not occupy the data-security lane.)</p>
+
+  <h2>Value to Cadillac F1 Team &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A, real mechanics. (1) TECHNICAL: an F1 team&#39;s crown jewels are its design IP and its sponsor/finance data; Cyera&#39;s DSPM/data-security platform discovers, classifies and protects that sensitive data across the team&#39;s cloud and AI tools - a genuine, deployable protection workstream and a flagship &#39;securing the data that wins&#39; reference, and for greenfield Cadillac it can be stood up from day one. (2) COMMERCIAL / B2B: Cyera sells to CISOs and CDOs, and the F1 paddock is dense with those enterprise buyers - hospitality becomes a pipeline, while Cadillac gains a $12B blue-chip security anchor. (3) BRAND / TALENT: &#39;the trust layer for the AI era&#39; is an ownable co-marketing story, with a security-engineering talent halo. Cadillac gets real data protection; Cyera gets a live reference and a premium B2B stage.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Data-Security Partner on the Cadillac F1 Team, minimum three years, ~$3-5M/yr, with a working DSPM deployment protecting the team&#39;s IP and data (data-security posture lane, distinct from endpoint/identity).</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Naveen Palavalli</div>
+        <div class="role">Chief Marketing Officer, Cyera - verified</div>
+        <div class="bio">CMO and owner of brand/sponsorship - the entry point. Decision path: Palavalli (brand/sponsorship) -&gt; CEO &amp; co-founder Yotam Segev (ex-Unit 8200; C-level sponsor) -&gt; co-founder/CTO Tamar Bar-Ilan (technical counterpart). (Cyera already approached by 1440 - coordinate with the human layer.)</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Naveen - Cadillac is building an F1 team from zero and you&#39;re the trust layer for the AI era. Securing the design IP and data that wins races is a real deployment, not a logo - and we&#39;re already in touch with your team. 25 minutes to shape it?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Just raised a $600M Series G at $12B (Jun 2026), tripling its valuation in ~18 months - fresh capital and a peak brand-build moment.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">$12B valuation, &gt;$1.7B raised - easily funds a top-tier partnership.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Cybersecurity is contested on the grid (CrowdStrike/Mercedes endpoint, Cisco/McLaren network, Keeper/Williams identity), but Cyera&#39;s DSPM/data-posture lane is distinct, and Cadillac lists cybersecurity as an explicitly open category as a greenfield team.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Post-raise brand momentum and the enterprise-AI security land-grab, but no dated competitor trigger in F1.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A: an F1 team holds high-value design IP and sponsor/finance data - Cyera&#39;s data-security platform is a genuine, deployable protection workstream.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Already approached</span> &nbsp;<span class="rc">Cyera is in 1440&#39;s human-layer pipeline. <b>Counter:</b> This brief supports that outreach - coordinate, don&#39;t duplicate; use the verified F1 thesis to advance the existing conversation.</span></div>
+  <div class="risk"><span class="rt">Security partly present on the grid</span> &nbsp;<span class="rc">Several teams already have security partners. <b>Counter:</b> Cyera&#39;s DSPM/data-security is a distinct lane (vs endpoint/identity) and open on Williams; position precisely on data, not generic &#39;cyber&#39;.</span></div>
+  <div class="risk"><span class="rt">Pre-IPO spend discipline</span> &nbsp;<span class="rc">A fast-scaling private company watches discretionary spend. <b>Counter:</b> Lead with a value-to-mid tier tied to a real deployment and measurable CISO-pipeline outcomes.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.businesswire.com/news/home/20260610121080/en/</li><li>https://fintech.global/2026/06/11/600m-raise-propels-cyera-to-ai-security-leadership/</li><li>https://www.crunchbase.com/person/yotam-segev-9f92</li><li>https://www.cohesity.com/newsroom/press/cohesity-expands-data-security-portfolio-with-cyera-dspm/</li>  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Cadence Design Systems</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "CADENCE DESIGN SYSTEMS · 19 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 020</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 020 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Cadence Design Systems</h1>
+  <div class="classline">Computational Engineering — Multiphysics / CFD / Simulation · San Jose, CA · NASDAQ: CDNS (~+17% rev growth FY26; ~$80B+ cap)</div>
+
+  <div class="lede">Cadence - now owner of Hexagon&#39;s CFD/structural engineering stack and a Physical-AI/NVIDIA partner - has never been in motorsport, and computational simulation is the literal toolchain an F1 team designs its car with.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">79</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Cadillac F1 Team</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Cadence Design Systems, long the leader in chip design, has become a computational-engineering powerhouse: in Feb 2026 it completed the acquisition of Hexagon&#39;s Design &amp; Engineering business (MSC Nastran, Adams), combining structural, acoustics and multibody dynamics with its own multiphysics and CFD portfolio, and it raised FY26 growth guidance to ~17% (an NVIDIA &#39;Physical AI&#39; partner). It has never entered motorsport. The fit is literal and on-profile (deep-tech, public): F1 performance is won in simulation - aerodynamics (CFD under the cost cap), vehicle dynamics and structural analysis - which is exactly Cadence&#39;s post-Hexagon stack. Cadillac, the greenfield 2026 team, must build its entire CAE/simulation capability from zero, so the lane is cleanly open. Verified decision path: SVP Marketing &amp; Business Development Nimish Modi (sponsorship owner) and President &amp; CEO Anirudh Devgan (C-level sponsor), with the System Design &amp; Analysis (multiphysics) organisation as technical counterpart.</p>
+
+  <h2>Why Now</h2>
+  <p>Cadence just expanded into the full multiphysics/CFD/structural stack and is investing in brand around &#39;Physical AI&#39;, so capital and appetite align now. F1&#39;s 2026 rules raise the simulation premium (lighter cars, active aero, electrical-heavy power units), and greenfield Cadillac is choosing its engineering tooling today - get in before the stack is set, not after.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">multiphysics</div><div class="pfk">Completed Hexagon Design &amp; Engineering acquisition (Feb 2026; CFD/structural/multibody)</div></div>
+    <div class="pf"><div class="pfv">~17%</div><div class="pfk">FY26 revenue growth guidance (raised)</div></div>
+    <div class="pf"><div class="pfv">Anirudh Devgan</div><div class="pfk">President &amp; CEO (since 2021; C-level sponsor)</div></div>
+    <div class="pf"><div class="pfv">Nimish Modi</div><div class="pfk">SVP Marketing &amp; Business Development (decision-maker)</div></div>
+    <div class="pf"><div class="pfv">Honda</div><div class="pfk">Customer using Cadence CFD for full-engine simulation</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Cadillac<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">After acquiring Hexagon&#39;s design-and-engineering business (CFD, structural, multibody - MSC Nastran, Adams), Cadence now owns the full multiphysics/CFD/CAE stack that an F1 team designs its car with. A real, deep MODE-A workstream, raised FY26 guidance, NVIDIA-partnered &#39;Physical AI&#39;. Greenfield Cadillac must build its entire simulation stack from zero - the cleanest open lane. Decision-maker: SVP Marketing &amp; BD Nimish Modi.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 020</span>
+  </div>
+
+  <h2>Why Cadillac F1 Team</h2>
+  <p>Cadillac is the only greenfield 2026 team, building its CAE/simulation capability from scratch - so Cadence can architect the design toolchain from day one, a uniquely concrete workstream - and the simulation lane is open (IFS = ERP, TWG = AI, Tenneco = powertrain). (Per signals-not-placements, other 1440 signals aimed at Cadillac in different categories do not occupy the simulation lane.)</p>
+
+  <h2>Value to Cadillac F1 Team &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A, real mechanics. (1) TECHNICAL (the core): aero, vehicle dynamics and structural performance are decided in simulation, and Cadence&#39;s post-Hexagon multiphysics/CFD/structural stack (incl. MSC Nastran, Adams) is exactly that toolchain - for greenfield Cadillac, Cadence can stand up the design-and-simulation environment from day one and co-engineer it, a flagship &#39;the simulation that designs the car&#39; reference, not signage. (2) COMMERCIAL / B2B: Cadence sells to every engineering and semiconductor enterprise, and the F1 paddock is full of those technical buyers - hospitality becomes a pipeline, while Cadillac gains a deep-pocketed (~$80B+) engineering-software anchor. (3) BRAND / TALENT: &#39;Physical AI designs the car&#39; is an ownable narrative on a data-driven sport, with a simulation/engineering-talent halo. Cadillac gets its design backbone; Cadence gets a live, visible reference.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Simulation / Computational-Engineering Partner on the Cadillac F1 Team, minimum three years, ~$4-6M/yr, with category exclusivity in multiphysics/CFD/CAE and a co-engineered design-and-simulation deployment.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Nimish Modi</div>
+        <div class="role">SVP, Marketing &amp; Business Development, Cadence - verified</div>
+        <div class="bio">Senior VP of Marketing &amp; Business Development - owns brand and partnership development, the right entry point. Decision path: Modi (brand/BD) -&gt; President &amp; CEO Anirudh Devgan (C-level sponsor) -&gt; the System Design &amp; Analysis (multiphysics) leadership as technical counterpart.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Nimish - F1 is won in simulation, and you now own the full CFD/multiphysics stack. Cadillac is building its design environment from zero - Cadence could architect it. &#39;Physical AI designs the car&#39;, a real workstream. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Just completed the Hexagon D&amp;E acquisition (Feb 2026, +$160M to FY26) and raised FY26 growth guidance to ~17% - a fresh, expanded multiphysics stack and a brand-investment window.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">~$80B+ market cap with double-digit growth across every segment - easily funds a multi-year partnership.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">CFD/multiphysics is the literal toolchain of F1 car design; the lane is open on greenfield Cadillac, which is building its CAE capability from scratch.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">The Physical-AI/engineering-simulation cycle is hot and Cadillac is making its tooling decisions now, but no single dated trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">MODE A: aerodynamics (CFD under the cost cap), vehicle dynamics and structural analysis are won or lost in simulation - exactly Cadence&#39;s post-Hexagon multiphysics stack.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">CAE incumbents</span> &nbsp;<span class="rc">Established teams already run Ansys/Siemens internally. <b>Counter:</b> Cadillac is greenfield with no incumbent CAE sponsor, so the lane is genuinely open - architect from day one rather than displace.</span></div>
+  <div class="risk"><span class="rt">B2B-software brand logic</span> &nbsp;<span class="rc">Cadence sells to engineers, not consumers. <b>Counter:</b> F1 is full of B2B engineering-software partners; the paddock is Cadence&#39;s buyer base and the design workstream carries the logic.</span></div>
+  <div class="risk"><span class="rt">Greenfield-team timing</span> &nbsp;<span class="rc">A new team&#39;s tooling decisions are in flux. <b>Counter:</b> That flux is the opportunity - engage now while the stack is being chosen, with phased deployment.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-completes-acquisition-of-hexagons-design-and-engineering.html</li><li>https://www.tikr.com/blog/cadence-design-systems-stock-q1-2026-earnings-every-segment-grew-double-digits</li><li>https://theorg.com/org/cadence-design-systems/org-chart/anirudh-devgan</li><li>https://www.cadence.com/en_US/home/company/leadership-team.html</li>  </ul>
+</div>
+</body>
+</html>

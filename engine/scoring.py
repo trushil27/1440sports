@@ -79,6 +79,12 @@ def is_eligible_for_hero(prospect: Dict[str, Any], min_deal_years: int = 3) -> b
         # MD/human-layer hold: kept in the DB and still scored, but excluded
         # from hero selection and the weekly decision until the hold is lifted.
         return False
+    if prospect.get("approached"):
+        # Already in the human-layer pipeline (see data/approached.json): kept in
+        # the DB and still scored, but excluded from auto hero/decision selection
+        # so we don't re-surface a company we're already pursuing. Still renderable
+        # on request via run_daily --force.
+        return False
     if prospect.get("already_present"):
         return False
     if prospect.get("series") not in ELIGIBLE_SERIES:
