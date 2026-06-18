@@ -3,7 +3,7 @@
 
 **HOT**
 
-> Cyera - the $12B AI-data-security leader and 'trust layer for enterprise AI' - is already in 1440's outreach pipeline; this brief arms that conversation with a verified case and a real data-protection workstream for a data-driven F1 team.
+> Cyera - the $12B AI-data-security leader and 'trust layer for enterprise AI' - has never been in motorsport, and protecting an F1 team's design IP and sponsor/finance data is a real, deployable workstream on a data-driven sport.
 
 ## OPPORTUNITY 77 / 100
 
