@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Commonwealth Fusion Systems</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "COMMONWEALTH FUSION SYSTEMS · 22 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 023</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 023 &nbsp;·&nbsp; WARM</div>
+
+  <h1>Commonwealth Fusion Systems</h1>
+  <div class="classline">Fusion Energy · Devens, MA · Private (~$3B raised; ~$8B+ class; MIT fusion spinout)</div>
+
+  <div class="lede">Commonwealth Fusion Systems - the MIT fusion leader (~$3B raised) targeting net energy gain in Q1 2027 with a Google power deal - has never been in motorsport, and &#39;limitless clean energy&#39; is a marquee brand story for the world&#39;s electric racing championship.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">71</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Andretti</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">10-14 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Commonwealth Fusion Systems (CFS), the MIT spinout leading the race to commercial fusion, has raised ~$3B (an $863M Series B2 in Aug 2025 from NVIDIA&#39;s NVentures, Google, Breakthrough Energy, Temasek, Eni and others). Its SPARC machine (Devens, MA) targets fusion net energy gain in Q1 2027 - a landmark scientific milestone - and Google has signed a 200MW PPA for CFS&#39;s first commercial ARC plant in Virginia. It has never entered motorsport. The fit with Formula E is a marquee brand story: &#39;limitless clean energy&#39; on the world&#39;s premier electric racing series is the ultimate sustainability-and-innovation narrative. HONEST framing: fusion is not a team-deployable workstream, so this is a brand / future-energy / talent-halo play (MODE B), scored WARM accordingly - the value is co-marketing around the clean-energy breakthrough, a science-content series and a recruiting halo, not an in-car deployment. Decision-maker: CEO &amp; co-founder Bob Mumgaard.</p>
+
+  <h2>Why Now</h2>
+  <p>CFS is approaching the sport&#39;s favourite kind of moment - a genuine breakthrough (SPARC net energy gain targeted Q1 2027) - and with the Google PPA and a fresh $863M round, its public profile is rising fast. The honest &#39;why now&#39; is narrative-led: align with the clean-energy breakthrough story as it crests, not a forcing F1/FE event - and engage early while inbound interest is low (~25).</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$3B</div><div class="pfk">Total raised ($863M Series B2 in Aug 2025; NVIDIA, Google, Breakthrough, Temasek, Eni)</div></div>
+    <div class="pf"><div class="pfv">Q1 2027</div><div class="pfk">SPARC target: fusion net energy gain</div></div>
+    <div class="pf"><div class="pfv">200MW</div><div class="pfk">Google PPA for the first ARC commercial plant (Virginia)</div></div>
+    <div class="pf"><div class="pfv">Bob Mumgaard</div><div class="pfk">Co-Founder &amp; CEO</div></div>
+    <div class="pf"><div class="pfv">MIT spinout</div><div class="pfk">Origin</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Andretti<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Jaguar TCS Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Nissan</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The leading fusion-energy company (MIT spinout) - ~$3B raised ($863M Series B2 Aug 2025; NVIDIA, Google, Breakthrough, Temasek) - with a landmark why-now: its SPARC machine targets fusion net energy gain in Q1 2027, and Google has signed a 200MW PPA for its first ARC plant. The ultimate clean-energy story on the world&#39;s electric racing championship. HONEST: this is a marquee brand / future-energy halo (fusion is not a team workstream), so it is scored MODE-B and WARM. Decision-maker: CEO Bob Mumgaard.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 023</span>
+  </div>
+
+  <h2>Why Andretti</h2>
+  <p>Andretti is a charter, sustainability-leading, American FE team - a natural cultural home for an American fusion pioneer&#39;s clean-energy story - and the fusion/clean-power lane is open. The partnership is brand-and-content led (the breakthrough narrative), not a car-technology workstream.</p>
+
+  <h2>Value to Andretti &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B - honest mechanics, named (not a bare logo). (1) BRAND / NARRATIVE: &#39;the team that races on electricity, backed by the company building limitless clean energy&#39; is a uniquely powerful, ownable co-marketing story on the first net-zero-certified series - peaking around the SPARC net-energy-gain milestone. (2) CONTENT / SCIENCE: a co-developed content series on the clean-energy future (fusion + electric racing) is genuinely distinctive fan and sponsor-facing material, not filler. (3) TALENT / ECOSYSTEM: a recruiting and innovation halo for the physics/engineering talent both fusion and motorsport compete for, plus access to CFS&#39;s marquee backer network (NVIDIA, Google). Andretti gets a marquee innovation-brand partner and standout content; CFS gets a global stage for its clean-energy story. (Scored honestly: this is brand/content/talent value - there is no in-car or operational deployment.)</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Brand / Innovation Partner on Andretti Formula E, minimum three years, value-tier (~$2-4M/yr), centred on clean-energy co-marketing, a science-content series timed to the SPARC milestone, and a talent/ecosystem programme - explicitly a brand partnership, not a technical deployment.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Bob Mumgaard</div>
+        <div class="role">Co-Founder &amp; CEO, Commonwealth Fusion Systems - verified</div>
+        <div class="bio">Co-founder and CEO, the public face of CFS and the owner of brand/narrative decisions at this founder-led company - the entry point. Decision path: Mumgaard (brand/strategy) with CFS&#39;s communications/external-affairs leadership as the activation counterpart; confirm the comms/brand lead before outreach. (R&amp;D-stage company - frame as a value-tier brand partnership.)</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Bob - you&#39;re about to show the world fusion net energy gain, and Formula E is the world&#39;s electric racing championship and first net-zero sport. &#39;Limitless clean energy meets electric racing&#39; is a story made for the SPARC moment - on Andretti, brand-and-content led. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">A landmark narrative window: SPARC targets fusion net energy gain in Q1 2027, on top of an $863M Series B2 (Aug 2025) and Google&#39;s 200MW ARC PPA - momentum and visibility are cresting.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">~$3B raised and a ~$8B+ valuation class with marquee backers (NVIDIA, Google, Breakthrough) - capacity is ample, though it is an R&amp;D-stage company building a plant, so discretionary brand spend is uncertain.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">&#39;Limitless clean energy&#39; on the world&#39;s premier electric racing championship is a marquee, on-message thematic match - the ultimate sustainability/innovation story.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">The SPARC milestone creates a narrative window, but the company is focused on building its plant, not marketing - no FE-specific trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">11 <span>/ 20</span></div>
+      <div class="why">MODE B, scored honestly low: fusion is not a team-deployable workstream - the value is brand, a science/innovation content story, and a talent halo, not in-car or operational.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Halo, not a workstream</span> &nbsp;<span class="rc">Fusion is not deployable to a race team; the value is brand/content/talent only. <b>Counter:</b> Scored and pitched honestly as a brand partnership timed to the SPARC breakthrough - name the concrete content/talent mechanics, don&#39;t dress it as a technical deal.</span></div>
+  <div class="risk"><span class="rt">R&amp;D-stage spend discipline</span> &nbsp;<span class="rc">CFS is pouring capital into building SPARC/ARC, not marketing. <b>Counter:</b> Right-size to a value tier with a clear narrative-moment rationale (the net-energy-gain milestone); treat as a relationship to build, not a marquee spend.</span></div>
+  <div class="risk"><span class="rt">Sponsorship appetite unproven</span> &nbsp;<span class="rc">A fusion lab has never done anything like this. <b>Counter:</b> Lead with the once-in-history breakthrough story and a low-commitment, content-led structure; let the narrative carry it.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://cfs.energy/news-and-media/commonwealth-fusion-systems-raises-863-million-series-b2-round-to-accelerate-the-commercialization-of-fusion-energy/</li><li>https://fortune.com/2026/01/07/fusion-power-commonwealth-sparc-nuclear-fusion-pilot-ai-siemens-nvidia/</li><li>https://cfs.energy/news-and-media/google-and-commonwealth-fusion-systems-sign-strategic-partnership/</li><li>https://www.crunchbase.com/person/robert-mumgaard</li><li>https://en.wikipedia.org/wiki/Commonwealth_Fusion_Systems</li>  </ul>
+</div>
+</body>
+</html>
