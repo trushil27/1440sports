@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Sila Nanotechnologies</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "SILA NANOTECHNOLOGIES · 24 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 025</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 025 &nbsp;·&nbsp; WARM</div>
+
+  <h1>Sila Nanotechnologies</h1>
+  <div class="classline">Next-Gen Battery Materials (silicon anode) · Alameda, CA · Private (~$3.3B; first auto-scale silicon-anode plant live)</div>
+
+  <div class="lede">Sila Nanotechnologies - the silicon-anode leader (~$3.3B) whose Titan Silicon lifts battery energy density, with the first auto-scale plant live and a Tesla-founder CEO - has never been in motorsport, and energy density is the defining constraint of electric racing.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">72</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Nissan Formula E</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Sila Nanotechnologies, the next-gen battery-materials leader (~$3.3B; $1.31B raised, incl. a $375M Series G, from Sutter Hill, Bessemer, Coatue), makes Titan Silicon - a silicon anode that raises lithium-ion energy density - and in Sep 2025 opened the first US auto-scale silicon-anode plant (Moses Lake, WA), now shipping to Mercedes-Benz, BMW and Panasonic. Its founder-CEO, Gene Berdichevsky, was Tesla employee #7 and led the original Roadster battery - a marquee, motorsport-adjacent story. It has never entered motorsport. Battery energy density is the single defining constraint of electric racing, so a silicon-anode leader is unusually on-message for Formula E. HONEST framing: FE&#39;s race battery is a single spec/series supplier, so Sila&#39;s anode is a series-level input rather than a team-deployable workstream - the team value is brand, a battery-innovation narrative and a talent halo (MODE B), scored WARM accordingly. Decision-maker: CEO &amp; co-founder Gene Berdichevsky.</p>
+
+  <h2>Why Now</h2>
+  <p>Sila just brought the first auto-scale silicon-anode plant online and is ramping series production with marquee automakers, so its profile and brand are rising - and electric racing is the most on-message stage for a battery-energy-density story. The honest &#39;why now&#39; is the production milestone plus a pre-IPO brand window, not a forcing FE event.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$3.3B</div><div class="pfk">Valuation (recent private-market data; $1.31B raised)</div></div>
+    <div class="pf"><div class="pfv">Moses Lake, Sep 2025</div><div class="pfk">First US auto-scale silicon-anode plant opened (supports ~500k vehicles/yr)</div></div>
+    <div class="pf"><div class="pfv">$375M</div><div class="pfk">Series G round (Jun 2024; Sutter Hill, Bessemer, Coatue)</div></div>
+    <div class="pf"><div class="pfv">Gene Berdichevsky</div><div class="pfk">Co-Founder &amp; CEO (Tesla employee #7; Roadster battery lead)</div></div>
+    <div class="pf"><div class="pfv">Titan Silicon</div><div class="pfk">Product (raises lithium-ion energy density; ships to Mercedes/BMW/Panasonic)</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Nissan<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Andretti</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">TWG AI, Quest Global, NAGASE</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Jaguar TCS Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">Next-gen battery-materials leader (~$3.3B; $1.31B raised) - its Titan Silicon anode lifts energy density, the core constraint of electric racing - and it opened the first auto-scale silicon-anode plant (Moses Lake, Sep 2025), shipping to Mercedes, BMW and Panasonic. Founder-CEO Gene Berdichevsky was Tesla employee #7 and led the Roadster battery - a marquee motorsport-adjacent story. HONEST: the in-car battery is a series/spec supplier, so this is brand + battery-innovation narrative (MODE-B-leaning), scored WARM.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 025</span>
+  </div>
+
+  <h2>Why Nissan Formula E</h2>
+  <p>Nissan&#39;s Formula E team is a works EV pioneer with an open battery-innovation/clean-energy lane (its partners are powertrain, electronics and ESG, not battery materials), so a silicon-anode energy-density story is on-brand. The value is brand + battery-innovation narrative, not a car-technology deployment.</p>
+
+  <h2>Value to Nissan Formula E &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B - concrete mechanics, honestly bounded. (1) BRAND / NARRATIVE: &#39;the battery breakthrough that makes electric go further&#39; on the electric racing series is an ownable, on-message co-marketing story, amplified by a Tesla-Roadster-battery founder - genuinely distinctive, not a logo. (2) CONTENT / TECH: a co-developed content series on battery energy density and the future of EVs (the exact thing FE exists to advance) is credible fan- and sponsor-facing material. (3) TALENT / ECOSYSTEM: a battery/materials-engineering recruiting halo and access to Sila&#39;s automaker network (Mercedes/BMW). Nissan gets a marquee battery-innovation brand partner and standout content; Sila gets a global stage for its energy-density story. (Scored honestly: the race battery is spec/series-supplied, so this is brand/content/talent value, not an in-car deployment.)</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Brand / Innovation Partner on Nissan Formula E, minimum three years, value-tier (~$2-4M/yr), centred on a battery-energy-density co-marketing and content programme plus a talent/ecosystem tie-in - explicitly a brand partnership, not a technical supply deal.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Gene Berdichevsky</div>
+        <div class="role">Co-Founder &amp; CEO, Sila Nanotechnologies - verified (Tesla employee #7; led the Roadster battery)</div>
+        <div class="bio">Co-founder and CEO with marquee EV-battery pedigree (Tesla #7, Roadster battery lead) - the owner of brand/partnership decisions and a credible motorsport-adjacent face. Decision path: Berdichevsky (brand/strategy) with the marketing/comms leadership as activation counterpart; confirm the brand lead before outreach.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Gene - you built Tesla&#39;s first battery, and Formula E is where battery energy density is proven in public. As Moses Lake ramps and you build toward an IPO, &#39;the silicon that makes electric go further&#39; on Nissan is a story only you can tell. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Opened the first US auto-scale silicon-anode plant (Moses Lake, Sep 2025) and is ramping series production for Mercedes/BMW/Panasonic - a real production-scale milestone window.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">~$3.3B valuation, $1.31B raised, GWh-scale production live - solid capacity for a value-to-mid tier.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Battery energy density is the defining constraint of electric racing, so a silicon-anode leader is maximally on-message, and Berdichevsky&#39;s Tesla-Roadster-battery pedigree resonates.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">Production ramp and IPO potential, but no dated FE trigger, and battery is a contested grid category.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">MODE B leaning: FE&#39;s battery is a single spec/series supplier, so Sila&#39;s anode is a series-level input, not a team workstream - the team value is brand + battery-innovation narrative + talent.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Battery is a contested category</span> &nbsp;<span class="rc">Battery-materials/cells partners sit at Mahindra (Umicore) and Envision (AESC). <b>Counter:</b> Position Sila on the energy-density innovation narrative on Nissan (where the lane is open), not as a grid-wide battery claim; it&#39;s brand-led.</span></div>
+  <div class="risk"><span class="rt">Race battery is spec/series-supplied</span> &nbsp;<span class="rc">Sila&#39;s anode can&#39;t be a team in-car workstream. <b>Counter:</b> Scored MODE-B; name the concrete brand/content/talent mechanics rather than implying an in-car deployment.</span></div>
+  <div class="risk"><span class="rt">Pre-IPO spend discipline</span> &nbsp;<span class="rc">Capital is going into the Moses Lake ramp, not marketing. <b>Counter:</b> Right-size to a value tier with a brand-build rationale tied to the production milestone.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.bitget.com/wiki/sila-nanotechnologies-stock</li><li>https://www.silanano.com/about-us</li><li>https://www.silanano.com/press/press-releases/sila-raises-375m-to-deliver-titan-silicon-for-auto-series-production</li><li>https://www.linkedin.com/in/berdichevsky</li><li>https://chargedevs.com/newswire/sila-raises-375-million-to-deliver-titan-silicon-for-ev-series-production/</li>  </ul>
+</div>
+</body>
+</html>
