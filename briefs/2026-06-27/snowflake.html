@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Snowflake</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "SNOWFLAKE · 27 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 029</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 029 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Snowflake</h1>
+  <div class="classline">AI Data Cloud / Analytics Platform · Bozeman, MT · NYSE: SNOW (FY26 rev $4.68B +33%; AI Cortex across 13,600+ accts)</div>
+
+  <div class="lede">Snowflake - the AI Data Cloud (FY26 revenue $4.68B, Cortex across 13,600+ accounts) that powered Red Bull&#39;s data in 2019-20 before leaving - has a clean re-entry: the AI-data era is the reason to return to F1, bigger.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">79</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Haas</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Snowflake (NYSE: SNOW), the AI Data Cloud, is at a reignited moment - FY26 revenue $4.68B (+33%), the strongest sequential dollar growth in its history, with its Cortex and Snowflake Intelligence (agentic AI) layer embedded across 13,600+ accounts. Notably, Snowflake already proved the F1 use-case: it partnered Aston Martin Red Bull Racing in 2019-20 to drive data-based race decisions, then left after 2020. It is NOT currently on a grid, so this is a clean re-entry - and the AI-data/Cortex era is exactly the reason to return, bigger. The workstream is real and on-profile (data/AI deep-tech): ingesting race-weekend telemetry, running strategy and simulation analytics, and applying Cortex AI on a team&#39;s data - the kind of data brain that, under the cost cap, increasingly decides results. Decision-maker: CEO Sridhar Ramaswamy (ex-Neeva, ex-Google Ads SVP). HONEST: data/cloud is a saturated F1 category (VAST, Oracle, TWG, Mphasis, Extreme Networks), so this is positioned as a distinct, complementary AI-Data-Cloud lane at a team where it doesn&#39;t clash (Haas), not as clean whitespace.</p>
+
+  <h2>Why Now</h2>
+  <p>Snowflake&#39;s AI-data thesis has reignited (record growth, Cortex/Intelligence adoption), so brand investment and visibility are rising, and F1&#39;s cost-cap era rewards the team with the best data/analytics brain. Snowflake left F1 in 2020 before its AI-data products existed - returning now, with Cortex, is a stronger story than the original; engage while the re-entry narrative is fresh.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$4.68B</div><div class="pfk">FY2026 revenue (+33% YoY)</div></div>
+    <div class="pf"><div class="pfv">13,600+ accounts</div><div class="pfk">Cortex / Snowflake Intelligence (agentic AI) embedded across accounts</div></div>
+    <div class="pf"><div class="pfv">Sridhar Ramaswamy</div><div class="pfk">CEO (since Feb 2024; ex-Neeva, ex-Google Ads SVP)</div></div>
+    <div class="pf"><div class="pfv">2019-2020</div><div class="pfk">Prior F1 data partnership (Aston Martin Red Bull Racing; left after 2020)</div></div>
+    <div class="pf"><div class="pfv">Bozeman, MT</div><div class="pfk">Headquarters</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Haas<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">Mphasis, RUCKUS Networks, MoneyGram</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">data platform / storage, identity &amp; access security</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">Oracle</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Cadillac</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">IFS, TWG AI, Tenneco</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The AI Data Cloud at a reignited moment - FY26 revenue $4.68B (+33%), Cortex/Snowflake Intelligence embedded across 13,600+ accounts. A REAL F1 workstream: the team&#39;s telemetry analytics, race-strategy data and AI brain - which Snowflake itself proved with Red Bull Racing in 2019-20 before leaving. The AI-data/Cortex era is the reason to RE-ENTER, bigger. On-profile (data/AI deep-tech), public, marquee. CEO Sridhar Ramaswamy (ex-Neeva/Google Ads).</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">category whitespace</span><span class="flag">new leadership</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 029</span>
+  </div>
+
+  <h2>Why Haas</h2>
+  <p>Haas is the leanest team and gains the most from a turnkey AI Data Cloud (more analytics per cost-cap dollar). HONEST: Haas has an IT-services partner (Mphasis) and data/cloud is a contested category grid-wide - but Mphasis is apps/digital services, distinct from a data-warehouse/Cortex AI platform, so Snowflake&#39;s specific lane is defensibly open and complementary (verify against the current roster before any exclusivity claim).</p>
+
+  <h2>Value to Haas &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A with real mechanics. (1) TECHNICAL (the core): a team&#39;s edge under the cost cap is how fast it turns race-weekend telemetry and historical data into decisions - Snowflake&#39;s AI Data Cloud ingests and unifies that data, runs strategy/simulation analytics, and applies Cortex AI/agents for natural-language insight, a genuine, deployable data-brain workstream (one Snowflake has run in F1 before, with Red Bull). (2) COMMERCIAL / B2B: Snowflake sells to the enterprise data and analytics buyers who fill the F1 paddock, so hospitality becomes a working pipeline channel, while Haas gains a marquee, deep-pocketed data anchor. (3) BRAND / TALENT: &#39;the data cloud that makes the calls&#39; is an ownable narrative on a data-driven sport, with a data/ML engineering-talent halo. Haas gets a transformative data platform and a blue-chip anchor; Snowflake gets a flagship live reference and a premium B2B stage for its AI-data story.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Data / AI-Cloud Partner on Haas, minimum three years, ~$4-6M/yr, with category exclusivity in data cloud/analytics and a working deployment running the team&#39;s telemetry analytics, race-strategy data and Cortex AI.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Sridhar Ramaswamy</div>
+        <div class="role">CEO, Snowflake - verified (ex-Neeva CEO; ex-Google SVP Ads)</div>
+        <div class="bio">CEO since Feb 2024, an AI/data veteran (founded Neeva; ran Google Ads) driving Snowflake&#39;s AI-data and Cortex strategy - the owner of a brand-defining partnership and the entry point. Decision path: Ramaswamy (strategy/brand) with Snowflake&#39;s CMO/field-marketing leadership as activation counterpart; confirm the CMO before outreach.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Sridhar - F1 under the cost cap is won by the team with the best data brain, and you proved it with Red Bull in 2019. Cortex makes the case far stronger now - Haas has an open data lane and gains the most. The data cloud that makes the calls. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">AI-data thesis reignited: FY26 revenue $4.68B (+33%), strongest sequential dollar growth in company history, and Cortex/Snowflake Intelligence scaling fast - strong moment, though no discrete catalyst.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">~$4.68B revenue and a large-cap balance sheet - ample for a top-tier partnership.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">A data/AI platform is core to a data-driven sport, and Snowflake proved the F1 use-case with Red Bull (2019-20); but data/cloud is partly present on the grid (VAST, Oracle, AWS), so not pristine.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">The enterprise-AI-data race and a clean re-entry narrative create momentum, but no dated F1 trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">MODE A: ingesting and analysing race-weekend telemetry, running strategy models and Cortex AI on a team&#39;s data is a genuine, deployable workstream - one Snowflake has literally run in F1 before.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Data/cloud is saturated on the grid</span> &nbsp;<span class="rc">VAST (Williams), Oracle (Red Bull), TWG (Cadillac), Mphasis (Haas), Extreme Networks (Audi) all hold data/cloud-adjacent lanes - so this is a contested category, not clean whitespace. <b>Counter:</b> Position Snowflake&#39;s specific AI-Data-Cloud/Cortex platform lane (distinct from storage, networking and IT-services), at a team where it&#39;s complementary (Haas, where Mphasis is IT-services); do NOT claim category exclusivity - lead with the re-entry/analytics workstream. Verify the chosen team&#39;s roster before outreach.</span></div>
+  <div class="risk"><span class="rt">Prior F1 deal churned (2020)</span> &nbsp;<span class="rc">Snowflake left F1 after 2020, so a return must be justified. <b>Counter:</b> Frame as a stronger re-entry: the AI-data/Cortex era (which didn&#39;t exist in 2020) is the reason to come back, with a measurable analytics workstream - not a repeat of a logo deal.</span></div>
+  <div class="risk"><span class="rt">Decision-maker/CMO to confirm</span> &nbsp;<span class="rc">The brand owner isn&#39;t verified here. <b>Counter:</b> Anchor on the verified CEO and the strategic case; confirm the CMO before outreach rather than naming a generic title.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.fool.com/investing/2026/05/31/software-was-the-markets-big-laggard-this-year-sno/</li><li>https://fortune.com/2026/05/30/snowflakes-ceo-ai-consumption-pricing/</li><li>https://www.prnewswire.com/news-releases/snowflake-and-aston-martin-red-bull-racing-partner-to-deliver-the-most-data-driven-formula-one-season-to-date-300819275.html</li><li>https://en.wikipedia.org/wiki/Snowflake_Inc.</li>  </ul>
+</div>
+</body>
+</html>
