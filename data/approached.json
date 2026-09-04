@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "what": "Human-layer pipeline: companies the 1440 Sports team has ALREADY APPROACHED directly. The engine must NOT re-surface these as fresh signals to pitch — they are in-flight by the human layer. This list also calibrates the engine's targeting profile (see 'profile_lessons').",
+    "why": "Provided by the MD on 2026-06-16. These are real outreach targets, not engine picks. Recording them (a) prevents duplicate/embarrassing re-pitches, (b) seeds the outcomes loop (approached -> meeting -> deal), and (c) sharpens what 1440 actually goes after.",
+    "rule": "Before shipping any new signal, check it is not in this list. If the engine ranks one of these, mark it 'approached' rather than re-briefing it cold.",
+    "updated": "2026-06-16",
+    "profile_lessons": [
+      "1440 targets a BROADER profile than 'pre-IPO unicorn' — mature PUBLIC companies are in scope (Five9, SLB, nVent, Planet Labs are all public).",
+      "Strong INDUSTRIAL / ELECTRICAL / ENERGY / DEEP-TECH lean (Versigent EV-electrical, SLB energy tech, nVent electrical, Planet Labs space/geospatial) — not just B2B SaaS. Electrical/EV-hardware is especially motorsport-native (F1/FE are electronics-intensive).",
+      "Born-big spin-offs are a live, prized class (Versigent = the worked example).",
+      "Still B2B across the board; deal-capable balance sheets matter more than 'venture-stage' labels.",
+      "Action: widen sourcing beyond clean-energy/SaaS startups to include public industrials, electrical/energy/space deep-tech, and fresh spin-offs."
+    ]
+  },
+  "approached": [
+    {
+      "name": "Versigent",
+      "ticker": "NYSE: VGNT",
+      "profile": "public (spin-off)",
+      "category": "EV electrical distribution systems",
+      "valuation": "~$17B equity (UBS SOTP)",
+      "motorsport_relevance": "HIGH — EV-electrical architecture is the 'nervous system' of an EV; natural Formula E fit and electronics-native to F1/FE.",
+      "status": "Aptiv EDS spin-off, completed 1 Apr 2026; ~$9.4B 2026 revenue.",
+      "in_prospects_db": "tracked in data/catalysts.json (id: versigent); corrects the earlier mistaken 'Vertesia' guess",
+      "source": "https://www.msn.com/en-us/money/other/meet-versigent-the-auto-supplier-spinning-off-from-aptiv-after-a-long-wait/ar-AA1ZmXNy"
+    },
+    {
+      "name": "Ramp",
+      "ticker": "Private",
+      "profile": "pre-IPO unicorn",
+      "category": "Fintech / corporate spend management",
+      "valuation": "$44B (Series F, Jun 2026)",
+      "motorsport_relevance": "HIGH — F1; was the weekly DECISION GO (2026-06-14), recommended Visa Cash App Racing Bulls.",
+      "status": "approached by human layer.",
+      "in_prospects_db": "yes (id: ramp) — mark approached, do not re-pitch cold",
+      "source": "https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/"
+    },
+    {
+      "name": "Planet Labs",
+      "ticker": "NYSE: PL",
+      "profile": "public",
+      "category": "Satellite imaging / geospatial Earth data",
+      "valuation": "public (mid-cap)",
+      "motorsport_relevance": "MEDIUM — data/Earth-observation brand; sustainability + tech-innovation narrative; signals public co's are in scope.",
+      "status": "approached by human layer.",
+      "in_prospects_db": "no",
+      "source": "https://www.planet.com/"
+    },
+    {
+      "name": "Rippling",
+      "ticker": "Private",
+      "profile": "pre-IPO unicorn",
+      "category": "Workforce management / HR / IT",
+      "valuation": "~$16.8B",
+      "motorsport_relevance": "MEDIUM — B2B workforce platform; global-team operations narrative.",
+      "status": "approached by human layer.",
+      "in_prospects_db": "no",
+      "source": "https://www.rippling.com/"
+    },
+    {
+      "name": "Five9",
+      "ticker": "NASDAQ: FIVN",
+      "profile": "public",
+      "category": "Cloud contact center (CCaaS) / CX AI",
+      "valuation": "public (mid-cap)",
+      "motorsport_relevance": "MEDIUM — enterprise CX/AI; the 2021 Zoom acquisition ($14.7B) was terminated, so Five9 is independent and public.",
+      "status": "approached by human layer.",
+      "in_prospects_db": "no",
+      "source": "https://www.five9.com/"
+    },
+    {
+      "name": "SLB (Schlumberger)",
+      "ticker": "NYSE: SLB",
+      "profile": "public (large-cap)",
+      "category": "Energy technology / industrial",
+      "valuation": "public large-cap (~$50B+ class)",
+      "motorsport_relevance": "MEDIUM — energy/industrial tech, engineering-heavy; energy-transition narrative; confirms large public industrials are in scope.",
+      "status": "approached by human layer; no existing motorsport presence found.",
+      "in_prospects_db": "no",
+      "source": "https://www.slb.com/"
+    },
+    {
+      "name": "nVent Electric",
+      "ticker": "NYSE: NVT",
+      "profile": "public",
+      "category": "Electrical connection & protection",
+      "valuation": "public (mid/large-cap)",
+      "motorsport_relevance": "HIGH — electrical protection/connection is motorsport-native (F1/FE electrical systems, data centres, electrification); spun from Pentair (2018).",
+      "status": "approached by human layer; no existing motorsport presence found.",
+      "in_prospects_db": "no",
+      "source": "https://www.nvent.com/"
+    },
+    {
+      "name": "Kraken (Octopus Energy spin-out)",
+      "ticker": "Private ($8.65B; IPO-track)",
+      "profile": "spin-out (pre-IPO)",
+      "category": "Utility / energy-AI software & grid flexibility",
+      "valuation": "$8.65B (2026 spin-out; $1B raise led by D1 Capital, Fidelity, Ontario Teachers')",
+      "motorsport_relevance": "HIGH — FE; energy-AI/grid-flex/smart-EV-charging is on-message for electric racing. Was the engine's recurring #1 FE name.",
+      "status": "MD flagged (this session, 2026-06): already in 1440's pipeline to chase — do not re-pitch cold.",
+      "in_prospects_db": "yes (id: kraken) — marked approached, excluded from auto hero/decision selection",
+      "source": "https://kraken.tech/"
+    }
+  ]
+}

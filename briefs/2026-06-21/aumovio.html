@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Aumovio SE</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "AUMOVIO SE · 21 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° ADHOC &nbsp;·&nbsp; HOT</div>
+
+  <h1>Aumovio SE</h1>
+  <div class="classline">Automotive Electronics / Software-Defined Vehicle · Frankfurt, Germany · FRA: AUMV (Continental spin-off, Sep 2025; ~EUR19.6B sales)</div>
+
+  <div class="lede">Aumovio - the ~EUR19.6B automotive-electronics company Continental spun off in Sep 2025 - has never been in motorsport, and its cockpit displays, sensors and software-defined-vehicle electronics are genuinely race-car-relevant for a data-driven F1 team.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">77</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Williams</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Aumovio SE is the automotive-electronics group Continental spun off as an independent, Frankfurt-listed company on 18 Sep 2025 (~EUR19.6B 2024 sales, targeting EUR24B+) - ADAS, sensors, cameras, cockpit displays/HMI, and software-defined-vehicle systems, including the relaunched VDO brand. It is the born-big spin-off class 1440 prizes (the Versigent archetype, at larger scale), with a brand-new independent identity launched in April 2025 and a clear brand-build motive, and it has never entered motorsport. On-profile (electrical/electronics/automotive deep-tech). The fit is real: cockpit displays/HMI, sensor systems and software-defined-vehicle electronics are exactly the kind of electronics an F1 car and its data systems rely on. Led by CEO Philipp von Hirschheydt, with Dr Jutta Donges as CFO (by Mar 2026).</p>
+
+  <h2>Why Now</h2>
+  <p>Aumovio is a newly independent company building its brand from a standing start (listing Sep 2025, brand launched Apr 2025), which is precisely when enterprise brand investment pays off - and F1&#39;s 2026 electronics-and-software-heavy rules make an automotive-electronics partner on-message. The honest &#39;why now&#39; is the spin-off inflection, not a forcing F1 event; engage while the new brand is being built.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">Sep 2025</div><div class="pfk">Continental automotive spin-off; Frankfurt listing 18 Sep 2025</div></div>
+    <div class="pf"><div class="pfv">EUR19.6B</div><div class="pfk">FY2024 sales of the spun-off business (targeting EUR24B+)</div></div>
+    <div class="pf"><div class="pfv">Philipp von Hirschheydt</div><div class="pfk">CEO (ex-Continental Executive Board)</div></div>
+    <div class="pf"><div class="pfv">Jutta Donges</div><div class="pfk">CFO (by Mar 2026) - economics counterpart</div></div>
+    <div class="pf"><div class="pfv">automotive electronics</div><div class="pfk">Focus (ADAS, sensors, cameras, cockpit displays, software-defined vehicle; VDO brand)</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Williams<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Aston Martin</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A born-big spin-off (the Versigent archetype, larger): Continental spun off its entire automotive group as Aumovio SE, listed on Frankfurt 18 Sep 2025 (~EUR19.6B sales) - ADAS, sensors, cameras, cockpit displays/HMI, software-defined-vehicle systems. Fresh independent brand (launched Apr 2025) with a real brand-build motive, never in motorsport, and electronics that are genuinely race-car-relevant. On-profile (electrical/electronics/automotive deep-tech). Decision path: CEO Philipp von Hirschheydt + CFO Jutta Donges.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">spinoff unicorn</span><span class="flag">never entered</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+
+  <h2>Why Williams</h2>
+  <p>Williams is the data-and-electronics-led team modernising its engineering and software stack, so a software-defined-vehicle and cockpit-electronics partner is on-narrative, and the automotive-electronics lane is distinct from its data-platform (VAST) and collaboration (Atlassian) partners. A credible stage with a real electronics/data-systems workstream.</p>
+
+  <h2>Value to Williams &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A with real mechanics. (1) TECHNICAL: cockpit displays/HMI, sensor systems and software-defined-vehicle electronics are core to a modern race car and its data pipeline - Aumovio&#39;s domain - so a co-engineering workstream on the car&#39;s electronics, displays and sensor data is genuine, not signage, and a flagship reference for the spun-off brand. (2) COMMERCIAL / B2B: Aumovio sells to automakers and Tier-1s who populate the F1 paddock, so hospitality is a working channel, while Williams gains a large (~EUR19.6B) automotive-electronics anchor as the brand seeks visibility. (3) BRAND / TALENT: a newly independent automotive-electronics brand on the world&#39;s premier motorsport is an ideal brand-build platform, with an electronics/SDV engineering-talent halo. Williams gets real electronics/data-systems value; Aumovio gets a high-visibility stage to launch its independent brand.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Vehicle-Electronics / Software-Defined-Vehicle Partner on Williams, minimum three years, ~$3-5M/yr (right-sized to an early-stage spin-off), with a co-engineering electronics/cockpit-data workstream plus brand-build activation.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Philipp von Hirschheydt</div>
+        <div class="role">CEO, Aumovio SE - verified (ex-Continental Executive Board)</div>
+        <div class="bio">CEO of the newly independent Aumovio and the owner of the brand-build that follows a spin-off - the entry point. Decision path: von Hirschheydt (brand/strategy at this stage) -&gt; CFO Dr Jutta Donges (economics) -&gt; the cockpit/SDV electronics engineering leadership as technical counterpart; confirm the brand/marketing lead of the new entity before outreach.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;You just launched Aumovio as an independent brand - and F1&#39;s 2026 cars are more electronics- and software-defined than ever. Cockpit displays, sensors, SDV systems on Williams is a real workstream and the ideal stage to build your new brand. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">A fresh born-big spin-off (Frankfurt listing 18 Sep 2025) with a brand launched Apr 2025 - a new independent company actively building its identity, the exact inflection 1440 targets.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">~EUR19.6B sales (targeting EUR24B+) - comfortably funds a partnership; spin-offs can be cost-disciplined early, so right-size.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Automotive electronics on a motorsport team is on-message, but Tier-1 electronics has some grid presence (Tenneco, Marelli); the new-brand-build motive and the cockpit/SDV angle are the differentiators.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">Post-spin-off brand-build window, but no dated F1 trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE A: cockpit displays/HMI, sensors and software-defined-vehicle electronics are genuinely race-car-relevant - a credible electronics/data-systems workstream.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Spin-off cost discipline</span> &nbsp;<span class="rc">A newly independent company often runs lean early. <b>Counter:</b> Right-size to a value-to-mid tier framed around the brand-build need (a new independent identity) plus a real electronics workstream.</span></div>
+  <div class="risk"><span class="rt">Tier-1 supplier vs sponsor</span> &nbsp;<span class="rc">Aumovio is an automotive supplier; would it sponsor rather than supply? <b>Counter:</b> Precedent on the grid (Tenneco, Marelli are technical partners), and a fresh spin-off has an unusual brand-visibility motive; position as technical-partner-plus-brand.</span></div>
+  <div class="risk"><span class="rt">Electronics partly present</span> &nbsp;<span class="rc">Some teams have Tier-1 electronics/PU partners. <b>Counter:</b> Position precisely on cockpit/HMI + software-defined-vehicle electronics, a distinct lane, on Williams where it&#39;s open.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.continental.com/en/investors/events/spin-off-automotive/</li><li>https://en.wikipedia.org/wiki/Aumovio_SE</li><li>https://www.aumovio.com/en/company/press/press-releases/20251120-vdo-relaunch.html</li><li>https://finance.yahoo.com/news/aumovio-unveils-next-gen-automotive-130000458.html</li>  </ul>
+</div>
+</body>
+</html>

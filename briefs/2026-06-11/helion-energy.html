@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Helion Energy</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "HELION ENERGY · 11 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 014</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 014 &nbsp;·&nbsp; WARM</div>
+
+  <h1>Helion Energy</h1>
+  <div class="classline">Fusion Energy / Clean Power · Everett, WA · Private (~$15.5B; pre-revenue; $465M Series G, Jun 2026)</div>
+
+  <div class="lede">Sam Altman-backed fusion pioneer Helion just raised $465M at a $15.5B valuation - nearly 3x in 18 months - with the world&#39;s first fusion power deal (Microsoft, 2028) and no motorsport footprint: the definitive clean-energy brand for Formula E&#39;s clean-mobility stage.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">73</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Envision Racing</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Helion Energy is the fusion company turning &#39;limitless clean power&#39; from physics into a construction site. In June 2026 it raised a $465M Series G at a $15.5B valuation - nearly tripling from $5.43B in January 2025 - to build Orion, its first commercial plant (Malaga, WA), which will deliver 50MW to Microsoft by 2028 under the world&#39;s first fusion power-purchase agreement. In February 2026 its Polaris machine became the first privately-funded device to run on deuterium-tritium fuel and reach 150 million degrees. For 1440 the fit is narrative, not operational: fusion is the definitive clean-energy story and Formula E is the championship built to prove clean mobility, so a Helion-FE pairing is the most on-message sustainability partnership on any grid - and Helion has never touched motorsport. The honest counterweight: it is pre-revenue and pouring capital into reactors, so its near-term sponsorship appetite is the open question - a brand/relationship play to open now, not a deal to force.</p>
+
+  <h2>Why Now</h2>
+  <p>Helion just closed a $465M round at a $15.5B valuation - a peak-visibility moment - and is moving publicly from lab milestone (Polaris) to construction (Orion for Microsoft, 2028). That arc is exactly when a deep-tech brand benefits from a global, on-narrative stage and a STEM-talent magnet. No clean-energy or fusion brand holds an FE position, so the on-theme lane is open and cheap to plant now.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$15.5B</div><div class="pfk">Valuation (Series G, Jun 2026; ~3x from $5.43B in Jan 2025)</div></div>
+    <div class="pf"><div class="pfv">$465M</div><div class="pfk">Series G raise</div></div>
+    <div class="pf"><div class="pfv">Microsoft PPA</div><div class="pfk">World&#39;s first fusion power deal: Orion plant -&gt; 50MW to Microsoft by 2028</div></div>
+    <div class="pf"><div class="pfv">150M degrees C</div><div class="pfk">Polaris: first privately-funded D-T fusion machine, 150M degrees (Feb 2026)</div></div>
+    <div class="pf"><div class="pfv">David Kirtley</div><div class="pfk">Founder &amp; CEO</div></div>
+    <div class="pf"><div class="pfv">Altman off board</div><div class="pfk">Chairman/investor Sam Altman left the board (Mar 2026, OpenAI-conflict recusal)</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Envision Racing<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Jaguar TCS Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Nissan</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">Fusion is the definitive clean-energy story and Formula E is the championship built to prove clean mobility - the most on-message sustainability pairing on any grid. Helion just raised $465M at $15.5B with the world&#39;s first fusion power deal (Microsoft, 2028) and no motorsport footprint. The honest caveat: pre-revenue deep-tech, so this is a brand/relationship play, not a deal to force.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">never entered</span><span class="flag">category whitespace</span>    <span class="flag">discovery: seeded</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 014</span>
+  </div>
+
+  <h2>Why Envision Racing</h2>
+  <p>Envision Racing is the sharpest fit: a sustainability-first independent whose entire identity (&#39;Race Against Climate Change&#39;) mirrors Helion&#39;s clean-energy mission, with a clean (greenfield) roster so Helion can own the clean-energy lane outright. A manufacturer team (e.g. Nissan or Jaguar) is the alternative if a larger stage is preferred over thematic purity.</p>
+
+  <h2>Value to Envision Racing &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B - a brand, narrative and talent partnership, not in-car tech (fusion doesn&#39;t power an FE car - batteries do). The substance is real on three fronts. (1) NARRATIVE: fusion is the definitive clean-energy story and Formula E is the championship built to prove clean mobility, so pairing &#39;the power source of the future&#39; with &#39;the racing of the future&#39; is the most on-message sustainability partnership available on any grid - and it supercharges Envision&#39;s own &#39;Race Against Climate Change&#39; identity rather than bolting a logo onto it. (2) CREDIBILITY &amp; COMMERCIAL: Helion&#39;s profile - the world&#39;s first fusion power-purchase agreement (Microsoft), a $15.5B valuation, a Polaris machine at 150 million degrees - lends Envision a marquee deep-tech innovation halo that materially lifts a sustainability-first independent&#39;s partner roster and helps it win and keep other backers, while Helion&#39;s high-profile ecosystem opens enterprise and policy doors. (3) TALENT &amp; CONTENT: a &#39;fusion meets electric racing&#39; content platform and a STEM/engineering recruiting halo for both - Helion is hiring physicists and engineers at speed in a fierce market. Envision gains a category-defining clean-energy story, commercial lift and talent pull; Helion gains a global, on-narrative stage as it moves from lab to grid.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Clean Energy / Innovation Partner tier on Envision Racing, minimum three years, ~$2-4M/yr (calibrated to a pre-revenue deep-tech&#39;s modest near-term appetite, structured to scale toward Orion&#39;s 2028 delivery), with category exclusivity for energy/fusion and a content-and-talent programme rather than heavy signage.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">David Kirtley</div>
+        <div class="role">Founder &amp; CEO, Helion Energy - verified</div>
+        <div class="bio">David Kirtley co-founded Helion in 2013 (plasma physics / aerospace) and leads it as CEO &amp; President; he owns strategy and partnership decisions. Co-decision-maker on a commercial deal: Chief Business Operations Officer Savanna Thompson. There is no CMO (deep-tech, no marketing chief), so brand decisions sit with the founder. Note: chairman/investor Sam Altman left the board in March 2026 (OpenAI-conflict recusal), so the thesis should rest on Helion&#39;s Microsoft power deal and the Polaris milestone, not on Altman.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;David, fusion is the clean-energy story and Formula E is where clean mobility proves itself - and no energy brand owns that stage yet. As you move from Polaris to powering Microsoft, a measured, on-narrative platform builds public credibility and pulls the physicists and engineers you&#39;re hiring. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Just closed a $465M Series G at a $15.5B valuation (~Jun 2026, ~3x from $5.43B in Jan 2025) and is moving publicly from lab milestone (Polaris) to construction (Orion for Microsoft) - a peak-visibility moment.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">$15.5B valuation, $465M just raised, $1B+ cumulative - funded; tempered only by being pre-revenue (no commercial fusion until ~2028).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Fusion clean energy on the clean-mobility grid is arguably the single most on-narrative pairing available; tempered by MODE B (a halo, not in-car tech).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">A fresh mega-round creates a brand window, but there is no competitor-on-grid clock or dated motorsport anchor.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">10 <span>/ 20</span></div>
+      <div class="why">MODE B: fusion does not power an FE car (batteries do), so the value is brand, narrative and talent - not an operational integration.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Sponsorship appetite (pre-revenue deep-tech)</span> &nbsp;<span class="rc">Helion is pre-commercial and capex-focused on building Orion; motorsport may read as off-strategy. <b>Counter:</b> Pitch a modest, relationship-first brand and STEM-talent platform - not heavy signage - timed to scale toward the 2028 Microsoft delivery; the on-narrative fit is rare and the lane is cheap to lock now.</span></div>
+  <div class="risk"><span class="rt">MODE B / no in-car tech</span> &nbsp;<span class="rc">Fusion doesn&#39;t power an FE car, so it is a brand halo, not an operational integration. <b>Counter:</b> Lean on the unmatched narrative (clean energy x clean mobility) and Envision&#39;s sustainability identity, with measurable brand and talent outcomes.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://techcrunch.com/2026/06/04/helion-the-sam-altman-backed-fusion-startup-raises-465m-to-build-a-power-plant-for-microsoft/</li><li>https://www.techtimes.com/articles/318030/20260608/helion-raises-465-million-155-billion-sam-altmans-fusion-bet-races-2028-power-microsoft.htm</li><li>https://en.wikipedia.org/wiki/Helion_Energy</li><li>https://www.geekwire.com/2026/the-fusion-pivot-helion-ceo-david-kirtleys-journey-from-starships-to-sustainable-star-power/</li><li>https://www.geekwire.com/2026/openai-ceo-sam-altmans-stake-in-helion-energy-draws-scrutiny-in-musk-trial-and-on-capitol-hill/</li>  </ul>
+</div>
+</body>
+</html>

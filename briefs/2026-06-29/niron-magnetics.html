@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Niron Magnetics</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "NIRON MAGNETICS · 29 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 029</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 029 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Niron Magnetics</h1>
+  <div class="classline">Rare-Earth-Free Permanent Magnets (EV Motor Materials) · Minneapolis, MN · Private (~$214M raised; reportedly raising ~$500M at ~$2-3B, Mar 2026)</div>
+
+  <div class="lede">Niron Magnetics - the rare-earth-free permanent-magnet leader (Clean Earth Magnet), backed by GM, Stellantis and Volvo and reportedly raising ~$500M at ~$2-3B - has never been in motorsport, and the magnet it makes is the heart of the EV motor that Formula E teams build.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">75</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Nissan Formula E</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Niron Magnetics (University-of-Minnesota-born) makes the Clean Earth Magnet - the first powerful permanent magnet built from iron and nitrogen, with no rare-earth elements and so no exposure to China&#39;s rare-earth supply chain. Backed by GM Ventures, Stellantis Ventures and Volvo Cars Tech Fund, it has raised ~$214M, is reportedly raising ~$500M at a ~$2-3B valuation (Axios, Mar 2026), and is opening the world&#39;s first commercial-scale iron-nitride plant (Sartell, MN; 1,500 t/yr) in 2026. It has never touched motorsport. The FE fit is real: the permanent magnet is the heart of the permanent-magnet synchronous motor FE manufacturers develop in-house, and Niron already integrates its magnets into EV motors (the MATTER variable-flux motor, Jan 2026). The why-now is sharp - China&#39;s rare-earth export controls have made magnet-supply independence a board-level priority for every automaker on the grid. Honest framing: adopting Niron in a race motor is a multi-year co-engineering commitment, not an off-the-shelf swap, so the near-term team value is a credible innovation + supply-resilience narrative and an R&amp;D relationship - scored accordingly. Verified decision-maker: CEO Jonathan Rowntree (confirm the commercial/BD lead before outreach).</p>
+
+  <h2>Why Now</h2>
+  <p>China&#39;s 2025-26 rare-earth export controls turned magnet-supply independence into a board-level priority for every automaker, and Niron - the only commercial rare-earth-free magnet maker - is scaling fast (first commercial-scale plant online 2026; a reported ~$500M raise in progress), so brand and partnership investment is live. Formula E, whose manufacturers build permanent-magnet motors, is the most on-message proving stage for that story.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$2-3B</div><div class="pfk">Reported raise in progress (Axios, Mar 2026): ~$500M round</div></div>
+    <div class="pf"><div class="pfv">~$214M</div><div class="pfk">Total equity raised to date</div></div>
+    <div class="pf"><div class="pfv">Clean Earth Magnet</div><div class="pfk">Product: first powerful rare-earth-free permanent magnet (iron + nitrogen)</div></div>
+    <div class="pf"><div class="pfv">1,500 tons/yr</div><div class="pfk">World&#39;s-first commercial-scale iron-nitride magnet plant (Sartell, MN), online 2026</div></div>
+    <div class="pf"><div class="pfv">GM, Stellantis, Volvo</div><div class="pfk">Automotive strategic backers</div></div>
+    <div class="pf"><div class="pfv">Jonathan Rowntree</div><div class="pfk">Chief Executive Officer</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Nissan<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Andretti</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">TWG AI, Quest Global, NAGASE</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Jaguar TCS Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The rare-earth-free permanent-magnet leader: its Clean Earth Magnet (iron-nitride, no rare earths) is the first powerful magnet free of Chinese rare-earth supply chains - and the permanent magnet is the heart of the EV traction motor FE manufacturers build. Backed by GM, Stellantis and Volvo, it is reportedly raising ~$500M at ~$2-3B (Mar 2026) and is opening the world&#39;s first commercial-scale iron-nitride plant in 2026. A REAL motor-materials workstream with a sharp why-now (China&#39;s rare-earth export controls). CEO Jonathan Rowntree.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 029</span>
+  </div>
+
+  <h2>Why Nissan Formula E</h2>
+  <p>Nissan is a Japanese EV pioneer that develops its own Formula E powertrain (motor included) and has an open &#39;EV tech&#39; lane, so a rare-earth-free magnet is a genuinely relevant motor-materials story, not a logo - and magnet-supply independence is a direct strategic concern for a major OEM. No FE team has a magnet or motor-materials partner, so the lane is open for Niron to own.</p>
+
+  <h2>Value to Nissan Formula E &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A with honest, named mechanics. (1) MOTOR-MATERIALS / TECHNICAL: the permanent magnet is the core of the PM synchronous motor an FE manufacturer develops; Niron&#39;s iron-nitride magnet is a credible co-engineering thread for motor efficiency, thermal behaviour and rare-earth-free supply security, and Niron already integrates into EV motors (MATTER) - so the workstream is real, with the honest caveat that race-motor adoption is a multi-year R&amp;D programme. (2) SUPPLY-CHAIN / STRATEGIC: for a global OEM like Nissan, a rare-earth-free magnet partner is a board-level supply-resilience story amid China&#39;s export controls - the FE deal is a public proof-point for it. (3) BRAND / CONTENT / TALENT: &#39;the magnet that frees the electric motor from rare earths, on the all-electric championship&#39; is an ownable co-marketing narrative, a strong independence/sustainability content line, and a recruiting halo for the materials and motor engineers both sides compete for. Nissan gets a distinctive deep-tech motor-materials partner; Niron gets a flagship motorsport reference and access to its exact OEM buyers.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Magnet-Technology / Motor-Materials Partner on the Nissan Formula E Team, minimum three years, ~$3-5M/yr, with category exclusivity in magnets/motor-materials and a defined rare-earth-free co-engineering and content workstream tied to the motor and the supply-resilience story.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Jonathan Rowntree</div>
+        <div class="role">Chief Executive Officer, Niron Magnetics - verified</div>
+        <div class="bio">CEO of Niron Magnetics and the owner of brand and strategic-partnership decisions at this scale-up - the right entry point, especially for a deal that doubles as a supply-chain-independence narrative. Decision path: Rowntree (CEO/strategy) with the commercial/BD lead as counterpart (confirm the named commercial owner before outreach); the OEM-investor relationships (GM/Stellantis/Volvo) are credibility anchors, not the FE route.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Jonathan - China&#39;s export controls just made rare-earth-free magnets a board-level priority, and the magnet is the heart of the motor Formula E teams build. A partnership with Nissan is the proof-point that takes the Clean Earth Magnet from supply-chain story to the grid. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Reportedly raising ~$500M at ~$2-3B (Axios, Mar 2026) and opening the world&#39;s first commercial-scale iron-nitride plant (1,500 t/yr) in 2026 - active capital and a scale-up inflection now.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">~$214M raised with GM, Stellantis and Volvo as backers, plus a reported ~$2-3B round in progress - funds a value-to-mid partner tier comfortably.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">A rare-earth-free magnet on the all-electric championship is on-message and timely (supply-chain independence is a 2026 board-level theme), and the magnet/motor-materials lane is open across the grid.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">China&#39;s export controls make magnet-supply independence urgent for every OEM, but there&#39;s no dated FE trigger and in-car adoption is a multi-year R&amp;D commitment - real but not pinned to a date.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE A: the permanent magnet is the core of the PM synchronous motor FE manufacturers develop, and Niron already integrates iron-nitride magnets into EV motors (MATTER) - a genuinely deployable motor-materials workstream, albeit a co-engineering programme rather than an off-the-shelf part.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Race-motor adoption is multi-year</span> &nbsp;<span class="rc">A team putting Niron magnets in its race motor is a co-engineering R&amp;D commitment, not an off-the-shelf swap. <b>Counter:</b> Lead with the supply-resilience + innovation narrative and an R&amp;D relationship; score the near-term team value as MODE-A-aspirational, not a guaranteed in-car part - honestly reflected in the score.</span></div>
+  <div class="risk"><span class="rt">Scale-up, reported (not closed) raise</span> &nbsp;<span class="rc">The ~$500M at ~$2-3B is reported/in-process (Axios, Mar 2026), not a closed round; capacity is value-to-mid. <b>Counter:</b> Right-size to a value-to-mid partner tier; ~$214M already raised plus OEM backers (GM/Stellantis/Volvo) confirm deal-capability now.</span></div>
+  <div class="risk"><span class="rt">OEM backers vs FE manufacturers</span> &nbsp;<span class="rc">Niron&#39;s GM/Stellantis/Volvo ties are corporate-VC, not the FE team relationship. <b>Counter:</b> Use them as credibility, not as an existing FE deal; the Nissan partnership would be net-new (grid-clean).</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.axios.com/pro/climate-deals/2026/03/30/niron-magnetics-rare-earth-permanent-magnets</li><li>https://tracxn.com/d/companies/niron-magnetics/___WH74Mms3hdvbIJood-I9ziwIZPQVO9STxYT0y1AUn8</li><li>https://www.businesswire.com/news/home/20241010091386/en/Niron-Magnetics-Opens-the-Worlds-First-Manufacturing-Facility-for-Powerful-Rare-Earth-Free-Permanent-Magnets</li><li>https://rareearthexchanges.com/news/niron-magnetics-breaks-ground-on-worlds-first-commercial-iron-nitride-magnet-plant-a-rare-earth-free-milestone-with-strategic-consequences/</li><li>https://nironmagnetics.com/niron-magnetics-secures-33m-from-leading-automotive-manufacturers-to-meet-growing-demand-for-rare-earth-free-magnets/</li><li>https://nironmagnetics.com/matter-and-niron-magnetics-unveil-next-generation-rare-earth-free-variable-flux-motor/</li><li>https://nironmagnetics.com/</li>  </ul>
+</div>
+</body>
+</html>

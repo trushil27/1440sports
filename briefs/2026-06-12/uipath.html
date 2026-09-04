@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — UiPath</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "UIPATH · 12 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 015</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 015 &nbsp;·&nbsp; HOT</div>
+
+  <h1>UiPath</h1>
+  <div class="classline">Enterprise Automation / Agentic AI · New York, NY · NYSE: PATH</div>
+
+  <div class="lede">UiPath just posted its first profitable year on $1.9B ARR (+12%) with agentic-AI product ARR nearing $200M - a founder-led, cash-rich (NYSE: PATH) enterprise-automation leader with a brand-new CMO, no motorsport footprint, and no automation brand anywhere on the F1 grid.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">80</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">McLaren</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">4-6 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>UiPath is the enterprise-automation leader pivoting hard into agentic AI - software agents that orchestrate and execute work across a company&#39;s systems. FY2026 was an inflection: its first profitable full year ($57M operating income, $282M net income), $1.9B ARR up 12%, $1.7B cash and no debt, with AI-product ARR (agentic automation, intelligent document processing, the Maestro orchestration layer) reaching ~$200M. Founder-CEO Daniel Dines is back at the helm framing the agentic-orchestration thesis, and a brand-new CMO - Michael Atalla (ex-Microsoft, ex-F5), appointed August 2025 - was hired to elevate exactly this story. No automation or agentic-AI orchestration brand sits anywhere on the F1 grid, so the category is open, and UiPath is a profitable, cash-rich company with the means to own it.</p>
+
+  <h2>Why Now</h2>
+  <p>Two clocks align. First, a new CMO (Atalla, Aug 2025) is in the window when marquee brand investments get defined - and he was hired specifically to elevate UiPath&#39;s agentic-AI leadership. Second, the agentic-AI category is in a land-grab for enterprise mindshare, and UiPath&#39;s first profitable year gives it both the confidence and the balance sheet to invest in brand. The open automation lane on the grid is cheap to plant now, before a peer notices it.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$1.9B</div><div class="pfk">Annual recurring revenue (+12% YoY)</div></div>
+    <div class="pf"><div class="pfv">$57M / $282M</div><div class="pfk">First profitable full year (FY2026): operating income / net income</div></div>
+    <div class="pf"><div class="pfv">$1.7B</div><div class="pfk">Cash, no debt</div></div>
+    <div class="pf"><div class="pfv">~$200M</div><div class="pfk">AI-product ARR (agentic automation, IDP, Maestro orchestration)</div></div>
+    <div class="pf"><div class="pfv">Michael Atalla</div><div class="pfk">CMO (decision-maker), appointed Aug 2025; ex-Microsoft / F5</div></div>
+    <div class="pf"><div class="pfv">Daniel Dines</div><div class="pfk">Founder &amp; CEO</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">McLaren<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Aston Martin</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A founder-led, newly-profitable enterprise-automation leader ($1.9B ARR, agentic-AI ARR ~$200M) with a brand-new CMO hired to drive its agentic story - and no automation brand on the F1 grid. McLaren&#39;s enterprise audience is UiPath&#39;s buyer; the lane is open and ownable now.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">new leadership</span><span class="flag">never entered</span><span class="flag">category whitespace</span>    <span class="flag">discovery: seeded</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 015</span>
+  </div>
+
+  <h2>Why McLaren</h2>
+  <p>McLaren is the fit: the grid&#39;s deepest enterprise-software partner roster (Dell, Salesforce, Workday, Google) means a proven hospitality machine aimed at exactly the CIO/COO/automation buyers UiPath sells to, and a premium, technology-forward brand that mirrors UiPath&#39;s &#39;orchestration&#39; positioning. The automation category is uncontested there. Aston Martin (boardroom enterprise audience) and Williams (data/engineering) are documented alternatives.</p>
+
+  <h2>Value to McLaren &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A (developing) - real substance, not signage. (1) TECHNICAL/OPERATIONAL: an F1 team runs on sprawling, repetitive back-office and engineering workflows - parts procurement and logistics across a global calendar, supplier onboarding, finance and compliance ops, and data movement between simulation, telemetry and strategy systems. That is exactly what UiPath&#39;s agentic automation and orchestration layer attacks: automating and orchestrating those processes so engineers and operations staff spend time on performance, not paperwork. A defined workstream (automating the team&#39;s logistics/finance/data ops with agentic orchestration) is genuine operational value and a flagship reference deployment. (2) COMMERCIAL: McLaren&#39;s enterprise-software partner audience - the CIOs, COOs and automation buyers UiPath sells to - is exactly its market, so race-weekend hospitality becomes a working enterprise pipeline channel, with co-marketing across UiPath&#39;s large enterprise base. (3) CONTENT &amp; TALENT: an &#39;automation behind a winning team&#39; content platform and a joint engineering/AI-talent narrative. The team gains real operational efficiency plus aligned co-marketing; UiPath gains a live, referenceable deployment and a premium enterprise stage for its agentic-AI story.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Automation / Agentic AI Partner tier on McLaren, minimum three years, estimated $4-6M/yr (calibrated to $1.9B ARR and profitability), with category exclusivity for automation/agentic-AI orchestration, a working automation deployment across the team&#39;s operations, and B2B hospitality + content aimed at UiPath&#39;s enterprise buyers.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Michael Atalla</div>
+        <div class="role">Chief Marketing Officer, UiPath (appointed Aug 2025) - verified</div>
+        <div class="bio">Michael Atalla joined UiPath as CMO in August 2025 (previously SVP/Head of Worldwide Marketing at F5, and ~15 years at Microsoft) to elevate UiPath&#39;s agentic-AI brand - so a marquee sponsorship sits squarely in his new mandate. Co-decision-maker: founder &amp; CEO Daniel Dines, who owns the agentic-orchestration thesis and marquee spend.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Michael, you came in to make UiPath the name in agentic AI - and there&#39;s no automation brand anywhere on the F1 grid. McLaren&#39;s hospitality is full of the CIOs and COOs you sell to, with a real automation workstream behind the badge. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">A new CMO (Michael Atalla, Aug 2025) hired specifically to elevate the agentic-AI brand is in the window when marquee investments get defined; layered on UiPath&#39;s first profitable year - confidence and budget to invest now.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">19 <span>/ 20</span></div>
+      <div class="why">$1.9B ARR (+12%), first profitable full year ($57M operating income, $282M net income), $1.7B cash and no debt - a marquee multi-year deal is immaterial.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Enterprise automation / agentic-AI orchestration is uncontested on the F1 grid, and McLaren&#39;s enterprise-software audience is exactly UiPath&#39;s buyer.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">The agentic-AI category is in a mindshare land-grab, but there is no competitor-on-grid or dated calendar anchor.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE A (developing): agentic automation/orchestration applied to a team&#39;s logistics, finance and data workflows is a genuine operational workstream, not signage.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Public-market spend discipline</span> &nbsp;<span class="rc">Newly profitable and watched by investors, UiPath will scrutinise discretionary brand spend. <b>Counter:</b> Frame on measurable enterprise pipeline + a working ops-automation reference deployment (ROI, not vanity); the first-profitable-year balance sheet supports a calibrated multi-year tier.</span></div>
+  <div class="risk"><span class="rt">Agentic-AI narrative is crowded</span> &nbsp;<span class="rc">Every enterprise-software firm now claims &#39;agentic AI&#39;. <b>Counter:</b> F1 is the differentiator - owning the automation lane on the grid is a distinct, ownable position no rival holds, anchored to a real team deployment.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://diginomica.com/uipath-ceo-daniel-dines-five-fold-right-win-powers-q1-solid-start-fiscal-26-year</li><li>https://diginomica.com/cheaper-code-becomes-more-orchestration-worth-argues-daniel-dines-yes-he-would-say-its-thesis-just</li><li>https://siliconangle.com/2026/05/28/agentic-ai-success-helps-uipath-swing-profit-investors-werent-impressed/</li><li>https://ir.uipath.com/news/detail/403/uipath-appoints-michael-atalla-as-chief-marketing-officer-to-drive-leadership-in-agentic-ai-and-orchestration</li><li>https://www.uipath.com/about-us/leadership</li>  </ul>
+</div>
+</body>
+</html>

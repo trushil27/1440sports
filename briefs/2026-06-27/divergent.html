@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Divergent Technologies</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "DIVERGENT TECHNOLOGIES · 27 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 028</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 028 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Divergent Technologies</h1>
+  <div class="classline">AI-Driven Additive / Digital Manufacturing · Los Angeles, CA · Private ($2.3B; $290M Series E Sep 2025; $828M raised)</div>
+
+  <div class="lede">Divergent Technologies - the $2.3B AI additive-manufacturing leader that already 3D-prints the McLaren W1 hypercar&#39;s suspension - has never been an F1 sponsor, and its DAPS platform is a real, proven structural-component workstream for a cost-capped team.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">78</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">McLaren</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Divergent Technologies, the AI-driven additive/digital-manufacturing leader, raised a $290M Series E at a $2.3B valuation (Sep 2025; $828M raised) and runs DAPS - an end-to-end platform that uses AI to design and 3D-print optimised, lightweight structural components and assemble them. The workstream is real and proven: Divergent already manufactures structural parts (front upper/lower wishbones, uprights) for McLaren Automotive&#39;s W1 hypercar - the same class of lightweight, performance-critical structures an F1 car needs. Crucially for the grid-check, that relationship is with McLaren AUTOMOTIVE (the road-car company), NOT the McLaren F1 team - they are separate businesses - so Divergent is grid-clean for an F1 sponsorship, and the McLaren brand-family connection is a warm bridge rather than a conflict. On-profile (advanced-manufacturing deep-tech). CEO Lukas Czinger (co-founder; with founder/chairman Kevin Czinger, who also built the Czinger 21C hypercar).</p>
+
+  <h2>Why Now</h2>
+  <p>Under the cost cap, the teams that iterate parts fastest and lightest win, and AI additive manufacturing is the frontier of that - Divergent is scaling DAPS now (post-Series E) and is investing in brand across automotive/aerospace/defense. The McLaren Automotive (W1) work is live proof, and the McLaren-family bridge is open today - engage before a rival manufacturing-tech brand claims the lane.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$2.3B</div><div class="pfk">Valuation (Series E, Sep 2025; $290M round)</div></div>
+    <div class="pf"><div class="pfv">$828M</div><div class="pfk">Total raised (Horizons Ventures, Hexagon, O Luxe)</div></div>
+    <div class="pf"><div class="pfv">McLaren W1</div><div class="pfk">Proven workstream: 3D-prints structural suspension parts for the McLaren Automotive W1 hypercar (NOT the F1 team)</div></div>
+    <div class="pf"><div class="pfv">Lukas Czinger</div><div class="pfk">Co-Founder &amp; CEO (with founder/chairman Kevin Czinger)</div></div>
+    <div class="pf"><div class="pfv">DAPS</div><div class="pfk">Platform</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">McLaren<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Aston Martin</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The AI additive-manufacturing leader - $2.3B ($290M Series E, Sep 2025) - whose DAPS platform designs and 3D-prints optimised structural components. A REAL F1 workstream (lightweight printed structures under the cost cap), already PROVEN: Divergent makes the W1 hypercar&#39;s suspension parts for McLaren Automotive - a warm brand-family bridge to McLaren Racing (separate companies), and grid-clean for F1 (not an F1 sponsor). On-profile (advanced-manufacturing deep-tech). CEO Lukas Czinger.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 028</span>
+  </div>
+
+  <h2>Why McLaren</h2>
+  <p>McLaren Racing pairs a technology-forward, precision-engineering identity with a genuine warm path: Divergent already builds structural components for McLaren Automotive&#39;s W1, so the capability is proven within the McLaren family (noting Racing and Automotive are separate companies). The additive-manufacturing lane on the F1 team is open, and the value is a real co-engineering workstream on the car, not a logo.</p>
+
+  <h2>Value to McLaren &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A with real, proven mechanics. (1) TECHNICAL (the core): F1 performance under the cost cap is decided by how fast a team designs, prints and iterates lightweight, stiffness-optimised structures - Divergent&#39;s DAPS does exactly that (AI topology optimisation + metal additive + automated assembly), and it is already producing this class of part (suspension wishbones, uprights) for the McLaren W1, so the transfer to F1 components is direct and deployable, not theoretical. (2) COMMERCIAL / BRAND: an American AI-manufacturing innovator on McLaren is a cutting-edge engineering story, and Divergent&#39;s aerospace/defense/auto customer network is a useful ecosystem; hospitality reaches advanced-manufacturing and OEM buyers. (3) TALENT: a recruiting halo for the additive/computational-design engineers both sides compete for. McLaren Racing gets a real, proven additive-manufacturing workstream and a frontier-tech partner; Divergent gets a flagship motorsport reference for DAPS.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Additive / Advanced-Manufacturing Partner on McLaren Racing, minimum three years, ~$3-5M/yr, with category exclusivity in additive/digital manufacturing and a co-engineering workstream printing structural components for the car (leveraging the proven McLaren W1 capability).</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Lukas Czinger</div>
+        <div class="role">Co-Founder &amp; CEO, Divergent Technologies - verified</div>
+        <div class="bio">Co-founder and CEO (with founder/chairman Kevin Czinger, creator of the Czinger 21C hypercar) - the owner of brand/partnership decisions and a credible motorsport-performance figure. Decision path: Lukas Czinger (strategy/brand) with the commercial leadership as counterpart; the existing McLaren Automotive relationship is a warm introduction route. Confirm the brand/commercial lead before outreach.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Lukas - you already print the W1&#39;s suspension for McLaren Automotive, and under F1&#39;s cost cap the team that iterates lightweight structures fastest wins. DAPS on McLaren Racing is the proof-point that takes Divergent from hypercars to the grid. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Raised a $290M Series E at $2.3B (Sep 2025) and is scaling DAPS across automotive, aerospace and defense - active capital and momentum.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">$2.3B valuation, $828M raised - funds a value-to-mid partnership tier.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">AI additive manufacturing is a cutting-edge, on-message F1 workstream (lightweight printed structures), the lane is open, and the McLaren Automotive (W1) relationship is a genuine warm bridge.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">The cost-cap manufacturing race and the McLaren-family path create momentum, but no dated F1 trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">MODE A: AI-optimised, 3D-printed structural components (suspension, uprights, brackets) are exactly what Divergent already produces for the McLaren W1 - directly transferable to F1 parts, a genuine deployable workstream.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">McLaren Automotive vs Racing distinction</span> &nbsp;<span class="rc">The existing tie is with McLaren Automotive (road cars), a separate company from McLaren Racing (F1). <b>Counter:</b> Use it honestly as a warm brand-family bridge and proof the workstream works - not as an existing F1 deal; the F1 sponsorship would be net-new (grid-clean).</span></div>
+  <div class="risk"><span class="rt">Value-tier capacity</span> &nbsp;<span class="rc">At $2.3B, Divergent funds a value-to-mid deal, not a marquee spend. <b>Counter:</b> Right-size to a value-to-mid Official Additive-Manufacturing Partner tier tied to a real co-engineering component workstream.</span></div>
+  <div class="risk"><span class="rt">Teams do additive in-house</span> &nbsp;<span class="rc">F1 teams run their own AM facilities. <b>Counter:</b> DAPS is AI-design + metal AM + automated assembly at production quality (proven on the W1) - a step beyond typical in-house prototyping AM; position as a co-engineering capability upgrade, not a printer.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://labusinessjournal.com/manufacturing/series-e-values-divergent-at-2-3b/</li><li>https://www.prnewswire.com/news-releases/divergent-announces-290-million-series-e-to-scale-digital-manufacturing-platform-and-meet-growing-us-defense-production-demand-302555989.html</li><li>https://3dprintingindustry.com/news/mclaren-collaborates-with-divergent-technologies-on-3d-printed-suspension-for-the-mclaren-w1-241380/</li><li>https://www.3dnatives.com/en/mclaren-adopts-divergents-daps-for-enhanced-supercar-performance/</li>  </ul>
+</div>
+</body>
+</html>

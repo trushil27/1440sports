@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Cerebras Systems</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "CEREBRAS SYSTEMS · 03 JUL 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 033</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 033 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Cerebras Systems</h1>
+  <div class="classline">AI Supercomputing / Wafer-Scale Compute · Sunnyvale, CA · Nasdaq: CBRS (blockbuster IPO May 2026; ~$67B cap; $510M 2025 rev, profitable)</div>
+
+  <div class="lede">Cerebras - the wafer-scale AI-supercompute leader, fresh off a blockbuster ~$67B Nasdaq IPO - has never been in motorsport, and for a greenfield F1 team building its simulation stack it is a real compute workstream and a two-way exchange, not a logo.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">79</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Cadillac</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Cerebras Systems, led by co-founder &amp; CEO Andrew Feldman, builds wafer-scale AI processors (the WSE-3 is the largest chip ever made, ~4 trillion transistors) and the systems around them, and IPO&#39;d on Nasdaq (CBRS) in a blockbuster May 2026 - ~$67B market cap, $510M 2025 revenue at a 47% net margin (profitable), with multi-billion-dollar compute agreements with OpenAI and AWS. It has never touched motorsport. The F1 fit is real: aerodynamics is the biggest lap-time lever and it is compute-bound, so wafer-scale compute lets a team extract more CFD fidelity and faster iteration - and run power-unit, strategy and ML simulation - within F1&#39;s regulated CFD/wind-tunnel allocation (the ATR). HONEST framing: the ATR caps aero-CFD volume (so this maximises value within the cap rather than removing it), CAE software incumbents (Ansys/Cadence/Siemens) already occupy the toolchain (Cerebras is the compute underneath, a distinct sub-lane), and Cerebras carries real customer concentration (G42/MBZUAI was ~62% of 2025 revenue) - all noted, and the score reflects them. Decision-maker: Co-Founder &amp; CEO Andrew Feldman.</p>
+
+  <h2>Why Now</h2>
+  <p>Cerebras is at a live capital + identity peak (blockbuster May-2026 IPO, ~$67B cap) - exactly when a company invests in brand and lands marquee references - and F1&#39;s 2026 rules raise the simulation burden, so a founding compute relationship with a greenfield team is best built now. The honest why-now is catalyst-driven, not a dated race trigger.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$67B</div><div class="pfk">Blockbuster Nasdaq IPO (May 2026; priced $185, opened +108%)</div></div>
+    <div class="pf"><div class="pfv">$510M</div><div class="pfk">2025 revenue (47% net margin; profitable)</div></div>
+    <div class="pf"><div class="pfv">WSE-3</div><div class="pfk">Largest AI chip ever (WSE-3; ~4 trillion transistors)</div></div>
+    <div class="pf"><div class="pfv">Andrew Feldman</div><div class="pfk">Co-Founder &amp; CEO (since 2015; ex-SeaMicro, sold to AMD)</div></div>
+    <div class="pf"><div class="pfv">MBZUAI ~62%</div><div class="pfk">Customer concentration (2025 revenue; G42-linked)</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Cadillac<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">Oracle</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The wafer-scale AI-supercompute leader (WSE-3, the largest AI chip ever) that IPO&#39;d on Nasdaq in a blockbuster May 2026 (~$67B cap; $510M 2025 revenue at a 47% net margin - profitable; OpenAI + AWS multi-billion deals). REAL F1 workstream: aerodynamics is the #1 lap-time lever and it is compute-bound; wafer-scale compute lets a team extract more CFD fidelity and faster iteration within F1&#39;s regulated CFD/wind-tunnel cap (ATR), plus PU/strategy/ML simulation. Heavily deal-capable. HONEST caveats: F1&#39;s ATR caps aero-CFD volume, and Cerebras has customer concentration (G42/MBZUAI) - noted. Co-Founder &amp; CEO Andrew Feldman.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 033</span>
+  </div>
+
+  <h2>Why Cadillac</h2>
+  <p>Cadillac is the new American works team building its entire simulation and compute stack from zero, so an AI-supercompute partner can be the baseline it designs around (a genuine prime lane), and an American AI-compute champion alongside the American flag-bearer is a clean brand alignment - with GM behind it as a deep-pocketed, deal-capable counterpart. No AI-compute incumbent to conflict with (IFS runs ERP, TWG AI is data/analytics services, not wafer-scale HPC). It is a signal, not a placement - Cadillac&#39;s greenfield build is simply the best fit for a foundational compute partner.</p>
+
+  <h2>Value to Cadillac &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>A TWO-WAY exchange (tech + business both directions), not a logo fee - three concrete swaps. (1) COMPUTE &lt;-&gt; ELITE CFD BENCHMARK: Cerebras gives the team wafer-scale AI-compute to maximise CFD fidelity and iteration within the ATR cap (plus power-unit, strategy and ML simulation); in return F1 aerodynamics - one of the hardest real-world CFD/HPC problems - becomes Cerebras&#39;s credibility-defining benchmark and showcase to industrial and scientific buyers. (2) CO-ENGINEERED WORKLOADS &lt;-&gt; PRODUCT VALIDATION: jointly optimising the team&#39;s CFD/simulation workloads on wafer-scale hardware advances Cerebras&#39;s real-world HPC performance and reference architecture; the team gets faster, higher-fidelity aero development that converts directly to lap time. (3) TALENT + BRAND &lt;-&gt; ENTERPRISE REACH: an American compute champion on the American works team is a recruiting and brand halo for the HPC/ML engineers both sides compete for; the paddock&#39;s industrial/OEM ecosystem opens the enterprise HPC buyers Cerebras is scaling into. Cadillac gets a foundational simulation-compute edge from day one; Cerebras gets the hardest benchmark, a global stage and buyers.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official AI Compute / Simulation Partner on Cadillac, minimum three years, structured as a compute-supply + co-engineering workstream (CFD/PU/strategy simulation on wafer-scale systems, joint HPC optimisation, a shared benchmark/reference programme) - value exchanged both ways, not a pure logo fee. Cerebras is highly deal-capable, so size to a genuine technical partnership.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Andrew Feldman</div>
+        <div class="role">Co-Founder &amp; CEO, Cerebras Systems - verified</div>
+        <div class="bio">Co-founder and CEO of Cerebras since 2015 (prior: co-founded SeaMicro, sold to AMD), the owner of brand and strategic-partnership decisions and the entry point - for whom the hardest real-world simulation benchmark plus an enterprise-buyer stage is strategically valuable. Confirm the marketing/partnerships lead before outreach.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Andrew - F1 aero is one of the hardest CFD problems on earth and it is compute-bound, and Cadillac is building its simulation stack from zero. Wafer-scale compute is their edge and their car is your benchmark and showcase. Fresh off your IPO, that&#39;s a two-way deal. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">Blockbuster Nasdaq IPO in May 2026 (priced $185, opened +108%, ~$67B cap) - a live, this-quarter capital + identity inflection at the peak of the AI-compute cycle.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">~$67B market cap, $510M 2025 revenue at a 47% net margin (profitable), OpenAI + AWS multi-billion deals - deal-capable at any tier (the standout, and the exact capacity smaller compute names lacked).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">AI supercompute maps onto F1&#39;s compute-bound aerodynamics (the #1 performance lever) and a cutting-edge engineering story - strong, though CAE software incumbents (Ansys/Cadence/Siemens) already sit in the CFD toolchain, so it is a distinct compute-hardware sub-lane.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">Fresh IPO plus rising F1-2026 simulation demand, but F1&#39;s Aerodynamic Testing Restriction caps CFD volume and there is no dated Cerebras-specific trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE A: wafer-scale compute genuinely accelerates a team&#39;s CFD, power-unit and strategy/ML simulation - higher fidelity and faster iteration per ATR-allocated unit, and broader simulation beyond capped aero-CFD; a real workstream, honestly bounded by the ATR cap.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">F1&#39;s CFD cap (ATR)</span> &nbsp;<span class="rc">F1 regulates CFD/wind-tunnel volume per team (Aerodynamic Testing Restriction), so compute can&#39;t simply be scaled up without limit. <b>Counter:</b> Wafer-scale value is higher fidelity and faster iteration PER allocated unit, plus uncapped power-unit/strategy/ML simulation - maximising the regulated budget, not evading it.</span></div>
+  <div class="risk"><span class="rt">CAE software incumbents</span> &nbsp;<span class="rc">Ansys, Cadence and Siemens already sit in the CFD toolchain. <b>Counter:</b> Cerebras is the compute layer underneath that software - a distinct hardware sub-lane; position as accelerating the existing toolchain, not replacing it.</span></div>
+  <div class="risk"><span class="rt">Customer concentration / independence</span> &nbsp;<span class="rc">G42/MBZUAI was ~62% of 2025 revenue and G42 is Cerebras&#39;s largest backer (a concentration and geopolitical-scrutiny risk). <b>Counter:</b> Revenue is diversifying fast (OpenAI, AWS multi-billion deals) and the company is profitable at ~$67B - deal-capability is not in question; note the concentration honestly.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://finance.yahoo.com/markets/stocks/articles/cerebras-raises-5-55-billion-003314885.html</li><li>https://tech-insider.org/cerebras-ipo-filing-510m-revenue-openai-deal-23b-valuation-2026/</li><li>https://www.cerebras.ai/press-release/cerebras-announces-third-generation-wafer-scale-engine</li><li>https://en.wikipedia.org/wiki/Cerebras</li><li>https://www.agbi.com/tech/2026/05/g42-linked-chipmaker-cerebras-jumps-in-first-day-on-nasdaq/</li>  </ul>
+</div>
+</body>
+</html>

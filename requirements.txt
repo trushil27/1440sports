@@ -1,0 +1,8 @@
+# 1440 Sports — Sponsorship Signals Engine
+# Core templating (required)
+Jinja2>=3.1
+
+# PDF rendering (optional but recommended). WeasyPrint needs system libraries
+# (Pango, Cairo, GDK-PixBuf). If it can't load, the engine still produces
+# print-ready HTML + Markdown and simply skips the PDF.
+weasyprint>=60

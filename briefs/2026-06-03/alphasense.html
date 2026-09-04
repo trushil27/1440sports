@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — AlphaSense</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "ALPHASENSE · 03 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 005</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 005 &nbsp;·&nbsp; HOT</div>
+
+  <h1>AlphaSense</h1>
+  <div class="classline">AI Market Intelligence / Financial Research · New York, NY · Private (~$7.5B; &gt;$600M ARR; IPO candidate)</div>
+
+  <div class="lede">Fresh off a $350M round at a ~$7.5B valuation on more than $600M of ARR, AlphaSense - the AI market-intelligence platform for the financial world - is a pre-IPO leader with no motorsport footprint, and no research-intelligence brand owns the F1 grid.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">75</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">McLaren</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">4-6 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>AlphaSense is the AI platform for market intelligence and search across the financial and business world - the tool banks, asset managers, hedge funds and a majority of the S&amp;P 500 use to find and trust insight. On 3 June 2026 it closed a $350M round at a ~$7.5B valuation (led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Growth Equity Partners), nearly doubling its 2024 mark, on more than $600M of ARR. It has scale and momentum - the $930M Tegus acquisition in July 2024 folded in the leading expert-transcript library - and CEO Jack Kokko has said an IPO is a possibility. Two things make it a 1440 target: it has never touched motorsport, and no market- or financial-intelligence brand owns a position anywhere on the F1 grid, so the category is uncontested. Its audience - research, strategy and investment professionals - is exactly the premium enterprise crowd an F1 partnership reaches.</p>
+
+  <h2>Why Now</h2>
+  <p>A $350M raise at a doubled, ~$7.5B valuation is the peak moment of brand-investment authority, and CEO Jack Kokko&#39;s openness to an IPO puts AlphaSense in the pre-listing window when enterprise credibility compounds most. A CMO appointed in 2024 with two IPO runs behind her is setting the brand agenda now. The market-intelligence category on the grid is empty and cheap to lock before a data or research rival notices the same open lane.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$7.5B</div><div class="pfk">Valuation (round closed 3 Jun 2026; led by Vitruvian, Accenture Ventures, J.P. Morgan)</div></div>
+    <div class="pf"><div class="pfv">&gt;$600M</div><div class="pfk">Annual recurring revenue (Q1 2026, up from $500M Oct 2025)</div></div>
+    <div class="pf"><div class="pfv">$350M</div><div class="pfk">Latest funding round (3 Jun 2026)</div></div>
+    <div class="pf"><div class="pfv">$930M</div><div class="pfk">Tegus acquisition (Jul 2024, expert-transcript library)</div></div>
+    <div class="pf"><div class="pfv">Heather Zynczak</div><div class="pfk">CMO (decision-maker); ex-Domo, ex-Pluralsight IPO team</div></div>
+    <div class="pf"><div class="pfv">Jack Kokko</div><div class="pfk">Founder &amp; CEO (since 2008); says an IPO is &#39;a possibility&#39;</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">McLaren<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Aston Martin</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">Fresh off a $350M round at a ~$7.5B valuation (3 Jun 2026) on $600M+ ARR, this pre-IPO market-intelligence leader has the budget and the brand-reckoning moment - and no research-intelligence brand owns the F1 grid. Lock the category before the IPO.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">never entered</span><span class="flag">category whitespace</span><span class="flag">new leadership</span>    <span class="flag">discovery: seeded</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 005</span>
+  </div>
+
+  <h2>Why McLaren</h2>
+  <p>McLaren is the sharpest canvas: a premium, technology-forward team with the deepest enterprise-B2B partner roster on the grid - Dell, Salesforce, Workday and Google among them - which means a proven hospitality machine pointed at exactly the corporate decision-makers AlphaSense sells to. The market-intelligence category is uncontested there, so AlphaSense can own it outright. If McLaren&#39;s inventory is constrained, Williams (a data-led revival with a B2B-tech audience) and Aston Martin (boardroom-premium) are credible fallbacks.</p>
+
+  <h2>Value to McLaren &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B - a real off-car value exchange. AlphaSense&#39;s market and competitive intelligence serves a team&#39;s commercial and strategy functions directly: sponsor and partner prospecting, category and market analysis, and tracking the businesses a team wants in its garage. McLaren gains a genuine intelligence capability plus co-marketing to a shared enterprise audience; AlphaSense gains a premium global stage and hospitality in front of the finance and corporate buyers it sells to. The honest framing is a commercial and brand partnership, not an in-car technical integration.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Market Intelligence Partner tier on McLaren, minimum three years, estimated $3-5M/yr, with category exclusivity for market/financial intelligence and research, B2B hospitality aimed at AlphaSense&#39;s finance and corporate-strategy buyers, and digital/content rights for its enterprise audience. Williams or Aston Martin are the documented fallbacks.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Heather Zynczak</div>
+        <div class="role">Chief Marketing Officer, AlphaSense - verified (appointed 2024)</div>
+        <div class="bio">AlphaSense&#39;s CMO since 2024 and a repeat IPO-scale brand builder: previously CMO at Domo (grew revenue from $0-100M) and CMO at Pluralsight, where she was part of the IPO team and built the enterprise go-to-market. She owns the brand mandate a multi-year F1 partnership would anchor. Co-decision-makers on a marquee spend: founder-CEO Jack Kokko and CFO Joe Hill.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Heather, you&#39;ve built brand through two IPO runs - and a $7.5B round is the moment to plant an enterprise flag. Market intelligence is the one category no brand owns on the F1 grid, and McLaren&#39;s hospitality is full of your buyers. 25 minutes before the IPO window?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">A $350M round at a ~$7.5B valuation closed 3 Jun 2026 (nearly doubling the 2024 mark) - the peak of brand-investment authority - and an IPO-scale CMO appointed in 2024 is setting the brand agenda now.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">~$7.5B valuation and more than $600M ARR, just topped up with a $350M raise - funding a $3-5M/yr partnership is immaterial.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">No market- or financial-intelligence brand sits anywhere on the F1 grid, so the category is ownable outright; tempered by MODE B (off-car) and a less iconic-than-in-car category.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">The fresh round and an IPO on the horizon open a brand-build window, but there is no competitor-on-grid or race-date clock forcing the timeline.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">MODE B: AlphaSense serves a team&#39;s commercial and strategy functions (sponsor and market intelligence), a real off-car value exchange rather than an in-car system.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Off-car relevance (MODE B)</span> &nbsp;<span class="rc">Market intelligence is not in-car technology, so the &#39;official technology partner&#39; story is weaker. <b>Counter:</b> Position it like Ramp&#39;s back-office partnership - a real commercial/strategy capability plus enterprise hospitality and co-marketing to a shared buyer audience; the value is audience and brand, not a garage integration.</span></div>
+  <div class="risk"><span class="rt">IPO sequencing</span> &nbsp;<span class="rc">Brand spend may follow rather than precede a listing. <b>Counter:</b> Lock category exclusivity now at pre-IPO pricing and scale activation at the listing - the empty category is the asset, and it disappears the moment a rival signs.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.verdict.co.uk/alphasense-secures-350m-funding/</li><li>https://letsdatascience.com/news/alphasense-raises-350m-surpasses-600m-arr-b1487fa9</li><li>https://www.fintechfutures.com/m-a/alphasense-acquires-rival-tegus-for-930m-valuation-tops-4bn</li><li>https://www.prnewswire.com/news-releases/alphasense-appoints-heather-zynczak-as-chief-marketing-officer-doubles-revenue-in-less-than-two-years-302111054.html</li><li>https://sacra.com/c/alphasense/</li><li>https://www.alpha-sense.com/about/</li>  </ul>
+</div>
+</body>
+</html>

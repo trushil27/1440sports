@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Applied Intuition</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "APPLIED INTUITION · 13 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 017</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 017 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Applied Intuition</h1>
+  <div class="classline">Physical AI / Autonomous-Vehicle Software &amp; Simulation · Mountain View, CA · Private ($15B; ~$830M ARR; pre-IPO)</div>
+
+  <div class="lede">Applied Intuition, the physical-AI and vehicle-software leader, raised $600M at a $15B valuation and roughly doubled ARR to ~$830M - a pre-IPO leader whose customers are 18 of the top 20 automakers, with no motorsport presence and an unclaimed &#39;physical AI / autonomy&#39; lane on the F1 grid.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">77</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Haas</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Applied Intuition is the leader in &#39;physical AI&#39; - vehicle software, simulation, validation and autonomy stacks - and in June 2025 it raised a $600M Series F at a $15B valuation (co-led by BlackRock-managed funds and Kleiner Perkins, $1.2B raised to date), while roughly doubling ARR to ~$830M. Its customers are 18 of the top 20 automakers (Toyota, VW, GM, Porsche, Stellantis among them), so the F1 paddock - dense with OEM and mobility decision-makers - is precisely the room it wants to be in ahead of a likely listing. Founder-led by Qasar Younis (ex-Y Combinator COO; early-career GM engineer), it has never touched motorsport. Crucially, the &#39;physical AI / autonomy&#39; lane is open: the AI partnerships already on the grid are generic-enterprise (Anthropic as Williams&#39; &#39;thinking partner&#39;, TWG as Cadillac&#39;s exclusive AI partner), not autonomous-vehicle software - a distinct category a single brand could own.</p>
+
+  <h2>Why Now</h2>
+  <p>Pre-IPO leaders invest in enterprise brand to support a future listing, and Applied Intuition&#39;s buyers - 18 of the top 20 automakers - cluster in the F1 paddock, so the audience ROI is unusually direct. The &#39;physical AI / autonomy&#39; lane is unclaimed today, which rewards a first mover before the generic-AI deals expand to crowd it. There is no hard competitor clock yet, so the work is to create the urgency with an early, relationship-led approach to a founder-CEO who still owns brand strategy directly.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$15B</div><div class="pfk">Valuation (Series F, Jun 2025; $600M round, co-led by BlackRock funds and Kleiner Perkins)</div></div>
+    <div class="pf"><div class="pfv">~$830M</div><div class="pfk">Annual recurring revenue (2025, roughly 2x YoY from ~$415M)</div></div>
+    <div class="pf"><div class="pfv">$1.2B</div><div class="pfk">Total funding raised to date</div></div>
+    <div class="pf"><div class="pfv">Qasar Younis</div><div class="pfk">Co-Founder &amp; CEO (ex-Y Combinator COO)</div></div>
+    <div class="pf"><div class="pfv">18 of the top 20 automakers</div><div class="pfk">Customer base (incl. Toyota, VW, GM, Porsche, Stellantis)</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Haas<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The physical-AI and vehicle-software leader - $15B, ~$830M ARR (roughly doubled YoY), $1.2B raised from BlackRock and Kleiner Perkins - whose customers are 18 of the top 20 automakers. The F1 paddock is dense with exactly those OEM decision-makers, and &#39;physical AI / autonomy&#39; is a distinct, unclaimed lane on the grid (the AI deals already signed are generic-enterprise - Anthropic at Williams, TWG at Cadillac - not autonomous-vehicle software). A pre-IPO leader with the capacity and brand mandate, never in motorsport. Honest framing: this is a brand-and-audience play with credible engineering adjacency, not a literal in-car deployment.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 017</span>
+  </div>
+
+  <h2>Why Haas</h2>
+  <p>Haas is the lean, accessible entry tier with genuinely open enterprise-technology whitespace (its roster is largely consumer/commercial brands), and as the grid&#39;s American team it aligns with a Silicon Valley physical-AI leader&#39;s identity - a sensible, ownable first motorsport step at a sensible price, with a clear scale-up path to a larger team at the next contract if the model proves out.</p>
+
+  <h2>Value to Haas &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B done with real substance - three concrete fronts. (1) COMMERCIAL / B2B ENGINE: Applied Intuition sells to 18 of the top 20 automakers, and the F1 paddock is wall-to-wall with exactly those OEM and mobility decision-makers - so Haas hospitality becomes a working enterprise pipeline channel for Applied Intuition, while Haas gains a premium, well-capitalized ($15B) American technology anchor partner whose presence signals engineering credibility and helps the team attract further blue-chip sponsors. Owning the unclaimed &#39;physical AI / autonomy&#39; grid category is a defensible, single-brand position. (2) ENGINEERING ADJACENCY &amp; TALENT: vehicle dynamics, simulation and controls are the shared language of any F1 engineering org and of Applied Intuition&#39;s product - a credible basis for co-developed &#39;simulation-driven development&#39; content, advisory access to Applied Intuition&#39;s vehicle-software expertise, and a joint engineering-talent pipeline (both compete for the same ML/controls/vehicle-dynamics engineers); this is positioned as adjacency and knowledge-halo, explicitly NOT a claim that Haas runs Applied Intuition&#39;s simulator. (3) BRAND &amp; CONTENT: an American team plus an American physical-AI champion is an aligned innovation narrative - a co-marketing content series on autonomy and physical AI, and a recruiting halo that lifts both brands with engineering talent. Haas gets a high-credibility, deep-pocketed partner and aligned co-marketing; Applied Intuition gets a premium B2B stage in front of its exact buyers ahead of an IPO.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Technology / Innovation Partner tier on Haas, minimum three years, ~$3-5M/yr, with category exclusivity in &#39;physical AI / autonomous-vehicle software&#39; and a co-marketing + hospitality program built around the OEM-buyer audience.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Qasar Younis</div>
+        <div class="role">CEO &amp; Co-Founder, Applied Intuition - verified (founder-led; no public CMO, so brand/sponsorship strategy routes through the CEO)</div>
+        <div class="bio">Co-founder and CEO, ex-Y Combinator COO and an early-career GM engineer; as a founder-led pre-IPO company with no public CMO, top-level brand and sponsorship decisions sit with Younis - the right entry point. Approach him with a ready-made, audience-led thesis: F1 as a direct line to the OEM buyers Applied Intuition already sells to.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Qasar - your buyers are 18 of the top 20 automakers, and most of them are in the F1 paddock every other weekend. &#39;Physical AI&#39; is the one lane no one on the grid owns yet, and Haas is the smart, ownable first step ahead of your IPO. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Closed a $600M Series F at a $15B valuation (Jun 2025, co-led by BlackRock funds and Kleiner Perkins) and roughly doubled ARR to ~$830M - a pre-IPO leader actively building enterprise brand.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">$15B valuation, ~$830M ARR and $1.2B raised - comfortably funds a mid-tier multi-year partnership.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">&#39;Physical AI / autonomy&#39; is a distinct, unclaimed lane on the grid; its customers (18 of the top 20 automakers) are the OEM decision-makers who populate F1 - a near-perfect B2B audience match.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">An IPO-readiness and brand-building window exists, but there is no acute external forcing function or competitor clock yet.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">MODE B, honestly scored: Applied Intuition is not an F1 race-simulation vendor, so the value is brand + B2B audience + a credible engineering/talent adjacency, not a literal in-car workstream.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Does a B2B infra company belong in F1?</span> &nbsp;<span class="rc">Applied Intuition sells to engineers, not consumers, so the brand logic isn&#39;t obvious at first glance. <b>Counter:</b> The grid is now full of exactly this play - Atlassian, Anthropic, VAST Data, Keeper Security all sponsor for B2B reach; the F1 paddock IS Applied Intuition&#39;s buyer base, making the audience ROI unusually direct.</span></div>
+  <div class="risk"><span class="rt">Engineering fit is adjacency, not in-car</span> &nbsp;<span class="rc">Applied Intuition is not an F1 race-simulation vendor; overclaiming a technical deployment would be a defect. <b>Counter:</b> Position honestly as brand + B2B audience + engineering/talent adjacency; the value stands on audience match and category ownership alone.</span></div>
+  <div class="risk"><span class="rt">Pre-IPO spend discipline</span> &nbsp;<span class="rc">Public-company preparation favours visible efficiency over discretionary spend. <b>Counter:</b> Lead with a value-to-mid tier and a measurable OEM-pipeline outcome, not title-level spend.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.appliedintuition.com/press-releases/series-f</li><li>https://sacra.com/c/applied-intuition/</li><li>https://www.appliedintuition.com/blog/2025-year-in-review</li><li>https://en.wikipedia.org/wiki/Qasar_Younis</li><li>https://www.crunchbase.com/person/qasar-younis</li>  </ul>
+</div>
+</body>
+</html>

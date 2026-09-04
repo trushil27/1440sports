@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — 1KOMMA5°</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "1KOMMA5° · 23 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 024</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 024 &nbsp;·&nbsp; WARM</div>
+
+  <h1>1KOMMA5°</h1>
+  <div class="classline">Home Electrification / Virtual Power Plant · Hamburg, Germany · Private (~$2.4B; ~EUR520M rev; debt-free; IPO-track)</div>
+
+  <div class="lede">1KOMMA5° - Europe&#39;s fastest-scaling home-electrification company (~$2.4B, ~EUR520M revenue) with its Heartbeat AI virtual power plant - has never been in motorsport, and Formula E&#39;s EV-positive European audience is precisely its customer base.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">72</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Mahindra Racing</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>1KOMMA5°, the German home-electrification leader, has scaled to ~EUR520M revenue (debt-free) at a ~$2.4B valuation, bundling solar, storage, heat pumps and EV charging under its Heartbeat AI virtual power plant, and is on an IPO track (Nasdaq intended, timing pushed amid policy headwinds). Founded and led by Philipp Schroder (ex-Tesla Germany, ex-Sonnen), it has never entered motorsport. On-profile (electrification/energy), it offers two genuine angles for Formula E: a real-ish energy workstream (Heartbeat VPP + renewable power + EV charging to run and optimise the team&#39;s facilities and operations) and a rare audience match - FE&#39;s EV-positive, urban, European fans are exactly 1KOMMA5&#39;s customers. HONEST framing: capacity is mid-cap and the workstream is operational/brand rather than in-car, so this is a value-tier WARM. Decision-maker: CEO &amp; co-founder Philipp Schroder.</p>
+
+  <h2>Why Now</h2>
+  <p>1KOMMA5° is in a fast organic-growth and pre-IPO brand-building phase, and Formula E reaches its target European EV-owner audience in the very cities it operates - so the audience ROI is direct. The honest &#39;why now&#39; is positional (brand-build + audience), not a dated trigger; engage while crowding is low and the IPO narrative is being built.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$2.4B</div><div class="pfk">Valuation (Dealroom)</div></div>
+    <div class="pf"><div class="pfv">~EUR520M</div><div class="pfk">2024 revenue (organic growth; debt-free)</div></div>
+    <div class="pf"><div class="pfv">EUR150M</div><div class="pfk">Pre-IPO round (Dec 2024; CalSTRS, G2 Venture Partners)</div></div>
+    <div class="pf"><div class="pfv">Philipp Schroder</div><div class="pfk">Co-Founder &amp; CEO (ex-Tesla Germany, ex-Sonnen)</div></div>
+    <div class="pf"><div class="pfv">Heartbeat</div><div class="pfk">Energy-management software / virtual power plant</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Mahindra Racing<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Jaguar TCS Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Nissan</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">Europe&#39;s fastest-scaling home-electrification company (~$2.4B, ~EUR520M revenue, debt-free, IPO-track) - solar + storage + heat pumps + EV charging tied together by its Heartbeat AI virtual power plant. On-profile (electrification/energy) with a real-ish energy workstream and a rare audience match: FE&#39;s EV-positive European fans are 1KOMMA5&#39;s customers. CEO Philipp Schroder (ex-Tesla Germany, ex-Sonnen). HONEST: a value-tier WARM - capacity is mid-cap and the workstream is operational/brand, not in-car.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">funding event</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 024</span>
+  </div>
+
+  <h2>Why Mahindra Racing</h2>
+  <p>Mahindra Racing is a sustainability-and-EV-led FE team (backed by an EV-and-renewables conglomerate) with an open clean-energy/electrification lane, so a home-electrification + VPP partner is on-brand. The value centres on verified renewable energy/VPP for the team plus the European EV-owner audience, not car technology.</p>
+
+  <h2>Value to Mahindra Racing &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A leaning B - concrete mechanics. (1) ENERGY / VPP: 1KOMMA5&#39;s Heartbeat VPP, solar+storage and EV charging can supply and optimise verified renewable power for the team&#39;s facilities and operations (and charge its road/ops fleet), with a hard-data sustainability story FE&#39;s net-zero agenda rewards - operationally real, if off-car. (2) AUDIENCE / B2C: this is the rare case where the team&#39;s fans ARE the sponsor&#39;s customers - FE&#39;s EV-positive European audience is 1KOMMA5&#39;s market - so activations (home-electrification fan offers, host-city campaigns) are a genuine acquisition channel, not decoration. (3) BRAND / TALENT: &#39;the team that races on electricity, powered by the company electrifying European homes&#39; is an ownable co-marketing story, plus an energy/software talent halo. Mahindra gets verified renewable energy + a relevant consumer-brand partner; 1KOMMA5 gets an on-message stage in front of its customers.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Value-tier Official Clean-Energy / Electrification Partner on Mahindra Racing, minimum three years, ~$2-4M/yr, centred on a Heartbeat VPP + renewable-power workstream for the team plus a European EV-owner fan-acquisition and content programme.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Philipp Schroder</div>
+        <div class="role">Co-Founder &amp; CEO, 1KOMMA5° - verified (ex-Tesla Germany, ex-Sonnen)</div>
+        <div class="bio">Co-founder and CEO with deep EV/energy pedigree (ran Tesla Germany, led Sonnen) - the owner of brand/partnership decisions at this founder-led company and the entry point. Decision path: Schroder (brand/strategy) with the marketing/brand leadership as activation counterpart; confirm the brand lead before outreach.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Philipp - Formula E&#39;s fans are your customers: EV-positive, urban, European. As you build toward an IPO, powering a Mahindra with Heartbeat-optimised renewable energy and turning FE fans into 1KOMMA5 customers is an acquisition channel, not a logo. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Scaling fast and organically (~EUR520M revenue, debt-free) after a EUR150M pre-IPO round, with a Nasdaq listing intended - a brand-build window, though the IPO has been delayed amid policy headwinds.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">~$2.4B valuation, ~EUR400M raised, debt-free - funds a value-to-mid tier comfortably (not a marquee spend).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Clean energy / electrification / VPP on the electric racing series is on-message, and there&#39;s a rare audience match - FE&#39;s EV-positive European fans are exactly 1KOMMA5&#39;s customers.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">An IPO/brand window and the European electrification push, but no dated FE trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A leaning B: its Heartbeat VPP, solar/storage and EV charging can power and optimise the team&#39;s facilities/operations with verified renewable energy - operationally real, though not in-car.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Mid-cap, value-tier capacity</span> &nbsp;<span class="rc">At ~$2.4B it funds a value tier, not a marquee deal. <b>Counter:</b> Right-size to a value tier tied to a real energy workstream and a measurable fan-acquisition channel - marketing with a return.</span></div>
+  <div class="risk"><span class="rt">Workstream is operational/brand, not in-car</span> &nbsp;<span class="rc">1KOMMA5 doesn&#39;t make race-car tech. <b>Counter:</b> Scored MODE-A-leaning-B; name the concrete energy/VPP + fan-acquisition mechanics, not a logo.</span></div>
+  <div class="risk"><span class="rt">IPO/policy uncertainty</span> &nbsp;<span class="rc">The IPO has slipped amid renewable-policy headwinds. <b>Counter:</b> Frame as a brand-build relationship through the IPO window, low-commitment and audience-led.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://app.dealroom.co/news/feed/1komma5-secures-150m-pre-ipo-funding</li><li>https://sifted.eu/articles/1komma5-e150m-pre-ipo-news</li><li>https://1komma5.com/en/press/press-releases/1komma5-raises-pre-ipo-round-of-150-million-euro/</li><li>https://www.clay.com/dossier/1komma5deg-ceo</li><li>https://techfundingnews.com/1komma5-powers-ahead-150m-boost-ipo-ai-home-energy/</li>  </ul>
+</div>
+</body>
+</html>

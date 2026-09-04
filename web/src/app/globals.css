@@ -1,0 +1,330 @@
+@import "tailwindcss";
+
+/* Theme toggle: `data-theme` on <html>, set before hydration by the inline script in
+   layout.tsx (stored choice → else dark on mobile, light on desktop). */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ---- brand tokens (from pipeline/intel/templates/brief.html.j2) ------------------- */
+:root {
+  --navy: #191a48;
+  --gold: #d1ae7a;
+  --gold-deep: #b8955c;
+  --ink: #1a1c2e;
+  --muted: #6b6e84;
+  --hair: #e2e0ea;
+  --paper: #ffffff;
+  --panel: #f5f4f8;
+  --panel-2: #ecebf2;
+  --ok: #2f7d4f;
+  --ok-bg: #eaf4ec;
+  --ok-line: #cfe6d6;
+  --warn: #9a6b1f;
+  --warn-bg: #fbf3e6;
+  --warn-line: #efe0c4;
+  --bad: #9a2f2f;
+  --bad-bg: #f7eaea;
+  --bad-line: #ecd2d2;
+  --shadow: 0 1px 2px rgb(25 26 72 / 0.06), 0 8px 24px -12px rgb(25 26 72 / 0.18);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --ink: #ecebf2;
+  --muted: #a3a5bd;
+  --hair: #2c2e5a;
+  --paper: #0f1030;
+  --panel: #171941;
+  --panel-2: #1f2150;
+  --ok: #7fc99a;
+  --ok-bg: #16311f;
+  --ok-line: #24512f;
+  --warn: #e4bd6e;
+  --warn-bg: #3a2b0f;
+  --warn-line: #5a4418;
+  --bad: #e39393;
+  --bad-bg: #3c1717;
+  --bad-line: #5f2323;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px -12px rgb(0 0 0 / 0.5);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-hair: var(--hair);
+  --color-paper: var(--paper);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-ok: var(--ok);
+  --color-ok-bg: var(--ok-bg);
+  --color-ok-line: var(--ok-line);
+  --color-warn: var(--warn);
+  --color-warn-bg: var(--warn-bg);
+  --color-warn-line: var(--warn-line);
+  --color-bad: var(--bad);
+  --color-bad-bg: var(--bad-bg);
+  --color-bad-line: var(--bad-line);
+  --font-display: var(--font-lora), Georgia, "Times New Roman", serif;
+  --font-ui: var(--font-poppins), "Helvetica Neue", Arial, sans-serif;
+  --shadow-card: var(--shadow);
+}
+
+/* ---- base ----------------------------------------------------------------------- */
+html {
+  background: var(--paper);
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior-y: none;
+}
+::selection {
+  background: var(--gold);
+  color: var(--navy);
+}
+a {
+  color: inherit;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ---- house styles (mirrors the brief's chip / score-box / panel language) ------------ */
+@utility eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+@utility kicker {
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+@utility h-rule {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--hair);
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+@utility chip {
+  border: 1px solid var(--hair);
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--paper);
+}
+@utility chip-k {
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+@utility chip-v {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 0.2rem;
+  line-height: 1.15;
+}
+@utility scorebox {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.8rem 1rem 0.65rem;
+  min-width: 7.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(209 174 122 / 0.35);
+}
+@utility panel {
+  background: var(--panel);
+  border: 1px solid var(--hair);
+  border-radius: 12px;
+}
+@utility card {
+  background: var(--paper);
+  border: 1px solid var(--hair);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+@utility btn {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.05rem;
+  border: 1px solid var(--hair);
+  background: var(--paper);
+  color: var(--ink);
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    opacity 0.15s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+@utility btn-primary {
+  background: var(--navy);
+  color: var(--gold);
+  border-color: var(--navy);
+}
+@utility btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+@utility btn-danger {
+  color: var(--bad);
+  border-color: var(--bad-line);
+  background: var(--bad-bg);
+}
+@utility pill {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  padding: 0.22rem 0.5rem;
+  border: 1px solid var(--hair);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+@utility pill-ok {
+  background: var(--ok-bg);
+  color: var(--ok);
+  border-color: var(--ok-line);
+}
+@utility pill-warn {
+  background: var(--warn-bg);
+  color: var(--warn);
+  border-color: var(--warn-line);
+}
+@utility pill-bad {
+  background: var(--bad-bg);
+  color: var(--bad);
+  border-color: var(--bad-line);
+}
+@utility pill-navy {
+  background: var(--navy);
+  color: var(--gold);
+  border-color: var(--navy);
+}
+@utility pill-muted {
+  background: var(--panel);
+  color: var(--muted);
+}
+@utility field {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  width: 100%;
+  border: 1px solid var(--hair);
+  border-radius: 10px;
+  background: var(--paper);
+  padding: 0.6rem 0.8rem;
+  color: var(--ink);
+}
+@utility quote {
+  background: var(--panel);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  padding: 0.75rem 1rem;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn:not(:disabled):hover {
+  border-color: var(--gold);
+}
+.field::placeholder {
+  color: var(--muted);
+}
+
+/* Highlighted spans inside brief copy: the writer marks them `<font>`; the renderer
+   turns them into <b class="hl">. */
+.hl,
+.prose-brief b {
+  color: var(--gold-deep);
+  font-family: var(--font-ui);
+  font-size: 0.92em;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+[data-theme="dark"] .hl,
+[data-theme="dark"] .prose-brief b {
+  color: var(--gold);
+}
+
+/* pdf.js pages */
+.react-pdf__Page {
+  margin: 0 auto 1rem;
+  box-shadow: var(--shadow);
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.react-pdf__Page__canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* iOS PWA safe areas */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

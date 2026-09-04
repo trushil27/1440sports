@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Infineon Technologies</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "INFINEON TECHNOLOGIES · 16 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 020</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 020 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Infineon Technologies</h1>
+  <div class="classline">Power Semiconductors (Silicon Carbide / EV traction inverters) · Neubiberg (Munich), Germany · FSE: IFX / OTC: IFNNY (~$17.2B revenue; ~$120B market cap)</div>
+
+  <div class="lede">Infineon - the world&#39;s #1 automotive/power-semiconductor maker (~$17.2B revenue, ~$120B market cap) and a silicon-carbide leader - has never been in motorsport, and the SiC traction inverter it builds is the literal heart of a Formula E powertrain.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">79</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Jaguar TCS Racing</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Infineon is the world&#39;s #1 automotive/power-semiconductor company (~$17.2B revenue, ~$120B market cap) and a silicon-carbide (SiC) leader - the power electronics at the heart of every EV traction inverter, where it just set new benchmarks (a 1300V module to 205C). It just raised FY26 guidance on the AI boom and improving automotive orders, and has never entered motorsport. The fit is literal and on-profile (electrification/deep-tech, public co&#39;s in scope): FE powertrains are manufacturer-developed, and the traction inverter - which turns battery DC into the AC that drives the motor, the biggest lever on efficiency, thermal and regen - runs on exactly Infineon&#39;s SiC. Jaguar TCS Racing is a works manufacturer with an open power-semiconductor lane (TCS = IT, Schaeffler = mechanical, Chase = finance). SiC has a prior FE association (onsemi powered the now-departed Mercedes-EQ team), so not pristine, but Infineon is the uncommitted global leader. Verified decision path: CMO Andreas Urschitz, CEO Jochen Hanebeck, Automotive President Peter Schiefer.</p>
+
+  <h2>Why Now</h2>
+  <p>Infineon just raised FY26 guidance on the AI-power and automotive up-cycle and is investing in brand around SiC leadership, so the capital and the appetite to tell its electrification story are aligned now. Electric racing is the sharpest possible proof point for SiC - the 2026 motorsport-wide electrification push (F1 ~50% electric, FE Gen4) makes the narrative timely - and the power-semiconductor lane is open on a works team (Jaguar), so a co-engineering-plus-brand partnership can be claimed before a rival semiconductor maker re-enters the space onsemi vacated.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">~$17.2B</div><div class="pfk">Trailing-twelve-month revenue (FY26 guidance raised)</div></div>
+    <div class="pf"><div class="pfv">~$120B</div><div class="pfk">Market capitalisation (Jun 2026)</div></div>
+    <div class="pf"><div class="pfv">Jochen Hanebeck</div><div class="pfk">CEO &amp; Chairman of the Management Board</div></div>
+    <div class="pf"><div class="pfv">Andreas Urschitz</div><div class="pfk">CMO &amp; Management Board member (since 2022) - decision-maker</div></div>
+    <div class="pf"><div class="pfv">Peter Schiefer</div><div class="pfk">President, Automotive Division (since 2016) - technical counterpart</div></div>
+    <div class="pf"><div class="pfv">silicon carbide</div><div class="pfk">Latest SiC EV-inverter module (1300V, to 205C)</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Jaguar TCS Racing<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Andretti</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">TWG AI, Quest Global, NAGASE</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Nissan</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The world&#39;s #1 automotive/power-semiconductor maker (~$17.2B revenue, ~$120B market cap) and a silicon-carbide leader - the literal heart of an EV traction inverter. Formula E powertrains are manufacturer-developed, so SiC is a REAL in-car workstream, not a halo, and Infineon has never been in motorsport. Jaguar is a works manufacturer with an open power-semiconductor lane. Verified decision path: CMO Andreas Urschitz, with CEO Jochen Hanebeck and Automotive President Peter Schiefer.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">category whitespace</span><span class="flag">funding event</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 020</span>
+  </div>
+
+  <h2>Why Jaguar TCS Racing</h2>
+  <p>Jaguar TCS Racing is a works manufacturer that develops its own powertrain, so Infineon&#39;s SiC can genuinely sit in the inverter - a real co-engineering workstream, not a logo - and its power-semiconductor lane is open (TCS = IT, Schaeffler = mechanical, Chase = finance). It is a premium engineering brand whose efficiency-and-thermal performance story aligns with SiC&#39;s value, and a long-horizon works programme supports a multi-year deal. (Per signals-not-placements, another 1440 signal aimed at Jaguar in a different category does not occupy the power-semi lane.)</p>
+
+  <h2>Value to Jaguar TCS Racing &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A with real, named mechanics. (1) TECHNICAL (the core): the traction inverter is the biggest single lever on an FE car&#39;s efficiency, thermal behaviour and energy recovery, and it runs on power semiconductors - so a partnership puts Infineon&#39;s SiC (its new 1300V/205C class) into Jaguar&#39;s inverter development: a genuine co-engineering workstream for efficiency/thermal/regen gains that translate into lap time and energy management, plus access to the world SiC leader&#39;s applications engineering. &#39;The silicon that powers the win&#39; - a flagship reference, not signage. (2) COMMERCIAL / B2B: Infineon sells to every automaker and Tier-1, and the FE paddock is dense with exactly those OEM/powertrain decision-makers - so hospitality becomes a working enterprise channel, while Jaguar gains a category-leading, deep-pocketed (~$120B) technology anchor in a lane it lacks. (3) BRAND / TALENT: &#39;decarbonisation runs on semiconductors&#39; is an ownable co-marketing narrative on the electric racing series, with an SiC/electrification content series and a power-electronics talent halo. Jaguar gets real inverter-development value; Infineon gets a live SiC reference and a premium B2B stage.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Power-Semiconductor / Traction-Inverter Partner on Jaguar TCS Racing, minimum three years, ~$3-5M/yr, with category exclusivity in power semiconductors and a co-engineering SiC inverter + content workstream.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Andreas Urschitz</div>
+        <div class="role">Chief Marketing Officer &amp; Management Board member, Infineon - verified (since 2022)</div>
+        <div class="bio">CMO and Management Board member - the owner of brand and sponsorship and the right entry point. Decision path: Urschitz (brand/sponsorship) -&gt; CEO &amp; Chairman Jochen Hanebeck (C-level sponsor) -&gt; Peter Schiefer, President of the Automotive Division (technical counterpart who owns the SiC/inverter business), with CFO Sven Schneider on the economics.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Andreas - the traction inverter is the heart of an electric race car, and it runs on your silicon carbide. Jaguar is a works team with that lane open, no SiC maker committed since onsemi left with Mercedes. &#39;The silicon that powers the win&#39; - real engineering, not a logo. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Just raised FY26 guidance on the AI boom and improving automotive order intake, with its SiC portfolio hitting new benchmarks (a 1300V module to 205°C) - a clear up-cycle and brand-investment window.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">~$17.2B revenue and a ~$120B market cap - easily funds a multi-year partner tier.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Power semiconductors are the literal heart of an EV powertrain, so the category is maximally on-message for electric racing; the lane is open on works-team Jaguar (TCS = IT, Schaeffler = mechanical, none is power-semi). SiC has prior FE association (onsemi/Mercedes-EQ, now departed), so not pristine, but Infineon is uncommitted.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">The SiC/EV-power and AI-power semiconductor cycle is running hot and guidance was just raised, but there is no single dated competitor trigger in FE.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">MODE A: the traction inverter - which converts battery DC to motor AC and is the biggest lever on efficiency, thermal and regen - is built on power semiconductors; FE powertrains are manufacturer-developed, so co-engineering Infineon SiC into Jaguar&#39;s inverter is a genuine, deployable workstream.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Prior SiC association in FE</span> &nbsp;<span class="rc">onsemi powered the Mercedes-EQ FE team&#39;s inverter, so the SiC-in-FE story has been told before. <b>Counter:</b> That team has left the grid and the lane is open; Infineon is the global SiC leader and uncommitted - this is a chance to own the category on a current works team.</span></div>
+  <div class="risk"><span class="rt">Would a semiconductor giant sponsor a team?</span> &nbsp;<span class="rc">Infineon is a B2B chipmaker, not a consumer brand. <b>Counter:</b> Infineon has motorsport-brand history (the former Infineon Raceway) and FE is perfectly on-message for &#39;decarbonisation via semiconductors&#39;; the real co-engineering workstream and OEM-buyer audience carry the logic.</span></div>
+  <div class="risk"><span class="rt">Incumbent inverter supply</span> &nbsp;<span class="rc">Jaguar already sources its current inverter semiconductors from somewhere. <b>Counter:</b> Frame this as the named, co-engineering power-semiconductor partnership opportunity (and brand lane), not a claim that Infineon is already in the car - a forward workstream to build.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://companiesmarketcap.com/infineon/revenue/</li><li>https://companiesmarketcap.com/infineon/</li><li>https://www.infineon.com/cms/en/about-infineon/company/management-board/</li><li>https://www.infineon.com/cms/en/about-infineon/company/management-board/andreas-urschitz/</li><li>https://www.infineon.com/dgdl/CV_Schiefer+Peter_0618_EN.pdf?fileId=5546d46154723b070154c32c2a810be1</li><li>https://www.semiconductor-today.com/news_items/2026/may/infineon-290526.shtml</li><li>https://www.eetimes.com/on-semi-brings-silicon-carbide-to-formula-e-power-inverter/</li>  </ul>
+</div>
+</body>
+</html>

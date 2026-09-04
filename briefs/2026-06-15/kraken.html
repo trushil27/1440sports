@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Kraken (Octopus Energy spin-out)</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "KRAKEN (OCTOPUS ENERGY SPIN-OUT) · 15 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° ADHOC &nbsp;·&nbsp; HOT</div>
+
+  <h1>Kraken (Octopus Energy spin-out)</h1>
+  <div class="classline">Utility / Energy AI Software &amp; Grid Flexibility · London, UK · Private ($8.65B; spun out 2026; $500M+ contracted revenue; IPO-track)</div>
+
+  <div class="lede">Octopus Energy spun Kraken out as an independent $8.65B company in a $1B raise (D1 Capital, Fidelity, Ontario Teachers&#39;), IPO-track by mid-2026 - a clean B2B energy-AI platform with real smart-EV-charging tech, never in motorsport, and an open energy lane on the Formula E grid.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">79</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Jaguar TCS Racing</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Kraken, the AI utility-software platform incubated inside Octopus Energy, has just been spun out as an independent company valued at $8.65B in a $1B raise (led by D1 Capital, with Fidelity, Durable and Ontario Teachers&#39;), and is on track for a public listing by mid-2026. It is a clean B2B story: Kraken licenses its platform to global energy giants (EDF, E.ON, Tokyo Gas, Origin, Severn Trent), serving 70M+ utility accounts with $500M+ in contracted annual revenue, while its Kraken Flex arm runs smart-EV-charging, virtual-power-plant and grid-flexibility tech across 2GW+ of managed assets. It has never touched motorsport. For an all-electric championship, a clean-energy / smart-charging platform is an unusually on-message partner, and the energy/grid lane is open on Jaguar TCS Racing (TCS holds the IT/data/title lane, Chase holds financial services). Led by CEO Amir Orad (ex-Sisense, NICE Actimize), with CFO Tim Wan (ex-Asana) - an enterprise-software team built for an IPO and the brand-building that precedes it.</p>
+
+  <h2>Why Now</h2>
+  <p>The spin-out and $1B raise just closed and an IPO is targeted for mid-2026, so the capital and the brand mandate are live right now - and post-spin-out, pre-IPO is exactly when a platform invests in enterprise brand. A clean-energy software leader on the world&#39;s premier electric racing series is a uniquely on-message story, the category lane is open, and a founder-style enterprise-software CEO (Amir Orad) with an IPO to position will move fast on a differentiated, substance-led pitch.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$8.65B</div><div class="pfk">Valuation at spin-out ($1B raise, led by D1 Capital; Fidelity, Durable, Ontario Teachers&#39;)</div></div>
+    <div class="pf"><div class="pfv">70M+</div><div class="pfk">Utility accounts served via licence agreements (EDF, E.ON, Tokyo Gas, Origin)</div></div>
+    <div class="pf"><div class="pfv">$500M+</div><div class="pfk">Contracted annual revenue</div></div>
+    <div class="pf"><div class="pfv">2GW+</div><div class="pfk">Kraken Flex managed distributed-energy assets (smart EV charging, VPP)</div></div>
+    <div class="pf"><div class="pfv">Amir Orad</div><div class="pfk">CEO (appointed Aug 2024; ex-Sisense, NICE Actimize)</div></div>
+    <div class="pf"><div class="pfv">London, UK</div><div class="pfk">Headquarters</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Jaguar TCS Racing<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Porsche</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Nissan</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">DS Penske</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">Octopus Energy just spun Kraken out as an independent $8.65B company ($1B raise led by D1 Capital, Fidelity and Ontario Teachers&#39;), IPO-track by mid-2026. It is a clean B2B energy-AI platform - 70M+ utility accounts, $500M+ contracted revenue - whose Kraken Flex arm runs real smart-EV-charging and grid-flexibility tech. That is a near-perfect, on-message fit for electric racing, the energy/grid lane is open on Jaguar, and CEO Amir Orad has an IPO brand mandate now.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">spinoff unicorn</span><span class="flag">funding event</span><span class="flag">never entered</span><span class="flag">category whitespace</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° ADHOC</span>
+  </div>
+
+  <h2>Why Jaguar TCS Racing</h2>
+  <p>Jaguar TCS Racing is British (matching London-based Kraken), premium, and explicitly sustainability-and-technology-led, with a long-term GEN4 commitment through 2026-2030 - so the relationship can run for the full multi-year horizon. Its energy/grid-software lane is open (TCS owns IT/data and the title, Chase owns finance), letting Kraken own a distinct, on-message &#39;sustainable energy tech&#39; category rather than competing with the incumbent IT partner.</p>
+
+  <h2>Value to Jaguar TCS Racing &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B with real, named mechanics across three fronts. (1) ENERGY / SUSTAINABILITY WORKSTREAM: Kraken Flex runs smart-EV-charging, virtual-power-plant and grid-flexibility tech (2GW+ of managed assets, 200k+ connected devices) - a credible basis to optimise and showcase the energy footprint of the team&#39;s operations and facilities (charging, battery, on-site renewables) and to co-tell a hard-data sustainability story that Formula E&#39;s audience and the FIA&#39;s net-zero agenda actually reward - substance, not a green logo. (2) COMMERCIAL / B2B: Kraken sells to the world&#39;s energy giants (EDF, E.ON, Tokyo Gas, Origin), and Formula E&#39;s paddock and host-city programmes are dense with the utility, government and infrastructure decision-makers it courts - so team hospitality becomes a working enterprise channel, while Jaguar gains a well-capitalised ($8.65B), IPO-track technology anchor that strengthens its commercial roster in a category it currently lacks. (3) BRAND / CONTENT / TALENT: &#39;the software running the world&#39;s energy, powering the team that races on electricity&#39; is an ownable co-marketing narrative, with a content series on energy/AI and a recruiting halo for the data/ML/energy engineers both sides fight for. Jaguar gets a distinctive sustainable-energy-tech partner and a real data story; Kraken gets an on-message global brand stage and a live reference ahead of its IPO.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Sustainable Energy / Grid-Tech Partner tier on Jaguar TCS Racing, minimum three years (aligned to the GEN4 cycle), ~$3-5M/yr, with category exclusivity in energy/grid software and a defined energy-data + sustainability activation workstream.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Amir Orad</div>
+        <div class="role">CEO, Kraken - verified (appointed Aug 2024; ex-Sisense, NICE Actimize)</div>
+        <div class="bio">Dedicated CEO of the newly-independent Kraken, a veteran enterprise-software leader brought in to scale it toward an IPO - the owner of brand positioning at this stage and the right entry point. Co-decision-maker: CFO Tim Wan (ex-Asana), who runs capital-markets/IPO strategy; Octopus founder Greg Jackson remains an influential stakeholder.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Amir - you just spun out at $8.65B with an IPO ahead, and there is no cleaner stage for an energy-AI platform than the world&#39;s electric racing championship. Jaguar&#39;s energy lane is open and it is British, like Kraken. A real sustainability-data workstream, not a logo. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Just spun out of Octopus Energy as an independent company at $8.65B (a $1B raise led by D1 Capital, Fidelity, Durable and Ontario Teachers&#39;), and is IPO-track by mid-2026 - a live spin-out-plus-funding catalyst.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">$8.65B valuation, $500M+ in contracted annual revenue and a fresh $1B round - easily funds a multi-year FE partner tier.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Clean-energy / grid-flexibility / smart-EV-charging tech is a near-perfect category fit for an all-electric championship, and the energy/grid lane is open on Jaguar (TCS holds IT/data, Chase finance).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">An IPO-readiness window (mid-2026) and a fresh-spin-out brand mandate, but no dated competitor clock on the FE grid yet.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE B leaning A: Kraken Flex runs real smart-EV-charging, virtual-power-plant and energy-optimisation tech (2GW+ managed assets) - a credible energy-data/sustainability workstream and content engine, though not an in-car race-system.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">B2B platform, niche brand</span> &nbsp;<span class="rc">Kraken sells to utilities, not consumers, so the sponsorship logic isn&#39;t obvious at first glance. <b>Counter:</b> Formula E&#39;s audience and host-city programmes are full of the utility/government/infrastructure buyers Kraken courts, and the all-electric narrative is uniquely on-message - the audience ROI is direct.</span></div>
+  <div class="risk"><span class="rt">Capital focused on growth/IPO</span> &nbsp;<span class="rc">A pre-IPO spin-out watches discretionary spend. <b>Counter:</b> Right-size to a value-to-mid energy-partner tier tied to a real energy-data workstream and measurable enterprise pipeline, not title-level spend.</span></div>
+  <div class="risk"><span class="rt">Perception overlap with TCS</span> &nbsp;<span class="rc">TCS is Jaguar&#39;s broad technology partner. <b>Counter:</b> Position Kraken precisely in the energy/grid-software vertical (a lane TCS does not hold), not as a general IT partner - the categories are distinct and the engine reads the lane as open.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.cnbc.com/2025/12/30/octopus-energy-to-spinoff-ai-unit-kraken-at-8point65-billion-valuation.html</li><li>https://esgnews.com/octopus-energy-spins-out-kraken-in-1-billion-raise-valuing-utility-ai-platform-at-8-65-billion/</li><li>https://octopus.energy/press/Kraken-appoints-Amir-Orad-as-CEO/</li><li>https://www.evinfrastructurenews.com/ev-technology/ai-powered-vpp-kraken-reaches-2gw-managed-domestic-assets</li><li>https://www.tcs.com/who-we-are/sports-sponsorships/jaguar-tcs-racing-formula-e-data-analytics</li>  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,376 @@
+{
+  "_comment": "Signals log: the record of which hero brief was generated when. last_hero drives the rotation cooldown; log is the running history (brief_no sequential by date). Reconstructed 2026-05-30 to restore Cohesity after an earlier session reset dropped it from the log.",
+  "last_hero": {
+    "cohesity": "2026-05-29",
+    "glean": "2026-05-30",
+    "cohere": "2026-06-02",
+    "1password": "2026-06-03",
+    "alphasense": "2026-06-03",
+    "plaid": "2026-06-05",
+    "ramp": "2026-06-06",
+    "quantinuum": "2026-06-07",
+    "celonis": "2026-06-08",
+    "deepl": "2026-06-09",
+    "honeywell-aerospace": "2026-06-09",
+    "wayve": "2026-06-10",
+    "snyk": "2026-06-11",
+    "helion-energy": "2026-06-11",
+    "uipath": "2026-06-12",
+    "applied-intuition": "2026-06-13",
+    "mistral-ai": "2026-06-15",
+    "infineon": "2026-06-16",
+    "cadence": "2026-06-19",
+    "eaton": "2026-06-20",
+    "commonwealth-fusion": "2026-06-22",
+    "1komma5": "2026-06-23",
+    "sila-nano": "2026-06-24",
+    "nebius": "2026-06-25",
+    "bloom-energy": "2026-06-26",
+    "divergent": "2026-06-27",
+    "niron-magnetics": "2026-06-29",
+    "odyssey": "2026-06-30",
+    "fairmat": "2026-07-01",
+    "higgsfield": "2026-07-02",
+    "cerebras": "2026-07-03",
+    "dsv": "2026-07-04",
+    "sambanova": "2026-07-16"
+  },
+  "log": [
+    {
+      "date": "2026-05-29",
+      "brief_no": "001",
+      "id": "cohesity",
+      "name": "Cohesity",
+      "opportunity": 82,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "Cadillac F1 Team",
+      "note": "F1 proof brief \u2014 shipped with the MD pitch deck"
+    },
+    {
+      "date": "2026-05-30",
+      "brief_no": "002",
+      "id": "glean",
+      "name": "Glean",
+      "opportunity": 72,
+      "tier": "WARM",
+      "series": "FE",
+      "recommended_team": "Mahindra Racing",
+      "note": "Formula E proof brief \u2014 full deep-dive dossier also at pitch/glean-deepdive.pdf"
+    },
+    {
+      "date": "2026-06-02",
+      "brief_no": "003",
+      "id": "cohere",
+      "name": "Cohere",
+      "opportunity": 73,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-03",
+      "brief_no": "004",
+      "id": "1password",
+      "name": "1Password",
+      "opportunity": 72,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-03",
+      "brief_no": "005",
+      "id": "alphasense",
+      "name": "AlphaSense",
+      "opportunity": 75,
+      "tier": "HOT"
+    },
+    {
+      "date": "2026-06-05",
+      "brief_no": "006",
+      "id": "plaid",
+      "name": "Plaid",
+      "opportunity": 71,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-06",
+      "brief_no": "007",
+      "id": "ramp",
+      "name": "Ramp",
+      "opportunity": 84,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "Visa Cash App Racing Bulls",
+      "note": "JFrog was the engine's #1 today but excluded by the MD; Ramp shipped instead (both records re-verified \u2014 Ramp's fabricated 'F1 London race' corrected)."
+    },
+    {
+      "date": "2026-06-07",
+      "brief_no": "008",
+      "id": "quantinuum",
+      "name": "Quantinuum",
+      "opportunity": 76,
+      "tier": "HOT"
+    },
+    {
+      "date": "2026-06-08",
+      "brief_no": "009",
+      "id": "celonis",
+      "name": "Celonis",
+      "opportunity": 73,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-09",
+      "brief_no": "010",
+      "id": "deepl",
+      "name": "DeepL",
+      "opportunity": 71,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-09",
+      "brief_no": "011",
+      "id": "honeywell-aerospace",
+      "name": "Honeywell Aerospace",
+      "opportunity": 69,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-10",
+      "brief_no": "012",
+      "id": "wayve",
+      "name": "Wayve",
+      "opportunity": 74,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-11",
+      "brief_no": "013",
+      "id": "snyk",
+      "name": "Snyk",
+      "opportunity": 72,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-11",
+      "brief_no": "014",
+      "id": "helion-energy",
+      "name": "Helion Energy",
+      "opportunity": 73,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-12",
+      "brief_no": "015",
+      "id": "uipath",
+      "name": "UiPath",
+      "opportunity": 80,
+      "tier": "HOT"
+    },
+    {
+      "date": "2026-06-13",
+      "brief_no": "016",
+      "id": "applied-intuition",
+      "name": "Applied Intuition",
+      "opportunity": 77,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "Haas",
+      "note": "Replaced Abnormal Security (MD: 'not good') and screened out Bridgestone (incoming sole FE tire supplier 2026-27 = deepest already_present; lost F1 tender; mature public incumbent, not our pre-IPO profile). Applied Intuition is a $15B/~$830M-ARR physical-AI & vehicle-software leader whose customers are 18 of the top 20 automakers - the F1 paddock is its exact B2B buyer base, and 'physical AI / autonomy' is an unclaimed grid lane (distinct from generic-AI deals: Anthropic-Williams, TWG-Cadillac). Honest MODE-B fit: brand+audience+engineering adjacency, not an in-car deployment."
+    },
+    {
+      "date": "2026-06-14",
+      "brief_no": "017",
+      "id": "ramp",
+      "name": "Ramp",
+      "opportunity": 84,
+      "tier": "HOT",
+      "kind": "weekly_decision"
+    },
+    {
+      "date": "2026-06-15",
+      "brief_no": "018",
+      "id": "mistral-ai",
+      "name": "Mistral AI",
+      "opportunity": 74,
+      "tier": "WARM",
+      "series": "FE",
+      "recommended_team": "Nissan Formula E",
+      "note": "Chose the freshest strong FE name over the engine's presumptive Wayve (featured just 5 days ago, only cleared cooldown today). Rebuilt Mistral's lighter record: re-verified live (\u20ac11.7B Series C Sep 2025; reportedly raising ~\u20ac3B at ~\u20ac20B per Bloomberg Jun 2026; $830M debt Mar 2026; CEO Arthur Mensch), corrected the decision-maker title (Jon Bock = SVP Marketing, verified), stamped trust fields (fit_lane/domain, key_facts, thesis, leadership_ties []). Nissan FE AI/LLM lane open. Gate 0 blockers, 2 pages."
+    },
+    {
+      "date": "2026-06-16",
+      "brief_no": "019",
+      "id": "infineon",
+      "name": "Infineon Technologies",
+      "opportunity": 79,
+      "tier": "HOT",
+      "series": "FE",
+      "recommended_team": "Jaguar TCS Racing",
+      "note": "Today's FE hero at the signal quality bar, built on the recalibrated electrical/electronics profile. Infineon = world #1 auto/power-semiconductor maker (~$17.2B rev, ~$120B cap), SiC leader. REAL in-car workstream: FE powertrains are manufacturer-developed, so SiC sits in Jaguar's traction inverter (the biggest lever on efficiency/thermal/regen) - not a halo. Verified decision PATH: CMO Andreas Urschitz -> CEO Jochen Hanebeck -> Automotive President Peter Schiefer. Screen-outs done: Eaton (FE-relevant eMobility being spun off/declining -> F1 fit), Porsche (TDK+Synopsys occupy electronics), Mahindra (Renesas). Jaguar power-semi lane OPEN. Gate 0 blockers, 2 pages. (Electra 68 + Watershed 70 + Vertiv 82/F1 also generated this day as bench options.)"
+    },
+    {
+      "date": "2026-06-19",
+      "brief_no": "020",
+      "id": "cadence",
+      "name": "Cadence Design Systems",
+      "opportunity": 79,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "Cadillac F1 Team",
+      "note": "Fri F1 hero. Cadence = computational-engineering leader; just acquired Hexagon's CFD/multiphysics/structural stack (MSC Nastran, Adams) - the literal toolchain F1 cars are designed with. REAL MODE-A workstream; greenfield Cadillac builds its CAE from zero (PRIME LANE). Decision path: SVP Mktg/BD Nimish Modi -> CEO Anirudh Devgan. 0 blockers, 2pp."
+    },
+    {
+      "date": "2026-06-20",
+      "brief_no": "021",
+      "id": "eaton",
+      "name": "Eaton",
+      "opportunity": 76,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "Aston Martin",
+      "note": "Sat F1 hero. Eaton = intelligent-power-management leader (record $27.4B FY25) on the electrification + AI-power supercycle; nVent electrical thread at scale, public. Real workstream: electrical backbone of Aston's new campus/wind-tunnel/sim + trackside; electrical lane OPEN. Decision path: CEO Paulo Ruiz + Marcomms Dir Camie Hanily. 0 blockers, 2pp."
+    },
+    {
+      "date": "2026-06-21",
+      "brief_no": "022",
+      "id": "aumovio",
+      "name": "Aumovio SE",
+      "opportunity": 77,
+      "tier": "HOT",
+      "kind": "weekly_decision",
+      "series": "F1",
+      "recommended_team": "Williams",
+      "note": "Sun weekly DECISION -> PROCEED: Aumovio (born-big spin-off, replacing Odyssey). Continental spun off its automotive group as Aumovio SE (Frankfurt, 18 Sep 2025; ~EUR19.6B sales) - ADAS/sensors/cockpit-HMI/software-defined-vehicle electronics. Versigent archetype at larger scale, on-profile, real race-car-relevant workstream, brand-build motive. CEO Philipp von Hirschheydt + CFO Jutta Donges. Williams electronics/SDV lane OPEN. 0 blockers, 2pp, HOT 77."
+    },
+    {
+      "date": "2026-06-22",
+      "brief_no": "023",
+      "id": "commonwealth-fusion",
+      "name": "Commonwealth Fusion Systems",
+      "opportunity": 71,
+      "tier": "WARM",
+      "series": "FE",
+      "recommended_team": "Andretti",
+      "note": "FE hero (refreshed-bench pick, replacing GE Vernova which stays a bench prospect). Commonwealth Fusion Systems = MIT fusion leader (~$3B raised; $863M Series B2 Aug 2025; NVIDIA/Google/Breakthrough). Why-now: SPARC targets net energy gain Q1 2027 + Google 200MW PPA. HONEST: marquee brand/future-energy halo (fusion not team-deployable) - MODE-B, scored 71 WARM (ops_fit 11). Andretti (American, sustainability, charter) lane OPEN. Decision-maker CEO Bob Mumgaard. 0 blockers, 2pp."
+    },
+    {
+      "date": "2026-06-23",
+      "brief_no": "024",
+      "id": "1komma5",
+      "name": "1KOMMA5\u00b0",
+      "opportunity": 72,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-24",
+      "brief_no": "025",
+      "id": "sila-nano",
+      "name": "Sila Nanotechnologies",
+      "opportunity": 72,
+      "tier": "WARM"
+    },
+    {
+      "date": "2026-06-25",
+      "brief_no": "026",
+      "id": "nebius",
+      "name": "Nebius Group",
+      "opportunity": 82,
+      "tier": "HOT"
+    },
+    {
+      "date": "2026-06-26",
+      "brief_no": "027",
+      "id": "bloom-energy",
+      "name": "Bloom Energy",
+      "opportunity": 80,
+      "tier": "HOT"
+    },
+    {
+      "date": "2026-06-27",
+      "brief_no": "028",
+      "id": "divergent",
+      "name": "Divergent Technologies",
+      "opportunity": 78,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "McLaren",
+      "note": "Sat F1 hero, replacing ElevenLabs (screened out \u2014 already_present: official Audi Revolut F1 AI partner since Jan 2026, the exact workstream pitched; the already_present gate is run FIRST now). Divergent = $2.3B AI additive-manufacturing leader ($290M Series E at $2.3B, Sep 2025; DAPS platform). REAL MODE-A workstream: AI-designed, 3D-printed lightweight structural components (suspension wishbones/uprights) under the cost cap \u2014 already PROVEN, as Divergent prints exactly these for the McLaren W1 hypercar. Grid-check run first: that tie is with McLaren AUTOMOTIVE (road cars), a SEPARATE company from McLaren Racing (F1) \u2014 so Divergent is grid-clean for F1, and the road-car work is an honest warm brand-family bridge, not an existing F1 deal. Additive-manufacturing lane on McLaren reads OPEN (0 conflicts/0 crowding). Decision-maker CEO Lukas Czinger. 0 blockers, 2pp, HOT 78."
+    },
+    {
+      "date": "2026-06-29",
+      "brief_no": "029",
+      "id": "niron-magnetics",
+      "name": "Niron Magnetics",
+      "opportunity": 75,
+      "tier": "HOT",
+      "series": "FE",
+      "recommended_team": "Nissan Formula E",
+      "note": "Mon FE hero \u2014 a NET-NEW company sourced from scratch (MD direction), after a disk-level audit showed the eligible FE bench is exhausted: of 19 eligible FE prospects only \u00d8rsted was never rendered, and it was already rejected. (GE Vernova and Redwood both rolled back this session as repeats \u2014 each had a prior bench render on disk, not just the log.) Niron Magnetics = rare-earth-free permanent-magnet leader (Clean Earth Magnet, iron-nitride; UMN-origin). Capital+identity inflection: ~$214M raised, reportedly raising ~$500M at ~$2-3B (Axios Mar 2026), world's-first commercial-scale iron-nitride plant (1,500 t/yr) online 2026; backers GM/Stellantis/Volvo. REAL MODE-A workstream: the permanent magnet is the heart of the PM synchronous motor FE manufacturers build, and Niron already integrates into EV motors (MATTER variable-flux motor, Jan 2026). Sharp why-now: China's rare-earth export-control crisis. HONEST: race-motor adoption is a multi-year co-engineering commitment (not off-the-shelf), so scored 75 HOT (urgency 13, ops_fit 15) \u2014 not inflated. All facts verified live; reported ~$2-3B raise flagged as reported/in-process, not closed. Nissan EV-tech/motor-materials lane OPEN (gridfit confirmed). Decision-maker CEO Jonathan Rowntree. 0 blockers, 2pp."
+    },
+    {
+      "date": "2026-06-30",
+      "brief_no": "030",
+      "id": "odyssey",
+      "name": "Odyssey",
+      "opportunity": 72,
+      "tier": "WARM",
+      "series": "F1",
+      "recommended_team": "Alpine",
+      "note": "Tue signal \u2014 cadence flexed FE->F1 after FE ran dry (5-search screen-out; ProLogium pulled). Odyssey = AI 'world models' lab, $310M Series B at $1.45B (17 Jun 2026, fresh catalyst); founders Oliver Cameron (ex-Voyage->Cruise) + Jeff Hawke (ex-Wayve). Real MODE-A workstream: generative world-models for driver-in-loop simulation + synthetic strategy data. FULL DISCIPLINE applied + committed verification memo (odyssey-verification.md): already-sent check (log+disk = net-new); every fact re-verified live; CAUGHT + CORRECTED a prior-session fabrication (record listed NVIDIA as an investor \u2014 not in the round; syndicate is Natural Capital/Amazon/AMD/GV/EQT/In-Q-Tel, compute on AWS+AMD); conflict-check re-pointed team Williams->Alpine (Williams's AI partner is Anthropic, covering strategy+sim; also screened out CoreWeave as already_present-Aston). Alpine has NO incumbent AI/sim partner -> PRIME LANE, no conflict. HONEST WARM 72: early research lab (capacity 14), frontier workstream, crowded F1 AI lane. Decision-maker CEO Oliver Cameron. 0 blockers, 2pp."
+    },
+    {
+      "date": "2026-07-01",
+      "brief_no": "031",
+      "id": "fairmat",
+      "name": "Fairmat",
+      "opportunity": 73,
+      "tier": "WARM",
+      "series": "F1",
+      "recommended_team": "Williams",
+      "note": "On-request build (outside-the-box sourcing). Fairmat = French deep-tech recycling carbon-fibre waste into new structural composite (FairPly, patented cold-plasma process); EUR51.5M Series B Apr 2025 (incl. EUR25M EIB), ~$114M raised, backers Bpifrance/Temasek/Pictet; founder-CEO Benjamin Saada. Full discipline + committed verification memo: already-sent (log+disk) net-new; all 6 load-bearing facts verified live (0 corrections); no motorsport presence. KEY REASONING: routed to F1 not FE because FE uses a SPEC chassis (Spark builds the common monocoque) -> recycled composite there is a championship decision, whereas F1 constructors build their OWN ~85%-carbon-fibre cars -> real team MODE-A workstream + Net-Zero-2030 lever. Team Williams (materials lane OPEN; Atlassian/VAST/Keeper/Anthropic all non-materials; no backer conflict). value_to_team written as 3 TWO-WAY exchanges (material<->proving-ground; sustainability-data<->credibility; co-eng-R&D<->buyer-network). HONEST WARM 73: homologation makes fully-structural longer-dated (near-term = non-structural/facility composites + ESG data); value-tier capacity. 0 blockers, 2pp."
+    },
+    {
+      "date": "2026-07-02",
+      "brief_no": "032",
+      "id": "higgsfield",
+      "name": "Higgsfield AI",
+      "opportunity": 75,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "Visa Cash App Racing Bulls",
+      "note": "Thu F1 hero + MD-requested check of Higgsfield AI. Higgsfield = fastest-growing generative-AI VIDEO platform (Cinema Studio), ~$500M revenue run-rate, reportedly raising at ~$5B (Jun 2026, up from $1.3B Jan); founder-CEO Alex Mashrabov (ex-Snap GenAI head). Full discipline + committed verification memo: already-sent (log+disk) net-new; no motorsport presence; 5 facts verified live (raise flagged reported/in-progress, not closed); conflict-free. HEAVILY deal-capable ($5B/$500M rev) - the exact capacity that screened out DeepDrive/energy-AI startups (directly uses MD's 'AI cos are well-backed & suitable' steer). HONEST: MODE-B CONTENT/fan-engagement play (nothing in-car) - scored 75 HOT led by capacity(18)+timing(17), held down by brand_fit(14)/urgency(13)/ops_fit(13). Team Racing Bulls chosen on NARRATIVE over engine's greenfield default (grid's youngest/most social-first team, no AI/content partner, fanbase ~ Higgsfield's users). F1 AI lane crowded but generative-video is a distinct sub-lane (vs ElevenLabs-Audi audio, Anthropic-Williams ops). value_to_team = 3 two-way exchanges (content-engine<->cinematic-canvas; young-audience<->creator-ecosystem; co-marketing<->brand). 0 blockers, 2pp."
+    },
+    {
+      "date": "2026-07-03",
+      "brief_no": "033",
+      "id": "cerebras",
+      "name": "Cerebras Systems",
+      "opportunity": 79,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "Cadillac",
+      "note": "Fri F1 hero, net-new sourced (F1 DB fresh names exhausted \u2014 only Snowflake left, MD-rejected). Distinct AI sub-lane from recent (Odyssey=sim, Higgsfield=content, Nebius=cloud): Cerebras = wafer-scale AI SUPERCOMPUTE (WSE-3), blockbuster Nasdaq IPO May 2026 (~$67B cap; $510M 2025 rev @47% net margin, profitable; OpenAI+AWS deals). Full discipline + committed memo: already-sent (log+disk) net-new; no F1 presence; 5 facts verified live; conflict-free. REAL MODE-A workstream: AI compute for aero/CFD (F1's #1 lap-time lever), honestly bounded by F1's ATR CFD cap (maximises fidelity/iteration per allocated unit + PU/strategy/ML sim) and Cerebras's customer concentration (G42/MBZUAI ~62% of 2025 rev) \u2014 both flagged as risks, not scored away. Team Cadillac greenfield PRIME LANE (American compute champion <-> American works team; 4th 1440 signal there but distinct lane \u2014 signals != placements). value_to_team = 3 two-way exchanges (compute<->benchmark; co-eng-workloads<->validation; talent+brand<->enterprise-reach). Decision-maker CEO Andrew Feldman. 0 blockers, 2pp, 79 HOT."
+    },
+    {
+      "date": "2026-07-04",
+      "brief_no": "034",
+      "id": "dsv",
+      "name": "DSV",
+      "opportunity": 78,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "Cadillac",
+      "note": "Sat F1 hero, sourced from the MD's external 'Prospect Radar' PDF (8 Jul, from Routine) \u2014 treated as UNVERIFIED and re-verified live. Screened all 10 radar names: excluded Sila (our hero 06-24) and Electra (bench-rendered 06-16) as REPEATS the radar missed; DSV chosen as the standout. DSV = world's #1-2 freight forwarder after ~EUR14.3B DB Schenker takeover (~EUR41.6B rev; radar's '\u20ac15.9B' CORRECTED to \u20ac14.3B). Logistics = genuine whitespace + a REAL operational workstream (motorsport is a global freight op; the DP World-McLaren / CEVA-Ferrari model; DHL holds the F1 SERIES deal -> 'dethrone DHL' story). Full discipline + committed memo: already-sent (log+disk) net-new; no F1/FE presence (only regional Porsche Motorsport NA sportscar, Feb 2026 \u2014 verified, proves appetite, clean for F1); 5 facts verified live; softened an unverified radar carbon stat. HONEST: operational/off-car (MODE-A-operational + sustainable-freight decarbonisation), integration to 2028 \u2014 scored 78 HOT. Team Cadillac greenfield PRIME (US new team scaling global freight; our 6th Cadillac signal \u2014 greenfield is open across ALL categories, so it legitimately fits many; Williams/Aston = valid alternates). Decision-maker Group CEO Jens H. Lund. value_to_team = 3 two-way exchanges (freight<->stage; decarbonisation<->ESG; US-pipeline<->client-ecosystem). 0 blockers, 2pp."
+    },
+    {
+      "date": "2026-07-16",
+      "brief_no": "035",
+      "id": "sambanova",
+      "name": "SambaNova Systems",
+      "opportunity": 77,
+      "tier": "HOT",
+      "series": "F1",
+      "recommended_team": "Haas",
+      "note": "From an external '1440 Intelligence Brief — SambaNova' PDF (16 Jul, from Routine). Facts VERIFIED live and accurate (unlike the DSV radar's €15.9B error): $1B Series F first close at $11B (8 Jul 2026, General Atlantic-led; JPMorgan on-prem inference partner; >$2B raised; CEO Rodrigo Liang eyeing 2027 IPO; no motorsport presence). Two JUDGMENT corrections applied: (1) the brief scored it 87/TOP-TIER and put it at Cadillac, which DUPLICATES our Cerebras signal (07-03, same AI-compute category+team; direct competitors for one slot; Cerebras public/$67B/profitable = stronger) — RE-POINTED to Haas on a distinct real-time-INFERENCE angle (pit-wall strategy + secure on-prem telemetry vs Cerebras's factory-CFD training); (2) 87 was INFLATED (above our Vertiv-82/Ramp-84 ceiling) — RE-SCORED honestly to 77 (their ops_fit 13 was the tell). Full discipline + committed memo: already-sent net-new; conflict-free (diversified investors, no team-owner tie). MODE-A-operational, off-car, crowded AI lane. Decision-maker CEO Rodrigo Liang. value_to_team = 3 two-way exchanges. Haas AI-compute lane OPEN (gridfit). 0 blockers, 2pp."
+    }
+  ]
+}

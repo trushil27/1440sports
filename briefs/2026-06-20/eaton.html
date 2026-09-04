@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Eaton</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "EATON · 20 JUN 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 021</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 021 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Eaton</h1>
+  <div class="classline">Intelligent Power Management / Electrical · Dublin, Ireland · NYSE: ETN (record $27.4B FY25 revenue; ~$100B+ cap)</div>
+
+  <div class="lede">Eaton - the intelligent-power-management leader at record $27.4B revenue, riding the electrification and AI-power supercycle - has never been in F1, and the electrical backbone of a modern team&#39;s factory and trackside is its core business.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">76</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Aston Martin</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">8-12 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Eaton, the intelligent-power-management leader, posted record FY25 revenue of $27.4B (+10%) and is concentrating on its core Electrical and Aerospace businesses as electrification, AI-data-centre power and reindustrialisation surge (it is spinning off its smaller Vehicle/eMobility segment). It has never entered F1. The fit is on-profile (the nVent/Versigent electrical thread, at large-cap scale and public) and real: a modern F1 operation - factory, wind tunnel, driver-in-loop simulator, energy-hungry compute and trackside - runs on resilient electrical power, exactly Eaton&#39;s domain. Aston Martin, which built a brand-new campus (factory, wind tunnel, simulator) and now runs its own works power-unit programme, is an intensive electrical-load build with an open electrical lane (its partners are compute/AI/data: Aramco, CoreWeave, Arm, NetApp, Cognition). Verified decision path: CEO Paulo Ruiz (C-level sponsor) and Global Marketing &amp; Communications Director Camie Hanily (brand/sponsorship owner), with Eaton&#39;s data-centre/electrical commercial leadership as technical counterpart.</p>
+
+  <h2>Why Now</h2>
+  <p>Eaton is at the crest of the electrification and AI-power demand cycle, with record revenue and brand investment to match, and F1&#39;s 2026 electrical-heavy rules make a power-management partner on-message. Aston Martin&#39;s new campus and works power-unit programme mean its electrical infrastructure is scaling now.</p>
+
+  <h2>Proof Points <span class="panelnote">— every figure verified to a primary source (see p.2)</span></h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$27.4B</div><div class="pfk">FY25 revenue (record, +10%)</div></div>
+    <div class="pf"><div class="pfv">Paulo Ruiz</div><div class="pfk">CEO (C-level sponsor)</div></div>
+    <div class="pf"><div class="pfv">Camie Hanily</div><div class="pfk">Global Marketing &amp; Communications Director (brand/sponsorship owner)</div></div>
+    <div class="pf"><div class="pfv">Electrical + Aerospace</div><div class="pfk">Strategy: separating Vehicle/eMobility to focus on Electrical + Aerospace</div></div>
+    <div class="pf"><div class="pfv">Dublin, Ireland</div><div class="pfk">Headquarters</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Aston Martin<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Williams</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">The intelligent-power-management leader (record $27.4B FY25 revenue) riding the electrification + AI-data-centre power supercycle. On-profile (the nVent electrical thread at scale, public). Real workstream: the electrical backbone of a team&#39;s new factory, wind tunnel, simulator and trackside operations. Aston Martin&#39;s new campus is the build; the electrical lane is open. Decision path: CEO Paulo Ruiz + Marcomms Director Camie Hanily.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">never entered</span><span class="flag">category whitespace</span><span class="flag">funding event</span>    <span class="flag">discovery: self</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 021</span>
+  </div>
+
+  <h2>Why Aston Martin</h2>
+  <p>Aston Martin&#39;s purpose-built campus - factory, wind tunnel, state-of-the-art simulator - plus a new works power-unit programme is one of the most electrically intensive builds on the grid, and its partner roster is compute/AI/data, not electrical-power, so the lane is open. Eaton can underpin the team&#39;s power resilience and efficiency as a real workstream.</p>
+
+  <h2>Value to Aston Martin &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A, real mechanics. (1) TECHNICAL (the core): a championship F1 operation is electrically intensive - a factory, a wind tunnel, a driver-in-loop simulator, energy-hungry CFD/compute and trackside garages that cannot lose power - and Eaton&#39;s intelligent power management (UPS, switchgear, distribution, energy optimisation) underpins exactly that, improving resilience and energy efficiency across the campus and at the track: a genuine, deployable workstream, not signage. (2) COMMERCIAL / B2B: Eaton sells to data-centre, industrial and utility buyers who populate the F1 paddock - hospitality becomes a pipeline, while Aston gains a deep-pocketed (~$100B+) electrical anchor. (3) BRAND / TALENT: &#39;the power behind performance&#39; ties Eaton to F1&#39;s electrification era, with an electrical-engineering talent halo. Aston gets power resilience/efficiency; Eaton gets a visible reference at its peak.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Official Power-Management / Electrical Partner on Aston Martin, minimum three years, ~$4-6M/yr, with category exclusivity in electrical power management and a deployment across the team&#39;s campus and trackside power.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Paulo Ruiz</div>
+        <div class="role">CEO, Eaton - verified</div>
+        <div class="bio">Chief Executive driving Eaton&#39;s electrical/data-centre growth strategy - the C-level sponsor. Decision path: brand/sponsorship owned by Global Marketing &amp; Communications Director Camie Hanily; Ruiz as executive sponsor; Eaton&#39;s data-centre/electrical commercial leadership (e.g. North American sales lead Molly Murphy) as the technical/commercial counterpart.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Your new campus - factory, wind tunnel, simulator - and a works power unit run on resilient electrical power, and no one owns that lane on the grid. Eaton is the power-management leader at the electrification moment. A real deployment, not a logo. 25 minutes?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Record FY25 revenue of $27.4B (+10%) on the electrification and AI-data-centre power surge, and a strategy now focused on core Electrical + Aerospace - capital and brand momentum are strong.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">~$100B+ market cap, $27.4B revenue - easily funds a top-tier partnership.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Electrical power management is on-profile and motorsport-adjacent, but it overlaps the broader power-infrastructure space; the specific electrical lane is open on Aston Martin&#39;s new campus.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">The electrification/data-centre power cycle is hot, but no single dated trigger in F1.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE A: a modern F1 operation - factory, wind tunnel, driver-in-loop simulator, trackside - is electrically intensive and needs resilient power management, exactly Eaton&#39;s core.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Overlaps the broader power space</span> &nbsp;<span class="rc">Power-infrastructure brands (e.g. cooling/critical-power) are circling F1. <b>Counter:</b> Eaton&#39;s lane is intelligent electrical power management/distribution specifically, distinct and open on Aston Martin&#39;s campus build.</span></div>
+  <div class="risk"><span class="rt">Large-cap, many priorities</span> &nbsp;<span class="rc">A company at peak demand may not prioritise one team. <b>Counter:</b> Frame as a flagship electrification reference at the company&#39;s peak-attention moment, right-sized to a real deployment.</span></div>
+  <div class="risk"><span class="rt">B2B brand logic</span> &nbsp;<span class="rc">Eaton sells to industry, not consumers. <b>Counter:</b> The paddock is Eaton&#39;s buyer base and the campus/trackside power workstream carries the logic.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>https://www.sec.gov/Archives/edgar/data/0001551182/000155118226000002/etn12312025exhibit99.htm</li><li>https://www.eaton.com/us/en-us/company/about-us/leadership-team/corporate-officers.html</li><li>https://tedmag.com/eaton-announces-leadership-changes-realigns-sales-and-marketing/</li>  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Ramp</title>
+<style>
+  /* ===== 1440 Sports brand system (from CMYK logo + Ramp brief N025) ===== */
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "RAMP · 29 MAY 2026"; font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Georgia, serif; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede strong { color: var(--navy); }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: Arial, sans-serif; font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: Arial, sans-serif; font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: Arial, sans-serif; font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+  .chip .v small { font-size: 6.6pt; font-weight: 700; color: var(--gold); display:block; letter-spacing:.08em; }
+
+  h2 { font-family: Arial, sans-serif; font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: Arial, sans-serif; font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: Arial, sans-serif; font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: Arial, sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: Arial, sans-serif; font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (cited key_facts) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfk { font-family: Arial, sans-serif; font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace check from the team-fit engine) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: Arial, sans-serif; font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: Arial, sans-serif; font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: Arial, sans-serif; font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: Arial, sans-serif; background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: Arial, sans-serif; font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 001</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 001 &nbsp;·&nbsp; HOT · TOP TIER</div>
+
+  <h1>Ramp</h1>
+  <div class="classline">Fintech · Corporate Spend Management / AI Finance · New York · Private (~$40B+ pre-money; $750M raise in progress, May 2026)</div>
+
+  <div class="lede">Ramp crossed $1B ARR in August 2025 and is in active talks for a $750M raise above $40B pre-money - a step-change of more than 25% in six months - while opening a London office, with no spend-management brand anywhere on the F1 grid.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">87</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Visa Cash App Racing Bulls</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Ramp&#39;s active $750M raise at above $40B pre-money is the brand-reckoning moment - the point at which a category-defining fintech transitions from growth story to institutional brand. With more than $100B in annualized purchase volume, 50,000+ business customers, profitability up 153% year-on-year, and a freshly opened London office targeting EU/UK onboarding this summer, the commercial clock is already running hard. The grid gap is total: no spend-management or AI-finance brand holds a position anywhere in F1, and direct rival Brex has no motorsport deal, so the entire corporate-spend category sits unoccupied at the paddock level. The single slot that fits Ramp&#39;s profile - its Visa issuing relationship and its EU/UK expansion arc - is open at Visa Cash App Racing Bulls, where Ramp can sit as the spend-intelligence layer above the existing Visa rail rather than competing with it.</p>
+
+  <h2>Why Now</h2>
+  <p>The $750M raise closes a short, well-defined window during which brand-investment authority is at its peak. More concretely, the F1 London race in August 2026 is a live, dated activation for Ramp&#39;s UK business-onboarding launch - a marketing moment the company would otherwise have to manufacture, handed to it by the calendar. Partnership terms must be agreed before that race date locks, because the value of the activation collapses if the deal slips past it.</p>
+
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (1440 team-fit engine)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Visa Cash App Racing Bulls<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Audi</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">Revolut</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Haas</div>
+      <div class="gflab crowded">CROWDED</div>
+      <div class="gfd">Mphasis, RUCKUS Networks, MoneyGram</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+
+  <div class="flags">
+<span class="flag">spinoff unicorn</span><span class="flag">funding event</span><span class="flag">new leadership</span><span class="flag">category whitespace</span>    <span class="flag">discovery: seeded</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/brand/assets/logo-blue-gold@3x.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 001</span>
+  </div>
+
+  <h2>Why Visa Cash App Racing Bulls</h2>
+  <p>Racing Bulls already carries Visa as its title sponsor, and Ramp&#39;s renewed multi-year Visa issuing agreement makes co-presence structural rather than conflicting: Ramp becomes the spend-management intelligence layer sitting above the Visa payment rail, an architecture that reinforces both brands. Cash App&#39;s younger demographic mirrors Ramp&#39;s founder, developer and CFO-suite audience, and no competing spend-management brand is anywhere near the car - so Ramp would not be sharing the category. The August London race lands precisely as Ramp opens UK business onboarding, aligning the team&#39;s biggest home-market moment with Ramp&#39;s biggest market-entry moment.</p>
+
+  <h2>Value to Visa Cash App Racing Bulls &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B - real operational value, off-car. Ramp&#39;s payments rail and back-office stack map directly onto Racing Bulls&#39; commercial machine: paddock supplier settlements, sponsor-activation treasury flows, and a partner-onboarding funnel in which venture-backed, CFO-led companies are exactly the incoming audience the team wants. Ramp&#39;s Visa issuing partnership amplifies rather than displaces the title relationship. In return, the team offers race-weekend brand surfaces that fit a B2B audience: garage hospitality, pit-wall broadcast cuts, and digital founder-audience content timed to the London race. The team gets a modern finance stack and aligned co-marketing; Ramp gets the stage and the calendar anchor.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry at Official Spend Management Partner tier. FOUR YEARS, to span the EU/UK build-out cycle and capture two full FIA calendar rotations through London, Las Vegas and Austin. Estimated $6-9M/yr. Scope: garage and cockpit logo rights, Visa co-activation rights, hospitality at London and Las Vegas, and digital content rights for Ramp&#39;s CFO-audience channels.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Eric Glyman</div>
+        <div class="role">CEO &amp; Co-Founder, Ramp - verified</div>
+        <div class="bio">Glyman co-founded Ramp after co-founding Paribus (acquired by Capital One). He drives all strategic capital allocation and partnership decisions; the $750M raise and the Visa stablecoin card deal are direct outputs of his office, so a sponsorship of this scale is his call to make.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+      <div class="quote">&#34;Eric, Ramp&#39;s Visa issuing deal and the London launch create an exact structural fit with Racing Bulls right now, and the August London race is a ready-made activation for your UK onboarding. Can we book 25 minutes before the calendar locks?&#34;</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">Timing</div>
+      <div class="val">20 <span>/ 20</span></div>
+      <div class="why">Active $750M raise above $40B pre-money plus a newly opened London office converge into a single entry window.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Capacity</div>
+      <div class="val">20 <span>/ 20</span></div>
+      <div class="why">Crossed $1B ARR (Aug 2025), $100B+ annualized purchase volume, profitability up 153% YoY - capacity is not a constraint.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Brand Fit</div>
+      <div class="val">20 <span>/ 20</span></div>
+      <div class="why">Visa issuing-rail overlap with Racing Bulls&#39; title sponsor makes co-presence structural; CFO-suite and developer demo match the team&#39;s audience.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Urgency</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">The August 2026 F1 London race is a hard calendar anchor for Ramp&#39;s UK onboarding launch - the deal must be set before that date locks.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">Ops Fit</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">MODE B: back-office and treasury - Ramp serves the team&#39;s spend and settlement operation rather than the car itself.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">Visa channel conflict</span> &nbsp;<span class="rc">Ramp&#39;s Visa issuing deal could be read as a conflict with the Visa title sponsorship. <b>Counter:</b> It is a structural bridge, not a conflict - frame Ramp as the spend-intelligence layer above the existing Visa relationship; the two roles are architecturally distinct and mutually reinforcing.</span></div>
+  <div class="risk"><span class="rt">Raise timeline slippage</span> &nbsp;<span class="rc">If the $750M close slips, brand-budget authority may pause. <b>Counter:</b> Anchor the outreach to the London race date, which is independent of the raise close and drives its own urgency regardless of financing timing.</span></div>
+
+  <h2>Sources</h2>
+  <ul class="sources">
+<li>1440 Intelligence Brief N 025, 28 May 2026 (attached)</li>  </ul>
+</div>
+</body>
+</html>
