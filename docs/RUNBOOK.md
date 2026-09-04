@@ -43,10 +43,14 @@ APP_COOKIE_SECURE=true
 
 ## 2. First deploy (M1–M5 acceptance)
 
-1. **Railway**: create a project from this repo with `railway.json` (Dockerfile `pipeline/Dockerfile`,
-   cron `30 4,5 * * *` — both UTC firings; the job itself keeps only the 05:30 Europe/London one).
-   Add a Postgres plugin and a volume mounted at `PDF_STORAGE_DIR`. Set the variables above.
-   The pre-deploy command runs `alembic upgrade head` and `python -m intel.seed`.
+1. **Railway**: create a project from this repo with `railway.json` (root `Dockerfile` — if the
+   build log mentions Railpack, set Settings → Build → Builder to *Dockerfile*; cron
+   `30 4,5 * * *` — both UTC firings; the job itself keeps only the 05:30 Europe/London one).
+   Add a Postgres plugin and a volume mounted at `PDF_STORAGE_DIR`. Set the variables above
+   (Railway's `postgresql://` `DATABASE_URL` is accepted as-is; the code pins the psycopg driver).
+   The container entrypoint runs `alembic upgrade head` and `python -m intel.seed` on every
+   start, so a healthy deploy log begins `[entrypoint] applying migrations` →
+   `Running upgrade -> 0001 … 0003` → seed counts → `[entrypoint] starting`.
 2. **Graph consent**: Entra app registration → API permissions → Microsoft Graph → *Application* →
    `Mail.Send` → grant admin consent; Exchange Application Access Policy scoped to
    `GRAPH_SENDER`. (See `scheduling/SCHEDULE_SETUP.md` for the click path.) If consent is refused,
