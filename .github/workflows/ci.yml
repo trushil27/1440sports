@@ -38,17 +38,20 @@ jobs:
           sudo apt-get update -q
           sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2 libffi-dev fonts-liberation fonts-dejavu-core
 
-      - name: Install pipeline
-        run: pip install -e "pipeline[dev,render]"
+      - name: Install pipeline + api
+        run: pip install -e "pipeline[dev,render]" -e "api[dev]"
 
       - name: Lint
-        run: ruff check --config pipeline/pyproject.toml pipeline db
+        run: ruff check --config pipeline/pyproject.toml pipeline db api
 
       - name: Migrations apply on a fresh Postgres
         run: alembic -c db/alembic.ini upgrade head
 
-      - name: Tests
+      - name: Pipeline tests
         run: pytest pipeline/tests
+
+      - name: API tests
+        run: pytest api/tests
 
       - name: Secret scan (no credentials in the repo, ever)
         run: |

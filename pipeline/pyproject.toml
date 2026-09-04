@@ -36,7 +36,11 @@ extend-exclude = ["../engine", "../pitch"]
 select = ["E", "F", "I", "B", "UP"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["intel", "tests"]
+known-first-party = ["intel", "intel_api", "tests"]
+
+[tool.ruff.lint.flake8-bugbear]
+# FastAPI's dependency-injection idiom: Depends()/Query() in argument defaults.
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.params.Depends"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

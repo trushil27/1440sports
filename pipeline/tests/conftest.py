@@ -175,6 +175,6 @@ def session(settings_env: None, migrated_database: str):
             text(
                 "TRUNCATE highlights, outreach_drafts, contacts, brief_actions, calendar_events, "
                 "sponsors, blocklist, alumni, surfaced_log, sends, verifications, claims, briefs, "
-                "candidates, runs RESTART IDENTITY CASCADE"
+                "candidates, runs, passkeys, app_users RESTART IDENTITY CASCADE"
             )
         )

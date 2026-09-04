@@ -248,12 +248,13 @@ class Candidate(Base):
 class Brief(Base):
     __tablename__ = "briefs"
     __table_args__ = (
-        # Idempotency per day: at most one non-blocked brief per run_date.
+        # Idempotency per day: at most one non-blocked LIVE brief per run_date.
+        # Historical imports (M6 backfill) are exempt: the n8n log has several per day.
         Index(
             "uq_briefs_issued_per_day",
             "run_date",
             unique=True,
-            postgresql_where=text("verification_status <> 'blocked'"),
+            postgresql_where=text("verification_status <> 'blocked' AND historical = false"),
         ),
     )
 

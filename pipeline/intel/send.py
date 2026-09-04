@@ -77,6 +77,10 @@ class Mailer(Protocol):
         """Send and return a message id."""
         ...
 
+    def create_draft(self, msg: Outgoing) -> str:
+        """Create a Draft in the sender's mailbox WITHOUT sending; return its id (§8 outreach)."""
+        ...
+
 
 class DryRunMailer:
     channel = SendChannel.app_only
@@ -103,6 +107,16 @@ class DryRunMailer:
         (self.outbox / f"{mid}.eml").write_bytes(bytes(em))
         self.sent.append(msg)
         return mid
+
+    def create_draft(self, msg: Outgoing) -> str:
+        (self.outbox / "drafts").mkdir(parents=True, exist_ok=True)
+        did = f"dryrun-draft-{uuid.uuid4()}"
+        em = EmailMessage()
+        em["To"] = ", ".join(msg.to)
+        em["Subject"] = msg.subject
+        em.set_content(msg.body_text)
+        (self.outbox / "drafts" / f"{did}.eml").write_bytes(bytes(em))
+        return did
 
 
 class GraphMailer:
@@ -154,9 +168,8 @@ class GraphMailer:
         return self._token
 
     # --- send -------------------------------------------------------------------------
-    def send(self, msg: Outgoing) -> str:
-        headers = {"Authorization": f"Bearer {self.token()}", "Content-Type": "application/json"}
-        message: dict[str, Any] = {
+    def _message(self, msg: Outgoing) -> dict[str, Any]:
+        return {
             "subject": msg.subject,
             "body": {
                 "contentType": "HTML" if msg.body_html else "Text",
@@ -174,8 +187,25 @@ class GraphMailer:
                 for a in msg.attachments
             ],
         }
-        base = f"{GRAPH}/users/{self.sender}" if not self.refresh_token else f"{GRAPH}/me"
-        created = self.http.post(f"{base}/messages", headers=headers, content=json.dumps(message))
+
+    def _base(self) -> str:
+        return f"{GRAPH}/users/{self.sender}" if not self.refresh_token else f"{GRAPH}/me"
+
+    def create_draft(self, msg: Outgoing) -> str:
+        """POST /messages only — the draft sits in the mailbox; nothing is sent."""
+        headers = {"Authorization": f"Bearer {self.token()}", "Content-Type": "application/json"}
+        created = self.http.post(
+            f"{self._base()}/messages", headers=headers, content=json.dumps(self._message(msg))
+        )
+        created.raise_for_status()
+        return created.json()["id"]
+
+    def send(self, msg: Outgoing) -> str:
+        headers = {"Authorization": f"Bearer {self.token()}", "Content-Type": "application/json"}
+        base = self._base()
+        created = self.http.post(
+            f"{base}/messages", headers=headers, content=json.dumps(self._message(msg))
+        )
         created.raise_for_status()
         draft = created.json()
         sent = self.http.post(f"{base}/messages/{draft['id']}/send", headers=headers)
