@@ -1,0 +1,535 @@
+{
+  "name": "1440 Daily Intelligence Brief",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 0 6 * * 1-7"
+            }
+          ]
+        }
+      },
+      "id": "bdbf34e0-3c15-4301-9def-643ca0675214",
+      "name": "6am Weekdays Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -672,
+        96
+      ],
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-6\",\n  \"max_tokens\": 12000,\n  \"system\": \"You are the 1440Sports Signal Scanner. Today is {{ $today.format('yyyy-MM-dd') }}. Search the web for fresh F1/Formula E sponsorship signals and return the TEN best qualifying signals as a ranked compact JSON array, best first.\\n\\nSCORING (V2.1): Six gates first, then four dimensions 0-25 each.\\nGates: (1) Tier 1 source. (2) Trigger within 12 months. (3) Capacity: $1B+ valuation or $100M+ ARR. (4) Motorsport relevance 5+/10. (5) Saturation penalty. (6) Alumni check.\\nDimensions: TIMING, CAPACITY, BRAND FIT, URGENCY.\\n\\nALUMNI DATABASE - apply +9 to +12 boost:\\n- Pete Schlampp - now CEO Luminary Cloud (ex-Workday CMO, McLaren deal)\\n- Sarah Franklin - now CEO Lattice (ex-Salesforce CMO, F1 deal)\\n- Brian Humphries - Version 1 + CD&R (ex-Cognizant CEO, Aston Martin)\\n- Genefa Murphy - CMO JFrog (ex-Udemy CMO, McLaren deal)\\n- Gary Steele - CEO Shield AI (ex-Splunk CEO, McLaren deal)\\n\\nDo NOT self-censor or apply any blocklist. Return the genuine top ten by score regardless of whether you think any have been seen before - deduplication is handled downstream in code. Your only job is to find and score the ten strongest fresh signals accurately.\\n\\nReturn ONLY a JSON array of exactly ten signal objects, ranked best first. No preamble, no markdown fences, no explanation. JSON must be complete and valid. Keep string values concise.\\n\\n[\\n  {\\n    \\\"signal_date\\\": \\\"YYYY-MM-DD\\\",\\n    \\\"company\\\": \\\"...\\\",\\n    \\\"score\\\": 82,\\n    \\\"tier\\\": \\\"HOT\\\",\\n    \\\"track\\\": 1,\\n    \\\"person\\\": \\\"...\\\",\\n    \\\"role\\\": \\\"...\\\",\\n    \\\"horizon_weeks\\\": \\\"4-6 weeks\\\",\\n    \\\"source_url\\\": \\\"https://...\\\",\\n    \\\"industry_meta\\\": \\\"Industry - Sub-sector - City - Date\\\",\\n    \\\"recommended_team\\\": \\\"WILLIAMS\\\",\\n    \\\"recommended_series\\\": \\\"F1\\\",\\n    \\\"timing_label\\\": \\\"HOT\\\",\\n    \\\"trigger_reason\\\": \\\"short normalised trigger\\\",\\n    \\\"key_facts\\\": {\\n      \\\"funding\\\": \\\"...\\\", \\\"investors\\\": \\\"...\\\", \\\"revenue\\\": \\\"...\\\", \\\"trigger\\\": \\\"...\\\",\\n      \\\"competitor_signal\\\": \\\"...\\\", \\\"strategic_hook\\\": \\\"...\\\", \\\"us_presence\\\": \\\"...\\\", \\\"alumni_match\\\": \\\"...\\\"\\n    },\\n    \\\"score_breakdown\\\": { \\\"timing\\\": 23, \\\"capacity\\\": 22, \\\"brand_fit\\\": 20, \\\"urgency_or_alumni\\\": 17 }\\n  }\\n]\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Run today's signal scan. Search broadly for fresh F1/Formula E sponsorship targets in the past 7-14 days using multiple distinct searches. Apply V2.1 scoring and the alumni database. Return the ten strongest qualifying signals as one ranked JSON array, best first. Do not self-censor - return real scores for the real top ten. Deduplication is enforced downstream in code. No preamble, no markdown.\"\n    }\n  ],\n  \"tools\": [ {\"type\": \"web_search_20250305\", \"name\": \"web_search\", \"max_uses\": 10} ]\n}",
+        "options": {}
+      },
+      "id": "6f1e8323-48b7-440c-85ed-1a2e678cfc7c",
+      "name": "Anthropic — Run Signals",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -432,
+        96
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "jnre3TuTJLfEtm06",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Claude's delimited response — tolerant; reconstructs SIGNAL_DATA if missing\nconst response = $input.first().json;\nconst textBlocks = (response.content || []).filter(c => c.type === 'text');\nconst fullText = textBlocks.map(b => b.text).join('\\n');\n\n// BRIEF_DATA is mandatory — PDF cannot build without it\nconst briefMatch = fullText.match(/<BRIEF_DATA>([\\s\\S]*?)<\\/BRIEF_DATA>/);\nif (!briefMatch) {\n  throw new Error('BRIEF_DATA block not found — Write Brief output malformed or truncated. Raw: ' + fullText.slice(0, 600));\n}\nlet briefData;\ntry {\n  briefData = JSON.parse(briefMatch[1].trim());\n} catch (e) {\n  throw new Error('BRIEF_DATA found but invalid JSON (likely truncated). Raw: ' + briefMatch[1].slice(0, 600));\n}\n\n// SIGNAL_DATA preferred but recoverable\nlet signal = null;\nconst signalMatch = fullText.match(/<SIGNAL_DATA>([\\s\\S]*?)<\\/SIGNAL_DATA>/);\nif (signalMatch) {\n  try { signal = JSON.parse(signalMatch[1].trim()); } catch (e) { signal = null; }\n}\nif (!signal) {\n  signal = {\n    signal_date: briefData.footer_date || new Date().toISOString().slice(0, 10),\n    top_signal: {\n      company: briefData.company,\n      score: briefData.score,\n      tier: briefData.timing_label,\n      person: briefData.decision_maker_name,\n      role: briefData.decision_maker_role,\n      action: briefData.horizon_label,\n      horizon_weeks: briefData.horizon_label,\n      source_url: \"\"\n    },\n    signals_log: []\n  };\n}\n\nreturn [{\n  json: {\n    ...briefData,\n    signal_date: signal.signal_date,\n    top_signal: signal.top_signal,\n    signals_log: signal.signals_log\n  }\n}];"
+      },
+      "id": "45495beb-5056-4ad4-8a31-a56b25896966",
+      "name": "Parse Claude Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        96
+      ]
+    },
+    {
+      "parameters": {
+        "toRecipients": "trushil.jani@1440sports.com , ricky.paugh@1440sports.com",
+        "subject": "=1440 Intelligence Brief — {{ $('Parse Claude Response').item.json.top_signal.company }} — {{ $today.format('d MMM yyyy') }}",
+        "bodyContent": "=Today's top signal: {{ $('Parse Claude Response').item.json.top_signal.company }}\n\nScore: {{ $('Parse Claude Response').item.json.top_signal.score }}/100 — {{ $('Parse Claude Response').item.json.top_signal.tier }}\nPerson: {{ $('Parse Claude Response').item.json.top_signal.person }} ({{ $('Parse Claude Response').item.json.top_signal.role }})\nAction horizon: {{ $('Parse Claude Response').item.json.top_signal.horizon_weeks }}\n\nFull brief attached.\n\n— 1440 Intelligence Engine",
+        "additionalFields": {
+          "attachments": {
+            "attachments": [
+              {
+                "binaryPropertyName": "data"
+              }
+            ]
+          },
+          "bodyContentType": "Text"
+        }
+      },
+      "id": "1ad73acb-0b66-483c-94a3-2b9b95d1ff79",
+      "name": "Outlook — Send Brief",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2,
+      "position": [
+        912,
+        0
+      ],
+      "webhookId": "f1874724-3d6a-4c1b-9080-5b4c9cac4d2b",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "TvTTwWmZpKi1mcZo",
+          "name": "Microsoft Outlook OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1_9gLcuHJLrT_2wUtCRYGtwjdXMiiG9PSLk3RlbA40j8",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Daily Signals",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Date": "={{ $json.signal_date }}",
+            "Company": "={{ $json.top_signal.company }}",
+            "Score": "={{ $json.top_signal.score }}",
+            "Tier": "={{ $json.top_signal.tier }}",
+            "Track": "={{ $json.top_signal.track }}",
+            "Person": "={{ $json.top_signal.person }}",
+            "Role": "={{ $json.top_signal.role }}",
+            "Action": "={{ $json.top_signal.action }}",
+            "Horizon": "={{ $json.top_signal.horizon_weeks }}",
+            "Source": "={{ $json.top_signal.source_url }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company",
+              "displayName": "Company",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Score",
+              "displayName": "Score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Tier",
+              "displayName": "Tier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Track",
+              "displayName": "Track",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Person",
+              "displayName": "Person",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Role",
+              "displayName": "Role",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Action",
+              "displayName": "Action",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Horizon",
+              "displayName": "Horizon",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Source",
+              "displayName": "Source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "15230a1d-b52f-44d6-a255-8a0bc67a3f9b",
+      "name": "Google Sheets — Log Signal",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        688,
+        192
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ea2AlFt7JMvn9Jcj",
+          "name": "Google Sheets OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://1440-pdf-builder-production.up.railway.app/build",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "db42d613-2f73-406d-8068-3511a0ebe7c8",
+      "name": "1440 Builder — Render PDF",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        688,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// ---- 1440 array parser + deterministic filter + picker (with revisit fallback) ----\n// Dedup is on company name only -- once a company is briefed it stays quiet for\n// 30 days regardless of what news comes out. Prevents same-company-different-trigger repeats.\nconst response = $input.first().json;\nconst textBlocks = (response.content || []).filter(c => c.type === 'text');\nif (textBlocks.length === 0) {\n  throw new Error('Run Signals returned no text content. Raw: ' + JSON.stringify(response).slice(0, 500));\n}\nlet raw = textBlocks.map(b => b.text).join('\\n').trim();\nraw = raw.replace(/\\x60\\x60\\x60json\\s*/gi, '').replace(/\\x60\\x60\\x60\\s*/g, '').trim();\nconst firstBracket = raw.indexOf('[');\nconst lastBracket = raw.lastIndexOf(']');\nif (firstBracket === -1 || lastBracket === -1 || lastBracket <= firstBracket) {\n  throw new Error('No JSON array found in Run Signals output. Likely truncated - raise max_tokens. Raw: ' + raw.slice(0, 800));\n}\nlet candidates;\ntry {\n  candidates = JSON.parse(raw.substring(firstBracket, lastBracket + 1));\n} catch (e) {\n  throw new Error('Run Signals array failed to parse. Raw: ' + raw.slice(0, 800));\n}\nif (!Array.isArray(candidates) || candidates.length === 0) {\n  throw new Error('Parsed value is not a non-empty array. Raw: ' + raw.slice(0, 800));\n}\n\n// HARD BLOCK = 1440 active deals + permanent suppressions. Never sent, period.\nconst HARD_BLOCK = [\n  'Factory AI', 'JFrog', 'Mistral AI', 'Luminary Cloud', 'Netomi',\n  'Shield AI', 'Wayve', 'Lattice', 'Omni Analytics', 'Legora',\n  'Cerebras Systems', 'Sierra'\n];\n\nfunction normalise(name) {\n  return (name || '').toLowerCase()\n    .replace(/\\b(inc|ltd|llc|corp|technologies|technology|ai|the)\\b/g, '')\n    .replace(/[^a-z0-9]/g, '').trim();\n}\nfunction isBlocked(companyNorm, listNorm) {\n  return listNorm.some(function (b) {\n    return b.length > 0 && (companyNorm === b ||\n      companyNorm.indexOf(b) !== -1 || b.indexOf(companyNorm) !== -1);\n  });\n}\n\nconst staticData = $getWorkflowStaticData('global');\nif (!staticData.surfaced) staticData.surfaced = [];\n// For ONE clean test, temporarily uncomment, run once, then re-comment:\n// staticData.surfaced = [];\nconst COOLING_DAYS = 30;\nconst now = Date.now();\nstaticData.surfaced = staticData.surfaced.filter(function (s) {\n  return (now - s.ts) / 86400000 < COOLING_DAYS;\n});\nconst hardBlockNorm = HARD_BLOCK.map(normalise);\n\nconst scanned = [];\nlet winner = null;\nlet revisitCandidate = null;\n\nfor (const c of candidates) {\n  const nameNorm = normalise(c.company);\n  const trigger = ((c.trigger_reason || (c.key_facts && c.key_facts.trigger) || '') + '').toLowerCase().trim();\n  const hard = isBlocked(nameNorm, hardBlockNorm);\n  // Dedup on company name only.\n  const cooling = staticData.surfaced.some(function (s) { return s.name === nameNorm; });\n  let status = 'eligible';\n  if (hard) status = 'hard_blocked';\n  else if (cooling) status = 'dedup_cooling';\n  scanned.push({ company: c.company, score: c.score, status: status });\n  if (status === 'eligible' && !winner) winner = c;\n  if (!hard && !revisitCandidate) revisitCandidate = c;\n}\n\nlet revisitFlag = false;\nif (!winner) {\n  // All candidates were duplicates or hard-blocked. Send the strongest non-active-deal\n  // candidate as a revisit, accepting a re-surface when nothing fresher qualifies.\n  winner = revisitCandidate || candidates[0];\n  revisitFlag = true;\n}\n\nconst winnerNorm = normalise(winner.company);\nconst winnerTrig = ((winner.trigger_reason || (winner.key_facts && winner.key_facts.trigger) || '') + '').toLowerCase().trim();\n// Dedup on company name only.\nconst existingIdx = staticData.surfaced.findIndex(function (s) { return s.name === winnerNorm; });\nif (existingIdx >= 0) staticData.surfaced[existingIdx].ts = now;\nelse staticData.surfaced.push({ name: winnerNorm, trigger: winnerTrig, display: winner.company, ts: now });\n\n// Auto-increment brief number, persisted in static data across runs.\n// Seeded at 9 so the first scheduled run increments to 010, matching the\n// last manually-set brief number. Subsequent runs increment by 1.\nif (typeof staticData.lastBriefNumber !== 'number') staticData.lastBriefNumber = 9;\nstaticData.lastBriefNumber += 1;\nwinner.brief_number = String(staticData.lastBriefNumber).padStart(3, '0');\n\nwinner._revisit = revisitFlag;\nwinner.scanned = scanned;\nreturn [{ json: winner }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -208,
+        96
+      ],
+      "id": "b55be03a-3b16-4989-a37f-880ff26b6e7a",
+      "name": "Parse Signal Data"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-6\",\n  \"max_tokens\": 16000,\n  \"system\": \"You are the 1440Sports Brief Writer. Your ONLY job is to write a fully populated 2-page intelligence brief from signal data provided to you.\\n\\nYou do NOT search the web. All facts are provided in the user message.\\n\\nPAGE COUNT IS HARD-CAPPED AT 2. NEVER 3. If you generate content that would overflow, cut from THE CASE p2 first, then WHY NOW, then risks.\\n\\nBRAND RULES:\\n- Inline bold markup: <font name='Poppins-Bold' size='9.5'>UPPERCASE PHRASE</font>\\n- WHY NOW must start with: <font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;\\n- Opening quote must end with: 25 minutes?&rdquo;\\n\\nTRACK LABEL — CRITICAL:\\n- For Track 1 (Company Signal): track_label must be EXACTLY an empty string \\\"\\\"\\n- For Track 2 (Alumni Signal): track_label must be EXACTLY \\\" · ALUMNI INTELLIGENCE\\\"\\n- NEVER write \\\"TRACK 1\\\" or \\\"TRACK 2\\\" as the track_label value\\n\\nWORD COUNT MAXIMUMS (hard ceilings — count words before submitting):\\n- deck: 50 words MAX\\n- the_case_p1: 95 words MAX (end with one bold uppercase phrase)\\n- the_case_p2: 75 words MAX\\n- why_now_callout: 55 words MAX\\n- why_team_para: 85 words MAX\\n- deal_arch_para: 70 words MAX (include TWO YEARS bold + $/yr)\\n- decision_maker_bio: 50 words MAX\\n- opening_angle_intro: 18 words MAX\\n- opening_angle_quote: 45 words MAX\\n- each risk: 40 words MAX\\n- score cell notes: 8 words MAX EACH\\n\\nCALIBRATION REFERENCE — Cerebras N°007 score cells (target this brevity exactly):\\n- TIMING 24/25: \\\"IPO roadshow live; listing 14 May.\\\"\\n- CAPACITY 24/25: \\\"$26.6B post-money, $510M rev.\\\"\\n- BRAND FIT 21/25: \\\"Speed + precision maps to F1 exactly.\\\"\\n- URGENCY 19/25: \\\"Hard deadline: bell rings 14 May.\\\"\\n\\nCALIBRATION REFERENCE — Cerebras N°007 paragraph density:\\n- the_case_p1 (93 words): \\\"Cerebras filed its S-1/A on 4 May 2026, targeting 28 million Class A shares at $115–$125, raising up to $3.5B at a $26.6B post-money valuation. Lead investors include Fidelity, Tiger Global, AMD and Benchmark. Revenue reached $510M in 2025, up 76% year-on-year, driven by a multi-year OpenAI contract exceeding $20B in aggregate value, alongside AWS and Meta. The Cerebras Wafer Scale Engine — the largest chip ever produced — delivers AI inference at speeds no GPU cluster can match. PRE-IPO BRAND WINDOW CLOSES 14 MAY.\\\"\\n- why_now_callout (53 words): \\\"WHY NOW The IPO roadshow runs institutional book-building from 5–14 May. A sponsorship announcement inside this window lands simultaneously in sell-side analyst notes, institutional investor decks and Bloomberg terminals — amplifying the roadshow narrative at zero incremental cost. The listing bell rings 14 May. Outreach must go today.\\\"\\n\\nRISKS: Write exactly 3 risks, each with bold uppercase label and a specific counter-strategy under 40 words.\\n\\nReturn ONLY the two delimited blocks below, BRIEF_DATA FIRST, then SIGNAL_DATA, nothing else. Both blocks are mandatory and must be complete and valid JSON. Respect every word-count ceiling above so the full output stays well within the token limit — if running long, cut content to stay within limits rather than omitting or truncating either block.\\n\\n<BRIEF_DATA>\\n{\\n  \\\"brief_number\\\": \\\"...\\\",\\n  \\\"track_label\\\": \\\"\\\",\\n  \\\"company\\\": \\\"...\\\",\\n  \\\"industry_meta\\\": \\\"...\\\",\\n  \\\"deck\\\": \\\"...\\\",\\n  \\\"score\\\": 82,\\n  \\\"timing_label\\\": \\\"HOT\\\",\\n  \\\"series_label\\\": \\\"F1\\\",\\n  \\\"team_label\\\": \\\"WILLIAMS\\\",\\n  \\\"horizon_label\\\": \\\"4-6 WKS\\\",\\n  \\\"the_case_p1\\\": \\\"...\\\",\\n  \\\"the_case_p2\\\": \\\"...\\\",\\n  \\\"why_now_callout\\\": \\\"<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;...\\\",\\n  \\\"why_team_label\\\": \\\"WHY WILLIAMS\\\",\\n  \\\"why_team_para\\\": \\\"...\\\",\\n  \\\"deal_arch_para\\\": \\\"... <font name='Poppins-Bold' size='9.5'>TWO YEARS</font> ...\\\",\\n  \\\"decision_maker_name\\\": \\\"...\\\",\\n  \\\"decision_maker_role\\\": \\\"...\\\",\\n  \\\"decision_maker_bio\\\": \\\"...\\\",\\n  \\\"opening_angle_intro\\\": \\\"...\\\",\\n  \\\"opening_angle_quote\\\": \\\"&ldquo;...25 minutes?&rdquo;\\\",\\n  \\\"score_cells\\\": [\\n    [\\\"TIMING\\\", \\\"23\\\", \\\"/ 25\\\", \\\"Short note max 8 words.\\\"],\\n    [\\\"CAPACITY\\\", \\\"22\\\", \\\"/ 25\\\", \\\"Short note max 8 words.\\\"],\\n    [\\\"BRAND FIT\\\", \\\"20\\\", \\\"/ 25\\\", \\\"Short note max 8 words.\\\"],\\n    [\\\"URGENCY\\\", \\\"17\\\", \\\"/ 25\\\", \\\"Short note max 8 words.\\\"]\\n  ],\\n  \\\"risks\\\": [\\n    [\\\"RISK ONE\\\", \\\"Counter strategy under 40 words.\\\"],\\n    [\\\"RISK TWO\\\", \\\"Counter strategy under 40 words.\\\"],\\n    [\\\"RISK THREE\\\", \\\"Counter strategy under 40 words.\\\"]\\n  ],\\n  \\\"footer_company\\\": \\\"COMPANY NAME UPPERCASE\\\",\\n  \\\"footer_date\\\": \\\"7 MAY 2026\\\"\\n}\\n</BRIEF_DATA>\\n\\n<SIGNAL_DATA>\\n{\\\"signal_date\\\":\\\"YYYY-MM-DD\\\",\\\"top_signal\\\":{\\\"company\\\":\\\"...\\\",\\\"score\\\":82,\\\"tier\\\":\\\"HOT\\\",\\\"track\\\":1,\\\"person\\\":\\\"...\\\",\\\"role\\\":\\\"...\\\",\\\"action\\\":\\\"...\\\",\\\"horizon_weeks\\\":\\\"...\\\",\\\"source_url\\\":\\\"https://...\\\"},\\\"signals_log\\\":[{\\\"company\\\":\\\"...\\\",\\\"score\\\":70,\\\"tier\\\":\\\"WARM\\\",\\\"person\\\":\\\"...\\\",\\\"role\\\":\\\"...\\\",\\\"action\\\":\\\"...\\\",\\\"horizon\\\":\\\"...\\\",\\\"source_url\\\":\\\"...\\\"}]}\\n</SIGNAL_DATA>\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Write a full intelligence brief from this signal data.\\n\\nCompany: {{ $json.company }}\\nScore: {{ $json.score }} ({{ $json.tier }})\\nTrack: {{ $json.track }}\\nPerson: {{ $json.person }}\\nRole: {{ $json.role }}\\nIndustry meta: {{ $json.industry_meta }}\\nHorizon: {{ $json.horizon_weeks }}\\nSource URL: {{ $json.source_url }}\\nRecommended team: {{ $json.recommended_team }}\\nRecommended series: {{ $json.recommended_series }}\\nBrief number: {{ $json.brief_number }}\\n\\nKey facts:\\n- Funding: {{ $json.key_facts.funding }}\\n- Investors: {{ $json.key_facts.investors }}\\n- Revenue/ARR: {{ $json.key_facts.revenue }}\\n- Trigger: {{ $json.key_facts.trigger }}\\n- Competitor signal: {{ $json.key_facts.competitor_signal }}\\n- Strategic hook: {{ $json.key_facts.strategic_hook }}\\n- US presence: {{ $json.key_facts.us_presence }}\\n- Alumni match: {{ $json.key_facts.alumni_match }}\\n\\nScore breakdown:\\n- Timing: {{ $json.score_breakdown.timing }}/25\\n- Capacity: {{ $json.score_breakdown.capacity }}/25\\n- Brand fit: {{ $json.score_breakdown.brand_fit }}/25\\n- Urgency or alumni boost: {{ $json.score_breakdown.urgency_or_alumni }}/25\\n\\nWrite every section to the calibration word counts in the system prompt. Match the Cerebras N°007 density benchmark. Exactly 3 risks, each with a specific counter-strategy. Output BRIEF_DATA first, then SIGNAL_DATA. Both blocks complete and valid.\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        16,
+        96
+      ],
+      "id": "82d9dd2f-c80b-430a-a255-a6cbf99e82c0",
+      "name": "Anthropic - Write Brief",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "jnre3TuTJLfEtm06",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const sd = $getWorkflowStaticData('global');\nsd._loop = { attempts: 0, rejects: [] };\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -480,
+        -240
+      ],
+      "id": "c10cd158-1962-44c8-9f4f-bcaa3738f872",
+      "name": "Init Loop"
+    },
+    {
+      "parameters": {
+        "jsCode": "const sd = $getWorkflowStaticData('global');\nif (!sd._loop) sd._loop = { attempts: 0, rejects: [] };\nsd._loop.attempts += 1;\nconst scanned = ($input.first().json.scanned) || [];\nfor (const s of scanned) {\n  if (s && s.company && sd._loop.rejects.indexOf(s.company) === -1) {\n    sd._loop.rejects.push(s.company);\n  }\n}\nconst MAX_ATTEMPTS = 3;\nconst attempts = sd._loop.attempts;\nreturn [{ json: {\n  attempts: attempts,\n  retry: attempts < MAX_ATTEMPTS,\n  rejectedThisRun: sd._loop.rejects.join(', ') || 'none'\n} }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -16,
+        -256
+      ],
+      "id": "16ca954d-5214-42d8-a152-c8dc8e6fab67",
+      "name": "Loop Guard"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "a674decc-f8ed-4b6e-90e6-98561d209f22",
+              "leftValue": "={{ $json._no_signal }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -288,
+        -240
+      ],
+      "id": "35995ddd-f8f5-4efc-ab1b-e72bf70f9dca",
+      "name": "All Dupes"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "a674decc-f8ed-4b6e-90e6-98561d209f22",
+              "leftValue": "={{ $json.retry }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        272,
+        -224
+      ],
+      "id": "c8973a3f-f444-4347-8d55-c0280a7ddcc2",
+      "name": "Retry?"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "6am Weekdays Trigger": {
+      "main": [
+        [
+          {
+            "node": "Anthropic — Run Signals",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic — Run Signals": {
+      "main": [
+        [
+          {
+            "node": "Parse Signal Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Claude Response": {
+      "main": [
+        [
+          {
+            "node": "1440 Builder — Render PDF",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets — Log Signal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1440 Builder — Render PDF": {
+      "main": [
+        [
+          {
+            "node": "Outlook — Send Brief",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Signal Data": {
+      "main": [
+        [
+          {
+            "node": "Anthropic - Write Brief",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic - Write Brief": {
+      "main": [
+        [
+          {
+            "node": "Parse Claude Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Init Loop": {
+      "main": [
+        []
+      ]
+    },
+    "Loop Guard": {
+      "main": [
+        [
+          {
+            "node": "Retry?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "All Dupes": {
+      "main": [
+        [
+          {
+            "node": "Loop Guard",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Retry?": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "3ab42e1d-91fd-4568-a5ad-98d25e4edf63",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5cd94252f2b2540ec240ceaaf06dca671c770e705a4533ba85308ffcd833a15d"
+  },
+  "id": "SLyZcgWP5vl6kEas",
+  "tags": []
+}
