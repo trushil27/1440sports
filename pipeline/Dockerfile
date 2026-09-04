@@ -10,10 +10,13 @@ RUN apt-get update -q \
 
 WORKDIR /app
 COPY pipeline/ /app/pipeline/
+COPY api/ /app/api/
 COPY db/ /app/db/
 COPY spec/ /app/spec/
-RUN pip install --no-cache-dir -e "pipeline[render]"
+RUN pip install --no-cache-dir -e "pipeline[render]" -e "api"
 
-ENV PYTHONUNBUFFERED=1 PYTHONPATH=/app/pipeline TZ=Europe/London
-# The cron schedule lives in railway.json (two UTC firings; intel.schedule picks the London one).
+ENV PYTHONUNBUFFERED=1 PYTHONPATH=/app/pipeline:/app/api TZ=Europe/London
+# One image, two Railway services:
+#   cron job (railway.json):     python -m intel.schedule
+#   API service (api/railway.json): uvicorn intel_api.app:get_app --factory --host 0.0.0.0 --port $PORT
 CMD ["python", "-m", "intel.schedule"]
