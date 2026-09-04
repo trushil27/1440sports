@@ -78,6 +78,26 @@ def extract_json_array(text: str) -> list[Any]:
     raise ParseError("no JSON array found in scanner output (truncated or missing)")
 
 
+def extract_json_object(text: str) -> dict[str, Any]:
+    """Return the first parseable JSON object in ``text`` (same balancing rules as arrays)."""
+    s = _FENCE.sub("", text or "")
+    last_error: Exception | None = None
+    for m in re.finditer(r"\{", s):
+        end = _balanced_span(s, m.start())
+        if end is None:
+            continue
+        try:
+            value = json.loads(s[m.start() : end])
+        except json.JSONDecodeError as exc:
+            last_error = exc
+            continue
+        if isinstance(value, dict):
+            return value
+    if last_error is not None:
+        raise ParseError(f"no valid JSON object found (last decode error: {last_error})")
+    raise ParseError("no JSON object found in output")
+
+
 def _to_str(v: Any) -> str | None:
     if v is None:
         return None

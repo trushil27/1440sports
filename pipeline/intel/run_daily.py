@@ -1,8 +1,9 @@
 """Daily orchestrator — idempotent per date (§4, §6, §9.8).
 
-M2 scope: scan → parse → freshness → blocklist/dedup → gates+score → select, all written
-to the database. Later milestones add verify → write → audit → render → send after
-``select`` (see ``RunOutcome``).
+Stages: scan → parse → freshness → blocklist/dedup → gates+score → select →
+**verify (claims ledger)** → [write → audit → render → send: later milestones].
+A candidate whose ledger is *blocked* is set aside and the next eligible candidate is
+tried, up to ``max_verification_attempts``, before the day is declared no-signal (§6.5).
 """
 
 from __future__ import annotations
@@ -15,7 +16,7 @@ from dataclasses import dataclass
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from intel import dedup, freshness, score
+from intel import dedup, freshness, score, verify
 from intel.config import Settings, get_settings
 from intel.db import session_scope
 from intel.models import (
@@ -41,6 +42,8 @@ class RunOutcome:
     run_date: dt.date
     status: str
     selected_candidate_id: int | None
+    brief_id: int | None = None
+    verification_status: str | None = None
     already_ran: bool = False
     summary: dict | None = None
 
@@ -55,7 +58,14 @@ def _existing_outcome(session: Session, run_date: dt.date) -> RunOutcome | None:
     if issued is not None:
         run = session.get(Run, issued.candidate.run_id)
         return RunOutcome(
-            run.id, run_date, run.status.value, issued.candidate_id, True, run.summary
+            run.id,
+            run_date,
+            run.status.value,
+            issued.candidate_id,
+            issued.id,
+            issued.verification_status.value,
+            True,
+            run.summary,
         )
     done = session.scalar(
         select(Run)
@@ -63,12 +73,9 @@ def _existing_outcome(session: Session, run_date: dt.date) -> RunOutcome | None:
         .order_by(Run.attempt.desc())
     )
     if done is not None:
-        sel = session.scalar(
-            select(Candidate.id).where(
-                Candidate.run_id == done.id, Candidate.decision == CandidateDecision.selected
-            )
+        return RunOutcome(
+            done.id, run_date, done.status.value, None, None, None, True, done.summary
         )
-        return RunOutcome(done.id, run_date, done.status.value, sel, True, done.summary)
     return None
 
 
@@ -90,7 +97,11 @@ def _new_run(session: Session, run_date: dt.date, settings: Settings) -> Run:
 
 
 def triage(
-    session: Session, run: Run, signals: list[ScannedSignal], run_date: dt.date, settings: Settings
+    session: Session,
+    run: Run,
+    signals: list[ScannedSignal],
+    run_date: dt.date,
+    settings: Settings,
 ) -> list[Candidate]:
     """Persist every candidate with its decision. Returns the eligible ones (decision pending)."""
     now = dt.datetime.combine(run_date, dt.time(hour=6), tzinfo=settings.tz)
@@ -98,9 +109,7 @@ def triage(
     for rank, sig in enumerate(signals, start=1):
         norm = company_norm(sig.company)
         tkey = dedup.trigger_key(sig.trigger_text)
-        series = None
-        if sig.recommended_series in ("F1", "FE"):
-            series = Series(sig.recommended_series)
+        series = Series(sig.recommended_series) if sig.recommended_series in ("F1", "FE") else None
         cand = Candidate(
             run_id=run.id,
             rank=rank,
@@ -160,27 +169,36 @@ def triage(
     return eligible
 
 
-def select_candidate(
-    session: Session, eligible: list[Candidate], run_date: dt.date, settings: Settings
-) -> Candidate | None:
-    pool = [
-        ((c.score_breakdown or {}).get("ranking", 0), c.series.value if c.series else None, c)
-        for c in eligible
-    ]
-    chosen = score.select_top(pool, run_date)
-    for c in eligible:
-        if c is chosen:
-            c.decision = CandidateDecision.selected
-            c.decision_reason = (c.decision_reason + "; " if c.decision_reason else "") + (
-                "FE rotation day (Tue/Fri)"
-                if score.fe_rotation_day(run_date) and c.series == Series.FE
-                else "top ranking score"
-            )
-        else:
-            c.decision = CandidateDecision.not_selected
-            c.decision_reason = "eligible but outranked"
+def rank_eligible(eligible: list[Candidate], run_date: dt.date) -> list[Candidate]:
+    """Selection order: FE first on Tue/Fri (rotation), then by ranking score desc."""
+    by_score = sorted(
+        eligible, key=lambda c: (c.score_breakdown or {}).get("ranking", 0), reverse=True
+    )
+    if score.fe_rotation_day(run_date):
+        fe = [c for c in by_score if c.series == Series.FE]
+        rest = [c for c in by_score if c.series != Series.FE]
+        return fe + rest
+    return by_score
+
+
+def _signal_of(cand: Candidate) -> ScannedSignal:
+    return ScannedSignal.model_validate(cand.raw_json)
+
+
+def verify_candidate(
+    session: Session,
+    cand: Candidate,
+    run_date: dt.date,
+    verifier: verify.Verifier,
+) -> tuple[Brief, verify.LedgerResult]:
+    """Create the Brief row for ``cand`` and run the pre-write claims ledger on its key facts."""
+    brief = Brief(candidate_id=cand.id, run_date=run_date)
+    session.add(brief)
     session.flush()
-    return chosen  # type: ignore[return-value]
+    sig = _signal_of(cand)
+    drafts = verify.claims_from_signal(sig)
+    result = verify.run_ledger(session, brief, drafts, sig.company, run_date, verifier)
+    return brief, result
 
 
 def run_day(
@@ -188,12 +206,14 @@ def run_day(
     settings: Settings | None = None,
     scanner: Scanner | None = None,
     session: Session | None = None,
+    verifier: verify.Verifier | None = None,
 ) -> RunOutcome:
-    """Run the M2 stages for one date. Safe to call twice: the second call is a no-op."""
+    """Run the pipeline for one date. Safe to call twice: the second call is a no-op."""
     settings = settings or get_settings()
     if session is None:
         with session_scope() as s:
-            return run_day(run_date, settings, scanner, s)
+            return run_day(run_date, settings, scanner, s, verifier)
+    verifier = verifier or verify.default_verifier(settings)
 
     existing = _existing_outcome(session, run_date)
     if existing is not None:
@@ -209,27 +229,71 @@ def run_day(
         return RunOutcome(run.id, run_date, "failed", None, summary={"error": str(exc)})
 
     eligible = triage(session, run, signals, run_date, settings)
-    chosen = select_candidate(session, eligible, run_date, settings)
+    ordered = rank_eligible(eligible, run_date)
+    now = dt.datetime.combine(run_date, dt.time(hour=6), tzinfo=settings.tz)
+    verification_log: list[dict] = []
+    issued: tuple[Candidate, Brief, verify.LedgerResult] | None = None
+
+    for cand in ordered[: settings.max_verification_attempts]:
+        cand.decision = CandidateDecision.selected
+        why = (
+            "FE rotation day (Tue/Fri)"
+            if score.fe_rotation_day(run_date) and cand.series == Series.FE
+            else "top ranking score"
+        )
+        cand.decision_reason = f"{cand.decision_reason}; {why}" if cand.decision_reason else why
+        brief, result = verify_candidate(session, cand, run_date, verifier)
+        verification_log.append(
+            {
+                "candidate_id": cand.id,
+                "company": cand.company_raw,
+                "brief_id": brief.id,
+                "status": result.status.value,
+                "counts": result.counts,
+                "blocking": result.blocking,
+            }
+        )
+        if result.status == VerificationStatus.blocked:
+            cand.decision = CandidateDecision.verification_blocked
+            cand.decision_reason = "contradicted load-bearing claim: " + " | ".join(result.blocking)
+            continue
+        issued = (cand, brief, result)
+        break
+
+    for cand in ordered:
+        if cand.decision == CandidateDecision.pending:
+            cand.decision = CandidateDecision.not_selected
+            cand.decision_reason = "eligible but outranked"
+
     counts: dict[str, int] = {}
     for c in run.candidates:
         counts[c.decision.value] = counts.get(c.decision.value, 0) + 1
-    run.summary = {"candidates": len(signals), "decisions": counts}
-    if chosen is None:
+    run.summary = {
+        "candidates": len(signals),
+        "decisions": counts,
+        "verification": verification_log,
+    }
+    run.finished_at = dt.datetime.now(dt.UTC)
+
+    if issued is None:
         run.status = RunStatus.no_signal
-        run.finished_at = dt.datetime.now(dt.UTC)
         session.flush()
         return RunOutcome(run.id, run_date, "no_signal", None, summary=run.summary)
 
-    # M2 boundary: selection is recorded as "surfaced" here. From M3 on, the surfaced_log
-    # row is attached to the issued brief (and unwound when verification blocks it).
-    now = dt.datetime.combine(run_date, dt.time(hour=6), tzinfo=settings.tz)
+    cand, brief, result = issued
     dedup.record_surfaced(
-        session, chosen.company_norm, chosen.trigger_reason_norm or "other", chosen.company_raw, now
+        session,
+        cand.company_norm,
+        cand.trigger_reason_norm or "other",
+        cand.company_raw,
+        now,
+        brief.id,
     )
     run.status = RunStatus.success
-    run.finished_at = dt.datetime.now(dt.UTC)
     session.flush()
-    return RunOutcome(run.id, run_date, "success", chosen.id, summary=run.summary)
+    return RunOutcome(
+        run.id, run_date, "success", cand.id, brief.id, result.status.value, summary=run.summary
+    )
 
 
 def main(argv: list[str] | None = None) -> int:
