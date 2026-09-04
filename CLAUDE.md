@@ -66,9 +66,13 @@ the legacy `engine/` (which stays until M8 cut-over):
 | `pipeline/tests/` | Regression suite incl. the §9 real cases (Lime, Primer, Strava, 1Komma5°, Ramp N° 025 phantom race, Ramp N° 007 layout reference). `python3 -m pytest pipeline/tests` (bootstraps a temp Postgres if no `DATABASE_URL`). |
 | `.github/workflows/ci.yml` | ruff + migrations on postgres:16 + pytest + secret grep. |
 
-**State:** M1–M4 done in code (schema, scan/dedup/score, claims ledger with calendar +
-sponsor-table checks, writer + 13-rule audit + June-format renderer). **Every "live run"
-acceptance item is blocked on `ANTHROPIC_API_KEY`** (not present in this environment).
+**State:** M1–M7 done in code — schema, scan/dedup/score, claims ledger with calendar +
+sponsor-table checks, writer + 13-rule audit + June-format renderer, Graph mailer + §7
+distribution + London scheduler, history backfill (`python -m intel.backfill`), FastAPI
+(`api/`, passkey + magic-link auth) and the Next.js PWA (`web/`). `docs/RUNBOOK.md` is the
+deploy/cut-over checklist. **Every "live run" / shadow-mode acceptance item is blocked on
+credentials this environment does not have** (`ANTHROPIC_API_KEY`, Graph, Railway, Vercel).
+M8 cut-over needs three clean shadow days first.
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;
