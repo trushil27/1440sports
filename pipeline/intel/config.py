@@ -11,9 +11,22 @@ from __future__ import annotations
 import os
 from zoneinfo import ZoneInfo
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 TZ_LONDON = ZoneInfo("Europe/London")
+
+
+def normalise_database_url(url: str) -> str:
+    """Pin the SQLAlchemy URL to the psycopg 3 driver.
+
+    Hosted Postgres (Railway, Heroku, Supabase …) hands out ``postgres://`` or
+    ``postgresql://``; SQLAlchemy would resolve those to psycopg2, which this image
+    does not ship. Only the scheme changes — credentials, host and query stay as given.
+    """
+    for prefix in ("postgres://", "postgresql://"):
+        if url.startswith(prefix):
+            return "postgresql+psycopg://" + url[len(prefix) :]
+    return url
 
 
 class Settings(BaseModel):
@@ -64,6 +77,11 @@ class Settings(BaseModel):
     outbox_dir: str = Field(
         default="storage/outbox", description="Dry-run mailer writes .eml here."
     )
+
+    @field_validator("database_url")
+    @classmethod
+    def _pin_driver(cls, value: str) -> str:
+        return normalise_database_url(value)
 
     @property
     def tz(self) -> ZoneInfo:

@@ -8,7 +8,7 @@ from contextlib import contextmanager
 from sqlalchemy import Engine, create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
-from intel.config import get_settings
+from intel.config import get_settings, normalise_database_url
 
 _engine: Engine | None = None
 _SessionLocal: sessionmaker[Session] | None = None
@@ -18,7 +18,7 @@ def get_engine(url: str | None = None) -> Engine:
     global _engine, _SessionLocal
     if _engine is None or url is not None:
         _engine = create_engine(
-            url or get_settings().database_url,
+            normalise_database_url(url or get_settings().database_url),
             future=True,
             pool_pre_ping=True,
             # psycopg 3 hands back bytes on SQL_ASCII databases; pin the client encoding.

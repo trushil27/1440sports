@@ -14,7 +14,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build image
         run: docker build -t intel:ci .
-      - name: Smoke — entrypoint runs, schedule exits outside the slot (no DB needed for the slot check)
+      - name: Smoke — imports resolve and the schedule step exits cleanly outside the 05:30 slot
+        # --entrypoint bypasses migrations + seeds (there is no database on the runner);
+        # the entrypoint itself is exercised end-to-end against Postgres in the step below.
         run: |
-          docker run --rm intel:ci python -c "import intel.schedule, intel_api.app, weasyprint; print('imports ok')"
-          docker run --rm --entrypoint python intel:ci -m intel.schedule || true
+          docker run --rm --entrypoint python intel:ci -c "import intel.schedule, intel_api.app, weasyprint; print('imports ok')"
+          docker run --rm --entrypoint python intel:ci -m intel.schedule
+      - name: Entrypoint — migrations + seeds against a hosted-style DATABASE_URL, then the schedule step
+        # Railway injects postgresql://…; the code must pin the psycopg driver itself.
+        run: |
+          docker network create ci
+          docker run -d --name pg --network ci -e POSTGRES_PASSWORD=pg -e POSTGRES_DB=intel postgres:16
+          for i in $(seq 1 30); do docker exec pg pg_isready -U postgres && break; sleep 1; done
+          docker run --rm --network ci -e DATABASE_URL=postgresql://postgres:pg@pg:5432/intel intel:ci

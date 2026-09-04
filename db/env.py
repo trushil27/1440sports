@@ -13,6 +13,7 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 
 from intel import models_auth  # noqa: F401  (registers app_users / passkeys on Base)
+from intel.config import normalise_database_url
 from intel.models import Base
 
 config = context.config
@@ -23,7 +24,7 @@ target_metadata = Base.metadata
 
 
 def _url() -> str:
-    return (
+    return normalise_database_url(
         config.attributes.get("url")
         or os.environ.get("DATABASE_URL")
         or config.get_main_option("sqlalchemy.url")
