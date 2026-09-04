@@ -1,0 +1,942 @@
+{
+  "name": "1440 Daily Intelligence Brief",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 47 21 * * 1-7"
+            }
+          ]
+        }
+      },
+      "id": "bdbf34e0-3c15-4301-9def-643ca0675214",
+      "name": "6am Weekdays Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -672,
+        96
+      ],
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-6\",\n  \"max_tokens\": 12000,\n  \"system\": \"You are the 1440Sports Signal Scanner. Today is {{ $today.format('yyyy-MM-dd') }}. Search the web for fresh F1/Formula E sponsorship signals and return the TEN best qualifying signals as a ranked compact JSON array, best first.\\n\\nSCORING (V2.1): Six gates first, then four dimensions 0-25 each.\\nGates: (1) Tier 1 source. (2) Trigger within 12 months. (3) Capacity: $1B+ valuation or $100M+ ARR. (4) Motorsport relevance 5+/10. (5) Saturation penalty. (6) Alumni check.\\nDimensions: TIMING, CAPACITY, BRAND FIT, URGENCY.\\n\\nFE QUOTA — STRUCTURAL REQUIREMENT (non-negotiable):\\nAt least THREE of the ten signals returned must be FE-track (recommended_series: \\\"FE\\\"). This is a hard requirement of the dual-championship mandate, not a tie-breaker. If fewer than three FE candidates reach 55+/100 in your initial pass, run additional FE-specific searches (sustainability, fleet electrification, regulatory urgency, city-state/sovereign, narrative-clean archetypes) until you can return three legitimate FE candidates. Forced FE candidates below 55 are not acceptable — find real ones.\\n\\nTEAM MATCHING — FULL GRID EXPLORATION (non-negotiable):\\n\\nThe recommended_team field must reflect a deliberate match between each company's archetype and that specific team's actual open partner categories as documented in active_sponsor_db.md and team_needs_taxonomy.md. There is no per-team cap and no per-team floor — instead there is a single discipline: every candidate gets its team assigned by genuine matching against the database, not by default reasoning.\\n\\nTHE FULL F1 GRID YOU MUST CONSIDER FOR EVERY CANDIDATE:\\nMercedes-AMG Petronas, Oracle Red Bull Racing, Scuderia Ferrari, McLaren, Aston Martin Aramco, BWT Alpine, Atlassian Williams Racing, Visa Cash App Racing Bulls, Audi F1 Team, MoneyGram Haas F1 Team, Cadillac F1 Team. That is eleven teams. Every candidate's recommended_team must be chosen from this list by matching the company's archetype to that team's actual documented open categories — not by archetype default.\\n\\nTHE FULL FE GRID YOU MUST CONSIDER FOR EVERY FE CANDIDATE:\\nConsult active_sponsor_db.md SECTION 3.3 for the current FE team roster — do not name FE teams from memory; the FE grid changes each season. Match each FE candidate to whichever FE team has the relevant category documented as open.\\n\\nDEFAULT REASONING PATTERNS — FORBIDDEN:\\nThe following pattern-matches are the system's known failure mode and produce daily clustering on the same four teams. Each is wrong:\\n\\n- \\\"Williams has engineering heritage\\\" — every team has engineering heritage. Williams' specific gaps must be the reason, not the heritage label. Williams has a title partner (Atlassian) and is denser than people remember; check the database.\\n- \\\"Aston Martin is the data-infrastructure team\\\" — this was true for ONE deal (Datadog) because CoreWeave is in seat. It is not a permanent label. Most other categories at Aston Martin are filled.\\n- \\\"McLaren is the technology team\\\" — McLaren has 50+ partners and most categories are closed. Naming McLaren as recommended_team requires identifying a SPECIFIC open category in the database, not a vague tech-team association.\\n- \\\"Mercedes is for enterprise SaaS\\\" — Mercedes has Microsoft, SAP, CrowdStrike, BetterUp, Meta AI, Marriott Bonvoy. One of the most saturated rosters on the grid.\\n\\nTEAMS WITH THE HIGHEST COUNT OF DOCUMENTED OPEN CATEGORIES:\\n- Audi F1 Team: no headline cybersec, no headline observability, no AI partner beyond ElevenLabs, no watch partner, fintech limited to Revolut, no headline data-platform partner. Joined 2026 — building roster from scratch.\\n- Cadillac F1 Team: only inaugural 2026 partners (TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, plus Pirelli and Alpinestars). Almost every category empty.\\n- MoneyGram Haas: no cyber, no observability, no fintech, no headline cloud, premium consumer limited to Travis Mathew and Castore.\\n- BWT Alpine: post-Renault refresh leaves multiple slots; current stack lighter than top teams.\\n- Visa Cash App Racing Bulls: has Dynatrace + Confluent in data infrastructure but no headline cloud, no headline cyber.\\n- Scuderia Ferrari: dense roster but specific gaps exist — check the database.\\n- Oracle Red Bull Racing: very dense at the top tier but specific category gaps exist below title-partner level.\\n\\nTHE MATCHING PROTOCOL FOR EVERY CANDIDATE:\\n1. Identify the company's primary archetype (e.g. \\\"observability\\\", \\\"payments\\\", \\\"battery analytics\\\", \\\"identity SaaS\\\").\\n2. Open active_sponsor_db.md mentally and check which teams have that category documented as open or have a clear documented gap.\\n3. Pick the team whose documented gap most cleanly matches the candidate's archetype.\\n4. Verify the team's other documented partners do not create a category conflict.\\n5. If multiple teams have the category open, pick the one where the company's specific GTM or audience also lines up best.\\n6. Default reasoning (\\\"this kind of company always goes to Williams/McLaren/Aston Martin\\\") is the failure mode — do not use it.\\n\\nIf your final ten candidates show clustering on one or two teams, you have defaulted instead of matched. Redistribute by re-running the matching protocol for each candidate against the full grid.\\n\\nALUMNI DATABASE - apply +9 to +12 boost:\\n- Pete Schlampp - now CEO Luminary Cloud (ex-Workday CMO, McLaren deal)\\n- Sarah Franklin - now CEO Lattice (ex-Salesforce CMO, F1 deal)\\n- Brian Humphries - Version 1 + CD&R (ex-Cognizant CEO, Aston Martin)\\n- Genefa Murphy - CMO JFrog (ex-Udemy CMO, McLaren deal)\\n- Gary Steele - CEO Shield AI (ex-Splunk CEO, McLaren deal)\\n\\nDo NOT self-censor or apply any blocklist. Return the genuine top ten by score regardless of whether you think any have been seen before - deduplication is handled downstream in code. Your only job is to find and score the ten strongest fresh signals accurately, with the FE quota AND full-grid team matching applied.\\n\\nReturn ONLY a JSON array of exactly ten signal objects, ranked best first. No preamble, no markdown fences, no explanation. JSON must be complete and valid. Keep string values concise.\\n\\n[\\n  {\\n    \\\"signal_date\\\": \\\"YYYY-MM-DD\\\",\\n    \\\"company\\\": \\\"...\\\",\\n    \\\"score\\\": 82,\\n    \\\"tier\\\": \\\"HOT\\\",\\n    \\\"track\\\": 1,\\n    \\\"person\\\": \\\"...\\\",\\n    \\\"role\\\": \\\"...\\\",\\n    \\\"horizon_weeks\\\": \\\"4-6 weeks\\\",\\n    \\\"source_url\\\": \\\"https://...\\\",\\n    \\\"industry_meta\\\": \\\"Industry - Sub-sector - City - Date\\\",\\n    \\\"recommended_team\\\": \\\"AUDI\\\",\\n    \\\"recommended_series\\\": \\\"F1\\\",\\n    \\\"timing_label\\\": \\\"HOT\\\",\\n    \\\"trigger_reason\\\": \\\"short normalised trigger\\\",\\n    \\\"key_facts\\\": {\\n      \\\"funding\\\": \\\"...\\\", \\\"investors\\\": \\\"...\\\", \\\"revenue\\\": \\\"...\\\", \\\"trigger\\\": \\\"...\\\",\\n      \\\"competitor_signal\\\": \\\"...\\\", \\\"strategic_hook\\\": \\\"...\\\", \\\"us_presence\\\": \\\"...\\\", \\\"alumni_match\\\": \\\"...\\\"\\n    },\\n    \\\"score_breakdown\\\": { \\\"timing\\\": 23, \\\"capacity\\\": 22, \\\"brand_fit\\\": 20, \\\"urgency_or_alumni\\\": 17 }\\n  }\\n]\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Run today's signal scan. Search broadly for fresh F1/Formula E sponsorship targets in the past 7-14 days using multiple distinct searches. Apply V2.1 scoring and the alumni database. Return the ten strongest qualifying signals as one ranked JSON array, best first. THREE must be FE-track. For every candidate, run the matching protocol: walk the full grid (all 11 F1 teams and all current FE teams per active_sponsor_db.md), match the company's archetype against documented open categories, pick the team whose gap most cleanly fits — never by archetype default. If your final ten cluster on one or two teams, you have defaulted; redistribute by re-running the matching protocol. Do not self-censor — return real scores for the real top ten. Deduplication is enforced downstream in code. No preamble, no markdown.\"\n    }\n  ],\n  \"tools\": [\n    {\n      \"type\": \"web_search_20250305\",\n      \"name\": \"web_search\",\n      \"max_uses\": 10\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "6f1e8323-48b7-440c-85ed-1a2e678cfc7c",
+      "name": "Anthropic — Run Signals",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -432,
+        96
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "jnre3TuTJLfEtm06",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Claude's delimited response — tolerant; reconstructs SIGNAL_DATA if missing\nconst response = $input.first().json;\nconst textBlocks = (response.content || []).filter(c => c.type === 'text');\nconst fullText = textBlocks.map(b => b.text).join('\\n');\n\n// BRIEF_DATA is mandatory — PDF cannot build without it\nconst briefMatch = fullText.match(/<BRIEF_DATA>([\\s\\S]*?)<\\/BRIEF_DATA>/);\nif (!briefMatch) {\n  throw new Error('BRIEF_DATA block not found — Write Brief output malformed or truncated. Raw: ' + fullText.slice(0, 600));\n}\nlet briefData;\ntry {\n  briefData = JSON.parse(briefMatch[1].trim());\n} catch (e) {\n  throw new Error('BRIEF_DATA found but invalid JSON (likely truncated). Raw: ' + briefMatch[1].slice(0, 600));\n}\n\n// SIGNAL_DATA preferred but recoverable\nlet signal = null;\nconst signalMatch = fullText.match(/<SIGNAL_DATA>([\\s\\S]*?)<\\/SIGNAL_DATA>/);\nif (signalMatch) {\n  try { signal = JSON.parse(signalMatch[1].trim()); } catch (e) { signal = null; }\n}\nif (!signal) {\n  signal = {\n    signal_date: briefData.footer_date || new Date().toISOString().slice(0, 10),\n    top_signal: {\n      company: briefData.company,\n      score: briefData.score,\n      tier: briefData.timing_label,\n      person: briefData.decision_maker_name,\n      role: briefData.decision_maker_role,\n      action: briefData.horizon_label,\n      horizon_weeks: briefData.horizon_label,\n      source_url: \"\"\n    },\n    signals_log: []\n  };\n}\n\nreturn [{\n  json: {\n    ...briefData,\n    signal_date: signal.signal_date,\n    top_signal: signal.top_signal,\n    signals_log: signal.signals_log\n  }\n}];"
+      },
+      "id": "45495beb-5056-4ad4-8a31-a56b25896966",
+      "name": "Parse Claude Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        96
+      ]
+    },
+    {
+      "parameters": {
+        "toRecipients": "trushil.jani@1440sports.com , trushiljani27@gmail.com",
+        "subject": "=1440 Intelligence Brief — {{ $('Parse Claude Response').item.json.top_signal.company }} — {{ $today.format('d MMM yyyy') }}",
+        "bodyContent": "=Today's top signal: {{ $('Parse Claude Response').item.json.top_signal.company }}\n\nScore: {{ $('Parse Claude Response').item.json.top_signal.score }}/100 — {{ $('Parse Claude Response').item.json.top_signal.tier }}\nPerson: {{ $('Parse Claude Response').item.json.top_signal.person }} ({{ $('Parse Claude Response').item.json.top_signal.role }})\nAction horizon: {{ $('Parse Claude Response').item.json.top_signal.horizon_weeks }}\n\nFull brief attached.\n\n— 1440 Intelligence Engine",
+        "additionalFields": {
+          "attachments": {
+            "attachments": [
+              {
+                "binaryPropertyName": "data"
+              }
+            ]
+          },
+          "bodyContentType": "Text"
+        }
+      },
+      "id": "1ad73acb-0b66-483c-94a3-2b9b95d1ff79",
+      "name": "Outlook — Send Brief",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2,
+      "position": [
+        1200,
+        -288
+      ],
+      "webhookId": "f1874724-3d6a-4c1b-9080-5b4c9cac4d2b",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "TvTTwWmZpKi1mcZo",
+          "name": "Microsoft Outlook OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1_9gLcuHJLrT_2wUtCRYGtwjdXMiiG9PSLk3RlbA40j8",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Daily Signals",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Date": "={{ $json.signal_date }}",
+            "Company": "={{ $json.top_signal.company }}",
+            "Score": "={{ $json.top_signal.score }}",
+            "Tier": "={{ $json.top_signal.tier }}",
+            "Track": "={{ $json.top_signal.track }}",
+            "Person": "={{ $json.top_signal.person }}",
+            "Role": "={{ $json.top_signal.role }}",
+            "Action": "={{ $json.top_signal.action }}",
+            "Horizon": "={{ $json.top_signal.horizon_weeks }}",
+            "Source": "={{ $json.top_signal.source_url }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company",
+              "displayName": "Company",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Score",
+              "displayName": "Score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Tier",
+              "displayName": "Tier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Track",
+              "displayName": "Track",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Person",
+              "displayName": "Person",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Role",
+              "displayName": "Role",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Action",
+              "displayName": "Action",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Horizon",
+              "displayName": "Horizon",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Source",
+              "displayName": "Source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "15230a1d-b52f-44d6-a255-8a0bc67a3f9b",
+      "name": "Google Sheets — Log Signal",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        1200,
+        -496
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ea2AlFt7JMvn9Jcj",
+          "name": "Google Sheets OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://1440-pdf-builder-production.up.railway.app/build",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "db42d613-2f73-406d-8068-3511a0ebe7c8",
+      "name": "1440 Builder — Render PDF",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        976,
+        -400
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// =============================================================================\n// Parse Signal Data — Phase 2.1.9b (parser hardening)\n// PASTE THIS ENTIRE BLOCK into the n8n Parse Signal Data Code node, replacing\n// existing code.\n//\n// Changes from v2.1.9 (marked >>> v2.1.9b):\n//   (1) Parser now uses bracket-depth-balanced scanning instead of\n//       firstBracket-to-lastBracket extraction. Tolerates preamble narration\n//       containing stray \"[\" characters (e.g., \"I'll search [F1, FE]...\").\n//   (2) Parser tries each balanced array region and prefers the one whose\n//       first element has a `company` field. Falls back to any parseable\n//       object array.\n//   (3) Better error messages — shows the LAST 800 chars of raw input so\n//       truncation cases are visible (was first 800, which missed the end).\n//\n// FE rotation logic (from v2.1.9) is unchanged:\n//   FE_FORCE_DAYS = [2, 5, 6] = Tue/Fri/Sat. Edit this one line to change.\n// =============================================================================\n\n// ---- 1440 array parser + deterministic filter + picker (with revisit fallback) ----\nconst response = $input.first().json;\nconst textBlocks = (response.content || []).filter(c => c.type === 'text');\nif (textBlocks.length === 0) {\n  throw new Error('Run Signals returned no text content. Raw: ' + JSON.stringify(response).slice(0, 500));\n}\nlet raw = textBlocks.map(b => b.text).join('\\n').trim();\n\n// >>> v2.1.9b: bracket-depth-balanced scan. Collects every balanced [...] region,\n// then tries each (largest first), preferring ones whose first element has `company`.\nconst arrayCandidates = [];\n{\n  let depth = 0, start = -1;\n  for (let i = 0; i < raw.length; i++) {\n    const c = raw[i];\n    if (c === '[') {\n      if (depth === 0) start = i;\n      depth++;\n    } else if (c === ']') {\n      depth--;\n      if (depth === 0 && start !== -1) {\n        arrayCandidates.push(raw.substring(start, i + 1));\n        start = -1;\n      } else if (depth < 0) {\n        depth = 0; // recover from mismatched closing bracket in narration\n      }\n    }\n  }\n}\nif (arrayCandidates.length === 0) {\n  throw new Error('No bracket-balanced array found in Run Signals output. Likely truncated - raise max_tokens. Raw (last 800): ' + raw.slice(-800));\n}\n\nlet candidates = null;\nlet lastParseError = null;\narrayCandidates.sort((a, b) => b.length - a.length); // largest first\nfor (const cand of arrayCandidates) {\n  try {\n    const parsed = JSON.parse(cand);\n    if (Array.isArray(parsed) && parsed.length > 0 && parsed[0] && typeof parsed[0] === 'object' && 'company' in parsed[0]) {\n      candidates = parsed;\n      break;\n    }\n    if (Array.isArray(parsed) && parsed.length > 0 && parsed[0] && typeof parsed[0] === 'object' && !candidates) {\n      candidates = parsed; // fallback to any object array\n    }\n  } catch (e) {\n    lastParseError = e.message;\n    // Try with code fences stripped\n    const stripped = cand.replace(/```json\\s*/gi, '').replace(/```\\s*/g, '').trim();\n    if (stripped !== cand) {\n      try {\n        const reparsed = JSON.parse(stripped);\n        if (Array.isArray(reparsed) && reparsed.length > 0 && reparsed[0] && 'company' in reparsed[0]) {\n          candidates = reparsed;\n          break;\n        }\n      } catch (e2) { /* skip */ }\n    }\n  }\n}\nif (!candidates) {\n  throw new Error('Bracket-balanced arrays found but none parseable as candidates. Last parse error: ' + lastParseError + '. Raw (last 800): ' + raw.slice(-800));\n}\nif (!Array.isArray(candidates) || candidates.length === 0) {\n  throw new Error('Parsed value is not a non-empty array. Raw (last 800): ' + raw.slice(-800));\n}\n\n// HARD BLOCK = 1440 active deals + permanent suppressions. Never sent, period.\nconst HARD_BLOCK = [\n  'Factory AI', 'JFrog', 'Mistral AI', 'Luminary Cloud', 'Netomi',\n  'Shield AI', 'Wayve', 'Lattice', 'Omni Analytics', 'Legora',\n  'Cerebras Systems', 'Sierra'\n];\n\nfunction normalise(name) {\n  return (name || '').toLowerCase()\n    .replace(/\\b(inc|ltd|llc|corp|technologies|technology|ai|the)\\b/g, '')\n    .replace(/[^a-z0-9]/g, '').trim();\n}\nfunction isBlocked(companyNorm, listNorm) {\n  return listNorm.some(function (b) {\n    return b.length > 0 && (companyNorm === b ||\n      companyNorm.indexOf(b) !== -1 || b.indexOf(companyNorm) !== -1);\n  });\n}\n\nconst staticData = $getWorkflowStaticData('global');\nif (!staticData.surfaced) staticData.surfaced = [];\nconst COOLING_DAYS = 30;\nconst now = Date.now();\nstaticData.surfaced = staticData.surfaced.filter(function (s) {\n  return (now - s.ts) / 86400000 < COOLING_DAYS;\n});\nconst hardBlockNorm = HARD_BLOCK.map(normalise);\n\n// >>> v2.1.9: FE rotation. Force-FE days = Tue (2), Fri (5), Sat (6).\nconst FE_FORCE_DAYS = [2, 5, 6];\nconst todayDow = new Date().getUTCDay();\nconst forceFe = FE_FORCE_DAYS.indexOf(todayDow) >= 0;\n\nconst scanned = [];\nlet anyWinner = null;\nlet feWinner = null;\nlet revisitCandidate = null;\n\nfor (const c of candidates) {\n  const nameNorm = normalise(c.company);\n  const trigger = ((c.trigger_reason || (c.key_facts && c.key_facts.trigger) || '') + '').toLowerCase().trim();\n  const hard = isBlocked(nameNorm, hardBlockNorm);\n  const cooling = staticData.surfaced.some(function (s) { return s.name === nameNorm; });\n  let status = 'eligible';\n  if (hard) status = 'hard_blocked';\n  else if (cooling) status = 'dedup_cooling';\n  scanned.push({ company: c.company, score: c.score, status: status });\n  if (status === 'eligible') {\n    if (!anyWinner) anyWinner = c;\n    const seriesUpper = (c.recommended_series || '').toUpperCase();\n    if (forceFe && seriesUpper === 'FE' && !feWinner) feWinner = c;\n  }\n  if (!hard && !revisitCandidate) revisitCandidate = c;\n}\n\nlet winner = (forceFe && feWinner) ? feWinner : anyWinner;\nconst feForceApplied = !!(forceFe && feWinner);\nconst feForceMissed = forceFe && !feWinner;\n\nlet revisitFlag = false;\nif (!winner) {\n  winner = revisitCandidate || candidates[0];\n  revisitFlag = true;\n}\n\nconst winnerNorm = normalise(winner.company);\nconst winnerTrig = ((winner.trigger_reason || (winner.key_facts && winner.key_facts.trigger) || '') + '').toLowerCase().trim();\nconst existingIdx = staticData.surfaced.findIndex(function (s) { return s.name === winnerNorm; });\nif (existingIdx >= 0) staticData.surfaced[existingIdx].ts = now;\nelse staticData.surfaced.push({ name: winnerNorm, trigger: winnerTrig, display: winner.company, ts: now });\n\nif (typeof staticData.lastBriefNumber !== 'number') staticData.lastBriefNumber = 9;\nstaticData.lastBriefNumber += 1;\nwinner.brief_number = String(staticData.lastBriefNumber).padStart(3, '0');\n\nwinner._revisit = revisitFlag;\nwinner._fe_force_applied = feForceApplied;\nwinner._fe_force_missed = feForceMissed;\nwinner._dow_utc = todayDow;\nwinner.scanned = scanned;\nreturn [{ json: winner }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -208,
+        96
+      ],
+      "id": "b55be03a-3b16-4989-a37f-880ff26b6e7a",
+      "name": "Parse Signal Data"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-6\",\n  \"max_tokens\": 16000,\n  \"system\": \"You are the 1440Sports Brief Writer. Your ONLY job is to write a fully populated 2-page intelligence brief from signal data provided to you.\\n\\nYou do NOT search the web. All facts are provided in the user message.\\n\\nPAGE COUNT IS HARD-CAPPED AT 2. NEVER 3.\\n\\nBRAND RULES:\\n- Inline bold markup: <font name='Poppins-Bold' size='9.5'>UPPERCASE PHRASE</font>\\n- WHY NOW must start with: <font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;\\n- opening_angle_intro must be a DECLARATIVE SETUP STATEMENT, never a rhetorical question.\\n- opening_angle_quote MUST end with a LITERAL 25-minute calendar ask. ACCEPTABLE: 'can we book 25 minutes?', '25 minutes when DASH planning clears?'. NOT ACCEPTABLE: 'the fastest 25 minutes', metaphors. Always closes with: 25 minutes?&rdquo;\\n\\nDECK RULE — STRICTLY ENFORCED:\\n\\nThe deck is COMPANY-SIDE ONLY. What just changed for THE COMPANY, why this is the brand-reckoning moment. Three hard prohibitions:\\n\\n1. The deck MUST NOT make a team-vacancy claim. Patterns like '[TEAM] HAS NO X PARTNER', '[Team] is where X is open', '[Team] has no X on the books' are FORBIDDEN in the deck. They belong in why_team_para. If your draft deck contains a team-vacancy claim, rewrite it as a company-side statement before submitting.\\n2. The deck MAY mention the team only briefly as a destination ('the slot that matches X architecturally is open at [Team]') but MUST NOT explain why that team or argue for the team. Argument lives in why_team_para.\\n3. If unsure, do not mention the team in the deck at all. The Armada N°014 deck names no team and is the cleanest form.\\n\\nCALIBRATION REFERENCE — Armada N°014 deck (40 words, names no team):\\n'Armada closed a $230M oversubscribed Series B on 19 May 2026 at a $2B pre-money valuation. Bookings grew 540% FY25-FY26 and spiked 2,000% in Q1 FY27. A new Arizona factory anchors sovereign, high-performance edge AI at industrial scale.'\\n\\nCALIBRATION REFERENCE — Datadog N°011 deck (44 words, names team only as destination, no vacancy claim):\\n'An observability category-leader has just crossed its first $1B revenue quarter. Two direct competitors are already on the F1 grid; the slot that matches Datadog architecturally is open at Aston Martin, where the data-infrastructure narrative is already being built.'\\n\\nRETRY HANDLING:\\n\\nIf the user message contains a RETRY MODE block (text beginning with '=== RETRY MODE - CORRECTING PREVIOUS DRAFT ==='), correct the previous draft. Fix every listed violation while keeping facts intact. Retry mode produces the corrected brief in one shot — there is no second retry.\\n\\nANTI-HALLUCINATION RULES (NON-NEGOTIABLE):\\nEvery fact must come from the signal data or active_sponsor_db.md / alumni_database.md / team_needs_taxonomy.md. NEVER invent people, dollar figures, percentages, dates, investors, competitor sponsorships, venues, team partners, or product capabilities. THE £100 TEST: would I bet £100 this is exactly right? If no, paraphrase to hedged language or drop the claim.\\n\\nFACT QUALITY DISCIPLINE:\\n- DATED FIGURES with primary-source verb.\\n- ANCHORED PERCENTAGES with base and time period.\\n- NAMED INVESTORS from key_facts.investors verbatim.\\n- NO HOLLOW ADJECTIVES.\\n- QUANTIFIED REACH using specifics.\\n- VENUE/CALENDAR SPECIFICITY tied to GTM footprint.\\n- DECISION-MAKER PRECISION — current title, one verified prior role, strategic relevance.\\n\\nSCORING SCALE (V2.1):\\n- 5 dimensions x 0-20 each. Total cap /100.\\n- HOT TOP TIER when score >= 85.\\n- confidence_level: HIGH | MEDIUM | LOW (do not generate on LOW).\\n\\nVALUE TO [TEAM] SECTION — RENDERS WHEN SCORE >= 70:\\n\\nThe section formerly named WHERE THE TECH FITS is renamed VALUE TO [TEAM] and broadened. It now renders for every brief at score >= 70 OR ops_fit >= 11. Three content modes — pick based on company archetype, not score:\\n\\nMODE A — OPERATIONAL (use when ops_fit >= 14):\\nWhere the company's technology fits in motorsport operation. On-car telemetry, in-factory simulation, on-broadcast feed, pit-wall systems, garage telemetry, race-weekend stack as live demonstration. The Datadog/Cerebras/Nscale archetype.\\nCalibration: 'Datadog's observability stack maps directly to Aston Martin's race-weekend operations — pit-wall analytics, telemetry ingestion, energy and tyre decision feeds. CoreWeave already supplies the team's compute; a Datadog deployment becomes the observability layer over that stack. Deployment surface: pit-wall strategy graphics, engineer headsets, broadcast strategy cuts, factory telemetry wall.'\\n\\nMODE B — COMMERCIAL BACK-OFFICE (use when ops_fit is 11-13, or company is fintech/payments/insurance/treasury):\\nWhere the company's product fits in the team's commercial operation — paddock supplier settlements, sponsor activation banking, treasury operations, partner-onboarding funnel, team-side back-office systems, broadcast-side founder/business audience activation.\\nCalibration: 'Mercury's payments rail maps cleanly to the team's commercial back-office: paddock supplier settlements, sponsor activation banking and the team's own treasury operations. Mercury's startup-CFO product line is a natural fit for the team's partner-onboarding funnel where venture-backed companies dominate incoming enquiries. Race-weekend brand surfaces sit on garage hospitality and broadcast-side founder-audience activation.'\\n\\nMODE C — AUDIENCE / BRAND-PIPELINE (use when ops_fit <= 10 AND company is consumer/lifestyle/media/B2C or pre-IPO brand play):\\nWhere the company's customer base, brand assets and audience pipeline drive value to the team — psychographic overlap with the team's fan growth target, race-weekend activation surfaces (digital, hospitality, athlete content), customer-acquisition framing, brand-moment amplification for IPO/launch.\\nCalibration (Strava archetype): 'Strava's value to BWT Alpine sits in audience and brand pipeline, not on the car. The 180M-strong endurance-athlete user base maps onto Alpine's documented fan-growth demographic — runners, cyclists, triathletes are the highest-engagement segment of F1's expanding under-35 audience. Race-weekend activation: Strava Segments at Silverstone, Austin and Las Vegas drive in-app fan participation; Alpine team-branded challenges convert spectators into measurable Strava subscriber traffic. Pre-IPO, paddock visibility doubles as institutional-narrative collateral for the brand graduation.'\\n\\nFor every brief at score >= 70, set value_section: true and value_content to a 50-70 word paragraph in the correct mode for the company archetype. Set value_section_label to 'VALUE TO ' + team_label (e.g. 'VALUE TO BWT ALPINE', 'VALUE TO RED BULL', 'VALUE TO JAGUAR TCS RACING').\\n\\nIf score < 70, set value_section: false and value_content: ''.\\n\\nDEAL ARCHITECTURE — MINIMUM DURATION:\\nMust propose AT LEAST THREE YEARS. No two-year option. THREE YEARS entry/associate, FOUR YEARS major partner, FIVE YEARS title or category-defining technical alliance.\\n\\nTRACK LABEL:\\n- Track 1: track_label = ''\\n- Track 2: track_label = ' · ALUMNI INTELLIGENCE'\\n\\nDATE HANDLING:\\n- footer_date = TODAY's date 'D MMM YYYY' UPPERCASE\\n- industry_meta has NO trailing date suffix\\n\\nSECTION CONTENT BOUNDARIES — NO CLAIM IN TWO SECTIONS:\\n- deck: COMPANY-SIDE ONLY (see DECK RULE above). No team-vacancy claim, ever.\\n- the_case_p1: trigger, financial context, BRAND RECKONING phrase. No team-fit logic.\\n- the_case_p2: competitive landscape, what's open. May name recommended team only as destination. MUST NOT explain why that team. Vacancy claims naming the team belong in why_team_para.\\n- why_now_callout: calendar/event anchor.\\n- why_team_para: THE ONLY PLACE the team-specific narrative claim appears.\\n- value_content: company's value to the team in the appropriate mode (A/B/C above). Specific, never generic. No narrative repeat from why_team_para.\\n- deal_arch_para: years (THREE+), $/yr, tier, race/city anchors.\\n\\nANTI-DUPLICATION SELF-CHECK (mandatory before submission):\\nStep 1 — identify team-specific narrative claim. Read deck, the_case_p1, the_case_p2, why_now_callout. If any contain the claim, rewrite.\\nStep 2 — Category-vacancy trap. Pattern '[Team] is where [category] is vacant/open' or '[TEAM] HAS NO X' belongs in why_team_para. If deck or the_case_p2 contains that pattern, rewrite.\\nStep 3 — Deck final check. Read the deck. Does it contain a team-vacancy claim, the team name in uppercase, or a why-this-team argument? If yes, rewrite to pure company-side framing.\\n\\nWORD COUNT MAXIMUMS:\\n- deck: 50 | the_case_p1: 95 | the_case_p2: 75 | why_now_callout: 55\\n- why_team_para: 85 | value_content: 75 | deal_arch_para: 70\\n- decision_maker_bio: 50 | opening_angle_intro: 18 | opening_angle_quote: 45\\n- each risk: 32 | score cell notes: 8\\n\\nRISK COUNT:\\n- value_section true: exactly 2 risks (page budget).\\n- value_section false: exactly 3 risks.\\n\\nOVERFLOW CUT ORDER: RISKS -> why_now_callout -> the_case_p2.\\n\\nReturn ONLY the two delimited blocks below, BRIEF_DATA FIRST, then SIGNAL_DATA, nothing else.\\n\\n<BRIEF_DATA>\\n{\\n  \\\"brief_number\\\": \\\"...\\\",\\n  \\\"track_label\\\": \\\"\\\",\\n  \\\"company\\\": \\\"...\\\",\\n  \\\"industry_meta\\\": \\\"...\\\",\\n  \\\"deck\\\": \\\"...\\\",\\n  \\\"score\\\": 82,\\n  \\\"timing_label\\\": \\\"HOT\\\",\\n  \\\"series_label\\\": \\\"F1\\\",\\n  \\\"team_label\\\": \\\"AUDI\\\",\\n  \\\"horizon_label\\\": \\\"4-6 WKS\\\",\\n  \\\"hot_top_tier\\\": false,\\n  \\\"confidence_level\\\": \\\"HIGH\\\",\\n  \\\"the_case_p1\\\": \\\"...\\\",\\n  \\\"the_case_p2\\\": \\\"...\\\",\\n  \\\"why_now_callout\\\": \\\"<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;...\\\",\\n  \\\"why_team_label\\\": \\\"WHY AUDI\\\",\\n  \\\"why_team_para\\\": \\\"...\\\",\\n  \\\"value_section\\\": true,\\n  \\\"value_section_label\\\": \\\"VALUE TO AUDI\\\",\\n  \\\"value_content\\\": \\\"...\\\",\\n  \\\"deal_arch_para\\\": \\\"... <font name='Poppins-Bold' size='9.5'>THREE YEARS</font> ...\\\",\\n  \\\"decision_maker_name\\\": \\\"...\\\",\\n  \\\"decision_maker_role\\\": \\\"...\\\",\\n  \\\"decision_maker_bio\\\": \\\"...\\\",\\n  \\\"opening_angle_intro\\\": \\\"...\\\",\\n  \\\"opening_angle_quote\\\": \\\"&ldquo;...25 minutes?&rdquo;\\\",\\n  \\\"score_cells\\\": [\\n    [\\\"TIMING\\\", \\\"18\\\", \\\"/ 20\\\", \\\"Short note max 8 words.\\\"],\\n    [\\\"CAPACITY\\\", \\\"17\\\", \\\"/ 20\\\", \\\"Short note max 8 words.\\\"],\\n    [\\\"BRAND FIT\\\", \\\"16\\\", \\\"/ 20\\\", \\\"Short note max 8 words.\\\"],\\n    [\\\"URGENCY\\\", \\\"14\\\", \\\"/ 20\\\", \\\"Short note max 8 words.\\\"],\\n    [\\\"OPS FIT\\\", \\\"15\\\", \\\"/ 20\\\", \\\"Short note max 8 words.\\\"]\\n  ],\\n  \\\"risks\\\": [\\n    [\\\"RISK ONE\\\", \\\"Counter strategy under 32 words.\\\"],\\n    [\\\"RISK TWO\\\", \\\"Counter strategy under 32 words.\\\"]\\n  ],\\n  \\\"footer_company\\\": \\\"COMPANY NAME UPPERCASE\\\",\\n  \\\"footer_date\\\": \\\"22 MAY 2026\\\"\\n}\\n</BRIEF_DATA>\\n\\n<SIGNAL_DATA>\\n{\\\"signal_date\\\":\\\"YYYY-MM-DD\\\",\\\"top_signal\\\":{\\\"company\\\":\\\"...\\\",\\\"score\\\":82,\\\"tier\\\":\\\"HOT\\\",\\\"track\\\":1,\\\"person\\\":\\\"...\\\",\\\"role\\\":\\\"...\\\",\\\"action\\\":\\\"...\\\",\\\"horizon_weeks\\\":\\\"...\\\",\\\"source_url\\\":\\\"https://...\\\"},\\\"signals_log\\\":[]}\\n</SIGNAL_DATA>\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Write a full intelligence brief from this signal data.\\n\\nTODAY'S DATE (use for footer_date — NOT signal article date): {{ $today.format('d MMM yyyy').toUpperCase() }}\\n\\nCompany: {{ $json.company }}\\nScore: {{ $json.score }} ({{ $json.tier }})\\nTrack: {{ $json.track }}\\nPerson: {{ $json.person }}\\nRole: {{ $json.role }}\\nIndustry meta: {{ $json.industry_meta }}\\nHorizon: {{ $json.horizon_weeks }}\\nSource URL: {{ $json.source_url }}\\nRecommended team: {{ $json.recommended_team }}\\nRecommended series: {{ $json.recommended_series }}\\nBrief number: {{ $json.brief_number }}\\nConfidence level: {{ $json.confidence_level }}\\n\\nKey facts:\\n- Funding: {{ $json.key_facts.funding }}\\n- Investors: {{ $json.key_facts.investors }}\\n- Revenue/ARR: {{ $json.key_facts.revenue }}\\n- Trigger: {{ $json.key_facts.trigger }}\\n- Competitor signal: {{ $json.key_facts.competitor_signal }}\\n- Strategic hook: {{ $json.key_facts.strategic_hook }}\\n- US presence: {{ $json.key_facts.us_presence }}\\n- Alumni match: {{ $json.key_facts.alumni_match }}\\n- Taxonomy category: {{ $json.key_facts.taxonomy_category }}\\n- Ops fit note: {{ $json.key_facts.ops_fit_note }}\\n\\nScore breakdown:\\n- Timing: {{ $json.score_breakdown.timing }}/20\\n- Capacity: {{ $json.score_breakdown.capacity }}/20\\n- Brand fit: {{ $json.score_breakdown.brand_fit }}/20\\n- Urgency: {{ $json.score_breakdown.urgency }}/20\\n- Ops fit: {{ $json.score_breakdown.ops_fit }}/20\\n\\n{{ JSON.stringify($json._retry_block || '').slice(1, -1) }}\\n\\nApply the VALUE TO [TEAM] section rule: render for every brief at score >= 70. Pick the correct content mode based on company archetype. MODE A (operational) for ops_fit >= 14 — on-car/factory/broadcast specifics. MODE B (commercial back-office) for ops_fit 11-13 or fintech/payments/insurance — paddock settlements, treasury, partner-onboarding funnel. MODE C (audience/brand-pipeline) for ops_fit <= 10 AND consumer/lifestyle/media/B2C — user base demographics, race-weekend activation surfaces, customer-acquisition framing, brand-moment amplification. Set value_section_label = 'VALUE TO ' + team_label uppercase. Set value_section true and write value_content (50-75 words) accordingly. If score < 70, set value_section false. DECK RULE: company-side only; NO team-vacancy claims in deck (forbidden patterns: '[TEAM] HAS NO X', '[Team] is where X is open'). DEAL ARCHITECTURE: THREE YEARS minimum. Apply SECTION CONTENT BOUNDARIES, OPENING ANGLE rule, ANTI-HALLUCINATION, FACT QUALITY DISCIPLINE, £100 test, anti-duplication self-check including the deck final check. Risk count: 2 if value_section true, 3 if false. Emit BRIEF_DATA then SIGNAL_DATA.\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        16,
+        96
+      ],
+      "id": "82d9dd2f-c80b-430a-a255-a6cbf99e82c0",
+      "name": "Anthropic - Write Brief",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "jnre3TuTJLfEtm06",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// =============================================================================\n// Audit Brief — Phase 2.1.8d\n// PASTE THIS ENTIRE BLOCK into the n8n Code node body, replacing existing code.\n// Changes from v2.1.8c (marked >>> v2.1.8d):\n//   (1) Rule 2: added Unicode curly-quote alternatives — closes silent-failure\n//       gap if writer ever emits typographic quotes directly\n//   (2) Rule 6: vacancyRe expanded with \"still seeking\", \"yet to sign/land/ink/secure\",\n//       \"currently lacks\", \"remains without\", \"is unclaimed\", \"no current\", \"unclaimed\"\n//   (3) Rule 6: Pattern B now uses matchAll + min pairwise distance (was first-match-only)\n//   (4) Rule 6: Patterns C and D now applied to deck (were p2-only)\n//   (5) Rule 10: severity aligned to spec — critical when value_section true, medium when false\n//       (was: critical only when value=on AND risks=3, else medium)\n//   (6) Rule 11: budgets recalibrated 2500→2300 and 2300→2100 (Nourish 22 May overflowed\n//       at ~2306 chars on old 2500 budget; tested against 5 real PDFs)\n// =============================================================================\n\nconst src = $input.first().json;\nconst brief = src.brief_data || src;\nconst signal = src.signal_data || src._signal_data || {};\nconst retryCount = Number(src.retry_count || src._retry_count || 0);\nconst previousViolations = src._previous_violations || [];\n\nconst violations = [];\nfunction add(rule, severity, detail) { violations.push({ rule: rule, severity: severity, detail: detail }); }\nfunction wc(s) { return (s || '').replace(/<[^>]+>/g, ' ').split(/\\s+/).filter(Boolean).length; }\nfunction plainText(s) { return (s || '').replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/gi, ' ').replace(/\\s+/g, ' ').trim(); }\n\n// Rule 1: Deal duration THREE/FOUR/FIVE YEARS\nconst dealPara = brief.deal_arch_para || '';\nconst dealPlain = plainText(dealPara);\nif (/\\bTWO\\s+YEARS?\\b/i.test(dealPlain)) add('min_3_year_deal', 'critical', 'deal_arch_para proposes TWO YEARS');\nif (!/<font[^>]*>\\s*(THREE|FOUR|FIVE) YEARS\\s*<\\/font>/i.test(dealPara)) add('missing_duration_marker', 'critical', 'deal_arch_para missing bold THREE/FOUR/FIVE YEARS marker');\n\n// Rule 2: Opening quote\n// >>> v2.1.8d: added Unicode curly-quote alternatives [\\u201C\\u201D]\nconst quote = (brief.opening_angle_quote || '').trim();\nif (!/\\?\\s*(&rdquo;|\"|[\\u201C\\u201D]|$)/.test(quote) || !/\\b25 minutes\\b/i.test(quote)) add('opening_quote_ending', 'critical', 'opening_angle_quote must contain \"25 minutes\" and end with \"?\"');\nconst quoteNoEnd = quote.replace(/25 minutes\\?\\s*(&rdquo;|\"|[\\u201C\\u201D]|$).*$/, '');\nif (/\\b(the|those|these|spending|sitting out|wasting)\\s+(fastest|hardest|toughest|best|most|same|next|last|whole|entire)?\\s*25 minutes\\b/i.test(quoteNoEnd)) add('opening_quote_metaphor', 'critical', '25 minutes used as metaphor');\n\n// Rule 3: Opening intro declarative\nconst intro = (brief.opening_angle_intro || '').trim();\nif (/\\?\\s*$/.test(intro)) add('opening_intro_question', 'critical', 'opening_angle_intro ends with \"?\" — must be declarative');\n\n// Rule 4: footer_date matches today UTC\nconst todayD = new Date();\nconst monthsUC = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];\nconst todayStr = todayD.getUTCDate() + ' ' + monthsUC[todayD.getUTCMonth()] + ' ' + todayD.getUTCFullYear();\nif ((brief.footer_date || '').toUpperCase().trim() !== todayStr) add('footer_date_mismatch', 'medium', \"footer_date '\" + brief.footer_date + \"' != today\");\n\n// Rule 5: industry_meta no trailing date\nif (/[·\\-\\s]\\s*\\d{4}-\\d{2}-\\d{2}\\s*$/.test(brief.industry_meta || '')) add('industry_meta_date_suffix', 'medium', 'industry_meta has trailing date');\n\n// Rule 6: team-vacancy patterns in deck OR the_case_p2\nconst p2 = plainText(brief.the_case_p2 || '');\nconst deck = plainText(brief.deck || '');\nconst teamRaw = (brief.team_label || '').trim();\nif (teamRaw) {\n  const teamCap = teamRaw.split(/\\s+/).map(function(w){ return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase(); }).join(' ');\n  const teamUC = teamRaw.toUpperCase();\n  const teamPattern = '(' + teamUC + '|' + teamCap + '|' + teamRaw + ')';\n\n  // >>> v2.1.8d: vacancyRe expanded with additional natural-language phrasings.\n  // Still excludes \"slot is open\" / \"seat is open\" by NOT including bare \"is open\"\n  // (preserves the Datadog reference construction).\n  const vacancyReSrc = '(\\\\b(?:has|carries|holds|hosts)\\\\s+no\\\\s+\\\\w+|\\\\b(?:no\\\\s+active|no\\\\s+documented|no\\\\s+title-level|no\\\\s+headline|no\\\\s+current)\\\\s+\\\\w+\\\\s+partner|\\\\bcategory\\\\s+(?:is|sits|remains)\\\\s+(?:vacant|available|open|uncontested|empty|unfilled|unclaimed)|\\\\bdestination\\\\s+where\\\\s+\\\\w+\\\\s+(?:sits|is)\\\\s+(?:vacant|open|available|unclaimed)|\\\\bwhere\\\\s+the\\\\s+\\\\w+(?:\\\\s+\\\\w+){0,4}\\\\s+category\\\\s+is\\\\s+(?:vacant|available|open|uncontested|unclaimed)|\\\\b(?:still\\\\s+seeking|yet\\\\s+to\\\\s+(?:sign|land|ink|secure))\\\\b|\\\\bcurrently\\\\s+lacks\\\\b|\\\\bremains\\\\s+without\\\\b|\\\\bis\\\\s+unclaimed\\\\b)';\n  const vacancyRe = new RegExp(vacancyReSrc, 'i');\n  const teamReGlobal = new RegExp('\\\\b' + teamPattern + '\\\\b', 'gi');\n\n  // >>> v2.1.8d: teamPlusVacancyWithin now uses matchAll + min pairwise distance.\n  // Old code only measured distance from FIRST team match; if team appeared twice,\n  // a vacancy clause near the second mention was missed.\n  function teamPlusVacancyWithin(text, maxDistance) {\n    const tMatches = Array.from(text.matchAll(teamReGlobal));\n    const vMatches = Array.from(text.matchAll(new RegExp(vacancyReSrc, 'gi')));\n    if (tMatches.length === 0 || vMatches.length === 0) return false;\n    let minDist = Infinity;\n    for (const tm of tMatches) {\n      for (const vm of vMatches) {\n        const d = Math.abs(tm.index - vm.index);\n        if (d < minDist) minDist = d;\n      }\n    }\n    return minDist <= maxDistance;\n  }\n\n  const reA = new RegExp('\\\\b' + teamPattern + '\\\\s+is\\\\s+(the\\\\s+only|where\\\\b|one\\\\s+of\\\\s+the\\\\s+only|the\\\\s+destination\\\\s+where)', 'i');\n  const reC = new RegExp('\\\\b(only|lone|sole)\\\\s+[A-Z]{1,3}\\\\s*\\\\w*\\\\s+team[^.]{0,80}\\\\b' + teamPattern + '\\\\b', 'i');\n  const reD = /\\b(two|three|four|several|multiple)\\s+\\w+\\s+teams?\\s+(carry|have|hold)\\s+no\\b/i;\n  const reE = new RegExp('\\\\b' + teamPattern + '\\\\s+(has|carries|holds|hosts)\\\\s+no\\\\b', 'i');\n\n  // Apply to p2\n  if (reA.test(p2)) add('why_team_claim_in_case_p2_a', 'critical', \"the_case_p2 has '[Team] is the only/where/destination' pattern\");\n  if (teamPlusVacancyWithin(p2, 100)) add('why_team_claim_in_case_p2_b', 'critical', 'the_case_p2 names team within 100 chars of a vacancy clause');\n  if (reC.test(p2)) add('why_team_claim_in_case_p2_c', 'critical', \"the_case_p2 has 'only [N]-team' framing naming recommended team\");\n  if (reD.test(p2)) add('count_claim_in_case_p2', 'medium', 'the_case_p2 makes counted-teams claim');\n  if (reE.test(p2)) add('team_has_no_in_case_p2', 'critical', \"the_case_p2 has '[Team] has/carries no X' pattern\");\n\n  // Apply to deck\n  // >>> v2.1.8d: Patterns C and D added to deck (were p2-only)\n  if (reA.test(deck)) add('team_vacancy_in_deck_a', 'critical', \"deck has '[Team] is the only/where/destination' — must be company-side only\");\n  if (reE.test(deck)) add('team_vacancy_in_deck_e', 'critical', \"deck has '[Team] HAS NO X' pattern — must be company-side only\");\n  if (teamPlusVacancyWithin(deck, 100)) add('team_vacancy_in_deck_b', 'critical', 'deck names team within 100 chars of a vacancy clause — must be company-side only');\n  if (reC.test(deck)) add('team_vacancy_in_deck_c', 'critical', \"deck has 'only [N]-team' framing — must be company-side only\");\n  if (reD.test(deck)) add('count_claim_in_deck', 'medium', 'deck makes counted-teams claim — must be company-side only');\n}\n\n// Rule 7: Word counts\nconst ceilings = { deck: 50, the_case_p1: 95, the_case_p2: 75, why_now_callout: 55, why_team_para: 85, value_content: 75, operational_fit_content: 75, deal_arch_para: 70, decision_maker_bio: 50, opening_angle_intro: 18, opening_angle_quote: 45 };\nfor (const key in ceilings) {\n  if (!brief[key]) continue;\n  const n = wc(brief[key]);\n  if (n > ceilings[key] + 5) add('wc_' + key, 'medium', key + ': ' + n + ' words > ' + ceilings[key]);\n}\n\n// Rule 8: Confidence not LOW\nif ((brief.confidence_level || '').toUpperCase() === 'LOW') add('low_confidence', 'critical', 'confidence_level is LOW');\n\n// Rule 9: Track label sanity\nconst tl = brief.track_label;\nif (tl !== undefined && tl !== '' && tl !== ' · ALUMNI INTELLIGENCE') add('bad_track_label', 'medium', \"track_label '\" + tl + \"' invalid\");\n\n// Rule 10: Risk count\n// >>> v2.1.8d: severity aligned to spec — critical when valueOn (where risk count affects\n// page-2 layout), medium when valueOff (still logs but doesn't gate).\nconst risks = brief.risks || [];\nconst valueOn = !!(brief.value_section || brief.operational_fit_section);\nconst expectedRiskCount = valueOn ? 2 : 3;\nif (risks.length !== expectedRiskCount) add('risk_count', valueOn ? 'critical' : 'medium', 'risks=' + risks.length + ', expected ' + expectedRiskCount);\n\n// Rule 11: Page-2 char budget\n// >>> v2.1.8d: budgets recalibrated 2500→2300 (valueOn) and 2300→2100 (valueOff).\n// Based on tests against 5 real briefs: Nourish overflowed at ~2306 chars on old 2500.\n// New 2300 catches Nourish but keeps Mercury (~2229), Farther (~2198), Primer (~2056) safe.\nconst bSecs = [brief.why_team_para, (brief.value_content || brief.operational_fit_content), brief.deal_arch_para, brief.decision_maker_bio, brief.opening_angle_intro, brief.opening_angle_quote];\nconst bChars = bSecs.map(function(s){ return plainText(s).length; }).reduce(function(a,b){return a+b;}, 0);\nconst rChars = risks.map(function(r){ return plainText((r[0]||'') + ' ' + (r[1]||'')).length; }).reduce(function(a,b){return a+b;}, 0);\nconst total = bChars + rChars;\nconst budget = valueOn ? 2300 : 2100;\nif (total > budget) add('page2_overflow_risk', 'critical', 'page-2 char budget exceeded: ' + total + ' > ' + budget);\n\n// Rule 12: VALUE section must render for score >= 70\nconst score = Number(brief.score || 0);\nif (score >= 70 && !valueOn) add('value_section_missing', 'critical', 'value_section is false but score ' + score + ' >= 70 — must render VALUE TO [TEAM]');\nif (valueOn && !plainText(brief.value_content || brief.operational_fit_content || '')) add('value_content_empty', 'critical', 'value_section is true but value_content is empty');\n\n// Rule 13: phrase overlap between the_case_p2 and why_team_para (5+ words substantive)\nfunction ngrams(text, n) {\n  const words = text.toLowerCase().replace(/[^\\w\\s]/g, ' ').replace(/\\s+/g, ' ').trim().split(' ').filter(Boolean);\n  const out = [];\n  for (let i = 0; i <= words.length - n; i++) out.push(words.slice(i, i + n).join(' '));\n  return out;\n}\nconst p2Plain = plainText(brief.the_case_p2 || '');\nconst wtPlain = plainText(brief.why_team_para || '');\nconst wtSet = new Set(ngrams(wtPlain, 5));\nconst sharedPhrases = [];\nconst seen = new Set();\nfor (const phrase of ngrams(p2Plain, 5)) {\n  if (wtSet.has(phrase) && !seen.has(phrase)) {\n    seen.add(phrase);\n    const STOPWORDS = new Set(['a','an','the','and','or','but','of','in','on','at','to','for','with','by','is','are','was','were','from','as','it','its','that','this','these','those','be','has','have']);\n    const tokens = phrase.split(' ');\n    const contentTokens = tokens.filter(function(t){ return !STOPWORDS.has(t); });\n    if (contentTokens.length < 3) continue;\n    if (teamRaw) {\n      const teamWords = teamRaw.toLowerCase().split(/\\s+/);\n      const teamOverlap = tokens.filter(function(t){ return teamWords.indexOf(t) >= 0; }).length;\n      if (teamOverlap >= 2) continue;\n    }\n    sharedPhrases.push(phrase);\n  }\n}\nif (sharedPhrases.length > 0) {\n  add('p2_why_team_phrase_overlap', 'medium', '5+ word phrase shared: \"' + sharedPhrases[0] + '\"' + (sharedPhrases.length > 1 ? ' (+' + (sharedPhrases.length - 1) + ' more)' : ''));\n}\n\n// Aggregate + route\nconst critical = violations.filter(function(v){ return v.severity === 'critical'; });\nconst medium = violations.filter(function(v){ return v.severity === 'medium'; });\nconst passed = critical.length === 0;\nlet route;\nif (passed) route = 'pass';\nelse if (retryCount < 1) route = 'retry';\nelse route = 'manual_review';\n\nconst runDate = new Date().toISOString().slice(0, 10);\nconst company = brief.company || brief.footer_company || 'unknown';\nconst briefNum = brief.brief_number || '???';\nconst logRows = [{\n  run_date: runDate, brief_number: briefNum, company: company,\n  row_type: 'summary',\n  rule: passed ? 'audit_passed' : (route === 'manual_review' ? 'audit_failed_manual_review' : 'audit_failed_retrying'),\n  severity: passed ? 'info' : (critical.length > 0 ? 'critical' : 'medium'),\n  detail: passed ? 'No violations.' : critical.length + ' critical, ' + medium.length + ' medium (retry=' + retryCount + ')'\n}];\nfor (const v of violations) {\n  logRows.push({ run_date: runDate, brief_number: briefNum, company: company, row_type: 'violation', rule: v.rule, severity: v.severity, detail: v.detail });\n}\n\nreturn [{\n  json: Object.assign({}, brief, {\n    _audit: { passed: passed, critical_count: critical.length, medium_count: medium.length, violations: violations, retry_count: retryCount, run_at: new Date().toISOString() },\n    _audit_route: route,\n    _audit_log_rows: logRows,\n    _signal_data: signal,\n    _retry_count: retryCount,\n    _previous_violations: previousViolations\n  })\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        -160
+      ],
+      "id": "054fcc83-7098-42a9-959f-6f8a04e15716",
+      "name": "Audit Brief",
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "retryOnFail": false
+    },
+    {
+      "parameters": {
+        "jsCode": "// Format Audit Log Rows - Phase 2.1.7b\n// Takes one input item (from Audit Brief) and explodes its _audit_log_rows\n// into one output item per row, shaped for the Sheets append node downstream.\n\nconst rows = $input.first().json._audit_log_rows || [];\nif (rows.length === 0) {\n  return [{ json: { run_date: new Date().toISOString().slice(0,10), brief_number: '???', company: 'unknown', row_type: 'summary', rule: 'no_audit_data', severity: 'info', detail: 'Audit produced no rows' } }];\n}\nreturn rows.map(function(r) { return { json: r }; });"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        640,
+        -64
+      ],
+      "id": "719cc75c-f8a6-4c8e-bd96-78af8c3e8391",
+      "name": "Format Audit Log Rows"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json._audit_route }}",
+                    "rightValue": "pass",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "6fd46d07-b8eb-4821-854b-43652bfcd24c"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "pass"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "824a3801-6075-4930-b36c-abd28f9090ca",
+                    "leftValue": "={{ $json._audit_route }}",
+                    "rightValue": "retry",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "retry"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "4f8e1f6d-9361-4be2-8fb9-139d480cac6d",
+                    "leftValue": "={{ $json._audit_route }}",
+                    "rightValue": "manual_review",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "manual_review"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "none"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        384,
+        -352
+      ],
+      "id": "51fbedf9-f9a8-43e2-9c0c-2d8692119ca3",
+      "name": "Audit Route"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Retry Prep - Phase 2.1.7 (FIXED)\n// Pre-formats the retry instructions as a single string so the Write Brief\n// user-message expression stays trivial (no multi-line JS strings in the body).\n\nconst src = $input.first().json;\nconst audit = src._audit || {};\nconst violations = audit.violations || audit.audit_violations || [];\nconst failedDraft = Object.assign({}, src);\ndelete failedDraft._audit;\ndelete failedDraft._signal_data;\ndelete failedDraft._retry_count;\ndelete failedDraft._previous_violations;\ndelete failedDraft._audit_route;\ndelete failedDraft._audit_log_rows;\n\nconst signal = src._signal_data || {};\n\n// Format violation lines (newline-separated string)\nconst violationLines = violations.map(function(v) {\n  return '- [' + v.severity.toUpperCase() + '] ' + v.rule + ': ' + v.detail;\n}).join('\\n');\n\n// Pre-format the complete retry block as ONE string. This goes verbatim into\n// the user message via a single simple expression -- no JS in the body field.\nconst retryBlock = [\n  '',\n  '=== RETRY MODE - CORRECTING PREVIOUS DRAFT ===',\n  'The previous draft of this brief failed automated audit. Fix EVERY violation below while keeping the facts intact.',\n  '',\n  'VIOLATIONS TO FIX:',\n  violationLines,\n  '',\n  'PREVIOUS DRAFT (BRIEF_DATA fields):',\n  JSON.stringify(failedDraft, null, 2),\n  '',\n  'Produce a corrected BRIEF_DATA that resolves every violation. Keep the same facts; change only the prose that violates the rules. Apply the retry rules in the system prompt. There is no second retry - get it right this time.',\n  ''\n].join('\\n');\n\n// Rebuild the data shape the Write Brief node expects (the original signal shape)\n// with retry annotations attached as simple string fields.\nconst retryInput = Object.assign({}, signal, {\n  retry_count: (Number(src._retry_count) || 0) + 1,\n  _is_retry: true,\n  _retry_block: retryBlock,\n  _previous_violations: violations\n});\n\nreturn [{ json: retryInput }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1024,
+        -96
+      ],
+      "id": "a0a494b1-5bb3-42e5-87be-f03f2000f642",
+      "name": "Retry Prep"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1_9gLcuHJLrT_2wUtCRYGtwjdXMiiG9PSLk3RlbA40j8",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Audit Log",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "run_date": "=={{ $json.run_date }}",
+            "brief_number": "=={{ $json.brief_number }}",
+            "company": "=={{ $json.company }}",
+            "row_type": "=={{ $json.row_type }}",
+            "rule": "=={{ $json.rule }}",
+            "severity": "=={{ $json.severity }}",
+            "detail": "=={{ $json.detail }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "run_date",
+              "displayName": "run_date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "brief_number",
+              "displayName": "brief_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "company",
+              "displayName": "company",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_type",
+              "displayName": "row_type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "rule",
+              "displayName": "rule",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "severity",
+              "displayName": "severity",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "detail",
+              "displayName": "detail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "bcb0116a-e4a0-4bbb-a88b-80e5b804fdd4",
+      "name": "Google Sheets — Audit Log",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        816,
+        160
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ea2AlFt7JMvn9Jcj",
+          "name": "Google Sheets OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toRecipients": "trushil.jani@1440sports.com ",
+        "subject": "==⚠️ 1440 Brief NEEDS MANUAL REVIEW — {{ $json.company }} ({{ $json.brief_number }})",
+        "bodyContent": "==<h2>Audit failed after retry</h2><p><b>Company:</b> {{ $json.company }}<br><b>Brief number:</b> {{ $json.brief_number }}<br><b>Recommended team:</b> {{ $json.team_label }}<br><b>Score:</b> {{ $json.score }}</p><h3>Violations after retry</h3><pre>{{ JSON.stringify($json._audit.violations, null, 2) }}</pre><p>The brief has NOT been sent to the MD. Open this workflow's execution in n8n to inspect, manually fix the brief data, and re-run from <code>1440 Builder — Render PDF</code> if you choose to send it.</p>",
+        "additionalFields": {
+          "bodyContentType": "html"
+        }
+      },
+      "id": "0583ef18-4e51-4437-abb8-b247d05929cd",
+      "name": "Outlook — Operator Manual Review Alert",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2,
+      "position": [
+        1296,
+        176
+      ],
+      "webhookId": "f1874724-3d6a-4c1b-9080-5b4c9cac4d2b",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "TvTTwWmZpKi1mcZo",
+          "name": "Microsoft Outlook OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1_9gLcuHJLrT_2wUtCRYGtwjdXMiiG9PSLk3RlbA40j8",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Daily Signals",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "id": "f993f347-fcc5-421b-80be-5e8a0c4c6ac3",
+      "name": "Google Sheets — Read Daily Signals",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        496,
+        -608
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ea2AlFt7JMvn9Jcj",
+          "name": "Google Sheets OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// =============================================================================\n// Duplicate Guard — Phase 2.1.10e (FINAL — normaliser verified against real data)\n//\n// PASTE INTO: the existing \"Duplicate Guard\" Code node (replace all current code).\n//\n// FIX from v2.1.10d:\n//   normalise() now strips parenthetical content FIRST, then suffixes.\n//   This catches \"Lime\" === \"Lime (Neutron Holdings)\" — the bug that let\n//   today's Lime duplicate through to MD.\n//   Verified against all 34 real Daily Signals rows: 11/11 expected behaviors.\n//\n// FAILURE MODES THIS GUARD CATCHES:\n//   (1) MD duplicate within 30 days — by normalised company name\n//   (2) Manual editor execution (mode != \"production\")\n//   (3) Scheduled trigger node didn't fire (defensive)\n//   (4) Daily Signals read failed (fail-closed)\n//   (5) Score < 70 (defensive)\n//   (6) Audit didn't pass (defensive)\n// =============================================================================\n\nconst brief = $input.first().json;\n\nconst company = brief.company || '';\nconst score = Number(brief.score || 0);\nconst auditPassed = brief._audit && brief._audit.passed === true;\n\n// ---- Read Daily Signals via explicit named node reference ----\nlet signalRows = [];\nlet sheetsReadOk = false;\ntry {\n  const sheetItems = $('Google Sheets — Read Daily Signals').all();\n  if (Array.isArray(sheetItems)) {\n    signalRows = sheetItems.map(function(i){ return i.json; }).filter(function(r){ return r && (r.Company || r.company); });\n    sheetsReadOk = true;\n  }\n} catch (e) {\n  signalRows = [];\n  sheetsReadOk = false;\n}\n\n// ---- Verify scheduled trigger fired (belt-and-braces) ----\nlet triggerFired = false;\ntry {\n  const triggerData = $('6am Weekdays Trigger').all();\n  triggerFired = Array.isArray(triggerData) && triggerData.length > 0;\n} catch (e) {\n  triggerFired = false;\n}\n\n// ---- Helpers ----\n// v2.1.10e: parenthetical content stripped BEFORE suffix stripping.\n// Verified against real Daily Signals data: catches \"Lime\" vs \"Lime (Neutron Holdings)\",\n// \"Exa\" vs \"Exa Labs\", and all other tested variants without over-matching.\nfunction normalise(name) {\n  return (name || '')\n    .toLowerCase()\n    .replace(/\\([^)]*\\)/g, ' ')  // strip (parenthetical content) FIRST\n    .replace(/\\b(inc|ltd|llc|corp|corporation|technologies|technology|ai|labs|lab|holdings|holding|group|company|co|the)\\b/g, ' ')\n    .replace(/[^a-z0-9]/g, '')\n    .trim();\n}\n\nfunction parseDateMs(s) {\n  if (!s) return NaN;\n  const str = String(s).trim();\n  let ms = new Date(str + 'T00:00:00Z').getTime();\n  if (!isNaN(ms)) return ms;\n  const m = str.match(/^(\\d{4})-(\\d{1,2})-(\\d{1,2})$/);\n  if (m) return Date.UTC(parseInt(m[1], 10), parseInt(m[2], 10) - 1, parseInt(m[3], 10));\n  return NaN;\n}\n\nconst blocks = [];\nconst companyNorm = normalise(company);\n\n// ---- GATE 1: Execution mode whitelist ----\nlet execMode = 'unknown';\ntry { execMode = $execution.mode; } catch (e) { execMode = 'unknown'; }\n\nif (execMode !== 'production') {\n  blocks.push({\n    rule: 'blocked_non_production_execution',\n    detail: 'execution_mode=' + execMode + '. Only \"production\" (scheduled cron) reaches MD.'\n  });\n}\n\nif (!triggerFired) {\n  blocks.push({\n    rule: 'blocked_trigger_not_fired',\n    detail: 'execution_mode=' + execMode + ' but \"6am Weekdays Trigger\" node did not fire.'\n  });\n}\n\n// ---- GATE 2: Sheets read verification ----\nif (!sheetsReadOk || signalRows.length === 0) {\n  blocks.push({\n    rule: 'blocked_signals_log_unreachable',\n    detail: 'Daily Signals read returned ' + signalRows.length + ' rows (sheetsReadOk=' + sheetsReadOk + ').'\n  });\n}\n\n// ---- GATE 3: Duplicate within 30 days ----\nconst todayIso = new Date().toISOString().slice(0, 10);\nconst todayMs = parseDateMs(todayIso);\nconst cutoffMs = todayMs - 30 * 86400000;\n\nconst recentSends = signalRows.filter(function(r) {\n  const rowDate = r.Date || r.date || r.run_date;\n  const rowCompany = r.Company || r.company;\n  if (!rowDate || !rowCompany) return false;\n  const rowMs = parseDateMs(rowDate);\n  if (isNaN(rowMs)) return false;\n  if (rowMs < cutoffMs) return false;\n  if (rowMs >= todayMs) return false;\n  return normalise(rowCompany) === companyNorm;\n});\n\nif (recentSends.length > 0) {\n  const dates = recentSends.map(function(r){ return r.Date || r.date || r.run_date; }).join(', ');\n  const names = recentSends.map(function(r){ return r.Company || r.company; }).join(', ');\n  blocks.push({\n    rule: 'blocked_duplicate_30d',\n    detail: 'Company \"' + company + '\" matches recent brief(s): ' + names + ' on dates: ' + dates + '. Normalised match: \"' + companyNorm + '\". Send suppressed to prevent MD duplicate.'\n  });\n}\n\n// ---- GATE 4: Defensive reverification ----\nif (score < 70) {\n  blocks.push({\n    rule: 'blocked_score_below_threshold',\n    detail: 'Score ' + score + ' < 70 threshold.'\n  });\n}\nif (!auditPassed) {\n  blocks.push({\n    rule: 'blocked_audit_not_passed',\n    detail: '_audit.passed is not true (got: ' + JSON.stringify(brief._audit) + ').'\n  });\n}\n\n// ---- Result ----\nconst passed = blocks.length === 0;\nconst route = passed ? 'send' : 'block';\n\nconst logRows = [];\nif (passed) {\n  logRows.push({\n    run_date: todayIso,\n    brief_number: brief.brief_number || '???',\n    company: company,\n    row_type: 'guard',\n    rule: 'duplicate_guard_passed',\n    severity: 'info',\n    detail: 'Duplicate Guard passed. Proceeding to Outlook Send Brief. signals_rows=' + signalRows.length + ', exec_mode=' + execMode + ', trigger_fired=' + triggerFired + ', companyNorm=' + companyNorm + '.'\n  });\n} else {\n  logRows.push({\n    run_date: todayIso,\n    brief_number: brief.brief_number || '???',\n    company: company,\n    row_type: 'guard',\n    rule: 'duplicate_guard_blocked',\n    severity: 'critical',\n    detail: blocks.length + ' guard block(s): ' + blocks.map(function(b){return b.rule;}).join(', ') + ' (signals_rows=' + signalRows.length + ', exec_mode=' + execMode + ', trigger_fired=' + triggerFired + ')'\n  });\n  for (const b of blocks) {\n    logRows.push({\n      run_date: todayIso,\n      brief_number: brief.brief_number || '???',\n      company: company,\n      row_type: 'guard_block',\n      rule: b.rule,\n      severity: 'critical',\n      detail: b.detail\n    });\n  }\n}\n\nreturn [{\n  json: Object.assign({}, brief, {\n    _guard: {\n      passed: passed,\n      blocks: blocks,\n      route: route,\n      execution_mode: execMode,\n      trigger_fired: triggerFired,\n      signals_rows_read: signalRows.length,\n      sheets_read_ok: sheetsReadOk,\n      company_normalised: companyNorm,\n      checked_at: new Date().toISOString()\n    },\n    _guard_route: route,\n    _audit_log_rows: (brief._audit_log_rows || []).concat(logRows)\n  })\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        768,
+        -608
+      ],
+      "id": "818c5628-0ab1-4f89-929a-f8346073dc15",
+      "name": "Duplicate Guard"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json._guard_route }}",
+                    "rightValue": "send",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "f3789a23-acc7-409e-92ce-33e90b4cf9a4"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "send"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "a5d70e54-a3a9-4eba-a946-df37071fd272",
+                    "leftValue": "={{ $json._guard_route }}",
+                    "rightValue": "block",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "block"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        960,
+        -656
+      ],
+      "id": "421cca65-63ba-4462-af6f-715ca1596f74",
+      "name": "Guard Route"
+    },
+    {
+      "parameters": {
+        "toRecipients": "trushil.jani@1440sports.com ",
+        "subject": "==1440 Intelligence — Brief BLOCKED — {{ $json.company }} — {{ $today.format('d MMM yyyy') }}",
+        "bodyContent": "==<h2>Brief blocked before MD send</h2><p><b>Company:</b> {{ $json.company }}<br><b>Brief number:</b> {{ $json.brief_number }}<br><b>Score:</b> {{ $json.score }}<br><b>Execution mode:</b> {{ $json._guard.execution_mode }}<br><b>Signals rows read:</b> {{ $json._guard.signals_rows_read }}</p><h3>Block reasons</h3><pre>{{ JSON.stringify($json._guard.blocks, null, 2) }}</pre><p>The brief has NOT been sent to the MD. To investigate: open n8n executions, inspect the Duplicate Guard node output, and check the Audit Log sheet for the block_rule rows. To force a send (if you're certain it's a false positive), manually re-run from <code>1440 Builder — Render PDF</code> with this brief's data.</p>",
+        "additionalFields": {
+          "bodyContentType": "html"
+        }
+      },
+      "id": "7126a44b-a786-4053-badc-a011c173b85c",
+      "name": "Outlook — Guard Block Alert",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2,
+      "position": [
+        1296,
+        -48
+      ],
+      "webhookId": "f1874724-3d6a-4c1b-9080-5b4c9cac4d2b",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "TvTTwWmZpKi1mcZo",
+          "name": "Microsoft Outlook OAuth2 API"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "6am Weekdays Trigger": {
+      "main": [
+        [
+          {
+            "node": "Anthropic — Run Signals",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic — Run Signals": {
+      "main": [
+        [
+          {
+            "node": "Parse Signal Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Claude Response": {
+      "main": [
+        [
+          {
+            "node": "Audit Brief",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1440 Builder — Render PDF": {
+      "main": [
+        [
+          {
+            "node": "Outlook — Send Brief",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets — Log Signal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Signal Data": {
+      "main": [
+        [
+          {
+            "node": "Anthropic - Write Brief",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic - Write Brief": {
+      "main": [
+        [
+          {
+            "node": "Parse Claude Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Outlook — Send Brief": {
+      "main": [
+        []
+      ]
+    },
+    "Audit Brief": {
+      "main": [
+        [
+          {
+            "node": "Audit Route",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Format Audit Log Rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Audit Route": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets — Read Daily Signals",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Duplicate Guard",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Retry Prep",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Outlook — Operator Manual Review Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Audit Log Rows": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets — Audit Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retry Prep": {
+      "main": [
+        [
+          {
+            "node": "Anthropic - Write Brief",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets — Read Daily Signals": {
+      "main": [
+        [
+          {
+            "node": "Duplicate Guard",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Duplicate Guard": {
+      "main": [
+        [
+          {
+            "node": "Guard Route",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guard Route": {
+      "main": [
+        [
+          {
+            "node": "1440 Builder — Render PDF",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Format Audit Log Rows",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Outlook — Guard Block Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets — Audit Log": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "23454442-f7e0-4783-a25a-924d4f6f6886",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5cd94252f2b2540ec240ceaaf06dca671c770e705a4533ba85308ffcd833a15d"
+  },
+  "nodeGroups": [],
+  "id": "SLyZcgWP5vl6kEas",
+  "tags": []
+}
