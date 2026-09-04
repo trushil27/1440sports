@@ -1,10 +1,15 @@
 """Build brief §9.10: every one of the 13 audit rules has a passing and a failing fixture.
 
+The audit is a port of the production n8n ``Audit Brief`` node (v2.1.8d) and these tests
+pin the JS semantics — codes, severities, the curly-quote endings, the vacancy patterns
+A/B/C/D/E per field, the +5-word grace, the 2300/2100 budgets, the 5-gram overlap, the
+pass / retry / manual_review route and the audit-log rows.
+
 The baseline is a ``WrittenBrief`` built ONLY from the real Ramp brief in this repo
 (briefs/2026-06-14/ramp.md — N° 017, Visa Cash App Racing Bulls, Eric Glyman, FOUR
-YEARS, run date 14 Jun 2026), with sentences trimmed to the NODE 2 word ceilings.
-Every failing fixture is the baseline with exactly one field changed. No company,
-figure, person or race outside that brief appears here (build brief §0 rule 4).
+YEARS, run date 14 Jun 2026), with sentences trimmed to the word ceilings. Every failing
+fixture is the baseline with one field re-worded from that same text. No company, figure,
+person or race outside that brief appears here (build brief §0 rule 4).
 """
 
 from __future__ import annotations
@@ -14,25 +19,34 @@ from datetime import date
 import pytest
 
 from intel.audit import (
+    CODES,
+    PAGE2_BUDGET_WITH_VALUE,
+    PAGE2_BUDGET_WITHOUT_VALUE,
     RULES,
+    WORD_CEILING_GRACE,
     AuditResult,
     Violation,
     audit_brief,
     expected_footer_date,
-    find_vacancy_proximity,
+    js_word_count,
     page2_chars,
+    plain_text,
+    quote_without_ask,
     shared_phrases,
-    team_name_variants,
+    team_pattern,
+    team_vacancy_distance,
+    team_vacancy_within,
     violations_feedback,
 )
-from intel.brief_data import WrittenBrief, strip_markup, word_count
+from intel.brief_data import WrittenBrief, strip_markup
 
 RUN_DATE = date(2026, 6, 14)
 BOLD = "<font name='Poppins-Bold' size='9.5'>{}</font>"
+TEAM = "Visa Cash App Racing Bulls"
 
-# The original Ramp headline_long — it carries the "no spend-management brand anywhere on
-# the F1 grid" vacancy claim next to a team mention, the exact deck failure rule 6 exists
-# for. Used ONLY as the rule-6 failing fixture.
+# The original Ramp headline_long — "the slot is open at Visa Cash App Racing Bulls". The JS
+# vacancy list deliberately has no bare "slot is open" (the Datadog reference construction),
+# so production lets this deck through: pinned below as documented behaviour.
 RAMP_ORIGINAL_HEADLINE = (
     "Ramp closed a $750M round at a $44B valuation in June 2026 (up ~38% from $32B six "
     "months earlier), crossed $1B+ ARR while staying free-cash-flow positive, and is "
@@ -56,7 +70,7 @@ BASELINE: dict = {
     "score": 84,
     "timing_label": "HOT",
     "series_label": "F1",
-    "team_label": "Visa Cash App Racing Bulls",
+    "team_label": TEAM,
     "horizon_label": "6-10 WKS",
     "hot_top_tier": False,
     "confidence_level": "HIGH",
@@ -150,10 +164,19 @@ BASELINE: dict = {
     "footer_company": "RAMP",
     "footer_date": "14 JUN 2026",
 }
+THIRD_RISK = ["UK/EU TIMING", "", "Anchor the launch to the British GP window."]
+FILLER = strip_markup(BASELINE["the_case_p1"])  # Ramp prose used to push counts over ceilings
 
 
 def make_brief(**overrides) -> WrittenBrief:
     return WrittenBrief.model_validate({**BASELINE, **overrides})
+
+
+def no_value(**overrides) -> WrittenBrief:
+    """Baseline switched to the no-value-section shape (score < 70, three risks)."""
+    base = dict(score=68, value_section=False, value_content="", value_section_label="")
+    base["risks"] = BASELINE["risks"] + [THIRD_RISK]
+    return make_brief(**{**base, **overrides})
 
 
 def fired(brief: WrittenBrief) -> set[int]:
@@ -161,16 +184,63 @@ def fired(brief: WrittenBrief) -> set[int]:
 
 
 def codes(brief: WrittenBrief) -> set[str]:
-    return {v.code for v in audit_brief(brief, RUN_DATE).violations}
+    return audit_brief(brief, RUN_DATE).codes()
+
+
+def only(brief: WrittenBrief, code: str) -> Violation:
+    hits = [v for v in audit_brief(brief, RUN_DATE).violations if v.code == code]
+    assert len(hits) == 1, hits
+    return hits[0]
 
 
 # ------------------------------------------------------------------ rule table
 
 
-def test_rules_table_is_the_thirteen_roadmap_rules_in_order():
+def test_rules_table_is_the_thirteen_production_rules_in_order():
     assert [r[0] for r in RULES] == list(range(1, 14))
-    assert [r[2] for r in RULES] == ["high"] * 12 + ["medium"]
-    assert RULES[12][1] == "phrase_overlap"
+    assert {n for n, _ in CODES.values()} == set(range(1, 14))
+    assert all(sev in ("critical", "medium") for _, sev in CODES.values())
+    # rules 4, 5, 7, 9 and 13 (and the rule-6 count claims) never block a send
+    assert {c for c, (n, s) in CODES.items() if s == "medium"} == {
+        "footer_date_mismatch",
+        "industry_meta_date_suffix",
+        "count_claim_in_case_p2",
+        "count_claim_in_deck",
+        "bad_track_label",
+        "p2_why_team_phrase_overlap",
+        *(
+            f"wc_{k}"
+            for k in (
+                "deck",
+                "the_case_p1",
+                "the_case_p2",
+                "why_now_callout",
+                "why_team_para",
+                "value_content",
+                "operational_fit_content",
+                "deal_arch_para",
+                "decision_maker_bio",
+                "opening_angle_intro",
+                "opening_angle_quote",
+            )
+        ),
+    }
+
+
+# ------------------------------------------------------------------ text helpers
+
+
+def test_js_word_count_strips_tags_only_and_keeps_entities_attached():
+    assert (
+        js_word_count("<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The raise") == 4
+    )
+    assert js_word_count("&ldquo;Eric, 25 minutes?&rdquo;") == 3
+    assert js_word_count("") == 0 and js_word_count(None) == 0
+
+
+def test_plain_text_removes_tags_and_named_entities():
+    assert plain_text("<font size='9'>WHY NOW</font>&nbsp;&nbsp;The  raise") == "WHY NOW The raise"
+    assert plain_text("&ldquo;Eric&rdquo;") == "Eric"
 
 
 # ------------------------------------------------------------------ baseline
@@ -179,59 +249,74 @@ def test_rules_table_is_the_thirteen_roadmap_rules_in_order():
 def test_baseline_passes_all_thirteen_rules():
     result = audit_brief(make_brief(), RUN_DATE)
     assert result.violations == [], violations_feedback(result)
-    assert result.passed is True
-    assert result.route == "pass"
-    assert result.warnings == []
+    assert result.passed is True and result.route == "pass" and result.warnings == []
 
 
-def test_baseline_honours_every_word_ceiling_with_headroom():
+def test_baseline_honours_every_ceiling_with_the_js_counter():
     b = make_brief()
-    assert word_count(b.deck) <= 50
-    assert word_count(b.the_case_p1) <= 95
-    assert word_count(b.the_case_p2) <= 75
-    assert word_count(b.why_now_text) <= 55
-    assert word_count(b.why_team_para) <= 85
-    assert word_count(b.value_content) <= 70
-    assert word_count(b.deal_arch_para) <= 70
-    assert word_count(b.decision_maker_bio) <= 50
-    assert word_count(b.opening_angle_intro) <= 18
-    assert word_count(b.opening_angle_quote) <= 45
-    assert all(word_count(f"{r.detail} {r.counter}") <= 32 for r in b.risks)
-    assert all(word_count(c.note) <= 8 for c in b.score_cells)
-    assert page2_chars(b) <= 2500
+    assert js_word_count(b.deck) <= 50
+    assert js_word_count(b.the_case_p1) <= 95
+    assert js_word_count(b.the_case_p2) <= 75
+    # The JS counts the "WHY NOW" prefix too (55-word body + 2); production's +5 grace absorbs it.
+    assert js_word_count(b.why_now_callout) == 57 <= 55 + WORD_CEILING_GRACE
+    assert js_word_count(b.why_team_para) <= 85
+    assert js_word_count(b.value_content) <= 75
+    assert js_word_count(b.deal_arch_para) <= 70
+    assert js_word_count(b.decision_maker_bio) <= 50
+    assert js_word_count(b.opening_angle_intro) <= 18
+    assert js_word_count(b.opening_angle_quote) <= 45
+    assert page2_chars(b) <= PAGE2_BUDGET_WITH_VALUE
 
 
 # ------------------------------------------------------------------ rule 1
 
 
-@pytest.mark.parametrize(
-    "duration",
-    ["THREE YEARS", "FOUR YEARS", "FIVE YEARS", "three-year", "3-year", "4 years", "36 months"],
-)
-def test_rule1_accepts_three_years_or_more(duration):
+@pytest.mark.parametrize("duration", ["THREE YEARS", "FOUR YEARS", "FIVE YEARS", "three years"])
+def test_rule1_accepts_a_bold_three_four_or_five_years_marker(duration):
     b = make_brief(deal_arch_para=f"Entry tier. {BOLD.format(duration)} at $6-9M/yr.")
     assert 1 not in fired(b)
 
 
-@pytest.mark.parametrize("duration", ["TWO YEARS", "two-year", "2-year", "24 months", "one year"])
-def test_rule1_fails_below_three_years(duration):
-    b = make_brief(deal_arch_para=f"Entry tier. {BOLD.format(duration)} at $6-9M/yr.")
-    assert "deal_duration" in codes(b)
+def test_rule1_two_years_fires_both_codes():
+    b = make_brief(deal_arch_para=f"Entry tier. {BOLD.format('TWO YEARS')} at $6-9M/yr.")
+    assert {"min_3_year_deal", "missing_duration_marker"} <= codes(b)
+    assert only(b, "min_3_year_deal").severity == "critical"
 
 
-def test_rule1_fails_when_no_duration_named():
-    b = make_brief(
-        deal_arch_para="Entry at Official Spend Management Partner tier. Estimated $6-9M/yr."
-    )
-    assert "deal_duration" in codes(b)
-    assert 1 in fired(b)
+@pytest.mark.parametrize(
+    "para",
+    [
+        "Entry tier. THREE YEARS at $6-9M/yr.",  # right words, no <font> marker
+        f"Entry tier. {BOLD.format('3-year')} at $6-9M/yr.",  # digits are not a marker
+        f"Entry tier. {BOLD.format('SIX YEARS')} at $6-9M/yr.",  # only THREE/FOUR/FIVE count
+        "Entry at Official Spend Management Partner tier. Estimated $6-9M/yr.",
+    ],
+)
+def test_rule1_requires_the_bold_marker_itself(para):
+    b = make_brief(deal_arch_para=para)
+    assert codes(b) & {"min_3_year_deal", "missing_duration_marker"} == {"missing_duration_marker"}
 
 
 # ------------------------------------------------------------------ rule 2
 
 
-def test_rule2_passes_when_quote_has_25_minutes_and_ends_with_question():
+def test_rule2_passes_at_baseline():
     assert 2 not in fired(make_brief())
+
+
+@pytest.mark.parametrize("closing", ["&rdquo;", '"', "”", "“", ""])
+def test_rule2_accepts_the_production_quote_endings(closing):
+    b = make_brief(opening_angle_quote=f"Eric, 25 minutes before a rival notices?{closing}")
+    assert 2 not in fired(b), closing
+
+
+@pytest.mark.parametrize("closing", ["’", "'", "</font>”", "."])
+def test_rule2_rejects_other_endings(closing):
+    opening = "<font name='Poppins-Bold' size='9.5'>" if closing.startswith("</font>") else ""
+    b = make_brief(
+        opening_angle_quote=f"{opening}Eric, 25 minutes before a rival notices?{closing}"
+    )
+    assert "opening_quote_ending" in codes(b), closing
 
 
 def test_rule2_fails_without_25_minutes():
@@ -241,26 +326,31 @@ def test_rule2_fails_without_25_minutes():
             "with Racing Bulls - before a rival notices the open lane?&rdquo;"
         )
     )
-    assert "opening_quote" in codes(b)
+    assert only(b, "opening_quote_ending").severity == "critical"
 
 
-def test_rule2_fails_when_quote_does_not_end_with_question_mark():
+def test_rule2_flags_25_minutes_used_as_a_metaphor():
     b = make_brief(
         opening_angle_quote=(
-            "&ldquo;Eric, the $44B round and your UK/EU launch this summer line up exactly "
-            "with Racing Bulls. 25 minutes before a rival notices the open lane.&rdquo;"
+            "&ldquo;Eric, the fastest 25 minutes of your UK/EU launch: the $44B round and "
+            "Racing Bulls line up. Can we book 25 minutes?&rdquo;"
         )
     )
-    assert 2 in fired(b)
+    assert codes(b) & {"opening_quote_ending", "opening_quote_metaphor"} == {
+        "opening_quote_metaphor"
+    }
 
 
-def test_rule2_strips_markup_and_trailing_quote_marks_before_checking_ending():
-    for closing in ['"', "”", "’", "'", "&rdquo;", "</font>”"]:
-        opening = "<font name='Poppins-Bold' size='9.5'>" if closing.startswith("</font>") else ""
-        b = make_brief(
-            opening_angle_quote=f"{opening}Eric, 25 minutes before a rival notices?{closing}"
-        )
-        assert 2 not in fired(b), closing
+def test_rule2_metaphor_check_ignores_the_closing_ask_itself():
+    quote = (
+        "&ldquo;Eric, before a rival notices the open lane, can we find the whole "
+        "25 minutes?&rdquo;"
+    )
+    assert (
+        quote_without_ask(quote)
+        == "&ldquo;Eric, before a rival notices the open lane, can we find the whole "
+    )
+    assert 2 not in fired(make_brief(opening_angle_quote=quote))
 
 
 # ------------------------------------------------------------------ rule 3
@@ -270,9 +360,15 @@ def test_rule3_passes_for_declarative_intro():
     assert 3 not in fired(make_brief())
 
 
-def test_rule3_fails_when_intro_contains_a_question_mark():
+def test_rule3_fails_when_intro_ends_with_a_question_mark():
     b = make_brief(opening_angle_intro="Lead with the $44B round and the UK/EU launch?")
-    assert "opening_intro_declarative" in codes(b)
+    assert only(b, "opening_intro_question").severity == "critical"
+
+
+def test_rule3_only_the_ending_counts():
+    # JS `/\?\s*$/` — a question mark mid-intro is not caught by production.
+    b = make_brief(opening_angle_intro="The $44B round? Lead with it and the UK/EU launch.")
+    assert 3 not in fired(b)
 
 
 # ------------------------------------------------------------------ rule 4
@@ -283,15 +379,17 @@ def test_expected_footer_date_has_no_leading_zero_and_is_uppercase():
     assert expected_footer_date(date(2026, 6, 4)) == "4 JUN 2026"
 
 
-def test_rule4_passes_when_footer_date_is_the_run_date():
-    assert 4 not in fired(make_brief())
+@pytest.mark.parametrize("ok", ["14 JUN 2026", "14 jun 2026", " 14 Jun 2026 "])
+def test_rule4_passes_when_footer_date_is_the_run_date_case_insensitive(ok):
+    assert 4 not in fired(make_brief(footer_date=ok))
 
 
 @pytest.mark.parametrize(
     "bad", ["2026-06-14", "04 JUN 2026", "4 JUN 2026", "14 June 2026", "14 JUN 2025"]
 )
 def test_rule4_fails_when_footer_date_differs_from_run_date(bad):
-    assert "footer_date" in codes(make_brief(footer_date=bad))
+    v = only(make_brief(footer_date=bad), "footer_date_mismatch")
+    assert v.rule == 4 and v.severity == "medium"
 
 
 # ------------------------------------------------------------------ rule 5
@@ -301,71 +399,116 @@ def test_rule5_passes_for_date_free_industry_meta():
     assert 5 not in fired(make_brief())
 
 
-@pytest.mark.parametrize(
-    "suffix",
-    [
-        " · 2026-06-14",
-        " 2026-06-14",
-        " · 14 Jun 2026",
-        " · 14 JUN 2026",
-        " · June 2026",
-        " · Jun 2026",
-    ],
-)
-def test_rule5_fails_for_trailing_date(suffix):
-    b = make_brief(industry_meta=BASELINE["industry_meta"] + suffix)
-    assert "industry_meta_no_date" in codes(b)
+@pytest.mark.parametrize("suffix", [" · 2026-06-14", " - 2026-06-14", " 2026-06-14"])
+def test_rule5_fails_for_trailing_iso_date(suffix):
+    v = only(
+        make_brief(industry_meta=BASELINE["industry_meta"] + suffix), "industry_meta_date_suffix"
+    )
+    assert v.rule == 5 and v.severity == "medium"
+
+
+@pytest.mark.parametrize("suffix", [" · 14 Jun 2026", " · June 2026"])
+def test_rule5_only_catches_iso_dates(suffix):
+    # JS `/[·\-\s]\s*\d{4}-\d{2}-\d{2}\s*$/` — prose dates pass through production.
+    assert 5 not in fired(make_brief(industry_meta=BASELINE["industry_meta"] + suffix))
 
 
 # ------------------------------------------------------------------ rule 6
 
 
-def test_team_name_variants():
-    assert team_name_variants("Visa Cash App Racing Bulls") == [
-        "Visa Cash App Racing Bulls",
-        "Visa",
-        "Bulls",
-    ]
-    assert team_name_variants("Aston Martin") == ["Aston Martin", "Aston", "Martin"]
-    assert "Bulls" in team_name_variants("Racing Bulls")
-    assert team_name_variants("Haas") == ["Haas"]  # no 4-letter word other than the label itself
+def test_team_pattern_is_upper_capitalised_and_raw():
+    assert team_pattern("Visa Cash App Racing Bulls") == (
+        "(VISA\\ CASH\\ APP\\ RACING\\ BULLS"
+        "|Visa\\ Cash\\ App\\ Racing\\ Bulls"
+        "|Visa\\ Cash\\ App\\ Racing\\ Bulls)"
+    )
+    assert team_pattern(" AUDI ") == "(AUDI|Audi|AUDI)"
 
 
 def test_rule6_passes_for_company_side_deck_and_landscape_p2():
     assert 6 not in fired(make_brief())
 
 
-def test_rule6_fails_on_original_ramp_headline_as_deck():
-    result = audit_brief(make_brief(deck=RAMP_ORIGINAL_HEADLINE), RUN_DATE)
-    hits = [v for v in result.violations if v.code == "team_vacancy_proximity"]
-    assert hits and hits[0].rule == 6 and hits[0].field == "deck"
+def test_rule6_the_slot_is_open_construction_is_allowed_by_production():
+    # No bare "is open" / "slot is open" in the JS vacancy list (Datadog reference preserved).
+    assert not team_vacancy_within(RAMP_ORIGINAL_HEADLINE, TEAM)
+    assert 6 not in fired(make_brief(deck=RAMP_ORIGINAL_HEADLINE))
 
 
-def test_rule6_fails_when_p2_puts_team_next_to_vacancy_clause():
-    # The original Ramp THE CASE sentence: "is open at Visa Cash App Racing Bulls".
-    b = make_brief(
-        the_case_p2=(
-            "The slot that fits Ramp's profile - its deepened, multi-year Visa issuing "
-            "relationship and its EU/UK expansion arc - is open at Visa Cash App Racing Bulls."
-        )
+def test_rule6_pattern_e_team_has_no_in_deck_and_p2():
+    text = f"{TEAM} has no spend-management partner; Ramp closed a $750M round in June 2026."
+    deck = only(make_brief(deck=text), "team_vacancy_in_deck_e")
+    assert deck.rule == 6 and deck.severity == "critical" and deck.field == "deck"
+    assert "team_has_no_in_case_p2" in codes(make_brief(the_case_p2=text))
+    # "has no spend" is also a vacancy clause 0 chars from the team → pattern B fires too
+    assert "team_vacancy_in_deck_b" in codes(make_brief(deck=text))
+
+
+def test_rule6_pattern_a_team_is_the_only_or_where():
+    for phrase in ("is the only", "is where", "is one of the only", "is the destination where"):
+        text = f"{TEAM} {phrase} Ramp's spend layer sits above the Visa rail."
+        assert "team_vacancy_in_deck_a" in codes(make_brief(deck=text)), phrase
+        assert "why_team_claim_in_case_p2_a" in codes(make_brief(the_case_p2=text)), phrase
+
+
+def test_rule6_pattern_b_uses_min_start_distance_across_all_team_mentions():
+    near = f"The corporate-spend category is vacant, and {TEAM} carries Visa as its title sponsor."
+    assert (
+        team_vacancy_distance(near, TEAM) is not None and team_vacancy_distance(near, TEAM) <= 100
     )
-    hits = [v for v in audit_brief(b, RUN_DATE).violations if v.code == "team_vacancy_proximity"]
-    assert hits and hits[0].field == "the_case_p2"
+    assert "why_team_claim_in_case_p2_b" in codes(make_brief(the_case_p2=near))
+    assert "team_vacancy_in_deck_b" in codes(make_brief(deck=near))
+    # first mention far away, second mention near the clause: v2.1.8d matchAll catches it
+    two = (
+        f"{TEAM} carries Visa as its title sponsor. "
+        + "Ramp begins onboarding UK and European businesses this summer. " * 3
+        + f"The corporate-spend category is vacant at {TEAM}."
+    )
+    assert "team_vacancy_in_deck_b" in codes(make_brief(deck=two))
 
 
-def test_rule6_short_team_alias_near_vacancy_clause_is_caught():
-    deck = "Racing Bulls has no spend-management brand anywhere near the car."
-    assert find_vacancy_proximity(deck, "Visa Cash App Racing Bulls") is not None
-
-
-def test_rule6_vacancy_clause_far_from_team_name_is_allowed():
+def test_rule6_vacancy_clause_far_from_every_team_mention_is_allowed():
     text = (
-        "The category is uncontested. "
-        + ("Ramp begins onboarding UK and European businesses. " * 3)
-        + "Racing Bulls is the destination."
+        "The corporate-spend category is vacant. "
+        + "Ramp begins onboarding UK and European businesses this summer. " * 3
+        + f"{TEAM} carries Visa as its title sponsor."
     )
-    assert text.index("Racing Bulls") - text.index("uncontested") > 100
-    assert find_vacancy_proximity(text, "Visa Cash App Racing Bulls") is None
+    assert team_vacancy_distance(text, TEAM) > 100
+    assert 6 not in fired(make_brief(deck=text, the_case_p2=text))
+
+
+def test_rule6_pattern_c_only_n_team_framing():
+    text = f"The only F1 team without a spend-management brand on the car is {TEAM}."
+    assert only(make_brief(deck=text), "team_vacancy_in_deck_c").severity == "critical"
+    assert "why_team_claim_in_case_p2_c" in codes(make_brief(the_case_p2=text))
+
+
+def test_rule6_pattern_d_counted_teams_claim_is_medium():
+    text = "Two F1 teams carry no spend-management partner; Ramp's category sits unoccupied."
+    v = only(make_brief(deck=text), "count_claim_in_deck")
+    assert v.rule == 6 and v.severity == "medium"
+    assert only(make_brief(the_case_p2=text), "count_claim_in_case_p2").severity == "medium"
+    assert audit_brief(make_brief(deck=text), RUN_DATE).route == "pass"
+
+
+@pytest.mark.parametrize(
+    "phrase",
+    [
+        "still seeking a spend partner",
+        "yet to sign a spend partner",
+        "currently lacks a spend partner",
+        "remains without a spend partner",
+        "the spend category is unclaimed",
+        "has no current spend-management partner",
+    ],
+)
+def test_rule6_v218d_vacancy_phrasings(phrase):
+    assert team_vacancy_within(f"{TEAM} {phrase}.", TEAM), phrase
+
+
+def test_rule6_is_skipped_without_a_team_label():
+    text = f"{TEAM} has no spend-management partner."
+    assert 6 not in fired(make_brief(team_label="", deck=text, the_case_p2=text))
 
 
 # ------------------------------------------------------------------ rule 7
@@ -375,51 +518,38 @@ def test_rule7_passes_at_baseline():
     assert 7 not in fired(make_brief())
 
 
-def test_rule7_fails_when_deck_exceeds_50_words():
-    b = make_brief(deck=BASELINE["deck"] + " " + strip_markup(BASELINE["the_case_p1"]))
-    assert word_count(b.deck) > 50
-    hits = [v for v in audit_brief(b, RUN_DATE).violations if v.code == "word_counts"]
-    assert hits and hits[0].field == "deck" and hits[0].rule == 7
+def test_rule7_fires_only_beyond_the_five_word_grace():
+    words = FILLER.split()
+    assert 7 not in fired(make_brief(deck=" ".join(words[:55])))
+    v = only(make_brief(deck=" ".join(words[:56])), "wc_deck")
+    assert v.rule == 7 and v.severity == "medium" and v.field == "deck"
+    assert "deck: 56 words > 50" == v.message
 
 
-def test_rule7_why_now_prefix_is_not_counted():
-    # 55 real words after the prefix is still within the ceiling.
-    words = (strip_markup(BASELINE["the_case_p1"]) + " " + strip_markup(BASELINE["deck"])).split()[
-        :55
-    ]
-    b = make_brief(
-        why_now_callout="<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;"
-        + " ".join(words)
-    )
-    assert word_count(b.why_now_text) == 55
-    assert 7 not in fired(b)
-    b2 = make_brief(
-        why_now_callout="<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;"
-        + " ".join(words + ["today."])
-    )
-    assert 7 in fired(b2)
+def test_rule7_why_now_prefix_counts_as_two_words():
+    prefix = "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;"
+    body = (FILLER + " " + strip_markup(BASELINE["deck"])).split()
+    assert 7 not in fired(make_brief(why_now_callout=prefix + " ".join(body[:58])))
+    assert "wc_why_now_callout" in codes(make_brief(why_now_callout=prefix + " ".join(body[:59])))
 
 
-def test_rule7_reports_every_field_that_exceeds():
+def test_rule7_empty_fields_are_skipped():
+    assert 7 not in fired(make_brief(opening_angle_intro=""))
+
+
+def test_rule7_does_not_count_risks_or_score_cell_notes():
     long_note = "MODE B: back-office and treasury - Ramp serves the team's spend operation."
     b = make_brief(
         score_cells=[[c[0], c[1], c[2], long_note] for c in BASELINE["score_cells"]],
         risks=[[r[0], r[1] + " " + r[2], r[2] + " " + r[1]] for r in BASELINE["risks"]],
     )
-    hits = [v for v in audit_brief(b, RUN_DATE).violations if v.code == "word_counts"]
-    assert len(hits) == 7  # 5 score-cell notes + 2 risks
-    assert {v.field for v in hits} >= {"risks[1]", "risks[2]"}
-
-
-def test_rule7_value_content_not_counted_when_section_off():
-    b = make_brief(
-        score=68,
-        value_section=False,
-        value_content=strip_markup(BASELINE["the_case_p1"]) + " " + BASELINE["value_content"],
-        risks=BASELINE["risks"] + [["THIRD RISK", "", "Counter."]],
-    )
-    assert word_count(b.value_content) > 70
     assert 7 not in fired(b)
+
+
+def test_rule7_value_content_is_audited_even_when_the_section_is_off():
+    b = no_value(value_content=FILLER + " " + BASELINE["value_content"])
+    assert js_word_count(b.value_content) > 80
+    assert "wc_value_content" in codes(b)
 
 
 # ------------------------------------------------------------------ rule 8
@@ -431,7 +561,7 @@ def test_rule8_passes_for_high_confidence():
 
 @pytest.mark.parametrize("level", ["LOW", "low", "Low"])
 def test_rule8_fails_for_low_confidence(level):
-    assert "confidence_not_low" in codes(make_brief(confidence_level=level))
+    assert only(make_brief(confidence_level=level), "low_confidence").severity == "critical"
 
 
 # ------------------------------------------------------------------ rule 9
@@ -445,8 +575,9 @@ def test_rule9_passes_for_the_two_exact_labels(label):
 @pytest.mark.parametrize(
     "label", ["TRACK 1", "TRACK 2", "ALUMNI INTELLIGENCE", "· ALUMNI INTELLIGENCE", " "]
 )
-def test_rule9_fails_for_anything_else(label):
-    assert "track_label" in codes(make_brief(track_label=label))
+def test_rule9_fails_for_anything_else_as_medium(label):
+    v = only(make_brief(track_label=label), "bad_track_label")
+    assert v.rule == 9 and v.severity == "medium"
 
 
 # ------------------------------------------------------------------ rule 10
@@ -457,53 +588,56 @@ def test_rule10_passes_with_two_risks_and_value_section():
 
 
 def test_rule10_passes_with_three_risks_and_no_value_section():
-    b = make_brief(
-        score=68, value_section=False, risks=BASELINE["risks"] + [["THIRD RISK", "", "Counter."]]
-    )
-    assert 10 not in fired(b)
+    assert 10 not in fired(no_value())
 
 
-def test_rule10_fails_with_three_risks_when_value_section_true():
-    b = make_brief(risks=BASELINE["risks"] + [["THIRD RISK", "", "Counter."]])
-    assert "risk_count" in codes(b)
+def test_rule10_three_risks_with_value_section_is_critical():
+    v = only(make_brief(risks=BASELINE["risks"] + [THIRD_RISK]), "risk_count")
+    assert v.rule == 10 and v.severity == "critical" and v.message == "risks=3, expected 2"
 
 
-def test_rule10_fails_with_two_risks_when_value_section_false():
-    b = make_brief(score=68, value_section=False)
-    assert "risk_count" in codes(b)
+def test_rule10_two_risks_without_value_section_is_only_medium():
+    b = no_value(risks=BASELINE["risks"])
+    v = only(b, "risk_count")
+    assert v.severity == "medium" and v.message == "risks=2, expected 3"
+    assert audit_brief(b, RUN_DATE).route == "pass"
 
 
 # ------------------------------------------------------------------ rule 11
 
 
 def test_rule11_passes_at_baseline():
-    assert page2_chars(make_brief()) <= 2500
+    assert page2_chars(make_brief()) <= 2300
     assert 11 not in fired(make_brief())
 
 
-def test_rule11_fails_when_page2_exceeds_2500_chars_with_value_section():
-    filler = strip_markup(BASELINE["the_case_p1"])
-    b = make_brief(
-        value_content=BASELINE["value_content"] + " " + filler + " " + filler + " " + filler
-    )
-    assert page2_chars(b) > 2500
-    assert "page2_char_budget" in codes(b)
+def test_rule11_fails_beyond_2300_chars_with_value_section():
+    b = make_brief(value_content=" ".join([BASELINE["value_content"], FILLER, FILLER, FILLER]))
+    assert page2_chars(b) > 2300
+    v = only(b, "page2_overflow_risk")
+    assert v.rule == 11 and v.severity == "critical" and "> 2300" in v.message
 
 
-def test_rule11_budget_is_2300_without_value_section():
-    filler = strip_markup(BASELINE["the_case_p1"])
-    three = BASELINE["risks"] + [["THIRD RISK", "", "Counter."]]
-    b = make_brief(score=68, value_section=False, risks=three)
-    base = page2_chars(b)
-    assert base <= 2300
-    b2 = make_brief(
-        score=68,
-        value_section=False,
-        risks=three,
-        decision_maker_bio=BASELINE["decision_maker_bio"] + " " + filler,
-    )
-    assert 2300 < page2_chars(b2) <= 2500  # would pass with the value section's budget
-    assert "page2_char_budget" in codes(b2)
+def test_rule11_budget_is_2100_without_value_section():
+    b = no_value()
+    assert page2_chars(b) <= PAGE2_BUDGET_WITHOUT_VALUE
+    b2 = no_value(decision_maker_bio=BASELINE["decision_maker_bio"] + " " + FILLER)
+    assert 2100 < page2_chars(b2) <= 2300  # would pass with the value section's budget
+    assert "> 2100" in only(b2, "page2_overflow_risk").message
+
+
+def test_rule11_counts_value_content_even_when_section_off_and_all_three_risk_parts():
+    b = no_value()
+    with_text = no_value(value_content=FILLER)
+    assert page2_chars(with_text) - page2_chars(b) == len(FILLER)
+    risk = [
+        "VISA CHANNEL CONFLICT",
+        "Ramp's Visa issuing deal could be read as a conflict.",
+        "Frame Ramp above the Visa rail.",
+    ]
+    b3 = make_brief(risks=[risk, BASELINE["risks"][1]])
+    b4 = make_brief(risks=[[risk[0], risk[1], ""], BASELINE["risks"][1]])
+    assert page2_chars(b3) - page2_chars(b4) == len(" " + risk[2])
 
 
 # ------------------------------------------------------------------ rule 12
@@ -514,77 +648,135 @@ def test_rule12_passes_when_value_section_rendered_at_score_84():
 
 
 def test_rule12_passes_below_70_without_value_section():
-    b = make_brief(
-        score=69,
-        value_section=False,
-        value_content="",
-        value_section_label="",
-        risks=BASELINE["risks"] + [["THIRD RISK", "", "Counter."]],
-    )
-    assert 12 not in fired(b)
+    assert 12 not in fired(no_value(score=69))
 
 
 def test_rule12_fails_when_value_section_false_at_score_70_plus():
-    b = make_brief(
-        score=70, value_section=False, risks=BASELINE["risks"] + [["THIRD RISK", "", "Counter."]]
+    v = only(no_value(score=70), "value_section_missing")
+    assert v.rule == 12 and v.severity == "critical"
+
+
+def test_rule12_fails_when_value_section_on_but_content_empty_at_any_score():
+    assert only(make_brief(value_content=""), "value_content_empty").severity == "critical"
+    assert "value_content_empty" in codes(
+        make_brief(score=60, value_content="<font size='9'></font>")
     )
-    assert "value_section_required" in codes(b)
 
 
-def test_rule12_fails_when_value_content_empty():
-    assert "value_section_required" in codes(make_brief(value_content=""))
-
-
-def test_rule12_fails_when_value_section_label_empty():
-    assert "value_section_required" in codes(make_brief(value_section_label=""))
+def test_rule12_does_not_check_the_section_label():
+    # production audits value_section + value_content only; the label is the writer's job
+    assert 12 not in fired(make_brief(value_section_label=""))
 
 
 # ------------------------------------------------------------------ rule 13
 
 
 def test_rule13_passes_at_baseline():
-    assert shared_phrases(BASELINE["the_case_p2"], BASELINE["why_team_para"]) == []
+    assert shared_phrases(BASELINE["the_case_p2"], BASELINE["why_team_para"], TEAM) == []
     assert 13 not in fired(make_brief())
 
 
-def test_rule13_flags_five_word_overlap_as_medium_warning_not_a_retry():
-    # Primer-style soft duplication: a THE CASE p2 sentence re-used in WHY [TEAM].
+def test_rule13_flags_five_gram_overlap_as_one_medium_warning():
+    # Primer-style soft duplication: a THE CASE p2 clause re-used in WHY [TEAM].
     b = make_brief(
         why_team_para=BASELINE["why_team_para"]
         + " Ramp's EU/UK expansion arc and its Visa issuing relationship land the profile here."
     )
     result = audit_brief(b, RUN_DATE)
-    hits = [v for v in result.violations if v.code == "phrase_overlap"]
-    assert hits and hits[0].rule == 13 and hits[0].severity == "medium"
-    assert "expansion arc and its visa issuing relationship" in hits[0].message
-    assert result.passed is True
-    assert result.route == "pass"
-    assert result.warnings == hits
+    hits = [v for v in result.violations if v.code == "p2_why_team_phrase_overlap"]
+    assert len(hits) == 1 and hits[0].rule == 13 and hits[0].severity == "medium"
+    assert hits[0].message.startswith('5+ word phrase shared: "ramp s eu uk expansion" (+')
+    assert result.passed is True and result.route == "pass" and result.warnings == hits
 
 
-def test_rule13_ignores_stopword_only_runs():
+def test_rule13_needs_three_content_tokens_per_five_gram():
     assert shared_phrases("and of the in the on a", "so and of the in the on a") == []
     assert shared_phrases(
         "the visa issuing relationship and the", "the visa issuing relationship and the"
-    ) == ["the visa issuing relationship and the"]
+    ) == [
+        "the visa issuing relationship and",
+        "visa issuing relationship and the",
+    ]
 
 
-def test_rule13_is_case_and_punctuation_insensitive():
+def test_rule13_skips_phrases_carrying_two_or_more_team_words():
+    phrase = "the profile at Visa Cash App Racing Bulls"
+    assert shared_phrases(phrase, phrase, TEAM) == []
+    assert shared_phrases(phrase, phrase, "") != []
+
+
+def test_rule13_is_case_and_punctuation_insensitive_and_splits_on_apostrophes():
     assert shared_phrases(
         "Visa issuing relationship, EU/UK expansion!", "visa ISSUING relationship EU UK expansion"
-    ) == ["visa issuing relationship eu uk expansion"]
+    ) == [
+        "visa issuing relationship eu uk",
+        "issuing relationship eu uk expansion",
+    ]
+    assert shared_phrases("Ramp's Visa issuing agreement", "ramp s visa issuing agreement") == [
+        "ramp s visa issuing agreement"
+    ]
 
 
-# ------------------------------------------------------------------ routing + feedback
+# ------------------------------------------------------------------ routing, log rows, feedback
 
 
-def test_route_is_retry_on_any_high_violation():
-    result = audit_brief(make_brief(confidence_level="LOW"), RUN_DATE)
-    assert result.passed is False
-    assert result.route == "retry"
+def test_route_is_retry_on_first_critical_failure_then_manual_review():
+    low = make_brief(confidence_level="LOW")
+    first = audit_brief(low, RUN_DATE)
+    assert first.passed is False and first.route == "retry" and first.retry_count == 0
+    second = audit_brief(low, RUN_DATE, retry_count=1, previous_violations=first.violations)
+    assert second.route == "manual_review" and second.previous_violations == first.violations
+    # previous violations never change the decision on their own
+    assert (
+        audit_brief(
+            make_brief(), RUN_DATE, retry_count=1, previous_violations=first.violations
+        ).route
+        == "pass"
+    )
 
 
-def test_violations_feedback_lists_every_violation_with_rule_number():
+def test_medium_only_results_pass_and_log_as_no_violations():
+    b = make_brief(track_label="TRACK 1")
+    result = audit_brief(b, RUN_DATE)
+    assert result.route == "pass" and result.warnings and result.passed
+    rows = result.log_rows(b, RUN_DATE)
+    assert rows[0] == {
+        "run_date": "2026-06-14",
+        "brief_number": "017",
+        "company": "Ramp",
+        "row_type": "summary",
+        "rule": "audit_passed",
+        "severity": "info",
+        "detail": "No violations.",
+    }
+    assert rows[1]["row_type"] == "violation" and rows[1]["rule"] == "bad_track_label"
+
+
+def test_log_rows_summary_for_retry_and_manual_review():
+    b = make_brief(confidence_level="LOW", track_label="TRACK 1")
+    retry = audit_brief(b, RUN_DATE).log_rows(b, RUN_DATE)
+    assert retry[0]["rule"] == "audit_failed_retrying" and retry[0]["severity"] == "critical"
+    assert retry[0]["detail"] == "1 critical, 1 medium (retry=0)"
+    assert [r["rule"] for r in retry[1:]] == ["low_confidence", "bad_track_label"]
+    manual = audit_brief(b, RUN_DATE, retry_count=1).log_rows(b, RUN_DATE)
+    assert manual[0]["rule"] == "audit_failed_manual_review" and manual[0]["detail"].endswith(
+        "(retry=1)"
+    )
+    blank = make_brief(brief_number="", company="")
+    assert audit_brief(blank, RUN_DATE).log_rows(blank, RUN_DATE)[0]["brief_number"] == "???"
+    assert audit_brief(blank, RUN_DATE).log_rows(blank, RUN_DATE)[0]["company"] == "RAMP"
+
+
+def test_as_json_mirrors_the_js_audit_object():
+    j = audit_brief(make_brief(confidence_level="LOW"), RUN_DATE).as_json()
+    assert j["passed"] is False and j["critical_count"] == 1 and j["medium_count"] == 0
+    assert j["violations"] == [
+        {"rule": "low_confidence", "severity": "critical", "detail": "confidence_level is LOW"}
+    ]
+    assert j["retry_count"] == 0 and "run_at" in j
+
+
+def test_violations_feedback_is_the_retry_prep_line_format():
     b = make_brief(
         confidence_level="LOW",
         track_label="TRACK 1",
@@ -592,15 +784,9 @@ def test_violations_feedback_lists_every_violation_with_rule_number():
         opening_angle_intro="Why not lead with the $44B round?",
     )
     result = audit_brief(b, RUN_DATE)
-    text = violations_feedback(result)
-    lines = text.splitlines()
-    assert len(lines) == len(result.violations) >= 4
-    for i, v in enumerate(result.violations, 1):
-        assert lines[i - 1].startswith(f"{i}. Rule {v.rule} ({v.code}")
-        assert v.message in lines[i - 1]
     assert {v.rule for v in result.violations} == {3, 4, 8, 9}
-
-
-def test_violations_feedback_for_clean_result():
-    assert violations_feedback(AuditResult()) == "No audit violations."
-    assert AuditResult([Violation(13, "phrase_overlap", "medium", "x")]).route == "pass"
+    assert violations_feedback(result).splitlines() == [
+        f"- [{v.severity.upper()}] {v.code}: {v.message}" for v in result.violations
+    ]
+    assert violations_feedback(AuditResult()) == ""
+    assert AuditResult([Violation(13, "p2_why_team_phrase_overlap", "medium", "x")]).route == "pass"

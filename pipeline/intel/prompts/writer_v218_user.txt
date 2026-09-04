@@ -1,0 +1,39 @@
+Write a full intelligence brief from this signal data.
+
+TODAY'S DATE (use for footer_date — NOT signal article date): {{ $today.format('d MMM yyyy').toUpperCase() }}
+
+Company: {{ $json.company }}
+Score: {{ $json.score }} ({{ $json.tier }})
+Track: {{ $json.track }}
+Person: {{ $json.person }}
+Role: {{ $json.role }}
+Industry meta: {{ $json.industry_meta }}
+Horizon: {{ $json.horizon_weeks }}
+Source URL: {{ $json.source_url }}
+Recommended team: {{ $json.recommended_team }}
+Recommended series: {{ $json.recommended_series }}
+Brief number: {{ $json.brief_number }}
+Confidence level: {{ $json.confidence_level }}
+
+Key facts:
+- Funding: {{ $json.key_facts.funding }}
+- Investors: {{ $json.key_facts.investors }}
+- Revenue/ARR: {{ $json.key_facts.revenue }}
+- Trigger: {{ $json.key_facts.trigger }}
+- Competitor signal: {{ $json.key_facts.competitor_signal }}
+- Strategic hook: {{ $json.key_facts.strategic_hook }}
+- US presence: {{ $json.key_facts.us_presence }}
+- Alumni match: {{ $json.key_facts.alumni_match }}
+- Taxonomy category: {{ $json.key_facts.taxonomy_category }}
+- Ops fit note: {{ $json.key_facts.ops_fit_note }}
+
+Score breakdown:
+- Timing: {{ $json.score_breakdown.timing }}/20
+- Capacity: {{ $json.score_breakdown.capacity }}/20
+- Brand fit: {{ $json.score_breakdown.brand_fit }}/20
+- Urgency: {{ $json.score_breakdown.urgency }}/20
+- Ops fit: {{ $json.score_breakdown.ops_fit }}/20
+
+{{ JSON.stringify($json._retry_block || '').slice(1, -1) }}
+
+Apply the VALUE TO [TEAM] section rule: render for every brief at score >= 70. Pick the correct content mode based on company archetype. MODE A (operational) for ops_fit >= 14 — on-car/factory/broadcast specifics. MODE B (commercial back-office) for ops_fit 11-13 or fintech/payments/insurance — paddock settlements, treasury, partner-onboarding funnel. MODE C (audience/brand-pipeline) for ops_fit <= 10 AND consumer/lifestyle/media/B2C — user base demographics, race-weekend activation surfaces, customer-acquisition framing, brand-moment amplification. Set value_section_label = 'VALUE TO ' + team_label uppercase. Set value_section true and write value_content (50-75 words) accordingly. If score < 70, set value_section false. DECK RULE: company-side only; NO team-vacancy claims in deck (forbidden patterns: '[TEAM] HAS NO X', '[Team] is where X is open'). DEAL ARCHITECTURE: THREE YEARS minimum. Apply SECTION CONTENT BOUNDARIES, OPENING ANGLE rule, ANTI-HALLUCINATION, FACT QUALITY DISCIPLINE, £100 test, anti-duplication self-check including the deck final check. Risk count: 2 if value_section true, 3 if false. Emit BRIEF_DATA then SIGNAL_DATA.

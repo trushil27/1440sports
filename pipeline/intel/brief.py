@@ -1,15 +1,22 @@
 """Brief writer (build brief §6.6).
 
-System prompt = the verbatim Phase 2.1.3 writer prompt from spec/n8n_v21_prompts.md NODE 2
-(``intel/prompts/writer_v213_system.txt``) + an addendum for what the June-2026 production
-format needs beyond it (value section modes and three-year minimum from
-spec/production_roadmap.md §2.1.8; bottom line, risk detail, signals, hq/ticker). The
-addendum is clearly delimited so the spec text itself stays untouched.
+System prompt = the verbatim production writer prompt from the live n8n export
+(``Anthropic - Write Brief`` node, v2.1.8 — ``intel/prompts/writer_v218_system.txt``) + a
+short delimited addendum for the June-2026 BRIEF_DATA fields the production prompt does not
+emit (``value_mode``, three-element risks, ``bottom_line``, ``hq`` / ``ticker`` /
+``signals``) and for what the pipeline computes itself. Everything the production prompt
+already covers (three-year minimum, VALUE TO [TEAM] modes, deck rule, risk count, retry
+handling) lives only in the verbatim text.
+
+A failed audit is fed back exactly as the production ``Retry Prep`` node does: the
+``=== RETRY MODE - CORRECTING PREVIOUS DRAFT ===`` block goes into the user message at the
+``{{ JSON.stringify($json._retry_block || '').slice(1, -1) }}`` slot.
 """
 
 from __future__ import annotations
 
 import datetime as dt
+import json
 import re
 from pathlib import Path
 from typing import Any, Protocol
@@ -22,62 +29,71 @@ from intel.parse import ParseError, ScannedSignal, extract_json_object
 
 PROMPTS = Path(__file__).parent / "prompts"
 
+# Only what the June-2026 BRIEF_DATA contract needs beyond the verbatim production prompt.
 WRITER_ADDENDUM = """
 
 =====================================================================
-JUNE-2026 FORMAT ADDENDUM (Phase 2.1.8 + production brief format). Where a line below
-conflicts with an instruction above, THIS ADDENDUM WINS.
+JUNE-2026 FORMAT ADDENDUM — extra BRIEF_DATA fields for the June-2026 renderer. Every rule
+above stands unchanged; this only adds fields.
 =====================================================================
 
-1. DEAL ARCHITECTURE MINIMUM IS THREE YEARS. Ignore the "TWO YEARS" instruction above.
-   State the term in bold uppercase: <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>,
-   FOUR YEARS or FIVE YEARS (three = entry/associate, four = major partner, five = title /
-   category-defining). Never propose a two-year deal.
+1. VALUE SECTION MODE: the mode (A, B or C, as defined above) is decided by code and given
+   in the user message — use that mode, and add "value_mode": "A" | "B" | "C" to BRIEF_DATA.
 
-2. VALUE TO [TEAM] SECTION. Add these fields to BRIEF_DATA:
-   "value_section": true,
-   "value_section_label": "VALUE TO <TEAM NAME UPPERCASE>",
-   "value_mode": "<A|B|C — use the mode given in the user message>",
-   "value_content": "<70 words MAX>"
-   The mode is decided by code, not by you:
-   MODE A (operational): what the product physically does on the car, in the factory or on
-   the broadcast feed — name the operational need and the deployment surface.
-   MODE B (commercial back-office): paddock supplier settlements, treasury, partner
-   onboarding, sponsor-activation flows — what the team's commercial operation gains.
-   MODE C (audience / brand pipeline): user-base demographics, race-weekend activation,
-   customer-acquisition framing — what the team's audience gives the company and vice versa.
-   Every mode must be concrete and two-way: what the team gets AND what the company gets.
-   Never a feature list, never "perfect fit for motorsport".
+2. RISK SHAPE: each risk is a three-element array ["UPPERCASE LABEL", "the risk in one
+   sentence", "the counter in one sentence"]; label excluded, risk + counter together are
+   32 words MAX. The risk COUNT rule above (2 with the value section, 3 without) stands.
 
-3. RISKS: write EXACTLY TWO risks (the value section is present). Each risk is a
-   three-element array ["UPPERCASE LABEL", "the risk in one sentence", "the counter in one
-   sentence"]; label excluded, risk + counter together are 32 words MAX.
-
-4. BOTTOM LINE: add "bottom_line": one or two sentences, 45 words MAX, that a busy MD could
+3. BOTTOM LINE: add "bottom_line": one or two sentences, 45 words MAX, that a busy MD could
    act on alone — the company-side moment plus the single team verdict. This is the ONLY
    place besides why_team_para where the team may be argued for.
 
-5. DECK RULE (hardened): the deck never claims a team vacancy ("[TEAM] has no X",
-   "the slot at [TEAM] is open"). The team may be named only as a destination, never
-   explained. If unsure, do not mention the team in the deck at all.
-
-6. EXTRA FIELDS: "hq": city from the signal data or null; "ticker": listing or valuation
+4. EXTRA FIELDS: "hq": city from the signal data or null; "ticker": listing or valuation
    line ONLY if it is in the signal data, else null; "signals": 2-4 tags from this
    vocabulary only: funding_event, ipo_filing, ipo_roadshow, new_leadership,
    category_whitespace, expansion, product_launch, partnership, alumni_tie, catalyst.
 
-7. NOT YOURS TO WRITE: proof points, GRID FIT rows, the SOURCES list and the decision-maker
+5. NOT YOURS TO WRITE: proof points, GRID FIT rows, the SOURCES list and the decision-maker
    VERIFIED tag are computed by the pipeline from the verified-claims ledger and the sponsor
    table. Do not emit them. Do not cite venues or races that are not on the current F1 /
    Formula E calendar — an unverifiable race blocks the brief.
-
-8. If the user message contains an AUDIT FEEDBACK block, fix every numbered violation and
-   re-emit the complete BRIEF_DATA. Keep everything that was not flagged.
 """
 
+RETRY_MODE_HEADER = "=== RETRY MODE - CORRECTING PREVIOUS DRAFT ==="
+
 _TODAY_TOKEN = "{{ $today.format('d MMM yyyy').toUpperCase() }}"
+_RETRY_TOKEN = "{{ JSON.stringify($json._retry_block || '').slice(1, -1) }}"
 _JSON_TOKEN = re.compile(r"\{\{\s*\$json\.([\w.]+)\s*\}\}")
 _BRIEF_BLOCK = re.compile(r"<BRIEF_DATA>(.*?)</BRIEF_DATA>", re.DOTALL)
+
+
+def retry_block(violation_lines: str, previous_draft: dict[str, Any] | None = None) -> str:
+    """The production ``Retry Prep`` block, verbatim. ``previous_draft`` (the failed
+    BRIEF_DATA) is included when the caller has it; the orchestrator currently passes only
+    the violation lines, so the PREVIOUS DRAFT section is omitted in that case."""
+    parts = [
+        "",
+        RETRY_MODE_HEADER,
+        "The previous draft of this brief failed automated audit. Fix EVERY violation below "
+        "while keeping the facts intact.",
+        "",
+        "VIOLATIONS TO FIX:",
+        violation_lines,
+        "",
+    ]
+    if previous_draft is not None:
+        parts += [
+            "PREVIOUS DRAFT (BRIEF_DATA fields):",
+            json.dumps(previous_draft, indent=2, ensure_ascii=False),
+            "",
+        ]
+    parts += [
+        "Produce a corrected BRIEF_DATA that resolves every violation. Keep the same facts; "
+        "change only the prose that violates the rules. Apply the retry rules in the system "
+        "prompt. There is no second retry - get it right this time.",
+        "",
+    ]
+    return "\n".join(parts)
 
 
 def date_upper(d: dt.date) -> str:
@@ -106,24 +122,20 @@ def writer_prompts(
     value_mode: str,
     feedback: str | None = None,
 ) -> tuple[str, str]:
-    system = (PROMPTS / "writer_v213_system.txt").read_text(encoding="utf-8") + WRITER_ADDENDUM
-    user = (PROMPTS / "writer_v213_user.txt").read_text(encoding="utf-8")
+    system = (PROMPTS / "writer_v218_system.txt").read_text(encoding="utf-8") + WRITER_ADDENDUM
+    user = (PROMPTS / "writer_v218_user.txt").read_text(encoding="utf-8")
     user = user.replace(_TODAY_TOKEN, date_upper(run_date))
+    user = user.replace(_RETRY_TOKEN, retry_block(feedback) if feedback else "")
     extra = {
         "brief_number": brief_number,
         "confidence_level": signal.confidence_level or "MEDIUM",
-        "of_gate_passed": signal.of_gate_passed if signal.of_gate_passed is not None else "",
     }
     user = _JSON_TOKEN.sub(lambda m: _lookup(signal, m.group(1), extra), user)
     user += (
         f"\n\nVALUE SECTION MODE (decided by code from ops_fit and industry): {value_mode}\n"
-        "Emit the addendum fields (value_section, value_section_label, value_mode, value_content, "
-        "bottom_line, hq, ticker, signals) and exactly TWO risks as three-element arrays."
+        "Emit the addendum fields (value_mode, bottom_line, hq, ticker, signals) and the risks "
+        "as three-element arrays."
     )
-    if feedback:
-        user += (
-            f"\n\nAUDIT FEEDBACK — fix every item and re-emit the complete BRIEF_DATA:\n{feedback}"
-        )
     return system, user
 
 

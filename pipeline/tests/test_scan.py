@@ -28,11 +28,14 @@ def _good_output() -> str:
     return json.dumps([row])
 
 
-def test_prompts_are_the_verbatim_spec_text_with_today_substituted():
+def test_prompts_are_the_verbatim_production_text_with_today_substituted():
     system, user = scan.scanner_prompts(dt.date(2026, 9, 4))
     assert system.startswith("You are the 1440Sports Signal Scanner. Today is 2026-09-04.")
     assert "{{" not in system
-    assert "FE QUOTA" in system and "ANTI-HALLUCINATION RULES" in system
+    # The v2.1.8 production scanner keeps the FE quota and adds full-grid team matching; the
+    # 2.1.3 "ANTI-HALLUCINATION RULES" block is no longer in the scanner (it lives in the writer).
+    assert "FE QUOTA" in system and "TEAM MATCHING — FULL GRID EXPLORATION" in system
+    assert "ANTI-HALLUCINATION RULES" not in system
     assert user.startswith("Run today's signal scan.")
 
 

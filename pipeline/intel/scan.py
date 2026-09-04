@@ -1,8 +1,9 @@
 """Scan: Claude + web search → ranked candidate list (§6.1).
 
-Prompt text is the verbatim Phase 2.1.3 scanner from spec/n8n_v21_prompts.md NODE 1
-(see intel/prompts/README.md). Malformed output → one retry with the parse error fed
-back → then ``ScanFailed`` (the run fails and the operator is alerted).
+Prompt text is the verbatim production scanner from the live n8n export
+(``Anthropic — Run Signals`` node, spec/n8n_workflow_production_2026-09-04.json; see
+intel/prompts/README.md). Malformed output → one retry with the parse error fed back →
+then ``ScanFailed`` (the run fails and the operator is alerted).
 """
 
 from __future__ import annotations
@@ -78,8 +79,8 @@ def load_prompt(name: str) -> str:
 
 
 def scanner_prompts(today: dt.date) -> tuple[str, str]:
-    system = load_prompt("scanner_v213_system.txt").replace(_TODAY_TOKEN, today.isoformat())
-    user = load_prompt("scanner_v213_user.txt")
+    system = load_prompt("scanner_v218_system.txt").replace(_TODAY_TOKEN, today.isoformat())
+    user = load_prompt("scanner_v218_user.txt")
     return system, user
 
 

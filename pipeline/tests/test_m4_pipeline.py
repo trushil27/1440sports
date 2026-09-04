@@ -99,7 +99,8 @@ def test_end_to_end_verified_brief_is_rendered_and_persisted(session, migrated_d
     # the writer got the spec prompt + addendum and today's date; surfaced_log points at the brief
     system, user = stages.writer.calls[0]
     assert "You are the 1440Sports Brief Writer" in system and "JUNE-2026 FORMAT ADDENDUM" in system
-    assert "TODAY'S DATE (use this for footer_date — NOT signal article date): 14 JUN 2026" in user
+    assert "TODAY'S DATE (use for footer_date — NOT signal article date): 14 JUN 2026" in user
+    assert "=== RETRY MODE" not in user  # first draft: the retry slot is empty
     assert "Company: Ramp" in user and "VALUE SECTION MODE" in user
     # brief numbers come from the global sequence (never reset, never reused)
     assert f"Brief number: {brief.brief_number:03d}" in user
@@ -127,7 +128,10 @@ def test_audit_violations_are_fed_back_once_then_pass_after_retry(
     brief = session.get(Brief, out.brief_id)
     assert brief.audit_attempts == 2
     _, retry_user = stages.writer.calls[1]
-    assert "AUDIT FEEDBACK" in retry_user and "Rule 1" in retry_user
+    # the production Retry Prep block with the `- [SEVERITY] code: detail` violation lines
+    assert "=== RETRY MODE - CORRECTING PREVIOUS DRAFT ===" in retry_user
+    assert "- [CRITICAL] min_3_year_deal: deal_arch_para proposes TWO YEARS" in retry_user
+    assert "- [CRITICAL] missing_duration_marker:" in retry_user
 
 
 def test_failed_audit_is_kept_for_operator_and_never_md_eligible(

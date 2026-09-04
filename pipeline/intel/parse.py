@@ -119,7 +119,15 @@ class OpsFitSubscores(BaseModel):
 
 
 class ScoreBreakdown(BaseModel):
-    """Five dimensions, each 0-20 (Phase 2.1)."""
+    """Five dimensions, each 0-20 (Phase 2.1).
+
+    The production v2.1.8 scanner system prompt (``prompts/scanner_v218_system.txt``)
+    still shows the pre-2.1 example schema — four dimensions 0-25 with
+    ``urgency_or_alumni`` instead of ``urgency``/``ops_fit`` — while the production writer
+    prompt reads five /20 dimensions including ``ops_fit``. ``urgency_or_alumni`` is
+    accepted here as an optional extra so such output is not silently dropped; the /20
+    contract itself is unchanged (build brief §0.5 — a scoring change needs the MD).
+    """
 
     model_config = ConfigDict(extra="ignore")
     timing: int = Field(ge=0, le=20)
@@ -128,6 +136,7 @@ class ScoreBreakdown(BaseModel):
     urgency: int = Field(ge=0, le=20)
     ops_fit: int | None = Field(default=None, ge=0, le=20)
     ops_fit_subscores: OpsFitSubscores | None = None
+    urgency_or_alumni: int | None = Field(default=None, ge=0, le=25)
 
 
 class KeyFacts(BaseModel):
