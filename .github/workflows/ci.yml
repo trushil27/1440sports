@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  pipeline:
+    name: pipeline — lint, migrate, test
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: intel_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://postgres:postgres@localhost:5432/intel_test
+      PYTHONPATH: pipeline
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: System libraries for WeasyPrint (render tests)
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2 libffi-dev
+
+      - name: Install pipeline
+        run: pip install -e "pipeline[dev,render]"
+
+      - name: Lint
+        run: ruff check --config pipeline/pyproject.toml pipeline db
+
+      - name: Migrations apply on a fresh Postgres
+        run: alembic -c db/alembic.ini upgrade head
+
+      - name: Tests
+        run: pytest pipeline/tests
+
+      - name: Secret scan (no credentials in the repo, ever)
+        run: |
+          ! git grep -nE "(sk-ant-[A-Za-z0-9_-]{20,}|client_secret *[:=] *['\"][^'\"]{8,}|BEGIN (RSA|OPENSSH) PRIVATE KEY)" -- . ':!.github/workflows/ci.yml' || (echo "possible secret committed" && exit 1)
