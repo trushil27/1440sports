@@ -50,6 +50,31 @@ information. Lead with "who to call, why now, which team" — never a research d
 - **Deep-dive dossier (gated Tier-2 showcase):** `pitch/glean-deepdive.pdf` (built by `pitch/glean_dossier.py`) — full company breakdown, leadership/decision path, financials, competitive-moat analysis, FE fit, with every claim confidence-tagged (VERIFIED/REPORTED/GAP/ESTIMATE) + source ledger.
 - **11 scored prospects** live in `data/prospects.json` (Ramp 87, JFrog 86, Cohesity 82, Quantinuum 76, 1Password 72, Glean 72, Plaid 71, + more). Only Cohesity and Glean carry the **full** trust-field standard (key_facts, fit_lane/domain, thesis, last_verified); the others are lighter.
 
+## Platform build (from 2026-09-04) — `1440_CLAUDE_CODE_BUILD_BRIEF.md`
+
+The MD greenlit a code rebuild of the delivery layer (replacing n8n). **Read the build
+brief and `spec/PROVENANCE.md` first** for any work on it. The new tree sits alongside
+the legacy `engine/` (which stays until M8 cut-over):
+
+| Path | What |
+|---|---|
+| `spec/` | Read-only spec bundle exported from the 1440 Claude Project (21 files). |
+| `pipeline/intel/` | The pipeline package: `scan → parse → freshness → dedup → score → verify → brief → audit → render → send`, orchestrated by `run_daily.py`. |
+| `pipeline/intel/prompts/` | Verbatim scanner/writer prompts extracted from the spec (+ a delimited June-2026 addendum in `brief.py`). |
+| `pipeline/intel/seeds/` | Sponsors (509), 2026 F1 calendar (24 rounds, provisional), alumni, blocklist, sponsor categories, team profiles — mirrored from spec/ + `data/teams.json` with per-row provenance. `python -m intel.seed`. |
+| `db/` | Alembic migrations (`alembic -c db/alembic.ini upgrade head`). |
+| `pipeline/tests/` | Regression suite incl. the §9 real cases (Lime, Primer, Strava, 1Komma5°, Ramp N° 025 phantom race, Ramp N° 007 layout reference). `python3 -m pytest pipeline/tests` (bootstraps a temp Postgres if no `DATABASE_URL`). |
+| `.github/workflows/ci.yml` | ruff + migrations on postgres:16 + pytest + secret grep. |
+
+**State:** M1–M4 done in code (schema, scan/dedup/score, claims ledger with calendar +
+sponsor-table checks, writer + 13-rule audit + June-format renderer). **Every "live run"
+acceptance item is blocked on `ANTHROPIC_API_KEY`** (not present in this environment).
+Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
+prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
+Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;
+threshold 70 as config; run every day; Graph app-permission send (delegated fallback);
+PWA + passkey login; Lora/Poppins vendored (a `june` font stack reproduces the old PDFs).
+
 ## The two-tier product
 
 1. **The 2-page brief** (the daily signal): should we move, why now, which team, opening angle. The thing Ricky loves.

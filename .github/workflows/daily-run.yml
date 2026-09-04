@@ -1,0 +1,52 @@
+# Fallback scheduler for the daily run (primary is the Railway cron in railway.json).
+# Fires at 04:30 and 05:30 UTC; intel.schedule runs only the one that is 05:30 Europe/London.
+# Disabled until the repository has the secrets below (the job skips when DATABASE_URL is unset).
+name: Daily run (fallback)
+
+on:
+  schedule:
+    - cron: "30 4 * * *"
+    - cron: "30 5 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Run regardless of the London slot"
+        type: boolean
+        default: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    if: ${{ vars.DAILY_RUN_ENABLED == 'true' }}
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      OPERATOR_EMAIL: ${{ secrets.OPERATOR_EMAIL }}
+      MD_EMAIL: ${{ secrets.MD_EMAIL }}
+      EXECUTION_MODE: ${{ vars.EXECUTION_MODE || 'shadow' }}
+      GRAPH_TENANT_ID: ${{ secrets.GRAPH_TENANT_ID }}
+      GRAPH_CLIENT_ID: ${{ secrets.GRAPH_CLIENT_ID }}
+      GRAPH_CLIENT_SECRET: ${{ secrets.GRAPH_CLIENT_SECRET }}
+      GRAPH_SENDER: ${{ secrets.GRAPH_SENDER }}
+      GRAPH_REFRESH_TOKEN: ${{ secrets.GRAPH_REFRESH_TOKEN }}
+      APP_BASE_URL: ${{ vars.APP_BASE_URL }}
+      PYTHONPATH: pipeline
+      TZ: Europe/London
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: System libraries for WeasyPrint
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2
+      - run: pip install -e "pipeline[render]"
+      - name: Migrate + seed
+        run: |
+          python -m alembic -c db/alembic.ini upgrade head
+          python -m intel.seed
+      - name: Run the day (05:30 London) and send at 06:00
+        run: python -m intel.schedule ${{ inputs.force && '--force' || '' }}

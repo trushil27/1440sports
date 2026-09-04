@@ -21,7 +21,7 @@ from pathlib import Path
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from intel import audit, dedup, freshness, render, score, verify
+from intel import audit, dedup, freshness, render, score, send, verify
 from intel import brief as brief_mod
 from intel.config import Settings, get_settings
 from intel.db import session_scope
@@ -66,6 +66,8 @@ class Stages:
     writer: brief_mod.Writer | None = None
     extractor: verify.ClaimExtractor = field(default_factory=verify.NoExtractor)
     font_stack: str = "brand"
+    mailer: send.Mailer | None = None
+    distribute: bool = True
 
 
 def _existing_outcome(session: Session, run_date: dt.date) -> RunOutcome | None:
@@ -343,6 +345,8 @@ def run_day(
         stages.verifier = verify.default_verifier(settings)
     if stages.writer is None and settings.anthropic_api_key:
         stages.writer = brief_mod.AnthropicWriter()
+    if stages.mailer is None:
+        stages.mailer = send.mailer_for(settings)
 
     existing = _existing_outcome(session, run_date)
     if existing is not None:
@@ -355,6 +359,8 @@ def run_day(
         run.status, run.error = RunStatus.failed, str(exc)
         run.finished_at = dt.datetime.now(dt.UTC)
         session.flush()
+        if stages.distribute:
+            send.distribute(session, run, settings, stages.mailer, None)
         return RunOutcome(run.id, run_date, "failed", None, summary={"error": str(exc)})
 
     eligible = triage(session, run, signals, run_date, settings)
@@ -415,6 +421,8 @@ def run_day(
     if issued is None:
         run.status = RunStatus.no_signal
         session.flush()
+        if stages.distribute:
+            send.distribute(session, run, settings, stages.mailer, None)
         return RunOutcome(run.id, run_date, "no_signal", None, summary=run.summary)
 
     cand, brief = issued
@@ -428,6 +436,8 @@ def run_day(
     )
     run.status = RunStatus.success
     session.flush()
+    if stages.distribute:
+        send.distribute(session, run, settings, stages.mailer, brief)
     return RunOutcome(
         run.id,
         run_date,

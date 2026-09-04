@@ -55,6 +55,15 @@ class Settings(BaseModel):
     graph_client_id: str | None = None
     graph_client_secret: str | None = None
     graph_sender: str | None = None
+    graph_refresh_token: str | None = Field(
+        default=None, description="Delegated-auth fallback if Mail.Send app consent is not granted."
+    )
+    app_base_url: str = Field(
+        default="https://intel.1440sports.com", description="Link target in emails."
+    )
+    outbox_dir: str = Field(
+        default="storage/outbox", description="Dry-run mailer writes .eml here."
+    )
 
     @property
     def tz(self) -> ZoneInfo:
