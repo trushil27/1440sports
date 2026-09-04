@@ -91,7 +91,8 @@ def test_end_to_end_verified_brief_is_rendered_and_persisted(session, migrated_d
     assert any("$750M" in p["value"] or "$44B" in p["value"] for p in data["proof_points"])
     assert all(p["verified"] for p in data["proof_points"]) and data["all_proof_points_verified"]
     assert data["decision_maker_verified"] is True
-    assert data["sources"] and "techcrunch.com" in data["sources"][0]
+    # evidence URLs from the verifier come first, then the cited sources
+    assert data["sources"] and any("techcrunch.com" in s for s in data["sources"])
     grid = data["gridfit"]
     assert grid and grid[0]["recommended"] and "Racing Bulls" in grid[0]["team"]
     assert data["claims_total"] > 0 and data["claims_verified"] == data["claims_total"]
@@ -99,7 +100,9 @@ def test_end_to_end_verified_brief_is_rendered_and_persisted(session, migrated_d
     system, user = stages.writer.calls[0]
     assert "You are the 1440Sports Brief Writer" in system and "JUNE-2026 FORMAT ADDENDUM" in system
     assert "TODAY'S DATE (use this for footer_date — NOT signal article date): 14 JUN 2026" in user
-    assert "Company: Ramp" in user and "VALUE SECTION MODE" in user and "Brief number: 001" in user
+    assert "Company: Ramp" in user and "VALUE SECTION MODE" in user
+    # brief numbers come from the global sequence (never reset, never reused)
+    assert f"Brief number: {brief.brief_number:03d}" in user
     assert session.scalar(select(SurfacedLog)).brief_id == brief.id
     assert render.brief_status_for_md(brief) is True
 
