@@ -16,10 +16,11 @@ from intel.models import (
     SponsorStatus,
 )
 from intel.normalise import company_norm
-from intel.seed import load_seeds
+from intel.seed import LANE_TOKENS_PREFIX, load_seeds, load_team_profiles
 
 MERCEDES = "Mercedes-AMG Petronas F1 Team"
 WILLIAMS = "Atlassian Williams Racing"
+MCLAREN = "McLaren F1 Team"
 
 
 def _counts(session) -> dict[str, int]:
@@ -39,7 +40,8 @@ def test_load_seeds_is_idempotent(session):
     session.commit()
     after_first = _counts(session)
     assert after_first["sponsors"] > 0 and after_first["calendar_events"] > 0
-    assert after_first == first
+    # ``sponsor_categories_applied`` counts rows touched in-place, not a table.
+    assert after_first == {k: v for k, v in first.items() if k in after_first}
 
     second = load_seeds(session)
     session.commit()
@@ -82,6 +84,53 @@ def test_sponsor_rows_match_spec(session):
         ).scalar_one()
         == 0
     )
+
+
+def test_sponsor_categories_applied_from_teams_json(session):
+    counts = load_seeds(session)
+    assert counts["sponsor_categories_applied"] > 0
+
+    splunk = [s for s in _sponsor_rows(session, "Splunk") if s.team == MCLAREN]
+    assert len(splunk) == 1
+    assert "observability" in splunk[0].category
+    assert f"{LANE_TOKENS_PREFIX}observability, apm" in splunk[0].notes
+
+    udemy = [s for s in _sponsor_rows(session, "Udemy") if s.team == MCLAREN]
+    assert len(udemy) == 1
+    assert udemy[0].category == "learning"
+
+    cisco = [s for s in _sponsor_rows(session, "Cisco") if s.team == MCLAREN]
+    assert len(cisco) == 1
+    assert "security" in cisco[0].category
+    assert "networking" in cisco[0].notes
+
+    # The spec's championship-level category is never overwritten by the team-level seed.
+    aws = [s for s in _sponsor_rows(session, "AWS") if s.level == SponsorLevel.championship_global]
+    assert aws[0].category == "Cloud / ML / AI"
+
+
+def test_sponsor_categories_are_idempotent(session):
+    first = load_seeds(session)
+    session.commit()
+    splunk_notes = [s.notes for s in _sponsor_rows(session, "Splunk") if s.team == MCLAREN][0]
+
+    second = load_seeds(session)
+    session.commit()
+    assert second["sponsor_categories_applied"] == first["sponsor_categories_applied"]
+    again = [s.notes for s in _sponsor_rows(session, "Splunk") if s.team == MCLAREN][0]
+    assert again == splunk_notes
+    assert again.count(LANE_TOKENS_PREFIX) == 1
+
+
+def test_team_profiles_cover_the_f1_grid():
+    profiles = load_team_profiles()
+    f1 = [p for p in profiles if p["series"] == "F1"]
+    assert len(f1) == 11
+    assert all(isinstance(p["open_categories"], list) for p in profiles)
+    assert all(p["source"] == "data/teams.json" for p in profiles)
+    mclaren = next(p for p in f1 if p["team"] == MCLAREN)
+    assert "software supply chain security" in mclaren["open_categories"]
+    assert any("Splunk" in lock for lock in mclaren["competitor_locks"])
 
 
 def test_blocklist_has_factory_ai_active(session):

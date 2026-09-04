@@ -115,6 +115,123 @@ def claims_from_signal(signal: ScannedSignal) -> list[ClaimDraft]:
     return out
 
 
+_NUMERIC = re.compile(
+    r"(?:[$€£]\s?\d[\d.,]*\s?(?:[MBK]|bn|million|billion)?\+?)|(?:\d+(?:\.\d+)?%)",
+    re.IGNORECASE,
+)
+_REVENUE_WORDS = re.compile(r"revenue|\barr\b|sales|turnover|run-?rate", re.IGNORECASE)
+_SPONSOR_WORDS = re.compile(r"sponsor|partner|livery|title deal|signed", re.IGNORECASE)
+_SENTENCE = re.compile(r"(?<=[.;])\s+")
+
+# Claims in these written sections gate the brief (§6.5). why_team / value / risks are still
+# verified but do not block on their own.
+_WRITTEN_LOAD_BEARING = {
+    "deck": True,
+    "the_case_p1": True,
+    "the_case_p2": True,
+    "why_now_callout": True,
+    "bottom_line": True,
+    "deal_arch_para": True,
+    "why_team_para": False,
+    "value_content": False,
+}
+
+
+def claims_from_brief(written: Any) -> list[ClaimDraft]:
+    """Deterministic claim extraction from the written brief text (stage B, after writing).
+
+    - decision-maker name + role (person_role, load-bearing);
+    - every sentence carrying a money / percentage figure in the load-bearing sections
+      (funding or revenue by wording; figures in DEAL ARCHITECTURE are 1440's own deal
+      proposal, not company facts, so they are skipped);
+    - every race / event mention anywhere in the brief;
+    - every 'Brand at Team' sponsorship pair in the landscape / team sections.
+    A model-based extractor (``ClaimExtractor``) can add what the regexes miss.
+    """
+    from intel.brief_data import strip_markup
+
+    out: list[ClaimDraft] = []
+    name = getattr(written, "decision_maker_name", None)
+    if name:
+        role = getattr(written, "decision_maker_role", None) or ""
+        out.append(
+            ClaimDraft(
+                f"{name}, {role} at {written.company}" if role else f"{name} at {written.company}",
+                "decision_maker",
+                ClaimType.person_role,
+                True,
+                None,
+                {"person": name, "role": role, "company": written.company},
+            )
+        )
+    for section, lb in _WRITTEN_LOAD_BEARING.items():
+        text = strip_markup(getattr(written, section, "") or "")
+        if not text:
+            continue
+        if section == "deal_arch_para":
+            continue
+        for sentence in _SENTENCE.split(text):
+            if _NUMERIC.search(sentence):
+                ctype = ClaimType.revenue if _REVENUE_WORDS.search(sentence) else ClaimType.funding
+                out.append(ClaimDraft(sentence.strip(), section, ctype, lb))
+    for section in ("the_case_p2", "why_team_para", "value_content"):
+        text = strip_markup(getattr(written, section, "") or "")
+        # Only sentences that talk about sponsorship carry 'Brand at Team' claims worth
+        # checking; the bare pattern over-fires on ordinary prose.
+        sponsor_sentences = " ".join(s for s in _SENTENCE.split(text) if _SPONSOR_WORDS.search(s))
+        for brand, team in sponsorship_pairs(sponsor_sentences):
+            out.append(
+                ClaimDraft(
+                    f"{brand} at {team}",
+                    section,
+                    ClaimType.sponsorship,
+                    _WRITTEN_LOAD_BEARING.get(section, False),
+                )
+            )
+    scan_sections = [
+        "deck",
+        "the_case_p1",
+        "the_case_p2",
+        "why_now_callout",
+        "why_team_para",
+        "value_content",
+        "deal_arch_para",
+        "bottom_line",
+        "opening_angle_quote",
+    ]
+    texts = [
+        ClaimDraft(strip_markup(getattr(written, s, "") or ""), s, ClaimType.other, True)
+        for s in scan_sections
+    ]
+    for r in getattr(written, "risks", []) or []:
+        texts.append(
+            ClaimDraft(strip_markup(f"{r.detail} {r.counter}"), "risks", ClaimType.other, False)
+        )
+    out.extend(event_claims_in([t for t in texts if t.text], None))
+    return out
+
+
+class ClaimExtractor(Protocol):
+    def extract(self, written: Any) -> list[ClaimDraft]: ...
+
+
+class NoExtractor:
+    def extract(self, written: Any) -> list[ClaimDraft]:
+        return []
+
+
+def merge_claims(*groups: list[ClaimDraft]) -> list[ClaimDraft]:
+    seen: set[str] = set()
+    out: list[ClaimDraft] = []
+    for g in groups:
+        for d in g:
+            key = re.sub(r"\W+", " ", d.text.lower()).strip()
+            if key and key not in seen:
+                seen.add(key)
+                out.append(d)
+    return out
+
+
 # --- calendar check ----------------------------------------------------------------------
 
 # Venue/city → the token that appears in the seeded round name. Geography only.
@@ -172,6 +289,11 @@ def find_event_mentions(text: str) -> list[dict[str, str | None]]:
     found: list[dict[str, str | None]] = []
     for m in _EVENT_RE.finditer(text or ""):
         place = m.group(2).strip()
+        # Drop sentence-initial articles / determiners ("The British GP" → "British").
+        words = place.split()
+        while len(words) > 1 and words[0].lower() in _STOP_PLACES:
+            words = words[1:]
+        place = " ".join(words)
         if place.lower() in _STOP_PLACES or len(place) < 3:
             continue
         series_raw = (m.group(1) or "").upper().replace(" ", "")
@@ -244,8 +366,11 @@ def check_event_claim(session: Session, draft: ClaimDraft, run_date: dt.date) ->
             method=VerificationMethod.calendar,
             notes=f"no {series} {season} calendar loaded; cannot check '{draft.text}'",
         )
-    token = VENUE_ALIASES.get(place, place)
-    tokens = {token, place}
+    # Match on the alias, the full place, and each significant word of it ("British",
+    # "Las Vegas", "Sao Paulo"), so wording variants still find the round.
+    words = [w for w in re.split(r"[^a-z0-9]+", place) if len(w) >= 4 and w not in _STOP_PLACES]
+    tokens = {VENUE_ALIASES.get(place, place), place, *words}
+    tokens |= {VENUE_ALIASES[w] for w in words if w in VENUE_ALIASES}
     for r in rows:
         hay = " ".join(filter(None, [r.name, r.city, r.country])).lower()
         if any(t and t in hay for t in tokens):
@@ -476,7 +601,15 @@ def run_ledger(
         session.add(v)
         pairs.append((claim, v))
     session.flush()
-    status = decide(pairs)
+    # The brief's status is decided over its WHOLE ledger (stage A key facts + stage B
+    # brief text), using the latest verification of each claim.
+    session.expire(brief, ["claims"])
+    all_pairs = [
+        (c, sorted(c.verifications, key=lambda x: (x.checked_at, x.id))[-1])
+        for c in brief.claims
+        if c.verifications
+    ]
+    status = decide(all_pairs or pairs)
     brief.verification_status = status
     counts: dict[str, int] = {}
     for _, v in pairs:

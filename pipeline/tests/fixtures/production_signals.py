@@ -166,6 +166,27 @@ RAMP_PHANTOM_RACE = {
 }
 
 
+# --- Ramp, 4 Jun 2026 round (the clean signal behind briefs N° 007 / 017) --------------------
+RAMP_JUNE_ROUND = {
+    "signal_date": "2026-06-04",
+    "company": "Ramp",
+    "score": 86,
+    "tier": "HOT TOP TIER",
+    "track": 1,
+    "person": "Eric Glyman",
+    "role": "CEO & Co-Founder",
+    "horizon_weeks": "8-12",
+    "source_url": (
+        "https://techcrunch.com/2026/06/04/"
+        "ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/"
+    ),
+    "trigger_reason": (
+        "Closed $750M primary round at $44B valuation; acquired Billhop and Juno for European "
+        "market entry; CEO signalled IPO trajectory"
+    ),
+}
+
+
 def synthetic_split(total: int) -> dict:
     """Test scaffolding: a labelled five-way split summing to ``total`` (see module docstring)."""
     if not 60 <= total <= 100:
@@ -185,11 +206,13 @@ def synthetic_split(total: int) -> dict:
     }
 
 
-def with_breakdown(row: dict, series: str | None = None) -> ScannedSignal:
+def with_breakdown(row: dict, series: str | None = None, **extra) -> ScannedSignal:
+    """``extra`` sets scanner fields the log does not record (team, industry_meta, ...)."""
     data = dict(row)
     data["score_breakdown"] = synthetic_split(row["score"])
     if series:
         data["recommended_series"] = series
+    data.update(extra)
     return ScannedSignal.model_validate(data)
 
 

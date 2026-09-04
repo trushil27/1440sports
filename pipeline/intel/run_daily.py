@@ -1,9 +1,13 @@
 """Daily orchestrator — idempotent per date (§4, §6, §9.8).
 
 Stages: scan → parse → freshness → blocklist/dedup → gates+score → select →
-**verify (claims ledger)** → [write → audit → render → send: later milestones].
-A candidate whose ledger is *blocked* is set aside and the next eligible candidate is
-tried, up to ``max_verification_attempts``, before the day is declared no-signal (§6.5).
+verify key facts (ledger stage A) → write → 13-rule audit (one retry) → verify the
+written text (ledger stage B) → render → [send: M5].
+
+A candidate whose ledger is *blocked* (stage A or B) is set aside and the next eligible
+candidate is tried, up to ``max_verification_attempts``, before the day is declared
+no-signal (§6.5). A brief that fails the audit after its retry is kept for operator review
+and never becomes MD-eligible (§6.7, §7).
 """
 
 from __future__ import annotations
@@ -11,15 +15,18 @@ from __future__ import annotations
 import datetime as dt
 import sys
 from collections.abc import Callable
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from pathlib import Path
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from intel import dedup, freshness, score, verify
+from intel import audit, dedup, freshness, render, score, verify
+from intel import brief as brief_mod
 from intel.config import Settings, get_settings
 from intel.db import session_scope
 from intel.models import (
+    AuditStatus,
     Brief,
     Candidate,
     CandidateDecision,
@@ -27,10 +34,11 @@ from intel.models import (
     Run,
     RunStatus,
     Series,
+    ValueMode,
     VerificationStatus,
 )
 from intel.normalise import company_norm
-from intel.parse import ScannedSignal
+from intel.parse import ParseError, ScannedSignal
 from intel.scan import ScanFailed, run_scan
 
 Scanner = Callable[[dt.date], list[ScannedSignal]]
@@ -44,8 +52,20 @@ class RunOutcome:
     selected_candidate_id: int | None
     brief_id: int | None = None
     verification_status: str | None = None
+    audit_status: str | None = None
+    pdf_path: str | None = None
     already_ran: bool = False
     summary: dict | None = None
+
+
+@dataclass
+class Stages:
+    """Injectable collaborators (real ones by default; fakes in tests)."""
+
+    verifier: verify.Verifier | None = None
+    writer: brief_mod.Writer | None = None
+    extractor: verify.ClaimExtractor = field(default_factory=verify.NoExtractor)
+    font_stack: str = "brand"
 
 
 def _existing_outcome(session: Session, run_date: dt.date) -> RunOutcome | None:
@@ -64,6 +84,8 @@ def _existing_outcome(session: Session, run_date: dt.date) -> RunOutcome | None:
             issued.candidate_id,
             issued.id,
             issued.verification_status.value,
+            issued.audit_status.value,
+            issued.pdf_path,
             True,
             run.summary,
         )
@@ -74,7 +96,7 @@ def _existing_outcome(session: Session, run_date: dt.date) -> RunOutcome | None:
     )
     if done is not None:
         return RunOutcome(
-            done.id, run_date, done.status.value, None, None, None, True, done.summary
+            done.id, run_date, done.status.value, None, already_ran=True, summary=done.summary
         )
     return None
 
@@ -201,19 +223,126 @@ def verify_candidate(
     return brief, result
 
 
+def produce_brief(
+    session: Session,
+    cand: Candidate,
+    brief: Brief,
+    run_date: dt.date,
+    settings: Settings,
+    stages: Stages,
+) -> dict:
+    """write → audit (one retry) → stage-B ledger → render. Returns a log dict for the run."""
+    log: dict = {"brief_id": brief.id}
+    sig = _signal_of(cand)
+    ops_fit = (cand.score_breakdown or {}).get("ops_fit")
+    mode = render.value_mode_for(ops_fit, sig.industry_meta)
+    number = f"{brief.brief_number:03d}"
+
+    if stages.writer is None:
+        brief.audit_violations = [
+            {"note": "writer unavailable (no ANTHROPIC_API_KEY); brief not written"}
+        ]
+        log["written"] = False
+        return log
+
+    written = None
+    audit_res = None
+    feedback: str | None = None
+    attempts = 0
+    for attempt in (1, 2):
+        attempts = attempt
+        try:
+            written, _raw = brief_mod.write_brief(
+                sig, number, run_date, mode, stages.writer, settings, feedback
+            )
+        except ParseError as exc:
+            feedback = f"1. BRIEF_DATA could not be parsed: {exc}"
+            written = None
+            continue
+        audit_res = audit.audit_brief(written, run_date)
+        if audit_res.route == "pass":
+            break
+        feedback = audit.violations_feedback(audit_res)
+
+    brief.audit_attempts = attempts
+    if written is None or audit_res is None:
+        brief.audit_status = AuditStatus.failed
+        brief.audit_violations = [{"rule": 0, "code": "unparseable", "message": feedback}]
+        log.update(written=False, audit="failed")
+        return log
+
+    brief.brief_data = written.model_dump()
+    brief.mode = ValueMode(mode)
+    brief.audit_violations = [
+        {
+            "rule": v.rule,
+            "code": v.code,
+            "severity": v.severity,
+            "field": v.field,
+            "message": v.message,
+        }
+        for v in audit_res.violations
+    ]
+    if audit_res.route == "pass":
+        brief.audit_status = AuditStatus.passed if attempts == 1 else AuditStatus.pass_after_retry
+    else:
+        brief.audit_status = AuditStatus.failed
+    log.update(written=True, audit=brief.audit_status.value, audit_attempts=attempts)
+
+    # Stage B: every claim in the written text joins the ledger; the status is re-decided
+    # over the whole ledger.
+    drafts = verify.merge_claims(
+        verify.claims_from_brief(written), stages.extractor.extract(written)
+    )
+    verifier = stages.verifier or verify.default_verifier(settings)
+    result = verify.run_ledger(session, brief, drafts, sig.company, run_date, verifier)
+    log.update(stage_b=result.counts, verification=result.status.value, blocking=result.blocking)
+    if result.status == VerificationStatus.blocked:
+        return log
+
+    # Render (even a failed-audit brief: the operator needs to see it).
+    extra = set()
+    if sig.key_facts.taxonomy_category:
+        extra = render._tokens(sig.key_facts.taxonomy_category)
+    data = render.assemble(session, brief, written, run_date, extra)
+    brief.brief_data = data.model_dump()  # the full BRIEF_DATA incl. computed panels
+    out_dir = Path(settings.pdf_storage_dir) / run_date.isoformat()
+    try:
+        paths = render.render_brief(data, out_dir, cand.company_norm, stages.font_stack)
+    except render.PageOverflow as exc:
+        brief.audit_status = AuditStatus.failed
+        brief.audit_violations = (brief.audit_violations or []) + [
+            {"rule": 11, "code": "page_overflow", "severity": "high", "message": str(exc)}
+        ]
+        log.update(rendered=False, overflow=str(exc))
+        return log
+    brief.pdf_path = str(paths["pdf"])
+    brief.html_path = str(paths["html"])
+    brief.page_count = int(paths["pages"])
+    log.update(rendered=True, pdf=brief.pdf_path)
+    return log
+
+
 def run_day(
     run_date: dt.date,
     settings: Settings | None = None,
     scanner: Scanner | None = None,
     session: Session | None = None,
     verifier: verify.Verifier | None = None,
+    stages: Stages | None = None,
 ) -> RunOutcome:
     """Run the pipeline for one date. Safe to call twice: the second call is a no-op."""
     settings = settings or get_settings()
     if session is None:
         with session_scope() as s:
-            return run_day(run_date, settings, scanner, s, verifier)
-    verifier = verifier or verify.default_verifier(settings)
+            return run_day(run_date, settings, scanner, s, verifier, stages)
+    stages = stages or Stages()
+    if verifier is not None:
+        stages.verifier = verifier
+    if stages.verifier is None:
+        stages.verifier = verify.default_verifier(settings)
+    if stages.writer is None and settings.anthropic_api_key:
+        stages.writer = brief_mod.AnthropicWriter()
 
     existing = _existing_outcome(session, run_date)
     if existing is not None:
@@ -232,7 +361,7 @@ def run_day(
     ordered = rank_eligible(eligible, run_date)
     now = dt.datetime.combine(run_date, dt.time(hour=6), tzinfo=settings.tz)
     verification_log: list[dict] = []
-    issued: tuple[Candidate, Brief, verify.LedgerResult] | None = None
+    issued: tuple[Candidate, Brief] | None = None
 
     for cand in ordered[: settings.max_verification_attempts]:
         cand.decision = CandidateDecision.selected
@@ -242,22 +371,30 @@ def run_day(
             else "top ranking score"
         )
         cand.decision_reason = f"{cand.decision_reason}; {why}" if cand.decision_reason else why
-        brief, result = verify_candidate(session, cand, run_date, verifier)
-        verification_log.append(
-            {
-                "candidate_id": cand.id,
-                "company": cand.company_raw,
-                "brief_id": brief.id,
-                "status": result.status.value,
-                "counts": result.counts,
-                "blocking": result.blocking,
-            }
-        )
+        brief, result = verify_candidate(session, cand, run_date, stages.verifier)
+        entry = {
+            "candidate_id": cand.id,
+            "company": cand.company_raw,
+            "brief_id": brief.id,
+            "stage_a": result.counts,
+            "status": result.status.value,
+            "blocking": result.blocking,
+        }
         if result.status == VerificationStatus.blocked:
             cand.decision = CandidateDecision.verification_blocked
             cand.decision_reason = "contradicted load-bearing claim: " + " | ".join(result.blocking)
+            verification_log.append(entry)
             continue
-        issued = (cand, brief, result)
+        entry.update(produce_brief(session, cand, brief, run_date, settings, stages))
+        verification_log.append(entry)
+        if brief.verification_status == VerificationStatus.blocked:
+            cand.decision = CandidateDecision.verification_blocked
+            cand.decision_reason = (
+                "contradicted load-bearing claim in the written brief: "
+                + " | ".join(entry.get("blocking") or [])
+            )
+            continue
+        issued = (cand, brief)
         break
 
     for cand in ordered:
@@ -280,7 +417,7 @@ def run_day(
         session.flush()
         return RunOutcome(run.id, run_date, "no_signal", None, summary=run.summary)
 
-    cand, brief, result = issued
+    cand, brief = issued
     dedup.record_surfaced(
         session,
         cand.company_norm,
@@ -292,7 +429,15 @@ def run_day(
     run.status = RunStatus.success
     session.flush()
     return RunOutcome(
-        run.id, run_date, "success", cand.id, brief.id, result.status.value, summary=run.summary
+        run.id,
+        run_date,
+        "success",
+        cand.id,
+        brief.id,
+        brief.verification_status.value,
+        brief.audit_status.value,
+        brief.pdf_path,
+        summary=run.summary,
     )
 
 

@@ -1,0 +1,252 @@
+[
+  {
+    "brand": "Udemy",
+    "team": "McLaren F1 Team",
+    "category": "learning",
+    "lane_tokens": [
+      "learning"
+    ],
+    "source": "data/teams.json McLaren notable_b2b: Udemy (learning)"
+  },
+  {
+    "brand": "Cisco",
+    "team": "McLaren F1 Team",
+    "category": "security / observability",
+    "lane_tokens": [
+      "security",
+      "observability",
+      "apm",
+      "networking"
+    ],
+    "source": "data/teams.json McLaren notable_b2b: Cisco (security + Splunk observability) | competitor_locks: networking & security (Cisco)"
+  },
+  {
+    "brand": "Splunk",
+    "team": "McLaren F1 Team",
+    "category": "observability / apm",
+    "lane_tokens": [
+      "observability",
+      "apm"
+    ],
+    "source": "data/teams.json McLaren competitor_locks: observability / APM (Splunk, via Cisco)"
+  },
+  {
+    "brand": "Salesforce",
+    "team": "McLaren F1 Team",
+    "category": "crm / enterprise saas / ai",
+    "lane_tokens": [
+      "crm",
+      "enterprise saas",
+      "saas",
+      "ai"
+    ],
+    "source": "data/teams.json McLaren notable_b2b: Salesforce | spec/active_sponsor_db.md §1.1 Salesforce: CRM / Enterprise SaaS / AI"
+  },
+  {
+    "brand": "Oracle",
+    "team": "Oracle Red Bull Racing",
+    "category": "cloud / compute",
+    "lane_tokens": [
+      "cloud",
+      "compute"
+    ],
+    "source": "data/teams.json Red Bull Racing notable_b2b: Oracle (cloud/compute) | spec/active_sponsor_db.md §5.1 Cloud / Hyperscaler: Red Bull (Oracle)"
+  },
+  {
+    "brand": "Atlassian",
+    "team": "Atlassian Williams Racing",
+    "category": "collaboration",
+    "lane_tokens": [
+      "collaboration"
+    ],
+    "source": "data/teams.json Williams notable_b2b: Atlassian (collaboration)"
+  },
+  {
+    "brand": "VAST",
+    "team": "Atlassian Williams Racing",
+    "category": "data platform / storage",
+    "lane_tokens": [
+      "data platform",
+      "storage",
+      "data"
+    ],
+    "source": "data/teams.json Williams notable_b2b: VAST Data (data platform / storage) | competitor_locks: data platform / storage (VAST Data)"
+  },
+  {
+    "brand": "Keeper",
+    "team": "Atlassian Williams Racing",
+    "category": "cybersecurity / pam",
+    "lane_tokens": [
+      "cybersecurity",
+      "pam",
+      "identity",
+      "access",
+      "security"
+    ],
+    "source": "data/teams.json Williams notable_b2b: Keeper Security (cybersecurity / PAM) | competitor_locks: identity & access security (Keeper Security)"
+  },
+  {
+    "brand": "Aramco",
+    "team": "Aston Martin Aramco F1 Team",
+    "category": "energy / fuel",
+    "lane_tokens": [
+      "energy",
+      "fuel",
+      "oil",
+      "gas"
+    ],
+    "source": "data/teams.json Aston Martin title_sponsor: Aramco | spec/active_sponsor_db.md §1.1 Aramco: Energy / Fuel; §5.1 Energy / Oil & Gas"
+  },
+  {
+    "brand": "Petronas",
+    "team": "Mercedes-AMG Petronas F1 Team",
+    "category": "fuel / lubricants",
+    "lane_tokens": [
+      "fuel",
+      "lubricants",
+      "lubricant"
+    ],
+    "source": "data/teams.json Mercedes title_sponsor: Petronas | spec/active_sponsor_db.md §5.1: team-level fuel/lubricant slots (Petronas at Mercedes)"
+  },
+  {
+    "brand": "Revolut",
+    "team": "Audi F1 Team",
+    "category": "fintech",
+    "lane_tokens": [
+      "fintech"
+    ],
+    "source": "data/teams.json Audi notable_b2b: Revolut (fintech) | spec/active_sponsor_db.md §5.1 Banking: fintech (Revolut at Audi)"
+  },
+  {
+    "brand": "Mphasis",
+    "team": "MoneyGram Haas F1 Team",
+    "category": "digital services (data / analytics / cyber / ai)",
+    "lane_tokens": [
+      "digital",
+      "services",
+      "data",
+      "analytics",
+      "cyber",
+      "ai"
+    ],
+    "source": "data/teams.json Haas notable_b2b: Mphasis (official digital partner - data/analytics/cyber/AI services) | note: services integrator, not a product-category lock"
+  },
+  {
+    "brand": "Ruckus",
+    "team": "MoneyGram Haas F1 Team",
+    "category": "networking",
+    "lane_tokens": [
+      "networking"
+    ],
+    "source": "data/teams.json Haas notable_b2b: RUCKUS Networks (networking)"
+  },
+  {
+    "brand": "MoneyGram",
+    "team": "MoneyGram Haas F1 Team",
+    "category": "fintech",
+    "lane_tokens": [
+      "fintech"
+    ],
+    "source": "data/teams.json Haas notable_b2b: MoneyGram (fintech)"
+  },
+  {
+    "brand": "IFS",
+    "team": "Cadillac F1 Team",
+    "category": "technology partner (erp / eam / fsm)",
+    "lane_tokens": [
+      "technology",
+      "erp",
+      "eam",
+      "fsm"
+    ],
+    "source": "data/teams.json Cadillac notable_b2b: IFS (official technology partner - ERP/EAM/FSM)"
+  },
+  {
+    "brand": "TWG AI",
+    "team": "Cadillac F1 Team",
+    "category": "ai / data",
+    "lane_tokens": [
+      "ai",
+      "data"
+    ],
+    "source": "data/teams.json Cadillac notable_b2b: TWG AI (AI/data)"
+  },
+  {
+    "brand": "Tenneco",
+    "team": "Cadillac F1 Team",
+    "category": "technical",
+    "lane_tokens": [
+      "technical"
+    ],
+    "source": "data/teams.json Cadillac notable_b2b: Tenneco (technical)"
+  },
+  {
+    "brand": "Tommy Hilfiger",
+    "team": "Cadillac F1 Team",
+    "category": "apparel",
+    "lane_tokens": [
+      "apparel"
+    ],
+    "source": "data/teams.json Cadillac notable_b2b: Tommy Hilfiger (apparel)"
+  },
+  {
+    "brand": "Jim Beam",
+    "team": "Cadillac F1 Team",
+    "category": "spirits",
+    "lane_tokens": [
+      "spirits"
+    ],
+    "source": "data/teams.json Cadillac notable_b2b: Jim Beam (spirits)"
+  },
+  {
+    "brand": "Visa",
+    "team": "Visa Cash App Racing Bulls",
+    "category": "payments rail",
+    "lane_tokens": [
+      "payments",
+      "payments rail"
+    ],
+    "source": "data/teams.json Visa Cash App Racing Bulls notable_b2b: Visa (payments rail)"
+  },
+  {
+    "brand": "TCS",
+    "team": "Jaguar TCS Racing",
+    "category": "it services",
+    "lane_tokens": [
+      "it services",
+      "it",
+      "services"
+    ],
+    "source": "data/teams.json Jaguar TCS Racing title_sponsor: TCS (Tata Consultancy Services) | spec/active_sponsor_db.md §4.6 TCS: IT services, parent of Jaguar"
+  },
+  {
+    "brand": "Porsche",
+    "team": "Andretti Formula E",
+    "category": "powertrain",
+    "lane_tokens": [
+      "powertrain"
+    ],
+    "source": "data/teams.json Andretti notable_b2b: Porsche (powertrain, to end of 2025/26)"
+  },
+  {
+    "brand": "Envision Group",
+    "team": "Envision Racing",
+    "category": "green tech",
+    "lane_tokens": [
+      "green tech",
+      "renewables",
+      "clean tech"
+    ],
+    "source": "data/teams.json Envision Racing title_sponsor: Envision (green tech) | spec/active_sponsor_db.md §4.5 Envision Group: renewables / clean tech"
+  },
+  {
+    "brand": "Mahindra & Mahindra",
+    "team": "Mahindra Racing",
+    "category": "industrial conglomerate",
+    "lane_tokens": [
+      "industrial",
+      "conglomerate"
+    ],
+    "source": "data/teams.json Mahindra Racing title_sponsor: Mahindra | spec/active_sponsor_db.md §4.8 Mahindra & Mahindra: industrial conglomerate"
+  }
+]

@@ -38,9 +38,14 @@ from intel.normalise import company_norm
 SEEDS_DIR = Path(__file__).resolve().parent / "seeds"
 
 SPONSORS_FILE = "sponsors.json"
+SPONSOR_CATEGORIES_FILE = "sponsor_categories.json"
+TEAM_PROFILES_FILE = "team_profiles.json"
 ALUMNI_FILE = "alumni.json"
 BLOCKLIST_FILE = "blocklist.json"
 CALENDAR_FILE = "calendar_2026.json"
+
+# ``sponsors`` has no lane_tokens column: they ride in ``notes`` behind this marker.
+LANE_TOKENS_PREFIX = "lane_tokens: "
 
 
 def _date(value: str | None) -> dt.date | None:
@@ -182,6 +187,58 @@ def load_sponsors(session: Session, seeds_dir: Path = SEEDS_DIR) -> int:
     )
 
 
+def _lane_tokens_note(tokens: Iterable[str]) -> str:
+    return LANE_TOKENS_PREFIX + ", ".join(tokens)
+
+
+def _with_lane_tokens(notes: str | None, tokens: Iterable[str]) -> str | None:
+    """Append the lane_tokens marker to ``notes`` unless an identical one is already there."""
+    note = _lane_tokens_note(tokens)
+    parts = [p for p in (notes or "").split(" | ") if p]
+    if note in parts:
+        return notes
+    # A stale marker (tokens changed in the seed) is replaced, not accumulated.
+    parts = [p for p in parts if not p.startswith(LANE_TOKENS_PREFIX)]
+    return _join(*parts, note)
+
+
+def apply_sponsor_categories(session: Session, seeds_dir: Path = SEEDS_DIR) -> int:
+    """Fill team-partner categories from ``sponsor_categories.json`` (derived from data/teams.json).
+
+    Only rows whose ``category`` is null (or already equal) are touched: a category the spec
+    assigns at championship level is never overwritten. Returns the number of sponsor rows
+    that matched an entry.
+    """
+    path = seeds_dir / SPONSOR_CATEGORIES_FILE
+    if not path.exists():
+        return 0
+    matched = 0
+    for entry in _read(path):
+        stmt = select(Sponsor).where(Sponsor.brand_norm == company_norm(entry["brand"]))
+        if entry.get("team"):
+            stmt = stmt.where(Sponsor.team == entry["team"])
+        else:
+            stmt = stmt.where(Sponsor.team.is_(None))
+        for row in session.execute(stmt).scalars():
+            if row.category is not None and row.category != entry["category"]:
+                continue
+            row.category = entry["category"]
+            if entry.get("lane_tokens"):
+                row.notes = _with_lane_tokens(row.notes, entry["lane_tokens"])
+            matched += 1
+    session.flush()
+    return matched
+
+
+def load_team_profiles(seeds_dir: Path | str | None = None) -> list[dict[str, Any]]:
+    """Per-team identity / open categories / locks (data/teams.json mirror) for the renderer.
+
+    Not loaded into the database — there is no team table — so this just returns the JSON.
+    """
+    base = Path(seeds_dir) if seeds_dir else SEEDS_DIR
+    return list(_read(base / TEAM_PROFILES_FILE))
+
+
 def load_alumni(session: Session, seeds_dir: Path = SEEDS_DIR) -> int:
     rows = (_alumni_row(r) for r in _read(seeds_dir / ALUMNI_FILE))
     return _upsert(
@@ -214,6 +271,7 @@ def load_seeds(session: Session, seeds_dir: Path | str | None = None) -> dict[st
     base = Path(seeds_dir) if seeds_dir else SEEDS_DIR
     return {
         "sponsors": load_sponsors(session, base),
+        "sponsor_categories_applied": apply_sponsor_categories(session, base),
         "alumni": load_alumni(session, base),
         "blocklist": load_blocklist(session, base),
         "calendar_events": load_calendar(session, base),
