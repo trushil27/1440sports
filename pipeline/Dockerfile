@@ -19,4 +19,6 @@ ENV PYTHONUNBUFFERED=1 PYTHONPATH=/app/pipeline:/app/api TZ=Europe/London
 # One image, two Railway services:
 #   cron job (railway.json):     python -m intel.schedule
 #   API service (api/railway.json): uvicorn intel_api.app:get_app --factory --host 0.0.0.0 --port $PORT
-CMD ["python", "-m", "intel.schedule"]
+RUN chmod +x /app/pipeline/entrypoint.sh
+ENTRYPOINT ["/app/pipeline/entrypoint.sh"]
+CMD []

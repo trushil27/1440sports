@@ -5,13 +5,14 @@
     "dockerfilePath": "pipeline/Dockerfile"
   },
   "deploy": {
-    "startCommand": "python -m intel.schedule",
+    "startCommand": "/app/pipeline/entrypoint.sh",
     "cronSchedule": "30 4,5 * * *",
-    "restartPolicyType": "NEVER",
-    "preDeployCommand": ["python -m alembic -c db/alembic.ini upgrade head", "python -m intel.seed"]
+    "restartPolicyType": "NEVER"
   },
   "_notes": [
+    "The entrypoint runs migrations + seeds (idempotent) and then intel.schedule on every start.",
     "cronSchedule is UTC: 04:30 and 05:30 UTC both fire; intel.schedule runs only the firing that is 05:30 Europe/London (BST vs GMT) and exits otherwise.",
+    "One-off smoke run: temporarily set the start command to `/app/pipeline/entrypoint.sh python -m intel.schedule --force --no-wait`, redeploy, then remove it.",
     "Required variables: DATABASE_URL, ANTHROPIC_API_KEY, OPERATOR_EMAIL, MD_EMAIL, EXECUTION_MODE (shadow until M8), GRAPH_TENANT_ID, GRAPH_CLIENT_ID, GRAPH_CLIENT_SECRET, GRAPH_SENDER (or GRAPH_REFRESH_TOKEN for delegated auth), APP_BASE_URL, PDF_STORAGE_DIR (a mounted volume until object storage is wired).",
     "No secret is stored in this repository."
   ]
