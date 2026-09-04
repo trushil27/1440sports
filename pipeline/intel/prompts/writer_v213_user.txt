@@ -1,0 +1,38 @@
+Write a full intelligence brief from this signal data.
+
+TODAY'S DATE (use this for footer_date — NOT signal article date): {{ $today.format('d MMM yyyy').toUpperCase() }}
+
+Company: {{ $json.company }}
+Score: {{ $json.score }} ({{ $json.tier }})
+Track: {{ $json.track }}
+Person: {{ $json.person }}
+Role: {{ $json.role }}
+Industry meta: {{ $json.industry_meta }}
+Horizon: {{ $json.horizon_weeks }}
+Source URL: {{ $json.source_url }}
+Recommended team: {{ $json.recommended_team }}
+Recommended series: {{ $json.recommended_series }}
+Brief number: {{ $json.brief_number }}
+Confidence level: {{ $json.confidence_level }}
+OF gate passed: {{ $json.of_gate_passed }}
+
+Key facts:
+- Funding: {{ $json.key_facts.funding }}
+- Investors: {{ $json.key_facts.investors }}
+- Revenue/ARR: {{ $json.key_facts.revenue }}
+- Trigger: {{ $json.key_facts.trigger }}
+- Competitor signal: {{ $json.key_facts.competitor_signal }}
+- Strategic hook: {{ $json.key_facts.strategic_hook }}
+- US presence: {{ $json.key_facts.us_presence }}
+- Alumni match: {{ $json.key_facts.alumni_match }}
+- Taxonomy category: {{ $json.key_facts.taxonomy_category }}
+- Ops fit note: {{ $json.key_facts.ops_fit_note }}
+
+Score breakdown:
+- Timing: {{ $json.score_breakdown.timing }}/20
+- Capacity: {{ $json.score_breakdown.capacity }}/20
+- Brand fit: {{ $json.score_breakdown.brand_fit }}/20
+- Urgency: {{ $json.score_breakdown.urgency }}/20
+- Ops fit: {{ $json.score_breakdown.ops_fit }}/20
+
+Write every section to the calibration word counts in the system prompt. Match the Cerebras N°007 density benchmark. Exactly 3 risks, each ≤ 32 words, with a specific counter-strategy. Set hot_top_tier to true only if score ≥ 85. Set operational_fit_section to true only if score_breakdown.ops_fit ≥ 14 — if so, write operational_fit_content (≤ 70 words) describing what the company's product would do on the car, in the factory, or on the broadcast feed; if not, leave operational_fit_content as empty string. Apply the SECTION CONTENT BOUNDARIES rule strictly: the single team-specific narrative claim appears in why_team_para ONLY — not in the deck, not in the_case_p1, not in the_case_p2, not in why_now_callout. Apply the ANTI-HALLUCINATION RULES strictly: every name, number, date, investor, competitor relationship and product capability must trace back to the signal data above or to skill context (active_sponsor_db.md / alumni_database.md / team_needs_taxonomy.md). When a fact is missing or thin, write less, never invent. Apply the FACT QUALITY DISCIPLINE: every dollar figure dated or source-anchored, every percentage carrying its base, every investor named from the signal, no hollow adjectives ('significant', 'strong', 'major', 'leading' without numbers). Run the £100 test on every numeric and named-person claim. Run the anti-duplication self-check. If the draft is at risk of overflowing to page 3, cut from RISKS first, then why_now_callout, then the_case_p2 — never WHY [TEAM]. Then emit BRIEF_DATA, then SIGNAL_DATA. Both blocks complete and valid.
