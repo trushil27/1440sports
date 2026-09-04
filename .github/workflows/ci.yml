@@ -36,7 +36,7 @@ jobs:
       - name: System libraries for WeasyPrint (render tests)
         run: |
           sudo apt-get update -q
-          sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2 libffi-dev
+          sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2 libffi-dev fonts-liberation fonts-dejavu-core
 
       - name: Install pipeline
         run: pip install -e "pipeline[dev,render]"
