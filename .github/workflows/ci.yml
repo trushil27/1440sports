@@ -53,6 +53,13 @@ jobs:
       - name: API tests
         run: pytest api/tests
 
+      - name: Web app — lint + build (offline-safe)
+        working-directory: web
+        run: |
+          npm ci
+          npm run lint
+          npm run build
+
       - name: Secret scan (no credentials in the repo, ever)
         run: |
           ! git grep -nE "(sk-ant-[A-Za-z0-9_-]{20,}|client_secret *[:=] *['\"][^'\"]{8,}|BEGIN (RSA|OPENSSH) PRIVATE KEY)" -- . ':!.github/workflows/ci.yml' || (echo "possible secret committed" && exit 1)
