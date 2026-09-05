@@ -68,6 +68,10 @@ class Stages:
     font_stack: str = "brand"
     mailer: send.Mailer | None = None
     distribute: bool = True
+    # Rebuild mode (``intel.rebuild``): the date may already have a brief, dedup must not
+    # suppress the one company being rebuilt, and a second brief on a day that already has
+    # a live one is stored with ``historical=True`` (the per-day rule keeps the live one).
+    rebuild: bool = False
 
 
 def progress(msg: str) -> None:
@@ -76,10 +80,13 @@ def progress(msg: str) -> None:
 
 
 def _existing_outcome(session: Session, run_date: dt.date) -> RunOutcome | None:
-    """A completed run (success or no_signal) for the date is final: no re-scan, no re-send."""
+    """A completed run (success or no_signal) for the date is final: no re-scan, no re-send.
+    Historical imports (M6 backfill) and rebuilt cases never count — they are not this job."""
     issued = session.scalar(
         select(Brief).where(
-            Brief.run_date == run_date, Brief.verification_status != VerificationStatus.blocked
+            Brief.run_date == run_date,
+            Brief.verification_status != VerificationStatus.blocked,
+            Brief.historical.is_(False),
         )
     )
     if issued is not None:
@@ -96,10 +103,18 @@ def _existing_outcome(session: Session, run_date: dt.date) -> RunOutcome | None:
             True,
             run.summary,
         )
-    done = session.scalar(
+    runs = session.scalars(
         select(Run)
         .where(Run.run_date == run_date, Run.status.in_([RunStatus.success, RunStatus.no_signal]))
         .order_by(Run.attempt.desc())
+    ).all()
+    done = next(
+        (
+            r
+            for r in runs
+            if not (r.summary or {}).get("backfill") and not (r.summary or {}).get("rebuild")
+        ),
+        None,
     )
     if done is not None:
         return RunOutcome(
@@ -131,6 +146,7 @@ def triage(
     signals: list[ScannedSignal],
     run_date: dt.date,
     settings: Settings,
+    rebuild: bool = False,
 ) -> list[Candidate]:
     """Persist every candidate with its decision. Returns the eligible ones (decision pending)."""
     now = dt.datetime.combine(run_date, dt.time(hour=6), tzinfo=settings.tz)
@@ -171,7 +187,7 @@ def triage(
             continue
 
         dd = dedup.check_dedup(session, norm, tkey, now, settings.dedup_window_days)
-        if dd.suppressed:
+        if dd.suppressed and not rebuild:
             cand.decision, cand.decision_reason = CandidateDecision.dedup_suppressed, dd.reason
             continue
         cand.resurfaced = dd.resurfaced
@@ -219,9 +235,11 @@ def verify_candidate(
     cand: Candidate,
     run_date: dt.date,
     verifier: verify.Verifier,
+    historical: bool = False,
 ) -> tuple[Brief, verify.LedgerResult]:
-    """Create the Brief row for ``cand`` and run the pre-write claims ledger on its key facts."""
-    brief = Brief(candidate_id=cand.id, run_date=run_date)
+    """Create the Brief row for ``cand`` and run the pre-write claims ledger on its key facts.
+    ``historical`` is set by a rebuild on a day that already has a live brief."""
+    brief = Brief(candidate_id=cand.id, run_date=run_date, historical=historical)
     session.add(brief)
     session.flush()
     sig = _signal_of(cand)
@@ -365,11 +383,24 @@ def run_day(
     if stages.mailer is None:
         stages.mailer = send.mailer_for(settings)
 
-    existing = _existing_outcome(session, run_date)
+    existing = None if stages.rebuild else _existing_outcome(session, run_date)
     if existing is not None:
         return existing
 
     run = _new_run(session, run_date, settings)
+    day_taken = False
+    if stages.rebuild:
+        run.summary = {"rebuild": True}
+        day_taken = (
+            session.scalar(
+                select(Brief).where(
+                    Brief.run_date == run_date,
+                    Brief.verification_status != VerificationStatus.blocked,
+                    Brief.historical.is_(False),
+                )
+            )
+            is not None
+        )
     progress(f"run {run.id} for {run_date} ({settings.execution_mode}): scanning")
     try:
         signals = scanner(run_date) if scanner else run_scan(run_date, settings=settings).signals
@@ -387,7 +418,7 @@ def run_day(
         return RunOutcome(run.id, run_date, "failed", None, summary=run.summary)
 
     progress(f"scan returned {len(signals)} signals; triaging (freshness, dedup, score)")
-    eligible = triage(session, run, signals, run_date, settings)
+    eligible = triage(session, run, signals, run_date, settings, rebuild=stages.rebuild)
     ordered = rank_eligible(eligible, run_date)
     shortlist = ordered[: settings.max_verification_attempts]
     progress(
@@ -407,7 +438,9 @@ def run_day(
         )
         cand.decision_reason = f"{cand.decision_reason}; {why}" if cand.decision_reason else why
         progress(f"{cand.company_raw}: stage-A verification of key facts")
-        brief, result = verify_candidate(session, cand, run_date, stages.verifier)
+        brief, result = verify_candidate(
+            session, cand, run_date, stages.verifier, historical=day_taken
+        )
         progress(f"{cand.company_raw}: stage A {result.status.value} {result.counts}")
         entry = {
             "candidate_id": cand.id,
@@ -431,6 +464,13 @@ def run_day(
                 + " | ".join(entry.get("blocking") or [])
             )
             continue
+        if stages.rebuild and brief.brief_data is not None:
+            brief.brief_data = {
+                **brief.brief_data,
+                "rebuilt": True,
+                "historical": brief.historical,
+                "historical_label": f"N° {brief.brief_number}" if brief.historical else None,
+            }
         issued = (cand, brief)
         progress(f"{cand.company_raw}: issued as brief N° {brief.brief_number:03d}")
         break
@@ -447,6 +487,7 @@ def run_day(
         "candidates": len(signals),
         "decisions": counts,
         "verification": verification_log,
+        **({"rebuild": True} if stages.rebuild else {}),
     }
     run.finished_at = dt.datetime.now(dt.UTC)
 

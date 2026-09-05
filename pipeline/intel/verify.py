@@ -296,6 +296,10 @@ _EVENT_RE = re.compile(
     r"(?:[^.;]{0,40}?\b(?i:((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+\d{4})))?"
 )
 _STOP_PLACES = {"the", "a", "an", "this", "that", "next", "home", "first", "key", "each"}
+_RACE_NOUN_TAIL = re.compile(
+    r"(engineer|engineering|team|car|cars|strategy|control|seat|suit|day|weekend|craft|"
+    r"pace|winning|wins|win|result|programme|program|operations|analytics|data)"
+)
 
 
 def find_event_mentions(text: str) -> list[dict[str, str | None]]:
@@ -312,6 +316,12 @@ def find_event_mentions(text: str) -> list[dict[str, str | None]]:
             continue
         series_raw = (m.group(1) or "").upper().replace(" ", "")
         kind = m.group(3).lower().replace("-", "")
+        # "Andretti's race engineers", "the team's race strategy": a possessive before a bare
+        # "race" / "round", or a noun phrase after it, is not an event mention.
+        if kind in {"race", "round"}:
+            tail = (text or "")[m.end() : m.end() + 24].lstrip().lower()
+            if place.endswith(("'s", "’s")) or _RACE_NOUN_TAIL.match(tail):
+                continue
         series: str | None = None
         if series_raw in {"F1", "FORMULA1", "FORMULAONE"}:
             series = "F1"
@@ -388,7 +398,17 @@ def check_event_claim(session: Session, draft: ClaimDraft, run_date: dt.date) ->
     words = [w for w in re.split(r"[^a-z0-9]+", place) if len(w) >= 4 and w not in _STOP_PLACES]
     tokens = {VENUE_ALIASES.get(place, place), place, *words}
     tokens |= {VENUE_ALIASES[w] for w in words if w in VENUE_ALIASES}
-    for r in rows:
+    # Name / city matches win before country matches, so "Austin" finds the Austin E-Prix and
+    # not another round in the same country.
+    ranked = sorted(
+        rows,
+        key=lambda r: (
+            0
+            if any(t and t in " ".join(filter(None, [r.name, r.city])).lower() for t in tokens)
+            else 1
+        ),
+    )
+    for r in ranked:
         hay = " ".join(filter(None, [r.name, r.city, r.country])).lower()
         if any(t and t in hay for t in tokens):
             note = f"round {r.round}: {r.name}"

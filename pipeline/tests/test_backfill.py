@@ -313,3 +313,24 @@ def test_engine_case_yields_to_a_live_brief_on_the_same_day(session, storage, tm
     assert copy.brief_number < 0
     assert copy.verification_status == VerificationStatus.verified
     assert copy.brief_data["historical_label"] == "N° 121"
+
+
+def test_case_record_round_trips_through_the_importer(session, storage, tmp_path):
+    from intel import case_record
+
+    backfill.import_engine_cases(session)
+    crusoe = session.scalar(
+        select(Brief).where(Brief.brief_data["engine_case_key"].astext.like("%crusoe"))
+    )
+    out = case_record.export_case(session, crusoe, tmp_path / "cases", stem="crusoe-again")
+    rec = json.loads(Path(out["record"]).read_text(encoding="utf-8"))
+    assert rec["brief"]["number"] == 121 and rec["brief"]["verification_status"] == "verified"
+    assert len(rec["ledger"]) == 21 and rec["candidates"][0]["decision"] == "selected"
+    assert Path(out[".pdf"]).exists() and Path(out[".web.html"]).exists()
+    # importing the exported record on a day that already has the live brief yields to it
+    res = backfill.import_engine_cases(session, tmp_path / "cases")
+    assert res["created"] == 1 and res["failed"] == 0, res
+    again = session.scalar(
+        select(Brief).where(Brief.brief_data["engine_case_key"].astext.like("%crusoe-again"))
+    )
+    assert again.historical is True and again.verification_status == VerificationStatus.verified

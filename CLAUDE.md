@@ -133,6 +133,16 @@ engine's first day) and sweep rows to their sweep date; `intel/cases/<date>/<com
 `backfill.import_engine_cases` persist in-session full cases (Crusoe N° 121) as live verified
 briefs on any database, entrypoint runs the backfill on every start; `rebuild_queue.backlog()`
 turns 4 unverified historical signals per daily run into full cases (`REBUILD_BACKLOG_PER_RUN`).
+**Second full case — N° 122 Fervo Energy → Andretti Formula E (72/100, MODE B), 5 Sep 2026**
+(`briefs/2026-09-05/fervoenergy.*`): the first FE case at the Crusoe standard, built in rebuild
+mode on a day that already had N° 121 (stored `historical=True`, label kept, shown as an engine row
+merged with its 13 May sweep entry). 17/17 claims verified via search summaries of primary pages
+(company/SEC/wire domains egress-blocked; `fervoenergy-verification.md`). It exposed and fixed:
+`run_day` treating a historical import as "already ran"; `austin → us` alias matching the wrong US
+round (name/city now ranks before country); "Andretti's race engineers" read as a race. Andretti's
+sponsor rows updated from Andretti Global / Formula E / RACER (TWG AI primary, Quest Global, Crowe
+UK, Reflo; Porsche powertrain ends with Season 12, Nissan from Season 13). `intel.case_record`
+exports any brief as a case record.
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;

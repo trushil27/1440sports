@@ -187,10 +187,7 @@ def backlog(
     verified = {
         company_norm(b.brief_data.get("company") or b.candidate.company_raw)
         for b in session.scalars(
-            select(Brief).where(
-                Brief.historical.is_(False),
-                Brief.verification_status == VerificationStatus.verified,
-            )
+            select(Brief).where(Brief.verification_status == VerificationStatus.verified)
         )
         if b.brief_data
     }

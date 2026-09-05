@@ -91,6 +91,7 @@ def rebuild(
     scanner = lambda _d: scan_one(company, date, client, settings, hint)  # noqa: E731
     stages = stages or run_daily.Stages()
     stages.distribute = False
+    stages.rebuild = True
     return run_daily.run_day(date, settings, scanner, session, stages=stages)
 
 

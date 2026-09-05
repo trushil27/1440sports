@@ -294,17 +294,18 @@ def brief_entry(
     card = brief_card(brief)
     d = brief.brief_data or {}
     series, inferred = infer_series(card, d)
+    engine_row = not brief.historical or bool(d.get("rebuilt")) or bool(d.get("engine_case_key"))
     rv = (
-        review_for(review or {}, card["date"], card["company"])
-        if brief.historical
-        else {"status": "keep"}
+        {"status": "keep"}
+        if engine_row
+        else review_for(review or {}, card["date"], card["company"])
     )
     entry = {
         **card,
         "key": f"{card['date']}|{company_norm(card['company'])}",
         "date": surfaced_date(brief, card["date"]),
         "review": rv,
-        "source_label": d.get("historical_source") if brief.historical else "engine",
+        "source_label": "engine" if engine_row else d.get("historical_source"),
         "series": series,
         "series_inferred": inferred,
         "deck": d.get("deck"),

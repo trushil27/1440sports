@@ -159,6 +159,13 @@ which points the scanner at that one company, then verifies, writes, audits and 
 2-page PDF and the long-form page, issued on the given date with the next brief number. It
 never emails anyone. Re-export the site afterwards (or wait for the next daily run).
 
+Rebuild mode (`Stages.rebuild=True`, set by `intel.rebuild`): the date may already carry a
+historical row or a live brief — neither makes the run a no-op; the rebuilt company is not
+dedup-suppressed; and when the day already has a live brief the case is stored with
+`historical=True` and its label (`N° 122`), so the one-live-brief-per-day rule holds. To carry a
+case in the repo, `python -m intel.case_record <number> --out pipeline/intel/cases` writes the
+run record next to the PDF and app page; the entrypoint's backfill imports it everywhere else.
+
 ## 4. Web app (M7)
 
 Vercel project from `web/` with `NEXT_PUBLIC_API_BASE_URL` set to the API service URL at build

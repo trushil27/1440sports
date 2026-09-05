@@ -129,3 +129,50 @@ def test_single_company_prompt_and_rebuild_issue_a_brief_on_the_original_date(
     assert brief.run_date == dt.date(2026, 6, 14) and brief.pdf_path and brief.web_html_path
     assert client.calls[0]["tools"][0]["type"] == "web_search_20260209"
     assert stages.distribute is False
+
+
+def test_rebuild_runs_again_on_a_taken_day_and_keeps_the_live_brief(
+    session, migrated_database, tmp_path
+):
+    """A rebuild never returns 'already ran': on a day that has a live brief it stores the
+    new case with ``historical=True`` (label kept), is not dedup-suppressed for the company
+    it rebuilds, and the daily job still sees the live brief as that day's outcome."""
+    load_seeds(session)
+    row = dict(ps.RAMP_JUNE_ROUND)
+    row["score_breakdown"] = ps.synthetic_split(row["score"])
+    settings = Settings(
+        database_url=migrated_database,
+        execution_mode="dry_run",
+        pdf_storage_dir=str(tmp_path / "briefs"),
+        anthropic_api_key="x",
+    )
+    day = dt.date(2026, 6, 15)
+
+    def run_once():
+        stages = rebuild.run_daily.Stages(
+            verifier=FakeVerifier(), writer=FakeWriter([_block(RAMP_WRITTEN)]), font_stack="june"
+        )
+        return rebuild.rebuild(
+            "Ramp", day, settings, OneShotClient(json.dumps([row])), stages, session
+        )
+
+    first = run_once()
+    assert first.status == "success" and not first.already_ran
+    live = session.get(Brief, first.brief_id)
+    assert live.historical is False
+
+    second = run_once()
+    assert second.status == "success" and not second.already_ran
+    again = session.get(Brief, second.brief_id)
+    assert again.id != live.id
+    assert again.historical is True  # the day already had a live brief
+    assert again.brief_data["rebuilt"] is True
+    assert again.brief_data["historical_label"] == f"N° {again.brief_number}"
+    assert again.candidate.decision.value == "selected"  # not dedup-suppressed
+    assert again.candidate.run.summary["rebuild"] is True
+
+    # the daily job for that date is still final on the live brief
+    outcome = rebuild.run_daily.run_day(
+        day, settings, lambda _d: [], session, stages=rebuild.run_daily.Stages(distribute=False)
+    )
+    assert outcome.already_ran and outcome.brief_id == live.id
