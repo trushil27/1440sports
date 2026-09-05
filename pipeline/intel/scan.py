@@ -151,6 +151,27 @@ def scanner_prompts(today: dt.date) -> tuple[str, str]:
     return system, user
 
 
+SINGLE_COMPANY_USER = (
+    "Run the scan for ONE named company only: {company}.\n"
+    "Research it live (its own newsroom, filings and Tier-1 coverage) and return a JSON array "
+    "with exactly one signal object for {company} in the format specified — same gates, same "
+    "five /20 dimensions, same anti-hallucination rules. If the company fails a gate, still "
+    "return the object with the honest score and say why in key_facts.strategic_hook. "
+    "Anchor signal_date to the most recent verifiable trigger on or before {today}"
+    "{hint}."
+)
+
+
+def single_company_prompts(
+    company: str, today: dt.date, hint: str | None = None
+) -> tuple[str, str]:
+    """The same scanner, pointed at one company (used by ``intel.rebuild``)."""
+    system = scanner_system_prompt().replace(_TODAY_TOKEN, today.isoformat())
+    extra = f" (context from the earlier signal: {hint})" if hint else ""
+    user = SINGLE_COMPANY_USER.format(company=company, today=today.isoformat(), hint=extra)
+    return system, user
+
+
 @dataclass
 class ScanResult:
     signals: list[ScannedSignal]

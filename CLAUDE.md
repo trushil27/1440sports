@@ -108,6 +108,16 @@ F1 / FE / All tiles, sponsors by series with since/until"):** `pipeline/intel/si
 Historical rows without a recorded series are inferred from text and marked "inferred". Sponsor
 since/until come from the seed notes + spec §7 renewals; absent = "not stated". This replaces the
 Railway API + Next.js PWA path for now (both still in the repo, undeployed).
+
+**Second pass (5 Sep 2026, MD: "logo wrong, not polished, bad historical rows, more FE, sponsors
+hard to navigate"):** real logo files in `brand/assets` + `pipeline/intel/assets` (SVG inlined into
+the app); `data/history_review.json` = the row-by-row review applied at export (screened / duplicate
+/ check); `seeds/calendar_fe.json` = FE Season 12 (complete) + Season 13 (provisional, GEN4);
+`intel/rebuild.py` = full case for one named company on its original date (the app's "Build the full
+case" button emails the command); `backfill/fe_sweep_signals_2026-09-05.json` = 20 FE leads from a
+live sweep, imported as historical/unverified; team display names for 2026 (`team_profiles.json`
+`display_name`, sponsor keys unchanged); sponsor page with team jump-chips, search, level filter,
+expand/collapse, by-category view.
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;

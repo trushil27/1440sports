@@ -113,6 +113,28 @@ redeploys the app automatically. Manual refresh: `python -m intel.site_export --
 The site is public by URL; keep the Netlify site name unguessable or add Netlify's password /
 Identity gate before circulating the link.
 
+**History clean-up (5 Sep 2026).** `data/history_review.json` is the row-by-row review of the
+imported n8n log: screened rows (existing partners, rights-holders, blocklisted / approached
+names, off-profile, below the capacity gate) move to the app's *Screened out* page with the
+reason; duplicates fold into their kept row; "Check" rows stay but carry the open question.
+Edit that file to change a decision; nothing is deleted from the database.
+
+**FE sweep (5 Sep 2026).** `pipeline/intel/backfill/fe_sweep_signals_2026-09-05.json` holds
+the Formula E leads found by live search on that day (real 2026 capital or identity events,
+sourced). `python -m intel.backfill` imports it like the n8n log (historical / unverified,
+source label `fe_sweep_signals_2026-09-05`). Add further sweep files as `*_signals_*.json`.
+
+**Build the full case for any past signal.** From the app, *Build the full case* opens an email
+to the operator with the exact command; on the daily-job service run
+
+```
+python -m intel.rebuild "Antora Energy" --date 2026-07-30
+```
+
+which points the scanner at that one company, then verifies, writes, audits and renders the
+2-page PDF and the long-form page, issued on the given date with the next brief number. It
+never emails anyone. Re-export the site afterwards (or wait for the next daily run).
+
 ## 4. Web app (M7)
 
 Vercel project from `web/` with `NEXT_PUBLIC_API_BASE_URL` set to the API service URL at build

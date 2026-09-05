@@ -250,9 +250,16 @@ def _signal_key(day: str, norm: str, action: str) -> str:
     return f"{SOURCE_SIGNALS}|{day}|{norm}|{action}"
 
 
-def import_daily_signals(session: Session, path: Path | str | None = None) -> dict[str, Any]:
-    """Import the n8n audit-log rows as historical, unverified briefs (one per row)."""
+def import_daily_signals(
+    session: Session, path: Path | str | None = None, source_label: str | None = None
+) -> dict[str, Any]:
+    """Import audit-log style rows as historical, unverified briefs (one per row).
+
+    The n8n log is the default file; any other file with the same columns (plus optional
+    ``Series`` / ``Team`` / ``Industry`` columns, e.g. the FE sweep) imports the same way with
+    its own ``source_label`` so the app can say where a row came from."""
     src_path = Path(path) if path else DEFAULT_SIGNALS_FILE
+    label = source_label or (SOURCE_SIGNALS if src_path == DEFAULT_SIGNALS_FILE else src_path.stem)
     data = _read_json(src_path)
     rows: list[dict[str, Any]] = data["rows"] if isinstance(data, dict) else data
     created = skipped = failed = 0
@@ -280,7 +287,10 @@ def import_daily_signals(session: Session, path: Path | str | None = None) -> di
             skipped += 1
             continue
 
-        run = _run_for(session, day, SOURCE_SIGNALS)
+        run = _run_for(session, day, label)
+        series_raw = _clean(row.get("Series"))
+        series = Series(series_raw) if series_raw in ("F1", "FE") else None
+        team = _clean(row.get("Team"))
         track_raw = _clean(row.get("Track"))
         track = int(track_raw) if track_raw in {"1", "2"} else 1
         source_url = _clean(row.get("Source"))
@@ -295,7 +305,8 @@ def import_daily_signals(session: Session, path: Path | str | None = None) -> di
             company_raw=company,
             company_norm=norm,
             track=track,
-            series=None,
+            series=series,
+            recommended_team=team,
             trigger_reason_raw=action or None,
             trigger_reason_norm=trigger_key(action),
             trigger_date=day,
@@ -319,17 +330,17 @@ def import_daily_signals(session: Session, path: Path | str | None = None) -> di
             audit_status=AuditStatus.pending,
             brief_data={
                 "company": company,
-                "industry_meta": None,
+                "industry_meta": _clean(row.get("Industry")),
                 "score": score if score is not None else _clean(row.get("Score")),
                 "timing_label": tier,
-                "series_label": None,
-                "team_label": None,
+                "series_label": series.value if series else None,
+                "team_label": team,
                 "horizon_label": _clean(row.get("Horizon")),
                 "decision_maker_name": person,
                 "decision_maker_role": role,
                 "deck": action or None,
                 "historical": True,
-                "historical_source": SOURCE_SIGNALS,
+                "historical_source": label,
                 "historical_label": None,
                 "historical_key": key,
                 "signal_date": day_raw,
@@ -732,6 +743,12 @@ def main(argv: list[str] | None = None) -> None:
     with session_scope() as session:
         if do_signals:
             print(json.dumps(import_daily_signals(session), indent=1, ensure_ascii=False))
+            # Any further audit-log style file next to the n8n log (e.g. the FE sweep of
+            # 5 Sep 2026) imports with its file stem as the source label.
+            for extra in sorted(BACKFILL_DIR.glob("*_signals_*.json")):
+                if extra != DEFAULT_SIGNALS_FILE and not extra.name.startswith("daily_signals"):
+                    res = import_daily_signals(session, extra)
+                    print(json.dumps({extra.name: res}, indent=1, ensure_ascii=False))
         if do_repo:
             print(json.dumps(import_repo_briefs(session), indent=1, ensure_ascii=False))
         if args.pdfs:

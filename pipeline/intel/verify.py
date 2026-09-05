@@ -369,9 +369,12 @@ def check_event_claim(session: Session, draft: ClaimDraft, run_date: dt.date) ->
     if series is None:
         series = "FE" if "prix" in kind and kind.startswith("e") else "F1"
     season = _season_for(ev.get("when"), run_date)
+    # Formula E seasons straddle the year end and are stored by the year they finish in, so a
+    # mention made in 2026 may refer to Season 12 (2026) or to Season 13 (2027, opening Dec 2026).
+    seasons = (season, season + 1) if series == "FE" and not ev.get("when") else (season,)
     rows = session.scalars(
         select(CalendarEvent).where(
-            CalendarEvent.series == Series(series), CalendarEvent.season == season
+            CalendarEvent.series == Series(series), CalendarEvent.season.in_(seasons)
         )
     ).all()
     if not rows:

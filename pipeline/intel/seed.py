@@ -254,9 +254,17 @@ def load_blocklist(session: Session, seeds_dir: Path = SEEDS_DIR) -> int:
     return _upsert(session, Blocklist, rows, lambda r: {"company_norm": r["company_norm"]})
 
 
+CALENDAR_FE_FILE = "calendar_fe.json"
+
+
 def load_calendar(session: Session, seeds_dir: Path = SEEDS_DIR) -> int:
-    data = _read(seeds_dir / CALENDAR_FILE)
-    events = data["events"] if isinstance(data, dict) else data
+    events: list[dict] = []
+    for name in (CALENDAR_FILE, CALENDAR_FE_FILE):
+        path = seeds_dir / name
+        if not path.exists():
+            continue
+        data = _read(path)
+        events.extend(data["events"] if isinstance(data, dict) else data)
     rows = (_calendar_row(r) for r in events)
     return _upsert(
         session,

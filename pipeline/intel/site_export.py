@@ -28,6 +28,41 @@ from intel.seed import load_team_profiles
 
 SITE_SRC = Path(__file__).parent / "site" / "app.html"
 DATA_TOKEN = "__DATA_JSON__"
+REVIEW_FILE = Path(__file__).resolve().parents[2] / "data" / "history_review.json"
+
+
+def load_review(path: Path = REVIEW_FILE) -> dict[str, dict[str, Any]]:
+    """data/history_review.json rows keyed by 'date|normalised company'."""
+    from intel.normalise import company_norm
+
+    if not path.exists():
+        return {}
+    raw = json.loads(path.read_text(encoding="utf-8")).get("rows", {})
+    out: dict[str, dict[str, Any]] = {}
+    for key, decision in raw.items():
+        parts = key.split("|")
+        if len(parts) < 2:
+            continue
+        out[f"{parts[0]}|{company_norm(parts[1])}"] = decision
+    return out
+
+
+def review_for(review: dict[str, dict[str, Any]], date: str, company: str) -> dict[str, Any]:
+    from intel.normalise import company_norm
+
+    d = review.get(f"{date}|{company_norm(company)}")
+    if not d:
+        return {"status": "keep"}
+    out = {
+        "status": d.get("status", "keep"),
+        "reason": d.get("reason"),
+        "reason_code": d.get("reason_code"),
+    }
+    if d.get("of"):
+        parts = d["of"].split("|")
+        out["of"] = f"{parts[0]}|{company_norm(parts[1])}"
+    return out
+
 
 # spec/active_sponsor_db.md §7 — the only publicly reported end dates. Everything else is
 # "not stated", never "open-ended".
@@ -98,7 +133,8 @@ _REPORTED = re.compile(r"\b(reported|reportedly|per public reporting|expected|li
 
 _FE_WORDS = re.compile(
     r"formula e|e-prix|\bev\b|electric|batter|charging|grid|solar|energy|sustainab|carbon|hydrogen"
-    r"|mobility|fleet|micromobility|renewable|clean ?tech|climate",
+    r"|mobility|fleet|micromobility|renewable|clean ?tech|climate|nuclear|fusion|reactor"
+    r"|geothermal|power plant|lithium|electrif",
     re.I,
 )
 _FE_TEAMS = (
@@ -233,12 +269,24 @@ def brief_card(brief: Brief) -> dict[str, Any]:
     }
 
 
-def brief_entry(brief: Brief, include_page: bool) -> dict[str, Any]:
+def brief_entry(
+    brief: Brief, include_page: bool, review: dict[str, dict[str, Any]] | None = None
+) -> dict[str, Any]:
+    from intel.normalise import company_norm
+
     card = brief_card(brief)
     d = brief.brief_data or {}
     series, inferred = infer_series(card, d)
+    rv = (
+        review_for(review or {}, card["date"], card["company"])
+        if brief.historical
+        else {"status": "keep"}
+    )
     entry = {
         **card,
+        "key": f"{card['date']}|{company_norm(card['company'])}",
+        "review": rv,
+        "source_label": d.get("historical_source") if brief.historical else "engine",
         "series": series,
         "series_inferred": inferred,
         "deck": d.get("deck"),
@@ -265,8 +313,24 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
         .where(Brief.verification_status != VerificationStatus.blocked)
         .order_by(Brief.run_date.desc(), Brief.id.desc())
     ).all()
-    entries = [brief_entry(b, include_page=True) for b in briefs]
-    today = next((e for e, b in zip(entries, briefs, strict=True) if not b.historical), None)
+    review = load_review()
+    entries = [brief_entry(b, include_page=True, review=review) for b in briefs]
+    # duplicates fold into the row they duplicate; screened rows leave the main lists
+    kept = {e["key"] for e in entries if e["review"]["status"] in ("keep", "keep_flagged")}
+    for e in entries:
+        if e["review"]["status"] == "duplicate_of" and e["review"].get("of") not in kept:
+            e["review"] = {
+                "status": "keep_flagged",
+                "reason": "duplicate of a row that was itself screened",
+            }
+    today = next(
+        (
+            e
+            for e, b in zip(entries, briefs, strict=True)
+            if not b.historical and e["review"]["status"] != "screened_out"
+        ),
+        None,
+    )
     sponsors = [
         sponsor_row(s)
         for s in session.scalars(
@@ -289,16 +353,40 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
             select(CalendarEvent).order_by(CalendarEvent.series, CalendarEvent.round)
         )
     ]
+    teams = load_team_profiles()
+    display = {t["team"]: t.get("display_name") or t["team"] for t in teams}
+    for row in sponsors:
+        row["team_display"] = display.get(row["team"], row["team"]) if row["team"] else None
     return {
         "generated_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
         "execution_mode": settings.execution_mode,
+        "operator_email": settings.operator_email,
         "today": today,
         "briefs": entries,
         "sponsors": sponsors,
         "calendar": calendar,
-        "teams": load_team_profiles(),
+        "teams": teams,
+        "team_display": display,
         "renewals": RENEWALS,
+        "review_meta": {
+            "reviewed_at": "2026-09-05",
+            "screened": sum(1 for e in entries if e["review"]["status"] == "screened_out"),
+            "duplicates": sum(1 for e in entries if e["review"]["status"] == "duplicate_of"),
+            "flagged": sum(1 for e in entries if e["review"]["status"] == "keep_flagged"),
+        },
     }
+
+
+ASSETS = Path(__file__).parent / "assets"
+
+
+def _svg_data_uri(name: str) -> str:
+    import base64
+
+    path = ASSETS / name
+    if not path.exists():
+        return ""
+    return "data:image/svg+xml;base64," + base64.b64encode(path.read_bytes()).decode("ascii")
 
 
 def write_site(data: dict[str, Any], out_dir: Path, src: Path = SITE_SRC) -> Path:
@@ -307,7 +395,12 @@ def write_site(data: dict[str, Any], out_dir: Path, src: Path = SITE_SRC) -> Pat
     (out_dir / "data.json").write_text(payload, encoding="utf-8")
     # first occurrence only: the data <script>; the app's own fallback check spells the
     # token in two halves so it never matches here.
-    html = src.read_text(encoding="utf-8").replace(DATA_TOKEN, payload.replace("</", "<\\/"), 1)
+    html = (
+        src.read_text(encoding="utf-8")
+        .replace("__LOGO_BLUE_GOLD__", _svg_data_uri("1440_logo.svg"))
+        .replace("__LOGO_WHITE__", _svg_data_uri("1440_logo_white.svg"))
+        .replace(DATA_TOKEN, payload.replace("</", "<\\/"), 1)
+    )
     (out_dir / "index.html").write_text(html, encoding="utf-8")
     return out_dir / "index.html"
 

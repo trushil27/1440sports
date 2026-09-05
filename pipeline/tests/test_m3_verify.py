@@ -99,15 +99,23 @@ def test_real_round_is_found_by_venue_alias(session):
 
 
 def test_fe_event_without_a_loaded_calendar_is_unverified_not_contradicted(session):
-    load_seeds(session)  # F1 only; FE Season 12 rounds are a documented gap
+    load_seeds(session)  # FE Seasons 12 + 13 are seeded (5 Sep 2026); 2029 is not
     draft = verify.ClaimDraft(
+        "Mexico City E-Prix",
+        "why_now",
+        ClaimType.event,
+        meta={"event": {"series": "FE", "place": "Mexico City", "when": "January 2029"}},
+    )
+    v = verify.check_event_claim(session, draft, dt.date(2028, 6, 14))
+    assert v.status == VerificationResult.unverified
+    # …and with the calendar loaded the same round verifies (Season 12, stored as 2026)
+    ok = verify.ClaimDraft(
         "Mexico City E-Prix",
         "why_now",
         ClaimType.event,
         meta={"event": {"series": "FE", "place": "Mexico City", "when": None}},
     )
-    v = verify.check_event_claim(session, draft, dt.date(2026, 6, 14))
-    assert v.status == VerificationResult.unverified
+    assert verify.check_event_claim(session, ok, dt.date(2026, 6, 14)).status.value == "verified"
 
 
 def test_ramp_025_is_blocked_before_any_brief_is_issued(session, migrated_database):
