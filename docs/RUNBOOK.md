@@ -44,11 +44,11 @@ APP_COOKIE_SECURE=true
 
 ## 2. First deploy (M1–M5 acceptance)
 
-0. **Test firing (5 Sep 2026):** `railway.json` carries `cronSchedule: "0 16 * * *"` (17:00 BST) so
-   the daily job fires once at 5 pm UK today with the smoke-run start command; put it back to
-   `"30 4,5 * * *"` after the test. `python -m intel.schedule --slot HH:MM` moves the run/send slot
-   for a one-off; the scheduler now always exits 0 (a failed run is reported by email, not by a
-   "Crashed" service).
+0. **Test firing (5 Sep 2026):** `railway.json` carried `cronSchedule: "0 16 * * *"` for a one-off
+   17:00 BST firing; it is back on `"30 4,5 * * *"`. Clear the Custom Start Command (the smoke-run
+   command `python -m intel.schedule --force --no-wait`) in Railway so the slot check applies again.
+   `python -m intel.schedule --slot HH:MM` moves the run/send slot for a one-off; the scheduler always
+   exits 0 (a failed run is reported by email, not by a "Crashed" service).
 1. **Railway**: create a project from this repo with `railway.json` (root `Dockerfile` — if the
    build log mentions Railpack, set Settings → Build → Builder to *Dockerfile*; cron
    `30 4,5 * * *` — both UTC firings; the job itself keeps only the 05:30 Europe/London one).
