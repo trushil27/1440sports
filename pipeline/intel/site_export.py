@@ -515,6 +515,12 @@ def publish(settings: Settings | None = None, session: Session | None = None) ->
         data = export_data(session, settings)
     index = write_site(data, out_dir)
     result: dict[str, Any] = {"index": str(index), "briefs": len(data["briefs"])}
+    if settings.github_token:
+        from intel.pages import publish_pages
+
+        result["pages"] = publish_pages(
+            out_dir, settings.github_token, settings.pages_repo, settings.pages_branch
+        )
     if settings.netlify_auth_token and settings.netlify_site_id:
         from intel.netlify import deploy
 

@@ -33,6 +33,8 @@ GRAPH_TENANT_ID / GRAPH_CLIENT_ID / GRAPH_CLIENT_SECRET / GRAPH_SENDER   # Mail.
 GRAPH_REFRESH_TOKEN                             # only if IT will not grant app consent (delegated fallback)
 PDF_STORAGE_DIR=/data/briefs                    # a Railway volume until object storage is wired
 APP_BASE_URL=https://intel.1440sports.com       # link target in emails
+GITHUB_TOKEN=github_pat_…                       # fine-grained, Contents: read/write on trushil27/1440sports →
+                                                # the job republishes the live app (gh-pages) after every run
 # API only
 APP_SECRET_KEY=<long random>                    # signs sessions, magic links, WebAuthn challenges
 APP_USERS=trushil.jani@1440sports.com:operator:Trushil,ricky.paugh@1440sports.com:md:Ricky
@@ -137,10 +139,14 @@ the Formula E leads found by live search on that day (real 2026 capital or ident
 sourced). `python -m intel.backfill` imports it like the n8n log (historical / unverified,
 source label `fe_sweep_signals_2026-09-05`). Add further sweep files as `*_signals_*.json`.
 
-**Live URL today: GitHub Pages** — `.github/workflows/pages.yml` publishes `site/` on every push
-to `main` at https://trushil27.github.io/1440sports/ (the repo is public). The daily job's own
-export/deploy goes to Netlify once the two Netlify variables exist; until then the site refreshes
-whenever `site/` is committed (`python -m intel.site_export --out site/` and push).
+**Live URL: GitHub Pages** — https://trushil27.github.io/1440sports/ is the `gh-pages` branch.
+Two things write it: `.github/workflows/pages.yml` on every push to `main` that touches `site/`,
+and **the daily job itself** when `GITHUB_TOKEN` is set on the Railway service (`intel/pages.py`
+writes `index.html` + `data.json` to the branch through the Git Data API after each run; no git
+binary, no build). Create the token at GitHub → Settings → Developer settings → Fine-grained
+tokens: repository `trushil27/1440sports`, permission *Contents: Read and write*, expiry as long
+as allowed. Nobody needs to log in anywhere for the daily refresh: Railway's cron starts the job,
+the job emails the brief and republishes the app. Netlify remains an alternative deploy target.
 
 **Build the full case for any past signal.** From the app, *Build the full case* queues the
 request: on Netlify it posts the `rebuild` form; elsewhere it opens a prefilled GitHub issue

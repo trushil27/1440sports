@@ -88,6 +88,15 @@ class Settings(BaseModel):
         description="Netlify personal access token; with NETLIFY_SITE_ID the job deploys.",
     )
     netlify_site_id: str | None = None
+    github_token: str | None = Field(
+        default=None,
+        description=(
+            "Fine-grained GitHub token (Contents: read/write on the repo); with it the daily job "
+            "publishes the exported app to the gh-pages branch (the live site) after every run."
+        ),
+    )
+    pages_repo: str = Field(default="trushil27/1440sports", description="owner/repo for Pages.")
+    pages_branch: str = Field(default="gh-pages", description="Branch GitHub Pages serves.")
     rebuild_backlog_per_run: int = Field(
         default=4,
         description="Historical signals rebuilt as full cases after each daily run (0 = off).",

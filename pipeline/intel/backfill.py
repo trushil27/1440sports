@@ -533,6 +533,18 @@ def import_repo_briefs(session: Session, repo_root: Path | str | None = None) ->
     """Import ``briefs/history.json`` entries that have a rendered PDF on disk."""
     root = Path(repo_root) if repo_root else REPO_ROOT
     history_path = root / "briefs" / "history.json"
+    if not history_path.exists():
+        # The deployed image ships pipeline/ only; the repo engine's briefs are imported from a
+        # checkout. Nothing to do here must not fail (and roll back) the other imports.
+        return {
+            "source": SOURCE_REPO,
+            "entries": 0,
+            "created": 0,
+            "skipped": 0,
+            "failed": 0,
+            "errors": [],
+            "note": f"no {history_path} in this environment",
+        }
     entries: list[dict[str, Any]] = _read_json(history_path).get("log", [])
     prospects = _load_prospects(root)
     created = skipped = failed = 0

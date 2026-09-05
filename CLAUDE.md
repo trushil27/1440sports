@@ -143,6 +143,9 @@ round (name/city now ranks before country); "Andretti's race engineers" read as 
 sponsor rows updated from Andretti Global / Formula E / RACER (TWG AI primary, Quest Global, Crowe
 UK, Reflo; Porsche powertrain ends with Season 12, Nissan from Season 13). `intel.case_record`
 exports any brief as a case record.
+**Automatic refresh of the live app:** with `GITHUB_TOKEN` on Railway the daily job republishes
+`gh-pages` itself (`intel/pages.py`, Git Data API); without it the site only changes when `site/`
+is pushed. The container backfill tolerates the missing `briefs/` folder in the image.
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;

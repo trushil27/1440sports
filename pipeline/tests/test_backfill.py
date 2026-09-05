@@ -334,3 +334,10 @@ def test_case_record_round_trips_through_the_importer(session, storage, tmp_path
         select(Brief).where(Brief.brief_data["engine_case_key"].astext.like("%crusoe-again"))
     )
     assert again.historical is True and again.verification_status == VerificationStatus.verified
+
+
+def test_repo_import_is_a_no_op_without_the_briefs_folder(session, storage, tmp_path):
+    """The Railway image has no briefs/ checkout; the importer must not raise (a raise would
+    roll back the signals import that ran in the same transaction)."""
+    out = backfill.import_repo_briefs(session, repo_root=tmp_path)
+    assert out["created"] == 0 and out["failed"] == 0 and "note" in out
