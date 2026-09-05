@@ -70,6 +70,11 @@ class Stages:
     distribute: bool = True
 
 
+def progress(msg: str) -> None:
+    """One line per stage on stdout so a deploy log shows where a run is (nothing else logs)."""
+    print(f"[run {dt.datetime.now(dt.UTC):%H:%M:%S}Z] {msg}", flush=True)
+
+
 def _existing_outcome(session: Session, run_date: dt.date) -> RunOutcome | None:
     """A completed run (success or no_signal) for the date is final: no re-scan, no re-send."""
     issued = session.scalar(
@@ -253,6 +258,7 @@ def produce_brief(
     attempts = 0
     for attempt in (1, 2):
         attempts = attempt
+        progress(f"{sig.company}: writing brief N° {number} (attempt {attempt}, mode {mode})")
         try:
             written, _raw = brief_mod.write_brief(
                 sig, number, run_date, mode, stages.writer, settings, feedback
@@ -262,6 +268,7 @@ def produce_brief(
             written = None
             continue
         audit_res = audit.audit_brief(written, run_date)
+        progress(f"{sig.company}: audit {audit_res.route} ({len(audit_res.violations)} violations)")
         if audit_res.route == "pass":
             break
         feedback = audit.violations_feedback(audit_res)
@@ -297,8 +304,10 @@ def produce_brief(
         verify.claims_from_brief(written), stages.extractor.extract(written)
     )
     verifier = stages.verifier or verify.default_verifier(settings)
+    progress(f"{sig.company}: stage-B verification of {len(drafts)} claims in the written brief")
     result = verify.run_ledger(session, brief, drafts, sig.company, run_date, verifier)
     log.update(stage_b=result.counts, verification=result.status.value, blocking=result.blocking)
+    progress(f"{sig.company}: stage B {result.status.value} {result.counts}")
     if result.status == VerificationStatus.blocked:
         return log
 
@@ -312,6 +321,7 @@ def produce_brief(
     try:
         paths = render.render_brief(data, out_dir, cand.company_norm, stages.font_stack)
     except render.PageOverflow as exc:
+        progress(f"{sig.company}: render failed — {exc}")
         brief.audit_status = AuditStatus.failed
         brief.audit_violations = (brief.audit_violations or []) + [
             {"rule": 11, "code": "page_overflow", "severity": "high", "message": str(exc)}
@@ -322,6 +332,7 @@ def produce_brief(
     brief.html_path = str(paths["html"])
     brief.page_count = int(paths["pages"])
     log.update(rendered=True, pdf=brief.pdf_path)
+    progress(f"{sig.company}: rendered {brief.page_count} pages → {brief.pdf_path}")
     from intel import highlights as highlights_mod
 
     log["highlights"] = len(highlights_mod.store_highlights(session, brief))
@@ -356,9 +367,11 @@ def run_day(
         return existing
 
     run = _new_run(session, run_date, settings)
+    progress(f"run {run.id} for {run_date} ({settings.execution_mode}): scanning")
     try:
         signals = scanner(run_date) if scanner else run_scan(run_date, settings=settings).signals
     except ScanFailed as exc:
+        progress(f"scan failed: {exc}")
         run.status, run.error = RunStatus.failed, str(exc)
         run.finished_at = dt.datetime.now(dt.UTC)
         session.flush()
@@ -366,8 +379,14 @@ def run_day(
             send.distribute(session, run, settings, stages.mailer, None)
         return RunOutcome(run.id, run_date, "failed", None, summary={"error": str(exc)})
 
+    progress(f"scan returned {len(signals)} signals; triaging (freshness, dedup, score)")
     eligible = triage(session, run, signals, run_date, settings)
     ordered = rank_eligible(eligible, run_date)
+    shortlist = ordered[: settings.max_verification_attempts]
+    progress(
+        f"{len(eligible)} eligible of {len(signals)}; verifying in order: "
+        + (", ".join(f"{c.company_raw} ({c.score_total})" for c in shortlist) or "none")
+    )
     now = dt.datetime.combine(run_date, dt.time(hour=6), tzinfo=settings.tz)
     verification_log: list[dict] = []
     issued: tuple[Candidate, Brief] | None = None
@@ -380,7 +399,9 @@ def run_day(
             else "top ranking score"
         )
         cand.decision_reason = f"{cand.decision_reason}; {why}" if cand.decision_reason else why
+        progress(f"{cand.company_raw}: stage-A verification of key facts")
         brief, result = verify_candidate(session, cand, run_date, stages.verifier)
+        progress(f"{cand.company_raw}: stage A {result.status.value} {result.counts}")
         entry = {
             "candidate_id": cand.id,
             "company": cand.company_raw,
@@ -404,6 +425,7 @@ def run_day(
             )
             continue
         issued = (cand, brief)
+        progress(f"{cand.company_raw}: issued as brief N° {brief.brief_number:03d}")
         break
 
     for cand in ordered:
