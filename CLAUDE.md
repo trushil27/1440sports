@@ -118,6 +118,15 @@ case" button emails the command); `backfill/fe_sweep_signals_2026-09-05.json` = 
 live sweep, imported as historical/unverified; team display names for 2026 (`team_profiles.json`
 `display_name`, sponsor keys unchanged); sponsor page with team jump-chips, search, level filter,
 expand/collapse, by-category view.
+
+**Third pass (5 Sep 2026):** live website on GitHub Pages (`.github/workflows/pages.yml` →
+https://trushil27.github.io/1440sports/); one row per company at export (`merge_same_company`,
+folded dates shown as "Also surfaced"); "Now partner" deal updates from the sponsor table
+(`attach_deal_updates` — NinjaOne→Audi, 1Password→Red Bull); screened rows hidden, no source
+labels, no trigger-source buttons; "Build the full case" = Netlify form or a prefilled GitHub
+issue `Rebuild: <Company> (<date>)`, processed by `intel/rebuild_queue.py` before each export;
+scheduler `--slot HH:MM` + exit 0; `railway.json` cron temporarily `0 16 * * *` for the 17:00 BST
+test firing (revert to `30 4,5 * * *`). FE sweep = 24 rows; FE working list = 42.
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;

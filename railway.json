@@ -6,7 +6,7 @@
   },
   "deploy": {
     "startCommand": "/app/pipeline/entrypoint.sh",
-    "cronSchedule": "30 4,5 * * *",
+    "cronSchedule": "0 16 * * *",
     "restartPolicyType": "NEVER"
   },
   "_notes": [

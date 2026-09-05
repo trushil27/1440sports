@@ -44,6 +44,11 @@ APP_COOKIE_SECURE=true
 
 ## 2. First deploy (M1–M5 acceptance)
 
+0. **Test firing (5 Sep 2026):** `railway.json` carries `cronSchedule: "0 16 * * *"` (17:00 BST) so
+   the daily job fires once at 5 pm UK today with the smoke-run start command; put it back to
+   `"30 4,5 * * *"` after the test. `python -m intel.schedule --slot HH:MM` moves the run/send slot
+   for a one-off; the scheduler now always exits 0 (a failed run is reported by email, not by a
+   "Crashed" service).
 1. **Railway**: create a project from this repo with `railway.json` (root `Dockerfile` — if the
    build log mentions Railpack, set Settings → Build → Builder to *Dockerfile*; cron
    `30 4,5 * * *` — both UTC firings; the job itself keeps only the 05:30 Europe/London one).
@@ -124,8 +129,16 @@ the Formula E leads found by live search on that day (real 2026 capital or ident
 sourced). `python -m intel.backfill` imports it like the n8n log (historical / unverified,
 source label `fe_sweep_signals_2026-09-05`). Add further sweep files as `*_signals_*.json`.
 
-**Build the full case for any past signal.** From the app, *Build the full case* opens an email
-to the operator with the exact command; on the daily-job service run
+**Live URL today: GitHub Pages** — `.github/workflows/pages.yml` publishes `site/` on every push
+to `main` at https://trushil27.github.io/1440sports/ (the repo is public). The daily job's own
+export/deploy goes to Netlify once the two Netlify variables exist; until then the site refreshes
+whenever `site/` is committed (`python -m intel.site_export --out site/` and push).
+
+**Build the full case for any past signal.** From the app, *Build the full case* queues the
+request: on Netlify it posts the `rebuild` form; elsewhere it opens a prefilled GitHub issue
+titled `Rebuild: <Company> (<date>)` (the daily job reads open issues with that prefix — no token
+needed on a public repo) and always shows the command. `intel.rebuild_queue` runs before each
+export (up to 3 rebuilds per run, remembered in `<pdf_storage_dir>/rebuild_done.json`). By hand:
 
 ```
 python -m intel.rebuild "Antora Energy" --date 2026-07-30

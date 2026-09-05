@@ -217,7 +217,6 @@
     <a href="#/signals/F1" data-nav="F1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l4-16h8l4 16M8 14h8"/></svg>Formula 1<span class="count" id="cF1"></span></a>
     <a href="#/signals/FE" data-nav="FE"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Formula E<span class="count" id="cFE"></span></a>
     <a href="#/signals/all" data-nav="all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg>All signals<span class="count" id="cAll"></span></a>
-    <a href="#/screened" data-nav="screened"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16l-6 8v6l-4 2v-8z"/></svg>Screened out<span class="count" id="cScreened"></span></a>
     <div class="group">Grid</div>
     <a href="#/sponsors/F1" data-nav="sF1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Sponsors · F1</a>
     <a href="#/sponsors/FE" data-nav="sFE"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Sponsors · FE</a>
@@ -226,6 +225,7 @@
   <main id="main"></main>
 </div>
 
+<form name="rebuild" netlify netlify-honeypot="bot-field" hidden><input name="company"><input name="date"><input name="label"><input name="bot-field"></form>
 <script id="data" type="application/json">__DATA_JSON__</script>
 <script>
 (function () {
@@ -235,7 +235,6 @@
   const fmtDate = (iso) => { if (!iso) return ''; const d = new Date(iso.length === 10 ? iso + 'T00:00:00' : iso); return isNaN(d) ? esc(iso) : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); };
   const verClass = (v) => v === 'verified' ? 'ok' : (v === 'needs_review' ? 'warn' : (v === 'blocked' ? 'bad' : 'info'));
   const verLabel = (v) => ({ verified: 'Verified', needs_review: 'Unverified', blocked: 'Blocked', pending: 'Pending' }[v] || v);
-  const REASONS = { existing_partner: 'Existing partner', rights_holder: 'Rights holder', blocklisted: 'Blocklisted', approached: 'Already approached', off_profile: 'Off profile', no_trigger: 'No trigger', below_capacity: 'Below capacity gate', too_early: 'Too early', category_conflict: 'Category conflict' };
 
   let D = null;
   function load() {
@@ -247,33 +246,51 @@
   // ---- data ----
   const all = () => D.briefs || [];
   const live = () => all().filter((b) => b.review.status === 'keep' || b.review.status === 'keep_flagged');
-  const screened = () => all().filter((b) => b.review.status === 'screened_out');
-  const dupes = () => all().filter((b) => b.review.status === 'duplicate_of');
   const bySeries = (s) => live().filter((b) => b.series === s);
   const teamDisplay = (t) => (D.team_display && D.team_display[t]) || t;
   const teamsFor = (series) => (D.teams || []).filter((t) => t.series === series);
-  const opEmail = () => D.operator_email || 'trushil.jani@1440sports.com';
-  const rebuildMail = (b) => {
+  const REPO = 'trushil27/1440sports';
+  const onNetlify = () => /netlify\.app$|1440sports\.com$/.test(location.hostname);
+  function bindRebuild() {
+    document.querySelectorAll('[data-rebuild]').forEach((btn) => btn.addEventListener('click', () => requestRebuild(btn.dataset.rebuild)));
+  }
+  async function requestRebuild(number) {
+    const b = all().find((x) => String(x.number) === String(number));
+    if (!b) return;
+    const panel = $('#reqpanel');
     const cmd = `python -m intel.rebuild "${b.company}" --date ${b.date}`;
-    const subject = encodeURIComponent(`Build the full case: ${b.company} (${b.label}, ${fmtDate(b.date)})`);
-    const body = encodeURIComponent(`Please run the full verified brief for this signal on the daily-job service:\n\n${cmd}\n\nThe brief will appear in the app after the next export.`);
-    return `mailto:${opEmail()}?subject=${subject}&body=${body}`;
-  };
+    const issueUrl = `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(`Rebuild: ${b.company} (${b.date})`)}&body=${encodeURIComponent(`Build the full case for ${b.company}, signal of ${b.date}.\n\nCommand: ${cmd}`)}`;
+    let queued = false;
+    if (onNetlify()) {
+      try {
+        const body = new URLSearchParams({ 'form-name': 'rebuild', company: b.company, date: b.date, label: b.label });
+        const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+        queued = r.ok;
+      } catch (e) { queued = false; }
+    }
+    panel.hidden = false;
+    panel.innerHTML = `<div class="note ${queued ? 'info' : ''}" style="margin-top:16px">
+      <b>${queued ? 'Queued.' : 'Request the full case.'}</b> ${queued ? `The next run builds the full case for ${esc(b.company)} and it appears here.` : `Open a one-line request on GitHub (the daily job reads the queue), or run the command on the daily-job service.`}
+      <div class="actions" style="margin-top:10px">${queued ? '' : `<a class="btn gold" href="${issueUrl}" target="_blank" rel="noreferrer noopener">Open request</a>`}<button type="button" class="btn" id="copycmd">Copy command</button></div>
+      <div style="margin-top:10px"><code>${esc(cmd)}</code></div></div>`;
+    const copy = $('#copycmd');
+    if (copy) copy.addEventListener('click', async () => { try { await navigator.clipboard.writeText(cmd); copy.textContent = 'Copied'; } catch (e) { copy.textContent = 'Select and copy above'; } });
+    panel.scrollIntoView({ block: 'nearest' });
+  }
 
   // ---- views ----
   function tag(b) {
     const out = [];
     out.push(`<span class="badge ${verClass(b.verification)}">${verLabel(b.verification)}</span>`);
     if (b.review.status === 'keep_flagged') out.push('<span class="badge warn" title="' + esc(b.review.reason || '') + '">Check</span>');
-    if (b.source_label && b.source_label !== 'engine' && b.source_label !== 'n8n daily signals log') out.push(`<span class="badge info">${esc(b.source_label.replace(/_/g, ' '))}</span>`);
-    else if (b.historical) out.push('<span class="badge mute">Historical</span>');
+    if (b.deal_update) out.push(`<span class="badge navy">Now partner · ${esc(teamDisplay(b.deal_update.team))}</span>`);
     return out.join(' ');
   }
 
   function table(rows, opts) {
     opts = opts || {};
     if (!rows.length) return '<div class="tablewrap"><div class="empty">Nothing here yet.</div></div>';
-    return `<div class="tablewrap"><table><thead><tr><th>Date</th><th>N°</th><th>Company</th><th>Series</th><th>Team</th><th>Score</th><th>${opts.reason ? 'Why screened' : 'Status'}</th></tr></thead><tbody>
+    return `<div class="tablewrap"><table><thead><tr><th>Date</th><th>N°</th><th>Company</th><th>Series</th><th>Team</th><th>Score</th><th>Status</th></tr></thead><tbody>
       ${rows.map((b) => `<tr class="row" data-go="#/brief/${b.number}">
         <td class="date">${fmtDate(b.date)}</td>
         <td class="num">${esc(b.label)}</td>
@@ -281,7 +298,7 @@
         <td>${esc(b.series || '—')}${b.series_inferred ? '<span class="sm">inferred</span>' : ''}</td>
         <td>${esc(teamDisplay(b.team) || '—')}</td>
         <td class="num">${b.score != null ? esc(b.score) : '—'}<span class="sm">${esc(b.tier || '')}</span></td>
-        <td>${opts.reason ? `<span class="badge bad">${esc(REASONS[b.review.reason_code] || 'Screened')}</span><span class="sm">${esc(b.review.reason || '')}</span>` : tag(b)}</td>
+        <td>${tag(b)}</td>
       </tr>`).join('')}
     </tbody></table></div>`;
   }
@@ -314,12 +331,10 @@
           </div>
           <div class="actions">
             <a class="btn gold" href="#/brief/${t.number}">Read the full brief</a>
-            ${t.source_url ? `<a class="btn" href="${esc(t.source_url)}" target="_blank" rel="noreferrer noopener">Trigger source</a>` : ''}
           </div>
         </div>
       </div>`;
     }
-    const rm = D.review_meta || {};
     return `
       <div class="head"><div><div class="eyebrow">${esc(D.execution_mode || '')} · generated ${fmtDate((D.generated_at || '').slice(0, 10))}</div><h1>Home</h1><p class="sub">One verified signal a day: who to call, why now, which team. Open any signal to read the case.</p></div></div>
       ${hero}
@@ -327,7 +342,7 @@
       <div class="tiles">
         <a class="tile" href="#/signals/F1"><div class="k">Formula 1</div><div class="n">${f1.length}</div><div class="t">Latest: ${latest(f1)}</div><div class="go">Open F1 signals →</div></a>
         <a class="tile" href="#/signals/FE"><div class="k">Formula E</div><div class="n">${fe.length}</div><div class="t">Latest: ${latest(fe)}</div><div class="go">Open FE signals →</div></a>
-        <a class="tile" href="#/signals/all"><div class="k">All signals</div><div class="n">${rows.length}</div><div class="t">Date-wise, back to ${fmtDate(rows[rows.length - 1] ? rows[rows.length - 1].date : '')}${rm.screened ? ` · ${rm.screened} screened out, ${rm.duplicates || 0} duplicates folded` : ''}</div><div class="go">Open the log →</div></a>
+        <a class="tile" href="#/signals/all"><div class="k">All signals</div><div class="n">${rows.length}</div><div class="t">Date-wise, back to ${fmtDate(rows[rows.length - 1] ? rows[rows.length - 1].date : '')}</div><div class="go">Open the log →</div></a>
       </div>
       <div class="rule"><span>Most recent</span></div>
       ${table(rows.slice(0, 8))}`;
@@ -340,36 +355,25 @@
     const flagged = rows.filter((b) => b.review.status === 'keep_flagged').length;
     return `
       <div class="head"><div><div class="eyebrow">Signals</div><h1>${title}</h1><p class="sub">${rows.length} signals, newest first.${inferred ? ` ${inferred} older rows had no series recorded; theirs is inferred from the text and marked.` : ''}${flagged ? ` ${flagged} carry a "Check" tag: kept, but a detail needs a human look before they are pitched.` : ''}</p></div>
-      <div class="actions"><a class="btn" href="#/screened">Screened out →</a></div></div>
+      </div>
       <div class="toolbar"><input id="q" type="search" placeholder="Search company, team, trigger…"><select id="tier"><option value="">All tiers</option><option>HOT TOP TIER</option><option>HOT</option><option>WARM</option></select><span class="seg"><button data-hist="all" class="on">All</button><button data-hist="live">Engine briefs</button><button data-hist="hist">Historical</button></span></div>
       <div id="list">${table(rows)}</div>`;
   }
 
-  function screenedView() {
-    const rows = screened();
-    const dd = dupes();
-    const counts = {};
-    rows.forEach((b) => { counts[b.review.reason_code] = (counts[b.review.reason_code] || 0) + 1; });
-    return `
-      <div class="head"><div><div class="eyebrow">Signals</div><h1>Screened out</h1><p class="sub">Rows the review removed from the working lists and why — existing partners, rights-holders, blocklisted or already-approached names, off-profile companies, and rows that fail the capacity gate. The judgment is part of the product; nothing is deleted.</p></div></div>
-      <div class="kpis">${Object.keys(counts).sort((a, b) => counts[b] - counts[a]).slice(0, 4).map((k) => `<div class="kpi"><div class="k">${esc(REASONS[k] || k)}</div><div class="n">${counts[k]}</div></div>`).join('')}</div>
-      ${table(rows, { reason: true })}
-      ${dd.length ? `<div class="rule"><span>Duplicates folded into their kept row</span><span class="cnt">${dd.length}</span></div>${table(dd)}` : ''}`;
-  }
 
   function briefView(number) {
     const b = all().find((x) => String(x.number) === String(number));
     if (!b) return '<div class="head"><div><h1>Brief not found</h1></div></div>';
-    const back = b.review.status === 'screened_out' ? '#/screened' : `#/signals/${b.series || 'all'}`;
+    const back = `#/signals/${b.series || 'all'}`;
     const head = `<div class="head"><div><div class="eyebrow">${esc(b.label)} · ${fmtDate(b.date)} · ${esc(b.series || '')}${b.series_inferred ? ' (inferred)' : ''}</div><h1>${esc(b.company)}</h1><div class="badges">${tag(b)}</div></div>
-      <div class="actions"><a class="btn" href="${back}">← Back</a>${b.source_url ? `<a class="btn" href="${esc(b.source_url)}" target="_blank" rel="noreferrer noopener">Trigger source</a>` : ''}${b.page_html ? '' : `<a class="btn gold" href="${rebuildMail(b)}">Build the full case</a>`}</div></div>`;
+      <div class="actions"><a class="btn" href="${back}">← Back</a>${b.page_html ? '' : `<button type="button" class="btn gold" data-rebuild="${b.number}">Build the full case</button>`}</div></div>`;
     if (b.page_html) {
       return head + `<div class="reader"><iframe title="Brief ${esc(b.label)} — ${esc(b.company)}" srcdoc="${esc(b.page_html)}"></iframe></div>`;
     }
-    const screenedNote = b.review.status === 'screened_out' ? `<div class="note"><b>${esc(REASONS[b.review.reason_code] || 'Screened out')}.</b> ${esc(b.review.reason || '')}</div>` : '';
     const checkNote = b.review.status === 'keep_flagged' ? `<div class="note"><b>Check before pitching.</b> ${esc(b.review.reason || '')}</div>` : '';
+    const dealNote = b.deal_update ? `<div class="note info"><b>Update.</b> ${esc(b.company)} is now a ${esc(b.deal_update.status)} partner of ${esc(teamDisplay(b.deal_update.team))}${b.deal_update.season ? ' (' + esc(b.deal_update.season) + ' roster)' : ''}${b.deal_update.notes ? ' — ' + esc(b.deal_update.notes) : ''}. The lane this signal pointed at is no longer open; treat the row as a closed case.</div>` : '';
     return head + `<div class="detail">
-      ${screenedNote}${checkNote}
+      ${dealNote}${checkNote}
       ${b.historical ? '<div class="note info">Historical signal imported from the previous system — a headline and a source, not a verified case. Build the full case to get the Crusoe-standard brief: live verification of every claim, the 13-rule audit, the 2-page PDF and this long-form page.</div>' : ''}
       <p>${esc(b.deck || b.take || 'No summary was stored for this signal.')}</p>
       ${b.bottom_line ? `<p><b>Bottom line.</b> ${esc(b.bottom_line)}</p>` : ''}
@@ -381,9 +385,10 @@
         <dt>Horizon</dt><dd>${esc(b.horizon || '—')}</dd>
         <dt>Verification</dt><dd><span class="badge ${verClass(b.verification)}">${verLabel(b.verification)}</span></dd>
         <dt>Source</dt><dd>${b.source_url ? `<a href="${esc(b.source_url)}" target="_blank" rel="noreferrer noopener">${esc(b.source_url)}</a>` : '—'}</dd>
-        <dt>Recorded by</dt><dd>${esc((b.source_label || '').replace(/_/g, ' ') || 'engine')}</dd>
+        ${b.also_surfaced && b.also_surfaced.length ? `<dt>Also surfaced</dt><dd>${b.also_surfaced.map(fmtDate).join(' · ')} — folded into this case</dd>` : ''}
       </dl>
-      ${b.review.status !== 'screened_out' ? `<div class="cta"><div><span class="k">Full case</span><p>Runs the whole pipeline for ${esc(b.company)} on the daily-job service: live research, claim-by-claim verification, the 13-rule audit, then the 2-page PDF and the long-form page. Takes 10–30 minutes.</p></div><a class="btn" href="${rebuildMail(b)}">Build the full case</a></div>` : ''}
+      ${b.deal_update ? '' : `<div class="cta"><div><span class="k">Full case</span><p>Runs the whole pipeline for ${esc(b.company)} on the daily-job service: live research, claim-by-claim verification, the 13-rule audit, then the 2-page PDF and the long-form page. Ready in the app after the next run.</p></div><button type="button" class="btn" data-rebuild="${b.number}">Build the full case</button></div>`}
+      <div id="reqpanel" hidden></div>
     </div>`;
   }
 
@@ -447,8 +452,7 @@
     const main = $('#main');
     let nav = 'home';
     if (parts[0] === 'signals') { main.innerHTML = signalsView(parts[1] || 'all'); nav = parts[1] || 'all'; bindSignals(parts[1] || 'all'); }
-    else if (parts[0] === 'screened') { main.innerHTML = screenedView(); nav = 'screened'; }
-    else if (parts[0] === 'brief') { main.innerHTML = briefView(parts[1]); const b = all().find((x) => String(x.number) === String(parts[1])); nav = b && b.review.status === 'screened_out' ? 'screened' : (b && b.series ? b.series : 'all'); }
+    else if (parts[0] === 'brief') { main.innerHTML = briefView(parts[1]); const b = all().find((x) => String(x.number) === String(parts[1])); nav = b && b.series ? b.series : 'all'; bindRebuild(); }
     else if (parts[0] === 'sponsors') { main.innerHTML = sponsorsView(parts[1] || 'F1'); nav = 's' + (parts[1] || 'F1'); bindSponsors(); }
     else if (parts[0] === 'calendar') { main.innerHTML = calendarView(); nav = 'calendar'; }
     else { main.innerHTML = homeView(); }
@@ -486,7 +490,7 @@
   }
 
   function boot() {
-    $('#cF1').textContent = bySeries('F1').length; $('#cFE').textContent = bySeries('FE').length; $('#cAll').textContent = live().length; $('#cScreened').textContent = screened().length;
+    $('#cF1').textContent = bySeries('F1').length; $('#cFE').textContent = bySeries('FE').length; $('#cAll').textContent = live().length;
     $('#mode').textContent = (D.execution_mode || '') + ' mode';
     window.addEventListener('hashchange', route); route();
   }

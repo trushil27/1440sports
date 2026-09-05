@@ -305,6 +305,68 @@ def brief_entry(
     return entry
 
 
+def merge_same_company(entries: list[dict[str, Any]]) -> None:
+    """One row per company in the working lists (the MD saw SambaNova twice: a thin n8n row
+    and the repo's own brief). The richest entry stays — a full engine page first, then a
+    non-historical brief, then one with a bottom line, then the newest — and the others fold
+    into it as ``also_surfaced`` dates. Screened rows are untouched."""
+    from intel.normalise import company_norm
+
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for e in entries:
+        if e["review"]["status"] in ("keep", "keep_flagged"):
+            groups.setdefault(company_norm(e["company"]), []).append(e)
+
+    def rank(e: dict[str, Any]) -> tuple:
+        return (
+            1 if e.get("page_html") else 0,
+            1 if not e.get("historical") else 0,
+            1 if e.get("bottom_line") else 0,
+            e.get("date") or "",
+        )
+
+    for group in groups.values():
+        if len(group) < 2:
+            continue
+        keep = max(group, key=rank)
+        keep["also_surfaced"] = sorted(
+            {g["date"] for g in group if g is not keep} - {keep["date"]}, reverse=True
+        )
+        if keep.get("score") is None:
+            keep["score"] = max((g.get("score") or 0) for g in group) or None
+        if not keep.get("team"):
+            keep["team"] = next((g.get("team") for g in group if g.get("team")), None)
+        for g in group:
+            if g is not keep:
+                g["review"] = {"status": "merged", "of": keep["key"]}
+
+
+def attach_deal_updates(entries: list[dict[str, Any]], sponsors: list[Sponsor]) -> None:
+    """A company we surfaced that is now a live partner in the sponsor table gets an
+    "Update: partner of X" note instead of looking like an open signal."""
+    from intel.normalise import company_norm
+
+    live: dict[str, Sponsor] = {}
+    for sp in sponsors:
+        if sp.status.value in ("active", "joined") and sp.team:
+            live.setdefault(company_norm(sp.brand), sp)
+    for e in entries:
+        norm = company_norm(e["company"])
+        sp = live.get(norm)
+        if sp is None and " " in norm:
+            first = norm.split(" ")[0]
+            sp = live.get(first) if len(first) > 4 else None
+        if sp is None:
+            continue
+        e["deal_update"] = {
+            "team": sp.team,
+            "status": sp.status.value,
+            "season": sp.season,
+            "notes": sp.notes,
+            "source": sp.source,
+        }
+
+
 def export_data(session: Session, settings: Settings | None = None) -> dict[str, Any]:
     settings = settings or get_settings()
     briefs = session.scalars(
@@ -331,6 +393,8 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
         ),
         None,
     )
+    merge_same_company(entries)
+    attach_deal_updates(entries, session.scalars(select(Sponsor)).all())
     sponsors = [
         sponsor_row(s)
         for s in session.scalars(
@@ -357,6 +421,10 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
     display = {t["team"]: t.get("display_name") or t["team"] for t in teams}
     for row in sponsors:
         row["team_display"] = display.get(row["team"], row["team"]) if row["team"] else None
+    for e in entries:
+        if e.get("deal_update"):
+            team = e["deal_update"]["team"]
+            e["deal_update"]["team_display"] = display.get(team, team)
     return {
         "generated_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
         "execution_mode": settings.execution_mode,

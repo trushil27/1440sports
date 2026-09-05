@@ -1,0 +1,36 @@
+# Publishes the desk app (site/) to GitHub Pages on every push to main that touches it.
+# The daily job on Railway refreshes the live site through Netlify when NETLIFY_AUTH_TOKEN +
+# NETLIFY_SITE_ID are set; until then this is the live URL: https://trushil27.github.io/1440sports/
+name: Pages
+
+on:
+  push:
+    branches: ["main"]
+    paths: ["site/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
