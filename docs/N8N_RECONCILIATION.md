@@ -73,7 +73,7 @@ Extracted verbatim (see `prompts/README.md`). Findings that need a decision:
 
 | # | Production | Python | Brief decides? |
 |---|---|---|---|
-| 2.1 | **Scanner scoring text regressed.** The v2.1.8 system prompt opens "Six gates first, then four dimensions 0-25 each … TIMING, CAPACITY, BRAND FIT, URGENCY" and its example `score_breakdown` is `{timing 23, capacity 22, brand_fit 20, urgency_or_alumni 17}` — the pre-Phase-2.1 scale. The 2.1.3 text had five /20 dimensions incl. OPS FIT and the OF gate. Yet the production **writer** user prompt reads `score_breakdown.ops_fit`, `key_facts.taxonomy_category`, `key_facts.ops_fit_note` and `confidence_level` — none of which the production scanner is asked to emit (they render as empty in n8n). | `ScoreBreakdown` enforces five /20 dims (`urgency` required); `urgency_or_alumni` accepted as an optional extra. Output in the 4×25 shape (`timing: 23`, no `urgency`) **fails parse** → scan retry → `ScanFailed`. | Brief §1 says "V2.1 six gates, five dimensions /20" and §0.5 forbids changing the scale without the MD → Python keeps /20. **Decision needed:** either restore the 2.1.3 scoring block in the scanner prompt (recommended) or accept the 4×25 shape. |
+| 2.1 | **Scanner scoring text regressed.** The v2.1.8 system prompt opens "Six gates first, then four dimensions 0-25 each … TIMING, CAPACITY, BRAND FIT, URGENCY" and its example `score_breakdown` is `{timing 23, capacity 22, brand_fit 20, urgency_or_alumni 17}` — the pre-Phase-2.1 scale. The 2.1.3 text had five /20 dimensions incl. OPS FIT and the OF gate. Yet the production **writer** user prompt reads `score_breakdown.ops_fit`, `key_facts.taxonomy_category`, `key_facts.ops_fit_note` and `confidence_level` — none of which the production scanner is asked to emit (they render as empty in n8n). | **Confirmed live (run 1, 5 Sep 2026):** all ten candidates came back 4×25 and the run failed. Since then `scan.scanner_system_prompt()` splices the 2.1.3 scoring block + example over the regressed text at run time (file on disk verbatim), and `ScoreBreakdown` accepts a 4×25 answer as a fallback (×0.8 onto /20, `legacy_scale` recorded in `gate_results.scanner_scale`). | Brief §1 says "V2.1 six gates, five dimensions /20" and §0.5 forbids changing the scale without the MD → Python keeps /20 and restores the specified scoring text. **Resolved as recommended** (restore, not re-scale); the MD should still be told the production prompt had regressed. |
 | 2.2 | Scanner returns exactly TEN signals. | `scan_candidates_max = 12`, at least 1. | YES §6.1 (8–12). |
 | 2.3 | Scanner has no "ANTI-HALLUCINATION RULES" block (moved to the writer). | verbatim v218. | — (test assertion updated). |
 | 2.4 | Models `claude-sonnet-4-6`; scanner `max_tokens` 12000; `web_search_20250305`. | `claude-sonnet-5` / `claude-opus-5` (verify), 16000, `web_search_20260209`. | YES §4. |
@@ -117,9 +117,11 @@ the pipeline, no off-calendar races.
 
 ## 4. Silent differences needing a human decision (summary)
 
-1. **Scanner scoring scale (2.1 / 3.19):** the production scanner prompt says 4 × 0-25 with
-   `urgency_or_alumni`; the writer and the Python contract are 5 × 0-20 with `ops_fit`. Restore the
-   2.1.3 scoring block in the scanner prompt, or change the contract (MD approval, §0.5).
+1. **Scanner scoring scale (2.1 / 3.19) — resolved 5 Sep 2026:** the production scanner prompt
+   said 4 × 0-25 with `urgency_or_alumni`; the writer and the Python contract are 5 × 0-20 with
+   `ops_fit`. The 2.1.3 scoring block is restored at run time (`scan.scanner_system_prompt`), which
+   is the brief's own scoring, so no §0.5 approval was needed; 4×25 answers are still parsed as a
+   fallback. Open sub-point: whether the scanner's own alumni boost is stripped before Python's (3.19).
 2. **Saturday FE-forcing (3.1):** production forces FE on Tue/Fri/**Sat**; the brief and Python say Tue/Fri.
 3. **Re-ranking by recomputed score (3.2):** production trusts the scanner's order; Python re-sorts.
 4. **What counts as "surfaced" (3.7):** production cools any *selected* candidate; Python only an *issued* brief (incl. audit-failed).

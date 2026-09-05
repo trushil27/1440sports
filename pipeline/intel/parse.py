@@ -16,7 +16,14 @@ import json
 import re
 from typing import Any
 
-from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    ValidationError,
+    field_validator,
+    model_validator,
+)
 
 _FENCE = re.compile(r"```(?:json)?", re.IGNORECASE)
 
@@ -121,12 +128,13 @@ class OpsFitSubscores(BaseModel):
 class ScoreBreakdown(BaseModel):
     """Five dimensions, each 0-20 (Phase 2.1).
 
-    The production v2.1.8 scanner system prompt (``prompts/scanner_v218_system.txt``)
-    still shows the pre-2.1 example schema — four dimensions 0-25 with
-    ``urgency_or_alumni`` instead of ``urgency``/``ops_fit`` — while the production writer
-    prompt reads five /20 dimensions including ``ops_fit``. ``urgency_or_alumni`` is
-    accepted here as an optional extra so such output is not silently dropped; the /20
-    contract itself is unchanged (build brief §0.5 — a scoring change needs the MD).
+    The scanner is prompted for this shape (``scan.scanner_system_prompt`` restores the
+    Phase 2.1 block over the regressed v2.1.8 text). As a safety net the pre-2.1 shape the
+    v2.1.8 prompt used to elicit — four dimensions 0-25 with ``urgency_or_alumni`` and no
+    ``ops_fit`` — is still accepted: each dimension is rescaled ×0.8 onto /20,
+    ``urgency_or_alumni`` becomes ``urgency``, ``ops_fit`` stays unknown, and
+    ``legacy_scale`` is set so the gate record says so. The /20 contract itself is unchanged
+    (build brief §0.5 — a scoring change needs the MD).
     """
 
     model_config = ConfigDict(extra="ignore")
@@ -137,6 +145,32 @@ class ScoreBreakdown(BaseModel):
     ops_fit: int | None = Field(default=None, ge=0, le=20)
     ops_fit_subscores: OpsFitSubscores | None = None
     urgency_or_alumni: int | None = Field(default=None, ge=0, le=25)
+    legacy_scale: bool = False
+
+    @model_validator(mode="before")
+    @classmethod
+    def _accept_legacy_4x25(cls, data: Any) -> Any:
+        if not isinstance(data, dict):
+            return data
+        dims = ("timing", "capacity", "brand_fit")
+        has_alt = data.get("urgency") is None and data.get("urgency_or_alumni") is not None
+        over_20 = any(isinstance(data.get(d), int | float) and data[d] > 20 for d in dims)
+        if not (has_alt or over_20):
+            return data
+
+        def rescale(v: Any) -> Any:
+            if isinstance(v, int | float) and 0 <= v <= 25:
+                return int(v * 0.8 + 0.5)
+            return v
+
+        out = {**data, "legacy_scale": True}
+        for d in dims:
+            out[d] = rescale(data.get(d))
+        raw_urgency = data.get("urgency") if data.get("urgency") is not None else None
+        if raw_urgency is None:
+            raw_urgency = data.get("urgency_or_alumni")
+        out["urgency"] = rescale(raw_urgency)
+        return out
 
 
 class KeyFacts(BaseModel):

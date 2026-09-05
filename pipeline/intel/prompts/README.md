@@ -25,6 +25,15 @@ opens with the pre-2.1 "four dimensions 0-25 each" text, its example `score_brea
 dimensions plus those two key facts. The "ANTI-HALLUCINATION RULES" block of 2.1.3 is gone from the
 scanner (it survives in the writer). See `docs/N8N_RECONCILIATION.md` §2.
 
+**Run-time splice (since the first live run, 5 Sep 2026):** the model followed the regressed text
+and returned `timing: 23 … urgency_or_alumni` for all ten candidates, which the /20 contract
+rejects. `intel/scan.py::scanner_system_prompt()` therefore replaces, at run time, the three
+regressed scoring lines and the example's `key_facts`/`score_breakdown` tail with the 2.1.3
+SCORING block (gates, anti-hallucination, five /20 dimensions, OF gate, tiers) and example —
+i.e. the scoring the build brief specifies (§1, §6.4). The file on disk stays verbatim; the
+splice asserts its anchors so a re-extracted export that changes them fails loudly. As a safety
+net `parse.ScoreBreakdown` still accepts the 4×25 shape (rescaled ×0.8, `legacy_scale=true`).
+
 Writer: adds the DECK RULE with the Armada N°014 / Datadog N°011 calibration decks, RETRY HANDLING
 (`=== RETRY MODE - CORRECTING PREVIOUS DRAFT ===`), the VALUE TO [TEAM] section with modes A/B/C,
 the THREE-YEARS minimum, the three-step anti-duplication self-check, and the 2/3 risk-count rule;

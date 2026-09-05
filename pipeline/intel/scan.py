@@ -78,8 +78,65 @@ def load_prompt(name: str) -> str:
     return (PROMPTS / name).read_text(encoding="utf-8")
 
 
+# --- scoring-block restoration ---------------------------------------------------------
+# The production v2.1.8 scanner prompt regressed to the pre-Phase-2.1 scoring text (four
+# dimensions 0-25, `urgency_or_alumni`, no OPS FIT) while the writer, the audit and the
+# build brief (§1, §6.4) all use the Phase 2.1 contract: five dimensions 0-20 incl. OPS FIT
+# and the OF gate (docs/N8N_RECONCILIATION.md 2.1). The first live run (5 Sep 2026) produced
+# the 4×25 shape and failed to parse. The v2.1.8 text is kept verbatim on disk; at run time
+# its regressed block and example are swapped for the 2.1.3 ones (scanner_v213_system.txt),
+# which is the scoring the brief specifies — not a new scale.
+_REGRESSED_SCORING = (
+    "SCORING (V2.1): Six gates first, then four dimensions 0-25 each.\n"
+    "Gates: (1) Tier 1 source. (2) Trigger within 12 months. (3) Capacity: $1B+ valuation or "
+    "$100M+ ARR. (4) Motorsport relevance 5+/10. (5) Saturation penalty. (6) Alumni check.\n"
+    "Dimensions: TIMING, CAPACITY, BRAND FIT, URGENCY.\n"
+)
+_REGRESSED_EXAMPLE_TAIL = (
+    '      "competitor_signal": "...", "strategic_hook": "...", "us_presence": "...", '
+    '"alumni_match": "..."\n'
+    "    },\n"
+    '    "score_breakdown": { "timing": 23, "capacity": 22, "brand_fit": 20, '
+    '"urgency_or_alumni": 17 }\n'
+)
+_V213_EXAMPLE_TAIL = (
+    '      "competitor_signal": "...", "strategic_hook": "...", "us_presence": "...", '
+    '"alumni_match": "...",\n'
+    '      "taxonomy_category": "A1 | A2 | B1 | B2 | C1 | D1 | E1 | F1",\n'
+    '      "ops_fit_note": "one-line on team-need fit (max 14 words)"\n'
+    "    },\n"
+    '    "score_breakdown": { "timing": 18, "capacity": 17, "brand_fit": 16, "urgency": 14, '
+    '"ops_fit": 15, "ops_fit_subscores": { "product_to_need": 6, "slot_availability": 3, '
+    '"on_camera": 3, "lock_in": 3 } },\n'
+    '    "of_gate_passed": true,\n'
+    '    "confidence_level": "HIGH"\n'
+)
+_V213_SCORING_START = "SCORING (V2.1 — Phase 2.1"
+_V213_SCORING_END = "ALUMNI DATABASE"
+
+
+def v213_scoring_block() -> str:
+    """The Phase 2.1 scoring text (gates, anti-hallucination, five /20 dims, OF gate, tiers)."""
+    text = load_prompt("scanner_v213_system.txt")
+    start, end = text.index(_V213_SCORING_START), text.index(_V213_SCORING_END)
+    return text[start:end].rstrip() + "\n"
+
+
+def scanner_system_prompt() -> str:
+    """v2.1.8 verbatim, with the regressed scoring block/example replaced by the 2.1.3 ones."""
+    system = load_prompt("scanner_v218_system.txt")
+    for anchor in (_REGRESSED_SCORING, _REGRESSED_EXAMPLE_TAIL):
+        if anchor not in system:
+            raise RuntimeError(
+                "scanner_v218_system.txt changed: scoring-restore anchor not found — "
+                "re-check intel/scan.py against the new export"
+            )
+    system = system.replace(_REGRESSED_SCORING, v213_scoring_block())
+    return system.replace(_REGRESSED_EXAMPLE_TAIL, _V213_EXAMPLE_TAIL)
+
+
 def scanner_prompts(today: dt.date) -> tuple[str, str]:
-    system = load_prompt("scanner_v218_system.txt").replace(_TODAY_TOKEN, today.isoformat())
+    system = scanner_system_prompt().replace(_TODAY_TOKEN, today.isoformat())
     user = load_prompt("scanner_v218_user.txt")
     return system, user
 

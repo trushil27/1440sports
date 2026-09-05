@@ -223,6 +223,8 @@ def score_signal(session: Session, signal: ScannedSignal, run_date: dt.date) -> 
         parts = [subs.product_to_need, subs.slot_availability, subs.on_camera, subs.lock_in]
         if all(p is not None for p in parts) and sum(parts) != bd.ops_fit:  # type: ignore[arg-type]
             gates["ops_fit_subscore_mismatch"] = {"sum": sum(parts), "ops_fit": bd.ops_fit}  # type: ignore[arg-type]
+    if bd.legacy_scale:
+        gates["scanner_scale"] = "legacy 4×25 shape rescaled to /20; ops_fit unknown"
     base = sum(dims.values())
     of_gate = bd.brand_fit >= 12
     gates["of_gate"] = {"brand_fit": bd.brand_fit, "applied": of_gate}
