@@ -371,13 +371,17 @@ def run_day(
     try:
         signals = scanner(run_date) if scanner else run_scan(run_date, settings=settings).signals
     except ScanFailed as exc:
+        raw_tail = (exc.raw or "")[-6000:]
         progress(f"scan failed: {exc}")
+        if raw_tail:
+            progress(f"last scanner text ({len(exc.raw)} chars), tail:\n{raw_tail}")
         run.status, run.error = RunStatus.failed, str(exc)
+        run.summary = {"error": str(exc), "scan_raw_tail": raw_tail}
         run.finished_at = dt.datetime.now(dt.UTC)
         session.flush()
         if stages.distribute:
             send.distribute(session, run, settings, stages.mailer, None)
-        return RunOutcome(run.id, run_date, "failed", None, summary={"error": str(exc)})
+        return RunOutcome(run.id, run_date, "failed", None, summary=run.summary)
 
     progress(f"scan returned {len(signals)} signals; triaging (freshness, dedup, score)")
     eligible = triage(session, run, signals, run_date, settings)

@@ -27,6 +27,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from intel.config import Settings, get_settings
+from intel.llm import ModelTurnError, complete_text
 from intel.models import (
     Brief,
     CalendarEvent,
@@ -497,20 +498,19 @@ class AnthropicVerifier:
             {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 3},
             {"type": "web_search_20260209", "name": "web_search", "max_uses": 3},
         ]
-        with self._client.messages.stream(
-            model=self.settings.verify_model,
-            max_tokens=8000,
-            system=VERIFIER_SYSTEM,
-            messages=[{"role": "user", "content": user}],
-            tools=tools,
-            thinking={"type": "adaptive"},
-            output_config={"effort": "high"},
-        ) as stream:
-            response = stream.get_final_message()
-        text = "\n".join(b.text for b in response.content if getattr(b, "type", "") == "text")
         try:
+            text = complete_text(
+                self._client,
+                model=self.settings.verify_model,
+                system=VERIFIER_SYSTEM,
+                messages=[{"role": "user", "content": user}],
+                tools=tools,
+                max_tokens=16000,
+                effort="high",
+                label="verifier",
+            ).text
             data = extract_json_object(text)
-        except ParseError as exc:
+        except (ParseError, ModelTurnError) as exc:
             return Verification(
                 status=VerificationResult.unverified,
                 method=VerificationMethod.llm_source_fetch,

@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Any, Protocol
 
 from intel.config import Settings, get_settings
+from intel.llm import ModelTurnError, complete_text
 from intel.parse import ParseError, ScannedSignal, parse_scan_output
 
 PROMPTS = Path(__file__).parent / "prompts"
@@ -33,7 +34,11 @@ RETRY_NOTE = (
 
 
 class ScanFailed(RuntimeError):
-    pass
+    """The scan produced nothing usable. ``raw`` keeps the last model text for diagnosis."""
+
+    def __init__(self, message: str, raw: str = "") -> None:
+        super().__init__(message)
+        self.raw = raw
 
 
 class MessagesClient(Protocol):
@@ -44,8 +49,12 @@ class MessagesClient(Protocol):
     ) -> str: ...
 
 
+# Streaming, so the ceiling can be generous: ten candidates + citations + thinking.
+SCAN_MAX_TOKENS = 32000
+
+
 class AnthropicText:
-    """Adapter over ``anthropic.Anthropic`` returning the joined text blocks of one response."""
+    """Adapter over ``anthropic.Anthropic``: one complete turn (pause_turn resumed) as text."""
 
     def __init__(self, client: Any | None = None) -> None:
         if client is None:
@@ -53,25 +62,26 @@ class AnthropicText:
 
             client = anthropic.Anthropic()
         self._client = client
-        self.last_usage: dict | None = None
+        self.last_usage: list[dict] | None = None
+        self.last_segments: int = 0
 
     def create_text(
         self, *, model: str, system: str, messages: list[dict], tools: list[dict]
     ) -> str:
-        with self._client.messages.stream(
-            model=model,
-            max_tokens=16000,
-            system=system,
-            messages=messages,
-            tools=tools,
-            thinking={"type": "adaptive"},
-        ) as stream:
-            response = stream.get_final_message()
-        if response.stop_reason == "refusal":
-            raise ScanFailed(f"model refused the scan: {getattr(response, 'stop_details', None)}")
-        usage = getattr(response, "usage", None)
-        self.last_usage = usage.to_dict() if hasattr(usage, "to_dict") else None
-        return "\n".join(b.text for b in response.content if getattr(b, "type", "") == "text")
+        try:
+            done = complete_text(
+                self._client,
+                model=model,
+                system=system,
+                messages=messages,
+                tools=tools,
+                max_tokens=SCAN_MAX_TOKENS,
+                label="scanner",
+            )
+        except ModelTurnError as exc:
+            raise ScanFailed(str(exc), raw=exc.text) from exc
+        self.last_usage, self.last_segments = done.usage, done.segments
+        return done.text
 
 
 def load_prompt(name: str) -> str:
@@ -174,4 +184,4 @@ def run_scan(
             ]
             continue
         return ScanResult(signals, raw, attempt, settings.scan_model)
-    raise ScanFailed(f"scanner output unparseable after retry: {last_error}")
+    raise ScanFailed(f"scanner output unparseable after retry: {last_error}", raw=raw)

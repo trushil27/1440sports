@@ -25,6 +25,7 @@ from pydantic import ValidationError
 
 from intel.brief_data import WrittenBrief
 from intel.config import Settings, get_settings
+from intel.llm import ModelTurnError, complete_text
 from intel.parse import ParseError, ScannedSignal, extract_json_object
 
 PROMPTS = Path(__file__).parent / "prompts"
@@ -163,17 +164,17 @@ class AnthropicWriter:
         self._client = client
 
     def write(self, *, model: str, system: str, user: str) -> str:
-        with self._client.messages.stream(
-            model=model,
-            max_tokens=16000,
-            system=system,
-            messages=[{"role": "user", "content": user}],
-            thinking={"type": "adaptive"},
-        ) as stream:
-            response = stream.get_final_message()
-        if response.stop_reason == "refusal":
-            raise ParseError("writer refused")
-        return "\n".join(b.text for b in response.content if getattr(b, "type", "") == "text")
+        try:
+            return complete_text(
+                self._client,
+                model=model,
+                system=system,
+                messages=[{"role": "user", "content": user}],
+                max_tokens=32000,
+                label="writer",
+            ).text
+        except ModelTurnError as exc:  # truncated / refused → the audit retry path
+            raise ParseError(str(exc)) from exc
 
 
 def write_brief(

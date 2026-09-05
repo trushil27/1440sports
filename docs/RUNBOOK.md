@@ -118,3 +118,4 @@ Touch ID on the `/enrol` step; afterwards it is passkey only, 90-day session.
 | The same company two days running | `/ops` → candidates: the second should read `dedup_suppressed`; if not, check `surfaced_log` |
 | A race or partnership blocked a brief | Correct by design: the fixed calendar / sponsor table says it does not exist. Update the table in `/ops` (sponsors) or the seeds only from a Tier 1 source |
 | 3 pages | Never ships: the renderer raises; the audit failure email says `page_overflow` |
+| `[RUN FAILED] … scanner output unparseable` | The deploy log prints the tail of the last scanner text (also `runs.summary.scan_raw_tail`, visible in `/ops`). "truncated at max_tokens" = raise `SCAN_MAX_TOKENS`; "still paused" = the web-search loop never finished; validation errors name the field the model got wrong |
