@@ -76,6 +76,14 @@ def main(argv: list[str] | None = None) -> int:
             print(
                 f"sent {s.kind.value} → {s.recipient} [{s.status.value}] {s.message_id or s.error}"
             )
+    # The static app (Netlify): export every brief + the sponsor grid; deploy when configured.
+    # Never lets a site problem fail the run — the brief has already been stored and sent.
+    try:
+        from intel import site_export
+
+        print("site:", site_export.publish(settings))
+    except Exception as exc:  # noqa: BLE001 — best effort by design
+        print(f"site export skipped: {exc}")
     return 0 if outcome.status != "failed" else 1
 
 

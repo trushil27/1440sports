@@ -95,6 +95,24 @@ Historical briefs are numbered negatively and marked "historical, unverified"; t
 labels (e.g. `N° 017`) are shown in the app. Re-verification of a historical brief is a manual
 operator action (People → Re-verify) and only ever moves a claim from unverified to verified.
 
+## 4a. The desk app (static, Netlify) — the front end the MD asked for on 5 Sep 2026
+
+`pipeline/intel/site/app.html` is a self-contained single-page app in the Mission Control style
+(Home with today's signal → full brief, F1 / FE / All-signals tiles and lists, Calendar, Sponsors
+by series with since / until / confirmed-or-reported). The daily job exports every brief, the
+sponsor grid and the calendar into `data.json`, inlines it into `index.html` and, when
+`NETLIFY_AUTH_TOKEN` + `NETLIFY_SITE_ID` are set, deploys the folder to Netlify with one API
+call (`intel/netlify.py`). No API service, no login, no Node build.
+
+First deploy (two clicks): Netlify → *Add new site* → *Import an existing project* → this repo;
+the committed `netlify.toml` publishes the `site/` folder. Then, on the Railway daily job, set
+`NETLIFY_AUTH_TOKEN` (Netlify → User settings → Applications → Personal access tokens) and
+`NETLIFY_SITE_ID` (Site → Site configuration → Site details → Site ID). From then on every run
+redeploys the app automatically. Manual refresh: `python -m intel.site_export --out site/`.
+
+The site is public by URL; keep the Netlify site name unguessable or add Netlify's password /
+Identity gate before circulating the link.
+
 ## 4. Web app (M7)
 
 Vercel project from `web/` with `NEXT_PUBLIC_API_BASE_URL` set to the API service URL at build

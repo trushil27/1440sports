@@ -1,0 +1,13 @@
+# The 1440 Intelligence app is a static site: pipeline/intel/site/app.html + data.json exported by
+# the daily job (python -m intel.site_export --out site/). Netlify serves the `site/` folder.
+# Day-to-day the Railway job deploys straight to Netlify via the API (NETLIFY_AUTH_TOKEN +
+# NETLIFY_SITE_ID), so this git-connected build is the fallback / first deploy.
+[build]
+  publish = "site"
+  command = "echo 'static site — nothing to build'"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "no-referrer"

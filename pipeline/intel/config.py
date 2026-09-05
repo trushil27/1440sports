@@ -78,6 +78,17 @@ class Settings(BaseModel):
         default="storage/outbox", description="Dry-run mailer writes .eml here."
     )
 
+    # --- the static app (Netlify) ---------------------------------------------------
+    site_dir: str = Field(
+        default="storage/site",
+        description="Where the daily job writes the static app (index.html + data.json).",
+    )
+    netlify_auth_token: str | None = Field(
+        default=None,
+        description="Netlify personal access token; with NETLIFY_SITE_ID the job deploys.",
+    )
+    netlify_site_id: str | None = None
+
     @field_validator("database_url")
     @classmethod
     def _pin_driver(cls, value: str) -> str:

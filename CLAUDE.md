@@ -99,6 +99,15 @@ ledger as non-load-bearing). The daily job renders `<company>.web.html` from
 `templates/brief_web.html.j2` (brand, light + dark, self-contained) next to the PDF; migration 0004
 adds `briefs.web_html_path`; the API serves it at `/api/briefs/{n}/page` and the PWA embeds it
 above the PDF. The 2-page PDF is unchanged. Crusoe's page: `briefs/2026-09-05/crusoe.web.html`.
+
+**The desk app (5 Sep 2026, MD: "same front end as Mission Control; Home with today's signal,
+F1 / FE / All tiles, sponsors by series with since/until"):** `pipeline/intel/site/app.html` +
+`intel/site_export.py` (→ `site/index.html` + `data.json`, data inlined) + `intel/netlify.py`
+(zip deploy). `intel.schedule` exports and deploys after every run when `NETLIFY_AUTH_TOKEN` +
+`NETLIFY_SITE_ID` are set; `netlify.toml` publishes `site/` for the git-connected first deploy.
+Historical rows without a recorded series are inferred from text and marked "inferred". Sponsor
+since/until come from the seed notes + spec §7 renewals; absent = "not stated". This replaces the
+Railway API + Next.js PWA path for now (both still in the repo, undeployed).
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;
