@@ -1,6 +1,8 @@
-# Publishes the desk app (site/) to GitHub Pages on every push to main that touches it.
-# The daily job on Railway refreshes the live site through Netlify when NETLIFY_AUTH_TOKEN +
-# NETLIFY_SITE_ID are set; until then this is the live URL: https://trushil27.github.io/1440sports/
+# Publishes the desk app (site/) to the gh-pages branch on every push to main that touches it.
+# GitHub serves that branch at https://trushil27.github.io/1440sports/ (public repo; Pages is
+# enabled automatically for a gh-pages branch — the Pages API itself is not available to the
+# workflow token). The daily job refreshes the live site through Netlify once NETLIFY_AUTH_TOKEN
+# + NETLIFY_SITE_ID are set; until then a push of site/ is the refresh.
 name: Pages
 
 on:
@@ -10,27 +12,27 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Push site/ to gh-pages
+        run: |
+          set -e
+          git config user.name "1440 desk publisher"
+          git config user.email "noreply@1440sports.com"
+          rm -rf /tmp/pages && mkdir -p /tmp/pages
+          cp -r site/. /tmp/pages/
+          touch /tmp/pages/.nojekyll
+          cd /tmp/pages
+          git init -q -b gh-pages
+          git add -A
+          git -c user.name="1440 desk publisher" -c user.email="noreply@1440sports.com" commit -q -m "desk: ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
