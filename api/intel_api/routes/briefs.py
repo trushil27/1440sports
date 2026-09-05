@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import APIRouter, Depends, HTTPException, Query
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from pydantic import BaseModel
 from sqlalchemy import String, cast, func, or_, select
 from sqlalchemy.orm import Session, selectinload
@@ -171,6 +171,17 @@ def get_pdf(
         media_type="application/pdf",
         filename=f"1440_Intelligence_Brief_{company}.pdf",
     )
+
+
+@router.get("/briefs/{number}/page", response_class=HTMLResponse)
+def get_page(
+    number: int, db: Session = Depends(get_db), _: SessionUser = Depends(current_user)
+) -> HTMLResponse:
+    """The app page: the brief with its long-form sections, self-contained HTML."""
+    brief = _brief_or_404(db, number)
+    if not brief.web_html_path or not Path(brief.web_html_path).exists():
+        raise HTTPException(status_code=404, detail="no page stored for this brief")
+    return HTMLResponse(Path(brief.web_html_path).read_text(encoding="utf-8"))
 
 
 @router.get("/briefs/{number}/highlights")

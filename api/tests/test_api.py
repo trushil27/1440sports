@@ -108,6 +108,10 @@ def test_today_and_detail_carry_the_verification_panel(api, session, migrated_da
     assert detail["pdf_url"].endswith("/pdf")
     pdf = api.get(detail["pdf_url"])
     assert pdf.status_code == 200 and pdf.headers["content-type"] == "application/pdf"
+    assert detail["page_url"].endswith("/page")
+    page = api.get(detail["page_url"])
+    assert page.status_code == 200 and page.headers["content-type"].startswith("text/html")
+    assert "Why now" in page.text and "Score composition" in page.text
 
 
 def test_history_search_and_filters(api, session, migrated_database, tmp_path):

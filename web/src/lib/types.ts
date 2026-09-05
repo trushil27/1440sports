@@ -142,6 +142,7 @@ export interface BriefDetail extends BriefCard {
   mode: string | null;
   page_count: number | null;
   pdf_url: string | null;
+  page_url: string | null;
   verification_panel: VerificationPanelData;
   score_composition: {
     cells: ScoreCell[];

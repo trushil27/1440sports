@@ -34,8 +34,11 @@ def test_proof_points_are_one_card_per_figure_with_key_facts_first():
         _claim(3, "Crusoe's reported $3B+ Series F at roughly $30B post-money", "the_case_p1"),
         _claim(4, "Bloomberg also reports a ~$13B, five-year AI-cloud contract", "the_case_p1"),
         _claim(5, "$1.375B Series E at a valuation above $10B (Oct 2025)", "key_facts", False),
+        _claim(6, "Fluidstack raised a reported $1.5B at an $18B valuation", "extended"),
     ]
+    claims[5].load_bearing = False
     pts = render.proof_points_from_ledger(claims)
+    assert all(p.claim_id != 6 for p in pts)  # rival / estimate figures never become proof
     assert [p.value for p in pts] == ["$3B+", "$13B", "$1.375B"]
     assert pts[0].claim_id == 2  # the scanner's key fact wins over the prose copy
     assert [p.verified for p in pts] == [True, True, False]

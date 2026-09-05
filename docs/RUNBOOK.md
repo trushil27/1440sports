@@ -10,6 +10,7 @@ goes into the hosting platform's variable store.
 | Part | Where | Runs on |
 |---|---|---|
 | Pipeline (scan → verify → write → audit → render → send) | `pipeline/intel/`, entry `python -m intel.schedule` | Railway cron (fallback: GitHub Actions `daily-run.yml`) |
+| App page per brief (long-form WHY NOW / WHY THIS TEAM / VALUE, `<company>.web.html` next to the PDF; served at `/api/briefs/{n}/page`, embedded in the web app) | `pipeline/intel/templates/brief_web.html.j2`, `render.render_web` | written by the daily job |
 | Database + migrations | `db/` (Alembic) | Railway Postgres |
 | API | `api/intel_api/`, entry `uvicorn intel_api.app:get_app --factory` | Railway service |
 | Web app (PWA) | `web/` | Vercel |

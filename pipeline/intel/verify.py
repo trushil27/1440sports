@@ -208,6 +208,19 @@ def claims_from_brief(written: Any) -> list[ClaimDraft]:
         texts.append(
             ClaimDraft(strip_markup(f"{r.detail} {r.counter}"), "risks", ClaimType.other, False)
         )
+    # The app-page expansion (extended.*) is not load-bearing for the send decision, but its
+    # figures and race mentions go through the same checks so nothing unverified reaches
+    # the screen unmarked.
+    ext = getattr(written, "extended", None)
+    for text in ext.texts if ext else []:
+        plain = strip_markup(text)
+        if not plain:
+            continue
+        texts.append(ClaimDraft(plain, "extended", ClaimType.other, False))
+        for sentence in _SENTENCE.split(plain):
+            if _NUMERIC.search(sentence):
+                ctype = ClaimType.revenue if _REVENUE_WORDS.search(sentence) else ClaimType.funding
+                out.append(ClaimDraft(sentence.strip(), "extended", ctype, False))
     out.extend(event_claims_in([t for t in texts if t.text], None))
     return out
 

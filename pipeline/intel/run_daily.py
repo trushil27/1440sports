@@ -333,6 +333,9 @@ def produce_brief(
     brief.page_count = int(paths["pages"])
     log.update(rendered=True, pdf=brief.pdf_path)
     progress(f"{sig.company}: rendered {brief.page_count} pages → {brief.pdf_path}")
+    web = render.render_web(data, out_dir / f"{cand.company_norm}.web.html")
+    brief.web_html_path = str(web)
+    log["web"] = brief.web_html_path
     from intel import highlights as highlights_mod
 
     log["highlights"] = len(highlights_mod.store_highlights(session, brief))

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ company }} · Brief N° {{ brief_number }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap">
+<style>
+  /* 1440 Sports brand system on screen: navy #191a48, gold #d1ae7a, Lora + Poppins. */
+  :root {
+    --serif: 'Lora', Georgia, 'Times New Roman', serif;
+    --sans: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+    --navy: #191a48; --gold: #d1ae7a; --gold-deep: #9a6b1f;
+    --paper: #fbfaf7; --panel: #f3f1ec; --panel-2: #ebe8e0; --hair: #ddd9d0;
+    --ink: #1a1c2e; --ink-2: #3e405a; --muted: #6b6e84;
+    --tile: #191a48; --tile-ink: #f3f1ea;
+    --ok: #2f7d4f; --ok-bg: #e9f3ec; --warn: #9a6b1f; --warn-bg: #f8f0e0; --bad: #9a2f2f; --bad-bg: #f6e8e8;
+    --shadow: 0 1px 2px rgba(25,26,72,.06), 0 8px 24px -12px rgba(25,26,72,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #12132b; --panel: #1b1c38; --panel-2: #23244a; --hair: #2f3059;
+      --ink: #ece9df; --ink-2: #c8c5bc; --muted: #9c9db4; --gold: #d9bc8a;
+      --tile: #0c0d22; --tile-ink: #f3f1ea;
+      --ok: #7fc59a; --ok-bg: #16301f; --warn: #d9bc8a; --warn-bg: #33290f; --bad: #e08a8a; --bad-bg: #3a1a1a;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #12132b; --panel: #1b1c38; --panel-2: #23244a; --hair: #2f3059;
+    --ink: #ece9df; --ink-2: #c8c5bc; --muted: #9c9db4; --gold: #d9bc8a;
+    --tile: #0c0d22; --tile-ink: #f3f1ea;
+    --ok: #7fc59a; --ok-bg: #16301f; --warn: #d9bc8a; --warn-bg: #33290f; --bad: #e08a8a; --bad-bg: #3a1a1a;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.55; }
+  a { color: inherit; }
+  .page { max-width: 900px; margin: 0 auto; padding: 28px 22px 64px; }
+  @media (min-width: 720px) { .page { padding: 40px 40px 80px; } }
+
+  /* masthead */
+  .mast { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 14px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 26px; }
+  .mast .meta { font-family: var(--sans); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); text-align: right; }
+  .ribbon { font-family: var(--sans); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 22px 0 0; }
+  .ribbon .sep { color: var(--hair); margin: 0 8px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(40px, 6vw, 60px); letter-spacing: -.02em; line-height: 1; color: var(--navy); margin: 6px 0 8px; text-wrap: balance; }
+  [data-theme="dark"] h1, .dark h1 { color: var(--ink); }
+  .classline { font-style: italic; color: var(--muted); font-size: 16px; margin: 0 0 18px; }
+  .lede { font-size: 21px; line-height: 1.45; color: var(--ink); margin: 0 0 22px; max-width: 34em; text-wrap: pretty; }
+
+  /* score strip */
+  .strip { display: grid; grid-template-columns: 148px 1fr; gap: 12px; margin: 0 0 34px; }
+  @media (max-width: 640px) { .strip { grid-template-columns: 1fr; } }
+  .scorebox { background: var(--tile); color: var(--tile-ink); border-radius: 10px; padding: 18px 20px 16px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-family: var(--sans); font-size: 56px; font-weight: 700; line-height: .9; font-variant-numeric: tabular-nums; }
+  .scorebox .den { font-family: var(--sans); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-top: 8px; }
+  .chips { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  @media (min-width: 640px) { .chips { grid-template-columns: repeat(4, 1fr); } }
+  .chip { border: 1px solid var(--hair); background: var(--panel); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .chip .v { font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--navy); margin-top: 4px; line-height: 1.2; }
+  [data-theme="dark"] .chip .v { color: var(--ink); }
+
+  /* sections */
+  section { margin: 0 0 38px; }
+  h2 { font-family: var(--sans); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-deep); margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--hair); font-weight: 600; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  [data-theme="dark"] h2 { color: var(--gold); }
+  h2 .note { font-family: var(--sans); font-size: 11px; letter-spacing: .04em; text-transform: none; color: var(--muted); font-weight: 400; }
+  h2 .note.warn { color: var(--warn); }
+  p { margin: 0 0 12px; max-width: 40em; text-wrap: pretty; }
+  .hl { font-family: var(--sans); font-weight: 600; font-size: .9em; letter-spacing: .02em; color: var(--navy); }
+  [data-theme="dark"] .hl { color: var(--gold); }
+
+  /* argument blocks: WHY NOW / WHY THIS TEAM / VALUE */
+  .args { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .args { grid-template-columns: repeat(2, 1fr); } }
+  .arg { background: var(--panel); border-radius: 10px; padding: 16px 18px 14px; border: 1px solid var(--hair); }
+  .arg .al { font-family: var(--sans); font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 6px; }
+  [data-theme="dark"] .arg .al { color: var(--gold); }
+  .arg .at { font-size: 16px; line-height: 1.5; color: var(--ink); }
+  .clock { display: grid; gap: 0; grid-template-columns: 1fr; border-left: 2px solid var(--gold); padding-left: 0; }
+  .clock .tick { display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 10px 0 10px 18px; border-bottom: 1px solid var(--hair); position: relative; }
+  .clock .tick::before { content: ""; position: absolute; left: -6px; top: 18px; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); border: 2px solid var(--paper); }
+  .clock .tick:last-child { border-bottom: 0; }
+  .clock .tl { font-family: var(--sans); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding-top: 3px; }
+  .clock .tt { font-size: 16px; line-height: 1.5; }
+  @media (max-width: 560px) { .clock .tick { grid-template-columns: 1fr; gap: 4px; } }
+  .ask { margin-top: 14px; background: var(--tile); color: var(--tile-ink); border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; padding: 14px 18px; font-size: 17px; line-height: 1.45; }
+  .ask .k { font-family: var(--sans); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 4px; }
+
+  /* ruled-out table */
+  .ruled { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 14px; }
+  .ruled th { font-family: var(--sans); font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 6px 10px 8px 0; border-bottom: 1px solid var(--hair); font-weight: 600; }
+  .ruled td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--hair); vertical-align: top; }
+  .ruled td.t { font-weight: 600; color: var(--navy); white-space: nowrap; width: 34%; }
+  [data-theme="dark"] .ruled td.t { color: var(--ink); }
+  .tablewrap { overflow-x: auto; }
+
+  /* proof points */
+  .proof { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  @media (min-width: 640px) { .proof { grid-template-columns: repeat(3, 1fr); } }
+  .pf { background: var(--panel); border: 1px solid var(--hair); border-radius: 10px; padding: 14px 16px; }
+  .pf .pfv { font-family: var(--sans); font-size: 24px; font-weight: 700; color: var(--navy); line-height: 1.05; font-variant-numeric: tabular-nums; }
+  [data-theme="dark"] .pf .pfv { color: var(--ink); }
+  .pf .pfv .dag { color: var(--warn); font-size: 14px; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.35; }
+
+  /* grid fit */
+  .gfrow { display: grid; grid-template-columns: 1.4fr 110px 2fr; gap: 12px; align-items: center; padding: 10px 8px; border-bottom: 1px solid var(--hair); border-radius: 8px; }
+  .gfrow.rec { background: var(--panel); }
+  @media (max-width: 560px) { .gfrow { grid-template-columns: 1fr 110px; } .gfrow .gfd { grid-column: 1 / -1; } }
+  .gft { font-weight: 600; color: var(--navy); font-size: 16px; }
+  [data-theme="dark"] .gft { color: var(--ink); }
+  .gft .star { display: block; font-family: var(--sans); font-size: 9.5px; letter-spacing: .16em; color: var(--gold-deep); font-weight: 600; margin-top: 2px; }
+  [data-theme="dark"] .gft .star { color: var(--gold); }
+  .gflab { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; text-align: center; padding: 5px 0; border-radius: 6px; }
+  .gflab.prime { background: var(--tile); color: var(--gold); }
+  .gflab.open { background: var(--ok-bg); color: var(--ok); }
+  .gflab.crowded { background: var(--warn-bg); color: var(--warn); }
+  .gflab.conflict { background: var(--bad-bg); color: var(--bad); }
+  .gfd { font-size: 14px; color: var(--ink-2); }
+
+  /* bottom line */
+  .bottomline { background: var(--tile); color: var(--tile-ink); border-left: 5px solid var(--gold); border-radius: 0 10px 10px 0; padding: 18px 22px; margin-top: 6px; }
+  .bottomline .k { font-family: var(--sans); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .bottomline .t { font-size: 19px; line-height: 1.45; margin-top: 6px; }
+  .bottomline .hl { color: var(--gold); }
+  .flags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .flag { font-family: var(--sans); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; background: var(--panel); border: 1px solid var(--hair); border-radius: 4px; padding: 4px 8px; color: var(--ink-2); }
+
+  /* decision maker + opening angle */
+  .twocol { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 720px) { .twocol { grid-template-columns: 1fr 1fr; } }
+  .dm { border: 1px solid var(--hair); background: var(--panel); border-radius: 10px; padding: 16px 18px; }
+  .dm .name { font-size: 22px; color: var(--navy); font-weight: 500; }
+  [data-theme="dark"] .dm .name { color: var(--ink); }
+  .dm .role { font-family: var(--sans); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 2px 0 10px; }
+  .dm .role .vtag { color: var(--ok); font-weight: 600; }
+  .dm .role .utag { color: var(--warn); font-weight: 600; }
+  .dm .bio { font-size: 15px; line-height: 1.5; }
+  .quote { background: var(--panel); border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; padding: 16px 18px; font-style: italic; font-size: 17px; line-height: 1.5; color: var(--navy); }
+  [data-theme="dark"] .quote { color: var(--ink); }
+  .intro { font-size: 15px; color: var(--ink-2); margin-bottom: 10px; }
+
+  /* score composition */
+  .scoregrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  @media (min-width: 720px) { .scoregrid { grid-template-columns: repeat(5, 1fr); } }
+  .sc { border: 1px solid var(--hair); border-radius: 10px; padding: 12px 14px; background: var(--panel); }
+  .sc .pill { font-family: var(--sans); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 24px; font-weight: 700; color: var(--navy); font-variant-numeric: tabular-nums; }
+  [data-theme="dark"] .sc .val { color: var(--ink); }
+  .sc .val span { font-size: 12px; color: var(--muted); font-weight: 400; }
+  .sc .bar { height: 4px; background: var(--hair); border-radius: 2px; margin: 8px 0; overflow: hidden; }
+  .sc .bar i { display: block; height: 100%; background: var(--gold); }
+  .sc .why { font-size: 13px; color: var(--ink-2); line-height: 1.4; }
+
+  /* risks */
+  .risk { display: grid; grid-template-columns: 170px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--hair); font-size: 15.5px; line-height: 1.5; }
+  @media (max-width: 560px) { .risk { grid-template-columns: 1fr; gap: 4px; } }
+  .risk .rt { font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--navy); padding-top: 4px; }
+  [data-theme="dark"] .risk .rt { color: var(--ink); }
+  .risk .rc b { font-family: var(--sans); font-size: .85em; letter-spacing: .04em; color: var(--gold-deep); }
+  [data-theme="dark"] .risk .rc b { color: var(--gold); }
+
+  .sources { font-family: var(--sans); font-size: 12.5px; color: var(--muted); padding-left: 18px; margin: 0; word-break: break-all; line-height: 1.5; }
+  .sources li { margin-bottom: 4px; }
+  .sources a { text-decoration: none; }
+  .sources a:hover, .sources a:focus-visible { text-decoration: underline; }
+  .foot { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--hair); font-family: var(--sans); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+  .foot .warn { color: var(--warn); }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  @media print {
+    body { background: #fff; color: #1a1c2e; font-size: 11pt; }
+    .page { max-width: 100%; padding: 0; }
+    .arg, .chip, .pf, .sc, .dm, .gfrow.rec { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="mast">
+    <img src="{{ logo_src }}" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential<br>N° {{ brief_number }} · {{ date_long }}</span>
+  </div>
+  <div class="ribbon">Intelligence Brief <span class="sep">/</span> N° {{ brief_number }}{{ track_label }} <span class="sep">·</span> {{ tier }} <span class="sep">·</span> {{ series_label }}</div>
+
+  <h1>{{ company }}</h1>
+  <div class="classline">{{ industry_meta }}{% if hq %} · {{ hq }}{% endif %}{% if ticker %} · {{ ticker }}{% endif %}</div>
+  <p class="lede">{{ deck_html }}</p>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">{{ score }}</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing window</div><div class="v">{{ timing_label }}</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">{{ series_label }}</div></div>
+      <div class="chip"><div class="k">Recommended team</div><div class="v">{{ team_label }}</div></div>
+      <div class="chip"><div class="k">Action horizon</div><div class="v">{{ horizon_label }}</div></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>The case</h2>
+    <p>{{ the_case_p1_html }}</p>
+    {% if the_case_p2 %}<p>{{ the_case_p2_html }}</p>{% endif %}
+  </section>
+
+  <section>
+    <h2>Why now <span class="note">— the clock this signal is on</span></h2>
+    {% if extended_html and extended_html.why_now %}
+    <div class="clock">
+      {% for p in extended_html.why_now %}
+      <div class="tick"><div class="tl">{{ p.label }}</div><div class="tt">{{ p.text }}</div></div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>{{ why_now_html }}</p>
+    {% endif %}
+  </section>
+
+  {% if proof_points %}
+  <section>
+    <h2>Proof points
+      {% if all_proof_points_verified %}<span class="note">— every figure checked against its source (see Sources)</span>
+      {% else %}<span class="note warn">— † not yet verified to a primary source · verify before circulation</span>{% endif %}
+    </h2>
+    <div class="proof">
+      {% for pf in proof_points[:6] %}
+      <div class="pf"><div class="pfv">{{ pf.value }}{% if not pf.verified %}<span class="dag">†</span>{% endif %}</div><div class="pfk">{{ pf.fact }}</div></div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section>
+    <h2>{{ why_team_label|title }} <span class="note">— the open lane, the audience, the platform</span></h2>
+    {% if extended_html and extended_html.why_team %}
+    <div class="args">
+      {% for p in extended_html.why_team %}
+      <div class="arg"><div class="al">{{ p.label }}</div><div class="at">{{ p.text }}</div></div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>{{ why_team_para_html }}</p>
+    {% endif %}
+    {% if gridfit %}
+    <div style="margin-top:18px">
+      {% for row in gridfit %}
+      <div class="gfrow {{ 'rec' if row.recommended }}">
+        <div class="gft">{{ row.team }}{% if row.recommended %}<span class="star">◆ Recommended</span>{% endif %}</div>
+        <div class="gflab {{ row.status }}">{{ row.label }}</div>
+        <div class="gfd">{{ row.detail }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if extended_html and extended_html.ruled_out %}
+    <div class="tablewrap">
+    <table class="ruled">
+      <thead><tr><th>Ruled out</th><th>Why the lane is closed</th></tr></thead>
+      <tbody>
+      {% for r in extended_html.ruled_out %}
+      <tr><td class="t">{{ r.team }}</td><td>{{ r.reason }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+    {% endif %}
+  </section>
+
+  {% if value_section and (value_content or (extended_html and extended_html.value)) %}
+  <section>
+    <h2>{{ value_section_label|title }} <span class="note">— Mode {{ value_mode }} · {{ mode_caption }}</span></h2>
+    {% if extended_html and extended_html.value %}
+    <div class="args">
+      {% for p in extended_html.value %}
+      <div class="arg"><div class="al">{{ p.label }}</div><div class="at">{{ p.text }}</div></div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>{{ value_content_html }}</p>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  <section>
+    <h2>Deal architecture</h2>
+    <p>{{ deal_arch_para_html }}</p>
+    {% if extended_html and extended_html.ask %}
+    <div class="ask"><span class="k">The ask</span>{{ extended_html.ask }}</div>
+    {% endif %}
+  </section>
+
+  <section class="twocol">
+    <div>
+      <h2>Primary decision-maker</h2>
+      <div class="dm">
+        <div class="name">{{ decision_maker_name }}</div>
+        <div class="role">{{ decision_maker_role }}{% if decision_maker_verified %} · <span class="vtag">verified</span>{% else %} · <span class="utag">role not yet verified</span>{% endif %}</div>
+        <div class="bio">{{ decision_maker_bio_html }}</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening angle</h2>
+      {% if opening_angle_intro %}<div class="intro">{{ opening_angle_intro_html }}</div>{% endif %}
+      <div class="quote">{{ opening_angle_quote_html }}</div>
+    </div>
+  </section>
+
+  {% if bottom_line %}
+  <section>
+    <div class="bottomline"><div class="k">Bottom line</div><div class="t">{{ bottom_line_html }}</div></div>
+    <div class="flags">{% for s in signals %}<span class="flag">{{ s.replace('_',' ') }}</span>{% endfor %}<span class="flag">discovery: {{ discovery }}</span></div>
+  </section>
+  {% endif %}
+
+  <section>
+    <h2>Score composition</h2>
+    <div class="scoregrid">
+      {% for c in score_cells %}
+      <div class="sc">
+        <div class="pill">{{ c.label }}</div>
+        <div class="val">{{ c.num }} <span>{{ c.denom }}</span></div>
+        <div class="bar"><i style="width: {{ (c.num * 5) }}%"></i></div>
+        <div class="why">{{ c.note }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <h2>Risks &amp; counters</h2>
+    {% for r in risks_html %}
+    <div class="risk"><div class="rt">{{ r.label }}</div><div class="rc">{{ r.detail }} <b>Counter:</b> {{ r.counter }}</div></div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2>Sources <span class="note">— {{ claims_verified }} of {{ claims_total }} load-bearing claims verified</span></h2>
+    <ol class="sources">
+      {% for s in sources %}<li><a href="{{ s }}" target="_blank" rel="noreferrer noopener">{{ s }}</a></li>{% endfor %}
+    </ol>
+  </section>
+
+  <div class="foot">
+    <span>{{ footer_left }}</span>
+    <span>{{ footer_company }} · {{ footer_date }}</span>
+    {% if confidence_level|upper != 'HIGH' %}<span class="warn">Confidence {{ confidence_level|upper }}</span>{% endif %}
+  </div>
+</div>
+</body>
+</html>

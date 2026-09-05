@@ -123,6 +123,10 @@ def proof_points_from_ledger(claims: list[Claim], limit: int = 6) -> list[ProofP
     for c in claims:
         if c.claim_type not in (ClaimType.funding, ClaimType.revenue, ClaimType.date):
             continue
+        # Proof points are company facts the brief stands on: skip the app-page expansion
+        # (rival figures, 1440's own price estimate) and anything not load-bearing.
+        if c.section == "extended" or not c.load_bearing:
+            continue
         text = strip_markup(c.text)
         m = _MONEY.search(text)
         if not m:
@@ -367,6 +371,40 @@ def render_html(data: BriefData, font_stack: str = "brand") -> str:
         page_font="Lora" if font_stack == "brand" else 'Georgia, "Liberation Serif", serif',
     )
     return _env().get_template("brief.html.j2").render(**ctx)
+
+
+def _logo_data_uri() -> str:
+    """The masthead logo inlined, so the app page is one self-contained file."""
+    import base64
+    import mimetypes
+
+    mime = mimetypes.guess_type(str(LOGO))[0] or "image/png"
+    return f"data:{mime};base64," + base64.b64encode(LOGO.read_bytes()).decode("ascii")
+
+
+def render_web_html(data: BriefData) -> str:
+    """The app page: the same brief with the long-form WHY NOW / WHY THIS TEAM / VALUE
+    sections, brand-styled for the screen (light + dark), self-contained (logo inlined,
+    fonts from Google Fonts with real fallbacks). No page limit applies here."""
+    ctx = data.render_context()
+    needs_review = (
+        data.verification_status == "needs_review" or data.confidence_level.upper() == "MEDIUM"
+    )
+    ctx.update(
+        tier=tier_for(data.score),
+        mode_caption=MODE_CAPTIONS.get(data.value_mode or "", ""),
+        footer_left="1440 Sports · London · Verify before circulation"
+        if needs_review
+        else "1440 Sports · London",
+        logo_src=_logo_data_uri(),
+    )
+    return _env().get_template("brief_web.html.j2").render(**ctx)
+
+
+def render_web(data: BriefData, out_path: Path) -> Path:
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(render_web_html(data), encoding="utf-8")
+    return out_path
 
 
 def render_pdf(html: str, out_path: Path) -> int:

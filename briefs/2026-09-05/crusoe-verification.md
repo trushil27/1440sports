@@ -25,6 +25,14 @@ Blocklist: none of the five. Approached list (`data/approached.json`): none. Ded
 surfaced once before (20 Jun 2026, Series E / IPO-candidate signal, score 76); 77 days ago and a
 new capital event, so it passes the 30-day company+trigger rule and is not flagged resurfaced.
 
+## The app page
+
+`crusoe.web.html` is the long-form version the MD asked for (why now as a dated clock, why this
+team as four business arguments plus the ruled-out table, value to the team as four workstreams,
+the ask). Its figures and race mentions went through the same ledger as non-load-bearing claims;
+the one left unverified is 1440's own $5-8M/yr price estimate, which has no external source by
+design.
+
 ## Ledger (17 of 17 load-bearing claims verified)
 
 | Claim | Status | Evidence |

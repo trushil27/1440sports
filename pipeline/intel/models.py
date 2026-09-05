@@ -281,6 +281,7 @@ class Brief(Base):
     )
     pdf_path: Mapped[str | None] = mapped_column(Text)
     html_path: Mapped[str | None] = mapped_column(Text)
+    web_html_path: Mapped[str | None] = mapped_column(Text)  # the app page (0004)
     page_count: Mapped[int | None] = mapped_column(Integer)
     historical: Mapped[bool] = mapped_column(Boolean, default=False)  # M6 backfill marker
     created_at: Mapped[dt.datetime] = mapped_column(DateTime(timezone=True), default=_now)

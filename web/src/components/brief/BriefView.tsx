@@ -135,6 +135,24 @@ export function BriefView({ number, tab }: { number: number; tab: "brief" | "peo
         </div>
       ) : (
         <div className="mt-6 space-y-10">
+          {/* The brief itself: the long-form page rendered by the pipeline (same design as the PDF) */}
+          {brief.page_url && (
+            <section id="page">
+              <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                <h2 className="h-rule !mb-0 flex-1 border-b-0">The brief</h2>
+                <a href={briefs.pageUrl(brief.number)} target="_blank" rel="noreferrer noopener" className="btn">
+                  Open full page
+                </a>
+              </div>
+              <iframe
+                src={briefs.pageUrl(brief.number)}
+                title={`Brief N° ${brief.number} — ${brief.company}`}
+                className="h-[80vh] w-full rounded-lg border border-hair bg-white"
+                loading="lazy"
+              />
+            </section>
+          )}
+
           {/* PDF */}
           <section id="pdf">
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2">

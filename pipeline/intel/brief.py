@@ -58,6 +58,26 @@ above stands unchanged; this only adds fields.
    VERIFIED tag are computed by the pipeline from the verified-claims ledger and the sponsor
    table. Do not emit them. Do not cite venues or races that are not on the current F1 /
    Formula E calendar — an unverifiable race blocks the brief.
+
+6. EXTENDED SECTIONS FOR THE APP PAGE (the 2-page PDF keeps every ceiling above; this block
+   is read on screen by the MD and has no word ceiling, but every sentence must still be
+   sourced, business-side and specific — write like a commercial director, not a marketer):
+   "extended": {
+     "why_now":   3-4 objects {"label": "...", "text": "..."} — the trigger and its date; the
+                  budget / brand-authority moment it creates; the concrete calendar window
+                  (only races on the current calendar); the competitive clock (who else could
+                  take the lane and when).
+     "why_team":  3-4 objects — the open category lane on THIS team and what it is worth; the
+                  audience / market overlap in business terms; the activation platform the team
+                  actually has (races, hospitality, content, facilities); why this team can
+                  consume the product, not just carry the logo.
+     "value":     3-4 objects — the operational workstream the team would run with the product;
+                  the commercial lift (pipeline, deal flow, procurement, partner introductions);
+                  content and ecosystem the partnership creates; what the team gives back.
+     "ruled_out": one object {"team": "...", "reason": "..."} per team excluded, naming the
+                  incumbent partner that closes the lane.
+     "ask":       one sentence: the meeting ask and what the first conversation should settle.
+   }
 """
 
 RETRY_MODE_HEADER = "=== RETRY MODE - CORRECTING PREVIOUS DRAFT ==="

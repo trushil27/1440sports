@@ -89,6 +89,41 @@ class Risk(BaseModel):
 ValueMode = Literal["A", "B", "C"]
 
 
+class Point(BaseModel):
+    """One labelled argument in the app's long-form sections (label + one or two sentences)."""
+
+    model_config = ConfigDict(extra="ignore")
+    label: str
+    text: str
+
+
+class RuledOut(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    team: str
+    reason: str
+
+
+class Extended(BaseModel):
+    """Long-form, business-language expansion of WHY NOW / WHY THIS TEAM / VALUE TO THE TEAM for
+    the app page. The 2-page PDF keeps its word ceilings; this is what the MD reads on screen.
+    Every list is optional so an older brief still renders."""
+
+    model_config = ConfigDict(extra="ignore")
+    why_now: list[Point] = Field(default_factory=list)
+    why_team: list[Point] = Field(default_factory=list)
+    value: list[Point] = Field(default_factory=list)
+    ruled_out: list[RuledOut] = Field(default_factory=list)
+    ask: str | None = None
+
+    @property
+    def texts(self) -> list[str]:
+        return (
+            [p.text for p in self.why_now + self.why_team + self.value]
+            + [r.reason for r in self.ruled_out]
+            + ([self.ask] if self.ask else [])
+        )
+
+
 class WrittenBrief(BaseModel):
     """What the writer model must emit (NODE 2 fields + June-2026 additions)."""
 
@@ -128,6 +163,7 @@ class WrittenBrief(BaseModel):
     signals: list[str] = Field(default_factory=list)
     footer_company: str
     footer_date: str
+    extended: Extended | None = None
 
     @field_validator("score_cells", mode="before")
     @classmethod
@@ -213,4 +249,27 @@ class BriefData(WrittenBrief):
             }
             for r in self.risks
         ]
+        ext = self.extended
+        d["extended_html"] = (
+            {
+                "why_now": [
+                    {"label": p.label, "text": Markup(emphasis_to_html(p.text))}
+                    for p in ext.why_now
+                ],
+                "why_team": [
+                    {"label": p.label, "text": Markup(emphasis_to_html(p.text))}
+                    for p in ext.why_team
+                ],
+                "value": [
+                    {"label": p.label, "text": Markup(emphasis_to_html(p.text))} for p in ext.value
+                ],
+                "ruled_out": [
+                    {"team": r.team, "reason": Markup(emphasis_to_html(r.reason))}
+                    for r in ext.ruled_out
+                ],
+                "ask": Markup(emphasis_to_html(ext.ask)) if ext.ask else None,
+            }
+            if ext
+            else None
+        )
         return d

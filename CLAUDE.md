@@ -91,6 +91,14 @@ TechCrunch/Forbes summaries — confidence MEDIUM, footer VERIFY BEFORE CIRCULAT
 exposed and fixed three pipeline defects: literal `<b class="hl">` in emphasis (Markup),
 duplicate proof-point cards (dedup by figure), and GRID FIT blind to cloud rivals ("cloud" was a
 stop-word; 30 tech partners now categorised in `seeds/sponsor_categories.json`).
+
+**App page (MD feedback 5 Sep 2026: "why that team / value / why now need more value, business
+language, readable format"):** the writer now also emits `extended` (why_now / why_team / value
+points, ruled_out table, ask — addendum §6, no word ceiling, figures + races still go through the
+ledger as non-load-bearing). The daily job renders `<company>.web.html` from
+`templates/brief_web.html.j2` (brand, light + dark, self-contained) next to the PDF; migration 0004
+adds `briefs.web_html_path`; the API serves it at `/api/briefs/{n}/page` and the PWA embeds it
+above the PDF. The 2-page PDF is unchanged. Crusoe's page: `briefs/2026-09-05/crusoe.web.html`.
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;

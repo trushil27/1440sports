@@ -159,6 +159,7 @@ export const briefs = {
     ),
   get: (number: number) => api<BriefDetail>(`/api/briefs/${number}`),
   pdfUrl: (number: number) => `/api/briefs/${number}/pdf`,
+  pageUrl: (number: number) => `/api/briefs/${number}/page`,
   highlights: (number: number) => api<Highlight[]>(`/api/briefs/${number}/highlights`),
   action: (number: number, action: BriefActionKind, note?: string) =>
     api<{ actions: BriefDetail["actions"] }>(`/api/briefs/${number}/actions`, {

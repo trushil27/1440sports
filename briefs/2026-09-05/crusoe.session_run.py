@@ -238,6 +238,7 @@ EVIDENCE: list[tuple[tuple[str, ...], str, str]] = [
     (("ruckus", "mphasis", "toyota gazoo"), HAAS_RUCKUS, "Haas F1 Team newsroom, Jan 2026: RUCKUS Networks becomes Official Networking Partner of TGR Haas F1 Team; Mphasis is Official Digital Partner."),
     (("cavness", "gordon", "mongodb"), CRUSOE_COO, "Crusoe newsroom, 11 Dec 2025: Michael Gordon appointed COO and CFO (ex-MongoDB); co-founder Cully Cavness becomes President and Chief Strategy Officer."),
     (("openai", "microsoft", "meta"), BBG_F, "Bloomberg: customers include OpenAI, Microsoft and Meta."),
+    (("fluidstack", "$18b"), FORBES_FS, "Forbes, 3 Sep 2026: Fluidstack raised $1.5B led by Jane Street at an $18B valuation."),
 ]
 
 
@@ -382,6 +383,73 @@ BRIEF = {
     "signals": ["funding_event", "mega_contract", "category_precedent"],
     "footer_company": "CRUSOE",
     "footer_date": "5 SEP 2026",
+    "extended": {
+        "why_now": [
+            {
+                "label": "Trigger",
+                "text": "Bloomberg reported on 3 September that Crusoe closed more than $3B of Series F capital at roughly $30B post-money, co-led by Atreides Management and Valor Equity Partners with Mubadala Capital participating. That is close to three times the valuation set by its $1.375B Series E in October 2025, and it lands in the same week as a reported ~$13B, five-year AI-cloud contract with Jane Street.",
+            },
+            {
+                "label": "Budget authority",
+                "text": "A raise of this size resets the brand and marketing budget for the next 12 to 18 months. With OpenAI, Microsoft, Meta and now Jane Street already on the customer list, the next buyers Crusoe has to reach are enterprise CIOs, CFOs and the capital-markets audience ahead of a probable listing. That is the audience a Formula 1 partnership puts in the room.",
+            },
+            {
+                "label": "Calendar window",
+                "text": "The US GP in Austin (late October) and the Las Vegas GP (November) are the two remaining home-market races of 2026. A partnership agreed before Austin can be announced there and activated in full for 2027; teams close their 2027 partner rosters in the fourth quarter.",
+            },
+            {
+                "label": "Competitive clock",
+                "text": "CoreWeave, Crusoe's closest listed rival, has held the Official AI Cloud Computing Partner slot at Aston Martin Aramco since May 2025, and Core Scientific joined Cadillac for 2026. Fluidstack raised a reported $1.5B at an $18B valuation this week and is the next name likely to shop for a grid position. The open cloud-compute lanes will not stay open through 2027.",
+            },
+        ],
+        "why_team": [
+            {
+                "label": "The open lane",
+                "text": "Haas carries no cloud, GPU or AI-compute partner. Its technology roster is Toyota Gazoo Racing as title partner, Mphasis for digital services and RUCKUS Networks for networking, which leaves Official AI Cloud Compute Partner a clean, ownable category at a team-partner price rather than a title price.",
+            },
+            {
+                "label": "Audience and market fit",
+                "text": "Haas is the American privateer in a US-owned sport; Crusoe is a Denver company whose growth story (Abilene, Wyoming, Jane Street) is American. Austin and Las Vegas are US rounds still to come in 2026, and the team's guest lists at those events are the enterprise and capital-markets buyers Crusoe is selling to.",
+            },
+            {
+                "label": "A team that will use the product",
+                "text": "Haas is the grid's lean privateer, so it has the most to gain from elastic GPU capacity for simulation, strategy and analytics work. The partnership would be consumed in the factory, not just displayed on the car, which is what separates a technology partner from a logo.",
+            },
+            {
+                "label": "Precedent and price",
+                "text": "CoreWeave's Aston Martin deal proves a neocloud buys Formula 1. The Haas lane comes at a team-partner entry tier, an estimated $5-8M a year and part-payable in compute credits, with sidepod placement and naming of the team's compute environment. The precedent removes the category doubt; the price makes it an easy first commitment.",
+            },
+        ],
+        "value": [
+            {
+                "label": "Operational workstream (Mode A)",
+                "text": "Elastic GPU capacity for the work that sits outside the FIA's aerodynamic-testing restrictions: machine-learning surrogate models, driver-in-the-loop and race-strategy simulation, and telemetry and video analytics between sessions. Crusoe supplies capacity on demand; the team gets compute it could not fund inside the cost cap.",
+            },
+            {
+                "label": "Commercial lift for the team",
+                "text": "A partner that sells to CIOs and CFOs brings a guest list of enterprise buyers, investors and bankers to Austin and Las Vegas, the same audience Haas's other B2B partners (Mphasis, RUCKUS, MoneyGram) want in the suite. Crusoe's own customers, OpenAI, Microsoft, Meta and Jane Street, are a hospitality draw in their own right.",
+            },
+            {
+                "label": "Content and ecosystem",
+                "text": "An energy-to-compute story the team can tell on camera: a Denver company that turns power into AI capacity, running the race team's models. It gives Haas a technology narrative it does not currently own, and gives Crusoe a proof-of-value case study for enterprise sales.",
+            },
+            {
+                "label": "What the team gives back",
+                "text": "Official AI Cloud Compute Partner designation, sidepod or engine-cover placement, naming of the team's compute environment, hospitality at Austin and Las Vegas, driver and engineering access for Crusoe's enterprise channels, and a factory reference customer for Crusoe's cloud.",
+            },
+        ],
+        "ruled_out": [
+            {"team": "Aston Martin Aramco F1 Team", "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, is Crusoe's direct rival."},
+            {"team": "Cadillac F1 Team", "reason": "Core Scientific (data-centre and HPC hosting) and TWG AI sit on the inaugural 2026 roster."},
+            {"team": "Oracle Red Bull Racing", "reason": "Oracle is title partner and the cloud and compute incumbent."},
+            {"team": "Mercedes-AMG Petronas F1 Team", "reason": "Microsoft holds the cloud lane."},
+            {"team": "McLaren F1 Team", "reason": "Google Cloud, Dell Technologies and Schneider Electric occupy cloud, hardware and data-centre power."},
+            {"team": "BWT Alpine F1 Team", "reason": "Microsoft holds the cloud lane."},
+            {"team": "Scuderia Ferrari", "reason": "HP (title) and IBM cover compute hardware and cloud services."},
+            {"team": "Audi F1 Team · Racing Bulls · Williams", "reason": "Lane open but not chosen: European rosters and audiences; Haas gives the US home-market platform the signal needs."},
+        ],
+        "ask": "A 25-minute call with Chase Lochmiller before the Las Vegas GP to confirm the Series F on the record, agree the Austin announcement window, and size the entry tier against Haas's 2027 partner roster.",
+    },
 }
 
 

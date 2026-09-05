@@ -127,6 +127,7 @@ def brief_detail(brief: Brief) -> dict[str, Any]:
         "mode": brief.mode.value if brief.mode else None,
         "page_count": brief.page_count,
         "pdf_url": f"/api/briefs/{brief.brief_number}/pdf" if brief.pdf_path else None,
+        "page_url": f"/api/briefs/{brief.brief_number}/page" if brief.web_html_path else None,
         "verification_panel": verification_panel(brief),
         "score_composition": {
             "cells": (brief.brief_data or {}).get("score_cells", []),
