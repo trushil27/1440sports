@@ -96,6 +96,8 @@ def main(argv: list[str] | None = None) -> int:
 
         for rec in rebuild_queue.process(settings):
             print("rebuilt:", rec)
+        for rec in rebuild_queue.backlog(settings, limit=settings.rebuild_backlog_per_run):
+            print("backlog:", rec)
     except Exception as exc:  # noqa: BLE001 — best effort by design
         print(f"rebuild queue skipped: {exc}")
     try:

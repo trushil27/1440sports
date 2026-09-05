@@ -88,6 +88,10 @@ class Settings(BaseModel):
         description="Netlify personal access token; with NETLIFY_SITE_ID the job deploys.",
     )
     netlify_site_id: str | None = None
+    rebuild_backlog_per_run: int = Field(
+        default=4,
+        description="Historical signals rebuilt as full cases after each daily run (0 = off).",
+    )
 
     @field_validator("database_url")
     @classmethod

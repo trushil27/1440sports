@@ -97,7 +97,15 @@ python -m intel.backfill --restart-sequence 121   # first free n8n-continuation 
 ```
 
 Historical briefs are numbered negatively and marked "historical, unverified"; their original
-labels (e.g. `N° 017`) are shown in the app. Re-verification of a historical brief is a manual
+labels (e.g. `N° 017`) are shown in the app.
+
+**Recorded engine cases.** A full case the engine produced outside the scheduled job is kept as
+`pipeline/intel/cases/<date>/<company>.run.json` (the run record: candidates, brief, ledger with
+every verification) plus the `.pdf` / `.html` / `.web.html` next to it. `python -m intel.backfill`
+(or `--cases`) imports these with their **live** status — verified / audited as recorded, positive
+number (the sequence is moved past it), files copied into `<pdf_storage_dir>/cases/` — so N° 121
+Crusoe survives any database rebuild and appears on Railway. The container entrypoint runs the
+whole backfill on every start (idempotent; a failure is logged, never blocks the run). Re-verification of a historical brief is a manual
 operator action (People → Re-verify) and only ever moves a claim from unverified to verified.
 
 ## 4a. The desk app (static, Netlify) — the front end the MD asked for on 5 Sep 2026
@@ -138,7 +146,10 @@ whenever `site/` is committed (`python -m intel.site_export --out site/` and pus
 request: on Netlify it posts the `rebuild` form; elsewhere it opens a prefilled GitHub issue
 titled `Rebuild: <Company> (<date>)` (the daily job reads open issues with that prefix — no token
 needed on a public repo) and always shows the command. `intel.rebuild_queue` runs before each
-export (up to 3 rebuilds per run, remembered in `<pdf_storage_dir>/rebuild_done.json`). By hand:
+export (up to 3 rebuilds per run, remembered in `<pdf_storage_dir>/rebuild_done.json`), then
+works through the **backlog**: `REBUILD_BACKLOG_PER_RUN` (default 4) unverified historical signals
+per run, newest first, skipping screened / merged / already-verified rows — so the whole log becomes
+verified full cases over the following weeks without anyone clicking. By hand:
 
 ```
 python -m intel.rebuild "Antora Energy" --date 2026-07-30

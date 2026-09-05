@@ -8,6 +8,9 @@ echo "[entrypoint] applying migrations"
 python -m alembic -c db/alembic.ini upgrade head
 echo "[entrypoint] loading reference seeds"
 python -m intel.seed
+# History + recorded engine cases (idempotent; a problem here must not stop the run).
+echo "[entrypoint] importing history and recorded cases"
+python -m intel.backfill > /tmp/backfill.log 2>&1 || { echo "[entrypoint] backfill skipped:"; tail -n 5 /tmp/backfill.log; }
 echo "[entrypoint] starting: ${*:-python -m intel.schedule}"
 if [ "$#" -gt 0 ]; then
   exec "$@"

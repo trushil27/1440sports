@@ -98,19 +98,19 @@
   .rule .cnt { font-variant-numeric: tabular-nums; color: var(--ink-2); }
 
   /* today card */
-  .today { background: var(--panel); border: 1px solid var(--hair); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px 30px; display: grid; grid-template-columns: 160px 1fr; gap: 28px; }
+  .today { background: var(--panel); border: 1px solid var(--hair); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; display: grid; grid-template-columns: 118px 1fr; gap: 20px; }
   @media (max-width: 700px) { .today { grid-template-columns: 1fr; } }
-  .score { background: var(--navy); color: #f3f1ea; border-radius: 12px; padding: 20px 16px 16px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
-  .score .n { font-size: 58px; font-weight: 700; line-height: .9; font-variant-numeric: tabular-nums; }
-  .score .d { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-2); margin-top: 10px; }
-  .score .tier { margin-top: 12px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: #fff; background: rgba(255,255,255,.1); border-radius: 6px; padding: 5px 0; }
-  .today h2 { font-family: var(--serif); font-weight: 500; font-size: 34px; margin: 4px 0 2px; color: var(--navy); letter-spacing: -.01em; }
+  .score { background: var(--navy); color: #f3f1ea; border-radius: 10px; padding: 14px 10px 12px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+  .score .n { font-size: 40px; font-weight: 700; line-height: .95; font-variant-numeric: tabular-nums; }
+  .score .d { font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-2); margin-top: 6px; }
+  .score .tier { margin-top: 10px; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: #fff; background: rgba(255,255,255,.1); border-radius: 6px; padding: 4px 0; }
+  .today h2 { font-family: var(--serif); font-weight: 500; font-size: 26px; margin: 2px 0 0; color: var(--navy); letter-spacing: -.01em; }
   [data-theme="dark"] .today h2 { color: var(--ink); }
-  .today .meta { font-size: 13.5px; color: var(--muted); font-style: italic; font-family: var(--serif); }
-  .today .deck { font-family: var(--serif); font-size: 17.5px; line-height: 1.55; margin: 14px 0 16px; color: var(--ink); max-width: 64ch; text-wrap: pretty; }
-  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px 22px; margin-bottom: 18px; }
-  .facts div { font-size: 11px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
-  .facts div b { display: block; color: var(--navy); font-size: 14.5px; letter-spacing: 0; text-transform: none; margin-top: 2px; }
+  .today .meta { font-size: 12.5px; color: var(--muted); font-style: italic; font-family: var(--serif); }
+  .today .deck { font-family: var(--serif); font-size: 15px; line-height: 1.5; margin: 10px 0 12px; color: var(--ink); max-width: 70ch; text-wrap: pretty; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px 18px; margin-bottom: 12px; }
+  .facts div { font-size: 10px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
+  .facts div b { display: block; color: var(--navy); font-size: 13px; letter-spacing: 0; text-transform: none; margin-top: 2px; }
   [data-theme="dark"] .facts div b { color: var(--ink); }
   .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
   .badge { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; border-radius: 6px; padding: 4px 9px; white-space: nowrap; }
@@ -322,6 +322,7 @@
             <div>Recommended team<b>${esc(teamDisplay(t.team) || '—')}</b></div>
             <div>Decision-maker<b>${esc(t.person || '—')}${t.role ? ' · ' + esc(t.role) : ''}</b></div>
             <div>Action horizon<b>${esc(t.horizon || '—')}</b></div>
+            ${t.trigger_date && t.trigger_date !== t.date ? `<div>Trigger date<b>${fmtDate(t.trigger_date)}</b></div>` : ''}
           </div>
           <div class="badges">
             <span class="badge ${verClass(t.verification)}">${verLabel(t.verification)}</span>

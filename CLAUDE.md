@@ -127,6 +127,12 @@ labels, no trigger-source buttons; "Build the full case" = Netlify form or a pre
 issue `Rebuild: <Company> (<date>)`, processed by `intel/rebuild_queue.py` before each export;
 scheduler `--slot HH:MM` + exit 0; `railway.json` cron temporarily `0 16 * * *` for the 17:00 BST
 test firing (revert to `30 4,5 * * *`). FE sweep = 24 rows; FE working list = 42.
+**Fourth pass (5 Sep 2026):** FE Season 13 dates all confirmed from fiaformulae.com (no
+"provisional"); today card at Mission Control size; surfaced dates clamped to ≥ 5 May 2026 (the
+engine's first day) and sweep rows to their sweep date; `intel/cases/<date>/<company>.run.json` +
+`backfill.import_engine_cases` persist in-session full cases (Crusoe N° 121) as live verified
+briefs on any database, entrypoint runs the backfill on every start; `rebuild_queue.backlog()`
+turns 4 unverified historical signals per daily run into full cases (`REBUILD_BACKLOG_PER_RUN`).
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;

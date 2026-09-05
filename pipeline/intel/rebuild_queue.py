@@ -6,7 +6,8 @@ submissions through the Netlify API, rebuilds each company not yet processed
 (``intel.rebuild``), and remembers what it has done in ``<pdf_storage_dir>/rebuild_done.json``.
 The daily job calls ``process()`` before exporting the site, so a request made during the
 day turns into a full brief in the next run — and ``python -m intel.rebuild_queue`` runs it
-on demand.
+on demand. ``backlog()`` (``--backlog N``) then works through the unverified history a few
+companies per run, newest first, so every past signal becomes a verified case over time.
 """
 
 from __future__ import annotations
@@ -159,7 +160,97 @@ def process(
     return results
 
 
-def main() -> int:
+def backlog(
+    settings: Settings | None = None, limit: int = 4, runner=None, session=None
+) -> list[dict[str, Any]]:
+    """Turn the unverified history into full cases a few at a time, newest first, skipping
+    screened / merged rows and anything already rebuilt. The daily job runs this after the
+    queue so the whole log becomes Crusoe-standard cases over the following weeks."""
+    from sqlalchemy import select
+
+    from intel import rebuild as rebuild_mod
+    from intel import site_export
+    from intel.db import session_scope
+    from intel.models import Brief, VerificationStatus
+    from intel.normalise import company_norm
+
+    settings = settings or get_settings()
+    if session is None:
+        with session_scope(settings.database_url) as s:
+            return backlog(settings, limit, runner, s)
+    run = runner or rebuild_mod.rebuild
+    review = site_export.load_review()
+    done = load_done(settings)
+    rebuilt_companies = {
+        company_norm(r["company"]) for r in done.values() if r.get("status") == "success"
+    }
+    verified = {
+        company_norm(b.brief_data.get("company") or b.candidate.company_raw)
+        for b in session.scalars(
+            select(Brief).where(
+                Brief.historical.is_(False),
+                Brief.verification_status == VerificationStatus.verified,
+            )
+        )
+        if b.brief_data
+    }
+    rows = session.scalars(
+        select(Brief)
+        .where(
+            Brief.historical.is_(True),
+            Brief.verification_status.not_in(
+                [VerificationStatus.blocked, VerificationStatus.verified]
+            ),
+        )
+        .order_by(Brief.run_date.desc(), Brief.id.desc())
+    ).all()
+    results: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for b in rows:
+        if len(results) >= limit:
+            break
+        company = (b.brief_data or {}).get("company") or b.candidate.company_raw
+        norm = company_norm(company)
+        if norm in seen or norm in verified or norm in rebuilt_companies:
+            continue
+        rv = site_export.review_for(review, b.run_date.isoformat(), company)
+        if rv["status"] not in ("keep", "keep_flagged"):
+            continue
+        seen.add(norm)
+        key = f"backlog-{b.id}"
+        if key in done:
+            continue
+        try:
+            out = run(company, b.run_date, settings)
+            record = {
+                "company": company,
+                "date": b.run_date.isoformat(),
+                "status": out.status,
+                "brief_id": out.brief_id,
+                "at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+            }
+        except Exception as exc:  # noqa: BLE001
+            record = {
+                "company": company,
+                "date": b.run_date.isoformat(),
+                "status": "failed",
+                "error": str(exc)[:500],
+                "at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+            }
+        done[key] = record
+        results.append(record)
+        save_done(settings, done)
+    return results
+
+
+def main(argv: list[str] | None = None) -> int:
+    import sys
+
+    argv = sys.argv[1:] if argv is None else argv
+    if "--backlog" in argv:
+        n = int(argv[argv.index("--backlog") + 1]) if len(argv) > argv.index("--backlog") + 1 else 4
+        print(json.dumps(backlog(limit=n), indent=1, default=str))
+        return 0
     print(json.dumps(process(), indent=1, default=str))
     return 0
 

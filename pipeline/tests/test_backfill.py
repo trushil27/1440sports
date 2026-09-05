@@ -250,3 +250,66 @@ def test_live_day_uniqueness_still_holds_alongside_historical(session, storage):
     _live_brief(session, day, "Alpha")  # one live brief on a historical day is fine
     with pytest.raises(IntegrityError):
         _live_brief(session, day, "Beta")
+
+
+# --- 4. recorded engine cases (N° 121 Crusoe) ---------------------------------------------------
+
+
+def test_engine_case_imports_live_verified_and_idempotent(session, storage):
+    out = backfill.import_engine_cases(session)
+    assert out["failed"] == 0, out["errors"]
+    assert out["created"] >= 1
+    crusoe = session.scalar(
+        select(Brief).where(Brief.brief_data["engine_case_key"].astext.like("%crusoe"))
+    )
+    assert crusoe is not None
+    assert crusoe.historical is False
+    assert crusoe.brief_number == 121
+    assert crusoe.verification_status == VerificationStatus.verified
+    assert crusoe.audit_status.value == "pass"
+    assert crusoe.page_count == 2
+    assert crusoe.pdf_path and Path(crusoe.pdf_path).exists()
+    assert crusoe.web_html_path and Path(crusoe.web_html_path).exists()
+    assert crusoe.brief_data["company"] == "Crusoe"
+    assert crusoe.candidate.decision.value == "selected"
+    assert crusoe.candidate.recommended_team
+    claims = session.scalars(select(Claim).where(Claim.brief_id == crusoe.id)).all()
+    assert len(claims) == 21
+    verified = [
+        v for c in claims for v in c.verifications if v.status == VerificationResult.verified
+    ]
+    assert len(verified) >= 17
+    # every candidate of that run came back with its decision
+    run = crusoe.candidate.run
+    assert run.summary["source"] == backfill.SOURCE_CASES
+    assert len(run.candidates) == 5
+    # the live sequence now sits past 121
+    nxt = session.execute(backfill.text("SELECT nextval('brief_number_seq')")).scalar()
+    assert nxt >= 122
+
+    again = backfill.import_engine_cases(session)
+    assert again["created"] == 0 and again["skipped"] >= 1
+    assert _count(session, Brief) == session.scalar(select(func.count()).select_from(Brief))
+
+
+def test_engine_case_yields_to_a_live_brief_on_the_same_day(session, storage, tmp_path):
+    """A day that already has a live brief keeps it: the case is stored as historical with
+    its statuses intact, and a taken number falls back to a negative one."""
+    first = backfill.import_engine_cases(session)
+    assert first["created"] >= 1
+    # a second copy of the same record under another name on the same day
+    src = backfill.CASES_DIR / "2026-09-05"
+    alt = tmp_path / "cases" / "2026-09-05"
+    alt.mkdir(parents=True)
+    for f in src.iterdir():
+        shutil.copyfile(f, alt / f.name.replace("crusoe", "crusoe-copy"))
+    out = backfill.import_engine_cases(session, tmp_path / "cases")
+    assert out["failed"] == 0, out["errors"]
+    copy = session.scalar(
+        select(Brief).where(Brief.brief_data["engine_case_key"].astext.like("%crusoe-copy"))
+    )
+    assert copy is not None
+    assert copy.historical is True
+    assert copy.brief_number < 0
+    assert copy.verification_status == VerificationStatus.verified
+    assert copy.brief_data["historical_label"] == "N° 121"

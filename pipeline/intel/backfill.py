@@ -12,6 +12,9 @@ row, ``briefs/history.json``, ``data/prospects.json`` or the file system; unknow
    001–035 in a numbering SEPARATE from n8n's.
 3. ``attach_pdfs`` — PDFs the operator exports later (Outlook / Railway), named
    ``<YYYY-MM-DD>_<company>.pdf`` and matched to a historical brief by date + company.
+4. ``import_engine_cases`` — full cases the engine produced outside the scheduled job,
+   recorded as ``intel/cases/<date>/<company>.run.json`` (+ .pdf / .web.html). These keep
+   their live status (verified, audited, positive number) — see the function docstring.
 
 Imported briefs get NEGATIVE ``brief_number`` values (−1, −2, … in import order): a
 negative number marks an import and can never collide with the live sequence.
@@ -646,6 +649,307 @@ def import_repo_briefs(session: Session, repo_root: Path | str | None = None) ->
     }
 
 
+# --- 4. engine cases produced outside the daily job -----------------------------------------
+
+CASES_DIR = PACKAGE_DIR / "cases"
+SOURCE_CASES = "1440 engine case record"
+CASES_SUBDIR = "cases"
+
+
+def _case_key(day: str, stem: str) -> str:
+    return f"{SOURCE_CASES}|{day}|{stem}"
+
+
+def _find_case(session: Session, key: str) -> Brief | None:
+    return session.scalar(select(Brief).where(Brief.brief_data["engine_case_key"].astext == key))
+
+
+def _sibling(record: Path, suffix: str) -> Path | None:
+    """``crusoe.run.json`` → ``crusoe.pdf`` / ``crusoe.web.html`` in the same folder, if present."""
+    stem = record.name[: -len(".run.json")]
+    path = record.with_name(f"{stem}{suffix}")
+    return path if path.exists() else None
+
+
+def _copy_case_file(src: Path | None, name: str) -> str | None:
+    if src is None:
+        return None
+    dest = Path(get_settings().pdf_storage_dir) / CASES_SUBDIR / name
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    if not (dest.exists() and dest.stat().st_size == src.stat().st_size):
+        shutil.copyfile(src, dest)
+    return str(dest)
+
+
+def _ledger_claims(session: Session, brief: Brief, ledger: list[dict[str, Any]]) -> int:
+    """Recreate the claims ledger of a case record, verification rows included — the record
+    is the run's own output, so nothing is re-interpreted here."""
+    for pos, row in enumerate(ledger):
+        ctype_raw = row.get("type") or "other"
+        claim = Claim(
+            brief_id=brief.id,
+            position=pos,
+            section=row.get("section") or "other",
+            text=row.get("text") or "",
+            claim_type=ClaimType(ctype_raw) if ctype_raw in set(ClaimType) else ClaimType.other,
+            load_bearing=bool(row.get("load_bearing", True)),
+            cited_source_url=_clean(row.get("cited_source_url")),
+        )
+        session.add(claim)
+        for v in row.get("verifications") or []:
+            status_raw = v.get("status") or "unverified"
+            method_raw = v.get("method") or "manual"
+            session.add(
+                Verification(
+                    claim=claim,
+                    status=(
+                        VerificationResult(status_raw)
+                        if status_raw in set(VerificationResult)
+                        else VerificationResult.unverified
+                    ),
+                    method=(
+                        VerificationMethod(method_raw)
+                        if method_raw in set(VerificationMethod)
+                        else VerificationMethod.manual
+                    ),
+                    evidence_url=_clean(v.get("evidence_url")),
+                    evidence_excerpt=_clean(v.get("excerpt") or v.get("evidence_excerpt")),
+                    notes=_clean(v.get("notes")),
+                    model=_clean(v.get("model")),
+                )
+            )
+    session.flush()
+    return len(ledger)
+
+
+def _bump_sequence(session: Session, number: int) -> None:
+    """Keep the live sequence ahead of an imported positive brief number."""
+    session.execute(
+        text(
+            "SELECT setval('brief_number_seq', "
+            "GREATEST((SELECT last_value FROM brief_number_seq), :n))"
+        ),
+        {"n": int(number)},
+    )
+
+
+def import_engine_cases(session: Session, cases_dir: Path | str | None = None) -> dict[str, Any]:
+    """Import full cases recorded as ``<date>/<company>.run.json`` (the pipeline's own run
+    record: run summary, every candidate with its decision, the brief with its statuses, and
+    the claims ledger with each verification). These are cases the engine produced outside the
+    scheduled job — the first one is N° 121 Crusoe, built in-session on 5 Sep 2026 — so they
+    keep their **live** status: not historical, verified / audited as recorded, positive
+    brief number, PDF + app page copied into storage. Idempotent by (date, file).
+
+    Two guards keep the live rules intact: a day that already has a live brief keeps it
+    (the case is then stored as ``historical`` with its statuses unchanged, so the one-live-
+    brief-per-day rule holds), and a brief number already taken falls back to a negative one.
+    """
+    folder = Path(cases_dir) if cases_dir else CASES_DIR
+    created = skipped = failed = 0
+    errors: list[dict[str, str]] = []
+    if not folder.exists():
+        return {"source": SOURCE_CASES, "files": 0, "created": 0, "skipped": 0, "failed": 0}
+    files = sorted(folder.glob("*/*.run.json"))
+    for record in files:
+        day_raw = record.parent.name
+        stem = record.name[: -len(".run.json")]
+        key = _case_key(day_raw, stem)
+        try:
+            with session.begin_nested():
+                data = _read_json(record)
+                parsed = parse_trigger_date(day_raw)
+                if parsed.date is None:
+                    raise ValueError(f"folder name {day_raw!r} is not a date")
+                day = parsed.date
+                if _find_case(session, key) is not None:
+                    skipped += 1
+                    continue
+                brief_rec = data["brief"]
+                bdata = dict(brief_rec.get("brief_data") or {})
+                company = _clean(bdata.get("company")) or stem
+                norm = company_norm(company)
+                run_rec = data.get("run") or {}
+
+                run = Run(
+                    run_date=day,
+                    attempt=(
+                        session.scalar(
+                            select(func.coalesce(func.max(Run.attempt), 0)).where(
+                                Run.run_date == day
+                            )
+                        )
+                        or 0
+                    )
+                    + 1,
+                    started_at=_surfaced_at(day),
+                    finished_at=_surfaced_at(day),
+                    status=RunStatus.success,
+                    execution_mode=ExecutionMode.production,
+                    summary={
+                        **(run_rec.get("summary") or {}),
+                        "source": SOURCE_CASES,
+                        "backfill": True,
+                        "case_file": str(record.relative_to(folder)),
+                    },
+                )
+                session.add(run)
+                session.flush()
+
+                selected: Candidate | None = None
+                for c in data.get("candidates") or []:
+                    decision_raw = c.get("decision") or "not_selected"
+                    series_raw = c.get("series")
+                    trig = _clean(c.get("trigger_reason")) or (
+                        _clean(bdata.get("deck")) if c.get("decision") == "selected" else None
+                    )
+                    trig_date = parse_trigger_date(c.get("trigger_date") or "").date
+                    cand = Candidate(
+                        run_id=run.id,
+                        rank=c.get("rank"),
+                        company_raw=c.get("company") or "",
+                        company_norm=company_norm(c.get("company") or ""),
+                        track=1,
+                        series=Series(series_raw)
+                        if series_raw in {s.value for s in Series}
+                        else None,
+                        trigger_reason_raw=trig,
+                        trigger_reason_norm=trigger_key(trig) if trig else None,
+                        trigger_date=trig_date,
+                        source_url=_clean(c.get("source_url")),
+                        source_tier=source_tier(_clean(c.get("source_url"))),
+                        raw_json=dict(c),
+                        gate_results=c.get("gate_results"),
+                        score_total=c.get("score_total"),
+                        score_breakdown=c.get("score_breakdown"),
+                        recommended_team=_clean(c.get("recommended_team")),
+                        decision=(
+                            CandidateDecision(decision_raw)
+                            if decision_raw in set(CandidateDecision)
+                            else CandidateDecision.not_selected
+                        ),
+                        decision_reason=_clean(c.get("reason")),
+                    )
+                    session.add(cand)
+                    if (
+                        cand.decision == CandidateDecision.selected
+                        and cand.company_norm == norm
+                        and selected is None
+                    ):
+                        selected = cand
+                if selected is None:
+                    selected = Candidate(
+                        run_id=run.id,
+                        rank=1,
+                        company_raw=company,
+                        company_norm=norm,
+                        track=1,
+                        series=(
+                            Series(bdata["series_label"])
+                            if bdata.get("series_label") in {s.value for s in Series}
+                            else None
+                        ),
+                        trigger_reason_raw=_clean(bdata.get("deck")),
+                        trigger_reason_norm=trigger_key(bdata["deck"])
+                        if bdata.get("deck")
+                        else None,
+                        trigger_date=day,
+                        raw_json={"from": "brief_data"},
+                        score_total=bdata.get("score")
+                        if isinstance(bdata.get("score"), int)
+                        else None,
+                        recommended_team=_clean(bdata.get("team_label")),
+                        decision=CandidateDecision.selected,
+                        decision_reason="selected (case record)",
+                    )
+                    session.add(selected)
+                session.flush()
+
+                live_exists = session.scalar(
+                    select(Brief).where(
+                        Brief.run_date == day,
+                        Brief.historical.is_(False),
+                        Brief.verification_status != VerificationStatus.blocked,
+                    )
+                )
+                number = brief_rec.get("number")
+                number_taken = (
+                    isinstance(number, int)
+                    and session.scalar(select(Brief).where(Brief.brief_number == number))
+                    is not None
+                )
+                if not isinstance(number, int) or number_taken:
+                    number = _next_negative_number(session)
+                vs_raw = brief_rec.get("verification_status") or "needs_review"
+                audit_raw = brief_rec.get("audit_status") or "pending"
+                mode_raw = brief_rec.get("mode")
+                bdata.update(
+                    {
+                        "engine_case_key": key,
+                        "engine_case_file": str(record.relative_to(folder)),
+                        "historical": live_exists is not None,
+                        "historical_source": SOURCE_CASES if live_exists is not None else None,
+                        "historical_label": f"N° {brief_rec.get('number')}"
+                        if live_exists is not None and brief_rec.get("number")
+                        else bdata.get("historical_label"),
+                    }
+                )
+                pdf_path = _copy_case_file(_sibling(record, ".pdf"), f"{day_raw}_{stem}.pdf")
+                brief = Brief(
+                    candidate_id=selected.id,
+                    run_date=day,
+                    brief_number=number,
+                    historical=live_exists is not None,
+                    verification_status=(
+                        VerificationStatus(vs_raw)
+                        if vs_raw in set(VerificationStatus)
+                        else VerificationStatus.needs_review
+                    ),
+                    audit_status=(
+                        AuditStatus(audit_raw)
+                        if audit_raw in set(AuditStatus)
+                        else AuditStatus.pending
+                    ),
+                    audit_attempts=int(brief_rec.get("audit_attempts") or 0),
+                    brief_data=bdata,
+                    mode=mode_raw if mode_raw in {"A", "B", "C"} else None,
+                    pdf_path=pdf_path,
+                    html_path=_copy_case_file(_sibling(record, ".html"), f"{day_raw}_{stem}.html"),
+                    web_html_path=_copy_case_file(
+                        _sibling(record, ".web.html"), f"{day_raw}_{stem}.web.html"
+                    ),
+                    page_count=brief_rec.get("pages")
+                    or (page_count_of(pdf_path) if pdf_path else None),
+                )
+                session.add(brief)
+                session.flush()
+                if number > 0:
+                    _bump_sequence(session, number)
+                _ledger_claims(session, brief, data.get("ledger") or [])
+                if selected.trigger_reason_norm:
+                    _upsert_surfaced(
+                        session,
+                        norm,
+                        selected.trigger_reason_norm,
+                        company,
+                        _surfaced_at(day),
+                        brief.id,
+                    )
+                created += 1
+        except Exception as exc:  # noqa: BLE001 — one bad record must not stop the import
+            failed += 1
+            errors.append({"file": str(record), "why": f"{type(exc).__name__}: {exc}"[:300]})
+    session.flush()
+    return {
+        "source": SOURCE_CASES,
+        "files": len(files),
+        "created": created,
+        "skipped": skipped,
+        "failed": failed,
+        "errors": errors,
+    }
+
+
 # --- 3. operator-exported PDFs -------------------------------------------------------------------
 
 
@@ -725,6 +1029,9 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--repo", action="store_true", help="import briefs/history.json + PDFs")
     parser.add_argument("--pdfs", metavar="DIR", help="attach <YYYY-MM-DD>_<company>.pdf files")
     parser.add_argument(
+        "--cases", action="store_true", help="import intel/cases/<date>/<company>.run.json records"
+    )
+    parser.add_argument(
         "--restart-sequence",
         type=int,
         metavar="N",
@@ -734,9 +1041,9 @@ def main(argv: list[str] | None = None) -> None:
         ),
     )
     args = parser.parse_args(argv)
-    do_signals, do_repo = args.signals, args.repo
-    if not (do_signals or do_repo or args.pdfs or args.restart_sequence is not None):
-        do_signals = do_repo = True
+    do_signals, do_repo, do_cases = args.signals, args.repo, args.cases
+    if not (do_signals or do_repo or do_cases or args.pdfs or args.restart_sequence is not None):
+        do_signals = do_repo = do_cases = True
 
     from intel.db import session_scope
 
@@ -753,6 +1060,8 @@ def main(argv: list[str] | None = None) -> None:
             print(json.dumps(import_repo_briefs(session), indent=1, ensure_ascii=False))
         if args.pdfs:
             print(json.dumps(attach_pdfs(session, args.pdfs), indent=1, ensure_ascii=False))
+        if do_cases:
+            print(json.dumps(import_engine_cases(session), indent=1, ensure_ascii=False))
         if args.restart_sequence is not None:
             restart_sequence(session, args.restart_sequence)
             print(f"brief_number_seq restarted at {args.restart_sequence}")

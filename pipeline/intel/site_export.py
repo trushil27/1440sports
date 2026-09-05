@@ -232,6 +232,23 @@ def infer_series(card: dict[str, Any], data: dict[str, Any]) -> tuple[str | None
     return None, False
 
 
+ENGINE_START = "2026-05-05"  # first row the n8n daily engine produced (build brief §3)
+SWEEP_DATE = {"fe_sweep_signals_2026-09-05": "2026-09-05"}
+
+
+def surfaced_date(brief: Brief, row_date: str) -> str:
+    """When the desk surfaced the signal. The n8n log stored the article date, so rows read
+    'January' for an engine that started in May; a sweep row carries its trigger date. The
+    trigger date is kept separately on the entry."""
+    d = brief.brief_data or {}
+    src = d.get("historical_source") or ""
+    if src in SWEEP_DATE:
+        return SWEEP_DATE[src]
+    if brief.historical and row_date < ENGINE_START:
+        return ENGINE_START
+    return row_date
+
+
 def brief_label(brief: Brief) -> str:
     d = brief.brief_data or {}
     if brief.historical and d.get("historical_label"):
@@ -285,6 +302,7 @@ def brief_entry(
     entry = {
         **card,
         "key": f"{card['date']}|{company_norm(card['company'])}",
+        "date": surfaced_date(brief, card["date"]),
         "review": rv,
         "source_label": d.get("historical_source") if brief.historical else "engine",
         "series": series,
@@ -395,6 +413,7 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
     )
     merge_same_company(entries)
     attach_deal_updates(entries, session.scalars(select(Sponsor)).all())
+    entries.sort(key=lambda e: (e["date"], e.get("trigger_date") or ""), reverse=True)
     sponsors = [
         sponsor_row(s)
         for s in session.scalars(
