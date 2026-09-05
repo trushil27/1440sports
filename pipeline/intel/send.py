@@ -145,11 +145,13 @@ class GraphMailer:
             return self._token
         url = f"{LOGIN}/{self.tenant_id}/oauth2/v2.0/token"
         if self.refresh_token:  # delegated fallback (§11.2)
+            # `.default` = every delegated permission the user consented to at sign-in
+            # (Mail.Send + Mail.ReadWrite for draft-then-send; see docs/RUNBOOK.md §2).
             data = {
                 "client_id": self.client_id,
                 "grant_type": "refresh_token",
                 "refresh_token": self.refresh_token,
-                "scope": "https://graph.microsoft.com/Mail.Send offline_access",
+                "scope": "https://graph.microsoft.com/.default offline_access",
             }
             if self.client_secret:
                 data["client_secret"] = self.client_secret

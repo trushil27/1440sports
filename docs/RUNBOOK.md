@@ -53,8 +53,27 @@ APP_COOKIE_SECURE=true
    `Running upgrade -> 0001 … 0003` → seed counts → `[entrypoint] starting`.
 2. **Graph consent**: Entra app registration → API permissions → Microsoft Graph → *Application* →
    `Mail.Send` → grant admin consent; Exchange Application Access Policy scoped to
-   `GRAPH_SENDER`. (See `scheduling/SCHEDULE_SETUP.md` for the click path.) If consent is refused,
-   set `GRAPH_REFRESH_TOKEN` instead — same code path.
+   `GRAPH_SENDER`. (See `scheduling/SCHEDULE_SETUP.md` for the click path.)
+   **No tenant admin available?** Use delegated auth on the sender's own mailbox instead —
+   same app registration, same code path:
+   - API permissions: remove the *Application* `Mail.Send` row; add *Delegated*
+     `Mail.Send`, `Mail.ReadWrite` (draft-then-send + outreach drafts) and `offline_access`.
+   - Authentication → *Allow public client flows* = **Yes** (enables the device-code sign-in).
+   - Sign in once with the device-code flow and keep the refresh token:
+     ```
+     curl -X POST https://login.microsoftonline.com/<tenant>/oauth2/v2.0/devicecode \
+       -d "client_id=<client id>" \
+       -d "scope=https://graph.microsoft.com/Mail.Send https://graph.microsoft.com/Mail.ReadWrite offline_access"
+     # open the verification_uri, enter user_code, sign in as GRAPH_SENDER, then:
+     curl -X POST https://login.microsoftonline.com/<tenant>/oauth2/v2.0/token \
+       -d "grant_type=urn:ietf:params:oauth:grant-type:device_code" \
+       -d "client_id=<client id>" -d "device_code=<device_code from the first reply>"
+     ```
+   - Set `GRAPH_TENANT_ID`, `GRAPH_CLIENT_ID`, `GRAPH_SENDER` and `GRAPH_REFRESH_TOKEN`
+     (the `refresh_token` from the second reply). Leave `GRAPH_CLIENT_SECRET` unset for a
+     public client. Mail goes out from `GRAPH_SENDER`'s mailbox via `/me`.
+   - The token stays valid while it is used (daily); if a [RUN FAILED] email ever shows
+     `invalid_grant`, repeat the two commands and update `GRAPH_REFRESH_TOKEN`.
 3. **Smoke run** (any time of day): `python -m intel.schedule --force --no-wait` on the Railway
    service. In shadow mode the operator receives the [SHADOW]/[REVIEW]/[NO SIGNAL] email; the MD
    receives nothing.
