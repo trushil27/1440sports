@@ -1,0 +1,686 @@
+{
+ "run": {
+  "id": 104,
+  "date": "2026-09-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "decisions": {
+    "stale": 1,
+    "selected": 1,
+    "not_selected": 1,
+    "below_threshold": 2
+   },
+   "candidates": 5,
+   "verification": [
+    {
+     "pdf": "/home/user/1440sports/briefs/2026-09-05/crusoe.pdf",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Crusoe",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 8
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 166,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 174,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Crusoe",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 80,
+   "score_breakdown": {
+    "cap": null,
+    "base": 80,
+    "total": 80,
+    "timing": 17,
+    "ops_fit": 15,
+    "ranking": 80,
+    "urgency": 13,
+    "capacity": 20,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 80,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 80,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "MoneyGram Haas F1 Team",
+   "source_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation",
+   "trigger_date": "2026-09-03"
+  },
+  {
+   "rank": 2,
+   "company": "Fluidstack",
+   "series": "F1",
+   "decision": "not_selected",
+   "reason": "eligible but outranked",
+   "score_total": 74,
+   "score_breakdown": {
+    "cap": null,
+    "base": 74,
+    "total": 74,
+    "timing": 16,
+    "ops_fit": 14,
+    "ranking": 74,
+    "urgency": 12,
+    "capacity": 18,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 74,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 74,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Atlassian Williams Racing",
+   "source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "trigger_date": "2026-09-03"
+  },
+  {
+   "rank": 3,
+   "company": "Base Power",
+   "series": "FE",
+   "decision": "stale",
+   "reason": "trigger 2026-08-03 (day) is 33 days old; window is 14",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Envision Racing",
+   "source_url": "https://techcrunch.com/2026/08/03/base-power-raises-another-1b-to-save-the-grid-using-backyard-batteries/",
+   "trigger_date": "2026-08-03"
+  },
+  {
+   "rank": 4,
+   "company": "Emerald AI",
+   "series": "FE",
+   "decision": "below_threshold",
+   "reason": "ranking score 66 < threshold 70",
+   "score_total": 66,
+   "score_breakdown": {
+    "cap": null,
+    "base": 66,
+    "total": 66,
+    "timing": 15,
+    "ops_fit": 12,
+    "ranking": 66,
+    "urgency": 12,
+    "capacity": 11,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 66,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 66,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Envision Racing",
+   "source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "trigger_date": "2026-08-25"
+  },
+  {
+   "rank": 5,
+   "company": "Gimlet Labs",
+   "series": "F1",
+   "decision": "below_threshold",
+   "reason": "ranking score 63 < threshold 70",
+   "score_total": 63,
+   "score_breakdown": {
+    "cap": null,
+    "base": 63,
+    "total": 63,
+    "timing": 15,
+    "ops_fit": 12,
+    "ranking": 63,
+    "urgency": 11,
+    "capacity": 13,
+    "brand_fit": 12,
+    "alumni_boost": 0,
+    "of_gate_applied": true
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 12
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-crusoe-fluidstack-multibillion-dollar-ai-infrastructure/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 63,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 63,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Audi F1 Team",
+   "source_url": "https://news.crunchbase.com/venture/biggest-funding-rounds-crusoe-fluidstack-multibillion-dollar-ai-infrastructure/",
+   "trigger_date": "2026-09-04"
+  }
+ ],
+ "brief": {
+  "number": 121,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "brief_data": {
+   "hq": "Denver, Colorado",
+   "deck": "Crusoe, the energy-first AI-infrastructure builder behind OpenAI's 1.2 GW Abilene campus, has reportedly closed a $3B+ Series F at a ~$30B valuation (Bloomberg, 3 Sep 2026), nearly tripling its October 2025 mark, days after a reported ~$13B five-year Jane Street cloud contract.",
+   "risks": [
+    {
+     "label": "REPORTED, NOT CONFIRMED",
+     "detail": "The Series F and the Jane Street contract are Bloomberg-reported; no Crusoe release yet.",
+     "counter": "Anchor on the confirmed Series E and Abilene facts; ask Crusoe to confirm the round on the first call."
+    },
+    {
+     "label": "B2B BRAND, NO CMO",
+     "detail": "Marketing sits at VP level; the audience is enterprise and capital markets, not fans.",
+     "counter": "Frame it as IPO-window brand building on the CoreWeave precedent, with measurable enterprise activations."
+    }
+   ],
+   "score": 80,
+   "ticker": "Private (~$30B reported; $3B+ Series F, Sep 2026)",
+   "company": "Crusoe",
+   "gridfit": [
+    {
+     "team": "MoneyGram Haas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies, Google Cloud, Schneider Electric",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "CoreWeave, NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "TAKEN",
+     "detail": "Microsoft",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "signals": [
+    "funding_event",
+    "mega_contract",
+    "category_precedent"
+   ],
+   "sources": [
+    "https://www.globenewswire.com/news-release/2025/10/24/3172932/0/en/Crusoe-the-AI-Factory-Company-Raising-1-375-Billion-at-a-Valuation-Above-10-Billion-to-Power-the-Future-of-AI-Infrastructure.html",
+    "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation",
+    "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-e-funding",
+    "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+    "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-signs-roughly-13-billion-ai-cloud-deal-with-jane-street",
+    "https://www.crusoe.ai/resources/newsroom/crusoe-announces-flagship-abilene-data-center-is-live"
+   ],
+   "date_long": "05 SEP 2026",
+   "discovery": "scan",
+   "team_label": "TGR Haas F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A reported $3B+ Series F at ~$30B, a reported ~$13B Jane Street contract and a live 1.2 GW Stargate campus put Crusoe at peak brand-investment authority while its direct rival CoreWeave already sits on Aston Martin. Haas offers the open cloud-compute lane and two US home races inside the window.",
+   "footer_date": "5 SEP 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round reported 3 Sep; Austin and Las Vegas inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 20,
+     "note": "~$30B valuation, $3B+ raise, ~$13B contract (reported).",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "Energy-plus-compute story; B2B brand, no consumer face.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "IPO-track narrative; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: elastic GPU capacity outside the aero cap.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Crusoe's reported $3B+ Series F at roughly $30B post-money, co-led by Atreides Management and Valor Equity Partners with Mubadala Capital participating, nearly triples the $10B+ valuation set by its $1.375B Series E in October 2025. The company builds and powers gigawatt-scale AI data centres - the first phase of the 1.2 GW Stargate campus in Abilene, Texas is live for Oracle and OpenAI - and sells GPU cloud to OpenAI, Microsoft and Meta. Bloomberg also reports a ~$13B, five-year AI-cloud contract with Jane Street, its highest-profile cloud customer yet.",
+   "the_case_p2": "The grid has already proved this archetype buys F1: CoreWeave signed with Aston Martin Aramco in May 2025 as Official AI Cloud Computing Partner, and Core Scientific joined Cadillac for 2026. Crusoe's closest rival is on the grid and Crusoe is not, and no team carries a brand that owns both halves of the AI build-out, the power and the compute.",
+   "track_label": "",
+   "brief_number": "121",
+   "claims_total": 17,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$3B+ Series F at ~$30B post-money, reported by Bloomberg 3 Sep 2026",
+     "value": "$3B+",
+     "claim_id": 516,
+     "verified": true,
+     "source_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation"
+    },
+    {
+     "fact": "Bloomberg also reports a ~$13B, five-year AI-cloud contract with Jane Street, its highest-profile cloud cus…",
+     "value": "$13B",
+     "claim_id": 527,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Infrastructure · GPU Cloud / Datacentre Builder",
+   "value_content": "MODE A - operational. A cost-capped team's fastest lever is elastic GPU capacity for the workloads outside the FIA aero-testing limits: machine-learning surrogates, driver-in-loop and race-strategy simulation, telemetry and video analytics between sessions. Crusoe supplies that capacity on demand with an energy story the team can tell on camera; Haas supplies a named compute partnership, livery presence and US-race hospitality for Crusoe's enterprise and capital-markets audiences.",
+   "value_section": true,
+   "why_team_para": "Haas is the lean American privateer with the most open technology roster: Toyota Gazoo Racing as title partner, Mphasis for digital services and RUCKUS for networking, but no cloud or GPU-compute partner. Crusoe brings American-built, energy-first compute a cost-capped team can actually consume, plus a US home-market story for Austin and Las Vegas. Audi and Racing Bulls are also open; Cadillac (Core Scientific, TWG AI), Red Bull (Oracle), Mercedes (AWS), McLaren (Google Cloud, Dell) and Aston Martin (CoreWeave) are not.",
+   "deal_arch_para": "Entry as Official AI Cloud Compute Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning a probable listing window and three US-race cycles. Estimated $5-8M/yr, part-payable in compute credits. Scope: sidepod placement, naming of the team's compute environment, Austin and Las Vegas hospitality, co-produced engineering content.",
+   "footer_company": "CRUSOE",
+   "why_team_label": "WHY TGR HAAS F1 TEAM",
+   "claims_verified": 17,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series F was reported on 3 September and brand-investment authority peaks in the quarter after a round. The US GP in Austin (late October) and the Las Vegas GP (November) are the two home-market stages before 2027 partner rosters lock.",
+   "confidence_level": "MEDIUM",
+   "decision_maker_bio": "Lochmiller co-founded Crusoe in 2018 and fronts every raise and mega-contract; a deal of this scale is his call. Path: Sharieff Mansour, VP Marketing (sponsorship owner; reported), Cully Cavness, President and Chief Strategy Officer, and CTO Nitin Perumbeti on compute scope.",
+   "decision_maker_name": "Chase Lochmiller",
+   "decision_maker_role": "CEO & Co-Founder, Crusoe",
+   "opening_angle_intro": "Lead with the Aston Martin precedent.",
+   "opening_angle_quote": "&ldquo;Chase, CoreWeave bought its F1 seat at Aston Martin in the year of its IPO; your Series F and the Austin race land in the same quarter, and the cloud-compute lane at Haas is open. 25 minutes before Las Vegas to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Chase Lochmiller, CEO & Co-Founder at Crusoe",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2025/10/24/3172932/0/en/Crusoe-the-AI-Factory-Company-Raising-1-375-Billion-at-a-Valuation-Above-10-Billion-to-Power-the-Future-of-AI-Infrastructure.html",
+     "excerpt": "Chase Lochmiller, CEO and co-founder of Crusoe (Series E release, 24 Oct 2025)",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$3B+ Series F at ~$30B post-money, reported by Bloomberg 3 Sep 2026",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation",
+     "excerpt": "Bloomberg, 3 Sep 2026: raised over $3 billion in a Series F at a roughly $30 billion post-money valuation; co-led by Atreides Management and Valor Equity Partners, with Mubadala Capital participating. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Atreides Management and Valor Equity Partners (co-leads); Mubadala Capital",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation",
+     "excerpt": "Bloomberg, 3 Sep 2026: raised over $3 billion in a Series F at a roughly $30 billion post-money valuation; co-led by Atreides Management and Valor Equity Partners, with Mubadala Capital participating. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Crusoe Cloud bookings ~5x year on year through Q3 2025; power pipeline over 45 GW (company, Oct 2025)",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-e-funding",
+     "excerpt": "Crusoe newsroom, 24 Oct 2025: $1.375B Series E at a valuation above $10B, co-led by Valor Equity Partners and Mubadala Capital; Crusoe Cloud bookings ~5x in the first three quarters of 2025; power pipeline over 45 GW.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$3B+ Series F at ~$30B post-money, reported by Bloomberg 3 Sep 2026",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation",
+     "excerpt": "Bloomberg, 3 Sep 2026: raised over $3 billion in a Series F at a roughly $30 billion post-money valuation; co-led by Atreides Management and Valor Equity Partners, with Mubadala Capital participating. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CoreWeave is Official AI Cloud Computing Partner of Aston Martin Aramco (multi-year, May 2025)",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+     "excerpt": "Aston Martin Aramco, 22 May 2025: CoreWeave joins as Official AI Cloud Computing Partner in a multi-year partnership; wind tunnel named the CoreWeave Wind Tunnel.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "First phase of the 1.2 GW Stargate campus in Abilene, Texas is live for Oracle and OpenAI; ~$13B five-year Jane Street AI-cloud contract reported by Bloomberg",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-signs-roughly-13-billion-ai-cloud-deal-with-jane-street",
+     "excerpt": "Bloomberg, 3 Sep 2026: ~$13 billion, five-year AI-cloud contract to supply Jane Street with GPU clusters via Crusoe's cloud platform. Reported.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Denver, Colorado; Abilene, Texas campus; Bellevue, Washington office",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-flagship-abilene-data-center-is-live",
+     "excerpt": "Crusoe newsroom: first phase of the Stargate flagship campus in Abilene, Texas is live on Oracle Cloud Infrastructure for OpenAI; 1.2 GW planned capacity.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation",
+     "excerpt": "Bloomberg, 3 Sep 2026: raised over $3 billion in a Series F at a roughly $30 billion post-money valuation; co-led by Atreides Management and Valor Equity Partners, with Mubadala Capital participating. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Chase Lochmiller, CEO & Co-Founder, Crusoe at Crusoe",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2025/10/24/3172932/0/en/Crusoe-the-AI-Factory-Company-Raising-1-375-Billion-at-a-Valuation-Above-10-Billion-to-Power-the-Future-of-AI-Infrastructure.html",
+     "excerpt": "Chase Lochmiller, CEO and co-founder of Crusoe (Series E release, 24 Oct 2025)",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Crusoe, the energy-first AI-infrastructure builder behind OpenAI's 1.2 GW Abilene campus, has reportedly closed a $3B+ Series F at a ~$30B valuation (Bloomberg, 3 Sep 2026), nearly tripling its October 2025 mark, days after a reported ~$13B five-year Jane Street cloud contract.",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation",
+     "excerpt": "Bloomberg, 3 Sep 2026: raised over $3 billion in a Series F at a roughly $30 billion post-money valuation; co-led by Atreides Management and Valor Equity Partners, with Mubadala Capital participating. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Crusoe's reported $3B+ Series F at roughly $30B post-money, co-led by Atreides Management and Valor Equity Partners with Mubadala Capital participating, nearly triples the $10B+ valuation set by its $1.375B Series E in October 2025.",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation",
+     "excerpt": "Bloomberg, 3 Sep 2026: raised over $3 billion in a Series F at a roughly $30 billion post-money valuation; co-led by Atreides Management and Valor Equity Partners, with Mubadala Capital participating. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Bloomberg also reports a ~$13B, five-year AI-cloud contract with Jane Street, its highest-profile cloud customer yet.",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-signs-roughly-13-billion-ai-cloud-deal-with-jane-street",
+     "excerpt": "Bloomberg, 3 Sep 2026: ~$13 billion, five-year AI-cloud contract to supply Jane Street with GPU clusters via Crusoe's cloud platform. Reported.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A reported $3B+ Series F at ~$30B, a reported ~$13B Jane Street contract and a live 1.2 GW Stargate campus put Crusoe at peak brand-investment authority while its direct rival CoreWeave already sits on Aston Martin.",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation",
+     "excerpt": "Bloomberg, 3 Sep 2026: raised over $3 billion in a Series F at a roughly $30 billion post-money valuation; co-led by Atreides Management and Valor Equity Partners, with Mubadala Capital participating. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited report"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CoreWeave at Aston Martin Aramco",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "CoreWeave → Aston Martin Aramco F1 Team (team_major, active)",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "section": "opening_angle_quote",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin race",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null
+    }
+   ]
+  }
+ ]
+}

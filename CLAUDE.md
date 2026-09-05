@@ -70,9 +70,27 @@ the legacy `engine/` (which stays until M8 cut-over):
 sponsor-table checks, writer + 13-rule audit + June-format renderer, Graph mailer + §7
 distribution + London scheduler, history backfill (`python -m intel.backfill`), FastAPI
 (`api/`, passkey + magic-link auth) and the Next.js PWA (`web/`). `docs/RUNBOOK.md` is the
-deploy/cut-over checklist. **Every "live run" / shadow-mode acceptance item is blocked on
-credentials this environment does not have** (`ANTHROPIC_API_KEY`, Graph, Railway, Vercel).
-M8 cut-over needs three clean shadow days first.
+deploy/cut-over checklist. M8 cut-over needs three clean shadow days first.
+
+**Deployment (5 Sep 2026):** Railway daily-job service is live from the root `Dockerfile`
+(migrations 0001–0003 applied, seeds loaded, Postgres + `/data` volume, Graph delegated
+refresh token as the mailer — the [RUN FAILED]/[SHADOW] emails do arrive). Four smoke runs
+failed in the scan stage and each fix is in `main`: Railway-style `postgresql://` URL
+(psycopg pin), the regressed 4×25 scoring text in the v2.1.8 prompt (2.1.3 block spliced in
+at run time + tolerant parser), and `pause_turn` on web-search turns (`intel/llm.py` resume
+loop). The Custom Start Command may still be the smoke-run command — clear it once a run
+succeeds so the cron slot check applies again.
+
+**First brief out of the new pipeline — N° 121 Crusoe → TGR Haas F1 Team (80/100), 5 Sep 2026**
+(`briefs/2026-09-05/`): produced in-session with Claude as scanner/verifier/writer through the
+pipeline's injectable stages (no API key in the sandbox), against a local migrated + seeded +
+backfilled Postgres. Verified 17/17, audit pass, 2 pages, sequence restarted at 121.
+`crusoe-verification.md` states the egress limitation (facts are REPORTED via Bloomberg/
+TechCrunch/Forbes summaries — confidence MEDIUM, footer VERIFY BEFORE CIRCULATION);
+`crusoe.run.json` is the run record + ledger; `crusoe.session_run.py` reproduces it. That render
+exposed and fixed three pipeline defects: literal `<b class="hl">` in emphasis (Markup),
+duplicate proof-point cards (dedup by figure), and GRID FIT blind to cloud rivals ("cloud" was a
+stop-word; 30 tech partners now categorised in `seeds/sponsor_categories.json`).
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;

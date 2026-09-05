@@ -185,6 +185,11 @@ class BriefData(WrittenBrief):
 
     def render_context(self) -> dict[str, Any]:
         """Plain dict for Jinja with markup converted for HTML."""
+        from markupsafe import Markup
+
+        # emphasis_to_html() has already escaped the text and re-opened only the spec's
+        # <font> emphasis as <b class="hl">; mark it safe so Jinja's autoescape does not
+        # print the tag literally (the first live render showed "<b class="hl">THREE YEARS</b>").
         d = self.model_dump()
         for key in (
             "deck",
@@ -198,13 +203,13 @@ class BriefData(WrittenBrief):
             "opening_angle_quote",
             "bottom_line",
         ):
-            d[key + "_html"] = emphasis_to_html(getattr(self, key))
-        d["why_now_html"] = emphasis_to_html(self.why_now_text)
+            d[key + "_html"] = Markup(emphasis_to_html(getattr(self, key)))
+        d["why_now_html"] = Markup(emphasis_to_html(self.why_now_text))
         d["risks_html"] = [
             {
                 "label": r.label,
-                "detail": emphasis_to_html(r.detail),
-                "counter": emphasis_to_html(r.counter),
+                "detail": Markup(emphasis_to_html(r.detail)),
+                "counter": Markup(emphasis_to_html(r.counter)),
             }
             for r in self.risks
         ]

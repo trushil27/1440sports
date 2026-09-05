@@ -74,6 +74,10 @@ _STOP = {
     "data",
     "cloud",
 }
+# For the GRID FIT lane match "cloud" is a real category word (Oracle at Red Bull, CoreWeave at
+# Aston Martin, Google Cloud at McLaren); the first live render showed Red Bull OPEN for a GPU-cloud
+# company because the generic stop-list swallowed it. "data" stays generic (services partners).
+_LANE_STOP = _STOP - {"cloud"}
 _MONEY = re.compile(
     r"(?:[$€£]\s?\d[\d.,]*\s?(?:[MBK]|bn|million|billion|m|b)?\+?)|(?:\d+(?:\.\d+)?%)|(?:\b\d[\d,]*\+)",
     re.IGNORECASE,
@@ -134,8 +138,25 @@ def proof_points_from_ledger(claims: list[Claim], limit: int = 6) -> list[ProofP
                 claim_id=c.id,
             )
         )
-    pts.sort(key=lambda p: not p.verified)
-    return pts[:limit]
+    # verified first, the scanner's key facts before sentences lifted from the prose, and one
+    # card per figure — the first live render showed "$3B+" four times.
+    pts.sort(key=lambda p: (not p.verified, _section_rank(claims, p.claim_id)))
+    seen: set[str] = set()
+    unique: list[ProofPoint] = []
+    for p in pts:
+        key = re.sub(r"[\s,+~]", "", p.value.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(p)
+    return unique[:limit]
+
+
+def _section_rank(claims: list[Claim], claim_id: int | None) -> int:
+    for c in claims:
+        if c.id == claim_id:
+            return 0 if c.section in ("key_facts", "trigger") else 1
+    return 1
 
 
 def sources_from_ledger(claims: list[Claim], limit: int = 8) -> list[str]:
@@ -175,6 +196,15 @@ def ledger_counts(claims: list[Claim]) -> tuple[int, int]:
 def _tokens(text: str | None) -> set[str]:
     return {
         t for t in re.split(r"[^a-z0-9]+", (text or "").lower()) if len(t) > 2 and t not in _STOP
+    }
+
+
+def _lane_tokens(text: str | None) -> set[str]:
+    """Category-lane tokens: like ``_tokens`` but keeps "cloud" (see ``_LANE_STOP``)."""
+    return {
+        t
+        for t in re.split(r"[^a-z0-9]+", (text or "").lower())
+        if len(t) > 2 and t not in _LANE_STOP
     }
 
 
@@ -219,7 +249,7 @@ def build_gridfit(
         crowded: list[str] = []
         for p in partners:
             blob = " ".join(filter(None, [p.category, p.notes])).lower()
-            ptoks = _tokens(blob)
+            ptoks = _lane_tokens(blob)
             if not ptoks:
                 continue
             if ptoks & lane_tokens:
@@ -286,7 +316,7 @@ def assemble(
     """Fill the computed fields from the ledger + sponsors table around the written text."""
     claims = list(brief.claims)
     verified_n, total_n = ledger_counts(claims)
-    lane = _tokens(written.industry_meta)
+    lane = _lane_tokens(written.industry_meta)
     domain = lane | (industry_tokens_extra or set())
     grid, note = build_gridfit(session, written.series_label, written.team_label, lane, domain)
     pts = proof_points_from_ledger(claims)

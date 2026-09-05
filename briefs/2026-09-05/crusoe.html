@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Crusoe</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "CRUSOE · 5 SEP 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 121</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 121 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Crusoe</h1>
+  <div class="classline">AI Infrastructure · GPU Cloud / Datacentre Builder · Denver, Colorado · Private (~$30B reported; $3B+ Series F, Sep 2026)</div>
+
+  <div class="lede">Crusoe, the energy-first AI-infrastructure builder behind OpenAI's 1.2 GW Abilene campus, has reportedly closed a $3B+ Series F at a ~$30B valuation (Bloomberg, 3 Sep 2026), nearly tripling its October 2025 mark, days after a reported ~$13B five-year Jane Street cloud contract.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">80</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">TGR Haas F1 Team</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Crusoe's reported $3B+ Series F at roughly $30B post-money, co-led by Atreides Management and Valor Equity Partners with Mubadala Capital participating, nearly triples the $10B+ valuation set by its $1.375B Series E in October 2025. The company builds and powers gigawatt-scale AI data centres - the first phase of the 1.2 GW Stargate campus in Abilene, Texas is live for Oracle and OpenAI - and sells GPU cloud to OpenAI, Microsoft and Meta. Bloomberg also reports a ~$13B, five-year AI-cloud contract with Jane Street, its highest-profile cloud customer yet.</p>
+<p>The grid has already proved this archetype buys F1: CoreWeave signed with Aston Martin Aramco in May 2025 as Official AI Cloud Computing Partner, and Core Scientific joined Cadillac for 2026. Crusoe's closest rival is on the grid and Crusoe is not, and no team carries a brand that owns both halves of the AI build-out, the power and the compute.</p>
+  <h2>Why Now</h2>
+  <p>The Series F was reported on 3 September and brand-investment authority peaks in the quarter after a round. The US GP in Austin (late October) and the Las Vegas GP (November) are the two home-market stages before 2027 partner rosters lock.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$3B+</div><div class="pfk">$3B+ Series F at ~$30B post-money, reported by Bloomberg 3 Sep 2026</div></div>
+    <div class="pf"><div class="pfv">$13B</div><div class="pfk">Bloomberg also reports a ~$13B, five-year AI-cloud contract with Jane Street, its highest-profile cloud cus…</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (sponsor table; 49 of 346 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">MoneyGram Haas F1 Team<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Dell Technologies, Google Cloud, Schneider Electric</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Aston Martin Aramco F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">CoreWeave, NetApp</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Mercedes-AMG Petronas F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Microsoft</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A reported $3B+ Series F at ~$30B, a reported ~$13B Jane Street contract and a live 1.2 GW Stargate campus put Crusoe at peak brand-investment authority while its direct rival CoreWeave already sits on Aston Martin. Haas offers the open cloud-compute lane and two US home races inside the window.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">mega contract</span><span class="flag">category precedent</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 121</span>
+  </div>
+
+  <h2>WHY TGR HAAS F1 TEAM</h2>
+  <p>Haas is the lean American privateer with the most open technology roster: Toyota Gazoo Racing as title partner, Mphasis for digital services and RUCKUS for networking, but no cloud or GPU-compute partner. Crusoe brings American-built, energy-first compute a cost-capped team can actually consume, plus a US home-market story for Austin and Las Vegas. Audi and Racing Bulls are also open; Cadillac (Core Scientific, TWG AI), Red Bull (Oracle), Mercedes (AWS), McLaren (Google Cloud, Dell) and Aston Martin (CoreWeave) are not.</p>
+
+  <h2>VALUE TO TGR HAAS F1 TEAM &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A - operational. A cost-capped team's fastest lever is elastic GPU capacity for the workloads outside the FIA aero-testing limits: machine-learning surrogates, driver-in-loop and race-strategy simulation, telemetry and video analytics between sessions. Crusoe supplies that capacity on demand with an energy story the team can tell on camera; Haas supplies a named compute partnership, livery presence and US-race hospitality for Crusoe's enterprise and capital-markets audiences.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official AI Cloud Compute Partner. <b class="hl">THREE YEARS</b>, 2027-2029, spanning a probable listing window and three US-race cycles. Estimated $5-8M/yr, part-payable in compute credits. Scope: sidepod placement, naming of the team's compute environment, Austin and Las Vegas hospitality, co-produced engineering content.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Chase Lochmiller</div>
+        <div class="role">CEO &amp; Co-Founder, Crusoe · <span class="vtag">verified</span></div>
+        <div class="bio">Lochmiller co-founded Crusoe in 2018 and fronts every raise and mega-contract; a deal of this scale is his call. Path: Sharieff Mansour, VP Marketing (sponsorship owner; reported), Cully Cavness, President and Chief Strategy Officer, and CTO Nitin Perumbeti on compute scope.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the Aston Martin precedent.</div>      <div class="quote">“Chase, CoreWeave bought its F1 seat at Aston Martin in the year of its IPO; your Series F and the Austin race land in the same quarter, and the cloud-compute lane at Haas is open. 25 minutes before Las Vegas to see the numbers?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Round reported 3 Sep; Austin and Las Vegas inside the window.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">20 <span>/ 20</span></div>
+      <div class="why">~$30B valuation, $3B+ raise, ~$13B contract (reported).</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Energy-plus-compute story; B2B brand, no consumer face.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">IPO-track narrative; no hard deadline.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE A: elastic GPU capacity outside the aero cap.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">REPORTED, NOT CONFIRMED</span> &nbsp;<span class="rc">The Series F and the Jane Street contract are Bloomberg-reported; no Crusoe release yet. <b>Counter:</b> Anchor on the confirmed Series E and Abilene facts; ask Crusoe to confirm the round on the first call.</span></div>
+  <div class="risk"><span class="rt">B2B BRAND, NO CMO</span> &nbsp;<span class="rc">Marketing sits at VP level; the audience is enterprise and capital markets, not fans. <b>Counter:</b> Frame it as IPO-window brand building on the CoreWeave precedent, with measurable enterprise activations.</span></div>
+
+  <h2>Sources <span class="panelnote">— 17 of 17 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://www.globenewswire.com/news-release/2025/10/24/3172932/0/en/Crusoe-the-AI-Factory-Company-Raising-1-375-Billion-at-a-Valuation-Above-10-Billion-to-Power-the-Future-of-AI-Infrastructure.html</li><li>https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation</li><li>https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-e-funding</li><li>https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner</li><li>https://www.bloomberg.com/news/articles/2026-09-03/crusoe-signs-roughly-13-billion-ai-cloud-deal-with-jane-street</li><li>https://www.crusoe.ai/resources/newsroom/crusoe-announces-flagship-abilene-data-center-is-live</li>  </ul>
+</div>
+</body>
+</html>
