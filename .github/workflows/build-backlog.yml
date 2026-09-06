@@ -1,0 +1,99 @@
+# Build the backlog: turn historical signals into full, verified cases (2-page PDF + app
+# page) in bulk, newest first, on a runner with a throwaway Postgres — the same pipeline and
+# memory as the daily run. Cases are saved into the repo and the live app is republished at
+# the end. Runs one at a time (same concurrency group as the daily run) so brief numbers stay
+# unique. Trigger from the Actions tab: count = how many cases to build in this run.
+name: Build backlog
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many historical signals to build into full cases (newest first)"
+        type: number
+        default: 30
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-run
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: pg
+          POSTGRES_DB: intel
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      DATABASE_URL: postgresql://postgres:pg@localhost:5432/intel
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      OPERATOR_EMAIL: ${{ secrets.OPERATOR_EMAIL }}
+      EXECUTION_MODE: dry_run
+      GITHUB_TOKEN: ${{ github.token }}
+      PAGES_REPO: ${{ github.repository }}
+      APP_BASE_URL: ${{ vars.APP_BASE_URL || 'https://trushil27.github.io/1440sports/' }}
+      REBUILD_BACKLOG_PER_RUN: ${{ vars.REBUILD_BACKLOG_PER_RUN || '6' }}
+      PDF_STORAGE_DIR: storage/briefs
+      SITE_DIR: storage/site
+      PYTHONPATH: pipeline
+      TZ: Europe/London
+    steps:
+      - name: Secrets present?
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not set"; exit 1
+          fi
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: System libraries for WeasyPrint
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2 fonts-liberation
+      - name: Install
+        run: pip install -q -e "pipeline[render]"
+      - name: Rebuild the desk's memory from the repo (migrate → seed → history, cases, checks)
+        run: |
+          python -m alembic -c db/alembic.ini upgrade head
+          python -m intel.seed
+          python -m intel.backfill
+      - name: Build ${{ inputs.count }} full cases, newest first
+        run: python -m intel.rebuild_queue --backlog ${{ inputs.count }}
+      - name: Save the new cases into the repo
+        if: always()
+        run: |
+          python -m intel.case_record --sync --out pipeline/intel/cases
+          git config user.name "1440 desk"
+          git config user.email "noreply@1440sports.com"
+          git add pipeline/intel/cases
+          if git diff --cached --quiet; then
+            echo "no new case to save"
+          else
+            git commit -m "Backlog build $(TZ=Europe/London date +%Y-%m-%d): $(git diff --cached --name-only | grep -c run.json) recorded case(s)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Republish the live app
+        if: always()
+        run: python -m intel.site_export
+      - name: Keep the run's storage as an artifact for 30 days
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backlog-build-${{ github.run_id }}
+          path: storage
+          retention-days: 30
+          if-no-files-found: ignore

@@ -283,7 +283,10 @@
           if (r.ok) { panel.innerHTML = `<div class="note info" style="margin-top:16px"><b>Queued.</b> The next daily run builds the full case for ${esc(b.company)} and it appears here.</div>`; return; }
         } catch (e) { /* fall through */ }
       }
-      panel.innerHTML = `<div class="note" style="margin-top:16px"><b>Build service not connected.</b> The desk build service is not deployed yet, so this button cannot start a build from here. Once it is live, one click builds the full case in about five minutes.</div>`;
+      const per = Number(D.backlog_per_run || 0), n = Number(b.backlog_position || 0);
+      const nights = per > 0 && n > 0 ? Math.ceil(n / per) : 0;
+      const eta = nights ? new Date(Date.now() + nights * 86400000).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) : '';
+      panel.innerHTML = `<div class="note info" style="margin-top:16px"><b>In the automatic build queue.</b> Every signal is being turned into a full case by the desk itself, newest first. ${esc(b.company)} is number ${n || '?'} of ${esc(D.backlog_size || '?')} still to build${per ? ` at ${per} a night` : ''}${eta ? `, so it lands by about ${esc(eta)}` : ''}; a bulk build brings that forward. Nothing to do here.</div>`;
       return;
     }
     panel.innerHTML = `<div class="note info" style="margin-top:16px"><b>Starting…</b> Asking the desk to build the full case for ${esc(b.company)}.</div>`;

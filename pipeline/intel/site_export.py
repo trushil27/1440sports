@@ -448,6 +448,13 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
     checks = load_checks()
     checked_rows = attach_signal_checks(entries, checks)
     entries.sort(key=lambda e: (e["date"], e.get("trigger_date") or ""), reverse=True)
+    # Where each unbuilt signal sits in the automatic build queue (newest first — the same
+    # order intel.rebuild_queue.backlog works through), so the app can say when it lands.
+    pos = 0
+    for e in entries:
+        if e["review"]["status"] in ("keep", "keep_flagged") and not e.get("page_html"):
+            pos += 1
+            e["backlog_position"] = pos
     sponsors = [
         sponsor_row(s)
         for s in session.scalars(
@@ -483,6 +490,8 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
         "execution_mode": settings.execution_mode,
         "operator_email": settings.operator_email,
         "desk_api": settings.desk_api_url,
+        "backlog_per_run": settings.rebuild_backlog_per_run,
+        "backlog_size": pos,
         "today": today,
         "briefs": entries,
         "sponsors": sponsors,

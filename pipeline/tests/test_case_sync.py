@@ -52,3 +52,21 @@ def test_site_export_ships_pdfs_for_full_cases(session, tmp_path, monkeypatch):
     assert row["pdf_url"].startswith("pdf/") and "pdf_path" not in row
     assert data["today"]["pdf_url"] == row["pdf_url"]
     assert "pdf_path" not in (out / "data.json").read_text(encoding="utf-8")
+
+
+def test_unbuilt_signals_get_a_queue_position(session, tmp_path, monkeypatch):
+    monkeypatch.setenv("PDF_STORAGE_DIR", str(tmp_path / "store"))
+    from intel.config import reset_settings
+
+    reset_settings()
+    backfill.import_daily_signals(
+        session, backfill.BACKFILL_DIR / "fe_sweep_signals_2026-09-05.json"
+    )
+    backfill.import_engine_cases(session)
+    data = site_export.export_data(session)
+    unbuilt = [e for e in data["briefs"] if e.get("backlog_position")]
+    assert unbuilt and data["backlog_size"] == len(unbuilt)
+    assert [e["backlog_position"] for e in unbuilt] == list(range(1, len(unbuilt) + 1))
+    assert all("page_html" not in e for e in unbuilt)
+    assert "backlog_position" not in next(e for e in data["briefs"] if e["company"] == "Crusoe")
+    assert data["backlog_per_run"] == 4
