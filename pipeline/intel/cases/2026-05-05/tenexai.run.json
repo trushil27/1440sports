@@ -1,0 +1,719 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-05-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-fm4oxbxi/2026-05-05/tenexai.pdf",
+     "web": "/tmp/case-pdf-fm4oxbxi/2026-05-05/tenexai.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "TENEX.AI",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 12
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "top ranking score",
+     "company": "TENEX.AI",
+     "decision": "selected",
+     "signal_date": "2026-03-31"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "TENEX.AI",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 15,
+    "ops_fit": 16,
+    "ranking": 71,
+    "urgency": 14,
+    "capacity": 13,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://tenex.ai/news/series-b/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://tenex.ai/news/series-b/",
+   "trigger_date": "2026-03-31",
+   "trigger_reason": "funding round and president appointment"
+  }
+ ],
+ "brief": {
+  "number": 228,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-fm4oxbxi/2026-05-05/tenexai.web.html",
+  "brief_data": {
+   "hq": "Sarasota, Florida",
+   "deck": "TENEX.AI, the Sarasota-based AI-native security operations firm, closed a $250M Series B led by Crosspoint Capital Partners on 31 March 2026 at a valuation Bloomberg put above $1B, a year after its first customer contract, and named former Charles Schwab CISO Bashar Abouseido President the same day.",
+   "risks": [
+    {
+     "label": "SCALE VERSUS DEAL SIZE",
+     "detail": "$25M of contracted revenue makes a mid-tier F1 fee a large share of the business.",
+     "counter": "Take part of the fee in service value and stage cash against the 2027 roster."
+    },
+    {
+     "label": "VALUATION IS REPORTED",
+     "detail": "The above-$1B valuation is Bloomberg's, absent from the company release.",
+     "counter": "Anchor on the $250M round and $25M contracted revenue, both company-stated; confirm on the call."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private (>$1B reported; $250M Series B, Mar 2026)",
+   "company": "TENEX.AI",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "TAKEN",
+     "detail": "CrowdStrike",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "TAKEN",
+     "detail": "Keeper",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "executive_hire",
+    "open_category"
+   ],
+   "sources": [
+    "https://tenex.ai/news/series-b/",
+    "https://tenex.ai/meet-the-tenexers/",
+    "https://www.businessobserverfl.com/news/2026/may/15/entrepreneur-eric-foster/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Eric Foster to confirm the valuation on the record, walk through Cadillac's security operating model, and size an Official Cybersecurity Partner entry against the team's 2027 roster before the summer break.",
+    "value": [
+     {
+      "text": "A race team's most valuable assets are data: car design files, race strategy, real-time telemetry between the track and the factory, and supplier links into GM. TENEX.AI would run the team's security operations centre: AI agents triaging and investigating every alert in under a minute, human analysts governing every response, continuous cover across US and UK time zones, and an incident-response retainer for race weekends.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "TENEX.AI's service is built on Google Cloud SecOps and integrates with Microsoft Sentinel. Whichever security tooling Cadillac standardises on, the managed layer sits on top rather than replacing it, which keeps the partnership out of the way of the IFS and Core Scientific relationships.",
+      "label": "Fit with the stack Cadillac already chose"
+     },
+     {
+      "text": "TENEX.AI sells to CISOs at Fortune 500 and Global 2000 companies. That guest list, hosted at Miami, Austin and Las Vegas, is the enterprise audience Cadillac's B2B partners want in the suite, and a security reference at the newest team on the grid is a sales asset for TENEX.AI's EMEA launch.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Official Cybersecurity Partner designation, sidepod or halo placement, naming of the team's security operations centre, hospitality at the three US rounds, and a co-authored case study on securing a Formula 1 team from day one, which is content no established team can offer.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 31 March 2026 TENEX.AI announced a $250M Series B led by Crosspoint Capital Partners, with Shield Capital and DeepWork Capital, and the same day appointed former Charles Schwab CISO Bashar Abouseido as President. Bloomberg reported the valuation at more than $1B; that figure is press-reported, not in the company release, and the brief says so.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The company states $25M of contracted revenue within a year of launch, 318% year-on-year growth and first place on IT-Harvest's 2026 Cyber 150. Its first customer contract landed in March 2025. A business that young does not yet have a brand; the round is what pays for one.",
+      "label": "A year-one business at unicorn scale"
+     },
+     {
+      "text": "The stated uses of the $250M are 250-plus hires in 2026 across engineering, sales and SOC analysts, expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. An EMEA launch by a Florida company is the classic moment a global brand platform gets bought.",
+      "label": "Budget is being allocated now"
+     },
+     {
+      "text": "The Miami GP ran on 3 May 2026, two days before this row; the remaining US rounds are the United States GP in Austin in late October and the Las Vegas GP in November. Cadillac settles its 2027 partner roster between the summer break and Austin, so a first conversation in May sits ahead of the inventory being priced.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Cadillac's 2026 roster is entirely inaugural: TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli, Alpinestars and TWG Motorsports, with General Motors as parent. IFS runs operations software, Core Scientific the data centre and TWG AI the models. There is no cybersecurity partner, and the team profile lists cybersecurity as an open category.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Cadillac is designing and building its cars at Silverstone while its Fishers, Indiana campus is under construction, with US bases in Charlotte and Warren. A team building its IT estate across two countries in year one is choosing its security operations model now, and a managed 24/7 SOC is the product built for a team that has no security team of its own yet.",
+      "label": "A team standing up its security from nothing"
+     },
+     {
+      "text": "TENEX.AI is headquartered in Sarasota, Florida, funded in part by the Florida Opportunity Fund, and sells to Fortune 500 and Global 2000 buyers. Cadillac is the American flag-bearer on the grid; a US security unicorn protecting the US debut team is a story both sides can sell at home.",
+      "label": "An American story for an American team"
+     },
+     {
+      "text": "Haas and Racing Bulls also carry no cybersecurity partner. Haas has Mphasis providing data, analytics and security services, which crowds the lane, and Racing Bulls' roster is built for a younger consumer audience. Cadillac offers the cleanest category, the strongest US-market fit and the greenfield workstream.",
+      "label": "Why not the other open seats"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "CrowdStrike holds the cybersecurity lane."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Keeper holds identity and access security."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "Bitdefender is the security partner."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "1Password occupies the security lane."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Cisco, Splunk, Okta and Rubrik cover security, identity, observability and data resilience."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Cato Networks joined the roster for 2026."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "NinjaOne and Extreme Networks crowd the IT-security lane."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "SentinelOne's seat was vacant on this row's date, but the team named Zscaler Global Cybersecurity Partner on 25 June 2026, so the lane is now closed."
+     },
+     {
+      "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+      "reason": "Open but not chosen: Mphasis provides security services at Haas, and Racing Bulls' roster targets a younger consumer audience."
+     }
+    ]
+   },
+   "date_long": "05 MAY 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $250M Series B at a reported $1B-plus valuation, a president hired from Charles Schwab and a 250-hire, EMEA-bound growth plan put TENEX.AI at the moment a brand platform gets funded. Cadillac's debut roster has no security partner, and the SOC it needs is the product TENEX.AI sells.",
+   "footer_date": "5 MAY 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Round closed 31 Mar; Miami just passed.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 13,
+     "note": "$250M raised; $25M contracted revenue is thin.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "B2B security brand; US debut-team story.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 14,
+     "note": "250 hires, EMEA launch; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: SOC for a greenfield team.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 31 March 2026 TENEX.AI announced a $250M Series B led by Crosspoint Capital Partners, with Shield Capital and DeepWork Capital, at a valuation Bloomberg reported above $1B. The company stated $25M of contracted revenue within a year of launch and 318% year-on-year growth, first on IT-Harvest's 2026 Cyber 150. The capital funds 250-plus hires in 2026, expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. The same day it named former Charles Schwab CISO Bashar Abouseido President. <font name='Poppins-Bold' size='9.5'>A UNICORN BUILDING A GLOBAL BRAND FROM FLORIDA.</font>",
+   "the_case_p2": "Cybersecurity is the most contested technology lane in Formula 1: CrowdStrike at Mercedes, Keeper at Williams, Bitdefender at Ferrari, Red Bull's 1Password, Okta at McLaren, Cato Networks at Alpine and NinjaOne at Audi, with the SentinelOne seat at Aston Martin newly vacated. Managed detection and response is a different product: a round-the-clock security operations service. That leaves Haas, Racing Bulls and Cadillac as open seats, one of them starting from nothing.",
+   "track_label": "",
+   "brief_number": "228",
+   "claims_total": 15,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$250M Series B led by Crosspoint Capital Partners with Shield Capital and DeepWork Capital, announced 31 Ma…",
+     "value": "$250M",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://tenex.ai/news/series-b/"
+    },
+    {
+     "fact": "$25M contracted revenue within a year of launch (company statement in the 31 Mar 2026 Series B release)",
+     "value": "$25M",
+     "claim_id": 623,
+     "verified": true,
+     "source_url": "https://tenex.ai/news/series-b/"
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Cybersecurity · AI-native Managed Detection & Response",
+   "value_content": "MODE A - operational. A race team's attack surface is its data: design files at Silverstone, telemetry from every circuit, supplier links into GM. TENEX.AI would run the team's security operations centre: AI agents triaging every alert, human analysts governing response, cover across US and UK time zones, an incident-response retainer for race weekends, and integration with the Google or Microsoft security tooling the team standardises on. On camera: the pit-wall data it protects.",
+   "value_section": true,
+   "why_team_para": "Cadillac has no cybersecurity partner and no legacy security stack: its 2026 roster is entirely inaugural, IFS runs the operations software, Core Scientific the data centre and TWG AI the models, and the seat for the service that watches over all of it is open. A debut American team, run from Silverstone while Fishers and Charlotte come online, is standing up its security operation now, exactly when an AI-native SOC is bought. TENEX.AI's Fortune 500 buyers are the audience in the Austin and Las Vegas suites.",
+   "deal_arch_para": "Entry as Official Cybersecurity Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the move into Fishers and a possible listing window. Estimated $2-4M a year, part in service value. Scope: sidepod or halo placement, naming of the team's security operations centre, Miami, Austin and Las Vegas hospitality for CISO customers, a co-authored case study on securing a team from day one.",
+   "footer_company": "TENEX.AI",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series B closed on 31 March; a brand budget sized for 250-plus hires and an EMEA launch is being set this quarter. Cadillac settles its second-season partner roster between the summer break and the United States GP in Austin, so an approach in May lands before the 2027 inventory is priced.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Foster founded TENEX.AI after three CISO tours and a presidency at Stairwell; he fronts every raise. Path: Bashar Abouseido, President since 31 March 2026; Ryan Shreve, Co-Founder, CFO and COO. No CMO was listed at this date; Richard Rogers joined as CMO on 4 June 2026.",
+   "decision_maker_name": "Eric Foster",
+   "decision_maker_role": "Founder & CEO, TENEX.AI",
+   "opening_angle_intro": "Lead with the greenfield roster.",
+   "opening_angle_quote": "&ldquo;Eric, Cadillac is building a Formula 1 team's IT from nothing and has no security partner; CrowdStrike and Keeper took their seats years ago. A debut team's SOC is a story only one company gets to tell. 25 minutes?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Eric Foster, Founder & CEO at TENEX.AI",
+   "cited_source_url": "https://tenex.ai/news/series-b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/meet-the-tenexers/",
+     "excerpt": "TENEX.AI leadership page (search summary; tenex.ai egress-blocked): Eric Foster, Founder and CEO — three-time CISO, early RiskIQ employee, former President of Stairwell. Also listed: Bashar Abouseido (President), Ryan Shreve (Co-Founder, CFO/COO), Venkata Koppaka (CTO).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Eric Foster, Founder & CEO, TENEX.AI at TENEX.AI",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/meet-the-tenexers/",
+     "excerpt": "TENEX.AI leadership page (search summary; tenex.ai egress-blocked): Eric Foster, Founder and CEO — three-time CISO, early RiskIQ employee, former President of Stairwell. Also listed: Bashar Abouseido (President), Ryan Shreve (Co-Founder, CFO/COO), Venkata Koppaka (CTO).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$250M Series B led by Crosspoint Capital Partners with Shield Capital and DeepWork Capital, announced 31 Mar 2026; valuation above $1B (Bloomberg, reported)",
+   "cited_source_url": "https://tenex.ai/news/series-b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "TENEX.AI, the Sarasota-based AI-native security operations firm, closed a $250M Series B led by Crosspoint Capital Partners on 31 March 2026 at a valuation Bloomberg put above $1B, a year after its first customer contract, and named former Charles Schwab CISO Bashar Abouseido President the same day.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Crosspoint Capital Partners (lead, Series A and B), Andreessen Horowitz, Shield Capital, DeepWork Capital, Florida Opportunity Fund",
+   "cited_source_url": "https://tenex.ai/news/series-b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 31 March 2026 TENEX.AI announced a $250M Series B led by Crosspoint Capital Partners, with Shield Capital and DeepWork Capital, at a valuation Bloomberg reported above $1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "$25M contracted revenue within a year of launch (company statement in the 31 Mar 2026 Series B release)",
+   "cited_source_url": "https://tenex.ai/news/series-b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The company stated $25M of contracted revenue within a year of launch and 318% year-on-year growth, first on IT-Harvest's 2026 Cyber 150.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$250M Series B at a reported valuation above $1B, and former Charles Schwab CISO Bashar Abouseido appointed President, both announced 31 Mar 2026",
+   "cited_source_url": "https://tenex.ai/news/series-b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $250M Series B at a reported $1B-plus valuation, a president hired from Charles Schwab and a 250-hire, EMEA-bound growth plan put TENEX.AI at the moment a brand platform gets funded.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CrowdStrike at Mercedes, Keeper at Williams, Bitdefender at Ferrari, Okta at McLaren, Cato Networks at Alpine, NinjaOne at Audi, and Red Bull's 1Password; SentinelOne has left Aston Martin; Cadillac, Haas and Racing Bulls carry no cybersecurity partner",
+   "cited_source_url": "https://tenex.ai/news/series-b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "CrowdStrike → Mercedes-AMG Petronas F1 Team (team_major, active); Keeper → Atlassian Williams Racing (team_major, active); Bitdefender → Scuderia Ferrari (team_major, active); Okta → McLaren F1 Team (team_major, active); Cato Networks → BWT Alpine F1 Team (team_major, joined); NinjaOne → Audi F1 Team (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 31 March 2026 TENEX.AI announced a $250M Series B led by Crosspoint Capital Partners, with Shield Capital and DeepWork Capital, and the same day appointed former Charles Schwab CISO Bashar Abouseido as President.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "318% year-on-year growth and first place on IT-Harvest's 2026 Cyber 150; the round funds 250-plus hires in 2026, expansion into EMEA and deeper Google Cloud SecOps and Microsoft Sentinel integrations",
+   "cited_source_url": "https://tenex.ai/news/series-b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Bloomberg reported the valuation at more than $1B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "World headquarters in Sarasota, Florida; around 100 staff, targeting about 300 by end-2026 (Business Observer, reported)",
+   "cited_source_url": "https://tenex.ai/news/series-b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businessobserverfl.com/news/2026/may/15/entrepreneur-eric-foster/",
+     "excerpt": "Business Observer, 15 May 2026 (search summary; site egress-blocked): Sarasota-based TENEX.AI posted $25M contracted revenue in the year after its first contract (March 2025); raised $250M in March 2026 and $27M in September 2025; around 100 employees, hiring about 200 more by year-end to reach roughly 300. World HQ in Sarasota, FL per the company's Florida Opportunity Fund release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "The company states $25M of contracted revenue within a year of launch, 318% year-on-year growth and first place on IT-Harvest's 2026 Cyber 150.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round and president appointment",
+   "cited_source_url": "https://tenex.ai/news/series-b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "The stated uses of the $250M are 250-plus hires in 2026 across engineering, sales and SOC analysts, expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://tenex.ai/news/series-b/",
+     "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Miami GP ran on 3 May 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 6: Miami GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
