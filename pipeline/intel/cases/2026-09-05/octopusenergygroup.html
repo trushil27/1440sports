@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Octopus Energy Group</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "OCTOPUS ENERGY GROUP · 5 SEP 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 139</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 139 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Octopus Energy Group</h1>
+  <div class="classline">Energy Retail &amp; Technology · Renewable Supply, EV Charging, Grid Flexibility · London · Private ($9B, May 2024)</div>
+
+  <div class="lede">Octopus Energy, Britain's largest household supplier with £13.7bn of revenue and 10 million customers, closed its majority investment in US grid-flexibility company Uplight on 1 September, eight months after selling a $1B stake in Kraken at $8.65B. The most EV-native energy brand has never been on an electric racing car.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">76</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Jaguar TCS Racing</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>On 1 September Octopus Energy Group completed its majority investment in Uplight, which manages 8.5 GW of flexible load for more than 85 US utilities; Schneider Electric stays as minority partner and Nick Chaset runs Uplight alongside Octopus Energy US. It caps a year of capital re-shaping: $850M of the $1B Kraken stake sale (December 2025, $8.65B valuation) went to Octopus, on top of a $9B valuation set by Generation Investment Management and CPP Investments in May 2024. The year to 30 April 2025 brought £13.7bn of revenue, up 10%, and 10 million customers.</p>
+<p>The brand is built on electric cars. Electroverse reaches more than 1 million public chargers in over 40 countries, Ford integrated it into its own charging network in September 2025, and more than half of Britain's 653,000 smart EV-tariff customers are with Octopus. It already knows long-term sport: Arsenal's official energy partner since October 2016. What it lacks is a stage where the product is the sport itself.</p>
+  <h2>Why Now</h2>
+  <p>The Uplight close on 1 September and the Kraken separation give Octopus a new group story to tell, and cash to tell it. Formula E's Season 13 opens in Jeddah on 18 December; a partner signed in the fourth quarter is on the car for the London E-Prix in May 2027.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$9B</div><div class="pfk">Valued at $9B in May 2024 when Generation Investment Management (13%) and CPP Investments (12%) increased t…</div></div>
+    <div class="pf"><div class="pfv">£13.7b</div><div class="pfk">£13.7bn revenue in the year to 30 April 2025, up 10%, with 10 million customers, a £255m net loss and £1.5b…</div></div>
+    <div class="pf"><div class="pfv">$850M</div><div class="pfk">It caps a year of capital re-shaping: $850M of the $1B Kraken stake sale (December 2025, $8.65B valuation)…</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (sponsor table; 10 of 35 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Jaguar TCS Racing<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Lola Yamaha ABT Formula E Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Shell</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Andretti Formula E</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Citroën Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A $9B energy brand whose product is electric driving, fresh from the Uplight close and the Kraken proceeds, with a proven ten-year sports partnership and no presence in electric racing. Jaguar TCS Racing's energy lane is open and the London E-Prix is its home stage.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">acquisition completed</span><span class="flag">category whitespace</span><span class="flag">sponsorship precedent</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 139</span>
+  </div>
+
+  <h2>WHY JAGUAR TCS RACING</h2>
+  <p>Jaguar TCS Racing carries TCS as title and technology partner, Castrol and the Jaguar powertrain; there is no energy retailer, EV-charging or home-energy brand on the roster. The road brand relaunches electric-only in 2026 with its first new car sold from Bond Street, so every new owner needs a tariff and a charging network. Two British electrification brands, one home race in London, and a team that runs its technology partners through the garage.</p>
+
+  <h2>VALUE TO JAGUAR TCS RACING &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A - operational. Renewable supply and Electroverse roaming for the team's UK operations and road fleet, with Octopus's flexibility analytics applied to race-weekend energy use. The larger workstream is commercial: an Intelligent Octopus Go plus Electroverse bundle for buyers of the new electric Jaguars, on the model Ford adopted in 2025. Return: a category partner, London hospitality for millions of customers, and content putting charging in the racing story.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official Energy Partner. <b class="hl">THREE YEARS</b>, Seasons 13-15, matching the GEN4 cycle and Jaguar's electric relaunch. Estimated £1.5-3M a season, part-payable in supply and charging services. Scope: car and suit placement, tariff and charging integration for Jaguar customers, London E-Prix hospitality and sustainability reporting.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Greg Jackson</div>
+        <div class="role">Founder &amp; CEO, Octopus Energy Group · <span class="vtag">verified</span></div>
+        <div class="bio">Jackson founded Octopus in 2015 and fronts its partnerships and investors. Path: Rebecca Dibb-Simkin, Chief Product and Marketing Officer, who owns the brand; Stuart Jackson, Co-Founder and CFO; Nick Chaset for any US extension. No separate CMO title.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the customer overlap.</div>      <div class="quote">“Greg, Octopus has more electric-car customers than anyone in Britain and Jaguar is about to relaunch electric-only; the energy lane on its Formula E car is open and Arsenal proved the model works for you. 25 minutes before the Jeddah opener to map it?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Uplight closed 1 Sep; Season 13 opens 18 Dec, London in May.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">£13.7bn revenue, $9B valuation, $850M from the Kraken sale.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">EV-native consumer brand; Arsenal shows long-term sport intent.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">New group story; no hard deadline beyond Season 13 rosters.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A: supply, charging and a Jaguar customer bundle.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">KRAKEN IS ALREADY IN PLAY</span> &nbsp;<span class="rc">Kraken, the Octopus spin-out, sits on 1440's approached list; the two conversations share a founder. <b>Counter:</b> Coordinate with the Kraken lead before contact; position this as the consumer-brand deal, distinct from Kraken's utility software.</span></div>
+  <div class="risk"><span class="rt">LOSS-MAKING YEAR</span> &nbsp;<span class="rc">FY25 showed a £255m net loss after one-off items, and Octopus markets direct rather than through big sponsorships. <b>Counter:</b> Anchor on the Arsenal precedent and the in-kind supply component; size the entry at partner level.</span></div>
+
+  <h2>Sources <span class="panelnote">— 16 of 16 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://octopus.energy/press/meet-the-team/</li><li>https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html</li><li>https://octopus.energy/press/Octopus-Energy-valuation-increases-to-9bn-following-further-commitments-from-existing-investors/</li><li>https://sifted.eu/articles/octopus-energy-annual-results-2025</li><li>https://www.arsenal.com/news/renewable-energy-partnership-octopus-energy</li>  </ul>
+</div>
+</body>
+</html>

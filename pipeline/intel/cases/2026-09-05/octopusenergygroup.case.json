@@ -1,0 +1,408 @@
+{
+ "run_date": "2026-09-05",
+ "signal_date": "2026-09-01",
+ "stem": "octopusenergygroup",
+ "number": 139,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Octopus Energy Group",
+  "signal_date": "2026-09-01",
+  "score": 76,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Greg Jackson",
+  "role": "Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+  "industry_meta": "Energy Retail & Technology · Renewable Supply, EV Charging (Electroverse), Grid Flexibility · London",
+  "recommended_team": "Jaguar TCS Racing",
+  "recommended_series": "FE",
+  "timing_label": "HOT",
+  "trigger_reason": "acquisition completed",
+  "key_facts": {
+   "funding": "Valued at $9B in May 2024 when Generation Investment Management (13%) and CPP Investments (12%) increased their stakes; $850M of the $1B Kraken stake sale (Dec 2025, $8.65B valuation) went to Octopus",
+   "investors": "Generation Investment Management, CPP Investments, Origin Energy, Tokyo Gas; Kraken round led by D1 Capital with Fidelity International, Durable Capital and Ontario Teachers'",
+   "revenue": "£13.7bn revenue in the year to 30 April 2025, up 10%, with 10 million customers, a £255m net loss and £1.5bn net assets (filed annual report, reported by Sifted)",
+   "trigger": "Completed its majority investment in Uplight on 1 Sep 2026 (Schneider Electric stays a minority partner); Nick Chaset becomes Uplight CEO alongside Octopus Energy US",
+   "competitor_signal": "No energy retailer, EV-charging or home-energy brand on the Jaguar TCS Racing roster (TCS, Castrol, Jaguar); Envision Group titles Envision Racing, Shell sits with Lola Yamaha ABT, TotalEnergies with DS Penske",
+   "strategic_hook": "Octopus already runs a long-term sports partnership: Arsenal's official energy partner since October 2016, with the Emirates Stadium on renewable supply and a fan tariff; Ford integrated Electroverse into its charging network in September 2025",
+   "us_presence": "Octopus Energy US is based in Houston, Texas; Uplight in Boulder, Colorado, manages 8.5 GW of flexible load across more than 85 utilities",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: renewable supply and Electroverse roaming for the team's operations, and an Intelligent Octopus Go plus Electroverse bundle for Jaguar's new electric-car buyers, on the Ford precedent",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 17,
+   "brand_fit": 16,
+   "urgency": 13,
+   "ops_fit": 14,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "greg jackson",
+    "founder & ceo",
+    "founder and ceo"
+   ],
+   "url": "https://octopus.energy/press/meet-the-team/",
+   "excerpt": "Octopus Energy Group leadership page (search summary; the page itself is egress-blocked): Greg Jackson CBE, Founder and CEO. WRI profile: grew Octopus from start-up to 10 million customers in 32 countries with a renewables portfolio over $9.5bn.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "dibb-simkin",
+    "stuart jackson",
+    "eddison",
+    "chief product",
+    "cfo",
+    "no cmo"
+   ],
+   "url": "https://www.crunchbase.com/person/rebecca-dibb-simkin",
+   "excerpt": "Rebecca Dibb-Simkin is Chief Product and Marketing Officer (CPMO) of Octopus Energy Group (Crunchbase, LinkedIn, The Drum interview; City AM calls her the Octopus CMO). Stuart Jackson is Co-Founder and Chief Financial Officer (Crunchbase, Board Intelligence interview). James Eddison is Co-Founder and CTO. The marketing function is therefore held by the CPMO; there is no separate CMO title.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "uplight",
+    "1 sep",
+    "1 september",
+    "chaset",
+    "schneider",
+    "8.5 gw",
+    "85 utilities",
+    "$1b",
+    "$1 billion",
+    "20 gw",
+    "boulder",
+    "acquisition completed"
+   ],
+   "url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "excerpt": "Octopus Energy Group release, 1 Sep 2026 (Houston / Boulder): Octopus Energy has closed its investment in Uplight, which continues as an independent company; Schneider Electric, an existing investor, continues its backing alongside Octopus's new majority stake; Nick Chaset is named CEO of Uplight alongside his role as CEO of Octopus Energy US; targets of $1 billion in customer savings and more than doubling flexible capacity to 20 GW over five years; Uplight manages 8.5 GW of flexible load across more than 85 utilities including eight of the ten largest in the US. Definitive agreement announced 24 Mar 2026 (Uplight press page). Secondary: Renewable Energy Magazine, 4 Sep 2026; Daily Energy Insider.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$9b",
+    "$9 billion",
+    "generation investment",
+    "13%",
+    "12%",
+    "may 2024"
+   ],
+   "url": "https://octopus.energy/press/Octopus-Energy-valuation-increases-to-9bn-following-further-commitments-from-existing-investors/",
+   "excerpt": "Octopus Energy release, 7 May 2024: valuation rises 15% on the last round to $9 billion (£7.2bn) as Generation Investment Management (now 13% of the group) and CPP Investments (now 12%) increase their stakes. Also carried by Generation IM's newsroom and UKTN.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "kraken",
+    "$8.65b",
+    "$850m",
+    "$1b kraken",
+    "d1 capital",
+    "13.7%",
+    "origin energy",
+    "tokyo gas",
+    "fidelity",
+    "durable",
+    "ontario teachers"
+   ],
+   "url": "https://www.cnbc.com/2025/12/30/octopus-energy-to-spinoff-ai-unit-kraken-at-8point65-billion-valuation.html",
+   "excerpt": "CNBC, 30 Dec 2025, and Sifted / Ontario Teachers' release: Octopus Energy Group to spin out Kraken after a $1 billion round at an $8.65 billion valuation led by D1 Capital Partners with Fidelity International, Durable Capital Partners and Ontario Teachers'; $850 million of the proceeds go to Octopus and $150 million to Kraken; Origin Energy (22.7% of Octopus) invests $140 million; Octopus will retain 13.7% of Kraken; separation targeted by mid-2026 (completion not yet confirmed as of 5 Sep 2026). Tokyo Gas and Origin are long-standing Octopus investors (TechCrunch 2020; Canary Media 2023).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "£13.7bn",
+    "10 million customers",
+    "£255m",
+    "£1.5bn",
+    "7.6m",
+    "30 april 2025",
+    "24% market share",
+    "2.4 million"
+   ],
+   "url": "https://sifted.eu/articles/octopus-energy-annual-results-2025",
+   "excerpt": "Sifted on the filed FY25 annual report (year to 30 April 2025): revenue £13.7bn, up 10% from £12.4bn; 10 million customers globally, 7.6m UK homes (24% share), 2.4m international; net loss £255m after one-off items (Bulb acquisition costs, final Energy Price Guarantee settlement); £1.5bn net assets. The annual report itself is filed at octopusenergy.group.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "arsenal",
+    "emirates stadium",
+    "october 2016",
+    "2016"
+   ],
+   "url": "https://www.arsenal.com/news/renewable-energy-partnership-octopus-energy",
+   "excerpt": "Arsenal.com and the Octopus Group newsroom: Octopus Energy has been Arsenal's official energy partner since October 2016 under a long-term deal; the Emirates Stadium and training facilities run on renewable supply, fans are offered a matching tariff, and Octopus receives stadium branding, hospitality and access to club channels.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "ford",
+    "blueoval",
+    "september 2025"
+   ],
+   "url": "https://media.ford.com/content/fordmedia/feu/en/news/2025/09/02/Ford-and-Octopus-Enable-Seamless-Public-Charging.html",
+   "excerpt": "Ford of Europe media centre, 2 Sep 2025: Ford and Octopus partner to enable seamless public charging, integrating Octopus Electroverse into the BlueOval Charge Network for Ford EV drivers.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "electroverse",
+    "1 million",
+    "one million",
+    "40 countries"
+   ],
+   "url": "https://octopus.energy/press/electroverse-skyrockets-to-1-million-public-ev-chargers/",
+   "excerpt": "Octopus Energy release: Octopus Electroverse connects drivers to more than 1 million public EV chargers in over 40 countries, Europe's largest consumer charging platform.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "intelligent octopus",
+    "653",
+    "ofgem",
+    "smart ev tariff",
+    "more than half"
+   ],
+   "url": "https://octopus.energy/smart/intelligent-octopus-go/",
+   "excerpt": "Octopus Energy's Intelligent Octopus Go page, citing Ofgem's State of the Market report: 653,000 domestic customers were on a smart time-of-use EV tariff in July 2025, more than half of them with Octopus, most on Intelligent Octopus Go.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "houston",
+    "texas",
+    "octopus energy us"
+   ],
+   "url": "https://octopusenergy.com/press-releases/houston-we-have-a-solution-free-power-from-octopus-energy",
+   "excerpt": "Octopus Energy US press page (Houston): Octopus Energy US is a Texas retail electricity provider led by CEO Nick Chaset; the 1 Sep 2026 Uplight release is datelined Houston and Boulder.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "type 00",
+    "electric-only",
+    "all-electric",
+    "new electric jaguar",
+    "three new electric",
+    "bond street"
+   ],
+   "url": "https://www.electrive.com/2025/11/03/jaguars-new-electric-car-will-debut-in-2026/",
+   "excerpt": "electrive, 3 Nov 2025: Jaguar presents its first new all-electric model in 2026 and starts taking orders, the first of three new electric Jaguars, sold through high-end sales centres including London's Bond Street; the reborn brand is electric-only (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "tcs",
+    "castrol",
+    "envision group",
+    "envision racing",
+    "shell",
+    "lola yamaha",
+    "totalenergies",
+    "ds penske",
+    "twg ai",
+    "andretti",
+    "nissan",
+    "mahindra",
+    "abb"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §4 + data/teams.json)",
+   "excerpt": "Sponsor table: Jaguar TCS Racing carries TCS (title and technology partner), Castrol and Jaguar (powertrain) — no energy retailer, EV-charging or home-energy partner. Envision Racing is titled by Envision Group (renewables / clean tech). Lola Yamaha ABT lists Shell (energy / lubricants). DS Penske lists TotalEnergies (lubricants) and DS exits after Season 12. Andretti Formula E: TWG AI (primary), Quest Global, Crowe UK, Reflo, Nissan powertrain from Season 13. Nissan Formula E Team rows are unverified for Season 12. Mahindra Racing: Mahindra & Mahindra, Tech Mahindra. Championship level: ABB (title), no energy retailer.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "london e-prix",
+    "london",
+    "jeddah",
+    "18 dec",
+    "december",
+    "may 2027",
+    "austin",
+    "miami"
+   ],
+   "url": "seeds/calendar_fe.json (FE Season 13 calendar)",
+   "excerpt": "FE Season 13 calendar table: season opens in Jeddah on 18-19 December 2026; Austin E-Prix 6 February and Miami E-Prix 20 February 2027; London E-Prix double-header 29-30 May 2027.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Octopus Energy Group",
+  "industry_meta": "Energy Retail & Technology · Renewable Supply, EV Charging, Grid Flexibility",
+  "hq": "London",
+  "ticker": "Private ($9B, May 2024)",
+  "deck": "Octopus Energy, Britain's largest household supplier with £13.7bn of revenue and 10 million customers, closed its majority investment in US grid-flexibility company Uplight on 1 September, eight months after selling a $1B stake in Kraken at $8.65B. The most EV-native energy brand has never been on an electric racing car.",
+  "score": 76,
+  "timing_label": "HOT",
+  "series_label": "FE",
+  "team_label": "Jaguar TCS Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 1 September Octopus Energy Group completed its majority investment in Uplight, which manages 8.5 GW of flexible load for more than 85 US utilities; Schneider Electric stays as minority partner and Nick Chaset runs Uplight alongside Octopus Energy US. It caps a year of capital re-shaping: $850M of the $1B Kraken stake sale (December 2025, $8.65B valuation) went to Octopus, on top of a $9B valuation set by Generation Investment Management and CPP Investments in May 2024. The year to 30 April 2025 brought £13.7bn of revenue, up 10%, and 10 million customers.",
+  "the_case_p2": "The brand is built on electric cars. Electroverse reaches more than 1 million public chargers in over 40 countries, Ford integrated it into its own charging network in September 2025, and more than half of Britain's 653,000 smart EV-tariff customers are with Octopus. It already knows long-term sport: Arsenal's official energy partner since October 2016. What it lacks is a stage where the product is the sport itself.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Uplight close on 1 September and the Kraken separation give Octopus a new group story to tell, and cash to tell it. Formula E's Season 13 opens in Jeddah on 18 December; a partner signed in the fourth quarter is on the car for the London E-Prix in May 2027.",
+  "why_team_label": "WHY JAGUAR TCS RACING",
+  "why_team_para": "Jaguar TCS Racing carries TCS as title and technology partner, Castrol and the Jaguar powertrain; there is no energy retailer, EV-charging or home-energy brand on the roster. The road brand relaunches electric-only in 2026 with its first new car sold from Bond Street, so every new owner needs a tariff and a charging network. Two British electrification brands, one home race in London, and a team that runs its technology partners through the garage.",
+  "value_section": true,
+  "value_section_label": "VALUE TO JAGUAR TCS RACING",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Renewable supply and Electroverse roaming for the team's UK operations and road fleet, with Octopus's flexibility analytics applied to race-weekend energy use. The larger workstream is commercial: an Intelligent Octopus Go plus Electroverse bundle for buyers of the new electric Jaguars, on the model Ford adopted in 2025. Return: a category partner, London hospitality for millions of customers, and content putting charging in the racing story.",
+  "deal_arch_para": "Entry as Official Energy Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, matching the GEN4 cycle and Jaguar's electric relaunch. Estimated £1.5-3M a season, part-payable in supply and charging services. Scope: car and suit placement, tariff and charging integration for Jaguar customers, London E-Prix hospitality and sustainability reporting.",
+  "decision_maker_name": "Greg Jackson",
+  "decision_maker_role": "Founder & CEO, Octopus Energy Group",
+  "decision_maker_bio": "Jackson founded Octopus in 2015 and fronts its partnerships and investors. Path: Rebecca Dibb-Simkin, Chief Product and Marketing Officer, who owns the brand; Stuart Jackson, Co-Founder and CFO; Nick Chaset for any US extension. No separate CMO title.",
+  "opening_angle_intro": "Lead with the customer overlap.",
+  "opening_angle_quote": "&ldquo;Greg, Octopus has more electric-car customers than anyone in Britain and Jaguar is about to relaunch electric-only; the energy lane on its Formula E car is open and Arsenal proved the model works for you. 25 minutes before the Jeddah opener to map it?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Uplight closed 1 Sep; Season 13 opens 18 Dec, London in May."
+   ],
+   [
+    "CAPACITY",
+    "17",
+    "/ 20",
+    "£13.7bn revenue, $9B valuation, $850M from the Kraken sale."
+   ],
+   [
+    "BRAND FIT",
+    "16",
+    "/ 20",
+    "EV-native consumer brand; Arsenal shows long-term sport intent."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "New group story; no hard deadline beyond Season 13 rosters."
+   ],
+   [
+    "OPS FIT",
+    "14",
+    "/ 20",
+    "MODE A: supply, charging and a Jaguar customer bundle."
+   ]
+  ],
+  "risks": [
+   [
+    "KRAKEN IS ALREADY IN PLAY",
+    "Kraken, the Octopus spin-out, sits on 1440's approached list; the two conversations share a founder.",
+    "Coordinate with the Kraken lead before contact; position this as the consumer-brand deal, distinct from Kraken's utility software."
+   ],
+   [
+    "LOSS-MAKING YEAR",
+    "FY25 showed a £255m net loss after one-off items, and Octopus markets direct rather than through big sponsorships.",
+    "Anchor on the Arsenal precedent and the in-kind supply component; size the entry at partner level."
+   ]
+  ],
+  "bottom_line": "A $9B energy brand whose product is electric driving, fresh from the Uplight close and the Kraken proceeds, with a proven ten-year sports partnership and no presence in electric racing. Jaguar TCS Racing's energy lane is open and the London E-Prix is its home stage.",
+  "signals": [
+   "acquisition_completed",
+   "category_whitespace",
+   "sponsorship_precedent"
+  ],
+  "footer_company": "OCTOPUS ENERGY GROUP",
+  "footer_date": "5 SEP 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "Octopus Energy Group completed its majority investment in Uplight on 1 September 2026. Uplight stays an independent company, Schneider Electric remains a minority partner, and Nick Chaset becomes Uplight's CEO alongside his role running Octopus Energy US. The stated targets are $1 billion of customer savings and more than doubling flexible capacity to 20 GW over five years."
+    },
+    {
+     "label": "A year of capital re-shaping",
+     "text": "In December 2025 Octopus sold a $1B stake in Kraken at an $8.65B valuation, with $850M of the proceeds going to the group, and set a mid-2026 target for full separation. The group itself was valued at $9B in May 2024 when Generation Investment Management and CPP Investments increased their stakes. A company that has just re-cut its own identity needs a new way to explain itself to customers and investors."
+    },
+    {
+     "label": "The numbers underneath",
+     "text": "In the year to 30 April 2025 Octopus recorded £13.7bn of revenue, up 10%, and grew to 10 million customers, including 7.6m UK homes. It reported a £255m net loss after one-off items, which is why the brief sizes the entry at partner level and includes an in-kind supply component."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Formula E's Season 13 opens in Jeddah on 18 December 2026 and reaches London on 29-30 May 2027. A partnership agreed in the fourth quarter is announced at the season launch and activated in full at the home race."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Jaguar TCS Racing carries TCS as title and technology partner, Castrol and the Jaguar powertrain. There is no energy retailer, EV-charging or home-energy brand on the roster, so Official Energy Partner is a clean category at a team-partner price."
+    },
+    {
+     "label": "Jaguar's relaunch",
+     "text": "The road brand is relaunching electric-only in 2026 with its first new car sold from Bond Street, the first of three new electric Jaguars. Every buyer needs a home tariff and a public charging network; Octopus sells both, and Ford has already shown that an OEM will integrate Electroverse into its own charging offer."
+    },
+    {
+     "label": "Two British electrification stories",
+     "text": "Britain's largest household supplier and Britain's electric racing team, with a home race in London. The partnership reads as a national story rather than a badge."
+    },
+    {
+     "label": "A team that uses its partners",
+     "text": "The TCS partnership runs across the team's operations rather than sitting on the car. Octopus's supply, charging and flexibility products fit the same pattern."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Renewable supply and Electroverse roaming for the team's UK operations and road fleet, and the flexibility analytics Octopus sells to utilities applied to the team's race-weekend energy use and reporting."
+    },
+    {
+     "label": "Commercial workstream for the parent",
+     "text": "An Intelligent Octopus Go plus Electroverse bundle offered to buyers of the new electric Jaguars in the UK, on the model Ford adopted in September 2025, giving the team's parent a customer proposition and Octopus a premium acquisition channel."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A consumer brand with 10 million customers brings a mass audience to the London E-Prix and a hospitality guest list of fleet, utility and government buyers. The Arsenal partnership shows Octopus activates for a decade, not a season."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Energy Partner designation, car and race-suit placement, London E-Prix hospitality, driver access for Octopus's channels, and co-produced content on charging and grid flexibility."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Envision Racing",
+     "reason": "Titled by Envision Group, a renewables and clean-technology business that competes with Octopus Energy Generation."
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "reason": "Shell holds the energy and lubricants position on the roster."
+    },
+    {
+     "team": "DS Penske",
+     "reason": "TotalEnergies on the roster, and DS leaves the championship after Season 12."
+    },
+    {
+     "team": "Andretti Formula E",
+     "reason": "Open lane and the natural US alternative, with the Austin E-Prix on 6 February 2027 close to Octopus Energy US in Houston; not chosen because the brand's weight and customer base are British. Revisit if the ask becomes US-led."
+    },
+    {
+     "team": "Nissan Formula E Team · Mahindra Racing · Porsche Formula E Team · Cupra Kiro · Citroën Racing",
+     "reason": "Manufacturer-led entries without the British home story; Nissan's partner rows are unverified for Season 12."
+    }
+   ],
+   "ask": "A 25-minute call with Greg Jackson before the Jeddah opener on 18 December to confirm the sponsorship owner, coordinate with the Kraken conversation already in 1440's pipeline, and size an Official Energy Partner entry at Jaguar TCS Racing for Seasons 13-15."
+  }
+ },
+ "note": "# Octopus Energy Group → Jaguar TCS Racing — verification log (N° 139, row of 5 Sep 2026)\n\nBuilt in-session at no API cost on 6 Sep 2026 (batch 3) with Claude as scanner, verifier and writer through `intel.session_case`; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code.\n\n**Sandbox limitation, stated plainly:** octopus.energy, globenewswire.com, uplight.com, sifted.eu and theorg.com are egress-blocked. Every claim was checked against the search summary of the primary page named as the evidence URL. Treat each VERIFIED line as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nOctopus Energy Group's release of 1 Sep 2026 (GlobeNewswire, datelined Houston / Boulder) states the investment in Uplight has closed; Schneider Electric continues as an investor alongside Octopus's new majority stake; Nick Chaset is CEO of Uplight alongside Octopus Energy US; targets $1bn customer savings and 20 GW flexible capacity in five years; Uplight manages 8.5 GW across 85+ utilities. The definitive agreement was announced 24 Mar 2026 (Uplight press page, octopus.energy). Secondary: Renewable Energy Magazine (4 Sep 2026), Daily Energy Insider. The deal value is not disclosed and is not claimed.\n\n## Corrections to the thin row\n\n- The row said \"raising up to £500M of new equity (reported Mar 2026)\". The only report found is ION Analytics, June 2025 (working with KPMG on a minority-stake raise). No 2026 confirmation exists, so the brief does not use it.\n- The row said \"valued ~$5B\". The latest valuation is $9B (7 May 2024, company release). Used instead.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Greg Jackson, Founder & CEO | VERIFIED | octopus.energy leadership page (summary); WRI profile |\n| Rebecca Dibb-Simkin, Chief Product and Marketing Officer; Stuart Jackson, Co-Founder & CFO; no separate CMO | REPORTED | Crunchbase, LinkedIn, The Drum, Board Intelligence (company page blocked) |\n| Uplight investment completed 1 Sep 2026; Chaset; Schneider minority; 8.5 GW / 85+ utilities; $1bn / 20 GW targets | VERIFIED | company release via GlobeNewswire (summary) |\n| $9B valuation, May 2024; Generation IM 13%, CPP 12% | VERIFIED | octopus.energy release, 7 May 2024 (summary); Generation IM newsroom |\n| Kraken $1B round at $8.65B; $850M to Octopus; D1 lead; 13.7% retained; mid-2026 separation target | REPORTED | CNBC 30 Dec 2025; Sifted; Ontario Teachers' release. Completion of the separation not confirmed as of 5 Sep 2026 |\n| FY25 revenue £13.7bn (+10%), 10m customers, 7.6m UK homes, £255m net loss, £1.5bn net assets | REPORTED | Sifted on the filed annual report (octopusenergy.group PDF) |\n| Arsenal official energy partner since Oct 2016 | VERIFIED | arsenal.com; Octopus Group newsroom |\n| Ford integrated Electroverse, 2 Sep 2025 | VERIFIED | Ford of Europe media centre |\n| Electroverse 1m+ chargers, 40+ countries | VERIFIED | octopus.energy release (summary) |\n| 653k smart EV-tariff customers (Ofgem, Jul 2025), more than half with Octopus | REPORTED | octopus.energy Intelligent Octopus Go page citing Ofgem |\n| Octopus Energy US in Houston; Uplight in Boulder | VERIFIED | octopusenergy.com press page; 1 Sep release dateline |\n| Jaguar electric-only relaunch 2026; Bond Street; three new cars | REPORTED | electrive, 3 Nov 2025 |\n| Jaguar TCS Racing roster (TCS, Castrol, Jaguar); Envision Group, Shell, TotalEnergies positions; Andretti roster | VERIFIED | sponsor table `seeds/sponsors.json` |\n| Jeddah 18-19 Dec 2026; Austin 6 Feb; Miami 20 Feb; London 29-30 May 2027 | VERIFIED | calendar table `seeds/calendar_fe.json` |\n\n## Decision path\n\nGreg Jackson (Founder & CEO) is the decision maker: a founder-led group whose partnerships (Arsenal, Ford, the investor rounds) are fronted by him. Path: Rebecca Dibb-Simkin (Chief Product and Marketing Officer, the brand owner), Stuart Jackson (Co-Founder & CFO), Nick Chaset (CEO Octopus Energy US and Uplight) for a US extension. No separate CMO title exists; the CPMO holds marketing.\n\n## Leadership ties\n\nSearched Greg Jackson against Formula E / Formula 1 / motorsport: none found. Rebecca Dibb-Simkin's background is British Gas (Hive, Dyno-Rod), not motorsport. `leadership_ties` = none found.\n\n## Screen-outs and things not claimed\n\n- **Kraken (spin-out) is on `data/approached.json`** — the first risk row and the ask both require coordination before contact. This case is the consumer-brand parent, not Kraken.\n- **No Octopus motorsport partnership found** (Formula E, Electroverse, Greg Jackson searches); Valencia CF sustainability partnership reported but not used.\n- **Jaguar TCS Racing's real-world partners** reported by Jaguar media (Dow, Chase, Schaeffler) are not in the sponsor table and are not named in the copy; none is an energy retailer or charging brand. Castrol (a BP brand) is lubricants, flagged as a check, not a lock.\n- **Deal size (£1.5–3M a season) is an ESTIMATE**, labelled as such.\n- The Uplight transaction value, Octopus Energy US customer numbers and the status of the Kraken separation are not stated because they are not sourced.\n"
+}
