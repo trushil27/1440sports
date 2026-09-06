@@ -1,0 +1,381 @@
+{
+ "run_date": "2026-05-05",
+ "signal_date": "2026-04-29",
+ "stem": "hightouch",
+ "number": 225,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Hightouch",
+  "signal_date": "2026-04-29",
+  "score": 73,
+  "tier": "WARM",
+  "track": 1,
+  "person": "Kashish Gupta",
+  "role": "Co-Founder & Co-CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+  "industry_meta": "Marketing Technology · Customer Data Platform / AI Decisioning · San Francisco",
+  "recommended_team": "McLaren Mastercard F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "WARM",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$150M Series D at a $2.75B valuation led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures, announced 29 Apr 2026 (BusinessWire); total funding about $322M",
+   "investors": "Goldman Sachs Alternatives (Growth Equity), Bain Capital Ventures, Iconiq, Sapphire Ventures, Amplify Partners, Y Combinator, TD7 (The Trade Desk); Series C $80M at $1.2B led by Sapphire, Feb 2025",
+   "revenue": null,
+   "trigger": "$150M Series D at $2.75B announced 29 Apr 2026, fourteen months after the $1.2B Series C",
+   "competitor_signal": "Salesforce, an F1 global partner, has departed McLaren's roster; Oracle is Red Bull's title partner; Confluent at Racing Bulls, Infobip at Haas; no customer-data or marketing-activation partner on any team roster",
+   "strategic_hook": "Hightouch sells to chief marketing officers; McLaren's fan-data lane opened when Salesforce departed and Google Cloud joined; customer Whoop is a Ferrari partner",
+   "us_presence": "HQ San Francisco; founded 2018; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop",
+   "alumni_match": null,
+   "taxonomy_category": "E1",
+   "ops_fit_note": "MODE A: warehouse-native activation of McLaren's fan data into paid media, email and the store, with AI decisioning on the next offer per fan",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 15,
+   "brand_fit": 13,
+   "urgency": 12,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 7,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "kashish gupta",
+    "co-ceo",
+    "tejas manohar",
+    "josh curl",
+    "cherry miao",
+    "kotlyar",
+    "no chief marketing officer",
+    "wharton",
+    "bessemer",
+    "2018",
+    "founded"
+   ],
+   "url": "https://craft.co/hightouch/executives",
+   "excerpt": "Craft executive listing (cross-checked with Contrary Research and the Series D release): Kashish Gupta, Co-Founder & Co-CEO; Tejas Manohar, Co-Founder & Co-CEO; Josh Curl, Co-Founder & CTO; Cherry Miao, CFO; Brian Kotlyar, VP Marketing & Growth (formerly SVP Marketing, New Relic). No chief marketing officer is listed. Founded in San Francisco in 2018; Gupta is a Wharton graduate and former Bessemer Venture Partners investor.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$150m",
+    "$2.75b",
+    "29 april",
+    "29 apr",
+    "goldman sachs",
+    "bain capital",
+    "iconiq",
+    "sapphire",
+    "amplify",
+    "y combinator",
+    "td7",
+    "trade desk",
+    "100%",
+    "domino's",
+    "petsmart",
+    "draftkings",
+    "ramp",
+    "whoop",
+    "san francisco",
+    "funding round",
+    "series d",
+    "more than doubling",
+    "hightouch says"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+   "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$322m",
+    "six rounds",
+    "total funding"
+   ],
+   "url": "https://www.adweek.com/dealroom/hightouch-raised-322-million-across-six-rounds-heres-how-the-company-skyrocketed-to-a-275-billion-valuation/",
+   "excerpt": "Adweek, Apr 2026: Hightouch has raised $322 million across six rounds on its way to the $2.75 billion valuation.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$80m",
+    "$1.2b",
+    "february 2025",
+    "feb 2025",
+    "series c",
+    "fourteen months",
+    "spotify",
+    "accor",
+    "$172m"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/hightouch-announces-80m-series-c-at-1-2b-valuation-to-bring-ai-decisioning-to-marketers-302378572.html",
+   "excerpt": "Hightouch release, 18 Feb 2025 (PRNewswire; TechCrunch): $80 million Series C led by Sapphire Ventures at a $1.2 billion valuation, with Amplify, ICONIQ Growth, Bain Capital Ventures and Y Combinator; total funding then $172 million; enterprise customers named PetSmart, Spotify and Accor. February 2025 to April 2026 is fourteen months.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "gartner",
+    "magic quadrant",
+    "leader",
+    "january",
+    "29 jan"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260129112125/en/Hightouch-Named-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-Customer-Data-Platforms",
+   "excerpt": "Hightouch release on BusinessWire, 29 Jan 2026: Hightouch named a Leader in the 2025 Gartner Magic Quadrant for Customer Data Platforms.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "salesforce",
+    "fan-relationship",
+    "fan experience",
+    "ran mclaren",
+    "fan platform"
+   ],
+   "url": "https://www.salesforce.com/news/stories/mclaren-racing-fan-experience/",
+   "excerpt": "Salesforce newsroom: a multi-year partnership with McLaren Racing to deepen the team's relationship with its global fan base using Salesforce's customer platform. The sponsor table now lists Salesforce as departed from McLaren's roster.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "google cloud",
+    "alteryx",
+    "splunk",
+    "medallia",
+    "freshworks",
+    "workday",
+    "smartsheet",
+    "dropbox",
+    "mastercard",
+    "oracle",
+    "confluent",
+    "rebeldot",
+    "sprinklr",
+    "mntn",
+    "avature",
+    "indramind",
+    "tiktok",
+    "cognizant",
+    "servicenow",
+    "sap",
+    "solera",
+    "teamviewer",
+    "infobip",
+    "mphasis",
+    "atlassian",
+    "vast",
+    "ifs",
+    "longest technology roster",
+    "departed",
+    "fan-data lane",
+    "no customer-data",
+    "activates fan data",
+    "nothing on the roster"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: McLaren carries the longest technology roster in the table — Mastercard (title), Google Cloud (joined), Dell, Cisco, Splunk, Alteryx, Smartsheet, Medallia, Dropbox, Workday, Freshworks, Okta, Groq, Gemini, Rubrik; Salesforce departed. No customer-data platform or marketing-activation partner appears on any team roster. Red Bull: Oracle (title). Racing Bulls: Confluent, Dynatrace, RebelDot. Alpine: Sprinklr and MNTN departed, Avature and IndraMind joined, Microsoft. Aston Martin: TikTok, Cognizant, ServiceNow. Mercedes: SAP, Solera, TeamViewer, Microsoft, Meta AI. Haas: Infobip, Mphasis. Williams: Atlassian (title), VAST, Airia, Brillio. Cadillac: IFS, TWG AI. Ferrari: HP (title), IBM, DXC, WHOOP (joined). F1 championship: Salesforce (global partner, to 2030), AWS.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "monaco",
+    "us gp",
+    "las vegas",
+    "european rounds",
+    "miami",
+    "abu dhabi"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: Miami GP is round 6; the European rounds run from Monaco (round 8) to the Italian GP (round 15); the US GP is round 19, the Las Vegas GP round 22; Abu Dhabi closes the season at round 24.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Hightouch",
+  "industry_meta": "Marketing Technology · Customer Data Platform / AI Decisioning",
+  "hq": "San Francisco",
+  "ticker": "Private ($2.75B; $150M Series D, Apr 2026)",
+  "deck": "San Francisco marketing-data company Hightouch announced a $150M Series D at a $2.75B valuation on 29 April 2026, led by Goldman Sachs Alternatives' growth arm and Bain Capital Ventures, more than doubling its price in fourteen months. Its buyers are chief marketing officers, the audience paddock hospitality was built for.",
+  "score": 73,
+  "timing_label": "WARM",
+  "series_label": "F1",
+  "team_label": "McLaren Mastercard F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Hightouch announced on 29 April that it had raised $150M in a Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75B valuation, with Iconiq, Sapphire Ventures, Amplify, Y Combinator and TD7, The Trade Desk's venture arm, participating; total funding is about $322M. Hightouch says revenue has grown more than 100% in each of the past two years, and names Domino's, PetSmart, DraftKings, Ramp and Whoop among customers. Its Series C, $80M at $1.2B led by Sapphire, closed in February 2025.",
+  "the_case_p2": "The product is a marketing data layer that reads a company's warehouse and pushes audiences to advertising, email and CRM tools, with AI agents deciding what each customer sees next. It is bought by marketing leaders, which makes the paddock a sales floor, not a billboard. Gartner named Hightouch a Leader in its 2025 Magic Quadrant for customer data platforms in January, and no team on the grid carries a partner in the category.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round was announced on 29 April; budgets reset in the quarter after a raise, and Hightouch is spending on category leadership. The European rounds from Monaco, then the US GP and Las Vegas, fall inside the window, and teams close 2027 rosters in the fourth quarter.",
+  "why_team_label": "WHY MCLAREN MASTERCARD F1 TEAM",
+  "why_team_para": "McLaren carries the longest technology roster in the sponsor table, and its fan-data lane has just opened: Salesforce, whose platform ran McLaren's fan-relationship programme, has departed, while Google Cloud has joined. Alteryx and Splunk cover analytics and observability; nothing on the roster activates fan data into media, email and the store. Hightouch fills that slot, with a warehouse-side partner already in place.",
+  "value_section": true,
+  "value_section_label": "VALUE TO MCLAREN MASTERCARD F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Hightouch as the activation layer on McLaren's fan data: audiences built from ticketing, store, app and content behaviour in the team's warehouse, pushed to paid media, email and the McLaren store, with AI decisioning choosing the next offer for each fan. The team gets a measured lift in fan revenue; Hightouch gets a reference customer and a paddock full of chief marketing officers at the US GP and Las Vegas.",
+  "deal_arch_para": "Entry as Official Marketing Data Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the next raise and a probable listing window. Estimated $2-4M a year, part in kind via platform licence and services. Scope: mirror or engine-cover placement, a fan-data activation programme with McLaren's digital team, CMO hospitality at the US rounds, and a co-authored annual fan-data report.",
+  "decision_maker_name": "Kashish Gupta",
+  "decision_maker_role": "Co-Founder & Co-CEO, Hightouch",
+  "decision_maker_bio": "Gupta co-founded Hightouch in 2018 and shares the CEO role with Tejas Manohar; a Wharton graduate and former Bessemer investor, he fronts the raises. Path: Tejas Manohar, Co-Founder & Co-CEO; Cherry Miao, CFO; Brian Kotlyar, VP Marketing & Growth. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the buyer, not the badge.",
+  "opening_angle_quote": "&ldquo;Kashish, your buyers are CMOs, and every one of them passes through a Formula 1 paddock. McLaren's fan-data lane opened when Salesforce left, and Google Cloud just arrived. 25 minutes before Monaco to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round announced 29 Apr; European rounds and two US races ahead."
+   ],
+   [
+    "CAPACITY",
+    "15",
+    "/ 20",
+    "$2.75B valuation; $322M raised; a mid-tier partner budget."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "B2B martech; the paddock is where its buyers are."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "No listing date; category leadership is the only clock."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: fan-data activation on a warehouse the team runs."
+   ]
+  ],
+  "risks": [
+   [
+    "ADJACENT ROSTER",
+    "Freshworks and Medallia sit on McLaren's roster in customer software; a marketing-data partner must be scoped so neither reads it as a rival.",
+    "Define the category as warehouse-native fan-data activation; get written non-conflict from McLaren before signing."
+   ],
+   [
+    "SCALE FOR THE ROSTER",
+    "At $2.75B and $322M raised, Hightouch is a mid-tier partner on the grid's longest technology roster; car visibility will be modest.",
+    "Buy the workstream and the hospitality, not the livery; measure the deal on pipeline from the paddock."
+   ]
+  ],
+  "bottom_line": "A $150M Series D at $2.75B, revenue more than doubling for two years and a customer list that includes Whoop and DraftKings put Hightouch at peak brand-investment authority. McLaren's fan-data lane opened when Salesforce departed, and the buyers Hightouch needs are already in the paddock.",
+  "signals": [
+   "funding_event",
+   "category_whitespace",
+   "buyer_audience"
+  ],
+  "footer_company": "HIGHTOUCH",
+  "footer_date": "5 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "Hightouch announced on 29 April 2026 a $150M Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75B valuation, with Iconiq, Sapphire Ventures, Amplify Partners, Y Combinator and TD7, The Trade Desk's venture arm, participating. Total funding is about $322M across six rounds. The release is the company's own, so the figures are announced, not reported."
+    },
+    {
+     "label": "Price more than doubled",
+     "text": "The Series C of February 2025, $80M led by Sapphire Ventures, valued Hightouch at $1.2B. Fourteen months later the Series D priced it at $2.75B. Hightouch says revenue has grown more than 100% in each of the past two years; no revenue figure is public and none is used here."
+    },
+    {
+     "label": "Category leadership is being bought",
+     "text": "Gartner named Hightouch a Leader in the 2025 Magic Quadrant for Customer Data Platforms (announced 29 January 2026). The company is investing to hold that position against Salesforce, Adobe and the warehouse vendors, and its buyers, chief marketing officers, are the people a Formula 1 partnership puts in a room."
+    },
+    {
+     "label": "Calendar window",
+     "text": "From the 5 May row date the European rounds run from Monaco to Monza; the US GP and Las Vegas fall in the last quarter of the calendar. Teams close 2027 rosters in the fourth quarter, so a conversation opened in May can be announced at a US round and activated in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "McLaren's technology roster is the longest in the sponsor table: Google Cloud, Dell, Cisco, Splunk, Alteryx, Smartsheet, Medallia, Dropbox, Workday, Freshworks, Okta, Groq, Gemini and Rubrik. Salesforce, whose platform ran McLaren's fan-relationship programme, has departed. Nothing on the roster activates fan data into media, email and the store: Official Marketing Data Partner is a clean designation."
+    },
+    {
+     "label": "A stack to plug into",
+     "text": "Hightouch reads a company's cloud data warehouse rather than copying the data into its own system; Google Cloud joined McLaren's roster this season, giving the programme a warehouse-side partner already in place."
+    },
+    {
+     "label": "A team that will use the product",
+     "text": "McLaren's commercial machine is the most visible on the grid: a global fan base, a large store and a hospitality programme that is itself a marketing operation. Fan-data activation is consumed by the team's digital and commercial staff every week, which is what separates a technology partner from a logo."
+    },
+    {
+     "label": "The buyer audience",
+     "text": "Hightouch sells to chief marketing officers. McLaren's partners are largely enterprise brands whose CMOs attend the races; a seat at the Paddock Club at the US GP and Las Vegas is a sales floor for Hightouch as much as a brand placement."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Audiences built from ticketing, store, app and content behaviour in McLaren's warehouse, pushed to paid media, email and the McLaren store, with AI decisioning choosing the next offer for each fan and measuring lift. The team funds no new data platform; Hightouch supplies the activation layer and the services to run it."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A measured increase in fan revenue per head across store, tickets and hospitality, reported quarterly, and a partner whose guest list is chief marketing officers, the audience McLaren's other B2B partners want in the suite."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "A co-authored annual fan-data report on how a Formula 1 team markets to its fans, McLaren as a named reference customer for Hightouch's enterprise sales, and engineering-to-marketing content that fits the team's technology positioning."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Marketing Data Partner designation, mirror or engine-cover placement, integration rights across McLaren's fan-data estate, US-round hospitality, and driver access for Hightouch's customer events."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and sells its own customer-data and marketing cloud; direct conflict."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Confluent (data streaming) and RebelDot (software) crowd the data lane."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Sprinklr and MNTN departed within the last 12 months and Avature and IndraMind joined; a marketing-software lane recently vacated and re-filled."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "TikTok, Cognizant and ServiceNow occupy the marketing-platform and enterprise-software positions."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "SAP, Solera, TeamViewer, Microsoft and Meta AI crowd enterprise software and AI."
+    },
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "Infobip, a customer-engagement platform, is a team partner; adjacent conflict."
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "reason": "Open but not chosen: Whoop, a Hightouch customer, is a Ferrari partner, which is a warm introduction rather than a lane; Ferrari's technology roster is HP-led and the fan-data story is weaker."
+    },
+    {
+     "team": "Atlassian Williams Racing · Audi F1 Team · Cadillac F1 Team",
+     "reason": "Open but not chosen: none carries the Salesforce-vacated, Google Cloud-backed fan-data setup that makes McLaren the natural home."
+    }
+   ],
+   "ask": "A 25-minute call with Kashish Gupta and Tejas Manohar before Monaco to test appetite, agree how a fan-data activation programme would be measured, and size an Official Marketing Data Partner entry against McLaren's 2027 roster."
+  }
+ },
+ "note": "# Hightouch → McLaren Mastercard F1 Team — verification log (N° 225, row date 5 May 2026)\n\nBuilt in-session at no API cost (no `ANTHROPIC_API_KEY`) with Claude as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code. Rebuilt on its original row date from the thin scan row (score 87, team none) in batch 20.\n\n**Sandbox limitation, stated plainly:** direct fetches of businesswire.com, hightouch.com, prnewswire.com, adweek.com and salesforce.com were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nCompany-announced: Hightouch's own release on BusinessWire, \"Hightouch Raises $150 Million to Reinvent How Marketing Works Using AI\". The BusinessWire URL carries 27 April; the trade coverage (Retail Technology Innovation Hub, citybiz, Pulse 2.0) and the search summary of the release date it 29 April 2026, which the brief uses; Built In San Francisco ran it on 30 April. Either date is inside the 90-day window of the 5 May row. $150M Series D, $2.75B valuation, led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures.\n\n## Screen-outs and things not claimed\n\n- **No revenue figure**: Hightouch says growth exceeded 100% in each of the past two years; no absolute figure is public and none is used.\n- **Product integration with McLaren's stack is not claimed as fact.** Google Cloud's presence on the roster comes from the sponsor table; the copy says it gives the programme a warehouse-side partner, not that McLaren's warehouse runs on it. Hightouch's most common data sources were not verified this session and are not named.\n- **McLaren fan-base, store and hospitality figures** are not quantified: none were sourced.\n- **Deal size ($2-4M a year) is an ESTIMATE**, labelled as such.\n- **The Snowflake partner-of-the-year award (June 2026)** post-dates the row and is left out.\n- **Ramp**, a named Hightouch customer, is on 1440's approached list (`data/approached.json`); it is mentioned only as a customer, not as a route in.\n- **Score 73, not the row's 87:** capacity is 15 (a $2.75B company with $322M raised is a mid-tier partner) and brand fit 13 (B2B martech). The case rests on the buyer audience and a real Mode A workstream.\n\n## Decision path\n\nKashish Gupta, Co-Founder & Co-CEO (fronts the raises), with Tejas Manohar, Co-Founder & Co-CEO. Path: Cherry Miao, CFO; Brian Kotlyar, VP Marketing & Growth. **No chief marketing officer is listed** (Craft executive listing, cross-checked with Contrary Research and the release). The company's own leadership page could not be opened from the sandbox.\n\n## Leadership ties\n\nNo F1/FE ecosystem tie found for Gupta, Manohar, Curl, Miao or Kotlyar after checking; no motorsport customer case study found. `leadership_ties`: none found.\n\n## Team choice\n\nMcLaren over Williams, Audi, Cadillac and Ferrari (all open). McLaren is the only roster where a customer-data platform (Salesforce) has just departed and a cloud partner (Google Cloud) has just joined, and its commercial programme is the most visible on the grid. Adjacent partners (Freshworks, Medallia) are the first risk and are named.\n"
+}

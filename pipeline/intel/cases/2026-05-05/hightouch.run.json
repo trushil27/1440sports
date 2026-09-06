@@ -1,0 +1,712 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-05-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-zigx51e7/2026-05-05/hightouch.pdf",
+     "web": "/tmp/case-pdf-zigx51e7/2026-05-05/hightouch.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Hightouch",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 12
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 73,
+     "reason": "top ranking score",
+     "company": "Hightouch",
+     "decision": "selected",
+     "signal_date": "2026-04-29"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Hightouch",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 73,
+   "score_breakdown": {
+    "cap": null,
+    "base": 73,
+    "total": 73,
+    "timing": 17,
+    "ops_fit": 16,
+    "ranking": 73,
+    "urgency": 12,
+    "capacity": 15,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 73,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 73,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "McLaren Mastercard F1 Team",
+   "source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+   "trigger_date": "2026-04-29",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 225,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-zigx51e7/2026-05-05/hightouch.web.html",
+  "brief_data": {
+   "hq": "San Francisco",
+   "deck": "San Francisco marketing-data company Hightouch announced a $150M Series D at a $2.75B valuation on 29 April 2026, led by Goldman Sachs Alternatives' growth arm and Bain Capital Ventures, more than doubling its price in fourteen months. Its buyers are chief marketing officers, the audience paddock hospitality was built for.",
+   "risks": [
+    {
+     "label": "ADJACENT ROSTER",
+     "detail": "Freshworks and Medallia sit on McLaren's roster in customer software; a marketing-data partner must be scoped so neither reads it as a rival.",
+     "counter": "Define the category as warehouse-native fan-data activation; get written non-conflict from McLaren before signing."
+    },
+    {
+     "label": "SCALE FOR THE ROSTER",
+     "detail": "At $2.75B and $322M raised, Hightouch is a mid-tier partner on the grid's longest technology roster; car visibility will be modest.",
+     "counter": "Buy the workstream and the hospitality, not the livery; measure the deal on pipeline from the paddock."
+    }
+   ],
+   "score": 73,
+   "ticker": "Private ($2.75B; $150M Series D, Apr 2026)",
+   "company": "Hightouch",
+   "gridfit": [
+    {
+     "team": "McLaren F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "buyer_audience"
+   ],
+   "sources": [
+    "https://craft.co/hightouch/executives",
+    "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+    "https://www.adweek.com/dealroom/hightouch-raised-322-million-across-six-rounds-heres-how-the-company-skyrocketed-to-a-275-billion-valuation/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Kashish Gupta and Tejas Manohar before Monaco to test appetite, agree how a fan-data activation programme would be measured, and size an Official Marketing Data Partner entry against McLaren's 2027 roster.",
+    "value": [
+     {
+      "text": "Audiences built from ticketing, store, app and content behaviour in McLaren's warehouse, pushed to paid media, email and the McLaren store, with AI decisioning choosing the next offer for each fan and measuring lift. The team funds no new data platform; Hightouch supplies the activation layer and the services to run it.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A measured increase in fan revenue per head across store, tickets and hospitality, reported quarterly, and a partner whose guest list is chief marketing officers, the audience McLaren's other B2B partners want in the suite.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A co-authored annual fan-data report on how a Formula 1 team markets to its fans, McLaren as a named reference customer for Hightouch's enterprise sales, and engineering-to-marketing content that fits the team's technology positioning.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Marketing Data Partner designation, mirror or engine-cover placement, integration rights across McLaren's fan-data estate, US-round hospitality, and driver access for Hightouch's customer events.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Hightouch announced on 29 April 2026 a $150M Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75B valuation, with Iconiq, Sapphire Ventures, Amplify Partners, Y Combinator and TD7, The Trade Desk's venture arm, participating. Total funding is about $322M across six rounds. The release is the company's own, so the figures are announced, not reported.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The Series C of February 2025, $80M led by Sapphire Ventures, valued Hightouch at $1.2B. Fourteen months later the Series D priced it at $2.75B. Hightouch says revenue has grown more than 100% in each of the past two years; no revenue figure is public and none is used here.",
+      "label": "Price more than doubled"
+     },
+     {
+      "text": "Gartner named Hightouch a Leader in the 2025 Magic Quadrant for Customer Data Platforms (announced 29 January 2026). The company is investing to hold that position against Salesforce, Adobe and the warehouse vendors, and its buyers, chief marketing officers, are the people a Formula 1 partnership puts in a room.",
+      "label": "Category leadership is being bought"
+     },
+     {
+      "text": "From the 5 May row date the European rounds run from Monaco to Monza; the US GP and Las Vegas fall in the last quarter of the calendar. Teams close 2027 rosters in the fourth quarter, so a conversation opened in May can be announced at a US round and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "McLaren's technology roster is the longest in the sponsor table: Google Cloud, Dell, Cisco, Splunk, Alteryx, Smartsheet, Medallia, Dropbox, Workday, Freshworks, Okta, Groq, Gemini and Rubrik. Salesforce, whose platform ran McLaren's fan-relationship programme, has departed. Nothing on the roster activates fan data into media, email and the store: Official Marketing Data Partner is a clean designation.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Hightouch reads a company's cloud data warehouse rather than copying the data into its own system; Google Cloud joined McLaren's roster this season, giving the programme a warehouse-side partner already in place.",
+      "label": "A stack to plug into"
+     },
+     {
+      "text": "McLaren's commercial machine is the most visible on the grid: a global fan base, a large store and a hospitality programme that is itself a marketing operation. Fan-data activation is consumed by the team's digital and commercial staff every week, which is what separates a technology partner from a logo.",
+      "label": "A team that will use the product"
+     },
+     {
+      "text": "Hightouch sells to chief marketing officers. McLaren's partners are largely enterprise brands whose CMOs attend the races; a seat at the Paddock Club at the US GP and Las Vegas is a sales floor for Hightouch as much as a brand placement.",
+      "label": "The buyer audience"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and sells its own customer-data and marketing cloud; direct conflict."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Confluent (data streaming) and RebelDot (software) crowd the data lane."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Sprinklr and MNTN departed within the last 12 months and Avature and IndraMind joined; a marketing-software lane recently vacated and re-filled."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "TikTok, Cognizant and ServiceNow occupy the marketing-platform and enterprise-software positions."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "SAP, Solera, TeamViewer, Microsoft and Meta AI crowd enterprise software and AI."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Infobip, a customer-engagement platform, is a team partner; adjacent conflict."
+     },
+     {
+      "team": "Scuderia Ferrari",
+      "reason": "Open but not chosen: Whoop, a Hightouch customer, is a Ferrari partner, which is a warm introduction rather than a lane; Ferrari's technology roster is HP-led and the fan-data story is weaker."
+     },
+     {
+      "team": "Atlassian Williams Racing · Audi F1 Team · Cadillac F1 Team",
+      "reason": "Open but not chosen: none carries the Salesforce-vacated, Google Cloud-backed fan-data setup that makes McLaren the natural home."
+     }
+    ]
+   },
+   "date_long": "05 MAY 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "McLaren Mastercard F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $150M Series D at $2.75B, revenue more than doubling for two years and a customer list that includes Whoop and DraftKings put Hightouch at peak brand-investment authority. McLaren's fan-data lane opened when Salesforce departed, and the buyers Hightouch needs are already in the paddock.",
+   "footer_date": "5 MAY 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round announced 29 Apr; European rounds and two US races ahead.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "$2.75B valuation; $322M raised; a mid-tier partner budget.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "B2B martech; the paddock is where its buyers are.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No listing date; category leadership is the only clock.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: fan-data activation on a warehouse the team runs.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Hightouch announced on 29 April that it had raised $150M in a Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75B valuation, with Iconiq, Sapphire Ventures, Amplify, Y Combinator and TD7, The Trade Desk's venture arm, participating; total funding is about $322M. Hightouch says revenue has grown more than 100% in each of the past two years, and names Domino's, PetSmart, DraftKings, Ramp and Whoop among customers. Its Series C, $80M at $1.2B led by Sapphire, closed in February 2025.",
+   "the_case_p2": "The product is a marketing data layer that reads a company's warehouse and pushes audiences to advertising, email and CRM tools, with AI agents deciding what each customer sees next. It is bought by marketing leaders, which makes the paddock a sales floor, not a billboard. Gartner named Hightouch a Leader in its 2025 Magic Quadrant for customer data platforms in January, and no team on the grid carries a partner in the category.",
+   "track_label": "",
+   "brief_number": "225",
+   "claims_total": 15,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$150M Series D at a $2.75B valuation led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ve…",
+     "value": "$150M",
+     "claim_id": 657,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI"
+    },
+    {
+     "fact": "Goldman Sachs Alternatives (Growth Equity), Bain Capital Ventures, Iconiq, Sapphire Ventures, Amplify Partn…",
+     "value": "$80M",
+     "claim_id": 658,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI"
+    },
+    {
+     "fact": "total funding is about $322M.",
+     "value": "$322M",
+     "claim_id": 667,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "Hightouch says revenue has grown more than 100% in each of the past two years, and names Domino's, PetSmart…",
+     "value": "100%",
+     "claim_id": 668,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Marketing Technology · Customer Data Platform / AI Decisioning",
+   "value_content": "MODE A - operational. Hightouch as the activation layer on McLaren's fan data: audiences built from ticketing, store, app and content behaviour in the team's warehouse, pushed to paid media, email and the McLaren store, with AI decisioning choosing the next offer for each fan. The team gets a measured lift in fan revenue; Hightouch gets a reference customer and a paddock full of chief marketing officers at the US GP and Las Vegas.",
+   "value_section": true,
+   "why_team_para": "McLaren carries the longest technology roster in the sponsor table, and its fan-data lane has just opened: Salesforce, whose platform ran McLaren's fan-relationship programme, has departed, while Google Cloud has joined. Alteryx and Splunk cover analytics and observability; nothing on the roster activates fan data into media, email and the store. Hightouch fills that slot, with a warehouse-side partner already in place.",
+   "deal_arch_para": "Entry as Official Marketing Data Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the next raise and a probable listing window. Estimated $2-4M a year, part in kind via platform licence and services. Scope: mirror or engine-cover placement, a fan-data activation programme with McLaren's digital team, CMO hospitality at the US rounds, and a co-authored annual fan-data report.",
+   "footer_company": "HIGHTOUCH",
+   "why_team_label": "WHY MCLAREN MASTERCARD F1 TEAM",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round was announced on 29 April; budgets reset in the quarter after a raise, and Hightouch is spending on category leadership. The European rounds from Monaco, then the US GP and Las Vegas, fall inside the window, and teams close 2027 rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Gupta co-founded Hightouch in 2018 and shares the CEO role with Tejas Manohar; a Wharton graduate and former Bessemer investor, he fronts the raises. Path: Tejas Manohar, Co-Founder & Co-CEO; Cherry Miao, CFO; Brian Kotlyar, VP Marketing & Growth. No chief marketing officer is listed.",
+   "decision_maker_name": "Kashish Gupta",
+   "decision_maker_role": "Co-Founder & Co-CEO, Hightouch",
+   "opening_angle_intro": "Lead with the buyer, not the badge.",
+   "opening_angle_quote": "&ldquo;Kashish, your buyers are CMOs, and every one of them passes through a Formula 1 paddock. McLaren's fan-data lane opened when Salesforce left, and Google Cloud just arrived. 25 minutes before Monaco to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO MCLAREN MASTERCARD F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Kashish Gupta, Co-Founder & Co-CEO at Hightouch",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://craft.co/hightouch/executives",
+     "excerpt": "Craft executive listing (cross-checked with Contrary Research and the Series D release): Kashish Gupta, Co-Founder & Co-CEO; Tejas Manohar, Co-Founder & Co-CEO; Josh Curl, Co-Founder & CTO; Cherry Miao, CFO; Brian Kotlyar, VP Marketing & Growth (formerly SVP Marketing, New Relic). No chief marketing officer is listed. Founded in San Francisco in 2018; Gupta is a Wharton graduate and former Bessemer Venture Partners investor.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Kashish Gupta, Co-Founder & Co-CEO, Hightouch at Hightouch",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://craft.co/hightouch/executives",
+     "excerpt": "Craft executive listing (cross-checked with Contrary Research and the Series D release): Kashish Gupta, Co-Founder & Co-CEO; Tejas Manohar, Co-Founder & Co-CEO; Josh Curl, Co-Founder & CTO; Cherry Miao, CFO; Brian Kotlyar, VP Marketing & Growth (formerly SVP Marketing, New Relic). No chief marketing officer is listed. Founded in San Francisco in 2018; Gupta is a Wharton graduate and former Bessemer Venture Partners investor.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$150M Series D at a $2.75B valuation led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures, announced 29 Apr 2026 (BusinessWire); total funding about $322M",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "San Francisco marketing-data company Hightouch announced a $150M Series D at a $2.75B valuation on 29 April 2026, led by Goldman Sachs Alternatives' growth arm and Bain Capital Ventures, more than doubling its price in fourteen months.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Goldman Sachs Alternatives (Growth Equity), Bain Capital Ventures, Iconiq, Sapphire Ventures, Amplify Partners, Y Combinator, TD7 (The Trade Desk); Series C $80M at $1.2B led by Sapphire, Feb 2025",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Hightouch announced on 29 April that it had raised $150M in a Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75B valuation, with Iconiq, Sapphire Ventures, Amplify, Y Combinator and TD7, The Trade Desk's venture arm, participating;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$150M Series D at $2.75B announced 29 Apr 2026, fourteen months after the $1.2B Series C",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "total funding is about $322M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.adweek.com/dealroom/hightouch-raised-322-million-across-six-rounds-heres-how-the-company-skyrocketed-to-a-275-billion-valuation/",
+     "excerpt": "Adweek, Apr 2026: Hightouch has raised $322 million across six rounds on its way to the $2.75 billion valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Salesforce, an F1 global partner, has departed McLaren's roster; Oracle is Red Bull's title partner; Confluent at Racing Bulls, Infobip at Haas; no customer-data or marketing-activation partner on any team roster",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Confluent → Visa Cash App Racing Bulls (team_major, active); Infobip → MoneyGram Haas F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Hightouch says revenue has grown more than 100% in each of the past two years, and names Domino's, PetSmart, DraftKings, Ramp and Whoop among customers.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Hightouch sells to chief marketing officers; McLaren's fan-data lane opened when Salesforce departed and Google Cloud joined; customer Whoop is a Ferrari partner",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Its Series C, $80M at $1.2B led by Sapphire, closed in February 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ San Francisco; founded 2018; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://craft.co/hightouch/executives",
+     "excerpt": "Craft executive listing (cross-checked with Contrary Research and the Series D release): Kashish Gupta, Co-Founder & Co-CEO; Tejas Manohar, Co-Founder & Co-CEO; Josh Curl, Co-Founder & CTO; Cherry Miao, CFO; Brian Kotlyar, VP Marketing & Growth (formerly SVP Marketing, New Relic). No chief marketing officer is listed. Founded in San Francisco in 2018; Gupta is a Wharton graduate and former Bessemer Venture Partners investor.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $150M Series D at $2.75B, revenue more than doubling for two years and a customer list that includes Whoop and DraftKings put Hightouch at peak brand-investment authority.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Hightouch announced on 29 April 2026 a $150M Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75B valuation, with Iconiq, Sapphire Ventures, Amplify Partners, Y Combinator and TD7, The Trade Desk's venture arm, participating.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Total funding is about $322M across six rounds.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.adweek.com/dealroom/hightouch-raised-322-million-across-six-rounds-heres-how-the-company-skyrocketed-to-a-275-billion-valuation/",
+     "excerpt": "Adweek, Apr 2026: Hightouch has raised $322 million across six rounds on its way to the $2.75 billion valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The Series C of February 2025, $80M led by Sapphire Ventures, valued Hightouch at $1.2B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Fourteen months later the Series D priced it at $2.75B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Hightouch says revenue has grown more than 100% in each of the past two years;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+     "excerpt": "Hightouch press release on BusinessWire (URL dated 27 Apr; carried 29 Apr 2026 by Retail Technology Innovation Hub, citybiz, Pulse 2.0): $150 million Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75 billion valuation; Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm) participated. Hightouch says it has grown more than 100% in each of the past two years; customers named include Domino's, PetSmart, DraftKings, Ramp and Whoop. San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  }
+ ]
+}

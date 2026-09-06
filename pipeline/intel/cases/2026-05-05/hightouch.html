@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Hightouch</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "HIGHTOUCH · 5 MAY 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 225</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 225 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Hightouch</h1>
+  <div class="classline">Marketing Technology · Customer Data Platform / AI Decisioning · San Francisco · Private ($2.75B; $150M Series D, Apr 2026)</div>
+
+  <div class="lede">San Francisco marketing-data company Hightouch announced a $150M Series D at a $2.75B valuation on 29 April 2026, led by Goldman Sachs Alternatives' growth arm and Bain Capital Ventures, more than doubling its price in fourteen months. Its buyers are chief marketing officers, the audience paddock hospitality was built for.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">73</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">McLaren Mastercard F1 Team</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Hightouch announced on 29 April that it had raised $150M in a Series D led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures at a $2.75B valuation, with Iconiq, Sapphire Ventures, Amplify, Y Combinator and TD7, The Trade Desk's venture arm, participating; total funding is about $322M. Hightouch says revenue has grown more than 100% in each of the past two years, and names Domino's, PetSmart, DraftKings, Ramp and Whoop among customers. Its Series C, $80M at $1.2B led by Sapphire, closed in February 2025.</p>
+<p>The product is a marketing data layer that reads a company's warehouse and pushes audiences to advertising, email and CRM tools, with AI agents deciding what each customer sees next. It is bought by marketing leaders, which makes the paddock a sales floor, not a billboard. Gartner named Hightouch a Leader in its 2025 Magic Quadrant for customer data platforms in January, and no team on the grid carries a partner in the category.</p>
+  <h2>Why Now</h2>
+  <p>The round was announced on 29 April; budgets reset in the quarter after a raise, and Hightouch is spending on category leadership. The European rounds from Monaco, then the US GP and Las Vegas, fall inside the window, and teams close 2027 rosters in the fourth quarter.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$150M</div><div class="pfk">$150M Series D at a $2.75B valuation led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ve…</div></div>
+    <div class="pf"><div class="pfv">$80M</div><div class="pfk">Goldman Sachs Alternatives (Growth Equity), Bain Capital Ventures, Iconiq, Sapphire Ventures, Amplify Partn…</div></div>
+    <div class="pf"><div class="pfv">$322M</div><div class="pfk">total funding is about $322M.</div></div>
+    <div class="pf"><div class="pfv">100%</div><div class="pfk">Hightouch says revenue has grown more than 100% in each of the past two years, and names Domino&#39;s, PetSmart…</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (sponsor table; 49 of 346 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">McLaren F1 Team<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Mercedes-AMG Petronas F1 Team</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Oracle Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Scuderia Ferrari</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A $150M Series D at $2.75B, revenue more than doubling for two years and a customer list that includes Whoop and DraftKings put Hightouch at peak brand-investment authority. McLaren's fan-data lane opened when Salesforce departed, and the buyers Hightouch needs are already in the paddock.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">category whitespace</span><span class="flag">buyer audience</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 225</span>
+  </div>
+
+  <h2>WHY MCLAREN MASTERCARD F1 TEAM</h2>
+  <p>McLaren carries the longest technology roster in the sponsor table, and its fan-data lane has just opened: Salesforce, whose platform ran McLaren's fan-relationship programme, has departed, while Google Cloud has joined. Alteryx and Splunk cover analytics and observability; nothing on the roster activates fan data into media, email and the store. Hightouch fills that slot, with a warehouse-side partner already in place.</p>
+
+  <h2>VALUE TO MCLAREN MASTERCARD F1 TEAM &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A - operational. Hightouch as the activation layer on McLaren's fan data: audiences built from ticketing, store, app and content behaviour in the team's warehouse, pushed to paid media, email and the McLaren store, with AI decisioning choosing the next offer for each fan. The team gets a measured lift in fan revenue; Hightouch gets a reference customer and a paddock full of chief marketing officers at the US GP and Las Vegas.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official Marketing Data Partner. <b class="hl">THREE YEARS</b>, 2027-2029, covering the next raise and a probable listing window. Estimated $2-4M a year, part in kind via platform licence and services. Scope: mirror or engine-cover placement, a fan-data activation programme with McLaren's digital team, CMO hospitality at the US rounds, and a co-authored annual fan-data report.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Kashish Gupta</div>
+        <div class="role">Co-Founder &amp; Co-CEO, Hightouch · <span class="vtag">verified</span></div>
+        <div class="bio">Gupta co-founded Hightouch in 2018 and shares the CEO role with Tejas Manohar; a Wharton graduate and former Bessemer investor, he fronts the raises. Path: Tejas Manohar, Co-Founder &amp; Co-CEO; Cherry Miao, CFO; Brian Kotlyar, VP Marketing &amp; Growth. No chief marketing officer is listed.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the buyer, not the badge.</div>      <div class="quote">“Kashish, your buyers are CMOs, and every one of them passes through a Formula 1 paddock. McLaren's fan-data lane opened when Salesforce left, and Google Cloud just arrived. 25 minutes before Monaco to see the numbers?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Round announced 29 Apr; European rounds and two US races ahead.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">$2.75B valuation; $322M raised; a mid-tier partner budget.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">B2B martech; the paddock is where its buyers are.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">No listing date; category leadership is the only clock.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">MODE A: fan-data activation on a warehouse the team runs.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">ADJACENT ROSTER</span> &nbsp;<span class="rc">Freshworks and Medallia sit on McLaren's roster in customer software; a marketing-data partner must be scoped so neither reads it as a rival. <b>Counter:</b> Define the category as warehouse-native fan-data activation; get written non-conflict from McLaren before signing.</span></div>
+  <div class="risk"><span class="rt">SCALE FOR THE ROSTER</span> &nbsp;<span class="rc">At $2.75B and $322M raised, Hightouch is a mid-tier partner on the grid's longest technology roster; car visibility will be modest. <b>Counter:</b> Buy the workstream and the hospitality, not the livery; measure the deal on pipeline from the paddock.</span></div>
+
+  <h2>Sources <span class="panelnote">— 15 of 15 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://craft.co/hightouch/executives</li><li>https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI</li><li>https://www.adweek.com/dealroom/hightouch-raised-322-million-across-six-rounds-heres-how-the-company-skyrocketed-to-a-275-billion-valuation/</li>  </ul>
+</div>
+</body>
+</html>
