@@ -1,0 +1,719 @@
+{
+ "run": {
+  "id": 132,
+  "date": "2026-08-03",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-s7vnw1ez/2026-08-03/valaratomics.pdf",
+     "web": "/tmp/case-pdf-s7vnw1ez/2026-08-03/valaratomics.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Valar Atomics",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 14
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 196,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 200,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "Valar Atomics",
+     "decision": "selected",
+     "signal_date": "2026-08-03"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Valar Atomics",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 15,
+    "ops_fit": 12,
+    "ranking": 70,
+    "urgency": 13,
+    "capacity": 16,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 3,
+     "product_to_need": 2,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Andretti Formula E",
+   "source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+   "trigger_date": "2026-08-03",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 152,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-s7vnw1ez/2026-08-03/valaratomics.web.html",
+  "brief_data": {
+   "hq": "El Segundo, California (reactor site: Emery County, Utah)",
+   "deck": "Valar Atomics, the El Segundo nuclear start-up whose Ward 250 reactor went critical in Utah in June and powered an NVIDIA Blackwell chip on 1 July, announced a $1B Series B led by Sequoia on 3 August with a $200M credit facility; Bloomberg puts the valuation at $6B.",
+   "risks": [
+    {
+     "label": "SERIES OPTICS",
+     "detail": "Formula E markets itself on sustainability; a fission brand may draw objection from the promoter, the team's owner or NGOs.",
+     "counter": "Clear it with team and series early; frame as clean firm power for electrification."
+    },
+    {
+     "label": "PROOF OF CONCEPT ONLY",
+     "detail": "Ward 250 ran at about 100 kW thermal for a demo; commercial power is years away, and the $6B is Bloomberg's figure, not the company's.",
+     "counter": "Anchor on the DOE milestone and the Oval Office; confirm the valuation on the first call."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private ($6B reported; $1B Series B, Aug 2026)",
+   "company": "Valar Atomics",
+   "gridfit": [
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Envision Racing",
+     "label": "TAKEN",
+     "detail": "Teijin",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "policy_milestone",
+    "us_market"
+   ],
+   "sources": [
+    "https://www.deseret.com/business/2026/03/17/isaiah-taylor-who-founded-valar-atomics-is-bringing-nuclear-power-online/",
+    "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Isaiah Taylor before Andretti settles its Season 13 roster to test the series and team on a nuclear partner, confirm the valuation on the record and size an Official Clean Firm Power Partner entry built around the Austin and Miami rounds.",
+    "value": [
+     {
+      "text": "A reactor is not a race-team input and the brief does not pretend otherwise. The value is commercial and narrative: Official Clean Firm Power Partner designation, an American energy story next to TWG AI on the car, and a power-behind-the-grid content series filmed at the Utah site.",
+      "label": "Halo with mechanics (Mode B)"
+     },
+     {
+      "text": "Valar's guest list for Austin and Miami is utilities, hyperscalers, state governors and federal energy officials, an audience no current Andretti partner brings to the suite and one that Quest Global and TWG AI would value.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Driver visits to Emery County, a reactor-to-race-track series on how firm power feeds an electric grid, and a reference story Valar can use with every regulator and utility it approaches.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Clean Firm Power Partner designation, sidepod placement, hospitality at the Austin and Miami rounds, driver and engineering access for Valar's recruiting and public-affairs channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 3 August Valar Atomics announced a $1B Series B led by Sequoia, with Shaun Maguire joining the board and Atreides, Point72, Snowpoint and Valor Equity Partners participating, alongside a $200M credit facility led by Erebor Bank with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg and TechCrunch report a $6B valuation, about three times the roughly $2B of the prior round months earlier; the company itself did not disclose it, and the brief says so.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Ward 250, a TRISO-fuelled high-temperature gas reactor flown to Utah by US Air Force cargo aircraft in February, reached criticality on 18 June at the Utah San Rafael Energy Lab in Emery County under the Department of Energy's Reactor Pilot Program, the first DOE-authorised reactor built outside a national laboratory and the second to go critical under the programme. The site had been empty nine months earlier.",
+      "label": "The reactor is real"
+     },
+     {
+      "text": "On 1 July Ward 250 powered an NVIDIA Blackwell chip live on stage and hosted a website, the first time a US advanced reactor has run an AI chip, and Valar and NVIDIA announced a joint study for a 30 MW water-free AI computing facility in Utah. On 24 July the President hosted Taylor and three other reactor CEOs in the Oval Office. The company is, for the first time, a brand the public has seen.",
+      "label": "The public moment"
+     },
+     {
+      "text": "Season 13 opens in Jeddah on 18 December and teams settle rosters this autumn. The Austin E-Prix on 6 February and the Miami E-Prix on 20 February 2027 are the two US rounds, in front of the utilities, hyperscalers, state governors and federal officials Valar sells to.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Andretti is the US entry in Formula E, and its two US home rounds fall within three weeks of each other in February. Valar's customers and regulators are American; the Oval Office is its most valuable photograph. No other Formula E team gives the story a home crowd.",
+      "label": "The American team"
+     },
+     {
+      "text": "Per the sponsor table, Andretti carries Porsche and, from Season 13, Nissan as powertrain partners, Andretti Global, TWG AI, Quest Global, Crowe UK and Reflo, and no energy, fuel or power partner. No nuclear or firm-power brand sits on any Formula E roster; Official Clean Firm Power Partner is a clean category.",
+      "label": "The open lane"
+     },
+     {
+      "text": "TWG AI is already on the Andretti car; Valar's first commercial customers are AI data centres, and its Utah facility study is with NVIDIA. Power and compute on one livery is a story the two partners can tell together.",
+      "label": "The AI adjacency"
+     },
+     {
+      "text": "Formula E is asked at every round where its power comes from. A partner whose product is clean firm electricity, on the American car, answers that question in a way a fuel or lubricant brand cannot.",
+      "label": "Where the electricity comes from"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "DS Penske",
+      "reason": "TotalEnergies holds the energy lane."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell holds the energy lane."
+     },
+     {
+      "team": "Jaguar TCS Racing · Nissan Formula E Team",
+      "reason": "Castrol sits on both rosters in the energy and lubricants lane; neither is an American team."
+     },
+     {
+      "team": "Envision Racing",
+      "reason": "Owned by Envision Group, a wind and battery company; a fission brand on that car contradicts the owner's identity."
+     },
+     {
+      "team": "Porsche Formula E Team · Mahindra Racing · Cupra Kiro · Citroën Racing",
+      "reason": "Open but not chosen: manufacturer teams without the American home rounds or the AI-partner adjacency that gives Andretti the fit."
+     }
+    ]
+   },
+   "date_long": "03 AUG 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Andretti Formula E",
+   "value_mode": "B",
+   "bottom_line": "A company-announced $1B Series B led by Sequoia, a DOE-recognised reactor and an Oval Office moment put Valar at peak brand-investment motive with an American story built for Andretti and an open energy lane in Formula E. The halo-only value and nuclear optics in an electric series hold the score at the 70 threshold.",
+   "footer_date": "3 AUG 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Round 3 Aug; off-season, but Season 13 rosters close before 18 Dec.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 16,
+     "note": "$1B equity plus $200M credit; capital is for reactors, not marketing.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Deep-tech energy, profile-matched; nuclear optics in FE to manage.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Utah 30 MW study and first orders; no deal deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 12,
+     "note": "MODE B halo; lane open; reactor is not a race input.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "The round is company-announced: $1B of Series B equity led by Sequoia, whose Shaun Maguire joins the board, with Atreides, Point72, Snowpoint and Valor Equity Partners participating, plus a $200M credit facility led by Erebor Bank with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg and TechCrunch report a $6B valuation, about three times the prior round; the company has not disclosed it. The engineering is real: Ward 250 reached criticality on 18 June at the Utah San Rafael Energy Lab under the DOE Reactor Pilot Program, the first DOE-authorised reactor built outside a national laboratory.",
+   "the_case_p2": "The identity moment is public and presidential: on 1 July Ward 250 powered an NVIDIA Blackwell chip live on stage, the first US advanced reactor to run an AI chip, and the two companies announced a study for a 30 MW water-free AI facility in Utah. On 24 July Taylor stood in the Oval Office as one of four reactor CEOs the President honoured. A company selling firm power to hyperscalers needs a brand beyond the trade press.",
+   "track_label": "",
+   "brief_number": "152",
+   "claims_total": 16,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$1B Series B led by Sequoia, company-announced 3 Aug 2026, with a $200M credit facility led by Erebor Bank…",
+     "value": "$1B",
+     "claim_id": 688,
+     "verified": true,
+     "source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia"
+    },
+    {
+     "fact": "Bloomberg puts the valuation at $6B.",
+     "value": "$6B",
+     "claim_id": 697,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Advanced Nuclear · Factory-Built Small Modular Reactors",
+   "value_content": "MODE B - halo with mechanics. A reactor is not a race-team input, and the brief says so. The value is commercial: Official Clean Firm Power Partner, an American energy story alongside TWG AI on the car, and Austin and Miami hospitality for utilities, hyperscalers, governors and federal officials no other Andretti partner brings. Valar gets a public stage; the team gets livery, content and a partner with $1B to spend on being known.",
+   "value_section": true,
+   "why_team_para": "Andretti is the American team in an electric championship, and its roster already carries TWG AI, an AI-infrastructure brand in the market Valar's reactors serve. The sponsor table shows no energy, fuel or power partner at Andretti and no nuclear or firm-power brand anywhere in Formula E, while TotalEnergies holds the energy lane at DS Penske, Shell at Lola Yamaha ABT and Castrol at Jaguar. An electric series asked where its power comes from meets an American reactor company with an answer.",
+   "deal_arch_para": "Entry as Official Clean Firm Power Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, spanning the Utah facility study and first commercial orders. Estimated $1.5-2.5M a year. Scope: sidepod placement, Austin and Miami hospitality, a power-behind-the-grid content series, driver visits to Utah.",
+   "footer_company": "VALAR ATOMICS",
+   "why_team_label": "WHY ANDRETTI FORMULA E",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 3 August and teams settle Season 13 rosters this autumn before the Jeddah opener on 18 December; the Austin E-Prix on 6 February and the Miami E-Prix on 20 February 2027 put two US rounds in front of the utilities, hyperscalers and regulators Valar sells to.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Taylor founded Valar in El Segundo in July 2023 and is its public face, from the Oval Office to the Utah launch stage. Path: Muhammad Shahzad, President, formerly President and CFO of Relativity Space; Mark Mitchell, Chief Nuclear Officer. No chief marketing officer is listed.",
+   "decision_maker_name": "Isaiah Taylor",
+   "decision_maker_role": "Founder & CEO, Valar Atomics",
+   "opening_angle_intro": "Lead with the question the series cannot dodge.",
+   "opening_angle_quote": "&ldquo;Isaiah, Formula E races on electricity and gets asked where it comes from; you just powered an NVIDIA chip from a reactor on stage. The American team has no power partner and races in Austin and Miami in February. 25 minutes?&rdquo;",
+   "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Isaiah Taylor, Founder & CEO at Valar Atomics",
+   "cited_source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.deseret.com/business/2026/03/17/isaiah-taylor-who-founded-valar-atomics-is-bringing-nuclear-power-online/",
+     "excerpt": "Deseret News (17 Mar 2026), the company announcement and The Org: Isaiah Taylor is founder and CEO of Valar Atomics, founded in July 2023 and headquartered in El Segundo, California. Muhammad Shahzad is President (since November 2025; formerly President and CFO of Relativity Space). Mark Mitchell, formerly president of Ultra Safe Nuclear Corporation, is Chief Nuclear Officer. Willem Kriel came out of retirement to help lead engineering. No chief marketing officer or commercial lead is named on any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Isaiah Taylor, Founder & CEO, Valar Atomics at Valar Atomics",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.deseret.com/business/2026/03/17/isaiah-taylor-who-founded-valar-atomics-is-bringing-nuclear-power-online/",
+     "excerpt": "Deseret News (17 Mar 2026), the company announcement and The Org: Isaiah Taylor is founder and CEO of Valar Atomics, founded in July 2023 and headquartered in El Segundo, California. Muhammad Shahzad is President (since November 2025; formerly President and CFO of Relativity Space). Mark Mitchell, formerly president of Ultra Safe Nuclear Corporation, is Chief Nuclear Officer. Willem Kriel came out of retirement to help lead engineering. No chief marketing officer or commercial lead is named on any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1B Series B led by Sequoia, company-announced 3 Aug 2026, with a $200M credit facility led by Erebor Bank with J.P. Morgan, Crescent Cove and Hercules Capital; valuation $6B per Bloomberg and TechCrunch, not disclosed by the company",
+   "cited_source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Valar Atomics, the El Segundo nuclear start-up whose Ward 250 reactor went critical in Utah in June and powered an NVIDIA Blackwell chip on 1 July, announced a $1B Series B led by Sequoia on 3 August with a $200M credit facility;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.deseret.com/business/2026/03/17/isaiah-taylor-who-founded-valar-atomics-is-bringing-nuclear-power-online/",
+     "excerpt": "Deseret News (17 Mar 2026), the company announcement and The Org: Isaiah Taylor is founder and CEO of Valar Atomics, founded in July 2023 and headquartered in El Segundo, California. Muhammad Shahzad is President (since November 2025; formerly President and CFO of Relativity Space). Mark Mitchell, formerly president of Ultra Safe Nuclear Corporation, is Chief Nuclear Officer. Willem Kriel came out of retirement to help lead engineering. No chief marketing officer or commercial lead is named on any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Sequoia (lead; Shaun Maguire joins the board), Atreides, Point72, Snowpoint and Valor Equity Partners among participants",
+   "cited_source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Bloomberg puts the valuation at $6B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$1B Series B led by Sequoia plus a $200M credit facility, announced 3 Aug 2026; reported $6B valuation",
+   "cited_source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The round is company-announced: $1B of Series B equity led by Sequoia, whose Shaun Maguire joins the board, with Atreides, Point72, Snowpoint and Valor Equity Partners participating, plus a $200M credit facility led by Erebor Bank with J.P.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No nuclear or firm-power brand on any Formula E roster; TotalEnergies sits at DS Penske, Shell at Lola Yamaha ABT and Castrol at Jaguar TCS Racing; Andretti's roster carries no energy partner",
+   "cited_source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Shell → Lola Yamaha ABT Formula E Team (team_major, active); Castrol → Jaguar TCS Racing (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Bloomberg and TechCrunch report a $6B valuation, about three times the prior round;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Ward 250 reached criticality on 18 Jun 2026 at the Utah San Rafael Energy Lab under the DOE Reactor Pilot Program, powered an NVIDIA Blackwell chip on 1 Jul, and Taylor stood in the Oval Office on 24 Jul as one of four reactor CEOs the President honoured",
+   "cited_source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.deseret.com/business/2026/03/17/isaiah-taylor-who-founded-valar-atomics-is-bringing-nuclear-power-online/",
+     "excerpt": "Deseret News (17 Mar 2026), the company announcement and The Org: Isaiah Taylor is founder and CEO of Valar Atomics, founded in July 2023 and headquartered in El Segundo, California. Muhammad Shahzad is President (since November 2025; formerly President and CFO of Relativity Space). Mark Mitchell, formerly president of Ultra Safe Nuclear Corporation, is Chief Nuclear Officer. Willem Kriel came out of retirement to help lead engineering. No chief marketing officer or commercial lead is named on any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A company-announced $1B Series B led by Sequoia, a DOE-recognised reactor and an Oval Office moment put Valar at peak brand-investment motive with an American story built for Andretti and an open energy lane in Formula E.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in El Segundo, California; Ward 250 test reactor in Emery County, Utah; a 30 MW water-free AI facility in Utah under joint feasibility study with NVIDIA",
+   "cited_source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.deseret.com/business/2026/03/17/isaiah-taylor-who-founded-valar-atomics-is-bringing-nuclear-power-online/",
+     "excerpt": "Deseret News (17 Mar 2026), the company announcement and The Org: Isaiah Taylor is founder and CEO of Valar Atomics, founded in July 2023 and headquartered in El Segundo, California. Muhammad Shahzad is President (since November 2025; formerly President and CFO of Relativity Space). Mark Mitchell, formerly president of Ultra Safe Nuclear Corporation, is Chief Nuclear Officer. Willem Kriel came out of retirement to help lead engineering. No chief marketing officer or commercial lead is named on any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "value_content",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "the team gets livery, content and a partner with $1B to spend on being known.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "sponsorship",
+   "load_bearing": false,
+   "text": "Shell at Lola Yamaha ABT",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Shell → Lola Yamaha ABT Formula E Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "sponsorship",
+   "load_bearing": false,
+   "text": "Castrol at Jaguar.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Castrol → Jaguar TCS Racing (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 3 August Valar Atomics announced a $1B Series B led by Sequoia, with Shaun Maguire joining the board and Atreides, Point72, Snowpoint and Valor Equity Partners participating, alongside a $200M credit facility led by Erebor Bank with J.P.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Bloomberg and TechCrunch report a $6B valuation, about three times the roughly $2B of the prior round months earlier;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+     "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Miami E-Prix on 20 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026)",
+     "excerpt": "round 5: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
