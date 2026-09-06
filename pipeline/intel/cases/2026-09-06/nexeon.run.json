@@ -1,0 +1,688 @@
+{
+ "run": {
+  "id": 188,
+  "date": "2026-09-06",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-_tb78193/2026-09-06/nexeon.pdf",
+     "web": "/tmp/case-pdf-_tb78193/2026-09-06/nexeon.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Nexeon",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 11
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 252,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 256,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "Nexeon",
+     "decision": "selected",
+     "signal_date": "2026-08-31"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Nexeon",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 17,
+    "ops_fit": 13,
+    "ranking": 70,
+    "urgency": 12,
+    "capacity": 13,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 3,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Jaguar TCS Racing",
+   "source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+   "trigger_date": "2026-08-31",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 241,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-_tb78193/2026-09-06/nexeon.web.html",
+  "brief_data": {
+   "hq": "Oxfordshire, UK (plant at Gunsan, South Korea)",
+   "deck": "Nexeon, the Oxfordshire silicon-anode company whose materials cut lithium-ion charging times, closed a £100 million round on 31 August with £52.6 million from the UK National Wealth Fund, alongside the Korea Development Bank and Honda Xcelerator Ventures - state money to scale a British battery business.",
+   "risks": [
+    {
+     "label": "THE RACE BATTERY IS A SPEC PART",
+     "detail": "Formula E teams do not choose their cell chemistry, so a materials partner puts no component on the car and the technical story has to be told honestly.",
+     "counter": "Sell the room, not the part: the paddock holds the cell makers and carmakers Nexeon needs in front of it."
+    },
+    {
+     "label": "THE MONEY IS EARMARKED",
+     "detail": "A round led by a state investor is committed to UK expansion and commercialisation, so a sponsorship line competes with plant spend.",
+     "counter": "Price at Formula E team rates and stage it, weighting year one to content and recruitment rather than rights."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private (£100M round, Aug 2026)",
+   "company": "Nexeon",
+   "gridfit": [
+    {
+     "team": "Jaguar TCS Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "TAKEN",
+     "detail": "Citroën, Stellantis",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Envision Racing",
+     "label": "TAKEN",
+     "detail": "Teijin",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "state_backed_capital",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://www.deeptechleaders.com/companies-we-advise/scott-brown-ceo-nexeon",
+    "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+    "https://www.nexeonglobal.com/media/first-commercial-volume-production-site"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Scott Brown before the autumn roster round to size an Official Battery Materials Partner entry at Jaguar TCS Racing on a three-year term across Seasons 13-15, and to agree whether Tony Cochrane runs it as customer marketing or Nexeon runs it as a recruitment and public-argument programme.",
+    "value": [
+     {
+      "text": "Formula E's battery is a spec component. Nexeon cannot supply the race car, and no part of this proposal depends on pretending it can. The value is audience, credibility and recruitment, and pricing it as anything else would be dishonest to both sides.",
+      "label": "What this is not (Mode B, stated plainly)"
+     },
+     {
+      "text": "Hospitality at the Middle East and British rounds aimed at cell makers, carmakers and their purchasing and engineering leads - the specific people who qualify an anode material - plus a named designation that gives Nexeon's sales team a credential it does not have to explain.",
+      "label": "The commercial mechanic"
+     },
+     {
+      "text": "Fast charging and energy density are the two things a Formula E audience already understands, and they are exactly what Nexeon's materials do. A joint technical-content series with the team's engineers gives Jaguar TCS Racing programming that is about the sport rather than about a sponsor.",
+      "label": "Content the team can use"
+     },
+     {
+      "text": "British battery engineering is a small and contested hiring market. A works Formula E association is the most efficient graduate-recruitment platform a UK materials company can buy, and that budget line is easier to defend than a media one.",
+      "label": "Recruitment, which is the hidden budget"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "The UK National Wealth Fund announced a £52.6 million ($70 million) investment in Nexeon on 31 August 2026, completing a £100 million ($133 million) round whose other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money is for expanding Nexeon's UK operations and commercialising its next-generation battery technology.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Nexeon was founded in 2006 and had raised roughly $400 million before this one. It is past the science: the world's first commercial-scale silicon anode plant, at Gunsan in South Korea beside OCI's monosilane supply, came online in December 2025, against a binding long-term supply agreement with Panasonic, a top-five global EV cell manufacturer.",
+      "label": "This is not a first round"
+     },
+     {
+      "text": "When a sovereign fund puts money into a private company, the company acquires a public argument to make - British industrial capability, jobs, supply-chain sovereignty. That argument needs a stage, and the marketing budget to make it usually appears in the first year after the round rather than the third.",
+      "label": "A state investor changes the brief"
+     },
+     {
+      "text": "Formula E's GEN4 era opens with the Jeddah E-Prix double-header on 18-19 December 2026, and the 2026-27 season brings the London E-Prix to Brands Hatch on 29-30 May 2027, with new rounds at the Circuit of The Americas and Zandvoort. Teams settle their partner tables before the opener, so the decision window is this autumn.",
+      "label": "The calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Jaguar TCS Racing's partner table is TCS as title partner, Castrol, and the Jaguar powertrain. No battery, cell-chemistry or materials partner sits on it, so Official Battery Materials Partner is a clean designation rather than a shared one.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Formula E lists Jaguar among the manufacturers committed to GEN4. A works entry means the people who specify cells and manage energy are inside the team, and the carmaker behind them is the kind of customer a silicon-anode supplier spends years trying to reach.",
+      "label": "A works engineering audience"
+     },
+     {
+      "text": "Nexeon is headquartered in Oxfordshire; Jaguar TCS Racing is a British team; and from the 2026-27 season the London E-Prix runs at Brands Hatch. A UK state-backed battery company gets a British stage on which to make a British industrial argument.",
+      "label": "British to British, with a home round"
+     },
+     {
+      "text": "Nexeon sells to cell manufacturers and to the carmakers who buy from them. The Formula E paddock is Jaguar, Nissan, Citroen, Lola Cars, Mahindra and Porsche, with Opel joining. Few trade events put that many electrification buyers in one place eleven weekends a year.",
+      "label": "Where the customers actually are"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Envision Racing",
+      "reason": "Title partner Envision Group runs its own energy and battery business, and Teijin already holds the materials lane - a direct conflict."
+     },
+     {
+      "team": "Nissan Formula E Team",
+      "reason": "Nissan's own cell supply arrangements sit above the team, and Castrol and Nagase already occupy the technical partner slots."
+     },
+     {
+      "team": "Porsche Formula E Team",
+      "reason": "A manufacturer team with its own cell and materials supply chain; TAG Heuer and Hugo Boss hold the visible partner slots."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "Mouser Electronics, TTI Inc., Molex and KYOCERA AVX fill the components and electronics lane, with TotalEnergies on energy."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell holds the energy and chemistry-adjacent lane, and Yamaha's powertrain programme owns the technical story."
+     },
+     {
+      "team": "Mahindra Racing",
+      "reason": "Room on the table, but the pull is Indian and Nexeon's customers, plant and state backer sit in the UK, Korea and Japan."
+     },
+     {
+      "team": "Andretti Formula E",
+      "reason": "TWG AI, Quest Global, Crowe UK and Reflo occupy the technology, engineering-services and materials-adjacent lanes."
+     },
+     {
+      "team": "Cupra Kiro · Citroen Racing",
+      "reason": "Both have space, but neither offers the works battery-engineering audience or the British home-round story that carries this case."
+     }
+    ]
+   },
+   "date_long": "06 SEP 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Jaguar TCS Racing",
+   "value_mode": "B",
+   "bottom_line": "A £100 million round with £52.6 million of UK state money behind it, a Korean plant already running and a Panasonic agreement signed, put Nexeon at the point where a British battery business has to become known. Jaguar TCS Racing has an open materials lane, and Britain gets its home round back at Brands Hatch.",
+   "footer_date": "6 SEP 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round closed 31 Aug; GEN4 opens in Jeddah in December.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 13,
+     "note": "£100M raised, ~$400M before it, but pre-profit and earmarked.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "British battery story, British team, British home round.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No hard deadline beyond the Season 13 roster window.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 13,
+     "note": "MODE B: the race battery is spec; value is audience, not parts.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "The National Wealth Fund committed £52.6 million on 31 August 2026, completing a £100 million round that also brought in the Korea Development Bank and Honda Xcelerator Ventures. Nexeon has raised roughly $400 million since 2006. The money is for UK expansion and commercialisation, and it lands on a business that is already shipping: the world's first commercial-scale silicon anode plant, at Gunsan in South Korea next to OCI's monosilane supply, came online in December 2025 against a binding long-term agreement with Panasonic.",
+   "the_case_p2": "Silicon anodes raise energy density and cut charging time, which is the specification the electric-vehicle argument still turns on. A state investor putting money behind that in Britain is a policy statement as much as a financing, and policy statements want an audience. Nexeon has a Japanese engineering centre, a Korean plant and a British head office; what it does not yet have is a public face.",
+   "track_label": "",
+   "brief_number": "241",
+   "claims_total": 15,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "£100 million ($133 million) round completed on 31 August 2026, including £52.6 million ($70 million) from t…",
+     "value": "£100 m",
+     "claim_id": 1873,
+     "verified": true,
+     "source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/"
+    },
+    {
+     "fact": "National Wealth Fund (£52.6 million), with the Korea Development Bank and Honda Xcelerator Ventures as the…",
+     "value": "£52.6 m",
+     "claim_id": 1874,
+     "verified": true,
+     "source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/"
+    },
+    {
+     "fact": "Nexeon has raised roughly $400 million since 2006.",
+     "value": "$400 m",
+     "claim_id": 1883,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Battery Materials · Silicon Anodes for Lithium-Ion Cells",
+   "value_content": "MODE B - halo, with concrete mechanics. Formula E's battery is a spec part, so Nexeon cannot supply the car and this brief will not pretend otherwise. What it can do: a named partnership on a works electric programme, garage and livery presence, hospitality for cell makers and carmakers at the Middle East and British rounds, joint fast-charge content with the team's engineers, and a recruiting platform for British battery talent.",
+   "value_section": true,
+   "why_team_para": "Jaguar TCS Racing runs with TCS as title partner and Castrol alongside a Jaguar powertrain, and carries no battery, cell-chemistry or materials partner. Jaguar is one of the manufacturers committed to GEN4, so the engineering audience is a works one. British company, British team, and from next season a British home round at Brands Hatch. For a materials business that sells to cell makers and the carmakers behind them, that is the right room.",
+   "deal_arch_para": "Entry as Official Battery Materials Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, matching the GEN4 cycle and the ramp of the Gunsan plant. Estimated £0.8-1.5M a year, part-payable in engineering and content support. Scope: garage and sidepod placement, a technical-content series with the team, and hospitality at the European and Middle East rounds.",
+   "footer_company": "NEXEON",
+   "why_team_label": "WHY JAGUAR TCS RACING",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 31 August. Formula E's GEN4 era opens at the Jeddah E-Prix in December, and the London E-Prix moves to Brands Hatch next season, giving a British company a home round again. Partner tables settle before the opener.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 241",
+   "decision_maker_bio": "Brown has led Nexeon since June 2009 and has raised roughly $400 million for it, so a first sports partnership is his call. Path: Tony Cochrane, Chief Commercial Officer, and David Lamb, Chief Financial Officer. No chief marketing officer is listed.",
+   "decision_maker_name": "Dr Scott Brown",
+   "decision_maker_role": "Chief Executive Officer, Nexeon",
+   "opening_angle_intro": "Lead with the home round, not the logo.",
+   "opening_angle_quote": "&ldquo;Scott, the National Wealth Fund has just put £52.6 million behind a British battery business, and Formula E's British works team has an open materials lane the season its home round moves to Brands Hatch. 25 minutes?&rdquo;",
+   "value_section_label": "VALUE TO JAGUAR TCS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Scott Brown, Chief Executive Officer at Nexeon",
+   "cited_source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.deeptechleaders.com/companies-we-advise/scott-brown-ceo-nexeon",
+     "excerpt": "Dr Scott Brown joined Nexeon as Chief Executive Officer in June 2009. He holds a PhD in Chemistry and an MBA with Distinction from Oxford Brookes University. Under his leadership Nexeon has scaled from early stage to a globally recognised developer of silicon-based anode materials and has raised circa $400m in funding. Corroborated by Nexeon's own leadership listing and The Org.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Dr Scott Brown, Chief Executive Officer, Nexeon at Nexeon",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.deeptechleaders.com/companies-we-advise/scott-brown-ceo-nexeon",
+     "excerpt": "Dr Scott Brown joined Nexeon as Chief Executive Officer in June 2009. He holds a PhD in Chemistry and an MBA with Distinction from Oxford Brookes University. Under his leadership Nexeon has scaled from early stage to a globally recognised developer of silicon-based anode materials and has raised circa $400m in funding. Corroborated by Nexeon's own leadership listing and The Org.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "£100 million ($133 million) round completed on 31 August 2026, including £52.6 million ($70 million) from the UK National Wealth Fund; roughly $400 million raised since the company was founded in 2006",
+   "cited_source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+     "excerpt": "National Wealth Fund, 31 August 2026: a £52.6 million ($70 million) investment into UK battery innovator Nexeon, completing Nexeon's latest investment round totalling £100 million ($133 million / €116.7 million). Other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money supports expansion of Nexeon's UK operations and the commercialisation of next-generation battery technology. Nexeon's silicon anode materials enable higher energy density lithium-ion cells, reducing charging times and extending EV range. Carried the same week by New Electronics, BusinessGreen, Electronics Weekly, BusinessCloud, reNEWS and EU-Startups; a small number of outlets dated their reports 1 September.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Nexeon, the Oxfordshire silicon-anode company whose materials cut lithium-ion charging times, closed a £100 million round on 31 August with £52.6 million from the UK National Wealth Fund, alongside the Korea Development Bank and Honda Xcelerator Ventures - state money to scale a British battery business.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+     "excerpt": "National Wealth Fund, 31 August 2026: a £52.6 million ($70 million) investment into UK battery innovator Nexeon, completing Nexeon's latest investment round totalling £100 million ($133 million / €116.7 million). Other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money supports expansion of Nexeon's UK operations and the commercialisation of next-generation battery technology. Nexeon's silicon anode materials enable higher energy density lithium-ion cells, reducing charging times and extending EV range. Carried the same week by New Electronics, BusinessGreen, Electronics Weekly, BusinessCloud, reNEWS and EU-Startups; a small number of outlets dated their reports 1 September.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "National Wealth Fund (£52.6 million), with the Korea Development Bank and Honda Xcelerator Ventures as the other new investors",
+   "cited_source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+     "excerpt": "National Wealth Fund, 31 August 2026: a £52.6 million ($70 million) investment into UK battery innovator Nexeon, completing Nexeon's latest investment round totalling £100 million ($133 million / €116.7 million). Other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money supports expansion of Nexeon's UK operations and the commercialisation of next-generation battery technology. Nexeon's silicon anode materials enable higher energy density lithium-ion cells, reducing charging times and extending EV range. Carried the same week by New Electronics, BusinessGreen, Electronics Weekly, BusinessCloud, reNEWS and EU-Startups; a small number of outlets dated their reports 1 September.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The National Wealth Fund committed £52.6 million on 31 August 2026, completing a £100 million round that also brought in the Korea Development Bank and Honda Xcelerator Ventures.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+     "excerpt": "National Wealth Fund, 31 August 2026: a £52.6 million ($70 million) investment into UK battery innovator Nexeon, completing Nexeon's latest investment round totalling £100 million ($133 million / €116.7 million). Other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money supports expansion of Nexeon's UK operations and the commercialisation of next-generation battery technology. Nexeon's silicon anode materials enable higher energy density lithium-ion cells, reducing charging times and extending EV range. Carried the same week by New Electronics, BusinessGreen, Electronics Weekly, BusinessCloud, reNEWS and EU-Startups; a small number of outlets dated their reports 1 September.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "The National Wealth Fund committed £52.6 million on 31 August 2026, completing Nexeon's £100 million investment round",
+   "cited_source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+     "excerpt": "National Wealth Fund, 31 August 2026: a £52.6 million ($70 million) investment into UK battery innovator Nexeon, completing Nexeon's latest investment round totalling £100 million ($133 million / €116.7 million). Other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money supports expansion of Nexeon's UK operations and the commercialisation of next-generation battery technology. Nexeon's silicon anode materials enable higher energy density lithium-ion cells, reducing charging times and extending EV range. Carried the same week by New Electronics, BusinessGreen, Electronics Weekly, BusinessCloud, reNEWS and EU-Startups; a small number of outlets dated their reports 1 September.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Nexeon has raised roughly $400 million since 2006.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.deeptechleaders.com/companies-we-advise/scott-brown-ceo-nexeon",
+     "excerpt": "Nexeon was founded in 2006 and has raised circa $400m in funding under Scott Brown, prior to the £100 million round completed in August 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Jaguar TCS Racing runs TCS as title partner with Castrol and a Jaguar powertrain; at Envision Racing the title partner Envision Group runs its own energy and battery business and Teijin holds the materials lane",
+   "cited_source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+     "excerpt": "Formula E sponsor table: Jaguar TCS Racing - TCS (title), Castrol, Jaguar (powertrain); no battery, cell-chemistry or materials partner. Envision Racing - Envision Group (title), Sand Technologies, Teijin, Genpact. Nissan Formula E Team - Nissan, Coral, Crowe, Nagase, Castrol. Porsche Formula E Team - Porsche, TAG Heuer, Hugo Boss. DS Penske - DS Automobiles, Penske Autosport, Mouser Electronics, TTI Inc., Molex, KYOCERA AVX, TotalEnergies. Mahindra Racing - Mahindra & Mahindra, Tech Mahindra. Andretti Formula E - Andretti Global, TWG AI, Quest Global, Crowe UK, Reflo, Nissan powertrain. Lola Yamaha ABT Formula E Team - Lola Cars, Yamaha, ABT Sportsline, Castore, OMP, Shell. Cupra Kiro - Cupra, Kiro. Citroen Racing - Citroen, Stellantis.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A £100 million round with £52.6 million of UK state money behind it, a Korean plant already running and a Panasonic agreement signed, put Nexeon at the point where a British battery business has to become known.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+     "excerpt": "National Wealth Fund, 31 August 2026: a £52.6 million ($70 million) investment into UK battery innovator Nexeon, completing Nexeon's latest investment round totalling £100 million ($133 million / €116.7 million). Other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money supports expansion of Nexeon's UK operations and the commercialisation of next-generation battery technology. Nexeon's silicon anode materials enable higher energy density lithium-ion cells, reducing charging times and extending EV range. Carried the same week by New Electronics, BusinessGreen, Electronics Weekly, BusinessCloud, reNEWS and EU-Startups; a small number of outlets dated their reports 1 September.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "A binding long-term supply agreement with Panasonic, a top-five global EV cell manufacturer, with commercial material from early 2025; the Gunsan plant in South Korea came online in December 2025",
+   "cited_source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.nexeonglobal.com/media/first-commercial-volume-production-site",
+     "excerpt": "Nexeon: a binding long-term supply agreement for silicon anode material with Panasonic, a top-five global EV cell manufacturer, with supply of commercial material beginning in early 2025. Nexeon's first commercial volume production site sits on land adjacent to OCI's Gunsan plant in South Korea, with a fenceline supply of monosilane from OCI; the facility - the world's first commercial-scale silicon anode production plant - came online in December 2025. Nexeon is headquartered in Oxfordshire, UK, with an application engineering and customer support centre in Yokohama, Japan.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The UK National Wealth Fund announced a £52.6 million ($70 million) investment in Nexeon on 31 August 2026, completing a £100 million ($133 million) round whose other new investors are the Korea Development Bank and Honda Xcelerator Ventures.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+     "excerpt": "National Wealth Fund, 31 August 2026: a £52.6 million ($70 million) investment into UK battery innovator Nexeon, completing Nexeon's latest investment round totalling £100 million ($133 million / €116.7 million). Other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money supports expansion of Nexeon's UK operations and the commercialisation of next-generation battery technology. Nexeon's silicon anode materials enable higher energy density lithium-ion cells, reducing charging times and extending EV range. Carried the same week by New Electronics, BusinessGreen, Electronics Weekly, BusinessCloud, reNEWS and EU-Startups; a small number of outlets dated their reports 1 September.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in Oxfordshire, UK, with an application engineering and customer support centre in Yokohama, Japan and the commercial plant at Gunsan, South Korea",
+   "cited_source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.nexeonglobal.com/media/first-commercial-volume-production-site",
+     "excerpt": "Nexeon: a binding long-term supply agreement for silicon anode material with Panasonic, a top-five global EV cell manufacturer, with supply of commercial material beginning in early 2025. Nexeon's first commercial volume production site sits on land adjacent to OCI's Gunsan plant in South Korea, with a fenceline supply of monosilane from OCI; the facility - the world's first commercial-scale silicon anode production plant - came online in December 2025. Nexeon is headquartered in Oxfordshire, UK, with an application engineering and customer support centre in Yokohama, Japan.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Nexeon was founded in 2006 and had raised roughly $400 million before this one.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.deeptechleaders.com/companies-we-advise/scott-brown-ceo-nexeon",
+     "excerpt": "Nexeon was founded in 2006 and has raised circa $400m in funding under Scott Brown, prior to the £100 million round completed in August 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+     "excerpt": "National Wealth Fund, 31 August 2026: a £52.6 million ($70 million) investment into UK battery innovator Nexeon, completing Nexeon's latest investment round totalling £100 million ($133 million / €116.7 million). Other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money supports expansion of Nexeon's UK operations and the commercialisation of next-generation battery technology. Nexeon's silicon anode materials enable higher energy density lithium-ion cells, reducing charging times and extending EV range. Carried the same week by New Electronics, BusinessGreen, Electronics Weekly, BusinessCloud, reNEWS and EU-Startups; a small number of outlets dated their reports 1 September.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Jeddah E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 12 calendar (ExCeL London finale) | note: ExCeL, double-header race 1 — season finale weekend",
+     "excerpt": "round 16: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Jeddah E-Prix double-header on 18-19 December 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "London E-Prix to Brands Hatch on 29-30 May 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Brands Hatch — new home, double-header race 1",
+     "excerpt": "round 12: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

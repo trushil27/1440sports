@@ -1,0 +1,345 @@
+{
+ "run_date": "2026-06-11",
+ "signal_date": "2026-06-11",
+ "stem": "dana",
+ "number": 240,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Dana Incorporated",
+  "signal_date": "2026-06-11",
+  "score": 74,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Byron Foster",
+  "role": "Chief Executive Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.dana.com/newsroom/press-releases/dana-incorporated-announces-agreement-to-combine-with-eatons-mobility-business-strengthens-danas-position-as-a-leading-global-powertrain-systems-provider/",
+  "industry_meta": "Automotive Supplier · Driveline & e-Propulsion Systems · Maumee, Ohio (NYSE: DAN)",
+  "recommended_team": "Mahindra Racing",
+  "recommended_series": "FE",
+  "timing_label": "WARM",
+  "trigger_reason": "merger / spin-off",
+  "key_facts": {
+   "funding": "Reverse Morris Trust combining Eaton's Mobility Group with Dana, announced 11 June 2026; combined company valued at more than $10 billion, Mobility at about $5.1 billion, with a cash distribution of about $1.1 billion to Eaton",
+   "investors": "Eaton shareholders will own at least 50.1 per cent of the combined company; the deal is expected to close in the first quarter of 2027, subject to Dana shareholder approval and regulatory clearances",
+   "revenue": "2025 sales of $7.5 billion with adjusted EBITDA of $610 million and net income of $85 million; about $11 billion of sales and $1.7 billion of adjusted EBITDA pro forma for the combined company",
+   "trigger": "Eaton and Dana signed a definitive agreement on 11 June 2026 to separate Eaton's Mobility Group and combine it with Dana in a Reverse Morris Trust",
+   "competitor_signal": "DS Penske carries the components and electronics cluster on the Formula E grid - Mouser Electronics, TTI Inc., Molex and KYOCERA AVX - while Castrol holds fluids at Jaguar TCS Racing and Shell at Lola Yamaha ABT Formula E Team",
+   "strategic_hook": "Byron Foster, who joined Dana in 2021 to lead global commercial, marketing and communications, became chief executive on 1 July 2026; Dana TM4 builds electric motors, power inverters and control systems",
+   "us_presence": "Headquartered in Maumee, Ohio; eighteen facilities in India including a Pune plant producing Dana TM4 electric motors, inverters and vehicle control units",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: Dana TM4 electric motors, inverters and vehicle control units, plus thermal management, sealing and driveline engineering alongside a works team's powertrain group",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 15,
+   "capacity": 18,
+   "brand_fit": 13,
+   "urgency": 13,
+   "ops_fit": 15,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "byron foster",
+    "foster"
+   ],
+   "url": "https://www.dana.com/newsroom/press-releases/dana-incorporated-announces-appointment-of-byron-foster-as-chief-executive-officer/",
+   "excerpt": "Dana Incorporated, 2026: the board appointed Byron Foster Chief Executive Officer effective 1 July 2026; R. Bruce McDonald, Chairman and CEO since 2024, continues as Chairman of the Board. Foster joined Dana in 2021 to lead the company's global commercial, marketing and communications efforts and latterly served as Senior Vice President and President of Light Vehicle Systems, Dana's largest business unit. Earlier roles: VP & General Manager at Johnson Controls (2012-2016), EVP at Adient (2016-2019), CEO of Shield T3 (2020-2021); director of Wabtec. BBA University of Michigan, MBA Northwestern.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "reverse morris trust",
+    "merger",
+    "spin-off",
+    "11 june",
+    "$10 billion",
+    "$5.1 billion",
+    "$1.1 billion",
+    "50.1",
+    "mobility group",
+    "$250 million",
+    "$11 billion",
+    "$1.7 billion",
+    "$11bn",
+    "eaton"
+   ],
+   "url": "https://www.dana.com/newsroom/press-releases/dana-incorporated-announces-agreement-to-combine-with-eatons-mobility-business-strengthens-danas-position-as-a-leading-global-powertrain-systems-provider/",
+   "excerpt": "Dana Incorporated / Eaton, 11 June 2026: definitive agreement under which Eaton will separate its Mobility Group (Vehicle and eMobility segments) and combine it with Dana in a Reverse Morris Trust, creating a combined company valued at more than $10 billion. The transaction values Eaton's Mobility Group at approximately $5.1 billion. The combined company is expected to have approximately $11 billion in sales and approximately $1.7 billion adjusted EBITDA on a fully synergised pro forma 2026 estimated basis, with $250 million of run-rate synergies within 24 months of closing. Eaton receives a cash distribution of approximately $1.1 billion; Eaton shareholders will own at least 50.1 per cent of the combined company. Closing expected in the first quarter of 2027, subject to Dana shareholder approval and regulatory clearances. Also carried by PRNewswire (302797498), Eaton's newsroom and Dana's Form 8-K / Form 425.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$7.5 billion",
+    "$610 million",
+    "$85 million",
+    "off-highway",
+    "2025 sales"
+   ],
+   "url": "https://www.dana.com/newsroom/press-releases/dana-incorporated-reports-strong-2025-financial-results/",
+   "excerpt": "Dana Incorporated full-year 2025 results: sales of $7.5 billion, adjusted EBITDA of $610 million (8.1 per cent margin) and net income of $85 million, against a net loss of $57 million a year earlier. Sales fell year on year because Dana divested its Off-Highway business to focus on light- and commercial-vehicle markets.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "dana tm4",
+    "hydro-qu",
+    "power inverters",
+    "control systems"
+   ],
+   "url": "https://www.danatm4.com/about.html",
+   "excerpt": "Dana TM4 is a joint venture between Dana Incorporated and Hydro-Quebec. TM4 Inc., a Hydro-Quebec subsidiary, became Dana's source for electric motors, power inverters and control systems, with Dana taking a majority shareholding in exchange for about $127 million (2018).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "pune",
+    "eighteen facilities",
+    "18th facility",
+    "e-drive",
+    "vehicle control units",
+    "india"
+   ],
+   "url": "https://www.dana.com/newsroom/press-releases/dana-to-strengthen-global-electrification-capabilities-through-production-of-e-drive-technologies-in-pune-india/",
+   "excerpt": "Dana Incorporated: a 4,600 square-metre facility in Pune, India producing Dana TM4 low- to high-voltage electric motors, inverters and vehicle control units - Dana's eighteenth facility in India. Pune is one of India's leading automotive hubs and home to OEMs including Bajaj Auto, Tata Motors and Mahindra & Mahindra.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "maumee",
+    "timothy kraus",
+    "kraus",
+    "mcdonald"
+   ],
+   "url": "https://www.dana.com/newsroom/press-releases/dana-incorporated-names-new-chief-financial-officer/",
+   "excerpt": "Dana Incorporated is based in Maumee, Ohio. Timothy R. Kraus was appointed senior vice president and chief financial officer in December 2021, having previously been senior vice president of finance and treasurer; earlier roles at Intelsat, Lear Corporation and Ernst & Young. R. Bruce McDonald is Chairman of the Board. No chief marketing officer is named on Dana's leadership listing.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "mouser",
+    "kyocera",
+    "molex",
+    "tti",
+    "castrol",
+    "shell",
+    "tech mahindra",
+    "mahindra & mahindra",
+    "partner table",
+    "quest global",
+    "teijin",
+    "sand technologies",
+    "totalenergies",
+    "hugo boss",
+    "tag heuer",
+    "reflo",
+    "crowe",
+    "twg ai",
+    "stellantis",
+    "citro"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Formula E sponsor table: Mahindra Racing - Mahindra & Mahindra (title) and Tech Mahindra; no driveline, e-propulsion, thermal or components partner. DS Penske - Mouser Electronics, TTI Inc., Molex, KYOCERA AVX, TotalEnergies. Jaguar TCS Racing - TCS (title), Castrol, Jaguar powertrain. Lola Yamaha ABT Formula E Team - Lola Cars, Yamaha, ABT Sportsline, Castore, OMP, Shell. Envision Racing - Envision Group, Sand Technologies, Teijin, Genpact. Andretti Formula E - Andretti Global, TWG AI, Quest Global, Crowe UK, Reflo, Nissan powertrain. Porsche Formula E Team - Porsche, TAG Heuer, Hugo Boss. Nissan Formula E Team - Nissan, Coral, Crowe, Nagase, Castrol. Cupra Kiro - Cupra, Kiro. Citroen Racing - Citroen, Stellantis. Series level: ABB, DHL, Julius Baer, Hankook, Google Cloud, Saudia, PIF, Infosys, TAG Heuer, SXSW.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "gen4",
+    "london e-prix",
+    "london race",
+    "excel"
+   ],
+   "url": "seeds/calendar_fe.json + https://www.fiaformulae.com/en/news/1074657/",
+   "excerpt": "Formula E calendar table: the London E-Prix closes the 2025-26 season at ExCeL on 15-16 August 2026; the GEN4 era begins with the 2026-27 season. Formula E lists Jaguar, Nissan, Citroen, Lola Cars, Mahindra and Porsche among the manufacturers committed to GEN4.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Dana Incorporated",
+  "industry_meta": "Automotive Supplier · Driveline & e-Propulsion Systems",
+  "hq": "Maumee, Ohio",
+  "ticker": "NYSE: DAN",
+  "deck": "Dana Incorporated, the $7.5 billion driveline and e-propulsion supplier, agreed on 11 June to combine with Eaton's Mobility Group in a Reverse Morris Trust - an $11 billion-sales vehicle-systems company closing in the first quarter of 2027, under a new chief executive who came up through commercial and marketing.",
+  "score": 74,
+  "timing_label": "WARM",
+  "series_label": "FE",
+  "team_label": "Mahindra Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Eaton and Dana signed a definitive agreement on 11 June 2026 to separate Eaton's Mobility Group and combine it with Dana in a Reverse Morris Trust, creating a company valued at more than $10 billion. The transaction values Mobility at about $5.1 billion and the combined business at roughly $11 billion of sales and $1.7 billion of adjusted EBITDA on a fully synergised pro forma 2026 basis, with $250 million of run-rate synergies inside 24 months. Eaton shareholders take at least 50.1 per cent. Closing is expected in the first quarter of 2027.",
+  "the_case_p2": "Dana closed 2025 with $7.5 billion of sales, $610 million of adjusted EBITDA and $85 million of net income after divesting Off-Highway, a supplier that has already chosen its ground in light and commercial vehicles. Byron Foster became chief executive on 1 July 2026. He joined Dana in 2021 to run global commercial, marketing and communications, so brand investment is his own discipline rather than a delegated one.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The combination closes in the first quarter of 2027 and the new company puts its name into the market then. Formula E's GEN4 era begins the same season, and teams settle their partner tables through the autumn.",
+  "why_team_label": "WHY MAHINDRA RACING",
+  "why_team_para": "Mahindra Racing carries only Mahindra & Mahindra and Tech Mahindra on its partner table, so the driveline, e-propulsion and thermal lane sits open at a works team committed to the GEN4 era. Dana's India footprint is real: eighteen facilities, and a Pune plant building Dana TM4 electric motors, inverters and vehicle control units in the city Mahindra & Mahindra calls home. The commercial conversation starts before the sponsorship one.",
+  "value_section": true,
+  "value_section_label": "VALUE TO MAHINDRA RACING",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Dana TM4 builds electric motors, power inverters and control systems; Dana engineers thermal management, sealing and driveline for light and commercial vehicles. That gives a works team's powertrain group a real supplier bench to work against, with Mahindra's road-car programme behind it. In return Dana gets a named technical partnership, livery presence, and a paddock of manufacturers that is its own customer base.",
+  "deal_arch_para": "Entry as Official Driveline & e-Propulsion Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, so the term opens with the combined company's first year and the GEN4 era together. Estimated $1.5-3M a year, part-payable in engineering support. Scope: sidepod and halo placement, an engineering programme with the powertrain group, and hospitality at the European and Asian rounds.",
+  "decision_maker_name": "Byron Foster",
+  "decision_maker_role": "Chief Executive Officer, Dana Incorporated",
+  "decision_maker_bio": "Foster became CEO on 1 July 2026 after leading Dana's global commercial, marketing and communications from 2021 and running Light Vehicle Systems, its largest unit. Path: R. Bruce McDonald, Chairman, and Timothy Kraus, CFO since December 2021. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the new company, not the old one.",
+  "opening_angle_quote": "&ldquo;Byron, you spent five years selling Dana before you ran it. In early 2027 you launch a company with $11 billion of sales that needs a name buyers know, and Formula E's paddock is your customer list. 25 minutes?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "15",
+    "/ 20",
+    "Agreement signed 11 Jun; the company itself lands Q1 2027."
+   ],
+   [
+    "CAPACITY",
+    "18",
+    "/ 20",
+    "$7.5B sales, $610M adjusted EBITDA; ~$11B pro forma."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "Tier-1 supplier; no consumer pull, but the paddock buys."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "No hard deadline beyond the Season 13 roster window."
+   ],
+   [
+    "OPS FIT",
+    "15",
+    "/ 20",
+    "MODE A: e-motors, inverters, thermal and driveline bench."
+   ]
+  ],
+  "risks": [
+   [
+    "THE COMPANY CLOSES IN 2027",
+    "The combined business does not exist until the Reverse Morris Trust closes, expected in the first quarter of 2027 and subject to Dana shareholder approval.",
+    "Contract now on a term starting at close, so the brand launch and Season 13 land together."
+   ],
+   [
+    "A SUPPLIER, NOT A CONSUMER BRAND",
+    "Dana sells to vehicle makers, so a livery has no retail job to do and the board will ask what it buys.",
+    "Price it as customer marketing against a trade budget: the paddock is manufacturers, not shoppers."
+   ]
+  ],
+  "bottom_line": "A vehicle-systems company with about $11 billion of sales is being assembled in public, and the executive who ran Dana's commercial and marketing function now runs the company. Mahindra Racing's partner table is nearly bare, Dana builds e-propulsion in Pune, and the GEN4 era begins as the deal closes.",
+  "signals": [
+   "merger_event",
+   "leadership_change",
+   "category_whitespace"
+  ],
+  "footer_company": "DANA INCORPORATED",
+  "footer_date": "11 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "Eaton and Dana announced a definitive agreement on 11 June 2026 to separate Eaton's Mobility Group and combine it with Dana in a Reverse Morris Trust. The combined company is valued at more than $10 billion, with Eaton's Mobility Group valued at approximately $5.1 billion and Eaton taking a cash distribution of approximately $1.1 billion."
+    },
+    {
+     "label": "The company that results",
+     "text": "On a fully synergised pro forma 2026 basis the combination is expected to carry approximately $11 billion in sales and approximately $1.7 billion of adjusted EBITDA, with $250 million of run-rate synergies targeted within 24 months of closing. Eaton shareholders will own at least 50.1 per cent. That is a top-tier global powertrain systems supplier assembled in a single step."
+    },
+    {
+     "label": "A commercial chief executive",
+     "text": "Byron Foster became chief executive on 1 July 2026. He joined Dana in 2021 to lead the company's global commercial, marketing and communications work before running Light Vehicle Systems, Dana's largest business unit. A sponsorship decision does not have to travel up through a marketing function to reach him; it is the function he built."
+    },
+    {
+     "label": "The window",
+     "text": "Closing is expected in the first quarter of 2027, subject to Dana shareholder approval and regulatory clearances. Formula E's GEN4 era begins with the 2026-27 season, and teams settle their partner tables in the autumn before it. A term agreed now starts as the new company gets its name."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Mahindra Racing's partner table carries Mahindra & Mahindra as title and Tech Mahindra alongside it. There is no driveline, e-propulsion, thermal or components partner, so Official Driveline & e-Propulsion Partner is a clean designation at a Formula E team price rather than a Formula 1 one."
+    },
+    {
+     "label": "A works team in the GEN4 era",
+     "text": "Formula E lists Mahindra among the manufacturers committed to GEN4. A works entry means the team's powertrain engineering sits inside the building, which is the only place a Tier-1 partnership has anything real to do."
+    },
+    {
+     "label": "India is where the two overlap",
+     "text": "Dana has eighteen facilities in India, including a Pune plant building Dana TM4 low- to high-voltage electric motors, inverters and vehicle control units. Pune is home to Mahindra & Mahindra. The relationship has a commercial address before it has a livery."
+    },
+    {
+     "label": "The audience is the customer list",
+     "text": "The Formula E paddock is Jaguar, Nissan, Citroen, Lola Cars, Mahindra and Porsche. For a company that sells electrified propulsion to vehicle makers, that is a season-long trade show with its buyers already in the room."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Dana TM4 builds electric motors, power inverters and control systems; Dana engineers thermal management, sealing and driveline hardware. A works team's powertrain group gets a supplier bench to test ideas against between seasons, and Dana gets an engineering reference it can show to every other manufacturer on the grid."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Mahindra Racing gains a partner whose customers are vehicle makers and fleet operators, which widens the guest list at the European and Asian rounds beyond the team's Indian corporate base and gives the commercial team a category it can sell again."
+    },
+    {
+     "label": "Talent and content",
+     "text": "Electrification engineering recruitment is the hardest hiring market Dana has; a Formula E programme is the recruitment story that works with graduate engineers. On the content side, road-car transfer from a works Formula E programme is a narrative both parties can film."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Driveline & e-Propulsion Partner designation, sidepod and halo placement, an engineering exchange with the powertrain group, hospitality at the European and Asian rounds, and driver access for Dana's customer and recruitment channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "DS Penske",
+     "reason": "Mouser Electronics, TTI Inc., Molex and KYOCERA AVX already fill the components and electronics lane, with TotalEnergies on energy."
+    },
+    {
+     "team": "Jaguar TCS Racing",
+     "reason": "Castrol holds the fluids and driveline-adjacent lane, and Jaguar's own powertrain programme sits above any Tier-1 partnership."
+    },
+    {
+     "team": "Porsche Formula E Team",
+     "reason": "A manufacturer team with its own powertrain supply chain; TAG Heuer and Hugo Boss hold the visible partner slots."
+    },
+    {
+     "team": "Nissan Formula E Team",
+     "reason": "Nissan supplies its GEN4 powertrain to a customer team as well as itself, so a rival Tier-1 on the car sits inside its own supply politics; Castrol and Nagase already on the roster."
+    },
+    {
+     "team": "Envision Racing",
+     "reason": "Sand Technologies, Teijin and Genpact occupy the technology and materials lanes, and Envision Group's own energy business dominates the brand story."
+    },
+    {
+     "team": "Andretti Formula E",
+     "reason": "TWG AI, Quest Global, Crowe UK and Reflo occupy the engineering-services and technology lanes; Nissan supplies the powertrain."
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "reason": "Yamaha's powertrain and Shell's energy partnership crowd the technical lane, and Lola's constructor identity owns the engineering story."
+    },
+    {
+     "team": "Cupra Kiro · Citroen Racing",
+     "reason": "Both have room, but neither carries a commercial adjacency to Dana's customer base of the kind Pune gives Mahindra."
+    }
+   ],
+   "ask": "A 25-minute call with Byron Foster before the autumn roster round to size an Official Driveline & e-Propulsion Partner entry at Mahindra Racing on a three-year term starting at the close of the Eaton transaction, and to agree who from Light Vehicle Systems joins the engineering conversation."
+  }
+ },
+ "note": "# Dana Incorporated → Mahindra Racing — verification log (N° 240, 11 Jun 2026)\n\nBuilt in-session at no model-API cost: Claude acted as scanner, verifier and writer through the\npipeline's injectable stages; freshness, dedup, scoring, the claims ledger with the calendar and\nsponsor-table checks, the 13-rule audit and the strict 2-page render ran as code.\n\n**Sandbox limitation, stated plainly:** direct fetches of dana.com, eaton.com, prnewswire.com,\nsec.gov, danatm4.com and fiaformulae.com were blocked by the egress proxy. Every claim below was\nchecked against the search summary of the primary page named as its evidence URL. Treat each\nVERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads\nVERIFY BEFORE CIRCULATION.\n\n## The trigger\n\n**11 June 2026** — Eaton and Dana signed a definitive agreement to separate Eaton's Mobility Group\n(the Vehicle and eMobility segments) and combine it with Dana in a Reverse Morris Trust. Company\nannouncements on both sides, plus PRNewswire 302797498 and Dana's Form 8-K / Form 425. Inside the\n90-day window for a 6 September sweep; the row sits on the trigger's own date.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| RMT announced 11 Jun 2026; combined company valued at more than $10B | VERIFIED | Dana + Eaton newsroom, 11 Jun 2026 |\n| Mobility Group valued at ~$5.1B; ~$1.1B cash distribution to Eaton; Eaton holders ≥50.1% | VERIFIED | same release |\n| ~$11B pro forma sales, ~$1.7B adjusted EBITDA, $250M run-rate synergies in 24 months | VERIFIED | same release (fully synergised pro forma 2026 estimate — a projection, labelled as such) |\n| Closing expected Q1 2027, subject to Dana shareholder approval and regulatory clearances | VERIFIED | same release |\n| 2025 sales $7.5B, adjusted EBITDA $610M (8.1%), net income $85M; Off-Highway divested | VERIFIED | Dana FY2025 results release |\n| Byron Foster CEO effective 1 Jul 2026; joined 2021 to lead global commercial, marketing and communications; SVP & President, Light Vehicle Systems | VERIFIED | Dana CEO appointment release; Dana leadership page; PRNewswire 301233165 (2021) |\n| R. Bruce McDonald Chairman; Timothy Kraus CFO since December 2021; no CMO listed | VERIFIED | Dana CFO appointment release + leadership listing |\n| Dana TM4 = Dana / Hydro-Québec JV for electric motors, power inverters and control systems | VERIFIED | danatm4.com |\n| Pune plant building Dana TM4 motors, inverters and vehicle control units; eighteenth facility in India; Pune home to Mahindra & Mahindra | VERIFIED | Dana e-drive Pune release |\n| Headquartered in Maumee, Ohio | VERIFIED | Dana newsroom |\n| Mahindra Racing partner table = Mahindra & Mahindra + Tech Mahindra; other FE rosters as quoted | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| London E-Prix closes the season at ExCeL, 15-16 Aug 2026; GEN4 era begins next season; Mahindra among the committed GEN4 manufacturers | VERIFIED | calendar table + fiaformulae.com |\n\n## Screen-outs and things deliberately not claimed\n\n- **Leadership ties: none found.** No Formula E or Formula 1 history was found for Byron Foster,\n  R. Bruce McDonald or Timothy Kraus after checking. `leadership_ties` is empty, not assumed.\n- **No claim that Dana supplies Mahindra.** The verified adjacency is geographic and industrial:\n  Dana's Pune e-drive plant sits in the city Mahindra & Mahindra is headquartered in. A supply\n  relationship was not found and is not asserted.\n- **No Dana motorsport heritage claim.** The Spicer driveline brand has a racing history in\n  general circulation, but no primary source was opened for it in this session, so the brief does\n  not use it.\n- **Deal size ($1.5-3M a year) is an ESTIMATE**, labelled as such, and set at Formula E team\n  rates rather than Formula 1 ones.\n- **The pro forma $11B / $1.7B figures are the parties' own projection**, not reported results;\n  the brief says \"pro forma\" every time they appear.\n\n## Why not the other teams\n\nJudged only against `seeds/sponsors.json`, never against other 1440 prospects. Every conflicting\nteam is named in `extended.ruled_out` with the partner that closes the lane.\n\n## Honest brake on the score\n\n74/100. Timing is the weak dimension: the agreement is signed but the company itself does not\nexist until Q1 2027, so this is a relationship to open now and sign at close, not a deal to\nannounce in the next month. Brand fit is 13 because Dana sells to vehicle makers and a livery\nhas no retail work to do — the case for it is customer marketing, and the brief says so.\n"
+}
