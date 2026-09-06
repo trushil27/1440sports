@@ -1,0 +1,336 @@
+{
+ "_meta": {
+  "what": "Decision path, batch 03 — 11 companies. Who owns, sponsors or vetoes a three-year motorsport sponsorship. Shape and rules: pipeline/intel/contacts.py.",
+  "rule": "A person appears here ONLY when a real page names them in that role. Where a company has no marketing officer, no_cmo is true and the note says so — never an invented name or a title guessed off a LinkedIn headline.",
+  "method": "Company leadership/newsroom pages, SEC filings and Companies House are the sources of record. Company domains are egress-blocked from this sandbox, so those pages were read through search-index summaries of the page itself; the source_url is the page the fact came from. 'verified' = a company-owned page (or official register/filing) names the person in that role; 'reported' = only a credible secondary does, or the naming page could not be pinned down.",
+  "checked_at": "2026-09-06"
+ },
+ "checked_at": "2026-09-06",
+ "companies": [
+  {
+   "company": "Keyfactor",
+   "no_cmo": false,
+   "note": "Full C-suite; marketing sits with a CMO promoted from within. No motorsport tie found in any leader's history. Caution on the CRO seat — see his note.",
+   "people": [
+    {
+     "name": "Jamie Walker",
+     "role": "Chief Marketing Officer",
+     "seat": "marketing",
+     "source_url": "https://www.keyfactor.com/press-releases/keyfactor-exceeds-100m-in-arr-in-less-than-five-years/",
+     "note": "The buyer. Promoted from EVP, Marketing to CMO in Keyfactor's own $100M-ARR release (13 Feb 2024) and given global execution of brand and demand at scale. Still fronting Keyfactor marketing in trade interviews through 2025-26. A brand-at-scale remit in a category (machine identity / PKI) with no consumer surface — the exact profile that buys a platform to be seen on.",
+     "status": "verified"
+    },
+    {
+     "name": "Martin Musierowicz",
+     "role": "Chief Revenue Officer",
+     "seat": "commercial",
+     "source_url": "https://www.keyfactor.com/press-releases/martin-musierowicz-joins-cro/",
+     "note": "Joined from Atlassian (head of global channels, $0 to $1B+ in partner bookings) to own direct sales, marketing AND channel — so a sponsorship argued as go-to-market lands on his desk, not only the CMO's. RE-CONFIRM BEFORE CALLING: a 2024-25 SmartBear appointment release also names a Martin Musierowicz as its CRO, and Keyfactor's live leadership page could not be read from here. Treat the seat as unconfirmed until the page is checked.",
+     "status": "reported"
+    },
+    {
+     "name": "Jordan Rackie",
+     "role": "Chief Executive Officer",
+     "seat": "executive",
+     "source_url": "https://www.keyfactor.com/about-us/",
+     "note": "Brief's named contact, confirmed still CEO — named as CEO in Keyfactor's own releases and current company profiles.",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "company": "Lovable",
+   "no_cmo": false,
+   "note": "A CMO exists and is based in San Francisco — Lovable's own 'Chief of Staff, Marketing' job page describes reporting into the CMO across an SF/Stockholm split — but that page does not name them, so the name below rests on the founder's own announcement plus a named trade interview. No CRO or commercial officer is named publicly; a first sponsorship at this company is a founder-plus-CMO conversation, not a procurement one.",
+   "people": [
+    {
+     "name": "Cecilia (Ceci) Stallsmith",
+     "role": "Chief Marketing Officer",
+     "seat": "marketing",
+     "source_url": "https://thefutureofmarketing.substack.com/p/from-developer-marketing-to-the-builder",
+     "note": "The buyer. Interviewed as Lovable's CMO; Anton Osika announced her arrival himself in Sept 2026. Built developer marketing at Slack and co-founded Calyx, a developer go-to-market consultancy — a builder-audience marketer, so the pitch is 'the builder economy on a global stage', not hospitality. No motorsport tie found.",
+     "status": "reported"
+    },
+    {
+     "name": "Anton Osika",
+     "role": "Co-Founder & Chief Executive Officer",
+     "seat": "executive",
+     "source_url": "https://lovable.dev/video/anton-osika-co-founder-and-ceo-lovable-hitting-85-day-30-retention-better-than-chatgpt",
+     "note": "Brief's named contact, confirmed still CEO on Lovable's own site. Stockholm-based and personally very public (podcasts, recruiting campaigns) — a founder who fronts the brand, which matters when the marketing function is only months old.",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "company": "Mercury",
+   "no_cmo": true,
+   "note": "No chief marketing officer: marketing is owned at VP level and there is no CMO above it. The 'CCO' Mercury announced alongside its CFO is a Chief COMPLIANCE Officer (Steve Pearlman, ex-Varo/Revolut US), not a commercial one — there is no CRO or CCO in the sponsorship sense, so the path is VP Marketing plus the founder.",
+   "people": [
+    {
+     "name": "Rachel (Moncton) Oatway",
+     "role": "VP, Marketing",
+     "seat": "marketing",
+     "source_url": "https://mercury.com/blog/how-much-should-a-small-business-spend-on-marketing",
+     "note": "The buyer, and the top of the marketing function — quoted on Mercury's own blog as its marketing leader; VP Marketing since Nov 2021, ~29-person department, previously VP Global Marketing at ClassPass. Marked reported because the naming page is an editorial post rather than a leadership page. No motorsport tie found.",
+     "status": "reported"
+    },
+    {
+     "name": "Immad Akhund",
+     "role": "Co-Founder & Chief Executive Officer",
+     "seat": "executive",
+     "source_url": "https://mercury.com/blog/authors/immad-akhund",
+     "note": "Brief's named contact, confirmed still CEO on Mercury's own author page. With no CMO in place, a multi-year commitment of this size is his signature.",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "company": "Modal Labs",
+   "no_cmo": true,
+   "note": "No marketing officer is named on modal.com/company or in any Modal release. A 'VP Marketing / Growth' (David Dorman, ex-DigitalOcean/Grafana) appears on LinkedIn and broker records only — NOT on any Modal page, so he is deliberately not listed here; confirm before using. The real opening is regional: Modal opened a London office in Aug 2026 and hired a VP EMEA to build go-to-market there, which is the natural owner of a European racing programme.",
+   "people": [
+    {
+     "name": "Hugh Killingbeck-Jones",
+     "role": "VP, EMEA",
+     "seat": "regional",
+     "source_url": "https://modal.com/blog/modal-europe-expansion",
+     "note": "First call for a Europe-facing F1/FE programme. Named in Modal's own London-office post as the hire building EMEA GTM across startups and enterprise, from a standing start of seven people, with Europe targeted at 20-30% of revenue. A leader with a brand-awareness problem in a market where F1 is the default business platform.",
+     "status": "verified"
+    },
+    {
+     "name": "Erik Bernhardsson",
+     "role": "Co-Founder & Chief Executive Officer",
+     "seat": "executive",
+     "source_url": "https://modal.com/company",
+     "note": "Brief's named contact, confirmed still CEO. Swedish, ex-Spotify (built Annoy and the music recommendation stack) — Modal has a Sweden office alongside New York, San Francisco and now London, so a European programme is not a stretch for him.",
+     "status": "verified"
+    },
+    {
+     "name": "Akshat Bubna",
+     "role": "Co-Founder & Chief Technology Officer",
+     "seat": "technical",
+     "source_url": "https://modal.com/company",
+     "note": "The counterpart who has to want it: serverless GPU compute is a workstream a race team could genuinely run (CFD/aero surrogate models, simulation bursts, video pipelines), not a logo. Any MODE-A technical case is built with him.",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "company": "Nebius Group",
+   "no_cmo": false,
+   "note": "Cleanest decision path in this batch: a brand-new CMO (Aug 2026), a CRO hired to scale to multiple billions, and a founder-CEO who is also executive director. NASDAQ-listed, so the seats are documented. No motorsport tie found in any of the three, but Irvine arriving with an explicit global-expansion brand mandate is the timing argument.",
+   "people": [
+    {
+     "name": "Lindsey Irvine",
+     "role": "Chief Marketing Officer",
+     "seat": "marketing",
+     "source_url": "https://nebius.com/newsroom/nebius-appoints-lindsey-irvine-as-chief-marketing-officer",
+     "note": "THE buyer, and newly in seat (announced 5 Aug 2026) to accelerate global expansion after a year of record growth — a new CMO with a category-defining brief is the single best moment to put a multi-year platform in front of. Previously global marketing at Square, CMO at Benchling, and CMO at MuleSoft through $250M to $1B+ ARR.",
+     "status": "verified"
+    },
+    {
+     "name": "Marc Boroditsky",
+     "role": "Chief Revenue Officer",
+     "seat": "commercial",
+     "source_url": "https://nebius.com/newsroom/marc-boroditsky-joins-nebius-as-chief-revenue-officer",
+     "note": "Commercial owner, in seat since May 2025. Grew Twilio paying customers 6x and revenue 10x to $4B; hired explicitly to take Nebius to multiple billions — the person who has to see pipeline in a sponsorship, not brand.",
+     "status": "verified"
+    },
+    {
+     "name": "Arkady Volozh",
+     "role": "Founder & Chief Executive Officer",
+     "seat": "executive",
+     "source_url": "https://nebius.com/board-of-directors/arkady-volozh",
+     "note": "Brief's named contact, confirmed still Founder & CEO (and executive director). CEO 2000-2022, resumed 2024. Cheque signer on anything multi-year at this scale.",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "company": "Nscale",
+   "no_cmo": true,
+   "note": "THE BRIEF'S NAMED PERSON IS WRONG. 'Aliaksei Smirnou — CEO & Co-Founder' is not an Nscale executive on any leadership page or release; Nscale's Founder & CEO is Josh Payne (co-founder Nathan Townsend), London HQ, spun out of Arkon Energy in May 2024. On marketing: there is no CMO — marketing is folded into the Chief Product Officer's remit, so the buyer and the product owner are the same person.",
+   "people": [
+    {
+     "name": "Dan Bathurst",
+     "role": "Chief Product Officer (leads product and marketing)",
+     "seat": "marketing",
+     "source_url": "https://www.nscale.com/about",
+     "note": "The marketing owner by remit: Nscale's own about page has him leading product AND marketing across the AI infrastructure stack. No CMO sits above him. A pitch here has to survive a product person's questions, so lead with the technical/audience case, not hospitality.",
+     "status": "verified"
+    },
+    {
+     "name": "Tom Burke",
+     "role": "Chief Revenue Officer",
+     "seat": "commercial",
+     "source_url": "https://www.nscale.com/about",
+     "note": "Commercial owner. 15+ years of global enterprise data/AI sales; previously CRO at Applied Digital (NASDAQ: APLD) and VP/Head of Global Sales for Data & AI at IBM — an enterprise seller who will value the room a paddock gives him.",
+     "status": "verified"
+    },
+    {
+     "name": "Josh Payne",
+     "role": "Founder & Chief Executive Officer",
+     "seat": "executive",
+     "source_url": "https://www.nscale.com/about",
+     "note": "The actual cheque signer, and the correction to the brief. UK-based founder of a London-headquartered company that reached a $14.6B valuation on its $2B Series C (Mar 2026) — a British AI-infrastructure story on a British grid is the natural angle.",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "company": "OLIX Computing",
+   "no_cmo": true,
+   "note": "Checked Companies House (OLIX COMPUTING LIMITED, 15585099), the Series B coverage and the company newsroom: no marketing officer, no commercial officer, no VP-level marketing hire is named anywhere. A ~2-year-old, 25-year-old-founder photonic-chip company — the founder personally fronts every announcement and a first sponsorship is his call alone, with the new CFO as the only other gate. UK-registered (St Albans), which puts it in F1's home market.",
+   "people": [
+    {
+     "name": "James Dacombe",
+     "role": "Founder & Chief Executive Officer",
+     "seat": "executive",
+     "source_url": "https://find-and-update.company-information.service.gov.uk/company/15585099/officers",
+     "note": "Brief's named contact, confirmed: director since incorporation (22 Mar 2024) on the official register, and named as founder & CEO throughout the 3 Aug 2026 Series B coverage ($312M at $3.3B). With no CMO and no CCO, he IS the decision path — one call, not three.",
+     "status": "verified"
+    },
+    {
+     "name": "Matt Briers",
+     "role": "Chief Financial Officer",
+     "seat": "executive",
+     "source_url": "https://businesscloud.co.uk/news/james-dacombe-profile-meet-the-uks-25-year-old-unicorn-boss/",
+     "note": "The other gate on a multi-year commitment: former CFO of Wise, i.e. someone who has run a UK scale-up's spend discipline through an IPO. Reported only — the appointment appears in press profiles, not on an OLIX leadership page (none is published).",
+     "status": "reported"
+    }
+   ]
+  },
+  {
+   "company": "Odyssey",
+   "no_cmo": true,
+   "note": "odyssey.ml/about lists a deliberately small senior team with no marketing officer of any level; go-to-market sits with a VP, GTM & Operations, so she is the marketing owner in practice. The strongest reason to call this company is the technical one — world models and real-time simulation are a live workstream for a race team, and both founders come out of autonomous driving.",
+   "people": [
+    {
+     "name": "Jessica Inman",
+     "role": "VP, GTM & Operations",
+     "seat": "commercial",
+     "source_url": "https://odyssey.ml/about",
+     "note": "Nearest thing to a marketing owner — owns go-to-market end to end at a company with no CMO. Route a first approach through her rather than assuming the founder handles brand.",
+     "status": "verified"
+    },
+    {
+     "name": "Oliver Cameron",
+     "role": "Co-Founder & Chief Executive Officer",
+     "seat": "executive",
+     "source_url": "https://odyssey.ml/about",
+     "note": "Brief's named contact, confirmed still CEO. MOTORSPORT-ADJACENT HISTORY: founder/CEO of self-driving startup Voyage (acquired by GM's Cruise), then VP Product at Cruise, where he launched the first fully driverless commercial service in San Francisco. An automotive-autonomy operator, so the vehicle-dynamics language of a race team is native to him.",
+     "status": "verified"
+    },
+    {
+     "name": "Jeff Hawke",
+     "role": "Co-Founder & Chief Technology Officer",
+     "seat": "technical",
+     "source_url": "https://odyssey.ml/about",
+     "note": "The counterpart who has to want it. Presents Odyssey's research publicly (RAAIS 2026); world models that simulate physically accurate environments in real time are directly usable for driver-in-loop simulation and generated race content — this is a MODE-A technical case, not a halo.",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "company": "Oxylabs",
+   "no_cmo": true,
+   "note": "TWO CORRECTIONS TO THE BRIEF. (1) The name is wrong: there is no 'Julius Irmantas Karosas' — Oxylabs' founder is Julius Cerniauskas. (2) The role is out of date: under the group leadership restructure Cerniauskas moved to Chairman of the Board and Vytautas Savickas became CEO of the Oxylabs group. On marketing: no CMO or head of marketing is named in the published leadership structure, so the commercial officer is the buyer. Lithuania-based (Vilnius) — a European company with no motorsport tie found in any leader's history.",
+   "people": [
+    {
+     "name": "Marija Gecaite",
+     "role": "Chief Commercial Officer",
+     "seat": "commercial",
+     "source_url": "https://oxylabs.io/blog/oxylabs-group-leadership",
+     "note": "The buyer, in the absence of any marketing officer — commercial sits above sales (Andrius Palionis, Head of Sales) in the published structure. Named in Oxylabs' own leadership-restructure post.",
+     "status": "verified"
+    },
+    {
+     "name": "Vytautas Savickas",
+     "role": "Chief Executive Officer, Oxylabs group",
+     "seat": "executive",
+     "source_url": "https://oxylabs.io/blog/oxylabs-group-leadership",
+     "note": "The operating cheque signer as of the restructure — Oxylabs' own post gives him daily operations, business growth and international markets. This is the person the brief should have named, not the founder.",
+     "status": "verified"
+    },
+    {
+     "name": "Julius Cerniauskas",
+     "role": "Founder & Chairman of the Board",
+     "seat": "executive",
+     "source_url": "https://oxylabs.io/blog/authors/julius-cerniauskas",
+     "note": "Still the strategic vote and still the public face of the company (bylined author on its own blog, Forbes Technology Council). His stated remit as Chairman is 'strategic direction and the initiatives that define the next decade' — which is exactly how a three-year sponsorship should be framed to him.",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "company": "PayPal",
+   "no_cmo": false,
+   "note": "Global public company, and the brief carries no named contact — here is the path. PayPal publishes NO single EMEA president: the region rolls up to the President, Global Markets, who owns country management worldwide. The 'SVP EMEA Rupert Keeley' still cited by data brokers is long out of date and must not be used. Note the whole top of the house turned over in 2026 (new CEO 1 Mar, a three-business reorganisation and a new marketing chief announced 29 Apr), which is both the risk and the opening. SPONSORSHIP-NATIVE: two of the four came from Visa, one of the largest sports-sponsorship portfolios in the world.",
+   "people": [
+    {
+     "name": "Antonio Lucio",
+     "role": "Chief Marketing & Corporate Affairs Officer",
+     "seat": "marketing",
+     "source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+     "note": "THE call. Appointed in the 29 Apr 2026 reorganisation. Was global Chief Marketing & Communications Officer at VISA — where the job included the FIFA World Cup and Olympic global sponsorships — then CMO at Meta and EVP/CMO & corporate affairs at HP. He has personally signed multi-year global sports rights; a motorsport programme needs no education with him, only a reason.",
+     "status": "verified"
+    },
+    {
+     "name": "Suzan Kereere",
+     "role": "President, Global Markets",
+     "seat": "regional",
+     "source_url": "https://about.pypl.com/who-we-are/executive-leadership/suzan-kereere/default.aspx",
+     "note": "The EMEA seat, in the absence of a named EMEA president: owns country management and global go-to-market execution. In role since 1 Jan 2024 and confirmed still serving (Form 4 share sales, Aug 2026). Previously Head of Europe Merchant Sales & Acquiring at Visa — a European commercial history plus a sponsorship-heavy alma mater.",
+     "status": "verified"
+    },
+    {
+     "name": "Frank Keller",
+     "role": "President, Checkout Solutions & PayPal",
+     "seat": "commercial",
+     "source_url": "https://about.pypl.com/who-we-are/executive-leadership/Frank-Keller/default.aspx",
+     "note": "The Europe-rooted business president and the closest thing PayPal has to a European voice at the top: German, founded two startups in Berlin, and formerly General Manager of PayPal Germany, Austria and Switzerland. Owns consumer and merchant strategy, the global wallet ecosystem AND PayPal Ads — the media budget a sponsorship would sit next to.",
+     "status": "verified"
+    },
+    {
+     "name": "Enrique Lores",
+     "role": "President & Chief Executive Officer",
+     "seat": "executive",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1633917/000119312526035860/d68718dex991.htm",
+     "note": "New CEO effective 1 Mar 2026 (8-K), arriving from HP where he was CEO. Any brief still naming a previous PayPal CEO is out of date. He brought Antonio Lucio with him from HP — the CEO and the CMO are a working pair, which shortens the path.",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "company": "Quantinuum",
+   "no_cmo": false,
+   "note": "The brief carries no named contact; this is now a NASDAQ-listed company (IPO closed 2026) with a published investor-relations leadership page, so the whole path is documented. MOTORSPORT-ADJACENT: Quantinuum has an expanded multi-year quantum-computing partnership with the BMW GROUP — a works motorsport manufacturer — so the company already knows how to structure a multi-year deal with a car maker, and there is a live relationship to reference. Both go-to-market leaders arrived from industrial/enterprise software, not quantum, which is the tell that this is a brand-building phase.",
+   "people": [
+    {
+     "name": "Lawrence Schwartz",
+     "role": "Chief Marketing Officer",
+     "seat": "marketing",
+     "source_url": "https://ir.quantinuum.com/corporate-governance/leadership-team",
+     "note": "The buyer. 20+ years of global B2B marketing across enterprise software and INDUSTRIAL technology; most recently CMO at AspenTech, where he built the Industrial AI positioning and played a role in the Emerson sale. MIT engineering degrees plus an HBS MBA — he will want the engineering substance of a team partnership, not the hospitality.",
+     "status": "verified"
+    },
+    {
+     "name": "Lawrence (Larry) Stack",
+     "role": "Chief Commercial Officer",
+     "seat": "commercial",
+     "source_url": "https://ir.quantinuum.com/corporate-governance/leadership-team",
+     "note": "Commercial owner. 20+ years running global sales and go-to-market; most recently CRO at Procore, six years at Red Hat as EVP Global Sales & Services, earlier at DXC, HPE, Accenture and Fujitsu. The seat that judges whether a paddock opens enterprise doors.",
+     "status": "verified"
+    },
+    {
+     "name": "Rajeeb (Raj) Hazra",
+     "role": "President & Chief Executive Officer",
+     "seat": "executive",
+     "source_url": "https://www.quantinuum.com/press-releases/quantinuum-names-rajeeb-raj-hazra-chief-executive-officer",
+     "note": "The cheque signer and the name the brief is missing. Three decades in supercomputing: GM of Compute & Networking at Micron and 25 years at Intel leading the Enterprise & Government and Technical Computing groups. The CLO and CPO appointed in 2026 both report to him, so the C-suite is his build.",
+     "status": "verified"
+    }
+   ]
+  }
+ ]
+}
