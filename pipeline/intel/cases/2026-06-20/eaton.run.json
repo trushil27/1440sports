@@ -1,6 +1,6 @@
 {
  "run": {
-  "id": 129,
+  "id": 131,
   "date": "2026-06-20",
   "status": "success",
   "mode": "dry_run",
@@ -12,8 +12,8 @@
    "candidates": 1,
    "verification": [
     {
-     "pdf": "/tmp/case-pdf-fh8_t4q1/2026-06-20/eaton.pdf",
-     "web": "/tmp/case-pdf-fh8_t4q1/2026-06-20/eaton.web.html",
+     "pdf": "/tmp/case-pdf-o7v0_vhi/2026-06-20/eaton.pdf",
+     "web": "/tmp/case-pdf-o7v0_vhi/2026-06-20/eaton.web.html",
      "audit": "pass",
      "status": "verified",
      "company": "Eaton",
@@ -25,10 +25,10 @@
      },
      "written": true,
      "blocking": [],
-     "brief_id": 193,
+     "brief_id": 195,
      "rendered": true,
      "highlights": 3,
-     "candidate_id": 197,
+     "candidate_id": 199,
      "verification": "verified",
      "audit_attempts": 1
     }
@@ -115,7 +115,7 @@
   "audit_attempts": 1,
   "pages": 2,
   "mode": "A",
-  "web_html_path": "/tmp/case-pdf-fh8_t4q1/2026-06-20/eaton.web.html",
+  "web_html_path": "/tmp/case-pdf-o7v0_vhi/2026-06-20/eaton.web.html",
   "brief_data": {
    "hq": "Dublin (operations run from the United States)",
    "deck": "Eaton, the $27.4B intelligent-power group, agreed on 10 June 2026 to separate its Mobility business and combine it with Dana in a ~$5.1B Reverse Morris Trust, taking about $1.1B in cash. What remains is a pure electrical and aerospace company riding a 240% surge in US data-centre orders.",
@@ -145,7 +145,14 @@
     {
      "team": "Oracle Red Bull Racing",
      "label": "TAKEN",
-     "detail": "Ford",
+     "detail": "Ford, Siemens",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "label": "TAKEN",
+     "detail": "Ford, Siemens",
      "status": "conflict",
      "recommended": false
     },
@@ -153,13 +160,6 @@
      "team": "McLaren F1 Team",
      "label": "TAKEN",
      "detail": "Schneider Electric",
-     "status": "conflict",
-     "recommended": false
-    },
-    {
-     "team": "Visa Cash App Racing Bulls",
-     "label": "TAKEN",
-     "detail": "Ford",
      "status": "conflict",
      "recommended": false
     }
@@ -310,35 +310,35 @@
     {
      "fact": "Public company (NYSE: ETN); 2025 sales a record $27.4B, up 10%; Q1 2026 sales $7.5B, up 17%",
      "value": "$27.4B",
-     "claim_id": 621,
+     "claim_id": 660,
      "verified": true,
      "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html"
     },
     {
      "fact": "Public shareholders; Eaton shareholders will hold at least 50.1% of the Dana-Mobility combination",
      "value": "50.1%",
-     "claim_id": 622,
+     "claim_id": 661,
      "verified": true,
      "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html"
     },
     {
      "fact": "Definitive agreements signed 10 June 2026 to separate the Mobility business and combine it with Dana in a ~…",
      "value": "$5.1B",
-     "claim_id": 624,
+     "claim_id": 663,
      "verified": true,
      "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html"
     },
     {
      "fact": "What remains is a pure electrical and aerospace company riding a 240% surge in US data-centre orders.",
      "value": "240%",
-     "claim_id": 631,
+     "claim_id": 670,
      "verified": true,
      "source_url": null
     },
     {
      "fact": "First-quarter sales were a record $7.5B, up 17%, Electrical Americas reached $3.6B, up 20%, data-centre ord…",
      "value": "$7.5B",
-     "claim_id": 634,
+     "claim_id": 673,
      "verified": true,
      "source_url": null
     }
@@ -346,7 +346,7 @@
    "series_label": "F1",
    "timing_label": "HOT",
    "horizon_label": "6-10 WKS",
-   "industry_meta": "Intelligent Power Management · Electrical Equipment",
+   "industry_meta": "Intelligent Power Management · Industrial Electrical Equipment",
    "value_content": "MODE A - operational. Three Cadillac sites are being fitted out at once. Eaton supplies the medium-voltage switchgear, power distribution, UPS and circuit protection for Fishers, Concord and Silverstone, with data-centre-grade monitoring across dyno rooms and simulators. Trackside, Eaton power-quality and backup kit runs the garage and pit wall. In return: Official Power Management Partner, engine-cover or halo placement, Austin and Las Vegas hospitality for Eaton's utility and data-centre buyers.",
    "value_section": true,
    "why_team_para": "Cadillac is the first American works entry in a generation: General Motors and TWG Motorsports, a $200M, 400,000 sq ft headquarters under construction in Fishers, Indiana, a power-unit facility in Concord, North Carolina, and a European base at Silverstone. Its inaugural roster is Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger and TWG AI: no electrical, power or energy brand. Eaton is the US incumbent in switchgear and UPS; a new campus is specified once.",
