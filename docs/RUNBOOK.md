@@ -204,6 +204,7 @@ Touch ID on the `/enrol` step; afterwards it is passkey only, 90-day session.
 
 | Symptom | Look at |
 |---|---|
+| Railway shows **Crashed** and the log repeats `[entrypoint] applying migrations` → `connection to server at "127.0.0.1", port 5432 failed` | `DATABASE_URL` is not set on that service (or the Postgres service is stopped): the code fell back to the `localhost` default. Variables → *Add Reference* → Postgres → `DATABASE_URL` on the **same service**, redeploy. Since 6 Sep the container runs `python -m intel.preflight` first: it prints which variables are set / missing, emails the operator "[RUN FAILED] … did not start", and exits 0 instead of looping |
 | No email at 06:00 | `/ops` → runs: status `failed` carries the error; the operator also gets a [RUN FAILED] email |
 | Brief went to the operator, not the MD | It is `needs_review` (an unverified load-bearing claim) or the audit failed — the email lists the open claims / violations |
 | The same company two days running | `/ops` → candidates: the second should read `dedup_suppressed`; if not, check `surfaced_log` |
