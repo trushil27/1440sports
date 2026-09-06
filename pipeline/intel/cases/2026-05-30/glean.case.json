@@ -1,0 +1,351 @@
+{
+ "run_date": "2026-05-30",
+ "signal_date": "2026-05-28",
+ "stem": "glean",
+ "number": 210,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Glean",
+  "signal_date": "2026-05-28",
+  "score": 70,
+  "tier": "WARM",
+  "track": 1,
+  "person": "Matt \"Kix\" Kixmoeller",
+  "role": "Chief Marketing Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+  "industry_meta": "Enterprise AI · Work AI Platform (search, assistant, agents) · Palo Alto",
+  "recommended_team": "Mahindra Racing",
+  "recommended_series": "FE",
+  "timing_label": "WARM",
+  "trigger_reason": "revenue milestone",
+  "key_facts": {
+   "funding": "$150M Series F at a $7.2B valuation led by Wellington Management (10 Jun 2025); total raised about $768M; no new round in 2026",
+   "investors": "Wellington Management (Series F lead); Khosla Ventures, Sequoia Capital, Lightspeed, Kleiner Perkins, ICONIQ, General Catalyst, Coatue and DST Global among the backers",
+   "revenue": "$300M ARR, company-stated on 28 May 2026; $200M in December 2025; roughly three times the level of fifteen months earlier",
+   "trigger": "ARR crossed $300M, announced by CEO Arvind Jain on 28 May 2026 and reported by TechCrunch the same day; the $150M Series F at $7.2B dates from June 2025",
+   "competitor_signal": "TWG AI is Andretti's Official Artificial Intelligence partner; Sand Technologies (AI) sits with Envision; TCS is Jaguar's title partner; Google Cloud is the championship's cloud partner; no Work AI platform is on the FE grid",
+   "strategic_hook": "Mahindra Racing committed as a manufacturer to the Gen4 era through 2030 (26 Nov 2025); Glean's largest base outside the US is its Bengaluru centre of more than 450 people",
+   "us_presence": "HQ Palo Alto, California; offices in San Francisco, New York, Nashville, London and Bengaluru",
+   "alumni_match": null,
+   "taxonomy_category": "C4",
+   "ops_fit_note": "MODE A: permission-aware enterprise search, assistant and agents over the team's and the parent group's documents; Tech Mahindra's AI tooling through the team is adjacent, so exclusivity is scoped to the Work AI platform",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 14,
+   "capacity": 16,
+   "brand_fit": 14,
+   "urgency": 11,
+   "ops_fit": 15,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "kixmoeller",
+    "kix"
+   ],
+   "url": "https://www.glean.com/authors/mattkix",
+   "excerpt": "Glean's own author page: Matt \"Kix\" Kixmoeller is Chief Marketing Officer at Glean; before Glean he led marketing at Ghost Autonomy and marketing and product at Pure Storage. The Org and Crunchbase list him as CMO.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$300m",
+    "28 may",
+    "$200m",
+    "three times",
+    "fifteen months",
+    "revenue milestone",
+    "arr"
+   ],
+   "url": "https://x.com/jainarvind/status/2060077511212445874",
+   "excerpt": "CEO Arvind Jain, 28 May 2026: Glean has surpassed $300M ARR, five months after crossing $200M and growing about 3x over the past fifteen months. TechCrunch the same day: top line crosses $300M, up from $100M in early 2025 and $200M by December 2025. Company-stated figure; not audited.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$150m",
+    "$7.2b",
+    "wellington",
+    "series f",
+    "$768m",
+    "june 2025",
+    "10 jun",
+    "khosla",
+    "sequoia"
+   ],
+   "url": "https://www.glean.com/press/glean-raises-150m-series-f-at-7-2b-valuation-to-accelerate-enterprise-ai-agent-innovation-globally",
+   "excerpt": "Glean press release, 10 Jun 2025: $150M Series F at a $7.2B valuation led by Wellington Management; new investors Khosla Ventures, Bicycle Capital, Geodesic Capital and Archerman Capital; existing investors Altimeter, Capital One Ventures, Citi, Coatue, DST Global, General Catalyst, ICONIQ, IVP, Kleiner Perkins, Latitude Capital, Lightspeed, Sapphire Ventures and Sequoia Capital. Crunchbase News: total raised roughly $768M; the Series E ($260M at $4.6B) closed nine months earlier. No round announced in 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "aryn",
+    "11 mar"
+   ],
+   "url": "https://www.aryn.ai/post/aryn-transition",
+   "excerpt": "Aryn's own announcement, 11 Mar 2026: Aryn joins Glean; Dealroom: Aryn acquired by Glean, its cloud service to shut on 15 April 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "palo alto",
+    "bengaluru",
+    "bangalore",
+    "450",
+    "nashville",
+    "new york",
+    "london office"
+   ],
+   "url": "https://www.businessofgcc.com/gcc-data/companies/glean-technologies-inc-india-bengaluru",
+   "excerpt": "Craft / Business of GCC listings: headquarters 3000 El Camino Real, Palo Alto, California; offices in San Francisco, New York, Nashville, London and Bengaluru. The Bengaluru centre, established 2022 with a formal office launch in July 2024, is Glean's largest investment outside the US and grew from 150 to more than 450 people in its first year (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "arvind jain",
+    "jain",
+    "maletira",
+    "rackspace",
+    "ceo"
+   ],
+   "url": "https://www.glean.com/authors/arvind-jain",
+   "excerpt": "Glean: Arvind Jain is co-founder and CEO (previously a Google distinguished engineer and a co-founder of Rubrik). Glean announced Amar Maletira as Chief Operating Officer (formerly CEO and President of Rackspace Technology and EVP & CFO of VIAVI Solutions). No CFO was confirmed on the sources reached.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "pure storage",
+    "mercedes",
+    "2016"
+   ],
+   "url": "https://investor.purestorage.com/news-and-events/press-releases/press-release-details/2016/The-MERCEDES-AMG-PETRONAS-Formula-One-Team-Accelerates-Track-Side-Race-Performance-With-Pure-Storage/default.aspx",
+   "excerpt": "Pure Storage press release, 1 Mar 2016: global technical partnership with the Mercedes-AMG Petronas Formula One Team, continued over several seasons. Kixmoeller held marketing, product and strategy roles at Pure Storage in that period (Bloomberg profile; Pure Storage bio). No evidence he structured the deal — recorded as a familiarity tie only.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "gen4",
+    "2030",
+    "26 nov",
+    "bertrand",
+    "manufacturer"
+   ],
+   "url": "https://www.fia.com/news/mahindra-racing-commits-formula-e-gen4-era-until-2030",
+   "excerpt": "FIA / Formula E / Mahindra press release, 26 Nov 2025 (Bengaluru): Mahindra Racing commits as a manufacturer to the GEN4 era of the ABB FIA Formula E World Championship until at least 2030; GEN4 begins with Season 13 (2026/27); announced by team principal Frederic Bertrand.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "tech mahindra",
+    "rubicon",
+    "erace"
+   ],
+   "url": "https://racer.com/2025/05/07/how-ai-boosts-mahindra-engineering-and-racing-tech",
+   "excerpt": "RACER, 7 May 2025, and Tech Mahindra press releases: Tech Mahindra, the group's IT-services arm, uses the Mahindra Racing programme to develop tooling including its Rubicon AI tool and an eRace Track Analytics platform (telemetry analytics, simulation). It is an IT-services and engineering partner, not a Work AI platform vendor.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "twg ai",
+    "sand technologies",
+    "tcs",
+    "google cloud",
+    "mahindra & mahindra",
+    "andretti",
+    "envision",
+    "jaguar",
+    "work ai platform is on",
+    "no enterprise-software"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md + data/teams.json)",
+   "excerpt": "Sponsor table: Mahindra Racing — Mahindra & Mahindra (parent / title), Tech Mahindra (software / tech integrator); no other partner listed. Andretti Formula E — TWG AI (Official Artificial Intelligence partner, primary partner of the FE programme). Envision Racing — Sand Technologies (AI), Teijin. Jaguar TCS Racing — TCS title (IT services). Championship level — Google Cloud (cloud / technology), Julius Baer. No Work AI or enterprise-software platform on any FE team roster.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "london",
+    "jeddah",
+    "sanya",
+    "shanghai",
+    "tokyo",
+    "season 13",
+    "season 12"
+   ],
+   "url": "seeds/calendar_fe.json (FE Season 12 and Season 13 calendars)",
+   "excerpt": "FE calendar table: Season 12 continues after 30 May with Sanya (20 Jun), Shanghai (4-5 Jul), Tokyo (25-26 Jul) and the London E-Prix finale (15-16 Aug 2026); Season 13, the first GEN4 season, opens with the Jeddah E-Prix on 18-19 Dec 2026 and visits Austin (6 Feb 2027) and Miami (20 Feb 2027).",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Glean",
+  "industry_meta": "Enterprise AI · Work AI Platform",
+  "hq": "Palo Alto, California",
+  "ticker": "Private ($7.2B, Series F Jun 2025)",
+  "deck": "Glean, the Palo Alto 'Work AI' platform, crossed $300M in annual recurring revenue on 28 May 2026, tripling in fifteen months, on the $7.2B valuation set by its $150M Series F. It has never entered motorsport, and Formula E's Work AI lane is open as the Gen4 era approaches.",
+  "score": 70,
+  "timing_label": "WARM",
+  "series_label": "FE",
+  "team_label": "Mahindra Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "CEO Arvind Jain announced on 28 May that ARR has passed $300M, five months after $200M and roughly three times the level of fifteen months earlier. The company raised $150M at $7.2B in June 2025 in a Series F led by Wellington Management, taking total funding to about $768M, and bought document-intelligence start-up Aryn on 11 March 2026. There has been no new round in 2026: this is a demand inflection, not a capital one, and the score says so. The buyers Glean must now win are enterprise CIOs, Formula E's paddock audience.",
+  "the_case_p2": "The enterprise-AI archetype is already on the grid. TWG AI is Official Artificial Intelligence partner of Andretti's programme; Sand Technologies backs Envision; Google Cloud is the championship's cloud partner. None of them sells a Work AI platform to end users, so a Glean-class brand would arrive first in its category. Mahindra Racing, committed as a manufacturer to the Gen4 era through 2030, pairs an Indian engineering parent with Glean's biggest office beyond America.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The $300M mark landed on 28 May, and brand budgets reset in the quarter after a milestone like it. Season 12 closes at the London E-Prix on 15-16 August and the Gen4 era opens at the Jeddah E-Prix in December, so Season 13 rosters are settled over the summer.",
+  "why_team_label": "WHY MAHINDRA RACING",
+  "why_team_para": "Mahindra Racing's roster is Mahindra & Mahindra as parent and title and Tech Mahindra as IT-services partner; there is no enterprise-software brand. Its Gen4 manufacturer commitment through 2030, made on 26 November 2025, de-risks a three-year term. Glean's largest base outside the US is its Bengaluru centre of more than 450 people, and the Mahindra Group is the multi-business enterprise it sells into. Exclusivity is scoped to the Work AI platform, not to AI, since Tech Mahindra builds AI tooling through the team.",
+  "value_section": true,
+  "value_section_label": "VALUE TO MAHINDRA RACING",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. A Formula E team and its parent run on scattered knowledge: homologation and regulation documents, supplier and freight data, simulation reports, sponsor contracts. Glean indexes it all with permissions intact and puts an assistant and agents on top for engineers, operations and commercial staff. A team deployment, extended to chosen Mahindra Group functions, gives Mahindra measurable hours back and Glean a referenceable flagship inside one of India's largest industrial groups.",
+  "deal_arch_para": "Entry as Official Work AI Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Season 13 to Season 15 (2026-27 to 2028-29), inside the Gen4 commitment. Estimated $2-3M a year, part-payable in seats. Scope: Work AI platform exclusivity, car and garage branding, a working team deployment, London and Bengaluru hospitality, engineering content.",
+  "decision_maker_name": "Matt \"Kix\" Kixmoeller",
+  "decision_maker_role": "Chief Marketing Officer, Glean",
+  "decision_maker_bio": "Kixmoeller runs Glean's marketing after leading marketing at Ghost Autonomy and marketing, product and strategy at Pure Storage, a Mercedes F1 technical partner since 2016. Path: Arvind Jain, co-founder and CEO; Amar Maletira, COO, ex-CEO of Rackspace. No CFO confirmed.",
+  "opening_angle_intro": "Lead with the category and the clock.",
+  "opening_angle_quote": "&ldquo;Kix, you watched Pure Storage put its name on a Mercedes. Glean just crossed $300M ARR and Formula E's Work AI lane is open, with Mahindra committed to 2030. 25 minutes before the London E-Prix?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "14",
+    "/ 20",
+    "$300M ARR crossed 28 May; no capital event, Series F is a year old."
+   ],
+   [
+    "CAPACITY",
+    "16",
+    "/ 20",
+    "$7.2B valuation, about $768M raised, $300M ARR."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Enterprise B2B brand; FE paddock is its CIO audience."
+   ],
+   [
+    "URGENCY",
+    "11",
+    "/ 20",
+    "No hard deadline beyond Season 13 rosters; category could close."
+   ],
+   [
+    "OPS FIT",
+    "15",
+    "/ 20",
+    "MODE A: knowledge platform the team and parent would use."
+   ]
+  ],
+  "risks": [
+   [
+    "NO CAPITAL EVENT",
+    "The trigger is a revenue milestone, not a raise; a company growing this fast may keep every dollar in direct go-to-market.",
+    "Fund part of the fee in seats; measure the deal on enterprise pipeline from the group and the paddock."
+   ],
+   [
+    "ADJACENT INCUMBENT",
+    "Tech Mahindra builds AI tooling through the team and could be read as holding the AI lane.",
+    "Scope exclusivity to the Work AI platform; integrators are Glean's channel, not its rival."
+   ]
+  ],
+  "bottom_line": "$300M ARR crossed on 28 May, a $7.2B valuation and about $768M raised put Glean at the moment enterprise brands start spending on credibility. Formula E's Work AI lane is open, Mahindra is committed through 2030, and Season 13 rosters close over the summer.",
+  "signals": [
+   "revenue_milestone",
+   "category_whitespace",
+   "never_entered"
+  ],
+  "footer_company": "GLEAN",
+  "footer_date": "30 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 28 May 2026 CEO Arvind Jain announced that Glean had passed $300M in annual recurring revenue, five months after $200M and roughly three times the level of fifteen months earlier; TechCrunch reported it the same day. The figure is company-stated, not audited, and the brief says so."
+    },
+    {
+     "label": "Why this is the moment",
+     "text": "The last capital event is a year old: the $150M Series F at $7.2B closed in June 2025. What has changed since is demand. A company that has tripled revenue in fifteen months moves from proving the product to building the brand that keeps winning enterprise accounts against Microsoft, Google and the model labs, and that is when a global platform earns its place in the budget."
+    },
+    {
+     "label": "The Gen4 clock",
+     "text": "Formula E's Gen4 era begins with Season 13 in December 2026 and Mahindra Racing has committed as a manufacturer through 2030. Teams settle their Season 13 partner rosters over the summer, so a decision taken before the London E-Prix finale on 15-16 August can be announced with the new car."
+    },
+    {
+     "label": "What holds the score back",
+     "text": "No raise, no listing and no hard deadline: urgency is scored 11 of 20 and timing 14. The case is strong on capacity and fit, not on a forcing event, and the brief does not pretend otherwise."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Mahindra Racing carries Mahindra & Mahindra as parent and title and Tech Mahindra as its engineering and IT-services partner, and nothing else in enterprise software. Official Work AI Partner is a clean category at a team-partner price, with exclusivity scoped to the Work AI platform so it sits beside Tech Mahindra rather than against it."
+    },
+    {
+     "label": "A parent that is the customer",
+     "text": "Glean sells to large, multi-business enterprises whose knowledge is scattered across systems. The Mahindra Group is exactly that, and Glean's largest base outside the US is its Bengaluru centre of more than 450 people. A team deployment that extends into group functions is a reference account, not just a logo."
+    },
+    {
+     "label": "A manufacturer committed to 2030",
+     "text": "Mahindra Racing's Gen4 commitment as a manufacturer, announced 26 November 2025, runs to at least 2030. A three-season term from Season 13 sits entirely inside it, which removes the exit risk that undermines multi-year deals with customer teams."
+    },
+    {
+     "label": "Why not the others",
+     "text": "TWG AI is Andretti's Official Artificial Intelligence partner, Sand Technologies backs Envision on AI and TCS, an IT-services group with its own AI practice, holds Jaguar's title. The remaining teams are open but carry neither the enterprise-software adjacency nor the India and US story that makes Mahindra the natural first deployment."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "A racing team runs on documents: technical regulations and homologation files, supplier and freight records, simulation and test reports, sponsor and hospitality contracts. Glean connects those sources, respects who is allowed to see what, and gives engineers, operations and commercial staff one assistant and a set of agents that answer from the team's own knowledge. The team gets hours back every week; the parent group can extend the same deployment to chosen functions."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Glean's buyers are CIOs and heads of IT at large enterprises, the audience Formula E's paddock is built to host. A partner that brings that guest list to London, Berlin and the new Austin and Miami rounds strengthens every other B2B conversation the team is having."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "A working deployment is a story: how a Formula E team finds what it knows before a race weekend, told through the engineers who use it. That content serves Glean's enterprise sales and Mahindra's technology positioning at the same time, and gives the Mahindra Group a visible AI programme with a global stage."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Work AI Partner designation, car and garage branding, category exclusivity for the Work AI platform, hospitality at the London finale and at the Season 13 rounds, driver and engineering access, and a reference account inside one of India's largest industrial groups."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Andretti Formula E",
+     "reason": "TWG AI is the programme's Official Artificial Intelligence partner and primary partner; the AI lane is taken."
+    },
+    {
+     "team": "Envision Racing",
+     "reason": "Sand Technologies holds the AI partnership."
+    },
+    {
+     "team": "Jaguar TCS Racing",
+     "reason": "TCS, an IT-services group with its own enterprise AI practice, is title partner; a Work AI platform would clash with the title sponsor's positioning."
+    },
+    {
+     "team": "Porsche Formula E Team · Nissan Formula E Team · DS Penske · Cupra Kiro · Lola Yamaha ABT Formula E Team · Citroën Racing",
+     "reason": "Open but not chosen: no enterprise-software adjacency and none of the India and US operating story that makes Mahindra the natural first deployment; DS Penske's roster is electronics distribution."
+    }
+   ],
+   "ask": "A 25-minute call with Matt Kixmoeller before the London E-Prix to size an Official Work AI Partner entry against Mahindra Racing's Season 13 roster, agree a team deployment scoped with Tech Mahindra, and set an announcement window with the Gen4 car."
+  }
+ },
+ "note": "# Glean → Mahindra Racing — verification log (N° 210, row of 30 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY` in the sandbox), with Claude acting as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code. The brief is issued for the row's date, 30 May 2026, and uses only facts public by that date.\n\n**Sandbox limitation, stated plainly:** direct fetches of glean.com, techcrunch.com, x.com, aryn.ai, fia.com, mahindra.com, purestorage.com and the listing sites were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, honestly re-dated\n\nThe desk row carried the **$150M Series F at $7.2B** as its trigger. That round closed on **10 Jun 2025**, almost a year before the row, and would be stale on its own. The real in-window event is the **$300M ARR milestone announced by CEO Arvind Jain on 28 May 2026** (his own post; TechCrunch the same day), a company-stated demand inflection rather than a capital one. `signal_date` is therefore 2026-05-28, the trigger is labelled a revenue milestone, and the score (70, WARM) is held down for the absence of a capital event: timing 14, urgency 11. The Aryn acquisition (11 Mar 2026) is a supporting in-window fact, not the trigger. The earlier proof hero (N° 002, 30 May 2026, 72/100) rested on the same Series F; this case replaces its basis.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Matt \"Kix\" Kixmoeller, Chief Marketing Officer | VERIFIED | glean.com author page; The Org; Crunchbase |\n| Arvind Jain co-founder & CEO; Amar Maletira COO (ex-Rackspace CEO) | VERIFIED | glean.com; Glean COO announcement (TipRanks summary) |\n| $300M ARR on 28 May 2026; $200M in Dec 2025; ~3x in 15 months | COMPANY-STATED (REPORTED) | Jain on X, 28 May 2026; TechCrunch, 28 May 2026 |\n| $150M Series F at $7.2B led by Wellington Management, 10 Jun 2025; investor list | VERIFIED | glean.com press release; BusinessWire; CNBC |\n| Total raised ~$768M; Series E $260M at $4.6B nine months earlier | REPORTED | Crunchbase News |\n| Aryn acquired, 11 Mar 2026 | VERIFIED | aryn.ai transition post; Dealroom |\n| HQ Palo Alto; offices SF, NYC, Nashville, London, Bengaluru; Bengaluru centre 450+ | REPORTED | Craft; Business of GCC |\n| Pure Storage–Mercedes-AMG Petronas technical partnership from 1 Mar 2016 | VERIFIED | Pure Storage press release |\n| Mahindra Racing Gen4 manufacturer commitment to 2030, 26 Nov 2025 | VERIFIED | fia.com; fiaformulae.com; mahindra.com |\n| Tech Mahindra develops Rubicon AI / eRace Track Analytics through the team | REPORTED | RACER, 7 May 2025; Tech Mahindra releases |\n| FE rosters: Mahindra (M&M, Tech Mahindra); Andretti (TWG AI); Envision (Sand Technologies); Jaguar (TCS title); championship Google Cloud | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Season 12 finale London E-Prix 15-16 Aug 2026; Season 13 opens Jeddah 18-19 Dec 2026; Austin and Miami in Season 13 | VERIFIED | calendar table (`seeds/calendar_fe.json`) |\n\n## Decision path\n\n**Owner:** Matt \"Kix\" Kixmoeller, CMO (Glean's own page). **Path:** Arvind Jain, co-founder and CEO; Amar Maletira, COO. **No CFO was confirmed** on the sources reached — the brief says so rather than naming one.\n\n## Leadership ties\n\n- **Kixmoeller — familiarity tie, not a deal credit.** Pure Storage, where he held marketing, product and strategy roles, has been a Mercedes-AMG Petronas F1 technical partner since March 2016. No evidence that he structured or ran that partnership; recorded as familiarity only and used in the opening angle as such.\n- Jain, Maletira: none found.\n\n## Screen-outs and things not claimed\n\n- **Glean is not an F1 or FE partner** (checked against both championships' partner pages and the sponsor table).\n- **No customer count, no employee count and no profitability figure** are used; sources disagree (1,300–1,600 staff) and none is company-stated.\n- **Deal size ($2–3M a year) is an ESTIMATE**, labelled as such.\n- **Tech Mahindra** is on the recommended team's roster as an IT-services and engineering partner that builds AI tooling through the team. It is not a Work AI platform vendor, but the brief treats it as an adjacent incumbent (risk 2), scopes exclusivity to the Work AI platform, and docks slot availability (4/5) for it.\n- **Kixmoeller's start date at Glean** was not confirmed to the month and is not stated.\n"
+}
