@@ -1,0 +1,368 @@
+{
+ "run_date": "2026-05-05",
+ "signal_date": "2026-03-31",
+ "stem": "saronic",
+ "number": 230,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Saronic",
+  "signal_date": "2026-03-31",
+  "score": 71,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Dino Mavrookas",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+  "industry_meta": "Defence Technology · Autonomous Maritime Vessels / Shipbuilding · Austin TX",
+  "recommended_team": "Cadillac F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, announced 31 Mar 2026; follows a $600M Series C at a $4B valuation in 2025",
+   "investors": "Kleiner Perkins (lead); Advent International, Bessemer Venture Partners, DFJ Growth, BAM Elevate (new); 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil, Franklin Templeton (existing)",
+   "revenue": null,
+   "trigger": "$1.75B Series D at a $9.25B post-money valuation announced 31 Mar 2026, with capital earmarked for shipbuilding capacity including Port Alpha, the planned Texas shipyard then in site selection",
+   "competitor_signal": "No defence, maritime-autonomy or shipbuilding brand on the F1 grid; the nearest adjacencies are Boeing at Alpine and Zoox at Williams",
+   "strategic_hook": "US Navy $392M Corsair production contract (Dec 2025), prototype to production in under 12 months; $300M expansion of the Franklin, Louisiana shipyard adding 300,000 sq ft and 1,500 jobs; Port Alpha planned to build 20-plus autonomous vessels a year by 2027 and create 10,000 direct jobs over a decade",
+   "us_presence": "Headquartered in Austin, Texas; Corsair plant in central Texas; Marauder shipyard in Franklin, Louisiana; Port Alpha sited in Brownsville, Texas (announced Jul 2026)",
+   "alumni_match": null,
+   "taxonomy_category": "A2",
+   "ops_fit_note": "MODE B halo: American shipbuilding and autonomy brand on the American works team; engineering recruitment is the mechanism",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 15,
+   "capacity": 19,
+   "brand_fit": 13,
+   "urgency": 14,
+   "ops_fit": 10,
+   "ops_fit_subscores": {
+    "product_to_need": 3,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 1
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "dino mavrookas",
+    "mavrookas"
+   ],
+   "url": "https://www.saronic.com/team",
+   "excerpt": "Saronic team page (search summary; saronic.com egress-blocked) and The Org: Dino Mavrookas, Co-Founder and Chief Executive Officer — eleven years as a Navy SEAL including eight combat tours, then private equity at Vista Equity Partners.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1.75b",
+    "$9.25b",
+    "kleiner",
+    "advent",
+    "bessemer",
+    "dfj",
+    "bam elevate",
+    "8vc",
+    "caffeinated",
+    "andreessen",
+    "elad gil",
+    "franklin templeton",
+    "31 mar",
+    "31 march",
+    "series d",
+    "$600m",
+    "$4b",
+    "20-plus",
+    "20 vessels",
+    "10,000",
+    "funding round",
+    "site selection",
+    "port alpha"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+   "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$392m",
+    "corsair",
+    "under 12 months",
+    "24-foot",
+    "december 2025",
+    "december",
+    "navy",
+    "reagan"
+   ],
+   "url": "https://www.navalnews.com/naval-news/2025/12/saronic-wins-contract-for-corsair-autonomous-surface-vessel-production/",
+   "excerpt": "Naval News / WorkBoat / gCaptain, Dec 2025: the US Navy awarded Saronic a $392M production contract for the 24-foot Corsair autonomous surface vessel, nearly $200M obligated at award, announced at the Reagan National Defense Forum by Navy Secretary John Phelan; prototype to production in under 12 months.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$300m",
+    "franklin",
+    "louisiana",
+    "300,000",
+    "1,500",
+    "marauder",
+    "180-foot"
+   ],
+   "url": "https://www.navalnews.com/naval-news/2025/12/saronic-expands-its-louisiana-shipyard-with-300-million-investment-to-accelerate-autonomous-ship-production/",
+   "excerpt": "Naval News / WorkBoat, Dec 2025: Saronic is investing $300M to expand its Franklin, Louisiana shipyard (a former Gulf Craft yard acquired in early 2025), adding more than 300,000 sq ft of production space and 1,500 jobs; the yard builds the 180-foot Marauder. The Franklin workforce tripled from about 30 to more than 100 in its first year.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "brownsville",
+    "$3.2b",
+    "$3b",
+    "16 jul",
+    "july 2026",
+    "texas shipyard"
+   ],
+   "url": "https://medium.com/saronic-technologies/saronic-to-build-port-alpha-americas-next-generation-shipyard-in-brownsville-texas-f71c15565ec6",
+   "excerpt": "Saronic, 16 Jul 2026 (Medium; Defense News; Naval News): Port Alpha, the $3.2B next-generation shipyard, will be built at the Port of Brownsville, Texas. After this row's date; on 5 May 2026 the site was still being selected.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "austin",
+    "texas",
+    "headquartered",
+    "central texas"
+   ],
+   "url": "https://www.govconwire.com/articles/saronic-1-75b-series-d-maritime-autonomy",
+   "excerpt": "GovCon Wire, Mar 2026, and the Series D release: Saronic Technologies is an Austin, Texas-based defence technology company; the Corsair is built at a plant in central Texas.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "lehman",
+    "shanklin",
+    "depriest",
+    "altekar",
+    "chief commercial officer",
+    "chief marketing officer",
+    "spacex",
+    "cfo",
+    "vista"
+   ],
+   "url": "https://www.saronic.com/team",
+   "excerpt": "Saronic team page (search summary) and LinkedIn: Rob Lehman, Co-Founder and Chief Commercial Officer, leads all marketing, sales and customer support (21 years a US Marine Corps officer); Emily Shanklin, Chief Marketing Officer, previously Senior Director of Marketing and Communications at SpaceX over 15 years; Patrick Depriest, Chief Financial Officer; Vibhav Altekar, Co-Founder and CTO; Doug Lambert, Co-Founder and Head of Engineering.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "boeing",
+    "zoox",
+    "twg ai",
+    "claro",
+    "core scientific",
+    "ifs",
+    "jim beam",
+    "tenneco",
+    "tommy hilfiger",
+    "pirelli",
+    "alpinestars",
+    "haas automation",
+    "no industrial",
+    "no defence",
+    "no defense",
+    "no autonomy",
+    "inaugural"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: no defence, maritime or shipbuilding brand on any F1 roster; Boeing is at Alpine (aerospace) and Zoox at Williams (autonomous vehicles). Cadillac's 2026 roster is entirely inaugural — TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli, Alpinestars, TWG Motorsports, General Motors (parent) — with no industrial-technology, defence or autonomy partner. Haas: Haas Automation (machine tools) is the parent brand.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "silverstone",
+    "fishers",
+    "indiana",
+    "charlotte"
+   ],
+   "url": "https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/jan/0119-f1.html",
+   "excerpt": "GM News, 19 Jan 2026: the Cadillac Formula 1 Team designs and builds its cars at Silverstone while its Fishers, Indiana campus is under construction; US bases in Fishers, Concord/Charlotte and Warren.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "united states",
+    "miami",
+    "las vegas",
+    "home race"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: Miami GP (round 6, run 3 May 2026), United States GP (Austin, round 19, late October), Las Vegas GP (round 22, November).",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Saronic",
+  "industry_meta": "Defence Technology · Autonomous Maritime Vessels / Shipbuilding",
+  "hq": "Austin, Texas",
+  "ticker": "Private ($9.25B; $1.75B Series D, Mar 2026)",
+  "deck": "Saronic, the Austin-based builder of autonomous naval vessels, closed a $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation on 31 March 2026, more than doubling its price in a year, with the capital pointed at shipyards: a $300M Louisiana expansion and Port Alpha, then choosing its site.",
+  "score": 71,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Cadillac F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 31 March 2026 Saronic announced a $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate joining 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; a $600M Series C had valued it at $4B in 2025. In December the US Navy awarded a $392M production contract for its 24-foot Corsair, prototype to production in under 12 months. Franklin, Louisiana is adding 300,000 square feet and 1,500 jobs; Port Alpha targets 20-plus vessels a year by 2027. <font name='Poppins-Bold' size='9.5'>AMERICAN SHIPBUILDING, REBUILT FROM TEXAS.</font>",
+  "the_case_p2": "No defence, maritime-autonomy or shipbuilding brand sits on the Formula 1 grid; the nearest adjacencies are Boeing at Alpine and Zoox at Williams, and neither conflicts. The question is not a category clash but which team's identity a US Navy supplier can stand behind. Two teams are American: one a privateer built around machine tools, the other a General Motors works entry in its first season with a manufacturing campus rising in Indiana.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series D closed on 31 March and the Port Alpha site decision, with its governors and senators, is the next public act. Cadillac settles its 2027 roster between the summer break and the United States GP in Austin, Saronic's home city; a deal agreed by summer is announced at home.",
+  "why_team_label": "WHY CADILLAC F1 TEAM",
+  "why_team_para": "Cadillac is the American works team, in its first season with an inaugural roster: TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli and Alpinestars. It has no industrial-technology, defence or autonomy partner. Its cars are engineered at Silverstone while a campus rises in Fishers, Indiana; Saronic is building Port Alpha on the same reindustrialisation story. Austin is the team's home race and Saronic's home city, and a Navy supplier belongs beside the American flag-bearer.",
+  "value_section": true,
+  "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+  "value_mode": "B",
+  "value_content": "MODE B - halo with mechanics. Saronic's constraint is people: 1,500 hires in Louisiana, 10,000 planned at Port Alpha, and autonomy engineers who could work anywhere. A Formula 1 partnership is a recruiting platform: engineer exchanges between Cadillac's simulation group and Saronic's autonomy team, campus activations around Austin, the team's manufacturing story told beside Saronic's. Cadillac gains an American industrial partner with a national-security audience for its US hospitality, and content from a shipyard building at Formula 1 pace.",
+  "deal_arch_para": "Entry as Official Autonomy and Shipbuilding Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, through the Port Alpha build-out. Estimated $4-6M a year. Scope: sidepod placement, Austin, Miami and Las Vegas hospitality for Navy, congressional and state guests, an engineering-exchange programme, and co-produced content on building at speed.",
+  "decision_maker_name": "Dino Mavrookas",
+  "decision_maker_role": "Co-Founder & CEO, Saronic",
+  "decision_maker_bio": "Mavrookas, a former Navy SEAL and Vista Equity Partners investor, co-founded Saronic and fronts every raise. Path: Rob Lehman, Co-Founder and Chief Commercial Officer, who owns marketing and sales; Emily Shanklin, Chief Marketing Officer, ex-SpaceX marketing and communications lead; Patrick Depriest, CFO.",
+  "opening_angle_intro": "Lead with Austin and the shipyards.",
+  "opening_angle_quote": "&ldquo;Dino, Cadillac is the American works team, and Austin is home for both of you. No defence or autonomy brand sits on the grid, and your constraint is hiring ten thousand people. 25 minutes on Formula 1 as a recruiting platform?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "15",
+    "/ 20",
+    "Round closed 31 Mar; Austin in October."
+   ],
+   [
+    "CAPACITY",
+    "19",
+    "/ 20",
+    "$1.75B raised at $9.25B post-money."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "Sovereignty archetype; defence brand needs care."
+   ],
+   [
+    "URGENCY",
+    "14",
+    "/ 20",
+    "Port Alpha site decision; 10,000 hires."
+   ],
+   [
+    "OPS FIT",
+    "10",
+    "/ 20",
+    "MODE B halo; recruiting is the mechanism."
+   ]
+  ],
+  "risks": [
+   [
+    "A DEFENCE BRAND ON A CAR",
+    "Some teams and host markets are wary of weapons-adjacent partners.",
+    "Lead with shipbuilding, autonomy and jobs; keep Corsair's strike role out of the creative."
+   ],
+   [
+    "NO OPERATIONAL WORKSTREAM",
+    "Saronic's product does not run in a race team; this is a halo.",
+    "Make the engineering exchange and recruiting KPIs the contract's substance."
+   ]
+  ],
+  "bottom_line": "A $1.75B Series D at $9.25B, a $392M Navy production contract and two shipyards to staff give Saronic the budget and the motive for a national platform. Cadillac is the American works team with no industrial or defence partner, and the United States GP in Austin is home for both.",
+  "signals": [
+   "funding_event",
+   "open_category",
+   "home_race"
+  ],
+  "footer_company": "SARONIC",
+  "footer_date": "5 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 31 March 2026 Saronic announced a $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate joining 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton. A $600M Series C had valued the company at $4B in 2025, so the price more than doubled in about a year."
+    },
+    {
+     "label": "Production, not prototypes",
+     "text": "In December 2025 the US Navy awarded Saronic a $392M production contract for the 24-foot Corsair, announced at the Reagan National Defense Forum, with the Navy Secretary citing prototype to production in under 12 months. The same month Saronic announced a $300M expansion of its Franklin, Louisiana shipyard, adding more than 300,000 square feet and 1,500 jobs, where the 180-foot Marauder is built."
+    },
+    {
+     "label": "Port Alpha",
+     "text": "The Series D capital is earmarked for shipbuilding capacity: Port Alpha, a planned Texas shipyard expected to build more than 20 autonomous surface vessels a year by 2027 and create 10,000 direct jobs over a decade. On this row's date the site was still being selected; Saronic announced Brownsville, Texas, on 16 July 2026. A company choosing where to put 10,000 jobs is in a season of governors, senators and public ceremonies, which is also the audience a US Grand Prix suite holds."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The Miami GP ran on 3 May 2026, two days before this row. The United States GP in Austin in late October is Saronic's home race, and Cadillac settles its 2027 partner roster between the summer break and Austin. A deal agreed by July can be announced at home."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Cadillac's 2026 roster is entirely inaugural: TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli, Alpinestars and TWG Motorsports, with General Motors as parent. There is no industrial-technology, defence or autonomy partner, and no such brand on any Formula 1 roster; the nearest adjacencies, Boeing at Alpine and Zoox at Williams, do not conflict."
+    },
+    {
+     "label": "The same story",
+     "text": "Cadillac is a General Motors works entry engineering its cars at Silverstone while a campus rises in Fishers, Indiana. Saronic is building Port Alpha and expanding Franklin on an American reindustrialisation narrative. Two American industrial builders in their first years, one on the car and one on the water, is a story both can tell in Washington and on Wall Street."
+    },
+    {
+     "label": "Home race",
+     "text": "Saronic is headquartered in Austin. The United States GP is Cadillac's home race and the round where the team hosts its most senior American guests. A Navy supplier's congressional, state and Navy audience is the same guest list."
+    },
+    {
+     "label": "Why not Haas",
+     "text": "TGR Haas is the other American team, a privateer whose parent, Haas Automation, is a machine-tool maker. It is open, but a General Motors works entry with a national profile carries a defence-industrial brand more comfortably than a privateer with a Toyota title partner, and Cadillac's roster is cleaner."
+    }
+   ],
+   "value": [
+    {
+     "label": "Recruiting is the workstream (Mode B)",
+     "text": "Saronic's binding constraint is people: 1,500 new jobs in Louisiana, 10,000 at Port Alpha, and autonomy, software and manufacturing engineers who have offers from anywhere. Formula 1 is the strongest engineering-recruitment brand in sport. Engineer exchanges between Cadillac's simulation and manufacturing groups and Saronic's autonomy team, campus activations around the Austin round and a co-branded careers programme give the partnership substance a logo does not."
+    },
+    {
+     "label": "The audience Cadillac wants",
+     "text": "Saronic brings Navy leadership, members of Congress, state officials and defence-industrial executives to the Austin, Miami and Las Vegas suites, an American power audience Cadillac's first-season hospitality is built to host."
+    },
+    {
+     "label": "Content and narrative",
+     "text": "A shipyard turning prototypes into production in under a year beside a team building a Formula 1 operation from nothing: co-produced content on building at speed, from Franklin and Port Alpha to Fishers and Silverstone, told for both companies' recruiting and investor audiences."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Autonomy and Shipbuilding Partner designation, sidepod placement, hospitality at the three US rounds, an engineering-exchange programme, and driver and team access for Saronic's recruiting and public-affairs channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "Open but not chosen: American privateer with a Toyota title partner and a machine-tool parent brand; a defence-industrial partner sits more comfortably on the GM works entry."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Boeing holds the aerospace and defence-adjacent lane."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Zoox holds the autonomy lane."
+    },
+    {
+     "team": "All non-American teams",
+     "reason": "A US Navy supplier's brand, audience and recruiting pool are American; a foreign-flag team gives it no home race and no political audience."
+    }
+   ],
+   "ask": "A 25-minute call with Dino Mavrookas and Rob Lehman before the summer break to test Formula 1 as a recruiting and public-affairs platform, agree an Austin announcement window, and size an entry against Cadillac's 2027 roster."
+  }
+ },
+ "note": "# Saronic → Cadillac F1 Team — verification log (N° 230, row dated 5 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost for the desk row dated 5 May 2026 (batch 21). Claude acted as researcher, verifier and writer; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code via `intel.session_case`.\n\n**Sandbox limitation, stated plainly:** direct fetches of prnewswire.com, saronic.com and cnbc.com were blocked by the egress proxy. Every claim below was checked against the search summary of the primary page named as the evidence URL (Saronic's PR Newswire release; Naval News, WorkBoat, gCaptain, Defense News and GovCon Wire as secondaries). Treat each VERIFIED line as REPORTED until a person opens the link; confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nThe thin row's trigger holds in full: the $1.75B Series D at a $9.25B post-money valuation was announced by the company on **31 Mar 2026**, 35 days before the row's date. The thin row's CNBC source is a credible secondary; the primary is the PR Newswire release. The '$300M shipyard expansion' is the Franklin, Louisiana project announced in December 2025, and 'Port Alpha Texas site search' was accurate on the row date; Brownsville was announced on 16 Jul 2026 (after the row; used only where labelled).\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Dino Mavrookas, Co-Founder & CEO (Navy SEAL; Vista Equity Partners) | VERIFIED (search summary) | saronic.com/team; The Org |\n| $1.75B Series D led by Kleiner Perkins at $9.25B post-money; investor list; 31 Mar 2026 | VERIFIED (search summary) | PR Newswire release; Sullivan & Cromwell; CNBC |\n| $600M Series C at $4B (2025) | VERIFIED (search summary) | Series D release; CNBC |\n| $392M Navy Corsair production contract, Dec 2025; <12 months prototype to production | VERIFIED (search summary) | Naval News; WorkBoat; gCaptain |\n| $300M Franklin, LA expansion; 300,000 sq ft; 1,500 jobs; Marauder 180 ft | VERIFIED (search summary) | Naval News Dec 2025; WorkBoat |\n| Port Alpha: 20-plus vessels a year by 2027; 10,000 direct jobs over a decade | VERIFIED (company statement) | Series D release |\n| Port Alpha in Brownsville, TX; $3.2B; 16 Jul 2026 | VERIFIED (search summary) — after row date | Saronic (Medium); Defense News; MyRGV |\n| HQ Austin, TX; Corsair plant in central Texas | VERIFIED (search summary) | GovCon Wire; Series D release |\n| Rob Lehman Co-Founder & CCO (owns marketing, sales); Emily Shanklin CMO (ex-SpaceX); Patrick Depriest CFO; Vibhav Altekar CTO | VERIFIED (search summary) | saronic.com/team; LinkedIn |\n| No defence/maritime brand on the F1 grid; Boeing at Alpine; Zoox at Williams; Cadillac roster inaugural | VERIFIED | sponsor table |\n| Cadillac engineered at Silverstone; Fishers campus under construction | VERIFIED (search summary) | GM News 19 Jan 2026 |\n| Miami GP 3 May 2026; United States GP (Austin) late Oct; Las Vegas Nov | VERIFIED | calendar table |\n\n## Screen-outs and things not claimed\n\n- **Leadership ties: none found** for Mavrookas, Lehman, Shanklin or Depriest; Shanklin's SpaceX brand-building record is the nearest thing to a sponsorship pedigree and is noted, not scored.\n- **Score is honest.** Capacity is near the top of the scale (19) and the category is clean, but this is a halo (ops fit 10) and a defence brand on a car carries reputational care (brand fit 13). 71, not the thin row's 83.\n- **Deal size ($4-6M a year) is an ESTIMATE**, labelled as such.\n- **The engineering-exchange and recruiting programme is a proposal**, not an existing arrangement.\n- Headcount for the company as a whole is not public and is not used; only the Franklin workforce figures and the stated job targets are.\n"
+}

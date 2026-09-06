@@ -1,0 +1,724 @@
+{
+ "run": {
+  "id": 132,
+  "date": "2026-05-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-2yjhifnw/2026-05-05/saronic.pdf",
+     "web": "/tmp/case-pdf-2yjhifnw/2026-05-05/saronic.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Saronic",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 14
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 196,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 200,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "top ranking score",
+     "company": "Saronic",
+     "decision": "selected",
+     "signal_date": "2026-03-31"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Saronic",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 15,
+    "ops_fit": 10,
+    "ranking": 71,
+    "urgency": 14,
+    "capacity": 19,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 1,
+     "on_camera": 2,
+     "product_to_need": 3,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+   "trigger_date": "2026-03-31",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 230,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-2yjhifnw/2026-05-05/saronic.web.html",
+  "brief_data": {
+   "hq": "Austin, Texas",
+   "deck": "Saronic, the Austin-based builder of autonomous naval vessels, closed a $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation on 31 March 2026, more than doubling its price in a year, with the capital pointed at shipyards: a $300M Louisiana expansion and Port Alpha, then choosing its site.",
+   "risks": [
+    {
+     "label": "A DEFENCE BRAND ON A CAR",
+     "detail": "Some teams and host markets are wary of weapons-adjacent partners.",
+     "counter": "Lead with shipbuilding, autonomy and jobs; keep Corsair's strike role out of the creative."
+    },
+    {
+     "label": "NO OPERATIONAL WORKSTREAM",
+     "detail": "Saronic's product does not run in a race team; this is a halo.",
+     "counter": "Make the engineering exchange and recruiting KPIs the contract's substance."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private ($9.25B; $1.75B Series D, Mar 2026)",
+   "company": "Saronic",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "open_category",
+    "home_race"
+   ],
+   "sources": [
+    "https://www.saronic.com/team",
+    "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+    "https://www.navalnews.com/naval-news/2025/12/saronic-wins-contract-for-corsair-autonomous-surface-vessel-production/",
+    "https://www.navalnews.com/naval-news/2025/12/saronic-expands-its-louisiana-shipyard-with-300-million-investment-to-accelerate-autonomous-ship-production/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Dino Mavrookas and Rob Lehman before the summer break to test Formula 1 as a recruiting and public-affairs platform, agree an Austin announcement window, and size an entry against Cadillac's 2027 roster.",
+    "value": [
+     {
+      "text": "Saronic's binding constraint is people: 1,500 new jobs in Louisiana, 10,000 at Port Alpha, and autonomy, software and manufacturing engineers who have offers from anywhere. Formula 1 is the strongest engineering-recruitment brand in sport. Engineer exchanges between Cadillac's simulation and manufacturing groups and Saronic's autonomy team, campus activations around the Austin round and a co-branded careers programme give the partnership substance a logo does not.",
+      "label": "Recruiting is the workstream (Mode B)"
+     },
+     {
+      "text": "Saronic brings Navy leadership, members of Congress, state officials and defence-industrial executives to the Austin, Miami and Las Vegas suites, an American power audience Cadillac's first-season hospitality is built to host.",
+      "label": "The audience Cadillac wants"
+     },
+     {
+      "text": "A shipyard turning prototypes into production in under a year beside a team building a Formula 1 operation from nothing: co-produced content on building at speed, from Franklin and Port Alpha to Fishers and Silverstone, told for both companies' recruiting and investor audiences.",
+      "label": "Content and narrative"
+     },
+     {
+      "text": "Official Autonomy and Shipbuilding Partner designation, sidepod placement, hospitality at the three US rounds, an engineering-exchange programme, and driver and team access for Saronic's recruiting and public-affairs channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 31 March 2026 Saronic announced a $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate joining 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton. A $600M Series C had valued the company at $4B in 2025, so the price more than doubled in about a year.",
+      "label": "Trigger"
+     },
+     {
+      "text": "In December 2025 the US Navy awarded Saronic a $392M production contract for the 24-foot Corsair, announced at the Reagan National Defense Forum, with the Navy Secretary citing prototype to production in under 12 months. The same month Saronic announced a $300M expansion of its Franklin, Louisiana shipyard, adding more than 300,000 square feet and 1,500 jobs, where the 180-foot Marauder is built.",
+      "label": "Production, not prototypes"
+     },
+     {
+      "text": "The Series D capital is earmarked for shipbuilding capacity: Port Alpha, a planned Texas shipyard expected to build more than 20 autonomous surface vessels a year by 2027 and create 10,000 direct jobs over a decade. On this row's date the site was still being selected; Saronic announced Brownsville, Texas, on 16 July 2026. A company choosing where to put 10,000 jobs is in a season of governors, senators and public ceremonies, which is also the audience a US Grand Prix suite holds.",
+      "label": "Port Alpha"
+     },
+     {
+      "text": "The Miami GP ran on 3 May 2026, two days before this row. The United States GP in Austin in late October is Saronic's home race, and Cadillac settles its 2027 partner roster between the summer break and Austin. A deal agreed by July can be announced at home.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Cadillac's 2026 roster is entirely inaugural: TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli, Alpinestars and TWG Motorsports, with General Motors as parent. There is no industrial-technology, defence or autonomy partner, and no such brand on any Formula 1 roster; the nearest adjacencies, Boeing at Alpine and Zoox at Williams, do not conflict.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Cadillac is a General Motors works entry engineering its cars at Silverstone while a campus rises in Fishers, Indiana. Saronic is building Port Alpha and expanding Franklin on an American reindustrialisation narrative. Two American industrial builders in their first years, one on the car and one on the water, is a story both can tell in Washington and on Wall Street.",
+      "label": "The same story"
+     },
+     {
+      "text": "Saronic is headquartered in Austin. The United States GP is Cadillac's home race and the round where the team hosts its most senior American guests. A Navy supplier's congressional, state and Navy audience is the same guest list.",
+      "label": "Home race"
+     },
+     {
+      "text": "TGR Haas is the other American team, a privateer whose parent, Haas Automation, is a machine-tool maker. It is open, but a General Motors works entry with a national profile carries a defence-industrial brand more comfortably than a privateer with a Toyota title partner, and Cadillac's roster is cleaner.",
+      "label": "Why not Haas"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Open but not chosen: American privateer with a Toyota title partner and a machine-tool parent brand; a defence-industrial partner sits more comfortably on the GM works entry."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Boeing holds the aerospace and defence-adjacent lane."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Zoox holds the autonomy lane."
+     },
+     {
+      "team": "All non-American teams",
+      "reason": "A US Navy supplier's brand, audience and recruiting pool are American; a foreign-flag team gives it no home race and no political audience."
+     }
+    ]
+   },
+   "date_long": "05 MAY 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "B",
+   "bottom_line": "A $1.75B Series D at $9.25B, a $392M Navy production contract and two shipyards to staff give Saronic the budget and the motive for a national platform. Cadillac is the American works team with no industrial or defence partner, and the United States GP in Austin is home for both.",
+   "footer_date": "5 MAY 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Round closed 31 Mar; Austin in October.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 19,
+     "note": "$1.75B raised at $9.25B post-money.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "Sovereignty archetype; defence brand needs care.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 14,
+     "note": "Port Alpha site decision; 10,000 hires.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 10,
+     "note": "MODE B halo; recruiting is the mechanism.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 31 March 2026 Saronic announced a $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate joining 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; a $600M Series C had valued it at $4B in 2025. In December the US Navy awarded a $392M production contract for its 24-foot Corsair, prototype to production in under 12 months. Franklin, Louisiana is adding 300,000 square feet and 1,500 jobs; Port Alpha targets 20-plus vessels a year by 2027. <font name='Poppins-Bold' size='9.5'>AMERICAN SHIPBUILDING, REBUILT FROM TEXAS.</font>",
+   "the_case_p2": "No defence, maritime-autonomy or shipbuilding brand sits on the Formula 1 grid; the nearest adjacencies are Boeing at Alpine and Zoox at Williams, and neither conflicts. The question is not a category clash but which team's identity a US Navy supplier can stand behind. Two teams are American: one a privateer built around machine tools, the other a General Motors works entry in its first season with a manufacturing campus rising in Indiana.",
+   "track_label": "",
+   "brief_number": "230",
+   "claims_total": 15,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, announced 31 Mar 2026; follows a $…",
+     "value": "$1.75B",
+     "claim_id": 681,
+     "verified": true,
+     "source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html"
+    },
+    {
+     "fact": "a $600M Series C had valued it at $4B in 2025.",
+     "value": "$600M",
+     "claim_id": 691,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "In December the US Navy awarded a $392M production contract for its 24-foot Corsair, prototype to productio…",
+     "value": "$392M",
+     "claim_id": 692,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Defence Technology · Autonomous Maritime Vessels / Shipbuilding",
+   "value_content": "MODE B - halo with mechanics. Saronic's constraint is people: 1,500 hires in Louisiana, 10,000 planned at Port Alpha, and autonomy engineers who could work anywhere. A Formula 1 partnership is a recruiting platform: engineer exchanges between Cadillac's simulation group and Saronic's autonomy team, campus activations around Austin, the team's manufacturing story told beside Saronic's. Cadillac gains an American industrial partner with a national-security audience for its US hospitality, and content from a shipyard building at Formula 1 pace.",
+   "value_section": true,
+   "why_team_para": "Cadillac is the American works team, in its first season with an inaugural roster: TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli and Alpinestars. It has no industrial-technology, defence or autonomy partner. Its cars are engineered at Silverstone while a campus rises in Fishers, Indiana; Saronic is building Port Alpha on the same reindustrialisation story. Austin is the team's home race and Saronic's home city, and a Navy supplier belongs beside the American flag-bearer.",
+   "deal_arch_para": "Entry as Official Autonomy and Shipbuilding Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, through the Port Alpha build-out. Estimated $4-6M a year. Scope: sidepod placement, Austin, Miami and Las Vegas hospitality for Navy, congressional and state guests, an engineering-exchange programme, and co-produced content on building at speed.",
+   "footer_company": "SARONIC",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series D closed on 31 March and the Port Alpha site decision, with its governors and senators, is the next public act. Cadillac settles its 2027 roster between the summer break and the United States GP in Austin, Saronic's home city; a deal agreed by summer is announced at home.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 230",
+   "decision_maker_bio": "Mavrookas, a former Navy SEAL and Vista Equity Partners investor, co-founded Saronic and fronts every raise. Path: Rob Lehman, Co-Founder and Chief Commercial Officer, who owns marketing and sales; Emily Shanklin, Chief Marketing Officer, ex-SpaceX marketing and communications lead; Patrick Depriest, CFO.",
+   "decision_maker_name": "Dino Mavrookas",
+   "decision_maker_role": "Co-Founder & CEO, Saronic",
+   "opening_angle_intro": "Lead with Austin and the shipyards.",
+   "opening_angle_quote": "&ldquo;Dino, Cadillac is the American works team, and Austin is home for both of you. No defence or autonomy brand sits on the grid, and your constraint is hiring ten thousand people. 25 minutes on Formula 1 as a recruiting platform?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Dino Mavrookas, Co-Founder & CEO at Saronic",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.saronic.com/team",
+     "excerpt": "Saronic team page (search summary; saronic.com egress-blocked) and The Org: Dino Mavrookas, Co-Founder and Chief Executive Officer — eleven years as a Navy SEAL including eight combat tours, then private equity at Vista Equity Partners.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Dino Mavrookas, Co-Founder & CEO, Saronic at Saronic",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.saronic.com/team",
+     "excerpt": "Saronic team page (search summary; saronic.com egress-blocked) and The Org: Dino Mavrookas, Co-Founder and Chief Executive Officer — eleven years as a Navy SEAL including eight combat tours, then private equity at Vista Equity Partners.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, announced 31 Mar 2026; follows a $600M Series C at a $4B valuation in 2025",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Saronic, the Austin-based builder of autonomous naval vessels, closed a $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation on 31 March 2026, more than doubling its price in a year, with the capital pointed at shipyards: a $300M Louisiana expansion and Port Alpha, then choosing its site.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Kleiner Perkins (lead); Advent International, Bessemer Venture Partners, DFJ Growth, BAM Elevate (new); 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil, Franklin Templeton (existing)",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 31 March 2026 Saronic announced a $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate joining 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$1.75B Series D at a $9.25B post-money valuation announced 31 Mar 2026, with capital earmarked for shipbuilding capacity including Port Alpha, the planned Texas shipyard then in site selection",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "a $600M Series C had valued it at $4B in 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No defence, maritime-autonomy or shipbuilding brand on the F1 grid; the nearest adjacencies are Boeing at Alpine and Zoox at Williams",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Boeing → BWT Alpine F1 Team (team_major, active); Zoox → Atlassian Williams Racing (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "In December the US Navy awarded a $392M production contract for its 24-foot Corsair, prototype to production in under 12 months.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.navalnews.com/naval-news/2025/12/saronic-wins-contract-for-corsair-autonomous-surface-vessel-production/",
+     "excerpt": "Naval News / WorkBoat / gCaptain, Dec 2025: the US Navy awarded Saronic a $392M production contract for the 24-foot Corsair autonomous surface vessel, nearly $200M obligated at award, announced at the Reagan National Defense Forum by Navy Secretary John Phelan; prototype to production in under 12 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "US Navy $392M Corsair production contract (Dec 2025), prototype to production in under 12 months; $300M expansion of the Franklin, Louisiana shipyard adding 300,000 sq ft and 1,500 jobs; Port Alpha planned to build 20-plus autonomous vessels a year by 2027 and create 10,000 direct jobs over a decade",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $1.75B Series D at $9.25B, a $392M Navy production contract and two shipyards to staff give Saronic the budget and the motive for a national platform.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in Austin, Texas; Corsair plant in central Texas; Marauder shipyard in Franklin, Louisiana; Port Alpha sited in Brownsville, Texas (announced Jul 2026)",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "A $600M Series C had valued the company at $4B in 2025, so the price more than doubled in about a year.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/saronic-closes-1-75b-series-d-at-9-25b-valuation-to-accelerate-a-new-era-of-maritime-autonomy-302729298.html",
+     "excerpt": "Saronic press release (PR Newswire), 31 Mar 2026: $1.75B Series D led by Kleiner Perkins at a $9.25B post-money valuation, with new investors Advent International, Bessemer Venture Partners, DFJ Growth and BAM Elevate and existing backers 8VC, Caffeinated Capital, Andreessen Horowitz, Elad Gil and Franklin Templeton; follows a $600M Series C at a $4B valuation in 2025 and the $392M Navy production contract; capital to expand supply chain and shipbuilding capacity, aiming to produce more than 20 autonomous surface vessels a year by 2027 at Port Alpha, the planned Texas shipyard expected to create 10,000 direct jobs over a decade (site selection ongoing at the time; CNBC and Sullivan & Cromwell carry the same figures).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "In December 2025 the US Navy awarded Saronic a $392M production contract for the 24-foot Corsair, announced at the Reagan National Defense Forum, with the Navy Secretary citing prototype to production in under 12 months.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.navalnews.com/naval-news/2025/12/saronic-wins-contract-for-corsair-autonomous-surface-vessel-production/",
+     "excerpt": "Naval News / WorkBoat / gCaptain, Dec 2025: the US Navy awarded Saronic a $392M production contract for the 24-foot Corsair autonomous surface vessel, nearly $200M obligated at award, announced at the Reagan National Defense Forum by Navy Secretary John Phelan; prototype to production in under 12 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The same month Saronic announced a $300M expansion of its Franklin, Louisiana shipyard, adding more than 300,000 square feet and 1,500 jobs, where the 180-foot Marauder is built.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.navalnews.com/naval-news/2025/12/saronic-expands-its-louisiana-shipyard-with-300-million-investment-to-accelerate-autonomous-ship-production/",
+     "excerpt": "Naval News / WorkBoat, Dec 2025: Saronic is investing $300M to expand its Franklin, Louisiana shipyard (a former Gulf Craft yard acquired in early 2025), adding more than 300,000 sq ft of production space and 1,500 jobs; the yard builds the 180-foot Marauder. The Franklin workforce tripled from about 30 to more than 100 in its first year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Miami GP ran on 3 May 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 6: Miami GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin. The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin round",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
