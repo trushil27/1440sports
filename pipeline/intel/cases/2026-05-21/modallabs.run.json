@@ -1,0 +1,819 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-05-21",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-i5jpfl42/2026-05-21/modallabs.pdf",
+     "web": "/tmp/case-pdf-i5jpfl42/2026-05-21/modallabs.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Modal Labs",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 17
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 78,
+     "reason": "top ranking score",
+     "company": "Modal Labs",
+     "decision": "selected",
+     "signal_date": "2026-05-21"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Modal Labs",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 78,
+   "score_breakdown": {
+    "cap": null,
+    "base": 78,
+    "total": 78,
+    "timing": 17,
+    "ops_fit": 16,
+    "ranking": 78,
+    "urgency": 13,
+    "capacity": 18,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://modal.com/blog/modal-series-c",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 78,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 78,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Atlassian Williams Racing",
+   "source_url": "https://modal.com/blog/modal-series-c",
+   "trigger_date": "2026-05-21",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 215,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-i5jpfl42/2026-05-21/modallabs.web.html",
+  "brief_data": {
+   "hq": "New York (founded 2021; offices in San Francisco and Stockholm)",
+   "deck": "Modal Labs, the New York serverless AI-compute platform, announced a $355M Series C at a $4.65B valuation on 21 May 2026, led by General Catalyst and Redpoint. Annualised revenue has passed $300M, up fivefold since September, and the valuation has quadrupled from the $1.1B Lux Capital set then.",
+   "risks": [
+    {
+     "label": "CROWDED ARCHETYPE",
+     "detail": "CoreWeave, Core Scientific and Crusoe are already holding or courting grid positions; a fourth AI-compute brand can look like a follower.",
+     "counter": "Position Modal as the developer-native layer, the compute engineers write to directly, not a data centre."
+    },
+    {
+     "label": "SPEND DISCIPLINE",
+     "detail": "Modal has grown on efficiency; a $3-5M sports line is a new category of spend for a company that has run lean.",
+     "counter": "Size year one in compute credits and a pilot inside the Williams simulation stack; step up cash with usage."
+    }
+   ],
+   "score": 78,
+   "ticker": "Private ($4.65B; $355M Series C, May 2026)",
+   "company": "Modal Labs",
+   "gridfit": [
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies, Google Cloud",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "CoreWeave, NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "TAKEN",
+     "detail": "Oracle",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "revenue_inflection"
+   ],
+   "sources": [
+    "https://finance.yahoo.com/sectors/technology/articles/exclusive-modal-labs-valued-4-170342702.html",
+    "https://modal.com/blog/modal-series-c",
+    "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+    "https://www.builtinnyc.com/articles/modal-raises-87m-series-b-1b-valuation-20251001"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Erik Bernhardsson before the Monaco GP to scope a simulation-compute pilot with Williams' engineering team, agree a British GP announcement window, and size an Official AI Compute Partner entry against the team's 2027 roster.",
+    "value": [
+     {
+      "text": "Elastic GPU compute for the work outside the aerodynamic-testing restrictions: machine-learning surrogates, driver-in-the-loop and race-strategy simulation, telemetry and video analytics between sessions. Engineers write Python; Modal scales it from zero to thousands of GPUs and back, so the team funds seconds of compute rather than idle clusters.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner that sells to AI labs and engineering leaders brings founders, CTOs and venture investors to the Austin and Las Vegas suites, the audience Williams' technology partners want alongside them.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Co-produced engineering content on how the team's simulations run (data on VAST, models with Claude, compute on Modal), a Williams reference customer for Modal's enterprise sales, and developer activations across Modal's community and Williams' digital channels.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official AI Compute Partner designation, engine-cover or sidepod placement, naming of the team's simulation compute environment, hospitality at Austin and Las Vegas, driver and engineering access for Modal's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 21 May 2026 Modal announced a $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo Ventures, Bain Capital Ventures and Accel joining. Reuters reports the round closed in two tranches, the first at $2.5B, as investor demand grew; TechCrunch had reported talks at $2.5B in February.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Annualised revenue has passed $300M, up fivefold from about $60M in September 2025, when Lux Capital led an $87M Series B at $1.1B. The valuation has quadrupled in eight months on the back of AI-coding demand: Modal scaled Lovable to more than a million sandboxes in one weekend and runs over a billion isolated sandboxes for DoorDash, Cognition, Decagon, Suno and Physical Intelligence.",
+      "label": "Revenue, not just valuation"
+     },
+     {
+      "text": "CoreWeave joined Aston Martin Aramco as Official AI Cloud Computing Partner in May 2025; Core Scientific and TWG AI launched with Cadillac; Modal's customer Cognition joined Aston Martin for 2026. AI-compute brands use F1 to reach engineers, enterprise buyers and capital markets at once, and Modal has not yet chosen a stage.",
+      "label": "The archetype is already on the grid"
+     },
+     {
+      "text": "Canadian GP (22-24 May), Monaco GP (5-7 June), the Spanish GP in Barcelona (12-14 June), the Austrian GP (26-28 June) and the British GP (3-5 July) all fall inside the window. The US GP in Austin and the Las Vegas GP in the autumn are the home-market stages; teams close 2027 partner rosters in the fourth quarter.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Williams carries Atlassian as title partner, VAST for the data platform, Keeper for identity security, Airia and Brillio on the technology tier, and Claude as Official Thinking Partner. No cloud, GPU or AI-compute partner: Official AI Compute Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Williams' revival is data-led and its simulation load is bursty. Modal's platform turns Python functions into autoscaling GPU jobs with cold starts in seconds, so the team pays for compute it uses and keeps capital spend outside the cost cap. That is consumed in the factory, which separates a technology partner from a logo.",
+      "label": "A team that will use the product"
+     },
+     {
+      "text": "VAST holds the data; Claude sits in the engineering workflow; Modal is the compute layer between them. A three-partner engineering story, data to model to compute, is one Williams can tell on camera and in the paddock.",
+      "label": "The stack fits"
+     },
+     {
+      "text": "New York headquarters for the Austin and Las Vegas rounds where Modal's customers and investors sit; a Stockholm office and a Swedish founder for the European rounds; a British team with the most software-native partner roster on the grid.",
+      "label": "Story and market fit"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, is a direct rival; Cognition, a Modal customer, is also on the roster."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Core Scientific and TWG AI occupy the compute and AI lanes on the 2026 roster."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and the cloud incumbent."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "Microsoft, Hewlett Packard Enterprise and AMD cover cloud, compute and silicon."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Microsoft holds the cloud lane."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Google Cloud, Dell Technologies and Groq occupy cloud, hardware and inference."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "HP (title) and IBM cover compute hardware and cloud services."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "Hewlett Packard Enterprise on the roster in the last 12 months; lane crowded."
+     },
+     {
+      "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+      "reason": "Open but not chosen: neither has the data-native roster (VAST, Claude) that makes Modal's compute layer a story rather than a logo."
+     }
+    ]
+   },
+   "date_long": "21 MAY 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Atlassian Williams Racing",
+   "value_mode": "A",
+   "bottom_line": "A $355M round at $4.65B, revenue past $300M and growing fivefold, and a product the engineers write to directly give Modal the budget, the motive and a real workstream. The compute lane at Williams is open, and Monaco and the British GP sit inside the window.",
+   "footer_date": "21 MAY 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round announced 21 May; Canada, Monaco and Silverstone inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 18,
+     "note": "$355M at $4.65B; $300M+ annualised revenue, fivefold in eight months.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Developer-first infrastructure brand; strong AI narrative, low consumer reach.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Hyper-growth and a quadrupled valuation; no listing signal yet.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: Python-native GPU compute for simulation and analytics.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 21 May Modal announced $355M at a $4.65B post-money valuation, led by General Catalyst and Redpoint with Menlo, Bain Capital Ventures and Accel joining. Reuters reports the round closed in two tranches, the first at $2.5B, as AI-coding demand surged. Annualised revenue has passed $300M, fivefold the roughly $60M of September 2025, when Lux Capital led an $87M Series B at $1.1B. Modal runs over a billion isolated sandboxes for DoorDash, Cognition, Decagon, Suno and Physical Intelligence, and scaled Lovable to a million sandboxes in a weekend. Founded 2021; New York, San Francisco and Stockholm.",
+   "the_case_p2": "The grid has already priced this archetype: CoreWeave became Aston Martin Aramco's Official AI Cloud Computing Partner in May 2025, Core Scientific sits on Cadillac's first roster, and Modal's own customer Cognition joined Aston Martin this season. Modal is the developer-native version of the same story, with revenue to match, and it has not chosen a stage. Its buyers are the engineers and AI labs an F1 technology partnership reaches best.",
+   "track_label": "",
+   "brief_number": "215",
+   "claims_total": 18,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo Ventures,…",
+     "value": "$355M",
+     "claim_id": 668,
+     "verified": true,
+     "source_url": "https://modal.com/blog/modal-series-c"
+    },
+    {
+     "fact": "General Catalyst and Redpoint (co-leads); Menlo Ventures, Bain Capital Ventures, Accel (new); Lux Capital l…",
+     "value": "$87M",
+     "claim_id": 669,
+     "verified": true,
+     "source_url": "https://modal.com/blog/modal-series-c"
+    },
+    {
+     "fact": "More than $300M annualised revenue, up fivefold from about $60M in September 2025 (company-stated; Reuters)",
+     "value": "$300M",
+     "claim_id": 670,
+     "verified": true,
+     "source_url": "https://modal.com/blog/modal-series-c"
+    },
+    {
+     "fact": "Reuters reports the round closed in two tranches, the first at $2.5B, as AI-coding demand surged.",
+     "value": "$2.5B",
+     "claim_id": 680,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Infrastructure · Serverless GPU Compute Platform",
+   "value_content": "MODE A - operational. Race-team compute is bursty: machine-learning surrogates, driver-in-loop and strategy simulation, telemetry and video analytics between sessions. Modal turns any Python function into an autoscaling GPU job with cold starts in seconds, so Williams pays for seconds of compute rather than idle clusters, outside cost-cap capital. In return: Official AI Compute Partner designation, livery presence and Austin and Las Vegas hospitality for Modal's developer audience.",
+   "value_section": true,
+   "why_team_para": "Williams runs the most data-native roster on the grid: Atlassian as title partner, VAST Data for the data platform, Keeper for identity, and since this season Claude as Official Thinking Partner inside engineering and strategy. There is no cloud or GPU-compute partner. Modal's product is Python-native compute that scales from zero, the shape of a race team's bursty simulation load; its New York base gives Austin and Las Vegas a US story.",
+   "deal_arch_para": "Entry as Official AI Compute Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the post-raise growth run and a probable listing window. Estimated $3-5M a year, part-payable in compute credits. Scope: engine-cover or sidepod placement, naming of the team's simulation compute environment, US-race hospitality, engineering content.",
+   "footer_company": "MODAL LABS",
+   "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+   "claims_verified": 18,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round was announced on 21 May; brand budgets reset in the quarter after a raise. Canadian GP (24 May), Monaco (7 June) and the British GP (5 July) fall inside the window, and teams close 2027 partner rosters in the autumn.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Bernhardsson built Spotify's recommendation engine, was CTO of Better.com and founded Modal in 2021 with Akshat Bubna, now CTO; he fronts every raise. Path: David Dorman, VP Marketing and Growth (ex-Grafana Labs), and Justin Dignelli, VP Sales. No CMO or CFO is listed.",
+   "decision_maker_name": "Erik Bernhardsson",
+   "decision_maker_role": "Co-Founder & CEO, Modal Labs",
+   "opening_angle_intro": "Lead with the CoreWeave precedent.",
+   "opening_angle_quote": "&ldquo;Erik, CoreWeave took its seat at Aston Martin in the year of its listing, and your customer Cognition followed. The compute lane at Williams is open, and the team already runs Claude and VAST. 25 minutes before Monaco to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Erik Bernhardsson, Co-Founder & CEO at Modal Labs",
+   "cited_source_url": "https://modal.com/blog/modal-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: CEO Erik Bernhardsson announced the $355M Series C. General Catalyst investment note and Modal company page: founded by Erik Bernhardsson (CEO; formerly Spotify's recommendation engine, CTO of Better.com) and Akshat Bubna (CTO).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Erik Bernhardsson, Co-Founder & CEO, Modal Labs at Modal Labs",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: CEO Erik Bernhardsson announced the $355M Series C. General Catalyst investment note and Modal company page: founded by Erik Bernhardsson (CEO; formerly Spotify's recommendation engine, CTO of Better.com) and Akshat Bubna (CTO).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo Ventures, Bain Capital Ventures and Accel, announced 21 May 2026 (Modal blog; Reuters)",
+   "cited_source_url": "https://modal.com/blog/modal-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Modal Labs, the New York serverless AI-compute platform, announced a $355M Series C at a $4.65B valuation on 21 May 2026, led by General Catalyst and Redpoint.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "General Catalyst and Redpoint (co-leads); Menlo Ventures, Bain Capital Ventures, Accel (new); Lux Capital led the $87M Series B at $1.1B in September 2025",
+   "cited_source_url": "https://modal.com/blog/modal-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Annualised revenue has passed $300M, up fivefold since September, and the valuation has quadrupled from the $1.1B Lux Capital set then.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://finance.yahoo.com/sectors/technology/articles/exclusive-modal-labs-valued-4-170342702.html",
+     "excerpt": "Reuters exclusive, 21 May 2026 (via Yahoo Finance): Modal has grown fivefold since September and surpassed $300 million in annualised revenue, up from about $60 million in September 2025; Modal blog states the same figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "More than $300M annualised revenue, up fivefold from about $60M in September 2025 (company-stated; Reuters)",
+   "cited_source_url": "https://modal.com/blog/modal-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://finance.yahoo.com/sectors/technology/articles/exclusive-modal-labs-valued-4-170342702.html",
+     "excerpt": "Reuters exclusive, 21 May 2026 (via Yahoo Finance): Modal has grown fivefold since September and surpassed $300 million in annualised revenue, up from about $60 million in September 2025; Modal blog states the same figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 21 May Modal announced $355M at a $4.65B post-money valuation, led by General Catalyst and Redpoint with Menlo, Bain Capital Ventures and Accel joining.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$355M Series C at $4.65B led by General Catalyst and Redpoint, announced 21 May 2026",
+   "cited_source_url": "https://modal.com/blog/modal-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Reuters reports the round closed in two tranches, the first at $2.5B, as AI-coding demand surged.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CoreWeave is Official AI Cloud Computing Partner of Aston Martin Aramco (May 2025); Core Scientific and TWG AI sit on Cadillac's roster; the cloud lanes of Red Bull (Oracle), Mercedes and Alpine (Microsoft), McLaren (Google Cloud) and Mercedes (Hewlett Packard Enterprise) are taken",
+   "cited_source_url": "https://modal.com/blog/modal-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+     "excerpt": "Aston Martin Aramco, 22 May 2025: CoreWeave joins as Official AI Cloud Computing Partner in a multi-year partnership.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Annualised revenue has passed $300M, fivefold the roughly $60M of September 2025, when Lux Capital led an $87M Series B at $1.1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://finance.yahoo.com/sectors/technology/articles/exclusive-modal-labs-valued-4-170342702.html",
+     "excerpt": "Reuters exclusive, 21 May 2026 (via Yahoo Finance): Modal has grown fivefold since September and surpassed $300 million in annualised revenue, up from about $60 million in September 2025; Modal blog states the same figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Modal customer Cognition joined Aston Martin Aramco for 2026; Williams runs VAST Data and Claude but has no cloud or GPU-compute partner",
+   "cited_source_url": "https://modal.com/blog/modal-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: Modal powers over 1 billion isolated container sandboxes for DoorDash, Cognition, Decagon, Suno, Physical Intelligence and Chai Discovery, and powered Lovable's 250,000 app creations in a weekend with more than 1M sandboxes; the platform turns Python functions into autoscaling GPU workloads with cold starts in seconds (Built In NYC).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $355M round at $4.65B, revenue past $300M and growing fivefold, and a product the engineers write to directly give Modal the budget, the motive and a real workstream.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ New York; offices in San Francisco and Stockholm; founded 2021",
+   "cited_source_url": "https://modal.com/blog/modal-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.builtinnyc.com/articles/modal-raises-87m-series-b-1b-valuation-20251001",
+     "excerpt": "Built In NYC: Modal is headquartered in New York City with offices in San Francisco and Stockholm; founded in 2021.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 21 May 2026 Modal announced a $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo Ventures, Bain Capital Ventures and Accel joining.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://modal.com/blog/modal-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Reuters reports the round closed in two tranches, the first at $2.5B, as investor demand grew;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "TechCrunch had reported talks at $2.5B in February.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://modal.com/blog/modal-series-c",
+     "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Annualised revenue has passed $300M, up fivefold from about $60M in September 2025, when Lux Capital led an $87M Series B at $1.1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://finance.yahoo.com/sectors/technology/articles/exclusive-modal-labs-valued-4-170342702.html",
+     "excerpt": "Reuters exclusive, 21 May 2026 (via Yahoo Finance): Modal has grown fivefold since September and surpassed $300 million in annualised revenue, up from about $60 million in September 2025; Modal blog states the same figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Canadian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 7: Canadian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Monaco GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 8: Monaco GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Spanish GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 9: Spanish GP (Barcelona) (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austrian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 10: Austrian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
