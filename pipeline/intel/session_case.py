@@ -248,6 +248,9 @@ def build(
         pdf_storage_dir=str(pdf_dir),
         outbox_dir=str(pdf_dir / "outbox"),
         operator_email="desk@1440sports.com",
+        # The MD's 90-day trigger window (6 Sep 2026), as the daily workflow sets it.
+        freshness_days_track1=int(spec.get("freshness_days") or 90),
+        freshness_fallback_days=int(spec.get("freshness_days") or 90),
     )
     verifier = SpecVerifier(spec)
     writer = SpecWriter(spec)
