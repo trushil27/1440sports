@@ -186,6 +186,19 @@
   .catcard li:last-child { border-bottom: 0; }
   .catcard li span:last-child { color: var(--muted); text-align: right; }
 
+  /* verification panel */
+  .vpanel { border: 1px solid var(--hair); border-radius: 12px; background: var(--panel-2); padding: 14px 18px; margin: 0 0 18px; font-family: var(--sans); font-size: 13.5px; }
+  .vpanel .vhead { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .vpanel .vhead .k { font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; }
+  .vpanel .vhead .sm { color: var(--muted); font-size: 12px; }
+  .vpanel .vrow { display: grid; grid-template-columns: 130px 1fr; gap: 8px 14px; padding: 8px 0; border-top: 1px dashed var(--hair); }
+  .vpanel .vk { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding-top: 3px; }
+  .vpanel .vv { line-height: 1.5; }
+  .vpanel .vv ul { margin: 4px 0 0; padding-left: 18px; }
+  .vpanel .vv a { text-decoration: underline; text-underline-offset: 3px; color: var(--navy); }
+  [data-theme="dark"] .vpanel .vv a { color: var(--gold-2); }
+  @media (max-width: 560px) { .vpanel .vrow { grid-template-columns: 1fr; gap: 4px; } }
+
   /* brief reader */
   .reader { background: var(--panel); border: 1px solid var(--hair); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
   .reader iframe { width: 100%; height: calc(100vh - 210px); min-height: 720px; border: 0; background: #fbfaf7; }
@@ -233,8 +246,11 @@
   const $ = (s, el) => (el || document).querySelector(s);
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmtDate = (iso) => { if (!iso) return ''; const d = new Date(iso.length === 10 ? iso + 'T00:00:00' : iso); return isNaN(d) ? esc(iso) : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); };
-  const verClass = (v) => v === 'verified' ? 'ok' : (v === 'needs_review' ? 'warn' : (v === 'blocked' ? 'bad' : 'info'));
-  const verLabel = (v) => ({ verified: 'Verified', needs_review: 'Unverified', blocked: 'Blocked', pending: 'Pending' }[v] || v);
+  const verClass = (v) => v === 'verified' ? 'ok' : (v === 'needs_review' ? 'warn' : ((v === 'blocked' || v === 'contradicted') ? 'bad' : 'info'));
+  const verLabel = (v) => ({ verified: 'Verified', needs_review: 'Check', blocked: 'Blocked', contradicted: 'Contradicted', pending: 'Pending' }[v] || v);
+  const stLabel = (v) => ({ CONFIRMED: 'Confirmed', CORRECTED: 'Confirmed, corrected', NOT_FOUND: 'Not confirmed', CONTRADICTED: 'Contradicted', CHANGED: 'Changed', NA: 'None named', NONE_FOUND: 'None found', EXISTING_PARTNER: 'Existing partner', REPORTED_TALKS: 'Reported talks', OTHER_MOTORSPORT: 'Other motorsport' }[v] || v || '—');
+  const stClass = (v) => ({ CONFIRMED: 'ok', CORRECTED: 'warn', NOT_FOUND: 'warn', CONTRADICTED: 'bad', CHANGED: 'warn', NA: 'mute', NONE_FOUND: 'ok', EXISTING_PARTNER: 'navy', REPORTED_TALKS: 'info', OTHER_MOTORSPORT: 'info' }[v] || 'mute');
+  const link = (u) => u ? `<a href="${esc(u)}" target="_blank" rel="noreferrer noopener">${esc(u.replace(/^https?:\/\/(www\.)?/, '').slice(0, 70))}${u.length > 78 ? '…' : ''}</a>` : '';
 
   let D = null;
   function load() {
@@ -284,6 +300,11 @@
     out.push(`<span class="badge ${verClass(b.verification)}">${verLabel(b.verification)}</span>`);
     if (b.review.status === 'keep_flagged') out.push('<span class="badge warn" title="' + esc(b.review.reason || '') + '">Check</span>');
     if (b.deal_update) out.push(`<span class="badge navy">Now partner · ${esc(teamDisplay(b.deal_update.team))}</span>`);
+    if (b.check) {
+      if (!b.deal_update && (b.check.motorsport_status || '') === 'EXISTING_PARTNER') out.push('<span class="badge navy">Existing partner</span>');
+      if (b.check.corrections && b.check.corrections.length) out.push('<span class="badge warn">Corrected</span>');
+      if (b.check.updates && b.check.updates.length) out.push(`<span class="badge info">${b.check.updates.length} update${b.check.updates.length > 1 ? 's' : ''}</span>`);
+    }
     return out.join(' ');
   }
 
@@ -375,7 +396,7 @@
     const dealNote = b.deal_update ? `<div class="note info"><b>Update.</b> ${esc(b.company)} is now a ${esc(b.deal_update.status)} partner of ${esc(teamDisplay(b.deal_update.team))}${b.deal_update.season ? ' (' + esc(b.deal_update.season) + ' roster)' : ''}${b.deal_update.notes ? ' — ' + esc(b.deal_update.notes) : ''}. The lane this signal pointed at is no longer open; treat the row as a closed case.</div>` : '';
     return head + `<div class="detail">
       ${dealNote}${checkNote}
-      ${b.historical ? '<div class="note info">Historical signal imported from the previous system — a headline and a source, not a verified case. Build the full case to get the Crusoe-standard brief: live verification of every claim, the 13-rule audit, the 2-page PDF and this long-form page.</div>' : ''}
+      ${b.check ? checkPanel(b) : (b.historical ? '<div class="note info">Historical signal imported from the previous system — a headline and a source, not yet checked. Build the full case to get the Crusoe-standard brief: live verification of every claim, the 13-rule audit, the 2-page PDF and this long-form page.</div>' : '')}
       <p>${esc(b.deck || b.take || 'No summary was stored for this signal.')}</p>
       ${b.bottom_line ? `<p><b>Bottom line.</b> ${esc(b.bottom_line)}</p>` : ''}
       <dl>
@@ -390,6 +411,23 @@
       </dl>
       ${b.deal_update ? '' : `<div class="cta"><div><span class="k">Full case</span><p>Runs the whole pipeline for ${esc(b.company)} on the daily-job service: live research, claim-by-claim verification, the 13-rule audit, then the 2-page PDF and the long-form page. Ready in the app after the next run.</p></div><button type="button" class="btn" data-rebuild="${b.number}">Build the full case</button></div>`}
       <div id="reqpanel" hidden></div>
+    </div>`;
+  }
+
+  function checkPanel(b) {
+    const c = b.check;
+    const reasons = (b.check_reasons || []).join('; ');
+    const partner = b.partner_note ? `<div class="note"><b>Existing partner.</b> ${esc(b.partner_note)} The lane this signal pointed at is not open; treat the row as a closed case unless the tie has ended.</div>` : '';
+    const corr = (c.corrections && c.corrections.length) ? `<div class="vrow"><div class="vk">Corrections</div><div class="vv"><ul>${c.corrections.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div></div>` : '';
+    const upd = (c.updates && c.updates.length) ? `<div class="vrow"><div class="vk">Since then</div><div class="vv"><ul>${c.updates.map((u) => `<li><b>${esc(u.date || '')}</b> ${esc(u.event || '')} ${u.url ? link(u.url) : ''}</li>`).join('')}</ul></div></div>` : '';
+    return partner + `<div class="vpanel">
+      <div class="vhead"><span class="k">Verification · checked ${esc(c.checked_at || '')} · confidence ${esc(c.confidence || '—')}</span><span class="badge ${verClass(b.verification)}">${verLabel(b.verification)}</span>${reasons ? `<span class="sm">${esc(reasons)}</span>` : ''}</div>
+      <div class="vrow"><div class="vk">Trigger</div><div class="vv"><span class="badge ${stClass(c.trigger_status)}">${stLabel(c.trigger_status)}</span> ${esc(c.evidence_excerpt || '')} ${c.evidence_url ? '<br>' + link(c.evidence_url) : ''}</div></div>
+      ${corr}
+      <div class="vrow"><div class="vk">Decision-maker</div><div class="vv"><span class="badge ${stClass(c.person_status)}">${stLabel(c.person_status)}</span> ${esc(c.person_note || '')}</div></div>
+      <div class="vrow"><div class="vk">Motorsport ties</div><div class="vv"><span class="badge ${stClass(c.motorsport_status)}">${stLabel(c.motorsport_status)}</span> ${esc(c.motorsport_note || '')}</div></div>
+      ${upd}
+      ${c.notes ? `<div class="vrow"><div class="vk">Desk note</div><div class="vv">${esc(c.notes)}</div></div>` : ''}
     </div>`;
   }
 

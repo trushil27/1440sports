@@ -184,20 +184,19 @@ def backlog(
     rebuilt_companies = {
         company_norm(r["company"]) for r in done.values() if r.get("status") == "success"
     }
+    # companies that already have a full case (their own ledger + app page); a signal-level
+    # check does not count — the point of the backlog is to build the case
     verified = {
         company_norm(b.brief_data.get("company") or b.candidate.company_raw)
-        for b in session.scalars(
-            select(Brief).where(Brief.verification_status == VerificationStatus.verified)
-        )
+        for b in session.scalars(select(Brief).where(Brief.web_html_path.is_not(None)))
         if b.brief_data
     }
     rows = session.scalars(
         select(Brief)
         .where(
             Brief.historical.is_(True),
-            Brief.verification_status.not_in(
-                [VerificationStatus.blocked, VerificationStatus.verified]
-            ),
+            Brief.verification_status != VerificationStatus.blocked,
+            Brief.web_html_path.is_(None),
         )
         .order_by(Brief.run_date.desc(), Brief.id.desc())
     ).all()

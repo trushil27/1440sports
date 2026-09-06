@@ -962,6 +962,85 @@ def import_engine_cases(session: Session, cases_dir: Path | str | None = None) -
     }
 
 
+# --- 5. signal-level fact-checks (data/signal_checks.json) ---------------------------------------
+
+
+def apply_signal_checks(session: Session, path: Path | str | None = None) -> dict[str, Any]:
+    """Write the live fact-check of each signal into its historical brief: a verification row
+    on the trigger claim and on the person claim, the brief's verification status from the
+    verdict (contradicted → blocked), and the whole record in ``brief_data['signal_check']``.
+    Idempotent per (company, checked_at). Rows that carry a full case are left alone."""
+    from intel.checks import CONTRADICTED, VERIFIED, load_checks, verdict
+
+    checks = load_checks(path)
+    seen: set[int] = set()
+    applied = skipped = 0
+    for norm, rec in checks.items():
+        if id(rec) in seen:
+            continue
+        seen.add(id(rec))
+        briefs = session.scalars(
+            select(Brief)
+            .join(Candidate, Candidate.id == Brief.candidate_id)
+            .where(Brief.historical.is_(True), Candidate.company_norm == norm)
+        ).all()
+        if not briefs:
+            briefs = session.scalars(
+                select(Brief).where(
+                    Brief.historical.is_(True),
+                    Brief.brief_data["company"].astext.ilike(rec["company"]),
+                )
+            ).all()
+        for brief in briefs:
+            if brief.web_html_path:
+                continue
+            prior = (brief.brief_data or {}).get("signal_check") or {}
+            if prior.get("checked_at") == rec.get("checked_at") and prior.get(
+                "trigger_status"
+            ) == rec.get("trigger_status"):
+                skipped += 1
+                continue
+            v, reasons = verdict(rec)
+            trig_status = {
+                "CONFIRMED": VerificationResult.verified,
+                "CORRECTED": VerificationResult.verified,
+                "CONTRADICTED": VerificationResult.contradicted,
+            }.get((rec.get("trigger_status") or "").upper(), VerificationResult.unverified)
+            person_status = {
+                "CONFIRMED": VerificationResult.verified,
+                "CHANGED": VerificationResult.contradicted,
+            }.get((rec.get("person_status") or "").upper(), VerificationResult.unverified)
+            note = f"signal check {rec.get('checked_at')}: " + "; ".join(reasons or ["confirmed"])
+            for claim in session.scalars(select(Claim).where(Claim.brief_id == brief.id)).all():
+                if claim.section == "trigger":
+                    status, extra = trig_status, "; ".join(rec.get("corrections") or [])
+                elif claim.section == "decision_maker":
+                    status, extra = person_status, rec.get("person_note") or ""
+                else:
+                    continue
+                session.add(
+                    Verification(
+                        claim=claim,
+                        status=status,
+                        method=VerificationMethod.manual,
+                        evidence_url=_clean(rec.get("evidence_url")),
+                        evidence_excerpt=_clean(rec.get("evidence_excerpt")),
+                        notes=_clean(f"{note}. {extra}".strip(". ")),
+                        model="claude-fact-check-2026-09-05",
+                    )
+                )
+            if v == CONTRADICTED:
+                brief.verification_status = VerificationStatus.blocked
+            elif v == VERIFIED:
+                brief.verification_status = VerificationStatus.verified
+            else:
+                brief.verification_status = VerificationStatus.needs_review
+            brief.brief_data = {**(brief.brief_data or {}), "signal_check": rec}
+            applied += 1
+    session.flush()
+    return {"source": "signal checks", "records": len(seen), "applied": applied, "skipped": skipped}
+
+
 # --- 3. operator-exported PDFs -------------------------------------------------------------------
 
 
@@ -1044,6 +1123,9 @@ def main(argv: list[str] | None = None) -> None:
         "--cases", action="store_true", help="import intel/cases/<date>/<company>.run.json records"
     )
     parser.add_argument(
+        "--checks", action="store_true", help="apply data/signal_checks.json to the ledger"
+    )
+    parser.add_argument(
         "--restart-sequence",
         type=int,
         metavar="N",
@@ -1053,9 +1135,16 @@ def main(argv: list[str] | None = None) -> None:
         ),
     )
     args = parser.parse_args(argv)
-    do_signals, do_repo, do_cases = args.signals, args.repo, args.cases
-    if not (do_signals or do_repo or do_cases or args.pdfs or args.restart_sequence is not None):
-        do_signals = do_repo = do_cases = True
+    do_signals, do_repo, do_cases, do_checks = args.signals, args.repo, args.cases, args.checks
+    if not (
+        do_signals
+        or do_repo
+        or do_cases
+        or do_checks
+        or args.pdfs
+        or args.restart_sequence is not None
+    ):
+        do_signals = do_repo = do_cases = do_checks = True
 
     from intel.db import session_scope
 
@@ -1074,6 +1163,8 @@ def main(argv: list[str] | None = None) -> None:
             print(json.dumps(attach_pdfs(session, args.pdfs), indent=1, ensure_ascii=False))
         if do_cases:
             print(json.dumps(import_engine_cases(session), indent=1, ensure_ascii=False))
+        if do_checks:
+            print(json.dumps(apply_signal_checks(session), indent=1, ensure_ascii=False))
         if args.restart_sequence is not None:
             restart_sequence(session, args.restart_sequence)
             print(f"brief_number_seq restarted at {args.restart_sequence}")

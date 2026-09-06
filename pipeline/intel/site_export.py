@@ -24,6 +24,7 @@ from sqlalchemy.orm import Session, selectinload
 
 from intel.config import Settings, get_settings
 from intel.models import Brief, CalendarEvent, Sponsor, VerificationStatus
+from intel.normalise import company_norm
 from intel.seed import load_team_profiles
 
 SITE_SRC = Path(__file__).parent / "site" / "app.html"
@@ -360,6 +361,32 @@ def merge_same_company(entries: list[dict[str, Any]]) -> None:
                 g["review"] = {"status": "merged", "of": keep["key"]}
 
 
+def attach_signal_checks(entries: list[dict[str, Any]], checks: dict[str, dict[str, Any]]) -> int:
+    """Put each company's live fact-check on its kept row and let it decide the row's status.
+    A row that already carries a full case (its own claims ledger + page) keeps its own status;
+    the check is attached for the record. Returns the number of rows checked."""
+    from intel.checks import verdict
+
+    n = 0
+    for e in entries:
+        if e["review"]["status"] not in ("keep", "keep_flagged"):
+            continue
+        rec = checks.get(company_norm(e["company"]))
+        if rec is None:
+            continue
+        v, reasons = verdict(rec)
+        e["check"] = rec
+        e["check_reasons"] = reasons
+        if not e.get("page_html"):
+            e["verification"] = v
+        if (rec.get("motorsport_status") or "").upper() == "EXISTING_PARTNER" and not e.get(
+            "deal_update"
+        ):
+            e["partner_note"] = rec.get("motorsport_note")
+        n += 1
+    return n
+
+
 def attach_deal_updates(entries: list[dict[str, Any]], sponsors: list[Sponsor]) -> None:
     """A company we surfaced that is now a live partner in the sponsor table gets an
     "Update: partner of X" note instead of looking like an open signal."""
@@ -414,6 +441,11 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
     )
     merge_same_company(entries)
     attach_deal_updates(entries, session.scalars(select(Sponsor)).all())
+    from intel.checks import load_checks
+    from intel.checks import summary as checks_summary
+
+    checks = load_checks()
+    checked_rows = attach_signal_checks(entries, checks)
     entries.sort(key=lambda e: (e["date"], e.get("trigger_date") or ""), reverse=True)
     sponsors = [
         sponsor_row(s)
@@ -456,6 +488,7 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
         "teams": teams,
         "team_display": display,
         "renewals": RENEWALS,
+        "checks_meta": {**checks_summary(checks), "rows_checked": checked_rows},
         "review_meta": {
             "reviewed_at": "2026-09-05",
             "screened": sum(1 for e in entries if e["review"]["status"] == "screened_out"),
