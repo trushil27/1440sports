@@ -1,0 +1,763 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-09-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-ktsrdtd2/2026-09-05/basepower.pdf",
+     "web": "/tmp/case-pdf-ktsrdtd2/2026-09-05/basepower.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Base Power",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 15
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 75,
+     "reason": "top ranking score",
+     "company": "Base Power",
+     "decision": "selected",
+     "signal_date": "2026-08-03"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Base Power",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 75,
+   "score_breakdown": {
+    "cap": null,
+    "base": 75,
+    "total": 75,
+    "timing": 17,
+    "ops_fit": 12,
+    "ranking": 75,
+    "urgency": 13,
+    "capacity": 19,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 1,
+     "on_camera": 3,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 75,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 75,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Andretti Formula E",
+   "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "trigger_date": "2026-08-03",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 136,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-ktsrdtd2/2026-09-05/basepower.web.html",
+  "brief_data": {
+   "hq": "Austin, Texas (founded 2023)",
+   "deck": "Base Power, the Austin company that installs grid-connected home batteries and sells the electricity behind them, closed a $1B Series D at a $13B post-money valuation on 3 August 2026, up from $4B last October, and launched Base Core, a 39.2 kWh battery built in its own Austin factory.",
+   "risks": [
+    {
+     "label": "HALO, NOT WORKSTREAM",
+     "detail": "A residential battery is not a product the team runs; the partnership lives on activation, not engineering.",
+     "counter": "Anchor it on the Austin and Miami weekends and the open category; keep the ask at team-partner level."
+    },
+    {
+     "label": "TWO-STATE FOOTPRINT",
+     "detail": "Base sells in Texas and Illinois only; most of the calendar is outside its market.",
+     "counter": "Price the deal on the two US rounds and the content programme, and time expansion announcements to the season."
+    }
+   ],
+   "score": 75,
+   "ticker": "Private ($13B post-money; $1B Series D, Aug 2026)",
+   "company": "Base Power",
+   "gridfit": [
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "TAKEN",
+     "detail": "Shell",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "home_race",
+    "category_gap"
+   ],
+   "sources": [
+    "https://finance.yahoo.com/energy/articles/power-announces-1b-series-d-120000504.html",
+    "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+    "https://www.envision-group.com/en/aesc.html",
+    "https://andrettiglobal.com/news/2025/02/twg-global-launches-twg-motorsports-with-brands-across-f1-indycar-nascar-formula-e-and-imsa/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Zach Dell before Andretti closes its Season 13 roster, to agree an Austin E-Prix announcement window and size an Official Energy Partner entry against the team's 2026-27 roster.",
+    "value": [
+     {
+      "text": "Base Core units powering the team's hospitality and fan zone at the Austin and Miami weekends, as a live demonstration of the product rather than a logo: the same battery that backs up a Texas home backing up the garage's guests.",
+      "label": "Home-race activation (Mode B, concrete)"
+     },
+     {
+      "text": "A member-acquisition offer for ERCOT and ComEd households carried on the car, in driver content and at the Austin fan zone; a measurable channel for a company whose growth is sign-ups, not brand awareness alone.",
+      "label": "Customer acquisition"
+     },
+     {
+      "text": "A partner that sells to utilities, home builders and regulators brings a guest list of co-op executives, policy makers and investors to Austin and Miami, the audience a team's other B2B partners want in the suite.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Official Energy Partner designation, livery and race-suit placement, naming of the home-race hospitality, Base Core demonstrations at the US rounds, driver and team content for the Texas and Illinois markets, and an introduction to the Cadillac F1 Team through TWG.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Base Power announced on 3 August 2026 a $1B Series D at a $13B post-money valuation, led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group. The company says it has raised more than $2.5B in total. This is company-announced, not press-reported: the release is on Business Wire and was covered the same day by TechCrunch.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The Series C of October 2025, $1B led by Addition, valued the company at $4B; the Series D puts it at $13B. A company re-priced that fast has a story to tell to homeowners, utilities and the public markets, and the release earmarks the money for taking Base Core to more homes and expanding nationally.",
+      "label": "Valuation tripled in ten months"
+     },
+     {
+      "text": "Base Core is a 39.2 kWh home battery designed and built at Base Factory 1 in Austin, available in Texas and Illinois. Sponsorship works hardest when there is a new product to put in front of people, and Base has one arriving state by state through the Season 13 calendar.",
+      "label": "A product to launch"
+     },
+     {
+      "text": "Formula E's GEN4 era opens with the Jeddah E-Prix on 18 December 2026. The Austin E-Prix on 6 February 2027 is a race in Base's home city, and the Miami E-Prix follows on 20 February. Teams close their Season 13 partner rosters in the autumn, so a deal agreed in the next six to ten weeks can launch at the first US round.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Andretti Formula E carries TWG AI as primary partner and Official AI Partner, Quest Global, Crowe UK and Reflo, with Nissan supplying the GEN4 powertrain from Season 13. There is no energy, battery, storage or utility partner on the roster, and none at any other Formula E team: Official Energy Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Andretti is the American entry in an otherwise European and Asian grid, owned by TWG Motorsports. The Austin and Miami weekends are its home rounds as much as Base's, and an Austin company on an American car in Austin is the story local and national media will write.",
+      "label": "The American team"
+     },
+     {
+      "text": "TWG Motorsports' parent, TWG Global, also fields the Cadillac F1 Team with General Motors. A Formula E entry that proves itself at the US rounds gives Base a relationship with the same owner when its footprint and budget justify Formula 1, without paying F1 prices for a two-state consumer brand today.",
+      "label": "A route to Formula 1"
+     },
+     {
+      "text": "Formula E's partners are ABB, DHL, Julius Baer, Google Cloud and PIF: an electrification and sustainability audience. Base sells grid resilience to homeowners and dispatchable capacity to utilities such as CoServ, and its Head of Policy, Travis Kavulla, is a former state regulator; the series' hospitality is where those utility and policy conversations happen.",
+      "label": "Audience fit"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Envision Racing",
+      "reason": "Owned by Envision Group, which also controls battery maker AESC and Envision Energy: a home-battery brand would sit beside the owner's own battery business."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell holds the energy lane on the roster; Yamaha's own battery and energy business crowds the category further."
+     },
+     {
+      "team": "Nissan Formula E Team",
+      "reason": "Nissan co-founded AESC and runs its own energy business; a Japanese works team with no US story. Nissan is Andretti's powertrain supplier, which is the right side of that relationship for Base."
+     },
+     {
+      "team": "Penske (ex DS Penske)",
+      "reason": "DS Automobiles leaves at the end of Season 12 and Penske's manufacturer alignment is unannounced; the team profile says do not target until resolved."
+     },
+     {
+      "team": "Porsche Formula E Team · Jaguar TCS Racing",
+      "reason": "German and British works teams with technology lanes taken (Porsche) and TCS and Castrol on the roster (Jaguar); no US story."
+     },
+     {
+      "team": "Mahindra Racing · Cupra Kiro · Citroën Racing",
+      "reason": "No US presence to activate; Cupra and Citroën partner lineups are still being confirmed under parents with their own battery ventures."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Same owner, the natural second step. Not first: F1 pricing does not fit a consumer brand sold in two states, and the Formula E entry is what earns the introduction."
+     }
+    ]
+   },
+   "date_long": "05 SEP 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Andretti Formula E",
+   "value_mode": "B",
+   "bottom_line": "A $1B round at $13B, more than $2.5B raised, a factory-built product to launch nationally and a home race in Austin on 6 February 2027 put Base Power at peak brand-investment authority. Andretti's energy lane is open and both US rounds fall inside the window.",
+   "footer_date": "5 SEP 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round closed 3 Aug; Austin E-Prix 6 Feb 2027 inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 19,
+     "note": "$1B at $13B post-money; more than $2.5B raised in total.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Consumer energy brand in an electric series; two-state footprint.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "National roll-out and a home race; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 12,
+     "note": "MODE B: category empty on the grid; no team workstream.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Base Power announced on 3 August that it had raised a $1B Series D at a $13B post-money valuation, led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, Coatue and others alongside. It follows a $1B Series C led by Addition in October 2025 at $4B and a $200M Series B in April 2025; the company says it has raised more than $2.5B. The same release launched Base Core, a 39.2 kWh home battery in production at Base Factory 1 in Austin, with proceeds going to national expansion.",
+   "the_case_p2": "The model is the story: Base sells homeowners a cheap battery and cheap electricity, then dispatches thousands of batteries into the ERCOT market as a virtual power plant. Utilities now buy it wholesale, with CoServ signing for 100 MW across North Texas in March 2026, and Illinois opened on 24 June in ComEd territory. The all-electric championship arrives in Base's own city in February, with the money for a national launch already in the bank.",
+   "track_label": "",
+   "brief_number": "136",
+   "claims_total": 17,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$1B Series D at a $13B post-money valuation, announced 3 Aug 2026 (Business Wire); the company says it has…",
+     "value": "$1B",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States"
+    },
+    {
+     "fact": "the company says it has raised more than $2.5B.",
+     "value": "$2.5B",
+     "claim_id": 633,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Energy · Home Batteries & Grid Services",
+   "value_content": "MODE B - halo with concrete mechanics. Base Core units powering the team's Austin and Miami hospitality and fan zone; a member-acquisition offer for ERCOT and ComEd households carried on the car and in team content; a grid-resilience story Andretti can tell on camera in Texas. In return Andretti gains an American consumer brand at the first US rounds, a utility and policy guest list, and a partner in the grid's emptiest category.",
+   "value_section": true,
+   "why_team_para": "Andretti Formula E is the American team, owned by TWG Motorsports, whose parent TWG Global also fields the Cadillac F1 Team. Its roster is TWG AI as primary partner, Quest Global, Crowe UK and Reflo, with Nissan supplying the GEN4 powertrain from Season 13; there is no energy, battery or utility partner. Austin on 6 February and Miami on 20 February 2027 give Base two home-market weekends in a fortnight, and a route to F1 later under the same owner.",
+   "deal_arch_para": "Entry as Official Energy Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Season 13 to Season 15, covering the national roll-out and a probable listing window. Estimated $2-3M a year, with the Austin and Miami activations budgeted separately. Scope: livery and race-suit placement, naming of the home-race hospitality, Base Core demonstrations, driver content for the Texas and Illinois markets, a route to the Cadillac F1 Team through TWG.",
+   "footer_company": "BASE POWER",
+   "why_team_label": "WHY ANDRETTI FORMULA E",
+   "claims_verified": 17,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 3 August and the money is earmarked for expansion beyond Texas and Illinois. Formula E's GEN4 era opens in Jeddah on 18 December, and the Austin E-Prix on 6 February 2027 is a home race in Base's own city; teams finalise Season 13 rosters this autumn.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 136",
+   "decision_maker_bio": "Dell co-founded Base in Austin in 2023 after Blackstone and Thrive Capital and fronts every raise; a first sports partnership is his call. Path: Justin Lopas, Co-Founder and COO (ex-SpaceX, Anduril), and Zina Bash, Chief Legal Officer since January 2026. No chief marketing officer is listed.",
+   "decision_maker_name": "Zach Dell",
+   "decision_maker_role": "Co-Founder & CEO, Base Power",
+   "opening_angle_intro": "Lead with the home race.",
+   "opening_angle_quote": "&ldquo;Zach, the Austin E-Prix is on 6 February and Andretti's roster has no energy partner. You just raised $1B to take Base national, and the all-electric series lands in your city first. 25 minutes to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Zach Dell, Co-Founder & CEO at Base Power",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://finance.yahoo.com/energy/articles/power-announces-1b-series-d-120000504.html",
+     "excerpt": "Base Power release (Business Wire, 3 Aug 2026, Yahoo Finance mirror): quotes 'Zach Dell, CEO and co-founder of Base Power'. Company About page / Wikipedia: founded in Austin, Texas in 2023 by Zach Dell (Chief Executive Officer) and Justin Lopas (Chief Operating Officer). Dell's earlier career at Blackstone and Thrive Capital is reported (Texas Monthly, Fortune).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Zach Dell, Co-Founder & CEO, Base Power at Base Power",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://finance.yahoo.com/energy/articles/power-announces-1b-series-d-120000504.html",
+     "excerpt": "Base Power release (Business Wire, 3 Aug 2026, Yahoo Finance mirror): quotes 'Zach Dell, CEO and co-founder of Base Power'. Company About page / Wikipedia: founded in Austin, Texas in 2023 by Zach Dell (Chief Executive Officer) and Justin Lopas (Chief Operating Officer). Dell's earlier career at Blackstone and Thrive Capital is reported (Texas Monthly, Fortune).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1B Series D at a $13B post-money valuation, announced 3 Aug 2026 (Business Wire); the company says it has raised more than $2.5B to date",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Base Power, the Austin company that installs grid-connected home batteries and sells the electricity behind them, closed a $1B Series D at a $13B post-money valuation on 3 August 2026, up from $4B last October, and launched Base Core, a 39.2 kWh battery built in its own Austin factory.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group; Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participated",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Base Power announced on 3 August that it had raised a $1B Series D at a $13B post-money valuation, led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, Coatue and others alongside.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$1B Series D at $13B and the launch of the Base Core home battery, 3 Aug 2026",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It follows a $1B Series C led by Addition in October 2025 at $4B and a $200M Series B in April 2025;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No battery, energy-storage or utility partner on any Formula E team roster; Envision Group, owner of Envision Racing, also controls battery maker AESC; Shell sits on Lola Yamaha ABT's roster",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.envision-group.com/en/aesc.html",
+     "excerpt": "Envision Group: Envision AESC is the group's battery business for EVs and energy storage (majority stake acquired 2018; founded 2007 by Nissan, NEC and NEC Tokin); Envision Racing is fully owned by Envision Group. A home-battery brand at Envision Racing would sit beside the owner's own battery maker.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "the company says it has raised more than $2.5B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "The Austin E-Prix on 6 Feb 2027 is a home race in Base's HQ city; Andretti Formula E is owned by TWG Motorsports, whose parent TWG Global also fields the Cadillac F1 Team",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://andrettiglobal.com/news/2025/02/twg-global-launches-twg-motorsports-with-brands-across-f1-indycar-nascar-formula-e-and-imsa/",
+     "excerpt": "Andretti Global, Feb 2025: TWG Global (CEO Mark Walter, co-chairman Thomas Tull) launches TWG Motorsports, led by CEO Dan Towriss, as the division holding its motorsport interests: the Cadillac F1 Team (with General Motors), Andretti Global (IndyCar, Indy NXT, Formula E), Spire Motorsports and Wayne Taylor Racing. Sponsor table: TWG Motorsports listed as ownership at both Andretti Formula E and Cadillac F1 Team. Reports in Aug 2026 of a federal investigation into Mark Walter and a TWG denial of any Cadillac sale are noted, not relied on.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $1B round at $13B, more than $2.5B raised, a factory-built product to launch nationally and a home race in Austin on 6 February 2027 put Base Power at peak brand-investment authority.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Austin, Texas; Base Factory 1 in Austin; sells in Texas (ERCOT) and, since 24 Jun 2026, Illinois (ComEd territory)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Base Power announced on 3 August 2026 a $1B Series D at a $13B post-money valuation, led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The company says it has raised more than $2.5B in total.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The Austin E-Prix on 6 Feb 2027",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The Series C of October 2025, $1B led by Addition, valued the company at $4B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "the Series D puts it at $13B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+     "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "opening_angle_quote",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Jeddah E-Prix on 18 December 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Austin E-Prix on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Miami E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: Miami International Autodrome (Hard Rock Stadium)",
+     "excerpt": "round 3: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

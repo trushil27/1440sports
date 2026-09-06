@@ -1,0 +1,449 @@
+{
+ "run_date": "2026-09-05",
+ "signal_date": "2026-08-03",
+ "stem": "basepower",
+ "number": 136,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Base Power",
+  "signal_date": "2026-08-03",
+  "score": 75,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Zach Dell",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+  "industry_meta": "Energy · Home Batteries & Grid Services · Austin, Texas",
+  "recommended_team": "Andretti Formula E",
+  "recommended_series": "FE",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$1B Series D at a $13B post-money valuation, announced 3 Aug 2026 (Business Wire); the company says it has raised more than $2.5B to date",
+   "investors": "Led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group; Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participated",
+   "revenue": null,
+   "trigger": "$1B Series D at $13B and the launch of the Base Core home battery, 3 Aug 2026",
+   "competitor_signal": "No battery, energy-storage or utility partner on any Formula E team roster; Envision Group, owner of Envision Racing, also controls battery maker AESC; Shell sits on Lola Yamaha ABT's roster",
+   "strategic_hook": "The Austin E-Prix on 6 Feb 2027 is a home race in Base's HQ city; Andretti Formula E is owned by TWG Motorsports, whose parent TWG Global also fields the Cadillac F1 Team",
+   "us_presence": "HQ Austin, Texas; Base Factory 1 in Austin; sells in Texas (ERCOT) and, since 24 Jun 2026, Illinois (ComEd territory)",
+   "alumni_match": null,
+   "taxonomy_category": "F2",
+   "ops_fit_note": "MODE B: halo with concrete mechanics — Base Core units powering the Austin and Miami hospitality, member acquisition in ERCOT and ComEd territories; F2 battery / energy storage is empty at team level",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 19,
+   "brand_fit": 14,
+   "urgency": 13,
+   "ops_fit": 12,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 1
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "zach dell",
+    "dell co-founded",
+    "co-founder & ceo"
+   ],
+   "url": "https://finance.yahoo.com/energy/articles/power-announces-1b-series-d-120000504.html",
+   "excerpt": "Base Power release (Business Wire, 3 Aug 2026, Yahoo Finance mirror): quotes 'Zach Dell, CEO and co-founder of Base Power'. Company About page / Wikipedia: founded in Austin, Texas in 2023 by Zach Dell (Chief Executive Officer) and Justin Lopas (Chief Operating Officer). Dell's earlier career at Blackstone and Thrive Capital is reported (Texas Monthly, Fortune).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1b",
+    "$13b",
+    "series d",
+    "3 aug",
+    "3 august",
+    "ribbit",
+    "valor",
+    "jpmorgan",
+    "$2.5b",
+    "base core",
+    "39.2",
+    "78.4",
+    "base factory",
+    "altimeter",
+    "coatue",
+    "energy impact",
+    "own austin factory",
+    "funding round"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+   "excerpt": "Business Wire, 3 Aug 2026: Base Power announces a $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital, Coatue, Layer Global and Energy Impact Partners participating; up from $4B at the Series C in October 2025; the company has raised over $2.5B to date. Launches Base Core, a home battery of 39.2 kWh / 78.4 kWh designed and built in America, in production at Base Factory 1 in Austin. Proceeds: bringing Base Core to more homes, national expansion, hiring.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$4b",
+    "series c",
+    "october 2025",
+    "last october",
+    "$200m",
+    "series b",
+    "april 2025",
+    "led by addition"
+   ],
+   "url": "https://www.businesswire.com/news/home/20251008106005/en/Base-Power-Raises-$1-Billion-Series-C-to-Build-the-Future-of-American-Power",
+   "excerpt": "Business Wire, 8 Oct 2025: Base Power raises a $1B Series C led by Addition, with Trust Ventures, Valor Equity Partners, Thrive Capital, Lightspeed, Andreessen Horowitz, Altimeter and others re-investing and Ribbit, CapitalG, Spark, BOND, Lowercarbon among new investors; TechCrunch (8 Oct 2025) and the Series D release put the post-money at $4B. Series B: $200M in April 2025 (Addition, a16z, Lightspeed, Valor, Altimeter, Terrain, Thrive, Trust Ventures).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "techcrunch",
+    "backyard"
+   ],
+   "url": "https://techcrunch.com/2026/08/03/base-power-raises-another-1b-to-save-the-grid-using-backyard-batteries/",
+   "excerpt": "TechCrunch, 3 Aug 2026: 'Base Power raises another $1B to save the grid using backyard batteries' — $1B Series D at a $13B valuation, up from $4B in under a year; Base Core home battery launched; expansion beyond Texas and Illinois.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "lopas",
+    "coo",
+    "chief operating",
+    "zina bash",
+    "kavulla",
+    "chief legal",
+    "no chief marketing",
+    "no cmo",
+    "spacex",
+    "anduril",
+    "blackstone",
+    "thrive capital",
+    "14 jan",
+    "january 2026"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260114241326/en/Base-Power-Builds-out-Senior-Legal-and-Policy-Leadership-Naming-Zina-Bash-as-Chief-Legal-Officer-and-Travis-Kavulla-as-Head-of-Policy",
+   "excerpt": "Business Wire, 14 Jan 2026: Base Power names Zina Bash Chief Legal Officer and Travis Kavulla Head of Policy (ex-NRG VP Regulatory Affairs, ex-Chairman Montana PSC, past NARUC president). Wikipedia / company About page: Justin Lopas, Co-Founder and Chief Operating Officer, previously SpaceX and Anduril Industries; Zach Dell previously Blackstone and Thrive Capital (reported). No chief marketing officer, chief commercial officer or CFO is named on any company release or listing found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "illinois",
+    "comed",
+    "chicago",
+    "24 jun",
+    "24 june"
+   ],
+   "url": "https://www.basepowercompany.com/illinois-press",
+   "excerpt": "Base Power press release: Base Power launched across the Chicagoland area on 24 June 2026, bringing homeowners in ComEd's service area lower electricity supply costs plus whole-home backup power; Base Core available in Texas and Illinois.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "coserv",
+    "100 mw",
+    "north texas",
+    "march 2026",
+    "6 mar"
+   ],
+   "url": "https://www.coserv.com/coserv-base-power-press-release/",
+   "excerpt": "CoServ / Base Power release (Business Wire, 6 Mar 2026): CoServ (Denton County Electric Cooperative) and Base Power launch a 100 MW residential storage programme across CoServ's North Texas territory, Base's largest agreement to date, installed over the next two years; the fleet gives the utility dispatchable capacity at peak demand and members whole-home backup.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "ercot",
+    "virtual power plant",
+    "dispatch",
+    "retail electricity",
+    "2023",
+    "austin, texas",
+    "hq austin",
+    "electricity behind"
+   ],
+   "url": "https://techcrunch.com/2025/10/08/base-power-raises-1b-to-deploy-home-batteries-everywhere/",
+   "excerpt": "TechCrunch, 8 Oct 2025, and Canary Media: Base Power launched in 2023 in the parts of Texas with retail electricity choice; it sells cheap backup power and a cheap electricity subscription, then dispatches the batteries in ERCOT as a virtual power plant to recoup the installation cost; partners with home builders such as Lennar; HQ Austin, Texas; first battery and power-electronics plant on the former Austin American-Statesman printing site.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "twg global",
+    "twg motorsports",
+    "cadillac",
+    "mark walter",
+    "dan towriss",
+    "same owner",
+    "f1 later",
+    "route to f1"
+   ],
+   "url": "https://andrettiglobal.com/news/2025/02/twg-global-launches-twg-motorsports-with-brands-across-f1-indycar-nascar-formula-e-and-imsa/",
+   "excerpt": "Andretti Global, Feb 2025: TWG Global (CEO Mark Walter, co-chairman Thomas Tull) launches TWG Motorsports, led by CEO Dan Towriss, as the division holding its motorsport interests: the Cadillac F1 Team (with General Motors), Andretti Global (IndyCar, Indy NXT, Formula E), Spire Motorsports and Wayne Taylor Racing. Sponsor table: TWG Motorsports listed as ownership at both Andretti Formula E and Cadillac F1 Team. Reports in Aug 2026 of a federal investigation into Mark Walter and a TWG denial of any Cadillac sale are noted, not relied on.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "nissan",
+    "24 jul",
+    "gen4 powertrain",
+    "jake dennis",
+    "drugovich",
+    "powertrain from season 13"
+   ],
+   "url": "https://andrettiglobal.com/news/2026/07/andretti-formula-e-to-partner-with-nissan-for-formula-e-gen4-era/",
+   "excerpt": "Andretti Global / Nissan newsroom, 24 Jul 2026: multi-year agreement for Nissan to supply its Formula E GEN4 powertrain to Andretti Formula E from Season 13; announced ahead of the Tokyo E-Prix; Jake Dennis extended, Felipe Drugovich joins for Season 13. Porsche's powertrain supply concludes with Season 12 (sponsor table).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "aesc",
+    "envision group",
+    "envision racing"
+   ],
+   "url": "https://www.envision-group.com/en/aesc.html",
+   "excerpt": "Envision Group: Envision AESC is the group's battery business for EVs and energy storage (majority stake acquired 2018; founded 2007 by Nissan, NEC and NEC Tokin); Envision Racing is fully owned by Envision Group. A home-battery brand at Envision Racing would sit beside the owner's own battery maker.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "ds automobiles",
+    "penske",
+    "end of season 12",
+    "exit"
+   ],
+   "url": "https://www.fiaformulae.com/en/news/1010223/ds-to-depart-formula-e-at-the-end-of-2025-26-season",
+   "excerpt": "Formula E, 20 Mar 2026: DS Automobiles departs Formula E at the end of the 2025-26 season (Season 12); Penske retains its entry and will announce its manufacturer alignment in due course (motorsport.com). Team profile: do not target until resolved.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "dell technologies",
+    "mclaren",
+    "michael dell"
+   ],
+   "url": "https://www.dell.com/en-us/lp/dt/customer-stories-mclaren-racing",
+   "excerpt": "Dell Technologies customer story: Dell is a technology partner of the McLaren Formula 1 Team since 2018 (sponsor table: Dell Technologies at McLaren F1 Team, active). Zach Dell is the son of Michael Dell (Fortune, Texas Monthly). No personal motorsport role or sponsorship structured by Base Power's leaders was found; recorded as family-company adjacency, not a tie.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "twg ai",
+    "quest global",
+    "crowe",
+    "reflo",
+    "porsche",
+    "shell",
+    "lola",
+    "tcs",
+    "castrol",
+    "roster",
+    "no energy",
+    "energy partner",
+    "no battery",
+    "utility partner",
+    "envision",
+    "tech mahindra",
+    "cupra",
+    "citroën",
+    "team-partner level",
+    "emptiest"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §3 + data/teams.json)",
+   "excerpt": "Sponsor table, FE: Andretti Formula E — TWG AI (primary partner, Official AI Partner), Quest Global, Crowe UK, Reflo, TWG Motorsports (ownership), Porsche powertrain through Season 12, Nissan powertrain from Season 13; no energy, battery, storage or utility partner. Envision Racing — Envision Group (title, renewables), Sand Technologies, Teijin, Genpact. Lola Yamaha ABT — Shell (energy/lubricants), Castore, OMP. Jaguar TCS Racing — TCS (title), Castrol. Nissan — Nagase, Coral, Crowe, Castrol (unverified for S12). Mahindra — Tech Mahindra. Cupra Kiro and Citroën Racing — parent brands only, partner lineups pending. Championship level: ABB (title), DHL, Julius Baer, Hankook, Google Cloud, Saudia, PIF. No battery / energy-storage / utility brand at any FE team; taxonomy F2 names it the single biggest gap in the FE roster.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin e-prix",
+    "miami e-prix",
+    "jeddah",
+    "6 feb",
+    "20 feb",
+    "18 dec",
+    "season 13",
+    "gen4",
+    "two us rounds",
+    "home race",
+    "fortnight"
+   ],
+   "url": "seeds/calendar_fe.json (FE Season 13 calendar, fiaformulae.com 23 Jun 2026)",
+   "excerpt": "FE Season 13 (2026-27, GEN4) calendar table: Round 1-2 Jeddah E-Prix 18-19 Dec 2026; Round 3 Mexico City 16 Jan 2027; Round 4 Austin E-Prix 6 Feb 2027; Round 5 Miami E-Prix 20 Feb 2027; then São Paulo, Sanya, Berlin, Monaco, London, Zandvoort, Madrid, Shanghai, Tokyo; all dates confirmed.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Base Power",
+  "industry_meta": "Energy · Home Batteries & Grid Services",
+  "hq": "Austin, Texas (founded 2023)",
+  "ticker": "Private ($13B post-money; $1B Series D, Aug 2026)",
+  "deck": "Base Power, the Austin company that installs grid-connected home batteries and sells the electricity behind them, closed a $1B Series D at a $13B post-money valuation on 3 August 2026, up from $4B last October, and launched Base Core, a 39.2 kWh battery built in its own Austin factory.",
+  "score": 75,
+  "timing_label": "HOT",
+  "series_label": "FE",
+  "team_label": "Andretti Formula E",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Base Power announced on 3 August that it had raised a $1B Series D at a $13B post-money valuation, led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, Coatue and others alongside. It follows a $1B Series C led by Addition in October 2025 at $4B and a $200M Series B in April 2025; the company says it has raised more than $2.5B. The same release launched Base Core, a 39.2 kWh home battery in production at Base Factory 1 in Austin, with proceeds going to national expansion.",
+  "the_case_p2": "The model is the story: Base sells homeowners a cheap battery and cheap electricity, then dispatches thousands of batteries into the ERCOT market as a virtual power plant. Utilities now buy it wholesale, with CoServ signing for 100 MW across North Texas in March 2026, and Illinois opened on 24 June in ComEd territory. The all-electric championship arrives in Base's own city in February, with the money for a national launch already in the bank.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 3 August and the money is earmarked for expansion beyond Texas and Illinois. Formula E's GEN4 era opens in Jeddah on 18 December, and the Austin E-Prix on 6 February 2027 is a home race in Base's own city; teams finalise Season 13 rosters this autumn.",
+  "why_team_label": "WHY ANDRETTI FORMULA E",
+  "why_team_para": "Andretti Formula E is the American team, owned by TWG Motorsports, whose parent TWG Global also fields the Cadillac F1 Team. Its roster is TWG AI as primary partner, Quest Global, Crowe UK and Reflo, with Nissan supplying the GEN4 powertrain from Season 13; there is no energy, battery or utility partner. Austin on 6 February and Miami on 20 February 2027 give Base two home-market weekends in a fortnight, and a route to F1 later under the same owner.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+  "value_mode": "B",
+  "value_content": "MODE B - halo with concrete mechanics. Base Core units powering the team's Austin and Miami hospitality and fan zone; a member-acquisition offer for ERCOT and ComEd households carried on the car and in team content; a grid-resilience story Andretti can tell on camera in Texas. In return Andretti gains an American consumer brand at the first US rounds, a utility and policy guest list, and a partner in the grid's emptiest category.",
+  "deal_arch_para": "Entry as Official Energy Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Season 13 to Season 15, covering the national roll-out and a probable listing window. Estimated $2-3M a year, with the Austin and Miami activations budgeted separately. Scope: livery and race-suit placement, naming of the home-race hospitality, Base Core demonstrations, driver content for the Texas and Illinois markets, a route to the Cadillac F1 Team through TWG.",
+  "decision_maker_name": "Zach Dell",
+  "decision_maker_role": "Co-Founder & CEO, Base Power",
+  "decision_maker_bio": "Dell co-founded Base in Austin in 2023 after Blackstone and Thrive Capital and fronts every raise; a first sports partnership is his call. Path: Justin Lopas, Co-Founder and COO (ex-SpaceX, Anduril), and Zina Bash, Chief Legal Officer since January 2026. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the home race.",
+  "opening_angle_quote": "&ldquo;Zach, the Austin E-Prix is on 6 February and Andretti's roster has no energy partner. You just raised $1B to take Base national, and the all-electric series lands in your city first. 25 minutes to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round closed 3 Aug; Austin E-Prix 6 Feb 2027 inside the window."
+   ],
+   [
+    "CAPACITY",
+    "19",
+    "/ 20",
+    "$1B at $13B post-money; more than $2.5B raised in total."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Consumer energy brand in an electric series; two-state footprint."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "National roll-out and a home race; no hard deadline."
+   ],
+   [
+    "OPS FIT",
+    "12",
+    "/ 20",
+    "MODE B: category empty on the grid; no team workstream."
+   ]
+  ],
+  "risks": [
+   [
+    "HALO, NOT WORKSTREAM",
+    "A residential battery is not a product the team runs; the partnership lives on activation, not engineering.",
+    "Anchor it on the Austin and Miami weekends and the open category; keep the ask at team-partner level."
+   ],
+   [
+    "TWO-STATE FOOTPRINT",
+    "Base sells in Texas and Illinois only; most of the calendar is outside its market.",
+    "Price the deal on the two US rounds and the content programme, and time expansion announcements to the season."
+   ]
+  ],
+  "bottom_line": "A $1B round at $13B, more than $2.5B raised, a factory-built product to launch nationally and a home race in Austin on 6 February 2027 put Base Power at peak brand-investment authority. Andretti's energy lane is open and both US rounds fall inside the window.",
+  "signals": [
+   "funding_event",
+   "home_race",
+   "category_gap"
+  ],
+  "footer_company": "BASE POWER",
+  "footer_date": "5 SEP 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "Base Power announced on 3 August 2026 a $1B Series D at a $13B post-money valuation, led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group. The company says it has raised more than $2.5B in total. This is company-announced, not press-reported: the release is on Business Wire and was covered the same day by TechCrunch."
+    },
+    {
+     "label": "Valuation tripled in ten months",
+     "text": "The Series C of October 2025, $1B led by Addition, valued the company at $4B; the Series D puts it at $13B. A company re-priced that fast has a story to tell to homeowners, utilities and the public markets, and the release earmarks the money for taking Base Core to more homes and expanding nationally."
+    },
+    {
+     "label": "A product to launch",
+     "text": "Base Core is a 39.2 kWh home battery designed and built at Base Factory 1 in Austin, available in Texas and Illinois. Sponsorship works hardest when there is a new product to put in front of people, and Base has one arriving state by state through the Season 13 calendar."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Formula E's GEN4 era opens with the Jeddah E-Prix on 18 December 2026. The Austin E-Prix on 6 February 2027 is a race in Base's home city, and the Miami E-Prix follows on 20 February. Teams close their Season 13 partner rosters in the autumn, so a deal agreed in the next six to ten weeks can launch at the first US round."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Andretti Formula E carries TWG AI as primary partner and Official AI Partner, Quest Global, Crowe UK and Reflo, with Nissan supplying the GEN4 powertrain from Season 13. There is no energy, battery, storage or utility partner on the roster, and none at any other Formula E team: Official Energy Partner is a clean category at a team-partner price."
+    },
+    {
+     "label": "The American team",
+     "text": "Andretti is the American entry in an otherwise European and Asian grid, owned by TWG Motorsports. The Austin and Miami weekends are its home rounds as much as Base's, and an Austin company on an American car in Austin is the story local and national media will write."
+    },
+    {
+     "label": "A route to Formula 1",
+     "text": "TWG Motorsports' parent, TWG Global, also fields the Cadillac F1 Team with General Motors. A Formula E entry that proves itself at the US rounds gives Base a relationship with the same owner when its footprint and budget justify Formula 1, without paying F1 prices for a two-state consumer brand today."
+    },
+    {
+     "label": "Audience fit",
+     "text": "Formula E's partners are ABB, DHL, Julius Baer, Google Cloud and PIF: an electrification and sustainability audience. Base sells grid resilience to homeowners and dispatchable capacity to utilities such as CoServ, and its Head of Policy, Travis Kavulla, is a former state regulator; the series' hospitality is where those utility and policy conversations happen."
+    }
+   ],
+   "value": [
+    {
+     "label": "Home-race activation (Mode B, concrete)",
+     "text": "Base Core units powering the team's hospitality and fan zone at the Austin and Miami weekends, as a live demonstration of the product rather than a logo: the same battery that backs up a Texas home backing up the garage's guests."
+    },
+    {
+     "label": "Customer acquisition",
+     "text": "A member-acquisition offer for ERCOT and ComEd households carried on the car, in driver content and at the Austin fan zone; a measurable channel for a company whose growth is sign-ups, not brand awareness alone."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner that sells to utilities, home builders and regulators brings a guest list of co-op executives, policy makers and investors to Austin and Miami, the audience a team's other B2B partners want in the suite."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Energy Partner designation, livery and race-suit placement, naming of the home-race hospitality, Base Core demonstrations at the US rounds, driver and team content for the Texas and Illinois markets, and an introduction to the Cadillac F1 Team through TWG."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Envision Racing",
+     "reason": "Owned by Envision Group, which also controls battery maker AESC and Envision Energy: a home-battery brand would sit beside the owner's own battery business."
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "reason": "Shell holds the energy lane on the roster; Yamaha's own battery and energy business crowds the category further."
+    },
+    {
+     "team": "Nissan Formula E Team",
+     "reason": "Nissan co-founded AESC and runs its own energy business; a Japanese works team with no US story. Nissan is Andretti's powertrain supplier, which is the right side of that relationship for Base."
+    },
+    {
+     "team": "Penske (ex DS Penske)",
+     "reason": "DS Automobiles leaves at the end of Season 12 and Penske's manufacturer alignment is unannounced; the team profile says do not target until resolved."
+    },
+    {
+     "team": "Porsche Formula E Team · Jaguar TCS Racing",
+     "reason": "German and British works teams with technology lanes taken (Porsche) and TCS and Castrol on the roster (Jaguar); no US story."
+    },
+    {
+     "team": "Mahindra Racing · Cupra Kiro · Citroën Racing",
+     "reason": "No US presence to activate; Cupra and Citroën partner lineups are still being confirmed under parents with their own battery ventures."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Same owner, the natural second step. Not first: F1 pricing does not fit a consumer brand sold in two states, and the Formula E entry is what earns the introduction."
+    }
+   ],
+   "ask": "A 25-minute call with Zach Dell before Andretti closes its Season 13 roster, to agree an Austin E-Prix announcement window and size an Official Energy Partner entry against the team's 2026-27 roster."
+  }
+ },
+ "note": "# Base Power → Andretti Formula E — verification log (N° 136, issued for 5 Sep 2026)\n\nBuilt in-session at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) from a case spec\n(`basepower.case.json`) with Claude acting as scanner, verifier and writer through\n`intel.session_case`; the calendar table, sponsor table, 13-rule audit and the 2-page render ran\nas code. The row sat on the desk as a thin FE signal (78, Andretti) from the 5 Sep run; this is the\nfull case on that date. The signal date is the trigger's real date, 3 Aug 2026 (33 days before the\nrow, inside the 90-day window).\n\n**Sandbox limitation, stated plainly:** direct fetches of businesswire.com, basepowercompany.com,\ntechcrunch.com, andrettiglobal.com, coserv.com, envision-group.com, fiaformulae.com and dell.com\nwere blocked by the egress proxy. Each claim below was checked against the search summary of the\nprimary page named as the evidence URL (several from more than one summary). Treat every VERIFIED\nline as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY\nBEFORE CIRCULATION.\n\n## The trigger\n\nCompany-announced: Business Wire, 3 Aug 2026, \"Base Power Announces $1B Series D and Launches\nBase Core\". $1B at a $13B post-money valuation, led by Ribbit, Addition, Valor Equity Partners and\nJPMorganChase's Strategic Investment Group, with Altimeter, D1 Capital Partners, Sands Capital,\nCoatue, Layer Global and Energy Impact Partners. Secondary: TechCrunch, 3 Aug 2026. The thin row's\nfacts held on re-verification; the row's \"~40 kWh\" is the release's 39.2 kWh.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Zach Dell, Co-Founder & CEO | VERIFIED | Business Wire release quote; company About page / Wikipedia |\n| Justin Lopas, Co-Founder & COO (ex-SpaceX, Anduril); Zina Bash CLO and Travis Kavulla Head of Policy (14 Jan 2026); no CMO, CCO or CFO listed | VERIFIED (Bash/Kavulla) · REPORTED (Lopas career) | Business Wire 14 Jan 2026; Wikipedia / Texas Monthly |\n| $1B Series D at $13B post-money, 3 Aug 2026; >$2.5B raised to date; Base Core 39.2 / 78.4 kWh built at Base Factory 1, Austin | VERIFIED | Business Wire 3 Aug 2026 |\n| Series C $1B led by Addition, Oct 2025, $4B post-money; Series B $200M, Apr 2025 | VERIFIED (C) · REPORTED (B, valuation) | Business Wire 8 Oct 2025; TechCrunch |\n| Illinois (ComEd territory) launch 24 Jun 2026 | VERIFIED | basepowercompany.com/illinois-press |\n| CoServ 100 MW residential storage programme, North Texas, 6 Mar 2026, largest to date | VERIFIED | CoServ / Business Wire release |\n| Model: home battery + electricity subscription, dispatched in ERCOT as a virtual power plant; founded Austin 2023 | REPORTED | TechCrunch 8 Oct 2025; Canary Media |\n| Andretti Formula E owned by TWG Motorsports; TWG Global also fields the Cadillac F1 Team with GM | VERIFIED | Andretti Global Feb 2025; sponsor table |\n| Nissan GEN4 powertrain to Andretti from Season 13 (24 Jul 2026); Porsche ends with Season 12 | VERIFIED | Andretti Global / Nissan newsroom; sponsor table |\n| Andretti roster (TWG AI, Quest Global, Crowe UK, Reflo); no energy/battery/utility partner at any FE team | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Envision Group owns Envision Racing and controls AESC | VERIFIED | envision-group.com |\n| DS exits at end of Season 12; Penske alignment unannounced | VERIFIED | fiaformulae.com 20 Mar 2026 |\n| Jeddah 18 Dec 2026; Austin E-Prix 6 Feb 2027; Miami E-Prix 20 Feb 2027 | VERIFIED | calendar table (`seeds/calendar_fe.json`) |\n| Dell Technologies at McLaren F1 Team (since 2018); Zach Dell is Michael Dell's son | VERIFIED (table) · REPORTED (family) | dell.com; sponsor table; Fortune |\n\n## Screen-outs and things not claimed\n\n- **Leadership ties: none found.** Neither founder has held a motorsport role or structured a\n  sponsorship. Dell Technologies' McLaren partnership is family-company adjacency and is recorded as\n  context only; `leadership_ties` is empty after checking.\n- **No revenue figure** is used: none is public (Sacra estimates exist and are not relied on).\n- **No deployment totals** (\"100+ MWh\", \"180 MW across five utilities\") are used: the figures vary\n  by outlet and none was traced to a company page.\n- **Deal size ($2-3M a year) is an ESTIMATE**, labelled as such in the brief.\n- **TWG ownership watch item:** August 2026 reports of a federal investigation into TWG Global's\n  Mark Walter and a TWG statement that the Cadillac F1 Team is not for sale (motorsport.com, ESPN)\n  are noted for the human layer; nothing in the case rests on them.\n- **Team choice:** Envision Racing (owner's AESC battery business), Lola Yamaha ABT (Shell), Nissan\n  (AESC co-founder, no US story), Penske (unresolved entry), Porsche and Jaguar (works teams, no US\n  story), Mahindra / Cupra Kiro / Citroën (no US presence) ruled out by name; Cadillac F1 held as\n  the second step under the same owner. Base Power is aimed at Andretti on the sponsor table alone,\n  not against any other 1440 prospect.\n\n## Batch context\n\nThe same batch screened Stegra (rescue round, pre-revenue, below threshold), Lyten (MOU only inside\nthe window, last raise Jul 2025, below threshold), Slate Auto (Series C 13 Apr 2026, stale; CEO is\nPeter Faricy since Mar 2026, not Chris Barman) and VoltaGrid (investment 11 May 2026, stale, no\nclosing announced). Base Power is the one signal of the five that clears the bar on its own facts.\n"
+}
