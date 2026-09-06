@@ -1,0 +1,404 @@
+{
+ "run_date": "2026-05-21",
+ "signal_date": "2026-05-21",
+ "stem": "modallabs",
+ "number": 215,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Modal Labs",
+  "signal_date": "2026-05-21",
+  "score": 78,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Erik Bernhardsson",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://modal.com/blog/modal-series-c",
+  "industry_meta": "AI Infrastructure · Serverless GPU Compute Platform · New York",
+  "recommended_team": "Atlassian Williams Racing",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo Ventures, Bain Capital Ventures and Accel, announced 21 May 2026 (Modal blog; Reuters)",
+   "investors": "General Catalyst and Redpoint (co-leads); Menlo Ventures, Bain Capital Ventures, Accel (new); Lux Capital led the $87M Series B at $1.1B in September 2025",
+   "revenue": "More than $300M annualised revenue, up fivefold from about $60M in September 2025 (company-stated; Reuters)",
+   "trigger": "$355M Series C at $4.65B led by General Catalyst and Redpoint, announced 21 May 2026",
+   "competitor_signal": "CoreWeave is Official AI Cloud Computing Partner of Aston Martin Aramco (May 2025); Core Scientific and TWG AI sit on Cadillac's roster; the cloud lanes of Red Bull (Oracle), Mercedes and Alpine (Microsoft), McLaren (Google Cloud) and Mercedes (Hewlett Packard Enterprise) are taken",
+   "strategic_hook": "Modal customer Cognition joined Aston Martin Aramco for 2026; Williams runs VAST Data and Claude but has no cloud or GPU-compute partner",
+   "us_presence": "HQ New York; offices in San Francisco and Stockholm; founded 2021",
+   "alumni_match": "",
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: serverless GPU capacity for ML surrogates, simulation batch jobs and telemetry analytics outside the aero-testing cap; Python-native, scales from zero, no cost-cap capital",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 18,
+   "brand_fit": 14,
+   "urgency": 13,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 7,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "erik bernhardsson",
+    "bernhardsson"
+   ],
+   "url": "https://modal.com/blog/modal-series-c",
+   "excerpt": "Modal blog, 21 May 2026: CEO Erik Bernhardsson announced the $355M Series C. General Catalyst investment note and Modal company page: founded by Erik Bernhardsson (CEO; formerly Spotify's recommendation engine, CTO of Better.com) and Akshat Bubna (CTO).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$355m",
+    "$4.65b",
+    "general catalyst",
+    "redpoint",
+    "21 may",
+    "series c",
+    "menlo",
+    "bain",
+    "accel",
+    "funding round",
+    "two tranches",
+    "$2.5b"
+   ],
+   "url": "https://modal.com/blog/modal-series-c",
+   "excerpt": "Modal blog, 21 May 2026: $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo, Bain Capital Ventures and Accel joining as new investors. Reuters (exclusive, 21 May 2026): the round closed in two tranches, the first at a $2.5B valuation, the second at $4.65B as interest grew; TechCrunch (11 Feb 2026) had reported talks at $2.5B.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$300m",
+    "fivefold",
+    "$60m",
+    "annualised",
+    "annualized",
+    "revenue"
+   ],
+   "url": "https://finance.yahoo.com/sectors/technology/articles/exclusive-modal-labs-valued-4-170342702.html",
+   "excerpt": "Reuters exclusive, 21 May 2026 (via Yahoo Finance): Modal has grown fivefold since September and surpassed $300 million in annualised revenue, up from about $60 million in September 2025; Modal blog states the same figures.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$87m",
+    "$1.1b",
+    "lux",
+    "september 2025",
+    "series b",
+    "$111m",
+    "$466m",
+    "quadrupled"
+   ],
+   "url": "https://www.builtinnyc.com/articles/modal-raises-87m-series-b-1b-valuation-20251001",
+   "excerpt": "Built In NYC, 1 Oct 2025 / Modal blog: $87M Series B led by Lux Capital at a $1.1B post-money valuation, taking total funding to $111M. With the Series C the valuation has quadrupled and disclosed funding totals $466M.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "akshat bubna",
+    "bubna",
+    "cto",
+    "dorman",
+    "vp marketing",
+    "dignelli",
+    "vp sales",
+    "cmo",
+    "cfo",
+    "spotify",
+    "better.com",
+    "grafana"
+   ],
+   "url": "https://www.generalcatalyst.com/stories/our-investment-in-modal",
+   "excerpt": "General Catalyst, May 2026: founded by Erik Bernhardsson and Akshat Bubna, CEO and CTO respectively; Bernhardsson built Spotify's recommendation engine and was CTO of Better.com. LinkedIn: David Dorman, VP Marketing and Growth at Modal (ex-Grafana Labs, DigitalOcean); Justin Dignelli, VP of Sales. No CMO, CFO or COO is listed on any source found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "new york",
+    "stockholm",
+    "san francisco",
+    "2021",
+    "founded"
+   ],
+   "url": "https://www.builtinnyc.com/articles/modal-raises-87m-series-b-1b-valuation-20251001",
+   "excerpt": "Built In NYC: Modal is headquartered in New York City with offices in San Francisco and Stockholm; founded in 2021.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "cognition",
+    "doordash",
+    "suno",
+    "decagon",
+    "lovable",
+    "sandboxes",
+    "billion",
+    "physical intelligence",
+    "chai",
+    "cold start",
+    "python"
+   ],
+   "url": "https://modal.com/blog/modal-series-c",
+   "excerpt": "Modal blog, 21 May 2026: Modal powers over 1 billion isolated container sandboxes for DoorDash, Cognition, Decagon, Suno, Physical Intelligence and Chai Discovery, and powered Lovable's 250,000 app creations in a weekend with more than 1M sandboxes; the platform turns Python functions into autoscaling GPU workloads with cold starts in seconds (Built In NYC).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "claude",
+    "thinking partner"
+   ],
+   "url": "https://www.williamsf1.com/articles/0f1eece4-e632-49c9-a767-148159bbbf87/anthropic-atlassian-williams-f1-team-multi-year-partnership-claude-official-thinking-partner",
+   "excerpt": "Atlassian Williams F1 Team, 2026: multi-year partnership with Anthropic naming Claude the team's Official Thinking Partner, working alongside Williams' engineers, strategists and operations teams.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "coreweave",
+    "official ai cloud computing partner",
+    "may 2025"
+   ],
+   "url": "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+   "excerpt": "Aston Martin Aramco, 22 May 2025: CoreWeave joins as Official AI Cloud Computing Partner in a multi-year partnership.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "core scientific",
+    "twg ai",
+    "oracle",
+    "microsoft",
+    "google cloud",
+    "hewlett",
+    "hpe",
+    "hp ",
+    "ibm",
+    "groq",
+    "amd",
+    "dell",
+    "keeper",
+    "atlassian",
+    "airia",
+    "brillio",
+    "vast",
+    "no cloud",
+    "gpu-compute partner",
+    "aston martin"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Williams — Atlassian (title), VAST, Keeper, Airia, Brillio, Claude (Anthropic, joined 2026); no cloud or GPU-compute partner. Aston Martin Aramco: CoreWeave, Cognition (joined 2026). Cadillac: Core Scientific, TWG AI. Red Bull: Oracle (title). Mercedes: Microsoft, Hewlett Packard Enterprise, AMD. Alpine: Microsoft. McLaren: Google Cloud, Dell, Groq. Ferrari: HP, IBM. Audi: Hewlett Packard Enterprise (departed, last 12 months).",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "monaco",
+    "british gp",
+    "silverstone",
+    "canadian",
+    "spanish",
+    "austrian",
+    "7 june",
+    "5 july",
+    "24 may",
+    "las vegas",
+    "us gp",
+    "austin"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar; dates per formula1.com via ESPN / F1 Experiences)",
+   "excerpt": "2026 F1 calendar table: Canadian GP (22-24 May), Monaco GP (5-7 June), Spanish GP Barcelona (12-14 June), Austrian GP (26-28 June), British GP (3-5 July), US GP (Austin, October), Las Vegas GP (November). Dates from the formula1.com 2026 calendar as summarised by ESPN and F1 Experiences.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Modal Labs",
+  "industry_meta": "AI Infrastructure · Serverless GPU Compute Platform",
+  "hq": "New York (founded 2021; offices in San Francisco and Stockholm)",
+  "ticker": "Private ($4.65B; $355M Series C, May 2026)",
+  "deck": "Modal Labs, the New York serverless AI-compute platform, announced a $355M Series C at a $4.65B valuation on 21 May 2026, led by General Catalyst and Redpoint. Annualised revenue has passed $300M, up fivefold since September, and the valuation has quadrupled from the $1.1B Lux Capital set then.",
+  "score": 78,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Atlassian Williams Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 21 May Modal announced $355M at a $4.65B post-money valuation, led by General Catalyst and Redpoint with Menlo, Bain Capital Ventures and Accel joining. Reuters reports the round closed in two tranches, the first at $2.5B, as AI-coding demand surged. Annualised revenue has passed $300M, fivefold the roughly $60M of September 2025, when Lux Capital led an $87M Series B at $1.1B. Modal runs over a billion isolated sandboxes for DoorDash, Cognition, Decagon, Suno and Physical Intelligence, and scaled Lovable to a million sandboxes in a weekend. Founded 2021; New York, San Francisco and Stockholm.",
+  "the_case_p2": "The grid has already priced this archetype: CoreWeave became Aston Martin Aramco's Official AI Cloud Computing Partner in May 2025, Core Scientific sits on Cadillac's first roster, and Modal's own customer Cognition joined Aston Martin this season. Modal is the developer-native version of the same story, with revenue to match, and it has not chosen a stage. Its buyers are the engineers and AI labs an F1 technology partnership reaches best.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round was announced on 21 May; brand budgets reset in the quarter after a raise. Canadian GP (24 May), Monaco (7 June) and the British GP (5 July) fall inside the window, and teams close 2027 partner rosters in the autumn.",
+  "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+  "why_team_para": "Williams runs the most data-native roster on the grid: Atlassian as title partner, VAST Data for the data platform, Keeper for identity, and since this season Claude as Official Thinking Partner inside engineering and strategy. There is no cloud or GPU-compute partner. Modal's product is Python-native compute that scales from zero, the shape of a race team's bursty simulation load; its New York base gives Austin and Las Vegas a US story.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Race-team compute is bursty: machine-learning surrogates, driver-in-loop and strategy simulation, telemetry and video analytics between sessions. Modal turns any Python function into an autoscaling GPU job with cold starts in seconds, so Williams pays for seconds of compute rather than idle clusters, outside cost-cap capital. In return: Official AI Compute Partner designation, livery presence and Austin and Las Vegas hospitality for Modal's developer audience.",
+  "deal_arch_para": "Entry as Official AI Compute Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the post-raise growth run and a probable listing window. Estimated $3-5M a year, part-payable in compute credits. Scope: engine-cover or sidepod placement, naming of the team's simulation compute environment, US-race hospitality, engineering content.",
+  "decision_maker_name": "Erik Bernhardsson",
+  "decision_maker_role": "Co-Founder & CEO, Modal Labs",
+  "decision_maker_bio": "Bernhardsson built Spotify's recommendation engine, was CTO of Better.com and founded Modal in 2021 with Akshat Bubna, now CTO; he fronts every raise. Path: David Dorman, VP Marketing and Growth (ex-Grafana Labs), and Justin Dignelli, VP Sales. No CMO or CFO is listed.",
+  "opening_angle_intro": "Lead with the CoreWeave precedent.",
+  "opening_angle_quote": "&ldquo;Erik, CoreWeave took its seat at Aston Martin in the year of its listing, and your customer Cognition followed. The compute lane at Williams is open, and the team already runs Claude and VAST. 25 minutes before Monaco to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round announced 21 May; Canada, Monaco and Silverstone inside the window."
+   ],
+   [
+    "CAPACITY",
+    "18",
+    "/ 20",
+    "$355M at $4.65B; $300M+ annualised revenue, fivefold in eight months."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Developer-first infrastructure brand; strong AI narrative, low consumer reach."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "Hyper-growth and a quadrupled valuation; no listing signal yet."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: Python-native GPU compute for simulation and analytics."
+   ]
+  ],
+  "risks": [
+   [
+    "CROWDED ARCHETYPE",
+    "CoreWeave, Core Scientific and Crusoe are already holding or courting grid positions; a fourth AI-compute brand can look like a follower.",
+    "Position Modal as the developer-native layer, the compute engineers write to directly, not a data centre."
+   ],
+   [
+    "SPEND DISCIPLINE",
+    "Modal has grown on efficiency; a $3-5M sports line is a new category of spend for a company that has run lean.",
+    "Size year one in compute credits and a pilot inside the Williams simulation stack; step up cash with usage."
+   ]
+  ],
+  "bottom_line": "A $355M round at $4.65B, revenue past $300M and growing fivefold, and a product the engineers write to directly give Modal the budget, the motive and a real workstream. The compute lane at Williams is open, and Monaco and the British GP sit inside the window.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "revenue_inflection"
+  ],
+  "footer_company": "MODAL LABS",
+  "footer_date": "21 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 21 May 2026 Modal announced a $355M Series C at a $4.65B post-money valuation led by General Catalyst and Redpoint, with Menlo Ventures, Bain Capital Ventures and Accel joining. Reuters reports the round closed in two tranches, the first at $2.5B, as investor demand grew; TechCrunch had reported talks at $2.5B in February."
+    },
+    {
+     "label": "Revenue, not just valuation",
+     "text": "Annualised revenue has passed $300M, up fivefold from about $60M in September 2025, when Lux Capital led an $87M Series B at $1.1B. The valuation has quadrupled in eight months on the back of AI-coding demand: Modal scaled Lovable to more than a million sandboxes in one weekend and runs over a billion isolated sandboxes for DoorDash, Cognition, Decagon, Suno and Physical Intelligence."
+    },
+    {
+     "label": "The archetype is already on the grid",
+     "text": "CoreWeave joined Aston Martin Aramco as Official AI Cloud Computing Partner in May 2025; Core Scientific and TWG AI launched with Cadillac; Modal's customer Cognition joined Aston Martin for 2026. AI-compute brands use F1 to reach engineers, enterprise buyers and capital markets at once, and Modal has not yet chosen a stage."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Canadian GP (22-24 May), Monaco GP (5-7 June), the Spanish GP in Barcelona (12-14 June), the Austrian GP (26-28 June) and the British GP (3-5 July) all fall inside the window. The US GP in Austin and the Las Vegas GP in the autumn are the home-market stages; teams close 2027 partner rosters in the fourth quarter."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Williams carries Atlassian as title partner, VAST for the data platform, Keeper for identity security, Airia and Brillio on the technology tier, and Claude as Official Thinking Partner. No cloud, GPU or AI-compute partner: Official AI Compute Partner is a clean category at a team-partner price."
+    },
+    {
+     "label": "A team that will use the product",
+     "text": "Williams' revival is data-led and its simulation load is bursty. Modal's platform turns Python functions into autoscaling GPU jobs with cold starts in seconds, so the team pays for compute it uses and keeps capital spend outside the cost cap. That is consumed in the factory, which separates a technology partner from a logo."
+    },
+    {
+     "label": "The stack fits",
+     "text": "VAST holds the data; Claude sits in the engineering workflow; Modal is the compute layer between them. A three-partner engineering story, data to model to compute, is one Williams can tell on camera and in the paddock."
+    },
+    {
+     "label": "Story and market fit",
+     "text": "New York headquarters for the Austin and Las Vegas rounds where Modal's customers and investors sit; a Stockholm office and a Swedish founder for the European rounds; a British team with the most software-native partner roster on the grid."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Elastic GPU compute for the work outside the aerodynamic-testing restrictions: machine-learning surrogates, driver-in-the-loop and race-strategy simulation, telemetry and video analytics between sessions. Engineers write Python; Modal scales it from zero to thousands of GPUs and back, so the team funds seconds of compute rather than idle clusters."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner that sells to AI labs and engineering leaders brings founders, CTOs and venture investors to the Austin and Las Vegas suites, the audience Williams' technology partners want alongside them."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "Co-produced engineering content on how the team's simulations run (data on VAST, models with Claude, compute on Modal), a Williams reference customer for Modal's enterprise sales, and developer activations across Modal's community and Williams' digital channels."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official AI Compute Partner designation, engine-cover or sidepod placement, naming of the team's simulation compute environment, hospitality at Austin and Las Vegas, driver and engineering access for Modal's channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, is a direct rival; Cognition, a Modal customer, is also on the roster."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific and TWG AI occupy the compute and AI lanes on the 2026 roster."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the cloud incumbent."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "Microsoft, Hewlett Packard Enterprise and AMD cover cloud, compute and silicon."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Microsoft holds the cloud lane."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Google Cloud, Dell Technologies and Groq occupy cloud, hardware and inference."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "HP (title) and IBM cover compute hardware and cloud services."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "Hewlett Packard Enterprise on the roster in the last 12 months; lane crowded."
+    },
+    {
+     "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+     "reason": "Open but not chosen: neither has the data-native roster (VAST, Claude) that makes Modal's compute layer a story rather than a logo."
+    }
+   ],
+   "ask": "A 25-minute call with Erik Bernhardsson before the Monaco GP to scope a simulation-compute pilot with Williams' engineering team, agree a British GP announcement window, and size an Official AI Compute Partner entry against the team's 2027 roster."
+  }
+ },
+ "note": "# Modal Labs → Atlassian Williams Racing — verification log (N° 215, issued for 21 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (batch 18): Claude did the research, verification and writing; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code. The brief is issued for the desk row's date, 21 May 2026; the trigger is dated the same day.\n\n**Sandbox limitation, stated plainly:** direct fetches of modal.com, generalcatalyst.com, williamsf1.com, astonmartinf1.com and the calendar sites were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## What the thin row got right and wrong\n\n- **Person and trigger are correct**: Erik Bernhardsson, CEO; $355M Series C led by General Catalyst with Redpoint, Bain Capital Ventures, Menlo and Accel; ARR from $60M (Sep 2025) to $300M. The row cited SiliconANGLE; the primary source is Modal's own blog post of 21 May 2026, with the Reuters exclusive as the credible secondary. The row omitted the valuation ($4.65B post-money) and the two-tranche structure.\n- **Score.** The row carried 85. Re-scored at 78: capacity and ops fit are strong; brand fit is a developer-first infrastructure brand with little consumer reach, and there is no listing signal.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| $355M Series C at $4.65B post-money; General Catalyst + Redpoint lead; Menlo, Bain Capital Ventures, Accel; 21 May 2026 | VERIFIED (company post) + REPORTED (Reuters) | modal.com/blog/modal-series-c; Reuters via Yahoo Finance |\n| Two tranches, first at $2.5B; talks reported Feb 2026 | REPORTED | Reuters; TechCrunch 11 Feb 2026 |\n| Annualised revenue > $300M, fivefold from ~$60M in Sep 2025 | VERIFIED (company-stated) + REPORTED (Reuters) | Modal blog; Reuters |\n| $87M Series B led by Lux at $1.1B, Sep 2025; total then $111M | VERIFIED | Modal Series B post; Built In NYC 1 Oct 2025 |\n| Disclosed funding $466M; valuation quadrupled | DERIVED (111 + 355; 4.65 / 1.1) | the two announcements |\n| Customers DoorDash, Cognition, Decagon, Suno, Physical Intelligence, Chai Discovery; >1B sandboxes; Lovable 1M+ sandboxes in a weekend | VERIFIED (company post) | Modal blog |\n| Bernhardsson CEO (ex-Spotify, Better.com CTO); Bubna CTO; founded 2021 | VERIFIED | General Catalyst investment note; Modal company page |\n| David Dorman VP Marketing and Growth; Justin Dignelli VP Sales; no CMO/CFO/COO listed | REPORTED (LinkedIn) / VERIFIED (absence) | LinkedIn profiles; no leadership page lists a C-level marketing or finance role |\n| HQ New York; offices San Francisco and Stockholm | VERIFIED | Built In NYC |\n| Claude Official Thinking Partner at Williams (2026) | VERIFIED | williamsf1.com |\n| CoreWeave Official AI Cloud Computing Partner, Aston Martin Aramco, May 2025 | VERIFIED | astonmartinf1.com |\n| Grid occupancy (Williams roster; CoreWeave + Cognition / Aston Martin; Core Scientific + TWG AI / Cadillac; Oracle / Red Bull; Microsoft + HPE + AMD / Mercedes; Microsoft / Alpine; Google Cloud + Dell + Groq / McLaren; HP + IBM / Ferrari; HPE / Audi departed) | VERIFIED | sponsor table `seeds/sponsors.json` |\n| Canadian GP 22-24 May; Monaco 5-7 Jun; Spanish 12-14 Jun; Austrian 26-28 Jun; British 3-5 Jul; US GP Oct; Las Vegas Nov | VERIFIED | calendar table + formula1.com dates via ESPN / F1 Experiences |\n\n## Screen-outs and things not claimed\n\n- **Employee count** is not used: sources disagree (122 vs ~153 in spring 2026).\n- **No motorsport tie found** for Bernhardsson, Bubna, Dorman or Dignelli after checking; `leadership_ties` is empty.\n- **Modal is not a partner of any F1 or FE team** (sponsor table; live search of 2026 AI partnerships).\n- **Cold-start timing** is stated as \"seconds\" because sources differ (sub-second vs under three seconds).\n- **Deal size ($3-5M a year) is an ESTIMATE**, labelled as such.\n- **Fluidstack (N° 127, 6 Sep 2026) also recommends Williams.** Our signals are not placements: team fit is judged only against real grid occupancy, and the compute lane at Williams was open on 21 May 2026 as it is today.\n\n## Decision path\n\nErik Bernhardsson (Co-Founder & CEO) is the sponsorship owner. Path: David Dorman (VP Marketing and Growth) and Justin Dignelli (VP Sales). Technical counterpart: Akshat Bubna (Co-Founder & CTO). No CMO or CFO is listed.\n"
+}

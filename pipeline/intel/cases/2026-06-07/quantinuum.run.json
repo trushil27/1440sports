@@ -1,0 +1,785 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-06-07",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-s9ehgmhq/2026-06-07/quantinuum.pdf",
+     "web": "/tmp/case-pdf-s9ehgmhq/2026-06-07/quantinuum.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Quantinuum",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 15
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 73,
+     "reason": "resurfaced: Quantinuum last surfaced 2026-06-07 (acquisition); new trigger other:ipo; top ranking score",
+     "company": "Quantinuum",
+     "decision": "selected",
+     "signal_date": "2026-06-04"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Quantinuum",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "resurfaced: Quantinuum last surfaced 2026-06-07 (acquisition); new trigger other:ipo; top ranking score",
+   "score_total": 73,
+   "score_breakdown": {
+    "cap": null,
+    "base": 73,
+    "total": 73,
+    "timing": 17,
+    "ops_fit": 12,
+    "ranking": 73,
+    "urgency": 13,
+    "capacity": 17,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 73,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 73,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Aston Martin Aramco F1 Team",
+   "source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "trigger_date": "2026-06-04",
+   "trigger_reason": "IPO"
+  }
+ ],
+ "brief": {
+  "number": 201,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-s9ehgmhq/2026-06-07/quantinuum.web.html",
+  "brief_data": {
+   "hq": "Broomfield, Colorado (European HQ Cambridge, UK)",
+   "deck": "Quantinuum, the Honeywell-controlled trapped-ion quantum computer maker formed from Honeywell Quantum Solutions and Cambridge Quantum, priced an upsized IPO at $60 a share and began trading on Nasdaq as QNT on 4 June 2026, raising $1.68B in one of the largest quantum-computing listings to date.",
+   "risks": [
+    {
+     "label": "REVENUE VERSUS VALUATION",
+     "detail": "2025 revenue of $30.9M against a $192.6M loss and a valuation near $15B; a sponsorship will be read against that gap.",
+     "counter": "Keep the cash component small, pay partly in Helios access, and frame it as research with published output."
+    },
+    {
+     "label": "RESEARCH, NOT OPERATIONS",
+     "detail": "No quantum system beats classical solvers on race problems today; an operational claim would be an overclaim.",
+     "counter": "Label the workstream exploratory from day one and set milestones the team's engineers own."
+    }
+   ],
+   "score": 73,
+   "ticker": "Nasdaq: QNT (IPO 4 Jun 2026; ~$15B reported)",
+   "company": "Quantinuum",
+   "gridfit": [
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "ipo",
+    "spinoff_unicorn",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://www.quantinuum.com/press-releases/quantinuum-names-rajeeb-raj-hazra-chief-executive-officer",
+    "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+    "https://thequantuminsider.com/2026/05/26/honeywell-backed-quantinuum-files-for-landmark-quantum-ipo/",
+    "https://www.quantinuum.com/press-releases/quantinuum-announces-commercial-launch-of-new-helios-quantum-computer-that-offers-unprecedented-accuracy-to-enable-generative-quantum-ai-genqai",
+    "https://www.quantinuum.com/press-releases/introducing-quantinuum"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Raj Hazra before the British GP to agree a research scope on Helios, a Silverstone or Austin announcement window, and the size of an Official Quantum Computing Partner entry against Aston Martin's 2027 roster.",
+    "value": [
+     {
+      "text": "Two research programmes on Helios: combinatorial optimisation for race-strategy scenarios and freight scheduling, benchmarked against the classical solvers the team uses today, and InQuanto chemistry simulation of battery and fuel materials relevant to the hybrid power unit. Results are research-grade and published jointly; no operational claim is made.",
+      "label": "Exploratory workstream (Mode A)"
+     },
+     {
+      "text": "A newly listed deep-tech company brings a guest list of institutional investors, government and enterprise buyers, and a scientific audience to the British GP and the US rounds that Aston Martin's technology partners want to meet.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "The quantum layer completing a visible compute stack is a story the team can tell on camera: joint papers, engineering content with the CoreWeave and Arm programmes, and a reference customer for Quantinuum's enterprise sales.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Quantum Computing Partner designation, engine-cover or sidepod placement, British GP and US-round hospitality, driver and engineering access, and a research programme the team's engineers own.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Quantinuum priced an upsized IPO of 28 million Class A shares at $60, above the $53-55 range, and began trading on Nasdaq as QNT on 4 June 2026, raising $1.68B with J.P. Morgan and Morgan Stanley leading the books. The stock closed flat on its first day. It is the first traditional listing of a full-stack quantum company.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Reports put the valuation at roughly $15B, up from the $10B pre-money valuation of the $600M raise Honeywell led in September 2025. Honeywell keeps about 48% of the voting power and its chairman and CEO, Vimal Kapur, chairs the Quantinuum board: a first sports partnership would be read as a Honeywell-sanctioned brand move.",
+      "label": "Valuation and backing"
+     },
+     {
+      "text": "The S-1 discloses 2025 revenue of $30.9M, bookings of $79.3M and a net loss of $192.6M. A company priced on its roadmap rather than its revenue has to keep investors, customers and recruits engaged through every quarter, and the period straight after listing is when the brand budget is set.",
+      "label": "The first two quarters as a public company"
+     },
+     {
+      "text": "The British GP on 5 July, Aston Martin's home race, sits four weeks from the row date; the United States GP in Austin and the Las Vegas GP follow in the autumn near the company's Colorado base and its US investors. Teams close 2027 rosters in the fourth quarter, so a deal agreed over the summer launches in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Aston Martin Aramco carries Arm on processors and edge compute, CoreWeave as Official AI Cloud Computing Partner, NetApp on data infrastructure, Cognizant and ServiceNow on the enterprise layer and Cognition for AI software engineering. Quantum is the missing layer, and no quantum company sits on any other car either: Official Quantum Computing Partner is a clean category.",
+      "label": "The compute-stack roster"
+     },
+     {
+      "text": "IBM is on the Ferrari, Google Cloud on the McLaren, Microsoft on the Mercedes and the Alpine, Oracle on the Red Bull. Each parent runs a quantum programme, so those four cars are closed to Quantinuum. Aston Martin has no such conflict.",
+      "label": "Every rival is locked elsewhere"
+     },
+     {
+      "text": "Quantinuum's European headquarters is in Cambridge with offices in London and Oxford, close to the Silverstone campus; its corporate headquarters is in Broomfield, Colorado. A British-based team with a Nasdaq-listed American partner tells the same story from both sides of the Atlantic.",
+      "label": "UK and US at once"
+     },
+     {
+      "text": "Aston Martin has moved its engineering compute to the cloud with CoreWeave and built a data pipeline with NetApp; a research programme on Helios sits naturally on top of that stack, run by engineers who already treat compute as a competitive lever.",
+      "label": "A team that will use the product"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Scuderia Ferrari",
+      "reason": "IBM, whose quantum division is Quantinuum's most direct rival, sits on the roster."
+     },
+     {
+      "team": "McLaren F1 Team",
+      "reason": "Google Cloud is on the car; Google runs its own quantum programme."
+     },
+     {
+      "team": "Mercedes-AMG Petronas · BWT Alpine",
+      "reason": "Microsoft holds the cloud lane at both and runs a quantum programme."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and the cloud incumbent."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Core Scientific and TWG AI occupy the compute and AI lanes on the inaugural roster."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Open but not chosen: the compute story there is built around Claude and VAST, not a hardware stack."
+     },
+     {
+      "team": "Audi F1 Team · TGR Haas F1 Team · Racing Bulls",
+      "reason": "Open but not chosen: none carries a processor-to-cloud roster for quantum to complete."
+     }
+    ]
+   },
+   "date_long": "07 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Aston Martin Aramco F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $1.68B IPO at roughly $15B, Honeywell's backing and a grid where every quantum rival is locked to another team give Quantinuum a clean lane at Aston Martin, whose roster already reads as a compute stack. Revenue of $30.9M against a $192.6M loss is what holds the score back.",
+   "footer_date": "7 JUN 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Listed 4 Jun; British GP inside window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 17,
+     "note": "$1.68B raised; ~$15B reported; $30.9M revenue.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Precision deep-tech; B2B, investor-facing.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Post-IPO brand build; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 12,
+     "note": "MODE A exploratory: optimisation, chemistry.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Quantinuum sold 28 million Class A shares at $60, above the $53-55 range, raising $1.68B; J.P. Morgan and Morgan Stanley led the books and the shares opened on Nasdaq on 4 June, closing flat on debut. Reports put the valuation at roughly $15B, up from the $10B pre-money at which Honeywell led a $600M raise in September 2025. The S-1 shows the scale of the bet: 2025 revenue of $30.9M, bookings of $79.3M and a net loss of $192.6M, with Honeywell keeping about 48% of the voting power.",
+   "the_case_p2": "Quantum has no seat on the grid, but its rivals do: IBM sits on the Ferrari, Google Cloud on the McLaren, Microsoft on the Mercedes and the Alpine, Oracle on the Red Bull. Each parent runs a quantum programme that would block a Quantinuum deal. That leaves a shortlist, and one roster that already reads as a compute stack, from Arm processors to CoreWeave's AI cloud, with the quantum layer missing.",
+   "track_label": "",
+   "brief_number": "201",
+   "claims_total": 18,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "IPO: 28 million Class A shares at $60 (above the $53-55 range), $1.68B raised, Nasdaq QNT, first trade 4 Ju…",
+     "value": "$60",
+     "claim_id": 645,
+     "verified": true,
+     "source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering"
+    },
+    {
+     "fact": "Honeywell (about 48% of voting power after the offering) and Cambridge Quantum Holdings as founding shareho…",
+     "value": "48%",
+     "claim_id": 646,
+     "verified": true,
+     "source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering"
+    },
+    {
+     "fact": "2025 revenue $30.9M, bookings $79.3M, net loss $192.6M (S-1, as reported)",
+     "value": "$30.9M",
+     "claim_id": 647,
+     "verified": true,
+     "source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering"
+    },
+    {
+     "fact": "Reports put the valuation at roughly $15B, up from the $10B pre-money at which Honeywell led a $600M raise…",
+     "value": "$15B",
+     "claim_id": 656,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "A $1.68B IPO at roughly $15B, Honeywell's backing and a grid where every quantum rival is locked to another…",
+     "value": "$1.68B",
+     "claim_id": 658,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Quantum Computing · Trapped-Ion Systems",
+   "value_content": "MODE A - exploratory research. Two workstreams the team's engineers could run on Helios: combinatorial optimisation for race-strategy and freight scheduling, benchmarked against the classical solvers the team uses today, and InQuanto chemistry simulation of battery and fuel materials for the hybrid power unit. Results are research-grade and published jointly. In return: Official Quantum Computing Partner status, livery presence and British GP hospitality.",
+   "value_section": true,
+   "why_team_para": "Aston Martin Aramco's roster is built like a compute stack: Arm on processors, CoreWeave as Official AI Cloud Computing Partner, NetApp on data infrastructure, Cognizant and ServiceNow on the enterprise layer and Cognition for AI software engineering. No quantum company sits on it, or on any other car. Quantinuum's European headquarters in Cambridge is close to the Silverstone campus; the Colorado headquarters and the Nasdaq ticker give the US rounds a story too.",
+   "deal_arch_para": "Entry as Official Quantum Computing Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the company's first three years as a listed business and the Sol system due in 2027. Estimated $3-5M a year, part-payable in compute access on Helios. Scope: engine-cover or sidepod placement, a joint research programme, British GP and US-round hospitality, engineering content.",
+   "footer_company": "QUANTINUUM",
+   "why_team_label": "WHY ASTON MARTIN ARAMCO F1 TEAM",
+   "claims_verified": 18,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The shares have traded since 4 June; a newly listed company sets its brand budget in its first two quarters, when investors, customers and recruits are all watching. The British GP on 5 July, Aston Martin's home race, falls inside the window, and teams close 2027 rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Hazra leads Quantinuum after 25 years at Intel and a compute-and-networking role at Micron, and fronted the IPO. Path: Nitesh Sharan, CFO since April 2026 (ex-SoundHound AI), and chairman Vimal Kapur, Honeywell's chairman and CEO. No chief marketing officer is confirmed.",
+   "decision_maker_name": "Rajeeb Hazra",
+   "decision_maker_role": "President & CEO, Quantinuum",
+   "opening_angle_intro": "Lead with the compute-stack gap.",
+   "opening_angle_quote": "&ldquo;Raj, Aston Martin's roster runs from Arm to CoreWeave and stops short of quantum; no team on the grid has that layer. You have just listed and the British GP is four weeks out. 25 minutes to see how the seat would work?&rdquo;",
+   "value_section_label": "VALUE TO ASTON MARTIN ARAMCO F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Rajeeb Hazra, President & Chief Executive Officer at Quantinuum",
+   "cited_source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-names-rajeeb-raj-hazra-chief-executive-officer",
+     "excerpt": "Quantinuum press release and About page: Rajeeb (Raj) Hazra is President and Chief Executive Officer; previously General Manager, Compute and Networking Business Unit at Micron Technology, after 25 years at Intel leading the Enterprise and Government Group and Technical Computing Group.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Rajeeb Hazra, President & CEO, Quantinuum at Quantinuum",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-names-rajeeb-raj-hazra-chief-executive-officer",
+     "excerpt": "Quantinuum press release and About page: Rajeeb (Raj) Hazra is President and Chief Executive Officer; previously General Manager, Compute and Networking Business Unit at Micron Technology, after 25 years at Intel leading the Enterprise and Government Group and Technical Computing Group.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "IPO: 28 million Class A shares at $60 (above the $53-55 range), $1.68B raised, Nasdaq QNT, first trade 4 Jun 2026; valuation reported at roughly $15B; $600M raise at a $10B pre-money valuation in Sep 2025",
+   "cited_source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Quantinuum, the Honeywell-controlled trapped-ion quantum computer maker formed from Honeywell Quantum Solutions and Cambridge Quantum, priced an upsized IPO at $60 a share and began trading on Nasdaq as QNT on 4 June 2026, raising $1.68B in one of the largest quantum-computing listings to date.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Honeywell (about 48% of voting power after the offering) and Cambridge Quantum Holdings as founding shareholders; J.P. Morgan and Morgan Stanley led the IPO books",
+   "cited_source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Quantinuum sold 28 million Class A shares at $60, above the $53-55 range, raising $1.68B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "2025 revenue $30.9M, bookings $79.3M, net loss $192.6M (S-1, as reported)",
+   "cited_source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://thequantuminsider.com/2026/05/26/honeywell-backed-quantinuum-files-for-landmark-quantum-ipo/",
+     "excerpt": "S-1 as reported by The Quantum Insider (26 May 2026), Quantum Zeitgeist and The Next Web: 2025 revenue $30.9 million, bookings $79.3 million, net loss $192.6 million; Honeywell to retain about 48.1% of combined voting power after the offering; RIKEN close to 60% of revenue; Amgen and Mitsui among early users.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Reports put the valuation at roughly $15B, up from the $10B pre-money at which Honeywell led a $600M raise in September 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Upsized IPO priced at $60 a share; Nasdaq debut as QNT on 4 Jun 2026, $1.68B raised",
+   "cited_source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The S-1 shows the scale of the bet: 2025 revenue of $30.9M, bookings of $79.3M and a net loss of $192.6M, with Honeywell keeping about 48% of the voting power.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://thequantuminsider.com/2026/05/26/honeywell-backed-quantinuum-files-for-landmark-quantum-ipo/",
+     "excerpt": "S-1 as reported by The Quantum Insider (26 May 2026), Quantum Zeitgeist and The Next Web: 2025 revenue $30.9 million, bookings $79.3 million, net loss $192.6 million; Honeywell to retain about 48.1% of combined voting power after the offering; RIKEN close to 60% of revenue; Amgen and Mitsui among early users.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "IBM (Ferrari), Google Cloud (McLaren), Microsoft (Mercedes, Alpine) and Oracle (Red Bull) each run quantum programmes at parent level; no quantum-computing company is on any F1 car",
+   "cited_source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+     "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): Aston Martin Aramco — Aramco title, Arm, CoreWeave (Official AI Cloud Computing Partner), NetApp, Cognizant, ServiceNow, Cognition; no quantum-computing partner on this or any F1 roster. Ferrari: IBM, HP. McLaren: Google Cloud, Dell. Mercedes and Alpine: Microsoft. Red Bull: Oracle. Cadillac: Core Scientific, TWG AI. Williams: Claude, VAST.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $1.68B IPO at roughly $15B, Honeywell's backing and a grid where every quantum rival is locked to another team give Quantinuum a clean lane at Aston Martin, whose roster already reads as a compute stack.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Helios, launched Nov 2025 with 98 physical qubits at 99.921% two-qubit gate fidelity, and the InQuanto chemistry platform give a race team research workstreams in optimisation and materials",
+   "cited_source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-commercial-launch-of-new-helios-quantum-computer-that-offers-unprecedented-accuracy-to-enable-generative-quantum-ai-genqai",
+     "excerpt": "Quantinuum, Nov 2025: commercial launch of Helios, 98 physical qubits at 99.921% average two-qubit gate fidelity, demonstrations with 48 logical qubits; roadmap to Sol (2027) and Apollo (2029) per the S-1 coverage. InQuanto is Quantinuum's computational-chemistry platform (Mitsui/QSimulate QIDO release).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Revenue of $30.9M against a $192.6M loss is what holds the score back.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://thequantuminsider.com/2026/05/26/honeywell-backed-quantinuum-files-for-landmark-quantum-ipo/",
+     "excerpt": "S-1 as reported by The Quantum Insider (26 May 2026), Quantum Zeitgeist and The Next Web: 2025 revenue $30.9 million, bookings $79.3 million, net loss $192.6 million; Honeywell to retain about 48.1% of combined voting power after the offering; RIKEN close to 60% of revenue; Amgen and Mitsui among early users.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquarters Broomfield, Colorado; European headquarters Cambridge, UK; offices in London, Oxford, Munich and Tokyo",
+   "cited_source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/introducing-quantinuum",
+     "excerpt": "Quantinuum (Nov 2021 launch release; About page): formed from the merger of Honeywell Quantum Solutions and Cambridge Quantum; headquartered in Broomfield, Colorado with European headquarters in Cambridge, UK, and offices in London, Oxford, Munich, Tokyo and across the United States.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Quantinuum priced an upsized IPO of 28 million Class A shares at $60, above the $53-55 range, and began trading on Nasdaq as QNT on 4 June 2026, raising $1.68B with J.P.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "IPO",
+   "cited_source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Reports put the valuation at roughly $15B, up from the $10B pre-money valuation of the $600M raise Honeywell led in September 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+     "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Honeywell keeps about 48% of the voting power and its chairman and CEO, Vimal Kapur, chairs the Quantinuum board: a first sports partnership would be read as a Honeywell-sanctioned brand move.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://thequantuminsider.com/2026/05/26/honeywell-backed-quantinuum-files-for-landmark-quantum-ipo/",
+     "excerpt": "S-1 as reported by The Quantum Insider (26 May 2026), Quantum Zeitgeist and The Next Web: 2025 revenue $30.9 million, bookings $79.3 million, net loss $192.6 million; Honeywell to retain about 48.1% of combined voting power after the offering; RIKEN close to 60% of revenue; Amgen and Mitsui among early users.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "The S-1 discloses 2025 revenue of $30.9M, bookings of $79.3M and a net loss of $192.6M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://thequantuminsider.com/2026/05/26/honeywell-backed-quantinuum-files-for-landmark-quantum-ipo/",
+     "excerpt": "S-1 as reported by The Quantum Insider (26 May 2026), Quantum Zeitgeist and The Next Web: 2025 revenue $30.9 million, bookings $79.3 million, net loss $192.6 million; Honeywell to retain about 48.1% of combined voting power after the offering; RIKEN close to 60% of revenue; Amgen and Mitsui among early users.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "value_content",
+   "type": "event",
+   "load_bearing": true,
+   "text": "British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

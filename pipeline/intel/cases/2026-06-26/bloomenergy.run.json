@@ -1,0 +1,833 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-06-26",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-gv4xk5_s/2026-06-26/bloomenergy.pdf",
+     "web": "/tmp/case-pdf-gv4xk5_s/2026-06-26/bloomenergy.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Bloom Energy",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 17
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 75,
+     "reason": "resurfaced: Bloom Energy last surfaced 2026-06-26 (other:never entered funding event category whitespace); new trigger partnership; top ranking score",
+     "company": "Bloom Energy",
+     "decision": "selected",
+     "signal_date": "2026-04-13"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Bloom Energy",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "resurfaced: Bloom Energy last surfaced 2026-06-26 (other:never entered funding event category whitespace); new trigger partnership; top ranking score",
+   "score_total": 75,
+   "score_breakdown": {
+    "cap": null,
+    "base": 75,
+    "total": 75,
+    "timing": 15,
+    "ops_fit": 14,
+    "ranking": 75,
+    "urgency": 13,
+    "capacity": 19,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 75,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 75,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Atlassian Williams Racing",
+   "source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+   "trigger_date": "2026-04-13",
+   "trigger_reason": "contract win"
+  }
+ ],
+ "brief": {
+  "number": 178,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-gv4xk5_s/2026-06-26/bloomenergy.web.html",
+  "brief_data": {
+   "hq": "San Jose, California",
+   "deck": "Bloom Energy, the San Jose fuel-cell maker now powering AI data centres for Oracle, American Electric Power and Brookfield, signed a master agreement for up to 2.8 GW of its systems with Oracle on 13 April 2026 and posted a record first quarter, lifting 2026 revenue guidance to $3.4-3.8B.",
+   "risks": [
+    {
+     "label": "ENERGY-ADJACENT ROSTER",
+     "detail": "Gulf (fuel) and Duracell (batteries) could read a power partner as a category intrusion.",
+     "counter": "Define the category as stationary power generation; neither sells it."
+    },
+    {
+     "label": "THIN UK FOOTPRINT",
+     "detail": "Bloom's growth is US data centres; a UK factory installation needs a gas or hydrogen supply at Grove.",
+     "counter": "Lead with the US races and a Grove feasibility study; the installation follows the deal."
+    }
+   ],
+   "score": 75,
+   "ticker": "NYSE: BE (2026 revenue guidance $3.4-3.8B)",
+   "company": "Bloom Energy",
+   "gridfit": [
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Schneider Electric",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "label": "TAKEN",
+     "detail": "bp/Castrol",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "Aramco",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "contract_win",
+    "category_whitespace",
+    "leadership_tie"
+   ],
+   "sources": [
+    "https://www.bloomenergy.com/leadership-board/",
+    "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-First-Quarter-2026-Results-and-Raises-Full-Year-2026-Guidance/default.aspx",
+    "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Brookfield-and-Bloom-Energy-Expand-AI-Infrastructure-Partnership-to-25-Billion-Fivefold-Increase-to-Build-and-Finance-Rapid-Power-for-AI-Infrastructure/default.aspx",
+    "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+    "https://www.mclaren.com/racing/partners/groq/mclaren-racing-announces-groq-as-an-official-partner/",
+    "https://www.fool.com/earnings/call-transcripts/2026/04/28/bloom-energy-be-q1-2026-earnings-transcript/",
+    "https://www.investing.com/news/stock-market-news/bloom-energy-stock-soars-after-aep-inks-265-billion-fuel-cell-deal-93CH-4437223"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with KR Sridhar before the US GP to confirm the Grove workstream is real for Williams, agree an Austin announcement window, and size an Official Power Partner entry against Williams' 2027 roster.",
+    "value": [
+     {
+      "text": "Bloom Energy Servers convert natural gas, biogas or hydrogen into electricity on site without combustion. For Grove that means resilient baseload for the simulator, data hall and wind-tunnel programme as the campus grows, delivered on Bloom's data-centre timescales (Oracle took its first system in 55 days) rather than a grid-upgrade timescale, with a lower-carbon footprint the team can report.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Bloom sells to CIOs, utility executives and infrastructure investors. Its guest list at Austin and Las Vegas is the audience Williams' B2B partners want in the suite, and a partner with a $3.4-3.8B revenue base is a credible multi-year counterparty.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A factory-power story the team can tell on camera: how a Formula 1 campus is powered, what the new buildings draw, and how fuel cells fit a lower-carbon plan. For Bloom, a reference installation outside the data-centre world, and engineering content with a team known for data.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Power Partner designation, rear-wing or engine-cover placement, naming of the factory's power plant, hospitality at Austin and Las Vegas, and driver and engineering access for Bloom's customer events.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 13 April 2026 Bloom Energy and Oracle announced a master services agreement under which Oracle intends to procure up to 2.8 GW of Bloom's fuel-cell systems, with 1.2 GW already contracted and deployment running into 2027. It is the largest single commitment in Bloom's history and it was announced by the company itself.",
+      "label": "Trigger"
+     },
+     {
+      "text": "On 28 April Bloom reported first-quarter revenue of $751.1M, up 130.4% on the year, and raised full-year 2026 revenue guidance to $3.4-3.8B, roughly 80% growth at the midpoint. On the call the company put total backlog at about $20B, more than half of the data-centre portion from hyperscalers, neoclouds and colocation providers other than Oracle.",
+      "label": "Record quarter, guidance raised"
+     },
+     {
+      "text": "American Electric Power exercised a $2.65B option for 900 MW of Bloom fuel cells on 8 January 2026 for a Wyoming data-centre campus, and Brookfield committed $5B in October 2025 to finance Bloom-powered AI data centres. A company selling power to the AI build-out in gigawatts is buying brand for the first time at scale; its CMO's stated brief is to build an iconic brand.",
+      "label": "The order book behind it"
+     },
+     {
+      "text": "The US GP in Austin (late October) and the Las Vegas GP (November) are the two US rounds left in 2026, and teams close 2027 partner rosters in the fourth quarter. A deal agreed before Austin can be announced in the US, where Bloom's customers sit, and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Williams carries Atlassian as title partner, Gulf in fuel, Duracell in consumer batteries, Komatsu in industrial equipment, VAST, Keeper, Airia and Brillio in technology. No power-generation or energy-infrastructure partner: Official Power Partner is a clean category at a team-partner price, without a title-level cheque.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Williams is in a phased modernisation of the Grove campus, adding new and larger factory, technology and testing facilities, offices and staff buildings, with a scoping opinion lodged with the district council. New buildings mean new load; on-site generation is a workstream the team would actually commission, not a logo.",
+      "label": "A factory that needs power"
+     },
+     {
+      "text": "Dorilton has invested heavily since taking ownership in 2020 and brought in James Vowles to run a data-led revival. A US-owned British team gives a San Jose industrial brand a home story on both sides of the Atlantic, and the Austin and Las Vegas suites put Bloom in front of the hyperscaler, utility and capital-markets guests it sells to.",
+      "label": "Ownership and audience"
+     },
+     {
+      "text": "Gulf and Duracell are energy-adjacent, so the category must be defined as stationary power generation from the first conversation; neither brand sells it. Aggreko supplies temporary power to the championship, not to a team, and does not block a team-level power partner.",
+      "label": "Category discipline"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Aramco is title partner and Valvoline the lubricants partner; an energy major owns the lane."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "Petronas is title partner and the longest-standing energy relationship on the grid."
+     },
+     {
+      "team": "Scuderia Ferrari",
+      "reason": "Shell holds the energy lane."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Eni holds the energy lane."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Mobil 1 and Esso hold fuel and lubricants; Oracle as title partner is Bloom's customer, which makes a power partner look like a supplier placement rather than a brand story."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Mobil 1 on the roster; sister team of Oracle Red Bull Racing."
+     },
+     {
+      "team": "Audi F1 Team",
+      "reason": "bp/Castrol joined as fuel and lubricants partner for 2026."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Toyota Gazoo Racing is the technical partner, and Toyota sells its own certified stationary fuel-cell generators; a rival fuel-cell brand on the car is a conflict."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Open but not chosen: an inaugural roster (Core Scientific, TWG AI) on a General Motors-branded team; GM ended its own Hydrotec fuel-cell programme in October 2025, so no live conflict, but a parent that has just exited fuel cells is an awkward host for one."
+     },
+     {
+      "team": "McLaren F1 Team",
+      "reason": "Schneider Electric joined for 2026 as the energy-management partner, the closest thing to Bloom's category on the grid; the lane is taken. The Groq relationship of Bloom's CFO remains a warm contact, not an opening."
+     }
+    ]
+   },
+   "date_long": "26 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Atlassian Williams Racing",
+   "value_mode": "A",
+   "bottom_line": "Up to 2.8 GW with Oracle, a $2.65B AEP order, $5B from Brookfield and guidance of $3.4-3.8B put Bloom at peak brand-building capacity with a brand few outside energy know. Williams is expanding Grove and carries no power partner; the lane, the workstream and two US races line up before 2027 rosters close.",
+   "footer_date": "26 JUN 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Oracle deal 13 Apr, guidance raised 28 Apr; Austin and Las Vegas in window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 19,
+     "note": "$3.4-3.8B 2026 guidance; ~$20B backlog; NYSE-listed.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Industrial B2B brand; CMO briefed to build an iconic brand.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "AI power scramble is now; 2027 rosters close in Q4.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 14,
+     "note": "MODE A: on-site power for the Grove expansion.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 13 April Bloom and Oracle announced a master services agreement under which Oracle intends to procure up to 2.8 GW of Bloom fuel-cell systems, 1.2 GW contracted. Two weeks later Bloom reported first-quarter revenue of $751.1M, up 130.4%, and raised 2026 guidance to $3.4-3.8B; total backlog is about $20B. American Electric Power exercised a $2.65B option for 900 MW in January, and Brookfield committed $5B in October 2025 to finance Bloom-powered AI data centres. A niche fuel-cell company has become the power supplier of the AI build-out, and its brand has not caught up.",
+   "the_case_p2": "The grid sells energy at scale, but every energy partner on it is a fuel or lubricant brand: Aramco at Aston Martin, Petronas at Mercedes, Shell at Ferrari, Eni at Alpine, Mobil 1 and Esso at Red Bull. No team carries an on-site power generation partner, even as factories add simulators, data halls and wind-tunnel hours that local grids were never sized for. Bloom's product is that: baseload power delivered in months, not years.",
+   "track_label": "",
+   "brief_number": "178",
+   "claims_total": 21,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "Public company (NYSE: BE); 2026 revenue guidance raised to $3.4-3.8B on 28 Apr 2026; total backlog about $2…",
+     "value": "$3.4",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx"
+    },
+    {
+     "fact": "Brookfield committed $5B in October 2025 to finance Bloom-powered AI data centres",
+     "value": "$5B",
+     "claim_id": 622,
+     "verified": true,
+     "source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx"
+    },
+    {
+     "fact": "Q1 2026 revenue $751.1M, up 130.4% year on year (28 Apr 2026)",
+     "value": "$751.1M",
+     "claim_id": 623,
+     "verified": true,
+     "source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx"
+    },
+    {
+     "fact": "total backlog is about $20B.",
+     "value": "$20B",
+     "claim_id": 632,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "American Electric Power exercised a $2.65B option for 900 MW in January, and Brookfield committed $5B in Oc…",
+     "value": "$2.65B",
+     "claim_id": 633,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "On-Site Energy Generation · SOFC Systems",
+   "value_content": "MODE A - operational. Grove's expansion adds simulator, data-hall and wind-tunnel load. Bloom Energy Servers generate power on site from natural gas, biogas or hydrogen without combustion; Oracle took its first system in 55 days, and that speed applies to a factory too. New buildings come online without waiting on a grid upgrade, with a lower-carbon footprint the team can report. In return: Official Power Partner status, rear-wing placement, Austin and Las Vegas hospitality for Bloom's customers.",
+   "value_section": true,
+   "why_team_para": "Williams is rebuilding Grove: a phased modernisation adds larger factory, technology and testing facilities. The roster carries Atlassian as title partner, Gulf in fuel, Duracell in consumer batteries, Komatsu, VAST and Keeper, but no power-generation or energy-infrastructure partner, so Official Power Partner is a clean category. Dorilton's investment since 2020 and a data-led revival under James Vowles give a US industrial brand a team that will use the product as well as show it.",
+   "deal_arch_para": "Entry as Official Power Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the Grove build-out and the first Oracle gigawatts. Estimated $3-5M a year, part-deliverable as installed Energy Server capacity at Grove. Scope: rear-wing or engine-cover placement, naming of the factory's power plant, US-race hospitality, content on powering the campus.",
+   "footer_company": "BLOOM ENERGY",
+   "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+   "claims_verified": 21,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Bloom's 2026 guidance of $3.4-3.8B implies roughly 80% growth, raised on 28 April; the budget and the motive to be known beyond energy circles crest together. Austin (late October) and Las Vegas (November) are the US stages left in 2026, and teams close 2027 rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Sridhar founded Bloom in 2001; a first sports partnership is his call. Path: Natalie Sunderland, CMO, briefed to build an iconic brand; Aman Joshi, EVP and Chief Commercial Officer since January 2024; Simon Edwards, CFO since April 2026, previously CFO then CEO of McLaren partner Groq.",
+   "decision_maker_name": "KR Sridhar",
+   "decision_maker_role": "Founder, Chairman & CEO, Bloom Energy",
+   "opening_angle_intro": "Lead with the Oracle gigawatts and the Grove build.",
+   "opening_angle_quote": "&ldquo;KR, Oracle is putting up to 2.8 GW of your servers under its AI factories; Williams is rebuilding Grove and has no power partner. Your new CFO watched Groq take a McLaren seat. 25 minutes before Austin to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "KR Sridhar, Founder, Chairman & CEO at Bloom Energy",
+   "cited_source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomenergy.com/leadership-board/",
+     "excerpt": "Bloom Energy leadership page and April 2026 investor presentation: KR Sridhar, PhD, Founder, Chairman & CEO. Also listed: Natalie Sunderland, Chief Marketing Officer; Aman Joshi, Chief Commercial Officer; Simon Edwards, Chief Financial Officer; Satish Chitoori, Chief Operations Officer; Ravi Prasher, Chief Technology Officer.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "KR Sridhar, Founder, Chairman & CEO, Bloom Energy at Bloom Energy",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomenergy.com/leadership-board/",
+     "excerpt": "Bloom Energy leadership page and April 2026 investor presentation: KR Sridhar, PhD, Founder, Chairman & CEO. Also listed: Natalie Sunderland, Chief Marketing Officer; Aman Joshi, Chief Commercial Officer; Simon Edwards, Chief Financial Officer; Satish Chitoori, Chief Operations Officer; Ravi Prasher, Chief Technology Officer.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Public company (NYSE: BE); 2026 revenue guidance raised to $3.4-3.8B on 28 Apr 2026; total backlog about $20B (Q1 2026 call)",
+   "cited_source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-First-Quarter-2026-Results-and-Raises-Full-Year-2026-Guidance/default.aspx",
+     "excerpt": "Bloom Energy Q1 2026 results, 28 Apr 2026 (8-K exhibit 99.1): revenue $751.1 million, up 130.4% from $326.0 million; product revenue $653.3 million, up 208.4%; GAAP operating income $72.2 million; full-year 2026 revenue guidance raised to $3.4-3.8 billion, growth midpoint lifted from ~60% to ~80%.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Bloom Energy, the San Jose fuel-cell maker now powering AI data centres for Oracle, American Electric Power and Brookfield, signed a master agreement for up to 2.8 GW of its systems with Oracle on 13 April 2026 and posted a record first quarter, lifting 2026 revenue guidance to $3.4-3.8B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+     "excerpt": "Bloom Energy, 13 Apr 2026 (BusinessWire 14 Apr): under a master services agreement Oracle intends to procure up to 2.8 gigawatts of Bloom's fuel cell systems; an initial 1.2 GW is contracted, with deployment underway and continuing into next year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Brookfield committed $5B in October 2025 to finance Bloom-powered AI data centres",
+   "cited_source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Brookfield-and-Bloom-Energy-Expand-AI-Infrastructure-Partnership-to-25-Billion-Fivefold-Increase-to-Build-and-Finance-Rapid-Power-for-AI-Infrastructure/default.aspx",
+     "excerpt": "Bloom Energy / Brookfield: the strategic AI-infrastructure power partnership was first announced in October 2025 with a $5 billion framework to deploy Bloom fuel cells at AI data centres; on 30 Jun 2026 (after this brief's date) the framework was expanded fivefold to $25 billion.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Two weeks later Bloom reported first-quarter revenue of $751.1M, up 130.4%, and raised 2026 guidance to $3.4-3.8B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-First-Quarter-2026-Results-and-Raises-Full-Year-2026-Guidance/default.aspx",
+     "excerpt": "Bloom Energy Q1 2026 results, 28 Apr 2026 (8-K exhibit 99.1): revenue $751.1 million, up 130.4% from $326.0 million; product revenue $653.3 million, up 208.4%; GAAP operating income $72.2 million; full-year 2026 revenue guidance raised to $3.4-3.8 billion, growth midpoint lifted from ~60% to ~80%.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Q1 2026 revenue $751.1M, up 130.4% year on year (28 Apr 2026)",
+   "cited_source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-First-Quarter-2026-Results-and-Raises-Full-Year-2026-Guidance/default.aspx",
+     "excerpt": "Bloom Energy Q1 2026 results, 28 Apr 2026 (8-K exhibit 99.1): revenue $751.1 million, up 130.4% from $326.0 million; product revenue $653.3 million, up 208.4%; GAAP operating income $72.2 million; full-year 2026 revenue guidance raised to $3.4-3.8 billion, growth midpoint lifted from ~60% to ~80%.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "total backlog is about $20B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.fool.com/earnings/call-transcripts/2026/04/28/bloom-energy-be-q1-2026-earnings-transcript/",
+     "excerpt": "Q1 2026 earnings call, 28 Apr 2026 (Motley Fool transcript; Yahoo Finance call summary): total backlog approximately $20 billion, product backlog roughly $6 billion (up about 2.5x year on year), service backlog roughly $14 billion; more than half of the data-centre backlog comes from hyperscalers, neoclouds and colocation providers other than Oracle.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Oracle master services agreement for up to 2.8 GW of Bloom fuel-cell systems, 1.2 GW contracted, announced 13 Apr 2026",
+   "cited_source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+     "excerpt": "Bloom Energy, 13 Apr 2026 (BusinessWire 14 Apr): under a master services agreement Oracle intends to procure up to 2.8 gigawatts of Bloom's fuel cell systems; an initial 1.2 GW is contracted, with deployment underway and continuing into next year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "American Electric Power exercised a $2.65B option for 900 MW in January, and Brookfield committed $5B in October 2025 to finance Bloom-powered AI data centres.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.investing.com/news/stock-market-news/bloom-energy-stock-soars-after-aep-inks-265-billion-fuel-cell-deal-93CH-4437223",
+     "excerpt": "8 Jan 2026 (AEP disclosure, reported by Investing.com, TradingView, Fuel Cells Works): AEP's unregulated subsidiary exercised its option for a further 900 MW of Bloom solid-oxide fuel cells, a $2.65 billion agreement supporting a planned 900 MW facility in Wyoming backed by a 20-year offtake; the initial 100 MW was agreed in November 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Every energy brand on the F1 grid sells fuel or lubricants (Aramco, Petronas, Shell, Eni, Mobil 1, Esso, Gulf, bp/Castrol, Valvoline); no team carries an on-site power generation partner; Schneider Electric (energy management) joined McLaren for 2026; Aggreko is the championship's temporary-power partner",
+   "cited_source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mclaren.com/racing/partners/groq/mclaren-racing-announces-groq-as-an-official-partner/",
+     "excerpt": "McLaren Racing, 26 Sep 2025: Groq announced as an Official Partner of the McLaren Formula 1 Team; Groq's LPU inference technology supports analysis, development and real-time insight; Groq branding on the cars from the 2025 Singapore Grand Prix.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "WHY NOW Bloom's 2026 guidance of $3.4-3.8B implies roughly 80% growth, raised on 28 April;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-First-Quarter-2026-Results-and-Raises-Full-Year-2026-Guidance/default.aspx",
+     "excerpt": "Bloom Energy Q1 2026 results, 28 Apr 2026 (8-K exhibit 99.1): revenue $751.1 million, up 130.4% from $326.0 million; product revenue $653.3 million, up 208.4%; GAAP operating income $72.2 million; full-year 2026 revenue guidance raised to $3.4-3.8 billion, growth midpoint lifted from ~60% to ~80%.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "American Electric Power exercised a $2.65B option for 900 MW of Bloom fuel cells on 8 Jan 2026; CFO Simon Edwards (from 13 Apr 2026) was CFO then CEO of Groq, McLaren's Official Partner since 26 Sep 2025",
+   "cited_source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+     "excerpt": "Bloom Energy, 13 Apr 2026 (BusinessWire 14 Apr): under a master services agreement Oracle intends to procure up to 2.8 gigawatts of Bloom's fuel cell systems; an initial 1.2 GW is contracted, with deployment underway and continuing into next year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Up to 2.8 GW with Oracle, a $2.65B AEP order, $5B from Brookfield and guidance of $3.4-3.8B put Bloom at peak brand-building capacity with a brand few outside energy know.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+     "excerpt": "Bloom Energy, 13 Apr 2026 (BusinessWire 14 Apr): under a master services agreement Oracle intends to procure up to 2.8 gigawatts of Bloom's fuel cell systems; an initial 1.2 GW is contracted, with deployment underway and continuing into next year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ San Jose, California; NYSE-listed; customers include Oracle, American Electric Power and Brookfield-financed AI data centres",
+   "cited_source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+     "excerpt": "Bloom Energy, 13 Apr 2026 (BusinessWire 14 Apr): under a master services agreement Oracle intends to procure up to 2.8 gigawatts of Bloom's fuel cell systems; an initial 1.2 GW is contracted, with deployment underway and continuing into next year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Aramco at Aston Martin",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Aramco → Aston Martin Aramco F1 Team (team_title, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "contract win",
+   "cited_source_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+     "excerpt": "Bloom Energy, 13 Apr 2026 (BusinessWire 14 Apr): under a master services agreement Oracle intends to procure up to 2.8 gigawatts of Bloom's fuel cell systems; an initial 1.2 GW is contracted, with deployment underway and continuing into next year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Petronas at Mercedes",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Petronas → Mercedes-AMG Petronas F1 Team (team_title, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Shell at Ferrari",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Shell → Scuderia Ferrari (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Eni at Alpine",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Eni → BWT Alpine F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Esso at Red Bull. No",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Esso → Oracle Red Bull Racing (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "On 28 April Bloom reported first-quarter revenue of $751.1M, up 130.4% on the year, and raised full-year 2026 revenue guidance to $3.4-3.8B, roughly 80% growth at the midpoint.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-First-Quarter-2026-Results-and-Raises-Full-Year-2026-Guidance/default.aspx",
+     "excerpt": "Bloom Energy Q1 2026 results, 28 Apr 2026 (8-K exhibit 99.1): revenue $751.1 million, up 130.4% from $326.0 million; product revenue $653.3 million, up 208.4%; GAAP operating income $72.2 million; full-year 2026 revenue guidance raised to $3.4-3.8 billion, growth midpoint lifted from ~60% to ~80%.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On the call the company put total backlog at about $20B, more than half of the data-centre portion from hyperscalers, neoclouds and colocation providers other than Oracle.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx",
+     "excerpt": "Bloom Energy, 13 Apr 2026 (BusinessWire 14 Apr): under a master services agreement Oracle intends to procure up to 2.8 gigawatts of Bloom's fuel cell systems; an initial 1.2 GW is contracted, with deployment underway and continuing into next year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "American Electric Power exercised a $2.65B option for 900 MW of Bloom fuel cells on 8 January 2026 for a Wyoming data-centre campus, and Brookfield committed $5B in October 2025 to finance Bloom-powered AI data centres.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.investing.com/news/stock-market-news/bloom-energy-stock-soars-after-aep-inks-265-billion-fuel-cell-deal-93CH-4437223",
+     "excerpt": "8 Jan 2026 (AEP disclosure, reported by Investing.com, TradingView, Fuel Cells Works): AEP's unregulated subsidiary exercised its option for a further 900 MW of Bloom solid-oxide fuel cells, a $2.65 billion agreement supporting a planned 900 MW facility in Wyoming backed by a 20-year offtake; the initial 100 MW was agreed in November 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Its guest list at Austin and Las Vegas is the audience Williams' B2B partners want in the suite, and a partner with a $3.4-3.8B revenue base is a credible multi-year counterparty.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-First-Quarter-2026-Results-and-Raises-Full-Year-2026-Guidance/default.aspx",
+     "excerpt": "Bloom Energy Q1 2026 results, 28 Apr 2026 (8-K exhibit 99.1): revenue $751.1 million, up 130.4% from $326.0 million; product revenue $653.3 million, up 208.4%; GAAP operating income $72.2 million; full-year 2026 revenue guidance raised to $3.4-3.8 billion, growth midpoint lifted from ~60% to ~80%.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

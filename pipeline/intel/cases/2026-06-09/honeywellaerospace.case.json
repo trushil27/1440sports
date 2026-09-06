@@ -1,0 +1,343 @@
+{
+ "run_date": "2026-06-09",
+ "signal_date": "2026-06-05",
+ "stem": "honeywellaerospace",
+ "number": 199,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Honeywell Aerospace",
+  "signal_date": "2026-06-05",
+  "score": 71,
+  "tier": "HOT",
+  "track": 1,
+  "person": "James Currier",
+  "role": "President & Chief Executive Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+  "industry_meta": "Aerospace · Avionics, Propulsion & Electrification · Phoenix, Arizona",
+  "recommended_team": "Aston Martin Aramco F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "spin-off listing",
+  "key_facts": {
+   "funding": "Spin-off from Honeywell: record date 15 Jun 2026, distribution 29 Jun 2026, one Honeywell Aerospace share for every two Honeywell shares; Nasdaq HONA regular-way from 29 Jun (when-issued HONAV from about 15 Jun)",
+   "investors": "Distributed pro rata to Honeywell shareholders; no external capital raise",
+   "revenue": "2025 net sales $17.4B, up 12% organically (Honeywell fourth-quarter release, 29 Jan 2026)",
+   "trigger": "Honeywell board sets the record date and the 29 Jun 2026 distribution for the Honeywell Aerospace spin-off, announced 5 Jun 2026",
+   "competitor_signal": "Boeing sits on the Alpine roster and Atlas Air on Aston Martin's; Bombardier has departed Aston Martin; no aerospace engines-or-avionics supplier is on any F1 car",
+   "strategic_hook": "Honeywell's 1-megawatt aerospace generator ran at 1.02 MVA and 900 kW continuously at about 97% efficiency and 8 kW/kg and doubles as a motor: an electrification story for F1's hybrid era",
+   "us_presence": "Headquarters Phoenix, Arizona; Nasdaq listing",
+   "alumni_match": null,
+   "taxonomy_category": "A2",
+   "ops_fit_note": "Electrification and thermal-management engineering exchange; the power unit itself is Honda's and homologated",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 18,
+   "brand_fit": 12,
+   "urgency": 13,
+   "ops_fit": 11,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 1
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "currier"
+   ],
+   "url": "https://www.honeywell.com/us/en/press/2025/11/honeywell-announces-ceo-and-board-chair-for-aerospace-spin-off",
+   "excerpt": "Honeywell, Nov 2025: Jim (James) Currier named President and Chief Executive Officer of Honeywell Aerospace; president and CEO of Honeywell Aerospace Technologies since August 2023, almost two decades in senior Honeywell roles. Form 10-12B: James Currier, 60, President and CEO since the spin-off.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "5 june",
+    "5 jun",
+    "15 june",
+    "15 jun",
+    "record date",
+    "29 june",
+    "29 jun",
+    "hona",
+    "honav",
+    "one-for-two",
+    "every two",
+    "12:01",
+    "spin-off listing",
+    "distribution",
+    "pro rata",
+    "shareholders",
+    "no external"
+   ],
+   "url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "excerpt": "Honeywell, 5 Jun 2026: the Board set 15 June 2026 as the record date for the spin-off of Honeywell Aerospace; distribution expected at 12:01 a.m. New York time on 29 June 2026 at one Honeywell Aerospace share for every two Honeywell shares; when-issued trading on Nasdaq as HONAV from on or about 15 June, regular-way trading as HONA from 29 June; a Honeywell reverse stock split accompanies the separation. Investing.com (5 Jun) confirms.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$17.4b",
+    "12%",
+    "aftermarket",
+    "defence",
+    "defense",
+    "net sales"
+   ],
+   "url": "https://www.honeywell.com/us/en/press/2026/01/honeywell-reports-fourth-quarter-2025-results-with-adjusted-sales-and-adjusted-earnings-above-high-end-of-guidance-issues-2026-outlook",
+   "excerpt": "Honeywell fourth-quarter 2025 release (29 Jan 2026) and the Aerospace 8-K: Aerospace Technologies 2025 net sales $17,404 million, up 13% reported and 12% organic versus 2024, led by commercial aftermarket and defence and space; fourth-quarter organic growth 21%.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "jepsen",
+    "buddecke",
+    "marinick",
+    "degraff",
+    "deere",
+    "no chief marketing",
+    "business-unit"
+   ],
+   "url": "https://www.honeywell.com/us/en/press/2026/01/honeywell-announces-cfo-business-unit-leaders-for-honeywell-aerospace",
+   "excerpt": "Honeywell, Jan 2026: Josh Jepsen joins Honeywell Aerospace as Chief Financial Officer effective 23 February 2026, previously SVP and CFO of Deere & Company; Bob Buddecke, Dave Marinick and Rich DeGraff lead the business units reporting to Currier. No chief marketing officer is named in this release, the Nov 2025 release or the Form 10 executive-officer list as summarised.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "arnold",
+    "eaton",
+    "chair"
+   ],
+   "url": "https://www.honeywell.com/us/en/press/2025/11/honeywell-announces-ceo-and-board-chair-for-aerospace-spin-off",
+   "excerpt": "Honeywell, Nov 2025: Craig Arnold, former Chairman and CEO of Eaton Corporation and lead director at Medtronic, to serve as non-executive Board Chair of Honeywell Aerospace on completion of the spin-off.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "phoenix",
+    "arizona",
+    "3 march",
+    "form 10"
+   ],
+   "url": "https://www.honeywell.com/us/en/news/press-releases/2026/03/honeywell-announces-filing-of-form-10-registration-statement-for-planned-spin-off-of-honeywell-aerospace",
+   "excerpt": "Honeywell, 3 Mar 2026: Form 10 registration statement filed with the SEC for the planned spin-off of Honeywell Aerospace, to be headquartered in Phoenix, Arizona, and listed on Nasdaq (Flight Global, Dealroom coverage).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "1-megawatt",
+    "1 megawatt",
+    "1mw",
+    "97%",
+    "8 kw/kg",
+    "1.02 mva",
+    "900 kw",
+    "generator",
+    "turbogenerator"
+   ],
+   "url": "https://www.aerospacetestinginternational.com/news/electric-hybrid/honeywells-1mw-generator-for-hybrid-electric-aircraft-passes-testing-milestone.html",
+   "excerpt": "Aerospace Testing International and Honeywell Aerospace's own pages: Honeywell's 1-megawatt generator for hybrid-electric aircraft operated at 1.02 MVA and ran continuously at 900 kW, at about 97% efficiency and roughly 8 kW/kg; the machine can also be used as a 1-megawatt motor without modification; paired with the HGT1700 APU it forms a turbogenerator that runs on biofuel, jet fuel or diesel.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "boeing",
+    "atlas air",
+    "bombardier",
+    "aramco",
+    "honda",
+    "arm",
+    "coreweave",
+    "power unit",
+    "alpine",
+    "departed"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): Aston Martin Aramco — Aramco title (through 2028), Honda power unit from 2026, Atlas Air (cargo airline), Arm, CoreWeave, NetApp, Cognizant, ServiceNow; Bombardier listed as departed. BWT Alpine — Boeing (active). No aerospace engines, avionics or propulsion supplier is on any live F1 roster.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "british gp",
+    "5 july",
+    "5 jul",
+    "austrian gp",
+    "28 june",
+    "28 jun",
+    "austin",
+    "las vegas",
+    "miami"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar; silverstone.co.uk, racingnews365.com)",
+   "excerpt": "2026 F1 calendar table with dates from silverstone.co.uk and RacingNews365: Austrian GP on 28 June, British GP at Silverstone on 5 July 2026; United States GP (Austin) in late October and Las Vegas GP in November; Miami GP in May.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Honeywell Aerospace",
+  "industry_meta": "Aerospace · Avionics, Propulsion & Electrification",
+  "hq": "Phoenix, Arizona",
+  "ticker": "Nasdaq: HONA (regular-way from 29 Jun 2026; HONAV when-issued from 15 Jun)",
+  "deck": "Honeywell Aerospace, the $17.4B-revenue avionics, engines and electrification supplier, becomes a standalone Nasdaq company on 29 June 2026: Honeywell's board set the 15 June record date on 5 June, and the separation gives one of aviation's biggest suppliers its own balance sheet, ticker and brand budget for the first time.",
+  "score": 71,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Aston Martin Aramco F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Honeywell announced on 5 June that its board has set 15 June 2026 as the record date for the spin-off of Honeywell Aerospace, with distribution on 29 June on a one-for-two basis; the shares trade when-issued as HONAV from around 15 June and regular-way on Nasdaq as HONA from 29 June. The business reported 2025 net sales of $17.4B, up 12% organically, led by commercial aftermarket and defence. Headquartered in Phoenix, it is led by Jim Currier as President and CEO with Josh Jepsen as CFO, chaired by former Eaton chief Craig Arnold.",
+  "the_case_p2": "Aerospace is already on the grid: Boeing sits on the Alpine, Atlas Air on the Aston Martin, and Bombardier, a Honeywell customer, has left the Aston Martin roster. The engines-and-avionics tier has never taken a seat. That leaves a supplier-grade engineering story, from megawatt electric machines to thermal management, without a grid home just as Formula 1's new hybrid era begins and a British team starts its Honda power-unit years.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Regular-way trading starts 29 June, the day after the Austrian GP; the British GP on 5 July is the company's first race weekend as an independent listing. A spin-off's first hundred days set its brand, and the marketing budget is now Honeywell Aerospace's own to spend.",
+  "why_team_label": "WHY ASTON MARTIN ARAMCO F1 TEAM",
+  "why_team_para": "Aston Martin is the one team where an aerospace supplier's story is already on the car: Aramco as title partner, Honda supplying the power unit from 2026, Atlas Air in the cargo-aviation lane, Arm and CoreWeave on compute. Bombardier's business-jet slot has departed, so the aerospace-engineering lane at Silverstone is open. Honeywell's 1-megawatt generator, about 97% efficient and usable as a motor, speaks to the hybrid era better than any consumer brand could.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ASTON MARTIN ARAMCO F1 TEAM",
+  "value_mode": "B",
+  "value_content": "MODE B - brand launch with an engineering exchange. The car carries the new company's name through its first hundred days as a listing; hospitality at the British GP and the US rounds hosts airline, defence and investor guests. Outside the regulated power unit, Honeywell's electrical-machine and thermal-management engineers work with the Silverstone campus on cooling and test rigs: aerospace-grade know-how for the team, a technical story for Honeywell.",
+  "deal_arch_para": "Entry as Official Aerospace Technology Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, the company's first three years as a listed business. Estimated $5-8M a year. Scope: sidepod placement, the engineering exchange above, hospitality at the British GP and the US rounds for airline, defence and investor guests.",
+  "decision_maker_name": "James Currier",
+  "decision_maker_role": "President & CEO, Honeywell Aerospace",
+  "decision_maker_bio": "Currier, 60, has run Honeywell's aerospace business since August 2023 and led it into the spin-off. Path: Josh Jepsen, CFO since February 2026 (ex-Deere), and business-unit presidents Bob Buddecke, Dave Marinick and Rich DeGraff. No chief marketing officer is named in the spin-off filings.",
+  "opening_angle_intro": "Lead with the first race weekend as an independent company.",
+  "opening_angle_quote": "&ldquo;Jim, Honeywell Aerospace trades on its own from 29 June and the British GP is its first race weekend as a listed company. Aston Martin's aerospace lane is open and the hybrid era needs your electrification story. 25 minutes before the record date?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Listing 29 Jun; British GP inside window."
+   ],
+   [
+    "CAPACITY",
+    "18",
+    "/ 20",
+    "$17.4B 2025 sales, 12% organic growth."
+   ],
+   [
+    "BRAND FIT",
+    "12",
+    "/ 20",
+    "B2B and defence supplier; precision halo only."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "Listing is a hard date; no marketing owner."
+   ],
+   [
+    "OPS FIT",
+    "11",
+    "/ 20",
+    "Electrification adjacency; power-unit rules limit."
+   ]
+  ],
+  "risks": [
+   [
+    "NO MARKETING OWNER",
+    "No chief marketing officer is named in the Form 10 or the spin-off releases; no obvious sponsor sits below the CEO.",
+    "Go straight to Currier with a spin-off brand-launch framing and ask who owns brand."
+   ],
+   [
+    "SUPPLIER, NOT SPONSOR",
+    "No Honeywell Formula 1 sponsorship is on record, and the power unit is Honda's and homologated, so product cannot go on the car.",
+    "Anchor on Boeing and Atlas Air as precedents and keep the workstream outside the regulated unit."
+   ]
+  ],
+  "bottom_line": "A $17.4B business listing on its own on 29 June, an open aerospace-engineering lane at Aston Martin and a British GP a week later give Honeywell Aerospace a clean brand-launch play. It scores 71: no marketing owner is named, the halo is B2B, and the power-unit rules limit what can run on the car.",
+  "signals": [
+   "spinoff",
+   "public_listing",
+   "category_whitespace"
+  ],
+  "footer_company": "HONEYWELL AEROSPACE",
+  "footer_date": "9 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 5 June 2026 Honeywell's board set 15 June as the record date for the spin-off of Honeywell Aerospace and confirmed distribution at 12:01 a.m. New York time on 29 June, one Honeywell Aerospace share for every two Honeywell shares. When-issued trading as HONAV starts on or about 15 June; regular-way trading on Nasdaq as HONA on 29 June. The Form 10 was filed on 3 March."
+    },
+    {
+     "label": "A brand that must stand on its own",
+     "text": "Until 29 June the aerospace business has been a segment of a conglomerate; from that day it has its own investors, its own annual report and its own marketing budget. Spin-offs spend their first hundred days establishing an identity with investors, customers and recruits, and that is the budget a team partnership would come from."
+    },
+    {
+     "label": "Scale, honestly",
+     "text": "The business reported 2025 net sales of $17.4B, up 12% organically, led by commercial aftermarket and defence and space. Capacity is not the question; appetite is. No Honeywell Formula 1 sponsorship is on record and no chief marketing officer is named, which is why the score stops at 71 despite a hard listing date inside the window."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Regular-way trading begins the day after the Austrian GP on 28 June; the British GP on 5 July is the first race weekend as an independent company, at the home of the recommended team. The United States GP in Austin and the Las Vegas GP follow in the autumn near the Phoenix headquarters and the US investor base."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Aston Martin Aramco carries Aramco as title partner, Honda supplying the power unit from 2026, Atlas Air in the cargo-aviation lane, and Arm, CoreWeave, NetApp, Cognizant and ServiceNow on technology. Bombardier, a business-jet maker and Honeywell customer, has departed, so no aerospace-engineering brand is on the car: Official Aerospace Technology Partner is a clean category."
+    },
+    {
+     "label": "The only aerospace-shaped roster",
+     "text": "Boeing sits on the Alpine, which closes that car to a supplier that sells to Boeing and its rivals alike. No other team carries an aerospace or aviation story on the livery; Aston Martin already has one through Atlas Air and its former business-jet partnership, so the audience and the hospitality format exist."
+    },
+    {
+     "label": "The hybrid-era engineering story",
+     "text": "Formula 1's 2026 rules lean harder on the electrical side of the power unit. Honeywell's 1-megawatt aerospace generator ran at 1.02 MVA and 900 kW continuously at about 97% efficiency and roughly 8 kW/kg, and doubles as a motor. The regulated power unit is Honda's, but thermal management, test rigs and electrical engineering exchange with the Silverstone campus are open ground."
+    },
+    {
+     "label": "UK and US at once",
+     "text": "A Phoenix-headquartered, Nasdaq-listed company with a British team gives the US rounds a home-market story and the British GP a first-weekend stage; Honeywell Aerospace's UK sites and European airline customers give the Silverstone hospitality a customer list."
+    }
+   ],
+   "value": [
+    {
+     "label": "Brand launch (Mode B)",
+     "text": "A new listed company's identity told through precision engineering on a global broadcast in its first hundred days: the Honeywell Aerospace name on the car from the British GP, the first race weekend after the 29 June listing, with the US rounds in Austin and Las Vegas timed to the first results as an independent company."
+    },
+    {
+     "label": "Engineering exchange, outside the regulated unit",
+     "text": "Thermal-management and electrical-machine know-how from the 1-megawatt generator programme applied to test rigs, cooling and energy-store integration at the AMR Technology Campus, with the homologated power unit left to Honda; a joint engineering series for the team's channels."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Airline, defence, business-aviation and institutional-investor guests at the British GP and the US rounds, the audience Aston Martin's Aramco and technology partners already court, plus a reference story for the team's own aerospace-grade supply chain."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Aerospace Technology Partner designation, sidepod placement, British GP and US-round hospitality, driver and engineering access, and a first-year brand-launch activation timed to the 29 June listing."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Boeing is on the roster; an aerospace OEM occupies the lane and is a Honeywell customer."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "A credible alternative for a Phoenix company, not chosen: the aerospace-engineering story and the departed business-jet slot sit at Silverstone, and Cadillac's inaugural roster is being built around AI and consumer brands."
+    },
+    {
+     "team": "McLaren F1 Team · Visa Cash App Racing Bulls",
+     "reason": "Etihad Airways (McLaren) and Hahn Air (Racing Bulls) hold aviation lanes on crowded technology rosters; Siemens covers industrial at Racing Bulls."
+    },
+    {
+     "team": "Atlassian Williams Racing · Audi · Haas · Ferrari · Mercedes · Red Bull",
+     "reason": "Open but not chosen: none carries an aviation or aerospace story on the car for a supplier brand to join."
+    }
+   ],
+   "ask": "A 25-minute call with Jim Currier before the 15 June record date to ask who owns brand at the new company, test appetite for a first-race-weekend announcement at the British GP, and size an Official Aerospace Technology Partner entry against Aston Martin's 2027 roster."
+  }
+ },
+ "note": "# Honeywell Aerospace → Aston Martin Aramco F1 Team — verification log (N° 199, 9 Jun 2026)\n\nBuilt in-session at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) with Claude acting as\nscanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor\ntable, 13-rule audit and the 2-page render ran as code. The case sits on the row's date, 9 Jun 2026,\nin rebuild mode; `honeywellaerospace.run.json` is the case record `python -m intel.backfill --cases`\nimports.\n\n**Sandbox limitation, stated plainly:** direct fetches of honeywell.com, investor.honeywell.com,\nsec.gov and prnewswire.com were blocked by the egress proxy. Each claim below was checked against the\nsearch summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED\nuntil a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, re-dated\n\nThe thin row cited a valuesense.io aggregator and \"Form 10-12B\". The Form 10 was filed on 3 Mar 2026,\n98 days before the row date and therefore outside the 90-day window, and the separation itself\n(29 Jun) and the board approval (15 Jun) fall after the row date. The trigger inside the window is\nHoneywell's release of **5 Jun 2026** setting the 15 Jun record date, the 29 Jun distribution, the\none-for-two ratio and the HONAV/HONA trading dates (Investing.com confirms, 5 Jun). Nothing dated\nafter 9 Jun is used in the brief.\n\n## Score: 71, value section on, two risks\n\nThe thin row said 69, and a first pass anchored on it. Re-scored against the spec's own rubric:\na dated listing (29 Jun, 20 days from the row) is a hard external date, so timing 17 and urgency 13\nrather than 16 and 12; capacity is obvious ($17.4B 2025 sales). What holds it back is unchanged:\nbrand fit is a B2B/B2G halo (12), no marketing owner is named, and the power unit is Honda's and\nhomologated, so the workstream is an engineering exchange around the regulated unit rather than\nproduct on the car (ops fit 11). The value section is therefore MODE B (brand launch) with a bounded\nengineering exchange, not an operational claim. The pipeline's production gate (`MD_THRESHOLD`, 70)\nis unchanged; a 69 would not have produced a record.\n\n## Ledger (claims verified against search summaries of the primary pages)\n\n| Claim | Status | Evidence |\n|---|---|---|\n| James (Jim) Currier, 60, President & CEO; ran Aerospace Technologies since Aug 2023 | VERIFIED | Honeywell release Nov 2025; Form 10 officer list |\n| 5 Jun 2026 release: record date 15 Jun; distribution 29 Jun, 12:01 a.m.; 1-for-2; HONAV/HONA | VERIFIED | honeywell.com release; Investing.com |\n| 2025 net sales $17.4B (+12% organic), led by aftermarket and defence | VERIFIED | Honeywell Q4 2025 release, 29 Jan 2026 |\n| Josh Jepsen CFO (from 23 Feb 2026, ex-Deere); BU leaders Buddecke, Marinick, DeGraff | VERIFIED | Honeywell release Jan 2026 |\n| Craig Arnold non-executive chair (ex-Eaton) | VERIFIED | Honeywell release Nov 2025 |\n| HQ Phoenix; Form 10 filed 3 Mar 2026 | VERIFIED | Honeywell release Mar 2026; Flight Global |\n| 1 MW generator: 1.02 MVA, 900 kW continuous, ~97% efficiency, ~8 kW/kg, doubles as motor | VERIFIED | Aerospace Testing International; Honeywell Aerospace pages |\n| Grid occupancy: Boeing (Alpine), Atlas Air (Aston Martin), Bombardier departed, Aramco, Honda PU, Arm, CoreWeave | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Austrian GP 28 Jun; British GP 5 Jul 2026; Austin, Las Vegas in the autumn | VERIFIED | calendar table + silverstone.co.uk / RacingNews365 |\n\n## Screen-outs and things not claimed\n\n- **No chief marketing officer is named** anywhere reached; the brief says so rather than inventing a marketing counterpart.\n- **No motorsport tie found** for Currier, Jepsen or Arnold; `leadership_ties` is empty after checking. (Garrett Motion, a former Honeywell turbocharger business now on Ferrari's roster, is independent since 2018 and not claimed as a tie.)\n- **No Honeywell F1 sponsorship found** (checked); stated as a risk, not a fact about appetite.\n- **Deal size ($5-8M a year) is an ESTIMATE**, labelled as such.\n- **Parent rename** (\"Honeywell Technologies\") is not used; not needed and not confirmed from a primary page.\n\n## Decision path\n\nCEO Jim Currier (owner) → CFO Josh Jepsen → chair Craig Arnold. Business-unit presidents Buddecke, Marinick and DeGraff are the technical counterparts. Ask on the first call who owns brand.\n"
+}

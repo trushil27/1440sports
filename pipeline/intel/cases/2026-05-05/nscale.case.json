@@ -1,0 +1,416 @@
+{
+ "run_date": "2026-05-05",
+ "signal_date": "2026-03-09",
+ "stem": "nscale",
+ "number": 231,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Nscale",
+  "signal_date": "2026-03-09",
+  "score": 77,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Josh Payne",
+  "role": "Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.nscale.com/press-releases/nscale-series-c",
+  "industry_meta": "AI Infrastructure · Sovereign GPU Cloud / Data-Centre Builder · London",
+  "recommended_team": "Atlassian Williams Racing",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$2B Series C led by Aker ASA and 8090 Industries at a $14.6B valuation, announced 9 Mar 2026, the largest Series C in European history (company statement)",
+   "investors": "Aker ASA, 8090 Industries (leads); Astra Capital Management, Citadel, Dell, Jane Street, Lenovo, Linden Advisors, Nokia, NVIDIA, Point72",
+   "revenue": null,
+   "trigger": "$2B Series C at a $14.6B valuation announced 9 Mar 2026; Goldman Sachs and JPMorgan hired for an IPO planned for the second half of 2026 (DCD, reported)",
+   "competitor_signal": "CoreWeave at Aston Martin (Official AI Cloud Computing Partner); Core Scientific and TWG AI at Cadillac; Oracle at Red Bull; Microsoft at Mercedes and at Alpine; Google Cloud and Dell at McLaren; HP and IBM at Ferrari; Williams carries no cloud or GPU-compute partner",
+   "strategic_hook": "Microsoft signed a $6.2B five-year capacity contract at Narvik, Norway (Sep 2025) and holds capacity agreements in the UK, Texas and Portugal; Stargate UK with OpenAI and NVIDIA (16 Sep 2025); the Loughton campus is to house 23,040 NVIDIA GB300 GPUs from Q1 2027 as the UK's largest AI supercomputer",
+   "us_presence": "Cedarvale, Texas: a 10-year lease on Ionic Digital's 234MW facility (Oct 2025, reported at about $2B) to deploy about 104,000 NVIDIA GB300 GPUs for Microsoft from Q3 2026",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: sovereign UK GPU capacity for CFD surrogates, simulation and analytics; Williams runs Claude and VAST but has no compute partner",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 14,
+   "capacity": 19,
+   "brand_fit": 15,
+   "urgency": 14,
+   "ops_fit": 15,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "josh payne",
+    "payne"
+   ],
+   "url": "https://www.nscale.com/about",
+   "excerpt": "Nscale about page (search summary; nscale.com egress-blocked) and LinkedIn: Joshua (Josh) Payne, Founder and CEO; Nscale formed in May 2024 as a spin-out from Arkon Energy, headquartered in London (Wikipedia; Computer Weekly).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$2b",
+    "$14.6b",
+    "aker",
+    "8090",
+    "9 mar",
+    "9 march",
+    "series c",
+    "astra",
+    "citadel",
+    "dell",
+    "jane street",
+    "lenovo",
+    "linden",
+    "nokia",
+    "nvidia",
+    "point72",
+    "largest series c",
+    "funding round"
+   ],
+   "url": "https://www.nscale.com/press-releases/nscale-series-c",
+   "excerpt": "Nscale press release (also PR Newswire), 9 Mar 2026: $2B Series C led by Aker ASA and 8090 Industries at a $14.6B valuation, the largest Series C in European history, with Astra Capital Management, Citadel, Dell, Jane Street, Lenovo, Linden Advisors, Nokia, NVIDIA and Point72; funds vertically integrated AI infrastructure across Europe, North America and Asia. CNBC (9 Mar 2026) and Sifted carry the same figures.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "goldman",
+    "jpmorgan",
+    "ipo",
+    "listing",
+    "second half"
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/neocloud-nscale-hires-goldman-sachs-and-jpmorgan-as-it-plans-ipo/",
+   "excerpt": "DCD, Feb 2026 (BeBeez 4 Feb 2026): Nscale has hired Goldman Sachs and JPMorgan as it plans an IPO in the second half of 2026 — reported, not company-announced.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1.1b",
+    "series b",
+    "september 2025",
+    "25 sep",
+    "$6.2b",
+    "narvik",
+    "five-year",
+    "$285m",
+    "9.3%"
+   ],
+   "url": "https://www.nscale.com/press-releases/nscale-series-b",
+   "excerpt": "Nscale, 25 Sep 2025: $1.1B Series B, the largest in UK and European history, led by Aker ASA (commitment $285M in cash and Narvik land in kind, 9.3% fully diluted) with Sandton Capital, Blue Owl, Dell, Fidelity, G Squared, Nokia, NVIDIA, Point72 and T.Capital. Microsoft agreed a $6.2B, five-year contract for compute in Norway with the Nscale-Aker venture at Narvik (DCD; Aker release).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "stargate",
+    "openai",
+    "loughton",
+    "23,040",
+    "gb300",
+    "q1 2027",
+    "58,640",
+    "300,000",
+    "16 sep",
+    "uk's largest"
+   ],
+   "url": "https://www.nscale.com/press-releases/nscale-uk-ai-infrastructure-announcement",
+   "excerpt": "Nscale, 16 Sep 2025 (GlobeNewswire; HPCwire): UK AI infrastructure commitment with Microsoft, NVIDIA and OpenAI. The Loughton AI Campus with Microsoft will be the UK's largest AI supercomputer when live, 50MW scalable to 90MW, initially 23,040 NVIDIA GB300 GPUs delivered in Q1 2027. Stargate UK with OpenAI and NVIDIA: OpenAI to explore offtake of up to 8,000 GPUs in Q1 2026, scalable to 31,000, across sites including Cobalt Park in the North East. Up to 58,640 NVIDIA GPUs across the UK within a plan for 300,000 globally.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "texas",
+    "cedarvale",
+    "ionic",
+    "234mw",
+    "104,000",
+    "q3 2026",
+    "10-year",
+    "ward county",
+    "north carolina",
+    "portugal"
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/nscale-to-supply-microsoft-with-additional-100000-nvidia-gpus-in-us-and-europe/",
+   "excerpt": "DCD / KSST, Oct 2025: Nscale took a 10-year triple-net lease on the full 234MW of Ionic Digital's Cedarvale facility in Ward County, Texas (valued at about $2B, reported) to deploy about 104,000 NVIDIA GB300 GPUs for Microsoft's AI services from Q3 2026, with Microsoft holding an option on a 700MW second phase from late 2027. Microsoft and Nscale also hold capacity agreements in the UK, Texas and Portugal (North State Journal, Apr 2026).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "hurwitz",
+    "takhtajan",
+    "chappell",
+    "coo",
+    "cfo",
+    "president of ai infrastructure",
+    "april 2026",
+    "december 2025",
+    "no chief marketing",
+    "no cmo",
+    "havard",
+    "huisman",
+    "may 2024",
+    "arkon"
+   ],
+   "url": "https://www.nscale.com/press-releases/nscale-appoints-lauren-hurwitz",
+   "excerpt": "Nscale press releases: Lauren Hurwitz appointed COO (28 Apr 2026), completing additions including Alice Takhtajan as CFO (26 Dec 2025), Nidhi Chappell as President of AI Infrastructure (4 Dec 2025; ex-Microsoft CVP Azure AI infrastructure), Osvaldo Morales as Deputy President and Stuart Pann as Senior Advisor; Karl Havard (COO) and Ron Huisman (CFO) had joined in Oct 2024, Huisman moving to Chief Accounting and Finance Operations Officer. No chief marketing officer is listed on any leadership page found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "london",
+    "glomfjord",
+    "norway"
+   ],
+   "url": "https://en.wikipedia.org/wiki/Nscale",
+   "excerpt": "Nscale is headquartered in London; formed May 2024 out of Arkon Energy; operates a 30MW data centre at Glomfjord Industrial Park, Norway, with Narvik and Fauske sites developed with Aker (DCD).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "claude",
+    "thinking partner",
+    "february",
+    "3 feb"
+   ],
+   "url": "https://www.williamsf1.com/articles/0f1eece4-e632-49c9-a767-148159bbbf87/anthropic-atlassian-williams-f1-team-multi-year-partnership-claude-official-thinking-partner",
+   "excerpt": "Atlassian Williams F1 Team, 2026: multi-year partnership with Anthropic naming Claude the team's Official Thinking Partner; Claude branding on the FW48 from the 3 Feb livery reveal; Claude works alongside Williams' engineers, strategists and operations teams.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "coreweave",
+    "may 2025",
+    "crusoe",
+    "fluidstack"
+   ],
+   "url": "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+   "excerpt": "Aston Martin Aramco, 22 May 2025: CoreWeave joins as Official AI Cloud Computing Partner in a multi-year partnership. Jane Street, an Nscale Series C investor, has also backed CoreWeave, Crusoe and Fluidstack (Forbes, 3 Sep 2026; TechCrunch, Apr 2026).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "vast",
+    "keeper",
+    "atlassian",
+    "airia",
+    "brillio",
+    "core scientific",
+    "twg ai",
+    "oracle",
+    "microsoft",
+    "google cloud",
+    "dell",
+    "hp ",
+    "ibm",
+    "hewlett",
+    "no cloud",
+    "no compute",
+    "data-native"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Williams — Atlassian title, VAST (data platform), Keeper (identity security), Airia, Brillio, Claude (joined 2026); no cloud or GPU-compute partner. Cadillac: Core Scientific, TWG AI. Red Bull: Oracle. Mercedes and Alpine: Microsoft. McLaren: Google Cloud, Dell. Ferrari: HP, IBM. Aston Martin: CoreWeave. Audi: Hewlett Packard Enterprise (departed, last 12 months).",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "british",
+    "silverstone",
+    "austin",
+    "las vegas",
+    "united states",
+    "july"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: British GP (Silverstone, round 11, July), United States GP (Austin, round 19, late October), Las Vegas GP (round 22, November).",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Nscale",
+  "industry_meta": "AI Infrastructure · Sovereign GPU Cloud / Data-Centre Builder",
+  "hq": "London",
+  "ticker": "Private ($14.6B; $2B Series C, Mar 2026)",
+  "deck": "Nscale, the London-based AI-infrastructure builder behind Stargate UK and Microsoft's Norwegian and Texan capacity, closed a $2B Series C led by Aker ASA and 8090 Industries at a $14.6B valuation on 9 March 2026, the largest Series C in European history, with an IPO reported for the second half.",
+  "score": 77,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Atlassian Williams Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 9 March 2026 Nscale announced a $2B Series C led by Aker ASA and 8090 Industries at a $14.6B valuation, with Astra Capital Management, Citadel, Dell, Jane Street, Lenovo, Linden Advisors, Nokia, NVIDIA and Point72. It follows a $1.1B Series B in September 2025, the month Microsoft signed a $6.2B, five-year capacity contract at Narvik. Nscale formed only in May 2024 as a spin-out from Arkon Energy; in February DCD reported it had hired Goldman Sachs and JPMorgan for a listing in the second half of 2026. <font name='Poppins-Bold' size='9.5'>BRITAIN'S SOVEREIGN COMPUTE CHAMPION, PRE-IPO.</font>",
+  "the_case_p2": "The grid has already priced the neocloud: CoreWeave became Aston Martin Aramco's Official AI Cloud Computing Partner in May 2025, Core Scientific and TWG AI opened Cadillac's roster, and Jane Street, an Nscale investor, has backed CoreWeave, Crusoe and Fluidstack. Every hyperscaler seat is taken, by Oracle, Microsoft, Google Cloud and HP. The one British company building compute at this scale has no seat, and its home race is in July.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series C closed on 9 March and an IPO is reported for the second half of 2026; a listed-company brand is built before the roadshow, not after. The British GP at Silverstone in July is Nscale's home race, and the Loughton GPUs land in the first quarter of 2027.",
+  "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+  "why_team_para": "Williams runs the most data-native roster on the grid: Atlassian as title partner, VAST Data for the data platform, Keeper for identity, Airia and Brillio, and since February Claude as Official Thinking Partner inside strategy and car development. It has no cloud or GPU-compute partner. Nscale is the British company building Stargate UK and Microsoft's capacity; Williams is the British team rebuilding on data, and Silverstone is the home race for both. A sovereign-compute story belongs on a British car.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Work outside the aero-testing restrictions is compute-bound: CFD surrogates, driver-in-the-loop and strategy simulation, telemetry and video analytics between sessions. Nscale supplies UK-hosted GPU capacity on demand, so the team's data stays in the country and no cost-cap capital goes on hardware; it is the layer beneath Claude and VAST. In return: a named compute partnership and Silverstone and US-round hospitality for Nscale's hyperscaler and capital-markets audience.",
+  "deal_arch_para": "Entry as Official AI Compute Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the listing and the Loughton and Texas ramps. Estimated $5-8M a year, part in compute credits. Scope: engine-cover or sidepod placement, naming of the team's compute environment, British GP and Austin hospitality, engineering content on sovereign compute.",
+  "decision_maker_name": "Josh Payne",
+  "decision_maker_role": "Founder & CEO, Nscale",
+  "decision_maker_bio": "Payne founded Nscale in May 2024 out of Arkon Energy and has led every raise; a first sports partnership is his call. Path: Lauren Hurwitz, COO since April 2026; Alice Takhtajan, CFO since December 2025; Nidhi Chappell, President of AI Infrastructure. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the home race and the listing.",
+  "opening_angle_quote": "&ldquo;Josh, CoreWeave took its seat at Aston Martin in the year it listed. Williams runs Claude and VAST with no compute partner, and Silverstone is your home race. 25 minutes before the British GP to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "14",
+    "/ 20",
+    "Round closed 9 Mar; British GP in July."
+   ],
+   [
+    "CAPACITY",
+    "19",
+    "/ 20",
+    "$2B raised at $14.6B; $3B-plus in a year."
+   ],
+   [
+    "BRAND FIT",
+    "15",
+    "/ 20",
+    "Sovereign-compute archetype; B2B brand."
+   ],
+   [
+    "URGENCY",
+    "14",
+    "/ 20",
+    "IPO reported for H2; no hard date."
+   ],
+   [
+    "OPS FIT",
+    "15",
+    "/ 20",
+    "MODE A: UK-hosted GPU capacity for simulation."
+   ]
+  ],
+  "risks": [
+   [
+    "IPO-YEAR SCRUTINY",
+    "A pre-listing company may defer discretionary brand spend until after pricing.",
+    "Position the deal as the listed-company brand platform, priced now and activated for 2027."
+   ],
+   [
+    "A CROWDED ARCHETYPE",
+    "CoreWeave, Core Scientific, Crusoe and Fluidstack are all courting or holding grid seats.",
+    "Own the sovereign-UK angle: the only British neocloud at this scale, on a British team with an open compute lane."
+   ]
+  ],
+  "bottom_line": "A $2B Series C at $14.6B, Microsoft, OpenAI and NVIDIA as anchor partners and a reported second-half listing put Nscale at peak brand-investment authority with its home race in July. Williams runs the most data-native roster on the grid with no compute partner, and the British angle is one no rival neocloud can claim.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "ipo_window"
+  ],
+  "footer_company": "NSCALE",
+  "footer_date": "5 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 9 March 2026 Nscale announced a $2B Series C led by Aker ASA and 8090 Industries at a $14.6B valuation, which the company calls the largest Series C in European history, with Astra Capital Management, Citadel, Dell, Jane Street, Lenovo, Linden Advisors, Nokia, NVIDIA and Point72 participating. The funds go to vertically integrated AI infrastructure across Europe, North America and Asia."
+    },
+    {
+     "label": "Three billion dollars in six months",
+     "text": "The $1.1B Series B of 25 September 2025, led by Aker with Dell, Fidelity, Nokia, NVIDIA and Point72, was itself the largest in UK and European history; the Series C followed within six months. A company that has raised more than $3B in half a year, from a standing start in May 2024, is building a public-company brand whether it has planned one or not."
+    },
+    {
+     "label": "The listing",
+     "text": "DCD reported in February 2026 that Nscale had hired Goldman Sachs and JPMorgan for an IPO planned for the second half of 2026. That is press-reported, not company-announced, and the brief says so. If it holds, the brand a sponsorship builds is the one institutional investors meet on the roadshow, and CoreWeave's Aston Martin seat in its own listing year is the precedent."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The British GP at Silverstone in July is inside the action horizon and is the home race for a London company and a Grove team. Microsoft's Texas deliveries from Cedarvale begin in the third quarter of 2026 and the Loughton GB300s land in the first quarter of 2027; the United States GP in Austin in late October and Las Vegas in November sit between those milestones."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Williams carries Atlassian as title partner, VAST Data for the data platform, Keeper for identity security, Airia and Brillio on the technology side, and Claude as Official Thinking Partner since the February livery reveal. There is no cloud, GPU or AI-compute partner on the roster: Official AI Compute Partner is a clean category."
+    },
+    {
+     "label": "The British story",
+     "text": "Nscale is the London company building Stargate UK with OpenAI and NVIDIA and the Loughton campus with Microsoft, the UK's largest AI supercomputer when live. Williams is the British team rebuilding around data. Sovereign compute on a British car, announced at Silverstone, is a narrative no US neocloud can borrow."
+    },
+    {
+     "label": "A team that will use the product",
+     "text": "Williams' revival is data-led: Claude sits in strategy and engineering, VAST holds the data. Elastic GPU capacity for surrogate models, simulation and analytics is consumed in the factory, and a UK-hosted supplier keeps the team's data in-country, which is what separates a technology partner from a logo."
+    },
+    {
+     "label": "Why not the other open seats",
+     "text": "Haas and Racing Bulls also lack a compute partner, but neither offers the British home race, the data-native roster or the Claude and VAST stack that make the workstream real from day one. Aston Martin, Cadillac, Red Bull, Mercedes, Alpine, McLaren and Ferrari are ruled out on direct conflicts."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Compute for the work outside the aerodynamic-testing restrictions: machine-learning surrogates for CFD, driver-in-the-loop and race-strategy simulation, telemetry and video analytics between sessions. Nscale supplies it on demand from UK sites, so the team gets capacity it could not fund inside the cost cap and its data never leaves the country."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner that sells to Microsoft, OpenAI and sovereign buyers brings hyperscaler executives, bankers and institutional investors to Silverstone, Austin and Las Vegas, the audience Williams' B2B partners want in the suite."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "The model, the data platform and the compute on one car: co-produced engineering content with the Claude and VAST programmes, a factory reference customer for Nscale's enterprise sales, and a data-centre-to-pit-wall story told from Loughton and Narvik."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official AI Compute Partner designation, engine-cover or sidepod placement, naming of the team's compute environment, hospitality at the British GP and the US rounds, driver and engineering access for Nscale's channels and roadshow content."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, is a direct rival."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific and TWG AI occupy the data-centre and AI lanes on the 2026 roster."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the cloud incumbent."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team · BWT Alpine F1 Team",
+     "reason": "Microsoft holds the cloud lane at both; Nscale is a Microsoft supplier, not a Microsoft brand."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Google Cloud and Dell Technologies occupy cloud and hardware."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "HP (title) and IBM cover compute hardware and cloud services."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "Hewlett Packard Enterprise on the roster in the last 12 months; lane crowded."
+    },
+    {
+     "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+     "reason": "Open but not chosen: neither has the British home race nor the data-native stack that makes the workstream real."
+    }
+   ],
+   "ask": "A 25-minute call with Josh Payne before the British GP to confirm the listing timetable on the record, agree a Silverstone announcement window, and size an Official AI Compute Partner entry against Williams' 2027 roster."
+  }
+ },
+ "note": "# Nscale → Atlassian Williams Racing — verification log (N° 231, row dated 5 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost for the desk row dated 5 May 2026 (batch 21). Claude acted as researcher, verifier and writer; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code via `intel.session_case`.\n\n**Sandbox limitation, stated plainly:** direct fetches of nscale.com, prnewswire.com, datacenterdynamics.com and wikipedia.org were blocked by the egress proxy. Every claim below was checked against the search summary of the primary page named as the evidence URL (Nscale's own press releases; CNBC, Sifted and DCD as secondaries). Treat each VERIFIED line as REPORTED until a person opens the link; confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nThe thin row's trigger holds: the $2B Series C at $14.6B was announced by the company on **9 Mar 2026** (the thin row said 'reported Mar 2026' with 1 Mar as a placeholder), 57 days before the row's date — inside the 90-day window. The thin row's source (Crunchbase News round-up) is secondary; the primary source is `nscale.com/press-releases/nscale-series-c` (also PR Newswire), with CNBC (9 Mar 2026) as the credible secondary.\n\n**The thin row's person was wrong.** 'Aliaksei Smirnou, CEO & Co-Founder' is not an Nscale executive on any leadership page or release found; Nscale's Founder and CEO is Josh Payne (with co-founder Nathan Townsend). Corrected.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Josh Payne, Founder & CEO; formed May 2024 out of Arkon Energy; HQ London | VERIFIED (search summary) | nscale.com/about; Wikipedia; Computer Weekly |\n| $2B Series C led by Aker ASA and 8090 Industries at $14.6B; investor list; 9 Mar 2026 | VERIFIED (search summary) | Nscale release; CNBC; Sifted |\n| IPO planned H2 2026; Goldman Sachs and JPMorgan hired | REPORTED | DCD / BeBeez, Feb 2026 |\n| $1.1B Series B, 25 Sep 2025; Aker $285M, 9.3%; Microsoft $6.2B five-year Narvik contract | VERIFIED (search summary) | Nscale release; Aker release; DCD |\n| Stargate UK; Loughton 23,040 GB300 GPUs from Q1 2027; 58,640 UK GPUs; 300,000 global | VERIFIED (search summary) | Nscale release 16 Sep 2025; NVIDIA newsroom |\n| Texas: Cedarvale 234MW lease with Ionic Digital, ~104,000 GB300s for Microsoft from Q3 2026; lease value ~$2B | VERIFIED / value REPORTED | DCD; KSST; Blockspace |\n| Lauren Hurwitz COO (28 Apr 2026); Alice Takhtajan CFO (26 Dec 2025); Nidhi Chappell President of AI Infrastructure (4 Dec 2025); no CMO | VERIFIED (search summary) | Nscale press releases; DCD |\n| Williams roster; no cloud/GPU partner; conflicts at Aston Martin, Cadillac, Red Bull, Mercedes, Alpine, McLaren, Ferrari, Audi | VERIFIED | sponsor table |\n| Claude Official Thinking Partner at Williams (Feb 2026); CoreWeave at Aston Martin (May 2025) | VERIFIED (search summary) | williamsf1.com; astonmartinf1.com |\n| British GP (July), United States GP (Austin), Las Vegas GP | VERIFIED | calendar table |\n\n## Screen-outs and things not claimed\n\n- **Leadership ties: none found** for Payne, Hurwitz, Takhtajan or Chappell.\n- **Not a placement.** N° 127 Fluidstack (6 Sep 2026) also recommends Williams' open compute lane; per the operating rules, both may point there — the human layer decides.\n- **No revenue figure** is used: none is public.\n- **Deal size ($5-8M a year) is an ESTIMATE**, labelled as such.\n- The Cedarvale lease value (~$2B) is press-reported and used only on the ledger/app page as reported.\n- Fortune (3 Jun 2026) questioned whether Nscale's build-out can match its funding; after the row date, noted here for the MD, not used in the score.\n"
+}

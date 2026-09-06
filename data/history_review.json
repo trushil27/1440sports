@@ -406,8 +406,17 @@
    "reason": "consumer apparel in talks with Formula One Management directly — not a team-partnership prospect on the B2B profile"
   },
   "2026-05-20|Primer": {
-   "status": "keep_flagged",
-   "reason": "three rows with three scores (85 / 79 / 76) for one round; keep one, re-score"
+   "status": "screened_out",
+   "reason": "below threshold: Trigger is real and fresh: a $100M Series C led by Sofina with Peak XV Partners and existing investors Balderton, Accel, ICONIQ, Tencent and Speedinvest, announced by Business Wire on 19 May 2026 (one day before the row), earmarked for AI payments and US expansion (up to 50 US hires; US to exceed one third of revenue by 2028). Primer is not a partner of any F1 or FE team and the decision path is verified (Gabriel Le Roux, Co-Founder & CEO; Pierre-Edouard Jumel, CFO; Mikael Minvielle, COO; Alex Mallet, CTO; Jade Maitland, VP Marketing; no CMO). Scored honestly it does not clear the 70 threshold: 65/100 = timing 17 (trigger 19 May; Monaco and the British GP inside the window), capacity 11 ($100M round, $170M total funding, valuation not disclosed and last set at $425M in October 2021, 274 employees, a 2023 convertible loan taken to extend runway, and the raise earmarked for hiring), brand fit 12 (B2B payments infrastructure sold to merchant finance and engineering teams; a London brand with no US identity yet; the SaaS-startup archetype 1440 has been told to stop over-indexing on), urgency 13 (US expansion is a genuine brand-build motive, but with no listing signal and no capital event beyond the round), ops fit 12 (taxonomy E2: payment orchestration for a team's store, ticketing and hospitality checkout is a real but small workstream; product_to_need 4, slot 4, on_camera 1, lock_in 3). The grid is also crowded in its lane: Visa (Red Bull, Racing Bulls), Mastercard and Airwallex (McLaren), Cash App (Racing Bulls), MoneyGram (Haas), Coinbase, Circle and CoinPayments (Aston Martin), Revolut (Audi), Barclays (Williams), eToro and Mobilize (Alpine), Nu (Mercedes); only Ferrari and Cadillac are open on payments, both at partner prices above a $100M-round company's reach. The desk scan logged Primer three times on 20 May 2026 (spec §9.4); this screen-out covers all three rows. What would change the verdict: a disclosed valuation of $1B or more, a named US headquarters or launch partner, or a US revenue share that makes a US-team partnership a budget line rather than a hope. Revisit in 2027 when US revenue is reported.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.businesswire.com/news/home/20260519989278/en/Primer-Raises-$100M-Series-C-to-Bring-AI-to-Every-Payment-and-Accelerate-US-Expansion",
+    "https://www.fintechfutures.com/venture-capital-funding/primer-100m-series-c",
+    "https://techcrunch.com/2021/10/18/primer-raises-50m-at-a-425m-valuation-for-a-framework-designed-to-help-merchants-build-more-powerful-payment-flows",
+    "https://www.primer.io/about-us",
+    "https://sacra.com/c/primer/"
+   ],
+   "screened_at": "2026-09-06"
   },
   "2026-06-22|Lime (Neutron Holdings)": {
    "status": "keep_flagged",
@@ -865,6 +874,19 @@
     "https://finance.yahoo.com/energy/articles/siemens-energy-plans-carve-transformation-031500771.html",
     "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/siemens-energy-s-10-billion-breakup-plan-puts-the-parent-s-shares-in/70004431",
     "https://fuelcellsworks.com/2026/08/26/electrolyzer/siemens-energy-is-spinning-out-its-industrial-unit-and-the-electrolyser-business-goes-with-it"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-10|Wayve": {
+   "status": "screened_out",
+   "reason": "blocklisted: Wayve is on the seeded blocklist (pipeline/intel/seeds/blocklist.json: n8n HARD_BLOCK, May 2026 export, '1440 active deals + permanent suppressions. Never sent, period.', added 21 May 2026), so the pipeline refuses to build it: the run reports the candidate as 'blocklisted - active pursuit' and CLAUDE.md's rule for companies the human layer is already pursuing is do not re-pitch cold. The research itself supports a case and is preserved in wayve.case.json (checked READY: audit pass, 22 claims, 0 uncovered): the row's trigger (the 24 Feb 2026 Series D) is 106 days before the row and stale, but an in-window trigger exists in Wayve's own release of 15 Apr 2026 (a $60M Series D extension from AMD, Arm and Qualcomm Ventures), reinforced by the Stellantis STLA AutoDrive partnership of 21 May 2026; Nissan is a Series D investor and production partner (ProPILOT from fiscal 2027; Tokyo robotaxi pilot with Uber by late 2026), which is why the row's Nissan Formula E Team recommendation holds as a warm, joint approach; decision path Alex Kendall (Co-Founder & CEO) and Max Warburton (CFO), no CMO; no motorsport tie found. Do not send. If the live blocklist is reconciled and Wayve is released, build from wayve.case.json (number 197) and re-date the trigger to the freshest company release.",
+   "reason_code": "case_screen",
+   "sources": [
+    "pipeline/intel/seeds/blocklist.json",
+    "https://wayve.ai/press/series-d-extension/",
+    "https://techcrunch.com/2026/04/15/chipmakers-amd-arm-and-qualcomm-are-all-investing-in-this-buzzy-self-driving-tech-startup/",
+    "https://wayve.ai/press/series-d/",
+    "https://www.cnbc.com/2026/02/24/wayve-fundraise-nvidia-microsoft.html"
    ],
    "screened_at": "2026-09-06"
   }

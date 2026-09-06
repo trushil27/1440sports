@@ -1,0 +1,16 @@
+{
+ "company": "Wayve",
+ "date": "2026-06-10",
+ "verdict": "blocklisted",
+ "reason": "Wayve is on the seeded blocklist (pipeline/intel/seeds/blocklist.json: n8n HARD_BLOCK, May 2026 export, '1440 active deals + permanent suppressions. Never sent, period.', added 21 May 2026), so the pipeline refuses to build it: the run reports the candidate as 'blocklisted - active pursuit' and CLAUDE.md's rule for companies the human layer is already pursuing is do not re-pitch cold. The research itself supports a case and is preserved in wayve.case.json (checked READY: audit pass, 22 claims, 0 uncovered): the row's trigger (the 24 Feb 2026 Series D) is 106 days before the row and stale, but an in-window trigger exists in Wayve's own release of 15 Apr 2026 (a $60M Series D extension from AMD, Arm and Qualcomm Ventures), reinforced by the Stellantis STLA AutoDrive partnership of 21 May 2026; Nissan is a Series D investor and production partner (ProPILOT from fiscal 2027; Tokyo robotaxi pilot with Uber by late 2026), which is why the row's Nissan Formula E Team recommendation holds as a warm, joint approach; decision path Alex Kendall (Co-Founder & CEO) and Max Warburton (CFO), no CMO; no motorsport tie found. Do not send. If the live blocklist is reconciled and Wayve is released, build from wayve.case.json (number 197) and re-date the trigger to the freshest company release.",
+ "sources": [
+  "pipeline/intel/seeds/blocklist.json",
+  "https://wayve.ai/press/series-d-extension/",
+  "https://techcrunch.com/2026/04/15/chipmakers-amd-arm-and-qualcomm-are-all-investing-in-this-buzzy-self-driving-tech-startup/",
+  "https://wayve.ai/press/series-d/",
+  "https://www.cnbc.com/2026/02/24/wayve-fundraise-nvidia-microsoft.html",
+  "https://wayve.ai/press/wayve-nissan-uber-robotaxi-collaboration/",
+  "https://www.stellantis.com/en/news/press-releases/2026/may/stellantis-and-wayve-partner-to-bring-hands-free-door-to-door-supervised-automated-driving-at-scale",
+  "https://wayve.ai/press/max-warburton-cfo/"
+ ]
+}

@@ -371,6 +371,40 @@ def merge_same_company(entries: list[dict[str, Any]]) -> None:
                 g["review"] = {"status": "merged", "of": keep["key"]}
 
 
+def propagate_case_screens(entries: list[dict[str, Any]]) -> int:
+    """A company screened out after a full check stays screened on its other thin rows.
+
+    The same company often surfaced on several days (a sweep row and a scan row). When a case
+    builder researched it and decided not to build — the trigger was stale, contradicted, or
+    the company already sits on the grid — that judgment is about the company, so the other
+    rows carry it too, naming the date that was examined. Rows that HAVE a full case are never
+    touched: a built case outranks a screen-out."""
+    from intel.normalise import company_norm
+
+    screened = {
+        company_norm(e["company"]): e
+        for e in entries
+        if e["review"].get("reason_code") == "case_screen"
+        and e["review"]["status"] == "screened_out"
+    }
+    n = 0
+    for e in entries:
+        if e["review"]["status"] not in ("keep", "keep_flagged") or e.get("page_html"):
+            continue
+        src = screened.get(company_norm(e["company"]))
+        if src is None or src is e:
+            continue
+        e["review"] = {
+            "status": "screened_out",
+            "reason": f"{src['review'].get('reason', '')} (checked on the {src['date']} row)",
+            "reason_code": "case_screen",
+            "sources": src["review"].get("sources", []),
+            "screened_at": src["review"].get("screened_at"),
+        }
+        n += 1
+    return n
+
+
 def attach_signal_checks(entries: list[dict[str, Any]], checks: dict[str, dict[str, Any]]) -> int:
     """Put each company's live fact-check on its kept row and let it decide the row's status.
     A row that already carries a full case (its own claims ledger + page) keeps its own status;
@@ -453,6 +487,7 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
         None,
     )
     merge_same_company(entries)
+    propagate_case_screens(entries)
     attach_deal_updates(entries, session.scalars(select(Sponsor)).all())
     from intel.checks import load_checks
     from intel.checks import summary as checks_summary

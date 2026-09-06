@@ -1,0 +1,383 @@
+{
+ "run_date": "2026-06-10",
+ "signal_date": "2026-06-10",
+ "stem": "tensorwave",
+ "number": 196,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "TensorWave",
+  "signal_date": "2026-06-10",
+  "score": 72,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Darrick Horton",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.businesswire.com/news/home/20260610650010/en/TensorWave-Raises-$350-Million-Series-B-at-$1.55B-Valuation-to-Expand-Global-AMD-Powered-AI-Infrastructure",
+  "industry_meta": "AI Infrastructure · GPU Cloud (all-AMD) · Las Vegas",
+  "recommended_team": "TGR Haas F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$350M Series B at a $1.55B valuation, co-led by Magnetar and AMD Ventures, announced 10 Jun 2026; prior $100M Series A (14 May 2025) co-led by the same two",
+   "investors": "Magnetar and AMD Ventures (co-leads); Maverick Silicon, Nexus Venture Partners, Western Frontier; Prosperity7 in the Series A",
+   "revenue": "Reported only: the May 2025 Series A release said TensorWave was on track to close 2025 with a revenue run rate exceeding $100M; no 2026 figure disclosed",
+   "trigger": "$350M Series B at a $1.55B valuation, announced 10 Jun 2026",
+   "competitor_signal": "CoreWeave is Official AI Cloud Computing Partner of Aston Martin Aramco; Core Scientific sits with Cadillac; Google Cloud and Dell with McLaren; Oracle with Red Bull; Microsoft with Mercedes and Alpine; AMD is itself a partner of Mercedes",
+   "strategic_hook": "The largest all-AMD GPU cloud: an 8,192-GPU Instinct MI325X training cluster live and more than 2 GW of long-term data-centre capacity secured; MI355X clusters next",
+   "us_presence": "HQ Las Vegas, Nevada; founded 2023; US data-centre capacity",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: elastic AMD Instinct GPU capacity for ML surrogates, simulation and analytics outside the aero-testing cap",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 14,
+   "brand_fit": 13,
+   "urgency": 12,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 7,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "horton",
+    "co-founder & ceo",
+    "co-founder and ceo"
+   ],
+   "url": "https://www.crunchbase.com/person/darrick-horton",
+   "excerpt": "Darrick Horton, Co-Founder and Chief Executive Officer of TensorWave (Crunchbase; company LinkedIn post 'Our CEO & Co-Founder Darrick Horton'; company blog interview); based in Las Vegas.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$350m",
+    "$1.55b",
+    "magnetar",
+    "amd ventures",
+    "10 jun",
+    "10 june",
+    "series b",
+    "funding round",
+    "maverick",
+    "nexus",
+    "western frontier",
+    "8,192",
+    "mi325x",
+    "mi355x",
+    "2 gw",
+    "2gw",
+    "all-amd",
+    "largest",
+    "quadrupl",
+    "$400m"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260610650010/en/TensorWave-Raises-$350-Million-Series-B-at-$1.55B-Valuation-to-Expand-Global-AMD-Powered-AI-Infrastructure",
+   "excerpt": "Business Wire, 10 Jun 2026 (mirrored on tensorwave.com; also HPCwire/AIwire, DCD, StorageReview): TensorWave raised $350 million in Series B funding at a $1.55 billion valuation, co-led by Magnetar and AMD Ventures with participation from Maverick Silicon, Nexus Venture Partners and Western Frontier; the capital funds next-generation AMD Instinct MI355X clusters; the company operates an 8,192-GPU AMD Instinct MI325X training cluster, one of the world's largest all-AMD GPU clouds, and has secured more than 2 GW of long-term data-centre capacity; the post-money is almost four times the $400 million valuation of the May 2025 Series A.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$100m",
+    "14 may",
+    "may 2025",
+    "series a",
+    "run rate",
+    "run-rate",
+    "prosperity7",
+    "20x"
+   ],
+   "url": "https://www.businesswire.com/news/home/20250514340458/en/TensorWave-Secures-$100-Million-Series-A-Funding-Co-Led-by-Magnetar-and-AMD-Ventures",
+   "excerpt": "Business Wire, 14 May 2025 (also DCD, TechCrunch): $100 million Series A co-led by Magnetar and AMD Ventures with Maverick Silicon, Nexus Venture Partners and new investor Prosperity7; the company said it was on track to close 2025 with a revenue run rate exceeding $100 million, a 20x year-over-year increase (a projection, reported; no 2026 revenue disclosed).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "las vegas",
+    "nevada",
+    "founded 2023",
+    "2023"
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/tensorwave-secures-100m-series-a-funding/",
+   "excerpt": "DCD / Crunchbase: founded in 2023, Las Vegas-based TensorWave provides AI compute on AMD Instinct GPUs.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "tomasik",
+    "tatarchuk",
+    "president",
+    "coo",
+    "chief growth",
+    "no cmo",
+    "no cfo",
+    "ganancial"
+   ],
+   "url": "https://www.linkedin.com/in/ptomasik/",
+   "excerpt": "Piotr Tomasik, Co-Founder, President & COO (LinkedIn; CB Insights); Jeff Tatarchuk, Co-Founder & Chief Growth Officer; Navi Ganancial, VP Marketing and Communications (CB Insights / RocketReach). No chief marketing officer or CFO is listed on any leadership listing found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "coreweave",
+    "core scientific",
+    "google cloud",
+    "dell",
+    "oracle",
+    "microsoft",
+    "amd",
+    "hewlett",
+    "hpe",
+    "ibm",
+    "hp ",
+    "vast",
+    "claude",
+    "twg ai",
+    "mphasis",
+    "ruckus",
+    "commscope",
+    "haas automation",
+    "toyota",
+    "gazoo",
+    "siemens",
+    "extreme networks",
+    "elevenlabs"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Haas — Toyota Gazoo Racing (title from 2026), Mphasis (services), Haas Automation, Ruckus (networking), CommScope, Infobip; no cloud, GPU or AI-compute partner. Aston Martin: CoreWeave (Official AI Cloud Computing Partner, May 2025), NetApp. Cadillac: Core Scientific (datacentre / HPC hosting), TWG AI. McLaren: Google Cloud, Dell Technologies. Red Bull: Oracle (title; cloud). Racing Bulls: shares the Red Bull group with Oracle as cloud incumbent. Mercedes: Microsoft, Hewlett Packard Enterprise, AMD (partner). Alpine: Microsoft. Ferrari: HP (title), IBM. Audi: Hewlett Packard Enterprise departed within 12 months; Extreme Networks, ElevenLabs. Williams: VAST (data platform), Claude; no compute partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "las vegas gp",
+    "austin",
+    "united states gp",
+    "november",
+    "october",
+    "miami"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar) + formula1.com",
+   "excerpt": "2026 F1 calendar table: Miami GP in May, United States GP (Austin) in late October, Las Vegas GP in November; three US rounds.",
+   "method": "calendar"
+  },
+  {
+   "needles": [
+    "kannapolis",
+    "banbury",
+    "maranello",
+    "american",
+    "privateer",
+    "leanest"
+   ],
+   "url": "https://en.wikipedia.org/wiki/Haas_F1_Team",
+   "excerpt": "Haas F1 Team (Wikipedia; Ruckus Networks release, Jan 2026): headquartered in Kannapolis, North Carolina, with a European base in Banbury and a design office in Maranello; Toyota Gazoo Racing title partner from 2026 (formula1.com, Dec 2025); the grid's American privateer (team profile).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "motorsport",
+    "none found",
+    "no f1",
+    "never"
+   ],
+   "url": "https://www.formula1.com/en/information/formula-1-partners.2shz7bIVhGgS3ovP69N3Rs",
+   "excerpt": "Live searches (6 Sep 2026): no TensorWave partnership with any F1 or Formula E team, series or race (its announced partnerships are AMD, Fermi America and UNLV); no motorsport background found for Horton, Tomasik or Tatarchuk.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$2-4m",
+    "estimate",
+    "mode a",
+    "aero-testing",
+    "cost cap"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260610650010/en/TensorWave-Raises-$350-Million-Series-B-at-$1.55B-Valuation-to-Expand-Global-AMD-Powered-AI-Infrastructure",
+   "excerpt": "The deal size ($2-4M a year) is a 1440 ESTIMATE, part-payable in compute credits. The workstream (elastic GPU capacity for machine-learning surrogates, simulation and analytics outside the FIA aerodynamic-testing restrictions) is 1440's proposed application of the product the release describes.",
+   "method": "manual"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "TensorWave",
+  "industry_meta": "AI Infrastructure · GPU Cloud (all-AMD)",
+  "hq": "Las Vegas, Nevada (founded 2023)",
+  "ticker": "Private ($1.55B; $350M Series B, Jun 2026)",
+  "deck": "TensorWave, the Las Vegas-based all-AMD GPU cloud, announced on 10 June 2026 a $350M Series B at a $1.55B valuation co-led by Magnetar and AMD Ventures, almost four times the price of its $100M Series A thirteen months earlier, with an 8,192-GPU cluster live and 2 GW of capacity secured.",
+  "score": 72,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "TGR Haas F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 10 June TensorWave announced a $350M Series B at a $1.55B valuation, co-led by Magnetar and AMD Ventures with Maverick Silicon, Nexus Venture Partners and Western Frontier; the same leads backed the $100M Series A of May 2025 at a reported $400M. The capital funds AMD Instinct MI355X clusters on top of an 8,192-GPU MI325X training cluster already live and more than 2 GW of data-centre capacity secured. Revenue is reported only: the 2025 release projected a run rate above $100M by year-end. Founded in Las Vegas in 2023, it is AMD's flagship challenger in the cloud.",
+  "the_case_p2": "The grid has priced this archetype: CoreWeave became Aston Martin Aramco's Official AI Cloud Computing Partner in May 2025 and Core Scientific sits with Cadillac. Both run Nvidia silicon; TensorWave is the AMD alternative, and AMD, its co-lead investor, is already a partner of Mercedes. A neocloud that has just quadrupled its price needs enterprise buyers, not only AI labs, and a home race in Las Vegas in November.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 10 June; brand budgets reset in the quarter after a raise. The United States GP in Austin (October) and the Las Vegas GP (November), TensorWave's home city, are the US rounds left in 2026, and teams close 2027 partner rosters in the fourth quarter.",
+  "why_team_label": "WHY TGR HAAS F1 TEAM",
+  "why_team_para": "Haas is the grid's American privateer, headquartered in Kannapolis, North Carolina; Toyota Gazoo Racing is title partner from 2026, with Mphasis, Ruckus and CommScope on the technology side. No cloud, GPU or AI-compute partner sits on the car, so Official AI Compute Partner is a clean category at a price a first-time sponsor can defend. Three US races give a Las Vegas company a home round, and the leanest team gains most from compute delivered in kind. Every other large team carries an incumbent.",
+  "value_section": true,
+  "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. The work outside the FIA aero-testing limits is compute-hungry: machine-learning surrogates, driver-in-the-loop and strategy simulation, telemetry and video analytics between sessions. TensorWave supplies elastic AMD Instinct GPU capacity on demand, part of it in kind, so the leanest team on the cost cap buys capability without capital. In return: Official AI Compute Partner status, livery presence, Austin and Las Vegas hospitality.",
+  "deal_arch_para": "Entry as Official AI Compute Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the MI355X build-out. Estimated $2-4M a year, part-payable in compute credits. Scope: sidepod placement, naming of the team's compute environment, Austin and Las Vegas hospitality, engineering content.",
+  "decision_maker_name": "Darrick Horton",
+  "decision_maker_role": "Co-Founder & CEO, TensorWave",
+  "decision_maker_bio": "Horton co-founded TensorWave in Las Vegas in 2023 and fronts every raise; a first sports partnership is his call. Path: Piotr Tomasik, Co-Founder, President and COO, and Jeff Tatarchuk, Co-Founder and Chief Growth Officer. No CMO or CFO is listed.",
+  "opening_angle_intro": "Lead with the Las Vegas home race.",
+  "opening_angle_quote": "&ldquo;Darrick, CoreWeave took its seat at Aston Martin the year it listed; the AMD story has no seat, and the American team's compute lane is open. Las Vegas is your home race. 25 minutes before Austin to see the numbers in kind?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round closed 10 Jun; Austin and Las Vegas inside the window."
+   ],
+   [
+    "CAPACITY",
+    "14",
+    "/ 20",
+    "$450M raised in total at $1.55B; revenue reported as a projection only."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "B2B infrastructure; Las Vegas home story; challenger narrative."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "No hard deadline beyond Q4 rosters and the Las Vegas GP."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: elastic GPU capacity outside the aero cap, part in kind."
+   ]
+  ],
+  "risks": [
+   [
+    "SUB-SCALE FOR THE ARCHETYPE",
+    "At $1.55B TensorWave is a fraction of CoreWeave's size and its revenue is a reported 2025 projection; a cash fee competes with GPU purchases.",
+    "Structure most of the value in compute credits; keep the cash component inside a first-timer's budget."
+   ],
+   [
+    "AMD SITS WITH MERCEDES",
+    "AMD, the co-lead investor, is a Mercedes partner; a rival team may read a TensorWave deal as AMD-adjacent.",
+    "Position it as the neocloud lane, not the silicon lane; keep AMD branding out of the Haas activation."
+   ]
+  ],
+  "bottom_line": "A $350M round at $1.55B on 10 June, a live 8,192-GPU cluster and 2 GW of secured capacity put TensorWave at peak brand-investment authority; the compute lane at the American team is open and its home race in Las Vegas sits inside the window.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "category_whitespace"
+  ],
+  "footer_company": "TENSORWAVE",
+  "footer_date": "10 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 10 June 2026 TensorWave announced a $350M Series B at a $1.55B valuation, co-led by Magnetar and AMD Ventures with Maverick Silicon, Nexus Venture Partners and Western Frontier. The release is the company's own on Business Wire, so the round and valuation are VERIFIED; the revenue figure is not, and the brief says so."
+    },
+    {
+     "label": "Price quadrupled in thirteen months",
+     "text": "The $100M Series A of May 2025 valued the company at a reported $400M; the Series B is almost four times that. A company re-priced this fast has a story to tell to enterprise buyers, bankers and the public markets, and a budget to tell it with."
+    },
+    {
+     "label": "Capacity is real",
+     "text": "An 8,192-GPU AMD Instinct MI325X training cluster is live, more than 2 GW of long-term data-centre capacity is secured, and the new capital funds MI355X clusters. Each cluster that goes live is a milestone the partnership can be timed to."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The United States GP in Austin (October) and the Las Vegas GP (November) are the two US rounds left in 2026; Las Vegas is TensorWave's home city. Teams close their 2027 partner rosters in the fourth quarter, so a deal agreed before Austin can be announced at home and activated in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Haas carries Toyota Gazoo Racing as title partner with Mphasis (services), Ruckus (networking), CommScope and Haas Automation on the technology side. No cloud, GPU or AI-compute partner: Official AI Compute Partner is a clean category at a team-partner price."
+    },
+    {
+     "label": "The American team for a Las Vegas company",
+     "text": "Haas is headquartered in Kannapolis, North Carolina, and races three US rounds (Miami, Austin, Las Vegas). For a Las Vegas company selling to US enterprises, the Las Vegas GP is a home race on the only American team."
+    },
+    {
+     "label": "Where compute in kind counts most",
+     "text": "The leanest team on the cost cap is the one where elastic GPU capacity delivered as part of the fee changes what the engineering team can do. That makes Haas a reference customer, not a logo, which is what TensorWave's enterprise sellers need."
+    },
+    {
+     "label": "The incumbents elsewhere",
+     "text": "CoreWeave at Aston Martin, Core Scientific at Cadillac, Google Cloud and Dell at McLaren, Oracle at Red Bull, Microsoft at Mercedes and Alpine, HP and IBM at Ferrari: every other large team carries a cloud or compute partner. Williams and Audi are open but offer no US or Las Vegas thread."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Compute for the work outside the aerodynamic-testing restrictions: machine-learning surrogates, driver-in-the-loop and race-strategy simulation, telemetry and video analytics between sessions. TensorWave supplies AMD Instinct GPU capacity on demand, part of it as credits inside the fee, so the team buys capability without capital."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner that sells to CIOs, AI labs and enterprises brings a guest list of technology buyers, investors and bankers to Austin and Las Vegas, the audience Haas's other B2B partners want in the suite."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "A data-centre-to-pit-wall story the team can tell on camera; a documented factory reference customer for TensorWave's enterprise sales; and a bridge into AMD's ecosystem of software and silicon partners."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official AI Compute Partner designation, engine-cover or sidepod placement, naming of the team's compute environment, Austin and Las Vegas hospitality, driver and engineering access for TensorWave's channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, is a direct rival."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific (datacentre and HPC hosting) and TWG AI occupy the compute and AI lanes."
+    },
+    {
+     "team": "Oracle Red Bull Racing · Visa Cash App Racing Bulls",
+     "reason": "Oracle is the Red Bull group's cloud incumbent and title partner of the senior team."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "Microsoft and Hewlett Packard Enterprise hold cloud and compute; AMD itself is a partner."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team · BWT Alpine",
+     "reason": "Google Cloud and Dell at McLaren; Microsoft at Alpine."
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "reason": "HP (title) and IBM cover compute hardware and cloud services."
+    },
+    {
+     "team": "Atlassian Williams Racing · Audi F1 Team",
+     "reason": "Open but not chosen: no US or Las Vegas thread; Audi carried HPE within the last 12 months."
+    }
+   ],
+   "ask": "A 25-minute call with Darrick Horton before the United States GP to size an Official AI Compute Partner entry at Haas, part-paid in compute credits, with a Las Vegas GP announcement window and full activation from 2027."
+  }
+ },
+ "note": "# TensorWave → TGR Haas F1 Team — verification log (N° 196, issued for 10 Jun 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY` in the sandbox), with Claude acting as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code from the case spec `tensorwave.case.json`.\n\n**Sandbox limitation, stated plainly:** businesswire.com, tensorwave.com, morningstar.com and nasdaq.com were blocked by the egress proxy. Every claim below was checked against the search summary of the primary page named as the evidence URL. Treat VERIFIED lines as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nThe row's trigger holds and is dated to the row: **$350M Series B at a $1.55B valuation, co-led by Magnetar and AMD Ventures, Business Wire release of 10 Jun 2026** (URL stamp 20260610). The row's \"~$100M ARR confirmed\" does not: the figure traces to the 14 May 2025 Series A release (\"on track to close the year with a revenue run rate exceeding $100 million\"), a 2025 projection. The brief says \"reported\" and the capacity score is 14, not the row's implied 18+; the total is 72 against the row's 87.\n\n## The team, chosen\n\nThe row carried no team. Compute-lane incumbents in the sponsor table: CoreWeave (Aston Martin), Core Scientific and TWG AI (Cadillac), Google Cloud and Dell (McLaren), Oracle (Red Bull; group incumbent for Racing Bulls), Microsoft and HPE (Mercedes), Microsoft (Alpine), HP and IBM (Ferrari). Open: Haas, Williams, Audi. **TGR Haas F1 Team** is chosen for the US thread (Las Vegas company, American team, three US rounds) and because compute in kind is worth most to the leanest team. AMD is a Mercedes partner; that is named as a risk, not hidden. Case N° 193 (UiPath) in this batch also recommends Haas: our signals are not placements, and each is judged against the real roster only. Two 2026 Haas additions sit outside the sponsor table and are not written as \"Brand at Team\" in the copy: Emburse (travel and expense, 3 Jun 2026) and Exein (physical AI security); neither is a compute rival.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Darrick Horton, Co-Founder & CEO | VERIFIED | Crunchbase; company LinkedIn post; company blog |\n| $350M Series B at $1.55B; Magnetar and AMD Ventures co-leads; Maverick Silicon, Nexus, Western Frontier; MI355X clusters; 8,192-GPU MI325X cluster; >2 GW secured; ~4x the $400M Series A price | VERIFIED | Business Wire 10 Jun 2026 (mirrored on tensorwave.com); HPCwire, DCD |\n| $100M Series A, 14 May 2025, same co-leads plus Prosperity7; run-rate above $100M by end-2025 (projection) | VERIFIED (figure REPORTED as a projection) | Business Wire 14 May 2025; DCD |\n| Founded 2023, HQ Las Vegas | VERIFIED | DCD; Crunchbase |\n| Piotr Tomasik, Co-Founder, President & COO; Jeff Tatarchuk, Co-Founder & Chief Growth Officer; Navi Ganancial, VP Marketing; no CMO/CFO listed | REPORTED | LinkedIn; CB Insights; RocketReach |\n| Haas: Kannapolis HQ, Banbury and Maranello; TGR title from 2026; roster (Mphasis, Ruckus, CommScope, Haas Automation) | VERIFIED | Ruckus release Jan 2026; formula1.com Dec 2025; sponsor table |\n| CoreWeave at Aston Martin (May 2025); Core Scientific at Cadillac; Google Cloud/Dell at McLaren; Oracle at Red Bull; Microsoft at Mercedes and Alpine; HP/IBM at Ferrari; AMD at Mercedes | VERIFIED | sponsor table (`seeds/sponsors.json`, `seeds/sponsor_categories.json`) |\n| Miami GP (May), United States GP (Austin, late Oct), Las Vegas GP (Nov) | VERIFIED | calendar table (`seeds/calendar_2026.json`) |\n\n## Decision path\n\nSponsorship owner: **Darrick Horton, Co-Founder & CEO** (founder-led; no CMO exists). Path: **Piotr Tomasik, Co-Founder, President & COO** (partnerships) and **Jeff Tatarchuk, Co-Founder & Chief Growth Officer**; marketing sits with **Navi Ganancial, VP Marketing and Communications**. No CFO is listed on any leadership listing found.\n\n## Leadership ties\n\n`leadership_ties: []` — Horton, Tomasik and Tatarchuk searched against F1/FE/motorsport; none found. TensorWave's announced partnerships are AMD, Fermi America and UNLV; none with any team, series or race.\n\n## Update after the row date\n\nOn 10 Aug 2026 Fermi America announced a binding 15-year lease with TensorWave as anchor tenant at Project Matador (Carson County, Texas): an initial 222 MW from the second half of 2027 with expansion rights to 650 MW, about $6.5B of revenue to Fermi over the term (prior signal check). Not used in the brief, which is issued for 10 June; it strengthens the capacity story for a re-dated approach.\n\n## Screen-outs and things not claimed\n\n- **No 2026 revenue figure**: none disclosed; the 2025 run-rate projection is labelled reported.\n- **Deal size ($2-4M a year) is an ESTIMATE**, part in compute credits, labelled as such.\n- **The F1 workstream is 1440's proposal**; no motorsport customer exists.\n- **Score 72, not 87**: capacity is sub-scale for the archetype and the brand is B2B infrastructure.\n"
+}

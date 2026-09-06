@@ -1,0 +1,372 @@
+{
+ "run_date": "2026-06-07",
+ "signal_date": "2026-06-04",
+ "stem": "quantinuum",
+ "number": 201,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Quantinuum",
+  "signal_date": "2026-06-04",
+  "score": 73,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Rajeeb Hazra",
+  "role": "President & Chief Executive Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+  "industry_meta": "Quantum Computing · Trapped-Ion Systems · Broomfield, Colorado / Cambridge, UK",
+  "recommended_team": "Aston Martin Aramco F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "IPO",
+  "key_facts": {
+   "funding": "IPO: 28 million Class A shares at $60 (above the $53-55 range), $1.68B raised, Nasdaq QNT, first trade 4 Jun 2026; valuation reported at roughly $15B; $600M raise at a $10B pre-money valuation in Sep 2025",
+   "investors": "Honeywell (about 48% of voting power after the offering) and Cambridge Quantum Holdings as founding shareholders; J.P. Morgan and Morgan Stanley led the IPO books",
+   "revenue": "2025 revenue $30.9M, bookings $79.3M, net loss $192.6M (S-1, as reported)",
+   "trigger": "Upsized IPO priced at $60 a share; Nasdaq debut as QNT on 4 Jun 2026, $1.68B raised",
+   "competitor_signal": "IBM (Ferrari), Google Cloud (McLaren), Microsoft (Mercedes, Alpine) and Oracle (Red Bull) each run quantum programmes at parent level; no quantum-computing company is on any F1 car",
+   "strategic_hook": "Helios, launched Nov 2025 with 98 physical qubits at 99.921% two-qubit gate fidelity, and the InQuanto chemistry platform give a race team research workstreams in optimisation and materials",
+   "us_presence": "Headquarters Broomfield, Colorado; European headquarters Cambridge, UK; offices in London, Oxford, Munich and Tokyo",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A exploratory: optimisation and materials-chemistry research on Helios",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 17,
+   "brand_fit": 14,
+   "urgency": 13,
+   "ops_fit": 12,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "hazra"
+   ],
+   "url": "https://www.quantinuum.com/press-releases/quantinuum-names-rajeeb-raj-hazra-chief-executive-officer",
+   "excerpt": "Quantinuum press release and About page: Rajeeb (Raj) Hazra is President and Chief Executive Officer; previously General Manager, Compute and Networking Business Unit at Micron Technology, after 25 years at Intel leading the Enterprise and Government Group and Technical Computing Group.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1.68b",
+    "$60",
+    "28 million",
+    "$53",
+    "qnt",
+    "4 jun",
+    "4 june",
+    "morgan stanley",
+    "j.p. morgan",
+    "ipo",
+    "nasdaq",
+    "closing flat",
+    "closed flat"
+   ],
+   "url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+   "excerpt": "Quantinuum, Jun 2026: upsized IPO of 28,000,000 Class A shares priced at $60.00, above the $53-55 range, with a 30-day option on 4,200,000 more; shares began trading on the Nasdaq Global Market on 4 June 2026 as QNT; J.P. Morgan and Morgan Stanley lead book-runners; $1.68 billion raised. CNBC (4 Jun): the stock closed flat on debut. Reuters/CNBC and The Quantum Insider confirm the figures.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$15b",
+    "$14.6b",
+    "$15.6b",
+    "roughly $15",
+    "valuation"
+   ],
+   "url": "https://thequantuminsider.com/2026/06/04/quantinuum-to-debut-on-nasdaq-after-raising-1-68-billion-in-ipo/",
+   "excerpt": "The Quantum Insider (4 Jun 2026) puts the implied valuation at roughly $14-15 billion; IBTimes UK reports $15.6 billion; Seeking Alpha cites about $14.6 billion market capitalisation. Reported, not company-stated; the brief says 'roughly $15B'.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$600m",
+    "$10b",
+    "september 2025",
+    "sep 2025"
+   ],
+   "url": "https://www.quantinuum.com/press-releases/honeywell-announces-600-million-capital-raise-for-quantinuum-at-10b-pre-money-equity-valuation-to-advance-quantum-computing-at-scale",
+   "excerpt": "Honeywell / Quantinuum, 4 Sep 2025: a $600 million capital raise for Quantinuum at a $10 billion pre-money equity valuation; Honeywell Chairman and CEO Vimal Kapur chairs Quantinuum's board.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$30.9m",
+    "$79.3m",
+    "$192.6m",
+    "48%",
+    "48.1%",
+    "voting power",
+    "s-1"
+   ],
+   "url": "https://thequantuminsider.com/2026/05/26/honeywell-backed-quantinuum-files-for-landmark-quantum-ipo/",
+   "excerpt": "S-1 as reported by The Quantum Insider (26 May 2026), Quantum Zeitgeist and The Next Web: 2025 revenue $30.9 million, bookings $79.3 million, net loss $192.6 million; Honeywell to retain about 48.1% of combined voting power after the offering; RIKEN close to 60% of revenue; Amgen and Mitsui among early users.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "sharan",
+    "kapur",
+    "soundhound",
+    "chairman",
+    "no chief marketing"
+   ],
+   "url": "https://www.quantinuum.com/press-releases/nitesh-sharan-joins-quantinuum-as-chief-financial-officer",
+   "excerpt": "Quantinuum, 2026: Nitesh Sharan appointed Chief Financial Officer effective 6 April 2026, previously CFO of SoundHound AI through its 2022 listing. Vimal Kapur (Honeywell Chairman and CEO) chairs the board (Sep 2025 release). The investor-relations leadership page was egress-blocked; no chief marketing officer could be confirmed and none is claimed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "broomfield",
+    "colorado",
+    "cambridge",
+    "london",
+    "oxford",
+    "munich",
+    "tokyo",
+    "cambridge quantum",
+    "honeywell quantum",
+    "2021"
+   ],
+   "url": "https://www.quantinuum.com/press-releases/introducing-quantinuum",
+   "excerpt": "Quantinuum (Nov 2021 launch release; About page): formed from the merger of Honeywell Quantum Solutions and Cambridge Quantum; headquartered in Broomfield, Colorado with European headquarters in Cambridge, UK, and offices in London, Oxford, Munich, Tokyo and across the United States.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "helios",
+    "98 physical",
+    "99.921%",
+    "48 logical",
+    "inquanto",
+    "sol",
+    "apollo",
+    "nov 2025",
+    "november 2025"
+   ],
+   "url": "https://www.quantinuum.com/press-releases/quantinuum-announces-commercial-launch-of-new-helios-quantum-computer-that-offers-unprecedented-accuracy-to-enable-generative-quantum-ai-genqai",
+   "excerpt": "Quantinuum, Nov 2025: commercial launch of Helios, 98 physical qubits at 99.921% average two-qubit gate fidelity, demonstrations with 48 logical qubits; roadmap to Sol (2027) and Apollo (2029) per the S-1 coverage. InQuanto is Quantinuum's computational-chemistry platform (Mitsui/QSimulate QIDO release).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "arm",
+    "coreweave",
+    "netapp",
+    "cognizant",
+    "servicenow",
+    "cognition",
+    "aramco",
+    "ibm",
+    "google cloud",
+    "microsoft",
+    "oracle",
+    "core scientific",
+    "twg ai",
+    "claude",
+    "vast"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): Aston Martin Aramco — Aramco title, Arm, CoreWeave (Official AI Cloud Computing Partner), NetApp, Cognizant, ServiceNow, Cognition; no quantum-computing partner on this or any F1 roster. Ferrari: IBM, HP. McLaren: Google Cloud, Dell. Mercedes and Alpine: Microsoft. Red Bull: Oracle. Cadillac: Core Scientific, TWG AI. Williams: Claude, VAST.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "british gp",
+    "5 july",
+    "5 jul",
+    "austrian gp",
+    "austin",
+    "las vegas",
+    "four weeks"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar; silverstone.co.uk, racingnews365.com)",
+   "excerpt": "2026 F1 calendar table with dates from silverstone.co.uk and RacingNews365: Austrian GP on 28 June, British GP at Silverstone on 5 July 2026 (four weeks from 7 June); United States GP (Austin) in late October and Las Vegas GP in November.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Quantinuum",
+  "industry_meta": "Quantum Computing · Trapped-Ion Systems",
+  "hq": "Broomfield, Colorado (European HQ Cambridge, UK)",
+  "ticker": "Nasdaq: QNT (IPO 4 Jun 2026; ~$15B reported)",
+  "deck": "Quantinuum, the Honeywell-controlled trapped-ion quantum computer maker formed from Honeywell Quantum Solutions and Cambridge Quantum, priced an upsized IPO at $60 a share and began trading on Nasdaq as QNT on 4 June 2026, raising $1.68B in one of the largest quantum-computing listings to date.",
+  "score": 73,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Aston Martin Aramco F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Quantinuum sold 28 million Class A shares at $60, above the $53-55 range, raising $1.68B; J.P. Morgan and Morgan Stanley led the books and the shares opened on Nasdaq on 4 June, closing flat on debut. Reports put the valuation at roughly $15B, up from the $10B pre-money at which Honeywell led a $600M raise in September 2025. The S-1 shows the scale of the bet: 2025 revenue of $30.9M, bookings of $79.3M and a net loss of $192.6M, with Honeywell keeping about 48% of the voting power.",
+  "the_case_p2": "Quantum has no seat on the grid, but its rivals do: IBM sits on the Ferrari, Google Cloud on the McLaren, Microsoft on the Mercedes and the Alpine, Oracle on the Red Bull. Each parent runs a quantum programme that would block a Quantinuum deal. That leaves a shortlist, and one roster that already reads as a compute stack, from Arm processors to CoreWeave's AI cloud, with the quantum layer missing.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The shares have traded since 4 June; a newly listed company sets its brand budget in its first two quarters, when investors, customers and recruits are all watching. The British GP on 5 July, Aston Martin's home race, falls inside the window, and teams close 2027 rosters in the fourth quarter.",
+  "why_team_label": "WHY ASTON MARTIN ARAMCO F1 TEAM",
+  "why_team_para": "Aston Martin Aramco's roster is built like a compute stack: Arm on processors, CoreWeave as Official AI Cloud Computing Partner, NetApp on data infrastructure, Cognizant and ServiceNow on the enterprise layer and Cognition for AI software engineering. No quantum company sits on it, or on any other car. Quantinuum's European headquarters in Cambridge is close to the Silverstone campus; the Colorado headquarters and the Nasdaq ticker give the US rounds a story too.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ASTON MARTIN ARAMCO F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - exploratory research. Two workstreams the team's engineers could run on Helios: combinatorial optimisation for race-strategy and freight scheduling, benchmarked against the classical solvers the team uses today, and InQuanto chemistry simulation of battery and fuel materials for the hybrid power unit. Results are research-grade and published jointly. In return: Official Quantum Computing Partner status, livery presence and British GP hospitality.",
+  "deal_arch_para": "Entry as Official Quantum Computing Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the company's first three years as a listed business and the Sol system due in 2027. Estimated $3-5M a year, part-payable in compute access on Helios. Scope: engine-cover or sidepod placement, a joint research programme, British GP and US-round hospitality, engineering content.",
+  "decision_maker_name": "Rajeeb Hazra",
+  "decision_maker_role": "President & CEO, Quantinuum",
+  "decision_maker_bio": "Hazra leads Quantinuum after 25 years at Intel and a compute-and-networking role at Micron, and fronted the IPO. Path: Nitesh Sharan, CFO since April 2026 (ex-SoundHound AI), and chairman Vimal Kapur, Honeywell's chairman and CEO. No chief marketing officer is confirmed.",
+  "opening_angle_intro": "Lead with the compute-stack gap.",
+  "opening_angle_quote": "&ldquo;Raj, Aston Martin's roster runs from Arm to CoreWeave and stops short of quantum; no team on the grid has that layer. You have just listed and the British GP is four weeks out. 25 minutes to see how the seat would work?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Listed 4 Jun; British GP inside window."
+   ],
+   [
+    "CAPACITY",
+    "17",
+    "/ 20",
+    "$1.68B raised; ~$15B reported; $30.9M revenue."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Precision deep-tech; B2B, investor-facing."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "Post-IPO brand build; no hard deadline."
+   ],
+   [
+    "OPS FIT",
+    "12",
+    "/ 20",
+    "MODE A exploratory: optimisation, chemistry."
+   ]
+  ],
+  "risks": [
+   [
+    "REVENUE VERSUS VALUATION",
+    "2025 revenue of $30.9M against a $192.6M loss and a valuation near $15B; a sponsorship will be read against that gap.",
+    "Keep the cash component small, pay partly in Helios access, and frame it as research with published output."
+   ],
+   [
+    "RESEARCH, NOT OPERATIONS",
+    "No quantum system beats classical solvers on race problems today; an operational claim would be an overclaim.",
+    "Label the workstream exploratory from day one and set milestones the team's engineers own."
+   ]
+  ],
+  "bottom_line": "A $1.68B IPO at roughly $15B, Honeywell's backing and a grid where every quantum rival is locked to another team give Quantinuum a clean lane at Aston Martin, whose roster already reads as a compute stack. Revenue of $30.9M against a $192.6M loss is what holds the score back.",
+  "signals": [
+   "ipo",
+   "spinoff_unicorn",
+   "category_whitespace"
+  ],
+  "footer_company": "QUANTINUUM",
+  "footer_date": "7 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "Quantinuum priced an upsized IPO of 28 million Class A shares at $60, above the $53-55 range, and began trading on Nasdaq as QNT on 4 June 2026, raising $1.68B with J.P. Morgan and Morgan Stanley leading the books. The stock closed flat on its first day. It is the first traditional listing of a full-stack quantum company."
+    },
+    {
+     "label": "Valuation and backing",
+     "text": "Reports put the valuation at roughly $15B, up from the $10B pre-money valuation of the $600M raise Honeywell led in September 2025. Honeywell keeps about 48% of the voting power and its chairman and CEO, Vimal Kapur, chairs the Quantinuum board: a first sports partnership would be read as a Honeywell-sanctioned brand move."
+    },
+    {
+     "label": "The first two quarters as a public company",
+     "text": "The S-1 discloses 2025 revenue of $30.9M, bookings of $79.3M and a net loss of $192.6M. A company priced on its roadmap rather than its revenue has to keep investors, customers and recruits engaged through every quarter, and the period straight after listing is when the brand budget is set."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The British GP on 5 July, Aston Martin's home race, sits four weeks from the row date; the United States GP in Austin and the Las Vegas GP follow in the autumn near the company's Colorado base and its US investors. Teams close 2027 rosters in the fourth quarter, so a deal agreed over the summer launches in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The compute-stack roster",
+     "text": "Aston Martin Aramco carries Arm on processors and edge compute, CoreWeave as Official AI Cloud Computing Partner, NetApp on data infrastructure, Cognizant and ServiceNow on the enterprise layer and Cognition for AI software engineering. Quantum is the missing layer, and no quantum company sits on any other car either: Official Quantum Computing Partner is a clean category."
+    },
+    {
+     "label": "Every rival is locked elsewhere",
+     "text": "IBM is on the Ferrari, Google Cloud on the McLaren, Microsoft on the Mercedes and the Alpine, Oracle on the Red Bull. Each parent runs a quantum programme, so those four cars are closed to Quantinuum. Aston Martin has no such conflict."
+    },
+    {
+     "label": "UK and US at once",
+     "text": "Quantinuum's European headquarters is in Cambridge with offices in London and Oxford, close to the Silverstone campus; its corporate headquarters is in Broomfield, Colorado. A British-based team with a Nasdaq-listed American partner tells the same story from both sides of the Atlantic."
+    },
+    {
+     "label": "A team that will use the product",
+     "text": "Aston Martin has moved its engineering compute to the cloud with CoreWeave and built a data pipeline with NetApp; a research programme on Helios sits naturally on top of that stack, run by engineers who already treat compute as a competitive lever."
+    }
+   ],
+   "value": [
+    {
+     "label": "Exploratory workstream (Mode A)",
+     "text": "Two research programmes on Helios: combinatorial optimisation for race-strategy scenarios and freight scheduling, benchmarked against the classical solvers the team uses today, and InQuanto chemistry simulation of battery and fuel materials relevant to the hybrid power unit. Results are research-grade and published jointly; no operational claim is made."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A newly listed deep-tech company brings a guest list of institutional investors, government and enterprise buyers, and a scientific audience to the British GP and the US rounds that Aston Martin's technology partners want to meet."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "The quantum layer completing a visible compute stack is a story the team can tell on camera: joint papers, engineering content with the CoreWeave and Arm programmes, and a reference customer for Quantinuum's enterprise sales."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Quantum Computing Partner designation, engine-cover or sidepod placement, British GP and US-round hospitality, driver and engineering access, and a research programme the team's engineers own."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Scuderia Ferrari",
+     "reason": "IBM, whose quantum division is Quantinuum's most direct rival, sits on the roster."
+    },
+    {
+     "team": "McLaren F1 Team",
+     "reason": "Google Cloud is on the car; Google runs its own quantum programme."
+    },
+    {
+     "team": "Mercedes-AMG Petronas · BWT Alpine",
+     "reason": "Microsoft holds the cloud lane at both and runs a quantum programme."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the cloud incumbent."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific and TWG AI occupy the compute and AI lanes on the inaugural roster."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Open but not chosen: the compute story there is built around Claude and VAST, not a hardware stack."
+    },
+    {
+     "team": "Audi F1 Team · TGR Haas F1 Team · Racing Bulls",
+     "reason": "Open but not chosen: none carries a processor-to-cloud roster for quantum to complete."
+    }
+   ],
+   "ask": "A 25-minute call with Raj Hazra before the British GP to agree a research scope on Helios, a Silverstone or Austin announcement window, and the size of an Official Quantum Computing Partner entry against Aston Martin's 2027 roster."
+  }
+ },
+ "note": "# Quantinuum → Aston Martin Aramco F1 Team — verification log (N° 201, 7 Jun 2026)\n\nBuilt in-session at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) with Claude acting as\nscanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor\ntable, 13-rule audit and the 2-page render ran as code. The case sits on the row's date, 7 Jun 2026,\nin rebuild mode; `quantinuum.run.json` is the case record `python -m intel.backfill --cases` imports.\n\n**Sandbox limitation, stated plainly:** direct fetches of quantinuum.com, ir.quantinuum.com, sec.gov,\ncnbc.com and wikipedia.org were blocked by the egress proxy. Each claim below was checked against the\nsearch summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED\nuntil a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nQuantinuum's own pricing release: an upsized IPO of 28,000,000 Class A shares at $60.00, Nasdaq\nGlobal Market, ticker QNT, trading from 4 Jun 2026; $1.68B raised (Reuters/CNBC, Bloomberg, The\nQuantum Insider). The row date is 7 Jun; the trigger is three days earlier, inside the 90-day\nwindow. The valuation (~$15B) is REPORTED and varies by outlet ($14.6B-$15.6B); the brief says\n\"roughly $15B\" and labels it reported.\n\n## Ledger (claims verified against search summaries of the primary pages)\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Rajeeb Hazra, President & CEO; ex-Intel (25 yrs), ex-Micron | VERIFIED | quantinuum.com CEO release; About page |\n| IPO: 28M shares at $60, above $53-55; $1.68B; QNT; 4 Jun 2026; JPM/MS leads; closed flat | VERIFIED (company + CNBC) | quantinuum.com pricing release; CNBC 4 Jun |\n| Valuation ~$15B | REPORTED | The Quantum Insider, IBTimes, Seeking Alpha (range) |\n| $600M at $10B pre-money, Sep 2025; Kapur chairs the board | VERIFIED | quantinuum.com / Honeywell release, 4 Sep 2025 |\n| 2025 revenue $30.9M, bookings $79.3M, net loss $192.6M; Honeywell ~48.1% voting power | REPORTED (S-1 via coverage) | The Quantum Insider 26 May; Quantum Zeitgeist; The Next Web |\n| Nitesh Sharan CFO from 6 Apr 2026 (ex-SoundHound AI) | VERIFIED | quantinuum.com release |\n| HQ Broomfield, Colorado; European HQ Cambridge; offices London, Oxford, Munich, Tokyo; formed 2021 from Honeywell Quantum Solutions + Cambridge Quantum | VERIFIED | quantinuum.com launch release / About |\n| Helios, Nov 2025, 98 physical qubits, 99.921% fidelity, 48 logical qubits; Sol 2027, Apollo 2029; InQuanto chemistry | VERIFIED / REPORTED (roadmap) | quantinuum.com Helios release; S-1 coverage |\n| Grid occupancy (Aston Martin roster; IBM, Google Cloud, Microsoft, Oracle, Core Scientific/TWG AI, Claude/VAST) | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Austrian GP 28 Jun; British GP 5 Jul 2026; Austin and Las Vegas in the autumn | VERIFIED | calendar table + silverstone.co.uk / RacingNews365 |\n\n## Screen-outs and things not claimed\n\n- **No chief marketing officer is claimed.** A search summary asserted a \"President and Chief Marketing Officer\" at Quantinuum but no source page confirmed it and the IR leadership page was blocked; the brief says none is confirmed rather than naming one.\n- **No motorsport tie found** for Hazra, Sharan or Kapur; `leadership_ties` is empty after checking.\n- **No lock-up period, share-count or free-float figure** is used beyond what the pricing release states.\n- **Deal size ($3-5M a year) is an ESTIMATE**, labelled as such.\n- **The workstream is labelled exploratory.** No claim that quantum beats classical solvers on race problems.\n- **The score is 73, not the thin row's 76.** What holds it back: $30.9M revenue against a $192.6M loss (capacity 17 despite the raise), a B2B investor-facing brand (14), no hard deadline (13) and a research-only workstream (ops fit 12).\n\n## Decision path\n\nCEO Raj Hazra (owner) → CFO Nitesh Sharan → chairman Vimal Kapur (Honeywell). Ask on the first call who owns marketing.\n"
+}

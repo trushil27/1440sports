@@ -1,0 +1,395 @@
+{
+ "run_date": "2026-06-10",
+ "signal_date": "2026-04-15",
+ "stem": "wayve",
+ "number": 197,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Wayve",
+  "signal_date": "2026-04-15",
+  "score": 71,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Alex Kendall",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://wayve.ai/press/series-d-extension/",
+  "industry_meta": "Embodied AI · Automated Driving Software · London",
+  "recommended_team": "Nissan Formula E Team",
+  "recommended_series": "FE",
+  "timing_label": "WARM",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$60M Series D extension from AMD, Arm and Qualcomm Ventures, announced 15 Apr 2026, on top of the $1.2B Series D at an $8.6B post-money valuation of 24 Feb 2026 ($1.5B including Uber's milestone-based capital)",
+   "investors": "Series D led by Eclipse, Balderton and SoftBank Vision Fund 2; Microsoft, Nvidia, Uber; automakers Mercedes-Benz, Nissan and Stellantis; Ontario Teachers', Baillie Gifford, British Business Bank, Schroders Capital; extension: AMD, Arm, Qualcomm Ventures",
+   "revenue": null,
+   "trigger": "$60M Series D extension from AMD, Arm and Qualcomm Ventures, announced 15 Apr 2026",
+   "competitor_signal": "No autonomous-driving or embodied-AI partner on the Formula E grid; TWG AI is Official AI Partner of Andretti Formula E and Google Cloud a series partner; in F1, Zoox, Amazon's robotaxi, sits with Williams",
+   "strategic_hook": "Nissan is a Series D investor and signed definitive agreements (10 Dec 2025) to put the Wayve AI Driver in next-generation ProPILOT from fiscal 2027; Wayve, Uber and Nissan agreed (11 Mar 2026) a Tokyo robotaxi pilot by late 2026; Stellantis will integrate the Wayve AI Driver into STLA AutoDrive (21 May 2026)",
+   "us_presence": "US office in Sunnyvale and a San Francisco Bay Area testing programme since October 2024; HQ London",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE B halo: embodied-AI demonstration laps and content at London and Tokyo; no in-car workstream",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 14,
+   "capacity": 17,
+   "brand_fit": 15,
+   "urgency": 13,
+   "ops_fit": 12,
+   "ops_fit_subscores": {
+    "product_to_need": 3,
+    "slot_availability": 4,
+    "on_camera": 4,
+    "lock_in": 1
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "kendall",
+    "co-founder & ceo",
+    "co-founder and ceo"
+   ],
+   "url": "https://wayve.ai/company/leadership-team/alex-kendall/",
+   "excerpt": "Alex Kendall, Co-Founder and CEO, leads Wayve's direction and execution (wayve.ai leadership page; The Org; TechCrunch); CEO since 2020, previously CTO.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$60m",
+    "amd",
+    "arm",
+    "qualcomm",
+    "15 apr",
+    "15 april",
+    "april 2026",
+    "extension",
+    "funding round"
+   ],
+   "url": "https://wayve.ai/press/series-d-extension/",
+   "excerpt": "Wayve press release 'Wayve Broadens Silicon Backing with $60M Investment from AMD, Arm and Qualcomm' and TechCrunch, 15 Apr 2026: a $60 million investment from AMD, Arm and Qualcomm Ventures extends the Series D to accelerate deployment of the Wayve AI Driver across automotive compute platforms for ADAS and automated driving.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1.2b",
+    "$8.6b",
+    "$1.5b",
+    "eclipse",
+    "balderton",
+    "softbank",
+    "microsoft",
+    "nvidia",
+    "uber",
+    "mercedes-benz",
+    "stellantis",
+    "ontario",
+    "baillie",
+    "british business bank",
+    "schroders",
+    "24 feb",
+    "25 feb",
+    "february 2026",
+    "series d"
+   ],
+   "url": "https://wayve.ai/press/series-d/",
+   "excerpt": "Wayve press release 'Wayve secures $1.5B to deploy its global autonomy platform' (24/25 Feb 2026), CNBC 24 Feb 2026, OTPP and Balderton: $1.2 billion Series D at an $8.6 billion post-money valuation, led by Eclipse, Balderton and SoftBank Vision Fund 2, with Microsoft, Nvidia and Uber and automakers Mercedes-Benz, Nissan and Stellantis participating, plus Ontario Teachers' Pension Plan, Baillie Gifford, British Business Bank, Icehouse Ventures and Schroders Capital; Uber adds milestone-based capital within the $1.5 billion total; commercial robotaxi trials in 2026 and supervised autonomy in consumer vehicles from 2027.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "propilot",
+    "fiscal 2027",
+    "fiscal year 2027",
+    "10 dec",
+    "december 2025",
+    "definitive agreements",
+    "mass-produced"
+   ],
+   "url": "https://wayve.ai/press/nissan-wayve-sign-definitive-agreements/",
+   "excerpt": "Wayve and Nissan (usa.nissannews.com; CleanTechnica), 10 Dec 2025: definitive agreements to integrate the Wayve AI Driver into Nissan's next-generation ProPILOT across a broad range of vehicles; first model in Japan in fiscal 2027, then global markets including North America; Nissan is the first automaker to commit to deploying Wayve AI systems at scale.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "tokyo",
+    "robotaxi",
+    "11 mar",
+    "march 2026",
+    "leaf",
+    "late 2026",
+    "memorandum"
+   ],
+   "url": "https://wayve.ai/press/wayve-nissan-uber-robotaxi-collaboration/",
+   "excerpt": "Wayve, Uber and Nissan (Business Wire 11 Mar 2026; Nissan global newsroom; Uber investor site): memorandum of understanding to develop robotaxis, with a pilot deployment in Tokyo by late 2026 using the Nissan LEAF powered by the Wayve AI Driver, available through Uber; Uber's first AV partnership in Japan.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "stla",
+    "autodrive",
+    "21 may",
+    "may 2026",
+    "2028",
+    "hands-free"
+   ],
+   "url": "https://www.stellantis.com/en/news/press-releases/2026/may/stellantis-and-wayve-partner-to-bring-hands-free-door-to-door-supervised-automated-driving-at-scale",
+   "excerpt": "Stellantis and Wayve, 21 May 2026 (Stellantis media; wayve.ai; WardsAuto): strategic technology partnership to integrate the Wayve AI Driver into the STLA AutoDrive platform for hands-free, door-to-door supervised (Level 2++) driving; first vehicle integration planned in North America in 2028; builds on Stellantis' Series D investment.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "warburton",
+    "cfo",
+    "chief financial",
+    "daimler",
+    "no cmo",
+    "no chief marketing",
+    "november 2024"
+   ],
+   "url": "https://wayve.ai/press/max-warburton-cfo/",
+   "excerpt": "Wayve press release (Business Wire 12 Nov 2024; wayve.ai leadership page): Max Warburton joined as Chief Financial Officer; previously advisor to the board and head of special projects at Daimler and Mercedes-Benz, and a sell-side auto analyst at Goldman Sachs, UBS and Bernstein; he leads finance and investor relations and OEM relationships. No chief marketing officer is listed on the leadership page.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "sunnyvale",
+    "san francisco",
+    "october 2024",
+    "us office",
+    "london"
+   ],
+   "url": "https://wayve.ai/press/us-expansion/",
+   "excerpt": "Wayve press release, Oct 2024 (also Bloomberg, Electrek): Wayve opened a new office in Sunnyvale, California, and began an ADAS testing programme in San Francisco and the Bay Area, its first on-road trials outside the UK; headquarters London.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "zoox",
+    "williams",
+    "twg ai",
+    "andretti",
+    "google cloud",
+    "no autonomous",
+    "no autonomy",
+    "embodied-ai partner",
+    "nissan formula e",
+    "works team",
+    "abb",
+    "jaguar",
+    "porsche",
+    "citroën",
+    "ds penske",
+    "cupra",
+    "mahindra",
+    "envision"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: no autonomous-driving, robotaxi or embodied-AI partner on any Formula E team. Nissan Formula E Team: Nissan (works entry; enterprise-software and EV-tech lanes open per team profile). Andretti Formula E: TWG AI (Official AI Partner). Series: ABB (title), Google Cloud (cloud / technology). F1: Zoox at Williams (Amazon's robotaxi). Other FE teams (Jaguar TCS Racing, Porsche, DS Penske, Citroën Racing, Cupra Kiro, Mahindra, Envision, Lola Yamaha ABT) carry no autonomy partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "london e-prix",
+    "tokyo e-prix",
+    "15-16 august",
+    "august",
+    "25-26 july",
+    "july",
+    "season 13",
+    "excel"
+   ],
+   "url": "seeds/calendar_fe.json (Formula E Season 12 and 13, fiaformulae.com)",
+   "excerpt": "Formula E calendar table: Season 12 Tokyo E-Prix double-header 25-26 July 2026 and London E-Prix double-header 15-16 August 2026 (season finale); Season 13 London E-Prix 29-30 May 2027 and Tokyo E-Prix 24-25 July 2027.",
+   "method": "calendar"
+  },
+  {
+   "needles": [
+    "motorsport",
+    "none found",
+    "never",
+    "no formula e"
+   ],
+   "url": "https://www.fiaformulae.com/en/partners",
+   "excerpt": "Live searches (6 Sep 2026): no Wayve partnership with any Formula E or F1 team, series or race; no motorsport background found for Kendall or Warburton (Warburton's Daimler / Mercedes-Benz board-advisory role is corporate, not a sponsorship tie).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$2-4m",
+    "estimate",
+    "mode b",
+    "demonstration"
+   ],
+   "url": "https://wayve.ai/press/series-d-extension/",
+   "excerpt": "Deal size ($2-4M a year) is a 1440 ESTIMATE; the value section is an honest MODE B halo (the Wayve AI Driver has no role in a Formula E race car), with the demonstration-lap and content mechanics as 1440's proposal.",
+   "method": "manual"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Wayve",
+  "industry_meta": "Embodied AI · Automated Driving Software",
+  "hq": "London (US office Sunnyvale, California)",
+  "ticker": "Private ($8.6B post-money; $1.5B Series D, Feb 2026, extended Apr 2026)",
+  "deck": "Wayve, the London embodied-AI company whose AI Driver Nissan will ship in next-generation ProPILOT from fiscal 2027, extended its Series D on 15 April 2026 with $60M from AMD, Arm and Qualcomm Ventures, on top of the $1.2B round at an $8.6B valuation closed in February with Nissan aboard.",
+  "score": 71,
+  "timing_label": "WARM",
+  "series_label": "FE",
+  "team_label": "Nissan Formula E Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 15 April Wayve announced a $60M Series D extension from AMD, Arm and Qualcomm Ventures, adding the three chipmakers to a round that closed on 24 February at $1.2B and an $8.6B post-money valuation, led by Eclipse, Balderton and SoftBank Vision Fund 2 with Microsoft, Nvidia and Uber, $1.5B in total with Uber's milestone capital. Nissan, Mercedes-Benz and Stellantis invested as automakers. Nissan signed definitive agreements in December 2025 to ship the AI Driver in next-generation ProPILOT from fiscal 2027; on 11 March Wayve, Uber and Nissan agreed a Tokyo robotaxi pilot.",
+  "the_case_p2": "Wayve's brand now has to reach consumers, not only automakers: a robotaxi with its name on it goes on the road this year and a ProPILOT product carries it next. Formula E is the electric street-racing series in Wayve's home city, London, and in Tokyo, where the pilot launches; Nissan, the automaker most committed to Wayve, races a works team there. In Formula 1 Amazon's Zoox has already taken a seat with Williams.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The extension landed on 15 April and the Stellantis deal on 21 May; brand budgets reset in the quarter after a raise. The Tokyo E-Prix (25-26 July) and the London E-Prix season finale (15-16 August) both fall inside the window, and Season 13 rosters for the GEN4 car are set over the summer.",
+  "why_team_label": "WHY NISSAN FORMULA E TEAM",
+  "why_team_para": "Nissan is a Wayve shareholder, its first automaker to commit at scale, and its partner in the Tokyo robotaxi pilot; the works team is the natural stage to show that relationship to the public, and its roster carries no software, AI or autonomy partner, so the lane is open. Tokyo, the team's home E-Prix, comes as the pilot prepares to launch; the London finale sits a few miles from Wayve's headquarters. Andretti carries TWG AI; rival automakers' teams are closed.",
+  "value_section": true,
+  "value_section_label": "VALUE TO NISSAN FORMULA E TEAM",
+  "value_mode": "B",
+  "value_content": "MODE B - halo, with concrete mechanics. The AI Driver has no role in the race car, so the substance is demonstration, content and audience: a Wayve-driven Nissan LEAF running the ExCeL circuit in London and the Tokyo course on race weekend, a race-to-road content series on Nissan's e-4ORCE and Wayve's AI Driver, and hospitality for the automaker, regulator and city audiences both must win. In return: Official Embodied AI Partner status, livery presence.",
+  "deal_arch_para": "Entry as Official Embodied AI Partner of the Nissan works team. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, spanning the Tokyo pilot and the fiscal-2027 ProPILOT launch. Estimated $2-4M a year, co-funded with Nissan's programme budget. Scope: autonomy-category exclusivity, demonstration laps at London and Tokyo, content, hospitality.",
+  "decision_maker_name": "Alex Kendall",
+  "decision_maker_role": "Co-Founder & CEO, Wayve",
+  "decision_maker_bio": "Kendall co-founded Wayve, has led it as CEO since 2020 and fronts every raise and automaker deal; a first sports partnership is his call, taken with Nissan. Path: Max Warburton, CFO since November 2024, formerly advisor to the Daimler and Mercedes-Benz board. No CMO listed.",
+  "opening_angle_intro": "Lead with the Nissan relationship.",
+  "opening_angle_quote": "&ldquo;Alex, Nissan races a works team in the two cities where Wayve's name goes public this year, Tokyo and London, and no autonomy brand sits on the Formula E grid. Zoox already races in Formula 1. 25 minutes before the Tokyo E-Prix?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "14",
+    "/ 20",
+    "Extension 15 Apr; Tokyo and London inside the window."
+   ],
+   [
+    "CAPACITY",
+    "17",
+    "/ 20",
+    "$1.5B raised at $8.6B; automakers and chipmakers aboard."
+   ],
+   [
+    "BRAND FIT",
+    "15",
+    "/ 20",
+    "Embodied AI on the electric street-racing grid; London home."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "Robotaxi pilot late 2026 and ProPILOT 2027 need consumer awareness."
+   ],
+   [
+    "OPS FIT",
+    "12",
+    "/ 20",
+    "MODE B: demonstration laps and content; no in-car workstream."
+   ]
+  ],
+  "risks": [
+   [
+    "SHAREHOLDER, NOT SPONSOR",
+    "Nissan holds Wayve equity and a production contract; a Wayve logo on Nissan's works team can read as a line in Nissan's programme.",
+    "Frame it as a co-funded joint activation driven by Wayve's own consumer-awareness need; run the path through both companies."
+   ],
+   [
+    "HALO, NOT WORKSTREAM",
+    "The AI Driver has no role in a Formula E car; the trigger is an extension, not the main round.",
+    "Anchor renewal on measured outcomes: demonstration-lap reach, content, regulator and city audiences at London and Tokyo."
+   ]
+  ],
+  "bottom_line": "A $1.5B Series D at $8.6B, extended in April by AMD, Arm and Qualcomm, and a robotaxi pilot launching in Tokyo this year give Wayve the budget and a consumer-facing motive; Nissan's works team races in Tokyo and London inside the window and no autonomy brand sits on the Formula E grid.",
+  "signals": [
+   "funding_event",
+   "partner_adjacency",
+   "category_whitespace"
+  ],
+  "footer_company": "WAYVE",
+  "footer_date": "10 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger, re-dated",
+     "text": "The row pointed at the February round, which is outside the 90-day window on 10 June. The in-window trigger is Wayve's own release of 15 April 2026: a $60M Series D extension from AMD, Arm and Qualcomm Ventures, bringing the three chipmakers whose silicon runs the AI Driver into the cap table."
+    },
+    {
+     "label": "The round behind it",
+     "text": "The Series D closed on 24 February 2026: $1.2B at an $8.6B post-money valuation led by Eclipse, Balderton and SoftBank Vision Fund 2, with Microsoft, Nvidia and Uber, the automakers Mercedes-Benz, Nissan and Stellantis, and institutions including Ontario Teachers' Pension Plan and Baillie Gifford; $1.5B in total with Uber's milestone-based capital. Wayve's own release headlines the $1.5B figure; CNBC and S&P report $1.2B, the difference being the Uber tranche."
+    },
+    {
+     "label": "The brand goes public this year",
+     "text": "Wayve, Uber and Nissan agreed on 11 March a Tokyo robotaxi pilot by late 2026 using the Nissan LEAF with the Wayve AI Driver; Nissan will ship the AI Driver in next-generation ProPILOT from fiscal 2027; Stellantis chose it on 21 May for STLA AutoDrive with a first North American vehicle in 2028. A B2B software brand is about to be a name consumers ride with, which is what a public stage is for."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The Tokyo E-Prix double-header on 25-26 July 2026 is Nissan's home round and comes as the Tokyo pilot prepares to launch; the London E-Prix on 15-16 August closes Season 12 a few miles from Wayve's headquarters. Season 13, the GEN4 era, returns to London on 29-30 May 2027 and Tokyo on 24-25 July 2027, so a three-season programme covers both cities every year."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The relationship already exists",
+     "text": "Nissan invested in the Series D, signed definitive agreements in December 2025 to deploy the Wayve AI Driver at scale, and is Wayve's partner with Uber in Tokyo. The works team is where that relationship becomes visible to the public, and the approach is warm, not cold."
+    },
+    {
+     "label": "The open lane",
+     "text": "The Nissan Formula E Team's sponsor-table roster is the works entry itself, with the enterprise-software and EV-technology lanes open. No autonomy, robotaxi or embodied-AI partner sits on any Formula E team, so Official Embodied AI Partner is a clean category."
+    },
+    {
+     "label": "Two home cities",
+     "text": "Tokyo is Nissan's home race and the pilot city; London is Wayve's headquarters and the season finale. No other team gives Wayve both, and Season 13 keeps both on the calendar."
+    },
+    {
+     "label": "Why not the other AI seat",
+     "text": "Andretti Formula E already carries TWG AI as Official AI Partner, and the works teams of rival automakers (Jaguar, Porsche, DS Penske, Citroën, Cupra) are closed to a supplier Nissan has committed to; in Formula 1 Zoox at Williams shows the archetype has a buyer."
+    }
+   ],
+   "value": [
+    {
+     "label": "Demonstration (Mode B)",
+     "text": "A Wayve-driven Nissan LEAF running the ExCeL circuit in London and the Tokyo course on race weekend, with the AI Driver's decisions shown on the broadcast and in the fan zone: embodied AI demonstrated on the same streets the race uses."
+    },
+    {
+     "label": "Content the team can use",
+     "text": "A race-to-road series pairing Nissan's e-4ORCE powertrain story with the AI Driver, co-produced with the team, for Nissan's consumer channels ahead of the fiscal-2027 ProPILOT launch and for Wayve's recruiting."
+    },
+    {
+     "label": "Audience the team can sell",
+     "text": "Regulators, city transport authorities and automaker executives at London and Tokyo are the guest list both companies need for robotaxi permissions and production programmes, and an audience the team's other partners want in the suite."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Embodied AI Partner designation with autonomy-category exclusivity, livery presence sized to the fee, driver access, demonstration-lap slots and hospitality at London and Tokyo."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Andretti Formula E",
+     "reason": "TWG AI is Official AI Partner; the AI lane is taken."
+    },
+    {
+     "team": "Jaguar TCS Racing · Porsche Formula E Team · DS Penske · Citroën Racing · Cupra Kiro",
+     "reason": "Works or manufacturer-aligned teams of rival automakers; closed to a supplier Nissan has committed to at scale."
+    },
+    {
+     "team": "Mahindra Racing · Envision Racing · Lola Yamaha ABT Formula E Team",
+     "reason": "Open but not chosen: none carries the Nissan relationship or the Tokyo home round."
+    },
+    {
+     "team": "Atlassian Williams Racing (F1)",
+     "reason": "Zoox, Amazon's robotaxi, holds the autonomy lane; the archetype's F1 seat is taken."
+    }
+   ],
+   "ask": "A 25-minute call with Alex Kendall before the Tokyo E-Prix to shape a co-funded Official Embodied AI Partner programme with Nissan's works team for Seasons 13-15, with demonstration laps at London and Tokyo."
+  }
+ },
+ "note": "# Wayve → Nissan Formula E Team — verification log (N° 197, issued for 10 Jun 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY` in the sandbox), with Claude acting as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code from the case spec `wayve.case.json`.\n\n**Sandbox limitation, stated plainly:** wayve.ai, businesswire.com, cnbc.com, techcrunch.com and nissannews.com were blocked by the egress proxy. Every claim below was checked against the search summary of the primary page named as the evidence URL. Treat VERIFIED lines as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, re-dated\n\nThe row's trigger was the 24 Feb 2026 Series D, 106 days before the row and therefore stale; the Wayve-Uber-Nissan Tokyo MoU of 11 Mar 2026 is 91 days before it, one day outside the window. The in-window trigger is **Wayve's own release of 15 Apr 2026: a $60M Series D extension from AMD, Arm and Qualcomm Ventures** (56 days before the row), reinforced by the **Stellantis STLA AutoDrive partnership of 21 May 2026**. Both are company-announced. The extension is small relative to the round, which is why timing is 14 and urgency 13, and why the brief leans on the Nissan relationship and the Tokyo pilot rather than on the capital.\n\n## The team, confirmed\n\nThe row suggested Nissan Formula E; research confirms it as the honest choice for the reason the earlier signal check flagged: **Nissan is a Wayve shareholder and production partner**, so this is a warm, joint approach, not a cold pitch, and the brief says so (first risk, decision-maker bio, deal architecture). The Nissan Formula E Team's technical sponsor **Alpine Tech** (renewed for Season 12 per Nissan's newsroom) is not in the sponsor table and is therefore not written as \"Brand at Team\" in the copy. Post-row update: on 24 Jul 2026 Nissan announced it will also supply Andretti's GEN4 powertrain from Season 13; not public on the row date, so not in the brief.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Alex Kendall, Co-Founder & CEO (since 2020) | VERIFIED | wayve.ai leadership page; The Org |\n| $60M Series D extension from AMD, Arm, Qualcomm Ventures, 15 Apr 2026 | VERIFIED | wayve.ai press release; TechCrunch 15 Apr 2026 |\n| Series D $1.2B at $8.6B post-money, 24 Feb 2026; leads Eclipse, Balderton, SoftBank Vision Fund 2; Microsoft, Nvidia, Uber; Mercedes-Benz, Nissan, Stellantis; OTPP, Baillie Gifford, British Business Bank, Schroders; $1.5B total with Uber milestone capital | VERIFIED | wayve.ai press release; CNBC; OTPP; Balderton |\n| Nissan definitive agreements, 10 Dec 2025: AI Driver in next-gen ProPILOT, first model Japan FY2027, then global | VERIFIED | wayve.ai; usa.nissannews.com |\n| Wayve-Uber-Nissan Tokyo robotaxi MoU, 11 Mar 2026; pilot by late 2026 with Nissan LEAF | VERIFIED | Business Wire; Nissan global newsroom; Uber IR |\n| Stellantis STLA AutoDrive partnership, 21 May 2026; first NA vehicle 2028 | VERIFIED | Stellantis press release; wayve.ai |\n| Max Warburton, CFO since Nov 2024; ex-Daimler/Mercedes-Benz board advisor; no CMO listed | VERIFIED | wayve.ai press release / Business Wire 12 Nov 2024; leadership page |\n| US office Sunnyvale; San Francisco testing since Oct 2024; HQ London | VERIFIED | wayve.ai press release; Bloomberg |\n| No autonomy partner on the FE grid; TWG AI at Andretti; Zoox at Williams (F1); Nissan FE roster = works entry | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Tokyo E-Prix 25-26 Jul 2026; London E-Prix 15-16 Aug 2026; Season 13 London 29-30 May 2027, Tokyo 24-25 Jul 2027 | VERIFIED | calendar table (`seeds/calendar_fe.json`) |\n\n## Decision path\n\nSponsorship owner: **Alex Kendall, Co-Founder & CEO** (no CMO exists). Path: **Max Warburton, CFO** (finance, investor relations, OEM relationships). Because Nissan is a shareholder and production partner, the second path runs through Nissan's Formula E programme; the ask is framed as a co-funded joint activation.\n\n## Leadership ties\n\n`leadership_ties: []` — Kendall and Warburton searched against F1/FE/motorsport; none found. Warburton's prior role as advisor to the Daimler and Mercedes-Benz board is a corporate adjacency to the Mercedes F1 parent, not a sponsorship tie, and is recorded here rather than claimed as one.\n\n## Screen-outs and things not claimed\n\n- **No revenue figure**: none is public.\n- **A 12 May 2026 UK Government partnership** surfaced in search summaries without a primary page opened; not used.\n- **Post-row events** (17 Jun 2026 Stellantis-Wayve-Uber L4 robotaxi MoU; 30 Jun 2026 $85M employee tender at $8.5B, TechCrunch) are noted for a re-dated approach, not used in the brief.\n- **Deal size ($2-4M a year) is an ESTIMATE**, co-funded with Nissan, labelled as such.\n- **MODE B is stated as MODE B**; ops fit 12/20; total 71 against the row's 74.\n"
+}
