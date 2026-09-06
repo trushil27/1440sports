@@ -199,7 +199,10 @@ def run_scan(
     raw = ""
     for attempt in (1, 2):
         raw = client.create_text(
-            model=settings.scan_model, system=system, messages=messages, tools=[WEB_SEARCH_TOOL]
+            model=settings.scan_model,
+            system=system,
+            messages=messages,
+            tools=[{**WEB_SEARCH_TOOL, "max_uses": int(settings.scan_search_uses)}],
         )
         try:
             signals = parse_scan_output(raw, min_n=1, max_n=settings.scan_candidates_max)

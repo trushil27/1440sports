@@ -51,7 +51,7 @@ def scan_one(
         model=settings.scan_model,
         system=system,
         messages=[{"role": "user", "content": user}],
-        tools=[WEB_SEARCH_TOOL],
+        tools=[{**WEB_SEARCH_TOOL, "max_uses": int(settings.rebuild_search_uses)}],
     )
     try:
         signals = parse_scan_output(raw, min_n=1, max_n=1)

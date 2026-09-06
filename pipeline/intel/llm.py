@@ -66,7 +66,9 @@ def complete_text(
     kwargs: dict[str, Any] = {
         "model": model,
         "max_tokens": max_tokens,
-        "system": system,
+        # The system prompt is the same for every call of a stage (scanner, verifier, writer):
+        # cache it, so the 17-odd verifier calls per case pay for it once, not 17 times.
+        "system": [{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
         "thinking": {"type": "adaptive"},
     }
     if tools:

@@ -43,7 +43,14 @@ class Settings(BaseModel):
     anthropic_api_key: str | None = None
     scan_model: str = "claude-sonnet-5"
     writer_model: str = "claude-sonnet-5"
-    verify_model: str = "claude-opus-5"
+    # Sonnet verifies well enough at a fifth of the price; set VERIFY_MODEL=claude-opus-5 to
+    # go back. Verification is the largest cost of a case (one call per claim, two stages).
+    verify_model: str = "claude-sonnet-5"
+    verify_effort: str = Field(default="medium", description="Reasoning effort per claim.")
+    verify_max_tokens: int = Field(default=6000, description="A verdict is short.")
+    verify_tool_uses: int = Field(default=2, description="Fetches / searches per claim.")
+    scan_search_uses: int = Field(default=8, description="Web searches per daily scan.")
+    rebuild_search_uses: int = Field(default=5, description="Web searches per single-company scan.")
 
     # --- pipeline policy (brief §6) ---------------------------------------------
     md_threshold: int = Field(default=70, description="Minimum score to produce a brief (§6.4).")
@@ -113,7 +120,7 @@ class Settings(BaseModel):
     )
     desk_max_builds_per_hour: int = Field(default=6, description="Abuse guard on the public URL.")
     rebuild_backlog_per_run: int = Field(
-        default=4,
+        default=1,
         description="Historical signals rebuilt as full cases after each daily run (0 = off).",
     )
 

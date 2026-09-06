@@ -56,7 +56,7 @@ jobs:
       PAGES_REPO: ${{ github.repository }}
       APP_BASE_URL: ${{ vars.APP_BASE_URL || 'https://trushil27.github.io/1440sports/' }}
       DESK_API_URL: ${{ vars.DESK_API_URL }}
-      REBUILD_BACKLOG_PER_RUN: ${{ vars.REBUILD_BACKLOG_PER_RUN || '6' }}
+      REBUILD_BACKLOG_PER_RUN: ${{ vars.REBUILD_BACKLOG_PER_RUN || '1' }}
       FRESHNESS_DAYS_TRACK1: ${{ vars.FRESHNESS_DAYS_TRACK1 || '90' }}
       FRESHNESS_FALLBACK_DAYS: ${{ vars.FRESHNESS_FALLBACK_DAYS || '90' }}
       PDF_STORAGE_DIR: storage/briefs

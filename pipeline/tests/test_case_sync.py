@@ -69,4 +69,4 @@ def test_unbuilt_signals_get_a_queue_position(session, tmp_path, monkeypatch):
     assert [e["backlog_position"] for e in unbuilt] == list(range(1, len(unbuilt) + 1))
     assert all("page_html" not in e for e in unbuilt)
     assert "backlog_position" not in next(e for e in data["briefs"] if e["company"] == "Crusoe")
-    assert data["backlog_per_run"] == 4
+    assert data["backlog_per_run"] == 1

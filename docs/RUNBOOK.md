@@ -222,6 +222,17 @@ Touch ID on the `/enrol` step; afterwards it is passkey only, 90-day session.
 - [ ] n8n workflow deleted (its Hetzner VPS cron off)
 - [ ] `engine/` legacy tree archived in a final commit
 
+## 5a. Cost (6 Sep 2026)
+
+A full case costs money in three places: the single-company scan (Sonnet + web search), the
+verifier (one model call per claim, two stages, about 17 calls per case — the biggest line),
+and the writer (Sonnet, up to two attempts). Defaults after 6 Sep: `VERIFY_MODEL=claude-sonnet-5`
+(Opus was ~5× the price; set it back with the variable if a case needs it), `VERIFY_EFFORT=medium`,
+`VERIFY_MAX_TOKENS=6000`, `VERIFY_TOOL_USES=2`, `SCAN_SEARCH_USES=8`, `REBUILD_SEARCH_USES=5`,
+system prompts cached, `REBUILD_BACKLOG_PER_RUN=1`. Rough guide: one daily run ≈ the scan plus
+one case; a backlog shard of 10 ≈ 10 cases. Running several backlog shards in parallel multiplies
+the hourly spend accordingly — trigger them deliberately, not routinely.
+
 ## 6. Where to look when something is wrong
 
 | Symptom | Look at |

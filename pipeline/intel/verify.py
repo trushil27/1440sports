@@ -515,7 +515,8 @@ VERIFIER_SYSTEM = (
 
 
 class AnthropicVerifier:
-    """claude-opus-5 + web_fetch/web_search; returns a Verification (never raises on model 'no')."""
+    """VERIFY_MODEL (Sonnet by default) + web_fetch/web_search; returns a Verification (never
+    raises on a model 'no')."""
 
     def __init__(self, client: Any | None = None, settings: Settings | None = None) -> None:
         self.settings = settings or get_settings()
@@ -530,9 +531,10 @@ class AnthropicVerifier:
             f"Company: {company}\nClaim ({claim.claim_type.value}, section {claim.section}): "
             f"{claim.text}\nCited source: {claim.cited_source_url or 'none given'}"
         )
+        uses = max(1, int(self.settings.verify_tool_uses))
         tools = [
-            {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 3},
-            {"type": "web_search_20260209", "name": "web_search", "max_uses": 3},
+            {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": uses},
+            {"type": "web_search_20260209", "name": "web_search", "max_uses": uses},
         ]
         try:
             text = complete_text(
@@ -541,8 +543,8 @@ class AnthropicVerifier:
                 system=VERIFIER_SYSTEM,
                 messages=[{"role": "user", "content": user}],
                 tools=tools,
-                max_tokens=16000,
-                effort="high",
+                max_tokens=int(self.settings.verify_max_tokens),
+                effort=self.settings.verify_effort,
                 label="verifier",
             ).text
             data = extract_json_object(text)
