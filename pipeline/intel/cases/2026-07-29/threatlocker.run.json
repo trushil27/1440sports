@@ -1,0 +1,728 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-07-29",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-u445x_qb/2026-07-29/threatlocker.pdf",
+     "web": "/tmp/case-pdf-u445x_qb/2026-07-29/threatlocker.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "ThreatLocker",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 74,
+     "reason": "top ranking score",
+     "company": "ThreatLocker",
+     "decision": "selected",
+     "signal_date": "2026-07-29"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "ThreatLocker",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 74,
+   "score_breakdown": {
+    "cap": null,
+    "base": 74,
+    "total": 74,
+    "timing": 16,
+    "ops_fit": 17,
+    "ranking": 74,
+    "urgency": 12,
+    "capacity": 15,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 4,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 74,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 74,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+   "trigger_date": "2026-07-29",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 158,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-u445x_qb/2026-07-29/threatlocker.web.html",
+  "brief_data": {
+   "hq": "Orlando, Florida (founded 2017)",
+   "deck": "ThreatLocker, the Orlando zero-trust endpoint company protecting more than 70,000 organisations, closed a $190M Series F led by Elephant on 29 July 2026, with Koch Disruptive Technologies joining and total funding now near $500M. The money funds AI-risk controls and a first UK office in Reading.",
+   "risks": [
+    {
+     "label": "VALUATION NOT STATED",
+     "detail": "The $1.6B pre-round figure is SecurityWeek's; ThreatLocker has not disclosed a Series F valuation and revenue is not public.",
+     "counter": "Size the ask against the $190M raise, not the valuation; ask for the number on the first call."
+    },
+    {
+     "label": "CROWDED CATEGORY, CHANNEL BRAND",
+     "detail": "Five security vendors already hold F1 seats and ThreatLocker sells through MSPs, so a sixth logo can read as a follower.",
+     "counter": "Sell the deployment story, a debut team secured from day one, not the logo."
+    }
+   ],
+   "score": 74,
+   "ticker": "Private ($190M Series F, Jul 2026)",
+   "company": "ThreatLocker",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "TAKEN",
+     "detail": "CrowdStrike",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Audi F1 Team",
+     "label": "TAKEN",
+     "detail": "NinjaOne",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "TAKEN",
+     "detail": "Keeper",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "geographic_expansion"
+   ],
+   "sources": [
+    "https://theorg.com/org/threatlocker/teams/leadership-team",
+    "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+    "https://www.threatlocker.com/company",
+    "https://www.securityweek.com/threatlocker-raises-190-million-in-series-f-funding/",
+    "https://investors.corescientific.com/news-events/press-releases/detail/129/cadillac-formula-1-team-joins-forces-with-core-scientific-as-official-data-center-partner"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Danny Jenkins before the United States GP to confirm the Series F valuation on the record, walk through Cadillac's estate build-out, and size an Official Zero Trust Cybersecurity Partner entry against the team's 2027 roster.",
+    "value": [
+     {
+      "text": "A debut team is defining its security baseline now. ThreatLocker's allowlisting denies any application not explicitly permitted, Ringfencing restricts how permitted applications touch data and each other, and Elevation Control removes standing admin rights: controls that fit engineering workstations, machining and additive cells, the Indianapolis data hub and trackside laptops that join a different circuit network every race weekend.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A default-deny posture stops ransomware and rogue tooling without the headcount of a large security operations centre, which matters for a team spending inside the FIA cost cap. Product and services can form part of the consideration, lowering the cash element.",
+      "label": "Cost-cap arithmetic"
+     },
+     {
+      "text": "ThreatLocker's channel is thousands of managed service providers and 70,000 end customers, a mid-market audience Cadillac's B2B partners do not yet reach. US-race hospitality for MSP partners and a factory reference story give the team a new pool of guests and prospects.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Official Zero Trust Cybersecurity Partner designation, halo or sidepod placement, a published deployment case study with the team's IT leadership, hospitality at the US rounds, and driver and engineering access for ThreatLocker's channel events.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "ThreatLocker announced on 29 July 2026 that it had secured $190M in Series F funding led by Elephant, with D. E. Shaw Ventures and Arthur Ventures continuing and Koch Disruptive Technologies investing for the first time. The company's own release names the uses: controls for AI-related security risks, the Zero Trust Platform, and international expansion starting with a Reading, UK office.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The Series F follows a $20M Series B, $100M Series C, $115M Series D in April 2024 and $60M Series E in April 2025, taking total funding to nearly $500M. SecurityWeek reports the previous round valued the company at $1.6B; ThreatLocker has not stated a Series F valuation and does not publish revenue, so the brief sizes capacity on the raise, not the valuation.",
+      "label": "Six rounds, near $500M"
+     },
+     {
+      "text": "The company already runs its European headquarters from Dublin, with offices in Dubai and Brisbane. Reading is the first UK office, which puts a brand-building budget in the same country as eight Formula 1 teams and Silverstone, where Cadillac's UK operation sits.",
+      "label": "Europe is the next spend"
+     },
+     {
+      "text": "On 4 September 2026 ThreatLocker joined Juncos Hollinger Racing for the IndyCar season finale at Laguna Seca, a one-race presence on the JHR entry. Danny Jenkins said the aim was to introduce ThreatLocker to the IndyCar community. The company has now tested motorsport with a single-race buy; the next conversation is whether a multi-year F1 seat at an Indiana-based team is the scale-up.",
+      "label": "Update since this date: a first motorsport trial"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Cadillac is building an entire Formula 1 operation from scratch: a $200M, roughly 400,000 sq ft campus in Fishers next to Indianapolis Metropolitan Airport, a Charlotte facility and a Silverstone base. Core Scientific is developing the team's Indianapolis data hub and optimising the cloud-hybrid environment across US and UK operations; IFS runs operations. There is no cybersecurity partner on the roster, which the team's profile lists as an open category.",
+      "label": "A greenfield estate"
+     },
+     {
+      "text": "Cadillac has said it is not seeking a title sponsor for its debut and wants fewer, bigger partnerships. That favours a partner whose product is deployed across the team rather than a badge, which is the shape of a zero-trust endpoint deal.",
+      "label": "Fewer, bigger partners"
+     },
+     {
+      "text": "ThreatLocker is headquartered in Orlando and sells mainly through US managed service providers. Cadillac is the American entry, with the Miami, Austin and Las Vegas rounds each year, and its Indiana base sits in the same city as the IndyCar team ThreatLocker has just tried.",
+      "label": "Home market"
+     },
+     {
+      "text": "Every established security lane is taken: CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, 1Password (Red Bull), Cato Networks at Alpine and NinjaOne at Audi. Of the open teams, Cadillac's combination of a new estate, a US identity and an explicit open category is the strongest.",
+      "label": "Ruled out by the table"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "CrowdStrike holds the cybersecurity lane; endpoint protection is a direct clash."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "Bitdefender is the cybersecurity partner and an endpoint rival."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Keeper occupies identity and privileged-access security."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "1Password holds the security lane."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Cato Networks joined in 2026 and covers security."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "NinjaOne (endpoint management) joined the roster; the endpoint lane is crowded."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Cisco covers security and networking and Okta covers identity."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "SentinelOne has been Official Cybersecurity Partner since 2021 with an extension announced in February 2024; the table now lists it as departed, but the endpoint lane is contested and SentinelOne is a direct rival."
+     },
+     {
+      "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+      "reason": "Open but not chosen: neither is building a new estate, and neither offers the Indiana and US-launch story Cadillac does."
+     }
+    ]
+   },
+   "date_long": "29 JUL 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $190M Series F closed on 29 July, a first European office and a platform protecting 70,000 organisations put ThreatLocker at peak spend authority. Cadillac's roster has no cybersecurity partner, the team is building its estate now, and two US races remain inside the window.",
+   "footer_date": "29 JUL 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Round closed 29 Jul; Austin and Las Vegas inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "$190M raise, ~$500M total; valuation reported, not stated.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Channel-led B2B brand; already sponsors UCF Athletics.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "UK and EMEA launch under way; no listing date.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 17,
+     "note": "MODE A: C2 cybersecurity; Cadillac's lane is open.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "ThreatLocker announced a $190M Series F on 29 July 2026, led by Elephant, with D. E. Shaw Ventures and Arthur Ventures returning and Koch Disruptive Technologies new. It follows a $20M Series B, $100M Series C, $115M Series D (April 2024) and $60M Series E (April 2025): nearly $500M in total. SecurityWeek puts the pre-round valuation at $1.6B (reported); the company has not stated a new one and publishes no revenue. The platform, allowlisting and Ringfencing that block whatever is not explicitly permitted, protects more than 70,000 organisations. The round funds AI-risk controls and a Reading office.",
+   "the_case_p2": "Cybersecurity is the most-sold technology category on the grid: CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, 1Password (Red Bull) and Cato Networks at Alpine. Each vendor bought the same thing, a paddock full of the enterprise buyers it sells to. ThreatLocker reaches the mid-market through managed service providers and has just committed to Europe. What it lacks is a brand stage for those partners and their customers.",
+   "track_label": "",
+   "brief_number": "158",
+   "claims_total": 16,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$190M Series F led by Elephant, with D. E. Shaw Ventures and Arthur Ventures returning and Koch Disruptive…",
+     "value": "$190M",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion"
+    },
+    {
+     "fact": "It follows a $20M Series B, $100M Series C, $115M Series D (April 2024) and $60M Series E (April 2025): nea…",
+     "value": "$20M",
+     "claim_id": 631,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "SecurityWeek puts the pre-round valuation at $1.6B (reported);",
+     "value": "$1.6B",
+     "claim_id": 632,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Cybersecurity · Zero Trust Endpoint Protection",
+   "value_content": "MODE A - operational. A new team writes its security baseline from nothing: engineering workstations, machining and additive cells, the Indianapolis data hub, and trackside laptops that join a different network 24 weekends a year. ThreatLocker's allowlisting and Ringfencing deny anything not explicitly permitted, which is how a cost-capped team stops ransomware without a large security operations centre. Deployment across Fishers, Charlotte and Silverstone, a published case study, a race-weekend response desk.",
+   "value_section": true,
+   "why_team_para": "Cadillac is the grid's first greenfield IT estate in a decade: a debut team operating from Fishers, Indiana, Charlotte and Silverstone, with Core Scientific building its Indianapolis data hub, IFS running operations, and no cybersecurity partner on the roster. The team wants fewer, bigger partners rather than a title sponsor. An Orlando company on an American car gets three US rounds a year at home; Cadillac gets a US security brand from launch.",
+   "deal_arch_para": "Entry as Official Zero Trust Cybersecurity Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the Reading launch and any listing window. Estimated $3-5M a year, part-payable in product and services. Scope: halo or sidepod placement, deployment across the team's estate, US-race hospitality for MSP partners, factory content.",
+   "footer_company": "THREATLOCKER",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 29 July and the Reading office is the first spend against it; marketing budgets are set in the quarter after a raise. The United States GP in October and the Las Vegas GP in November sit inside the window, and teams close 2027 rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Jenkins co-founded ThreatLocker in Orlando in 2017 after building Dublin email-security vendor MXSweep, and fronts every raise and sponsorship. Path: Sami Jenkins, COO and Co-Founder; Shane Deegan, Chief Revenue Officer. No chief marketing officer is listed.",
+   "decision_maker_name": "Danny Jenkins",
+   "decision_maker_role": "CEO & Co-Founder, ThreatLocker",
+   "opening_angle_intro": "Lead with the greenfield estate.",
+   "opening_angle_quote": "&ldquo;Danny, Cadillac is building its security stack from zero in Indiana and Silverstone, and there is no cybersecurity partner on the car. Your Series F just paid for Europe; an American team gives your 70,000 customers and MSPs the story. 25 minutes before Austin?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Danny Jenkins, CEO & Co-Founder at ThreatLocker",
+   "cited_source_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://theorg.com/org/threatlocker/teams/leadership-team",
+     "excerpt": "ThreatLocker leadership as listed by The Org and the company's own leadership page: Danny Jenkins, CEO & Co-Founder (co-founded the company in Orlando in 2017 with Sami Jenkins and John Carolan; previously co-founded Dublin email-security vendor MXSweep); Sami Jenkins, COO & Co-Founder; Rob Allen, Chief Product Officer; Shane Deegan, Chief Revenue Officer; Michael Jenkins, CTO; Martin Olivo, CIO. No chief marketing officer or chief financial officer is named on the listings found (marketing is led at SVP level).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Danny Jenkins, CEO & Co-Founder, ThreatLocker at ThreatLocker",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://theorg.com/org/threatlocker/teams/leadership-team",
+     "excerpt": "ThreatLocker leadership as listed by The Org and the company's own leadership page: Danny Jenkins, CEO & Co-Founder (co-founded the company in Orlando in 2017 with Sami Jenkins and John Carolan; previously co-founded Dublin email-security vendor MXSweep); Sami Jenkins, COO & Co-Founder; Rob Allen, Chief Product Officer; Shane Deegan, Chief Revenue Officer; Michael Jenkins, CTO; Martin Olivo, CIO. No chief marketing officer or chief financial officer is named on the listings found (marketing is led at SVP level).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$190M Series F led by Elephant, with D. E. Shaw Ventures and Arthur Ventures returning and Koch Disruptive Technologies new (company release, 29 Jul 2026); prior rounds $20M Series B, $100M Series C, $115M Series D (Apr 2024), $60M Series E (Apr 2025); total nearly $500M",
+   "cited_source_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "excerpt": "ThreatLocker press release, 29 Jul 2026 (also on PR Newswire; SecurityWeek and Cyber Daily summaries): $190 million Series F led by Elephant, with continued support from D. E. Shaw Ventures and Arthur Ventures and a significant new investment from Koch Disruptive Technologies. Funds AI-related security controls, the Zero Trust Platform and international expansion beginning with a Reading, U.K. office. Headquartered in Orlando, Florida, with offices in Dublin, Dubai and Brisbane; protects over 70,000 organizations worldwide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "ThreatLocker, the Orlando zero-trust endpoint company protecting more than 70,000 organisations, closed a $190M Series F led by Elephant on 29 July 2026, with Koch Disruptive Technologies joining and total funding now near $500M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "excerpt": "ThreatLocker press release, 29 Jul 2026 (also on PR Newswire; SecurityWeek and Cyber Daily summaries): $190 million Series F led by Elephant, with continued support from D. E. Shaw Ventures and Arthur Ventures and a significant new investment from Koch Disruptive Technologies. Funds AI-related security controls, the Zero Trust Platform and international expansion beginning with a Reading, U.K. office. Headquartered in Orlando, Florida, with offices in Dublin, Dubai and Brisbane; protects over 70,000 organizations worldwide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Elephant (lead), D. E. Shaw Ventures, Arthur Ventures, Koch Disruptive Technologies",
+   "cited_source_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "excerpt": "ThreatLocker press release, 29 Jul 2026 (also on PR Newswire; SecurityWeek and Cyber Daily summaries): $190 million Series F led by Elephant, with continued support from D. E. Shaw Ventures and Arthur Ventures and a significant new investment from Koch Disruptive Technologies. Funds AI-related security controls, the Zero Trust Platform and international expansion beginning with a Reading, U.K. office. Headquartered in Orlando, Florida, with offices in Dublin, Dubai and Brisbane; protects over 70,000 organizations worldwide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "ThreatLocker announced a $190M Series F on 29 July 2026, led by Elephant, with D.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "excerpt": "ThreatLocker press release, 29 Jul 2026 (also on PR Newswire; SecurityWeek and Cyber Daily summaries): $190 million Series F led by Elephant, with continued support from D. E. Shaw Ventures and Arthur Ventures and a significant new investment from Koch Disruptive Technologies. Funds AI-related security controls, the Zero Trust Platform and international expansion beginning with a Reading, U.K. office. Headquartered in Orlando, Florida, with offices in Dublin, Dubai and Brisbane; protects over 70,000 organizations worldwide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$190M Series F led by Elephant announced 29 Jul 2026, funding AI-risk controls and a first UK office in Reading",
+   "cited_source_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "excerpt": "ThreatLocker press release, 29 Jul 2026 (also on PR Newswire; SecurityWeek and Cyber Daily summaries): $190 million Series F led by Elephant, with continued support from D. E. Shaw Ventures and Arthur Ventures and a significant new investment from Koch Disruptive Technologies. Funds AI-related security controls, the Zero Trust Platform and international expansion beginning with a Reading, U.K. office. Headquartered in Orlando, Florida, with offices in Dublin, Dubai and Brisbane; protects over 70,000 organizations worldwide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It follows a $20M Series B, $100M Series C, $115M Series D (April 2024) and $60M Series E (April 2025): nearly $500M in total.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.securityweek.com/threatlocker-raises-190-million-in-series-f-funding/",
+     "excerpt": "SecurityWeek, 29 Jul 2026: ThreatLocker previously raised a $20M Series B, $100M Series C, $115M Series D and $60M Series E, bringing the total to nearly $500 million; the company was valued at $1.6 billion in its previous round (reported; the Series E of April 2025 was reported at $1.2B by Capital Asset Ventures). The company has not stated a Series F valuation and publishes no revenue figure. Series D of $115M announced 24 Apr 2024 (GlobeNewswire).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, 1Password (Red Bull), Cato Networks at Alpine, NinjaOne at Audi; Cadillac carries no cybersecurity partner",
+   "cited_source_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "CrowdStrike → Mercedes-AMG Petronas F1 Team (team_major, active); Bitdefender → Scuderia Ferrari (team_major, active); Keeper → Atlassian Williams Racing (team_major, active); Cato Networks → BWT Alpine F1 Team (team_major, joined); NinjaOne → Audi F1 Team (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "SecurityWeek puts the pre-round valuation at $1.6B (reported);",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.securityweek.com/threatlocker-raises-190-million-in-series-f-funding/",
+     "excerpt": "SecurityWeek, 29 Jul 2026: ThreatLocker previously raised a $20M Series B, $100M Series C, $115M Series D and $60M Series E, bringing the total to nearly $500 million; the company was valued at $1.6 billion in its previous round (reported; the Series E of April 2025 was reported at $1.2B by Capital Asset Ventures). The company has not stated a Series F valuation and publishes no revenue figure. Series D of $115M announced 24 Apr 2024 (GlobeNewswire).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Zero-trust endpoint controls (allowlisting, Ringfencing) for a debut team building a greenfield IT estate across Fishers, Charlotte and Silverstone, with Core Scientific building its Indianapolis data hub",
+   "cited_source_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/company",
+     "excerpt": "ThreatLocker company page and press releases: founded in 2017 by Danny and Sami Jenkins and John Carolan; Zero Trust endpoint platform built on Allowlisting (permit or deny application execution), Ringfencing (restrict how permitted apps interact with data and other apps) and Elevation Control; sold largely through managed service providers; sponsor of UCF Athletics (company release).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $190M Series F closed on 29 July, a first European office and a platform protecting 70,000 organisations put ThreatLocker at peak spend authority.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "excerpt": "ThreatLocker press release, 29 Jul 2026 (also on PR Newswire; SecurityWeek and Cyber Daily summaries): $190 million Series F led by Elephant, with continued support from D. E. Shaw Ventures and Arthur Ventures and a significant new investment from Koch Disruptive Technologies. Funds AI-related security controls, the Zero Trust Platform and international expansion beginning with a Reading, U.K. office. Headquartered in Orlando, Florida, with offices in Dublin, Dubai and Brisbane; protects over 70,000 organizations worldwide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Orlando, Florida; offices in Dublin, Dubai and Brisbane; Reading, UK office opening",
+   "cited_source_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "excerpt": "ThreatLocker press release, 29 Jul 2026 (also on PR Newswire; SecurityWeek and Cyber Daily summaries): $190 million Series F led by Elephant, with continued support from D. E. Shaw Ventures and Arthur Ventures and a significant new investment from Koch Disruptive Technologies. Funds AI-related security controls, the Zero Trust Platform and international expansion beginning with a Reading, U.K. office. Headquartered in Orlando, Florida, with offices in Dublin, Dubai and Brisbane; protects over 70,000 organizations worldwide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "ThreatLocker announced on 29 July 2026 that it had secured $190M in Series F funding led by Elephant, with D.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "excerpt": "ThreatLocker press release, 29 Jul 2026 (also on PR Newswire; SecurityWeek and Cyber Daily summaries): $190 million Series F led by Elephant, with continued support from D. E. Shaw Ventures and Arthur Ventures and a significant new investment from Koch Disruptive Technologies. Funds AI-related security controls, the Zero Trust Platform and international expansion beginning with a Reading, U.K. office. Headquartered in Orlando, Florida, with offices in Dublin, Dubai and Brisbane; protects over 70,000 organizations worldwide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "excerpt": "ThreatLocker press release, 29 Jul 2026 (also on PR Newswire; SecurityWeek and Cyber Daily summaries): $190 million Series F led by Elephant, with continued support from D. E. Shaw Ventures and Arthur Ventures and a significant new investment from Koch Disruptive Technologies. Funds AI-related security controls, the Zero Trust Platform and international expansion beginning with a Reading, U.K. office. Headquartered in Orlando, Florida, with offices in Dublin, Dubai and Brisbane; protects over 70,000 organizations worldwide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The Series F follows a $20M Series B, $100M Series C, $115M Series D in April 2024 and $60M Series E in April 2025, taking total funding to nearly $500M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.threatlocker.com/press-release/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion",
+     "excerpt": "ThreatLocker press release, 29 Jul 2026 (also on PR Newswire; SecurityWeek and Cyber Daily summaries): $190 million Series F led by Elephant, with continued support from D. E. Shaw Ventures and Arthur Ventures and a significant new investment from Koch Disruptive Technologies. Funds AI-related security controls, the Zero Trust Platform and international expansion beginning with a Reading, U.K. office. Headquartered in Orlando, Florida, with offices in Dublin, Dubai and Brisbane; protects over 70,000 organizations worldwide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "SecurityWeek reports the previous round valued the company at $1.6B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.securityweek.com/threatlocker-raises-190-million-in-series-f-funding/",
+     "excerpt": "SecurityWeek, 29 Jul 2026: ThreatLocker previously raised a $20M Series B, $100M Series C, $115M Series D and $60M Series E, bringing the total to nearly $500 million; the company was valued at $1.6 billion in its previous round (reported; the Series E of April 2025 was reported at $1.2B by Capital Asset Ventures). The company has not stated a Series F valuation and publishes no revenue figure. Series D of $115M announced 24 Apr 2024 (GlobeNewswire).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Cadillac is building an entire Formula 1 operation from scratch: a $200M, roughly 400,000 sq ft campus in Fishers next to Indianapolis Metropolitan Airport, a Charlotte facility and a Silverstone base.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.corescientific.com/news-events/press-releases/detail/129/cadillac-formula-1-team-joins-forces-with-core-scientific-as-official-data-center-partner",
+     "excerpt": "Core Scientific / Cadillac Formula 1 Team, 10 Mar 2026: multi-year partnership naming Core Scientific Official Data Center Partner, developing the team's primary U.S. data hub in Indianapolis for simulation, engineering, manufacturing and race operations, and optimising cloud-hybrid environments across U.S. and U.K. operations. The team operates from Indianapolis (Fishers campus, a $200M, ~400,000 sq ft development next to Indianapolis Metropolitan Airport), Charlotte, North Carolina, and Silverstone. IFS is Official Technology Partner (ERP/operations). Team profile: not seeking a title sponsor for the 2026 debut ('fewer, bigger, better').",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
