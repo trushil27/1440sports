@@ -1,0 +1,766 @@
+{
+ "run": {
+  "id": 132,
+  "date": "2026-07-29",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-l6aezw_e/2026-07-29/groundcover.pdf",
+     "web": "/tmp/case-pdf-l6aezw_e/2026-07-29/groundcover.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "groundcover",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 14
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 196,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 200,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "groundcover",
+     "decision": "selected",
+     "signal_date": "2026-07-29"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "groundcover",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 16,
+    "ops_fit": 16,
+    "ranking": 70,
+    "urgency": 12,
+    "capacity": 13,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "TGR Haas F1 Team",
+   "source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+   "trigger_date": "2026-07-29",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 157,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-l6aezw_e/2026-07-29/groundcover.web.html",
+  "brief_data": {
+   "hq": "Tel Aviv · Boston · San Francisco; founded 2021",
+   "deck": "groundcover, the Tel Aviv observability company that says it wants to replace Datadog, announced a $100M Series C led by One Peak on 29 July, with Morgan Stanley Expansion Capital joining. Total funding is $160M; Calcalist puts the valuation at about $500M, roughly four times the last round (reported).",
+   "risks": [
+    {
+     "label": "SCALE",
+     "detail": "$160M raised, about $500M reported value and 140 staff; a Formula 1 fee is a large share of a challenger's marketing budget.",
+     "counter": "Part-pay in licences and step fees up with the next round."
+    },
+    {
+     "label": "NO MARKETING OFFICER",
+     "detail": "Marketing is led at VP level from San Francisco; a sponsorship has no natural owner below the CEO.",
+     "counter": "Pitch to Azulay directly with Churilo on the call; frame the deal as the US launch campaign."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private (~$500M reported; $100M Series C, Jul 2026)",
+   "company": "groundcover",
+   "gridfit": [
+    {
+     "team": "MoneyGram Haas F1 Team",
+     "label": "PRIME LANE",
+     "detail": "documented open category: observability",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "McLaren F1 Team",
+     "label": "TAKEN",
+     "detail": "Cisco, Google Cloud, Splunk",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "TAKEN",
+     "detail": "Microsoft",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "TAKEN",
+     "detail": "Oracle",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "challenger_brand"
+   ],
+   "sources": [
+    "https://www.calcalistech.com/ctechnews/article/r19aupvrme",
+    "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Shahar Azulay, with Chris Churilo, before the United States GP to test appetite for a 2027 start and size an Official Observability Partner entry, part-paid in licences, against Haas's 2027 roster.",
+    "value": [
+     {
+      "text": "eBPF-based logs, metrics and traces across the team's cloud and Kubernetes estate: telemetry pipelines from garage to factory, simulation and analysis services, race-weekend tooling. Engineers see what is slow or failing between sessions without instrumenting each application, and nothing leaves the team's environment.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner selling to platform-engineering and DevOps leaders brings a guest list of technology buyers to Austin and Las Vegas, the audience Haas's B2B partners want alongside them.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "'What the grid runs on': co-produced engineering content on how a Formula 1 team observes its own systems, a Haas reference case for groundcover's US sales, and a story that suits a challenger brand next to a privateer team.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Observability Partner designation, car and garage placement, Austin and Las Vegas hospitality, driver and engineering access for groundcover's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "groundcover announced a $100M Series C led by One Peak on 29 July 2026, with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe. Total funding is $160M. The company release carries the round; Calcalist reports a valuation of about $500M, roughly four times the prior round.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Annual recurring revenue tripled, headcount doubled to about 140 and the customer count passed 250, from early-stage startups to Fortune 5 enterprises, with several seven-figure contracts. A challenger growing at that rate needs awareness among the platform-engineering buyers who default to the incumbent.",
+      "label": "A year of tripled revenue"
+     },
+     {
+      "text": "Roughly 80 of the 140 staff are in Israel; the rest are in Boston and San Francisco, where the VP of Marketing sits. The Series C funds the US go-to-market that a partnership with an American team supports directly.",
+      "label": "The US push"
+     },
+     {
+      "text": "The Italian GP (early September), the United States GP in Austin (late October) and the Las Vegas GP (November) fall inside the horizon; teams close 2027 partner rosters in the fourth quarter. A deal agreed before Austin can be announced there and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Haas carries Toyota Gazoo Racing as title partner, Mphasis for digital services, CommScope and Ruckus for networking, Infobip for messaging, and Fix Network, a collision-repair brand, from 2026. No observability or monitoring partner: Official Observability Partner is a clean category, and Mphasis is a services channel rather than a rival product.",
+      "label": "The open lane"
+     },
+     {
+      "text": "A lean American privateer with engineering in Kannapolis and Banbury runs cloud and trackside systems with a small platform team under a cost cap. groundcover's in-your-own-cloud model, with no per-application instrumentation, is designed for exactly that team.",
+      "label": "The customer the product was built for"
+     },
+     {
+      "text": "A Formula 1 team's telemetry is its intellectual property. groundcover's pitch is that observability data never leaves the customer's environment, which is a story a race team can tell credibly on camera.",
+      "label": "Data stays inside"
+     },
+     {
+      "text": "McLaren holds Splunk through Cisco and Racing Bulls holds Dynatrace. Cadillac's observability lane is open but its 'fewer, bigger, better' policy is priced above a $500M company; Haas offers the same open lane at a privateer's price with two US rounds in the window.",
+      "label": "Why not the others"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Splunk, through Cisco, holds the observability and APM lane."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Dynatrace is the observability partner; Confluent covers data streaming."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "VAST Data holds the data-platform lane; the technology roster is crowded."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Observability lane open, but the 'fewer, bigger, better' partner policy is priced above a $500M company."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "Hewlett Packard Enterprise, TeamViewer and Microsoft crowd the infrastructure lane."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and the infrastructure incumbent."
+     },
+     {
+      "team": "Scuderia Ferrari HP · BWT Alpine",
+      "reason": "HP, IBM and DXC at Ferrari, Microsoft at Alpine: infrastructure and cloud lanes occupied."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "Extreme Networks and NinjaOne cover networking and IT management."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "NetApp, CoreWeave and Cognizant occupy data, compute and services."
+     }
+    ]
+   },
+   "date_long": "29 JUL 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "TGR Haas F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $100M Series C led by One Peak, tripled ARR and a doubled team give groundcover the budget and the motive to be seen beside Splunk and Dynatrace; Haas offers an open observability lane at a privateer's price. Scale and the absence of a marketing officer hold the score at 70.",
+   "footer_date": "29 JUL 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Round announced 29 Jul; Monza, Austin and Las Vegas in the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 13,
+     "note": "$100M raise, $160M total, ~$500M reported; 140 staff.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "Developer-facing B2B brand; platform-engineering audience.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "US push and doubled team; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: in-your-own-cloud observability of a small team's estate.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Zeev Ventures, Angular Ventures, Heavybit and Jibe returned; the $35M Series B, led by Zeev, closed in April 2025. Over the past year the company tripled annual recurring revenue, doubled headcount to about 140, roughly 80 in Israel and the rest in Boston and San Francisco, and passed 250 paying customers, startups to Fortune 5 enterprises. Its platform captures telemetry with eBPF inside the customer's own cloud, so nothing leaves the environment. Founders Shahar Azulay and Yechezkel Rabinovich served together in the cyber unit of Israel's Prime Minister's Office.",
+   "the_case_p2": "Observability is on the grid but thinly: Splunk sits with McLaren through Cisco and Dynatrace at Racing Bulls, and the rest of the field runs the same telemetry pipelines without a named partner. A challenger that needs to be seen beside the incumbents, and whose whole pitch is keeping sensitive data inside the customer's walls, has a story Formula 1 tells better than any conference.",
+   "track_label": "",
+   "brief_number": "157",
+   "claims_total": 16,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$100M Series C led by One Peak, announced 29 Jul 2026; total funding $160M; valuation about $500M, roughly…",
+     "value": "$100M",
+     "claim_id": 678,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era"
+    },
+    {
+     "fact": "Total funding is $160M;",
+     "value": "$160M",
+     "claim_id": 688,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "Calcalist puts the valuation at about $500M, roughly four times the last round (reported).",
+     "value": "$500M",
+     "claim_id": 689,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "the $35M Series B, led by Zeev, closed in April 2025.",
+     "value": "$35M",
+     "claim_id": 690,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Observability · eBPF, Bring-Your-Own-Cloud",
+   "value_content": "MODE A - operational. groundcover deploys inside Haas's own cloud and Kubernetes estate and captures logs, metrics and traces with eBPF, without instrumenting each application: the pipelines that carry car data from the garage to Kannapolis and Banbury, the simulation services, the race-weekend tooling. Engineers get one view of what is slow or failing between sessions, and no telemetry leaves the team's environment.",
+   "value_section": true,
+   "why_team_para": "Haas is the lean American privateer: Kannapolis base, Banbury forward base, Toyota Gazoo Racing as title partner from 2026, and a technology roster of Mphasis for services, CommScope and Ruckus for networking, Infobip for messaging. It has no observability partner, so Official Observability Partner is clean, and Mphasis is a services channel rather than a rival. A small engineering team running cloud and trackside systems under a cost cap is the customer groundcover's in-your-own-cloud model was built for.",
+   "deal_arch_para": "Entry as Official Observability Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the US expansion and a possible next round. Estimated $1.5-3M a year, part in platform licences. Scope: car and garage placement, a 'what the grid runs on' engineering content series, Austin and Las Vegas hospitality for platform-engineering buyers, a Haas reference case.",
+   "footer_company": "GROUNDCOVER",
+   "why_team_label": "WHY TGR HAAS F1 TEAM",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 29 July with a doubled team to feed and a US push from Boston and San Francisco. Austin (late October) and Las Vegas (November) fall inside the window; teams settle 2027 rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Azulay co-founded groundcover in 2021 with CTO Yechezkel Rabinovich after a machine-learning role at Apple (reported); he fronts every raise and a first sponsorship is his call. Path: Chris Churilo, VP Marketing (San Francisco), and Ran Ziskovich, VP Finance (reported). No chief marketing or financial officer is titled.",
+   "decision_maker_name": "Shahar Azulay",
+   "decision_maker_role": "Co-founder & CEO, groundcover",
+   "opening_angle_intro": "Lead with Datadog and the open lane.",
+   "opening_angle_quote": "&ldquo;Shahar, you have said you want to replace Datadog. Datadog is not on the grid, Splunk and Dynatrace are, and Haas has no observability partner. 25 minutes before Austin to see what a challenger's seat costs?&rdquo;",
+   "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Shahar Azulay, Co-founder & CEO at groundcover",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/r19aupvrme",
+     "excerpt": "Calcalist (CTech), 29 Jul 2026: groundcover was founded in 2021 by Shahar Azulay, CEO, and Yechezkel Rabinovich, CTO, who served together in the cyber unit of Israel's Prime Minister's Office. Tech Funding News: Azulay previously a machine-learning manager at Apple (reported). The thin desk row's 'Shahar Fogel' is wrong.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Shahar Azulay, Co-founder & CEO, groundcover at groundcover",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/r19aupvrme",
+     "excerpt": "Calcalist (CTech), 29 Jul 2026: groundcover was founded in 2021 by Shahar Azulay, CEO, and Yechezkel Rabinovich, CTO, who served together in the cyber unit of Israel's Prime Minister's Office. Tech Funding News: Azulay previously a machine-learning manager at Apple (reported). The thin desk row's 'Shahar Fogel' is wrong.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$100M Series C led by One Peak, announced 29 Jul 2026; total funding $160M; valuation about $500M, roughly four times the prior round (Calcalist, reported)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "groundcover, the Tel Aviv observability company that says it wants to replace Datadog, announced a $100M Series C led by One Peak on 29 July, with Morgan Stanley Expansion Capital joining.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "One Peak (lead); Morgan Stanley Expansion Capital; existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Total funding is $160M;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Annual recurring revenue tripled over the past year; several seven-figure contracts signed (company release; no absolute figure public)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Calcalist puts the valuation at about $500M, roughly four times the last round (reported).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/r19aupvrme",
+     "excerpt": "Calcalist, 29 Jul 2026 ('We want to replace Datadog'): the round values groundcover at about $500M, roughly four times its previous valuation (reported); headcount doubled to 140, including 80 in Israel with the remainder in Boston and San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$100M Series C led by One Peak, announced 29 Jul 2026",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "the $35M Series B, led by Zeev, closed in April 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Splunk sits with McLaren through Cisco and Dynatrace at Racing Bulls; Haas carries no observability partner",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Dynatrace → Visa Cash App Racing Bulls (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $100M Series C led by One Peak, tripled ARR and a doubled team give groundcover the budget and the motive to be seen beside Splunk and Dynatrace;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headcount doubled to about 140, roughly 80 in Israel and the rest in Boston and San Francisco; more than 250 paying customers from startups to Fortune 5 enterprises; stated aim to replace Datadog",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Dynatrace at Racing Bulls",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Dynatrace → Visa Cash App Racing Bulls (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Offices in Boston and San Francisco; VP Marketing based in San Francisco",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/r19aupvrme",
+     "excerpt": "Calcalist, 29 Jul 2026 ('We want to replace Datadog'): the round values groundcover at about $500M, roughly four times its previous valuation (reported); headcount doubled to 140, including 80 in Israel with the remainder in Boston and San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "groundcover announced a $100M Series C led by One Peak on 29 July 2026, with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260729686071/en/groundcover-Raises-$100-Million-Series-C-to-Create-the-Observability-Platform-Built-for-the-AI-Era",
+     "excerpt": "groundcover press release via Business Wire, 29 Jul 2026 (search summary; page blocked to the sandbox): $100M Series C led by One Peak with Morgan Stanley Expansion Capital and existing investors Zeev Ventures, Angular Ventures, Heavybit and Jibe; total funding $160M; over the past year the company tripled annual recurring revenue, doubled global headcount, passed 250 paying customers from early-stage startups to Fortune 5 enterprises and signed multiple seven-figure contracts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Calcalist reports a valuation of about $500M, roughly four times the prior round.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/r19aupvrme",
+     "excerpt": "Calcalist, 29 Jul 2026 ('We want to replace Datadog'): the round values groundcover at about $500M, roughly four times its previous valuation (reported); headcount doubled to 140, including 80 in Israel with the remainder in Boston and San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Cadillac's observability lane is open but its 'fewer, bigger, better' policy is priced above a $500M company;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/r19aupvrme",
+     "excerpt": "Calcalist, 29 Jul 2026 ('We want to replace Datadog'): the round values groundcover at about $500M, roughly four times its previous valuation (reported); headcount doubled to 140, including 80 in Israel with the remainder in Boston and San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Observability lane open, but the 'fewer, bigger, better' partner policy is priced above a $500M company.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/r19aupvrme",
+     "excerpt": "Calcalist, 29 Jul 2026 ('We want to replace Datadog'): the round values groundcover at about $500M, roughly four times its previous valuation (reported); headcount doubled to 140, including 80 in Israel with the remainder in Boston and San Francisco.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Italian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 15: Italian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
