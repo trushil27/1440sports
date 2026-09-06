@@ -1,0 +1,409 @@
+{
+ "run_date": "2026-06-22",
+ "signal_date": "2026-06-22",
+ "stem": "lime",
+ "number": 183,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Lime",
+  "signal_date": "2026-06-22",
+  "score": 70,
+  "tier": "WARM",
+  "track": 1,
+  "person": "Wayne Ting",
+  "role": "Chief Executive Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+  "industry_meta": "Shared Electric Micromobility · E-bikes and E-scooters · San Francisco",
+  "recommended_team": "Envision Racing",
+  "recommended_series": "FE",
+  "timing_label": "WARM",
+  "trigger_reason": "IPO roadshow launched",
+  "key_facts": {
+   "funding": "IPO roadshow launched 22 Jun 2026: 6,956,522 shares at $24-$26 (6,679,791 from Lime), up to about $181M at a valuation of up to about $1.8B (Renaissance Capital); Nasdaq Global Select, ticker LIME",
+   "investors": "Uber holds 24.4% pre-IPO and has indicated interest in up to $20M of shares at the IPO price; Goldman Sachs and J.P. Morgan lead the books",
+   "revenue": "FY2025 revenue $886.7M, up 29%; adjusted EBITDA $218.1M; net loss $59.3M; free cash flow $103.8M (S-1, as summarised by Dealroom and micromobility.io)",
+   "trigger": "Lime announced the launch of its IPO roadshow on 22 Jun 2026 with pricing expected the following week",
+   "competitor_signal": "No shared-mobility, e-bike or e-scooter brand sits on any Formula E team roster; Yamaha (Lola Yamaha ABT title) and the OEM-owned teams are the category conflicts",
+   "strategic_hook": "Season 12 closes with the London E-Prix on 15-16 Aug 2026 in Lime's largest European market, and the GEN4 era opens in December with Berlin, Madrid, Miami, Austin, Mexico City and Sao Paulo all Lime cities",
+   "us_presence": "Headquartered in San Francisco; operates in about 230 cities across 29 countries as of 31 Dec 2025, including Miami and Austin",
+   "alumni_match": "",
+   "taxonomy_category": "B2C",
+   "ops_fit_note": "MODE B: halo with concrete race-week mechanics (rider zones, ride credits, team-liveried fleet) in the E-Prix host cities Lime already serves; no engineering workstream",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 13,
+   "brand_fit": 16,
+   "urgency": 12,
+   "ops_fit": 13,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "wayne ting",
+    "chief executive officer",
+    "ting "
+   ],
+   "url": "https://investors.li.me/corporate-governance/management-team",
+   "excerpt": "Lime management team page (search summary): Wayne Ting, Chief Executive Officer and director since May 2020; previously Lime's Global Head of Operations and Strategy (Oct 2018-May 2020) and Chief of Staff to Uber's CEO (Jul 2017-Oct 2018). Ann Gugino, Chief Financial Officer since December 2023. Hannah McClellan Richards joined as Chief Operating Officer in June 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "kraus",
+    "gugino",
+    "mcclellan",
+    "no chief marketing",
+    "cfo",
+    "president"
+   ],
+   "url": "https://www.sec.gov/Archives/edgar/data/0001699963/000162828026044471/neutronholdingsinc-sx1a1.htm",
+   "excerpt": "Neutron Holdings S-1/A (search summary): executive officers as of May 2026 are Wayne Ting (Chief Executive Officer and Director), Joseph Kraus (President; former Google Ventures partner) and Ann Gugino (Chief Financial Officer; former CFO of Papa John's). No chief marketing officer is listed among the executive officers. Hannah McClellan Richards joined as Chief Operating Officer in June 2026 (Lime management page; HR Today).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "roadshow",
+    "22 jun",
+    "6,956,522",
+    "6,679,791",
+    "$24",
+    "$181m",
+    "$1.8b",
+    "renaissance",
+    "nasdaq",
+    "lime",
+    "the following week",
+    "next week"
+   ],
+   "url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "excerpt": "Lime, 22 Jun 2026 (Business Wire release on the company IR site; syndicated by Yahoo Finance): launch of the roadshow for its proposed IPO of 6,956,522 shares of common stock, 6,679,791 offered by Lime and 276,731 by selling stockholders, at an expected price range of $24.00-$26.00; Nasdaq Global Select Market under LIME; Goldman Sachs and J.P. Morgan lead joint book-runners with Jefferies, Evercore ISI, Citizens Capital Markets and KeyBanc. Renaissance Capital / Yahoo Finance, 22 Jun 2026: the deal seeks up to $181M at a valuation of up to $1.8B; Reuters put the top of the range at about $1.66B on the shares outstanding it counted. Pricing was expected the following week.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "24.4%",
+    "$20m",
+    "uber",
+    "goldman",
+    "j.p. morgan"
+   ],
+   "url": "https://www.iposcoop.com/the-ipo-buzz-uber-backed-lime-lime-proposed-sets-174-million-deal-for-next-week/",
+   "excerpt": "IPOScoop, Jun 2026: Uber began investing in Lime in 2018 and holds 24.4% of the outstanding stock pre-IPO; entities affiliated with Uber indicated interest in purchasing up to $20M of shares at the IPO price (also Bloomberg / Seeking Alpha). Goldman Sachs and J.P. Morgan lead the books.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$886",
+    "$887m",
+    "29%",
+    "$218",
+    "$59.3m",
+    "$103.8m",
+    "$70.4m",
+    "42%",
+    "fy2025",
+    "2025 revenue",
+    "free cash flow",
+    "adjusted ebitda"
+   ],
+   "url": "https://app.dealroom.co/news/note/lime-ipos-on-nasdaq-at-1-6b-fy2025-revenue-887m-29",
+   "excerpt": "S-1 financials as summarised by Dealroom and micromobility.io ('Inside Lime's S-1'): FY2025 revenue $886.7M, up 29% year on year; adjusted EBITDA $218.1M, up 42%; operating income $70.4M; net loss $59.3M (widened from $33.9M in 2024, driven by debt costs); free cash flow $103.8M, a third consecutive positive year.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "230 cities",
+    "29 countries",
+    "san francisco",
+    "19 million",
+    "1 billion"
+   ],
+   "url": "https://www.sec.gov/Archives/edgar/data/0001699963/000162828026032523/neutronholdingsinc-sx1.htm",
+   "excerpt": "Neutron Holdings S-1 (search summary): headquartered in San Francisco; as of 31 Dec 2025 Lime operated in about 230 cities across 29 countries with over 1 billion lifetime rides.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$115m",
+    "term loan",
+    "10%",
+    "september 2026",
+    "repay"
+   ],
+   "url": "https://www.iposcoop.com/the-ipo-buzz-uber-backed-lime-lime-proposed-sets-174-million-deal-for-next-week/",
+   "excerpt": "IPOScoop, Jun 2026: IPO proceeds are earmarked to repay all $115M principal of the senior secured term loan, which carries 10% interest and matures in September 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "london",
+    "berlin",
+    "madrid",
+    "miami",
+    "austin",
+    "mexico city",
+    "sao paulo",
+    "são paulo",
+    "400,000",
+    "eu capitals",
+    "largest european"
+   ],
+   "url": "https://www.li.me/locations",
+   "excerpt": "Lime's own pages (search summary): Lime serves London with e-bikes and e-scooters (more than 400,000 London customers at the time of the TfL e-scooter selection), is the only operator with multiple modes in every EU capital including Berlin (li.me/en-de/locations/berlin) and Madrid, and lists Austin and Miami among its US cities (Google Maps integration expansion). Mexico City and Sao Paulo appear in third-party city guides of Lime's markets (Ridester, Levy Electric) - confirm on li.me/locations before use in copy for those two.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "priced",
+    "$25",
+    "$167m",
+    "$174m",
+    "1 jul",
+    "30 jun",
+    "$1.66b",
+    "$1.6b",
+    "market value",
+    "9%"
+   ],
+   "url": "https://www.morningstar.com/news/business-wire/20260630995454/lime-announces-pricing-of-initial-public-offering",
+   "excerpt": "Outcome after the issue date: Lime priced the IPO on 30 Jun 2026 at $25.00, the mid-point of the range (Business Wire release via Morningstar); trading began on Nasdaq on 1 Jul 2026. TechCrunch (1 Jul 2026): $167M raised at an implied valuation of about $1.66B, shares up about 9% in the first hour; IPOScoop: about $174M including selling stockholders, market cap about $1.6B at pricing.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "none found",
+    "leadership tie",
+    "motorsport"
+   ],
+   "url": "https://investors.li.me/corporate-governance/management-team",
+   "excerpt": "Searches on Wayne Ting, Joseph Kraus and Ann Gugino returned no motorsport, F1 or Formula E background or sponsorship history: none found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "yamaha",
+    "jaguar",
+    "nissan",
+    "porsche",
+    "cupra",
+    "citroën",
+    "citroen",
+    "mahindra",
+    "ds penske",
+    "andretti",
+    "envision group",
+    "sand technologies",
+    "teijin",
+    "genpact",
+    "no shared-mobility",
+    "no mobility",
+    "roster",
+    "lane"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Envision Racing - Envision Group (title), Sand Technologies, Teijin, Genpact; no shared-mobility, e-bike, e-scooter or consumer-transport partner on any Formula E team. Lola Yamaha ABT - Lola Cars, Yamaha and ABT Sportsline (title), Castore, OMP, Shell. Jaguar TCS Racing, Nissan Formula E Team, Porsche Formula E Team, Cupra Kiro, Citroën Racing and Mahindra Racing are OEM-owned works entries. DS Penske: DS announced its exit at the end of the season (team profile). Andretti Formula E: Porsche powertrain to Season 12, Nissan from Season 13, TWG AI, Quest Global, Crowe UK, Reflo.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "london e-prix",
+    "15-16 aug",
+    "15 and 16 august",
+    "season 12",
+    "season 13",
+    "gen4",
+    "jeddah",
+    "december",
+    "18-19 dec",
+    "berlin e-prix",
+    "madrid e-prix",
+    "miami e-prix",
+    "austin e-prix",
+    "mexico city e-prix",
+    "sao paulo e-prix",
+    "são paulo e-prix",
+    "zandvoort"
+   ],
+   "url": "seeds/calendar_fe.json (ABB FIA Formula E Season 12 and Season 13 calendars)",
+   "excerpt": "FE calendar table: Season 12 closes with the London E-Prix double-header on 15-16 Aug 2026. Season 13 (GEN4) opens in Jeddah on 18-19 Dec 2026, then Mexico City (16 Jan 2027), Austin (6 Feb), Miami (20 Feb), Sao Paulo (13 Mar), Sanya, Berlin (8-9 May), Monaco, London (29-30 May), Zandvoort, Madrid (26-27 Jun), Shanghai and Tokyo (24-25 Jul 2027).",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Lime",
+  "industry_meta": "Shared Electric Micromobility · E-bikes and E-scooters",
+  "hq": "San Francisco (about 230 cities, 29 countries)",
+  "ticker": "Nasdaq: LIME (roadshow live; pricing expected next week)",
+  "deck": "Lime launched its IPO roadshow on 22 June: 6.96M shares at $24-$26, up to about $181M at a valuation of up to about $1.8B (Renaissance Capital), Nasdaq ticker LIME. A profitable, electric, city-centre mobility brand is about to become public in the cities where Formula E races.",
+  "score": 70,
+  "timing_label": "WARM",
+  "series_label": "FE",
+  "team_label": "Envision Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Lime announced the roadshow on 22 June with pricing expected the following week; Goldman Sachs and J.P. Morgan lead the books and Uber, holder of 24.4% pre-IPO, has indicated interest in up to $20M of shares. The business on sale is no longer a scooter story: FY2025 revenue was $886.7M, up 29%, with adjusted EBITDA of $218.1M and free cash flow of $103.8M, a third positive year, against a $59.3M net loss driven by debt costs. Proceeds repay a $115M term loan at 10% due in September 2026, which frees the cash flow behind it.",
+  "the_case_p2": "A newly listed consumer brand needs a public-market story about scale and cities, and Formula E races in Lime's cities. London, where Lime has served more than 400,000 customers, hosts the season finale on 15-16 August; Berlin and Madrid follow in the GEN4 season. No shared-mobility brand has ever raced on the grid, so the first one defines the category.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Pricing lands next week and the first public-company brand budget is set in July, with the London E-Prix on 15-16 August eight weeks out. Season 13 opens in Jeddah in December with a GEN4 car and a 21-race calendar.",
+  "why_team_label": "WHY ENVISION RACING",
+  "why_team_para": "Envision Racing carries Envision Group as title partner with Sand Technologies, Teijin and Genpact alongside; there is no mobility or consumer-transport partner, so the lane is clean. The team is British-based and built its identity on the Race Against Climate Change, the same car-replacement argument Lime makes to city halls. It is an independent, not an OEM works entry, so a two-wheel brand is a fit rather than a conflict. London is its home race and Lime's largest European market.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ENVISION RACING",
+  "value_mode": "B",
+  "value_content": "MODE B - halo with hard mechanics. Lime-liveried rider zones and ride credits for ticket holders at the London, Berlin and Madrid E-Prix, team-branded e-bikes in each host city during race week, and a rider-app audience in the tens of millions for Envision's climate content. For the team: a consumer brand that turns a city race into a city-wide campaign, and Uber-backed distribution the roster does not yet have.",
+  "deal_arch_para": "Entry as Official Micromobility Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, the whole first GEN4 cycle. Estimated $1.5-2.5M a year plus in-kind fleet and ride credits. Scope: car and suit placement, host-city activation in Lime cities, app and rider communications, hospitality at London and Berlin.",
+  "decision_maker_name": "Wayne Ting",
+  "decision_maker_role": "Chief Executive Officer, Lime",
+  "decision_maker_bio": "Ting has run Lime since May 2020, joining in 2018 after four years at Uber including Chief of Staff to its CEO. Path: Joseph Kraus, President; Ann Gugino, CFO since December 2023; Hannah McClellan Richards, COO from June 2026. No chief marketing officer is listed among the executive officers.",
+  "opening_angle_intro": "Lead with the cities.",
+  "opening_angle_quote": "&ldquo;Wayne, you are about to list a brand that lives in London, Berlin and Madrid, and Formula E races in all three. No mobility brand has ever been on that grid. 25 minutes after pricing to see how Envision would put Lime in the finale?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Roadshow live 22 Jun; London finale in eight weeks."
+   ],
+   [
+    "CAPACITY",
+    "13",
+    "/ 20",
+    "$886.7M revenue, FCF-positive; proceeds repay debt."
+   ],
+   [
+    "BRAND FIT",
+    "16",
+    "/ 20",
+    "Electric, urban, consumer: FE's cities are Lime's."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "Listing motive real; no hard external deadline."
+   ],
+   [
+    "OPS FIT",
+    "13",
+    "/ 20",
+    "MODE B: host-city activation, no engineering use."
+   ]
+  ],
+  "risks": [
+   [
+    "A SCOOTER BRAND IN A B2B PADDOCK",
+    "Lime is a consumer brand with thin margins after debt; a sponsorship line competes with city-licence costs and fleet capex.",
+    "Size the entry at the low end and weight it to in-kind fleet and ride credits, which cost Lime little."
+   ],
+   [
+    "LISTING FIRST, BRAND SECOND",
+    "Pricing and the quiet period come before any marketing decision; the window may not open until the first public quarter.",
+    "Approach after pricing with a London-finale package that needs only a July decision."
+   ]
+  ],
+  "bottom_line": "A profitable electric mobility brand listing on Nasdaq this month, an open micromobility lane on every Formula E roster, and a season finale in its biggest European market eight weeks out. Envision Racing is the clean, independent, climate-led home; the deal is small, in-kind heavy and time-bound.",
+  "signals": [
+   "ipo_roadshow",
+   "category_whitespace",
+   "host_city_overlap"
+  ],
+  "footer_company": "LIME",
+  "footer_date": "22 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 22 June 2026 Lime announced the launch of its IPO roadshow: 6,956,522 shares (6,679,791 from Lime, 276,731 from selling stockholders) at $24-$26, listing on the Nasdaq Global Select Market as LIME, with Goldman Sachs and J.P. Morgan leading. Renaissance Capital sized the deal at up to $181M and a valuation of up to $1.8B; pricing was expected the following week."
+    },
+    {
+     "label": "The business behind the listing",
+     "text": "FY2025 revenue was $886.7M, up 29%, adjusted EBITDA $218.1M, operating income $70.4M and free cash flow $103.8M, the third positive year. The $59.3M net loss is a debt-cost story: proceeds repay a $115M term loan at 10% due September 2026. After the listing Lime's cash flow is its own."
+    },
+    {
+     "label": "A public brand needs a public story",
+     "text": "Uber, Lime's largest holder at 24.4%, has indicated interest in up to $20M of shares. A newly public consumer brand has to explain to investors and city governments why it belongs in the centre of cities. Formula E's street circuits in London, Berlin, Madrid, Miami and Austin are that argument on television."
+    },
+    {
+     "label": "Update since issue",
+     "text": "The IPO priced on 30 June 2026 at $25, the mid-point, and trading began on 1 July; TechCrunch reported $167M raised at an implied valuation of about $1.66B (about $174M including selling stockholders). The London E-Prix on 15-16 August remains the first activation window; Season 13 opens in Jeddah on 18-19 December."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Envision Racing's roster is Envision Group (title), Sand Technologies, Teijin and Genpact. No Formula E team carries a shared-mobility, e-bike or e-scooter partner, so Official Micromobility Partner is a first-of-category designation at a team-partner price."
+    },
+    {
+     "label": "Climate identity",
+     "text": "Envision Racing built its brand on the Race Against Climate Change programme; Lime's pitch to cities is car-trip replacement. The two stories are the same story, told to fans and to city halls."
+    },
+    {
+     "label": "Independent, not a works team",
+     "text": "Six Formula E teams are owned by car makers or two-wheel makers (Jaguar, Nissan, Porsche, Cupra, Citroën, Mahindra, and Yamaha in the Lola entry). An independent team can put a scooter brand on the car without an OEM marketing department objecting."
+    },
+    {
+     "label": "London is home for both",
+     "text": "Envision is British-based and the London E-Prix is its home race. Lime has served more than 400,000 London customers and runs both e-bikes and e-scooters there. A finale activation in August needs only a July decision."
+    }
+   ],
+   "value": [
+    {
+     "label": "Race-week mechanics (Mode B)",
+     "text": "Lime rider zones and ticket-holder ride credits at the London, Berlin and Madrid E-Prix; Envision-liveried e-bikes in each host city during race week; push and in-app messaging to riders in those cities. The team gets a city-wide presence for a city race."
+    },
+    {
+     "label": "Audience the roster lacks",
+     "text": "Envision's partners are industrial and enterprise brands. Lime brings a consumer audience across about 230 cities and the Uber ecosystem behind its largest shareholder, which is reach the team cannot buy at this price elsewhere."
+    },
+    {
+     "label": "Content",
+     "text": "Driver and team commutes on Lime, a season-long 'last mile to the grid' series, and a shared climate-impact scoreboard built from Lime's ride data and the team's Race Against Climate Change reporting."
+    },
+    {
+     "label": "What Envision gives back",
+     "text": "Official Micromobility Partner designation, car and race-suit placement, host-city activation rights, hospitality at London and Berlin, and a public-company partner announcement timed to the GEN4 launch in December."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "reason": "Yamaha, a title partner, makes e-bikes and scooters: direct category conflict."
+    },
+    {
+     "team": "Jaguar TCS Racing · Nissan Formula E Team · Porsche Formula E Team · Cupra Kiro · Citroën Racing",
+     "reason": "OEM works entries; mobility messaging stays with the car maker."
+    },
+    {
+     "team": "Mahindra Racing",
+     "reason": "Mahindra & Mahindra builds vehicles, including electric two- and three-wheelers; category conflict."
+    },
+    {
+     "team": "DS Penske",
+     "reason": "DS has announced its exit at the end of the season; entry future unresolved."
+    },
+    {
+     "team": "Andretti Formula E",
+     "reason": "Open and US-based, a credible second choice, but Lime's revenue centre and the finale are in Europe and Envision offers the climate identity and London home race."
+    }
+   ],
+   "ask": "A 25-minute call with Wayne Ting in the week after pricing to agree a London E-Prix activation for 15-16 August and size a three-season Official Micromobility Partner entry with Envision Racing for the GEN4 era."
+  }
+ },
+ "note": "# Lime → Envision Racing — verification log (N° 183, issued for 22 Jun 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost, in rebuild mode for the desk row dated 22 Jun 2026. The thin row read \"F1, 84/100, no team\"; this case re-points it honestly to **Formula E** and **Envision Racing** at **70/100 WARM**. A $1.6B consumer micromobility company whose IPO proceeds repay debt is not an F1 budget; it is a natural Formula E host-city brand.\n\n**Sandbox limitation, stated plainly:** investors.li.me, li.me, sec.gov, techcrunch.com, finance.yahoo.com, micromobility.io, stocktitan.net, theorg.com and envision-racing.com were egress-blocked. Every claim was checked against the search summary of the primary page named in the evidence. Treat VERIFIED lines as REPORTED until a person opens the link. Confidence MEDIUM.\n\n## The trigger\n\nLime's own release of **22 Jun 2026** (Business Wire on the company IR site) launched the roadshow: 6,956,522 shares, 6,679,791 from Lime, $24-$26, Nasdaq Global Select `LIME`, Goldman Sachs / J.P. Morgan leading. Renaissance Capital sized it at up to $181M and up to $1.8B; Reuters counted about $1.66B at the top of the range. Both are given as \"about\" in the copy. **Outcome after the issue date:** priced 30 Jun at $25.00 (mid-point), trading from 1 Jul; TechCrunch: $167M raised at about $1.66B; IPOScoop: about $174M including selling stockholders. The app page carries this as \"Update since issue\".\n\n## Financials (S-1, via Dealroom and micromobility.io summaries — REPORTED until the S-1 is opened)\n\nFY2025 revenue $886.7M (+29%), adjusted EBITDA $218.1M (+42%), operating income $70.4M, net loss $59.3M, free cash flow $103.8M. Use of proceeds: repay the $115M senior secured term loan (10%, matures Sep 2026). About 230 cities in 29 countries at 31 Dec 2025. Uber 24.4% pre-IPO, indicated interest up to $20M at the IPO price.\n\n## Decision path\n\nExecutive officers in the S-1/A: **Wayne Ting** (CEO and director since May 2020; ex-Uber chief of staff to the CEO), **Joseph Kraus** (President), **Ann Gugino** (CFO since Dec 2023). **Hannah McClellan Richards** joined as COO in June 2026 (Lime management page; HR Today). **No chief marketing officer is listed** among the executive officers, so the sponsorship owner is the CEO; the brief says so. Lime's public leadership page mentions a chief product officer whose name the search summary did not return — not used.\n\n## Leadership ties\n\nSearches on Ting, Kraus and Gugino for motorsport, F1 or Formula E background or sponsorship history: **none found**. `leadership_ties = []`.\n\n## Team fit and screen-outs\n\n- Sponsor table: no shared-mobility, e-bike or e-scooter brand on any FE roster (or any F1 roster). Envision Racing: Envision Group (title), Sand Technologies, Teijin, Genpact.\n- Ruled out: Lola Yamaha ABT (Yamaha two-wheelers), the six OEM works entries, Mahindra (vehicle maker), DS Penske (DS exit announced), Andretti (open; second choice, US-weighted).\n- **Post-date development:** Paysafe became Envision Racing's title partner on 14 Aug 2026 (\"Paysafe Envision Racing\", Business Wire / fiaformulae.com). Payments, not mobility: no conflict with this case, and not in the sponsor table yet, so the copy names only the table's roster.\n- Lime cities: London, Berlin and Madrid are on Lime's own pages; Miami and Austin from Lime's Google Maps integration notice; Mexico City and Sao Paulo appear only in third-party city guides and are used only in the app page's list of Season 13 venues — confirm on li.me/locations before circulation.\n\n## What holds the score back\n\nMODE B only (no engineering workstream); consumer brand in a B2B-lean targeting profile; thin margins after debt service; the quiet period sits between the roadshow and any brand decision. Deal size ($1.5-2.5M a year) is an ESTIMATE, labelled as such.\n"
+}

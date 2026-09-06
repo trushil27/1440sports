@@ -1,0 +1,788 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-06-22",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-uz6obqhz/2026-06-22/lime.pdf",
+     "web": "/tmp/case-pdf-uz6obqhz/2026-06-22/lime.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Lime",
+     "stage_a": {
+      "verified": 10
+     },
+     "stage_b": {
+      "verified": 15
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "Lime",
+     "decision": "selected",
+     "signal_date": "2026-06-22"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Lime",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 16,
+    "ops_fit": 13,
+    "ranking": 70,
+    "urgency": 12,
+    "capacity": 13,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 3,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Envision Racing",
+   "source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "trigger_date": "2026-06-22",
+   "trigger_reason": "IPO roadshow launched"
+  }
+ ],
+ "brief": {
+  "number": 183,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-uz6obqhz/2026-06-22/lime.web.html",
+  "brief_data": {
+   "hq": "San Francisco (about 230 cities, 29 countries)",
+   "deck": "Lime launched its IPO roadshow on 22 June: 6.96M shares at $24-$26, up to about $181M at a valuation of up to about $1.8B (Renaissance Capital), Nasdaq ticker LIME. A profitable, electric, city-centre mobility brand is about to become public in the cities where Formula E races.",
+   "risks": [
+    {
+     "label": "A SCOOTER BRAND IN A B2B PADDOCK",
+     "detail": "Lime is a consumer brand with thin margins after debt; a sponsorship line competes with city-licence costs and fleet capex.",
+     "counter": "Size the entry at the low end and weight it to in-kind fleet and ride credits, which cost Lime little."
+    },
+    {
+     "label": "LISTING FIRST, BRAND SECOND",
+     "detail": "Pricing and the quiet period come before any marketing decision; the window may not open until the first public quarter.",
+     "counter": "Approach after pricing with a London-finale package that needs only a July decision."
+    }
+   ],
+   "score": 70,
+   "ticker": "Nasdaq: LIME (roadshow live; pricing expected next week)",
+   "company": "Lime",
+   "gridfit": [
+    {
+     "team": "Envision Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "ipo_roadshow",
+    "category_whitespace",
+    "host_city_overlap"
+   ],
+   "sources": [
+    "https://investors.li.me/corporate-governance/management-team",
+    "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+    "https://www.iposcoop.com/the-ipo-buzz-uber-backed-lime-lime-proposed-sets-174-million-deal-for-next-week/",
+    "https://app.dealroom.co/news/note/lime-ipos-on-nasdaq-at-1-6b-fy2025-revenue-887m-29",
+    "https://www.sec.gov/Archives/edgar/data/0001699963/000162828026032523/neutronholdingsinc-sx1.htm",
+    "https://www.morningstar.com/news/business-wire/20260630995454/lime-announces-pricing-of-initial-public-offering"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Wayne Ting in the week after pricing to agree a London E-Prix activation for 15-16 August and size a three-season Official Micromobility Partner entry with Envision Racing for the GEN4 era.",
+    "value": [
+     {
+      "text": "Lime rider zones and ticket-holder ride credits at the London, Berlin and Madrid E-Prix; Envision-liveried e-bikes in each host city during race week; push and in-app messaging to riders in those cities. The team gets a city-wide presence for a city race.",
+      "label": "Race-week mechanics (Mode B)"
+     },
+     {
+      "text": "Envision's partners are industrial and enterprise brands. Lime brings a consumer audience across about 230 cities and the Uber ecosystem behind its largest shareholder, which is reach the team cannot buy at this price elsewhere.",
+      "label": "Audience the roster lacks"
+     },
+     {
+      "text": "Driver and team commutes on Lime, a season-long 'last mile to the grid' series, and a shared climate-impact scoreboard built from Lime's ride data and the team's Race Against Climate Change reporting.",
+      "label": "Content"
+     },
+     {
+      "text": "Official Micromobility Partner designation, car and race-suit placement, host-city activation rights, hospitality at London and Berlin, and a public-company partner announcement timed to the GEN4 launch in December.",
+      "label": "What Envision gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 22 June 2026 Lime announced the launch of its IPO roadshow: 6,956,522 shares (6,679,791 from Lime, 276,731 from selling stockholders) at $24-$26, listing on the Nasdaq Global Select Market as LIME, with Goldman Sachs and J.P. Morgan leading. Renaissance Capital sized the deal at up to $181M and a valuation of up to $1.8B; pricing was expected the following week.",
+      "label": "Trigger"
+     },
+     {
+      "text": "FY2025 revenue was $886.7M, up 29%, adjusted EBITDA $218.1M, operating income $70.4M and free cash flow $103.8M, the third positive year. The $59.3M net loss is a debt-cost story: proceeds repay a $115M term loan at 10% due September 2026. After the listing Lime's cash flow is its own.",
+      "label": "The business behind the listing"
+     },
+     {
+      "text": "Uber, Lime's largest holder at 24.4%, has indicated interest in up to $20M of shares. A newly public consumer brand has to explain to investors and city governments why it belongs in the centre of cities. Formula E's street circuits in London, Berlin, Madrid, Miami and Austin are that argument on television.",
+      "label": "A public brand needs a public story"
+     },
+     {
+      "text": "The IPO priced on 30 June 2026 at $25, the mid-point, and trading began on 1 July; TechCrunch reported $167M raised at an implied valuation of about $1.66B (about $174M including selling stockholders). The London E-Prix on 15-16 August remains the first activation window; Season 13 opens in Jeddah on 18-19 December.",
+      "label": "Update since issue"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Envision Racing's roster is Envision Group (title), Sand Technologies, Teijin and Genpact. No Formula E team carries a shared-mobility, e-bike or e-scooter partner, so Official Micromobility Partner is a first-of-category designation at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Envision Racing built its brand on the Race Against Climate Change programme; Lime's pitch to cities is car-trip replacement. The two stories are the same story, told to fans and to city halls.",
+      "label": "Climate identity"
+     },
+     {
+      "text": "Six Formula E teams are owned by car makers or two-wheel makers (Jaguar, Nissan, Porsche, Cupra, Citroën, Mahindra, and Yamaha in the Lola entry). An independent team can put a scooter brand on the car without an OEM marketing department objecting.",
+      "label": "Independent, not a works team"
+     },
+     {
+      "text": "Envision is British-based and the London E-Prix is its home race. Lime has served more than 400,000 London customers and runs both e-bikes and e-scooters there. A finale activation in August needs only a July decision.",
+      "label": "London is home for both"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Yamaha, a title partner, makes e-bikes and scooters: direct category conflict."
+     },
+     {
+      "team": "Jaguar TCS Racing · Nissan Formula E Team · Porsche Formula E Team · Cupra Kiro · Citroën Racing",
+      "reason": "OEM works entries; mobility messaging stays with the car maker."
+     },
+     {
+      "team": "Mahindra Racing",
+      "reason": "Mahindra & Mahindra builds vehicles, including electric two- and three-wheelers; category conflict."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "DS has announced its exit at the end of the season; entry future unresolved."
+     },
+     {
+      "team": "Andretti Formula E",
+      "reason": "Open and US-based, a credible second choice, but Lime's revenue centre and the finale are in Europe and Envision offers the climate identity and London home race."
+     }
+    ]
+   },
+   "date_long": "22 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Envision Racing",
+   "value_mode": "B",
+   "bottom_line": "A profitable electric mobility brand listing on Nasdaq this month, an open micromobility lane on every Formula E roster, and a season finale in its biggest European market eight weeks out. Envision Racing is the clean, independent, climate-led home; the deal is small, in-kind heavy and time-bound.",
+   "footer_date": "22 JUN 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Roadshow live 22 Jun; London finale in eight weeks.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 13,
+     "note": "$886.7M revenue, FCF-positive; proceeds repay debt.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 16,
+     "note": "Electric, urban, consumer: FE's cities are Lime's.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "Listing motive real; no hard external deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 13,
+     "note": "MODE B: host-city activation, no engineering use.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Lime announced the roadshow on 22 June with pricing expected the following week; Goldman Sachs and J.P. Morgan lead the books and Uber, holder of 24.4% pre-IPO, has indicated interest in up to $20M of shares. The business on sale is no longer a scooter story: FY2025 revenue was $886.7M, up 29%, with adjusted EBITDA of $218.1M and free cash flow of $103.8M, a third positive year, against a $59.3M net loss driven by debt costs. Proceeds repay a $115M term loan at 10% due in September 2026, which frees the cash flow behind it.",
+   "the_case_p2": "A newly listed consumer brand needs a public-market story about scale and cities, and Formula E races in Lime's cities. London, where Lime has served more than 400,000 customers, hosts the season finale on 15-16 August; Berlin and Madrid follow in the GEN4 season. No shared-mobility brand has ever raced on the grid, so the first one defines the category.",
+   "track_label": "",
+   "brief_number": "183",
+   "claims_total": 17,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "IPO roadshow launched 22 Jun 2026: 6,956,522 shares at $24-$26 (6,679,791 from Lime), up to about $181M at…",
+     "value": "$24",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering"
+    },
+    {
+     "fact": "Uber holds 24.4% pre-IPO and has indicated interest in up to $20M of shares at the IPO price; Goldman Sachs…",
+     "value": "24.4%",
+     "claim_id": 622,
+     "verified": true,
+     "source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering"
+    },
+    {
+     "fact": "FY2025 revenue $886.7M, up 29%; adjusted EBITDA $218.1M; net loss $59.3M; free cash flow $103.8M (S-1, as s…",
+     "value": "$886.7M",
+     "claim_id": 623,
+     "verified": true,
+     "source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering"
+    },
+    {
+     "fact": "Proceeds repay a $115M term loan at 10% due in September 2026, which frees the cash flow behind it.",
+     "value": "$115M",
+     "claim_id": 634,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Shared Electric Micromobility · E-bikes and E-scooters",
+   "value_content": "MODE B - halo with hard mechanics. Lime-liveried rider zones and ride credits for ticket holders at the London, Berlin and Madrid E-Prix, team-branded e-bikes in each host city during race week, and a rider-app audience in the tens of millions for Envision's climate content. For the team: a consumer brand that turns a city race into a city-wide campaign, and Uber-backed distribution the roster does not yet have.",
+   "value_section": true,
+   "why_team_para": "Envision Racing carries Envision Group as title partner with Sand Technologies, Teijin and Genpact alongside; there is no mobility or consumer-transport partner, so the lane is clean. The team is British-based and built its identity on the Race Against Climate Change, the same car-replacement argument Lime makes to city halls. It is an independent, not an OEM works entry, so a two-wheel brand is a fit rather than a conflict. London is its home race and Lime's largest European market.",
+   "deal_arch_para": "Entry as Official Micromobility Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, the whole first GEN4 cycle. Estimated $1.5-2.5M a year plus in-kind fleet and ride credits. Scope: car and suit placement, host-city activation in Lime cities, app and rider communications, hospitality at London and Berlin.",
+   "footer_company": "LIME",
+   "why_team_label": "WHY ENVISION RACING",
+   "claims_verified": 17,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Pricing lands next week and the first public-company brand budget is set in July, with the London E-Prix on 15-16 August eight weeks out. Season 13 opens in Jeddah in December with a GEN4 car and a 21-race calendar.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Ting has run Lime since May 2020, joining in 2018 after four years at Uber including Chief of Staff to its CEO. Path: Joseph Kraus, President; Ann Gugino, CFO since December 2023; Hannah McClellan Richards, COO from June 2026. No chief marketing officer is listed among the executive officers.",
+   "decision_maker_name": "Wayne Ting",
+   "decision_maker_role": "Chief Executive Officer, Lime",
+   "opening_angle_intro": "Lead with the cities.",
+   "opening_angle_quote": "&ldquo;Wayne, you are about to list a brand that lives in London, Berlin and Madrid, and Formula E races in all three. No mobility brand has ever been on that grid. 25 minutes after pricing to see how Envision would put Lime in the finale?&rdquo;",
+   "value_section_label": "VALUE TO ENVISION RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Wayne Ting, Chief Executive Officer at Lime",
+   "cited_source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/corporate-governance/management-team",
+     "excerpt": "Lime management team page (search summary): Wayne Ting, Chief Executive Officer and director since May 2020; previously Lime's Global Head of Operations and Strategy (Oct 2018-May 2020) and Chief of Staff to Uber's CEO (Jul 2017-Oct 2018). Ann Gugino, Chief Financial Officer since December 2023. Hannah McClellan Richards joined as Chief Operating Officer in June 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Wayne Ting, Chief Executive Officer, Lime at Lime",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/corporate-governance/management-team",
+     "excerpt": "Lime management team page (search summary): Wayne Ting, Chief Executive Officer and director since May 2020; previously Lime's Global Head of Operations and Strategy (Oct 2018-May 2020) and Chief of Staff to Uber's CEO (Jul 2017-Oct 2018). Ann Gugino, Chief Financial Officer since December 2023. Hannah McClellan Richards joined as Chief Operating Officer in June 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "IPO roadshow launched 22 Jun 2026: 6,956,522 shares at $24-$26 (6,679,791 from Lime), up to about $181M at a valuation of up to about $1.8B (Renaissance Capital); Nasdaq Global Select, ticker LIME",
+   "cited_source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+     "excerpt": "Lime, 22 Jun 2026 (Business Wire release on the company IR site; syndicated by Yahoo Finance): launch of the roadshow for its proposed IPO of 6,956,522 shares of common stock, 6,679,791 offered by Lime and 276,731 by selling stockholders, at an expected price range of $24.00-$26.00; Nasdaq Global Select Market under LIME; Goldman Sachs and J.P. Morgan lead joint book-runners with Jefferies, Evercore ISI, Citizens Capital Markets and KeyBanc. Renaissance Capital / Yahoo Finance, 22 Jun 2026: the deal seeks up to $181M at a valuation of up to $1.8B; Reuters put the top of the range at about $1.66B on the shares outstanding it counted. Pricing was expected the following week.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Lime launched its IPO roadshow on 22 June: 6.96M shares at $24-$26, up to about $181M at a valuation of up to about $1.8B (Renaissance Capital), Nasdaq ticker LIME.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+     "excerpt": "Lime, 22 Jun 2026 (Business Wire release on the company IR site; syndicated by Yahoo Finance): launch of the roadshow for its proposed IPO of 6,956,522 shares of common stock, 6,679,791 offered by Lime and 276,731 by selling stockholders, at an expected price range of $24.00-$26.00; Nasdaq Global Select Market under LIME; Goldman Sachs and J.P. Morgan lead joint book-runners with Jefferies, Evercore ISI, Citizens Capital Markets and KeyBanc. Renaissance Capital / Yahoo Finance, 22 Jun 2026: the deal seeks up to $181M at a valuation of up to $1.8B; Reuters put the top of the range at about $1.66B on the shares outstanding it counted. Pricing was expected the following week.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Uber holds 24.4% pre-IPO and has indicated interest in up to $20M of shares at the IPO price; Goldman Sachs and J.P. Morgan lead the books",
+   "cited_source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.iposcoop.com/the-ipo-buzz-uber-backed-lime-lime-proposed-sets-174-million-deal-for-next-week/",
+     "excerpt": "IPOScoop, Jun 2026: Uber began investing in Lime in 2018 and holds 24.4% of the outstanding stock pre-IPO; entities affiliated with Uber indicated interest in purchasing up to $20M of shares at the IPO price (also Bloomberg / Seeking Alpha). Goldman Sachs and J.P. Morgan lead the books.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Morgan lead the books and Uber, holder of 24.4% pre-IPO, has indicated interest in up to $20M of shares.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.iposcoop.com/the-ipo-buzz-uber-backed-lime-lime-proposed-sets-174-million-deal-for-next-week/",
+     "excerpt": "IPOScoop, Jun 2026: Uber began investing in Lime in 2018 and holds 24.4% of the outstanding stock pre-IPO; entities affiliated with Uber indicated interest in purchasing up to $20M of shares at the IPO price (also Bloomberg / Seeking Alpha). Goldman Sachs and J.P. Morgan lead the books.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "FY2025 revenue $886.7M, up 29%; adjusted EBITDA $218.1M; net loss $59.3M; free cash flow $103.8M (S-1, as summarised by Dealroom and micromobility.io)",
+   "cited_source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://app.dealroom.co/news/note/lime-ipos-on-nasdaq-at-1-6b-fy2025-revenue-887m-29",
+     "excerpt": "S-1 financials as summarised by Dealroom and micromobility.io ('Inside Lime's S-1'): FY2025 revenue $886.7M, up 29% year on year; adjusted EBITDA $218.1M, up 42%; operating income $70.4M; net loss $59.3M (widened from $33.9M in 2024, driven by debt costs); free cash flow $103.8M, a third consecutive positive year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The business on sale is no longer a scooter story: FY2025 revenue was $886.7M, up 29%, with adjusted EBITDA of $218.1M and free cash flow of $103.8M, a third positive year, against a $59.3M net loss driven by debt costs.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://app.dealroom.co/news/note/lime-ipos-on-nasdaq-at-1-6b-fy2025-revenue-887m-29",
+     "excerpt": "S-1 financials as summarised by Dealroom and micromobility.io ('Inside Lime's S-1'): FY2025 revenue $886.7M, up 29% year on year; adjusted EBITDA $218.1M, up 42%; operating income $70.4M; net loss $59.3M (widened from $33.9M in 2024, driven by debt costs); free cash flow $103.8M, a third consecutive positive year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Lime announced the launch of its IPO roadshow on 22 Jun 2026 with pricing expected the following week",
+   "cited_source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+     "excerpt": "Lime, 22 Jun 2026 (Business Wire release on the company IR site; syndicated by Yahoo Finance): launch of the roadshow for its proposed IPO of 6,956,522 shares of common stock, 6,679,791 offered by Lime and 276,731 by selling stockholders, at an expected price range of $24.00-$26.00; Nasdaq Global Select Market under LIME; Goldman Sachs and J.P. Morgan lead joint book-runners with Jefferies, Evercore ISI, Citizens Capital Markets and KeyBanc. Renaissance Capital / Yahoo Finance, 22 Jun 2026: the deal seeks up to $181M at a valuation of up to $1.8B; Reuters put the top of the range at about $1.66B on the shares outstanding it counted. Pricing was expected the following week.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Proceeds repay a $115M term loan at 10% due in September 2026, which frees the cash flow behind it.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.iposcoop.com/the-ipo-buzz-uber-backed-lime-lime-proposed-sets-174-million-deal-for-next-week/",
+     "excerpt": "IPOScoop, Jun 2026: IPO proceeds are earmarked to repay all $115M principal of the senior secured term loan, which carries 10% interest and matures in September 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No shared-mobility, e-bike or e-scooter brand sits on any Formula E team roster; Yamaha (Lola Yamaha ABT title) and the OEM-owned teams are the category conflicts",
+   "cited_source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+     "excerpt": "Sponsor table: Envision Racing - Envision Group (title), Sand Technologies, Teijin, Genpact; no shared-mobility, e-bike, e-scooter or consumer-transport partner on any Formula E team. Lola Yamaha ABT - Lola Cars, Yamaha and ABT Sportsline (title), Castore, OMP, Shell. Jaguar TCS Racing, Nissan Formula E Team, Porsche Formula E Team, Cupra Kiro, Citroën Racing and Mahindra Racing are OEM-owned works entries. DS Penske: DS announced its exit at the end of the season (team profile). Andretti Formula E: Porsche powertrain to Season 12, Nissan from Season 13, TWG AI, Quest Global, Crowe UK, Reflo.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 22 June 2026 Lime announced the launch of its IPO roadshow: 6,956,522 shares (6,679,791 from Lime, 276,731 from selling stockholders) at $24-$26, listing on the Nasdaq Global Select Market as LIME, with Goldman Sachs and J.P.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/corporate-governance/management-team",
+     "excerpt": "Lime management team page (search summary): Wayne Ting, Chief Executive Officer and director since May 2020; previously Lime's Global Head of Operations and Strategy (Oct 2018-May 2020) and Chief of Staff to Uber's CEO (Jul 2017-Oct 2018). Ann Gugino, Chief Financial Officer since December 2023. Hannah McClellan Richards joined as Chief Operating Officer in June 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Season 12 closes with the London E-Prix on 15-16 Aug 2026 in Lime's largest European market, and the GEN4 era opens in December with Berlin, Madrid, Miami, Austin, Mexico City and Sao Paulo all Lime cities",
+   "cited_source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+     "excerpt": "Lime, 22 Jun 2026 (Business Wire release on the company IR site; syndicated by Yahoo Finance): launch of the roadshow for its proposed IPO of 6,956,522 shares of common stock, 6,679,791 offered by Lime and 276,731 by selling stockholders, at an expected price range of $24.00-$26.00; Nasdaq Global Select Market under LIME; Goldman Sachs and J.P. Morgan lead joint book-runners with Jefferies, Evercore ISI, Citizens Capital Markets and KeyBanc. Renaissance Capital / Yahoo Finance, 22 Jun 2026: the deal seeks up to $181M at a valuation of up to $1.8B; Reuters put the top of the range at about $1.66B on the shares outstanding it counted. Pricing was expected the following week.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Renaissance Capital sized the deal at up to $181M and a valuation of up to $1.8B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+     "excerpt": "Lime, 22 Jun 2026 (Business Wire release on the company IR site; syndicated by Yahoo Finance): launch of the roadshow for its proposed IPO of 6,956,522 shares of common stock, 6,679,791 offered by Lime and 276,731 by selling stockholders, at an expected price range of $24.00-$26.00; Nasdaq Global Select Market under LIME; Goldman Sachs and J.P. Morgan lead joint book-runners with Jefferies, Evercore ISI, Citizens Capital Markets and KeyBanc. Renaissance Capital / Yahoo Finance, 22 Jun 2026: the deal seeks up to $181M at a valuation of up to $1.8B; Reuters put the top of the range at about $1.66B on the shares outstanding it counted. Pricing was expected the following week.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in San Francisco; operates in about 230 cities across 29 countries as of 31 Dec 2025, including Miami and Austin",
+   "cited_source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.sec.gov/Archives/edgar/data/0001699963/000162828026032523/neutronholdingsinc-sx1.htm",
+     "excerpt": "Neutron Holdings S-1 (search summary): headquartered in San Francisco; as of 31 Dec 2025 Lime operated in about 230 cities across 29 countries with over 1 billion lifetime rides.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "FY2025 revenue was $886.7M, up 29%, adjusted EBITDA $218.1M, operating income $70.4M and free cash flow $103.8M, the third positive year.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/corporate-governance/management-team",
+     "excerpt": "Lime management team page (search summary): Wayne Ting, Chief Executive Officer and director since May 2020; previously Lime's Global Head of Operations and Strategy (Oct 2018-May 2020) and Chief of Staff to Uber's CEO (Jul 2017-Oct 2018). Ann Gugino, Chief Financial Officer since December 2023. Hannah McClellan Richards joined as Chief Operating Officer in June 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "IPO roadshow launched",
+   "cited_source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+     "excerpt": "Lime, 22 Jun 2026 (Business Wire release on the company IR site; syndicated by Yahoo Finance): launch of the roadshow for its proposed IPO of 6,956,522 shares of common stock, 6,679,791 offered by Lime and 276,731 by selling stockholders, at an expected price range of $24.00-$26.00; Nasdaq Global Select Market under LIME; Goldman Sachs and J.P. Morgan lead joint book-runners with Jefferies, Evercore ISI, Citizens Capital Markets and KeyBanc. Renaissance Capital / Yahoo Finance, 22 Jun 2026: the deal seeks up to $181M at a valuation of up to $1.8B; Reuters put the top of the range at about $1.66B on the shares outstanding it counted. Pricing was expected the following week.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The $59.3M net loss is a debt-cost story: proceeds repay a $115M term loan at 10% due September 2026.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://app.dealroom.co/news/note/lime-ipos-on-nasdaq-at-1-6b-fy2025-revenue-887m-29",
+     "excerpt": "S-1 financials as summarised by Dealroom and micromobility.io ('Inside Lime's S-1'): FY2025 revenue $886.7M, up 29% year on year; adjusted EBITDA $218.1M, up 42%; operating income $70.4M; net loss $59.3M (widened from $33.9M in 2024, driven by debt costs); free cash flow $103.8M, a third consecutive positive year.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix on 15-16 Aug 2026",
+   "cited_source_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 12 calendar (ExCeL London finale) | note: ExCeL, double-header race 1 — season finale weekend",
+     "excerpt": "round 16: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Uber, Lime's largest holder at 24.4%, has indicated interest in up to $20M of shares.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.li.me/news-releases/news-release-details/lime-announces-launch-initial-public-offering",
+     "excerpt": "Lime, 22 Jun 2026 (Business Wire release on the company IR site; syndicated by Yahoo Finance): launch of the roadshow for its proposed IPO of 6,956,522 shares of common stock, 6,679,791 offered by Lime and 276,731 by selling stockholders, at an expected price range of $24.00-$26.00; Nasdaq Global Select Market under LIME; Goldman Sachs and J.P. Morgan lead joint book-runners with Jefferies, Evercore ISI, Citizens Capital Markets and KeyBanc. Renaissance Capital / Yahoo Finance, 22 Jun 2026: the deal seeks up to $181M at a valuation of up to $1.8B; Reuters put the top of the range at about $1.66B on the shares outstanding it counted. Pricing was expected the following week.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The IPO priced on 30 June 2026 at $25, the mid-point, and trading began on 1 July;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.morningstar.com/news/business-wire/20260630995454/lime-announces-pricing-of-initial-public-offering",
+     "excerpt": "Outcome after the issue date: Lime priced the IPO on 30 Jun 2026 at $25.00, the mid-point of the range (Business Wire release via Morningstar); trading began on Nasdaq on 1 Jul 2026. TechCrunch (1 Jul 2026): $167M raised at an implied valuation of about $1.66B, shares up about 9% in the first hour; IPOScoop: about $174M including selling stockholders, market cap about $1.6B at pricing.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "TechCrunch reported $167M raised at an implied valuation of about $1.66B (about $174M including selling stockholders).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.morningstar.com/news/business-wire/20260630995454/lime-announces-pricing-of-initial-public-offering",
+     "excerpt": "Outcome after the issue date: Lime priced the IPO on 30 Jun 2026 at $25.00, the mid-point of the range (Business Wire release via Morningstar); trading began on Nasdaq on 1 Jul 2026. TechCrunch (1 Jul 2026): $167M raised at an implied valuation of about $1.66B, shares up about 9% in the first hour; IPOScoop: about $174M including selling stockholders, market cap about $1.6B at pricing.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 12 calendar (ExCeL London finale) | note: ExCeL, double-header race 1 — season finale weekend",
+     "excerpt": "round 16: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "value_content",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Madrid E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: Circuito de Madrid Jarama-RACE — new venue",
+     "excerpt": "round 6: Madrid E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The London E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 12 calendar (ExCeL London finale) | note: ExCeL, double-header race 1 — season finale weekend",
+     "excerpt": "round 16: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
