@@ -50,6 +50,8 @@ EXECUTION_MODE=shadow                           # shadow until M8; then producti
 OPERATOR_EMAIL=trushil.jani@1440sports.com
 MD_EMAIL=ricky.paugh@1440sports.com             # only used in production mode
 MD_THRESHOLD=70                                 # brief-production threshold (§6.4)
+FRESHNESS_DAYS_TRACK1=90                        # trigger window in days (spec §6.2 said 14; the MD set 90 on 6 Sep 2026)
+FRESHNESS_FALLBACK_DAYS=90                      # wider window tried when the first pass finds nothing
 GRAPH_TENANT_ID / GRAPH_CLIENT_ID / GRAPH_CLIENT_SECRET / GRAPH_SENDER   # Mail.Send app permission (§11.2)
 GRAPH_REFRESH_TOKEN                             # only if IT will not grant app consent (delegated fallback)
 PDF_STORAGE_DIR=/data/briefs                    # a Railway volume until object storage is wired
