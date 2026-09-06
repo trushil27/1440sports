@@ -292,3 +292,38 @@ def test_claims_from_signal_cover_person_key_facts_trigger_and_events():
     assert ClaimType.date in types  # the trigger text
     assert types[-1] == ClaimType.event and "London" in drafts[-1].text
     assert all(d.load_bearing for d in drafts)
+
+
+def test_a_scanners_negative_finding_is_not_a_claim():
+    # N° 125 Emerald AI and N° 126 CodeRabbit sat in needs_review for ever because the
+    # scanner's honest "I looked and found nothing" became a load-bearing claim no source
+    # can confirm.
+    for text in (
+        "None — no match among the 5 tracked alumni-database executives",
+        "None identified in Tier-1 coverage",
+        "No existing F1/FE grid-flexibility or energy-management sponsor identified",
+        "none",
+        "N/A",
+    ):
+        assert verify.is_negative_finding(text), text
+    for text in (
+        "$550M Series C led by G2 Venture Partners",
+        "No Fly Zone Robotics raised $40M in June 2026",
+        "Nothing but a 5 GWh plant in South Dakota came online in May",
+    ):
+        assert not verify.is_negative_finding(text), text
+
+
+def test_negative_key_facts_are_dropped_from_the_ledger():
+    sig = ps.with_breakdown(
+        ps.PRIMER_B,
+        series="F1",
+        key_facts={
+            "funding": "$550M Series C at a $2.47B valuation",
+            "alumni_match": "None — no match among the 5 tracked executives",
+            "competitor_signal": "No existing F1/FE energy sponsor identified",
+        },
+    )
+    texts = [c.text for c in verify.claims_from_signal(sig)]
+    assert "$550M Series C at a $2.47B valuation" in texts
+    assert not [t for t in texts if t.lower().startswith(("none", "no existing"))]

@@ -752,6 +752,19 @@ def _bump_sequence(session: Session, number: int) -> None:
     )
 
 
+def _case_import_order(record: Path) -> tuple[str, int, str]:
+    """Import order within a day: the day's OWN daily brief first, then the cases rebuilt for
+    that date. The one-live-brief-per-day rule gives the live slot to whoever lands first, and
+    a rebuild must never take it from the brief that actually went out (N° 121 Crusoe on
+    5 Sep 2026 lost it to an alphabetically earlier backlog case)."""
+    try:
+        summary = json.loads(record.read_text(encoding="utf-8")).get("run", {}).get("summary")
+    except (OSError, ValueError):
+        summary = None
+    rebuilt = 1 if isinstance(summary, dict) and summary.get("rebuild") else 0
+    return (record.parent.name, rebuilt, record.name)
+
+
 def import_engine_cases(session: Session, cases_dir: Path | str | None = None) -> dict[str, Any]:
     """Import full cases recorded as ``<date>/<company>.run.json`` (the pipeline's own run
     record: run summary, every candidate with its decision, the brief with its statuses, and
@@ -769,7 +782,7 @@ def import_engine_cases(session: Session, cases_dir: Path | str | None = None) -
     errors: list[dict[str, str]] = []
     if not folder.exists():
         return {"source": SOURCE_CASES, "files": 0, "created": 0, "skipped": 0, "failed": 0}
-    files = sorted(folder.glob("*/*.run.json"))
+    files = sorted(folder.glob("*/*.run.json"), key=_case_import_order)
     for record in files:
         day_raw = record.parent.name
         stem = record.name[: -len(".run.json")]

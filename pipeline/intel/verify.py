@@ -85,6 +85,34 @@ _KEY_FACT_TYPES: dict[str, ClaimType] = {
     "alumni_match": ClaimType.person_role,
 }
 _EMPTY = {"", "n/a", "na", "none", "null", "unknown", "undisclosed", "not disclosed", "-", "—"}
+# A scanner that looked and found nothing writes that as prose ("None — no match among the
+# tracked alumni", "No existing F1/FE energy sponsor identified"). That is an honest negative
+# finding, not a claim about the world: there is no source that can confirm an absence, so
+# turning it into a load-bearing claim leaves the brief in needs_review for ever (it did:
+# N° 125 Emerald AI and N° 126 CodeRabbit). Recognise the shape and drop it.
+_NEGATIVE_FINDING = re.compile(
+    r"^\s*(?:none|no|not|nothing|n/a)\b"
+    r"(?:[^.]*\b(?:found|identified|match(?:ed|es)?|known|listed|disclosed|available|"
+    r"reported|confirmed|detected|present|apply|applicable)\b)?",
+    re.IGNORECASE,
+)
+
+
+def is_negative_finding(value: str) -> bool:
+    """True when the scanner's field says it looked and found nothing."""
+    text = value.strip().strip("—-–").strip()
+    if text.lower() in _EMPTY:
+        return True
+    m = _NEGATIVE_FINDING.match(text)
+    # "None — no match among the 5 tracked executives" is a negative finding;
+    # "No Fly Zone raised $40M" starts with "No" but names a fact, so require the
+    # negative verb, or a bare opener with nothing but qualifiers after it.
+    if not m:
+        return False
+    if m.group(0).strip().lower() not in {"none", "no", "not", "nothing", "n/a"}:
+        return True
+    rest = text[m.end() :].strip(" .,;:—-–")
+    return not rest or rest.lower().startswith(("match", "such", "one", "existing"))
 
 
 def claims_from_signal(signal: ScannedSignal) -> list[ClaimDraft]:
@@ -106,7 +134,7 @@ def claims_from_signal(signal: ScannedSignal) -> list[ClaimDraft]:
     kf = signal.key_facts.model_dump()
     for key, ctype in _KEY_FACT_TYPES.items():
         val = kf.get(key)
-        if not val or str(val).strip().lower() in _EMPTY:
+        if not val or is_negative_finding(str(val)):
             continue
         out.append(ClaimDraft(str(val).strip(), "key_facts", ctype, True, src, {"field": key}))
     trig = signal.trigger_reason
