@@ -1,8 +1,15 @@
-# Publishes the desk app (site/) to the gh-pages branch on every push to main that touches it.
-# GitHub serves that branch at https://trushil27.github.io/1440sports/ (public repo; Pages is
-# enabled automatically for a gh-pages branch — the Pages API itself is not available to the
-# workflow token). The daily job refreshes the live site through Netlify once NETLIFY_AUTH_TOKEN
-# + NETLIFY_SITE_ID are set; until then a push of site/ is the refresh.
+# Publishes the desk app (site/) on every push to main that touches it.
+#
+# Two destinations, both optional, both live at once if you want:
+#   1. This repo's gh-pages branch — the default. GitHub serves it at
+#      https://trushil27.github.io/1440sports/, which carries a personal username.
+#   2. A SEPARATE repo you own, set with the SITE_REPO variable + SITE_REPO_TOKEN secret.
+#      Point it at <org>/<org>.github.io in a free GitHub organisation and the desk lives at
+#      https://<org>.github.io/ with no personal name and no DNS. This repo does not move:
+#      only the built site is pushed there. See docs/APP_URL.md.
+#
+# The daily job also deploys to Netlify when NETLIFY_AUTH_TOKEN + NETLIFY_SITE_ID are set —
+# a third option that needs no GitHub organisation at all.
 name: Pages
 
 on:
@@ -23,18 +30,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Push site/ to gh-pages
+      - name: Stage the site
         run: |
           set -e
-          git config user.name "1440 desk publisher"
-          git config user.email "noreply@1440sports.com"
           rm -rf /tmp/pages && mkdir -p /tmp/pages
           cp -r site/. /tmp/pages/
           touch /tmp/pages/.nojekyll
-          # A 1440-branded address instead of a personal github.io one. Opt-in: set the repo
-          # variable APP_DOMAIN (e.g. intel.1440sports.com) ONLY after the DNS CNAME for it
-          # points at trushil27.github.io — publishing this file without the DNS record would
-          # take the live site down. See docs/APP_DOMAIN.md.
+          # A 1440-owned address instead of a github.io one. Opt-in: set the repo variable
+          # APP_DOMAIN (e.g. intel.1440sports.com) ONLY after the DNS record for it points at
+          # GitHub — publishing this file without the DNS record takes the live site down.
           if [ -n "${{ vars.APP_DOMAIN }}" ]; then
             echo "${{ vars.APP_DOMAIN }}" > /tmp/pages/CNAME
             echo "custom domain: ${{ vars.APP_DOMAIN }}"
@@ -42,5 +46,27 @@ jobs:
           cd /tmp/pages
           git init -q -b gh-pages
           git add -A
-          git -c user.name="1440 desk publisher" -c user.email="noreply@1440sports.com" commit -q -m "desk: ${GITHUB_SHA::7}"
+          git -c user.name="1440 desk publisher" -c user.email="noreply@1440sports.com" \
+            commit -q -m "desk: ${GITHUB_SHA::7}"
+
+      - name: Publish to this repo's gh-pages
+        if: vars.SITE_REPO == ''
+        run: |
+          cd /tmp/pages
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
+
+      - name: Publish to ${{ vars.SITE_REPO }} (no personal name in the URL)
+        if: vars.SITE_REPO != ''
+        env:
+          TOKEN: ${{ secrets.SITE_REPO_TOKEN }}
+        run: |
+          set -e
+          if [ -z "$TOKEN" ]; then
+            echo "::error::SITE_REPO is set to '${{ vars.SITE_REPO }}' but the SITE_REPO_TOKEN secret is missing — the site cannot be pushed there. Add the token, or clear SITE_REPO to fall back to this repo's gh-pages."
+            exit 1
+          fi
+          cd /tmp/pages
+          # An <org>/<org>.github.io repo serves from its DEFAULT branch, not gh-pages.
+          git branch -M main
+          git push -f "https://x-access-token:${TOKEN}@github.com/${{ vars.SITE_REPO }}.git" main
+          echo "published to https://github.com/${{ vars.SITE_REPO }}"

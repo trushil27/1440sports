@@ -1,4 +1,8 @@
-# Putting the desk on a 1440 address
+# Putting the desk on a 1440 address (needs DNS)
+
+> **DNS is not available (operator, 6 Sep 2026).** Use `docs/APP_URL.md` instead — it has
+> two routes that remove the personal name with no DNS record at all. Keep this page for
+> the day a DNS change becomes possible: a custom domain still beats both.
 
 The links in the signal email currently read
 `https://trushil27.github.io/1440sports/#/brief/127`. That is a personal GitHub username in
