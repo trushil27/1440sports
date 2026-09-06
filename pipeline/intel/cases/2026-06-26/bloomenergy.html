@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Bloom Energy</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "BLOOM ENERGY · 26 JUN 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 178</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 178 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Bloom Energy</h1>
+  <div class="classline">On-Site Energy Generation · SOFC Systems · San Jose, California · NYSE: BE (2026 revenue guidance $3.4-3.8B)</div>
+
+  <div class="lede">Bloom Energy, the San Jose fuel-cell maker now powering AI data centres for Oracle, American Electric Power and Brookfield, signed a master agreement for up to 2.8 GW of its systems with Oracle on 13 April 2026 and posted a record first quarter, lifting 2026 revenue guidance to $3.4-3.8B.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">75</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Atlassian Williams Racing</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>On 13 April Bloom and Oracle announced a master services agreement under which Oracle intends to procure up to 2.8 GW of Bloom fuel-cell systems, 1.2 GW contracted. Two weeks later Bloom reported first-quarter revenue of $751.1M, up 130.4%, and raised 2026 guidance to $3.4-3.8B; total backlog is about $20B. American Electric Power exercised a $2.65B option for 900 MW in January, and Brookfield committed $5B in October 2025 to finance Bloom-powered AI data centres. A niche fuel-cell company has become the power supplier of the AI build-out, and its brand has not caught up.</p>
+<p>The grid sells energy at scale, but every energy partner on it is a fuel or lubricant brand: Aramco at Aston Martin, Petronas at Mercedes, Shell at Ferrari, Eni at Alpine, Mobil 1 and Esso at Red Bull. No team carries an on-site power generation partner, even as factories add simulators, data halls and wind-tunnel hours that local grids were never sized for. Bloom's product is that: baseload power delivered in months, not years.</p>
+  <h2>Why Now</h2>
+  <p>Bloom's 2026 guidance of $3.4-3.8B implies roughly 80% growth, raised on 28 April; the budget and the motive to be known beyond energy circles crest together. Austin (late October) and Las Vegas (November) are the US stages left in 2026, and teams close 2027 rosters in the fourth quarter.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$3.4</div><div class="pfk">Public company (NYSE: BE); 2026 revenue guidance raised to $3.4-3.8B on 28 Apr 2026; total backlog about $2…</div></div>
+    <div class="pf"><div class="pfv">$5B</div><div class="pfk">Brookfield committed $5B in October 2025 to finance Bloom-powered AI data centres</div></div>
+    <div class="pf"><div class="pfv">$751.1M</div><div class="pfk">Q1 2026 revenue $751.1M, up 130.4% year on year (28 Apr 2026)</div></div>
+    <div class="pf"><div class="pfv">$20B</div><div class="pfk">total backlog is about $20B.</div></div>
+    <div class="pf"><div class="pfv">$2.65B</div><div class="pfk">American Electric Power exercised a $2.65B option for 900 MW in January, and Brookfield committed $5B in Oc…</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (sponsor table; 49 of 346 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Atlassian Williams Racing<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Schneider Electric</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Audi F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">bp/Castrol</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Aston Martin Aramco F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Aramco</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">Up to 2.8 GW with Oracle, a $2.65B AEP order, $5B from Brookfield and guidance of $3.4-3.8B put Bloom at peak brand-building capacity with a brand few outside energy know. Williams is expanding Grove and carries no power partner; the lane, the workstream and two US races line up before 2027 rosters close.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">contract win</span><span class="flag">category whitespace</span><span class="flag">leadership tie</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 178</span>
+  </div>
+
+  <h2>WHY ATLASSIAN WILLIAMS RACING</h2>
+  <p>Williams is rebuilding Grove: a phased modernisation adds larger factory, technology and testing facilities. The roster carries Atlassian as title partner, Gulf in fuel, Duracell in consumer batteries, Komatsu, VAST and Keeper, but no power-generation or energy-infrastructure partner, so Official Power Partner is a clean category. Dorilton's investment since 2020 and a data-led revival under James Vowles give a US industrial brand a team that will use the product as well as show it.</p>
+
+  <h2>VALUE TO ATLASSIAN WILLIAMS RACING &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A - operational. Grove's expansion adds simulator, data-hall and wind-tunnel load. Bloom Energy Servers generate power on site from natural gas, biogas or hydrogen without combustion; Oracle took its first system in 55 days, and that speed applies to a factory too. New buildings come online without waiting on a grid upgrade, with a lower-carbon footprint the team can report. In return: Official Power Partner status, rear-wing placement, Austin and Las Vegas hospitality for Bloom's customers.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official Power Partner. <b class="hl">THREE YEARS</b>, 2027-2029, spanning the Grove build-out and the first Oracle gigawatts. Estimated $3-5M a year, part-deliverable as installed Energy Server capacity at Grove. Scope: rear-wing or engine-cover placement, naming of the factory's power plant, US-race hospitality, content on powering the campus.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">KR Sridhar</div>
+        <div class="role">Founder, Chairman &amp; CEO, Bloom Energy · <span class="vtag">verified</span></div>
+        <div class="bio">Sridhar founded Bloom in 2001; a first sports partnership is his call. Path: Natalie Sunderland, CMO, briefed to build an iconic brand; Aman Joshi, EVP and Chief Commercial Officer since January 2024; Simon Edwards, CFO since April 2026, previously CFO then CEO of McLaren partner Groq.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the Oracle gigawatts and the Grove build.</div>      <div class="quote">“KR, Oracle is putting up to 2.8 GW of your servers under its AI factories; Williams is rebuilding Grove and has no power partner. Your new CFO watched Groq take a McLaren seat. 25 minutes before Austin to see the numbers?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Oracle deal 13 Apr, guidance raised 28 Apr; Austin and Las Vegas in window.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">19 <span>/ 20</span></div>
+      <div class="why">$3.4-3.8B 2026 guidance; ~$20B backlog; NYSE-listed.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Industrial B2B brand; CMO briefed to build an iconic brand.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">AI power scramble is now; 2027 rosters close in Q4.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A: on-site power for the Grove expansion.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">ENERGY-ADJACENT ROSTER</span> &nbsp;<span class="rc">Gulf (fuel) and Duracell (batteries) could read a power partner as a category intrusion. <b>Counter:</b> Define the category as stationary power generation; neither sells it.</span></div>
+  <div class="risk"><span class="rt">THIN UK FOOTPRINT</span> &nbsp;<span class="rc">Bloom's growth is US data centres; a UK factory installation needs a gas or hydrogen supply at Grove. <b>Counter:</b> Lead with the US races and a Grove feasibility study; the installation follows the deal.</span></div>
+
+  <h2>Sources <span class="panelnote">— 21 of 21 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://www.bloomenergy.com/leadership-board/</li><li>https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-First-Quarter-2026-Results-and-Raises-Full-Year-2026-Guidance/default.aspx</li><li>https://investor.bloomenergy.com/press-releases/press-release-details/2026/Brookfield-and-Bloom-Energy-Expand-AI-Infrastructure-Partnership-to-25-Billion-Fivefold-Increase-to-Build-and-Finance-Rapid-Power-for-AI-Infrastructure/default.aspx</li><li>https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-and-Oracle-Expand-Strategic-Partnership-to-Deploy-up-to-2-8-GW-to-Accelerate-AI-Infrastructure-Build-Out/default.aspx</li><li>https://www.mclaren.com/racing/partners/groq/mclaren-racing-announces-groq-as-an-official-partner/</li><li>https://www.fool.com/earnings/call-transcripts/2026/04/28/bloom-energy-be-q1-2026-earnings-transcript/</li><li>https://www.investing.com/news/stock-market-news/bloom-energy-stock-soars-after-aep-inks-265-billion-fuel-cell-deal-93CH-4437223</li>  </ul>
+</div>
+</body>
+</html>
