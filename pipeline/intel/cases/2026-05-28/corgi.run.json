@@ -1,0 +1,703 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-05-28",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-c9bpcw1b/2026-05-28/corgi.pdf",
+     "web": "/tmp/case-pdf-c9bpcw1b/2026-05-28/corgi.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Corgi",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 12
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "Corgi",
+     "decision": "selected",
+     "signal_date": "2026-05-28"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Corgi",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 16,
+    "ops_fit": 14,
+    "ranking": 70,
+    "urgency": 13,
+    "capacity": 14,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 5,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.corgi.insure/press-releases/series-b1",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "ops_fit_subscore_mismatch": {
+     "sum": 13,
+     "ops_fit": 14
+    },
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://www.corgi.insure/press-releases/series-b1",
+   "trigger_date": "2026-05-28",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 212,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-c9bpcw1b/2026-05-28/corgi.web.html",
+  "brief_data": {
+   "hq": "San Francisco, California",
+   "deck": "Corgi, the San Francisco AI-native insurance carrier for start-ups, closed a $106M Series B1 at a $2.6B valuation on 28 May 2026, three weeks after a $160M Series B at $1.3B. It named sports as a next vertical the same day: a brand about to be built in public.",
+   "risks": [
+    {
+     "label": "YOUNG BOOK",
+     "detail": "Corgi is two years old and its valuation runs far ahead of its premium base; a multi-year fee could look reckless to investors.",
+     "counter": "Pay part of the fee in cover, tie the balance to premium milestones, keep year one at Austin scale."
+    },
+    {
+     "label": "REGULATED SPEND",
+     "detail": "A carrier's capital is watched by regulators and rating agencies; sponsorship can read as surplus leaving the balance sheet.",
+     "counter": "Fund it from the growth capital just raised, with the sports vertical as the stated commercial purpose."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private ($2.6B, Series B1 May 2026)",
+   "company": "Corgi",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Audi F1 Team",
+     "label": "TAKEN",
+     "detail": "Audi",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "never_entered"
+   ],
+   "sources": [
+    "https://www.ycombinator.com/companies/corgi-insurance",
+    "https://www.corgi.insure/press-releases/series-b1",
+    "https://www.axios.com/pro/fintech-deals/2026/01/08/startup-insurer-corgi-108-million-630-million-valuation",
+    "https://ny1.com/nyc/all-boroughs/ap-top-news/2025/02/25/cadillac-f1-to-be-managed-by-global-group-twg-motorsports-dan-towriss-named-ceo-of-racing-portfolio",
+    "https://www.prnewswire.com/news-releases/corgi-raises-160-million-series-b-to-continue-expanding-its-full-stack-insurance-platform-into-new-verticals-302764003.html"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Nico Laqua before the British GP to confirm Corgi's licensed footprint for a team account, size an Official Insurance Partner entry against Cadillac's 2027 roster, and agree an Austin announcement window.",
+    "value": [
+     {
+      "text": "A first-year team carries general liability, cyber and technology-and-AI liability exposure from the day it opens its US entities, signs suppliers and starts generating car data. Corgi underwrites exactly those lines in-house and quotes with models rather than weeks of manual review. Within its licensed footprint it can insure the team's US operations, and the account becomes the first reference for the sports vertical it has just announced.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Corgi's customer base is founders and their investors, the guest list a new American team wants in its Austin and Las Vegas suites. A partner that pays partly in cover also lowers the team's own operating cost.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A joint series on what it takes to insure a start-up F1 team, told through the people standing up Fishers and Charlotte, serves Corgi's sales into sports and Cadillac's story of an American operation being built from scratch. The corgi mascot on an F1 car is the kind of asset both brands' social channels will use.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Insurance Partner designation, commercial-insurance exclusivity, sidepod or halo placement, hospitality at Austin and Las Vegas, driver and engineering access for Corgi's channels, and a case study Corgi can take to every league and club it pitches.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 28 May 2026 Corgi announced a $106M Series B1 led by TCV at a $2.6B valuation, three weeks after the same investor led a $160M Series B at $1.3B on 6 May. Total funding is $378M. Both figures come from the company's own releases; the founder's statement that Corgi was profitable last month is reported by TechCrunch and not audited.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Corgi came out of stealth in January 2026 with $108M and has since doubled its valuation twice. Companies that re-price this fast spend the following quarter telling the story to customers, recruits and the next round of investors, and Corgi already invests in brand: a mascot, a named office cafe, a consumer-grade identity in a category that has none.",
+      "label": "A brand about to be built in public"
+     },
+     {
+      "text": "The 28 May release names trucking, small business and sports as the next verticals. A Formula 1 partnership is the fastest way to make the sports line credible to leagues, clubs and venues, and to put Corgi in front of the sports-industry buyers who sit in the paddock.",
+      "label": "Sports named as a vertical"
+     },
+     {
+      "text": "The British GP at Silverstone on 3-5 July falls inside the six-to-ten-week window; the United States GP in Austin on 23-25 October and the Las Vegas GP on 19-21 November are the US stages left in 2026. Teams close 2027 partner rosters in the fourth quarter, so a deal agreed over the summer can be announced in Austin and run in full from 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Cadillac's inaugural roster carries TWG AI, IFS, Core Scientific, Tenneco, Claro, Jim Beam, Tommy Hilfiger, Pirelli and Alpinestars, with no insurer and no financial-services brand. Official Insurance Partner is a clean category at a founding-partner price on a team still building its 2027 line-up.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Dan Towriss, chief executive of TWG Motorsports and the Cadillac programme, also runs Group 1001, a US insurance and financial-services group. He can judge an AI-native carrier on its underwriting, not on its logo, which shortens the sale and raises the chance the team actually uses the product.",
+      "label": "A buyer who understands the product"
+     },
+     {
+      "text": "Cadillac is the grid's first-year entrant, building a 450,000 sq ft base in Fishers, Indiana while racing from Silverstone. Its exposures are those of a fast-growing company, and its story, a new American operation standing itself up in public, is Corgi's own customer story.",
+      "label": "A start-up team for a start-up insurer"
+     },
+     {
+      "text": "Corgi's customers are US start-ups and its buyers are US founders. Cadillac gives them Austin and Las Vegas hospitality on an American team, which is the audience match that Haas, with an insurer already on the car, cannot offer.",
+      "label": "American brand, American stages"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Orion180, a homeowners insurer, has held a multi-year partnership since October 2024; the insurance lane is taken."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "Aon, the insurance broker, is on the roster."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Visa and Cash App own the financial lane at title level."
+     },
+     {
+      "team": "Audi Revolut F1 Team · BWT Alpine F1 Team",
+      "reason": "Revolut is title partner at Audi; Mobilize Financial Services sits at Alpine; both financial-services lanes are occupied."
+     },
+     {
+      "team": "Atlassian Williams Racing · Mercedes-AMG Petronas F1 Team",
+      "reason": "Williams carries Stephens, Nuveen, Barclays, BNY and Kraken; Mercedes carries UBS, Nasdaq and Nu; crowded financial rosters where an insurer would be one logo among many."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team · McLaren Mastercard F1 Team · Oracle Red Bull Racing",
+      "reason": "Coinbase, Circle and CoinPayments at Aston Martin; Mastercard title and Goldman Sachs at McLaren; Visa, Carlyle and Gate.io at Red Bull. Open on insurance but no American start-up story and no insurance-literate buyer."
+     }
+    ]
+   },
+   "date_long": "28 MAY 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "A",
+   "bottom_line": "Two rounds in three weeks, a $2.6B valuation and a named push into sports put Corgi at the moment a brand gets built in public. Cadillac's inaugural roster carries no insurer, its chief executive runs one, and the British GP and Austin sit inside the window.",
+   "footer_date": "28 MAY 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Two rounds in three weeks; British GP and Austin inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 14,
+     "note": "$378M raised at $2.6B; profitability reported, book still young.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "Playful consumer-grade brand, but sells to start-ups, not fans.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Sports vertical named; 2027 rosters close in Q4.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 14,
+     "note": "MODE A: liability and cyber cover a first-year team needs.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Corgi announced on 28 May a $106M Series B1 led by TCV at a $2.6B valuation, three weeks after the same investor led its $160M Series B at $1.3B on 6 May. Total funding stands at $378M for a company founded in 2024 that came out of stealth in January with $108M at a reported $630M. Founder-CEO Nico Laqua told TechCrunch the company was profitable last month and will expand from start-ups into trucking, small business and sports. It writes general liability, cyber and tech-and-AI liability as a full-stack carrier, not a broker.",
+   "the_case_p2": "Insurance is on the grid, but thinly. Orion180, a Florida homeowners insurer, has been on the Haas car since October 2024; Aon is at Ferrari as a broker. Fintech is crowded: Visa and Cash App at Racing Bulls, Revolut at Audi, Mobilize Financial Services at Alpine. Cadillac, the grid's new American entrant, carries none of it, and the executive who runs the team also runs an insurance group.",
+   "track_label": "",
+   "brief_number": "212",
+   "claims_total": 16,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$106M Series B1 led by TCV at a $2.6B valuation (28 May 2026), three weeks after a $160M Series B led by TC…",
+     "value": "$106M",
+     "claim_id": 640,
+     "verified": true,
+     "source_url": "https://www.corgi.insure/press-releases/series-b1"
+    },
+    {
+     "fact": "Total funding stands at $378M for a company founded in 2024 that came out of stealth in January with $108M…",
+     "value": "$378M",
+     "claim_id": 650,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "Two rounds in three weeks, a $2.6B valuation and a named push into sports put Corgi at the moment a brand g…",
+     "value": "$2.6B",
+     "claim_id": 651,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Insurance · AI-native full-stack carrier",
+   "value_content": "MODE A - operational. A first-year team stands up US entities, a factory, supplier contracts and a growing data estate, with general liability, cyber and tech-and-AI liability exposure from day one. Corgi underwrites those lines in-house with models that quote in minutes, so it can cover the team's US operations, within its licensed footprint, and make the account its first sports reference. Cadillac gains a partner that pays partly in cover and brings founders to Austin.",
+   "value_section": true,
+   "why_team_para": "Cadillac's inaugural roster is TWG AI, IFS, Core Scientific, Tenneco, Claro, Jim Beam, Tommy Hilfiger, Pirelli and Alpinestars: no insurer and no financial-services brand. Its chief executive, Dan Towriss, also runs Group 1001, a US insurance and financial-services group, so an AI-native carrier is a product he can judge. The team is building a 450,000 sq ft base in Fishers, Indiana while racing from Silverstone; Corgi's start-up customers and Cadillac's American story meet at Austin.",
+   "deal_arch_para": "Entry as Official Insurance Partner of the Cadillac F1 Team. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, with an option to start at Austin in 2026. Estimated $3-5M a year, part-payable in underwritten cover. Scope: commercial-insurance exclusivity, sidepod or halo placement, Austin and Las Vegas hospitality for founder customers, a content series on insuring a start-up team.",
+   "footer_company": "CORGI",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Two rounds in three weeks doubled the valuation by 28 May, and brand budgets are set in the quarter after a raise. The British GP (3-5 July) falls inside the window, and the United States GP in Austin (23-25 October) is the natural announcement stage.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Laqua co-founded Corgi in 2024 and holds the CEO and CTO titles; the brand, the mascot and the all-night office cafe are his. Path: Emily Yuan, Co-Founder and COO. No chief marketing officer or CFO is listed on any source checked.",
+   "decision_maker_name": "Nico Laqua",
+   "decision_maker_role": "Co-Founder & CEO, Corgi",
+   "opening_angle_intro": "Lead with the sports vertical he named.",
+   "opening_angle_quote": "&ldquo;Nico, you named sports as Corgi's next vertical the day you hit $2.6B. Cadillac is a start-up team with no insurer on the car, run by a man who runs an insurance group. 25 minutes before Silverstone to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Nico Laqua, Co-Founder & CEO at Corgi",
+   "cited_source_url": "https://www.corgi.insure/press-releases/series-b1",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.ycombinator.com/companies/corgi-insurance",
+     "excerpt": "Y Combinator company page and Corgi's Series B / B1 releases: founded 2024 by Nico Laqua (founder and CEO; also holds the CTO title) and Emily Yuan (Co-Founder and COO); YC batch S24. No chief marketing officer or CFO is named on any listing or release found (Wikipedia, Tracxn, PitchBook, PR Newswire).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Nico Laqua, Co-Founder & CEO, Corgi at Corgi",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.ycombinator.com/companies/corgi-insurance",
+     "excerpt": "Y Combinator company page and Corgi's Series B / B1 releases: founded 2024 by Nico Laqua (founder and CEO; also holds the CTO title) and Emily Yuan (Co-Founder and COO); YC batch S24. No chief marketing officer or CFO is named on any listing or release found (Wikipedia, Tracxn, PitchBook, PR Newswire).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$106M Series B1 led by TCV at a $2.6B valuation (28 May 2026), three weeks after a $160M Series B led by TCV at $1.3B (6 May 2026); total raised $378M",
+   "cited_source_url": "https://www.corgi.insure/press-releases/series-b1",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Corgi, the San Francisco AI-native insurance carrier for start-ups, closed a $106M Series B1 at a $2.6B valuation on 28 May 2026, three weeks after a $160M Series B at $1.3B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "TCV (lead, both rounds); Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Y Combinator (S24)",
+   "cited_source_url": "https://www.corgi.insure/press-releases/series-b1",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Corgi announced on 28 May a $106M Series B1 led by TCV at a $2.6B valuation, three weeks after the same investor led its $160M Series B at $1.3B on 6 May.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$106M Series B1 at a $2.6B valuation announced 28 May 2026, doubling the $1.3B set by the $160M Series B on 6 May; new verticals named: trucking, small business, sports",
+   "cited_source_url": "https://www.corgi.insure/press-releases/series-b1",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Total funding stands at $378M for a company founded in 2024 that came out of stealth in January with $108M at a reported $630M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Orion180 (homeowners insurer) has a multi-year partnership with Haas since October 2024; Aon is a Ferrari partner; fintech lanes crowded at Racing Bulls (Visa, Cash App), Audi (Revolut) and Alpine (Mobilize Financial Services)",
+   "cited_source_url": "https://www.corgi.insure/press-releases/series-b1",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.axios.com/pro/fintech-deals/2026/01/08/startup-insurer-corgi-108-million-630-million-valuation",
+     "excerpt": "Axios, 8 Jan 2026: San Francisco start-up insurer Corgi came out of stealth with a combined seed and Series A of $108M at a $630M valuation (valuation reported, not company-stated). Insurance Innovation Reporter: Corgi (San Francisco) secured $108M and regulatory approval to launch a full-stack carrier for start-ups. Founded 2024.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Two rounds in three weeks, a $2.6B valuation and a named push into sports put Corgi at the moment a brand gets built in public.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Cadillac's inaugural roster has no insurer or financial-services brand; TWG Motorsports CEO Dan Towriss also runs Group 1001, a US insurance and financial-services group",
+   "cited_source_url": "https://www.corgi.insure/press-releases/series-b1",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2025/02/25/cadillac-f1-to-be-managed-by-global-group-twg-motorsports-dan-towriss-named-ceo-of-racing-portfolio",
+     "excerpt": "AP, 25 Feb 2025: Cadillac F1 is managed by TWG Motorsports; Dan Towriss named CEO of the racing portfolio while retaining his role as CEO of Group 1001 Insurance, a US financial-services firm with more than $66B in assets under management. Andretti Global release, Feb 2025: Towriss instrumental in forming the Cadillac Formula 1 team with General Motors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 28 May 2026 Corgi announced a $106M Series B1 led by TCV at a $2.6B valuation, three weeks after the same investor led a $160M Series B at $1.3B on 6 May.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ San Francisco; full-stack carrier with US regulatory approval since July 2025; customers are US start-ups",
+   "cited_source_url": "https://www.corgi.insure/press-releases/series-b1",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/corgi-raises-160-million-series-b-to-continue-expanding-its-full-stack-insurance-platform-into-new-verticals-302764003.html",
+     "excerpt": "Corgi press release, 6 May 2026: $160M Series B led by TCV at a $1.3B valuation, with Oliver Jung, Leblon Capital, Kindred Ventures, Repeat VC, Zone 2 Ventures, Audeo Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Maiora Ventures, Nordstar, Seven Stars Ventures, Hexa Capital, Alpha Square Group, GSBackers, OurCrowd, Alumni Ventures and Global Growth Fund; total raised over $268M; Corgi writes general liability, cyber liability and tech and AI liability as a full-stack carrier, with regulatory approval received in July 2025; first new vertical is trucking. TechCrunch and The Insurer, 6 May 2026, report the same figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Total funding is $378M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.corgi.insure/press-releases/series-b1",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Corgi came out of stealth in January 2026 with $108M and has since doubled its valuation twice.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.corgi.insure/press-releases/series-b1",
+     "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "event",
+   "load_bearing": true,
+   "text": "British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

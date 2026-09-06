@@ -1,0 +1,363 @@
+{
+ "run_date": "2026-05-28",
+ "signal_date": "2026-05-28",
+ "stem": "corgi",
+ "number": 212,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Corgi",
+  "signal_date": "2026-05-28",
+  "score": 70,
+  "tier": "WARM",
+  "track": 1,
+  "person": "Nico Laqua",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.corgi.insure/press-releases/series-b1",
+  "industry_meta": "Insurance · AI-native full-stack commercial carrier · San Francisco",
+  "recommended_team": "Cadillac F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "WARM",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$106M Series B1 led by TCV at a $2.6B valuation (28 May 2026), three weeks after a $160M Series B led by TCV at $1.3B (6 May 2026); total raised $378M",
+   "investors": "TCV (lead, both rounds); Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Y Combinator (S24)",
+   "revenue": "",
+   "trigger": "$106M Series B1 at a $2.6B valuation announced 28 May 2026, doubling the $1.3B set by the $160M Series B on 6 May; new verticals named: trucking, small business, sports",
+   "competitor_signal": "Orion180 (homeowners insurer) has a multi-year partnership with Haas since October 2024; Aon is a Ferrari partner; fintech lanes crowded at Racing Bulls (Visa, Cash App), Audi (Revolut) and Alpine (Mobilize Financial Services)",
+   "strategic_hook": "Cadillac's inaugural roster has no insurer or financial-services brand; TWG Motorsports CEO Dan Towriss also runs Group 1001, a US insurance and financial-services group",
+   "us_presence": "HQ San Francisco; full-stack carrier with US regulatory approval since July 2025; customers are US start-ups",
+   "alumni_match": null,
+   "taxonomy_category": "C2",
+   "ops_fit_note": "MODE A: general liability, cyber and tech-and-AI liability cover for a first-year team's US operations, underwritten in-house, within Corgi's licensed footprint; sports named as a next vertical on 28 May",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 14,
+   "brand_fit": 13,
+   "urgency": 13,
+   "ops_fit": 14,
+   "ops_fit_subscores": {
+    "product_to_need": 5,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "laqua",
+    "emily yuan",
+    "yuan",
+    "no chief marketing",
+    "no cmo"
+   ],
+   "url": "https://www.ycombinator.com/companies/corgi-insurance",
+   "excerpt": "Y Combinator company page and Corgi's Series B / B1 releases: founded 2024 by Nico Laqua (founder and CEO; also holds the CTO title) and Emily Yuan (Co-Founder and COO); YC batch S24. No chief marketing officer or CFO is named on any listing or release found (Wikipedia, Tracxn, PitchBook, PR Newswire).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$106m",
+    "$2.6b",
+    "28 may",
+    "$378m",
+    "prime capital",
+    "trucking",
+    "profitable",
+    "funding round",
+    "doubl"
+   ],
+   "url": "https://www.corgi.insure/press-releases/series-b1",
+   "excerpt": "Corgi press release (corgi.insure; PR Newswire; Morningstar), 28 May 2026: $106M Series B1 led by TCV with Prime Capital, Zone 2 Ventures, Oliver Jung, Leblon Capital, Kindred Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Nordstar, GSBackers, Repeat Ventures, 8188 Capital and others; valuation $2.6B, three weeks after the $160M Series B at $1.3B; total funding $378M including the $108M Series A. Laqua: expansion into trucking, small business, sports and more. TechCrunch, 28 May 2026: Laqua says the company was profitable last month (reported, not audited).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$160m",
+    "$1.3b",
+    "6 may",
+    "$268m",
+    "tcv",
+    "general liability",
+    "cyber",
+    "july 2025",
+    "regulatory approval"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/corgi-raises-160-million-series-b-to-continue-expanding-its-full-stack-insurance-platform-into-new-verticals-302764003.html",
+   "excerpt": "Corgi press release, 6 May 2026: $160M Series B led by TCV at a $1.3B valuation, with Oliver Jung, Leblon Capital, Kindred Ventures, Repeat VC, Zone 2 Ventures, Audeo Ventures, Quadri Ventures, First Order Fund, Vocal Ventures, Maiora Ventures, Nordstar, Seven Stars Ventures, Hexa Capital, Alpha Square Group, GSBackers, OurCrowd, Alumni Ventures and Global Growth Fund; total raised over $268M; Corgi writes general liability, cyber liability and tech and AI liability as a full-stack carrier, with regulatory approval received in July 2025; first new vertical is trucking. TechCrunch and The Insurer, 6 May 2026, report the same figures.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$108m",
+    "$630m",
+    "january",
+    "stealth",
+    "san francisco",
+    "2024"
+   ],
+   "url": "https://www.axios.com/pro/fintech-deals/2026/01/08/startup-insurer-corgi-108-million-630-million-valuation",
+   "excerpt": "Axios, 8 Jan 2026: San Francisco start-up insurer Corgi came out of stealth with a combined seed and Series A of $108M at a $630M valuation (valuation reported, not company-stated). Insurance Innovation Reporter: Corgi (San Francisco) secured $108M and regulatory approval to launch a full-stack carrier for start-ups. Founded 2024.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$450m",
+    "$40m",
+    "forbes",
+    "annualised",
+    "annualized"
+   ],
+   "url": "https://www.forbes.com/sites/richardnieva/2026/05/28/corgi-doubles-valuation/",
+   "excerpt": "Forbes, 28 May 2026 (and 6 May 2026): Corgi projects $450M in annualised revenue by the end of 2026, up from a $40M annualised rate seven months earlier; about 250 employees; an all-night cafe in the San Francisco office and a corgi mascot. Reported projections, not audited figures.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "towriss",
+    "group 1001",
+    "twg motorsports",
+    "$66b"
+   ],
+   "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2025/02/25/cadillac-f1-to-be-managed-by-global-group-twg-motorsports-dan-towriss-named-ceo-of-racing-portfolio",
+   "excerpt": "AP, 25 Feb 2025: Cadillac F1 is managed by TWG Motorsports; Dan Towriss named CEO of the racing portfolio while retaining his role as CEO of Group 1001 Insurance, a US financial-services firm with more than $66B in assets under management. Andretti Global release, Feb 2025: Towriss instrumental in forming the Cadillac Formula 1 team with General Motors.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "fishers",
+    "silverstone",
+    "charlotte",
+    "450,000",
+    "lowdon",
+    "australian",
+    "bottas",
+    "perez"
+   ],
+   "url": "https://www.motorsport.com/f1/news/cadillac-to-run-f1-2026-operation-from-silverstone-while-us-base-under-construction/10760242/",
+   "excerpt": "Motorsport.com and Sky Sports: Cadillac F1 Team debuted at the 2026 Australian GP (6-8 Mar 2026) with Valtteri Bottas and Sergio Perez; team principal Graeme Lowdon; the team runs its 2026 operation from Silverstone while a 450,000 sq ft base in Fishers, Indiana is under construction, with a Charlotte, North Carolina hub.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "orion180",
+    "october 2024",
+    "homeowners"
+   ],
+   "url": "https://www.haasf1team.com/news/moneygram-haas-f1-team-and-orion180-announce-new-multi-year-partnership",
+   "excerpt": "Haas F1 Team and Orion180, 14 Oct 2024: multi-year partnership between Orion180 Insurance, a Florida homeowners insurer, and the Haas F1 Team, starting at the 2024 United States GP; logo on the car, race suits and team kit from 2025.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "aon",
+    "visa",
+    "cash app",
+    "revolut",
+    "mobilize",
+    "twg ai",
+    "ifs",
+    "core scientific",
+    "tenneco",
+    "claro",
+    "jim beam",
+    "tommy hilfiger",
+    "inaugural roster",
+    "no insurer"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md + data/teams.json)",
+   "excerpt": "Sponsor table: Cadillac F1 Team — TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli, Alpinestars, TWG Motorsports, General Motors (all inaugural, joined 2026); no insurer and no financial-services brand. Haas — Orion180 (active). Ferrari — AON (active). Racing Bulls — Visa, Cash App. Audi — Revolut. Alpine — Mobilize Financial Services. Williams — Stephens, Nuveen, Barclays, BNY, Kraken. Mercedes — UBS, Nasdaq, Nu. Aston Martin — Coinbase, Circle, CoinPayments, Pepperstone, Public. McLaren — Mastercard, Goldman Sachs, Airwallex. Red Bull — Visa, Carlyle, Gate.io, Ava Trade.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "british gp",
+    "silverstone",
+    "austin",
+    "united states gp",
+    "las vegas",
+    "3-5 july",
+    "23-25 october",
+    "19-21 november"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar; dates per formula1.com via ESPN)",
+   "excerpt": "2026 F1 calendar table: British GP (Silverstone, 3-5 Jul 2026), United States GP (Austin, 23-25 Oct 2026), Las Vegas GP (19-21 Nov 2026); Miami (early May) has already passed on the row date.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Corgi",
+  "industry_meta": "Insurance · AI-native full-stack carrier",
+  "hq": "San Francisco, California",
+  "ticker": "Private ($2.6B, Series B1 May 2026)",
+  "deck": "Corgi, the San Francisco AI-native insurance carrier for start-ups, closed a $106M Series B1 at a $2.6B valuation on 28 May 2026, three weeks after a $160M Series B at $1.3B. It named sports as a next vertical the same day: a brand about to be built in public.",
+  "score": 70,
+  "timing_label": "WARM",
+  "series_label": "F1",
+  "team_label": "Cadillac F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Corgi announced on 28 May a $106M Series B1 led by TCV at a $2.6B valuation, three weeks after the same investor led its $160M Series B at $1.3B on 6 May. Total funding stands at $378M for a company founded in 2024 that came out of stealth in January with $108M at a reported $630M. Founder-CEO Nico Laqua told TechCrunch the company was profitable last month and will expand from start-ups into trucking, small business and sports. It writes general liability, cyber and tech-and-AI liability as a full-stack carrier, not a broker.",
+  "the_case_p2": "Insurance is on the grid, but thinly. Orion180, a Florida homeowners insurer, has been on the Haas car since October 2024; Aon is at Ferrari as a broker. Fintech is crowded: Visa and Cash App at Racing Bulls, Revolut at Audi, Mobilize Financial Services at Alpine. Cadillac, the grid's new American entrant, carries none of it, and the executive who runs the team also runs an insurance group.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Two rounds in three weeks doubled the valuation by 28 May, and brand budgets are set in the quarter after a raise. The British GP (3-5 July) falls inside the window, and the United States GP in Austin (23-25 October) is the natural announcement stage.",
+  "why_team_label": "WHY CADILLAC F1 TEAM",
+  "why_team_para": "Cadillac's inaugural roster is TWG AI, IFS, Core Scientific, Tenneco, Claro, Jim Beam, Tommy Hilfiger, Pirelli and Alpinestars: no insurer and no financial-services brand. Its chief executive, Dan Towriss, also runs Group 1001, a US insurance and financial-services group, so an AI-native carrier is a product he can judge. The team is building a 450,000 sq ft base in Fishers, Indiana while racing from Silverstone; Corgi's start-up customers and Cadillac's American story meet at Austin.",
+  "value_section": true,
+  "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. A first-year team stands up US entities, a factory, supplier contracts and a growing data estate, with general liability, cyber and tech-and-AI liability exposure from day one. Corgi underwrites those lines in-house with models that quote in minutes, so it can cover the team's US operations, within its licensed footprint, and make the account its first sports reference. Cadillac gains a partner that pays partly in cover and brings founders to Austin.",
+  "deal_arch_para": "Entry as Official Insurance Partner of the Cadillac F1 Team. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, with an option to start at Austin in 2026. Estimated $3-5M a year, part-payable in underwritten cover. Scope: commercial-insurance exclusivity, sidepod or halo placement, Austin and Las Vegas hospitality for founder customers, a content series on insuring a start-up team.",
+  "decision_maker_name": "Nico Laqua",
+  "decision_maker_role": "Co-Founder & CEO, Corgi",
+  "decision_maker_bio": "Laqua co-founded Corgi in 2024 and holds the CEO and CTO titles; the brand, the mascot and the all-night office cafe are his. Path: Emily Yuan, Co-Founder and COO. No chief marketing officer or CFO is listed on any source checked.",
+  "opening_angle_intro": "Lead with the sports vertical he named.",
+  "opening_angle_quote": "&ldquo;Nico, you named sports as Corgi's next vertical the day you hit $2.6B. Cadillac is a start-up team with no insurer on the car, run by a man who runs an insurance group. 25 minutes before Silverstone to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Two rounds in three weeks; British GP and Austin inside the window."
+   ],
+   [
+    "CAPACITY",
+    "14",
+    "/ 20",
+    "$378M raised at $2.6B; profitability reported, book still young."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "Playful consumer-grade brand, but sells to start-ups, not fans."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "Sports vertical named; 2027 rosters close in Q4."
+   ],
+   [
+    "OPS FIT",
+    "14",
+    "/ 20",
+    "MODE A: liability and cyber cover a first-year team needs."
+   ]
+  ],
+  "risks": [
+   [
+    "YOUNG BOOK",
+    "Corgi is two years old and its valuation runs far ahead of its premium base; a multi-year fee could look reckless to investors.",
+    "Pay part of the fee in cover, tie the balance to premium milestones, keep year one at Austin scale."
+   ],
+   [
+    "REGULATED SPEND",
+    "A carrier's capital is watched by regulators and rating agencies; sponsorship can read as surplus leaving the balance sheet.",
+    "Fund it from the growth capital just raised, with the sports vertical as the stated commercial purpose."
+   ]
+  ],
+  "bottom_line": "Two rounds in three weeks, a $2.6B valuation and a named push into sports put Corgi at the moment a brand gets built in public. Cadillac's inaugural roster carries no insurer, its chief executive runs one, and the British GP and Austin sit inside the window.",
+  "signals": [
+   "funding_event",
+   "category_whitespace",
+   "never_entered"
+  ],
+  "footer_company": "CORGI",
+  "footer_date": "28 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 28 May 2026 Corgi announced a $106M Series B1 led by TCV at a $2.6B valuation, three weeks after the same investor led a $160M Series B at $1.3B on 6 May. Total funding is $378M. Both figures come from the company's own releases; the founder's statement that Corgi was profitable last month is reported by TechCrunch and not audited."
+    },
+    {
+     "label": "A brand about to be built in public",
+     "text": "Corgi came out of stealth in January 2026 with $108M and has since doubled its valuation twice. Companies that re-price this fast spend the following quarter telling the story to customers, recruits and the next round of investors, and Corgi already invests in brand: a mascot, a named office cafe, a consumer-grade identity in a category that has none."
+    },
+    {
+     "label": "Sports named as a vertical",
+     "text": "The 28 May release names trucking, small business and sports as the next verticals. A Formula 1 partnership is the fastest way to make the sports line credible to leagues, clubs and venues, and to put Corgi in front of the sports-industry buyers who sit in the paddock."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The British GP at Silverstone on 3-5 July falls inside the six-to-ten-week window; the United States GP in Austin on 23-25 October and the Las Vegas GP on 19-21 November are the US stages left in 2026. Teams close 2027 partner rosters in the fourth quarter, so a deal agreed over the summer can be announced in Austin and run in full from 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Cadillac's inaugural roster carries TWG AI, IFS, Core Scientific, Tenneco, Claro, Jim Beam, Tommy Hilfiger, Pirelli and Alpinestars, with no insurer and no financial-services brand. Official Insurance Partner is a clean category at a founding-partner price on a team still building its 2027 line-up."
+    },
+    {
+     "label": "A buyer who understands the product",
+     "text": "Dan Towriss, chief executive of TWG Motorsports and the Cadillac programme, also runs Group 1001, a US insurance and financial-services group. He can judge an AI-native carrier on its underwriting, not on its logo, which shortens the sale and raises the chance the team actually uses the product."
+    },
+    {
+     "label": "A start-up team for a start-up insurer",
+     "text": "Cadillac is the grid's first-year entrant, building a 450,000 sq ft base in Fishers, Indiana while racing from Silverstone. Its exposures are those of a fast-growing company, and its story, a new American operation standing itself up in public, is Corgi's own customer story."
+    },
+    {
+     "label": "American brand, American stages",
+     "text": "Corgi's customers are US start-ups and its buyers are US founders. Cadillac gives them Austin and Las Vegas hospitality on an American team, which is the audience match that Haas, with an insurer already on the car, cannot offer."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "A first-year team carries general liability, cyber and technology-and-AI liability exposure from the day it opens its US entities, signs suppliers and starts generating car data. Corgi underwrites exactly those lines in-house and quotes with models rather than weeks of manual review. Within its licensed footprint it can insure the team's US operations, and the account becomes the first reference for the sports vertical it has just announced."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Corgi's customer base is founders and their investors, the guest list a new American team wants in its Austin and Las Vegas suites. A partner that pays partly in cover also lowers the team's own operating cost."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "A joint series on what it takes to insure a start-up F1 team, told through the people standing up Fishers and Charlotte, serves Corgi's sales into sports and Cadillac's story of an American operation being built from scratch. The corgi mascot on an F1 car is the kind of asset both brands' social channels will use."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Insurance Partner designation, commercial-insurance exclusivity, sidepod or halo placement, hospitality at Austin and Las Vegas, driver and engineering access for Corgi's channels, and a case study Corgi can take to every league and club it pitches."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "Orion180, a homeowners insurer, has held a multi-year partnership since October 2024; the insurance lane is taken."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "Aon, the insurance broker, is on the roster."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Visa and Cash App own the financial lane at title level."
+    },
+    {
+     "team": "Audi Revolut F1 Team · BWT Alpine F1 Team",
+     "reason": "Revolut is title partner at Audi; Mobilize Financial Services sits at Alpine; both financial-services lanes are occupied."
+    },
+    {
+     "team": "Atlassian Williams Racing · Mercedes-AMG Petronas F1 Team",
+     "reason": "Williams carries Stephens, Nuveen, Barclays, BNY and Kraken; Mercedes carries UBS, Nasdaq and Nu; crowded financial rosters where an insurer would be one logo among many."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team · McLaren Mastercard F1 Team · Oracle Red Bull Racing",
+     "reason": "Coinbase, Circle and CoinPayments at Aston Martin; Mastercard title and Goldman Sachs at McLaren; Visa, Carlyle and Gate.io at Red Bull. Open on insurance but no American start-up story and no insurance-literate buyer."
+    }
+   ],
+   "ask": "A 25-minute call with Nico Laqua before the British GP to confirm Corgi's licensed footprint for a team account, size an Official Insurance Partner entry against Cadillac's 2027 roster, and agree an Austin announcement window."
+  }
+ },
+ "note": "# Corgi → Cadillac F1 Team — verification log (N° 212, row of 28 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY` in the sandbox), with Claude acting as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code. The brief is issued for the row's date, 28 May 2026, and uses only facts public by that date.\n\n**Sandbox limitation, stated plainly:** direct fetches of corgi.insure, prnewswire.com, techcrunch.com, forbes.com, axios.com, haasf1team.com, cadillacf1team.com and motorsport.com were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nThe desk row carried the **$160M Series B at $1.3B (6 May 2026)**. Both that round and the **$106M Series B1 at $2.6B announced on 28 May 2026**, the row's own date, are company-announced (corgi.insure press releases, PR Newswire) and inside the window. The brief uses the B1 as the trigger and the B as context; `signal_date` is 2026-05-28.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Nico Laqua, Co-Founder & CEO (also CTO); Emily Yuan, Co-Founder & COO; founded 2024, YC S24 | VERIFIED | Y Combinator page; Corgi releases |\n| $106M Series B1 led by TCV at $2.6B, 28 May 2026; total raised $378M; investor list | VERIFIED | corgi.insure press release; PR Newswire; Morningstar |\n| $160M Series B led by TCV at $1.3B, 6 May 2026; total over $268M; lines written; regulatory approval July 2025 | VERIFIED | PR Newswire release; TechCrunch; The Insurer |\n| $108M seed + Series A, January 2026, at $630M | REPORTED (valuation) | Axios, 8 Jan 2026; Insurance Innovation Reporter |\n| Profitable in April 2026 | REPORTED (founder statement) | TechCrunch, 28 May 2026 |\n| $450M annualised revenue projected by end 2026, from $40M seven months earlier; ~250 staff | REPORTED (projection) — used on the app page only, labelled | Forbes, 28 May 2026 |\n| HQ San Francisco | VERIFIED | Axios; YC; Forbes |\n| Dan Towriss CEO of TWG Motorsports and of Group 1001 Insurance ($66B AUM) | VERIFIED | AP, 25 Feb 2025; Andretti Global release |\n| Cadillac debut Australian GP Mar 2026; Fishers 450,000 sq ft base under construction; racing from Silverstone; Charlotte hub | VERIFIED | Motorsport.com; Sky Sports |\n| Orion180 multi-year partnership with Haas from Oct 2024 | VERIFIED | haasf1team.com announcement |\n| Cadillac roster (no insurer / financial-services brand); Haas (Orion180); Ferrari (AON); fintech lanes at Racing Bulls, Audi, Alpine, Williams, Mercedes, Aston Martin, McLaren, Red Bull | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| British GP 3-5 Jul; United States GP 23-25 Oct; Las Vegas GP 19-21 Nov 2026 | VERIFIED | calendar table (`seeds/calendar_2026.json`); dates via ESPN / formula1.com |\n\n## Decision path\n\n**Owner:** Nico Laqua, Co-Founder & CEO (Corgi's own releases and the YC page). **Path:** Emily Yuan, Co-Founder & COO. **No CMO and no CFO** are listed on any source checked — the brief says so rather than inventing one.\n\n## Leadership ties\n\n- Laqua, Yuan: **none found** after checking (search on motorsport / Formula 1 ties returned nothing).\n\n## Screen-outs and things not claimed\n\n- **Revenue is left blank** in the key facts: the only figures are a founder's profitability statement and a Forbes-reported projection; both are labelled reported and neither is treated as a company financial.\n- **Deal size ($3–5M a year) is an ESTIMATE**, labelled as such.\n- **Corgi's licensing footprint** (which states, which lines) was not confirmed; the value section says 'within its licensed footprint' and the ask is to confirm it on the first call.\n- **Post-row context for the operator (not used in the brief):** on 14 Jul 2026 Corgi launched 'Golden by Corgi', a dedicated sports and entertainment insurance vertical serving US national governing bodies (PR Newswire; USA Luge renewal, Sep 2026). That confirms the sports intent named on 28 May and makes the MODE A workstream more concrete for any follow-up conversation.\n- **The 2026 calendar table carries no dates**; the British, United States and Las Vegas GP dates in the copy come from formula1.com via ESPN and are recorded in the calendar evidence entry.\n- **Taxonomy:** insurance has no slot in `team_needs_taxonomy.md`; C2 (cybersecurity, the closest operational need, cyber liability cover) is used and the ops-fit sub-scores are set conservatively.\n"
+}
