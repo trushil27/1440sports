@@ -3,7 +3,8 @@
 Rules, enforced here and by the ``sends`` table's unique constraints:
 - The MD receives an email ONLY for a brief that is ``verified`` AND audit pass /
   pass_after_retry — and only in ``production`` mode. In ``shadow`` mode the same email
-  goes to the operator alone (subject prefixed [SHADOW]).
+  goes to the operator alone; the subject is identical either way and the shadow copy is
+  marked in the body footer instead.
 - The operator receives everything: the MD copy (cc), needs-review briefs (footer
   "VERIFY BEFORE CIRCULATION"), blocked notices with the failing claim, run failures,
   and the "no verified signal today" note.
@@ -443,8 +444,9 @@ def distribute(
         msg = Outgoing(
             to=[md] if (md and settings.execution_mode == "production") else [op],
             cc=[op] if (md and settings.execution_mode == "production") else [],
-            subject=("" if settings.execution_mode == "production" else "[SHADOW] ")
-            + md_subject(brief),
+            # The subject is the MD's, not the operator's: no mode tag in it (operator
+            # decision, 6 Sep 2026). A shadow copy is still marked, in the body footer.
+            subject=md_subject(brief),
             body_text=executive_take(brief, settings),
             body_html=brief_body_html(brief, settings),
             attachments=_attachment(brief),

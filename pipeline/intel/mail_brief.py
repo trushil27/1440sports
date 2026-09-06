@@ -104,7 +104,18 @@ def executive_take(brief, settings) -> str:
         "",
         "— 1440 Intelligence Engine",
     ]
+    note = _mode_note(settings)
+    if note:
+        lines.append(note)
     return "\n".join(lines)
+
+
+def _mode_note(settings) -> str:
+    """Shadow copies used to shout "[SHADOW]" from the subject line. The subject is what the
+    MD sees, so the marker lives here instead — still unmistakable to the operator."""
+    if getattr(settings, "execution_mode", "production") == "production":
+        return ""
+    return "Shadow mode: operator copy, not sent to the MD."
 
 
 def _esc(s: Any) -> str:
@@ -142,6 +153,8 @@ def brief_html(brief, settings) -> str:
         if tier
         else ""
     )
+    note = _mode_note(settings)
+    mode_note = f' · <span style="color:{MUTED}">{_esc(note)}</span>' if note else ""
     verdict_block = (
         f'<div style="background:{PANEL};border-left:4px solid {GOLD};border-radius:0 8px 8px 0;'
         f'padding:14px 18px;margin:0 0 20px">'
@@ -189,6 +202,6 @@ def brief_html(brief, settings) -> str:
      The 2-page brief is attached as a PDF.</div>
   </td></tr>
   <tr><td style="padding:16px 24px 0;color:{MUTED};font-size:11px;letter-spacing:.1em;
-   text-transform:uppercase">1440 Intelligence Engine</td></tr>
+   text-transform:uppercase">1440 Intelligence Engine{mode_note}</td></tr>
 </table>
 </td></tr></table></div>"""

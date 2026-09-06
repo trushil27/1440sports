@@ -17,6 +17,10 @@
     --tile: #191a48; --tile-ink: #f3f1ea;
     --ok: #2f7d4f; --ok-bg: #e9f3ec; --warn: #9a6b1f; --warn-bg: #f8f0e0; --bad: #9a2f2f; --bad-bg: #f6e8e8;
     --shadow: 0 1px 2px rgba(25,26,72,.06), 0 8px 24px -12px rgba(25,26,72,.18);
+    /* Text that sits ON the page (headings, figures, names). It has to follow the
+       theme: on a phone in dark mode the background flips but a hard navy would
+       leave navy-on-navy. --head/--label flip in BOTH dark contexts below. */
+    --head: var(--navy); --label: var(--gold-deep);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -25,6 +29,7 @@
       --tile: #0c0d22; --tile-ink: #f3f1ea;
       --ok: #7fc59a; --ok-bg: #16301f; --warn: #d9bc8a; --warn-bg: #33290f; --bad: #e08a8a; --bad-bg: #3a1a1a;
       --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+      --head: var(--ink); --label: var(--gold);
     }
   }
   :root[data-theme="dark"] {
@@ -33,6 +38,7 @@
     --tile: #0c0d22; --tile-ink: #f3f1ea;
     --ok: #7fc59a; --ok-bg: #16301f; --warn: #d9bc8a; --warn-bg: #33290f; --bad: #e08a8a; --bad-bg: #3a1a1a;
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+      --head: var(--ink); --label: var(--gold);
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
@@ -44,11 +50,20 @@
   /* masthead */
   .mast { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 14px; border-bottom: 2px solid var(--navy); }
   .mast img { height: 26px; }
+  /* The navy wordmark disappears on a dark page, so carry both and swap with the theme
+     — in the media query AND on the explicit toggle, or a phone in dark mode keeps the
+     navy one (operator report, 6 Sep 2026). */
+  .mast img.dark { display: none; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .mast img.light { display: none; }
+    :root:not([data-theme="light"]) .mast img.dark { display: block; }
+  }
+  :root[data-theme="dark"] .mast img.light { display: none; }
+  :root[data-theme="dark"] .mast img.dark { display: block; }
   .mast .meta { font-family: var(--sans); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); text-align: right; }
   .ribbon { font-family: var(--sans); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 22px 0 0; }
   .ribbon .sep { color: var(--hair); margin: 0 8px; }
-  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(40px, 6vw, 60px); letter-spacing: -.02em; line-height: 1; color: var(--navy); margin: 6px 0 8px; text-wrap: balance; }
-  [data-theme="dark"] h1, .dark h1 { color: var(--ink); }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(40px, 6vw, 60px); letter-spacing: -.02em; line-height: 1; color: var(--head); margin: 6px 0 8px; text-wrap: balance; }
   .classline { font-style: italic; color: var(--muted); font-size: 16px; margin: 0 0 18px; }
   .lede { font-size: 21px; line-height: 1.45; color: var(--ink); margin: 0 0 22px; max-width: 34em; text-wrap: pretty; }
 
@@ -62,25 +77,21 @@
   @media (min-width: 640px) { .chips { grid-template-columns: repeat(4, 1fr); } }
   .chip { border: 1px solid var(--hair); background: var(--panel); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; justify-content: center; }
   .chip .k { font-family: var(--sans); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
-  .chip .v { font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--navy); margin-top: 4px; line-height: 1.2; }
-  [data-theme="dark"] .chip .v { color: var(--ink); }
+  .chip .v { font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--head); margin-top: 4px; line-height: 1.2; }
 
   /* sections */
   section { margin: 0 0 38px; }
-  h2 { font-family: var(--sans); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-deep); margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--hair); font-weight: 600; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-  [data-theme="dark"] h2 { color: var(--gold); }
+  h2 { font-family: var(--sans); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--label); margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--hair); font-weight: 600; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
   h2 .note { font-family: var(--sans); font-size: 11px; letter-spacing: .04em; text-transform: none; color: var(--muted); font-weight: 400; }
   h2 .note.warn { color: var(--warn); }
   p { margin: 0 0 12px; max-width: 40em; text-wrap: pretty; }
-  .hl { font-family: var(--sans); font-weight: 600; font-size: .9em; letter-spacing: .02em; color: var(--navy); }
-  [data-theme="dark"] .hl { color: var(--gold); }
+  .hl { font-family: var(--sans); font-weight: 600; font-size: .9em; letter-spacing: .02em; color: var(--head); }
 
   /* argument blocks: WHY NOW / WHY THIS TEAM / VALUE */
   .args { display: grid; gap: 12px; grid-template-columns: 1fr; }
   @media (min-width: 720px) { .args { grid-template-columns: repeat(2, 1fr); } }
   .arg { background: var(--panel); border-radius: 10px; padding: 16px 18px 14px; border: 1px solid var(--hair); }
-  .arg .al { font-family: var(--sans); font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 6px; }
-  [data-theme="dark"] .arg .al { color: var(--gold); }
+  .arg .al { font-family: var(--sans); font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--label); font-weight: 600; margin-bottom: 6px; }
   .arg .at { font-size: 16px; line-height: 1.5; color: var(--ink); }
   .clock { display: grid; gap: 0; grid-template-columns: 1fr; border-left: 2px solid var(--gold); padding-left: 0; }
   .clock .tick { display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 10px 0 10px 18px; border-bottom: 1px solid var(--hair); position: relative; }
@@ -96,16 +107,14 @@
   .ruled { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 14px; }
   .ruled th { font-family: var(--sans); font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 6px 10px 8px 0; border-bottom: 1px solid var(--hair); font-weight: 600; }
   .ruled td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--hair); vertical-align: top; }
-  .ruled td.t { font-weight: 600; color: var(--navy); white-space: nowrap; width: 34%; }
-  [data-theme="dark"] .ruled td.t { color: var(--ink); }
+  .ruled td.t { font-weight: 600; color: var(--head); white-space: nowrap; width: 34%; }
   .tablewrap { overflow-x: auto; }
 
   /* proof points */
   .proof { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
   @media (min-width: 640px) { .proof { grid-template-columns: repeat(3, 1fr); } }
   .pf { background: var(--panel); border: 1px solid var(--hair); border-radius: 10px; padding: 14px 16px; }
-  .pf .pfv { font-family: var(--sans); font-size: 24px; font-weight: 700; color: var(--navy); line-height: 1.05; font-variant-numeric: tabular-nums; }
-  [data-theme="dark"] .pf .pfv { color: var(--ink); }
+  .pf .pfv { font-family: var(--sans); font-size: 24px; font-weight: 700; color: var(--head); line-height: 1.05; font-variant-numeric: tabular-nums; }
   .pf .pfv .dag { color: var(--warn); font-size: 14px; vertical-align: super; }
   .pf .pfk { font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.35; }
 
@@ -113,10 +122,8 @@
   .gfrow { display: grid; grid-template-columns: 1.4fr 110px 2fr; gap: 12px; align-items: center; padding: 10px 8px; border-bottom: 1px solid var(--hair); border-radius: 8px; }
   .gfrow.rec { background: var(--panel); }
   @media (max-width: 560px) { .gfrow { grid-template-columns: 1fr 110px; } .gfrow .gfd { grid-column: 1 / -1; } }
-  .gft { font-weight: 600; color: var(--navy); font-size: 16px; }
-  [data-theme="dark"] .gft { color: var(--ink); }
-  .gft .star { display: block; font-family: var(--sans); font-size: 9.5px; letter-spacing: .16em; color: var(--gold-deep); font-weight: 600; margin-top: 2px; }
-  [data-theme="dark"] .gft .star { color: var(--gold); }
+  .gft { font-weight: 600; color: var(--head); font-size: 16px; }
+  .gft .star { display: block; font-family: var(--sans); font-size: 9.5px; letter-spacing: .16em; color: var(--label); font-weight: 600; margin-top: 2px; }
   .gflab { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; text-align: center; padding: 5px 0; border-radius: 6px; }
   .gflab.prime { background: var(--tile); color: var(--gold); }
   .gflab.open { background: var(--ok-bg); color: var(--ok); }
@@ -136,14 +143,12 @@
   .twocol { display: grid; grid-template-columns: 1fr; gap: 20px; }
   @media (min-width: 720px) { .twocol { grid-template-columns: 1fr 1fr; } }
   .dm { border: 1px solid var(--hair); background: var(--panel); border-radius: 10px; padding: 16px 18px; }
-  .dm .name { font-size: 22px; color: var(--navy); font-weight: 500; }
-  [data-theme="dark"] .dm .name { color: var(--ink); }
+  .dm .name { font-size: 22px; color: var(--head); font-weight: 500; }
   .dm .role { font-family: var(--sans); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 2px 0 10px; }
   .dm .role .vtag { color: var(--ok); font-weight: 600; }
   .dm .role .utag { color: var(--warn); font-weight: 600; }
   .dm .bio { font-size: 15px; line-height: 1.5; }
-  .quote { background: var(--panel); border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; padding: 16px 18px; font-style: italic; font-size: 17px; line-height: 1.5; color: var(--navy); }
-  [data-theme="dark"] .quote { color: var(--ink); }
+  .quote { background: var(--panel); border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; padding: 16px 18px; font-style: italic; font-size: 17px; line-height: 1.5; color: var(--head); }
   .intro { font-size: 15px; color: var(--ink-2); margin-bottom: 10px; }
 
   /* score composition */
@@ -151,8 +156,7 @@
   @media (min-width: 720px) { .scoregrid { grid-template-columns: repeat(5, 1fr); } }
   .sc { border: 1px solid var(--hair); border-radius: 10px; padding: 12px 14px; background: var(--panel); }
   .sc .pill { font-family: var(--sans); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-  .sc .val { font-family: var(--sans); font-size: 24px; font-weight: 700; color: var(--navy); font-variant-numeric: tabular-nums; }
-  [data-theme="dark"] .sc .val { color: var(--ink); }
+  .sc .val { font-family: var(--sans); font-size: 24px; font-weight: 700; color: var(--head); font-variant-numeric: tabular-nums; }
   .sc .val span { font-size: 12px; color: var(--muted); font-weight: 400; }
   .sc .bar { height: 4px; background: var(--hair); border-radius: 2px; margin: 8px 0; overflow: hidden; }
   .sc .bar i { display: block; height: 100%; background: var(--gold); }
@@ -161,10 +165,8 @@
   /* risks */
   .risk { display: grid; grid-template-columns: 170px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--hair); font-size: 15.5px; line-height: 1.5; }
   @media (max-width: 560px) { .risk { grid-template-columns: 1fr; gap: 4px; } }
-  .risk .rt { font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--navy); padding-top: 4px; }
-  [data-theme="dark"] .risk .rt { color: var(--ink); }
-  .risk .rc b { font-family: var(--sans); font-size: .85em; letter-spacing: .04em; color: var(--gold-deep); }
-  [data-theme="dark"] .risk .rc b { color: var(--gold); }
+  .risk .rt { font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--head); padding-top: 4px; }
+  .risk .rc b { font-family: var(--sans); font-size: .85em; letter-spacing: .04em; color: var(--label); }
 
   .sources { font-family: var(--sans); font-size: 12.5px; color: var(--muted); padding-left: 18px; margin: 0; word-break: break-all; line-height: 1.5; }
   .sources li { margin-bottom: 4px; }
@@ -183,7 +185,8 @@
 <body>
 <div class="page">
   <div class="mast">
-    <img src="{{ logo_src }}" alt="1440 Sports">
+    <img class="light" src="{{ logo_src }}" alt="1440 Sports">
+    {% if logo_src_dark %}<img class="dark" src="{{ logo_src_dark }}" alt="1440 Sports">{% endif %}
     <span class="meta">Intelligence Brief · Confidential<br>N° {{ brief_number }} · {{ date_long }}</span>
   </div>
   <div class="ribbon">Intelligence Brief <span class="sep">/</span> N° {{ brief_number }}{{ track_label }} <span class="sep">·</span> {{ tier }} <span class="sep">·</span> {{ series_label }}</div>

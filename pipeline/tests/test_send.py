@@ -100,7 +100,11 @@ def test_shadow_mode_sends_the_md_copy_to_the_operator_only(session, migrated_da
         stages=_stages(mailer),
     )
     assert [m.to for m in mailer.sent] == [[OP]]
-    assert mailer.sent[0].subject.startswith("[SHADOW] 1440 Intelligence Brief")
+    # The subject carries no mode tag (operator decision, 6 Sep 2026) — the MD reads it.
+    assert mailer.sent[0].subject.startswith("1440 Intelligence Brief")
+    assert "SHADOW" not in mailer.sent[0].subject
+    # …but a shadow copy is still unmistakable in the body.
+    assert "Shadow mode: operator copy" in mailer.sent[0].body_text
     assert _sends(session) == [(OP, "operator_copy", "sent")]
 
 

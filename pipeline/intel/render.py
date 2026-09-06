@@ -41,6 +41,7 @@ HERE = Path(__file__).parent
 ASSETS = HERE / "assets"
 TEMPLATES = HERE / "templates"
 LOGO = ASSETS / "1440_logo.png"
+LOGO_DARK = ASSETS / "1440_logo_white.svg"  # navy wordmark is invisible on a dark page
 
 MODE_CAPTIONS = {
     "A": "tech in the car / championship",
@@ -380,13 +381,14 @@ def render_html(data: BriefData, font_stack: str = "brand") -> str:
     return _env().get_template("brief.html.j2").render(**ctx)
 
 
-def _logo_data_uri() -> str:
+def _logo_data_uri(path: Path | None = None) -> str:
     """The masthead logo inlined, so the app page is one self-contained file."""
     import base64
     import mimetypes
 
-    mime = mimetypes.guess_type(str(LOGO))[0] or "image/png"
-    return f"data:{mime};base64," + base64.b64encode(LOGO.read_bytes()).decode("ascii")
+    path = path or LOGO
+    mime = mimetypes.guess_type(str(path))[0] or "image/png"
+    return f"data:{mime};base64," + base64.b64encode(path.read_bytes()).decode("ascii")
 
 
 def render_web_html(data: BriefData) -> str:
@@ -404,6 +406,7 @@ def render_web_html(data: BriefData) -> str:
         if needs_review
         else "1440 Sports · London",
         logo_src=_logo_data_uri(),
+        logo_src_dark=_logo_data_uri(LOGO_DARK),
     )
     return _env().get_template("brief_web.html.j2").render(**ctx)
 
