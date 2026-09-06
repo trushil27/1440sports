@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Zenity</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "ZENITY · 3 AUG 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 155</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 155 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Zenity</h1>
+  <div class="classline">Cybersecurity · AI Agent Security &amp; Governance · New York (commercial) · Tel Aviv (R&amp;D); founded 2021 · Private (valuation undisclosed; $125M Series C, Aug 2026)</div>
+
+  <div class="lede">Zenity, the AI-agent security company founded in Tel Aviv and run commercially from New York, announced a $125M Series C led by Norwest on 3 August, with SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures joining. Total funding is about $185M; the valuation was not disclosed.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">72</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Cadillac F1 Team</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Qumra Capital joined the new investors; Vertex Ventures, Third Point Ventures, DTCP and Intel Capital returned. The $38M Series B, co-led by Third Point and DTCP with Microsoft's M12, closed in October 2024. In April Gartner named Zenity 'the company to beat' in AI agent governance. Founders Ben Kliger and Michael Bargury built security products together at Microsoft; the company now employs more than 230 people, about 150 in Israel, runs sales, marketing and operations from New York, and counts Fortune 500 and Global 2000 enterprises, SoftBank Corp among them, as customers.</p>
+<p>Every AI agent an enterprise deploys, from Microsoft Copilot to custom builds, acts with someone's permissions; Zenity inventories them, limits what they can reach and detects when their intent drifts. The grid has bought defence in depth, CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Rubrik at McLaren, but nobody has bought the agent layer. The Norwest-led Series C funds exactly the global expansion a sponsorship serves.</p>
+  <h2>Why Now</h2>
+  <p>The Series C closed on 3 August with a global-expansion mandate, and Gartner's April verdict gives the brand a window to own its category before rivals catch up. The United States GP in Austin (late October) and Las Vegas (November) sit inside the horizon; teams settle 2027 rosters in the fourth quarter.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$125M</div><div class="pfk">$125M Series C led by Norwest, announced 3 Aug 2026; total funding about $185M (company; Fortune reports $1…</div></div>
+    <div class="pf"><div class="pfv">$185M</div><div class="pfk">Total funding is about $185M;</div></div>
+    <div class="pf"><div class="pfv">$38M</div><div class="pfk">The $38M Series B, co-led by Third Point and DTCP with Microsoft&#39;s M12, closed in October 2024.</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (sponsor table; 49 of 346 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Cadillac F1 Team<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Mercedes-AMG Petronas F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">CrowdStrike</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Cisco</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Atlassian Williams Racing</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Keeper</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A $125M Series C led by Norwest, with SoftBank, Hitachi and LG, Gartner's 'company to beat' verdict and an untouched agent-security lane at the American debutant put Zenity in a window to buy category ownership, with Austin and Las Vegas inside it. An undisclosed valuation, no marketing officer and Cadillac's price point hold the score at 72.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">category precedent</span><span class="flag">analyst verdict</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 155</span>
+  </div>
+
+  <h2>WHY CADILLAC F1 TEAM</h2>
+  <p>Cadillac's debut roster has TWG AI as exclusive AI partner, Core Scientific for the data centre and IFS for enterprise software, and no cybersecurity partner, so the agent-security lane is clean. A team assembling its estate in 2026 is adopting agents inside Copilot and its own AI programme at the same moment, with no legacy controls to retrofit. Zenity's New York commercial base and Fortune 500 customer list match an American flag-bearer selling to enterprise CIOs.</p>
+
+  <h2>VALUE TO CADILLAC F1 TEAM &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A - operational. Zenity inventories every AI agent in the team's estate and what each can reach; enforces least privilege before an agent touches design, supplier or strategy data; and watches agent behaviour at runtime for prompt injection and intent drift. For a first-season team standing up Copilot beside an exclusive AI programme, it is the control layer that lets engineers use agents without exposing the car.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official AI Security Partner, in the cybersecurity category. <b class="hl">THREE YEARS</b>, 2027-2029, covering the expansion the Series C funds. Estimated $2-4M a year, part in platform licences. Scope: garage and car placement, an 'agents in the garage' content series, Austin and Las Vegas hospitality for CISOs and CIOs, a Cadillac reference deployment.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Ben Kliger</div>
+        <div class="role">CEO &amp; Co-founder, Zenity · <span class="vtag">verified</span></div>
+        <div class="bio">Kliger co-founded Zenity in 2021 with CTO Michael Bargury after leading security products together at Microsoft, is based in New York. Path: Bargury, and Keren Herscovici, VP Finance and Corporate Development. No chief marketing officer is listed; marketing is led at director level (reported).</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with Gartner and the empty agent lane.</div>      <div class="quote">“Ben, Gartner says you are the company to beat, and no Formula 1 team has an AI-agent security partner. Cadillac is building its estate from zero this year. 25 minutes before Austin to see what that lane is worth?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Round announced 3 Aug; Austin and Las Vegas inside the window.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">$125M raise, ~$185M total; valuation undisclosed; 230 staff.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">B2B security brand; CIO and CISO audience; New York base.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">Category race after Gartner&#39;s verdict; no hard deadline.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE A: agent inventory and control for a greenfield estate.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">TWG AI EXCLUSIVITY</span> &nbsp;<span class="rc">TWG AI is Cadillac's exclusive AI partner; an 'AI security' brand could be read as an AI partner and blocked. <b>Counter:</b> Enter as cybersecurity, position Zenity as agent governance, and clear the language with TWG first.</span></div>
+  <div class="risk"><span class="rt">SCALE AND PRICE</span> &nbsp;<span class="rc">About $185M raised, no disclosed valuation and no marketing officer; Cadillac's 'fewer, bigger, better' policy is priced for larger cheques. <b>Counter:</b> Part-pay in licences the team would buy anyway and step fees up over the three years.</span></div>
+
+  <h2>Sources <span class="panelnote">— 14 of 14 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents</li><li>https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe</li>  </ul>
+</div>
+</body>
+</html>
