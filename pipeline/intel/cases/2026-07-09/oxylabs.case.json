@@ -1,0 +1,358 @@
+{
+ "run_date": "2026-07-09",
+ "signal_date": "2026-07-09",
+ "stem": "oxylabs",
+ "number": 164,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Oxylabs",
+  "signal_date": "2026-07-09",
+  "score": 71,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Vytautas Savickas",
+  "role": "Chief Executive Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+  "industry_meta": "AI Data Infrastructure · Web Intelligence / Proxy Network · New York (founded Vilnius, 2015)",
+  "recommended_team": "Audi Revolut F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "WARM",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$130M investment from Warburg Pincus (Warburg Pincus Capital Solutions Founders Fund) at about $3.6B valuation, announced 9 Jul 2026; the company's first outside capital since its 2015 founding",
+   "investors": "Warburg Pincus (sole outside investor, via the Capital Solutions Founders Fund, 2026); bootstrapped before that",
+   "revenue": "$350M annual recurring revenue, as reported by Dealroom and IBTimes citing the company (not in the release headline)",
+   "trigger": "$130M investment from Warburg Pincus at about $3.6B valuation, announced 9 Jul 2026",
+   "competitor_signal": "No web-data, proxy or scraping brand on the 2026 grid; adjacent data lanes are held by VAST (Williams), TWG AI (Cadillac), Confluent (Racing Bulls), Alteryx (McLaren), NetApp (Aston Martin) and Mphasis (Haas)",
+   "strategic_hook": "Revolut, Audi's 2026 title partner, runs its European bank from Vilnius (Revolut Bank UAB, licensed by the Bank of Lithuania and the ECB), the city where Oxylabs was founded; the release positions Oxylabs as data infrastructure for AI agents",
+   "us_presence": "Release issued from New York and Vilnius; the company describes itself as headquartered in New York with more than 15 offices globally (reported); serves over 350,000 customers",
+   "alumni_match": "",
+   "taxonomy_category": "C3",
+   "ops_fit_note": "MODE B: halo with a working edge; web intelligence for brand protection, counterfeit-merchandise and ticket-resale monitoring is a standard use of the platform a team's commercial group can run"
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 16,
+   "brand_fit": 12,
+   "urgency": 13,
+   "ops_fit": 14,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 4
+   }
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "savickas"
+   ],
+   "url": "https://oxylabs.io/press-area/oxylabs-group-leadership",
+   "excerpt": "Oxylabs press area, 25 Mar 2026, 'Oxylabs Group Evolves Its Leadership Structure to Accelerate the Next Decade': Vytautas Savickas becomes Chief Executive Officer of the Oxylabs group, responsible for daily operations, growth and operational efficiency across international markets; founder Julius Černiauskas moves to Chairman of the Board. Savickas is quoted as CEO in the 9 Jul 2026 investment release.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$130m",
+    "$3.6b",
+    "warburg",
+    "9 jul",
+    "9 july",
+    "funding round",
+    "first outside",
+    "first external",
+    "founders fund"
+   ],
+   "url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$350m",
+    "annual recurring",
+    "arr"
+   ],
+   "url": "https://www.ibtimes.com/oxylabs-reaches-36b-valuation-warburg-pincus-investment-3805174",
+   "excerpt": "IBTimes and Dealroom (Jul 2026), citing the company: Oxylabs records $350 million in annual recurring revenue and is trusted by more than 350,000 technology teams. Reported, not in the release headline.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "350,000",
+    "new york",
+    "15 offices",
+    "vilnius",
+    "2015",
+    "bootstrapped"
+   ],
+   "url": "https://oxylabs.io/about-us",
+   "excerpt": "Company boilerplate in the 9 Jul 2026 release and About page: founded in Vilnius, Lithuania, in 2015; release datelined New York and Vilnius; describes itself as headquartered in New York with more than 15 offices globally; over 350,000 customers; no outside capital before the Warburg Pincus investment.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "černiauskas",
+    "cerniauskas",
+    "chairman",
+    "montvilas",
+    "chief commercial officer",
+    "no chief marketing",
+    "head of marketing"
+   ],
+   "url": "https://oxylabs.io/press-area/oxylabs-group-leadership",
+   "excerpt": "Oxylabs leadership: Julius Černiauskas, founder, Chairman of the Board from Q2 2026 (previously CEO); Tomas Montvilas, Chief Commercial Officer (Forbes Business Development Council profile); Vytautas Kirjazovas, Head of Communications. No chief marketing officer is listed; the careers site advertises a Head of Marketing role.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "revolut bank uab",
+    "bank of lithuania",
+    "european bank",
+    "konstitucijos"
+   ],
+   "url": "https://www.lb.lt/en/sfi-financial-market-participants/revolut-bank-uab",
+   "excerpt": "Bank of Lithuania register: Revolut Bank UAB is a bank incorporated and licensed in Lithuania, registered office Konstitucijos ave. 21B, Vilnius; licensed by the Bank of Lithuania and the European Central Bank; Revolut operates in Europe through this entity.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "ai agents",
+    "agentic",
+    "web intelligence",
+    "public web"
+   ],
+   "url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "excerpt": "Release: from its origins as a premium proxy service Oxylabs is evolving into a full-stack web-data infrastructure platform that lets AI systems access, interpret and act on the open web at scale; positioned as a data infrastructure provider for AI and agentic applications.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "brand protection",
+    "counterfeit",
+    "ticket-resale",
+    "ticket resale",
+    "cybersecurity, e-commerce"
+   ],
+   "url": "https://oxylabs.io/",
+   "excerpt": "Oxylabs product site and release: customers across cybersecurity, e-commerce and financial industries use the platform for large-scale public web data acquisition, including brand protection and price and marketplace monitoring.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "vast",
+    "twg ai",
+    "confluent",
+    "alteryx",
+    "netapp",
+    "mphasis",
+    "elevenlabs",
+    "ninjaone",
+    "extreme networks",
+    "libertex",
+    "jigspace",
+    "revolut",
+    "title partner",
+    "no web-data",
+    "data partner",
+    "oracle",
+    "microsoft",
+    "google cloud",
+    "ibm"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json, team_profiles.json): Audi F1 Team 2026 — Revolut (title, joined), Audi, Camozzi, Pirelli, Sabelt, JigSpace, Extreme Networks, Libertex, Visit Qatar, bp/Castrol, adidas, Aleph, NEXO, NinjaOne, Gillette, World of Hyatt, Perk, ic! berlin, ElevenLabs, Piquadro, Paulaner, Specialized, Bell, Mammoet, Glasurit; no data-platform, web-data or AI-data partner; profile lists enterprise software as an open category. Data lanes elsewhere: Williams — VAST, Claude; Cadillac — TWG AI, Core Scientific; Racing Bulls — Confluent, Dynatrace; McLaren — Alteryx, Google Cloud; Aston Martin — NetApp; Haas — Mphasis; Red Bull — Oracle; Mercedes and Alpine — Microsoft; Ferrari — IBM.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "dutch",
+    "zandvoort",
+    "italian",
+    "monza",
+    "austin",
+    "las vegas",
+    "united states"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: Dutch GP (Zandvoort) in late August, Italian GP (Monza) in September, US GP (Austin) in October, Las Vegas GP in November.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Oxylabs",
+  "industry_meta": "AI Data Infrastructure · Web Intelligence / Proxy Network",
+  "hq": "New York (founded in Vilnius, 2015)",
+  "ticker": "Private (~$3.6B reported; $130M, Jul 2026)",
+  "deck": "Oxylabs, the Vilnius-born web-data platform now headquartered in New York, took its first outside capital on 9 July 2026: $130M from Warburg Pincus at a reported $3.6B valuation, eleven years after founding. A bootstrapped business under a new chief executive, with a mandate to be the data layer for AI agents.",
+  "score": 71,
+  "timing_label": "WARM",
+  "series_label": "F1",
+  "team_label": "Audi Revolut F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 9 July Oxylabs announced a $130M investment from the Warburg Pincus Capital Solutions Founders Fund; the release does not print a valuation, and the $3.6B figure is reported by SiliconANGLE, TNW and Dealroom. It is the company's first external funding since 2015. The business serves over 350,000 customers across cybersecurity, e-commerce and finance, and Dealroom and IBTimes report $350M of annual recurring revenue, citing the company. Vytautas Savickas took over as chief executive in the second quarter, with founder Julius Černiauskas moving to chairman.",
+  "the_case_p2": "The grid has learned to sell data infrastructure: VAST at Williams, Confluent and Dynatrace at Racing Bulls, Alteryx at McLaren, TWG AI at Cadillac. None of them touches the public web, where the grounding data for AI agents comes from and where Oxylabs sits. A bootstrapped European company that just took growth capital from a New York investor has one job now: be known by the enterprises and AI builders that buy this.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;First outside money and a new CEO arrive together, which is when a company decides what it wants to be known for. The Dutch GP and Italian GP fall inside the window, Austin and Las Vegas close the US season, and 2027 rosters are set in the fourth quarter.",
+  "why_team_label": "WHY AUDI REVOLUT F1 TEAM",
+  "why_team_para": "Audi's first season carries a technology roster still being written: Revolut as title partner, ElevenLabs, NinjaOne, Extreme Networks, JigSpace and Libertex. There is no data-platform, web-data or AI-data partner, and the profile lists enterprise software as open. The introduction is unusually warm: Revolut runs its European bank from Vilnius, licensed by the Bank of Lithuania, the city where Oxylabs was founded. A European scale-up going to America suits a German works team with a fintech on the car.",
+  "value_section": true,
+  "value_section_label": "VALUE TO AUDI REVOLUT F1 TEAM",
+  "value_mode": "B",
+  "value_content": "MODE B - halo with a working edge. Oxylabs' web intelligence is what brands use for counterfeit and grey-market monitoring, price tracking and ticket-resale surveillance across marketplaces; a new team's licensing and merchandise operation can run exactly that. On the brand side: an AI-infrastructure name for the team's technology story, developer-community activation through Oxylabs' channels, and hospitality at Zandvoort, Monza and the US rounds.",
+  "deal_arch_para": "Entry as Official Web Intelligence Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the US build-out and a plausible listing window. Estimated $2-4M a year, part in data services. Scope: sidepod or mirror placement, brand-protection workstream for the licensing programme, European and US-race hospitality, developer content.",
+  "decision_maker_name": "Vytautas Savickas",
+  "decision_maker_role": "Chief Executive Officer, Oxylabs",
+  "decision_maker_bio": "Savickas became group CEO in the second quarter of 2026, charged with daily operations and international growth; the Warburg Pincus round is his first as CEO. Path: Julius Černiauskas, founder and Chairman; Tomas Montvilas, Chief Commercial Officer. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the Vilnius connection.",
+  "opening_angle_quote": "&ldquo;Vytautas, Revolut runs its European bank from your home city and its name is on the Audi. No team on the grid has a web-data partner, and you just took your first outside capital. 25 minutes before Zandvoort to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Round announced 9 Jul; Zandvoort and Monza inside the window."
+   ],
+   [
+    "CAPACITY",
+    "16",
+    "/ 20",
+    "$130M raise; ~$3.6B and $350M ARR both reported, not stated."
+   ],
+   [
+    "BRAND FIT",
+    "12",
+    "/ 20",
+    "B2B infrastructure; proxy heritage needs careful positioning."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "New CEO, first outside capital, US push; no hard deadline."
+   ],
+   [
+    "OPS FIT",
+    "14",
+    "/ 20",
+    "MODE B: brand-protection workstream; low on-camera value."
+   ]
+  ],
+  "risks": [
+   [
+    "PROXY HERITAGE",
+    "Oxylabs grew as a proxy and scraping provider; web scraping draws legal and reputational scrutiny a partner review will raise.",
+    "Lead with the compliance record and enterprise base; position it as AI data infrastructure, not proxies."
+   ],
+   [
+    "REPORTED FIGURES",
+    "The $3.6B valuation and $350M ARR come from press and data providers citing the company, not the release.",
+    "Anchor on the confirmed $130M and 350,000 customers; ask Savickas to confirm the rest on the first call."
+   ]
+  ],
+  "bottom_line": "A $130M first outside round from Warburg Pincus at a reported $3.6B, a new chief executive with an international mandate, and a title partner whose European bank sits in Oxylabs' home city put Oxylabs at the start of its brand-building phase with a warm path onto a team that has no data partner.",
+  "signals": [
+   "funding_event",
+   "leadership_change",
+   "partner_adjacency"
+  ],
+  "footer_company": "OXYLABS",
+  "footer_date": "9 JUL 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 9 July 2026 Oxylabs announced a $130M investment from the Warburg Pincus Capital Solutions Founders Fund, its first outside capital since it was founded in Vilnius in 2015. The release does not state a valuation; SiliconANGLE, TNW, IBTimes and Dealroom report about $3.6B, and the brief labels that figure as reported."
+    },
+    {
+     "label": "A new chief executive",
+     "text": "Vytautas Savickas became CEO of the Oxylabs group in the second quarter of 2026, with founder Julius Černiauskas moving to Chairman. A new CEO with a growth mandate and fresh capital is the moment a company chooses what it wants to be known for, and who it wants to be known by."
+    },
+    {
+     "label": "From proxies to AI data infrastructure",
+     "text": "The release repositions Oxylabs as the data layer that lets AI systems access, interpret and act on the open web. That is a message aimed at enterprises and AI builders, an audience a bootstrapped Lithuanian company has never had to market to at scale."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The Dutch GP at Zandvoort in late August and the Italian GP at Monza in September fall inside the six-to-ten-week window; the US GP in Austin and the Las Vegas GP close the US season; teams set their 2027 partner rosters in the fourth quarter."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Audi's 2026 roster carries Revolut as title partner, ElevenLabs, NinjaOne, Extreme Networks, JigSpace and Libertex on the technology side. There is no data-platform, web-data or AI-data partner, and the team's profile lists enterprise software as an open category."
+    },
+    {
+     "label": "The Vilnius connection",
+     "text": "Revolut operates in Europe through Revolut Bank UAB, incorporated, licensed and headquartered in Vilnius under the Bank of Lithuania and the European Central Bank. Oxylabs was founded in the same city. A title partner and a prospect from the same home market is an introduction path, not just a coincidence."
+    },
+    {
+     "label": "A first-season team",
+     "text": "A works entrant in its debut year is still assembling its technology story and has room for a partner that arrives with a use case. Data partners that came later to established teams paid for crowded space."
+    },
+    {
+     "label": "Story and market fit",
+     "text": "A European scale-up that has just moved its headquarters to New York and taken American capital fits a German works team with a British fintech on the car and a full US calendar: Austin, Miami and Las Vegas."
+    }
+   ],
+   "value": [
+    {
+     "label": "Working edge (Mode B)",
+     "text": "Brand protection is a standard use of the Oxylabs platform: counterfeit and grey-market listings, unauthorised merchandise, price tracking and ticket-resale surveillance across marketplaces. A new team's licensing and merchandise operation can run exactly that workflow, with the results reported to the commercial director each race week."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Oxylabs sells to security, e-commerce and financial-services buyers and to AI builders. That guest list at Zandvoort, Monza and the US rounds is an enterprise audience the team's other technology partners want to meet."
+    },
+    {
+     "label": "Content and community",
+     "text": "Oxylabs runs a developer community and its own conference and content channels; an AI-infrastructure story told from the pit wall reaches an audience the team does not otherwise address, and gives Audi a data-and-AI chapter alongside ElevenLabs."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Web Intelligence Partner designation, sidepod or mirror placement, hospitality in Europe and the United States, driver and engineering access for Oxylabs' channels, and a reference deployment for its enterprise sales."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "VAST holds the data platform and Claude the AI lane; the data story is taken."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "TWG AI (AI and data) and Core Scientific occupy the data and compute lanes."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Confluent (data streaming) and Dynatrace crowd the data lane."
+    },
+    {
+     "team": "McLaren F1 Team",
+     "reason": "Alteryx (analytics) and Google Cloud sit on the roster."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "NetApp holds data infrastructure."
+    },
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "Mphasis covers data and analytics services."
+    },
+    {
+     "team": "Oracle Red Bull Racing · Mercedes-AMG Petronas · BWT Alpine · Scuderia Ferrari",
+     "reason": "Oracle, Microsoft (both Mercedes and Alpine) and IBM are the data and cloud incumbents."
+    }
+   ],
+   "ask": "A 25-minute call with Vytautas Savickas before the Dutch GP to confirm the valuation and revenue figures on the record, test the Revolut introduction, and size an Official Web Intelligence Partner entry against Audi's 2027 roster."
+  }
+ },
+ "note": "# Oxylabs → Audi Revolut F1 Team — verification log (N° 164, issued for 9 Jul 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) from a case spec: Claude did the research and writing; the pipeline's code stages ran the freshness window, the claims ledger with the calendar and sponsor-table checks, the 13-rule audit and the 2-page render. The row came from a thin scan (SiliconANGLE); the primary source is the company release on GlobeNewswire, mirrored on warburgpincus.com.\n\n**Sandbox limitation, stated plainly:** direct fetches of globenewswire.com, warburgpincus.com, oxylabs.io, finance.yahoo.com, thenextweb.com, proxyway.com and lb.lt were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The row was wrong about the person\n\nThe thin row named \"Julius Irmantas Karosas, Co-founder & CEO\". No such person appears in any source. Oxylabs was founded by **Julius Černiauskas**, who was CEO until the group's leadership change announced on 25 March 2026, when **Vytautas Savickas** became CEO and Černiauskas moved to Chairman of the Board. Savickas is the CEO quoted in the 9 July release and is the decision-maker here.\n\n## The trigger, honestly labelled\n\n- **$130M from Warburg Pincus (Capital Solutions Founders Fund), 9 Jul 2026** — company release. VERIFIED (search summary).\n- **~$3.6B valuation** — reported by SiliconANGLE, TNW, IBTimes, Dealroom; not in the release headline. REPORTED, labelled so in the copy.\n- **$350M ARR** — IBTimes / Dealroom citing the company. REPORTED, labelled so in the copy and in the second risk row.\n- **First outside capital since 2015** — release. VERIFIED.\n- **350,000+ customers** — release. VERIFIED.\n- **HQ New York / 15+ offices** — release boilerplate via search summary; other listings still say Vilnius. Written as \"describes itself as headquartered in New York\" (REPORTED).\n\n## Decision path\n\n- **Vytautas Savickas, Chief Executive Officer** (group CEO from Q2 2026).\n- Path: **Julius Černiauskas, founder and Chairman of the Board**; **Tomas Montvilas, Chief Commercial Officer**. **No chief marketing officer is listed**; the careers site advertises a Head of Marketing role. Vytautas Kirjazovas is Head of Communications.\n\n## Leadership ties\n\nNo motorsport or sponsorship-deal history was found for Savickas, Černiauskas or Montvilas after searching; `leadership_ties` is empty.\n\n## Team choice\n\nNo web-data, proxy or scraping brand is on the 2026 grid (searched Bright Data, Zyte, Decodo/Smartproxy: none found). Audi was chosen over Williams (VAST + Claude), Cadillac (TWG AI + Core Scientific), Racing Bulls (Confluent), McLaren (Alteryx + Google Cloud), Aston Martin (NetApp) and Haas (Mphasis) because its roster carries no data partner and because Revolut, its title partner, runs its European bank from Vilnius (Revolut Bank UAB, Bank of Lithuania register), which gives a real introduction path. The Revolut link is presented as an introduction, not as a relationship that exists.\n\n## Screen-outs and things not claimed\n\n- **Profitability** is not asserted with a figure; \"profitable, bootstrapped\" rests on the release's statement that the company took no outside capital in eleven years and the reported ARR.\n- **Deal size ($2-4M a year) is an ESTIMATE**, labelled as such.\n- The brand-protection workstream is described as a standard platform use case, not as something Audi has asked for.\n- The score is held at 71: brand fit is 12 because the proxy heritage needs positioning, and ops fit is MODE B.\n"
+}

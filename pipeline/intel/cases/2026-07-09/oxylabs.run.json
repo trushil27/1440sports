@@ -1,0 +1,719 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-07-09",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-h65cpm3y/2026-07-09/oxylabs.pdf",
+     "web": "/tmp/case-pdf-h65cpm3y/2026-07-09/oxylabs.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Oxylabs",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 12
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "top ranking score",
+     "company": "Oxylabs",
+     "decision": "selected",
+     "signal_date": "2026-07-09"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Oxylabs",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 16,
+    "ops_fit": 14,
+    "ranking": 71,
+    "urgency": 13,
+    "capacity": 16,
+    "brand_fit": 12,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 4,
+     "on_camera": 2,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 12
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Audi Revolut F1 Team",
+   "source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "trigger_date": "2026-07-09",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 164,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-h65cpm3y/2026-07-09/oxylabs.web.html",
+  "brief_data": {
+   "hq": "New York (founded in Vilnius, 2015)",
+   "deck": "Oxylabs, the Vilnius-born web-data platform now headquartered in New York, took its first outside capital on 9 July 2026: $130M from Warburg Pincus at a reported $3.6B valuation, eleven years after founding. A bootstrapped business under a new chief executive, with a mandate to be the data layer for AI agents.",
+   "risks": [
+    {
+     "label": "PROXY HERITAGE",
+     "detail": "Oxylabs grew as a proxy and scraping provider; web scraping draws legal and reputational scrutiny a partner review will raise.",
+     "counter": "Lead with the compliance record and enterprise base; position it as AI data infrastructure, not proxies."
+    },
+    {
+     "label": "REPORTED FIGURES",
+     "detail": "The $3.6B valuation and $350M ARR come from press and data providers citing the company, not the release.",
+     "counter": "Anchor on the confirmed $130M and 350,000 customers; ask Savickas to confirm the rest on the first call."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private (~$3.6B reported; $130M, Jul 2026)",
+   "company": "Oxylabs",
+   "gridfit": [
+    {
+     "team": "Audi F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "leadership_change",
+    "partner_adjacency"
+   ],
+   "sources": [
+    "https://oxylabs.io/press-area/oxylabs-group-leadership",
+    "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+    "https://www.ibtimes.com/oxylabs-reaches-36b-valuation-warburg-pincus-investment-3805174",
+    "https://oxylabs.io/about-us"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Vytautas Savickas before the Dutch GP to confirm the valuation and revenue figures on the record, test the Revolut introduction, and size an Official Web Intelligence Partner entry against Audi's 2027 roster.",
+    "value": [
+     {
+      "text": "Brand protection is a standard use of the Oxylabs platform: counterfeit and grey-market listings, unauthorised merchandise, price tracking and ticket-resale surveillance across marketplaces. A new team's licensing and merchandise operation can run exactly that workflow, with the results reported to the commercial director each race week.",
+      "label": "Working edge (Mode B)"
+     },
+     {
+      "text": "Oxylabs sells to security, e-commerce and financial-services buyers and to AI builders. That guest list at Zandvoort, Monza and the US rounds is an enterprise audience the team's other technology partners want to meet.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Oxylabs runs a developer community and its own conference and content channels; an AI-infrastructure story told from the pit wall reaches an audience the team does not otherwise address, and gives Audi a data-and-AI chapter alongside ElevenLabs.",
+      "label": "Content and community"
+     },
+     {
+      "text": "Official Web Intelligence Partner designation, sidepod or mirror placement, hospitality in Europe and the United States, driver and engineering access for Oxylabs' channels, and a reference deployment for its enterprise sales.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 9 July 2026 Oxylabs announced a $130M investment from the Warburg Pincus Capital Solutions Founders Fund, its first outside capital since it was founded in Vilnius in 2015. The release does not state a valuation; SiliconANGLE, TNW, IBTimes and Dealroom report about $3.6B, and the brief labels that figure as reported.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Vytautas Savickas became CEO of the Oxylabs group in the second quarter of 2026, with founder Julius Černiauskas moving to Chairman. A new CEO with a growth mandate and fresh capital is the moment a company chooses what it wants to be known for, and who it wants to be known by.",
+      "label": "A new chief executive"
+     },
+     {
+      "text": "The release repositions Oxylabs as the data layer that lets AI systems access, interpret and act on the open web. That is a message aimed at enterprises and AI builders, an audience a bootstrapped Lithuanian company has never had to market to at scale.",
+      "label": "From proxies to AI data infrastructure"
+     },
+     {
+      "text": "The Dutch GP at Zandvoort in late August and the Italian GP at Monza in September fall inside the six-to-ten-week window; the US GP in Austin and the Las Vegas GP close the US season; teams set their 2027 partner rosters in the fourth quarter.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Audi's 2026 roster carries Revolut as title partner, ElevenLabs, NinjaOne, Extreme Networks, JigSpace and Libertex on the technology side. There is no data-platform, web-data or AI-data partner, and the team's profile lists enterprise software as an open category.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Revolut operates in Europe through Revolut Bank UAB, incorporated, licensed and headquartered in Vilnius under the Bank of Lithuania and the European Central Bank. Oxylabs was founded in the same city. A title partner and a prospect from the same home market is an introduction path, not just a coincidence.",
+      "label": "The Vilnius connection"
+     },
+     {
+      "text": "A works entrant in its debut year is still assembling its technology story and has room for a partner that arrives with a use case. Data partners that came later to established teams paid for crowded space.",
+      "label": "A first-season team"
+     },
+     {
+      "text": "A European scale-up that has just moved its headquarters to New York and taken American capital fits a German works team with a British fintech on the car and a full US calendar: Austin, Miami and Las Vegas.",
+      "label": "Story and market fit"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "VAST holds the data platform and Claude the AI lane; the data story is taken."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "TWG AI (AI and data) and Core Scientific occupy the data and compute lanes."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Confluent (data streaming) and Dynatrace crowd the data lane."
+     },
+     {
+      "team": "McLaren F1 Team",
+      "reason": "Alteryx (analytics) and Google Cloud sit on the roster."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "NetApp holds data infrastructure."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Mphasis covers data and analytics services."
+     },
+     {
+      "team": "Oracle Red Bull Racing · Mercedes-AMG Petronas · BWT Alpine · Scuderia Ferrari",
+      "reason": "Oracle, Microsoft (both Mercedes and Alpine) and IBM are the data and cloud incumbents."
+     }
+    ]
+   },
+   "date_long": "09 JUL 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Audi Revolut F1 Team",
+   "value_mode": "B",
+   "bottom_line": "A $130M first outside round from Warburg Pincus at a reported $3.6B, a new chief executive with an international mandate, and a title partner whose European bank sits in Oxylabs' home city put Oxylabs at the start of its brand-building phase with a warm path onto a team that has no data partner.",
+   "footer_date": "9 JUL 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Round announced 9 Jul; Zandvoort and Monza inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 16,
+     "note": "$130M raise; ~$3.6B and $350M ARR both reported, not stated.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 12,
+     "note": "B2B infrastructure; proxy heritage needs careful positioning.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "New CEO, first outside capital, US push; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 14,
+     "note": "MODE B: brand-protection workstream; low on-camera value.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 9 July Oxylabs announced a $130M investment from the Warburg Pincus Capital Solutions Founders Fund; the release does not print a valuation, and the $3.6B figure is reported by SiliconANGLE, TNW and Dealroom. It is the company's first external funding since 2015. The business serves over 350,000 customers across cybersecurity, e-commerce and finance, and Dealroom and IBTimes report $350M of annual recurring revenue, citing the company. Vytautas Savickas took over as chief executive in the second quarter, with founder Julius Černiauskas moving to chairman.",
+   "the_case_p2": "The grid has learned to sell data infrastructure: VAST at Williams, Confluent and Dynatrace at Racing Bulls, Alteryx at McLaren, TWG AI at Cadillac. None of them touches the public web, where the grounding data for AI agents comes from and where Oxylabs sits. A bootstrapped European company that just took growth capital from a New York investor has one job now: be known by the enterprises and AI builders that buy this.",
+   "track_label": "",
+   "brief_number": "164",
+   "claims_total": 17,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$130M investment from Warburg Pincus (Warburg Pincus Capital Solutions Founders Fund) at about $3.6B valuat…",
+     "value": "$130M",
+     "claim_id": 637,
+     "verified": true,
+     "source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html"
+    },
+    {
+     "fact": "$350M annual recurring revenue, as reported by Dealroom and IBTimes citing the company (not in the release…",
+     "value": "$350M",
+     "claim_id": 639,
+     "verified": true,
+     "source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html"
+    },
+    {
+     "fact": "the release does not print a valuation, and the $3.6B figure is reported by SiliconANGLE, TNW and Dealroom.",
+     "value": "$3.6B",
+     "claim_id": 648,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Data Infrastructure · Web Intelligence / Proxy Network",
+   "value_content": "MODE B - halo with a working edge. Oxylabs' web intelligence is what brands use for counterfeit and grey-market monitoring, price tracking and ticket-resale surveillance across marketplaces; a new team's licensing and merchandise operation can run exactly that. On the brand side: an AI-infrastructure name for the team's technology story, developer-community activation through Oxylabs' channels, and hospitality at Zandvoort, Monza and the US rounds.",
+   "value_section": true,
+   "why_team_para": "Audi's first season carries a technology roster still being written: Revolut as title partner, ElevenLabs, NinjaOne, Extreme Networks, JigSpace and Libertex. There is no data-platform, web-data or AI-data partner, and the profile lists enterprise software as open. The introduction is unusually warm: Revolut runs its European bank from Vilnius, licensed by the Bank of Lithuania, the city where Oxylabs was founded. A European scale-up going to America suits a German works team with a fintech on the car.",
+   "deal_arch_para": "Entry as Official Web Intelligence Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the US build-out and a plausible listing window. Estimated $2-4M a year, part in data services. Scope: sidepod or mirror placement, brand-protection workstream for the licensing programme, European and US-race hospitality, developer content.",
+   "footer_company": "OXYLABS",
+   "why_team_label": "WHY AUDI REVOLUT F1 TEAM",
+   "claims_verified": 17,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;First outside money and a new CEO arrive together, which is when a company decides what it wants to be known for. The Dutch GP and Italian GP fall inside the window, Austin and Las Vegas close the US season, and 2027 rosters are set in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Savickas became group CEO in the second quarter of 2026, charged with daily operations and international growth; the Warburg Pincus round is his first as CEO. Path: Julius Černiauskas, founder and Chairman; Tomas Montvilas, Chief Commercial Officer. No chief marketing officer is listed.",
+   "decision_maker_name": "Vytautas Savickas",
+   "decision_maker_role": "Chief Executive Officer, Oxylabs",
+   "opening_angle_intro": "Lead with the Vilnius connection.",
+   "opening_angle_quote": "&ldquo;Vytautas, Revolut runs its European bank from your home city and its name is on the Audi. No team on the grid has a web-data partner, and you just took your first outside capital. 25 minutes before Zandvoort to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO AUDI REVOLUT F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Vytautas Savickas, Chief Executive Officer at Oxylabs",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://oxylabs.io/press-area/oxylabs-group-leadership",
+     "excerpt": "Oxylabs press area, 25 Mar 2026, 'Oxylabs Group Evolves Its Leadership Structure to Accelerate the Next Decade': Vytautas Savickas becomes Chief Executive Officer of the Oxylabs group, responsible for daily operations, growth and operational efficiency across international markets; founder Julius Černiauskas moves to Chairman of the Board. Savickas is quoted as CEO in the 9 Jul 2026 investment release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Vytautas Savickas, Chief Executive Officer, Oxylabs at Oxylabs",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://oxylabs.io/press-area/oxylabs-group-leadership",
+     "excerpt": "Oxylabs press area, 25 Mar 2026, 'Oxylabs Group Evolves Its Leadership Structure to Accelerate the Next Decade': Vytautas Savickas becomes Chief Executive Officer of the Oxylabs group, responsible for daily operations, growth and operational efficiency across international markets; founder Julius Černiauskas moves to Chairman of the Board. Savickas is quoted as CEO in the 9 Jul 2026 investment release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$130M investment from Warburg Pincus (Warburg Pincus Capital Solutions Founders Fund) at about $3.6B valuation, announced 9 Jul 2026; the company's first outside capital since its 2015 founding",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Oxylabs, the Vilnius-born web-data platform now headquartered in New York, took its first outside capital on 9 July 2026: $130M from Warburg Pincus at a reported $3.6B valuation, eleven years after founding.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Warburg Pincus (sole outside investor, via the Capital Solutions Founders Fund, 2026); bootstrapped before that",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 9 July Oxylabs announced a $130M investment from the Warburg Pincus Capital Solutions Founders Fund;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "$350M annual recurring revenue, as reported by Dealroom and IBTimes citing the company (not in the release headline)",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.ibtimes.com/oxylabs-reaches-36b-valuation-warburg-pincus-investment-3805174",
+     "excerpt": "IBTimes and Dealroom (Jul 2026), citing the company: Oxylabs records $350 million in annual recurring revenue and is trusted by more than 350,000 technology teams. Reported, not in the release headline.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "the release does not print a valuation, and the $3.6B figure is reported by SiliconANGLE, TNW and Dealroom.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$130M investment from Warburg Pincus at about $3.6B valuation, announced 9 Jul 2026",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The business serves over 350,000 customers across cybersecurity, e-commerce and finance, and Dealroom and IBTimes report $350M of annual recurring revenue, citing the company.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.ibtimes.com/oxylabs-reaches-36b-valuation-warburg-pincus-investment-3805174",
+     "excerpt": "IBTimes and Dealroom (Jul 2026), citing the company: Oxylabs records $350 million in annual recurring revenue and is trusted by more than 350,000 technology teams. Reported, not in the release headline.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No web-data, proxy or scraping brand on the 2026 grid; adjacent data lanes are held by VAST (Williams), TWG AI (Cadillac), Confluent (Racing Bulls), Alteryx (McLaren), NetApp (Aston Martin) and Mphasis (Haas)",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+     "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json, team_profiles.json): Audi F1 Team 2026 — Revolut (title, joined), Audi, Camozzi, Pirelli, Sabelt, JigSpace, Extreme Networks, Libertex, Visit Qatar, bp/Castrol, adidas, Aleph, NEXO, NinjaOne, Gillette, World of Hyatt, Perk, ic! berlin, ElevenLabs, Piquadro, Paulaner, Specialized, Bell, Mammoet, Glasurit; no data-platform, web-data or AI-data partner; profile lists enterprise software as an open category. Data lanes elsewhere: Williams — VAST, Claude; Cadillac — TWG AI, Core Scientific; Racing Bulls — Confluent, Dynatrace; McLaren — Alteryx, Google Cloud; Aston Martin — NetApp; Haas — Mphasis; Red Bull — Oracle; Mercedes and Alpine — Microsoft; Ferrari — IBM.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $130M first outside round from Warburg Pincus at a reported $3.6B, a new chief executive with an international mandate, and a title partner whose European bank sits in Oxylabs' home city put Oxylabs at the start of its brand-building phase with a warm path onto a team that has no data partner.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Revolut, Audi's 2026 title partner, runs its European bank from Vilnius (Revolut Bank UAB, licensed by the Bank of Lithuania and the ECB), the city where Oxylabs was founded; the release positions Oxylabs as data infrastructure for AI agents",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://oxylabs.io/about-us",
+     "excerpt": "Company boilerplate in the 9 Jul 2026 release and About page: founded in Vilnius, Lithuania, in 2015; release datelined New York and Vilnius; describes itself as headquartered in New York with more than 15 offices globally; over 350,000 customers; no outside capital before the Warburg Pincus investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 9 July 2026 Oxylabs announced a $130M investment from the Warburg Pincus Capital Solutions Founders Fund, its first outside capital since it was founded in Vilnius in 2015.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Release issued from New York and Vilnius; the company describes itself as headquartered in New York with more than 15 offices globally (reported); serves over 350,000 customers",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://oxylabs.io/about-us",
+     "excerpt": "Company boilerplate in the 9 Jul 2026 release and About page: founded in Vilnius, Lithuania, in 2015; release datelined New York and Vilnius; describes itself as headquartered in New York with more than 15 offices globally; over 350,000 customers; no outside capital before the Warburg Pincus investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "SiliconANGLE, TNW, IBTimes and Dealroom report about $3.6B, and the brief labels that figure as reported.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+     "excerpt": "Oxylabs release (GlobeNewswire, 9 Jul 2026; mirrored on warburgpincus.com): $130 million investment from Warburg Pincus through the Warburg Pincus Capital Solutions Founders Fund; the company's first outside investment since its founding in 2015; over 350,000 customers across cybersecurity, e-commerce and financial industries; proceeds to extend its competitive advantage and accelerate next-generation products for AI and agentic applications. Vytautas Savickas, CEO, and Allison Ross, Principal at Warburg Pincus, quoted. The $3.6B valuation is reported by SiliconANGLE, TNW, IBTimes and Dealroom.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The Dutch GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 14: Dutch GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Italian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 15: Italian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Dutch GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 14: Dutch GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
