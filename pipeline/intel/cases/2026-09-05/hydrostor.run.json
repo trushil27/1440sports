@@ -1,0 +1,679 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-09-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-np6ppvkk/2026-09-05/hydrostor.pdf",
+     "web": "/tmp/case-pdf-np6ppvkk/2026-09-05/hydrostor.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Hydrostor",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 11
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "Hydrostor",
+     "decision": "selected",
+     "signal_date": "2026-08-12"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Hydrostor",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 16,
+    "ops_fit": 13,
+    "ranking": 70,
+    "urgency": 14,
+    "capacity": 13,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Andretti Formula E",
+   "source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "trigger_date": "2026-08-12",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 141,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-np6ppvkk/2026-09-05/hydrostor.web.html",
+  "brief_data": {
+   "hq": "Toronto (US HQ Denver, Colorado)",
+   "deck": "Hydrostor, the Toronto developer of cavern-scale compressed-air storage backed by Goldman Sachs, CPP Investments and Canada Growth Fund, closed a $230M equity investment on 12 August to carry its 500 MW Willow Rock plant in California to financial close this year and its Australian Silver City project into construction.",
+   "risks": [
+    {
+     "label": "PROJECT MONEY, NOT BRAND MONEY",
+     "detail": "The $230M includes converted notes and is earmarked for a 7 GW pipeline; no valuation or marketing budget is stated and there is no CMO.",
+     "counter": "Size at partner level, hospitality weighted to Austin and Miami; ask for the budget line on the first call."
+    },
+    {
+     "label": "A HALO WITH NO WORKSTREAM",
+     "detail": "Compressed-air caverns have nothing to do on a race car; the deal rests on story and audience.",
+     "counter": "Anchor on Formula E's electrification message and a Willow Rock site activation; do not overclaim integration."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private ($230M equity, Aug 2026; valuation not stated)",
+   "company": "Hydrostor",
+   "gridfit": [
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Envision Racing",
+     "label": "TAKEN",
+     "detail": "Teijin",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "TAKEN",
+     "detail": "Shell",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "construction_milestone"
+   ],
+   "sources": [
+    "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+    "https://www.energytrend.com/news/20260427-51300.html",
+    "https://hydrostor.ca/project/willow-rock-energy-storage-center/",
+    "https://investors.bakerhughes.com/news/press-releases/news-details/2026/Baker-Hughes-and-Hydrostor-Deepen-Strategic-Collaboration-to-Advance-Reliable-Resilient-and-Sustainable-Power-Systems/default.aspx",
+    "https://www.theglobeandmail.com/business/article-hydrostor-secures-us200-million-in-financing-from-canada-growth-fund/",
+    "https://www.businesswire.com/news/home/20250916124650/en/Hydrostor-Announces-US$55-Million-in-Funding-From-Export-Development-Canada-to-Finance-Development-Expenditures-for-Late-Stage-Project"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Curtis VanWalleghem before the Jeddah opener on 18 December to confirm whether a brand budget exists alongside the project capital, and to size an Official Energy Storage Partner entry at Andretti Formula E for Seasons 13-15 timed to Willow Rock's financial close.",
+    "value": [
+     {
+      "text": "There is no operational workstream: cavern-scale storage has nothing to do on a race car, and the brief does not pretend otherwise. The value is commercial and narrative.",
+      "label": "Halo, honestly stated (Mode B)"
+     },
+     {
+      "text": "Utilities, community-choice aggregators, regulators and project-finance investors are a B2B audience Andretti's hospitality has not yet hosted. Hydrostor brings them to Austin and Miami, and the team's other partners get to meet them.",
+      "label": "Audience the team wants"
+     },
+     {
+      "text": "Co-produced content on long-duration storage and grid reliability, a Willow Rock site activation with the team's US partners, and a technology narrative that complements TWG AI rather than competing with it.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Energy Storage Partner designation, car and race-suit placement, Austin and Miami hospitality, driver access, and a platform for Hydrostor's first public brand campaign at the moment its plants become visible.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Hydrostor closed a $230M equity investment on 12 August 2026. It includes the conversion of the previously announced note from Canada Growth Fund, Goldman Sachs Alternatives and CPP Investments and a strategic equity round from returning investor Baker Hughes and new investors Realize Capital Partners and Hatch. The company does not break out the new-money portion, and the brief says so.",
+      "label": "Trigger"
+     },
+     {
+      "text": "February 2025 brought $200M from the same three institutions ($150M convertible note plus a $50M development loan). Export Development Canada added US$55M in September 2025 for Silver City. In January 2026 Baker Hughes, an investor since 2019, paired an equity investment with up to 1.4 GW of equipment orders. Capital of this quality is what makes a multi-year partnership bankable even without a stated valuation.",
+      "label": "The capital stack behind it"
+     },
+     {
+      "text": "Willow Rock in Kern County, California (500 MW) holds a state licence granted on 19 December 2025, a 25-year offtake with Central Coast Community Energy worth about $1B, and a further 50 MW offtake signed with California Community Power in February 2026; financial close is targeted later in 2026. Silver City in Broken Hill (200 MW) won grid-connection approval on 2 September 2026 and is due to start construction. The first plant, Goderich in Ontario, has operated commercially since 2020.",
+      "label": "Developer to builder"
+     },
+     {
+      "text": "Formula E's Season 13 opens in Jeddah on 18 December 2026; the Austin E-Prix follows on 6 February and the Miami E-Prix on 20 February 2027. A partnership agreed in the fourth quarter is announced at the season launch and activated in the United States within eight weeks.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Andretti Formula E carries TWG AI as primary partner, Quest Global, Crowe UK and Reflo, with Nissan powertrains from Season 13. There is no energy, storage, utility or grid brand on the roster, so Official Energy Storage Partner is a clean category at a partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Hydrostor's US headquarters is in Denver and its flagship plant is in California. Andretti's Austin and Miami rounds land within weeks of Willow Rock's financial close, in front of the utilities, community-choice buyers and financiers Hydrostor sells to.",
+      "label": "The American team for a US build-out"
+     },
+     {
+      "text": "Envision Racing would be the natural fit, but its title partner Envision Group owns Envision AESC, a maker of grid-storage battery cells with a 60 GWh storage expansion under way. Hydrostor's compressed-air caverns compete with exactly that product.",
+      "label": "Why not the energy team"
+     },
+     {
+      "text": "Formula E markets itself as the championship of electrification. Eight-hour storage that firms renewable power is the missing chapter in that story, and Andretti's content programme with TWG AI gives it a home.",
+      "label": "Story fit"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Envision Racing",
+      "reason": "Title partner Envision Group owns Envision AESC, a grid-storage battery maker and direct competitor."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell holds the energy position on the roster."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "TotalEnergies on the roster, and DS leaves the championship after Season 12."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "Open lane but a British story; Castrol (a BP brand) sits on the roster and the team has no US rounds of its own to anchor a California build-out."
+     },
+     {
+      "team": "Nissan Formula E Team · Mahindra Racing · Porsche Formula E Team · Cupra Kiro · Citroën Racing",
+      "reason": "Manufacturer-led entries without the American home story; Nissan's partner rows are unverified for Season 12."
+     }
+    ]
+   },
+   "date_long": "05 SEP 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Andretti Formula E",
+   "value_mode": "B",
+   "bottom_line": "A well-backed storage developer at the moment its first two utility-scale plants go to financial close and construction, with no brand, no CMO and no rival storage name on the Andretti roster. Partner-level, halo-honest, timed to the Season 13 launch and two US rounds in February.",
+   "footer_date": "5 SEP 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Round closed 12 Aug; Jeddah 18 Dec, Austin and Miami in Feb.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 13,
+     "note": "$230M includes a note conversion; capital is for projects.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Storage is FE's message, but the audience is B2B.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 14,
+     "note": "Financial close and first construction both in Q4 2026.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 13,
+     "note": "MODE B: no car workstream; open lane at Andretti.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 12 August Hydrostor closed a $230M equity investment: the conversion of the note committed by Canada Growth Fund, Goldman Sachs Alternatives and CPP Investments in February 2025, plus a strategic round from Baker Hughes, Realize Capital Partners and Hatch. The new-money share is not broken out. It follows US$55M from Export Development Canada in September 2025 and Baker Hughes' January agreement pairing equity with up to 1.4 GW of equipment orders. The money has a stated job: a 7 GW pipeline and Willow Rock, 500 MW in Kern County, to financial close this year.",
+   "the_case_p2": "This is the half-year in which a developer becomes a builder. Willow Rock holds a California licence granted on 19 December 2025 and a 25-year offtake with Central Coast Community Energy worth about $1B; Silver City in Broken Hill won grid-connection approval on 2 September and is due to start construction. Goderich in Ontario has run commercially since 2020. A company about to pour concrete in two countries needs a public identity it lacks.",
+   "track_label": "",
+   "brief_number": "141",
+   "claims_total": 13,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$230M equity investment closed 12 Aug 2026, which includes the conversion of the previously announced note…",
+     "value": "$230M",
+     "claim_id": 643,
+     "verified": true,
+     "source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/"
+    },
+    {
+     "fact": "Canada Growth Fund, Goldman Sachs Alternatives, CPP Investments; strategic investors Baker Hughes (investor…",
+     "value": "$55M",
+     "claim_id": 644,
+     "verified": true,
+     "source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/"
+    },
+    {
+     "fact": "Willow Rock holds a California licence granted on 19 December 2025 and a 25-year offtake with Central Coast…",
+     "value": "$1B",
+     "claim_id": 654,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Long-Duration Energy Storage · Advanced Compressed-Air Storage Developer & Operator",
+   "value_content": "MODE B - halo, honestly stated: a cavern-scale storage developer has no workstream on a race car. The mechanics are commercial. Formula E sells itself as the championship of electrification; a partner that stores electricity for eight hours gives Andretti an energy story its roster lacks. Hydrostor brings utilities, community-choice buyers, regulators and project financiers to Austin and Miami, and a technology narrative for the team's content.",
+   "value_section": true,
+   "why_team_para": "Andretti's roster is TWG AI as primary partner, Quest Global, Crowe UK and Reflo, with Nissan power from Season 13; there is no energy, storage, utility or grid brand on it. It is the American team for a company headquartered in Denver for the US with its first US plant in California; Austin and Miami arrive within weeks of Willow Rock's financial close. Envision Racing, the obvious energy fit, is titled by a rival grid-battery maker.",
+   "deal_arch_para": "Entry as Official Energy Storage Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, spanning Willow Rock construction and the first Silver City operations. Estimated $1-2M a season at partner level. Scope: car and suit placement, Austin and Miami hospitality, co-produced content on long-duration storage, and a Willow Rock site activation.",
+   "footer_company": "HYDROSTOR",
+   "why_team_label": "WHY ANDRETTI FORMULA E",
+   "claims_verified": 13,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Financial close on Willow Rock and first construction at Silver City both fall in the fourth quarter, the window in which Formula E teams finalise Season 13 rosters before the Jeddah opener on 18 December. Austin follows on 6 February and Miami on 20 February 2027.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 141",
+   "decision_maker_bio": "VanWalleghem launched Hydrostor in 2010 and fronts every raise, so a first brand partnership is his call. Path: Jon Norman, President; Jordan Cole, Chief Commercial Officer, ex-Brookfield; Beth Summers, Chief Financial Officer. No chief marketing officer is listed, which is itself the opening.",
+   "decision_maker_name": "Curtis VanWalleghem",
+   "decision_maker_role": "Co-Founder & CEO, Hydrostor",
+   "opening_angle_intro": "Lead with the construction moment.",
+   "opening_angle_quote": "&ldquo;Curtis, Willow Rock closes and Silver City breaks ground in the same quarter Formula E launches Season 13; Andretti is the American team with an open energy lane and Austin and Miami in February. 25 minutes before Jeddah to see whether the timing works?&rdquo;",
+   "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Curtis VanWalleghem, Co-Founder & CEO at Hydrostor",
+   "cited_source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "excerpt": "Hydrostor release, 12 Aug 2026, quotes 'CEO and Co-Founder Curtis VanWalleghem' (hydrostor.ca is egress-blocked; text from the Mercom / Mondaq / DWPV mirrors and search summaries). Bloomberg and Crunchbase profiles: Co-Founder and CEO, launched Hydrostor in 2010.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Curtis VanWalleghem, Co-Founder & CEO, Hydrostor at Hydrostor",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "excerpt": "Hydrostor release, 12 Aug 2026, quotes 'CEO and Co-Founder Curtis VanWalleghem' (hydrostor.ca is egress-blocked; text from the Mercom / Mondaq / DWPV mirrors and search summaries). Bloomberg and Crunchbase profiles: Co-Founder and CEO, launched Hydrostor in 2010.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$230M equity investment closed 12 Aug 2026, which includes the conversion of the previously announced note from Canada Growth Fund, Goldman Sachs Alternatives and CPP Investments plus a new strategic round; the new-money portion is not broken out",
+   "cited_source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "excerpt": "Hydrostor, 12 Aug 2026: closed a US$230 million equity investment, including previously announced funding from a convertible note committed by Canada Growth Fund Inc., Goldman Sachs Alternatives and Canada Pension Plan Investment Board, plus a strategic equity round with returning investor Baker Hughes, new investors Realize Capital Partners and Hatch Ltd., a Social Finance Fund wholesaler, among others. Funds support the 7 GW global pipeline and propel the 500 MW Willow Rock Energy Storage Center to financial close later this year. Secondary: Mercom Capital; Mondaq; Davies (DWPV) counsel note. The new-money portion is not broken out in the release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Hydrostor, the Toronto developer of cavern-scale compressed-air storage backed by Goldman Sachs, CPP Investments and Canada Growth Fund, closed a $230M equity investment on 12 August to carry its 500 MW Willow Rock plant in California to financial close this year and its Australian Silver City project into construction.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "excerpt": "Hydrostor, 12 Aug 2026: closed a US$230 million equity investment, including previously announced funding from a convertible note committed by Canada Growth Fund Inc., Goldman Sachs Alternatives and Canada Pension Plan Investment Board, plus a strategic equity round with returning investor Baker Hughes, new investors Realize Capital Partners and Hatch Ltd., a Social Finance Fund wholesaler, among others. Funds support the 7 GW global pipeline and propel the 500 MW Willow Rock Energy Storage Center to financial close later this year. Secondary: Mercom Capital; Mondaq; Davies (DWPV) counsel note. The new-money portion is not broken out in the release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Canada Growth Fund, Goldman Sachs Alternatives, CPP Investments; strategic investors Baker Hughes (investor since 2019, equity plus up to 1.4 GW of equipment orders, Jan 2026), Realize Capital Partners and Hatch; Export Development Canada lent US$55M in Sep 2025",
+   "cited_source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "excerpt": "Hydrostor, 12 Aug 2026: closed a US$230 million equity investment, including previously announced funding from a convertible note committed by Canada Growth Fund Inc., Goldman Sachs Alternatives and Canada Pension Plan Investment Board, plus a strategic equity round with returning investor Baker Hughes, new investors Realize Capital Partners and Hatch Ltd., a Social Finance Fund wholesaler, among others. Funds support the 7 GW global pipeline and propel the 500 MW Willow Rock Energy Storage Center to financial close later this year. Secondary: Mercom Capital; Mondaq; Davies (DWPV) counsel note. The new-money portion is not broken out in the release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 12 August Hydrostor closed a $230M equity investment: the conversion of the note committed by Canada Growth Fund, Goldman Sachs Alternatives and CPP Investments in February 2025, plus a strategic round from Baker Hughes, Realize Capital Partners and Hatch.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "excerpt": "Hydrostor, 12 Aug 2026: closed a US$230 million equity investment, including previously announced funding from a convertible note committed by Canada Growth Fund Inc., Goldman Sachs Alternatives and Canada Pension Plan Investment Board, plus a strategic equity round with returning investor Baker Hughes, new investors Realize Capital Partners and Hatch Ltd., a Social Finance Fund wholesaler, among others. Funds support the 7 GW global pipeline and propel the 500 MW Willow Rock Energy Storage Center to financial close later this year. Secondary: Mercom Capital; Mondaq; Davies (DWPV) counsel note. The new-money portion is not broken out in the release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$230M equity investment announced 12 Aug 2026 to progress a 7 GW pipeline and take the 500 MW Willow Rock project to financial close later in 2026",
+   "cited_source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "excerpt": "Hydrostor, 12 Aug 2026: closed a US$230 million equity investment, including previously announced funding from a convertible note committed by Canada Growth Fund Inc., Goldman Sachs Alternatives and Canada Pension Plan Investment Board, plus a strategic equity round with returning investor Baker Hughes, new investors Realize Capital Partners and Hatch Ltd., a Social Finance Fund wholesaler, among others. Funds support the 7 GW global pipeline and propel the 500 MW Willow Rock Energy Storage Center to financial close later this year. Secondary: Mercom Capital; Mondaq; Davies (DWPV) counsel note. The new-money portion is not broken out in the release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It follows US$55M from Export Development Canada in September 2025 and Baker Hughes' January agreement pairing equity with up to 1.4 GW of equipment orders.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.bakerhughes.com/news/press-releases/news-details/2026/Baker-Hughes-and-Hydrostor-Deepen-Strategic-Collaboration-to-Advance-Reliable-Resilient-and-Sustainable-Power-Systems/default.aspx",
+     "excerpt": "Baker Hughes release, 28 Jan 2026 (Florence annual meeting): strategic technology solutions and equity agreement; Baker Hughes technology becomes part of Hydrostor's core A-CAES design; up to 1.4 GW of compression, expander, motor and generator equipment orders for flagship projects; Baker Hughes an investor since 2019.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No energy-storage, utility or grid brand on the Andretti Formula E roster (TWG AI, Quest Global, Crowe UK, Reflo, Nissan powertrain from Season 13); Envision Group, whose AESC arm makes grid-storage batteries, titles Envision Racing",
+   "cited_source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.energytrend.com/news/20260427-51300.html",
+     "excerpt": "EnergyTrend, 27 Apr 2026, and Energy-Storage.News: Envision Group's battery arm Envision AESC makes cells for cars and stationary storage, with a 60 GWh energy-storage cell expansion at Yichang and Envision Energy deploying grid batteries in France — a direct competitor to Hydrostor in grid storage. Sponsor table: Envision Group is the title partner of Envision Racing.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Willow Rock holds a California licence granted on 19 December 2025 and a 25-year offtake with Central Coast Community Energy worth about $1B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/project/willow-rock-energy-storage-center/",
+     "excerpt": "Willow Rock Energy Storage Center: 500 MW / 4,000 MWh A-CAES project in Kern County, California. Central Coast Community Energy signed a 25-year agreement for 200 MW / 1,600 MWh valued at nearly $1 billion (3cenergy.org; Utility Dive). California Energy Commission granted the power-plant licence on 19 Dec 2025 (Business Wire). California Community Power signed a 50 MW offtake for six CCA members on 12 Feb 2026 (Hydrostor release). Project cost reported at about $1.5 billion (CalCCA). Financial close targeted later in 2026 (12 Aug 2026 release).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Two flagship projects turn from paper to construction in the same half-year: Willow Rock in Kern County, California (500 MW, 25-year offtake of about $1B with Central Coast Community Energy, licence granted 19 Dec 2025) heads to financial close, and Silver City in Broken Hill (200 MW) won grid-connection approval on 2 Sep 2026",
+   "cited_source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "excerpt": "Hydrostor, 12 Aug 2026: closed a US$230 million equity investment, including previously announced funding from a convertible note committed by Canada Growth Fund Inc., Goldman Sachs Alternatives and Canada Pension Plan Investment Board, plus a strategic equity round with returning investor Baker Hughes, new investors Realize Capital Partners and Hatch Ltd., a Social Finance Fund wholesaler, among others. Funds support the 7 GW global pipeline and propel the 500 MW Willow Rock Energy Storage Center to financial close later this year. Secondary: Mercom Capital; Mondaq; Davies (DWPV) counsel note. The new-money portion is not broken out in the release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Hydrostor closed a $230M equity investment on 12 August 2026.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "excerpt": "Hydrostor, 12 Aug 2026: closed a US$230 million equity investment, including previously announced funding from a convertible note committed by Canada Growth Fund Inc., Goldman Sachs Alternatives and Canada Pension Plan Investment Board, plus a strategic equity round with returning investor Baker Hughes, new investors Realize Capital Partners and Hatch Ltd., a Social Finance Fund wholesaler, among others. Funds support the 7 GW global pipeline and propel the 500 MW Willow Rock Energy Storage Center to financial close later this year. Secondary: Mercom Capital; Mondaq; Davies (DWPV) counsel note. The new-money portion is not broken out in the release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "US headquarters in Denver, Colorado since May 2024; flagship US project Willow Rock in Kern County, California; offices in Sydney and Melbourne",
+   "cited_source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/project/willow-rock-energy-storage-center/",
+     "excerpt": "Willow Rock Energy Storage Center: 500 MW / 4,000 MWh A-CAES project in Kern County, California. Central Coast Community Energy signed a 25-year agreement for 200 MW / 1,600 MWh valued at nearly $1 billion (3cenergy.org; Utility Dive). California Energy Commission granted the power-plant licence on 19 Dec 2025 (Business Wire). California Community Power signed a 50 MW offtake for six CCA members on 12 Feb 2026 (Hydrostor release). Project cost reported at about $1.5 billion (CalCCA). Financial close targeted later in 2026 (12 Aug 2026 release).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "February 2025 brought $200M from the same three institutions ($150M convertible note plus a $50M development loan).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.theglobeandmail.com/business/article-hydrostor-secures-us200-million-in-financing-from-canada-growth-fund/",
+     "excerpt": "Globe and Mail and Hydrostor release, 13 Feb 2025: US$200 million from Canada Growth Fund, Goldman Sachs Alternatives and CPP Investments — a US$150 million convertible note from all three plus a US$50 million convertible development-expenditure loan from Canada Growth Fund; the second major investment by Goldman Sachs and CPP.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+     "excerpt": "Hydrostor, 12 Aug 2026: closed a US$230 million equity investment, including previously announced funding from a convertible note committed by Canada Growth Fund Inc., Goldman Sachs Alternatives and Canada Pension Plan Investment Board, plus a strategic equity round with returning investor Baker Hughes, new investors Realize Capital Partners and Hatch Ltd., a Social Finance Fund wholesaler, among others. Funds support the 7 GW global pipeline and propel the 500 MW Willow Rock Energy Storage Center to financial close later this year. Secondary: Mercom Capital; Mondaq; Davies (DWPV) counsel note. The new-money portion is not broken out in the release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Export Development Canada added US$55M in September 2025 for Silver City.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20250916124650/en/Hydrostor-Announces-US$55-Million-in-Funding-From-Export-Development-Canada-to-Finance-Development-Expenditures-for-Late-Stage-Project",
+     "excerpt": "Business Wire, 16 Sep 2025: Hydrostor announces US$55 million from Export Development Canada to finance development expenditures for a late-stage project (Silver City, per Energy-Storage.News and pv magazine Australia).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Willow Rock in Kern County, California (500 MW) holds a state licence granted on 19 December 2025, a 25-year offtake with Central Coast Community Energy worth about $1B, and a further 50 MW offtake signed with California Community Power in February 2026;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://hydrostor.ca/project/willow-rock-energy-storage-center/",
+     "excerpt": "Willow Rock Energy Storage Center: 500 MW / 4,000 MWh A-CAES project in Kern County, California. Central Coast Community Energy signed a 25-year agreement for 200 MW / 1,600 MWh valued at nearly $1 billion (3cenergy.org; Utility Dive). California Energy Commission granted the power-plant licence on 19 Dec 2025 (Business Wire). California Community Power signed a 50 MW offtake for six CCA members on 12 Feb 2026 (Hydrostor release). Project cost reported at about $1.5 billion (CalCCA). Financial close targeted later in 2026 (12 Aug 2026 release).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Miami E-Prix on 20 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026)",
+     "excerpt": "round 5: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
