@@ -1,0 +1,608 @@
+{
+ "run": {
+  "id": 132,
+  "date": "2026-08-12",
+  "status": "success",
+  "mode": "shadow",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "storage/briefs/2026-08-12/coderabbit.pdf",
+     "web": "storage/briefs/2026-08-12/coderabbit.web.html",
+     "audit": "failed",
+     "status": "needs_review",
+     "company": "CodeRabbit",
+     "stage_a": {
+      "verified": 8,
+      "unverified": 2
+     },
+     "stage_b": {
+      "verified": 7
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 209,
+     "verification": "needs_review",
+     "audit_attempts": 2
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "CodeRabbit",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 74,
+   "score_breakdown": {
+    "cap": null,
+    "base": 74,
+    "total": 74,
+    "timing": 13,
+    "ops_fit": 15,
+    "ranking": 74,
+    "urgency": 16,
+    "capacity": 15,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "Genefa Murphy (CMO JFrog, ex-Udemy CMO, McLaren deal alumna) — JFrog is a named CodeRabbit customer per the company's own release, giving a documented warm-intro path toward the McLaren alumni network"
+    },
+    "scanner_score": 74,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 74,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Audi F1 Team",
+   "source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "trigger_date": "2026-08-12",
+   "trigger_reason": "$143M Series C at $1.5B valuation closed + Agentic Change Management product launch + Europe/Japan expansion announced same day"
+  }
+ ],
+ "brief": {
+  "number": 126,
+  "verification_status": "needs_review",
+  "audit_status": "failed",
+  "audit_attempts": 2,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "storage/briefs/2026-08-12/coderabbit.web.html",
+  "brief_data": {
+   "hq": "San Francisco",
+   "deck": "CodeRabbit closed a $143M Series C on 12 Aug 2026 at a $1.5B post-money valuation, co-led by Atomico and Smash Capital. Revenue grew more than 5x YoY. The company launched Agentic Change Management — Triage, Change Stack, Security — while doubling European headcount and entering Japan and Asia.",
+   "risks": [
+    {
+     "label": "TIMING RISK",
+     "detail": "CodeRabbit's growth push targets Europe and Asia, not motorsport, so F1 budget may be unplanned this cycle.",
+     "counter": "Frame as a 2027 entry ahead of Audi's technical-partner budget cycle, not an immediate buy."
+    },
+    {
+     "label": "BRAND FIT RISK",
+     "detail": "AI DevTools brands typically favor factory-team back-office deals over on-car branding, limiting broadcast visibility.",
+     "counter": "Anchor value in factory engineering credibility and BMW automotive proof points rather than broadcast exposure."
+    }
+   ],
+   "score": 74,
+   "ticker": "$1.5B post-money valuation (Series C, Aug 2026)",
+   "company": "CodeRabbit",
+   "gridfit": [
+    {
+     "team": "Audi F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "product_launch",
+    "expansion",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+    "https://www.businesswire.com/news/home/20250916401011/en/CodeRabbit-Raises-$60M-Series-B-Following-Unprecedented-Growth-as-Vibe-Coding-Triggers-a-Need-for-New-Code-Quality-Standards",
+    "https://www.press.bmwgroup.com/usa/article/detail/T0460064EN_US/bmw-i-ventures-in-coderabbit-to-advance-independent-ai-review-in-software-development"
+   ],
+   "extended": {
+    "ask": "Request 25 minutes with Harjot Gill's team to scope a three-year Audi technical-partner tier before 2027 sponsorship budgets lock, confirming the BMW i Ventures introduction path and Audi's engineering-governance requirements.",
+    "value": [
+     {
+      "text": "Automated Triage and Change Stack review gates would sit over Audi's control-software and simulation-tool commit pipeline across Hinwil and Neuburg.",
+      "label": "Operational workstream"
+     },
+     {
+      "text": "A named automotive-manufacturer deployment gives CodeRabbit a reference case for its wider push into automotive and industrial engineering software governance.",
+      "label": "Commercial lift"
+     },
+     {
+      "text": "Factory engineering-software wall and race-weekend software-deployment sign-off create demonstrable governance moments for factory-tour and technical-partner content.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Audi provides a live, safety-critical software environment and automotive-engineering credibility that CodeRabbit can use in enterprise and OEM sales conversations.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "CodeRabbit closed a $143M Series C on 12 Aug 2026 at a $1.5B post-money valuation, co-led by Atomico and Smash Capital, with BMW i Ventures and Datadog joining as new investors.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The raise funds Agentic Change Management and doubling European headcount plus Japan/Asia entry — a sponsorship-budget window opens as the company scales past 17,000 customers.",
+      "label": "Budget moment"
+     },
+     {
+      "text": "The F1 grid resumes at the Dutch Grand Prix after the summer break, the point at which teams finalize 2027 technical-partner budgets before the season's final third.",
+      "label": "Calendar window"
+     },
+     {
+      "text": "No competing AI code-governance vendor holds an F1 or Formula E sponsorship as of this signal, leaving the category open but unlikely to stay uncontested through 2027 budget season.",
+      "label": "Competitive clock"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Audi's factory entry has no disclosed AI code-governance or DevOps-security partner as it consolidates engineering across Hinwil and Neuburg.",
+      "label": "Open lane"
+     },
+     {
+      "text": "BMW i Ventures' investment and BMW's status as a CodeRabbit customer give the company a documented automotive-engineering credibility bridge that generic DevTools vendors cannot claim.",
+      "label": "Market overlap"
+     },
+     {
+      "text": "Audi's factory build-out gives CodeRabbit a live governance-at-scale engineering environment — power-unit software, simulation tooling and control-software pipelines — to demonstrate the product against, not just brand.",
+      "label": "Activation platform"
+     },
+     {
+      "text": "A software-heavy power-unit program consolidating two engineering sites is precisely the change-management and code-governance problem CodeRabbit's Agentic Change Management platform was built to solve.",
+      "label": "Consumption capacity"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Red Bull Racing",
+      "reason": "Oracle's title partnership already closes the enterprise cloud and software-infrastructure lane."
+     },
+     {
+      "team": "Aston Martin",
+      "reason": "Cognizant's title partnership already occupies the IT-services and digital-engineering category."
+     }
+    ]
+   },
+   "date_long": "12 AUG 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "AUDI",
+   "value_mode": "A",
+   "bottom_line": "CodeRabbit just raised $143M at a $1.5B valuation with BMW i Ventures and BMW itself as customer and investor; Audi's factory build-out has no disclosed AI code-governance partner, making this a three-year technical-tier conversation worth opening before 2027 budgets lock.",
+   "footer_date": "12 AUG 2026",
+   "score_cells": [
+    {
+     "num": 13,
+     "note": "Post-raise, pre-2027 budget window",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "Well-capitalized, scaling international teams",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "BMW bridge, low on-car visibility",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 16,
+     "note": "Category open, no competitor sponsorship",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "Fits factory engineering software pipeline",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "CodeRabbit's $143M Series C, co-led by Atomico and Smash Capital, values the AI code-review company at $1.5B post-money as of 12 Aug 2026 — a raise joined by BMW i Ventures and Datadog alongside existing backers CRV and Scale Venture Partners. Revenue grew more than 5x YoY. The company now serves 17,000+ customers including Adyen, BMW, JFrog and NVIDIA. This is the <font name='Poppins-Bold' size='9.5'>BRAND RECKONING</font> moment: a governance-layer category leader with automotive-engineering credibility and no F1 paddock presence at all.",
+   "the_case_p2": "No competing AI code-governance vendor holds an F1 or Formula E sponsorship as of this signal. The engineering-software governance category remains unclaimed on the grid. The slot that matches an AI change-management layer to a manufacturer engineering pipeline sits open at Audi, entering its first full factory season.",
+   "track_label": "",
+   "brief_number": "126",
+   "claims_total": 16,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$143M Series C at $1.5B post-money valuation, co-led by Atomico and Smash Capital, closed/announced Aug 12…",
+     "value": "$143M",
+     "claim_id": 606,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management"
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "16-24 WKS",
+   "industry_meta": "AI DevTools - Code Review/Governance - San Francisco",
+   "value_content": "CodeRabbit's agentic code-review layer maps directly to Audi's power-unit and chassis software pipeline: automated Triage and Change Stack review gates for on-car firmware, control-software and simulation-tool commits across the Hinwil-Neuburg engineering split. Security scanning covers agent-generated code entering trackside and factory systems. Deployment surface: factory engineering-software wall, race-weekend software-deployment sign-off, and the CI/CD pipeline feeding car-control-unit updates between sessions.",
+   "value_section": true,
+   "why_team_para": "Audi's factory entry lacks a disclosed AI code-governance or DevOps-security partner as it scales a new Sauber-based engineering organization across Hinwil and Neuburg. CodeRabbit's BMW i Ventures backing and BMW customer relationship offer a direct automotive-engineering credibility bridge that a generic DevTools vendor cannot claim. Audi's software-heavy power-unit program, now consolidating two engineering sites, is precisely the governance-at-scale problem CodeRabbit's Agentic Change Management was built to solve.",
+   "deal_arch_para": "A three-year technical-partner tier fits the engineering-governance category: <font name='Poppins-Bold' size='9.5'>THREE YEARS</font> at an estimated $3-5M/yr, structured around Audi's power-unit rollout. First activation window: the Dutch and Italian Grand Prix rounds, ahead of 2027 sponsorship-budget lock.",
+   "footer_company": "CODERABBIT",
+   "why_team_label": "WHY AUDI",
+   "claims_verified": 14,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;CodeRabbit closed its Series C on 12 Aug 2026, days after the F1 summer break ends and the grid resumes at the Dutch Grand Prix — the sponsorship-planning window for 2027 technical-partner slots opens as teams finalize budgets ahead of the season's final third.",
+   "confidence_level": "HIGH",
+   "historical_label": null,
+   "decision_maker_bio": "Harjot Gill is Co-Founder and CEO of CodeRabbit, leading the company through its $143M Series C and the launch of Agentic Change Management. He is scaling a 17,000+ customer base — including BMW, Adyen and JFrog — into automotive and enterprise engineering markets.",
+   "decision_maker_name": "Harjot Gill",
+   "decision_maker_role": "Co-Founder & CEO, CodeRabbit",
+   "opening_angle_intro": "CodeRabbit just raised $143M with BMW as investor and customer, and F1's governance-layer lane is unclaimed.",
+   "opening_angle_quote": "&ldquo;CodeRabbit closed $143M at a $1.5B valuation with BMW i Ventures on the cap table and BMW as a named customer — Audi's engineering org has no disclosed AI governance partner. Can we book 25 minutes when Audi sponsorship planning clears?&rdquo;",
+   "value_section_label": "VALUE TO AUDI",
+   "verification_status": "needs_review",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Harjot Gill, Co-Founder & CEO at CodeRabbit",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "said Harjot Gill, co-founder and CEO of CodeRabbit",
+     "notes": "The cited CodeRabbit press release on Business Wire directly attributes a quote to Harjot Gill as co-founder and CEO of CodeRabbit, matching the claimed name, role and company.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Harjot Gill, Co-Founder & CEO, CodeRabbit at CodeRabbit",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20250916401011/en/CodeRabbit-Raises-$60M-Series-B-Following-Unprecedented-Growth-as-Vibe-Coding-Triggers-a-Need-for-New-Code-Quality-Standards",
+     "excerpt": "“AI-generated code is here to stay, but speed without a centralized knowledge base and an independent governance layer is a recipe for disaster,” said Harjot Gill, co-founder and CEO of CodeRabbit.",
+     "notes": "CodeRabbit's own Series B press release on Business Wire identifies Harjot Gill as co-founder and CEO of CodeRabbit, directly matching the claimed name, role and company.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$143M Series C at $1.5B post-money valuation, co-led by Atomico and Smash Capital, closed/announced Aug 12 2026",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "CodeRabbit, the pioneer of AI code review, today announced a $143 million Series C funding round at a $1.5 billion valuation and introduced Agentic Change Management — the control layer that enables teams to govern, understand, and ship software created by people and agents. The round was co-led by Atomico and Smash Capital, with participation from new investors including BMW i Ventures, Datadog, Hirtle Callaghan, SineWave Ventures, Scenic Management, and existing investors including CRV, Scale Venture Partners, Flex Capital, Pelion Venture Partners, Harmony Partners and Engineering Capital.",
+     "notes": "The company's own Business Wire release confirms the $143M Series C at a $1.5B valuation co-led by Atomico and Smash Capital, and the Aug 12 2026 announcement date is corroborated by an independent source (Wilson Sonsini: \"On August 12, 2026, CodeRabbit... announced a $143 million Series C funding round at a $1.5 billion valuation\"), though neither source uses the word \"post-money\" explicitly.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "CodeRabbit closed a $143M Series C on 12 Aug 2026 at a $1.5B post-money valuation, co-led by Atomico and Smash Capital.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "CodeRabbit, the pioneer of AI code review, today announced a $143 million Series C funding round at a $1.5 billion valuation and introduced Agentic Change Management — the control layer that enables teams to govern, understand, and ship software created by people and agents. ... The round was co-led by Atomico and Smash Capital, with participation from new investors including BMW i Ventures, Datadog, Hirtle Callaghan, SineWave Ventures, Scenic Management, and existing investors including CRV, Scale Venture Partners, Flex Capital, Pelion Venture Partners, Harmony Partners and Engineering Capital.",
+     "notes": "CodeRabbit's own Business Wire press release dated 12 Aug 2026 confirms the $143M Series C, the $1.5B valuation and the Atomico/Smash Capital co-lead, though it does not explicitly label the valuation as post-money.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "New: BMW i Ventures, Datadog, Hirtle Callaghan, SineWave Ventures, Scenic Management; existing: CRV, Scale Venture Partners, Flex Capital, Pelion Venture Partners, Harmony Partners, Engineering Capital; angel investors include senior Apple executives",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "The round was co-led by Atomico and Smash Capital, with participation from new investors including BMW i Ventures, Datadog, Hirtle Callaghan, SineWave Ventures, Scenic Management, and existing investors including CRV, Scale Venture Partners, Flex Capital, Pelion Venture Partners, Harmony Partners and Engineering Capital.",
+     "notes": "The cited CodeRabbit press release names every new and existing investor exactly as claimed, and the angel-investor detail — absent from the release — is corroborated by SiliconANGLE, which reports that angel investors in the round included senior executives from Apple and Amazon.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "CodeRabbit's $143M Series C, co-led by Atomico and Smash Capital, values the AI code-review company at $1.5B post-money as of 12 Aug 2026 — a raise joined by BMW i Ventures and Datadog alongside existing backers CRV and Scale Venture Partners.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "The round was co-led by Atomico and Smash Capital, with participation from new investors including BMW i Ventures, Datadog, Hirtle Callaghan, SineWave Ventures, Scenic Management, and existing investors including CRV, Scale Venture Partners, Flex Capital, Pelion Venture Partners, Harmony Partners and Engineering Capital.",
+     "notes": "CodeRabbit's own press release dated 12 Aug 2026 confirms the $143M Series C at a $1.5B valuation co-led by Atomico and Smash Capital with BMW i Ventures and Datadog joining alongside existing backers CRV and Scale Venture Partners, though the release does not explicitly label the valuation 'post-money'.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Company states revenue grew more than 5x YoY; no specific ARR figure disclosed in Tier-1 coverage",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "Revenue grew more than 5x year-over-year as engineering organizations globally adopted independent review and governance infrastructure for AI-generated code.",
+     "notes": "The cited CodeRabbit press release states the >5x year-over-year revenue growth verbatim without disclosing an ARR figure, and secondary coverage of the Series C likewise reports only the growth multiple, not an absolute ARR number.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "CodeRabbit just raised $143M at a $1.5B valuation with BMW i Ventures and BMW itself as customer and investor;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.press.bmwgroup.com/usa/article/detail/T0460064EN_US/bmw-i-ventures-in-coderabbit-to-advance-independent-ai-review-in-software-development",
+     "excerpt": "BMW i Ventures, the independent venture capital fund of the BMW Group, has invested in CodeRabbit as part of the company's $143 million Series C financing round. The round was co-led by Atomico and Smash Capital and values CodeRabbit at $1.5 billion. ... The investment builds on a two-year collaboration between BMW and CodeRabbit, whose AI-powered review platform supports more than 1,000 BMW software developers worldwide.",
+     "notes": "The BMW Group's own press release (Aug 12, 2026), corroborated by CodeRabbit's Business Wire announcement, confirms the $143M Series C at a $1.5B valuation, BMW i Ventures' participation as investor, and BMW's use of the platform for over 1,000 of its developers.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Series C close plus launch of Agentic Change Management (Triage, Change Stack, Security) plus announced European headcount doubling and entry into Japan/Asia",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "The company is planning to double down on the European footprint as part of this round. Additionally, CodeRabbit is planning to enter the Japanese market, as well as other key Asian markets, where the company is seeing large demand for its product.",
+     "notes": "The release supports the $143M Series C, the launch of Agentic Change Management with Triage, Change Stack and Security, and planned entry into Japan/Asia, but it says CodeRabbit will 'double down on the European footprint' (with 50 FTE across London and the EU today) rather than announcing a doubling of European headcount, so that component of the claim is unsupported.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "CodeRabbit closed a $143M Series C on 12 Aug 2026 at a $1.5B post-money valuation, co-led by Atomico and Smash Capital, with BMW i Ventures and Datadog joining as new investors.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "SAN FRANCISCO--(BUSINESS WIRE)--CodeRabbit, the pioneer of AI code review, today announced a $143 million Series C funding round at a $1.5 billion valuation and introduced Agentic Change Management — the control layer that enables teams to govern, understand, and ship software created by people and agents. The round was co-led by Atomico and Smash Capital, with participation from new investors including BMW i Ventures, Datadog, Hirtle Callaghan, SineWave Ventures, Scenic Management, and existing investors including CRV, Scale Venture Partners, Flex Capital, Pelion Venture Partners, Harmony Partners and Engineering Capital.",
+     "notes": "The company's 12 Aug 2026 Business Wire press release confirms the $143M Series C, $1.5B valuation, Atomico/Smash Capital co-leads and BMW i Ventures and Datadog as new investors, though it states only \"$1.5 billion valuation\" without specifying post-money.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "None identified in Tier-1 coverage",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": null,
+     "excerpt": null,
+     "notes": "The cited Business Wire release (funding/product news) contains no mention of sponsorship at all, and no Tier-1 source affirmatively documents CodeRabbit sponsorship activity — an absence-of-evidence claim cannot itself be source-verified, though CodeRabbit's own blog does describe open-source cash sponsorships that fall outside Tier-1 sponsorship coverage.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Dutch Grand Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 14: Dutch GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "AI governance layer for human- and agent-generated code maps to F1/FE engineering software validation pipelines; BMW i Ventures joined as new investor and BMW is a named customer, giving an automotive-engineering credibility hook",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "The round was co-led by Atomico and Smash Capital, with participation from new investors including BMW i Ventures, Datadog...",
+     "notes": "The cited CodeRabbit press release confirms BMW i Ventures as a new investor, separately names BMW among its 17,000+ customers, and describes the product as a control layer governing software created by people and agents; the F1/FE pipeline analogy is the brief's own inference rather than a factual assertion.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "deal_arch_para",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Italian Grand Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 15: Italian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ San Francisco; 17,000+ customers including Adyen, BMW, Indeed, JFrog, NVIDIA, Trivago, Campfire",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "CodeRabbit conducts more than 2 million code reviews each week and is depended on by more than 17,000 customers, including Adyen, BMW, Indeed, JFrog, NVIDIA, Trivago and Campfire.",
+     "notes": "The cited CodeRabbit press release on Business Wire states the 17,000+ customer count with the exact named customer list, and its About section confirms the company is headquartered in San Francisco.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Genefa Murphy (CMO JFrog, ex-Udemy CMO, McLaren deal alumna) — JFrog is a named CodeRabbit customer per the company's own release, giving a documented warm-intro path toward the McLaren alumni network",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "CodeRabbit conducts more than 2 million code reviews each week and is depended on by more than 17,000 customers, including Adyen, BMW, Indeed, JFrog, NVIDIA, Trivago and Campfire.",
+     "notes": "CodeRabbit's own Business Wire release names JFrog as a customer, JFrog's January 5, 2026 press release confirms Genefa Murphy as CMO joining from Udemy, and Udemy releases quote her as CMO on the McLaren Racing partnership.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$143M Series C at $1.5B valuation closed + Agentic Change Management product launch + Europe/Japan expansion announced same day",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260812311754/en/CodeRabbit-Raises-$143-Million-at-$1.5-Billion-Valuation-and-Introduces-Agentic-Change-Management",
+     "excerpt": "CodeRabbit, the pioneer of AI code review, today announced a $143 million Series C funding round at a $1.5 billion valuation and introduced Agentic Change Management — the control layer that enables teams to govern, understand, and ship software created by people and agents.",
+     "notes": "The company's own Business Wire release (Aug 12, 2026) states the $143M Series C at $1.5B valuation and the Agentic Change Management launch in its lead, and an 'International expansion' section in the same release confirms the European build-out (London/EU) and planned entry into the Japanese market, so all three elements were announced the same day.",
+     "model": "claude-opus-5"
+    }
+   ]
+  }
+ ]
+}

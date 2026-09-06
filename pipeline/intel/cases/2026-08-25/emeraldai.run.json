@@ -1,0 +1,569 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-08-25",
+  "status": "success",
+  "mode": "shadow",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "storage/briefs/2026-08-25/emeraldai.pdf",
+     "web": "storage/briefs/2026-08-25/emeraldai.web.html",
+     "audit": "failed",
+     "status": "needs_review",
+     "company": "Emerald AI",
+     "stage_a": {
+      "verified": 8,
+      "unverified": 2
+     },
+     "stage_b": {
+      "verified": 5
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 192,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 206,
+     "verification": "needs_review",
+     "audit_attempts": 2
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Emerald AI",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "FE rotation day (Tue/Fri)",
+   "score_total": 75,
+   "score_breakdown": {
+    "cap": null,
+    "base": 75,
+    "total": 75,
+    "timing": 15,
+    "ops_fit": 15,
+    "ranking": 75,
+    "urgency": 15,
+    "capacity": 15,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 3,
+     "product_to_need": 6,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None — no match among the 5 tracked alumni-database executives"
+    },
+    "scanner_score": 75,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 75,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Nissan Formula E Team",
+   "source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "trigger_date": "2026-08-25",
+   "trigger_reason": "Oversubscribed $150M Series A closed at $1.05B valuation same-day; entering global commercial scaling"
+  }
+ ],
+ "brief": {
+  "number": 125,
+  "verification_status": "needs_review",
+  "audit_status": "failed",
+  "audit_attempts": 2,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "storage/briefs/2026-08-25/emeraldai.web.html",
+  "brief_data": {
+   "hq": "Washington, D.C.",
+   "deck": "Emerald AI closed a $150M oversubscribed Series A on 25 Aug 2026 at a $1.05B valuation, lifting total funding past $220M. Twelve Fortune Global 500 strategics — including NVIDIA, Siemens and GE Vernova — now hold stakes as the company moves from demonstration to full-scale commercial grid-flex deployment.",
+   "risks": [
+    {
+     "label": "UNPROVEN SPONSORSHIP APPETITE",
+     "detail": "Emerald has never bought sports sponsorship and may default to trade-show marketing instead.",
+     "counter": "Frame as a three-year entry-tier pilot with utility-conversion KPIs, not a brand-only media buy."
+    },
+    {
+     "label": "CATEGORY COULD DRAW RIVAL BIDDERS",
+     "detail": "Grid-flexibility peers may approach Formula E once Emerald's raise publicizes the category's motorsport fit.",
+     "counter": "Move within the 8-12 week horizon before competitors register the open energy-management lane."
+    }
+   ],
+   "score": 75,
+   "ticker": "$1.05B valuation (Series A, Aug 2026)",
+   "company": "Emerald AI",
+   "gridfit": [
+    {
+     "team": "Nissan Formula E Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "TAKEN",
+     "detail": "Shell",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "catalyst"
+   ],
+   "sources": [
+    "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+    "https://www.cnbc.com/video/2026/08/25/watch-cnbcs-full-interview-with-emerald-ai-ceo-varun-sivaram.html",
+    "https://www.emeraldai.co/blog/emerald-ai-raises-150-million-series-a"
+   ],
+   "extended": {
+    "ask": "Request 25 minutes with Dr. Sivaram's team to scope a three-year entry-tier energy-management partnership ahead of Formula E's 2026-27 sponsorship renewal window.",
+    "value": [
+     {
+      "text": "Emerald Conductor's load-shedding engine could manage Nissan's factory energy draw and simulator compute loads, giving the team a live grid-flex deployment to showcase.",
+      "label": "Operational workstream"
+     },
+     {
+      "text": "Sponsorship introduces Emerald to Nissan's existing utility and OEM supplier relationships, widening its pipeline of enterprise pilot customers beyond current strategic investors.",
+      "label": "Commercial lift"
+     },
+     {
+      "text": "Race-weekend broadcast graphics and factory telemetry walls give Emerald recurring content assets showing real-time grid interaction during ePrix sessions.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Nissan provides paddock access, factory demonstration space and co-branded content assets in exchange for Emerald's energy-management technology and visibility budget.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Emerald AI closed a $150M oversubscribed Series A on 25 Aug 2026 at a $1.05B valuation, lifting total funding past $220M, with Energize Capital and DCVC co-leading alongside NVIDIA, Siemens, GE Vernova, RWE, Aramco Ventures and Samsung Ventures.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Fresh capital funds Emerald's shift from demonstration pilots to multi-megawatt, full data-center-scale commercial deployment, creating a first enterprise-marketing budget cycle before the company locks utility and hyperscaler contracts.",
+      "label": "Budget moment"
+     },
+     {
+      "text": "The 8-12 week horizon lines up with Formula E's 2026-27 season sponsorship renewal cycle, when grid-partner slots are negotiated before pre-season commitments close.",
+      "label": "Calendar window"
+     },
+     {
+      "text": "No F1 or Formula E grid-flexibility sponsor currently exists on either grid; twelve Fortune Global 500 investors now have incentive to steer their own sponsorship dollars toward the category once Emerald's raise is public.",
+      "label": "Competitive clock"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Nissan Formula E Team carries no grid-flexibility or energy-management partner today, leaving a category lane open on an EV-native grid with no direct precedent among rival teams.",
+      "label": "Open lane"
+     },
+     {
+      "text": "Formula E's urban, sustainability-literate fanbase and Nissan's global EV customer base overlap directly with the utility and hyperscaler executives Emerald is courting for its next contract cycle.",
+      "label": "Audience overlap"
+     },
+     {
+      "text": "Nissan's factory operations, simulator facilities and race-weekend garage infrastructure give Emerald live surfaces to demonstrate real-time grid-flex software beyond a logo placement.",
+      "label": "Activation platform"
+     },
+     {
+      "text": "Nissan's global EV manufacturing scale and existing utility relationships mean the team can credibly co-present Emerald's technology rather than simply carry sponsorship branding.",
+      "label": "Consumption capacity"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Other Formula E entries",
+      "reason": "were not evaluated against this signal; team_needs_taxonomy.md flags Nissan as the only tracked entry with an open D1 energy-management lane."
+     }
+    ]
+   },
+   "date_long": "25 AUG 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "NISSAN FORMULA E TEAM",
+   "value_mode": "A",
+   "bottom_line": "Emerald AI's $150M Series A, backed by NVIDIA, Siemens and GE Vernova, hands it enterprise credibility but zero motorsport visibility. Nissan Formula E Team is the clean fit: an electrification-native series with no grid-flexibility partner, ready to co-present Emerald's technology to the same utility audiences.",
+   "footer_date": "25 AUG 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Fresh capital, no motorsport spend yet.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "$150M raised, budget still unallocated.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "Grid-flex mirrors FE's electrification story.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 15,
+     "note": "Renewal window opens within 8-12 weeks.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "Load-shedding tech maps to live ops.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Emerald AI raised a $150M oversubscribed Series A on 25 Aug 2026, valuing the grid-flexibility software company at $1.05B and lifting total capital raised past $220M. Energize Capital and DCVC co-led the round, joined by NVIDIA, Siemens, GE Vernova, RWE, Aramco Ventures and Samsung Ventures — twelve Fortune Global 500 companies now hold equity. The raise marks a <font name='Poppins-Bold' size='9.5'>BRAND RECKONING</font> moment: Emerald moves from demonstration pilots to multi-megawatt, full data-center-scale commercial deployment, and needs a visibility platform to match its new enterprise-trust ambitions.",
+   "the_case_p2": "No F1 or Formula E grid-flexibility sponsor exists on either grid, leaving the energy-management category entirely open. As hyperscalers and utilities scrutinize Emerald's enterprise credentials, a global motorsport platform offers scale-validation no single-utility pilot can match. The slot that matches Emerald's grid-flex narrative architecturally is open at Nissan Formula E Team.",
+   "track_label": "",
+   "brief_number": "125",
+   "claims_total": 14,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$150M oversubscribed Series A at $1.05B valuation, brings total funding to $220M+",
+     "value": "$150M",
+     "claim_id": 591,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers"
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "HOT",
+   "horizon_label": "8-12 WKS",
+   "industry_meta": "Climate Tech - Grid/Energy Management Software - Washington DC",
+   "value_content": "Emerald Conductor's real-time grid-flex and load-shedding engine maps directly onto Nissan's factory energy operations and race-weekend power draw — EV battery charging, simulator compute loads, and trackside power management all become live demonstration surfaces. Deployment surface: garage energy dashboards, factory telemetry walls, broadcast graphics showing real-time grid interaction during ePrix sessions, and pit-wall power-allocation feeds during qualifying and race format changes.",
+   "value_section": true,
+   "why_team_para": "Nissan Formula E Team carries no grid-flexibility or energy-management partner today, and its electrification-first positioning gives Emerald's load-shedding narrative direct thematic alignment no combustion-era team can offer. Formula E's entire proposition — cars drawing grid power, racing on street circuits embedded in urban grids — mirrors Emerald Conductor's real-time demand-response story. Nissan's global EV manufacturing scale and utility relationships give the team credibility to co-present Emerald's technology to the same hyperscaler and utility audiences it is courting.",
+   "deal_arch_para": "A three-year entry-tier grid-flexibility partnership, in the $2-4M annual range, makes Emerald the team's energy-management partner across the 2026-27 season, with activation anchored at flagship street-circuit race weekends. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font> secures renewal leverage as Emerald scales from pilot utilities toward full hyperscaler contracts.",
+   "footer_company": "EMERALD AI",
+   "why_team_label": "WHY NISSAN",
+   "claims_verified": 12,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Emerald's Series A closes as Formula E teams open 2026-27 season sponsorship renewals, an 8-12 week window before grid-partner commitments lock for pre-season. No rival grid-flexibility platform has claimed the lane; a first-mover conversation now secures placement before category competitors reach the paddock.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Dr. Varun Sivaram founded Emerald AI in 2024 after serving as Chief Technology Officer of ReNew Power, one of India's largest renewable energy companies. He now leads Emerald's push to commercialize grid-flexible AI data-center software with utility and hyperscaler partners nationwide.",
+   "decision_maker_name": "Dr. Varun Sivaram",
+   "decision_maker_role": "Founder & CEO, Emerald AI",
+   "opening_angle_intro": "Emerald AI just banked $150M at a $1.05B valuation with zero motorsport visibility to match its ambition.",
+   "opening_angle_quote": "&ldquo;Emerald just closed a $150M round with NVIDIA and Siemens on the cap table, and Formula E has no grid-flexibility partner on the grid — can we book 25 minutes?&rdquo;",
+   "value_section_label": "VALUE TO NISSAN FORMULA E TEAM",
+   "verification_status": "needs_review",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Dr. Varun Sivaram, Founder & CEO at Emerald AI",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "\"We founded Emerald AI on the conviction that the intelligence driving the AI revolution could solve its own greatest bottleneck: power,\" said Emerald AI Founder and CEO Dr. Varun Sivaram.",
+     "notes": "The cited Tier 1 source, Emerald AI's own Business Wire press release announcing its $150M Series A, explicitly identifies Dr. Varun Sivaram as Emerald AI's Founder and CEO, matching the claimed name, title and company.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Dr. Varun Sivaram, Founder & CEO, Emerald AI at Emerald AI",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.cnbc.com/video/2026/08/25/watch-cnbcs-full-interview-with-emerald-ai-ceo-varun-sivaram.html",
+     "excerpt": "Varun Sivaram, Emerald AI founder and CEO, joins 'Squawk Box' to discuss what the company does",
+     "notes": "CNBC's August 25, 2026 interview identifies Varun Sivaram as founder and CEO of Emerald AI, corroborated by coverage of the company's $150M Series A quoting him in the same role.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$150M oversubscribed Series A at $1.05B valuation, brings total funding to $220M+",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "Emerald AI, the company transforming data centers into flexible assets for the power grid, today announced it has raised $150 million in an oversubscribed Series A financing at a valuation of $1.05 billion.",
+     "notes": "The cited Business Wire company press release directly confirms every element of the claim — the $150M oversubscribed Series A, the $1.05B valuation, and separately that the round 'brings Emerald AI's total funding raised to more than $220 million.'",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Emerald AI closed a $150M oversubscribed Series A on 25 Aug 2026 at a $1.05B valuation, lifting total funding past $220M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "Emerald AI, the company transforming data centers into flexible assets for the power grid, today announced it has raised $150 million in an oversubscribed Series A financing at a valuation of $1.05 billion. ... The oversubscribed round was co-led by Energize Capital and DCVC, including participation from leading global financial and strategic investors, and brings Emerald AI's total funding raised to more than $220 million.",
+     "notes": "The company's own Business Wire press release (release ID 20260825, dated 25 Aug 2026 and corroborated by Cooley's 25 Aug 2026 coverage) confirms the $150M oversubscribed Series A, the $1.05B valuation, and total funding above $220M exactly as claimed.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Co-led by Energize Capital and DCVC; joined by NVIDIA, Siemens, GE Vernova, RWE, Aramco Ventures, Samsung Ventures and other strategics — 12 Fortune Global 500 companies now hold investments",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "The Series A round was co-led by Energize Capital and DCVC. Several of the world's largest companies and leading financial investors participated, including NVIDIA, Samsung Ventures, Siemens, Aramco Ventures, Salesforce Ventures, GE Vernova, RWE, JERA Ventures... The round was co-led by Energize Capital and DCVC, joined by a global group of leading financial and strategic investors–the company now counts 12 Fortune Global 500 companies as investors.",
+     "notes": "The cited Emerald AI press release (Tier 1 company announcement via Business Wire) directly confirms the co-leads, each named strategic investor, and the count of 12 Fortune Global 500 companies holding investments.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Emerald AI raised a $150M oversubscribed Series A on 25 Aug 2026, valuing the grid-flexibility software company at $1.05B and lifting total capital raised past $220M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.emeraldai.co/blog/emerald-ai-raises-150-million-series-a",
+     "excerpt": "WASHINGTON, D.C. – August 25, 2026 – Emerald AI, the company transforming data centers into flexible assets for the power grid, today announced it has raised $150 million in an oversubscribed Series A financing at a valuation of $1.05 billion.",
+     "notes": "Emerald AI's own press release dated 25 Aug 2026 confirms the $150M oversubscribed Series A at a $1.05B valuation for the grid-flexibility software company, and trade coverage of the same announcement reports the round lifts total funding past $220 million.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Not disclosed in source",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "Emerald AI, the company transforming data centers into flexible assets for the power grid, today announced it has raised $150 million in an oversubscribed Series A financing at a valuation of $1.05 billion.",
+     "notes": "The cited Business Wire company press release discloses only funding and valuation figures and contains no revenue, ARR, or sales figures anywhere in its text, confirming the brief's 'not disclosed in source' characterization.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Emerald AI's $150M Series A, backed by NVIDIA, Siemens and GE Vernova, hands it enterprise credibility but zero motorsport visibility.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "Several of the world's largest companies and leading financial investors participated, including NVIDIA, Samsung Ventures, Siemens, ... GE Vernova",
+     "notes": "The company's own press release (headline plus investor list) confirms the $150M Series A with NVIDIA, Siemens and GE Vernova as backers; the 'zero motorsport visibility' portion is editorial judgment, not a checkable fact.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Series A financing announced 25 Aug 2026; company moving from demonstration phase into commercial deployment at multi-megawatt, full data-center scale",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "With five global demonstrations complete, Emerald AI's technology is now deployed commercially, dynamically flexing power consumption at multi-megawatt, full data center scale.",
+     "notes": "The company's Business Wire release, dated 25 Aug 2026 (dateline confirmed by Yahoo Finance and Cooley's 25 Aug 2026 deal notice), announces the $150M Series A and states the transition from completed demonstrations to commercial deployment at multi-megawatt, full data center scale.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Emerald AI closed a $150M oversubscribed Series A on 25 Aug 2026 at a $1.05B valuation, lifting total funding past $220M, with Energize Capital and DCVC co-leading alongside NVIDIA, Siemens, GE Vernova, RWE, Aramco Ventures and Samsung Ventures.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "The oversubscribed round was co-led by Energize Capital and DCVC, including participation from leading global financial and strategic investors, and brings Emerald AI's total funding raised to more than $220 million.",
+     "notes": "Emerald AI's own dated press release (Aug 25, 2026, on Business Wire and emeraldai.co) confirms the $150M oversubscribed Series A at a $1.05B valuation, total funding above $220M, Energize Capital and DCVC as co-leads, and participation by NVIDIA, Samsung Ventures, Siemens, Aramco Ventures, GE Vernova and RWE, with Reuters corroborating.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No existing F1/FE grid-flexibility or energy-management sponsor identified against active_sponsor_db.md",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": null,
+     "excerpt": null,
+     "notes": "The cited Business Wire release covers Emerald AI's $150M Series A and contains no mention of sponsorship, F1 or Formula E, and the claim rests on an internal file (active_sponsor_db.md) that cannot be externally checked — note also that ABB, an energy-management and electrification firm, is Formula E's title partner, so the whitespace assertion should be re-validated before use.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Emerald Conductor's real-time grid-flex/load-shedding narrative mirrors FE's electrification and grid-interaction storyline; fresh capital creates need for a global enterprise-trust and visibility amplifier as it courts utilities and hyperscalers",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "The Emerald Conductor software platform dynamically orchestrates AI computational workloads and onsite energy resources to control a facility's power draw when the grid is stressed while protecting the performance of critical AI workloads. ... The company will use the new capital to scale commercial deployments worldwide with its customers, which include leading AI firms, data center operators, and electric power utilities.",
+     "notes": "The company's own Business Wire release (Tier 1) confirms every checkable element — the Emerald Conductor real-time grid-flexibility/load-curtailment positioning, the fresh $150M Series A capital, and the customer base of utilities and large AI/data-center players — while the Formula E narrative-fit and sponsorship-need portions are subjective brand judgment rather than verifiable fact.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ in Washington, D.C.; commercial deployments and demonstrations across U.S. data centers and utility partners",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "Emerald AI has completed five successful demonstrations at commercial data centers in Arizona, Illinois, Virginia, Oregon, and London, working alongside partners including NVIDIA, EPRI, Oracle, Nebius, and National Grid as well as regional utilities and grid operators",
+     "notes": "The cited company press release carries a WASHINGTON dateline (corroborated by ESG Today describing Emerald AI as Washington, D.C.-based) and documents completed demonstrations and commercial deployment at U.S. data centers with utility and grid-operator partners.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "None — no match among the 5 tracked alumni-database executives",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": null,
+     "excerpt": null,
+     "notes": "The claim is a negative finding about an internal proprietary alumni database (no match among 5 tracked executives), and the cited Business Wire release — which covers Emerald AI's $150 million Series A at a $1.05 billion valuation — contains no information that can confirm or refute an internal roster match, so no external source can verify it.",
+     "model": "claude-opus-5"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Oversubscribed $150M Series A closed at $1.05B valuation same-day; entering global commercial scaling",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers",
+     "excerpt": "Emerald AI, the company transforming data centers into flexible assets for the power grid, today announced it has raised $150 million in an oversubscribed Series A financing at a valuation of $1.05 billion.",
+     "notes": "The cited Business Wire company press release directly confirms the oversubscribed $150M Series A at a $1.05B valuation announced that day, and separately states the company has entered commercial scaling and will use the capital to scale deployments worldwide.",
+     "model": "claude-opus-5"
+    }
+   ]
+  }
+ ]
+}
