@@ -1,0 +1,396 @@
+{
+ "run_date": "2026-05-20",
+ "signal_date": "2026-05-20",
+ "stem": "mercury",
+ "number": 216,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Mercury",
+  "signal_date": "2026-05-20",
+  "score": 74,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Immad Akhund",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+  "industry_meta": "Fintech · Business Banking for Startups (bank charter pending) · San Francisco",
+  "recommended_team": "Cadillac F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital returning, announced 20 May 2026 (Business Wire; Mercury blog)",
+   "investors": "TCV (lead, Series D); Sequoia Capital led the $300M Series C at $3.5B in March 2025; Andreessen Horowitz, Coatue, CRV, Spark Capital, Sapphire Ventures",
+   "revenue": "$650M annualised revenue reached in Q3 2025 (company-stated); $500M revenue in 2024 with ten straight profitable quarters (Series C release, March 2025)",
+   "trigger": "$200M Series D at a $5.2B valuation led by TCV, announced 20 May 2026",
+   "competitor_signal": "Airwallex at McLaren, Revolut as Audi's title partner, Cash App at Racing Bulls, Nu at Mercedes, Barclays and BNY at Williams; Cadillac's inaugural roster carries no bank or fintech",
+   "strategic_hook": "OCC conditional approval for Mercury Bank, N.A. on 27 April 2026; more than 300,000 customers including one in three US startups; Cadillac is the first new American team on the grid since 2016",
+   "us_presence": "HQ San Francisco; founded 2017; Mercury Bank, N.A. to be headquartered in Utah",
+   "alumni_match": "",
+   "taxonomy_category": "E1",
+   "ops_fit_note": "MODE B: halo with concrete mechanics; founder-audience hospitality at the US rounds, paddock-supplier banking, launch-year content for the bank; no engineering workstream",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 18,
+   "brand_fit": 14,
+   "urgency": 14,
+   "ops_fit": 11,
+   "ops_fit_subscores": {
+    "product_to_need": 3,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "immad akhund",
+    "akhund"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "excerpt": "Business Wire, 20 May 2026: Immad Akhund, co-founder and CEO of Mercury, quoted in the Series D release. Founded 2017 by Akhund (CEO), Max Tagher (CTO) and Jason Zhang (COO).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$200m",
+    "$5.2b",
+    "tcv",
+    "20 may",
+    "series d",
+    "coatue",
+    "crv",
+    "sapphire",
+    "spark",
+    "funding round",
+    "49%"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$300m",
+    "$3.5b",
+    "sequoia",
+    "march 2025",
+    "series c",
+    "$500m",
+    "ten straight",
+    "profitable",
+    "$156b"
+   ],
+   "url": "https://www.businesswire.com/news/home/20250326427283/en/Mercury-Announces-$300-Million-Series-C-Round-at-$3.5-Billion-Valuation",
+   "excerpt": "Business Wire, 26 Mar 2025: $300M Series C at a $3.5B valuation led by Sequoia Capital (primary and secondary), with Spark Capital and Marathon new and Coatue, CRV and Andreessen Horowitz returning; $500M revenue in 2024; ten straight quarters of EBITDA and GAAP profitability; $156B annual transaction volume.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$650m",
+    "annualised",
+    "annualized",
+    "300,000",
+    "one in three",
+    "2.5x",
+    "applications",
+    "ai companies",
+    "revenue"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "excerpt": "Business Wire, 20 May 2026: more than 300,000 customers including one in three US startups and a growing share of AI companies; in Q3 2025 Mercury reached $650 million in annualised revenue and applications rose 2.5x in Q1 2026 versus Q1 2025 (Fortune, 7 Nov 2025, first reported the $650M figure).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "occ",
+    "conditional approval",
+    "27 april",
+    "mercury bank",
+    "utah",
+    "auxier",
+    "sofi",
+    "charter",
+    "december 2025"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260427949683/en/Mercury-Receives-OCC-Conditional-Approval-to-Establish-Mercury-Bank-N.A.",
+   "excerpt": "Business Wire, 27 Apr 2026: the Office of the Comptroller of the Currency granted conditional approval to establish Mercury Bank, N.A., five months after the December 2025 application; the bank will be headquartered in Utah and led by Jon Auxier as president and CEO (joined as chief banking officer in August 2025; formerly CFO of SoFi Bank). Mercury now enters the bank-organisation phase before final authorisation.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "dan kang",
+    "kang",
+    "cfo",
+    "oatway",
+    "vp marketing",
+    "vp, marketing",
+    "classpass",
+    "zhang",
+    "tagher",
+    "coo",
+    "cto",
+    "cmo",
+    "pearlman"
+   ],
+   "url": "https://mercury.com/blog/introducing-new-cfo-cco",
+   "excerpt": "Mercury blog, May 2025: Dan Kang promoted to Chief Financial Officer (Mercury's first finance hire in 2022); Steve Pearlman joins as Chief Compliance Officer. The Org / LinkedIn: Rachel Moncton Oatway, VP, Marketing since November 2021 (formerly VP Global Marketing, ClassPass), reporting to Immad Akhund; Jason Zhang, Co-Founder & COO; Max Tagher, Co-Founder & CTO. No chief marketing officer is listed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "san francisco",
+    "2017",
+    "founded"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "excerpt": "Business Wire, 20 May 2026: Mercury is based in San Francisco; founded in 2017 by Immad Akhund, Max Tagher and Jason Zhang (Wikipedia / Inc.).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "airwallex",
+    "revolut",
+    "cash app",
+    "nu ",
+    "nubank",
+    "barclays",
+    "bny",
+    "ubs",
+    "goldman",
+    "unicredit",
+    "coinbase",
+    "public",
+    "moneygram",
+    "mobilize",
+    "visa",
+    "carlyle",
+    "etoro",
+    "claro",
+    "ifs",
+    "jim beam",
+    "tenneco",
+    "tommy hilfiger",
+    "twg ai",
+    "core scientific",
+    "no bank",
+    "inaugural",
+    "since 2016",
+    "first new american"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Cadillac F1 Team — TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli, Alpinestars, TWG Motorsports, General Motors (all inaugural, joined for 2026); no bank, fintech or payments partner. McLaren: Airwallex, Mastercard (title), Goldman Sachs. Audi: Revolut (title). Racing Bulls: Visa, Cash App. Mercedes: Nu, UBS. Williams: Barclays, BNY (joined). Ferrari: UniCredit. Aston Martin: Coinbase, Circle, Public. Red Bull: Visa, Carlyle. Haas: MoneyGram. Alpine: Mobilize Financial Services, eToro. Cadillac is F1's first new American team since Haas in 2016 (formula1.com).",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "monaco",
+    "british gp",
+    "silverstone",
+    "canadian",
+    "las vegas",
+    "us gp",
+    "austin",
+    "7 june",
+    "5 july",
+    "24 may",
+    "miami"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar; dates per formula1.com via ESPN / F1 Experiences)",
+   "excerpt": "2026 F1 calendar table: Miami GP (round 6, early May, already run), Canadian GP (22-24 May), Monaco GP (5-7 June), British GP (3-5 July), US GP (Austin, October), Las Vegas GP (November). Dates from the formula1.com 2026 calendar as summarised by ESPN and F1 Experiences.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Mercury",
+  "industry_meta": "Fintech · Business Banking for Startups (bank charter pending)",
+  "hq": "San Francisco (founded 2017)",
+  "ticker": "Private ($5.2B; $200M Series D, May 2026)",
+  "deck": "Mercury, the business-banking platform used by one in three US startups, announced a $200M Series D at a $5.2B valuation led by TCV on 20 May 2026, three weeks after the OCC conditionally approved its own national bank. Revenue passed $650M annualised in 2025 after ten straight profitable quarters.",
+  "score": 74,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Cadillac F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 20 May Mercury announced a $200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire, Sequoia and Spark returning; CNBC puts the valuation up 49% in 14 months. Sequoia led the $300M Series C at $3.5B in March 2025, when Mercury reported $500M revenue for 2024 and ten straight profitable quarters. It reached $650M annualised revenue in Q3 2025 and serves more than 300,000 customers, one in three US startups. On 27 April the OCC granted conditional approval for Mercury Bank, N.A., headquartered in Utah under Jon Auxier, formerly CFO of SoFi Bank.",
+  "the_case_p2": "This is a capital and identity inflection at once: fresh money and a company about to become a bank in its own name. Fintech has already found the grid, with Airwallex at McLaren, Revolut as Audi's title partner, Cash App at Racing Bulls and Nu at Mercedes. Mercury's customers are American founders, the audience Cadillac was built to reach, and no bank or fintech has taken the seat at the new American team.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round was announced on 20 May and the bank charter is in its organisation phase; a brand about to become Mercury Bank sets its launch budget now. Canadian GP (24 May), Monaco (7 June) and the British GP (5 July) fall inside the window; Austin and Las Vegas follow in the autumn.",
+  "why_team_label": "WHY CADILLAC F1 TEAM",
+  "why_team_para": "Cadillac is the first new American team since 2016 and its inaugural roster, TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco and Tommy Hilfiger, carries no bank, fintech or payments partner: Official Banking Partner is a clean category on the American story of the season. Its US rounds, Austin and Las Vegas, are where Mercury's founders, investors and bankers sit. The team is closing its 2027 roster in its first year, so the category is open now and unlikely to stay so.",
+  "value_section": true,
+  "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+  "value_mode": "B",
+  "value_content": "MODE B - halo, with concrete mechanics. No engineering workstream: the value is audience and commerce. Mercury brings 300,000 business customers, one in three US startups, as a guest list and a marketing channel; founder hospitality at Austin and Las Vegas; banking, cards and treasury for the team's US supplier base; launch-year content as Mercury becomes a bank. In return: Official Banking Partner designation, livery presence and driver access for Mercury's founders.",
+  "deal_arch_para": "Entry as Official Banking Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the bank launch and a probable listing window. Estimated $4-6M a year. Scope: sidepod or rear-wing placement, founder hospitality at Austin and Las Vegas, a Mercury Bank launch activation at the US rounds, co-branded content with the team's leadership.",
+  "decision_maker_name": "Immad Akhund",
+  "decision_maker_role": "Co-Founder & CEO, Mercury",
+  "decision_maker_bio": "Akhund founded Mercury in 2017 with Max Tagher (CTO) and Jason Zhang (COO) and fronts every raise and the charter; a first sports partnership is his call. Path: Rachel Moncton Oatway, VP Marketing (ex-ClassPass), who reports to him, and Dan Kang, CFO since May 2025. No CMO is listed.",
+  "opening_angle_intro": "Lead with the bank launch.",
+  "opening_angle_quote": "&ldquo;Immad, Mercury is about to become a bank in its own name, and Cadillac is the first American team in a decade with no bank on the car. Revolut and Airwallex have already taken theirs. 25 minutes before Monaco to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round 20 May; charter approval 27 Apr; Monaco and Silverstone inside the window."
+   ],
+   [
+    "CAPACITY",
+    "18",
+    "/ 20",
+    "$5.2B valuation; $650M+ annualised revenue; profitable; $200M raised."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "B2B fintech with a founder brand; consumer reach limited."
+   ],
+   [
+    "URGENCY",
+    "14",
+    "/ 20",
+    "Bank launch is a rebrand moment; no listing signal yet."
+   ],
+   [
+    "OPS FIT",
+    "11",
+    "/ 20",
+    "MODE B: audience and commerce, no engineering workstream."
+   ]
+  ],
+  "risks": [
+   [
+    "REGULATORY TIMING",
+    "Final OCC authorisation is not yet granted; a bank in its organisation phase may hold marketing until launch.",
+    "Time the announcement to follow final authorisation; make 2027, not 2026, year one."
+   ],
+   [
+    "OWNER OVERLAP",
+    "TWG Global, Cadillac's co-owner, is itself a financial-services group and may reserve the banking category.",
+    "Ask on the first call; TWG has no startup-banking product, so the lane is complementary."
+   ]
+  ],
+  "bottom_line": "A $200M round at $5.2B, $650M-plus of profitable revenue, and a bank charter that turns Mercury into a bank in its own name give it the budget, the motive and a launch to time a partnership to. Cadillac is the American team with no bank on the car, and Monaco and the British GP sit inside the window.",
+  "signals": [
+   "funding_event",
+   "identity_inflection",
+   "category_precedent"
+  ],
+  "footer_company": "MERCURY",
+  "footer_date": "20 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 20 May 2026 Mercury announced a $200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital returning. CNBC puts the valuation up 49% in 14 months from the $3.5B Sequoia set in March 2025."
+    },
+    {
+     "label": "Becoming a bank",
+     "text": "On 27 April 2026 the OCC granted conditional approval for Mercury Bank, N.A., five months after the December 2025 application. The bank will be headquartered in Utah and led by Jon Auxier, formerly CFO of SoFi Bank. A company that has spent seven years as a technology brand on top of partner banks is about to relaunch under its own charter: a rebrand moment with a launch budget attached."
+    },
+    {
+     "label": "Revenue that pays for it",
+     "text": "Mercury reported $500M revenue for 2024 with ten straight profitable quarters at the Series C, reached $650M annualised revenue in Q3 2025, and saw applications rise 2.5x in Q1 2026 versus Q1 2025 as AI companies formed at record pace. More than 300,000 customers, one in three US startups, use it."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Canadian GP (22-24 May), Monaco GP (5-7 June) and the British GP (3-5 July) fall inside the window. The US GP in Austin and the Las Vegas GP in the autumn are the stages a US bank launch would be timed to; Cadillac closes its 2027 roster in its first season."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Cadillac's inaugural roster carries TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco and Tommy Hilfiger, all joined for 2026, and no bank, fintech or payments partner. Official Banking Partner is a clean category on the newest car on the grid."
+    },
+    {
+     "label": "The audience match",
+     "text": "Mercury's customers are American founders and finance teams; Cadillac is the first new American team since 2016 and the story of the season for US audiences. Austin and Las Vegas put Mercury's founders, investors and bankers in the same suite as the team's."
+    },
+    {
+     "label": "The category precedent",
+     "text": "Fintech has already found the grid: Airwallex at McLaren, Revolut as Audi's title partner, Cash App at Racing Bulls, Nu at Mercedes, Barclays and BNY at Williams. Each of those teams is now closed to a business bank; Cadillac is not."
+    },
+    {
+     "label": "The owner question, answered honestly",
+     "text": "TWG Global, Cadillac's co-owner with General Motors, is a financial-services group. It has no startup-banking product, so Mercury's lane is complementary, but the team may reserve the category; the brief lists this as a risk to test on the first call rather than a reason to stand down."
+    }
+   ],
+   "value": [
+    {
+     "label": "Audience and commerce (Mode B)",
+     "text": "300,000 business customers as a marketing channel and a guest list: founder hospitality at Austin and Las Vegas, a Cadillac offer inside the Mercury product for the team's US fan base of business owners, and a Mercury Bank launch activation at the US rounds."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner whose customers are one in three US startups brings founders, venture investors and bankers to the team's hospitality, the audience a first-year American team needs to sell its remaining 2027 inventory."
+    },
+    {
+     "label": "Paddock supplier banking",
+     "text": "Banking, corporate cards and treasury for the team's US entity and its American supplier base: a real, if modest, operational use that makes the partnership more than a logo."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Banking Partner designation, sidepod or rear-wing placement, driver access for Mercury's founder community, and co-branded content with the team's engineering and commercial leadership."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Airwallex, a direct business-banking rival, and Goldman Sachs are on the roster; Mastercard is title partner."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "Revolut, a direct rival with Revolut Business, is title partner."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Cash App (Block) and Visa hold the fintech and payments lanes."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "Nu (Nubank) joined for 2026 and UBS holds the banking lane."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Barclays and BNY joined the roster for 2026."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "Coinbase, Circle and Public occupy the financial-services tier."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Visa and Carlyle sit on the roster; crowded financial tier."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "UniCredit holds the banking lane."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Mobilize Financial Services and eToro hold the financial lanes."
+    },
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "MoneyGram is the team's name partner; open on banking, but no US-founder audience story to match Cadillac's."
+    }
+   ],
+   "ask": "A 25-minute call with Immad Akhund before the Monaco GP to confirm the bank-launch timetable, test the TWG Global category question with the team, and size an Official Banking Partner entry against Cadillac's 2027 roster."
+  }
+ },
+ "note": "# Mercury → Cadillac F1 Team — verification log (N° 216, issued for 20 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (batch 18): Claude did the research, verification and writing; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code. The brief is issued for the desk row's date, 20 May 2026; the trigger is dated the same day.\n\n**Sandbox limitation, stated plainly:** direct fetches of mercury.com, businesswire.com, cnbc.com and the calendar sites were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## What the thin row got right and wrong\n\n- **Person, trigger and source are correct**: Immad Akhund, Co-Founder & CEO; $200M Series D at $5.2B; Business Wire release of 20 May 2026. The row's 'Mercury Command AI launch pending' was true on the day (Command launched 16 Jun 2026, after the brief date, and is not claimed as launched).\n- **Score.** The row carried 82. Re-scored at 74: capacity and timing are strong, but there is no engineering workstream (MODE B, ops fit 11/20) and consumer reach is limited.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| $200M Series D at $5.2B led by TCV; a16z, Coatue, CRV, Sapphire, Sequoia, Spark; 20 May 2026 | VERIFIED (company release) | Business Wire 20 May 2026; mercury.com blog |\n| Valuation up 49% in 14 months | REPORTED | CNBC 20 May 2026 |\n| $300M Series C at $3.5B led by Sequoia, Mar 2025; $500M revenue 2024; ten profitable quarters; $156B volume | VERIFIED (company release) | Business Wire 26 Mar 2025 |\n| $650M annualised revenue (Q3 2025); 300,000+ customers; one in three US startups; applications 2.5x Q1 2026 | VERIFIED (company release) | Business Wire 20 May 2026; Fortune 7 Nov 2025 |\n| OCC conditional approval, 27 Apr 2026; Mercury Bank, N.A.; Utah; Jon Auxier (ex-SoFi Bank CFO); application Dec 2025 | VERIFIED (company release) | Business Wire 27 Apr 2026; OCC Corporate Decision #1372 |\n| Akhund CEO, Tagher CTO, Zhang COO (founders, 2017); Dan Kang CFO (May 2025); Rachel Moncton Oatway VP Marketing (reports to Akhund); no CMO | VERIFIED / REPORTED (The Org, LinkedIn) | mercury.com blog; The Org |\n| HQ San Francisco | VERIFIED | Business Wire |\n| Grid occupancy (Cadillac roster; Airwallex + Mastercard + Goldman / McLaren; Revolut / Audi; Cash App + Visa / Racing Bulls; Nu + UBS / Mercedes; Barclays + BNY / Williams; UniCredit / Ferrari; Coinbase + Circle + Public / Aston Martin; Visa + Carlyle / Red Bull; MoneyGram / Haas; Mobilize + eToro / Alpine) | VERIFIED | sponsor table `seeds/sponsors.json` |\n| Cadillac is F1's first new American team since Haas (2016) | VERIFIED | formula1.com / ESPN |\n| Canadian GP 22-24 May; Monaco 5-7 Jun; British 3-5 Jul; US GP Oct; Las Vegas Nov | VERIFIED | calendar table + formula1.com dates via ESPN / F1 Experiences |\n\n## Screen-outs and things not claimed\n\n- **Employee count** (Tracxn: 1,729 at Jul 2026) is not used.\n- **No motorsport tie found** for Akhund, Tagher, Zhang, Kang or Oatway after checking; `leadership_ties` is empty.\n- **Mercury is not a partner of any F1 or FE team** (sponsor table; live search).\n- **MODE B is stated plainly**: there is no engineering workstream; the value is audience, hospitality and supplier banking, and ops fit is scored 11/20.\n- **The TWG Global owner overlap** (Cadillac's co-owner is a financial-services group) is listed as a risk to test, not resolved.\n- **Deal size ($4-6M a year) is an ESTIMATE**, labelled as such.\n- **Ramp**, a Mercury competitor, is on 1440's approached list (`data/approached.json`); this brief does not re-pitch Ramp and treats Mercury on its own merits.\n\n## Decision path\n\nImmad Akhund (Co-Founder & CEO) is the sponsorship owner. Path: Rachel Moncton Oatway (VP, Marketing, reporting to Akhund) and Dan Kang (CFO). Jason Zhang (Co-Founder & COO) and Jon Auxier (President & CEO, Mercury Bank) are the operating counterparts. No CMO is listed.\n"
+}

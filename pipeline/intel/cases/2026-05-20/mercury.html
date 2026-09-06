@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Mercury</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "MERCURY · 20 MAY 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 216</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 216 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Mercury</h1>
+  <div class="classline">Fintech · Business Banking for Startups (bank charter pending) · San Francisco (founded 2017) · Private ($5.2B; $200M Series D, May 2026)</div>
+
+  <div class="lede">Mercury, the business-banking platform used by one in three US startups, announced a $200M Series D at a $5.2B valuation led by TCV on 20 May 2026, three weeks after the OCC conditionally approved its own national bank. Revenue passed $650M annualised in 2025 after ten straight profitable quarters.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">74</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Cadillac F1 Team</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>On 20 May Mercury announced a $200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire, Sequoia and Spark returning; CNBC puts the valuation up 49% in 14 months. Sequoia led the $300M Series C at $3.5B in March 2025, when Mercury reported $500M revenue for 2024 and ten straight profitable quarters. It reached $650M annualised revenue in Q3 2025 and serves more than 300,000 customers, one in three US startups. On 27 April the OCC granted conditional approval for Mercury Bank, N.A., headquartered in Utah under Jon Auxier, formerly CFO of SoFi Bank.</p>
+<p>This is a capital and identity inflection at once: fresh money and a company about to become a bank in its own name. Fintech has already found the grid, with Airwallex at McLaren, Revolut as Audi's title partner, Cash App at Racing Bulls and Nu at Mercedes. Mercury's customers are American founders, the audience Cadillac was built to reach, and no bank or fintech has taken the seat at the new American team.</p>
+  <h2>Why Now</h2>
+  <p>The round was announced on 20 May and the bank charter is in its organisation phase; a brand about to become Mercury Bank sets its launch budget now. Canadian GP (24 May), Monaco (7 June) and the British GP (5 July) fall inside the window; Austin and Las Vegas follow in the autumn.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$200M</div><div class="pfk">$200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, S…</div></div>
+    <div class="pf"><div class="pfv">$300M</div><div class="pfk">TCV (lead, Series D); Sequoia Capital led the $300M Series C at $3.5B in March 2025; Andreessen Horowitz, C…</div></div>
+    <div class="pf"><div class="pfv">$650M</div><div class="pfk">$650M annualised revenue reached in Q3 2025 (company-stated); $500M revenue in 2024 with ten straight profi…</div></div>
+    <div class="pf"><div class="pfv">49%</div><div class="pfk">CNBC puts the valuation up 49% in 14 months.</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (sponsor table; 49 of 346 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Cadillac F1 Team<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab prime">PRIME LANE</div>
+      <div class="gfd">greenfield entry — partner roster being built from zero</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Visa Cash App Racing Bulls</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Cash App</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Audi F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Revolut</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">MoneyGram Haas F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">MoneyGram</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A $200M round at $5.2B, $650M-plus of profitable revenue, and a bank charter that turns Mercury into a bank in its own name give it the budget, the motive and a launch to time a partnership to. Cadillac is the American team with no bank on the car, and Monaco and the British GP sit inside the window.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">identity inflection</span><span class="flag">category precedent</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 216</span>
+  </div>
+
+  <h2>WHY CADILLAC F1 TEAM</h2>
+  <p>Cadillac is the first new American team since 2016 and its inaugural roster, TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco and Tommy Hilfiger, carries no bank, fintech or payments partner: Official Banking Partner is a clean category on the American story of the season. Its US rounds, Austin and Las Vegas, are where Mercury's founders, investors and bankers sit. The team is closing its 2027 roster in its first year, so the category is open now and unlikely to stay so.</p>
+
+  <h2>VALUE TO CADILLAC F1 TEAM &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B - halo, with concrete mechanics. No engineering workstream: the value is audience and commerce. Mercury brings 300,000 business customers, one in three US startups, as a guest list and a marketing channel; founder hospitality at Austin and Las Vegas; banking, cards and treasury for the team's US supplier base; launch-year content as Mercury becomes a bank. In return: Official Banking Partner designation, livery presence and driver access for Mercury's founders.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official Banking Partner. <b class="hl">THREE YEARS</b>, 2027-2029, spanning the bank launch and a probable listing window. Estimated $4-6M a year. Scope: sidepod or rear-wing placement, founder hospitality at Austin and Las Vegas, a Mercury Bank launch activation at the US rounds, co-branded content with the team's leadership.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Immad Akhund</div>
+        <div class="role">Co-Founder &amp; CEO, Mercury · <span class="vtag">verified</span></div>
+        <div class="bio">Akhund founded Mercury in 2017 with Max Tagher (CTO) and Jason Zhang (COO) and fronts every raise and the charter; a first sports partnership is his call. Path: Rachel Moncton Oatway, VP Marketing (ex-ClassPass), who reports to him, and Dan Kang, CFO since May 2025. No CMO is listed.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the bank launch.</div>      <div class="quote">“Immad, Mercury is about to become a bank in its own name, and Cadillac is the first American team in a decade with no bank on the car. Revolut and Airwallex have already taken theirs. 25 minutes before Monaco to see the numbers?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Round 20 May; charter approval 27 Apr; Monaco and Silverstone inside the window.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">$5.2B valuation; $650M+ annualised revenue; profitable; $200M raised.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">B2B fintech with a founder brand; consumer reach limited.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Bank launch is a rebrand moment; no listing signal yet.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">11 <span>/ 20</span></div>
+      <div class="why">MODE B: audience and commerce, no engineering workstream.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">REGULATORY TIMING</span> &nbsp;<span class="rc">Final OCC authorisation is not yet granted; a bank in its organisation phase may hold marketing until launch. <b>Counter:</b> Time the announcement to follow final authorisation; make 2027, not 2026, year one.</span></div>
+  <div class="risk"><span class="rt">OWNER OVERLAP</span> &nbsp;<span class="rc">TWG Global, Cadillac's co-owner, is itself a financial-services group and may reserve the banking category. <b>Counter:</b> Ask on the first call; TWG has no startup-banking product, so the lane is complementary.</span></div>
+
+  <h2>Sources <span class="panelnote">— 22 of 22 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation</li><li>https://www.businesswire.com/news/home/20250326427283/en/Mercury-Announces-$300-Million-Series-C-Round-at-$3.5-Billion-Valuation</li><li>https://www.businesswire.com/news/home/20260427949683/en/Mercury-Receives-OCC-Conditional-Approval-to-Establish-Mercury-Bank-N.A.</li>  </ul>
+</div>
+</body>
+</html>

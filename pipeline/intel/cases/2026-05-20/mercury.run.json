@@ -1,0 +1,839 @@
+{
+ "run": {
+  "id": 132,
+  "date": "2026-05-20",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-maqge01v/2026-05-20/mercury.pdf",
+     "web": "/tmp/case-pdf-maqge01v/2026-05-20/mercury.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Mercury",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 18
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 196,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 200,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 74,
+     "reason": "top ranking score",
+     "company": "Mercury",
+     "decision": "selected",
+     "signal_date": "2026-05-20"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Mercury",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 74,
+   "score_breakdown": {
+    "cap": null,
+    "base": 74,
+    "total": 74,
+    "timing": 17,
+    "ops_fit": 11,
+    "ranking": 74,
+    "urgency": 14,
+    "capacity": 18,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 3,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 74,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 74,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "trigger_date": "2026-05-20",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 216,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-maqge01v/2026-05-20/mercury.web.html",
+  "brief_data": {
+   "hq": "San Francisco (founded 2017)",
+   "deck": "Mercury, the business-banking platform used by one in three US startups, announced a $200M Series D at a $5.2B valuation led by TCV on 20 May 2026, three weeks after the OCC conditionally approved its own national bank. Revenue passed $650M annualised in 2025 after ten straight profitable quarters.",
+   "risks": [
+    {
+     "label": "REGULATORY TIMING",
+     "detail": "Final OCC authorisation is not yet granted; a bank in its organisation phase may hold marketing until launch.",
+     "counter": "Time the announcement to follow final authorisation; make 2027, not 2026, year one."
+    },
+    {
+     "label": "OWNER OVERLAP",
+     "detail": "TWG Global, Cadillac's co-owner, is itself a financial-services group and may reserve the banking category.",
+     "counter": "Ask on the first call; TWG has no startup-banking product, so the lane is complementary."
+    }
+   ],
+   "score": 74,
+   "ticker": "Private ($5.2B; $200M Series D, May 2026)",
+   "company": "Mercury",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "label": "TAKEN",
+     "detail": "Cash App",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Audi F1 Team",
+     "label": "TAKEN",
+     "detail": "Revolut",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "MoneyGram Haas F1 Team",
+     "label": "TAKEN",
+     "detail": "MoneyGram",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "identity_inflection",
+    "category_precedent"
+   ],
+   "sources": [
+    "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+    "https://www.businesswire.com/news/home/20250326427283/en/Mercury-Announces-$300-Million-Series-C-Round-at-$3.5-Billion-Valuation",
+    "https://www.businesswire.com/news/home/20260427949683/en/Mercury-Receives-OCC-Conditional-Approval-to-Establish-Mercury-Bank-N.A."
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Immad Akhund before the Monaco GP to confirm the bank-launch timetable, test the TWG Global category question with the team, and size an Official Banking Partner entry against Cadillac's 2027 roster.",
+    "value": [
+     {
+      "text": "300,000 business customers as a marketing channel and a guest list: founder hospitality at Austin and Las Vegas, a Cadillac offer inside the Mercury product for the team's US fan base of business owners, and a Mercury Bank launch activation at the US rounds.",
+      "label": "Audience and commerce (Mode B)"
+     },
+     {
+      "text": "A partner whose customers are one in three US startups brings founders, venture investors and bankers to the team's hospitality, the audience a first-year American team needs to sell its remaining 2027 inventory.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Banking, corporate cards and treasury for the team's US entity and its American supplier base: a real, if modest, operational use that makes the partnership more than a logo.",
+      "label": "Paddock supplier banking"
+     },
+     {
+      "text": "Official Banking Partner designation, sidepod or rear-wing placement, driver access for Mercury's founder community, and co-branded content with the team's engineering and commercial leadership.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 20 May 2026 Mercury announced a $200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital returning. CNBC puts the valuation up 49% in 14 months from the $3.5B Sequoia set in March 2025.",
+      "label": "Trigger"
+     },
+     {
+      "text": "On 27 April 2026 the OCC granted conditional approval for Mercury Bank, N.A., five months after the December 2025 application. The bank will be headquartered in Utah and led by Jon Auxier, formerly CFO of SoFi Bank. A company that has spent seven years as a technology brand on top of partner banks is about to relaunch under its own charter: a rebrand moment with a launch budget attached.",
+      "label": "Becoming a bank"
+     },
+     {
+      "text": "Mercury reported $500M revenue for 2024 with ten straight profitable quarters at the Series C, reached $650M annualised revenue in Q3 2025, and saw applications rise 2.5x in Q1 2026 versus Q1 2025 as AI companies formed at record pace. More than 300,000 customers, one in three US startups, use it.",
+      "label": "Revenue that pays for it"
+     },
+     {
+      "text": "Canadian GP (22-24 May), Monaco GP (5-7 June) and the British GP (3-5 July) fall inside the window. The US GP in Austin and the Las Vegas GP in the autumn are the stages a US bank launch would be timed to; Cadillac closes its 2027 roster in its first season.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Cadillac's inaugural roster carries TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco and Tommy Hilfiger, all joined for 2026, and no bank, fintech or payments partner. Official Banking Partner is a clean category on the newest car on the grid.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Mercury's customers are American founders and finance teams; Cadillac is the first new American team since 2016 and the story of the season for US audiences. Austin and Las Vegas put Mercury's founders, investors and bankers in the same suite as the team's.",
+      "label": "The audience match"
+     },
+     {
+      "text": "Fintech has already found the grid: Airwallex at McLaren, Revolut as Audi's title partner, Cash App at Racing Bulls, Nu at Mercedes, Barclays and BNY at Williams. Each of those teams is now closed to a business bank; Cadillac is not.",
+      "label": "The category precedent"
+     },
+     {
+      "text": "TWG Global, Cadillac's co-owner with General Motors, is a financial-services group. It has no startup-banking product, so Mercury's lane is complementary, but the team may reserve the category; the brief lists this as a risk to test on the first call rather than a reason to stand down.",
+      "label": "The owner question, answered honestly"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Airwallex, a direct business-banking rival, and Goldman Sachs are on the roster; Mastercard is title partner."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "Revolut, a direct rival with Revolut Business, is title partner."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Cash App (Block) and Visa hold the fintech and payments lanes."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "Nu (Nubank) joined for 2026 and UBS holds the banking lane."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Barclays and BNY joined the roster for 2026."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Coinbase, Circle and Public occupy the financial-services tier."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Visa and Carlyle sit on the roster; crowded financial tier."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "UniCredit holds the banking lane."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Mobilize Financial Services and eToro hold the financial lanes."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "MoneyGram is the team's name partner; open on banking, but no US-founder audience story to match Cadillac's."
+     }
+    ]
+   },
+   "date_long": "20 MAY 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "B",
+   "bottom_line": "A $200M round at $5.2B, $650M-plus of profitable revenue, and a bank charter that turns Mercury into a bank in its own name give it the budget, the motive and a launch to time a partnership to. Cadillac is the American team with no bank on the car, and Monaco and the British GP sit inside the window.",
+   "footer_date": "20 MAY 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round 20 May; charter approval 27 Apr; Monaco and Silverstone inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 18,
+     "note": "$5.2B valuation; $650M+ annualised revenue; profitable; $200M raised.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "B2B fintech with a founder brand; consumer reach limited.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 14,
+     "note": "Bank launch is a rebrand moment; no listing signal yet.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 11,
+     "note": "MODE B: audience and commerce, no engineering workstream.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 20 May Mercury announced a $200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire, Sequoia and Spark returning; CNBC puts the valuation up 49% in 14 months. Sequoia led the $300M Series C at $3.5B in March 2025, when Mercury reported $500M revenue for 2024 and ten straight profitable quarters. It reached $650M annualised revenue in Q3 2025 and serves more than 300,000 customers, one in three US startups. On 27 April the OCC granted conditional approval for Mercury Bank, N.A., headquartered in Utah under Jon Auxier, formerly CFO of SoFi Bank.",
+   "the_case_p2": "This is a capital and identity inflection at once: fresh money and a company about to become a bank in its own name. Fintech has already found the grid, with Airwallex at McLaren, Revolut as Audi's title partner, Cash App at Racing Bulls and Nu at Mercedes. Mercury's customers are American founders, the audience Cadillac was built to reach, and no bank or fintech has taken the seat at the new American team.",
+   "track_label": "",
+   "brief_number": "216",
+   "claims_total": 22,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, S…",
+     "value": "$200M",
+     "claim_id": 694,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation"
+    },
+    {
+     "fact": "TCV (lead, Series D); Sequoia Capital led the $300M Series C at $3.5B in March 2025; Andreessen Horowitz, C…",
+     "value": "$300M",
+     "claim_id": 695,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation"
+    },
+    {
+     "fact": "$650M annualised revenue reached in Q3 2025 (company-stated); $500M revenue in 2024 with ten straight profi…",
+     "value": "$650M",
+     "claim_id": 696,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation"
+    },
+    {
+     "fact": "CNBC puts the valuation up 49% in 14 months.",
+     "value": "49%",
+     "claim_id": 706,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Fintech · Business Banking for Startups (bank charter pending)",
+   "value_content": "MODE B - halo, with concrete mechanics. No engineering workstream: the value is audience and commerce. Mercury brings 300,000 business customers, one in three US startups, as a guest list and a marketing channel; founder hospitality at Austin and Las Vegas; banking, cards and treasury for the team's US supplier base; launch-year content as Mercury becomes a bank. In return: Official Banking Partner designation, livery presence and driver access for Mercury's founders.",
+   "value_section": true,
+   "why_team_para": "Cadillac is the first new American team since 2016 and its inaugural roster, TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco and Tommy Hilfiger, carries no bank, fintech or payments partner: Official Banking Partner is a clean category on the American story of the season. Its US rounds, Austin and Las Vegas, are where Mercury's founders, investors and bankers sit. The team is closing its 2027 roster in its first year, so the category is open now and unlikely to stay so.",
+   "deal_arch_para": "Entry as Official Banking Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the bank launch and a probable listing window. Estimated $4-6M a year. Scope: sidepod or rear-wing placement, founder hospitality at Austin and Las Vegas, a Mercury Bank launch activation at the US rounds, co-branded content with the team's leadership.",
+   "footer_company": "MERCURY",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 22,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round was announced on 20 May and the bank charter is in its organisation phase; a brand about to become Mercury Bank sets its launch budget now. Canadian GP (24 May), Monaco (7 June) and the British GP (5 July) fall inside the window; Austin and Las Vegas follow in the autumn.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Akhund founded Mercury in 2017 with Max Tagher (CTO) and Jason Zhang (COO) and fronts every raise and the charter; a first sports partnership is his call. Path: Rachel Moncton Oatway, VP Marketing (ex-ClassPass), who reports to him, and Dan Kang, CFO since May 2025. No CMO is listed.",
+   "decision_maker_name": "Immad Akhund",
+   "decision_maker_role": "Co-Founder & CEO, Mercury",
+   "opening_angle_intro": "Lead with the bank launch.",
+   "opening_angle_quote": "&ldquo;Immad, Mercury is about to become a bank in its own name, and Cadillac is the first American team in a decade with no bank on the car. Revolut and Airwallex have already taken theirs. 25 minutes before Monaco to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Immad Akhund, Co-Founder & CEO at Mercury",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026: Immad Akhund, co-founder and CEO of Mercury, quoted in the Series D release. Founded 2017 by Akhund (CEO), Max Tagher (CTO) and Jason Zhang (COO).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Immad Akhund, Co-Founder & CEO, Mercury at Mercury",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026: Immad Akhund, co-founder and CEO of Mercury, quoted in the Series D release. Founded 2017 by Akhund (CEO), Max Tagher (CTO) and Jason Zhang (COO).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital returning, announced 20 May 2026 (Business Wire; Mercury blog)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Mercury, the business-banking platform used by one in three US startups, announced a $200M Series D at a $5.2B valuation led by TCV on 20 May 2026, three weeks after the OCC conditionally approved its own national bank.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "TCV (lead, Series D); Sequoia Capital led the $300M Series C at $3.5B in March 2025; Andreessen Horowitz, Coatue, CRV, Spark Capital, Sapphire Ventures",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Revenue passed $650M annualised in 2025 after ten straight profitable quarters.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20250326427283/en/Mercury-Announces-$300-Million-Series-C-Round-at-$3.5-Billion-Valuation",
+     "excerpt": "Business Wire, 26 Mar 2025: $300M Series C at a $3.5B valuation led by Sequoia Capital (primary and secondary), with Spark Capital and Marathon new and Coatue, CRV and Andreessen Horowitz returning; $500M revenue in 2024; ten straight quarters of EBITDA and GAAP profitability; $156B annual transaction volume.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "$650M annualised revenue reached in Q3 2025 (company-stated); $500M revenue in 2024 with ten straight profitable quarters (Series C release, March 2025)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20250326427283/en/Mercury-Announces-$300-Million-Series-C-Round-at-$3.5-Billion-Valuation",
+     "excerpt": "Business Wire, 26 Mar 2025: $300M Series C at a $3.5B valuation led by Sequoia Capital (primary and secondary), with Spark Capital and Marathon new and Coatue, CRV and Andreessen Horowitz returning; $500M revenue in 2024; ten straight quarters of EBITDA and GAAP profitability; $156B annual transaction volume.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 20 May Mercury announced a $200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire, Sequoia and Spark returning;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$200M Series D at a $5.2B valuation led by TCV, announced 20 May 2026",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "CNBC puts the valuation up 49% in 14 months.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Airwallex at McLaren, Revolut as Audi's title partner, Cash App at Racing Bulls, Nu at Mercedes, Barclays and BNY at Williams; Cadillac's inaugural roster carries no bank or fintech",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Airwallex → McLaren F1 Team (team_major, active); Cash App → Visa Cash App Racing Bulls (team_major, active); Nu → Mercedes-AMG Petronas F1 Team (team_major, joined); BNY → Atlassian Williams Racing (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Sequoia led the $300M Series C at $3.5B in March 2025, when Mercury reported $500M revenue for 2024 and ten straight profitable quarters.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20250326427283/en/Mercury-Announces-$300-Million-Series-C-Round-at-$3.5-Billion-Valuation",
+     "excerpt": "Business Wire, 26 Mar 2025: $300M Series C at a $3.5B valuation led by Sequoia Capital (primary and secondary), with Spark Capital and Marathon new and Coatue, CRV and Andreessen Horowitz returning; $500M revenue in 2024; ten straight quarters of EBITDA and GAAP profitability; $156B annual transaction volume.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "OCC conditional approval for Mercury Bank, N.A. on 27 April 2026; more than 300,000 customers including one in three US startups; Cadillac is the first new American team on the grid since 2016",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026: more than 300,000 customers including one in three US startups and a growing share of AI companies; in Q3 2025 Mercury reached $650 million in annualised revenue and applications rose 2.5x in Q1 2026 versus Q1 2025 (Fortune, 7 Nov 2025, first reported the $650M figure).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "It reached $650M annualised revenue in Q3 2025 and serves more than 300,000 customers, one in three US startups.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026: more than 300,000 customers including one in three US startups and a growing share of AI companies; in Q3 2025 Mercury reached $650 million in annualised revenue and applications rose 2.5x in Q1 2026 versus Q1 2025 (Fortune, 7 Nov 2025, first reported the $650M figure).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ San Francisco; founded 2017; Mercury Bank, N.A. to be headquartered in Utah",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260427949683/en/Mercury-Receives-OCC-Conditional-Approval-to-Establish-Mercury-Bank-N.A.",
+     "excerpt": "Business Wire, 27 Apr 2026: the Office of the Comptroller of the Currency granted conditional approval to establish Mercury Bank, N.A., five months after the December 2025 application; the bank will be headquartered in Utah and led by Jon Auxier as president and CEO (joined as chief banking officer in August 2025; formerly CFO of SoFi Bank). Mercury now enters the bank-organisation phase before final authorisation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $200M round at $5.2B, $650M-plus of profitable revenue, and a bank charter that turns Mercury into a bank in its own name give it the budget, the motive and a launch to time a partnership to.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Airwallex at McLaren",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Airwallex → McLaren F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Cash App at Racing Bulls",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Cash App → Visa Cash App Racing Bulls (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Nu at Mercedes.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Nu → Mercedes-AMG Petronas F1 Team (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 20 May 2026 Mercury announced a $200M Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital returning.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "CNBC puts the valuation up 49% in 14 months from the $3.5B Sequoia set in March 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+     "excerpt": "Business Wire, 20 May 2026 (company release; also mercury.com/blog/series-d-announcement): Mercury raised a $200 million Series D at a $5.2B valuation led by TCV, with Andreessen Horowitz, Coatue, CRV, Sapphire Ventures, Sequoia Capital and Spark Capital participating. CNBC, 20 May 2026: the valuation is up 49% in 14 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Mercury reported $500M revenue for 2024 with ten straight profitable quarters at the Series C, reached $650M annualised revenue in Q3 2025, and saw applications rise 2.5x in Q1 2026 versus Q1 2025 as AI companies formed at record pace.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20250326427283/en/Mercury-Announces-$300-Million-Series-C-Round-at-$3.5-Billion-Valuation",
+     "excerpt": "Business Wire, 26 Mar 2025: $300M Series C at a $3.5B valuation led by Sequoia Capital (primary and secondary), with Spark Capital and Marathon new and Coatue, CRV and Andreessen Horowitz returning; $500M revenue in 2024; ten straight quarters of EBITDA and GAAP profitability; $156B annual transaction volume.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Canadian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 7: Canadian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Monaco GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 8: Monaco GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
