@@ -1,0 +1,721 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-08-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-il861jeq/2026-08-05/moove.pdf",
+     "web": "/tmp/case-pdf-il861jeq/2026-08-05/moove.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Moove",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "top ranking score",
+     "company": "Moove",
+     "decision": "selected",
+     "signal_date": "2026-08-05"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Moove",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 15,
+    "ops_fit": 13,
+    "ranking": 71,
+    "urgency": 12,
+    "capacity": 15,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 3,
+     "product_to_need": 3,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Jaguar TCS Racing",
+   "source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+   "trigger_date": "2026-08-05",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 151,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-il861jeq/2026-08-05/moove.web.html",
+  "brief_data": {
+   "hq": "Dubai (founded in Lagos, 2020)",
+   "deck": "Moove, the fleet operator that runs Waymo's all-electric Jaguar I-PACE robotaxis in Phoenix and Miami and is Waymo's named partner for London, announced a $250M Series C at a $2.1B valuation on 5 August, led by Mubadala and co-led by Toyota's Woven Capital and Ion Pacific.",
+   "risks": [
+    {
+     "label": "NOT A RACE INPUT",
+     "detail": "Depots and charging orchestration give the team nothing to use; a halo at a manufacturer team can read as a logo.",
+     "counter": "Anchor the deal on the I-PACE fleets and the two matching rounds; keep the activation about cars, not depots."
+    },
+    {
+     "label": "CAPITAL GOES TO FLEETS",
+     "detail": "The round funds owning autonomous vehicles outright, a capital-intensive plan that competes with marketing spend.",
+     "counter": "Size the entry small and value-in-kind heavy: fleet livery and rider activations cost Moove little."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private ($2.1B; $250M Series C, Aug 2026)",
+   "company": "Moove",
+   "gridfit": [
+    {
+     "team": "Jaguar TCS Racing",
+     "label": "TAKEN",
+     "detail": "TCS",
+     "status": "conflict",
+     "recommended": true
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "TAKEN",
+     "detail": "ABT Sportsline",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "partner_adjacency",
+    "market_launch"
+   ],
+   "sources": [
+    "https://businessday.ng/technology/article/meet-ladi-delano-and-jide-odunsi-founders-of-uber-backed-moove/",
+    "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+    "https://techcrunch.com/2024/12/05/waymo-outsources-fleet-operations-to-african-fintech-moove-in-phoenix-and-miami",
+    "https://www.globalfleet.com/en/technology-and-innovation/global/article/moove-raises-250m-accelerate-autonomous-fleet-expansion?curl=1"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Ladi Delano before Jaguar closes its Season 13 roster to agree a London E-Prix announcement window and size an Official Fleet Partner entry built around the Miami and London rounds.",
+    "value": [
+     {
+      "text": "Depots and charging orchestration are not a race-car input, and the brief says so. The value is commercial: a Jaguar-branded robotaxi story during race weeks at Miami and London, rider-to-race activations where Waymo riders are taken to the E-Prix in the cars, and a road-EV proof point the racing programme was built to promote.",
+      "label": "Halo with mechanics (Mode B)"
+     },
+     {
+      "text": "Moove's investors and partners, Mubadala, Toyota's Woven Capital, Uber and Waymo, are the mobility and sovereign-capital audience Jaguar's other partners want in the suite at Miami and London.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Driver appearances at Nest openings, a depot-to-grid content series on charging and energy management, and a reference story Moove can use with every city regulator it approaches.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Fleet Partner designation, sidepod placement, hospitality at the Miami and London rounds, rights to co-brand I-PACE fleet livery on race weeks, driver and engineering access for Moove's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 5 August Mubadala and Moove announced a $250M Series C at a $2.1B valuation, led by Mubadala Investment Company and co-led by Woven Capital, Toyota's growth fund, and Ion Pacific, with BlueCrest and Sona Capital new alongside BlackRock, MUFG, Franklin Templeton, Uber and the Ontario Power Generation Pension Plan. It is a lead-investor release, carried the same day by BusinessWire, TechCrunch and The National.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Moove reports about $420M of annual recurring revenue from roughly 42,000 vehicles in 29 cities across 13 countries, built organically and through the acquisitions of Kovi in Brazil and Tokyo Taxi in Japan. The proceeds fund autonomous fleet ownership and 'Nests', robotics-first depots where robotaxis are charged, serviced and orchestrated, with the autonomous workforce growing from about 150 to about 500 by the end of 2026.",
+      "label": "Scale behind it"
+     },
+     {
+      "text": "Waymo named Moove its fleet partner for London in October 2025, its first European city, operating and maintaining all-electric Jaguar I-PACEs; testing is under way under a government-backed pilot and commercial service is pending regulatory approval. A brand launching driverless Jaguars in London wants to be known there before the cars arrive.",
+      "label": "The London launch"
+     },
+     {
+      "text": "Season 13 opens in Jeddah on 18 December and teams close rosters this autumn. The Miami E-Prix on 20 February and the London E-Prix double-header on 29-30 May 2027 are Moove's two Waymo cities; the Austin E-Prix on 6 February adds a third US stage.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Waymo's Phoenix and Miami fleets that Moove operates and maintains are all-electric Jaguar I-PACEs, and the London fleet will be too. No other team on either grid has its road car in Moove's daily operation.",
+      "label": "The cars Moove runs"
+     },
+     {
+      "text": "Per the sponsor table, Jaguar TCS Racing carries TCS as title partner, Castrol and Jaguar itself, and no fleet, mobility or ride-hail partner; nor does any other Formula E roster. Official Fleet Partner is a clean category.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Jaguar has committed to the GEN4 era, Seasons 13-16 through 2030, so a three-year deal sits inside a confirmed programme, and the London E-Prix is the team's home round in the city where Moove's next launch happens.",
+      "label": "Platform that lasts"
+     },
+     {
+      "text": "Jaguar's Formula E programme exists to sell electric road cars; tens of thousands of driverless I-PACE hours a week in three cities is the most visible real-world use of that car anywhere, and Moove is the operator.",
+      "label": "Road-to-race proof"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Andretti Formula E",
+      "reason": "US team with Miami and Austin rounds, but no vehicle tie; TWG AI and Quest Global fill its technology lanes."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "Penske Autosport's parent runs its own truck-leasing and fleet businesses; a fleet operator on that car conflicts with the owner."
+     },
+     {
+      "team": "Nissan Formula E Team · Citroën Racing · Porsche Formula E Team · Cupra Kiro",
+      "reason": "Manufacturer teams whose road cars are not in Moove's Waymo fleets; a Jaguar-fleet operator would sit awkwardly on a rival OEM's car."
+     },
+     {
+      "team": "Mahindra Racing",
+      "reason": "Mahindra makes ride-hail vehicles in India, one of Moove's markets; the owner competes with Moove's suppliers."
+     },
+     {
+      "team": "Envision Racing · Lola Yamaha ABT",
+      "reason": "Open but not chosen: no vehicle, city or partner tie comparable to Jaguar's."
+     }
+    ]
+   },
+   "date_long": "05 AUG 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Jaguar TCS Racing",
+   "value_mode": "B",
+   "bottom_line": "A $250M round at $2.1B announced by Mubadala, about $420M of recurring revenue, and Jaguar I-PACE robotaxi fleets in Phoenix, Miami and soon London put Moove at peak brand motive with a unique tie to one team. The lane at Jaguar is open; the halo-only value and fleet capex hold the score at 71.",
+   "footer_date": "5 AUG 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Round 5 Aug; off-season, but rosters close before the 18 Dec opener.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "$250M at $2.1B, $420M ARR; capital is earmarked for fleets.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 16,
+     "note": "Runs Jaguar I-PACE fleets; Miami and London map onto rounds.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "London launch pending regulators; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 13,
+     "note": "MODE B halo; lane open; product not a race-team input.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "The round is announced by the lead investor and the company: $250M at $2.1B, led by Mubadala, co-led by Woven Capital and Ion Pacific, with BlueCrest and Sona Capital new alongside BlackRock, MUFG, Franklin Templeton and Uber. Moove reports about $420M of annual recurring revenue from roughly 42,000 vehicles in 29 cities across 13 countries. Proceeds go to owning autonomous fleets outright and to 'Nests', robotics-first depots where robotaxis are charged, serviced and orchestrated, with the autonomous workforce growing from about 150 to about 500 by year-end.",
+   "the_case_p2": "The identity moment is the pivot from financing drivers in Lagos to owning the operating layer beneath robotaxis. Since Waymo contracted Moove for Phoenix and Miami in December 2024, every vehicle it runs there has been a Jaguar I-PACE; London, Waymo's first European city, is next, with Moove as fleet partner and service pending regulators. A company about to put its name on driverless Jaguars in three cities needs a brand its riders, regulators and partners recognise.",
+   "track_label": "",
+   "brief_number": "151",
+   "claims_total": 17,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$250M Series C at a $2.1B valuation, announced 5 Aug 2026 by lead investor Mubadala and the company; co-led…",
+     "value": "$250M",
+     "claim_id": 666,
+     "verified": true,
+     "source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility"
+    },
+    {
+     "fact": "About $420M annual recurring revenue (company release, 5 Aug 2026), from roughly 42,000 vehicles in 29 citi…",
+     "value": "$420M",
+     "claim_id": 668,
+     "verified": true,
+     "source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility"
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Mobility Infrastructure · Autonomous & EV Fleet Operations",
+   "value_content": "MODE B - halo with mechanics. Moove's product, depots and charging orchestration for EV fleets, is not a race-car input, so the value is commercial: Official Fleet Partner, a Jaguar-branded robotaxi story in race weeks at Miami and London, rider-to-race activations, and a demonstrable road-EV use of the I-PACE that the racing programme was built to promote. Moove brings Mubadala, Toyota, Uber and Waymo into the Jaguar suite; the team gives livery, hospitality and driver content.",
+   "value_section": true,
+   "why_team_para": "Jaguar TCS Racing is the only team whose road car Moove already runs: the Waymo fleets it operates in Phoenix and Miami, and will operate in London, are Jaguar I-PACEs. Jaguar has committed to the GEN4 era through 2030, so the platform outlives a three-year deal. The sponsor table shows TCS as title partner, Castrol and Jaguar itself, and no fleet, mobility or ride-hail partner at Jaguar or on any Formula E roster; the lane is clean and the London E-Prix is the home round.",
+   "deal_arch_para": "Entry as Official Fleet Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, spanning the London launch and the fleet-ownership build. Estimated $1.5-2.5M a year. Scope: sidepod placement, Miami and London hospitality, co-branded I-PACE fleet livery on race weeks, driver appearances at Nest openings.",
+   "footer_company": "MOOVE",
+   "why_team_label": "WHY JAGUAR TCS RACING",
+   "claims_verified": 17,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 5 August and teams close Season 13 rosters this autumn, before the Jeddah opener on 18 December; Moove's two Waymo cities then host the Miami E-Prix on 20 February and the London E-Prix on 29-30 May 2027, and London's driverless launch is due the same season.",
+   "confidence_level": "HIGH",
+   "historical_label": null,
+   "decision_maker_bio": "Delano co-founded Moove in Lagos in 2020, is Co-CEO and separately chairman, and fronts the raises; he is UK-based. Path: Jide Odunsi, Co-Founder and Co-CEO; Tayo Oyegunle, COO; Tingting Peng, Chief Capital, Strategy and Impact Officer. No chief marketing officer is listed.",
+   "decision_maker_name": "Ladi Delano",
+   "decision_maker_role": "Co-Founder & Co-CEO, Moove",
+   "opening_angle_intro": "Lead with the cars Moove already runs.",
+   "opening_angle_quote": "&ldquo;Ladi, every Waymo you operate in Phoenix and Miami is a Jaguar, and London is next. Jaguar's race team has no fleet partner and its home race is the London E-Prix. 25 minutes before the roster closes to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO JAGUAR TCS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Ladi Delano, Co-Founder & Co-CEO at Moove",
+   "cited_source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://businessday.ng/technology/article/meet-ladi-delano-and-jide-odunsi-founders-of-uber-backed-moove/",
+     "excerpt": "Businessday NG founder profile, billionaires.africa (6 Aug 2026), LinkedIn and The Official Board: Moove was founded in Lagos in 2020 by Ladi Delano and Jide Odunsi, both UK-based Nigerian entrepreneurs; Delano is Co-Founder and Co-CEO and separately holds the chairmanship; Odunsi is Co-Founder and Co-CEO; Tayo Oyegunle is Chief Operating Officer; Tingting Peng is Chief Capital, Strategy and Impact Officer. No chief marketing officer is named on any leadership listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Ladi Delano, Co-Founder & Co-CEO, Moove at Moove",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://businessday.ng/technology/article/meet-ladi-delano-and-jide-odunsi-founders-of-uber-backed-moove/",
+     "excerpt": "Businessday NG founder profile, billionaires.africa (6 Aug 2026), LinkedIn and The Official Board: Moove was founded in Lagos in 2020 by Ladi Delano and Jide Odunsi, both UK-based Nigerian entrepreneurs; Delano is Co-Founder and Co-CEO and separately holds the chairmanship; Odunsi is Co-Founder and Co-CEO; Tayo Oyegunle is Chief Operating Officer; Tingting Peng is Chief Capital, Strategy and Impact Officer. No chief marketing officer is named on any leadership listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$250M Series C at a $2.1B valuation, announced 5 Aug 2026 by lead investor Mubadala and the company; co-led by Woven Capital (Toyota's growth fund) and Ion Pacific",
+   "cited_source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+     "excerpt": "Mubadala release (5 Aug 2026; also BusinessWire, TechCrunch, The National, Just Auto the same day): Moove raised $250 million in a Series C at a $2.1 billion valuation, led by Mubadala Investment Company and co-led by Woven Capital (Toyota's growth fund) and Ion Pacific; BlueCrest Capital Management and Sona Capital joined as new investors alongside BlackRock, MUFG, Franklin Templeton, Uber, Left Lane, Square Associates, The Latest Ventures and the Ontario Power Generation Pension Plan. Proceeds fund autonomous fleet ownership, robotics-first depot infrastructure called 'Nests' (charging, servicing, maintenance and orchestration), and new market launches; the autonomous-vehicle workforce grows from about 150 to about 500 by the end of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Moove, the fleet operator that runs Waymo's all-electric Jaguar I-PACE robotaxis in Phoenix and Miami and is Waymo's named partner for London, announced a $250M Series C at a $2.1B valuation on 5 August, led by Mubadala and co-led by Toyota's Woven Capital and Ion Pacific.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+     "excerpt": "Mubadala release (5 Aug 2026; also BusinessWire, TechCrunch, The National, Just Auto the same day): Moove raised $250 million in a Series C at a $2.1 billion valuation, led by Mubadala Investment Company and co-led by Woven Capital (Toyota's growth fund) and Ion Pacific; BlueCrest Capital Management and Sona Capital joined as new investors alongside BlackRock, MUFG, Franklin Templeton, Uber, Left Lane, Square Associates, The Latest Ventures and the Ontario Power Generation Pension Plan. Proceeds fund autonomous fleet ownership, robotics-first depot infrastructure called 'Nests' (charging, servicing, maintenance and orchestration), and new market launches; the autonomous-vehicle workforce grows from about 150 to about 500 by the end of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Mubadala Investment Company (lead), Woven Capital and Ion Pacific (co-leads), BlueCrest Capital Management and Sona Capital (new); existing backers include BlackRock, MUFG, Franklin Templeton, Uber and the Ontario Power Generation Pension Plan",
+   "cited_source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+     "excerpt": "Mubadala release (5 Aug 2026; also BusinessWire, TechCrunch, The National, Just Auto the same day): Moove raised $250 million in a Series C at a $2.1 billion valuation, led by Mubadala Investment Company and co-led by Woven Capital (Toyota's growth fund) and Ion Pacific; BlueCrest Capital Management and Sona Capital joined as new investors alongside BlackRock, MUFG, Franklin Templeton, Uber, Left Lane, Square Associates, The Latest Ventures and the Ontario Power Generation Pension Plan. Proceeds fund autonomous fleet ownership, robotics-first depot infrastructure called 'Nests' (charging, servicing, maintenance and orchestration), and new market launches; the autonomous-vehicle workforce grows from about 150 to about 500 by the end of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The round is announced by the lead investor and the company: $250M at $2.1B, led by Mubadala, co-led by Woven Capital and Ion Pacific, with BlueCrest and Sona Capital new alongside BlackRock, MUFG, Franklin Templeton and Uber.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+     "excerpt": "Mubadala release (5 Aug 2026; also BusinessWire, TechCrunch, The National, Just Auto the same day): Moove raised $250 million in a Series C at a $2.1 billion valuation, led by Mubadala Investment Company and co-led by Woven Capital (Toyota's growth fund) and Ion Pacific; BlueCrest Capital Management and Sona Capital joined as new investors alongside BlackRock, MUFG, Franklin Templeton, Uber, Left Lane, Square Associates, The Latest Ventures and the Ontario Power Generation Pension Plan. Proceeds fund autonomous fleet ownership, robotics-first depot infrastructure called 'Nests' (charging, servicing, maintenance and orchestration), and new market launches; the autonomous-vehicle workforce grows from about 150 to about 500 by the end of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "About $420M annual recurring revenue (company release, 5 Aug 2026), from roughly 42,000 vehicles in 29 cities across 13 countries",
+   "cited_source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+     "excerpt": "Mubadala release (5 Aug 2026; also BusinessWire, TechCrunch, The National, Just Auto the same day): Moove raised $250 million in a Series C at a $2.1 billion valuation, led by Mubadala Investment Company and co-led by Woven Capital (Toyota's growth fund) and Ion Pacific; BlueCrest Capital Management and Sona Capital joined as new investors alongside BlackRock, MUFG, Franklin Templeton, Uber, Left Lane, Square Associates, The Latest Ventures and the Ontario Power Generation Pension Plan. Proceeds fund autonomous fleet ownership, robotics-first depot infrastructure called 'Nests' (charging, servicing, maintenance and orchestration), and new market launches; the autonomous-vehicle workforce grows from about 150 to about 500 by the end of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Moove reports about $420M of annual recurring revenue from roughly 42,000 vehicles in 29 cities across 13 countries.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globalfleet.com/en/technology-and-innovation/global/article/moove-raises-250m-accelerate-autonomous-fleet-expansion?curl=1",
+     "excerpt": "Global Fleet and ITWeb Africa, quoting the 5 Aug 2026 release: Moove operates around 42,000 vehicles across 29 cities in 13 countries and reports annual recurring revenue of about $420 million; it has grown organically and through acquisitions including Kovi in Brazil and Tokyo Taxi in Japan.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$250M Series C at a $2.1B valuation to scale autonomous fleet ownership and 'Nest' depot infrastructure, 5 Aug 2026",
+   "cited_source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+     "excerpt": "Mubadala release (5 Aug 2026; also BusinessWire, TechCrunch, The National, Just Auto the same day): Moove raised $250 million in a Series C at a $2.1 billion valuation, led by Mubadala Investment Company and co-led by Woven Capital (Toyota's growth fund) and Ion Pacific; BlueCrest Capital Management and Sona Capital joined as new investors alongside BlackRock, MUFG, Franklin Templeton, Uber, Left Lane, Square Associates, The Latest Ventures and the Ontario Power Generation Pension Plan. Proceeds fund autonomous fleet ownership, robotics-first depot infrastructure called 'Nests' (charging, servicing, maintenance and orchestration), and new market launches; the autonomous-vehicle workforce grows from about 150 to about 500 by the end of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $250M round at $2.1B announced by Mubadala, about $420M of recurring revenue, and Jaguar I-PACE robotaxi fleets in Phoenix, Miami and soon London put Moove at peak brand motive with a unique tie to one team.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+     "excerpt": "Mubadala release (5 Aug 2026; also BusinessWire, TechCrunch, The National, Just Auto the same day): Moove raised $250 million in a Series C at a $2.1 billion valuation, led by Mubadala Investment Company and co-led by Woven Capital (Toyota's growth fund) and Ion Pacific; BlueCrest Capital Management and Sona Capital joined as new investors alongside BlackRock, MUFG, Franklin Templeton, Uber, Left Lane, Square Associates, The Latest Ventures and the Ontario Power Generation Pension Plan. Proceeds fund autonomous fleet ownership, robotics-first depot infrastructure called 'Nests' (charging, servicing, maintenance and orchestration), and new market launches; the autonomous-vehicle workforce grows from about 150 to about 500 by the end of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No fleet-operations, ride-hail or autonomous-mobility partner on any Formula E roster; Zoox sits on Williams' F1 roster; Jaguar TCS Racing carries TCS (title), Castrol and Jaguar",
+   "cited_source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+     "excerpt": "Sponsor table: Jaguar TCS Racing — TCS (title), Castrol, Jaguar (powertrain); no fleet, mobility or ride-hail partner. No Formula E roster carries a fleet-operations or autonomous-mobility brand. Andretti: TWG AI, Quest Global, Crowe UK, Reflo, Nissan powertrain. DS Penske: DS Automobiles, Penske Autosport, TotalEnergies, Mouser, Molex. Nissan: Castrol (unverified). Mahindra: Mahindra & Mahindra, Tech Mahindra. Envision: Envision Group, Sand Technologies. Citroën: Citroën, Stellantis. Zoox is on Williams' F1 roster.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 5 August Mubadala and Moove announced a $250M Series C at a $2.1B valuation, led by Mubadala Investment Company and co-led by Woven Capital, Toyota's growth fund, and Ion Pacific, with BlueCrest and Sona Capital new alongside BlackRock, MUFG, Franklin Templeton, Uber and the Ontario Power Generation Pension Plan.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+     "excerpt": "Mubadala release (5 Aug 2026; also BusinessWire, TechCrunch, The National, Just Auto the same day): Moove raised $250 million in a Series C at a $2.1 billion valuation, led by Mubadala Investment Company and co-led by Woven Capital (Toyota's growth fund) and Ion Pacific; BlueCrest Capital Management and Sona Capital joined as new investors alongside BlackRock, MUFG, Franklin Templeton, Uber, Left Lane, Square Associates, The Latest Ventures and the Ontario Power Generation Pension Plan. Proceeds fund autonomous fleet ownership, robotics-first depot infrastructure called 'Nests' (charging, servicing, maintenance and orchestration), and new market launches; the autonomous-vehicle workforce grows from about 150 to about 500 by the end of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Moove operates and maintains Waymo's all-electric Jaguar I-PACE robotaxi fleets in Phoenix and Miami and is Waymo's named fleet partner for London, the Season 13 home round of Jaguar TCS Racing",
+   "cited_source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2024/12/05/waymo-outsources-fleet-operations-to-african-fintech-moove-in-phoenix-and-miami",
+     "excerpt": "TechCrunch (5 Dec 2024) and EV Magazine: Waymo contracted Moove to handle fleet operations, maintenance and charging infrastructure for its robotaxi service in Phoenix and then Miami, using all-electric Jaguar I-PACE vehicles fitted with the Waymo Driver; Miami launched in early 2026 and opened to all riders in late April 2026 (reported by AV trade press).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Moove reports about $420M of annual recurring revenue from roughly 42,000 vehicles in 29 cities across 13 countries, built organically and through the acquisitions of Kovi in Brazil and Tokyo Taxi in Japan.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globalfleet.com/en/technology-and-innovation/global/article/moove-raises-250m-accelerate-autonomous-fleet-expansion?curl=1",
+     "excerpt": "Global Fleet and ITWeb Africa, quoting the 5 Aug 2026 release: Moove operates around 42,000 vehicles across 29 cities in 13 countries and reports annual recurring revenue of about $420 million; it has grown organically and through acquisitions including Kovi in Brazil and Tokyo Taxi in Japan.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Waymo fleet operations in Phoenix, Arizona and Miami, Florida (opened to all riders in 2026); headquartered in Dubai; founders based in the UK",
+   "cited_source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2024/12/05/waymo-outsources-fleet-operations-to-african-fintech-moove-in-phoenix-and-miami",
+     "excerpt": "TechCrunch (5 Dec 2024) and EV Magazine: Waymo contracted Moove to handle fleet operations, maintenance and charging infrastructure for its robotaxi service in Phoenix and then Miami, using all-electric Jaguar I-PACE vehicles fitted with the Waymo Driver; Miami launched in early 2026 and opened to all riders in late April 2026 (reported by AV trade press).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Miami E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: Miami International Autodrome (Hard Rock Stadium)",
+     "excerpt": "round 3: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+     "excerpt": "Mubadala release (5 Aug 2026; also BusinessWire, TechCrunch, The National, Just Auto the same day): Moove raised $250 million in a Series C at a $2.1 billion valuation, led by Mubadala Investment Company and co-led by Woven Capital (Toyota's growth fund) and Ion Pacific; BlueCrest Capital Management and Sona Capital joined as new investors alongside BlackRock, MUFG, Franklin Templeton, Uber, Left Lane, Square Associates, The Latest Ventures and the Ontario Power Generation Pension Plan. Proceeds fund autonomous fleet ownership, robotics-first depot infrastructure called 'Nests' (charging, servicing, maintenance and orchestration), and new market launches; the autonomous-vehicle workforce grows from about 150 to about 500 by the end of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix on 29-30 May 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Brands Hatch — new home, double-header race 1",
+     "excerpt": "round 12: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 12 calendar (ExCeL London finale) | note: ExCeL, double-header race 1 — season finale weekend",
+     "excerpt": "round 16: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Miami E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: Miami International Autodrome (Hard Rock Stadium)",
+     "excerpt": "round 3: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "London E-Prix double-header on 29-30 May 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Brands Hatch — new home, double-header race 1",
+     "excerpt": "round 12: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
