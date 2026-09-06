@@ -40,9 +40,9 @@ information. Lead with "who to call, why now, which team" — never a research d
 | `brand/assets/` | Logos (navy/gold). Brand: navy `#191a48`, gold `#d1ae7a`, Georgia serif. |
 | `README.md`, `STRATEGY_ASSESSMENT.md`, `PROMPT_DAILY.md` | Project overview, business case, the scheduled daily-run prompt. |
 
-## Current state of play (as of 2026-05-30)
+## Current state of play (legacy engine, as of 2026-05-30 — the platform section below is current)
 
-- **Branch:** `claude/confident-cray-Q9sAc` → **open as PR #1** (github.com/trushil27/1440sports/pull/1). Push to this branch to update the PR; do **not** open a new one.
+- **Branch:** `claude/confident-cray-Q9sAc` → **open as PR #1** (github.com/trushil27/1440sports/pull/1). Push to this branch to update the PR; do **not** open a new one. The user also authorises direct pushes to `main`, which is what the live app publishes from.
 - **Two worked proof heroes** (both verified, 0 blockers, 2 pages, logged in `history.json`):
   - **Cohesity → Cadillac F1 Team** (82/100, HOT) — F1 proof. `briefs/2026-05-29/cohesity.*`
   - **Glean → Mahindra Racing** (72/100, WARM) — FE proof. `briefs/2026-05-30/glean.*`
@@ -162,6 +162,32 @@ bash), saves new cases with `intel.case_record --sync` and pushes them to `main`
 republished to `gh-pages` with the run token. Needs the 7 secrets listed in RUNBOOK §0a. Railway
 stays optional (desk build service + cron). Home card shows "Today's signal" only when the latest
 brief is dated today, else "Latest signal"; every full case ships its 2-page PDF under `site/pdf/`.
+**Every shown signal now carries a full case (6 Sep 2026, MD: "fully developed cases for each of
+those signals"), built at NO model-API cost.** `intel/session_case.py` is the zero-cost case
+runner: a **case spec** (`pipeline/intel/cases/<date>/<stem>.case.json`) supplies what the three
+model stages would produce — the scanned signal, the evidence behind every claim, the written
+brief — and the CODE stages run unchanged (freshness, dedup, scoring, the claims ledger with the
+calendar + sponsor-table checks, the 13-rule audit, the strict 2-page render, the app page). It
+is the same case record the app and `intel.backfill --cases` already understand.
+`docs/CASE_SPEC.md` is the standard + format + workflow; `pipeline/intel/cases/2026-09-06/
+fluidstack.case.json` is the worked example. `python -m intel.session_case <spec> check` must
+print `audit route: pass` and `uncovered: 0` before `build` (exit 0 verified · 2 a claim has no
+evidence · 3 a claim is contradicted by a table). 21 child sessions built the backlog in
+parallel on `cases/batch-01…21` branches; `intel/merge_cases.py` collects those branches and
+turns each `<stem>.screened.json` into a review decision, `intel/rerender_cases.py` re-renders
+recorded cases after a renderer fix, `intel/tempdb.py` is the throw-away Postgres both the tests
+and the runner use. **State: 63 of 63 shown signals verified, audit pass, exactly 2 pages, PDF +
+app page each; 57 signals screened out after a full check** (stale trigger outside the 90-day
+window, contradicted by the primary source, already on the grid, or an honest score under 70) —
+shown in the app under "Screened out after a full check" with the reason and its sources, because
+that judgment is the product. A screen-out decided for one date now applies to the same company's
+other thin rows, and a row is matched under either its stored or its displayed date.
+Defects this run exposed and fixed: a funding "round" read as a race round (`_FUNDING_ROUND_TAIL`);
+a stray backspace byte inside the race-noun regex; GRID FIT showing sponsor-table keys instead of
+2026 entry names; a scanner's honest "nothing found" becoming an unverifiable load-bearing claim
+(`verify.is_negative_finding` — it had left N° 125 Emerald AI and N° 126 CodeRabbit in
+needs_review, both since rebuilt from their own recorded evidence); and a backlog case taking the
+live slot for a day from the brief that actually went out (`backfill._case_import_order`).
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;
@@ -199,6 +225,17 @@ python3 engine/run_daily.py --force <id> --no-email               # force a spec
 python3 engine/verify_brief.py <id> --net                         # trust gate (live citation check)
 python3 pitch/build_deck.py                                       # rebuild MD deck
 python3 pitch/glean_dossier.py                                    # rebuild Glean dossier
+```
+
+The platform (`pipeline/`, all with `PYTHONPATH=pipeline`):
+
+```bash
+python -m intel.session_case <spec>.case.json check     # audit + word ceilings + claim coverage
+python -m intel.session_case <spec>.case.json build     # temp Postgres → case record (no API key)
+python -m intel.merge_cases                             # collect cases/* branches + screen-outs
+python -m intel.rerender_cases                          # re-render records after a renderer fix
+python -m intel.backfill && python -m intel.site_export --out site   # rebuild memory, publish app
+python3 -m pytest pipeline/tests                        # full suite (bootstraps its own Postgres)
 ```
 
 ## Next steps / open TODOs
