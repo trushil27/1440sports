@@ -28,8 +28,12 @@ def test_missing_database_url_is_named(monkeypatch):
     assert "DATABASE_URL: MISSING" in text and "NOT REACHABLE" in text
 
 
-def test_localhost_url_is_named_as_the_container_default():
-    """The alembic.ini default (what the Railway log showed): probed, refused, explained."""
+def test_localhost_url_is_named_as_the_container_default(monkeypatch):
+    """The alembic.ini default (what the Railway log showed): probed, refused, explained.
+    The probe is stubbed so the test does not depend on what listens on the runner's 5432."""
+    monkeypatch.setattr(
+        preflight, "check_database", lambda url, timeout=5: "connection refused (stubbed)"
+    )
     diag = preflight.diagnose(
         {
             "DATABASE_URL": "postgresql://postgres@localhost:5432/intel",
@@ -92,6 +96,35 @@ def test_cli_exit_codes(monkeypatch, tmp_path: Path):
     from intel.config import reset_settings
 
     reset_settings()
-    assert preflight.main([]) == 1
-    assert preflight.main(["--alert", "--service", "desk build service"]) == 0
+    assert preflight.main([]) == preflight.EXIT_DB_UNREACHABLE
+    assert preflight.main(["--alert", "--service", "desk build service"]) == (
+        preflight.EXIT_DB_UNREACHABLE
+    )
+    assert len(list((tmp_path / "o").glob("*.eml"))) == 1
+    assert "desk build service did not start" in next((tmp_path / "o").glob("*.eml")).read_text()
     reset_settings()
+
+
+def test_cli_waits_for_a_database_that_comes_back(monkeypatch, tmp_path: Path):
+    monkeypatch.setenv("DATABASE_URL", "postgresql://postgres@db.internal:5432/railway")
+    monkeypatch.setenv("EXECUTION_MODE", "dry_run")
+    monkeypatch.setenv("OUTBOX_DIR", str(tmp_path / "o"))
+    monkeypatch.setenv("OPERATOR_EMAIL", "ops@example.com")
+    from intel.config import reset_settings
+
+    reset_settings()
+    answers = iter(["refused", "refused", None])  # third probe succeeds
+    monkeypatch.setattr(preflight, "check_database", lambda url, timeout=5: next(answers))
+    monkeypatch.setattr(preflight.time, "sleep", lambda s: None)
+    assert preflight.main(["--alert", "--wait", "30"]) == preflight.EXIT_OK
+    assert not (tmp_path / "o").exists()  # no email when it recovered
+    reset_settings()
+
+
+def test_unparseable_url_is_its_own_problem(monkeypatch):
+    monkeypatch.setattr(preflight, "check_database", lambda url, timeout=5: "x")
+    diag = preflight.diagnose({"DATABASE_URL": "postgresql://u:p@[::1/db", **GOOD_MAIL})
+    assert diag["database_ok"] is False
+    assert "not a valid database URL" in diag["problems"][0]
+    diag = preflight.diagnose({"DATABASE_URL": "not a url", **GOOD_MAIL})
+    assert diag["database_ok"] is False and "not a valid database URL" in diag["problems"][0]

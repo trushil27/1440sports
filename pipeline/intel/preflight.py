@@ -6,10 +6,14 @@ on the Railway service (or the Postgres service is down), Alembic falls back to 
 in a loop: the dashboard just says "Crashed". This module runs first and turns that into a
 one-line diagnosis in the log plus an email to the operator, with no database needed:
 
-    python -m intel.preflight            # prints the diagnosis; exit 1 if the DB is unreachable
-    python -m intel.preflight --alert    # same, and emails the operator; always exits 0
+    python -m intel.preflight                      # diagnosis; exit 0 reachable, 3 unreachable
+    python -m intel.preflight --alert --wait 120   # keep probing for up to 120 s, then email
+                                                   # the operator once; exit 3 if still down
 
-Values are never printed — only whether each variable is set, and the database host.
+Exit codes: 0 database reachable · 3 database unreachable (diagnosed, emailed if --alert) ·
+1 anything else (a defect in preflight itself — the entrypoint must NOT treat that as
+"unreachable" and quietly skip the run). Values are never printed — only whether each
+variable is set, and the database host.
 """
 
 from __future__ import annotations
@@ -17,10 +21,15 @@ from __future__ import annotations
 import datetime as dt
 import os
 import sys
+import time
 from typing import Any
 from urllib.parse import urlsplit
 
 from intel.config import Settings, get_settings, normalise_database_url
+
+EXIT_OK = 0
+EXIT_ERROR = 1
+EXIT_DB_UNREACHABLE = 3
 
 REQUIRED = ["DATABASE_URL", "ANTHROPIC_API_KEY", "PDF_STORAGE_DIR"]
 MAIL = ["OPERATOR_EMAIL", "GRAPH_TENANT_ID", "GRAPH_CLIENT_ID", "GRAPH_SENDER"]
@@ -77,8 +86,13 @@ def diagnose(env: dict[str, str] | None = None, probe: bool = True) -> dict[str,
             "and there is no database there. On Railway: Variables → Add Reference → "
             "Postgres → DATABASE_URL (the variable must be on THIS service)."
         )
+    elif host == "unparseable" or (host or "").startswith(("/", ":")):
+        problems.append(
+            "DATABASE_URL is set but is not a valid database URL (expected "
+            "postgresql://user:password@host:5432/dbname). Re-add the Railway Postgres reference."
+        )
     elif db_error:
-        local = (urlsplit(normalise_database_url(url)).hostname or "") in LOCAL_HOSTS
+        local = (host or "").split(":")[0].split("/")[0] in LOCAL_HOSTS
         if local:
             problems.append(
                 f"DATABASE_URL points at {host}, a local address inside the container where no "
@@ -101,7 +115,9 @@ def diagnose(env: dict[str, str] | None = None, probe: bool = True) -> dict[str,
         )
     return {
         "database_host": host,
-        "database_ok": bool(url) and db_error is None,
+        "database_ok": bool(url)
+        and db_error is None
+        and not any(p.startswith("DATABASE_URL is set but") for p in problems),
         "variables": present,
         "problems": problems,
     }
@@ -156,19 +172,32 @@ def alert(diag: dict[str, Any], settings: Settings | None = None, service: str =
     return mid
 
 
+def _arg(argv: list[str], flag: str, default: str) -> str:
+    return (
+        argv[argv.index(flag) + 1] if flag in argv and len(argv) > argv.index(flag) + 1 else default
+    )
+
+
 def main(argv: list[str] | None = None) -> int:
     argv = sys.argv[1:] if argv is None else argv
-    service = "daily job"
-    if "--service" in argv:
-        service = argv[argv.index("--service") + 1]
+    service = _arg(argv, "--service", "daily job")
+    wait = int(_arg(argv, "--wait", "0"))
     diag = diagnose()
     print("[preflight]\n" + render(diag))
     if diag["database_ok"]:
-        return 0
+        return EXIT_OK
+    # A configured URL that is merely not answering yet (Postgres restarting, deploy race):
+    # keep probing for the window before concluding.
+    url = os.environ.get("DATABASE_URL") or ""
+    deadline = time.monotonic() + wait
+    while wait and url and time.monotonic() < deadline:
+        time.sleep(min(10, max(1, deadline - time.monotonic())))
+        if check_database(url) is None:
+            print("[preflight] database became reachable; continuing")
+            return EXIT_OK
     if "--alert" in argv:
         alert(diag, service=service)
-        return 0
-    return 1
+    return EXIT_DB_UNREACHABLE
 
 
 if __name__ == "__main__":  # pragma: no cover
