@@ -1,0 +1,606 @@
+[
+ {
+  "key": "2026-08-03|basepower",
+  "company": "Base Power",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+  "evidence_excerpt": "Base Power press release, 3 Aug 2026 (BusinessWire; also TechCrunch/Dealroom same day): $1B Series D at a $13B post-money valuation led by Ribbit, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group, with Altimeter, D1, Sands Capital, Coatue, Layer Global and Energy Impact Partners; up from $4B at the Series C (Oct 2025); >$2.5B raised to date; Base Core home battery launched at 39.2 kWh / 78.4 kWh, built in the US.",
+  "corrections": [
+   "battery capacity: recorded '~40 kWh Base Core' -> source says 39.2 kWh (78.4 kWh double unit) (BusinessWire / Dealroom, 3 Aug 2026) - immaterial rounding"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Zach Dell is co-founder and CEO of Base Power (Austin American-Statesman, Aug 2026; Fortune 6 and 11 Aug 2026; Wikipedia).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Base Power Formula E sponsorship Andretti motorsport' - no Base Power sponsorship found; Andretti FE's listed partners are NAGASE, Prysmian, TWG AI etc. (andrettiglobal.com/teams/formula-e/). Nissan supplies Andretti's GEN4 powertrain from 2026/27 (fiaformulae.com, 24 Jul 2026).",
+  "updates": [],
+  "confidence": "HIGH",
+  "notes": "Post-trigger search (3 Aug to 6 Sep 2026): no new funding, M&A, leadership change or sponsorship found. Coverage after 3 Aug is the same Series D / Base Core story (Fortune profile 6 Aug 2026; pv magazine 4 Aug; Solar Power World Aug 2026 on the 39.2 kWh battery entering production at Base Factory 1, Austin; >23,000 batteries installed in Texas and the Chicago area). Austin E-Prix 6 Feb 2027 home-race hook holds (prior check). Trigger/person/motorsport carried from the 5 Sep check. Snippets only; no fetch attempted.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-08-14|dataiku",
+  "company": "Dataiku",
+  "trigger_status": "CORRECTED",
+  "evidence_url": "https://finance.yahoo.com/news/exclusive-ai-data-analytics-startup-165722584.html",
+  "evidence_excerpt": "Reuters exclusive (Oct 2025, via Yahoo Finance): Dataiku hired Morgan Stanley and Citigroup to prepare a US IPO that could come as soon as the first half of 2026; the company said in Oct 2025 it had surpassed $350 million ARR; last priced at $3.7bn (2022). Forge/Capital.com (2026): no S-1 filed yet.",
+  "corrections": [
+   "trigger_date: recorded 2026-08-14 -> the underwriter appointment was reported by Reuters in October 2025 (finance.yahoo.com / investing.com); the 14 Aug 2026 'trigger' is a re-surfacing from an IPO-outlook page (microventures.com), not a new event",
+   "IPO timing: recorded as a live pre-IPO window -> sources expected H1 2026, which has passed with no S-1 found (Forge: 'has not yet filed'); the IPO is slipped/unconfirmed",
+   "trigger text: 'Disney+/ESPN FE broadcast deal' is an unrelated Formula E rights-holder event (screened as rights_holder in data/history_review.json), not a Dataiku fact"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Florian Douetteau is Co-Founder and CEO of Dataiku (Crunchbase person profile; Dataiku founded 2013 with Thomas Cabrol, Clement Stenac, Marc Batty).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Dataiku Formula 1 / Formula E sponsorship partner team' - no result mentions Dataiku (results were generic F1/FE 2026 partner lists).",
+  "updates": [],
+  "confidence": "MEDIUM",
+  "notes": "Post-trigger search (14 Aug to 6 Sep 2026): still no S-1 on EDGAR and no new round found; Forge and Capital.com (Sep 2026) say Dataiku 'has not filed for an IPO yet, though a confidential filing may be in process' and the H1 2026 window has passed. Only company blog posts (27 to 31 Aug 2026) and a 2026 Snowflake Product Partner of the Year award (AOL) surfaced. The prior corrections stand: the underwriter appointment dates from Oct 2025 (Reuters) and the 14 Aug 2026 date is a re-surfacing from an IPO-outlook page. Secondary sources only; no team recorded.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-08-03|valaratomics",
+  "company": "Valar Atomics",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+  "evidence_excerpt": "Valar Atomics company announcement and Bloomberg / TechCrunch, 3 Aug 2026: $1 billion Series B led by Sequoia (Shaun Maguire joins the board) at a $6 billion valuation including the new money, three times the ~$2 billion valuation of the prior round months earlier; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; plus a $200 million credit facility led by Erebor Bank and J.P. Morgan with Crescent Cove and Hercules Capital. The Ward 250 reactor powered an Nvidia Blackwell chip and hosted a website on 1 Jul 2026 (Deseret News; Canary Media), and Valar and Nvidia plan a 30 MW nuclear-powered AI facility in Utah.",
+  "corrections": [
+   "Ward 250 / Nvidia demo date: recorded as part of a 3 Aug event -> the demo was 1 Jul 2026, following criticality outside the national-lab system in June 2026 (Deseret News; company site)",
+   "'presidential Oval Office tie-in 24 Jul 2026': NOT FOUND in any retrieved source (four searches) - treat as unverified",
+   "'DoE Reactor Pilot Program selected': NOT FOUND in retrieved snippets; the only federal reference found is Executive Order 14301 (Deseret News) - treat as unverified",
+   "round detail: recorded '$1B Series B at $6B' is right but omits the $200M credit facility (Erebor / J.P. Morgan) announced the same day (Bloomberg, 3 Aug 2026)"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Isaiah P. Taylor (b. 1999) is founder and CEO of Valar Atomics, El Segundo CA, founded July 2023 (Wikipedia 'Isaiah P. Taylor'; Deseret News 17 Mar 2026; Contrary Research; company announcement quotes him as founder and CEO).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Valar Atomics Formula 1 / Formula E / motorsport sponsorship' - no result mentions Valar Atomics; only generic F1/FE partner lists returned. Not in the desk sponsor table (prior check).",
+  "updates": [],
+  "confidence": "MEDIUM",
+  "notes": "Round confirmed by the company's own announcement, Bloomberg and TechCrunch (all via search snippets; valaratomics.com, bloomberg.com and techcrunch.com not fetched). Two sub-claims in the recorded trigger (Oval Office tie-in 24 Jul; DOE Reactor Pilot Program) were not found and must not be used until sourced. No material event found between 3 Aug and 6 Sep 2026. Nuclear-fission prospect with a defence-adjacent investor base (Sequoia/Maguire, Erebor) - check FE team and series policy before pitching; no team recorded on the row.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-07-16|sambanovasystems",
+  "company": "SambaNova Systems",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+  "evidence_excerpt": "General Atlantic / BusinessWire, 8 Jul 2026 (also TechCrunch and Bloomberg same day): SambaNova completed the first close of $1 billion in Series F financing at an $11 billion post-money valuation, led by General Atlantic with Seligman Ventures, T. Rowe Price Associates and Capital Group; QIA and Battery Ventures also participated; five months after a $350M Series E (Feb 2026). JPMorgan Chase selected SambaNova's SN40L/SN50 systems for on-premises inference.",
+  "corrections": [
+   "round status: recorded 'fresh off a $1B Series F' -> it is a FIRST CLOSE of the Series F, additional investors expected (General Atlantic / TechCrunch, 8 Jul 2026) - the repo's own record already states this"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Rodrigo Liang is CEO and Co-Founder of SambaNova Systems (LinkedIn profile; TechCrunch/Bloomberg 8 Jul 2026 coverage).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'SambaNova Formula 1 / Formula E / motorsport sponsorship Rodrigo Liang' - no motorsport tie found.",
+  "updates": [],
+  "confidence": "HIGH",
+  "notes": "Post-trigger search (16 Jul to 6 Sep 2026): no second close, IPO filing, acquisition or leadership change found; August items are product/blog (MiniMax M3 on SambaCloud 24 Aug; inference posts 10-11 Aug). Desk-critical context surfaced: Intel CEO Lip-Bu Tan chairs SambaNova and Intel holds ~9% after further investments (Reuters exclusive, 1 Apr 2026); Bloomberg reported in Dec 2025 that Intel was in advanced talks to buy SambaNova for ~$1.6B and Reuters says that non-binding term sheet did not result in a deal - superseded by the $1B Series F first close at $11B (8 Jul 2026). The Haas vs Cadillac re-pointing note from the prior check stands.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-07-09|oxylabs",
+  "company": "Oxylabs",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://www.globenewswire.com/news-release/2026/07/09/3324811/0/en/oxylabs-announces-130-million-investment-from-warburg-pincus.html",
+  "evidence_excerpt": "GlobeNewswire / Warburg Pincus, 9 Jul 2026: Oxylabs announced a $130 million investment from Warburg Pincus (Capital Solutions Founders Fund), valuing the company at $3.6 billion — its first outside investment since founding in 2015; $350 million ARR; 350,000+ tech teams served.",
+  "corrections": [],
+  "person_status": "CHANGED",
+  "person_note": "The CEO is Vytautas Savickas; founder Julius Černiauskas moved to Chairman of the Board (oxylabs.io/blog/oxylabs-group-leadership; Forbes Councils profile). No person named 'Julius Irmantas Karosas' was found at Oxylabs — the recorded name appears to be a conflation/invention and must not be used.",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "No Oxylabs F1/FE or other motorsport partnership found in search.",
+  "updates": [],
+  "confidence": "HIGH",
+  "notes": "Post-trigger search (9 Jul to 6 Sep 2026): no new funding, acquisition, leadership change or sponsorship found; August 2026 items on oxylabs.io are product updates (Web Scraper API parsers for Google Search/Scholar/Travel, 18-27 Aug). Prior finding stands and is decision-critical: the recorded person 'Julius Irmantas Karosas' does not exist at Oxylabs - CEO is Vytautas Savickas, founder Julius Cerniauskas is Chairman. Vilnius-based; Warburg Pincus $130M at $3.6B (9 Jul 2026) confirmed in the prior check.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-07-02|higgsfieldai",
+  "company": "Higgsfield AI",
+  "trigger_status": "CORRECTED",
+  "evidence_url": "https://www.prnewswire.com/news-releases/higgsfield-raises-400-million-series-b-financing-at-5-4-billion-valuation-with-annualized-revenue-reaching-700-million-302852430.html",
+  "evidence_excerpt": "Higgsfield press release (PR Newswire, 17 Aug 2026) and CNBC interview with CEO Alex Mashrabov (17 Aug 2026): $400 million Series B at a $5.4 billion valuation led by DST Global with Tribe Capital, Growth Equity at Goldman Sachs Alternatives, Smash Capital, Fifth Wall, Valor Capital, Intel Capital, Liberty Global Tech Ventures, Mirae Asset Capital and NTT DOCOMO Ventures; annualised revenue $700 million; prior round was an $80M Series A extension led by Accel in Jan 2026 at $1.3B (Sacra).",
+  "corrections": [
+   "round: recorded 'reportedly raising at ~$5B' (in progress on 2 Jul) -> closed 17 Aug 2026 as a $400M Series B at a $5.4B valuation led by DST Global (PR Newswire, 17 Aug 2026)",
+   "revenue: recorded '~$500M run-rate' (TechTimes, 30 Jun) -> the company states $700M annualised revenue at the Series B (PR Newswire, 17 Aug 2026); the June figure is superseded, not contradicted"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Alex Mashrabov is CEO and Co-Founder of Higgsfield (Crunchbase person profile; Bloomberg profile; CNBC video 17 Aug 2026 'Higgsfield CEO Alex Mashrabov on new funding round'); previously Head of Generative AI at Snap after Snap bought his AI Factory for $166M; co-founded Higgsfield in 2023 with Erzat Dulat (Wikipedia).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Higgsfield AI Formula 1 / Formula E / motorsport / racing partnership' - no result mentions Higgsfield; results were other AI-in-motorsport deals (Google Cloud-Formula E, Anthropic-Williams, TWG AI-Andretti). Not in the desk sponsor table.",
+  "updates": [
+   {
+    "date": "2026-08-17",
+    "event": "Higgsfield closes $400M Series B at a $5.4B valuation led by DST Global; annualised revenue $700M",
+    "url": "https://www.prnewswire.com/news-releases/higgsfield-raises-400-million-series-b-financing-at-5-4-billion-valuation-with-annualized-revenue-reaching-700-million-302852430.html"
+   }
+  ],
+  "confidence": "MEDIUM",
+  "notes": "The round the 2 Jul signal anticipated has now closed (17 Aug 2026), so the capital catalyst is fresh again - the brief's figures ($500M run-rate, ~$5B) should be updated to $700M / $5.4B. Company release via PR Newswire and CNBC snippets; prnewswire.com not fetched. No motorsport tie found; Visa Cash App RB lane not re-checked here (motorsport search only covered Higgsfield).",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-07-01|joulent",
+  "company": "Joulent",
+  "trigger_status": "CORRECTED",
+  "evidence_url": "https://www.businesswire.com/news/home/20260701013471/en/Joulent-Secures-$1.75B-Strategic-Investment-from-National-Grid-to-Accelerate-Growth-as-Technology-Driven-Energy-Company-Powering-American-Innovation",
+  "evidence_excerpt": "Joulent press release (BusinessWire, 1 Jul 2026) and National Grid Ventures (PRNewswire, 1 Jul 2026): National Grid Ventures agreed to invest $1.75 billion for a 35% stake in Houston-based Joulent LLC; flagship 'Kilby' project to deliver approximately 2.67 GW of generation for a Microsoft-operated data-centre campus under a 20-year PPA.",
+  "corrections": [
+   "investor: recorded 'strategic financing' with no counterparty → a single strategic investor, National Grid Ventures, taking a 35% equity stake (BusinessWire / PRNewswire, 1 Jul 2026) — a stake sale to a utility, not a venture round"
+  ],
+  "person_status": "CHANGED",
+  "person_note": "The recorded placeholder 'CEO (undisclosed)' can be replaced: Chris James is Founder and CEO of Joulent (quoted in the 1 Jul 2026 BusinessWire release and named by Latitude Media 'Inside National Grid's $1.75 billion bet on Joulent', Jul 2026). Surname/title from search snippets; businesswire.com not fetched - confirm on the release before use.",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Joulent motorsport / Formula E / Formula 1 sponsorship' - no result mentions Joulent; only generic FE/F1 sponsorship pages. Not in the desk sponsor table.",
+  "updates": [],
+  "confidence": "MEDIUM",
+  "notes": "No material event found between 1 Jul and 6 Sep 2026 (searches return only the National Grid deal and analysis of it, e.g. Enverus). Context: Joulent launched from stealth on 22 Jun 2026 (BusinessWire) with Project Kilby, a ~2.67 GW West Texas gas-fired facility for a Microsoft-operated data centre under a 20-year PPA, developed with GE Vernova and Chevron's Energy Forge; National Grid Ventures took 35% for $1.75B (1 Jul 2026). Gas-fired power developer, 35% utility-owned - capacity is project finance, not brand budget, and the FE sustainability fit is weak; decision path now has a name (Chris James) but no CMO.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-26|bloomenergy",
+  "company": "Bloom Energy",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026027913/ex991_q126financialresults.htm",
+  "evidence_excerpt": "Bloom Energy Q1 2026 results (8-K exhibit 99.1 / BusinessWire, 28 Apr 2026): revenue $751.1 million, up 130.4% from $326.0 million; product revenue $653.3 million, up 208.4%; gross margin 30.0%; operating income $72.2 million; full-year 2026 guidance raised. Q2 2026 (28 Jul 2026): record revenue $1,065.4 million, up 165.5%; total backlog ~$20 billion with product backlog approaching $6 billion; FY2026 revenue guidance raised to $3.9-4.2 billion.",
+  "corrections": [
+   "'+219% YTD' share-price figure: a market statistic as of late June 2026, not re-verified and now stale - drop or refresh before use",
+   "'~$20B backlog': confirmed as ~$20 billion total backlog in Q2 2026 coverage (Motley Fool / 24-7 Wall St, Jul-Aug 2026); the Q1 release snippet did not show the backlog figure",
+   "'Brookfield $5B / Oracle / Nebius 328MW deals' (from the brief, not the trigger text): not checked in this run"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "KR Sridhar is Founder, Chairman and CEO of Bloom Energy (April 2026 investor presentation, s29.q4cdn.com; bloomenergy.com/team/board-kr-sridhar; Crunchbase; Bloomberg profile).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched '\"Bloom Energy\" Formula 1 / Formula E / motorsport / racing team partner' - no result mentions Bloom Energy; only generic F1/FE partner pages. Not in the desk sponsor table.",
+  "updates": [
+   {
+    "date": "2026-07-28",
+    "event": "Q2 2026 results: record revenue $1,065.4M (+165.5%), product revenue $935.4M (+215%), operating income $182.2M; FY2026 revenue guidance raised to $3.9-4.2B (~100% growth at midpoint); ~$20B total backlog",
+    "url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-Second-Quarter-2026-Financial-Results-and-Raises-Full-Year-2026-Guidance/default.aspx"
+   },
+   {
+    "date": "2026-08",
+    "event": "Launches Power Connect factory-integrated deployment system (claims ~40% faster installation) and expands MiTAC AI-server microgrid partnership to a Fremont campus",
+    "url": "https://investor.bloomenergy.com/press-releases/default.aspx"
+   }
+  ],
+  "confidence": "HIGH",
+  "notes": "Trigger figures verified against the company's own 8-K/press releases (SEC snippet shows 'first-quarter 2026 revenue was $751.1 million'). Refresh the brief to Q2: revenue now >$1B a quarter and guidance $3.9-4.2B. No motorsport tie found; Williams lane not re-checked here. sec.gov / investor.bloomenergy.com fetch not attempted; figures from search snippets of the releases.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-22|commonwealthfusionsystems",
+  "company": "Commonwealth Fusion Systems",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://cfs.energy/news-and-media/commonwealth-fusion-systems-raises-863-million-series-b2-round-to-accelerate-the-commercialization-of-fusion-energy/",
+  "evidence_excerpt": "CFS announced an oversubscribed $863 million Series B2 on 28 August 2025 (Bob Mumgaard post; PR Newswire), with new investors including NVentures (Nvidia), Counterpoint Global, Galaxy Interactive, Planet First Partners and a 12-company Japanese consortium led by Mitsui and Mitsubishi; 'to date, CFS has raised close to $3 billion', funds to complete SPARC and progress the first ARC plant in Virginia.",
+  "corrections": [],
+  "person_status": "CONFIRMED",
+  "person_note": "The Series B2 release quotes Bob Mumgaard as CEO and co-founder of CFS (Aug 2025); DCD and Inc. carry the same title.",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched '\"Commonwealth Fusion\" Formula 1 / Formula E / motorsport / racing sponsorship' (covers both series this time) - no result mentions CFS; only generic sponsor lists. Not in the desk sponsor table.",
+  "updates": [
+   {
+    "date": "2026-07-30",
+    "event": "CFS raises a further $1 billion (institutional investors incl. pension funds, sovereign wealth funds and industrial partners), taking total capital raised to ~$4 billion; SPARC ~80% assembled, first plasma and scientific breakeven targeted for 2027",
+    "url": "https://techcrunch.com/2026/07/30/fusion-power-darling-commonwealth-fusion-systems-raises-another-1b/"
+   }
+  ],
+  "confidence": "MEDIUM",
+  "notes": "A fresh capital catalyst now exists: the $1B round of 30 Jul 2026 (TechCrunch, Boston Globe, Utility Dive) post-dates the 22 Jun signal and lifts the '~$3B raised' figure to ~$4B - the brief should cite this, not the Aug 2025 Series B2. 'Net energy gain in Q1 2027' reads in sources as 'first plasma and scientific breakeven targeted for 2027' (Utility Dive) - soften the quarter. The 'Google power deal' sub-claim was still not checked. Snippets only; cfs.energy and techcrunch.com not fetched.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-21|aumoviose",
+  "company": "Aumovio SE",
+  "trigger_status": "CORRECTED",
+  "evidence_url": "https://www.continental.com/en/investors/events/spin-off-automotive/",
+  "evidence_excerpt": "Continental spin-off page and Wikipedia: AUMOVIO SE began trading on the Frankfurt Stock Exchange on 18 September 2025 as an independent company. S&P AutoTechInsight: Aumovio FY2025 sales EUR 18.5 billion, down 5.6%. Gasgoo / Rubber World, 6 Aug 2026: H1 2026 adjusted sales EUR 8.6 billion (-8.9%), adjusted EBIT EUR 157 million (1.8% margin); full-year 2026 sales guidance cut to EUR 17.0-17.5 billion from EUR 17.0-18.5 billion, citing weaker vehicle production, geopolitics and a BMW legal settlement (30 Jul 2026).",
+  "corrections": [
+   "size: recorded '~EUR19.6B automotive-electronics company' -> EUR 19.6B was FY2024 sales of the spun-off business; FY2025 sales were EUR 18.5B (-5.6%) and H1 2026 EUR 8.6B (-8.9%) with 2026 guidance cut to EUR 17.0-17.5B (S&P AutoTechInsight; Gasgoo 6 Aug 2026) - say 'sales' and use the current figure",
+   "spin-off date: 'Sep 2025' confirmed as first trading day 18 Sep 2025 (Frankfurt); no Aumovio event on 21 Jun 2026 was found - the trigger date is a desk date, not an event date"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Philipp von Hirschheydt has been CEO of AUMOVIO SE since September 2025 (aumovio.com executive-board CV, 2026; AGM CEO speech 13 May 2026, Frankfurt); ex-Continental Executive Board. He held the CFO role on an interim basis until Dr Jutta Doenges became CFO on 1 Mar 2026 (Automotive World; Continental release 28 Aug 2025).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Aumovio Formula 1 / Formula E / motorsport / racing partnership' - no result mentions Aumovio; only ABB/Sennheiser/Autoliv Formula E and Audi-bp F1 items. Not in the desk sponsor table. Continental's own motorsport history (Extreme E tyres) is a tyre business that stayed with Continental, not Aumovio.",
+  "updates": [
+   {
+    "date": "2026-08-06",
+    "event": "H1 2026 results: adjusted sales EUR 8.6B (-8.9%), adjusted EBIT EUR 157M (1.8% margin), Q2 margin 1.2%; full-year 2026 sales guidance cut to EUR 17.0-17.5B; BMW legal dispute settled 30 Jul 2026 with accounting effects in H1",
+    "url": "https://autonews.gasgoo.com/articles/news/aumovio-first-half-sales-86-billion-euros-cuts-full-year-outlook-2085678707032473600"
+   }
+  ],
+  "confidence": "MEDIUM",
+  "notes": "Spin-off and CEO confirmed on primary pages (via snippets; continental.com / aumovio.com not fetched); results figures from Gasgoo / Rubber World / Investing.com transcripts, not the Aumovio release itself. Desk read: a newly independent company with falling sales, 1-2% margins, a guidance cut and restructuring cash-outs (EUR 230M in H1) - brand-spend capacity for a multi-year F1 deal is doubtful right now; the 'race-car-relevant electronics' angle holds but the budget case does not. Williams lane not re-checked here.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-19|cadencedesignsystems",
+  "company": "Cadence Design Systems",
+  "trigger_status": "CONTRADICTED",
+  "evidence_url": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2022/cadence-shifts-into-high-gear-with-mclaren-racing.html",
+  "evidence_excerpt": "Cadence press release (25 May 2022, BusinessWire): Cadence named Official Technology Partner of the McLaren Formula 1 Team in a multi-year deal, supplying Fidelity CFD software, with Cadence branding on the MCL36 from the 2022 Monaco GP; mclaren.com (2024) announced a new multi-year renewal. The Hexagon D&E acquisition itself is confirmed: completed 23 Feb 2026 for approximately €2.7 billion (Cadence/BusinessWire, 23 Feb 2026).",
+  "corrections": [
+   "trigger: 'has never been in motorsport' → Cadence has been Official Technology Partner of McLaren F1 since May 2022, renewed multi-year in 2024 (cadence.com 2022 release; mclaren.com 2024)",
+   "trigger_date: recorded 2026-06-19 → the Hexagon D&E acquisition closed 23 Feb 2026 (BusinessWire, 23 Feb 2026); no Cadence event on 19 Jun 2026 was found",
+   "person role: recorded 'SVP, Marketing & Business Development' → current bio (LinkedIn / Cadence) is Senior Vice President and General Manager, Strategy and New Ventures (corporate strategy, M&A, Molecular Sciences); the Marketing & BD title is the older one carried by aggregators (Comparably, The Org)"
+  ],
+  "person_status": "CHANGED",
+  "person_note": "Nimish Modi is still at Cadence but as SVP & GM, Strategy and New Ventures per his LinkedIn/Cadence bio; he is not the marketing/sponsorship owner, so the decision path needs re-pointing (cadence.com leadership page egress-blocked — confirm there).",
+  "motorsport_status": "EXISTING_PARTNER",
+  "motorsport_note": "McLaren Formula 1 Team - Cadence is Official Technology Partner since May 2022 (Fidelity CFD; livery from Monaco 2022), with a new multi-year renewal announced 2024: https://www.mclaren.com/racing/partners/cadence/mclaren-racing-and-cadence-announce-new-multi-year-partnership/ . Re-checked 6 Sep 2026: the 2024 renewal is the latest McLaren announcement found, Cadence still hosts a 'McLaren and Cadence: Engineering Success in Formula 1' page and the McLaren F1 CFD Student Challenge, and no termination or replacement was found - treat as active in 2026. The search also showed Cadence branding ran on Arrow McLaren IndyCar cars at the Indy 500.",
+  "updates": [],
+  "confidence": "MEDIUM",
+  "notes": "Do not pitch Cadence to Cadillac on a 'never in motorsport' premise - it is a sitting McLaren F1 partner (2022, renewed 2024) with the CFD workstream already deployed there; any approach would be a McLaren-conflict/renewal play, not greenfield. The prior corrections stand (Hexagon D&E deal closed 23 Feb 2026; Nimish Modi is SVP & GM Strategy and New Ventures, not the marketing owner). Current-season roster on racing.mclaren.com/racing/partners/ could not be read (snippet only).",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-14|ramp",
+  "company": "Ramp",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+  "evidence_excerpt": "Ramp press release (PR Newswire, 4 Jun 2026), Bloomberg and CNBC same day: $750 million Series F at a $44 billion valuation, co-led by Iconiq Capital, GIC and Ontario Teachers' Pension Plan, with Goldman Sachs Growth Equity, Morgan Stanley Investment Management and Founders Fund; a ~38% step-up from $32 billion; $3 billion raised to date; annualised revenue crossed $1 billion with positive free cash flow; 70,000+ customers.",
+  "corrections": [
+   "trigger_date: recorded 14 Jun 2026 -> the round was announced 4 Jun 2026 (Bloomberg / PR Newswire); the row's also_surfaced dates 4 and 6 Jun already carry this",
+   "'launching in the UK/EU this summer': NOT FOUND in any retrieved source (three searches) - treat as unverified",
+   "role: recorded 'CEO & Co-Founder' -> Eric Glyman is now Co-Founder & Co-CEO; co-founder Karim Atiyeh was promoted from CTO to co-CEO in June 2026 (ramp.com blog 'Welcoming my Co-Founder Karim as Co-CEO'; Banking Dive; American Banker)"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Eric Glyman is Co-Founder and Co-CEO of Ramp (ramp.com/authors/eric-glyman; Forbes profile; CNBC 16 Jul 2026). Since June 2026 he shares the CEO role with co-founder Karim Atiyeh (ex-CTO), with Rahul Sengottuvelu succeeding as CTO (Banking Dive / Payments Dive) - the decision path now has two principals.",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Ramp fintech Formula 1 / Formula E / motorsport / racing sponsorship' - no result mentions Ramp; results were the general fintech-in-F1 wave (Revolut-Audi, Visa Cash App RB, Coinbase-Aston Martin). Not in the desk sponsor table.",
+  "updates": [
+   {
+    "date": "2026-06",
+    "event": "Ramp names co-founder and CTO Karim Atiyeh co-CEO alongside Eric Glyman; Rahul Sengottuvelu becomes CTO (exact day not in snippets)",
+    "url": "https://www.bankingdive.com/news/ramp-names-karim-atiyeh-co-ceo-glyman-cto-Rahul-Sengottuvelu/824229/"
+   }
+  ],
+  "confidence": "HIGH",
+  "notes": "Desk-critical regardless of verification: Ramp is in data/approached.json - the 1440 human layer has ALREADY APPROACHED Ramp (CLAUDE.md, 16 Jun 2026). Do not re-pitch cold. Round facts verified against the company release and Bloomberg/CNBC (snippets; sites not fetched). The UK/EU launch claim is unsourced. No material post-round event beyond the co-CEO change found to 6 Sep 2026 (no IPO filing).",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-11|snyk",
+  "company": "Snyk",
+  "trigger_status": "CORRECTED",
+  "evidence_url": "https://www.tipranks.com/news/private-companies/snyk-adjusts-leadership-structure-amid-renewed-focus-on-ai-security",
+  "evidence_excerpt": "TipRanks and Clay (2026): CFO Kenneth (Ken) MacAskill assumed an expanded role as Interim CEO & CFO while Snyk searches for a permanent successor, after long-time CEO Peter McKay moved to a Company Advisor role.",
+  "corrections": [
+   "role: recorded 'Chief Executive Officer & CFO' → 'Interim CEO & CFO' during a search for a permanent CEO (TipRanks; Clay, 2026)",
+   "ARR ~$325M and 'CMO seat still vacant' → could not be re-verified live (techculture.biz and snyk.io/about/leadership egress-blocked; search budget exhausted) — treat as unverified as of 5 Sep 2026"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Ken MacAskill holds the CEO and CFO roles per TipRanks/Clay/Bloomberg profile, but the CEO seat is explicitly interim — the recorded role omits this; the in-repo 11 Jun 2026 log (MD screenshots of snyk.io) showed 'CEO & CFO' with no CMO listed.",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Search for Snyk with Formula 1 / Formula E / motorsport sponsorship returned only generic series pages; none found in search.",
+  "updates": [
+   {
+    "date": "2026-06 (late)",
+    "event": "Snyk cuts ~90 jobs to prioritise its AI security platform under interim CEO Ken MacAskill - its fourth round of layoffs; R&D unified under one leader (reported 14 Jul 2026)",
+    "url": "https://www.bostonglobe.com/2026/07/14/business/rapid7-layoffs-snyk-cybersecurity-jobs/"
+   },
+   {
+    "date": "2026-08-04",
+    "event": "Snyk launches Evo Continuous Offensive Security (AI pentesting / agent red-teaming) - product, not capital",
+    "url": "https://snyk.io/news/snyk-launches-evo-continuous-offensive-security/"
+   }
+  ],
+  "confidence": "MEDIUM",
+  "notes": "Key risk re-checked: as of the Boston Globe's 14 Jul 2026 report no permanent CEO had been named; Ken MacAskill remains interim CEO & CFO after Peter McKay stepped down in April 2026 (Boston Globe; Ctech). No CEO appointment found in Aug/Sep 2026 searches. A ~90-person layoff (late Jun 2026) plus an interim finance-first CEO is a weak setting for a 3-year sponsorship commitment. The ~$325M ARR / vacant-CMO claims remain unverified (prior check).",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-09|honeywellaerospace",
+  "company": "Honeywell Aerospace",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://investor.honeywellaerospace.com/news-releases/news-release-details/honeywell-aerospace-completes-spin-honeywell-technologies-and",
+  "evidence_excerpt": "Honeywell Aerospace / Honeywell Technologies releases, 29 Jun 2026, and Form 10-Q for the quarter ended 27 Jun 2026: the spin-off completed on 29 June 2026 via a distribution of one Honeywell Aerospace share for every two Honeywell shares held at the 15 Jun 2026 record date; Honeywell Aerospace Inc. (Phoenix) now trades on Nasdaq as HONA and the parent is renamed Honeywell Technologies. Q2 2026 (5 Aug 2026): sales $4.52 billion, +5% organic; backlog $18.2 billion.",
+  "corrections": [
+   "completion: recorded as prospective ('becomes ... on 29 June 2026') -> completed as scheduled on 29 Jun 2026; ticker HONA (Nasdaq); Honeywell Technologies is the remaining parent (Honeywell release 29 Jun 2026; 8-K)",
+   "'~$17B-revenue': Q2 2026 sales were $4.52B (annualising near $18B) - keep as 'about $17-18B' and note the FY2026 organic-growth guide was cut to 4-5% on 5 Aug 2026"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Jim (James) Currier is President and CEO of Honeywell Aerospace Inc. (Honeywell release 4 Nov 2025 naming CEO and board chair; Form 10-Q Section 302/906 certifications for the quarter ended 27 Jun 2026; Fox Business interview). He presents at the Jefferies Industrials Conference (9 Sep 2026) and Morgan Stanley Laguna (15 Sep 2026). A standalone CMO was not identified in this run.",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched '\"Honeywell Aerospace\" Formula 1 / Formula E / motorsport / racing partnership' - no result mentions Honeywell Aerospace; only generic F1/FE partner pages and Air Race E. Not in the desk sponsor seed (prior check).",
+  "updates": [
+   {
+    "date": "2026-06-29",
+    "event": "Spin-off from Honeywell (now Honeywell Technologies) completes; Honeywell Aerospace begins trading on Nasdaq as HONA",
+    "url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-aerospace-completes-spin-off-from-honeywell-technologies-and-begins-trading-on-nasdaq"
+   },
+   {
+    "date": "2026-08-05",
+    "event": "First standalone results (Q2 2026): sales $4.52B, +5% organic, but full-year organic growth guidance cut to 4-5% from 7-9% on supply-chain constraints; shares fell ~21%; backlog $18.2B",
+    "url": "https://investor.honeywellaerospace.com/news-releases/news-release-details/honeywell-aerospace-reports-second-quarter-results-updates-2026"
+   },
+   {
+    "date": "2026-08-19",
+    "event": "Morgan Stanley upgrades HONA to Overweight",
+    "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/honeywell-stock-steadies-as-honeywell-aerospace-guidance-reset-and-analyst/69980367"
+   }
+  ],
+  "confidence": "HIGH",
+  "notes": "Born-big thesis confirmed on primary sources (company releases and SEC 10-Q/8-K via snippets; sec.gov and honeywell.com not fetched). Timing caveat: the first quarter as a public company brought a guidance cut and a ~21% one-day fall (5-6 Aug 2026) - a CEO under margin pressure may resist a new brand-establishment spend; frame any approach around defence/space/commercial demand and the Sep 2026 investor-conference narrative. No CMO named; Aston Martin lane not re-checked here.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-07|quantinuum",
+  "company": "Quantinuum",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering",
+  "evidence_excerpt": "Quantinuum priced an upsized IPO at $60.00 per share (above the $53–$55 range), raising $1.68 billion, and began trading on Nasdaq as QNT on 4 Jun 2026; shares opened at $68 and closed little changed, giving a market value of $15.7 billion (CNBC, 4 Jun 2026; The Quantum Insider, 4 Jun 2026).",
+  "corrections": [],
+  "person_status": "CONFIRMED",
+  "person_note": "Rajeeb Hazra is President and CEO of Quantinuum (quantinuum.com; MarketWatch interview at IPO). The claim that the board is chaired by Honeywell CEO Vimal Kapur was not checked in this batch.",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "No Quantinuum F1/FE partnership found. Aston Martin's current tech partners include Aramco, Arm (Official AI Compute Platform Partner), Cognizant and Cognition (astonmartinf1.com/en-GB/partners).",
+  "updates": [
+   {
+    "date": "2026-08-11",
+    "event": "First results as a public company (Q2 2026): revenue $8M, +279% YoY; first formal guidance of $28-32M 2026 revenue; $2.11B cash and short-term investments after the $1.7B IPO",
+    "url": "https://www.quantinuum.com/press-releases/quantinuum-reports-second-quarter-2026-results"
+   },
+   {
+    "date": "2026-08-11",
+    "event": "Multi-year strategic partnership with Oracle to offer the Helios quantum computer on Oracle Cloud Infrastructure",
+    "url": "https://www.quantinuum.com/press-releases/quantinuum-and-oracle-partner-to-accelerate-hybrid-quantum-compute-adoption-on-oracle-cloud-infrastructure"
+   }
+  ],
+  "confidence": "HIGH",
+  "notes": "Post-IPO check complete: Q2 results (11 Aug 2026, company release / SEC 8-K exhibit) show a tiny revenue base ($8M/quarter; $28-32M FY guide) against $2.11B cash - capital is there, commercial scale is not; a sponsorship would be pure brand-elevation from a loss-making company. Minor items: $1.5M Albuquerque R&D expansion funding (18 Aug), Singapore Institute of Technology education partnership (15 Aug). The 'board chaired by Honeywell CEO Vimal Kapur' claim and the IPO lock-up expiry (typically ~180 days, i.e. early Dec 2026) were not checked.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-04|databricks",
+  "company": "Databricks",
+  "trigger_status": "CONTRADICTED",
+  "evidence_url": "https://forgeglobal.com/insights/databricks-upcoming-ipo-news/",
+  "evidence_excerpt": "Forge Global / Crypto Briefing / Curved Trading (Jun–Aug 2026): on 4 Jun 2026 Ali Ghodsi called 2026 'a terrible year to go public' and said Databricks would not IPO in 2026; no public or confidential S-1 filed as of mid-Aug 2026, with a listing 'increasingly expected in 2027 or beyond'. Confirmed facts: $5B Series L at $134B in Feb 2026; on 13 Aug 2026 a further $5B round closed at a $190B valuation; annualised revenue run-rate $7B, up more than 80% YoY (Aug 2026).",
+  "corrections": [
+   "IPO claim: recorded 'CEO publicly confirmed H2 2026 IPO target' (4 Jun 2026) → sources report the opposite: Ghodsi said on 4 Jun that 2026 is 'a terrible year to go public' and ruled out a 2026 listing (cryptobriefing.com; curvedtrading.com 'CEO Says Not 2026')",
+   "ARR: recorded '$5.4B up 65% YoY' → not found in any source this session; latest stated figure is a $7B run-rate up >80% YoY (Aug 2026, Forge Global)",
+   "'Panther Labs acquisition opens cybersecurity GTM vertical' → not found in any source this session; unverified"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Ali Ghodsi is Co-Founder & CEO of Databricks (referenced as such across Forge Global, KuCoin, Crypto Briefing coverage of the 4 Jun 2026 remarks).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Databricks Formula 1 / Formula E / motorsport / racing team partnership' - no official team or series partnership found; results are only hobbyist data-engineering projects using F1 data on Databricks, plus unrelated deals (Dell-McLaren, NetApp-Aston Martin, Kroll-Mercedes FE). Not in the desk sponsor table.",
+  "updates": [
+   {
+    "date": "2026-08-13",
+    "event": "Databricks closes a $5B funding round at a $190B valuation (~42% above the Feb 2026 $134B Series L); ARR run-rate $7B, up >80% YoY",
+    "url": "https://forgeglobal.com/insights/databricks-upcoming-ipo-news/"
+   }
+  ],
+  "confidence": "MEDIUM",
+  "notes": "Motorsport lane now cleared live, but the load-bearing why-now stays inverted (prior check): Ghodsi ruled out a 2026 IPO on 4 Jun 2026; $5B at $190B closed 13 Aug 2026 (secondary sources). Repo still gates Databricks as oversaturated under the crowding rule.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-02|cohere",
+  "company": "Cohere",
+  "trigger_status": "CONTRADICTED",
+  "evidence_url": "https://www.astonmartinf1.com/en-GB/news/announcement/cohere-joins-aston-martin-aramco-as-official-generative-ai-partner",
+  "evidence_excerpt": "Aston Martin Aramco F1 Team announcement and Cohere blog, 4 Mar 2026: Cohere joins as Official Generative AI Partner in a multi-year deal, with team-wide access to its 'North' agentic platform and Cohere branding on the chassis side and front-wing mirror arms from the Melbourne season opener. Financials in the trigger hold on secondary sources: ~$240M ARR (BetaKit / Sacra, 2026), ~$7B valuation after the $500M Aug 2025 round at $6.8B was extended by $100M in Sep 2025 (Tracxn / Sacra); CFO Francois Chadwick in place. No S-1/F-1, underwriters or IPO date as of mid-2026 (Value Add VC / Crunchbase 'probable' list).",
+  "corrections": [
+   "'no motorsport footprint ... clean fit for Formula E': CONTRADICTED - Cohere has been Official Generative AI Partner of the Aston Martin Aramco F1 Team since 4 Mar 2026, three months before the 2 Jun signal (astonmartinf1.com; cohere.com/partnerships/aston-martin-f1; BlackBook Motorsport)",
+   "'signalled an IPO is coming soon': no filing, banks or date found as of Sep 2026 - IPO remains REPORTED/unconfirmed",
+   "'~$7B valuation': confirmed as the Sep 2025 extension; no 2026 round found (Sacra / Tracxn)"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Aidan Gomez is Co-Founder and CEO of Cohere since 2019 (Crunchbase; Wikipedia; cohere.com/about listed in results but egress-blocked). CFO Francois Chadwick (Clay). A 'Frank O'Dowd, Chief Revenue Officer' now appears in a 2026 LinkedIn post ('Cohere Appoints Frank O'Dowd as CRO', ex-Cloudera CRO) and an aggregator (nextaipress.com) - the desk previously removed this name as a fabrication; it may be a real 2026 hire but is NOT confirmed on a primary page. Keep the decision path to Gomez/Chadwick until cohere.com/about is read.",
+  "motorsport_status": "EXISTING_PARTNER",
+  "motorsport_note": "Aston Martin Aramco Formula One Team - Official Generative AI Partner, multi-year, announced 4 Mar 2026 (branding from the Australian GP): https://www.astonmartinf1.com/en-GB/news/announcement/cohere-joins-aston-martin-aramco-as-official-generative-ai-partner . No Formula E tie found; Nissan FE not re-checked.",
+  "updates": [],
+  "confidence": "HIGH",
+  "notes": "Do not pitch Cohere to Nissan Formula E as a 'no motorsport footprint' name: it is a sitting Aston Martin F1 partner (from Mar 2026) and the in-repo 2 Jun 2026 verification missed it. Any FE approach would be a second-series extension conversation with a company already spending on F1. No material capital event between 2 Jun and 6 Sep 2026 (only product launches Parse and North Mini Code, 27 Aug 2026). cohere.com fetch blocked; team site via snippet.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-06-01|machindustries",
+  "company": "Mach Industries",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://techcrunch.com/2026/06/01/defense-tech-darling-mach-industries-hits-1-8b-valuation-a-4x-jump-in-a-year/",
+  "evidence_excerpt": "TechCrunch (1 Jun 2026): Mach Industries raised a $300 million Series C at a $1.8 billion valuation, nearly 4x the $470M mark of its June 2025 $100M round; led by Infinite Capital and Ribbit Capital with Bedrock, Sequoia and Khosla; announced less than a month after its $50 million cash-and-equity purchase of solid-rocket-motor firm Exquadrum (Victorville), rebranded Mach Energetics (Orange County Business Journal; Dealroom).",
+  "corrections": [
+   "Mach Energetics: recorded 'launched Mach Energetics commercial propulsion division' → it is the rebrand of the acquired Exquadrum (~$50M deal), not a newly launched division (OCBJ / Dealroom, May–Jun 2026)"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Ethan Thornton is Founder & CEO of Mach Industries, aged 22 per TechCrunch (1 Jun 2026).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched '\"Mach Industries\" Formula 1 / Formula E / motorsport / racing sponsorship' - no result mentions Mach Industries; only generic sponsorship pages. Not in the desk sponsor table.",
+  "updates": [],
+  "confidence": "MEDIUM",
+  "notes": "Motorsport lane cleared live. Prior check stands: $300M Series C at $1.8B (TechCrunch, 1 Jun 2026); Mach Energetics is the rebranded Exquadrum acquisition. Defence-weapons manufacturer (drones, solid rocket motors) - check F1 team/series policy on defence sponsors and the repo blocklist before pitching; post-trigger updates were not in scope for this rerun.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-05-27|cognitionai",
+  "company": "Cognition AI",
+  "trigger_status": "NOT_FOUND",
+  "evidence_url": null,
+  "evidence_excerpt": "Could not verify live today (search budget exhausted; techcrunch.com and Wikipedia egress-blocked).",
+  "corrections": [],
+  "person_status": "CONFIRMED",
+  "person_note": "Scott Wu is co-founder and CEO of Cognition (TechCrunch 29 May 2026 'Cognition's Scott Wu says AI coding agents shouldn't replace humans'; Fortune 7 Jul 2026; Crunchbase person profile; Stripe customer story).",
+  "motorsport_status": "EXISTING_PARTNER",
+  "motorsport_note": "The desk's own sponsor table lists 'Cognition' as a team_major partner that JOINED Aston Martin Aramco F1 Team for the 2026 season (spec/active_sponsor_db.md §2.7; pipeline/intel/seeds/sponsors.json, verified_at 2026-05-20). The table entry is unqualified ('Cognition', no category) — confirm live that it is Cognition AI (Devin) and the deal dates before treating the lane as taken, but on the desk's own record this company is already on the F1 grid.",
+  "updates": [],
+  "confidence": "MEDIUM",
+  "notes": "Person confirmed. Out-of-scope but decision-critical, confirmed incidentally: the Aston Martin 'Cognition' IS Cognition AI (Devin) - Aston Martin Aramco announced a multi-year Global Partner deal with 'Cognition, the dedicated AI coding agent company' in Feb 2026 at the car launch (astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-signs-cognition; Sector, Feb 2026), so this company is already on the F1 grid and must not be pitched cold to another team. Fortune (Jul 2026) and a podcast title reference '$1B at a $26B valuation', consistent with the recorded $25B pre-money, but the trigger itself was not in this rerun's scope.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-05-21|ourahealth",
+  "company": "Oura Health",
+  "trigger_status": "CORRECTED",
+  "evidence_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+  "evidence_excerpt": "Oura Inc. Form S-1 filed publicly with the SEC on 3 Sep 2026 (Bloomberg, 3 Sep 2026; MobiHealthNews; the5krunner 4 Sep 2026): Nasdaq listing under 'OURA'; revenue $1.21 billion for the nine months to 30 Jun 2026, up 74% from $697.6 million; net loss attributable to common stockholders $924.3 million (including a $985.0 million deemed dividend); 5.0 million paid members; Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies lead. The public filing replaces the confidential draft submitted in May 2026. Ring 5 launched May 2026; Kane and Rice signed as global ambassadors on 11 Jun 2026 (BusinessWire).",
+  "corrections": [
+   "IPO status: recorded 'confidential S-1 filed 21 May 2026' -> now a PUBLIC S-1 filed 3 Sep 2026 (SEC; Bloomberg) - the pre-IPO quiet-period window is live and the listing is imminent, so the timing thesis changes",
+   "ambassadors: recorded 'Harry Kane and Declan Rice ambassador deals closed July 2026' -> announced 11 Jun 2026 (BusinessWire / ouraring.com blog)",
+   "banks: recorded 'Goldman Sachs, Morgan Stanley, JPMorgan mandated' -> S-1 lists Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies",
+   "'$2B revenue projected 2026': not found in retrieved snippets - S-1 shows $1.21B for the nine months to 30 Jun 2026 (+74%); treat the $2B figure as an unsourced estimate"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Tom Hale is CEO of Oura, appointed 2022 (Fortune 27 Mar 2026 and 4 Feb 2026; CES 2026 keynote release; LinkedIn; webAI board appointment release, May 2026).",
+  "motorsport_status": "EXISTING_PARTNER",
+  "motorsport_note": "Red Bull Racing (F1) - Oura was named the team's first Official Health Technology Partner in Nov 2020 (https://ouraring.com/blog/redbull/ ; Digital Trends; Beyond the Flag 17 Nov 2020). Whether that deal is still live in 2026 could not be confirmed: 2026 Red Bull partner announcements found (Oracle extension, Ford, Carlyle, Clear) do not mention Oura. Oura also lists NASCAR among its sports partnerships (Beyond the Flag). No Formula E tie found.",
+  "updates": [
+   {
+    "date": "2026-06-11",
+    "event": "Oura signs Harry Kane and Declan Rice as global brand ambassadors ahead of the 2026 FIFA World Cup ('Ready?' campaign)",
+    "url": "https://secure.businesswire.com/news/home/20260611016301/en/URA-Signs-England-Football-Legends-Harry-Kane-and-Declan-Rice-as-Global-Brand-Ambassadors"
+   },
+   {
+    "date": "2026-09-03",
+    "event": "Oura files public S-1 for a Nasdaq IPO (ticker OURA); revenue $1.21B for nine months to 30 Jun 2026 (+74%), 5.0M paid members; Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Co and Jefferies lead",
+    "url": "https://www.bloomberg.com/news/articles/2026-09-03/smart-ring-maker-oura-files-for-us-ipo-as-revenue-surges"
+   }
+  ],
+  "confidence": "HIGH",
+  "notes": "Trigger now superseded by the public S-1 (3 Sep 2026): Oura is days-to-weeks from pricing, in a quiet period, and any sponsorship conversation would be with a company about to list. Motorsport is not greenfield - a Red Bull Racing health-technology partnership exists on record from 2020 (current status unconfirmed) - so 'F1 with no team' framing needs the Red Bull question answered first. Consumer wearables brand: off the desk's B2B/industrial profile. SEC page surfaced in search but sec.gov not fetched; figures from Bloomberg/the5krunner/MobiHealthNews snippets of the filing.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-05-20|mercury",
+  "company": "Mercury",
+  "trigger_status": "CORRECTED",
+  "evidence_url": "https://www.businesswire.com/news/home/20260520511817/en/Mercury-Raises-$200-Million-Series-D-at-$5.2B-Valuation",
+  "evidence_excerpt": "Mercury press release (BusinessWire, 20 May 2026), mercury.com blog and Crunchbase News: $200 million Series D at a $5.2 billion valuation led by TCV with a16z, Coatue, CRV, Sapphire, Sequoia and Spark; total primary and secondary funding ~$700 million; valuation up 49% from $3.5 billion (Series C, Mar 2025); $650 million annualised revenue (Q3 2025); applications up 2.5x in Q1 2026 vs Q1 2025; four consecutive years of GAAP and EBITDA profitability. OCC: conditional approval to establish Mercury Bank, N.A. (Utah) granted 27 Apr 2026 (OCC Corporate Decision #1372; BusinessWire 27 Apr 2026).",
+  "corrections": [
+   "'OCC conditional bank charter pending': the OCC had already GRANTED conditional approval on 27 Apr 2026 (Corporate Decision #1372; Banking Dive; BusinessWire) - what remains pending is final OCC authorisation plus FDIC deposit insurance and Federal Reserve approvals; Jon Auxier will be CEO and president of Mercury Bank, N.A.",
+   "'Mercury Command AI launch pending': NOT FOUND in any retrieved source - the August 2026 product news is 'Mercury Spend' with cards for AI agents (fintech.global, 12 Aug 2026); treat 'Mercury Command' as unverified"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Immad Akhund is co-founder and CEO of Mercury (Mercury Technologies), founded 2017 (Wikipedia 'Mercury Technologies'; Banking Dive Apr 2026; Series D coverage). The chartered bank subsidiary will be run by Jon Auxier as CEO/president (Banking Dive).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Mercury banking fintech Formula 1 / Formula E / motorsport / racing sponsorship' - no result mentions Mercury; results were the general fintech-in-F1 landscape (34 financial sponsors on the 2026 grid; Coinbase-Aston Martin, Revolut, Nubank). Not in the desk sponsor table, blocklist or approached list (prior check).",
+  "updates": [
+   {
+    "date": "2026-08-12",
+    "event": "Launches Mercury Spend: employee and AI-agent cards with budgets and merchant controls inside the banking dashboard",
+    "url": "https://fintech.global/2026/08/12/mercury-puts-ai-agents-on-the-company-spending-line/"
+   },
+   {
+    "date": "2026-08-19",
+    "event": "Adds treasury products with Morgan Stanley Investment Management (MCRYX ultra-short bond fund) and State Street (MRGXX government money-market share class)",
+    "url": "https://fintech.global/2026/08/19/mercury-targets-stronger-startup-cash-returns/"
+   }
+  ],
+  "confidence": "HIGH",
+  "notes": "Round verified against the company's BusinessWire release (surfaced in search; not fetched) and Crunchbase News. The charter story is further along than recorded (conditional approval Apr 2026; final approvals pending as of the latest snippets) - a good why-now if the bank launches in H2 2026, so confirm the final OCC/FDIC status before pitching. Fintech lane on the F1 grid is crowded (Visa Cash App RB, Revolut-Audi, Coinbase-Aston Martin); no team recorded on the row.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-05-15|andurilindustries",
+  "company": "Anduril Industries",
+  "trigger_status": "CORRECTED",
+  "evidence_url": "https://www.bloomberg.com/news/articles/2026-05-13/anduril-valued-at-61-billion-in-round-led-by-thrive-andreessen",
+  "evidence_excerpt": "Bloomberg / TechCrunch / CNBC, 13 May 2026: Anduril raised $5 billion in a Series H led by Thrive Capital and Andreessen Horowitz, doubling its valuation to $61 billion; its previous round was $2.5 billion at a $30.5 billion valuation roughly a year earlier (Yahoo Finance, June 2025).",
+  "corrections": [
+   "'prior $4B Series Mar 2026 at $60B valuation': no such round found — the prior round was $2.5B at $30.5B (mid-2025); the $60B-range valuation ($61B) is the May 2026 Series H itself, not a March round",
+   "valuation: recorded $60B → $61 billion (Bloomberg/TechCrunch 13 May 2026)",
+   "trigger_date: recorded 15 May 2026 → round reported 13 May 2026",
+   "'$20B US Army contract' and '$4.3B projected 2026 revenue': could not be verified in this batch (search budget exhausted) — treat as unverified",
+   "'competitor Shield AI primed for F1 entry': not verified"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Palmer Luckey is co-founder of Anduril Industries (2017) and its public face (Wikipedia; Forbes profile; US Space Force SSC article 'Anduril Co-Founder Palmer Luckey', 2026; Fortune 28 Mar 2026). He is not CEO: Brian Schimpf is CEO and Trae Stephens is chairman (Wikipedia 'Anduril Industries') - route any approach via Schimpf/commercial leadership, with Luckey as the brand principal.",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "No Anduril F1/FE or motorsport partnership found in 2026 sponsor lists (formula1.com, sector.world, f1salaries, pitdebrief).",
+  "updates": [],
+  "confidence": "MEDIUM",
+  "notes": "No material event found between 15 May and 6 Sep 2026: no S-1 or IPO announcement as of mid-Jun 2026 (Forge; Octagon), analysts expect late 2026 or 2027. Two previously unverified trigger items now have secondary support: the US Army awarded a 10-year enterprise contract with a ceiling of up to $20B on 13 Mar 2026, and the company targets ~$4.3B 2026 revenue on ~$2.2B 2025 (Forge Global / Value Add VC - pre-IPO-market sites, not Tier-1). The phantom '$4B March 2026 round' correction from the prior check stands. Defence-tech brand-safety and team-policy questions remain; no team recorded.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-05-11|helsing",
+  "company": "Helsing",
+  "trigger_status": "CORRECTED",
+  "evidence_url": "https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e",
+  "evidence_excerpt": "Helsing newsroom, 13 Jul 2026 (also Yahoo Finance, Crunchbase News): Helsing raised US$1.8 billion in a Series E at an $18 billion valuation, with Dragoneer, Lightspeed, Disruptive, Iconiq, Growth Equity at Goldman Sachs Alternatives, JPMorganChase, CPP Investments, General Catalyst, Plural and StepStone - the round TechCrunch had reported on 11 May 2026 as $1.2 billion in final close. Helsing unveiled its Area 9 research division and launched the RX-1 quadruped robotics platform in Paris on 1 Jun 2026 (helsing.ai newsroom). Bundestag budget committee approved an initial EUR 269 million HX-2 loitering-munition contract in Feb 2026 with a framework capped at EUR 1 billion per company (DroneXL, 25 Feb 2026).",
+  "corrections": [
+   "round size: recorded '$1.2B Series E ... entered final close' -> closed 13 Jul 2026 at $1.8B (upsized) at the same $18B valuation (helsing.ai newsroom; Yahoo Finance)",
+   "HX-2 framework: recorded 'within EUR1.46B framework' -> EUR 1.46B was the ceiling in procurement documents; lawmakers capped the framework at EUR 1 billion per company when approving the EUR 269M initial contract (DroneXL, 25 Feb 2026; Jerusalem Post)",
+   "role: recorded 'CEO & Co-founder' -> Torsten Reil is Co-Founder and Co-CEO (co-CEO structure with Gundbert Scherf) per Crunchbase, LinkedIn and The Org, Jul 2026",
+   "RX-1 'launched June 1 2026' - confirmed (helsing.ai newsroom; Dealroom), so the forward-dated claim in a 11 May row did happen"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Torsten Reil is Co-Founder and Co-CEO of Helsing (Crunchbase; LinkedIn; The Org; Wikipedia), co-founded 2021 with Gundbert Scherf and Niklas Koehler; Reil previously founded NaturalMotion (sold to Zynga). The company runs a co-CEO structure, which changes the decision path - both co-CEOs would need to be in it.",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Helsing defence Formula 1 / Formula E / motorsport / racing sponsorship' - no result mentions Helsing; only generic sponsorship-agency pages. Not in the desk sponsor table (prior check).",
+  "updates": [
+   {
+    "date": "2026-06-01",
+    "event": "Helsing unveils Area 9 research division and launches RX-1, a European-built quadruped robotics research platform (partners ETH Zurich, INRIA)",
+    "url": "https://helsing.ai/newsroom/helsing-unveils-area-9-and-launches-rx-1-its-first-european-robotics-research-platform"
+   },
+   {
+    "date": "2026-07-13",
+    "event": "Series E closes at $1.8B (up from the $1.2B reported in May) at an $18B valuation, making Helsing Europe's largest defence-tech startup",
+    "url": "https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e"
+   }
+  ],
+  "confidence": "HIGH",
+  "notes": "Capital catalyst is now closed and larger than recorded ($1.8B, 13 Jul 2026, company newsroom via snippet; helsing.ai not fetched). Defence-sector prospect (strike drones, loitering munitions): check series/team policy and the repo blocklist (Shield AI is blocklisted) before pitching; no team recorded on the row. Co-CEO structure noted for the decision path.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-04-27|hightouch",
+  "company": "Hightouch",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://www.businesswire.com/news/home/20260427054567/en/Hightouch-Raises-$150-Million-to-Reinvent-How-Marketing-Works-Using-AI",
+  "evidence_excerpt": "Hightouch press release (BusinessWire, 27 Apr 2026; PYMNTS and Adweek 29 Apr 2026): $150 million Series D at a $2.75 billion valuation led by Growth Equity at Goldman Sachs Alternatives and Bain Capital Ventures, with Iconiq Capital, Sapphire Ventures, Amplify Partners, Y Combinator and TD7 (The Trade Desk's venture arm); up from $1.2 billion at the $80M Series C (Feb 2025); ~$322 million raised across six rounds; revenue more than doubled in each of the past two years.",
+  "corrections": [],
+  "person_status": "CONFIRMED",
+  "person_note": "Kashish Gupta and Tejas Manohar are co-founders and Co-CEOs of Hightouch (Gupta's LinkedIn 'Co-CEO @ Hightouch'; Contrary Research; SF Standard 12 May 2026); Josh Curl is co-founder and CTO.",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Hightouch Formula 1 / Formula E / motorsport / racing sponsorship' - no result mentions Hightouch; only generic F1/FE sponsorship pages. Not in the desk sponsor table.",
+  "updates": [],
+  "confidence": "HIGH",
+  "notes": "Round verified against the company's BusinessWire release (surfaced in search; not fetched) and Tier-2 trade coverage. No material event between 27 Apr and 6 Sep 2026: only a Snowflake Product Partner of the Year award (2 Jun) and the Lifecycle Studio product launch (24 Jun); an investment from Snowflake Ventures and Capital One Ventures appears in results without a date. Marketing-tech SaaS at $2.75B - modest capacity for a 3-year F1 deal; no team recorded on the row.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-03-31|tenexai",
+  "company": "TENEX.AI",
+  "trigger_status": "CONFIRMED",
+  "evidence_url": "https://tenex.ai/news/series-b/",
+  "evidence_excerpt": "TENEX.AI newsroom and SC Media / Business Observer (Sarasota), 31 Mar 2026: $250 million Series B led by Crosspoint Capital Partners with Shield Capital and DeepWork Capital, valuing the Sarasota, Florida company at over $1 billion, less than a year after launch, on $25 million of contracted revenue; #1 on the 2026 Cyber 150 fastest-growing list (318% growth). Bashar Abouseido, ex-SVP and CISO of Charles Schwab, appointed President (tenex.ai press release).",
+  "corrections": [
+   "valuation: recorded as not stated -> reported as 'over $1 billion' (SC Media; Tech Funding News; TFN calls it a unicorn) - still not a company-stated figure",
+   "'initiated 250-plus engineer hiring programme': NOT FOUND as a number in retrieved sources; TMCnet reports the money is being spent on people/analysts (no headcount) - treat the 250 figure as unverified",
+   "Abouseido appointment date: the tenex.ai release exists but its date was not in the snippet - do not assert it as part of the 31 Mar event"
+  ],
+  "person_status": "CONFIRMED",
+  "person_note": "Eric Foster is founder and CEO of TENEX.AI (tenex.ai 'A Conversation With CEO Eric Foster'; Pulse 2.0; Black Hat 2026 event listing) - ex-Mandiant, Trustwave SpiderLabs, three-time CISO, former President of Stairwell. Bashar Abouseido is President, formerly SVP & CISO at Charles Schwab (tenex.ai press release).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'TENEX.AI Formula 1 / Formula E / motorsport / racing sponsorship' - no result mentions TENEX; results were the general AI-in-F1 sponsorship wave (Groq, Meta AI, Anthropic-Williams). Not in the desk sponsor table.",
+  "updates": [],
+  "confidence": "MEDIUM",
+  "notes": "Round and people confirmed on the company's own site plus SC Media / Business Observer (snippets; tenex.ai not fetched). Nothing material after 31 Mar 2026: Black Hat 2026 platform launch (3 Aug) and an Armadin joint red-team exercise are product/marketing items. Capacity caveat: ~$25M contracted revenue and a ~$1B valuation do not support a multi-year F1 deal - the recorded 89 / HOT TOP TIER score is not justified by the verified facts; no team recorded on the row.",
+  "checked_at": "2026-09-06"
+ },
+ {
+  "key": "2026-01-01|strava",
+  "company": "Strava",
+  "trigger_status": "CORRECTED",
+  "evidence_url": "https://press.strava.com/articles/strava-confidential-submission-of-draft-registration-statement-for-IPO",
+  "evidence_excerpt": "Strava press release, 2 Feb 2026: confidential submission of a draft registration statement (S-1) to the SEC for a proposed IPO, first reported 8 Jan 2026 (SiliconANGLE / Bloomberg) with Goldman Sachs leading; valued at $2.2 billion (May 2025). As of 15 Aug 2026 no public S-1 exists on EDGAR, no deal has priced and the 'as soon as this spring' window has passed (Forge; QuantLogix); Forge price implies ~$2.2B (28 Aug 2026).",
+  "corrections": [
+   "trigger_date: recorded 1 Jan 2026 (placeholder) -> confidential filing reported 8 Jan 2026 and confirmed by Strava on 2 Feb 2026 (press.strava.com; SiliconANGLE)",
+   "IPO timing: 'pre-IPO brand-building window open' -> still no public S-1 as of mid-Aug 2026; the spring 2026 target slipped with no new date (Forge, 23 Jul 2026)",
+   "'AI coaching product launch planned post-funding': NOT FOUND in retrieved sources - unverified"
+  ],
+  "person_status": "CHANGED",
+  "person_note": "The CEO is Michael Martin (ex-YouTube/Google), appointed 2 Jan 2024 (press.strava.com 'Strava Appoints Google Executive Michael Martin as CEO'; LinkedIn; Crunchbase) - he made the 2026 IPO remarks. Michael Horvath is co-founder and former CEO (2009-13 and 2019-23), not CEO. Leadership team completed Aug 2025: CFO Matt Anderson (ex-Nextdoor/Block, IPO-experienced) and CMO Louisa Wee (PR Newswire, 19 Aug 2025).",
+  "motorsport_status": "NONE_FOUND",
+  "motorsport_note": "Searched 'Strava Formula 1 / Formula E / motorsport / racing partnership' - no Strava partnership found; the only hit is Track Titan, an unrelated startup billed as 'Strava for motorsport'. Not in the desk sponsor table.",
+  "updates": [],
+  "confidence": "MEDIUM",
+  "notes": "Recorded decision-maker is wrong (Horvath left the CEO seat in 2023; Martin is CEO). The S-1 is confirmed by the company's own release (via snippet; press.strava.com egress-blocked) but the IPO has stalled - no public filing or pricing to 6 Sep 2026, so the 'window open' why-now is weak. Consumer fitness app at ~$2.2B, off the desk's B2B/industrial profile; the CMO (Louisa Wee) is the natural sponsorship owner if pursued. Strava is a spec section 9 regression case in pipeline/tests.",
+  "checked_at": "2026-09-06"
+ }
+]
