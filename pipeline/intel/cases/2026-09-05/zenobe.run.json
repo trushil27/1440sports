@@ -1,0 +1,741 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-09-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-cqm8rgll/2026-09-05/zenobe.pdf",
+     "web": "/tmp/case-pdf-cqm8rgll/2026-09-05/zenobe.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Zenobē",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "top ranking score",
+     "company": "Zenobē",
+     "decision": "selected",
+     "signal_date": "2026-06-15"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Zenobē",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 12,
+    "ops_fit": 16,
+    "ranking": 71,
+    "urgency": 12,
+    "capacity": 15,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 3,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Jaguar TCS Racing",
+   "source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "trigger_date": "2026-06-15",
+   "trigger_reason": "financing round"
+  }
+ ],
+ "brief": {
+  "number": 130,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-cqm8rgll/2026-09-05/zenobe.web.html",
+  "brief_data": {
+   "hq": "London (North American HQ Chicago)",
+   "deck": "Zenobē, the London fleet-electrification and grid-battery operator owned by KKR and Infracapital, secured c.£980M of new financing on 15 June 2026 to put 1,200 more electric buses on UK and Irish roads, taking capital raised past £3.2B, then added a $400M Australasian platform and a German acquisition within six weeks.",
+   "risks": [
+    {
+     "label": "DEBT, NOT EQUITY",
+     "detail": "The £980M is bank debt for buses and chargers, not a marketing budget, and the company's revenue is not public.",
+     "counter": "Price the entry at £1-2M with in-kind supply; the Extreme E precedent shows the budget line exists."
+    },
+    {
+     "label": "CHAMPIONSHIP RULES",
+     "detail": "Event power at an E-Prix is the championship's remit; team-level powerskid use needs Formula E's approval.",
+     "counter": "Start with garage, hospitality and depot load, which need no approval; add trackside supply later."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private (KKR / Infracapital; c.£980M financing, Jun 2026)",
+   "company": "Zenobē",
+   "gridfit": [
+    {
+     "team": "Jaguar TCS Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "financing_event",
+    "motorsport_precedent",
+    "home_race"
+   ],
+   "sources": [
+    "https://www.zenobe.com/our-story",
+    "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+    "https://www.zenobe.com/extreme-e/",
+    "https://www.prnewswire.com/news-releases/zenob-expands-its-north-american-fleet-with-acquisition-of-revolv-302718718.html",
+    "https://www.zenobe.com/news-and-events/zenobe-400-million-financing-zero-emission-transport-australia-new-zealand/",
+    "https://www.zenobe.com/news-and-events/zenobe-new-investment-kkr-infracapital/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Donald Weir before the Jeddah opener to confirm the financing and the Extreme E budget history on the record, agree a Brands Hatch announcement window, and size an Official Fleet Electrification and Energy Storage Partner entry at Jaguar TCS Racing for Seasons 13-15.",
+    "value": [
+     {
+      "text": "Second-life battery powerskids for the team's garage and hospitality load at European rounds, subject to the championship's event-power rules, replacing generator diesel with a visible, on-camera story. Zenobē ran exactly this for five Extreme E seasons.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Zenobē's fleet-as-a-service model, vehicles, chargers, batteries and finance, applied to the team's Kidlington base and support fleet, giving the champions a measured emissions reduction they can report and Zenobē a reference site.",
+      "label": "Depot and fleet electrification"
+     },
+     {
+      "text": "Zenobē brings bus operators, transport authorities, city officials and the 22 banks behind its facility to Brands Hatch and Berlin; a guest list that overlaps with the public-sector and financial audience TCS and Chase already court.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Official Fleet Electrification and Energy Storage Partner designation, sidepod branding, Brands Hatch and Berlin hospitality, paddock-power content, and driver access for Zenobē's customer events in the UK, Europe, North America and Australasia.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 15 June 2026 Zenobē announced c.£980M of new financing for its UK and Ireland electric-fleet facility, the facility's third round: £480M of new long-dated term commitments, a £400M capital-expenditure facility and £100M of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva. It funds more than 1,200 new electric buses and their charging over three years and takes capital raised since 2017 past £3.2B.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Nine days after the UK round, Zenobē closed a $400M platform for zero-emission heavy-vehicle fleets across Australia and New Zealand, seeded with four operating depots. On 27 July it bought Bavaria's sdp energie and with it a 1.75 GW pipeline of transmission-connected battery projects in Germany. Combined with the €325M European facility, the company expects to support up to 5,000 electric buses by 2028. A company scaling on four continents at once is at the point where a global brand gets built.",
+      "label": "Three financings in six weeks"
+     },
+     {
+      "text": "Zenobē was Extreme E's Official Energy Storage Supplier from the series' first season in 2021, powering remote paddocks with powerskids built from second-life bus batteries. Extreme E ran its farewell event in October 2025. The company has proved it will fund motorsport and has just lost the property it funded; Formula E is the obvious successor and the powerskid story transfers intact.",
+      "label": "A motorsport budget with nowhere to go"
+     },
+     {
+      "text": "Formula E's GEN4 era opens with the Jeddah double-header on 18-19 December 2026. The London E-Prix moves from ExCeL to Brands Hatch on 29-30 May 2027, a new home for the reigning champions' home race, about forty miles from Zenobē's London office and within reach of every UK bus operator it sells to.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Jaguar TCS Racing's roster in the sponsor table is TCS as title partner and Castrol, with Jaguar as powertrain supplier and parent; the team's own partner page adds Wolfspeed, Reflo, OpenText, Dow and Chase. None is a fleet-electrification, charging or energy-storage brand. Official Fleet Electrification and Energy Storage Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Jaguar TCS Racing won the 2025/26 Teams' World Championship at the London finale with Mitch Evans and António Félix da Costa, 17 points clear of Porsche, and is committed to the GEN4 era through 2030 under team principal Ian James. A partner joining for Season 13 joins the reigning champions in the first year of a new car.",
+      "label": "The champions"
+     },
+     {
+      "text": "Zenobē is London-headquartered and Britain's largest owner and operator of transmission-connected batteries; Jaguar TCS Racing is run from Kidlington, Oxfordshire. The Brands Hatch home race puts both in front of the transport authorities, bus operators and lenders that decide Zenobē's UK pipeline.",
+      "label": "British on British"
+     },
+     {
+      "text": "Jaguar's parent sells vehicles to the same fleet buyers Zenobē electrifies. A joint proposition to fleet owners, vehicle plus depot plus charging plus finance, is a commercial programme the team's parent can carry beyond the racetrack.",
+      "label": "Fleet customers in common"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Envision Racing",
+      "reason": "The owner, Envision Group, runs its own battery and storage businesses (Envision Energy, Envision AESC): a storage operator on that car competes with the owner. Paysafe became title partner on 14 August 2026."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell is the energy partner and Shell's fleet-charging business is a direct rival."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "TotalEnergies, which sells fleet charging, holds the energy lane; DS Automobiles leaves after Season 12 and Penske's Season 13 entry was unregistered at the last report."
+     },
+     {
+      "team": "Porsche Formula E Team",
+      "reason": "TDK, a battery and component maker, is the official technology partner; German team, no UK home-race story."
+     },
+     {
+      "team": "Andretti Formula E",
+      "reason": "Open lane and a US audience, but Zenobē's core market and home race are British; better kept for US-led prospects."
+     },
+     {
+      "team": "Nissan Formula E Team · Mahindra Racing · Cupra Kiro · Citroën Racing",
+      "reason": "Open but not chosen: no champion status, no British home story and no comparable fleet-customer overlap."
+     }
+    ]
+   },
+   "date_long": "05 SEP 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Jaguar TCS Racing",
+   "value_mode": "A",
+   "bottom_line": "£980M closed in June, a $400M Australasian platform and a German acquisition inside six weeks, five seasons of paying for motorsport at Extreme E, and a home race at Brands Hatch in May: Zenobē has the budget, the habit and the stage. The fleet and storage lane at Jaguar TCS Racing is open.",
+   "footer_date": "5 SEP 2026",
+   "score_cells": [
+    {
+     "num": 12,
+     "note": "Trigger 15 Jun is twelve weeks old; GEN4 opener in December, Brands Hatch in May.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "£3.2B raised, KKR-owned; mostly project debt, revenue not public.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 16,
+     "note": "Fleet electrification is Formula E's own story; British; Extreme E precedent.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No listing or deadline; the home-race debut is the soft trigger.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: paddock power and depot electrification; open lane.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Zenobē announced on 15 June that 22 banks, NatWest, Lloyds, Santander and Aviva among them, had committed c.£980M to its UK and Ireland electric-fleet facility: £480M of long-dated term debt, a £400M capex line and £100M of ancillaries. Capital raised since 2017 now exceeds £3.2B. Nine days later it closed a $400M platform for zero-emission fleets in Australia and New Zealand, and on 27 July it bought Bavaria's sdp energie with a 1.75 GW German battery pipeline. KKR and Infracapital have been joint majority owners since a c.£870M equity round in September 2023.",
+   "the_case_p2": "This is a company that has already paid for motorsport in kind: its second-life bus-battery powerskids were Extreme E's official energy-storage supply from the series' first season to its final event in October 2025. With Extreme E gone, that budget line is orphaned. Zenobē now sells fleet electrification to bus operators in Britain, Europe, North America and Australasia, and the buyers it needs are transport authorities, fleet owners and the banks that fund them.",
+   "track_label": "",
+   "brief_number": "130",
+   "claims_total": 17,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "c.£980M financing announced 15 Jun 2026 for the UK and Ireland electric-fleet facility (£480M long-dated te…",
+     "value": "£980M",
+     "claim_id": 664,
+     "verified": true,
+     "source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/"
+    },
+    {
+     "fact": "Capital raised since 2017 now exceeds £3.2B.",
+     "value": "£3.2B",
+     "claim_id": 675,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "Nine days later it closed a $400M platform for zero-emission fleets in Australia and New Zealand, and on 27…",
+     "value": "$400M",
+     "claim_id": 676,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "KKR and Infracapital have been joint majority owners since a c.£870M equity round in September 2023.",
+     "value": "£870M",
+     "claim_id": 677,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Fleet Electrification · Electric Buses, Charging & Grid Storage",
+   "value_content": "MODE A - operational. Zenobē's second-life battery powerskids powered five Extreme E paddocks; at Jaguar they can carry garage and hospitality load at European rounds where event-power rules allow, cutting generator diesel on camera. Off track, Zenobē electrifies the team's Kidlington depot and support fleet under its fleet-as-a-service model. Commercially: Brands Hatch hospitality for transport authorities, fleet owners and lenders, and an Official Fleet Electrification Partner designation.",
+   "value_section": true,
+   "why_team_para": "Jaguar TCS Racing are the reigning Teams' World Champions, run from Kidlington, Oxfordshire, and committed to GEN4 through 2030. The roster in the sponsor table is TCS as title partner and Castrol; there is no fleet, charging or storage brand, so the lane is open. A British electrification operator on the British champions' car at a British home race is the cleanest story on the grid.",
+   "deal_arch_para": "Entry as Official Fleet Electrification and Energy Storage Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15 (2026/27 to 2028/29), from the GEN4 debut through the first two Brands Hatch home races. Estimated £1-2M a year, part-payable in powerskid supply and depot electrification. Scope: sidepod branding, Brands Hatch and Berlin hospitality, paddock-power content, and a bus-operator guest programme.",
+   "footer_company": "ZENOBĒ",
+   "why_team_label": "WHY JAGUAR TCS RACING",
+   "claims_verified": 17,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Three financings in six weeks reset the marketing calendar. Formula E's GEN4 era opens in Jeddah on 18 December, and the London E-Prix moves to Brands Hatch on 29-30 May 2027: the reigning champions' home race, forty miles from Zenobē's London office, is the natural launch stage.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 130",
+   "decision_maker_bio": "Weir joined Zenobē as CEO in 2025; a first Formula E partnership is his call. Path: Steven Meersman, Co-Founder and Director, EV Fleet; Tim Boothman, Chief Commercial Officer, Electric Fleet; Iain Wetherall, CFO, formerly CFO of Wizz Air. No chief marketing officer is listed.",
+   "decision_maker_name": "Donald Weir",
+   "decision_maker_role": "Chief Executive Officer, Zenobē",
+   "opening_angle_intro": "Lead with Extreme E and Brands Hatch.",
+   "opening_angle_quote": "&ldquo;Donald, Zenobē powered Extreme E's paddock for five seasons and that series has gone. The reigning Formula E champions race at Brands Hatch next May with no fleet or storage partner on the car. 25 minutes to see what the seat costs?&rdquo;",
+   "value_section_label": "VALUE TO JAGUAR TCS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Donald Weir, Chief Executive Officer at Zenobē",
+   "cited_source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/our-story",
+     "excerpt": "Zenobē 'Our Story' and news pages (search summaries; domain egress-blocked) with Craft, Equilar and LinkedIn listings: Dr Donald Weir, Chief Executive Officer, joined in 2025 ('Zenobē welcomes Dr Donald Weir as CEO'); founders James Basden (Network Infrastructure), Steven Meersman (EV Fleet) and Nicholas Beatty (Finance and ANZ) remain directors; Tim Boothman, Chief Commercial Officer, Electric Fleet; Iain Wetherall, Chief Financial Officer, formerly CFO of Wizz Air and Kiwi.com; Steve Holliday, Non-Executive Chairman; Maggie Clancy, Executive Vice President, US EV Sales and Marketing. No chief marketing officer is listed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Donald Weir, Chief Executive Officer, Zenobē at Zenobē",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/our-story",
+     "excerpt": "Zenobē 'Our Story' and news pages (search summaries; domain egress-blocked) with Craft, Equilar and LinkedIn listings: Dr Donald Weir, Chief Executive Officer, joined in 2025 ('Zenobē welcomes Dr Donald Weir as CEO'); founders James Basden (Network Infrastructure), Steven Meersman (EV Fleet) and Nicholas Beatty (Finance and ANZ) remain directors; Tim Boothman, Chief Commercial Officer, Electric Fleet; Iain Wetherall, Chief Financial Officer, formerly CFO of Wizz Air and Kiwi.com; Steve Holliday, Non-Executive Chairman; Maggie Clancy, Executive Vice President, US EV Sales and Marketing. No chief marketing officer is listed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "c.£980M financing announced 15 Jun 2026 for the UK and Ireland electric-fleet facility (£480M long-dated term commitments, £400M capex facility, £100M ancillaries) from 22 banks; capital raised since 2017 now over £3.2B; equity from KKR (c.£600M) and Infracapital (c.£270M) since September 2023",
+   "cited_source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Zenobē, the London fleet-electrification and grid-battery operator owned by KKR and Infracapital, secured c.£980M of new financing on 15 June 2026 to put 1,200 more electric buses on UK and Irish roads, taking capital raised past £3.2B, then added a $400M Australasian platform and a German acquisition within six weeks.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "KKR and Infracapital (joint majority shareholders since Sep 2023); Jera and TEPCO Power Grid (minority); lenders include NatWest, Lloyds, Santander and Aviva",
+   "cited_source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Zenobē announced on 15 June that 22 banks, NatWest, Lloyds, Santander and Aviva among them, had committed c.£980M to its UK and Ireland electric-fleet facility: £480M of long-dated term debt, a £400M capex line and £100M of ancillaries.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "c.£980M financing announced 15 Jun 2026 to fund more than 1,200 new electric buses and charging in the UK and Ireland over three years; followed by a $400M Australia and New Zealand platform (24 Jun) and the acquisition of German battery developer sdp energie (27 Jul)",
+   "cited_source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Capital raised since 2017 now exceeds £3.2B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No fleet-electrification, charging or storage brand on any Formula E team roster in the sponsor table; Shell at Lola Yamaha ABT and TotalEnergies at DS Penske hold energy lanes; Envision Group (owner of Envision Racing) runs its own storage business",
+   "cited_source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Shell → Lola Yamaha ABT Formula E Team (team_major, active); TotalEnergies → DS Penske (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Nine days later it closed a $400M platform for zero-emission fleets in Australia and New Zealand, and on 27 July it bought Bavaria's sdp energie with a 1.75 GW German battery pipeline.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-400-million-financing-zero-emission-transport-australia-new-zealand/",
+     "excerpt": "Zenobē newsroom, 24 Jun 2026 (search summary; The Driven, Sustainable Bus, HVIA): closed a $400 million financing platform for zero-emission heavy-vehicle fleets across Australia and New Zealand, the first integrated multi-site platform of its kind there, seeded with four operating depots (Leichhardt; Dunedin, West Auckland, Greater Wellington).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Official energy-storage supplier to Extreme E from its first season to its final event in October 2025, using second-life bus-battery powerskids; Jaguar TCS Racing are the 2025/26 Teams' World Champions and the London E-Prix moves to Brands Hatch on 29-30 May 2027",
+   "cited_source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/extreme-e/",
+     "excerpt": "Zenobē x Extreme E page, Extreme E newsroom ('Zenobe's second-life batteries continue to power Extreme E's paddock for Season 3') and Electrek, 1 Mar 2023 (search summaries): Zenobē was Extreme E's Official Energy Storage Supplier from the series' inaugural 2021 season, supplying 'powerskids' built from repurposed electric-bus batteries (about 150 kWh each) that powered the paddock in remote locations, avoiding roughly 15 tonnes of CO2 a season. Extreme E ran a one-off farewell double-header at Qiddiya City on 4-5 Oct 2025 and was succeeded by the hydrogen series Extreme H (Wikipedia; SportsPro).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "KKR and Infracapital have been joint majority owners since a c.£870M equity round in September 2023.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-new-investment-kkr-infracapital/",
+     "excerpt": "Zenobē newsroom, 7 Sep 2023 (search summary; PR Newswire, Energy-Storage.News, IPE Real Assets): c.£600 million investment from KKR and a further c.£270 million from existing shareholder Infracapital (c.£870 million in total); on completion KKR and Infracapital became joint majority shareholders; Jera and TEPCO Power Grid remain minority strategic shareholders.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "North American headquarters in Chicago with a New York office; acquired California electric-truck operator Revolv in March 2026; electric school-bus deployments in Massachusetts and New York",
+   "cited_source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/zenob-expands-its-north-american-fleet-with-acquisition-of-revolv-302718718.html",
+     "excerpt": "Zenobē via PR Newswire, 19 Mar 2026, and zenobe.com/north-america (search summaries): acquisition of California-based electric-truck operator Revolv (13 customer sites, 100-plus electric trucks); North American headquarters in Chicago with a subsidiary office in New York; electric school-bus deployments in Massachusetts (35 buses) and Copiague, Long Island (10); Canadian entry through 7Gen and the City of Brampton.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "£980M closed in June, a $400M Australasian platform and a German acquisition inside six weeks, five seasons of paying for motorsport at Extreme E, and a home race at Brands Hatch in May: Zenobē has the budget, the habit and the stage.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "financing round",
+   "cited_source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 15 June 2026 Zenobē announced c.£980M of new financing for its UK and Ireland electric-fleet facility, the facility's third round: £480M of new long-dated term commitments, a £400M capital-expenditure facility and £100M of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix moves to Brands Hatch on 29-30 May 2027",
+   "cited_source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Brands Hatch — new home, double-header race 1",
+     "excerpt": "round 12: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "It funds more than 1,200 new electric buses and their charging over three years and takes capital raised since 2017 past £3.2B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Nine days after the UK round, Zenobē closed a $400M platform for zero-emission heavy-vehicle fleets across Australia and New Zealand, seeded with four operating depots.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-400-million-financing-zero-emission-transport-australia-new-zealand/",
+     "excerpt": "Zenobē newsroom, 24 Jun 2026 (search summary; The Driven, Sustainable Bus, HVIA): closed a $400 million financing platform for zero-emission heavy-vehicle fleets across Australia and New Zealand, the first integrated multi-site platform of its kind there, seeded with four operating depots (Leichhardt; Dunedin, West Auckland, Greater Wellington).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Combined with the €325M European facility, the company expects to support up to 5,000 electric buses by 2028.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+     "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix moves to Brands Hatch on 29-30 May 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Brands Hatch — new home, double-header race 1",
+     "excerpt": "round 12: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The London E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 12 calendar (ExCeL London finale) | note: ExCeL, double-header race 1 — season finale weekend",
+     "excerpt": "round 16: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "run_date": "2026-09-05",
+ "signal_date": "2026-06-15",
+ "stem": "zenobe",
+ "number": 130,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Zenobē",
+  "signal_date": "2026-06-15",
+  "score": 71,
+  "tier": "WARM",
+  "track": 1,
+  "person": "Donald Weir",
+  "role": "Chief Executive Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+  "industry_meta": "Fleet Electrification · Electric Buses, Charging & Grid Storage · London",
+  "recommended_team": "Jaguar TCS Racing",
+  "recommended_series": "FE",
+  "timing_label": "WARM",
+  "trigger_reason": "financing round",
+  "key_facts": {
+   "funding": "c.£980M financing announced 15 Jun 2026 for the UK and Ireland electric-fleet facility (£480M long-dated term commitments, £400M capex facility, £100M ancillaries) from 22 banks; capital raised since 2017 now over £3.2B; equity from KKR (c.£600M) and Infracapital (c.£270M) since September 2023",
+   "investors": "KKR and Infracapital (joint majority shareholders since Sep 2023); Jera and TEPCO Power Grid (minority); lenders include NatWest, Lloyds, Santander and Aviva",
+   "revenue": "",
+   "trigger": "c.£980M financing announced 15 Jun 2026 to fund more than 1,200 new electric buses and charging in the UK and Ireland over three years; followed by a $400M Australia and New Zealand platform (24 Jun) and the acquisition of German battery developer sdp energie (27 Jul)",
+   "competitor_signal": "No fleet-electrification, charging or storage brand on any Formula E team roster in the sponsor table; Shell at Lola Yamaha ABT and TotalEnergies at DS Penske hold energy lanes; Envision Group (owner of Envision Racing) runs its own storage business",
+   "strategic_hook": "Official energy-storage supplier to Extreme E from its first season to its final event in October 2025, using second-life bus-battery powerskids; Jaguar TCS Racing are the 2025/26 Teams' World Champions and the London E-Prix moves to Brands Hatch on 29-30 May 2027",
+   "us_presence": "North American headquarters in Chicago with a New York office; acquired California electric-truck operator Revolv in March 2026; electric school-bus deployments in Massachusetts and New York",
+   "alumni_match": "",
+   "taxonomy_category": "D1",
+   "ops_fit_note": "MODE A: second-life battery powerskids for garage and hospitality power where event rules allow, plus depot and support-fleet electrification at Kidlington"
+  },
+  "score_breakdown": {
+   "timing": 12,
+   "capacity": 15,
+   "brand_fit": 16,
+   "urgency": 12,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 3
+   }
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": ["weir", "meersman", "basden", "beatty", "boothman", "wetherall", "holliday", "clancy", "no chief marketing", "chief commercial", "wizz air"],
+   "url": "https://www.zenobe.com/our-story",
+   "excerpt": "Zenobē 'Our Story' and news pages (search summaries; domain egress-blocked) with Craft, Equilar and LinkedIn listings: Dr Donald Weir, Chief Executive Officer, joined in 2025 ('Zenobē welcomes Dr Donald Weir as CEO'); founders James Basden (Network Infrastructure), Steven Meersman (EV Fleet) and Nicholas Beatty (Finance and ANZ) remain directors; Tim Boothman, Chief Commercial Officer, Electric Fleet; Iain Wetherall, Chief Financial Officer, formerly CFO of Wizz Air and Kiwi.com; Steve Holliday, Non-Executive Chairman; Maggie Clancy, Executive Vice President, US EV Sales and Marketing. No chief marketing officer is listed.",
+   "method": "manual"
+  },
+  {
+   "needles": ["£980m", "980", "15 jun", "15 june", "£480m", "£400m", "£100m", "22 banks", "natwest", "lloyds", "santander", "aviva", "1,200", "£3.2b", "3.2", "5,000", "€325m", "three years", "financing round", "since 2017", "uk and ireland"],
+   "url": "https://www.zenobe.com/news-and-events/zenobe-secures-980m-financing-electric-buses-uk-ireland/",
+   "excerpt": "Zenobē newsroom, 15 Jun 2026 (search summary; route-one.net dates it 15 Jun, electrive 17 Jun, Sustainable Bus and Bus & Coach Buyer carry the same): c.£980 million of new financing for its UK and Ireland EV-fleet debt facility, the facility's third round: £480 million of new long-dated term commitments, a £400 million capital-expenditure facility and £100 million of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva; funds more than 1,200 new electric buses and charging over the next three years; total capital raised since 2017 now over £3.2 billion; with the €325 million European facility, up to 5,000 electric buses by 2028.",
+   "method": "manual"
+  },
+  {
+   "needles": ["kkr", "infracapital", "£600m", "£270m", "£870m", "september 2023", "sep 2023", "joint majority", "jera", "tepco"],
+   "url": "https://www.zenobe.com/news-and-events/zenobe-new-investment-kkr-infracapital/",
+   "excerpt": "Zenobē newsroom, 7 Sep 2023 (search summary; PR Newswire, Energy-Storage.News, IPE Real Assets): c.£600 million investment from KKR and a further c.£270 million from existing shareholder Infracapital (c.£870 million in total); on completion KKR and Infracapital became joint majority shareholders; Jera and TEPCO Power Grid remain minority strategic shareholders.",
+   "method": "manual"
+  },
+  {
+   "needles": ["$400m", "australia", "new zealand", "australasia", "24 jun", "24 june", "leichhardt", "dunedin", "auckland", "wellington", "nine days"],
+   "url": "https://www.zenobe.com/news-and-events/zenobe-400-million-financing-zero-emission-transport-australia-new-zealand/",
+   "excerpt": "Zenobē newsroom, 24 Jun 2026 (search summary; The Driven, Sustainable Bus, HVIA): closed a $400 million financing platform for zero-emission heavy-vehicle fleets across Australia and New Zealand, the first integrated multi-site platform of its kind there, seeded with four operating depots (Leichhardt; Dunedin, West Auckland, Greater Wellington).",
+   "method": "manual"
+  },
+  {
+   "needles": ["sdp energie", "sdp", "germany", "german", "bavaria", "1.75 gw", "27 jul", "27 july"],
+   "url": "https://www.zenobe.com/news-and-events/zenobe-acquires-sdp-energie-a-leading-battery-storage-developer-to-accelerate-bess-deployment-in-the-german-market/",
+   "excerpt": "Zenobē newsroom, 27 Jul 2026 (search summary; Energy-Storage.News, ESS News, Enerdata): acquisition of Bavaria-headquartered battery-storage developer sdp energie, Zenobē's entry into the German market, with a 1.75 GW pipeline of transmission-connected battery projects across six sites; financial terms not disclosed.",
+   "method": "manual"
+  },
+  {
+   "needles": ["chicago", "new york", "revolv", "california", "massachusetts", "school bus", "north america", "brampton", "7gen"],
+   "url": "https://www.prnewswire.com/news-releases/zenob-expands-its-north-american-fleet-with-acquisition-of-revolv-302718718.html",
+   "excerpt": "Zenobē via PR Newswire, 19 Mar 2026, and zenobe.com/north-america (search summaries): acquisition of California-based electric-truck operator Revolv (13 customer sites, 100-plus electric trucks); North American headquarters in Chicago with a subsidiary office in New York; electric school-bus deployments in Massachusetts (35 buses) and Copiague, Long Island (10); Canadian entry through 7Gen and the City of Brampton.",
+   "method": "manual"
+  },
+  {
+   "needles": ["extreme e", "powerskid", "second-life", "second life", "energy storage supplier", "energy-storage supplier", "150 kwh", "15 tons", "15 tonnes", "october 2025", "final event", "first season", "five seasons", "qiddiya", "in kind", "paid for motorsport"],
+   "url": "https://www.zenobe.com/extreme-e/",
+   "excerpt": "Zenobē x Extreme E page, Extreme E newsroom ('Zenobe's second-life batteries continue to power Extreme E's paddock for Season 3') and Electrek, 1 Mar 2023 (search summaries): Zenobē was Extreme E's Official Energy Storage Supplier from the series' inaugural 2021 season, supplying 'powerskids' built from repurposed electric-bus batteries (about 150 kWh each) that powered the paddock in remote locations, avoiding roughly 15 tonnes of CO2 a season. Extreme E ran a one-off farewell double-header at Qiddiya City on 4-5 Oct 2025 and was succeeded by the hydrogen series Extreme H (Wikipedia; SportsPro).",
+   "method": "manual"
+  },
+  {
+   "needles": ["kidlington", "oxfordshire", "teams' world champion", "world champions", "reigning", "evans", "da costa", "ian james", "2030", "seasons 13-16", "288 points", "17 points", "porsche"],
+   "url": "https://www.fiaformulae.com/en/news/1085838",
+   "excerpt": "Formula E, 16 Aug 2026 ('Jaguar TCS Racing take home the 2025/26 Teams' World Championship') and Jaguar Racing media (search summaries; domains egress-blocked): Jaguar TCS Racing won the 2025/26 Teams' World Championship at the London finale (15-16 Aug 2026) with Mitch Evans and António Félix da Costa, four wins, ten further podiums and 288 points, 17 ahead of Porsche; team principal Ian James; the team is based in Kidlington, Oxfordshire; Jaguar is committed to the GEN4 era for Seasons 13-16, through 2030; Evans and da Costa continue.",
+   "method": "manual"
+  },
+  {
+   "needles": ["tcs", "castrol", "wolfspeed", "reflo", "opentext", "dow", "chase", "shell", "totalenergies", "envision group", "envision energy", "aesc", "tdk", "sponsor table", "roster", "lane is open", "no fleet", "fleet, charging or storage", "fleet-electrification", "title partner"],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json; Jaguar Racing partner page, Sep 2026)",
+   "excerpt": "Sponsor table: Jaguar TCS Racing — TCS (Tata Consultancy Services, title), Castrol (lubricants), Jaguar (powertrain and parent); team profile lists a financial-services lock (Chase) and no fleet, charging or energy-storage brand. Jaguar's own partner page additionally names Wolfspeed, Reflo, OpenText, Dow and Chase (not in the table). Lola Yamaha ABT — Shell. DS Penske — TotalEnergies. Envision Racing — Envision Group (title/parent; group includes Envision Energy storage and battery maker Envision AESC). Porsche — TDK named official technology partner in team_profiles. Andretti, Nissan, Mahindra, Cupra Kiro and Citroën carry no energy or fleet partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": ["brands hatch", "29-30 may", "29 may", "30 may", "may 2027", "jeddah", "18 dec", "18 december", "berlin", "8-9 may", "zandvoort", "e-prix", "home race", "forty miles"],
+   "url": "seeds/calendar_fe.json (Formula E Season 13 calendar, announced 23 Jun 2026)",
+   "excerpt": "Formula E Season 13 calendar table: GEN4 opener Jeddah E-Prix double-header 18-19 Dec 2026; Berlin double-header 8-9 May 2027; London E-Prix moves to Brands Hatch, a new home, as a double-header on 29-30 May 2027; Zandvoort 18-19 Jun 2027; Madrid 26-27 Jun 2027; Tokyo finale 24-25 Jul 2027. Brands Hatch is about forty miles from central London.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Zenobē",
+  "industry_meta": "Fleet Electrification · Electric Buses, Charging & Grid Storage",
+  "hq": "London (North American HQ Chicago)",
+  "ticker": "Private (KKR / Infracapital; c.£980M financing, Jun 2026)",
+  "deck": "Zenobē, the London fleet-electrification and grid-battery operator owned by KKR and Infracapital, secured c.£980M of new financing on 15 June 2026 to put 1,200 more electric buses on UK and Irish roads, taking capital raised past £3.2B, then added a $400M Australasian platform and a German acquisition within six weeks.",
+  "score": 71,
+  "timing_label": "WARM",
+  "series_label": "FE",
+  "team_label": "Jaguar TCS Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Zenobē announced on 15 June that 22 banks, NatWest, Lloyds, Santander and Aviva among them, had committed c.£980M to its UK and Ireland electric-fleet facility: £480M of long-dated term debt, a £400M capex line and £100M of ancillaries. Capital raised since 2017 now exceeds £3.2B. Nine days later it closed a $400M platform for zero-emission fleets in Australia and New Zealand, and on 27 July it bought Bavaria's sdp energie with a 1.75 GW German battery pipeline. KKR and Infracapital have been joint majority owners since a c.£870M equity round in September 2023.",
+  "the_case_p2": "This is a company that has already paid for motorsport in kind: its second-life bus-battery powerskids were Extreme E's official energy-storage supply from the series' first season to its final event in October 2025. With Extreme E gone, that budget line is orphaned. Zenobē now sells fleet electrification to bus operators in Britain, Europe, North America and Australasia, and the buyers it needs are transport authorities, fleet owners and the banks that fund them.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Three financings in six weeks reset the marketing calendar. Formula E's GEN4 era opens in Jeddah on 18 December, and the London E-Prix moves to Brands Hatch on 29-30 May 2027: the reigning champions' home race, forty miles from Zenobē's London office, is the natural launch stage.",
+  "why_team_label": "WHY JAGUAR TCS RACING",
+  "why_team_para": "Jaguar TCS Racing are the reigning Teams' World Champions, run from Kidlington, Oxfordshire, and committed to GEN4 through 2030. The roster in the sponsor table is TCS as title partner and Castrol; there is no fleet, charging or storage brand, so the lane is open. A British electrification operator on the British champions' car at a British home race is the cleanest story on the grid.",
+  "value_section": true,
+  "value_section_label": "VALUE TO JAGUAR TCS RACING",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Zenobē's second-life battery powerskids powered five Extreme E paddocks; at Jaguar they can carry garage and hospitality load at European rounds where event-power rules allow, cutting generator diesel on camera. Off track, Zenobē electrifies the team's Kidlington depot and support fleet under its fleet-as-a-service model. Commercially: Brands Hatch hospitality for transport authorities, fleet owners and lenders, and an Official Fleet Electrification Partner designation.",
+  "deal_arch_para": "Entry as Official Fleet Electrification and Energy Storage Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15 (2026/27 to 2028/29), from the GEN4 debut through the first two Brands Hatch home races. Estimated £1-2M a year, part-payable in powerskid supply and depot electrification. Scope: sidepod branding, Brands Hatch and Berlin hospitality, paddock-power content, and a bus-operator guest programme.",
+  "decision_maker_name": "Donald Weir",
+  "decision_maker_role": "Chief Executive Officer, Zenobē",
+  "decision_maker_bio": "Weir joined Zenobē as CEO in 2025; a first Formula E partnership is his call. Path: Steven Meersman, Co-Founder and Director, EV Fleet; Tim Boothman, Chief Commercial Officer, Electric Fleet; Iain Wetherall, CFO, formerly CFO of Wizz Air. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with Extreme E and Brands Hatch.",
+  "opening_angle_quote": "&ldquo;Donald, Zenobē powered Extreme E's paddock for five seasons and that series has gone. The reigning Formula E champions race at Brands Hatch next May with no fleet or storage partner on the car. 25 minutes to see what the seat costs?&rdquo;",
+  "score_cells": [
+   ["TIMING", "12", "/ 20", "Trigger 15 Jun is twelve weeks old; GEN4 opener in December, Brands Hatch in May."],
+   ["CAPACITY", "15", "/ 20", "£3.2B raised, KKR-owned; mostly project debt, revenue not public."],
+   ["BRAND FIT", "16", "/ 20", "Fleet electrification is Formula E's own story; British; Extreme E precedent."],
+   ["URGENCY", "12", "/ 20", "No listing or deadline; the home-race debut is the soft trigger."],
+   ["OPS FIT", "16", "/ 20", "MODE A: paddock power and depot electrification; open lane."]
+  ],
+  "risks": [
+   ["DEBT, NOT EQUITY", "The £980M is bank debt for buses and chargers, not a marketing budget, and the company's revenue is not public.", "Price the entry at £1-2M with in-kind supply; the Extreme E precedent shows the budget line exists."],
+   ["CHAMPIONSHIP RULES", "Event power at an E-Prix is the championship's remit; team-level powerskid use needs Formula E's approval.", "Start with garage, hospitality and depot load, which need no approval; add trackside supply later."]
+  ],
+  "bottom_line": "£980M closed in June, a $400M Australasian platform and a German acquisition inside six weeks, five seasons of paying for motorsport at Extreme E, and a home race at Brands Hatch in May: Zenobē has the budget, the habit and the stage. The fleet and storage lane at Jaguar TCS Racing is open.",
+  "signals": ["financing_event", "motorsport_precedent", "home_race"],
+  "footer_company": "ZENOBĒ",
+  "footer_date": "5 SEP 2026",
+  "extended": {
+   "why_now": [
+    {"label": "Trigger", "text": "On 15 June 2026 Zenobē announced c.£980M of new financing for its UK and Ireland electric-fleet facility, the facility's third round: £480M of new long-dated term commitments, a £400M capital-expenditure facility and £100M of ancillaries from 22 banks including NatWest, Lloyds, Santander and Aviva. It funds more than 1,200 new electric buses and their charging over three years and takes capital raised since 2017 past £3.2B."},
+    {"label": "Three financings in six weeks", "text": "Nine days after the UK round, Zenobē closed a $400M platform for zero-emission heavy-vehicle fleets across Australia and New Zealand, seeded with four operating depots. On 27 July it bought Bavaria's sdp energie and with it a 1.75 GW pipeline of transmission-connected battery projects in Germany. Combined with the €325M European facility, the company expects to support up to 5,000 electric buses by 2028. A company scaling on four continents at once is at the point where a global brand gets built."},
+    {"label": "A motorsport budget with nowhere to go", "text": "Zenobē was Extreme E's Official Energy Storage Supplier from the series' first season in 2021, powering remote paddocks with powerskids built from second-life bus batteries. Extreme E ran its farewell event in October 2025. The company has proved it will fund motorsport and has just lost the property it funded; Formula E is the obvious successor and the powerskid story transfers intact."},
+    {"label": "Calendar window", "text": "Formula E's GEN4 era opens with the Jeddah double-header on 18-19 December 2026. The London E-Prix moves from ExCeL to Brands Hatch on 29-30 May 2027, a new home for the reigning champions' home race, about forty miles from Zenobē's London office and within reach of every UK bus operator it sells to."}
+   ],
+   "why_team": [
+    {"label": "The open lane", "text": "Jaguar TCS Racing's roster in the sponsor table is TCS as title partner and Castrol, with Jaguar as powertrain supplier and parent; the team's own partner page adds Wolfspeed, Reflo, OpenText, Dow and Chase. None is a fleet-electrification, charging or energy-storage brand. Official Fleet Electrification and Energy Storage Partner is a clean category at a team-partner price."},
+    {"label": "The champions", "text": "Jaguar TCS Racing won the 2025/26 Teams' World Championship at the London finale with Mitch Evans and António Félix da Costa, 17 points clear of Porsche, and is committed to the GEN4 era through 2030 under team principal Ian James. A partner joining for Season 13 joins the reigning champions in the first year of a new car."},
+    {"label": "British on British", "text": "Zenobē is London-headquartered and Britain's largest owner and operator of transmission-connected batteries; Jaguar TCS Racing is run from Kidlington, Oxfordshire. The Brands Hatch home race puts both in front of the transport authorities, bus operators and lenders that decide Zenobē's UK pipeline."},
+    {"label": "Fleet customers in common", "text": "Jaguar's parent sells vehicles to the same fleet buyers Zenobē electrifies. A joint proposition to fleet owners, vehicle plus depot plus charging plus finance, is a commercial programme the team's parent can carry beyond the racetrack."}
+   ],
+   "value": [
+    {"label": "Operational workstream (Mode A)", "text": "Second-life battery powerskids for the team's garage and hospitality load at European rounds, subject to the championship's event-power rules, replacing generator diesel with a visible, on-camera story. Zenobē ran exactly this for five Extreme E seasons."},
+    {"label": "Depot and fleet electrification", "text": "Zenobē's fleet-as-a-service model, vehicles, chargers, batteries and finance, applied to the team's Kidlington base and support fleet, giving the champions a measured emissions reduction they can report and Zenobē a reference site."},
+    {"label": "Commercial lift for the team", "text": "Zenobē brings bus operators, transport authorities, city officials and the 22 banks behind its facility to Brands Hatch and Berlin; a guest list that overlaps with the public-sector and financial audience TCS and Chase already court."},
+    {"label": "What the team gives back", "text": "Official Fleet Electrification and Energy Storage Partner designation, sidepod branding, Brands Hatch and Berlin hospitality, paddock-power content, and driver access for Zenobē's customer events in the UK, Europe, North America and Australasia."}
+   ],
+   "ruled_out": [
+    {"team": "Envision Racing", "reason": "The owner, Envision Group, runs its own battery and storage businesses (Envision Energy, Envision AESC): a storage operator on that car competes with the owner. Paysafe became title partner on 14 August 2026."},
+    {"team": "Lola Yamaha ABT Formula E Team", "reason": "Shell is the energy partner and Shell's fleet-charging business is a direct rival."},
+    {"team": "DS Penske", "reason": "TotalEnergies, which sells fleet charging, holds the energy lane; DS Automobiles leaves after Season 12 and Penske's Season 13 entry was unregistered at the last report."},
+    {"team": "Porsche Formula E Team", "reason": "TDK, a battery and component maker, is the official technology partner; German team, no UK home-race story."},
+    {"team": "Andretti Formula E", "reason": "Open lane and a US audience, but Zenobē's core market and home race are British; better kept for US-led prospects."},
+    {"team": "Nissan Formula E Team · Mahindra Racing · Cupra Kiro · Citroën Racing", "reason": "Open but not chosen: no champion status, no British home story and no comparable fleet-customer overlap."}
+   ],
+   "ask": "A 25-minute call with Donald Weir before the Jeddah opener to confirm the financing and the Extreme E budget history on the record, agree a Brands Hatch announcement window, and size an Official Fleet Electrification and Energy Storage Partner entry at Jaguar TCS Racing for Seasons 13-15."
+  }
+ },
+ "note": "# Zenobē → Jaguar TCS Racing — verification log (N° 130, 5 Sep 2026)\n\nBuilt in-session at no API cost with Claude as scanner, verifier and writer through the\npipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page\nrender ran as code. `zenobe.run.json` is the case record.\n\n**Sandbox limitation, stated plainly:** direct fetches of zenobe.com, media.jaguar.com,\nfiaformulae.com, prnewswire.com, energy-storage.news and the trade press were blocked by the\negress proxy. Every claim below was checked against the search summary of the primary page named\nas the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link.\nConfidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, corrected\n\nThe desk row dated the financing 17 Jun (electrive's publication date). Zenobē's own release and\nroute-one.net date it **15 Jun 2026**, which is the `signal_date` (82 days before the row's date,\ninside the 90-day window). The row's '$400M platform for Australia/NZ' was announced on 24 Jun,\nafter the trigger, and is presented as a follow-on, not part of the trigger. The £980M is **debt**\n(bank facilities), not equity: the brief and the first risk row say so.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Donald Weir, CEO (joined 2025) | VERIFIED | zenobe.com news ('Zenobē welcomes Dr Donald Weir as CEO'; summary); Craft |\n| Meersman (Co-Founder, EV Fleet), Boothman (CCO Electric Fleet), Wetherall (CFO, ex-Wizz Air); no CMO listed | VERIFIED | zenobe.com/our-story (summary); Equilar; LinkedIn / Bloomberg profiles |\n| c.£980M financing, 15 Jun 2026, structure, 22 banks, 1,200 buses, >£3.2B raised | VERIFIED | zenobe.com release (summary); route-one; Sustainable Bus; electrive |\n| KKR c.£600M + Infracapital c.£270M, Sep 2023, joint majority | VERIFIED | zenobe.com release (summary); PR Newswire; Energy-Storage.News |\n| $400M ANZ platform, 24 Jun 2026 | VERIFIED | zenobe.com release (summary); The Driven; HVIA |\n| sdp energie acquisition, 27 Jul 2026, 1.75 GW pipeline | VERIFIED | zenobe.com release (summary); Energy-Storage.News; Enerdata |\n| Chicago NA HQ; Revolv acquisition Mar 2026; US school buses | VERIFIED | PR Newswire release (summary); zenobe.com/north-america |\n| Extreme E Official Energy Storage Supplier, powerskids, 2021 to the Oct 2025 finale | VERIFIED | zenobe.com/extreme-e; Extreme E newsroom; Electrek (summaries); Wikipedia for the series' end |\n| Jaguar: 2025/26 Teams' champions; Evans + da Costa; Kidlington; GEN4 to 2030; Ian James | VERIFIED | fiaformulae.com news (summary); Jaguar Racing media |\n| Jaguar roster (TCS, Castrol, Jaguar); no fleet/charging/storage brand; Shell, TotalEnergies, Envision Group, TDK lanes | VERIFIED | sponsor table (`seeds/sponsors.json`) + team profile |\n| Jeddah 18-19 Dec 2026; Berlin 8-9 May 2027; London at Brands Hatch 29-30 May 2027 | VERIFIED | calendar table (`seeds/calendar_fe.json`) |\n\n## Screen-outs and things not claimed\n\n- **Leadership ties:** none found for Weir, Meersman, Basden, Beatty, Boothman or Wetherall after two\n  searches; `leadership_ties` is empty. The **company-level** tie (Extreme E supplier, five seasons)\n  is real and is the warmest fact in the case.\n- **No revenue figure** is used: Zenobē's accounts are filed at Companies House but no figure\n  surfaced in search; third-party estimates are ignored.\n- **Wolfspeed, Reflo, OpenText, Dow and Chase** appear on Jaguar's partner page but are not in the\n  sponsor table; they are named only on the app page and never as 'Brand at Team' sentences.\n- **Jaguar's team profile lists no open categories.** The recommendation stands on the sponsor table\n  itself: no fleet, charging or storage brand is on the roster, and the only recorded lock is\n  financial services (Chase), which Zenobē does not touch.\n- **Powerskids trackside** is stated as subject to Formula E's event-power rules; the deployable\n  MODE A floor is garage/hospitality load and depot electrification.\n- **Deal size (£1-2M a year) is an ESTIMATE**, labelled as such.\n- **Score 71, not the desk row's 72**: trigger twelve weeks old, debt not equity, no hard deadline;\n  held up by a real workstream and the Extreme E precedent.\n"
+}
