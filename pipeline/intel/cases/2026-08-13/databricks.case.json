@@ -1,0 +1,371 @@
+{
+ "run_date": "2026-08-13",
+ "signal_date": "2026-08-13",
+ "stem": "databricks",
+ "number": 235,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Databricks",
+  "signal_date": "2026-08-13",
+  "score": 81,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Rick Schultz",
+  "role": "Chief Marketing Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales",
+  "industry_meta": "Data & AI Platform · Lakehouse / Enterprise AI · San Francisco",
+  "recommended_team": "Nissan Formula E Team",
+  "recommended_series": "FE",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$5B strategic round closed at a $190B valuation, announced 13 August 2026 — 42% above the $134B Series L mark set six months earlier",
+   "investors": "Coatue leading, with Blackstone, MGX and accounts advised by T. Rowe Price; new investors Sixth Street Growth, BOND, Clearlake Capital, Point72, Premji Invest and TPG; Andreessen Horowitz, Dragoneer, Goldman Sachs Alternatives and Thrive Capital following on",
+   "revenue": "Revenue run-rate past $7B growing more than 80% year on year, per the company's own announcement",
+   "trigger": "$5B round closed at a $190B valuation, announced by the company on 13 August 2026",
+   "competitor_signal": "Enterprise data brands hold a seat at almost every Formula 1 team — Oracle at Oracle Red Bull Racing, SAP at Mercedes-AMG Petronas F1 Team, Splunk at McLaren F1 Team, IBM at Scuderia Ferrari, VAST at Atlassian Williams Racing — while only four of the ten Formula E entries carry a data or AI partner",
+   "strategic_hook": "Nissan supplies its GEN4 Formula E powertrain to Andretti Formula E from Season 13 under a multi-year agreement, so a data partnership at the works team spans two entries; Oliver Rowland won the Season 11 drivers' title for Nissan and stays for Season 13 alongside Zane Maloney",
+   "us_presence": "Headquarters in San Francisco, California; the round's proceeds go to the Unity AI Gateway, Lakebase and Genie enterprise-agent products",
+   "alumni_match": null,
+   "taxonomy_category": "B1",
+   "ops_fit_note": "MODE A: Formula E is an energy-management contest, and a lakehouse unifying telemetry, energy, tyre, weather and timing data with predictive models between sessions is the competitive lever; the same platform serves two garages through the Andretti powertrain deal",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 18,
+   "capacity": 19,
+   "brand_fit": 15,
+   "urgency": 13,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 7,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "$5b",
+    "$190b",
+    "13 august",
+    "coatue",
+    "blackstone",
+    "mgx",
+    "t. rowe price",
+    "sixth street",
+    "point72",
+    "premji",
+    "tpg",
+    "clearlake",
+    "bond",
+    "dragoneer",
+    "thrive capital",
+    "andreessen",
+    "goldman sachs alternatives",
+    "$134b",
+    "42%",
+    "series l",
+    "funding round"
+   ],
+   "url": "https://www.cnbc.com/2026/08/13/databricks-funding-round-190-billion-valuation.html",
+   "excerpt": "CNBC and Quartz, 13 Aug 2026, alongside Databricks' own newsroom: Databricks wrapped a $5 billion strategic funding round at a $190 billion valuation, led by Coatue and including Blackstone, MGX and accounts advised by T. Rowe Price Associates and T. Rowe Price Investment Management, with new investors Sixth Street Growth, BOND, Clearlake Capital, Point72, Premji Invest and TPG, and existing investors Andreessen Horowitz, Dragoneer, Goldman Sachs Alternatives and Thrive Capital participating. The mark is about 42% above the $134 billion Series L valuation set six months earlier; proceeds are earmarked for products that help businesses build and manage AI agents.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$7b",
+    "80%",
+    "run-rate",
+    "run rate",
+    "unity ai gateway",
+    "lakebase",
+    "genie"
+   ],
+   "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales",
+   "excerpt": "Databricks newsroom, 13 Aug 2026: 'Databricks Grows >80% YoY, Surpasses $7B Revenue Run-Rate, Scales Lakebase, Genie, and Unity AI Gateway'. The company's own figures: a revenue run-rate above $7 billion with more than 80% year-on-year growth, with the new capital directed at the Unity AI Gateway, Lakebase and Genie products for enterprise AI workflows. Not audited accounts.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "rick schultz",
+    "schultz",
+    "ali ghodsi",
+    "ghodsi",
+    "ion stoica",
+    "stoica",
+    "alteryx",
+    "march 2017",
+    "hatim shafique",
+    "chief marketing officer",
+    "san francisco"
+   ],
+   "url": "https://theorg.com/org/databricks/org-chart/rick-schultz",
+   "excerpt": "Databricks leadership as listed by the company, The Org, Crunchbase and Bloomberg: Rick Schultz, Chief Marketing Officer since March 2017, previously head of marketing at Alteryx for more than four years through its listing, running product marketing, demand generation, brand, communications, events and field marketing worldwide; Ali Ghodsi, co-founder and Chief Executive Officer since 2016; Ion Stoica, co-founder and Executive Chair; Hatim Shafique, Chief Operating Officer. Headquarters San Francisco. No motorsport role appears in any leader's history and no CFO name was confirmed in this session.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "terrible year to go public",
+    "no s-1",
+    "2027"
+   ],
+   "url": "https://www.allied.vc/articles/databricks-ipo-expectations-key-dates-valuation-risks",
+   "excerpt": "Reported IPO position: Ali Ghodsi said in June 2026 that this is a 'terrible year to go public' given a crowded slate of large offerings, and no public or confidential S-1 had been filed as of mid-August 2026. A listing is expected in 2027 or later. Reported, not company-announced.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "oliver rowland",
+    "rowland",
+    "zane maloney",
+    "maloney",
+    "alpine tech",
+    "gen4",
+    "season 11",
+    "drivers' title",
+    "e-4orce",
+    "powertrain to andretti"
+   ],
+   "url": "https://global.nissannews.com/en/releases/nissan-formula-e-team-confirms-zane-maloney-alongside-oliver-rowland-for-season-13",
+   "excerpt": "Nissan global newsroom: Nissan Formula E Team fields Oliver Rowland and Zane Maloney for the 2026/27 season, the first of the GEN4 era, Rowland continuing for a fourth campaign under a multi-year agreement after winning the Season 11 drivers' world championship. Nissan renewed its sponsorship agreement with long-standing partner Alpine Tech, which helped develop the Nissan e-4ORCE 05 Formula E powertrain, with branding on the cars and drivers' overalls. Nissan also announced a multi-year agreement to supply its GEN4 Formula E powertrain to Andretti Formula E from Season 13.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "oracle at",
+    "sap at",
+    "splunk at",
+    "ibm at",
+    "vast at",
+    "coreweave",
+    "tech mahindra",
+    "sand technologies",
+    "twg ai",
+    "tcs",
+    "google cloud",
+    "dell",
+    "microsoft",
+    "hewlett packard",
+    "core scientific",
+    "no data",
+    "four of the ten",
+    "six of the ten",
+    "ten entries",
+    "enterprise software",
+    "unverified"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md + data/teams.json)",
+   "excerpt": "Sponsor table. Formula 1: Oracle is title partner at Oracle Red Bull Racing; SAP, Microsoft and Hewlett Packard Enterprise sit at Mercedes-AMG Petronas F1 Team; Splunk, Dell Technologies, Google Cloud and Mastercard at McLaren F1 Team; HP and IBM at Scuderia Ferrari; Atlassian, VAST, Keeper, Zoox, Claude, Airia and Brillio at Atlassian Williams Racing; CoreWeave at Aston Martin Aramco F1 Team; Microsoft at BWT Alpine F1 Team; TWG AI and Core Scientific at Cadillac F1 Team; Revolut at Audi F1 Team; AWS and Salesforce at championship level. Formula E: Google Cloud at championship level; TWG AI at Andretti Formula E; Sand Technologies at Envision Racing; Tech Mahindra at Mahindra Racing; TCS at Jaguar TCS Racing; TDK at Porsche Formula E Team. Six of the ten Formula E entries carry no data, AI or software partner. Nissan Formula E Team's only table rows besides the Nissan parent are Coral, Crowe, Nagase and Castrol, all marked unverified; the team profile lists enterprise software and EV tech as open categories.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "jeddah",
+    "season 13",
+    "21 races",
+    "13 cities",
+    "austin",
+    "miami",
+    "tokyo"
+   ],
+   "url": "seeds/calendar_fe.json (ABB FIA Formula E Season 13 calendar)",
+   "excerpt": "Formula E Season 13 calendar table (announced 23 Jun 2026): 21 races across 13 cities, opening with the Jeddah E-Prix on 18-19 December 2026, the Austin E-Prix on 6 February 2027 and the Miami E-Prix on 20 February 2027, closing at the Tokyo E-Prix on 24-25 July 2027. Season 13 is the first season of the GEN4 regulations.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Databricks",
+  "industry_meta": "Data & AI Platform · Lakehouse / Enterprise AI",
+  "hq": "San Francisco, California",
+  "ticker": "Private ($190B, Aug 2026)",
+  "deck": "Databricks closed $5B at a $190B valuation on 13 August, 42% above its $134B Series L mark six months earlier, on a revenue run-rate past $7B growing more than 80% a year. Enterprise data brands hold a seat at almost every Formula 1 team.",
+  "score": 81,
+  "timing_label": "HOT",
+  "series_label": "FE",
+  "team_label": "Nissan Formula E Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Databricks announced on 13 August that it had closed a $5B strategic round at a $190B valuation, led by Coatue, with Blackstone, MGX and T. Rowe Price accounts, and new money from Sixth Street Growth, Point72, Premji Invest and TPG. Its own release puts the revenue run-rate past $7B at more than 80% growth. The mark is 42% above the $134B Series L of six months earlier. Ali Ghodsi has said publicly that this is a poor year to list, so the money is the balance sheet, not a roadshow.",
+  "the_case_p2": "Enterprise data brands already treat motorsport as a proven channel, and the Formula 1 grid is close to sold: Oracle at Oracle Red Bull Racing, SAP at Mercedes-AMG Petronas F1 Team, Splunk at McLaren F1 Team, IBM at Scuderia Ferrari, VAST at Atlassian Williams Racing, CoreWeave at Aston Martin Aramco F1 Team. On the Formula E grid, six of the ten entries carry no data, AI or software partner at all.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 13 August, and brand budgets are written in the quarter after one. Formula E teams close Season 13 rosters this autumn, and the GEN4 era opens at the Jeddah E-Prix in December - the largest technical reset the championship has had.",
+  "why_team_label": "WHY NISSAN FORMULA E TEAM",
+  "why_team_para": "Nissan's rows in the sponsor table are the parent, Alpine Tech on the powertrain and legacy entries still marked unverified - nothing in the technology category, and the team profile lists enterprise software as open. It is the works entry of the manufacturer now supplying the GEN4 powertrain to Andretti as well, so one platform reaches two garages. Rowland's Season 11 title is the shop window.",
+  "value_section": true,
+  "value_section_label": "VALUE TO NISSAN FORMULA E TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Formula E is an energy-management contest: a fixed allocation, attack mode, regeneration and the slipstream, won by whoever models it best. A lakehouse unifying telemetry, energy, tyre and timing data, with models run between sessions, is that lever, and no testing cap limits the software. Nissan's GEN4 powertrain also runs at Andretti, so one platform serves two data sets.",
+  "deal_arch_para": "Entry as Official Data and AI Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, covering the GEN4 cycle. Estimated $3-6M a year, part-payable in platform credits. Scope: sidepod and halo placement, naming of the team's data environment, and a joint programme with Nissan's own data organisation.",
+  "decision_maker_name": "Rick Schultz",
+  "decision_maker_role": "Chief Marketing Officer, Databricks",
+  "decision_maker_bio": "Schultz has run Databricks' marketing since March 2017, after leading marketing at Alteryx through its listing; brand and sponsorship sit with him. Path: Ali Ghodsi, co-founder and chief executive since 2016, and Ion Stoica, co-founder and executive chair.",
+  "opening_angle_intro": "Lead with the grid map.",
+  "opening_angle_quote": "&ldquo;Rick, Oracle, SAP, Splunk, IBM and VAST have each bought a Formula 1 team. Six of the ten Formula E entries have no data partner at all, and Nissan holds a drivers' title. 25 minutes before the rosters close?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "18",
+    "/ 20",
+    "$5B closed 13 Aug; Season 13 rosters close this autumn."
+   ],
+   [
+    "CAPACITY",
+    "19",
+    "/ 20",
+    "$190B valuation, run-rate past $7B, growth above 80%."
+   ],
+   [
+    "BRAND FIT",
+    "15",
+    "/ 20",
+    "Proven category in motorsport, but Formula E is the smaller stage."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "No listing to time against; the GEN4 reset is the only clock."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: energy modelling is the team's competitive lever."
+   ]
+  ],
+  "risks": [
+   [
+    "FORMULA E IS THE SMALLER STAGE",
+    "A company valued at $190B can afford Formula 1, which delivers several times the audience. A Formula E recommendation will be challenged internally on reach alone.",
+    "The Formula 1 data lane is bought at every team a brand this size would want. Formula E buys the category outright, with a workstream that is real rather than decorative."
+   ],
+   [
+    "AN ADJACENCY AT CHAMPIONSHIP LEVEL",
+    "Google Cloud is Formula E's cloud and technology partner. Databricks runs on the hyperscalers rather than against them, but the championship may read the categories as neighbouring.",
+    "Scope the designation as data and AI at team level and clear it before signature. McLaren carries Splunk and Google Cloud on the same car."
+   ]
+  ],
+  "bottom_line": "A $5B round closed at $190B on 13 August, a revenue run-rate past $7B growing more than 80% a year, and no listing to wait for. The Formula 1 data lane is bought at every team a brand this size would want, six of the ten Formula E entries carry no data partner, and the works team that holds a drivers' title has an open enterprise-software lane.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "category_whitespace"
+  ],
+  "footer_company": "DATABRICKS",
+  "footer_date": "13 AUG 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "The trigger",
+     "text": "Databricks closed a $5B strategic funding round at a $190B valuation, announced on 13 August 2026. Coatue led, with Blackstone, MGX and accounts advised by T. Rowe Price Associates and T. Rowe Price Investment Management; new investors included Sixth Street Growth, BOND, Clearlake Capital, Point72, Premji Invest and TPG, with Andreessen Horowitz, Dragoneer, Goldman Sachs Alternatives and Thrive Capital following on. The company's own newsroom carries it, so this is company-confirmed rather than reported."
+    },
+    {
+     "label": "The business under the round",
+     "text": "Databricks put its revenue run-rate past $7B with more than 80% year-on-year growth, and directed the capital at the Unity AI Gateway, Lakebase and Genie - the products for building and managing enterprise AI agents. These are the company's own figures from its own release, not audited accounts, and the brief attributes them that way."
+    },
+    {
+     "label": "A re-pricing, not a listing",
+     "text": "The $190B mark is about 42% above the $134B Series L set six months earlier. Ali Ghodsi said in June 2026 that this is a poor year to go public, and no public or confidential S-1 had been filed as of mid-August, with a listing widely expected in 2027 or later. That matters commercially: there is no quiet period and no roadshow, so a multi-year brand commitment can be signed now rather than deferred."
+    },
+    {
+     "label": "The calendar",
+     "text": "Formula E teams close Season 13 rosters through the autumn. Season 13 is the first season of the GEN4 regulations - the championship's largest technical reset - opening at the Jeddah E-Prix on 18 December 2026 and running 21 races across 13 cities, with the Austin E-Prix on 6 February 2027, the Miami E-Prix two weeks later and the Tokyo E-Prix closing on 24-25 July 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The Formula 1 lane is bought; the Formula E lane is not",
+     "text": "On the Formula 1 grid the data, cloud and enterprise-software categories are occupied almost everywhere: Oracle at Red Bull, SAP and Microsoft and Hewlett Packard Enterprise at Mercedes, Splunk and Dell and Google Cloud at McLaren, HP and IBM at Ferrari, Atlassian and VAST at Williams, CoreWeave at Aston Martin, Microsoft at Alpine, TWG AI and Core Scientific at Cadillac, with AWS and Salesforce at championship level. On the Formula E grid only Andretti, Envision, Mahindra and Jaguar carry a data or AI partner. Six of the ten entries carry none."
+    },
+    {
+     "label": "Nissan's lane is open on the table, not by assertion",
+     "text": "The sponsor table records no data, AI or software partner at Nissan Formula E Team. Alpine Tech is the renewed partner that helped develop the Nissan e-4ORCE 05 powertrain, and the remaining rows - Coral, Crowe, Nagase, Castrol - are legacy entries the table still marks unverified. The team profile lists enterprise software and EV tech as open categories. Official Data and AI Partner would be a first there."
+    },
+    {
+     "label": "One partnership, two garages",
+     "text": "Nissan announced a multi-year agreement to supply its GEN4 Formula E powertrain to Andretti Formula E from Season 13. A data platform bought at the works team therefore sits at the centre of a powertrain relationship spanning two entries, which is more telemetry, more validation and more of the story that makes an enterprise reference customer credible."
+    },
+    {
+     "label": "A works team with something to show",
+     "text": "Oliver Rowland won the Season 11 drivers' world championship for Nissan and stays for a fourth campaign under a multi-year agreement, with Zane Maloney alongside for Season 13. Beyond the garage, the partnership opens a route into Nissan's own enterprise data estate - manufacturing, connected vehicles, supply chain - which is where a motorsport deal earns back more than it costs for a company selling what Databricks sells."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Formula E is decided by energy management: a fixed allocation per race, attack mode, regeneration and the slipstream, resolved by whoever models consumption and rivals' strategies best. A lakehouse unifying telemetry, energy, tyre, weather and timing data, with machine-learning models run between sessions and on the pit wall, is that lever. Unlike Formula 1 there is no aerodynamic-testing restriction shaping where a team may spend its effort, so the software lever is comparatively larger."
+    },
+    {
+     "label": "The GEN4 reset makes it worth more",
+     "text": "Season 13 is the first season of GEN4. Every energy model, tyre model and strategy assumption a team holds is rebuilt from a smaller base of data. A partner that arrives at the start of that cycle is embedded in how the team learns the new car, which is a far stronger position than joining a settled formula, and it is why the timing rather than the money is the argument."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner selling to chief data officers and chief information officers brings a guest list of enterprise buyers to the Austin, Miami and Tokyo rounds, and a co-produced engineering content strand that gives the team technical credibility rather than another logo. For a works team whose commercial roster is thin outside the manufacturer, a category-defining technology partner is a signal to the rest of the market."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Data and AI Partner designation, sidepod and halo placement, naming of the team's data environment, engineer and driver access for Databricks' channels, hospitality at the US and Tokyo rounds, and a joint programme with Nissan's own data organisation - the part of the deal that makes it defensible to a chief financial officer."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the incumbent data and cloud brand."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "SAP, Microsoft and Hewlett Packard Enterprise all sit on the roster."
+    },
+    {
+     "team": "McLaren F1 Team",
+     "reason": "Splunk, Dell Technologies and Google Cloud occupy analytics, hardware and cloud."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "HP is title partner and IBM holds the enterprise software and cloud lane."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Atlassian as title partner and VAST on the data platform - the closest direct clash on the grid."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team · BWT Alpine F1 Team",
+     "reason": "CoreWeave holds AI cloud at Aston Martin; Microsoft holds cloud at Alpine."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "TWG AI and Core Scientific occupy the AI and compute lanes on the first roster."
+    },
+    {
+     "team": "Andretti Formula E",
+     "reason": "TWG AI is primary partner and Official Artificial Intelligence Partner - and Andretti is a Nissan powertrain customer, so the works team reaches it anyway."
+    },
+    {
+     "team": "Envision Racing · Mahindra Racing · Jaguar TCS Racing",
+     "reason": "Sand Technologies, Tech Mahindra and TCS respectively already hold the data and technology lane at each."
+    },
+    {
+     "team": "Porsche Formula E Team",
+     "reason": "TDK holds the official technology designation; title rights are open but priced as title rights."
+    },
+    {
+     "team": "DS Penske · Cupra Kiro · Citroën Racing · Lola Yamaha ABT Formula E Team",
+     "reason": "Open on data, but none offers the works-team engineering programme or the two-garage powertrain reach that makes the workstream real."
+    }
+   ],
+   "ask": "A 25-minute call with Rick Schultz before Formula E teams close Season 13 rosters, to size an Official Data and AI Partner entry at Nissan Formula E Team across the GEN4 cycle, agree how the designation is scoped against the championship's own cloud partner, and put an energy-modelling proof of concept in front of the team's race engineers."
+  }
+ },
+ "note": "# Databricks → Nissan Formula E Team — verification log (N° 235, 13 Aug 2026)\n\nAn n8n-engine row (27 Aug 2026, score 87, \"HOT TOP TIER\", person Ali Ghodsi) rebuilt as a full case\nat no model-API cost. n8n surfaced Databricks four times — 7 May at 84, 4 Jun at 76, 27 Jul at 89,\n27 Aug at 87 — without ever pinning a trigger. Nothing it recorded was carried over.\n\n**Sandbox limitation, stated plainly:** direct fetches of databricks.com, cnbc.com, qz.com,\nglobal.nissannews.com and allied.vc were blocked by the egress proxy. Every claim below was checked\nagainst the search summary of the primary page named as the evidence URL. Treat each VERIFIED line\nas REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE\nCIRCULATION.\n\n## The trigger, and the three candidates that lost\n\n| Candidate | Date | Verdict |\n|---|---|---|\n| Series L, >$4B at $134B | Dec 2025 – early 2026 | **Stale** — outside the 90-day window |\n| \"In talks at $165–175B\" | mid-2026 | **Rejected** — talks, not a closed round |\n| IPO | — | **Rejected** — no S-1; Ghodsi said in June 2026 this is a poor year to list |\n| **$5B closed at $190B** | **13 Aug 2026** | **Used** — company-announced, 24 days before today |\n\nThe used trigger carries on **Databricks' own newsroom** (\"Databricks Grows >80% YoY, Surpasses $7B\nRevenue Run-Rate, Scales Lakebase, Genie, and Unity AI Gateway\") and on CNBC the same day, so it is\ncompany-confirmed rather than press-reported. The signal therefore sits on 13 Aug 2026, not on the\n27 Aug row date n8n recorded.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| $5B closed at a $190B valuation, announced 13 Aug 2026 | VERIFIED | databricks.com newsroom; CNBC 13 Aug 2026; Quartz |\n| Coatue lead; Blackstone, MGX, T. Rowe Price accounts; new: Sixth Street Growth, BOND, Clearlake, Point72, Premji Invest, TPG; existing: a16z, Dragoneer, Goldman Sachs Alternatives, Thrive | VERIFIED | same |\n| 42% above the $134B Series L mark of six months earlier | VERIFIED | same |\n| Revenue run-rate past $7B, growth above 80% YoY | VERIFIED as the company's own stated figures — the copy says \"its own release puts\" | Databricks newsroom, 13 Aug 2026 |\n| Proceeds to Unity AI Gateway, Lakebase, Genie | VERIFIED | Databricks newsroom |\n| Ghodsi: a poor year to go public; no S-1 filed as of mid-Aug 2026; listing expected 2027+ | REPORTED — labelled \"has said publicly\" and \"reported\" | Allied Venture Partners IPO analysis; Forge |\n| Rick Schultz, CMO since March 2017, previously marketing lead at Alteryx through its listing | VERIFIED | The Org, Crunchbase, Bloomberg profile, databricks.com speaker page |\n| Ali Ghodsi, co-founder and CEO since 2016; Ion Stoica, co-founder and executive chair; Hatim Shafique, COO; HQ San Francisco | VERIFIED | company listings, The Org, Craft |\n| Oliver Rowland won the Season 11 drivers' world championship; stays for Season 13 with Zane Maloney; Alpine Tech renewed and helped develop the e-4ORCE 05 powertrain; Nissan supplies the GEN4 powertrain to Andretti Formula E from Season 13 | VERIFIED | global.nissannews.com releases |\n| F1 occupancy: Oracle (Red Bull), SAP + Microsoft + HPE (Mercedes), Splunk + Dell + Google Cloud + Mastercard (McLaren), HP + IBM (Ferrari), Atlassian + VAST + Keeper + Zoox + Claude (Williams), CoreWeave (Aston Martin), Microsoft (Alpine), TWG AI + Core Scientific (Cadillac), AWS + Salesforce (championship) | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| FE occupancy: Google Cloud (championship), TWG AI (Andretti), Sand Technologies (Envision), Tech Mahindra (Mahindra), TCS (Jaguar), TDK (Porsche); six of ten entries carry no data, AI or software partner; Nissan's non-parent rows all marked unverified | VERIFIED | sponsor table |\n| Season 13: first GEN4 season, 21 races, 13 cities, Jeddah opener 18 Dec 2026, Austin 6 Feb 2027, Miami 20 Feb 2027, Tokyo finale 24-25 Jul 2027 | VERIFIED | calendar table (`seeds/calendar_fe.json`) |\n| Databricks is not a partner of any F1 or FE team or of either championship | VERIFIED | sponsor table; live partner-list search found nothing |\n\n## Why Formula E, on the evidence rather than on preference\n\nThe Formula 1 answer was tested first and it fails on occupancy. Every Formula 1 team a brand at\nthis valuation would want already carries a data, cloud or enterprise-software partner — the table\nrows are in the ledger above — so entering Formula 1 means displacing an incumbent, taking a\nsecond-tier designation beside one, or buying a team without an engineering story. The two Formula 1\nrosters with room are the ones a $190B company would not choose for reach.\n\nFormula E is the opposite: six of ten entries carry no data partner at all, and the operational case\nis genuinely stronger there. Formula E is an energy-management formula — fixed energy per race,\nattack mode, regeneration, slipstream — decided by modelling rather than by aerodynamic development,\nand it has no aerodynamic-testing restriction shaping where a team may spend effort. Season 13 is the\nfirst GEN4 season, so every energy and tyre model is rebuilt from a small base of data. That is a\nreal Mode A workstream, not a halo.\n\n## Honest score — what holds it back (81, not the 87 n8n recorded)\n\n- **Brand fit 15/20.** The category is proven in motorsport, but Formula E's reach is a fraction of\n  Formula 1's for a company that could pay Formula 1 prices. This is the first objection the brief\n  will meet internally and it is the first risk row on page 2.\n- **Urgency 13/20.** There is no listing to time against. Ghodsi has deferred it, which removes the\n  quiet-period pressure that usually drives this desk's HOT TOP TIER scores. The GEN4 reset is a\n  window, not a deadline.\n- **Capacity 19/20, not 20.** The money is unquestionable; the constraint is that a works-OEM entry\n  means the partner sits behind the Nissan marque rather than beside it.\n- **On-camera 3/4.** A works Formula E car is a manufacturer's canvas first.\n\n## Leadership ties\n\n`leadership_ties`: **none found**. Ali Ghodsi, Ion Stoica, Rick Schultz and Hatim Shafique show no\nFormula 1 or Formula E role in any listing checked, and no prior motorsport sponsorship structured by\nany of them was found. Schultz's relevant experience is taking a data-analytics brand through a\nlisting at Alteryx, which is the pattern, not a tie.\n\n## Not claimed\n\n- **No CFO is named.** No Databricks CFO was confirmed in this session, so the decision path stops at\n  the executive chair rather than inventing one. The brief says who is listed and no more.\n- **No total-funding or ARR figure** beyond the company's own run-rate statement, which is attributed\n  as such.\n- **Deal size ($3-6M a year) is an ESTIMATE**, labelled as such on the app page.\n- **Andy Kofoid** appears in one secondary listing as President, Global Field Operations. A single\n  unconfirmed source is not enough for a decision path, so he is not in the brief.\n- **Google Cloud is Formula E's championship cloud and technology partner.** Databricks runs on the\n  hyperscalers rather than against them, so this is treated as an adjacency to be scoped and cleared,\n  named as the second risk row, with the McLaren precedent (Splunk and Google Cloud on one car) as\n  the counter — not as a hard clash.\n"
+}

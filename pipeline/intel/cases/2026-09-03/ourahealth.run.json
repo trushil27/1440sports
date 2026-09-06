@@ -1,0 +1,804 @@
+{
+ "run": {
+  "id": 187,
+  "date": "2026-09-03",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-7e8nrg36/2026-09-03/ourahealth.pdf",
+     "web": "/tmp/case-pdf-7e8nrg36/2026-09-03/ourahealth.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Oura Health",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 16
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 251,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 255,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 78,
+     "reason": "resurfaced: Oura Health last surfaced 2026-08-24 (funding_round); new trigger ipo_filing; top ranking score",
+     "company": "Oura Health",
+     "decision": "selected",
+     "signal_date": "2026-09-03"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Oura Health",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "resurfaced: Oura Health last surfaced 2026-08-24 (funding_round); new trigger ipo_filing; top ranking score",
+   "score_total": 78,
+   "score_breakdown": {
+    "cap": null,
+    "base": 78,
+    "total": 78,
+    "timing": 18,
+    "ops_fit": 15,
+    "ranking": 78,
+    "urgency": 12,
+    "capacity": 19,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 3,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 78,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 78,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Andretti Formula E",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+   "trigger_date": "2026-09-03",
+   "trigger_reason": "IPO filing"
+  }
+ ],
+ "brief": {
+  "number": 233,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-7e8nrg36/2026-09-03/ourahealth.web.html",
+  "brief_data": {
+   "hq": "San Francisco (founded in Oulu, Finland)",
+   "deck": "Oura filed a public Form S-1 with the SEC on 3 September for a Nasdaq listing under the ticker OURA, disclosing $1.4B of trailing-twelve-month revenue at $59M of net profit. The Official Wearable of Team USA holds no motorsport property.",
+   "risks": [
+    {
+     "label": "A LIVE OFFERING",
+     "detail": "The S-1 is on file and pricing is weeks away; new multi-year commitments are hard to sign while an offering is in the market.",
+     "counter": "Use the window to agree heads of terms for announcement after the bell - the filing is the reason to call now."
+    },
+    {
+     "label": "A FULL SPORTS SHELF, AND A LAPSED F1 DEAL",
+     "detail": "Team USA, LA28, U.S. Soccer and a five-year USTA agreement are already bought, and the 2020 Red Bull Racing partnership is not on Red Bull's 2026 roster.",
+     "counter": "Pitch motorsport as the gap in the shelf, not a fifth of the same; the lapsed deal proves a top team deployed the product, and Formula E costs a fraction."
+    }
+   ],
+   "score": 78,
+   "ticker": "Private (Nasdaq: OURA filed, 3 Sep 2026)",
+   "company": "Oura Health",
+   "gridfit": [
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "DS Penske",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "ipo_filing",
+    "category_whitespace",
+    "sports_portfolio"
+   ],
+   "sources": [
+    "https://www.adweek.com/brand-marketing/marketing-vanguard-at-cannes-the-smart-ring-that-made-wellness-more-useful-ft-doug-sweeny-of-oura/",
+    "https://www.cnbc.com/2025/10/14/oura-ringmaker-valuation-fundraise.html",
+    "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+    "https://uk.finance.yahoo.com/news/oura-takes-step-toward-ipo-215012105.html",
+    "https://la28.org/en/newsroom/oura-named-official-wearable-of-team-usa-and-la28.html",
+    "https://techcrunch.com/2026/08/24/oura-is-reportedly-eyeing-a-september-ipo-that-could-value-it-at-more-than-16b/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Doug Sweeny in the listing quarter to size an Official Health Technology Partner entry at Andretti Formula E against Season 13, agree an announcement window after the bell, and put a readiness pilot in front of the team's performance staff before the Austin E-Prix.",
+    "value": [
+     {
+      "text": "Season 13 is 21 races in 13 cities on four continents between December and July. The limiting factor for drivers, race engineers and travelling crew across that schedule is sleep debt and circadian disruption, not fitness. Oura Ring gives the team's performance staff readiness, sleep-stage, heart-rate-variability and body-temperature data per person per day - the same instrumentation Oura supplies to Team USA and supplied to Red Bull Racing's drivers and pit crew from 2020.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Travel and training plans built on measured recovery rather than assumption; a documented readiness protocol for a double-header weekend; an early-warning signal on illness in a travelling party of dozens. In a cost-capped, weight-sensitive series, a partner whose product is consumed by the people rather than the car is one the team can adopt without engineering trade-offs.",
+      "label": "What the team can do with it"
+     },
+     {
+      "text": "Oura brings a five-million-member consumer base and a marketing organisation that has just spent a year activating Olympic, soccer and tennis properties. For Andretti that is retail reach, a co-branded content series on human performance in motorsport, and a partner whose brand is welcome in exactly the health-and-wellness territory Formula E's audience skews toward.",
+      "label": "Commercial and content lift"
+     },
+     {
+      "text": "Official Health Technology Partner designation, sidepod and race-suit placement, naming of the team's readiness programme, driver and engineer access for Oura's channels, and hospitality at the Austin E-Prix and the Miami E-Prix for Oura's retail partners and new public-market investors.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Oura Inc. filed a public Form S-1 with the SEC on 3 September 2026 for a Nasdaq listing under the ticker OURA. Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies lead the offering, with around a dozen further banks named. A confidential draft was submitted on 21 May 2026; this is the public step, and it is the reason the company is in front of every institutional investor in the country this month.",
+      "label": "The trigger"
+     },
+     {
+      "text": "Revenue of $1.21B for the nine months to 30 June 2026, up 74% from $697.6M a year earlier. Trailing-twelve-month revenue of $1.4B at $59M of net profit. Five million paid members against 2.5 million a year earlier, and 3.6 million rings sold over twelve months. The nine-month loss attributable to common stockholders of $924.3M is an accounting artefact of a $985.0M deemed dividend to preferred holders, not trading performance.",
+      "label": "The numbers the filing put on the record"
+     },
+     {
+      "text": "The Series E in October 2025 raised more than $900M at an $11B valuation, led by Fidelity with ICONIQ, Whale Rock and Atreides - double the $5B set at the Series D in December 2024. TechCrunch reported on 24 August that the listing could value Oura above $16B. That figure is reported, not confirmed, and no price range is set in the filing.",
+      "label": "The re-pricing"
+     },
+     {
+      "text": "Formula E opens Season 13 at the Jeddah E-Prix on 18 December 2026 and runs 21 races across 13 cities to July 2027. Teams close Season 13 partner rosters through the autumn. A deal agreed in the listing quarter can be announced after the bell and activated for the Austin E-Prix on 6 February 2027 and the Miami E-Prix two weeks later.",
+      "label": "The calendar"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "The sponsor table shows no wearable, health-technology or recovery partner on any 2026 Formula E roster. On the Formula 1 grid the same lane is filling fast - WHOOP at Scuderia Ferrari, Eight Sleep at Aston Martin Aramco. Official Health Technology Partner is therefore available in Formula E as a clean, ownable designation rather than a contested one.",
+      "label": "An empty category across a whole championship"
+     },
+     {
+      "text": "Andretti Formula E is the US team on the grid, run under TWG Global with TWG AI as primary partner of the Formula E programme and Official Artificial Intelligence Partner of Andretti Global since 2026, alongside Quest Global, Crowe UK and Reflo. Season 13 gives it two home rounds, Austin and Miami, which is where a newly Nasdaq-listed consumer brand wants its hospitality.",
+      "label": "The American entry, for an American listing"
+     },
+     {
+      "text": "Oura is Official Wearable of Team USA and the LA28 Games and of U.S. Soccer's 27 national teams, and holds a five-year USTA agreement covering the US Open. A three-year Formula E term running to LA28 is the same audience and the same message, extended to the one arena the shelf is missing.",
+      "label": "It sits inside the portfolio Oura already owns"
+     },
+     {
+      "text": "Three reasons, stated plainly. The Formula 1 human-performance lane is taken at the two teams that fit. Oura's own Formula 1 history sits at Red Bull Racing, which is not on its 2026 roster, so a return means re-opening a lapsed relationship or partnering a direct rival of it. And Formula E's price for a category-defining designation is a fraction of Formula 1's, which matters in the first budget cycle after a listing.",
+      "label": "Why Formula E and not Formula 1"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "WHOOP has joined the roster - a direct wearable rival in the same recovery category."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Eight Sleep has joined the roster; sleep and recovery is the same lane Oura would buy."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oura's own 2020 Official Health Technology partnership ran here and does not appear on the 2026 roster; returning means re-opening a lapsed deal, and TAG Heuer holds the worn-device territory."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Optimum Nutrition occupies the athlete-performance lane on the roster."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "Open on health, but Chase locks financial services and the technology story runs through TCS; no US home round to activate."
+     },
+     {
+      "team": "Porsche Formula E Team",
+      "reason": "Title rights are open but priced as title rights, and TDK holds the official technology designation after TAG Heuer's exit."
+     },
+     {
+      "team": "Nissan Formula E Team",
+      "reason": "Genuinely open, but a works OEM entry whose Season 13 story is Tokyo; it gives a US-listing consumer brand no home-round identity."
+     },
+     {
+      "team": "Envision Racing · Mahindra Racing",
+      "reason": "Both open, but their partner narratives are sustainability and the India market rather than consumer health in the United States."
+     },
+     {
+      "team": "Cupra Kiro · DS Penske · Lola Yamaha ABT Formula E Team · Citroën Racing",
+      "reason": "Open but OEM-fronted; the consumer-brand voice would sit behind a car marque rather than beside it."
+     }
+    ]
+   },
+   "date_long": "03 SEP 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Andretti Formula E",
+   "value_mode": "A",
+   "bottom_line": "A public S-1 on 3 September, $1.4B of trailing revenue and a reported listing above $16B put Oura at the point where a newly listed consumer brand writes its next marketing plan. It has bought Team USA, U.S. Soccer and the US Open and owns nothing in motorsport, and no Formula E team carries a wearable partner.",
+   "footer_date": "3 SEP 2026",
+   "score_cells": [
+    {
+     "num": 18,
+     "note": "S-1 public 3 Sep; pricing and the first post-listing plan follow.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 19,
+     "note": "$1.4B trailing revenue, $59M net profit, $900M raised last October.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Consumer wellness brand; motorsport is not its core audience.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No deadline beyond the listing; Season 13 rosters close this autumn.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: readiness data for drivers and travelling crew.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Oura filed its public S-1 on 3 September for a Nasdaq listing under the ticker OURA, led by Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies. The filing shows $1.21B of revenue for the nine months to 30 June 2026, up 74% from $697.6M, five million paid members against 2.5 million a year earlier, and $1.4B of trailing-twelve-month revenue at $59M of net profit. TechCrunch reported on 24 August that the listing could value the company above $16B, against $11B at last October's Series E.",
+   "the_case_p2": "Human performance is already a priced category in motorsport: WHOOP has joined Scuderia Ferrari's roster and Eight Sleep has joined Aston Martin Aramco's. Oura has been buying elite sport at pace - Official Wearable of Team USA and the LA28 Games in February, of U.S. Soccer and its 27 national teams in April, and of the US Open on a five-year USTA agreement. Motorsport is the one arena it does not hold.",
+   "track_label": "",
+   "brief_number": "233",
+   "claims_total": 18,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$900M Series E led by Fidelity at an $11B valuation (Oct 2025), double the $5B Series D mark of Dec 2024; a…",
+     "value": "$900M",
+     "claim_id": 1856,
+     "verified": true,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm"
+    },
+    {
+     "fact": "$1.21B for the nine months to 30 June 2026, up 74% from $697.6M; $1.4B of trailing-twelve-month revenue at…",
+     "value": "$1.21B",
+     "claim_id": 1858,
+     "verified": true,
+     "source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm"
+    },
+    {
+     "fact": "Oura filed a public Form S-1 with the SEC on 3 September for a Nasdaq listing under the ticker OURA, disclo…",
+     "value": "$1.4B",
+     "claim_id": 1865,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "TechCrunch reported on 24 August that the listing could value the company above $16B, against $11B at last…",
+     "value": "$16B",
+     "claim_id": 1867,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Consumer Health Technology · Smart Ring / Recovery Data",
+   "value_content": "MODE A - operational. Season 13 runs 21 races in 13 cities; what limits drivers, engineers and travelling crew across it is circadian, not physical. Oura Ring puts readiness, sleep and heart-rate-variability data in front of the team's performance staff - the programme it runs for Team USA and ran for Red Bull Racing's pit crew from 2020. In return: Official Health Technology Partner status, livery and race-suit presence, US-round hospitality.",
+   "value_section": true,
+   "why_team_para": "The sponsor table shows no wearable or health-technology partner anywhere on the 2026 Formula E grid: the designation is open across the series, at Formula E prices rather than Formula 1 ones. Andretti Formula E is the American entry, owned by TWG Global. Its roster runs TWG AI, Quest Global, Crowe UK and Reflo. Season 13 gives it two home rounds, in Austin and Miami, inside the LA28 build-up Oura has already bought.",
+   "deal_arch_para": "Entry as Official Health Technology Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, carrying through to the LA28 Games. Estimated $2-4M a year, part-payable in product. Scope: sidepod and race-suit placement, naming of the team's readiness programme, US-round hospitality, performance content.",
+   "footer_company": "OURA HEALTH",
+   "why_team_label": "WHY ANDRETTI FORMULA E",
+   "claims_verified": 18,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The S-1 went public on 3 September and pricing follows within weeks; a newly listed company sets its marketing plan in the first cycle after the bell. Formula E opens Season 13 at the Jeddah E-Prix in December, and the Austin E-Prix and the Miami E-Prix land in February 2027.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Sweeny owns the sports portfolio that bought Team USA, U.S. Soccer and the US Open; he came from Levi's, Nest and One Medical. Path: Tom Hale, chief executive since March 2022, who took Momentive public in 2018, and Sean Brecker, CFO. No president is listed.",
+   "decision_maker_name": "Doug Sweeny",
+   "decision_maker_role": "Chief Marketing Officer, Oura Health",
+   "opening_angle_intro": "Lead with the listing, not the ring.",
+   "opening_angle_quote": "&ldquo;Doug, you own Team USA, U.S. Soccer and the US Open, and nothing in motorsport. No Formula E team carries a wearable partner, and Andretti runs the Austin E-Prix and the Miami E-Prix before LA28. 25 minutes?&rdquo;",
+   "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Doug Sweeny, Chief Marketing Officer at Oura Health",
+   "cited_source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.adweek.com/brand-marketing/marketing-vanguard-at-cannes-the-smart-ring-that-made-wellness-more-useful-ft-doug-sweeny-of-oura/",
+     "excerpt": "Adweek and Modern Retail both identify Doug Sweeny as Ōura's chief marketing officer, the marketer behind the company's first $1B year, with prior leadership roles at Levi's, Nest and One Medical. He succeeded Karina Kogan, Ōura's first CMO, who moved to an advisory role on strategic partnerships (ouraring.com/blog).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Doug Sweeny, Chief Marketing Officer, Oura Health at Oura Health",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.adweek.com/brand-marketing/marketing-vanguard-at-cannes-the-smart-ring-that-made-wellness-more-useful-ft-doug-sweeny-of-oura/",
+     "excerpt": "Adweek and Modern Retail both identify Doug Sweeny as Ōura's chief marketing officer, the marketer behind the company's first $1B year, with prior leadership roles at Levi's, Nest and One Medical. He succeeded Karina Kogan, Ōura's first CMO, who moved to an advisory role on strategic partnerships (ouraring.com/blog).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$900M Series E led by Fidelity at an $11B valuation (Oct 2025), double the $5B Series D mark of Dec 2024; a listing above $16B is reported, not confirmed",
+   "cited_source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.cnbc.com/2025/10/14/oura-ringmaker-valuation-fundraise.html",
+     "excerpt": "CNBC, 14 Oct 2025: Oura raised more than $900 million in a Series E led by Fidelity Management & Research Company at an $11 billion valuation, with new investor ICONIQ and participation from Whale Rock and Atreides. The round doubled the $5 billion valuation set at the Series D announced in December 2024. Proceeds were earmarked for production scale, international expansion and product development.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Oura filed a public Form S-1 with the SEC on 3 September for a Nasdaq listing under the ticker OURA, disclosing $1.4B of trailing-twelve-month revenue at $59M of net profit.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+     "excerpt": "Oura Inc. filed a public Form S-1 registration statement with the SEC on 3 September 2026 (accession 0001193125-26-381855), confirming a Nasdaq listing under the ticker OURA. Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies lead the offering, with a further dozen banks named including BofA Securities, Barclays and Robinhood Securities. Bloomberg reported the filing the same day; a confidential draft registration statement was submitted on 21 May 2026 (CNBC).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Fidelity Management & Research (lead), ICONIQ, Whale Rock and Atreides in the Series E; the offering is led by Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies",
+   "cited_source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+     "excerpt": "Oura Inc. filed a public Form S-1 registration statement with the SEC on 3 September 2026 (accession 0001193125-26-381855), confirming a Nasdaq listing under the ticker OURA. Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies lead the offering, with a further dozen banks named including BofA Securities, Barclays and Robinhood Securities. Bloomberg reported the filing the same day; a confidential draft registration statement was submitted on 21 May 2026 (CNBC).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The filing shows $1.21B of revenue for the nine months to 30 June 2026, up 74% from $697.6M, five million paid members against 2.5 million a year earlier, and $1.4B of trailing-twelve-month revenue at $59M of net profit.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://uk.finance.yahoo.com/news/oura-takes-step-toward-ipo-215012105.html",
+     "excerpt": "The S-1, as reported by Yahoo Finance, Bloomberg and the5krunner: revenue of $1.21 billion for the nine months to 30 June 2026, up 74% from $697.6 million a year earlier; $1.4 billion of trailing-twelve-month revenue and $59 million of net profit; five million paid members at 30 June 2026 against 2.5 million a year earlier; 3.6 million rings sold over the trailing twelve months, about 2% of global wearable shipments per IDC. Net loss attributable to common stockholders for the nine months was $924.3 million, reflecting a $985.0 million deemed dividend to holders of redeemable convertible preferred stock.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "$1.21B for the nine months to 30 June 2026, up 74% from $697.6M; $1.4B of trailing-twelve-month revenue at $59M net profit",
+   "cited_source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://uk.finance.yahoo.com/news/oura-takes-step-toward-ipo-215012105.html",
+     "excerpt": "The S-1, as reported by Yahoo Finance, Bloomberg and the5krunner: revenue of $1.21 billion for the nine months to 30 June 2026, up 74% from $697.6 million a year earlier; $1.4 billion of trailing-twelve-month revenue and $59 million of net profit; five million paid members at 30 June 2026 against 2.5 million a year earlier; 3.6 million rings sold over the trailing twelve months, about 2% of global wearable shipments per IDC. Net loss attributable to common stockholders for the nine months was $924.3 million, reflecting a $985.0 million deemed dividend to holders of redeemable convertible preferred stock.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "TechCrunch reported on 24 August that the listing could value the company above $16B, against $11B at last October's Series E.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.cnbc.com/2025/10/14/oura-ringmaker-valuation-fundraise.html",
+     "excerpt": "CNBC, 14 Oct 2025: Oura raised more than $900 million in a Series E led by Fidelity Management & Research Company at an $11 billion valuation, with new investor ICONIQ and participation from Whale Rock and Atreides. The round doubled the $5 billion valuation set at the Series D announced in December 2024. Proceeds were earmarked for production scale, international expansion and product development.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Public Form S-1 filed with the SEC on 3 September 2026 for a Nasdaq listing under the ticker OURA",
+   "cited_source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+     "excerpt": "Oura Inc. filed a public Form S-1 registration statement with the SEC on 3 September 2026 (accession 0001193125-26-381855), confirming a Nasdaq listing under the ticker OURA. Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies lead the offering, with a further dozen banks named including BofA Securities, Barclays and Robinhood Securities. Bloomberg reported the filing the same day; a confidential draft registration statement was submitted on 21 May 2026 (CNBC).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A public S-1 on 3 September, $1.4B of trailing revenue and a reported listing above $16B put Oura at the point where a newly listed consumer brand writes its next marketing plan.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+     "excerpt": "Oura Inc. filed a public Form S-1 registration statement with the SEC on 3 September 2026 (accession 0001193125-26-381855), confirming a Nasdaq listing under the ticker OURA. Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies lead the offering, with a further dozen banks named including BofA Securities, Barclays and Robinhood Securities. Bloomberg reported the filing the same day; a confidential draft registration statement was submitted on 21 May 2026 (CNBC).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "WHOOP has joined Scuderia Ferrari's roster and Eight Sleep has joined Aston Martin Aramco's; no wearable or health-technology partner appears on any 2026 Formula E roster",
+   "cited_source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md + data/teams.json)",
+     "excerpt": "Sponsor table: on the 2026 F1 grid WHOOP has joined Scuderia Ferrari and Eight Sleep has joined Aston Martin Aramco; McLaren carries Optimum Nutrition; Oracle Red Bull Racing carries Oracle as title and TAG Heuer as a major partner, and Oura does not appear on its 2026 roster. On the Formula E grid no team carries a wearable or health-technology partner. Andretti Formula E: TWG AI as primary partner of the Formula E programme and Official Artificial Intelligence Partner of Andretti Global since 2026, plus Quest Global, Crowe UK, Reflo and TWG Motorsports ownership branding; Nissan supplies the powertrain from Season 13. Jaguar TCS Racing locks financial services with Chase; Porsche Formula E Team has TDK as official technology partner after TAG Heuer's exit.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Revenue of $1.21B for the nine months to 30 June 2026, up 74% from $697.6M a year earlier.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://uk.finance.yahoo.com/news/oura-takes-step-toward-ipo-215012105.html",
+     "excerpt": "The S-1, as reported by Yahoo Finance, Bloomberg and the5krunner: revenue of $1.21 billion for the nine months to 30 June 2026, up 74% from $697.6 million a year earlier; $1.4 billion of trailing-twelve-month revenue and $59 million of net profit; five million paid members at 30 June 2026 against 2.5 million a year earlier; 3.6 million rings sold over the trailing twelve months, about 2% of global wearable shipments per IDC. Net loss attributable to common stockholders for the nine months was $924.3 million, reflecting a $985.0 million deemed dividend to holders of redeemable convertible preferred stock.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Official Wearable of Team USA and the LA28 Games (6 Feb 2026), of U.S. Soccer and its 27 national teams (22 Apr 2026) and, on a five-year USTA agreement, of the US Open; no motorsport property in the portfolio",
+   "cited_source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://la28.org/en/newsroom/oura-named-official-wearable-of-team-usa-and-la28.html",
+     "excerpt": "LA28 newsroom and Business Wire, 6 Feb 2026: ŌURA named Official Wearable of Team USA and the LA28 Olympic and Paralympic Games. Ōura has also partnered with Team Finland through to the 2030 Winter Olympics.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Trailing-twelve-month revenue of $1.4B at $59M of net profit.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://uk.finance.yahoo.com/news/oura-takes-step-toward-ipo-215012105.html",
+     "excerpt": "The S-1, as reported by Yahoo Finance, Bloomberg and the5krunner: revenue of $1.21 billion for the nine months to 30 June 2026, up 74% from $697.6 million a year earlier; $1.4 billion of trailing-twelve-month revenue and $59 million of net profit; five million paid members at 30 June 2026 against 2.5 million a year earlier; 3.6 million rings sold over the trailing twelve months, about 2% of global wearable shipments per IDC. Net loss attributable to common stockholders for the nine months was $924.3 million, reflecting a $985.0 million deemed dividend to holders of redeemable convertible preferred stock.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquarters in San Francisco with offices in Finland, more than 900 employees, and a Nasdaq listing filed",
+   "cited_source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+     "excerpt": "Oura Inc. filed a public Form S-1 registration statement with the SEC on 3 September 2026 (accession 0001193125-26-381855), confirming a Nasdaq listing under the ticker OURA. Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies lead the offering, with a further dozen banks named including BofA Securities, Barclays and Robinhood Securities. Bloomberg reported the filing the same day; a confidential draft registration statement was submitted on 21 May 2026 (CNBC).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The nine-month loss attributable to common stockholders of $924.3M is an accounting artefact of a $985.0M deemed dividend to preferred holders, not trading performance.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://uk.finance.yahoo.com/news/oura-takes-step-toward-ipo-215012105.html",
+     "excerpt": "The S-1, as reported by Yahoo Finance, Bloomberg and the5krunner: revenue of $1.21 billion for the nine months to 30 June 2026, up 74% from $697.6 million a year earlier; $1.4 billion of trailing-twelve-month revenue and $59 million of net profit; five million paid members at 30 June 2026 against 2.5 million a year earlier; 3.6 million rings sold over the trailing twelve months, about 2% of global wearable shipments per IDC. Net loss attributable to common stockholders for the nine months was $924.3 million, reflecting a $985.0 million deemed dividend to holders of redeemable convertible preferred stock.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "IPO filing",
+   "cited_source_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm",
+     "excerpt": "Oura Inc. filed a public Form S-1 registration statement with the SEC on 3 September 2026 (accession 0001193125-26-381855), confirming a Nasdaq listing under the ticker OURA. Goldman Sachs, Morgan Stanley, JPMorgan, Allen & Company and Jefferies lead the offering, with a further dozen banks named including BofA Securities, Barclays and Robinhood Securities. Bloomberg reported the filing the same day; a confidential draft registration statement was submitted on 21 May 2026 (CNBC).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The Series E in October 2025 raised more than $900M at an $11B valuation, led by Fidelity with ICONIQ, Whale Rock and Atreides - double the $5B set at the Series D in December 2024.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.cnbc.com/2025/10/14/oura-ringmaker-valuation-fundraise.html",
+     "excerpt": "CNBC, 14 Oct 2025: Oura raised more than $900 million in a Series E led by Fidelity Management & Research Company at an $11 billion valuation, with new investor ICONIQ and participation from Whale Rock and Atreides. The round doubled the $5 billion valuation set at the Series D announced in December 2024. Proceeds were earmarked for production scale, international expansion and product development.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "TechCrunch reported on 24 August that the listing could value Oura above $16B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/24/oura-is-reportedly-eyeing-a-september-ipo-that-could-value-it-at-more-than-16b/",
+     "excerpt": "TechCrunch, 24 Aug 2026: Oura is reportedly eyeing a September IPO that could value it at more than $16 billion. Reported, not company-confirmed; the S-1 filed on 3 September does not set a price range.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Jeddah E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix and the Miami E-Prix land in February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "opening_angle_quote",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "opening_angle_quote",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Miami E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: Miami International Autodrome (Hard Rock Stadium)",
+     "excerpt": "round 3: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Jeddah E-Prix on 18 December 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
