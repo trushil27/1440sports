@@ -1,0 +1,648 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-06-27",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-zvpf18jn/2026-06-27/divergent.pdf",
+     "web": "/tmp/case-pdf-zvpf18jn/2026-06-27/divergent.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Divergent Technologies",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 9
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "resurfaced: Divergent Technologies last surfaced 2026-06-27 (other:never entered funding event category whitespace); new trigger other:second factory and new production system; top ranking score",
+     "company": "Divergent Technologies",
+     "decision": "selected",
+     "signal_date": "2026-06-17"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Divergent Technologies",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "resurfaced: Divergent Technologies last surfaced 2026-06-27 (other:never entered funding event category whitespace); new trigger other:second factory and new production system; top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 15,
+    "ops_fit": 15,
+    "ranking": 71,
+    "urgency": 13,
+    "capacity": 15,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "McLaren Mastercard F1 Team",
+   "source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+   "trigger_date": "2026-06-17",
+   "trigger_reason": "second factory and new production system"
+  }
+ ],
+ "brief": {
+  "number": 177,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-zvpf18jn/2026-06-27/divergent.web.html",
+  "brief_data": {
+   "hq": "Torrance, California",
+   "deck": "Divergent, the Torrance digital-manufacturing company whose printed titanium suspension sits on the McLaren W1, unveiled Monolith One, a twelve-laser metal printer, and a 430,000 sq ft second factory in Long Beach on 17 June 2026, an 8X step in output nine months after a $290M Series E at $2.3B.",
+   "risks": [
+    {
+     "label": "DEFENCE IDENTITY",
+     "detail": "The June story is Tomahawk airframes; a weapons-manufacturing partner may not suit McLaren's consumer-facing brand mix.",
+     "counter": "Build the programme on the automotive lineage, W1, Bugatti, Aston Martin, and keep the activation technical."
+    },
+    {
+     "label": "SEPARATE COMPANIES",
+     "detail": "McLaren Automotive is the customer; McLaren Racing is a different company with its own commercial team and top-of-grid pricing.",
+     "counter": "Use the Automotive engineers as the reference; enter at technology-partner level, part-paid in parts."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private ($2.3B valuation, Series E, Sep 2025)",
+   "company": "Divergent Technologies",
+   "gridfit": [
+    {
+     "team": "McLaren F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "capacity_expansion",
+    "category_whitespace",
+    "partner_adjacency"
+   ],
+   "sources": [
+    "https://www.prnewswire.com/news-releases/divergent-announces-cooper-keller-as-chief-operating-officer-302786589.html",
+    "https://www.prnewswire.com/news-releases/divergent-announces-290-million-series-e-to-scale-digital-manufacturing-platform-and-meet-growing-us-defense-production-demand-302555989.html",
+    "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+    "https://www.automotiveworld.com/news-releases/mclaren-automotive-collaborates-with-divergent-to-deliver-advanced-suspension-hardware-on-the-new-mclaren-w1/",
+    "https://www.prnewswire.com/news-releases/divergent-technologies-inc-announces-closing-of-upsized-230-million-series-d-capital-raise-301985962.html"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Lukas Czinger before the British GP to confirm the Long Beach timeline on the record, agree which printed structures a McLaren Racing pilot would cover, and size an Official Digital Manufacturing Partner entry against McLaren's 2027 roster.",
+    "value": [
+     {
+      "text": "Titanium uprights, wishbone prototypes, brackets, cooling manifolds and wind-tunnel-model structures designed with DAPS' AI-enabled optimisation and printed on Monolith One, with robotic assembly for sub-structures. It is the workflow that produced the W1's suspension, applied to a race car's fast-iteration parts; the value to the team is shorter design-to-track cycles and a second, US-based source of structural parts inside the cost cap.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Divergent's customers are aerospace primes, defence contractors and hypercar makers; its guest list at Austin and Las Vegas is an industrial and capital-markets audience that McLaren's technology partners want to meet.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "From metal powder to wishbone to race car: co-produced engineering content from the McLaren Technology Centre and Long Beach, a Formula 1 reference for Divergent's automotive sales, and a hypercar-to-F1 story through Czinger Vehicles, whose 21C holds production-car lap records.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Digital Manufacturing Partner designation, sidepod placement, naming of a printed-structures programme, MTC engineering content, driver and engineering access for Divergent's channels, hospitality at Silverstone, Austin and Las Vegas.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 17 June 2026 Divergent announced Monolith One, a laser powder-bed fusion printer with twelve 2kW lasers and a 700 x 700 x 835 mm build volume, and a second factory in Long Beach, California: 430,000 sq ft, 64 printers, about 1,000 jobs, an 8X increase in annual output, production from the first half of 2027. The release is Divergent's own; TCT, Metal AM, Breaking Defense and the Long Beach Post carried it.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The $290M Series E closed on 15 September 2025 at a $2.3B valuation, led by Rochefort Asset Management with $120M of the round, on top of a $230M Series D in November 2023; total funding is reported at about $1.1B. The thin row scored the Series E as the trigger; it is nine months old. The fresh event is the factory, funded by that round.",
+      "label": "Capital already in place"
+     },
+     {
+      "text": "Cooper Keller was promoted to Chief Operating Officer on 1 June, Brian Erhartic named Chief Technology Officer on 8 June and Ben Nicholson, from Ursa Major, appointed Chief Commercial Officer on 15 June. A company that hires its first CCO in the month it announces a factory is about to sell capacity, and a brand partnership is part of how it does that.",
+      "label": "A leadership team built in one month"
+     },
+     {
+      "text": "The British GP at Silverstone falls days after the row, the Dutch and Italian GPs inside the six-to-ten-week window, and the US GP in Austin and the Las Vegas GP later in the year on Divergent's home ground. Teams close 2027 rosters in the fourth quarter.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "McLaren's 2026 roster is engineering-heavy, Dell Technologies, Cisco, Google Cloud, Groq, Arrow Electronics, Greene Tweed, Smartsheet, Workday, but the sponsor table shows no additive-manufacturing or digital-manufacturing partner. Stratasys supplies the team's polymer printing; metal structural components and robotic assembly are a different lane.",
+      "label": "The open lane"
+     },
+     {
+      "text": "McLaren Automotive's engineers worked with Divergent on the W1's titanium front upper wishbone, aero-form lower wishbone and front upright, printed by Divergent under a multi-year collaboration. McLaren Racing is a separate company, majority-owned by Bahrain Mumtalakat with CYVN Holdings, the owner of Automotive, holding a non-controlling stake, so the introduction runs through engineers who already trust the parts, not through a shared commercial team.",
+      "label": "The warm path"
+     },
+     {
+      "text": "Alpine carries 3D Systems as its additive partner. Haas is owned by a machine-tool brand, Haas Automation, whose identity a digital-manufacturing partner would cut across. Audi's Additive Industries relationship ended within the last 12 months, so the lane is open there, but Audi has no Divergent lineage. Aston Martin's road-car arm used DAPS for the DBR22 subframe and Mercedes-AMG is a customer too, so both are credible second choices; McLaren is where a live production programme already sits.",
+      "label": "Why not the alternatives"
+     },
+     {
+      "text": "The W1's suspension is described by McLaren as Formula 1-inspired. Putting the company that prints it onto the Formula 1 car closes the loop in a single sentence, and gives McLaren's technology-forward identity a manufacturing chapter it currently lacks.",
+      "label": "Story fit"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "3D Systems is Alpine's additive-manufacturing partner: a direct rival."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Owned by the founder of Haas Automation, a machine-tool brand; a digital-manufacturing partner cuts across the owner's identity."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "Open but not chosen: Additive Industries left within the last 12 months and Audi has no Divergent lineage."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team · Mercedes-AMG Petronas F1 Team",
+      "reason": "Credible second choices: both road-car brands are Divergent customers, but neither has a live production programme like the W1, and Mercedes prices at the top of the grid."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "General Motors and Tenneco hold the manufacturing identity of the new team; no Divergent relationship."
+     },
+     {
+      "team": "Oracle Red Bull Racing · Visa Cash App Racing Bulls",
+      "reason": "Siemens holds the digital-manufacturing and design-software lane at both."
+     }
+    ]
+   },
+   "date_long": "27 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "McLaren Mastercard F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $2.3B company that already prints the McLaren W1's suspension has just announced a twelve-laser printer and a 430,000 sq ft factory it must fill. McLaren Racing carries no manufacturing partner, the warm path runs through McLaren Automotive's own engineers, and Silverstone opens the window days after the row.",
+   "footer_date": "27 JUN 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Factory announced 17 Jun; shutdown mid-window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "$2.3B valuation, $290M Series E: mid-tier partner money.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "Motorsport-native manufacturing story; defence identity dilutes.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Capacity to sell from 2027; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: metal additive structures, proven on the W1.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 17 June Divergent announced Monolith One, a laser powder-bed printer with twelve 2kW lasers, and a second factory: 430,000 sq ft in Long Beach, California, 64 printers, production from early 2027, an 8X rise in annual output. It follows the $290M Series E closed on 15 September 2025 at a $2.3B valuation, led by Rochefort Asset Management, after a $230M Series D in November 2023. The platform, DAPS, pairs AI-enabled design with metal additive and robotic assembly, and has delivered 600+ unique parts for Lockheed Martin, RTX, McLaren, Aston Martin and Bugatti.",
+   "the_case_p2": "Divergent already builds the McLaren W1's Formula 1-inspired front suspension: titanium upper and lower wishbones and the upright, printed by Divergent under a multi-year collaboration with McLaren Automotive. The road-car side of the brand is a customer; the racing side, operationally separate under Zak Brown, is not yet a partner. A second factory needs a flagship to fill it, and a race car is the fastest proof a structural printer can give.",
+   "track_label": "",
+   "brief_number": "177",
+   "claims_total": 12,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$290M Series E ($250M equity, $40M debt) led by Rochefort Asset Management at a $2.3B valuation, closed 15…",
+     "value": "$290M",
+     "claim_id": 642,
+     "verified": true,
+     "source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html"
+    },
+    {
+     "fact": "Rochefort Asset Management (Series E lead, $120M of the round); total raised more than $1B (Tracxn, reported)",
+     "value": "$120M",
+     "claim_id": 643,
+     "verified": true,
+     "source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html"
+    },
+    {
+     "fact": "A $2.3B company that already prints the McLaren W1's suspension has just announced a twelve-laser printer a…",
+     "value": "$2.3B",
+     "claim_id": 652,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Digital Manufacturing · AI Design + Metal Additive + Robotic Assembly",
+   "value_content": "MODE A - operational. Titanium uprights, wishbone prototypes, brackets and cooling manifolds designed with DAPS' AI-enabled optimisation and printed on Monolith One, with robotic assembly for sub-structures: the workflow that produced the W1's suspension, applied to a race car's fast-iteration parts inside the cost cap. McLaren gets shorter design-to-track cycles and a US manufacturing source; Divergent gets a flagship for the new factory.",
+   "value_section": true,
+   "why_team_para": "McLaren's roster is engineering-led, Dell, Cisco, Google Cloud, Groq, Arrow Electronics, but carries no additive or digital-manufacturing partner; Stratasys supplies polymer printing, a different lane from metal structures. The warm path is real: McLaren Automotive's engineers iterated the W1 wishbones on DAPS, and CYVN, which owns Automotive, holds a non-controlling stake in Racing. Alpine has 3D Systems and Haas is owned by a machine-tool brand; McLaren is where the printed-suspension story lives.",
+   "deal_arch_para": "Entry as Official Digital Manufacturing Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the Long Beach ramp. Estimated $3-5M a year, part-payable in printed parts and engineering time. Scope: sidepod placement, naming of a printed-structures programme, MTC content, hospitality at Silverstone, Austin and Las Vegas.",
+   "footer_company": "DIVERGENT TECHNOLOGIES",
+   "why_team_label": "WHY MCLAREN MASTERCARD F1 TEAM",
+   "claims_verified": 12,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The factory and the printer were announced on 17 June, with a new COO, CTO and Chief Commercial Officer named in the same month: a company staffing up to sell capacity. Silverstone falls days after the row; Monza and Austin sit inside the window, and 2027 rosters close in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Czinger co-founded Divergent with his father Kevin, Executive Chairman, and runs Czinger Vehicles, whose 21C holds production-car lap records; a first F1 deal is his call. Path: Ben Nicholson, Chief Commercial Officer since 15 June, and Cooper Keller, COO. No CMO or CFO is listed.",
+   "decision_maker_name": "Lukas Czinger",
+   "decision_maker_role": "President & CEO, Co-Founder, Divergent Technologies",
+   "opening_angle_intro": "Lead with the W1's wishbones.",
+   "opening_angle_quote": "&ldquo;Lukas, your titanium wishbones already carry a McLaren; the Formula 1 team that inspired them has no manufacturing partner, and you have a factory to fill. 25 minutes before Silverstone to talk about a printed-structures programme?&rdquo;",
+   "value_section_label": "VALUE TO MCLAREN MASTERCARD F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Lukas Czinger, President & CEO, Co-Founder at Divergent Technologies",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-announces-cooper-keller-as-chief-operating-officer-302786589.html",
+     "excerpt": "Divergent releases and listings, June 2026: Lukas Czinger, President & Chief Executive Officer and Co-Founder; Kevin Czinger, Founder, Lead Inventor & Executive Chairman; Cooper Keller promoted to Chief Operating Officer (1 Jun 2026); Ben Nicholson appointed Chief Commercial Officer (15 Jun 2026, from Ursa Major); Brian Erhartic named Chief Technology Officer (8 Jun 2026). No chief marketing officer and no CFO are named on any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Lukas Czinger, President & CEO, Co-Founder, Divergent Technologies at Divergent Technologies",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-announces-cooper-keller-as-chief-operating-officer-302786589.html",
+     "excerpt": "Divergent releases and listings, June 2026: Lukas Czinger, President & Chief Executive Officer and Co-Founder; Kevin Czinger, Founder, Lead Inventor & Executive Chairman; Cooper Keller promoted to Chief Operating Officer (1 Jun 2026); Ben Nicholson appointed Chief Commercial Officer (15 Jun 2026, from Ursa Major); Brian Erhartic named Chief Technology Officer (8 Jun 2026). No chief marketing officer and no CFO are named on any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$290M Series E ($250M equity, $40M debt) led by Rochefort Asset Management at a $2.3B valuation, closed 15 Sep 2025 (company release); $230M Series D in Nov 2023",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-announces-290-million-series-e-to-scale-digital-manufacturing-platform-and-meet-growing-us-defense-production-demand-302555989.html",
+     "excerpt": "Divergent, 15 Sep 2025 (company release; SiliconANGLE, TechCrunch): closed a $290 million Series E at a $2.3 billion valuation, $250 million equity and $40 million debt, led by Rochefort Asset Management (which contributed $120 million), to scale manufacturing capacity and fund new product families.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Divergent, the Torrance digital-manufacturing company whose printed titanium suspension sits on the McLaren W1, unveiled Monolith One, a twelve-laser metal printer, and a 430,000 sq ft second factory in Long Beach on 17 June 2026, an 8X step in output nine months after a $290M Series E at $2.3B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+     "excerpt": "Divergent, 17 Jun 2026 (PR Newswire; TCT, Metal AM, Breaking Defense, Long Beach Post): Monolith One is a laser powder-bed fusion printer with twelve 2kW lasers (24kW) and a 700 x 700 x 835 mm build volume, 28 months in development under CTO Brian Erhartic; a second factory of 430,000 sq ft in Long Beach, California, will house 64 Monolith One printers, raise annual production output 8X for defence and commercial programmes, create about 1,000 jobs and start production in the first half of 2027. CEO Lukas Czinger: the factory 'represents the new industrial age at scale'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Rochefort Asset Management (Series E lead, $120M of the round); total raised more than $1B (Tracxn, reported)",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-announces-290-million-series-e-to-scale-digital-manufacturing-platform-and-meet-growing-us-defense-production-demand-302555989.html",
+     "excerpt": "Divergent, 15 Sep 2025 (company release; SiliconANGLE, TechCrunch): closed a $290 million Series E at a $2.3 billion valuation, $250 million equity and $40 million debt, led by Rochefort Asset Management (which contributed $120 million), to scale manufacturing capacity and fund new product families.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It follows the $290M Series E closed on 15 September 2025 at a $2.3B valuation, led by Rochefort Asset Management, after a $230M Series D in November 2023.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-announces-290-million-series-e-to-scale-digital-manufacturing-platform-and-meet-growing-us-defense-production-demand-302555989.html",
+     "excerpt": "Divergent, 15 Sep 2025 (company release; SiliconANGLE, TechCrunch): closed a $290 million Series E at a $2.3 billion valuation, $250 million equity and $40 million debt, led by Rochefort Asset Management (which contributed $120 million), to scale manufacturing capacity and fund new product families.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "17 Jun 2026: Divergent unveils Monolith One, a 12-laser (24kW) metal printer, and a second factory in Long Beach, California (430,000 sq ft) for an 8X rise in annual output",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+     "excerpt": "Divergent, 17 Jun 2026 (PR Newswire; TCT, Metal AM, Breaking Defense, Long Beach Post): Monolith One is a laser powder-bed fusion printer with twelve 2kW lasers (24kW) and a 700 x 700 x 835 mm build volume, 28 months in development under CTO Brian Erhartic; a second factory of 430,000 sq ft in Long Beach, California, will house 64 Monolith One printers, raise annual production output 8X for defence and commercial programmes, create about 1,000 jobs and start production in the first half of 2027. CEO Lukas Czinger: the factory 'represents the new industrial age at scale'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $2.3B company that already prints the McLaren W1's suspension has just announced a twelve-laser printer and a 430,000 sq ft factory it must fill.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+     "excerpt": "Divergent, 17 Jun 2026 (PR Newswire; TCT, Metal AM, Breaking Defense, Long Beach Post): Monolith One is a laser powder-bed fusion printer with twelve 2kW lasers (24kW) and a 700 x 700 x 835 mm build volume, 28 months in development under CTO Brian Erhartic; a second factory of 430,000 sq ft in Long Beach, California, will house 64 Monolith One printers, raise annual production output 8X for defence and commercial programmes, create about 1,000 jobs and start production in the first half of 2027. CEO Lukas Czinger: the factory 'represents the new industrial age at scale'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "3D Systems is Alpine's additive partner; Additive Industries departed Audi within the last 12 months; Haas Automation (machine tools) is the Haas F1 owner's brand",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+     "excerpt": "Sponsor table: McLaren F1 Team 2026 — Mastercard (title), Dell Technologies, Cisco, Google Cloud, Groq, Arrow Electronics, Greene Tweed, Smartsheet, Workday and others; no additive-manufacturing or digital-manufacturing partner active. Alpine: 3D Systems (additive). Audi: Additive Industries departed within the last 12 months; Camozzi active. Haas: Haas Automation (machine tools), Toyota Gazoo Racing (title). Red Bull: Siemens, Ansys. Cadillac: Tenneco, General Motors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The $290M Series E closed on 15 September 2025 at a $2.3B valuation, led by Rochefort Asset Management with $120M of the round, on top of a $230M Series D in November 2023;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-announces-290-million-series-e-to-scale-digital-manufacturing-platform-and-meet-growing-us-defense-production-demand-302555989.html",
+     "excerpt": "Divergent, 15 Sep 2025 (company release; SiliconANGLE, TechCrunch): closed a $290 million Series E at a $2.3 billion valuation, $250 million equity and $40 million debt, led by Rochefort Asset Management (which contributed $120 million), to scale manufacturing capacity and fund new product families.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "McLaren Automotive already builds the W1's front suspension on Divergent's DAPS: titanium upper and lower wishbones and the front upright, printed by Divergent",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.automotiveworld.com/news-releases/mclaren-automotive-collaborates-with-divergent-to-deliver-advanced-suspension-hardware-on-the-new-mclaren-w1/",
+     "excerpt": "McLaren Automotive release (Automotive World; TCT; Metal AM): a multi-year collaboration with Divergent; the McLaren W1's Formula 1-inspired front suspension uses Divergent's Adaptive Production System for the titanium front upper wishbone, aero-form lower wishbone and front upright, printed by Divergent, allowing rapid design iteration for stiffness and durability.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "total funding is reported at about $1.1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-technologies-inc-announces-closing-of-upsized-230-million-series-d-capital-raise-301985962.html",
+     "excerpt": "Divergent, Nov 2023: closing of an upsized $230 million Series D. Tracxn and Crunchbase put total funding at about $1.1 billion as of July 2026 (reported).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Torrance, California; second factory in Long Beach, California",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+     "excerpt": "Divergent, 17 Jun 2026 (PR Newswire; TCT, Metal AM, Breaking Defense, Long Beach Post): Monolith One is a laser powder-bed fusion printer with twelve 2kW lasers (24kW) and a 700 x 700 x 835 mm build volume, 28 months in development under CTO Brian Erhartic; a second factory of 430,000 sq ft in Long Beach, California, will house 64 Monolith One printers, raise annual production output 8X for defence and commercial programmes, create about 1,000 jobs and start production in the first half of 2027. CEO Lukas Czinger: the factory 'represents the new industrial age at scale'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "second factory and new production system",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/divergent-builds-americas-most-advanced-industrial-metal-3d-printer-monolith-one-and-announces-second-factory-302802466.html",
+     "excerpt": "Divergent, 17 Jun 2026 (PR Newswire; TCT, Metal AM, Breaking Defense, Long Beach Post): Monolith One is a laser powder-bed fusion printer with twelve 2kW lasers (24kW) and a 700 x 700 x 835 mm build volume, 28 months in development under CTO Brian Erhartic; a second factory of 430,000 sq ft in Long Beach, California, will house 64 Monolith One printers, raise annual production output 8X for defence and commercial programmes, create about 1,000 jobs and start production in the first half of 2027. CEO Lukas Czinger: the factory 'represents the new industrial age at scale'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
