@@ -43,7 +43,11 @@ jobs:
       DATABASE_URL: postgresql://postgres:pg@localhost:5432/intel
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       OPERATOR_EMAIL: ${{ secrets.OPERATOR_EMAIL }}
-      MD_EMAIL: ${{ secrets.MD_EMAIL }}
+      # MD_EMAIL is deliberately NOT passed (operator decision, 6 Sep 2026): nothing reaches
+      # the MD — no brief, no failure notice — until the desk has run clean for several days.
+      # Shadow mode already routes everything to the operator; this makes it true in any mode.
+      # Restore the line below to resume MD delivery, and only with EXECUTION_MODE=production.
+      #   MD_EMAIL: ${{ secrets.MD_EMAIL }}
       EXECUTION_MODE: ${{ vars.EXECUTION_MODE || 'shadow' }}
       GRAPH_TENANT_ID: ${{ secrets.GRAPH_TENANT_ID }}
       GRAPH_CLIENT_ID: ${{ secrets.GRAPH_CLIENT_ID }}
