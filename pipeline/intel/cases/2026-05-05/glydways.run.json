@@ -1,0 +1,690 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-05-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-0zlydy2p/2026-05-05/glydways.pdf",
+     "web": "/tmp/case-pdf-0zlydy2p/2026-05-05/glydways.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Glydways",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 12
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "FE rotation day (Tue/Fri)",
+     "company": "Glydways",
+     "decision": "selected",
+     "signal_date": "2026-04-14"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Glydways",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "FE rotation day (Tue/Fri)",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 15,
+    "ops_fit": 11,
+    "ranking": 70,
+    "urgency": 15,
+    "capacity": 12,
+    "brand_fit": 17,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 1,
+     "on_camera": 2,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 17
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Andretti Formula E",
+   "source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+   "trigger_date": "2026-04-14",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 229,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-0zlydy2p/2026-05-05/glydways.web.html",
+  "brief_data": {
+   "hq": "South San Francisco, California",
+   "deck": "Glydways, the South San Francisco builder of on-demand autonomous transit networks, closed an oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures on 14 April 2026, as its first three public systems, in the UAE, greater New York and South Metro Atlanta, move toward passengers this year.",
+   "risks": [
+    {
+     "label": "CAPACITY IS EARLY-STAGE",
+     "detail": "No revenue and a reported ~$700M valuation; sponsorship competes with pilot capital.",
+     "counter": "Size the entry to Formula E economics and step the fee with the Atlanta opening and the next round."
+    },
+    {
+     "label": "AN INFRASTRUCTURE SALE, NOT A CONSUMER ONE",
+     "detail": "Glydways sells to governments; racing reach can look off-strategy to its board.",
+     "counter": "Frame the deal around hosted city officials at Tokyo, Miami and Austin, with attendance as the KPI."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private (~$700M reported; $170M Series C, Apr 2026)",
+   "company": "Glydways",
+   "gridfit": [
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "DS Penske",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "open_category",
+    "public_pilot"
+   ],
+   "sources": [
+    "https://www.glydways.com/about/",
+    "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+    "https://www.businesswire.com/news/home/20260211500738/en/Glydways-Breaks-Ground-on-First-Ever-Public-Mass-Transit-System-in-South-Metro-Atlanta"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Gokul Hemmady and Chris Riley before the Tokyo E-Prix to test the city-official hospitality model, agree a Season 13 entry against Andretti's roster, and set the Atlanta opening as the first activation.",
+    "value": [
+     {
+      "text": "Glydways sells to city and regional governments. Formula E races on city streets by agreement with those same governments, and its paddock is where transport authorities, mayors and investment offices are hosted. A partnership buys Glydways the room: Tokyo for its Japanese investors, Jeddah for the Gulf agreements, Miami and Austin for the US pilots.",
+      "label": "The audience is the product (Mode B)"
+     },
+     {
+      "text": "A branded Glydways pod on the E-Prix fan concourse, or a short on-demand shuttle between fan zones where the circuit allows, shows the product moving people rather than a logo on a car. Formula E's own pitch to host cities is driverless, electric, on-demand transit; Glydways is that pitch made physical.",
+      "label": "A working demonstration on the concourse"
+     },
+     {
+      "text": "The Atlanta line's first public rides in December 2026, the Dubai and Abu Dhabi studies and the GEN4 launch give Andretti a season-long story about how cities will move, with drivers riding the pods and city officials on camera.",
+      "label": "Content the team cannot make alone"
+     },
+     {
+      "text": "Official Mobility Partner designation, livery and driver-suit placement, a pod demonstration at the US rounds, hospitality for city officials at Tokyo, Jeddah, Miami and Austin, and driver access for Glydways' public-launch communications.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 14 April 2026 Glydways announced an oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with Mitsui Chemicals and Gates Frontier returning and Obayashi Corporation new. Total funding now exceeds $250M. Bloomberg reported the round valued the company at almost $700M and that talks are under way for $250M more at $1B or above; those valuation figures are press-reported, not company-stated.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The South Metro Atlanta demonstration pilot, built with ACS Infra, broke ground in February 2026 and is scheduled to open to the public in December 2026: a dedicated 0.5-mile guideway from the ATL SkyTrain at the Georgia International Convention Center to the Gateway Center Arena, the first Glydways system to run as public transportation anywhere. A company whose product the public has never ridden becomes, this year, one the public judges.",
+      "label": "The first public passengers"
+     },
+     {
+      "text": "Dubai's Roads and Transport Authority signed with Glydways at the World Governments Summit in February 2026 to study initial routes, with a planned 2.8km pilot from National Paints Metro Station to Bluewaters Island. The Abu Dhabi Investment Office signed an interim agreement in November 2025 to assess a deployment in the capital. Gulf transport authorities are also Formula E's founding audience: Jeddah opens Season 13.",
+      "label": "Two Gulf agreements"
+     },
+     {
+      "text": "The Tokyo E-Prix on 25-26 July is the home race for three of Glydways' investors, Suzuki, Obayashi and Mitsui Chemicals, and falls inside the action horizon. Formula E's Season 13 rosters are agreed over the summer; the GEN4 era opens in Jeddah in December, and the Austin E-Prix on 6 February and Miami on 20 February 2027 are the US rounds closest to Glydways' Atlanta and New York pilots.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Andretti's roster is Andretti Global, TWG Motorsports, TWG AI, Quest Global, Crowe UK and Reflo, with Porsche powertrain to the end of Season 12 and Nissan from Season 13. There is no mobility, transit or autonomy partner on it, and no such brand anywhere on the Formula E grid.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Suzuki co-led the round, and eight of the grid's teams are carmaker works entries or carry a carmaker's badge: Nissan, Porsche, Jaguar, Citroën, Cupra, DS, Mahindra and Lola Yamaha ABT. Andretti is an independent; a Suzuki-backed company can sit on its car without embarrassing anyone.",
+      "label": "No carmaker clash"
+     },
+     {
+      "text": "Andretti is the American entry in Formula E. Season 13 brings an Austin E-Prix on 6 February and Miami on 20 February 2027, the two rounds nearest Glydways' first public riders in Atlanta and its greater New York pilot, and Miami already ran in Season 12.",
+      "label": "The American team with the American rounds"
+     },
+     {
+      "text": "Envision Racing is the other independent and its sustainability identity fits, but it is UK-based with a Chinese parent and offers no US home story. Jaguar TCS Racing's autonomy-adjacent parent is a rival carmaker to an investor. The works teams are ruled out on the carmaker clash above.",
+      "label": "Why not the others"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Nissan Formula E Team",
+      "reason": "Carmaker works team; Suzuki co-led the round."
+     },
+     {
+      "team": "Porsche Formula E Team",
+      "reason": "Carmaker works team; Suzuki clash."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "Carmaker works team (JLR); Suzuki clash."
+     },
+     {
+      "team": "Citroën Racing · DS Penske",
+      "reason": "Stellantis works entries; Suzuki clash."
+     },
+     {
+      "team": "Cupra Kiro · Mahindra Racing · Lola Yamaha ABT",
+      "reason": "Carry Cupra, Mahindra and Yamaha badges; Suzuki clash."
+     },
+     {
+      "team": "Envision Racing",
+      "reason": "Open but not chosen: independent with a sustainability identity, but UK-based with no US home rounds story."
+     }
+    ]
+   },
+   "date_long": "05 MAY 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Andretti Formula E",
+   "value_mode": "B",
+   "bottom_line": "A $170M Series C, first public passengers in Atlanta by December and live agreements in Dubai and Abu Dhabi make 2026 the year Glydways needs a public face. Formula E races in the cities it sells to, no transit brand is on the grid, and Andretti is the American team with Miami and Austin next season.",
+   "footer_date": "5 MAY 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "14 Apr raise; Tokyo E-Prix, Season 13 next.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 12,
+     "note": "$170M raised; ~$700M reported; no revenue yet.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 17,
+     "note": "City-street electric racing meets city transit.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 15,
+     "note": "First public riders in 2026; $1B talks.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 11,
+     "note": "MODE B halo; pod demo at US rounds.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 14 April 2026 Glydways announced a $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with Mitsui Chemicals, Gates Frontier and new investor Obayashi Corporation; total funding exceeds $250M, and Bloomberg reported the round at almost $700M with talks for $250M more at $1B or above. The money is for going public in the literal sense: the South Metro Atlanta system broke ground in February and opens in December 2026, Dubai's RTA signed for a 2.8km pilot route, and Abu Dhabi's investment office is assessing a deployment. <font name='Poppins-Bold' size='9.5'>THE FIRST PASSENGERS RIDE THIS YEAR.</font>",
+   "the_case_p2": "No autonomous-transit or mobility-network brand sits anywhere on the Formula E grid; the only autonomous-vehicle partner in either series is Zoox, at Williams in Formula 1. Formula E's works teams belong to carmakers, which matters when Suzuki co-led the round: Nissan, Porsche, Jaguar, Citroën, Cupra, DS and Mahindra each carry a rival badge. That leaves the independents, and one of them is American, with Miami and Austin on its next season's calendar.",
+   "track_label": "",
+   "brief_number": "229",
+   "claims_total": 15,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$170M oversubscribed Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, announced…",
+     "value": "$170M",
+     "claim_id": 642,
+     "verified": true,
+     "source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html"
+    },
+    {
+     "fact": "total funding exceeds $250M, and Bloomberg reported the round at almost $700M with talks for $250M more at…",
+     "value": "$250M",
+     "claim_id": 652,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Autonomous Transit · Personal Rapid Transit Networks",
+   "value_content": "MODE B - halo with mechanics. Glydways sells to cities, so the deliverable is the audience: transport authorities and mayors hosted at Miami, Austin and Tokyo, where Formula E races on their streets. A branded pod on the E-Prix fan concourse is a working demonstration, not a logo. Andretti gains a technology partner whose story, driverless electric transit, is Formula E's own pitch to host cities, plus content from the Atlanta line's first public rides.",
+   "value_section": true,
+   "why_team_para": "Andretti is the American team in Formula E, and its roster has no mobility or autonomy partner: Andretti Global, TWG AI, Quest Global, Crowe UK and Reflo, with Porsche power until Season 12 ends and Nissan from Season 13. As an independent it carries no carmaker badge to clash with Suzuki's. Its next season brings the Austin E-Prix and Miami in February 2027, the closest Formula E gets to Glydways' Atlanta and New York riders, and the paddock is where city transport authorities are hosted.",
+   "deal_arch_para": "Entry as Official Mobility Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, tracking public operations from 2027. Estimated $1-2M a year, scaled to a Series C business. Scope: livery and driver-suit placement, a pod demonstration at Miami and Austin, city-official hospitality at Tokyo and Jeddah, and joint content around the Atlanta opening.",
+   "footer_company": "GLYDWAYS",
+   "why_team_label": "WHY ANDRETTI FORMULA E",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series C closed on 14 April and public passengers board in Atlanta in December. Between those dates sit the Tokyo E-Prix on 25-26 July, home race for Suzuki, Obayashi and Mitsui Chemicals, and Formula E's Season 13 roster window. The GEN4 era opens in December, with Miami and Austin following in February 2027.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 229",
+   "decision_maker_bio": "Hemmady joined Glydways in 2019 as President and CFO and now runs it as CEO; a first sports partnership is his sign-off. Path: Chris Riley, Chief Commercial Officer, ex-Ogilvy Singapore chairman, owns partnerships and corporate reputation; Mark Seeger, Founder and Chief Strategy Officer. No CMO is listed.",
+   "decision_maker_name": "Gokul Hemmady",
+   "decision_maker_role": "CEO, Glydways",
+   "opening_angle_intro": "Lead with the cities, not the cars.",
+   "opening_angle_quote": "&ldquo;Gokul, Formula E races on the streets of the cities you sell to, and no transit brand is on its grid. Andretti is the American team, with Miami and Austin next season. 25 minutes on how the pod meets the paddock?&rdquo;",
+   "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Gokul Hemmady, CEO at Glydways",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.glydways.com/about/",
+     "excerpt": "Glydways about page (search summary; glydways.com egress-blocked): Gokul Hemmady, CEO — joined Glydways in 2019 as President and Chief Financial Officer; Blake Barber, Chief Technology Officer; Mark Seeger, Founder and Chief Strategy Officer (founded the company in 2016); Chris Riley, Chief Commercial Officer.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Gokul Hemmady, CEO, Glydways at Glydways",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.glydways.com/about/",
+     "excerpt": "Glydways about page (search summary; glydways.com egress-blocked): Gokul Hemmady, CEO — joined Glydways in 2019 as President and Chief Financial Officer; Blake Barber, Chief Technology Officer; Mark Seeger, Founder and Chief Strategy Officer (founded the company in 2016); Chris Riley, Chief Commercial Officer.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$170M oversubscribed Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, announced 14 Apr 2026; total raised well over $250M; valued at almost $700M (Bloomberg, reported)",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Glydways, the South San Francisco builder of on-demand autonomous transit networks, closed an oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures on 14 April 2026, as its first three public systems, in the UAE, greater New York and South Metro Atlanta, move toward passengers this year.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Suzuki Motor Corporation, ACS Group, Khosla Ventures (co-leads); Mitsui Chemicals, Gates Frontier (existing); Obayashi Corporation (new)",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 14 April 2026 Glydways announced a $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with Mitsui Chemicals, Gates Frontier and new investor Obayashi Corporation;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$170M Series C announced 14 Apr 2026; three public pilots in 2026 in the UAE, greater New York City and South Metro Atlanta ahead of large-scale operations from 2027",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "total funding exceeds $250M, and Bloomberg reported the round at almost $700M with talks for $250M more at $1B or above.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No autonomous-transit or mobility-network partner on the Formula E grid; the only autonomous-vehicle brand in either series is Zoox at Williams",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Zoox → Atlassian Williams Racing (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $170M Series C, first public passengers in Atlanta by December and live agreements in Dubai and Abu Dhabi make 2026 the year Glydways needs a public face.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "First public system under construction in South Metro Atlanta (groundbreaking Feb 2026, opening Dec 2026); Dubai RTA agreement (Feb 2026) for a 2.8km pilot route and an Abu Dhabi Investment Office interim agreement (Nov 2025); Bloomberg reports talks for $250M more at a $1B-plus valuation",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 14 April 2026 Glydways announced an oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with Mitsui Chemicals and Gates Frontier returning and Obayashi Corporation new.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in South San Francisco, California; public pilots in South Metro Atlanta and greater New York City",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260211500738/en/Glydways-Breaks-Ground-on-First-Ever-Public-Mass-Transit-System-in-South-Metro-Atlanta",
+     "excerpt": "Glydways / ACS Infra release (Business Wire), 11 Feb 2026: groundbreaking of the South Metro Atlanta demonstration pilot, a dedicated 0.5-mile guideway from the ATL SkyTrain at the Georgia International Convention Center to the Gateway Center Arena, the first fully autonomous on-demand Glydways system to operate as public transportation; scheduled to open to the public in December 2026 (Site Selection; Atlanta local coverage).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Total funding now exceeds $250M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Bloomberg reported the round valued the company at almost $700M and that talks are under way for $250M more at $1B or above;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+     "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Tokyo E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "racingnews365.com (TDK Tokyo E-Prix title partner, Jul 2026); Season 12 calendar | note: double-header race 1",
+     "excerpt": "round 14: Tokyo E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix and Miami in February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Tokyo E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "racingnews365.com (TDK Tokyo E-Prix title partner, Jul 2026); Season 12 calendar | note: double-header race 1",
+     "excerpt": "round 14: Tokyo E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix on 6 February and Miami on 20 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

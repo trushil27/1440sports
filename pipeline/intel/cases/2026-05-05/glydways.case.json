@@ -1,0 +1,191 @@
+{
+ "run_date": "2026-05-05",
+ "signal_date": "2026-04-14",
+ "stem": "glydways",
+ "number": 229,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Glydways",
+  "signal_date": "2026-04-14",
+  "score": 70,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Gokul Hemmady",
+  "role": "CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+  "industry_meta": "Autonomous Transit · Personal Rapid Transit Networks · South San Francisco CA",
+  "recommended_team": "Andretti Formula E",
+  "recommended_series": "FE",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$170M oversubscribed Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, announced 14 Apr 2026; total raised well over $250M; valued at almost $700M (Bloomberg, reported)",
+   "investors": "Suzuki Motor Corporation, ACS Group, Khosla Ventures (co-leads); Mitsui Chemicals, Gates Frontier (existing); Obayashi Corporation (new)",
+   "revenue": null,
+   "trigger": "$170M Series C announced 14 Apr 2026; three public pilots in 2026 in the UAE, greater New York City and South Metro Atlanta ahead of large-scale operations from 2027",
+   "competitor_signal": "No autonomous-transit or mobility-network partner on the Formula E grid; the only autonomous-vehicle brand in either series is Zoox at Williams",
+   "strategic_hook": "First public system under construction in South Metro Atlanta (groundbreaking Feb 2026, opening Dec 2026); Dubai RTA agreement (Feb 2026) for a 2.8km pilot route and an Abu Dhabi Investment Office interim agreement (Nov 2025); Bloomberg reports talks for $250M more at a $1B-plus valuation",
+   "us_presence": "Headquartered in South San Francisco, California; public pilots in South Metro Atlanta and greater New York City",
+   "alumni_match": null,
+   "taxonomy_category": "D1",
+   "ops_fit_note": "MODE B halo: an on-demand autonomous transit brand on the American FE team; pod demonstration at the US rounds",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 15,
+   "capacity": 12,
+   "brand_fit": 17,
+   "urgency": 15,
+   "ops_fit": 11,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 1
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": ["gokul hemmady", "hemmady"],
+   "url": "https://www.glydways.com/about/",
+   "excerpt": "Glydways about page (search summary; glydways.com egress-blocked): Gokul Hemmady, CEO — joined Glydways in 2019 as President and Chief Financial Officer; Blake Barber, Chief Technology Officer; Mark Seeger, Founder and Chief Strategy Officer (founded the company in 2016); Chris Riley, Chief Commercial Officer.",
+   "method": "manual"
+  },
+  {
+   "needles": ["$170m", "series c", "suzuki", "acs", "khosla", "14 apr", "14 april", "oversubscribed", "$250m", "mitsui", "gates frontier", "obayashi", "funding round", "2027", "three public", "three operational", "first public"],
+   "url": "https://www.globenewswire.com/news-release/2026/04/14/3273722/0/en/Glydways-Raises-Oversubscribed-170M-Series-C-as-First-Autonomous-Vehicle-Networks-Enter-Public-Operation-in-2026.html",
+   "excerpt": "Glydways press release (GlobeNewswire), 14 Apr 2026: oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with existing investors Mitsui Chemicals and Gates Frontier and new investor Obayashi Corporation; total funding now well over $250M; three operational pilots launching in 2026 in the UAE, the greater New York City area and South Metro Atlanta as the company ramps toward large-scale operations from 2027; MoUs with the Abu Dhabi Investment Office and Dubai RTA; groundbreaking of the first publicly accessible system in South Metro Atlanta. Suzuki's own release (globalsuzuki.com, 15 Apr 2026) confirms its additional investment.",
+   "method": "manual"
+  },
+  {
+   "needles": ["$700m", "$1b", "bloomberg", "almost $700"],
+   "url": "https://www.bloomberg.com/news/articles/2026-04-14/altman-backed-startup-raises-170-million-for-robocar-networks",
+   "excerpt": "Bloomberg, 14 Apr 2026: the $170M Series C valued Glydways at almost $700M; the company is in talks to raise $250M in a new round that would value it at $1B or more (reported; Transport Topics and Dealroom carry the same report). Not company-confirmed.",
+   "method": "manual"
+  },
+  {
+   "needles": ["atlanta", "groundbreaking", "broke ground", "feb 2026", "february", "0.5-mile", "december 2026", "december", "skytrain", "gateway center", "acs infra"],
+   "url": "https://www.businesswire.com/news/home/20260211500738/en/Glydways-Breaks-Ground-on-First-Ever-Public-Mass-Transit-System-in-South-Metro-Atlanta",
+   "excerpt": "Glydways / ACS Infra release (Business Wire), 11 Feb 2026: groundbreaking of the South Metro Atlanta demonstration pilot, a dedicated 0.5-mile guideway from the ATL SkyTrain at the Georgia International Convention Center to the Gateway Center Arena, the first fully autonomous on-demand Glydways system to operate as public transportation; scheduled to open to the public in December 2026 (Site Selection; Atlanta local coverage).",
+   "method": "manual"
+  },
+  {
+   "needles": ["dubai", "rta", "2.8km", "abu dhabi", "adio", "nov 2025", "november 2025", "world governments summit", "uae"],
+   "url": "https://www.mediaoffice.abudhabi/en/transport/abu-dhabi-investment-office-partners-with-glydways-to-bring-transformative-autonomous-transit-technology/",
+   "excerpt": "Abu Dhabi Media Office, Nov 2025: the Abu Dhabi Investment Office signed an interim agreement with Glydways to assess deploying its autonomous mass-transit system in the capital. AGBI / Khaleej Times, Feb 2026: Dubai's Roads and Transport Authority signed with Glydways at the World Governments Summit 2026 to study initial routes, with a planned 2.8km pilot linking National Paints Metro Station to Bluewaters Island.",
+   "method": "manual"
+  },
+  {
+   "needles": ["10,000 people", "90%", "2-meter", "two-metre"],
+   "url": "https://techcrunch.com/2026/04/15/this-khosla-backed-autonomous-pod-startup-just-raised-170m-now-its-aiming-for-more/",
+   "excerpt": "TechCrunch, 15 Apr 2026: Glydways' personal autonomous pods run on dedicated 2-meter-wide lanes; the company claims up to 10,000 people per hour per lane and infrastructure costs up to 90% below rail (company claims, reported).",
+   "method": "manual"
+  },
+  {
+   "needles": ["south san francisco", "california", "2016"],
+   "url": "https://www.glydways.com/about/",
+   "excerpt": "Glydways, Inc. is based in South San Francisco, California; founded in 2016 by Mark Seeger (about page via search summary; Climatebase; Crunchbase).",
+   "method": "manual"
+  },
+  {
+   "needles": ["chris riley", "riley", "chief commercial officer", "seeger", "barber", "ogilvy", "no cmo", "no chief marketing officer"],
+   "url": "https://www.glydways.com/wp-content/uploads/2025/12/Glydways-Leadership-Bios-2025-1.pdf",
+   "excerpt": "Glydways leadership bios (Dec 2025) and Marketing-Interactive: Chris Riley, Chief Commercial Officer, responsible for growing global business, strategic partnerships and corporate reputation; previously Group Chairman of Ogilvy Singapore and Malaysia and Ogilvy Singapore CEO, 30 years advising global brands in Hong Kong and Singapore. Mark Seeger, Founder and Chief Strategy Officer; Blake Barber, CTO. No chief marketing officer is listed.",
+   "method": "manual"
+  },
+  {
+   "needles": ["zoox", "andretti", "twg ai", "quest global", "crowe", "reflo", "porsche", "nissan", "envision", "jaguar", "citroën", "citroen", "cupra", "mahindra", "ds penske", "yamaha", "no mobility", "no autonomy", "no transit", "independent"],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Andretti Formula E — Andretti Global, TWG Motorsports, TWG AI, Quest Global, Crowe UK, Reflo; Porsche powertrain to the end of Season 12, Nissan from Season 13; no mobility, transit or autonomy partner. Works teams and their carmaker parents: Nissan, Porsche, Jaguar (TCS, Castrol), Citroën (Stellantis), Cupra Kiro, DS Penske (DS Automobiles, Penske, Mouser, TTI, Molex, KYOCERA AVX, TotalEnergies), Mahindra, Lola Yamaha ABT. Envision Racing — Envision Group, Sand Technologies, Teijin. F1: Zoox at Williams is the only autonomous-vehicle brand in either series.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": ["tokyo", "miami", "austin", "london", "monaco", "jeddah", "são paulo", "sao paulo", "mexico city", "berlin", "shanghai", "sanya", "zandvoort", "madrid", "gen4", "season 13", "december"],
+   "url": "seeds/calendar_fe.json (fiaformulae.com Season 12 + Season 13 calendars)",
+   "excerpt": "Formula E calendar table: Season 12 — Monaco 16-17 May, Sanya 20 Jun, Shanghai 4-5 Jul, Tokyo E-Prix 25-26 Jul, London 15-16 Aug 2026. Season 13 (GEN4 era, announced 23 Jun 2026) opens in Jeddah 18-19 Dec 2026; Mexico City 16 Jan, Austin E-Prix 6 Feb, Miami E-Prix 20 Feb, São Paulo 13 Mar 2027, then Sanya, Berlin, Monaco, London, Zandvoort, Madrid, Shanghai, Tokyo.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Glydways",
+  "industry_meta": "Autonomous Transit · Personal Rapid Transit Networks",
+  "hq": "South San Francisco, California",
+  "ticker": "Private (~$700M reported; $170M Series C, Apr 2026)",
+  "deck": "Glydways, the South San Francisco builder of on-demand autonomous transit networks, closed an oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures on 14 April 2026, as its first three public systems, in the UAE, greater New York and South Metro Atlanta, move toward passengers this year.",
+  "score": 70,
+  "timing_label": "HOT",
+  "series_label": "FE",
+  "team_label": "Andretti Formula E",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 14 April 2026 Glydways announced a $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with Mitsui Chemicals, Gates Frontier and new investor Obayashi Corporation; total funding exceeds $250M, and Bloomberg reported the round at almost $700M with talks for $250M more at $1B or above. The money is for going public in the literal sense: the South Metro Atlanta system broke ground in February and opens in December 2026, Dubai's RTA signed for a 2.8km pilot route, and Abu Dhabi's investment office is assessing a deployment. <font name='Poppins-Bold' size='9.5'>THE FIRST PASSENGERS RIDE THIS YEAR.</font>",
+  "the_case_p2": "No autonomous-transit or mobility-network brand sits anywhere on the Formula E grid; the only autonomous-vehicle partner in either series is Zoox, at Williams in Formula 1. Formula E's works teams belong to carmakers, which matters when Suzuki co-led the round: Nissan, Porsche, Jaguar, Citroën, Cupra, DS and Mahindra each carry a rival badge. That leaves the independents, and one of them is American, with Miami and Austin on its next season's calendar.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series C closed on 14 April and public passengers board in Atlanta in December. Between those dates sit the Tokyo E-Prix on 25-26 July, home race for Suzuki, Obayashi and Mitsui Chemicals, and Formula E's Season 13 roster window. The GEN4 era opens in December, with Miami and Austin following in February 2027.",
+  "why_team_label": "WHY ANDRETTI FORMULA E",
+  "why_team_para": "Andretti is the American team in Formula E, and its roster has no mobility or autonomy partner: Andretti Global, TWG AI, Quest Global, Crowe UK and Reflo, with Porsche power until Season 12 ends and Nissan from Season 13. As an independent it carries no carmaker badge to clash with Suzuki's. Its next season brings the Austin E-Prix and Miami in February 2027, the closest Formula E gets to Glydways' Atlanta and New York riders, and the paddock is where city transport authorities are hosted.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+  "value_mode": "B",
+  "value_content": "MODE B - halo with mechanics. Glydways sells to cities, so the deliverable is the audience: transport authorities and mayors hosted at Miami, Austin and Tokyo, where Formula E races on their streets. A branded pod on the E-Prix fan concourse is a working demonstration, not a logo. Andretti gains a technology partner whose story, driverless electric transit, is Formula E's own pitch to host cities, plus content from the Atlanta line's first public rides.",
+  "deal_arch_para": "Entry as Official Mobility Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, tracking public operations from 2027. Estimated $1-2M a year, scaled to a Series C business. Scope: livery and driver-suit placement, a pod demonstration at Miami and Austin, city-official hospitality at Tokyo and Jeddah, and joint content around the Atlanta opening.",
+  "decision_maker_name": "Gokul Hemmady",
+  "decision_maker_role": "CEO, Glydways",
+  "decision_maker_bio": "Hemmady joined Glydways in 2019 as President and CFO and now runs it as CEO; a first sports partnership is his sign-off. Path: Chris Riley, Chief Commercial Officer, ex-Ogilvy Singapore chairman, owns partnerships and corporate reputation; Mark Seeger, Founder and Chief Strategy Officer. No CMO is listed.",
+  "opening_angle_intro": "Lead with the cities, not the cars.",
+  "opening_angle_quote": "&ldquo;Gokul, Formula E races on the streets of the cities you sell to, and no transit brand is on its grid. Andretti is the American team, with Miami and Austin next season. 25 minutes on how the pod meets the paddock?&rdquo;",
+  "score_cells": [
+   ["TIMING", "15", "/ 20", "14 Apr raise; Tokyo E-Prix, Season 13 next."],
+   ["CAPACITY", "12", "/ 20", "$170M raised; ~$700M reported; no revenue yet."],
+   ["BRAND FIT", "17", "/ 20", "City-street electric racing meets city transit."],
+   ["URGENCY", "15", "/ 20", "First public riders in 2026; $1B talks."],
+   ["OPS FIT", "11", "/ 20", "MODE B halo; pod demo at US rounds."]
+  ],
+  "risks": [
+   ["CAPACITY IS EARLY-STAGE", "No revenue and a reported ~$700M valuation; sponsorship competes with pilot capital.", "Size the entry to Formula E economics and step the fee with the Atlanta opening and the next round."],
+   ["AN INFRASTRUCTURE SALE, NOT A CONSUMER ONE", "Glydways sells to governments; racing reach can look off-strategy to its board.", "Frame the deal around hosted city officials at Tokyo, Miami and Austin, with attendance as the KPI."]
+  ],
+  "bottom_line": "A $170M Series C, first public passengers in Atlanta by December and live agreements in Dubai and Abu Dhabi make 2026 the year Glydways needs a public face. Formula E races in the cities it sells to, no transit brand is on the grid, and Andretti is the American team with Miami and Austin next season.",
+  "signals": ["funding_event", "open_category", "public_pilot"],
+  "footer_company": "GLYDWAYS",
+  "footer_date": "5 MAY 2026",
+  "extended": {
+   "why_now": [
+    {"label": "Trigger", "text": "On 14 April 2026 Glydways announced an oversubscribed $170M Series C co-led by Suzuki Motor Corporation, ACS Group and Khosla Ventures, with Mitsui Chemicals and Gates Frontier returning and Obayashi Corporation new. Total funding now exceeds $250M. Bloomberg reported the round valued the company at almost $700M and that talks are under way for $250M more at $1B or above; those valuation figures are press-reported, not company-stated."},
+    {"label": "The first public passengers", "text": "The South Metro Atlanta demonstration pilot, built with ACS Infra, broke ground in February 2026 and is scheduled to open to the public in December 2026: a dedicated 0.5-mile guideway from the ATL SkyTrain at the Georgia International Convention Center to the Gateway Center Arena, the first Glydways system to run as public transportation anywhere. A company whose product the public has never ridden becomes, this year, one the public judges."},
+    {"label": "Two Gulf agreements", "text": "Dubai's Roads and Transport Authority signed with Glydways at the World Governments Summit in February 2026 to study initial routes, with a planned 2.8km pilot from National Paints Metro Station to Bluewaters Island. The Abu Dhabi Investment Office signed an interim agreement in November 2025 to assess a deployment in the capital. Gulf transport authorities are also Formula E's founding audience: Jeddah opens Season 13."},
+    {"label": "Calendar window", "text": "The Tokyo E-Prix on 25-26 July is the home race for three of Glydways' investors, Suzuki, Obayashi and Mitsui Chemicals, and falls inside the action horizon. Formula E's Season 13 rosters are agreed over the summer; the GEN4 era opens in Jeddah in December, and the Austin E-Prix on 6 February and Miami on 20 February 2027 are the US rounds closest to Glydways' Atlanta and New York pilots."}
+   ],
+   "why_team": [
+    {"label": "The open lane", "text": "Andretti's roster is Andretti Global, TWG Motorsports, TWG AI, Quest Global, Crowe UK and Reflo, with Porsche powertrain to the end of Season 12 and Nissan from Season 13. There is no mobility, transit or autonomy partner on it, and no such brand anywhere on the Formula E grid."},
+    {"label": "No carmaker clash", "text": "Suzuki co-led the round, and eight of the grid's teams are carmaker works entries or carry a carmaker's badge: Nissan, Porsche, Jaguar, Citroën, Cupra, DS, Mahindra and Lola Yamaha ABT. Andretti is an independent; a Suzuki-backed company can sit on its car without embarrassing anyone."},
+    {"label": "The American team with the American rounds", "text": "Andretti is the American entry in Formula E. Season 13 brings an Austin E-Prix on 6 February and Miami on 20 February 2027, the two rounds nearest Glydways' first public riders in Atlanta and its greater New York pilot, and Miami already ran in Season 12."},
+    {"label": "Why not the others", "text": "Envision Racing is the other independent and its sustainability identity fits, but it is UK-based with a Chinese parent and offers no US home story. Jaguar TCS Racing's autonomy-adjacent parent is a rival carmaker to an investor. The works teams are ruled out on the carmaker clash above."}
+   ],
+   "value": [
+    {"label": "The audience is the product (Mode B)", "text": "Glydways sells to city and regional governments. Formula E races on city streets by agreement with those same governments, and its paddock is where transport authorities, mayors and investment offices are hosted. A partnership buys Glydways the room: Tokyo for its Japanese investors, Jeddah for the Gulf agreements, Miami and Austin for the US pilots."},
+    {"label": "A working demonstration on the concourse", "text": "A branded Glydways pod on the E-Prix fan concourse, or a short on-demand shuttle between fan zones where the circuit allows, shows the product moving people rather than a logo on a car. Formula E's own pitch to host cities is driverless, electric, on-demand transit; Glydways is that pitch made physical."},
+    {"label": "Content the team cannot make alone", "text": "The Atlanta line's first public rides in December 2026, the Dubai and Abu Dhabi studies and the GEN4 launch give Andretti a season-long story about how cities will move, with drivers riding the pods and city officials on camera."},
+    {"label": "What the team gives back", "text": "Official Mobility Partner designation, livery and driver-suit placement, a pod demonstration at the US rounds, hospitality for city officials at Tokyo, Jeddah, Miami and Austin, and driver access for Glydways' public-launch communications."}
+   ],
+   "ruled_out": [
+    {"team": "Nissan Formula E Team", "reason": "Carmaker works team; Suzuki co-led the round."},
+    {"team": "Porsche Formula E Team", "reason": "Carmaker works team; Suzuki clash."},
+    {"team": "Jaguar TCS Racing", "reason": "Carmaker works team (JLR); Suzuki clash."},
+    {"team": "Citroën Racing · DS Penske", "reason": "Stellantis works entries; Suzuki clash."},
+    {"team": "Cupra Kiro · Mahindra Racing · Lola Yamaha ABT", "reason": "Carry Cupra, Mahindra and Yamaha badges; Suzuki clash."},
+    {"team": "Envision Racing", "reason": "Open but not chosen: independent with a sustainability identity, but UK-based with no US home rounds story."}
+   ],
+   "ask": "A 25-minute call with Gokul Hemmady and Chris Riley before the Tokyo E-Prix to test the city-official hospitality model, agree a Season 13 entry against Andretti's roster, and set the Atlanta opening as the first activation."
+  }
+ },
+ "note": "# Glydways → Andretti Formula E — verification log (N° 229, row dated 5 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost for the desk row dated 5 May 2026 (batch 21). Claude acted as researcher, verifier and writer; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code via `intel.session_case`.\n\n**Sandbox limitation, stated plainly:** direct fetches of globenewswire.com, glydways.com, globalsuzuki.com and bloomberg.com were blocked by the egress proxy. Every claim below was checked against the search summary of the primary page named as the evidence URL. Treat each VERIFIED line as REPORTED until a person opens the link; confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nThe thin row's trigger holds: the $170M Series C was announced by the company on **14 Apr 2026**, 21 days before the row's date. The thin row's source (pulse2.com) is an aggregator; the primary source is the GlobeNewswire release, with Bloomberg (14 Apr) and TechCrunch (15 Apr) as secondaries and Suzuki's own 15 Apr release confirming its participation. The thin row said F1 with no team; the profile is Formula E on four of five track indicators (mobility, city-centric, regulator audience, capex-heavy, sustainability pitch), so the case is built for FE. The thin row's person (Mark Seeger, 'Founder & Co-CEO') is out of date: Seeger is Founder and Chief Strategy Officer; Gokul Hemmady is CEO.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Gokul Hemmady, CEO (joined 2019 as President and CFO) | VERIFIED (search summary) | glydways.com/about; The Org; Crunchbase |\n| $170M Series C, co-leads Suzuki / ACS / Khosla; Mitsui Chemicals, Gates Frontier, Obayashi; total > $250M; 14 Apr 2026 | VERIFIED (search summary) | GlobeNewswire release; Suzuki release 15 Apr 2026 |\n| Valued at almost $700M; talks for $250M at $1B+ | REPORTED | Bloomberg 14 Apr 2026 |\n| Three 2026 pilots (UAE, greater NYC, South Metro Atlanta); large-scale operations from 2027 | VERIFIED (company statement) | GlobeNewswire release |\n| Atlanta groundbreaking Feb 2026; 0.5-mile guideway; opens Dec 2026 | VERIFIED (search summary) | Business Wire 11 Feb 2026; Site Selection |\n| Dubai RTA agreement Feb 2026, 2.8km pilot route | VERIFIED (search summary) | AGBI; Khaleej Times |\n| ADIO interim agreement Nov 2025 | VERIFIED (search summary) | Abu Dhabi Media Office |\n| Chris Riley, CCO (ex-Ogilvy Singapore chairman); Seeger Founder & CSO; Barber CTO; no CMO | VERIFIED (search summary) | Glydways leadership bios PDF (Dec 2025); Marketing-Interactive |\n| 10,000 people/hour/lane; 90% below rail cost | REPORTED (company claims via TechCrunch) | TechCrunch 15 Apr 2026 — used only on the app page |\n| Andretti roster; no mobility partner on the FE grid; Zoox at Williams | VERIFIED | sponsor table |\n| Tokyo E-Prix 25-26 Jul 2026; Season 13 opens Jeddah Dec 2026; Austin 6 Feb, Miami 20 Feb 2027 | VERIFIED | calendar table (fiaformulae.com) |\n\n## Screen-outs and things not claimed\n\n- **Leadership ties: none found** for Hemmady, Riley, Seeger or Barber.\n- **Score is honest and marginal.** 70 rests on brand fit (17, Formula E's own city pitch) and urgency (15, first public riders this year); capacity is the constraint (12: no revenue, ~$700M reported). The thin row's 74 was close; the series was wrong.\n- **Deal size ($1-2M a year) is an ESTIMATE**, labelled as such.\n- **The pod-on-the-concourse demonstration is a proposal**, not an existing programme.\n- Mark Seeger's role as of 5 May 2026 could not be pinned to a dated page; the leadership bios PDF (Dec 2025) and the about page list him as Founder and Chief Strategy Officer.\n"
+}
