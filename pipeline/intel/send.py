@@ -33,7 +33,6 @@ import httpx
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from intel.brief_data import strip_markup
 from intel.config import Settings, get_settings
 from intel.models import (
     AuditStatus,
@@ -246,19 +245,18 @@ def md_subject(brief: Brief) -> str:
 
 
 def executive_take(brief: Brief, settings: Settings) -> str:
-    """Three-line executive take + link (§7)."""
-    d = brief.brief_data or {}
-    lines = [
-        strip_markup(d.get("deck", "")),
-        strip_markup(d.get("bottom_line", "")),
-        f"Decision-maker: {d.get('decision_maker_name', '?')}, {d.get('decision_maker_role', '?')}",
-        "",
-        f"Open in the app: {settings.app_base_url}/brief/{brief.brief_number}",
-        "",
-        "PDF attached.",
-        "— 1440 Intelligence Engine",
-    ]
-    return "\n".join(lines)
+    """The signal email in plain text — the call first, then the facts, then the sections.
+    See ``intel.mail_brief`` (operator feedback, 6 Sep 2026: the old one-block body was
+    unreadable at a glance)."""
+    from intel.mail_brief import executive_take as _take
+
+    return _take(brief, settings)
+
+
+def brief_body_html(brief: Brief, settings: Settings) -> str:
+    from intel.mail_brief import brief_html
+
+    return brief_html(brief, settings)
 
 
 def _ledger_summary(brief: Brief) -> str:
@@ -448,6 +446,7 @@ def distribute(
             subject=("" if settings.execution_mode == "production" else "[SHADOW] ")
             + md_subject(brief),
             body_text=executive_take(brief, settings),
+            body_html=brief_body_html(brief, settings),
             attachments=_attachment(brief),
         )
         if md and settings.execution_mode == "production":

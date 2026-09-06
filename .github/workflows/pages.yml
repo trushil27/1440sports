@@ -31,6 +31,14 @@ jobs:
           rm -rf /tmp/pages && mkdir -p /tmp/pages
           cp -r site/. /tmp/pages/
           touch /tmp/pages/.nojekyll
+          # A 1440-branded address instead of a personal github.io one. Opt-in: set the repo
+          # variable APP_DOMAIN (e.g. intel.1440sports.com) ONLY after the DNS CNAME for it
+          # points at trushil27.github.io — publishing this file without the DNS record would
+          # take the live site down. See docs/APP_DOMAIN.md.
+          if [ -n "${{ vars.APP_DOMAIN }}" ]; then
+            echo "${{ vars.APP_DOMAIN }}" > /tmp/pages/CNAME
+            echo "custom domain: ${{ vars.APP_DOMAIN }}"
+          fi
           cd /tmp/pages
           git init -q -b gh-pages
           git add -A
