@@ -1,0 +1,719 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-05-22",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-v6t6ibsu/2026-05-22/exa.pdf",
+     "web": "/tmp/case-pdf-v6t6ibsu/2026-05-22/exa.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Exa",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 72,
+     "reason": "top ranking score",
+     "company": "Exa",
+     "decision": "selected",
+     "signal_date": "2026-05-20"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Exa",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 72,
+   "score_breakdown": {
+    "cap": null,
+    "base": 72,
+    "total": 72,
+    "timing": 17,
+    "ops_fit": 14,
+    "ranking": 72,
+    "urgency": 12,
+    "capacity": 16,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 5,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://exa.ai/blog/announcing-series-c",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 72,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 72,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Atlassian Williams Racing",
+   "source_url": "https://exa.ai/blog/announcing-series-c",
+   "trigger_date": "2026-05-20",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 213,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-v6t6ibsu/2026-05-22/exa.web.html",
+  "brief_data": {
+   "hq": "San Francisco (founded 2021, Y Combinator)",
+   "deck": "Exa, the search engine built for AI agents, announced a $250M Series C led by Andreessen Horowitz at a $2.2B valuation on 20 May 2026, more than tripling the $700M Benchmark set in September. It powers search for Cursor, Cognition and HubSpot and ships as a native Claude connector.",
+   "risks": [
+    {
+     "label": "THIN WORKSTREAM",
+     "detail": "Web retrieval for research agents is real but modest next to a compute or data partner; the team may see a logo, not a tool.",
+     "counter": "Scope a 90-day pilot inside the Claude workflow before the commercial term; size part of the fee in API credits."
+    },
+    {
+     "label": "CROWDED TECHNOLOGY TIER",
+     "detail": "Williams already carries Claude, VAST, Keeper, Airia and Brillio; a further technology name risks second billing.",
+     "counter": "Take a defined Official AI Search Partner category with its own on-car placement."
+    }
+   ],
+   "score": 72,
+   "ticker": "Private ($2.2B; $250M Series C, May 2026)",
+   "company": "Exa",
+   "gridfit": [
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "partner_adjacency",
+    "category_precedent"
+   ],
+   "sources": [
+    "https://exa.ai/blog/announcing-series-c",
+    "https://claude.com/connectors/exa",
+    "https://siliconangle.com/2025/09/03/nvidia-backs-85m-round-ai-search-startup-exa/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Will Bryk before the Monaco GP to confirm the go-to-market budget with Marcus Holm, agree a 90-day pilot inside the Claude workflow at Williams, and size an Official AI Search Partner entry against the team's 2027 roster.",
+    "value": [
+     {
+      "text": "Exa's search API and Websets give Williams' Claude-based agents live retrieval from the open web: FIA regulation and technical-directive monitoring, supplier and parts discovery, tracking of rivals' publicly reported upgrades, media monitoring, and sponsor-prospect research for the commercial team. Delivered as API capacity, it costs the team nothing inside the cost cap.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner that sells to AI-native companies brings founders, engineering leaders and venture investors to the British GP and Las Vegas suites, the audience Williams' technology partners want alongside them.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Co-produced engineering content with the Claude programme (how the team's agents search, verify and decide), a Williams reference case for Exa's enterprise sales, and developer activations across Exa's 400,000-developer community and Williams' digital channels.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official AI Search Partner designation, sidepod or halo placement, naming of the team's research-agent stack, British GP hospitality, and driver and engineering access for Exa's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 20 May 2026 Exa announced a $250M Series C led by Andreessen Horowitz at a $2.2B valuation, on its own blog and confirmed by Bloomberg the same day. The valuation has more than tripled since the $85M Series B at $700M led by Benchmark in September 2025.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The round came with a commercial hire: Marcus Holm, President of LaunchDarkly, joins as Chief Revenue Officer to build the global go-to-market organisation across sales, solutions and marketing. A company assembling its first real marketing function after a raise is the moment a first sports partnership gets decided.",
+      "label": "A go-to-market build-out"
+     },
+     {
+      "text": "In the last year Claude joined Williams, Cognition joined Aston Martin Aramco, Meta AI joined Mercedes and TWG AI launched with Cadillac. AI brands are using F1 to reach engineers, buyers and capital markets at once; Exa sells into exactly those AI companies and has not yet chosen a stage.",
+      "label": "The category is moving onto the grid"
+     },
+     {
+      "text": "Monaco GP (5-7 June), the Spanish GP in Barcelona (12-14 June), the Austrian GP (26-28 June) and the British GP (3-5 July) all fall inside the 6-10 week window. A deal agreed before Silverstone can be announced at the British GP and activated in full for 2027, when teams close their partner rosters in the autumn.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Williams carries Atlassian as title partner, VAST for the data platform, Keeper for identity security, Airia and Brillio on the technology tier, and Claude as Official Thinking Partner. No search, retrieval or knowledge partner sits on the car: Official AI Search Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Exa is a native Claude connector and publishes an open-source MCP server; Claude has worked alongside Williams' engineers, strategists and operations teams since the February 2026 livery reveal. The introduction runs through a partner Williams already trusts, and the product plugs into a workflow the team already uses.",
+      "label": "The warm path"
+     },
+     {
+      "text": "Williams' revival is data-led. Live web retrieval for the team's agents is consumed in the factory and on the pit wall, which separates a technology partner from a logo. The workstream is lighter than compute or data, and the brief scores it honestly at 14 out of 20.",
+      "label": "A team that will use the product"
+     },
+     {
+      "text": "Exa sells to developers and AI companies; Williams' partner roster is the most software-native on the grid, and its hospitality already gathers CIOs, CTOs and founders. The British GP, the team's home race, is the natural stage for a developer-facing brand with a San Francisco base.",
+      "label": "Audience fit"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Google Cloud holds the technology lane; Google is the search incumbent Exa positions against."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "Microsoft and Meta AI both sit on the roster; the search and AI lanes are taken."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Microsoft holds the cloud and AI lane."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Cognition, an Exa customer, and CoreWeave already hold the AI tier; Exa would sit behind its own customer."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and sells its own enterprise search and AI stack."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "HP (title) and IBM cover compute and enterprise AI."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "TWG AI holds the AI lane on the inaugural roster."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "ElevenLabs holds the AI-startup slot; open otherwise, but no warm path."
+     },
+     {
+      "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+      "reason": "Open but not chosen: neither carries the Claude connection that gives Williams a warm path."
+     }
+    ]
+   },
+   "date_long": "22 MAY 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Atlassian Williams Racing",
+   "value_mode": "A",
+   "bottom_line": "A $250M round at $2.2B, a new revenue chief with a go-to-market mandate, and a native connection to the Claude programme already on the Williams give Exa the budget, the motive and a warm path. The search lane at Williams is open, and Monaco and the British GP sit inside the window.",
+   "footer_date": "22 MAY 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round announced 20 May; Monaco and the British GP inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 16,
+     "note": "$250M raise at $2.2B; $357M across three rounds; no revenue disclosed.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "Developer API brand; low consumer reach, strong AI narrative.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No listing signal; the CRO hire is the brand-build trigger.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 14,
+     "note": "MODE A: live retrieval for agents Williams already runs.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 20 May Exa announced a $250M Series C led by Andreessen Horowitz at a $2.2B valuation, confirmed by Bloomberg the same day. It follows an $85M Series B led by Benchmark at $700M in September 2025 and a $22M Series A led by Lightspeed in July 2024. Exa says more than 5,000 companies and 400,000 developers use its search API, Cursor, Cognition and HubSpot among them. The money funds next-generation models, infrastructure for hundreds of thousands of searches a second, and a go-to-market build-out under Marcus Holm, joining as CRO from LaunchDarkly.",
+   "the_case_p2": "AI brands have moved onto the grid quickly: Claude races on the Williams, Cognition joined Aston Martin Aramco, Meta AI sits at Mercedes and TWG AI at Cadillac. Exa is the search layer beneath those agents, and the companies it positions against are already on cars, Google Cloud at McLaren and Microsoft at Mercedes and Alpine. A challenger with a $250M war chest and a new revenue chief has a story to tell against them.",
+   "track_label": "",
+   "brief_number": "213",
+   "claims_total": 16,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$250M Series C led by Andreessen Horowitz at a $2.2B valuation, announced 20 May 2026 (Exa blog; Bloomberg)",
+     "value": "$250M",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://exa.ai/blog/announcing-series-c"
+    },
+    {
+     "fact": "Andreessen Horowitz (lead, Series C); Benchmark led the $85M Series B at $700M in September 2025; Lightspee…",
+     "value": "$85M",
+     "claim_id": 622,
+     "verified": true,
+     "source_url": "https://exa.ai/blog/announcing-series-c"
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Search Infrastructure · Search API for AI Agents",
+   "value_content": "MODE A - operational. Williams engineers, strategists and commercial staff already work with Claude; Exa gives those agents live web retrieval: regulation and technical-directive monitoring, supplier and parts discovery, rival upgrade tracking from open sources, and media and prospect research through Websets. It is a lighter workstream than compute. In return: Official AI Search Partner designation, livery presence and British GP hospitality for Exa's developer audience.",
+   "value_section": true,
+   "why_team_para": "Williams runs the most software-native roster on the grid: Atlassian as title partner, VAST Data for the data platform, Keeper for identity, Airia and Brillio, and since February Claude as Official Thinking Partner inside engineering and strategy. No search or retrieval partner sits on the car. Exa is a native Claude connector, so the introduction runs through a partnership Williams already trusts, and the product plugs into a workflow the team already uses.",
+   "deal_arch_para": "Entry as Official AI Search Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the go-to-market build-out and any listing window. Estimated $2-4M a year, part-payable in API credits for the team's agents. Scope: sidepod or halo placement, naming of the team's research-agent stack, British GP hospitality, developer content with the Claude programme.",
+   "footer_company": "EXA",
+   "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round was announced on 20 May; a first sports partnership is a decision for the quarter after a raise, when a new CRO is setting the brand budget. Monaco GP (7 June) and the British GP (5 July) fall inside the window, and 2027 rosters close in the autumn.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Bryk co-founded Exa in 2021 with Jeff Wang, a Harvard classmate, and CTO Dan McArdle, and fronts every raise; a first sports partnership is his call. Path: Marcus Holm, incoming CRO, owns go-to-market; Jeff Wang oversees finance. No CMO, CFO or COO is listed.",
+   "decision_maker_name": "Will Bryk",
+   "decision_maker_role": "Co-Founder & CEO, Exa",
+   "opening_angle_intro": "Lead with the Claude connection.",
+   "opening_angle_quote": "&ldquo;Will, Exa is already a Claude connector and Claude already races on the Williams. Cognition took its seat at Aston Martin in its breakout year; the search lane at Williams is open. 25 minutes before Monaco to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Will Bryk, Co-Founder & CEO at Exa",
+   "cited_source_url": "https://exa.ai/blog/announcing-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026, posted by Will Bryk, CEO & Co-founder: Exa raised a $250M Series C at a $2.2B valuation led by a16z. The desk row named Jeff Wang as CEO; the company's own post and a16z's announcement name Will Bryk as CEO and Jeff Wang as co-founder.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Will Bryk, Co-Founder & CEO, Exa at Exa",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026, posted by Will Bryk, CEO & Co-founder: Exa raised a $250M Series C at a $2.2B valuation led by a16z. The desk row named Jeff Wang as CEO; the company's own post and a16z's announcement name Will Bryk as CEO and Jeff Wang as co-founder.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$250M Series C led by Andreessen Horowitz at a $2.2B valuation, announced 20 May 2026 (Exa blog; Bloomberg)",
+   "cited_source_url": "https://exa.ai/blog/announcing-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026: $250M Series C at a $2.2B valuation led by a16z; funds go to next-generation models and infrastructure for hundreds of thousands of searches per second. Bloomberg, 20 May 2026: Exa Labs Inc., San Francisco, raised $250 million at a $2.2 billion valuation led by Andreessen Horowitz, more than tripling the $700 million set last fall.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Exa, the search engine built for AI agents, announced a $250M Series C led by Andreessen Horowitz at a $2.2B valuation on 20 May 2026, more than tripling the $700M Benchmark set in September.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026: $250M Series C at a $2.2B valuation led by a16z; funds go to next-generation models and infrastructure for hundreds of thousands of searches per second. Bloomberg, 20 May 2026: Exa Labs Inc., San Francisco, raised $250 million at a $2.2 billion valuation led by Andreessen Horowitz, more than tripling the $700 million set last fall.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Andreessen Horowitz (lead, Series C); Benchmark led the $85M Series B at $700M in September 2025; Lightspeed led the $22M Series A in July 2024; Y Combinator and NVentures participated",
+   "cited_source_url": "https://exa.ai/blog/announcing-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026: $250M Series C at a $2.2B valuation led by a16z; funds go to next-generation models and infrastructure for hundreds of thousands of searches per second. Bloomberg, 20 May 2026: Exa Labs Inc., San Francisco, raised $250 million at a $2.2 billion valuation led by Andreessen Horowitz, more than tripling the $700 million set last fall.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 20 May Exa announced a $250M Series C led by Andreessen Horowitz at a $2.2B valuation, confirmed by Bloomberg the same day.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026: $250M Series C at a $2.2B valuation led by a16z; funds go to next-generation models and infrastructure for hundreds of thousands of searches per second. Bloomberg, 20 May 2026: Exa Labs Inc., San Francisco, raised $250 million at a $2.2 billion valuation led by Andreessen Horowitz, more than tripling the $700 million set last fall.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$250M Series C led by Andreessen Horowitz at a $2.2B valuation, announced 20 May 2026",
+   "cited_source_url": "https://exa.ai/blog/announcing-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026: $250M Series C at a $2.2B valuation led by a16z; funds go to next-generation models and infrastructure for hundreds of thousands of searches per second. Bloomberg, 20 May 2026: Exa Labs Inc., San Francisco, raised $250 million at a $2.2 billion valuation led by Andreessen Horowitz, more than tripling the $700 million set last fall.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It follows an $85M Series B led by Benchmark at $700M in September 2025 and a $22M Series A led by Lightspeed in July 2024.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://siliconangle.com/2025/09/03/nvidia-backs-85m-round-ai-search-startup-exa/",
+     "excerpt": "SiliconANGLE, 3 Sep 2025: $85M Series B at a $700M valuation led by Benchmark with Lightspeed, Y Combinator and NVentures; followed a $22M Series A led by Lightspeed in July 2024 (TechCrunch, 16 Jul 2024). With the $250M Series C the three announced rounds total $357M.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Google Cloud at McLaren and Microsoft at Mercedes and Alpine are the search incumbents on the grid; Meta AI at Mercedes, TWG AI at Cadillac and Cognition at Aston Martin Aramco show AI brands taking seats",
+   "cited_source_url": "https://exa.ai/blog/announcing-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Google Cloud → McLaren F1 Team (team_major, joined); Microsoft → Mercedes-AMG Petronas F1 Team (team_major, joined); Meta AI → Mercedes-AMG Petronas F1 Team (team_major, joined); TWG AI → Cadillac F1 Team (team_major, joined); Cognition → Aston Martin Aramco F1 Team (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A challenger with a $250M war chest and a new revenue chief has a story to tell against them.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026: $250M Series C at a $2.2B valuation led by a16z; funds go to next-generation models and infrastructure for hundreds of thousands of searches per second. Bloomberg, 20 May 2026: Exa Labs Inc., San Francisco, raised $250 million at a $2.2 billion valuation led by Andreessen Horowitz, more than tripling the $700 million set last fall.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Exa is a native Claude connector and MCP server; Claude is Atlassian Williams Racing's Official Thinking Partner from 2026",
+   "cited_source_url": "https://exa.ai/blog/announcing-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://claude.com/connectors/exa",
+     "excerpt": "Claude connector directory lists Exa as a native connector; exa.ai/mcp documents the open-source Exa MCP server for Claude, Cursor and VS Code. Atlassian Williams F1 Team, 2026: multi-year partnership with Anthropic naming Claude the team's Official Thinking Partner, working alongside Williams' engineers, strategists and operations teams (williamsf1.com).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $250M round at $2.2B, a new revenue chief with a go-to-market mandate, and a native connection to the Claude programme already on the Williams give Exa the budget, the motive and a warm path.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026: $250M Series C at a $2.2B valuation led by a16z; funds go to next-generation models and infrastructure for hundreds of thousands of searches per second. Bloomberg, 20 May 2026: Exa Labs Inc., San Francisco, raised $250 million at a $2.2 billion valuation led by Andreessen Horowitz, more than tripling the $700 million set last fall.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ San Francisco; founded 2021 out of Y Combinator",
+   "cited_source_url": "https://exa.ai/blog/announcing-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://siliconangle.com/2025/09/03/nvidia-backs-85m-round-ai-search-startup-exa/",
+     "excerpt": "SiliconANGLE, 3 Sep 2025: $85M Series B at a $700M valuation led by Benchmark with Lightspeed, Y Combinator and NVentures; followed a $22M Series A led by Lightspeed in July 2024 (TechCrunch, 16 Jul 2024). With the $250M Series C the three announced rounds total $357M.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 20 May 2026 Exa announced a $250M Series C led by Andreessen Horowitz at a $2.2B valuation, on its own blog and confirmed by Bloomberg the same day.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026: $250M Series C at a $2.2B valuation led by a16z; funds go to next-generation models and infrastructure for hundreds of thousands of searches per second. Bloomberg, 20 May 2026: Exa Labs Inc., San Francisco, raised $250 million at a $2.2 billion valuation led by Andreessen Horowitz, more than tripling the $700 million set last fall.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://exa.ai/blog/announcing-series-c",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://exa.ai/blog/announcing-series-c",
+     "excerpt": "Exa blog, 20 May 2026: $250M Series C at a $2.2B valuation led by a16z; funds go to next-generation models and infrastructure for hundreds of thousands of searches per second. Bloomberg, 20 May 2026: Exa Labs Inc., San Francisco, raised $250 million at a $2.2 billion valuation led by Andreessen Horowitz, more than tripling the $700 million set last fall.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The valuation has more than tripled since the $85M Series B at $700M led by Benchmark in September 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://siliconangle.com/2025/09/03/nvidia-backs-85m-round-ai-search-startup-exa/",
+     "excerpt": "SiliconANGLE, 3 Sep 2025: $85M Series B at a $700M valuation led by Benchmark with Lightspeed, Y Combinator and NVentures; followed a $22M Series A led by Lightspeed in July 2024 (TechCrunch, 16 Jul 2024). With the $250M Series C the three announced rounds total $357M.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Monaco GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 8: Monaco GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Spanish GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 9: Spanish GP (Barcelona) (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austrian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 10: Austrian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
