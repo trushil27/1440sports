@@ -551,9 +551,12 @@ def publish(settings: Settings | None = None, session: Session | None = None) ->
     if settings.github_token:
         from intel.pages import publish_pages
 
-        result["pages"] = publish_pages(
-            out_dir, settings.github_token, settings.pages_repo, settings.pages_branch
-        )
+        try:
+            result["pages"] = publish_pages(
+                out_dir, settings.github_token, settings.pages_repo, settings.pages_branch
+            )
+        except Exception as exc:  # noqa: BLE001 — the export on disk is still good
+            result["pages_error"] = f"{type(exc).__name__}: {str(exc)[:200]}"
     if settings.netlify_auth_token and settings.netlify_site_id:
         from intel.netlify import deploy
 
