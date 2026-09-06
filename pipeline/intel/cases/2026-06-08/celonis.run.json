@@ -1,0 +1,612 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-06-08",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-hfr0em1o/2026-06-08/celonis.pdf",
+     "web": "/tmp/case-pdf-hfr0em1o/2026-06-08/celonis.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Celonis",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 7
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 73,
+     "reason": "resurfaced: Celonis last surfaced 2026-06-08 (other:funding event never entered category whitespace); new trigger product_launch; top ranking score",
+     "company": "Celonis",
+     "decision": "selected",
+     "signal_date": "2026-05-12"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Celonis",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "resurfaced: Celonis last surfaced 2026-06-08 (other:funding event never entered category whitespace); new trigger product_launch; top ranking score",
+   "score_total": 73,
+   "score_breakdown": {
+    "cap": null,
+    "base": 73,
+    "total": 73,
+    "timing": 14,
+    "ops_fit": 15,
+    "ranking": 73,
+    "urgency": 12,
+    "capacity": 17,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 73,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 73,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Porsche Formula E Team",
+   "source_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+   "trigger_date": "2026-05-12",
+   "trigger_reason": "product launch and acquisition"
+  }
+ ],
+ "brief": {
+  "number": 200,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-hfr0em1o/2026-06-08/celonis.web.html",
+  "brief_data": {
+   "hq": "Munich and New York (dual headquarters; founded 2011)",
+   "deck": "Celonis, the Munich- and New York-based process-intelligence company last valued at about $13B, launched the Celonis Context Model on 12 May 2026 and agreed to acquire MIT-linked Ikigai Labs, repositioning a platform Porsche already runs in production as the context layer for enterprise AI.",
+   "risks": [
+    {
+     "label": "NO NEW CAPITAL SINCE 2022",
+     "detail": "The $13B mark is four years old and revenue is undisclosed; appetite for a first motorsport budget is unproven.",
+     "counter": "Lead with the Ikigai launch budget and a services-heavy structure; confirm the marketing envelope on the first call."
+    },
+    {
+     "label": "CUSTOMER, NOT SPONSOR",
+     "detail": "Porsche buys Celonis software; turning a supplier into a paying partner inverts the relationship.",
+     "counter": "Position it as a joint showcase of Porsche's own process programme, co-funded, with Celosphere as the stage."
+    }
+   ],
+   "score": 73,
+   "ticker": "Private (~$13B, Aug 2022; ~$2.4B raised)",
+   "company": "Celonis",
+   "gridfit": [
+    {
+     "team": "Porsche Formula E Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "TAKEN",
+     "detail": "TWG AI",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "product_launch",
+    "acquisition",
+    "category_whitespace",
+    "customer_adjacency"
+   ],
+   "sources": [
+    "https://www.businesswire.com/news/home/20230809005120/en/Celonis-Appoints-Carsten-Thoma-as-President-to-Advance-Innovation-and-Sustainable-Growth",
+    "https://www.prnewswire.com/news-releases/celonis-secures-1-billion-to-help-customers-fight-economic-and-supply-chain-challenges-with-process-improvements-301610454.html",
+    "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+    "https://www.mhp.com/en/insights/our-experience/porsche-ag-process-mining-creates-excellent-processes",
+    "https://www.celonis.com/company/about-us",
+    "https://www.thesaasnews.com/news/celonis-secures-400-million-in-series-d-extension-and-600-million-credit-facility"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Carsten Thoma before the London finale to confirm the marketing envelope behind the Context Model launch, agree a Season 13 announcement window with Porsche Motorsport, and size an Official Process Intelligence Partner entry across both Porsche works cars.",
+    "value": [
+     {
+      "text": "Celonis maps the team's race operations end to end: freight and parts flow across a global season, garage build and tear-down, spares approvals, supplier lead times and homologation paperwork, with the Context Model as a live digital twin the operations director can query and Ikigai's forecasting flagging bottlenecks before a race weekend. Porsche AG's process-mining centre of excellence supplies the method and the people.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner that sells to chief operating officers, chief financial officers and chief information officers brings a guest list of enterprise buyers to Berlin, London and the US rounds, the audience Porsche's technology partners want in the garage.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A race team's operations are a legible, dramatic process: the digital twin of a race weekend is a story for broadcast and for Celosphere, Celonis' annual customer conference, and a reference deployment for the automotive and logistics accounts Celonis sells to.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Process Intelligence Partner designation, livery on both works cars, naming of the team's operations twin, hospitality at Berlin and London, driver and engineering access for Celonis' channels, and a joint case study with Porsche AG.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 12 May 2026 Celonis launched the Celonis Context Model, a real-time digital twin of a company's operations built from process data, and signed a definitive agreement to acquire Ikigai Labs, an AI decision-intelligence company whose planning, simulation and forecasting software rests on patents licensed from MIT. MIT becomes a Celonis shareholder and Ikigai co-founder Devavrat Shah, an MIT professor, joins as Chief Scientist, Enterprise AI.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The launch recasts Celonis from process-mining vendor to the context layer beneath enterprise AI agents, a message aimed at chief executives and boards rather than process engineers. Product repositioning of that kind is exactly what a motorsport platform amplifies: a live operations twin at a race team is the demonstration the pitch needs.",
+      "label": "A repositioning that needs a stage"
+     },
+     {
+      "text": "Celonis last priced at about $13B in an August 2022 extension led by Qatar Investment Authority, after a $1B Series D at $11B in June 2021; it has raised roughly $2.4B in total and does not disclose revenue. There has been no new priced equity since 2022, which is why the score stops at 73 and why the deal is sized modestly and paid partly in software.",
+      "label": "Capital position, honestly"
+     },
+     {
+      "text": "Season 12 closes with the London E-Prix double-header on 15-16 August, ten weeks from the row date. Season 13, the first GEN4 season, opens in Jeddah in December with Porsche running two works entries for the first time, so partner decisions for the new cars are being made over the summer.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Porsche AG relies on Celonis for process mining and, with MHP, its own consulting subsidiary, has run more than 25 process-mining projects from inbound supplier logistics to the production line, finance and supply chain, coordinated by a Porsche centre of excellence. A team sponsorship extends a deployment the group already trusts into its most visible engineering programme.",
+      "label": "Porsche already runs the product"
+     },
+     {
+      "text": "From Season 13 Porsche fields two works teams under its own marque alongside a customer team, so its partner inventory doubles at the moment the GEN4 car debuts. The factory team's Season 12 roster is reported to include TDK, NetApp, Synopsys, Cato Networks, Mobil 1, Loctite and Puma; none is a process-intelligence or operations-software brand.",
+      "label": "Two cars, one open lane"
+     },
+     {
+      "text": "TCS titles the Jaguar and owns its technology narrative, Tech Mahindra sits on the Mahindra, Sand Technologies on the Envision and TWG AI on the Andretti. Those lanes belong to services and AI integrators who resell or compete with Celonis; Porsche has no such conflict.",
+      "label": "The rest of the grid is taken by integrators"
+     },
+     {
+      "text": "Celonis is headquartered in Munich and New York; Porsche Motorsport in Weissach. A German enterprise-software brand on a German works team plays at home in Berlin and, through Formula E's Miami and Mexico City rounds, in front of the US customers the New York headquarters serves.",
+      "label": "German company, German team, American market"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "TCS is title partner and owns the enterprise-technology narrative; a direct services-integrator conflict."
+     },
+     {
+      "team": "Mahindra Racing",
+      "reason": "Tech Mahindra holds the software and integration lane."
+     },
+     {
+      "team": "Envision Racing",
+      "reason": "Sand Technologies (AI) and Genpact (services, unverified for Season 12) crowd the lane."
+     },
+     {
+      "team": "Andretti Formula E",
+      "reason": "TWG AI is primary partner and Official AI Partner; Quest Global covers engineering services."
+     },
+     {
+      "team": "DS Penske · Nissan · Cupra Kiro · Citroën · Lola Yamaha ABT",
+      "reason": "Open but not chosen: none carries the existing Porsche AG deployment that makes the Celonis story credible from day one."
+     }
+    ]
+   },
+   "date_long": "08 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Porsche Formula E Team",
+   "value_mode": "A",
+   "bottom_line": "A product launch and an MIT-linked acquisition at a company last valued at $13B, a customer in Porsche that already runs the software, and a Formula E grid with no operations-software brand make Celonis the right name for Porsche's expanded GEN4 programme. What holds it back: no fresh capital since 2022 and no public revenue.",
+   "footer_date": "8 JUN 2026",
+   "score_cells": [
+    {
+     "num": 14,
+     "note": "Launch 12 May; GEN4 roster set over summer.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 17,
+     "note": "$13B valuation; $2.4B raised; no revenue public.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "German enterprise AI; Porsche customer already.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "Product launch needs amplifier; no deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: race-operations process twin.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 12 May 2026 Celonis launched the Celonis Context Model, a real-time digital twin of a company's operations built from process data, and signed a definitive agreement to acquire Ikigai Labs, whose forecasting and simulation software rests on patents licensed from MIT; MIT becomes a Celonis shareholder and Ikigai co-founder Devavrat Shah joins as Chief Scientist, Enterprise AI. Celonis last priced at about $13B in an August 2022 extension led by Qatar Investment Authority, after a $1B Series D at $11B in June 2021; it has raised roughly $2.4B in total. Revenue is not disclosed.",
+   "the_case_p2": "Formula E's technology lanes are held by integrators, not software: TCS titles the Jaguar, Tech Mahindra sits on the Mahindra, Sand Technologies on the Envision and TWG AI on the Andretti. No process-intelligence or operations-software brand is on the grid. Porsche AG already runs Celonis across supply chain and production, and Porsche is doubling its Formula E presence to two works teams for the first GEN4 season.",
+   "track_label": "",
+   "brief_number": "200",
+   "claims_total": 13,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$1B Series D at an $11B valuation (Jun 2021); $400M Series D extension led by Qatar Investment Authority at…",
+     "value": "$1B",
+     "claim_id": 669,
+     "verified": true,
+     "source_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs"
+    },
+    {
+     "fact": "Celonis, the Munich- and New York-based process-intelligence company last valued at about $13B, launched th…",
+     "value": "$13B",
+     "claim_id": 677,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "it has raised roughly $2.4B in total.",
+     "value": "$2.4B",
+     "claim_id": 679,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Enterprise Process Intelligence · Process Mining",
+   "value_content": "MODE A - operational. Celonis maps the team's race operations end to end: freight and parts flow across a global season, garage build and tear-down, spares approvals and supplier lead times, with the Context Model as a live digital twin the operations director can query and Ikigai's forecasting flagging bottlenecks before a race weekend. In return: Official Process Intelligence Partner status, livery on both cars, London hospitality.",
+   "value_section": true,
+   "why_team_para": "Porsche runs Celonis inside its own operations: with MHP, its consulting subsidiary, it has used Celonis process mining across more than 25 projects from inbound supply chain to production and finance. The Formula E team is the sharpest public expression of that culture, and from Season 13 it doubles to two works entries that need partners. Its Season 12 roster is reported to include TDK, NetApp, Synopsys and Cato Networks; none is an operations-software brand.",
+   "deal_arch_para": "Entry as Official Process Intelligence Partner across both Porsche works entries. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, the first three GEN4 seasons. Estimated $2-3M a year, part-payable in software and services. Scope: livery on both cars, naming of the team's operations twin, hospitality at Berlin and London.",
+   "footer_company": "CELONIS",
+   "why_team_label": "WHY PORSCHE FORMULA E TEAM",
+   "claims_verified": 13,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Context Model launched on 12 May and the Ikigai deal is closing; the marketing push runs through the autumn. Season 12 ends with the London double-header on 15-16 August, and Season 13 opens the GEN4 era with two Porsche entries, so the partner slate for the new cars is set this summer.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Thoma, President since August 2023, owns corporate strategy, marketing, ecosystem and Celonis Labs; a sponsorship sits in his remit. Path: co-founders and co-CEOs Alexander Rinke and Bastian Nominacher, and CFO Benoit Fouilland (since December 2024). No chief marketing officer is currently listed.",
+   "decision_maker_name": "Carsten Thoma",
+   "decision_maker_role": "President, Celonis",
+   "opening_angle_intro": "Lead with Porsche's own Celonis deployment.",
+   "opening_angle_quote": "&ldquo;Carsten, Porsche already runs Celonis from inbound logistics to the production line, and from Season 13 it fields two Formula E teams with no operations-software name on the cars. The London finale is ten weeks out. 25 minutes to talk about the second car?&rdquo;",
+   "value_section_label": "VALUE TO PORSCHE FORMULA E TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Carsten Thoma, President at Celonis",
+   "cited_source_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20230809005120/en/Celonis-Appoints-Carsten-Thoma-as-President-to-Advance-Innovation-and-Sustainable-Growth",
+     "excerpt": "Celonis, August 2023 (Business Wire, via StreetInsider/ERP Today): Carsten Thoma appointed President, responsible for corporate strategy and development, marketing, platform ecosystem, culture and Celonis Labs, working alongside co-CEOs Alex Rinke and Bastian Nominacher; still President as of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Carsten Thoma, President, Celonis at Celonis",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20230809005120/en/Celonis-Appoints-Carsten-Thoma-as-President-to-Advance-Innovation-and-Sustainable-Growth",
+     "excerpt": "Celonis, August 2023 (Business Wire, via StreetInsider/ERP Today): Carsten Thoma appointed President, responsible for corporate strategy and development, marketing, platform ecosystem, culture and Celonis Labs, working alongside co-CEOs Alex Rinke and Bastian Nominacher; still President as of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1B Series D at an $11B valuation (Jun 2021); $400M Series D extension led by Qatar Investment Authority at about $13B (Aug 2022); roughly $2.4B raised in total",
+   "cited_source_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/celonis-secures-1-billion-to-help-customers-fight-economic-and-supply-chain-challenges-with-process-improvements-301610454.html",
+     "excerpt": "Celonis, June 2021: $1 billion Series D at an $11 billion valuation (Bloomberg, Crunchbase News).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Celonis, the Munich- and New York-based process-intelligence company last valued at about $13B, launched the Celonis Context Model on 12 May 2026 and agreed to acquire MIT-linked Ikigai Labs, repositioning a platform Porsche already runs in production as the context layer for enterprise AI.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+     "excerpt": "Celonis, 12 May 2026 (company release, Business Wire): launch of the Celonis Context Model, a dynamic real-time digital twin of operations built on process data, and a definitive agreement to acquire Ikigai Labs (AI decision intelligence: planning, simulation, forecasting). Celonis gains exclusive rights to MIT patents Ikigai licensed; MIT becomes a Celonis shareholder; co-founder Devavrat Shah (MIT EECS) becomes Chief Scientist, Enterprise AI. Confirmed by Forrester, Constellation Research, diginomica, ERP Today.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Qatar Investment Authority led the 2022 extension; MIT becomes a shareholder through the Ikigai Labs acquisition",
+   "cited_source_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+     "excerpt": "Celonis, 12 May 2026 (company release, Business Wire): launch of the Celonis Context Model, a dynamic real-time digital twin of operations built on process data, and a definitive agreement to acquire Ikigai Labs (AI decision intelligence: planning, simulation, forecasting). Celonis gains exclusive rights to MIT patents Ikigai licensed; MIT becomes a Celonis shareholder; co-founder Devavrat Shah (MIT EECS) becomes Chief Scientist, Enterprise AI. Confirmed by Forrester, Constellation Research, diginomica, ERP Today.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Celonis last priced at about $13B in an August 2022 extension led by Qatar Investment Authority, after a $1B Series D at $11B in June 2021;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/celonis-secures-1-billion-to-help-customers-fight-economic-and-supply-chain-challenges-with-process-improvements-301610454.html",
+     "excerpt": "Celonis, June 2021: $1 billion Series D at an $11 billion valuation (Bloomberg, Crunchbase News).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Celonis Context Model launch and definitive agreement to acquire Ikigai Labs, announced 12 May 2026 (company release; Business Wire)",
+   "cited_source_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+     "excerpt": "Celonis, 12 May 2026 (company release, Business Wire): launch of the Celonis Context Model, a dynamic real-time digital twin of operations built on process data, and a definitive agreement to acquire Ikigai Labs (AI decision intelligence: planning, simulation, forecasting). Celonis gains exclusive rights to MIT patents Ikigai licensed; MIT becomes a Celonis shareholder; co-founder Devavrat Shah (MIT EECS) becomes Chief Scientist, Enterprise AI. Confirmed by Forrester, Constellation Research, diginomica, ERP Today.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "it has raised roughly $2.4B in total.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.thesaasnews.com/news/celonis-secures-400-million-in-series-d-extension-and-600-million-credit-facility",
+     "excerpt": "Celonis, August 2022 (PR Newswire, The SaaS News): $400 million Series D extension led by Qatar Investment Authority plus a $600 million credit facility, at a post-money valuation of nearly $13 billion. Tracxn: about $2.4 billion raised over 13 rounds; no priced equity round since 2022.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "TCS (Jaguar title), Tech Mahindra (Mahindra), Sand Technologies (Envision) and TWG AI (Andretti) hold Formula E's technology lanes; no process-intelligence or operations-software brand on the grid",
+   "cited_source_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+     "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): Jaguar TCS Racing — TCS title (IT services), Castrol; Mahindra Racing — Tech Mahindra (software/tech integrator); Envision Racing — Sand Technologies (AI), Genpact (unverified); Andretti Formula E — TWG AI (Official AI Partner), Quest Global; Porsche Formula E Team — Porsche (parent), TAG Heuer and Hugo Boss (unverified legacy). No process-mining or operations-software brand on any Formula E roster.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A product launch and an MIT-linked acquisition at a company last valued at $13B, a customer in Porsche that already runs the software, and a Formula E grid with no operations-software brand make Celonis the right name for Porsche's expanded GEN4 programme.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+     "excerpt": "Celonis, 12 May 2026 (company release, Business Wire): launch of the Celonis Context Model, a dynamic real-time digital twin of operations built on process data, and a definitive agreement to acquire Ikigai Labs (AI decision intelligence: planning, simulation, forecasting). Celonis gains exclusive rights to MIT patents Ikigai licensed; MIT becomes a Celonis shareholder; co-founder Devavrat Shah (MIT EECS) becomes Chief Scientist, Enterprise AI. Confirmed by Forrester, Constellation Research, diginomica, ERP Today.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Porsche AG runs Celonis process mining with its consultancy MHP across more than 25 projects from supply chain to production and finance; Porsche fields two works Formula E teams from Season 13 (GEN4)",
+   "cited_source_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mhp.com/en/insights/our-experience/porsche-ag-process-mining-creates-excellent-processes",
+     "excerpt": "MHP (a Porsche company) success story and Porsche AG's own Medium post: Porsche relies on Celonis for process mining; MHP has supported Porsche across more than 25 process-mining projects end to end, from inbound supplier processes to the production line, finance and supply chain; a Porsche process-mining centre of excellence works with Celonis and MHP.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "it has raised roughly $2.4B in total and does not disclose revenue.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.thesaasnews.com/news/celonis-secures-400-million-in-series-d-extension-and-600-million-credit-facility",
+     "excerpt": "Celonis, August 2022 (PR Newswire, The SaaS News): $400 million Series D extension led by Qatar Investment Authority plus a $600 million credit facility, at a post-money valuation of nearly $13 billion. Tracxn: about $2.4 billion raised over 13 rounds; no priced equity round since 2022.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Dual headquarters Munich and New York; founded 2011 in Munich",
+   "cited_source_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.celonis.com/company/about-us",
+     "excerpt": "Celonis About page (via Tracxn/PitchBook summaries): founded 2011 in Munich; dual headquarters in Munich, Germany and New York, US.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "London E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 12 calendar (ExCeL London finale) | note: ExCeL, double-header race 1 — season finale weekend",
+     "excerpt": "round 16: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "product launch and acquisition",
+   "cited_source_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.celonis.com/news/press/celonis-launches-the-context-model-to-eliminate-enterprise-ais-operational-blind-spots-agrees-to-acquire-ai-decision-intelligence-leader-ikigai-labs",
+     "excerpt": "Celonis, 12 May 2026 (company release, Business Wire): launch of the Celonis Context Model, a dynamic real-time digital twin of operations built on process data, and a definitive agreement to acquire Ikigai Labs (AI decision intelligence: planning, simulation, forecasting). Celonis gains exclusive rights to MIT patents Ikigai licensed; MIT becomes a Celonis shareholder; co-founder Devavrat Shah (MIT EECS) becomes Chief Scientist, Enterprise AI. Confirmed by Forrester, Constellation Research, diginomica, ERP Today.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  }
+ ]
+}
