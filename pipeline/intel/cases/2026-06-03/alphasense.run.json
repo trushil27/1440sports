@@ -1,0 +1,779 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-06-03",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-f6_nka9c/2026-06-03/alphasense.pdf",
+     "web": "/tmp/case-pdf-f6_nka9c/2026-06-03/alphasense.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "AlphaSense",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 15
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 73,
+     "reason": "top ranking score",
+     "company": "AlphaSense",
+     "decision": "selected",
+     "signal_date": "2026-06-03"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "AlphaSense",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 73,
+   "score_breakdown": {
+    "cap": null,
+    "base": 73,
+    "total": 73,
+    "timing": 17,
+    "ops_fit": 12,
+    "ranking": 73,
+    "urgency": 13,
+    "capacity": 17,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 1,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 73,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 73,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "McLaren Mastercard F1 Team",
+   "source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+   "trigger_date": "2026-06-03",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 205,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-f6_nka9c/2026-06-03/alphasense.web.html",
+  "brief_data": {
+   "hq": "New York",
+   "deck": "AlphaSense, the New York AI market-intelligence platform used by 90% of the S&P 100, closed a $350M round on 3 June 2026 at a $7.5B valuation, led by Vitruvian, Accenture Ventures and J.P. Morgan Asset Management, on annual recurring revenue above $600M and reported IPO intent.",
+   "risks": [
+    {
+     "label": "AI ADJACENCY",
+     "detail": "Gemini is McLaren's Primary Partner for AI; an AI-first research brand can read as overlap.",
+     "counter": "Define the category as market and financial research with exclusivity; keep AI out of the title."
+    },
+    {
+     "label": "PRICE OF ENTRY",
+     "detail": "McLaren partner tiers are among the priciest outside the top three; the return is hospitality-led.",
+     "counter": "Weight the fee to hospitality and investor events; phase car placement in from year two."
+    }
+   ],
+   "score": 73,
+   "ticker": "Private ($7.5B; $350M round, Jun 2026)",
+   "company": "AlphaSense",
+   "gridfit": [
+    {
+     "team": "McLaren F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "partner_adjacency"
+   ],
+   "sources": [
+    "https://www.prnewswire.com/news-releases/alphasense-appoints-heather-zynczak-as-chief-marketing-officer-doubles-revenue-in-less-than-two-years-302111054.html",
+    "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+    "https://www.globenewswire.com/news-release/2026/04/14/3273274/0/en/alphasense-appoints-samantha-greenberg-as-chief-financial-officer.html"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Heather Zynczak before the British GP to confirm the listing intent on the record, agree a category definition that sits beside Gemini, and size an Official Market Intelligence Partner entry against McLaren's 2027 roster.",
+    "value": [
+     {
+      "text": "McLaren's commercial and strategy teams sell to public companies and renew with them. AlphaSense puts partners' and prospects' earnings calls, broker research, regulatory filings and expert-call transcripts in one search, so partner prospecting, renewal risk and the financial health of rival teams' sponsors are tracked with the tools an investment bank uses.",
+      "label": "Commercial workstream (Mode B)"
+     },
+     {
+      "text": "AlphaSense's buyers are analysts, bankers and corporate strategists at more than 7,000 enterprises, including 90% of the S&P 100. Silverstone, Monza, Austin and Las Vegas hospitality puts those decision-makers in McLaren's suite, the audience the team's B2B partners already pay to reach.",
+      "label": "Hospitality that matches the customer list"
+     },
+     {
+      "text": "Co-produced content on how a race team reads its market, natural alongside CNBC on the roster; co-hosted investor events at the US rounds; a McLaren reference story for AlphaSense's enterprise sales and for the Accenture channel.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Market Intelligence Partner designation with category exclusivity, car placement at US and European rounds, platform seats for McLaren's commercial and strategy staff, driver and leadership access for customer programmes.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "AlphaSense announced on 3 June 2026 that it had closed a $350M round at a $7.5B valuation, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management, with D. E. Shaw Ventures and Pinegrove Opportunity Partners joining and Goldman Sachs Alternatives, CapitalG and Viking Global Investors returning. Total funding now exceeds $1B. Sophie Bower-Straziota of Vitruvian joins the board.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Annual recurring revenue passed $600M in the first quarter of 2026, up from $500M in October 2025, and the valuation nearly doubled from the $4B set by the $650M round of 2024. This is a company with the revenue to fund a multi-year programme from operating budget, not from the raise.",
+      "label": "Revenue, not just valuation"
+     },
+     {
+      "text": "Jack Kokko told the press an IPO is a possibility. That is reported, not committed, but a company preparing to be known by public-market investors and chief executives, rather than only by the analysts who already use it, is exactly when a brand platform earns its budget. The Accenture partnership adds an enterprise channel that wants the brand seen in boardrooms.",
+      "label": "A listing story being told"
+     },
+     {
+      "text": "The British GP at Silverstone on 5 July sits inside the six-to-ten-week window; Belgium and Hungary follow before the summer break, when McLaren settles its 2027 roster. A deal agreed in July can launch at Austin or Las Vegas, where AlphaSense's US banking and corporate customers are, and run in full from 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "No team on the grid carries a market-intelligence or financial-research platform. McLaren's roster has Goldman Sachs, CNBC, Deloitte, Workday, Alteryx and Dell, all adjacent, none competing: Official Market Intelligence Partner is a clean category next to the most B2B-fluent partner programme in the paddock.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Goldman Sachs Alternatives is an existing AlphaSense investor and Goldman Sachs is a McLaren partner. The introduction runs through a partner McLaren already trusts, and every top global investment bank is an AlphaSense customer, so the guests AlphaSense would host are the ones McLaren's finance partners already recognise.",
+      "label": "The warm path"
+     },
+     {
+      "text": "Gemini is McLaren's Primary Partner for AI and is used across racing operations. AlphaSense is not an AI assistant; it is the research layer for markets, filings and expert calls. The category has to be written as market and financial research, with exclusivity, so the two sit side by side rather than overlap.",
+      "label": "Beside Gemini, not against it"
+     },
+     {
+      "text": "Aston Martin carries the Financial Times, Public, Coinbase and Pepperstone, a crowded financial-information roster; Mercedes has Nasdaq and UBS at the highest price on the grid; Williams' BNY, Barclays, Nuveen and Stephens would make AlphaSense one more finance logo rather than the intelligence layer. McLaren gives it the stage its customers already attend.",
+      "label": "Why not the others"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Financial Times, Public, Coinbase, Pepperstone and Circle crowd the financial-information and fintech lane."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "Nasdaq and UBS already own the capital-markets story, at the highest partner price on the grid."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "BNY, Barclays, Nuveen, Stephens and Kraken: a finance-heavy roster where AlphaSense would be one more finance logo. Open but not chosen."
+     },
+     {
+      "team": "Oracle Red Bull Racing · Scuderia Ferrari HP",
+      "reason": "Carlyle and Visa at Red Bull, UniCredit and AON at Ferrari; no research clash, but neither carries the B2B partner programme McLaren runs. Open but not chosen."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls · BWT Alpine · Audi Revolut",
+      "reason": "Fintech and trading brands (Cash App, XM Trading, eToro, Revolut, Libertex, NEXO) set a retail-finance tone that does not fit an institutional research platform."
+     },
+     {
+      "team": "Cadillac F1 Team · TGR Haas F1 Team",
+      "reason": "Open but not chosen: neither has the financial-services ecosystem that makes McLaren's suite the right room."
+     }
+    ]
+   },
+   "date_long": "03 JUN 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "McLaren Mastercard F1 Team",
+   "value_mode": "B",
+   "bottom_line": "A $350M round at $7.5B on 3 June, ARR above $600M, a customer list that already fills McLaren's suites and an open market-intelligence lane put AlphaSense at peak brand-investment authority with a warm route through Goldman Sachs. A MODE B workstream and an unconfirmed IPO hold the score at 73.",
+   "footer_date": "3 JUN 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round closed 3 Jun; Silverstone on 5 Jul inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 17,
+     "note": "$350M fresh at $7.5B; ARR above $600M; $1B-plus raised.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "B2B brand for finance and corporate strategy; no consumer pull.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "IPO is a possibility, not a date; Accenture channel adds a clock.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 12,
+     "note": "MODE B: off-car commercial workstream; nothing on the car.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "AlphaSense announced the $350M round on 3 June 2026: led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management, with Goldman Sachs Alternatives, CapitalG and Viking returning, taking total funding past $1B. The $7.5B valuation nearly doubles the $4B set by the $650M round of 2024. Annual recurring revenue passed $600M in the first quarter, up from $500M in October 2025. More than 7,000 enterprises use the platform, including 90% of the S&P 100 and every top global investment bank. Jack Kokko told the press an IPO is a possibility.",
+   "the_case_p2": "The product is the research desk for the people who run the world's capital: analysts, bankers, corporate strategists and the boards they brief. Those are the guests every F1 team's commercial partners want in the suite, and no team carries a market-intelligence or research platform. The round arrives with Accenture as both investor and channel partner, giving AlphaSense a reason to be seen by chief executives, not just analysts, over the next twelve months.",
+   "track_label": "",
+   "brief_number": "205",
+   "claims_total": 19,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$350M round announced 3 Jun 2026 at a $7.5B valuation, led by Vitruvian Partners, Accenture Ventures and J.…",
+     "value": "$350M",
+     "claim_id": 641,
+     "verified": true,
+     "source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/"
+    },
+    {
+     "fact": "Annual recurring revenue above $600M in Q1 2026, up from $500M in October 2025 (company release, 3 Jun 2026)",
+     "value": "$600M",
+     "claim_id": 643,
+     "verified": true,
+     "source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/"
+    },
+    {
+     "fact": "AlphaSense, the New York AI market-intelligence platform used by 90% of the S&P 100, closed a $350M round o…",
+     "value": "90%",
+     "claim_id": 650,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "Morgan Asset Management, with Goldman Sachs Alternatives, CapitalG and Viking returning, taking total fundi…",
+     "value": "$1B",
+     "claim_id": 653,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "The $7.5B valuation nearly doubles the $4B set by the $650M round of 2024.",
+     "value": "$7.5B",
+     "claim_id": 654,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Market Intelligence · Financial & Corporate Research Platform",
+   "value_content": "MODE B - halo with an off-car workstream. McLaren's commercial team sells to and renews with public companies; AlphaSense puts their earnings calls, broker research, filings and expert-call transcripts in one search, so partner prospecting, renewal risk and rival rosters' sponsor health are tracked the way a bank would. In return: Official Market Intelligence Partner designation, Silverstone, Austin and Las Vegas hospitality for its banking and corporate customers, and CNBC-adjacent content.",
+   "value_section": true,
+   "why_team_para": "McLaren runs the most B2B-fluent partner programme on the grid: Mastercard as title partner, with Goldman Sachs, Deloitte, Workday and CNBC on the roster. Goldman Sachs Alternatives is already an AlphaSense investor, so the introduction runs through a partner McLaren knows. There is no market-intelligence or research partner. Gemini is McLaren's Primary Partner for AI, so AlphaSense enters as the intelligence layer beside it, not an AI badge.",
+   "deal_arch_para": "Entry as Official Market Intelligence Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning a probable listing window. Estimated $4-6M a year, hospitality-weighted. Scope: category exclusivity for market and financial research, car placement at US and European rounds, platform seats for McLaren's commercial staff, co-hosted investor events at Austin and Las Vegas.",
+   "footer_company": "ALPHASENSE",
+   "why_team_label": "WHY MCLAREN MASTERCARD F1 TEAM",
+   "claims_verified": 19,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 3 June; brand budgets are set in the quarter after a raise and a listing story is being told. The British GP at Silverstone on 5 July sits inside the window, and McLaren settles its 2027 partner roster through the summer break.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 205",
+   "decision_maker_bio": "Zynczak has been CMO since April 2024 and has scaled two software brands: Domo from launch to $100M revenue and Pluralsight through its IPO, after Oracle and SAP. Path: Jack Kokko, Founder and CEO, signs; Kiva Kolstein, President and Chief Revenue Officer; Samantha Greenberg, CFO since April 2026.",
+   "decision_maker_name": "Heather Zynczak",
+   "decision_maker_role": "Chief Marketing Officer, AlphaSense",
+   "opening_angle_intro": "Lead with the customer list and the open lane.",
+   "opening_angle_quote": "&ldquo;Heather, every top investment bank runs on AlphaSense and entertains at McLaren, where Goldman already sits and nobody owns market intelligence. A listing story needs a stage. 25 minutes before Silverstone to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO MCLAREN MASTERCARD F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Heather Zynczak, Chief Marketing Officer at AlphaSense",
+   "cited_source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/alphasense-appoints-heather-zynczak-as-chief-marketing-officer-doubles-revenue-in-less-than-two-years-302111054.html",
+     "excerpt": "AlphaSense press release, PR Newswire, 9 Apr 2024: Heather Zynczak appointed Chief Marketing Officer; previously CMO at Domo (launched the brand, revenue from $0 to $100M) and CMO at Pluralsight (member of the IPO team); earlier executive roles at Oracle and SAP; began as a consultant at Accenture, BCG and Booz Allen. She leads global marketing with emphasis on brand and revenue alignment. Listed as CMO on The Org and LinkedIn in 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Heather Zynczak, Chief Marketing Officer, AlphaSense at AlphaSense",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/alphasense-appoints-heather-zynczak-as-chief-marketing-officer-doubles-revenue-in-less-than-two-years-302111054.html",
+     "excerpt": "AlphaSense press release, PR Newswire, 9 Apr 2024: Heather Zynczak appointed Chief Marketing Officer; previously CMO at Domo (launched the brand, revenue from $0 to $100M) and CMO at Pluralsight (member of the IPO team); earlier executive roles at Oracle and SAP; began as a consultant at Accenture, BCG and Booz Allen. She leads global marketing with emphasis on brand and revenue alignment. Listed as CMO on The Org and LinkedIn in 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$350M round announced 3 Jun 2026 at a $7.5B valuation, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; total funding over $1B; prior round $650M at $4B in 2024",
+   "cited_source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "AlphaSense, the New York AI market-intelligence platform used by 90% of the S&P 100, closed a $350M round on 3 June 2026 at a $7.5B valuation, led by Vitruvian, Accenture Ventures and J.P.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Vitruvian Partners, Accenture Ventures, J.P. Morgan Asset Management (leads); D. E. Shaw Ventures and Pinegrove Opportunity Partners new; Goldman Sachs Alternatives, CapitalG and Viking Global Investors existing",
+   "cited_source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Morgan Asset Management, on annual recurring revenue above $600M and reported IPO intent.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "Same release: annual recurring revenue exceeded $600 million in Q1 2026, up from $500 million in October 2025. More than 7,000 enterprises rely on the platform, including 90% of the S&P 100, all of the world's top global investment banks and 92% of the world's 50 largest pharmaceutical companies.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Annual recurring revenue above $600M in Q1 2026, up from $500M in October 2025 (company release, 3 Jun 2026)",
+   "cited_source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "AlphaSense announced the $350M round on 3 June 2026: led by Vitruvian Partners, Accenture Ventures and J.P.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$350M round at a $7.5B valuation announced 3 Jun 2026",
+   "cited_source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Morgan Asset Management, with Goldman Sachs Alternatives, CapitalG and Viking returning, taking total funding past $1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No market-intelligence or research platform sits on the F1 grid; Financial Times at Aston Martin and CNBC at McLaren are the nearest financial-information adjacencies",
+   "cited_source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Financial Times → Aston Martin Aramco F1 Team (team_major, active); CNBC → McLaren F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The $7.5B valuation nearly doubles the $4B set by the $650M round of 2024.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "More than 7,000 enterprise customers including 90% of the S&P 100 and all of the top global investment banks; Goldman Sachs Alternatives is an existing investor and Goldman Sachs is a McLaren partner; CEO Jack Kokko has said an IPO is a possibility (reported)",
+   "cited_source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/04/14/3273274/0/en/alphasense-appoints-samantha-greenberg-as-chief-financial-officer.html",
+     "excerpt": "AlphaSense press release, 14 Apr 2026: Samantha Greenberg appointed Chief Financial Officer. Leadership as listed on alpha-sense.com and Craft: Jack Kokko, Founder and CEO; Kiva Kolstein, President and Chief Revenue Officer; Raj Neervannan, Co-Founder and CTO; Heather Zynczak, CMO.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Annual recurring revenue passed $600M in the first quarter, up from $500M in October 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "Same release: annual recurring revenue exceeded $600 million in Q1 2026, up from $500 million in October 2025. More than 7,000 enterprises rely on the platform, including 90% of the S&P 100, all of the world's top global investment banks and 92% of the world's 50 largest pharmaceutical companies.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in New York; the 3 Jun 2026 release is datelined New York",
+   "cited_source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "More than 7,000 enterprises use the platform, including 90% of the S&P 100 and every top global investment bank.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "Same release: annual recurring revenue exceeded $600 million in Q1 2026, up from $500 million in October 2025. More than 7,000 enterprises rely on the platform, including 90% of the S&P 100, all of the world's top global investment banks and 92% of the world's 50 largest pharmaceutical companies.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $350M round at $7.5B on 3 June, ARR above $600M, a customer list that already fills McLaren's suites and an open market-intelligence lane put AlphaSense at peak brand-investment authority with a warm route through Goldman Sachs.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "AlphaSense announced on 3 June 2026 that it had closed a $350M round at a $7.5B valuation, led by Vitruvian Partners, Accenture Ventures and J.P.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Total funding now exceeds $1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "AlphaSense press release, New York, 3 Jun 2026 (also GlobeNewswire and Nasdaq): closed a $350 million funding round valuing the company at $7.5 billion, led by Vitruvian Partners, Accenture Ventures and J.P. Morgan Asset Management; new investors D. E. Shaw Ventures and Pinegrove Opportunity Partners; existing investors Goldman Sachs Alternatives, CapitalG and Viking Global Investors participated; total funding now over $1 billion. Sophie Bower-Straziota, Partner at Vitruvian, joins the board. Funds go to the AI platform, proprietary content library, international expansion and customer support.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Annual recurring revenue passed $600M in the first quarter of 2026, up from $500M in October 2025, and the valuation nearly doubled from the $4B set by the $650M round of 2024.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "Same release: annual recurring revenue exceeded $600 million in Q1 2026, up from $500 million in October 2025. More than 7,000 enterprises rely on the platform, including 90% of the S&P 100, all of the world's top global investment banks and 92% of the world's 50 largest pharmaceutical companies.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "AlphaSense's buyers are analysts, bankers and corporate strategists at more than 7,000 enterprises, including 90% of the S&P 100.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+     "excerpt": "Same release: annual recurring revenue exceeded $600 million in Q1 2026, up from $500 million in October 2025. More than 7,000 enterprises rely on the platform, including 90% of the S&P 100, all of the world's top global investment banks and 92% of the world's 50 largest pharmaceutical companies.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
