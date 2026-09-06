@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — EnergyX</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "ENERGYX · 6 JUL 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 166</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 166 &nbsp;·&nbsp; HOT</div>
+
+  <h1>EnergyX</h1>
+  <div class="classline">Energy · Lithium / Direct Lithium Extraction · Austin, Texas · Private (Reg A+ retail-funded; $225M Eni, Jul 2026)</div>
+
+  <div class="lede">EnergyX, the Austin lithium-extraction company backed by General Motors and POSCO, announced a $225M strategic equity investment from Eni on 6 July 2026 for a minority stake in its Black Giant project in Chile, alongside a $690M debt letter of intent from the US EXIM Bank. An energy major has underwritten the flagship.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">71</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Andretti Formula E</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>On 6 July EnergyX announced a $225M equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta region designed for 52,500 tonnes a year of lithium carbonate across two phases, with Eni taking rights to up to 25% of output. It sits on top of a $690M debt letter of intent from the US EXIM Bank; total project cost is put just below $1B. General Motors led the $50M Series B in April 2023; a $75M Regulation A+ raise built about 40,000 retail shareholders (reported).</p>
+<p>Formula E is the world championship built around the electric car, and the lithium that goes into it has no name on the grid. Energy majors do: TotalEnergies at DS Penske, Shell at Lola Yamaha ABT, Castrol at Jaguar. EnergyX now carries an energy major's endorsement, an American home base and a Chilean flagship, and its first US plant, Project Lonestar in the Smackover, came online in March.</p>
+  <h2>Why Now</h2>
+  <p>Eni's money arrived on 6 July; Season 12 ends with the London E-Prix in mid-August and Season 13 opens in Jeddah in December with the GEN4 car. The Austin E-Prix on 6 February 2027 is a home race for an Austin company, and a partner signed before the launch is on the car for it.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$225M</div><div class="pfk">$225M strategic equity investment from Eni for a minority stake in Project Black Giant, announced 6 Jul 202…</div></div>
+    <div class="pf"><div class="pfv">$50M</div><div class="pfk">Eni (2026, project-level); General Motors led a $50M Series B in Apr 2023 with Elohim Partners and IMM Inve…</div></div>
+    <div class="pf"><div class="pfv">$690M</div><div class="pfk">It sits on top of a $690M debt letter of intent from the US EXIM Bank;</div></div>
+    <div class="pf"><div class="pfv">$1B</div><div class="pfk">total project cost is put just below $1B.</div></div>
+    <div class="pf"><div class="pfv">$75M</div><div class="pfk">a $75M Regulation A+ raise built about 40,000 retail shareholders (reported).</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (sponsor table; 10 of 35 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Andretti Formula E<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Lola Yamaha ABT Formula E Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Shell</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Citroën Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Cupra Kiro</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A $225M Eni investment plus a $690M EXIM letter of intent give EnergyX an energy major's endorsement at the moment the GEN4 era opens, with a home race in Austin on 6 February 2027 and an American team whose roster carries no energy partner. Small, honest MODE B entry; move before the season launch.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">strategic investment</span><span class="flag">home race</span><span class="flag">open category</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 166</span>
+  </div>
+
+  <h2>WHY ANDRETTI FORMULA E</h2>
+  <p>Andretti is the American team, owned by TWG Motorsports, with TWG AI as primary partner, Nissan GEN4 powertrains from Season 13 and Quest Global, Crowe UK and Reflo alongside. There is no energy, battery or materials partner, and the roster is being rebuilt for the new car. The ownership link is real: General Motors, EnergyX's Series B lead, is TWG Motorsports' partner in the Cadillac F1 Team. Austin and Miami in February 2027 are home rounds for the team and for EnergyX.</p>
+
+  <h2>VALUE TO ANDRETTI FORMULA E &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B - halo, stated honestly: Formula E runs a spec battery, so no EnergyX lithium enters the car. The mechanics are concrete: a lithium-to-lap supply-chain story told from the Smackover plant to the Austin grid; hospitality at Austin and Miami for the company's retail shareholders and strategic investors; a US critical-minerals narrative the team can carry into policy and OEM conversations; driver content on where a battery begins.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official Lithium and Critical-Minerals Partner. <b class="hl">THREE YEARS</b>, Seasons 13-15, spanning Black Giant's build and a probable listing. Estimated $1.5-3M a year. Scope: rear-wing or sidepod placement on the GEN4 car, Austin and Miami hospitality with a shareholder allocation, plant-to-track content.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Teague Egan</div>
+        <div class="role">Founder, Chairman &amp; CEO, EnergyX · <span class="vtag">verified</span></div>
+        <div class="bio">Egan founded EnergyX in 2018 and has fronted every raise, including the retail offering; a first motorsport deal is his call. Path: Kellee Khalil, Chief Marketing Officer, who owns brand strategy; Mayank Sharma, Chief Financial Officer; Juan Carlos Barrera, President of Lithium, South America, for the Chile story.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the home race.</div>      <div class="quote">“Teague, the Austin E-Prix is on 6 February and no lithium company is on a Formula E car. Andretti is the American team, GM sits beside its owner in Formula 1, and the GEN4 roster is open. 25 minutes to see the numbers?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Eni closed 6 Jul; GEN4 season launch and Austin inside the horizon.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">$225M is project equity; corporate brand budget unproven, pre-revenue.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Lithium and the electric car; natural FE story, MODE B only.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Home race 6 Feb 2027; retail base to reward; no hard deadline.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">Spec battery: no in-car workstream; open lane, strong story.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">PROJECT MONEY, NOT BRAND MONEY</span> &nbsp;<span class="rc">Eni's $225M goes into Project Black Giant, not the corporate budget; the company is pre-revenue and its filings report losses. <b>Counter:</b> Size the entry small, tie it to Austin and the shareholder programme, and let year one earn year two.</span></div>
+  <div class="risk"><span class="rt">RETAIL-FUNDED PROFILE</span> &nbsp;<span class="rc">A company that raises from 40,000 small investors invites scrutiny of its promotional spend. <b>Counter:</b> Frame it as shareholder engagement and OEM-facing storytelling with a stated budget, never a vanity buy.</span></div>
+
+  <h2>Sources <span class="panelnote">— 20 of 20 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://energyx.com/company/teague-egan/</li><li>https://energyx.com/press-release/energyx-eni-strategic-investment/</li><li>https://investors.gm.com/news-releases/news-release-details/gm-leads-50-million-funding-round-energyx-unlock-us-based-0/</li><li>https://energyx.com/press-release/american-made-lithium-project-lonestar/</li><li>https://techcrunch.com/2024/10/04/why-energyx-raised-75m-from-small-investors-even-after-taking-vc-money-from-gm-and-others/</li>  </ul>
+</div>
+</body>
+</html>
