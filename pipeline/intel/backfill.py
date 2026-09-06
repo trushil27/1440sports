@@ -734,8 +734,15 @@ def _ledger_claims(session: Session, brief: Brief, ledger: list[dict[str, Any]])
     return len(ledger)
 
 
+BACKLOG_BLOCK_BASE = 10000  # parallel backlog runs number their cases from reserved blocks
+
+
 def _bump_sequence(session: Session, number: int) -> None:
-    """Keep the live sequence ahead of an imported positive brief number."""
+    """Keep the live sequence ahead of an imported positive brief number — but not past a
+    backlog block: cases built in parallel carry numbers ≥ 10000 so that the daily heroes
+    (121, 122, …) keep their own unbroken sequence."""
+    if number >= BACKLOG_BLOCK_BASE:
+        return
     session.execute(
         text(
             "SELECT setval('brief_number_seq', "

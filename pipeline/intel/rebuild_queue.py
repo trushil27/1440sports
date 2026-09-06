@@ -169,11 +169,21 @@ def process(
 
 
 def backlog(
-    settings: Settings | None = None, limit: int = 4, runner=None, session=None
+    settings: Settings | None = None,
+    limit: int = 4,
+    runner=None,
+    session=None,
+    shard: int = 0,
+    shards: int = 1,
 ) -> list[dict[str, Any]]:
     """Turn the unverified history into full cases a few at a time, newest first, skipping
     screened / merged rows and anything already rebuilt. The daily job runs this after the
-    queue so the whole log becomes Crusoe-standard cases over the following weeks."""
+    queue so the whole log becomes Crusoe-standard cases over the following weeks.
+
+    ``shard`` / ``shards`` split the queue for parallel runners: shard k of n takes every
+    n-th company (k, k+n, k+2n …) of the same newest-first order, so two runs never build
+    the same company. Each runner must also use its own brief-number block (see
+    ``backfill.restart_sequence`` and the build-backlog workflow)."""
     from sqlalchemy import select
 
     from intel import rebuild as rebuild_mod
@@ -185,7 +195,7 @@ def backlog(
     settings = settings or get_settings()
     if session is None:
         with session_scope(settings.database_url) as s:
-            return backlog(settings, limit, runner, s)
+            return backlog(settings, limit, runner, s, shard, shards)
     run = runner or rebuild_mod.rebuild
     review = site_export.load_review()
     done = load_done(settings)
@@ -208,11 +218,9 @@ def backlog(
         )
         .order_by(Brief.run_date.desc(), Brief.id.desc())
     ).all()
-    results: list[dict[str, Any]] = []
+    queue: list[tuple[Brief, str]] = []
     seen: set[str] = set()
     for b in rows:
-        if len(results) >= limit:
-            break
         company = (b.brief_data or {}).get("company") or b.candidate.company_raw
         norm = company_norm(company)
         if norm in seen or norm in verified or norm in rebuilt_companies:
@@ -220,10 +228,18 @@ def backlog(
         rv = site_export.review_for(review, b.run_date.isoformat(), company)
         if rv["status"] not in ("keep", "keep_flagged"):
             continue
-        seen.add(norm)
-        key = f"backlog-{b.id}"
-        if key in done:
+        if f"backlog-{b.id}" in done:
             continue
+        seen.add(norm)
+        queue.append((b, company))
+    shards = max(1, int(shards))
+    mine = queue[max(0, int(shard)) % shards :: shards]
+    print(f"backlog: {len(queue)} companies to build; shard {shard}/{shards} takes {len(mine)}")
+    results: list[dict[str, Any]] = []
+    for b, company in mine:
+        if len(results) >= limit:
+            break
+        key = f"backlog-{b.id}"
         try:
             out = run(company, b.run_date, settings)
             record = {
@@ -253,7 +269,11 @@ def main(argv: list[str] | None = None) -> int:
     argv = sys.argv[1:] if argv is None else argv
     if "--backlog" in argv:
         n = int(argv[argv.index("--backlog") + 1]) if len(argv) > argv.index("--backlog") + 1 else 4
-        print(json.dumps(backlog(limit=n), indent=1, default=str))
+        shard, shards = 0, 1
+        if "--shard" in argv:  # --shard k/n
+            k, _, total = argv[argv.index("--shard") + 1].partition("/")
+            shard, shards = int(k), int(total or 1)
+        print(json.dumps(backlog(limit=n, shard=shard, shards=shards), indent=1, default=str))
         return 0
     print(json.dumps(process(), indent=1, default=str))
     return 0

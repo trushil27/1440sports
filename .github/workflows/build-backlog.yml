@@ -1,29 +1,41 @@
 # Build the backlog: turn historical signals into full, verified cases (2-page PDF + app
-# page) in bulk, newest first, on a runner with a throwaway Postgres — the same pipeline and
-# memory as the daily run. Cases are saved into the repo and the live app is republished at
-# the end. Runs one at a time (same concurrency group as the daily run) so brief numbers stay
-# unique. Trigger from the Actions tab: count = how many cases to build in this run.
+# page) in bulk, newest first, on runners with a throwaway Postgres each — the same pipeline
+# and memory as the daily run. Runs in PARALLEL shards: shard k of n builds every n-th
+# company of the queue and numbers its cases from its own reserved block (10000 + …), so
+# nothing collides with the other shards or with the daily run. Cases are saved into the
+# repo and the live app is republished. Trigger from the Actions tab.
 name: Build backlog
 
 on:
   workflow_dispatch:
     inputs:
       count:
-        description: "How many historical signals to build into full cases (newest first)"
+        description: "Cases to build PER SHARD in this run"
         type: number
         default: 30
+      shards:
+        description: "Shard ids to run in parallel, as a JSON list"
+        type: string
+        default: "[0, 1, 2]"
+      total:
+        description: "Total number of shards the queue is split into"
+        type: number
+        default: 3
 
 permissions:
   contents: write
-
-concurrency:
-  group: daily-run
-  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(inputs.shards) }}
+    concurrency:
+      group: backlog-shard-${{ matrix.shard }}
+      cancel-in-progress: false
     services:
       postgres:
         image: postgres:16
@@ -42,6 +54,8 @@ jobs:
       PAGES_REPO: ${{ github.repository }}
       APP_BASE_URL: ${{ vars.APP_BASE_URL || 'https://trushil27.github.io/1440sports/' }}
       REBUILD_BACKLOG_PER_RUN: ${{ vars.REBUILD_BACKLOG_PER_RUN || '6' }}
+      FRESHNESS_DAYS_TRACK1: ${{ vars.FRESHNESS_DAYS_TRACK1 || '90' }}
+      FRESHNESS_FALLBACK_DAYS: ${{ vars.FRESHNESS_FALLBACK_DAYS || '90' }}
       PDF_STORAGE_DIR: storage/briefs
       SITE_DIR: storage/site
       PYTHONPATH: pipeline
@@ -65,13 +79,16 @@ jobs:
           sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2 fonts-liberation
       - name: Install
         run: pip install -q -e "pipeline[render]"
-      - name: Rebuild the desk's memory from the repo (migrate → seed → history, cases, checks)
+      - name: Rebuild the desk's memory from the repo, then take this shard's number block
         run: |
           python -m alembic -c db/alembic.ini upgrade head
           python -m intel.seed
           python -m intel.backfill
-      - name: Build ${{ inputs.count }} full cases, newest first
-        run: python -m intel.rebuild_queue --backlog ${{ inputs.count }}
+          BLOCK=$(( 10000 + (GITHUB_RUN_NUMBER % 90) * 1000 + ${{ matrix.shard }} * 100 ))
+          echo "brief numbers for this shard start at $BLOCK"
+          python -m intel.backfill --restart-sequence "$BLOCK"
+      - name: Build up to ${{ inputs.count }} full cases (shard ${{ matrix.shard }} of ${{ inputs.total }})
+        run: python -m intel.rebuild_queue --backlog ${{ inputs.count }} --shard ${{ matrix.shard }}/${{ inputs.total }}
       - name: Save the new cases into the repo
         if: always()
         run: |
@@ -82,18 +99,23 @@ jobs:
           if git diff --cached --quiet; then
             echo "no new case to save"
           else
-            git commit -m "Backlog build $(TZ=Europe/London date +%Y-%m-%d): $(git diff --cached --name-only | grep -c run.json) recorded case(s)"
-            git pull --rebase origin main
-            git push origin HEAD:main
+            git commit -m "Backlog build $(TZ=Europe/London date +%Y-%m-%d) shard ${{ matrix.shard }}: $(git diff --cached --name-only | grep -c run.json) recorded case(s)"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push origin HEAD:main && break
+              echo "push retry $i"; sleep $((i * 7))
+            done
           fi
-      - name: Republish the live app
+      - name: Republish the live app (with every case the repo holds now)
         if: always()
-        run: python -m intel.site_export
+        run: |
+          git pull --rebase origin main || true
+          python -m intel.backfill --cases
+          python -m intel.site_export
       - name: Keep the run's storage as an artifact for 30 days
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: backlog-build-${{ github.run_id }}
+          name: backlog-build-${{ github.run_id }}-shard-${{ matrix.shard }}
           path: storage
           retention-days: 30
           if-no-files-found: ignore
