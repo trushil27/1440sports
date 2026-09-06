@@ -155,6 +155,13 @@ could not reach for search budget are "Check", never guessed.
 **Desk build service (6 Sep 2026, MD: "build the case by clicking the button, no GitHub"):**
 `intel/desk_api.py` + migration 0005 `rebuild_requests` + `pipeline/railway.desk.json`; the app
 calls `DESK_API_URL` (exported into data.json) and polls until the case is built and republished.
+**Scheduler moved to GitHub Actions (6 Sep 2026, MD: "if Railway doesn't work, find another
+way"):** `.github/workflows/daily-run.yml` runs the morning with a service-container Postgres,
+rebuilds memory from the repo (`intel.backfill`), runs `intel.schedule --force` (London gate in
+bash), saves new cases with `intel.case_record --sync` and pushes them to `main`; the app is
+republished to `gh-pages` with the run token. Needs the 7 secrets listed in RUNBOOK §0a. Railway
+stays optional (desk build service + cron). Home card shows "Today's signal" only when the latest
+brief is dated today, else "Latest signal"; every full case ships its 2-page PDF under `site/pdf/`.
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;

@@ -9,7 +9,7 @@ goes into the hosting platform's variable store.
 
 | Part | Where | Runs on |
 |---|---|---|
-| Pipeline (scan → verify → write → audit → render → send) | `pipeline/intel/`, entry `python -m intel.schedule` | Railway cron (fallback: GitHub Actions `daily-run.yml`) |
+| Pipeline (scan → verify → write → audit → render → send) | `pipeline/intel/`, entry `python -m intel.schedule` | **GitHub Actions `daily-run.yml`** (primary since 6 Sep 2026; Railway cron is optional) |
 | App page per brief (long-form WHY NOW / WHY THIS TEAM / VALUE, `<company>.web.html` next to the PDF; served at `/api/briefs/{n}/page`, embedded in the web app) | `pipeline/intel/templates/brief_web.html.j2`, `render.render_web` | written by the daily job |
 | Database + migrations | `db/` (Alembic) | Railway Postgres |
 | API | `api/intel_api/`, entry `uvicorn intel_api.app:get_app --factory` | Railway service |
@@ -17,6 +17,26 @@ goes into the hosting platform's variable store.
 | Web app (PWA) | `web/` | Vercel |
 | Reference data seeds | `pipeline/intel/seeds/` — `python -m intel.seed` | run after migrations |
 | History backfill | `pipeline/intel/backfill.py` — `python -m intel.backfill` | run once |
+
+## 0a. How the morning works now (6 Sep 2026) — no server of ours has to stay up
+
+`.github/workflows/daily-run.yml` is the scheduler. At 05:30 London GitHub starts a runner with
+a throwaway Postgres, rebuilds the desk's memory from this repo (`alembic upgrade`, `intel.seed`,
+`intel.backfill` = n8n history + FE sweep + recorded cases + signal checks), runs the day
+(`intel.schedule --force`: scan → verify → write → audit → render, waits for 06:00 London, sends,
+builds `REBUILD_BACKLOG_PER_RUN` historical cases as full cases, republishes the app to
+`gh-pages` with the run's own token), then saves the new case(s) into `pipeline/intel/cases/`
+and pushes that commit to `main`. **The repo is the memory**: numbering, dedup and history all
+come back from it the next morning. The app shows the new brief as *Today's signal*; yesterday's
+moves into its F1 / FE list. Run it by hand: Actions → *Daily run* → *Run workflow* (force).
+
+One-time set-up — GitHub → Settings → Secrets and variables → Actions → *New repository secret*:
+`ANTHROPIC_API_KEY`, `OPERATOR_EMAIL`, `MD_EMAIL`, `GRAPH_TENANT_ID`, `GRAPH_CLIENT_ID`,
+`GRAPH_SENDER`, `GRAPH_REFRESH_TOKEN` (or `GRAPH_CLIENT_SECRET`). Same values as on Railway.
+Optional variables (the *Variables* tab): `EXECUTION_MODE` (shadow → production),
+`REBUILD_BACKLOG_PER_RUN` (default 6), `DESK_API_URL`, `APP_BASE_URL`. Optional secrets
+`NETLIFY_AUTH_TOKEN` + `NETLIFY_SITE_ID` if the app is also hosted on Netlify (its form is the
+no-sign-in queue for *Build the full case* when no desk service is deployed).
 
 ## 1. Variables (no defaults for secrets)
 

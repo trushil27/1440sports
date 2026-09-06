@@ -98,21 +98,21 @@
   .rule .cnt { font-variant-numeric: tabular-nums; color: var(--ink-2); }
 
   /* today card */
-  .today { background: var(--panel); border: 1px solid var(--hair); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; display: grid; grid-template-columns: 118px 1fr; gap: 20px; }
+  .today { background: var(--panel); border: 1px solid var(--hair); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 20px; display: grid; grid-template-columns: 96px 1fr; gap: 18px; align-items: start; }
   @media (max-width: 700px) { .today { grid-template-columns: 1fr; } }
-  .score { background: var(--navy); color: #f3f1ea; border-radius: 10px; padding: 14px 10px 12px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
-  .score .n { font-size: 40px; font-weight: 700; line-height: .95; font-variant-numeric: tabular-nums; }
-  .score .d { font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-2); margin-top: 6px; }
-  .score .tier { margin-top: 10px; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: #fff; background: rgba(255,255,255,.1); border-radius: 6px; padding: 4px 0; }
-  .today h2 { font-family: var(--serif); font-weight: 500; font-size: 26px; margin: 2px 0 0; color: var(--navy); letter-spacing: -.01em; }
+  .score { background: var(--navy); color: #f3f1ea; border-radius: 10px; padding: 12px 8px 10px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+  .score .n { font-size: 34px; font-weight: 700; line-height: .95; font-variant-numeric: tabular-nums; }
+  .score .d { font-size: 8.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-2); margin-top: 6px; }
+  .score .tier { margin-top: 8px; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: #fff; background: rgba(255,255,255,.1); border-radius: 6px; padding: 4px 0; }
+  .today h2 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin: 2px 0 0; color: var(--navy); letter-spacing: -.01em; }
   [data-theme="dark"] .today h2 { color: var(--ink); }
   .today .meta { font-size: 12.5px; color: var(--muted); font-style: italic; font-family: var(--serif); }
-  .today .deck { font-family: var(--serif); font-size: 15px; line-height: 1.5; margin: 10px 0 12px; color: var(--ink); max-width: 70ch; text-wrap: pretty; }
-  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px 18px; margin-bottom: 12px; }
+  .today .deck { font-family: var(--serif); font-size: 14.5px; line-height: 1.5; margin: 8px 0 10px; color: var(--ink); max-width: 72ch; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px 18px; margin-bottom: 10px; }
   .facts div { font-size: 10px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
   .facts div b { display: block; color: var(--navy); font-size: 13px; letter-spacing: 0; text-transform: none; margin-top: 2px; }
   [data-theme="dark"] .facts div b { color: var(--ink); }
-  .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
   .badge { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; border-radius: 6px; padding: 4px 9px; white-space: nowrap; }
   .badge.ok { background: var(--ok-bg); color: var(--ok); } .badge.warn { background: var(--warn-bg); color: var(--warn); }
   .badge.bad { background: var(--bad-bg); color: var(--bad); } .badge.info { background: var(--info-bg); color: var(--info); }
@@ -358,7 +358,7 @@
       <div class="today">
         <div class="score"><div class="n">${esc(t.score)}</div><div class="d">Opportunity / 100</div><div class="tier">${esc(t.tier || '')}</div></div>
         <div>
-          <div class="eyebrow">Today's signal · ${esc(t.label)} · ${fmtDate(t.date)}</div>
+          <div class="eyebrow">${t.date === (D.generated_at || '').slice(0, 10) ? "Today's signal" : 'Latest signal'} · ${esc(t.label)} · ${fmtDate(t.date)}</div>
           <h2>${esc(t.company)}</h2>
           <div class="meta">${esc(t.industry || '')}</div>
           <p class="deck">${esc(t.deck || t.take || '')}</p>
@@ -376,7 +376,7 @@
             ${(t.signals || []).map((s) => `<span class="badge info">${esc(s.replace(/_/g, ' '))}</span>`).join('')}
           </div>
           <div class="actions">
-            <a class="btn gold" href="#/brief/${t.number}">Read the full brief</a>
+            <a class="btn gold" href="#/brief/${t.number}">Read the full brief</a>${t.pdf_url ? `<a class="btn" href="${esc(t.pdf_url)}" target="_blank" rel="noopener">2-page PDF</a>` : ''}
           </div>
         </div>
       </div>`;
@@ -412,7 +412,7 @@
     if (!b) return '<div class="head"><div><h1>Brief not found</h1></div></div>';
     const back = `#/signals/${b.series || 'all'}`;
     const head = `<div class="head"><div><div class="eyebrow">${esc(b.label)} · ${fmtDate(b.date)} · ${esc(b.series || '')}${b.series_inferred ? ' (inferred)' : ''}</div><h1>${esc(b.company)}</h1><div class="badges">${tag(b)}</div></div>
-      <div class="actions"><a class="btn" href="${back}">← Back</a>${b.page_html ? '' : `<button type="button" class="btn gold" data-rebuild="${b.number}">Build the full case</button>`}</div></div>`;
+      <div class="actions"><a class="btn" href="${back}">← Back</a>${b.pdf_url ? `<a class="btn gold" href="${esc(b.pdf_url)}" target="_blank" rel="noopener">2-page PDF</a>` : ''}${b.page_html ? '' : `<button type="button" class="btn gold" data-rebuild="${b.number}">Build the full case</button>`}</div></div>`;
     if (b.page_html) {
       return head + `<div class="reader"><iframe title="Brief ${esc(b.label)} — ${esc(b.company)}" srcdoc="${esc(b.page_html)}"></iframe></div>`;
     }

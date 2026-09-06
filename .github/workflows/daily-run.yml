@@ -1,7 +1,12 @@
-# Fallback scheduler for the daily run (primary is the Railway cron in railway.json).
-# Fires at 04:30 and 05:30 UTC; intel.schedule runs only the one that is 05:30 Europe/London.
-# Disabled until the repository has the secrets below (the job skips when DATABASE_URL is unset).
-name: Daily run (fallback)
+# The daily run — the scheduler for the 1440 Intelligence desk. No server of ours has to stay
+# up: every morning GitHub starts a runner with a throwaway Postgres, rebuilds the desk's
+# memory from this repo (history, recorded cases, signal checks), runs the day (scan → verify
+# → write → audit → render → send at 06:00 London), then saves the new case(s) back into the
+# repo and republishes the live app (gh-pages). The repo is the memory.
+#
+# Fires at 04:30 and 05:30 UTC; the London gate below keeps only the one that is 05:30 local.
+# Run it by hand from the Actions tab (workflow_dispatch → force) to test.
+name: Daily run
 
 on:
   schedule:
@@ -10,17 +15,32 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: "Run regardless of the London slot"
+        description: "Run now regardless of the 05:30 London slot"
         type: boolean
-        default: false
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-run
+  cancel-in-progress: false
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
-    if: ${{ vars.DAILY_RUN_ENABLED == 'true' }}
+    timeout-minutes: 150
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: pg
+          POSTGRES_DB: intel
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 20
     env:
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DATABASE_URL: postgresql://postgres:pg@localhost:5432/intel
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       OPERATOR_EMAIL: ${{ secrets.OPERATOR_EMAIL }}
       MD_EMAIL: ${{ secrets.MD_EMAIL }}
@@ -30,23 +50,80 @@ jobs:
       GRAPH_CLIENT_SECRET: ${{ secrets.GRAPH_CLIENT_SECRET }}
       GRAPH_SENDER: ${{ secrets.GRAPH_SENDER }}
       GRAPH_REFRESH_TOKEN: ${{ secrets.GRAPH_REFRESH_TOKEN }}
-      APP_BASE_URL: ${{ vars.APP_BASE_URL }}
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      GITHUB_TOKEN: ${{ github.token }}
+      PAGES_REPO: ${{ github.repository }}
+      APP_BASE_URL: ${{ vars.APP_BASE_URL || 'https://trushil27.github.io/1440sports/' }}
+      DESK_API_URL: ${{ vars.DESK_API_URL }}
+      REBUILD_BACKLOG_PER_RUN: ${{ vars.REBUILD_BACKLOG_PER_RUN || '6' }}
+      PDF_STORAGE_DIR: storage/briefs
+      SITE_DIR: storage/site
       PYTHONPATH: pipeline
       TZ: Europe/London
     steps:
+      - name: London slot gate (05:xx local, or a forced run)
+        id: gate
+        run: |
+          H=$(TZ=Europe/London date +%H)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
+            echo "run=yes" >> "$GITHUB_OUTPUT"; echo "forced run at $(date)"
+          elif [ "$H" = "05" ]; then
+            echo "run=yes" >> "$GITHUB_OUTPUT"; echo "05:xx Europe/London — this is the slot"
+          else
+            echo "run=no" >> "$GITHUB_OUTPUT"; echo "not the 05:30 Europe/London firing (local hour $H); exiting"
+          fi
+      - name: Secrets present?
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not set (GitHub → Settings → Secrets and variables → Actions)"; exit 1
+          fi
       - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'yes'
+        with:
+          ref: main
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'yes'
         with:
           python-version: "3.12"
           cache: pip
       - name: System libraries for WeasyPrint
+        if: steps.gate.outputs.run == 'yes'
         run: |
           sudo apt-get update -q
-          sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2
-      - run: pip install -e "pipeline[render]"
-      - name: Migrate + seed
+          sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2 fonts-liberation
+      - name: Install
+        if: steps.gate.outputs.run == 'yes'
+        run: pip install -q -e "pipeline[render]" -e api
+      - name: Rebuild the desk's memory from the repo (migrate → seed → history, cases, checks)
+        if: steps.gate.outputs.run == 'yes'
         run: |
           python -m alembic -c db/alembic.ini upgrade head
           python -m intel.seed
-      - name: Run the day (05:30 London) and send at 06:00
-        run: python -m intel.schedule ${{ inputs.force && '--force' || '' }}
+          python -m intel.backfill
+      - name: Run the day, send at 06:00 London, build the backlog, republish the app
+        if: steps.gate.outputs.run == 'yes'
+        run: python -m intel.schedule --force
+      - name: Save today's case(s) into the repo
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          python -m intel.case_record --sync --out pipeline/intel/cases
+          git config user.name "1440 desk"
+          git config user.email "noreply@1440sports.com"
+          git add pipeline/intel/cases
+          if git diff --cached --quiet; then
+            echo "no new case to save"
+          else
+            git commit -m "Daily run $(TZ=Europe/London date +%Y-%m-%d): recorded case(s)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Keep the run's storage as an artifact (PDFs, outbox, logs) for 30 days
+        if: always() && steps.gate.outputs.run == 'yes'
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-run-${{ github.run_id }}
+          path: storage
+          retention-days: 30
+          if-no-files-found: ignore

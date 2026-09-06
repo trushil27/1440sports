@@ -319,6 +319,7 @@ def brief_entry(
         "horizon": d.get("horizon_label"),
         "signals": d.get("signals") or [],
         "has_page": bool(brief.web_html_path),
+        "pdf_path": brief.pdf_path if brief.pdf_path and Path(brief.pdf_path).exists() else None,
     }
     if include_page and brief.web_html_path and Path(brief.web_html_path).exists():
         entry["page_html"] = Path(brief.web_html_path).read_text(encoding="utf-8")
@@ -511,8 +512,38 @@ def _svg_data_uri(name: str) -> str:
     return "data:image/svg+xml;base64," + base64.b64encode(path.read_bytes()).decode("ascii")
 
 
+def _ship_pdfs(data: dict[str, Any], out_dir: Path) -> int:
+    """Copy each full case's 2-page PDF into ``<site>/pdf/`` and point the row at it, so the
+    app can offer the PDF without any server. The absolute storage path never leaves the box."""
+    import shutil
+
+    n = 0
+    pdf_dir = out_dir / "pdf"
+    for e in data["briefs"]:
+        src = e.pop("pdf_path", None)
+        if not src:
+            continue
+        name = f"{e['number']}-{company_norm(e['company']).replace(' ', '-')[:40]}.pdf"
+        pdf_dir.mkdir(parents=True, exist_ok=True)
+        dest = pdf_dir / name
+        if not (dest.exists() and dest.stat().st_size == Path(src).stat().st_size):
+            shutil.copyfile(src, dest)
+        e["pdf_url"] = f"pdf/{name}"
+        n += 1
+    if data.get("today") and data["today"].get("pdf_path"):
+        t = data["today"]
+        src = t.pop("pdf_path")
+        name = f"{t['number']}-{company_norm(t['company']).replace(' ', '-')[:40]}.pdf"
+        pdf_dir.mkdir(parents=True, exist_ok=True)
+        if not (pdf_dir / name).exists():
+            shutil.copyfile(src, pdf_dir / name)
+        t["pdf_url"] = f"pdf/{name}"
+    return n
+
+
 def write_site(data: dict[str, Any], out_dir: Path, src: Path = SITE_SRC) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
+    _ship_pdfs(data, out_dir)
     payload = json.dumps(data, ensure_ascii=False, default=str)
     (out_dir / "data.json").write_text(payload, encoding="utf-8")
     # first occurrence only: the data <script>; the app's own fallback check spells the

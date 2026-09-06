@@ -57,6 +57,32 @@ def seconds_until_send(now_utc: dt.datetime | None = None, send_at: dt.time = SE
     return (target - local).total_seconds()
 
 
+def crashed(settings, run_date: dt.date, exc: BaseException) -> str | None:
+    """Last-resort operator email when the run itself raised (no Run row to hang it on)."""
+    from intel import send
+
+    if not settings.operator_email:
+        print("[schedule] OPERATOR_EMAIL not set — crash not emailed")
+        return None
+    msg = send.Outgoing(
+        to=[settings.operator_email],
+        subject=f"[RUN FAILED] 1440 Intelligence — {run_date:%-d %b %Y} — the run crashed",
+        body_text=(
+            f"The daily run for {run_date:%-d %b %Y} raised an unexpected error before it could "
+            f"finish:\n\n{type(exc).__name__}: {str(exc)[:1500]}\n\nNothing was sent to the "
+            "MD. The app was refreshed with what exists. The next scheduled run retries; the "
+            "full traceback is in the run log."
+        ),
+    )
+    try:
+        mid = send.mailer_for(settings).send(msg)
+        print(f"[schedule] crash email: {mid}")
+        return mid
+    except Exception as mail_exc:  # noqa: BLE001
+        print(f"[schedule] crash email failed: {mail_exc}")
+        return None
+
+
 def main(argv: list[str] | None = None) -> int:
     """Cron entry point. ``--force`` skips the slot check (manual runs); ``--no-wait`` sends now."""
     from intel import run_daily, send
@@ -73,33 +99,43 @@ def main(argv: list[str] | None = None) -> int:
     settings = get_settings()
     run_date = london_now().date()
     stages = run_daily.Stages(distribute=False)  # distribute at 06:00, below
-    outcome = run_daily.run_day(run_date, settings, stages=stages)
-    print(outcome)
+    try:
+        outcome = run_daily.run_day(run_date, settings, stages=stages)
+        print(outcome)
+    except Exception as exc:  # noqa: BLE001 — nothing inside the run may take the morning down
+        import traceback
 
-    wait = 0.0 if no_wait else seconds_until_send(send_at=send_at)
-    if wait > 0:
-        print(f"waiting {int(wait)}s until {send_at:%H:%M} Europe/London")
-        time.sleep(wait)
-    with session_scope() as session:
-        run = session.get(Run, outcome.run_id)
-        brief = session.get(Brief, outcome.brief_id) if outcome.brief_id else None
-        sends = send.distribute(session, run, settings, send.mailer_for(settings), brief)
-        for s in sends:
-            print(
-                f"sent {s.kind.value} → {s.recipient} [{s.status.value}] {s.message_id or s.error}"
-            )
+        traceback.print_exc()
+        crashed(settings, run_date, exc)
+        outcome = None
+
+    if outcome is not None:
+        wait = 0.0 if no_wait else seconds_until_send(send_at=send_at)
+        if wait > 0:
+            print(f"waiting {int(wait)}s until {send_at:%H:%M} Europe/London")
+            time.sleep(wait)
+        with session_scope() as session:
+            run = session.get(Run, outcome.run_id)
+            brief = session.get(Brief, outcome.brief_id) if outcome.brief_id else None
+            sends = send.distribute(session, run, settings, send.mailer_for(settings), brief)
+            for s in sends:
+                print(
+                    f"sent {s.kind.value} → {s.recipient} [{s.status.value}] "
+                    f"{s.message_id or s.error}"
+                )
     # "Build the full case" requests from the app (Netlify form) → full rebuilds, then the
     # static app: export every brief + the sponsor grid; deploy when configured. Neither may
     # fail the run — the brief has already been stored and sent.
-    try:
-        from intel import rebuild_queue
+    if outcome is not None:  # the models are answering: work the queue and the backlog
+        try:
+            from intel import rebuild_queue
 
-        for rec in rebuild_queue.process(settings):
-            print("rebuilt:", rec)
-        for rec in rebuild_queue.backlog(settings, limit=settings.rebuild_backlog_per_run):
-            print("backlog:", rec)
-    except Exception as exc:  # noqa: BLE001 — best effort by design
-        print(f"rebuild queue skipped: {exc}")
+            for rec in rebuild_queue.process(settings):
+                print("rebuilt:", rec)
+            for rec in rebuild_queue.backlog(settings, limit=settings.rebuild_backlog_per_run):
+                print("backlog:", rec)
+        except Exception as exc:  # noqa: BLE001 — best effort by design
+            print(f"rebuild queue skipped: {exc}")
     try:
         from intel import site_export
 

@@ -80,6 +80,8 @@ class AnthropicText:
             )
         except ModelTurnError as exc:
             raise ScanFailed(str(exc), raw=exc.text) from exc
+        except Exception as exc:  # noqa: BLE001 — auth, network, 5xx: the run fails cleanly
+            raise ScanFailed(f"scanner call failed: {type(exc).__name__}: {exc}") from exc
         self.last_usage, self.last_segments = done.usage, done.segments
         return done.text
 

@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import re
 import shutil
 from pathlib import Path
 from typing import Any
@@ -126,15 +127,45 @@ def export_case(
     return out
 
 
+def sync_cases(session: Session, out_root: Path | str) -> list[dict[str, str]]:
+    """Export every full case (a brief with an app page) that has no record file yet — the
+    daily run's own brief and any case rebuilt from the backlog — so the repo carries them.
+    Briefs that were themselves imported from a record are skipped (they already have one)."""
+    out_root = Path(out_root)
+    written: list[dict[str, str]] = []
+    briefs = session.scalars(
+        select(Brief).where(Brief.web_html_path.is_not(None)).order_by(Brief.run_date, Brief.id)
+    ).all()
+    for brief in briefs:
+        d = brief.brief_data or {}
+        if d.get("engine_case_key"):
+            continue
+        stem = Path(brief.pdf_path or brief.web_html_path or "case").stem.replace(".web", "")
+        stem = re.sub(r"^\d{4}-\d{2}-\d{2}_", "", stem)  # storage copies carry a date prefix
+        record = out_root / brief.run_date.isoformat() / f"{stem}.run.json"
+        if record.exists():
+            continue
+        written.append(export_case(session, brief, out_root, stem))
+    return written
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m intel.case_record")
-    parser.add_argument("number", type=int, help="brief number to export")
+    parser.add_argument("number", type=int, nargs="?", help="brief number to export")
+    parser.add_argument(
+        "--sync", action="store_true", help="export every full case that has no record yet"
+    )
     parser.add_argument("--out", default="pipeline/intel/cases", help="cases folder")
     parser.add_argument("--stem", default=None, help="file stem (default: from the PDF name)")
     args = parser.parse_args(argv)
     from intel.db import session_scope
 
     with session_scope() as session:
+        if args.sync:
+            print(json.dumps(sync_cases(session, args.out), indent=1))
+            return 0
+        if args.number is None:
+            parser.error("give a brief number or --sync")
         brief = session.scalar(select(Brief).where(Brief.brief_number == args.number))
         if brief is None:
             print(f"no brief N° {args.number}")
