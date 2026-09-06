@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Oura Health</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "OURA HEALTH · 3 SEP 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 233</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 233 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Oura Health</h1>
+  <div class="classline">Consumer Health Technology · Smart Ring / Recovery Data · San Francisco (founded in Oulu, Finland) · Private (Nasdaq: OURA filed, 3 Sep 2026)</div>
+
+  <div class="lede">Oura filed a public Form S-1 with the SEC on 3 September for a Nasdaq listing under the ticker OURA, disclosing $1.4B of trailing-twelve-month revenue at $59M of net profit. The Official Wearable of Team USA holds no motorsport property.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">78</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Andretti Formula E</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Oura filed its public S-1 on 3 September for a Nasdaq listing under the ticker OURA, led by Goldman Sachs, Morgan Stanley, JPMorgan, Allen &amp; Company and Jefferies. The filing shows $1.21B of revenue for the nine months to 30 June 2026, up 74% from $697.6M, five million paid members against 2.5 million a year earlier, and $1.4B of trailing-twelve-month revenue at $59M of net profit. TechCrunch reported on 24 August that the listing could value the company above $16B, against $11B at last October's Series E.</p>
+<p>Human performance is already a priced category in motorsport: WHOOP has joined Scuderia Ferrari's roster and Eight Sleep has joined Aston Martin Aramco's. Oura has been buying elite sport at pace - Official Wearable of Team USA and the LA28 Games in February, of U.S. Soccer and its 27 national teams in April, and of the US Open on a five-year USTA agreement. Motorsport is the one arena it does not hold.</p>
+  <h2>Why Now</h2>
+  <p>The S-1 went public on 3 September and pricing follows within weeks; a newly listed company sets its marketing plan in the first cycle after the bell. Formula E opens Season 13 at the Jeddah E-Prix in December, and the Austin E-Prix and the Miami E-Prix land in February 2027.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$900M</div><div class="pfk">$900M Series E led by Fidelity at an $11B valuation (Oct 2025), double the $5B Series D mark of Dec 2024; a…</div></div>
+    <div class="pf"><div class="pfv">$1.21B</div><div class="pfk">$1.21B for the nine months to 30 June 2026, up 74% from $697.6M; $1.4B of trailing-twelve-month revenue at…</div></div>
+    <div class="pf"><div class="pfv">$1.4B</div><div class="pfk">Oura filed a public Form S-1 with the SEC on 3 September for a Nasdaq listing under the ticker OURA, disclo…</div></div>
+    <div class="pf"><div class="pfv">$16B</div><div class="pfk">TechCrunch reported on 24 August that the listing could value the company above $16B, against $11B at last…</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (sponsor table; 10 of 35 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Andretti Formula E<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Citroën Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Cupra Kiro</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">DS Penske</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A public S-1 on 3 September, $1.4B of trailing revenue and a reported listing above $16B put Oura at the point where a newly listed consumer brand writes its next marketing plan. It has bought Team USA, U.S. Soccer and the US Open and owns nothing in motorsport, and no Formula E team carries a wearable partner.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">ipo filing</span><span class="flag">category whitespace</span><span class="flag">sports portfolio</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 233</span>
+  </div>
+
+  <h2>WHY ANDRETTI FORMULA E</h2>
+  <p>The sponsor table shows no wearable or health-technology partner anywhere on the 2026 Formula E grid: the designation is open across the series, at Formula E prices rather than Formula 1 ones. Andretti Formula E is the American entry, owned by TWG Global. Its roster runs TWG AI, Quest Global, Crowe UK and Reflo. Season 13 gives it two home rounds, in Austin and Miami, inside the LA28 build-up Oura has already bought.</p>
+
+  <h2>VALUE TO ANDRETTI FORMULA E &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A - operational. Season 13 runs 21 races in 13 cities; what limits drivers, engineers and travelling crew across it is circadian, not physical. Oura Ring puts readiness, sleep and heart-rate-variability data in front of the team's performance staff - the programme it runs for Team USA and ran for Red Bull Racing's pit crew from 2020. In return: Official Health Technology Partner status, livery and race-suit presence, US-round hospitality.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official Health Technology Partner. <b class="hl">THREE YEARS</b>, Seasons 13-15, carrying through to the LA28 Games. Estimated $2-4M a year, part-payable in product. Scope: sidepod and race-suit placement, naming of the team's readiness programme, US-round hospitality, performance content.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Doug Sweeny</div>
+        <div class="role">Chief Marketing Officer, Oura Health · <span class="vtag">verified</span></div>
+        <div class="bio">Sweeny owns the sports portfolio that bought Team USA, U.S. Soccer and the US Open; he came from Levi's, Nest and One Medical. Path: Tom Hale, chief executive since March 2022, who took Momentive public in 2018, and Sean Brecker, CFO. No president is listed.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the listing, not the ring.</div>      <div class="quote">“Doug, you own Team USA, U.S. Soccer and the US Open, and nothing in motorsport. No Formula E team carries a wearable partner, and Andretti runs the Austin E-Prix and the Miami E-Prix before LA28. 25 minutes?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">S-1 public 3 Sep; pricing and the first post-listing plan follow.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">19 <span>/ 20</span></div>
+      <div class="why">$1.4B trailing revenue, $59M net profit, $900M raised last October.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Consumer wellness brand; motorsport is not its core audience.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">No deadline beyond the listing; Season 13 rosters close this autumn.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">MODE A: readiness data for drivers and travelling crew.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">A LIVE OFFERING</span> &nbsp;<span class="rc">The S-1 is on file and pricing is weeks away; new multi-year commitments are hard to sign while an offering is in the market. <b>Counter:</b> Use the window to agree heads of terms for announcement after the bell - the filing is the reason to call now.</span></div>
+  <div class="risk"><span class="rt">A FULL SPORTS SHELF, AND A LAPSED F1 DEAL</span> &nbsp;<span class="rc">Team USA, LA28, U.S. Soccer and a five-year USTA agreement are already bought, and the 2020 Red Bull Racing partnership is not on Red Bull's 2026 roster. <b>Counter:</b> Pitch motorsport as the gap in the shelf, not a fifth of the same; the lapsed deal proves a top team deployed the product, and Formula E costs a fraction.</span></div>
+
+  <h2>Sources <span class="panelnote">— 18 of 18 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://www.adweek.com/brand-marketing/marketing-vanguard-at-cannes-the-smart-ring-that-made-wellness-more-useful-ft-doug-sweeny-of-oura/</li><li>https://www.cnbc.com/2025/10/14/oura-ringmaker-valuation-fundraise.html</li><li>https://www.sec.gov/Archives/edgar/data/0002133022/000119312526381855/d119865ds1.htm</li><li>https://uk.finance.yahoo.com/news/oura-takes-step-toward-ipo-215012105.html</li><li>https://la28.org/en/newsroom/oura-named-official-wearable-of-team-usa-and-la28.html</li><li>https://techcrunch.com/2026/08/24/oura-is-reportedly-eyeing-a-september-ipo-that-could-value-it-at-more-than-16b/</li>  </ul>
+</div>
+</body>
+</html>
