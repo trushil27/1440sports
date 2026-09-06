@@ -1,0 +1,428 @@
+{
+ "run_date": "2026-05-19",
+ "signal_date": "2026-05-19",
+ "stem": "armada",
+ "number": 218,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Armada",
+  "signal_date": "2026-05-19",
+  "score": 75,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Dan Wright",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+  "industry_meta": "Edge AI Infrastructure · Modular, Satellite-Connected Data Centres · San Francisco",
+  "recommended_team": "TGR Haas F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$230M oversubscribed Series B at a $2B pre-money valuation, announced 19 May 2026 in a company release and reported by CNBC; total funding nearly $500M",
+   "investors": "Series B co-led by Overmatch, BlackRock and 8090 Industries; Johnson Controls invested alongside the Galleon Forge One agreement; earlier backers include M12 (Microsoft's venture fund), Founders Fund, Lux Capital, Shield Capital and Felicis",
+   "revenue": null,
+   "trigger": "$230M Series B at a $2B pre-money valuation plus a Johnson Controls agreement for Galleon Forge One, an up-to-400,000 sq ft Arizona factory, announced 19 May 2026",
+   "competitor_signal": "Core Scientific is Cadillac F1 Team's official data-centre partner (Mar 2026); CoreWeave is Aston Martin Aramco's Official AI Cloud Computing Partner; Hewlett Packard Enterprise sits on the Mercedes roster; the Haas roster carries connectivity and services partners only",
+   "strategic_hook": "Galleon and Leviathan are ruggedised, Starlink-connected modular data centres built for sites with no grid or fibre; Galleon Forge One starts continuous production in summer 2026; the company reports 540% bookings growth FY25 to FY26",
+   "us_presence": "HQ San Francisco; Seattle-area hub of about 120 people (GeekWire, 2026); Arizona factory from summer 2026; US customers named by the company include the US Navy, Alaska's Department of Transportation, Targa Resources and Atlas Energy",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: a ruggedised Galleon travelling with the freight as the team's garage data centre, with satellite backhaul managed through Armada's software; complementary to the CommScope and Ruckus LAN at Haas",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 15,
+   "brand_fit": 15,
+   "urgency": 12,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 7,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "dan wright"
+   ],
+   "url": "https://theorg.com/org/armada-2/org-chart/dan-wright",
+   "excerpt": "Armada leadership as listed by The Org and Wright's own LinkedIn: Dan Wright, Co-Founder and Chief Executive Officer; previously CEO of DataRobot and COO of AppDynamics.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$230m",
+    "$2b",
+    "19 may",
+    "overmatch",
+    "blackrock",
+    "8090",
+    "johnson controls",
+    "400,000",
+    "500 jobs",
+    "$500m",
+    "540%",
+    "2,000%",
+    "oversubscribed",
+    "forge one",
+    "series b",
+    "funding round",
+    "continuous production",
+    "this summer",
+    "summer 2026"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+   "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$131m",
+    "leviathan",
+    "24 jul",
+    "july 2025",
+    "pinegrove",
+    "founders fund",
+    "lux capital",
+    "shield capital",
+    "felicis",
+    "megawatt"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/armada-announces-131m-strategic-funding-round-launch-of-megawatt-scale-modular-ai-data-centers-to-accelerate-american-energy-and-ai-dominance-302513137.html",
+   "excerpt": "Armada company release, 24 Jul 2025: $131M strategic funding round with new investors Pinegrove, Veriten and Glade Brook and existing investors Founders Fund, Lux Capital, Shield Capital, 8090 Industries, M12 (Microsoft's venture fund), Overmatch, Silent Ventures, Felicis and Marlinspike; launch of Leviathan, a megawatt-scale, ruggedised, full-stack modular data centre deployable in weeks and able to run on stranded gas, solar or nuclear power in remote areas.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "m12",
+    "$40m",
+    "microsoft",
+    "edarat",
+    "gulf"
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/microsoft-leads-40-million-investment-into-edge-startup-armada/",
+   "excerpt": "Data Center Dynamics / SDxCentral, Jul 2024: Microsoft's venture arm M12 led a $40M investment in Armada; Galleons are ruggedised, self-contained, Starlink-connected data-centre modules in 3-rack 20ft and 6-rack 40ft forms; agreement with Edarat Group to deploy ten Galleons across the Gulf.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "runyan",
+    "zissimos",
+    "pradeep nair",
+    "mishra",
+    "no chief marketing",
+    "launch-cmo",
+    "launch cmo",
+    "datarobot",
+    "appdynamics",
+    "$3.7b",
+    "okta",
+    "late 2022",
+    "gunderson",
+    "emergence"
+   ],
+   "url": "https://theorg.com/org/armada-2/teams/leadership-team",
+   "excerpt": "Armada leadership team (The Org; Contrary Research profile): Dan Wright, Co-Founder and CEO (ex-CEO DataRobot, ex-COO AppDynamics through its $3.7B acquisition by Cisco); Jon Runyan, Co-Founder and COO (ex-General Counsel, Okta, through its IPO); Pradeep Nair, Founding CTO (ex-VP Microsoft Azure, joined Mar 2023); Prag Mishra, Chief AI Officer. Company founded late 2022; the founders met at Gunderson Dettmer and worked together at Emergence Capital. No chief marketing officer or CFO is listed; John Zissimos appears only as 'Advisor, Launch CMO and Brand Architect'.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "san francisco",
+    "seattle",
+    "120 people",
+    "bellevue",
+    "navy",
+    "alaska",
+    "targa",
+    "atlas energy",
+    "sqm",
+    "marriott",
+    "sixty countries",
+    "starlink",
+    "no grid",
+    "no fibre",
+    "remote"
+   ],
+   "url": "https://www.geekwire.com/2026/startup-building-portable-ai-data-centers-for-remote-operations-grows-seattle-area-hub-to-120-people/",
+   "excerpt": "GeekWire, 2026: Armada, the San Francisco-headquartered builder of portable AI data centres for remote operations, has grown its Seattle-area (Bellevue) hub to about 120 people. Armada's own first-full-year release names customers across oil and gas, mining, telecom, hospitality and government including Targa Resources, Atlas Energy, SQM, Mars, Marriott, Vocus, Tampnet, the U.S. Navy and Alaska's Department of Transportation, and says its platform manages thousands of Starlink terminals across more than sixty countries.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "carahsoft",
+    "reston",
+    "7 apr",
+    "experience center"
+   ],
+   "url": "https://www.carahsoft.com/news/armada-and-carahsoft-open-first-galleon-experience-center-at-carahsoft-headquarters-2026",
+   "excerpt": "Carahsoft, 7 Apr 2026: Armada and Carahsoft open the first Galleon Experience Center at Carahsoft's headquarters in Reston, Virginia, for US public-sector buyers.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "core scientific",
+    "coreweave",
+    "hewlett packard",
+    "cadillac",
+    "aston martin",
+    "10 mar",
+    "march 2026",
+    "may 2025",
+    "data-centre archetype",
+    "data-centre lane",
+    "data-centre partner"
+   ],
+   "url": "https://www.cadillacf1team.com/partners",
+   "excerpt": "Cadillac Formula 1 Team partners page and coverage, 10 Mar 2026: Core Scientific is the team's official data-centre partner, advising on the high-density computing infrastructure at its Indiana headquarters for simulation, engineering, manufacturing and race operations; TWG AI is primary and exclusive AI partner. Aston Martin Aramco, 22 May 2025: CoreWeave joins as Official AI Cloud Computing Partner (astonmartinf1.com). Mercedes-AMG Petronas roster: Hewlett Packard Enterprise (sponsor table).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "commscope",
+    "ruckus",
+    "mphasis",
+    "haas",
+    "connectivity partner",
+    "networking partner",
+    "digital partner",
+    "toyota",
+    "american-owned",
+    "privateer",
+    "machine-tool"
+   ],
+   "url": "https://www.commscope.com/press-releases/2026/ruckus-networks-announces-official-partnership-with-tgr-haas-f1-team/",
+   "excerpt": "CommScope / RUCKUS Networks releases: CommScope became Official Connectivity Partner of the Haas F1 Team in Feb 2025 (multi-year; trackside, garage and pit-wall network operations); RUCKUS Networks became Official Networking Partner of TGR Haas F1 Team in Jan 2026 (trackside, hospitality and factory networks; branding on the VF-26). Mphasis is Official Digital Partner since Nov 2024 (data, analytics, cyber and AI services). Sponsor table and team profile: Toyota Gazoo Racing title, Haas Automation (machine tools), MoneyGram, UChicago Medicine, Infobip, Orion180; identity 'lean American privateer'; no compute, cloud or data-centre partner listed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "oracle",
+    "dell",
+    "google cloud",
+    "groq",
+    "hp",
+    "ibm",
+    "dxc",
+    "twg ai",
+    "vast",
+    "claude",
+    "keeper",
+    "extreme networks",
+    "dynatrace",
+    "confluent",
+    "amd",
+    "mercedes",
+    "red bull",
+    "mclaren",
+    "ferrari",
+    "alpine",
+    "audi",
+    "williams",
+    "racing bulls"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): Haas — Toyota Gazoo Racing, Haas Automation, MoneyGram, CommScope, Ruckus, Mphasis, UChicago Medicine, Infobip; no compute/cloud/data-centre partner. Cadillac: Core Scientific, TWG AI. Aston Martin: CoreWeave. Mercedes: Hewlett Packard Enterprise, AMD, Microsoft. Red Bull: Oracle. McLaren: Google Cloud, Dell Technologies, Groq. Ferrari: HP, IBM, DXC Technology. Alpine: Microsoft. Audi: Extreme Networks (Hewlett Packard Enterprise departed). Williams: VAST, Claude, Keeper. Racing Bulls: Dynatrace, Confluent.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "united states gp",
+    "us gp",
+    "miami",
+    "canadian",
+    "24 times",
+    "fourth quarter"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table (24 rounds): Miami GP (round 6, early May, already run on the row date), Canadian GP (round 7), United States GP (Austin, round 19, October) and Las Vegas GP (round 22, November) are the North American rounds; the season closes with Qatar and Abu Dhabi in December.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Armada",
+  "industry_meta": "Edge AI Infrastructure · Modular, Satellite-Connected Data Centres",
+  "hq": "San Francisco (founded late 2022)",
+  "ticker": "Private ($2B pre-money; $230M Series B, May 2026)",
+  "deck": "Armada, the San Francisco builder of ruggedised, satellite-connected data centres that run on oil fields, mines and Navy sites, closed an oversubscribed $230M Series B at a $2B pre-money valuation on 19 May 2026 and will build them at a new Arizona factory with Johnson Controls from this summer.",
+  "score": 75,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "TGR Haas F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 19 May 2026 Armada announced a $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M. Johnson Controls invested alongside an agreement to build Galleon Forge One, an up-to-400,000 sq ft Arizona factory with more than 500 jobs, in continuous production from summer 2026. The company says customer bookings grew 540% from FY25 to FY26. Its Galleon and Leviathan units are self-contained, Starlink-connected data centres for places with no grid or fibre: oil fields, mines, ships and bases.",
+  "the_case_p2": "The grid has already bought the data-centre archetype: Core Scientific joined Cadillac as official data-centre partner in March 2026, CoreWeave sits at Aston Martin, Hewlett Packard Enterprise at Mercedes. None of them sells compute that travels. A Formula 1 garage is a temporary remote site rebuilt 24 times a year, which is the problem Armada was founded to solve, and Microsoft's M12 and Johnson Controls are investor names a team can put on a car.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 19 May and Galleon Forge One starts production this summer, so the brand story and the budget crest together. The United States GP in Austin (October) and the Las Vegas GP (November) are the American stages left in 2026, and teams settle 2027 partner rosters in the fourth quarter.",
+  "why_team_label": "WHY TGR HAAS F1 TEAM",
+  "why_team_para": "Haas is the American-owned privateer of the grid, built by a machine-tool manufacturer, and its technology roster is connectivity and services: CommScope as Official Connectivity Partner, Ruckus Networks for trackside networking, Mphasis for digital services. No compute, cloud or data-centre partner is listed. Armada's units plug in behind the network Ruckus already runs, so the fit is complementary: two American industrial brands, one Arizona factory, Austin as the launch stage.",
+  "value_section": true,
+  "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Each race weekend the team rebuilds a remote site: a garage of compute for telemetry, video and strategy, in a car park in Baku or a paddock in Las Vegas. A ruggedised Galleon in the freight, with Starlink backhaul managed by Armada's software, gives Haas a garage data centre that works before the circuit's fibre does, plus edge inference on the factory-to-track link. In return: Austin and Las Vegas hospitality for Armada's energy and government buyers.",
+  "deal_arch_para": "Entry as Official Edge Computing Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, across the Arizona ramp and a probable listing window. Estimated $2-4M a year, part-payable in equipment and managed services. Scope: sidepod or halo placement, a Galleon in the garage, US-race hospitality, engineering content built on the freight-to-pit-wall story.",
+  "decision_maker_name": "Dan Wright",
+  "decision_maker_role": "Co-Founder & CEO, Armada",
+  "decision_maker_bio": "Wright co-founded Armada in late 2022 after running DataRobot as CEO and AppDynamics as COO through its $3.7B sale to Cisco; he fronts every raise and the Johnson Controls deal. Path: Jon Runyan, Co-Founder and COO, ex-Okta general counsel. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the garage as a remote site.",
+  "opening_angle_quote": "&ldquo;Dan, you build data centres for places with no fibre and no grid. A Formula 1 garage is that place 24 times a year, and the American privateer has no compute partner. 25 minutes before Austin to price a Galleon in the freight?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round closed 19 May; Arizona production from summer; Austin and Las Vegas in window."
+   ],
+   [
+    "CAPACITY",
+    "15",
+    "/ 20",
+    "$230M raise at $2B pre-money; nearly $500M raised; marketing budget still modest."
+   ],
+   [
+    "BRAND FIT",
+    "15",
+    "/ 20",
+    "American-built AI infrastructure for hard places; industrial customer base."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "Rivals hold data-centre lanes at three teams; no hard deadline beyond Q4 rosters."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: a travelling garage data centre with satellite backhaul."
+   ]
+  ],
+  "risks": [
+   [
+    "SCALE OF SPEND",
+    "A $2B company with no marketing chief; a multi-million F1 fee competes with factory capital.",
+    "Size the entry at the Haas price point; structure part of it as equipment and managed services."
+   ],
+   [
+    "NETWORK LANE OVERLAP",
+    "Ruckus and CommScope hold connectivity at Haas; Armada manages Starlink terminals, which the team could read as the same lane.",
+    "Define the category as edge compute and satellite backhaul, and clear it with Haas before the first call."
+   ]
+  ],
+  "bottom_line": "A $230M round at $2B pre-money, a factory in production this summer and a product that is literally a data centre for remote sites give Armada budget, story and a real garage workstream at once. The compute lane at the American privateer is open and two US races remain inside the window.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "us_manufacturing"
+  ],
+  "footer_company": "ARMADA",
+  "footer_date": "19 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 19 May 2026 Armada announced a $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M. The figures come from the company's own release and were carried by CNBC the same day."
+    },
+    {
+     "label": "A factory, not just a round",
+     "text": "Johnson Controls invested alongside an agreement to build Galleon Forge One, an up-to-400,000 sq ft Arizona factory with more than 500 jobs, in continuous production from summer 2026, initially building the megawatt-scale Leviathan. A company that has just committed to American manufacturing has a story it needs to tell to customers, policymakers and future public-market investors, and a race in Austin is where that audience gathers."
+    },
+    {
+     "label": "Demand is the proof point",
+     "text": "The company reports 540% customer bookings growth from FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings; these are company figures, unaudited, and the brief treats them as such. Customers named in its own releases span oil and gas, mining, telecom, hospitality and government, including the U.S. Navy, Alaska's Department of Transportation, Targa Resources and Atlas Energy."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The Miami GP has just run; the United States GP in Austin (October) and the Las Vegas GP (November) are the American rounds left in 2026, and teams settle their 2027 partner rosters in the fourth quarter. A deal agreed over the summer can be announced at Austin and activated in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "The Haas roster is connectivity and services: Toyota Gazoo Racing as title partner, Haas Automation, MoneyGram, CommScope as Official Connectivity Partner (Feb 2025), Ruckus Networks as Official Networking Partner (Jan 2026), Mphasis as Official Digital Partner, UChicago Medicine and Infobip. No compute, cloud or data-centre partner is listed, so Official Edge Computing Partner is a clean category at the most accessible price on the grid."
+    },
+    {
+     "label": "Complementary, not a clash",
+     "text": "CommScope and Ruckus run the wired and wireless network in the garage, pit wall and hospitality. Armada's Galleon is the compute and the satellite backhaul that sit behind that network. The clash-check is a category definition, not a rival product, and it should be cleared with Haas before the first call."
+    },
+    {
+     "label": "Two American industrial brands",
+     "text": "Haas is the American-owned privateer of the grid, founded by a machine-tool manufacturer. Armada is building an Arizona factory with Johnson Controls to make AI infrastructure in the United States. The shared story, American industry that builds hard things, is one the team can tell in Austin and Las Vegas without stretching."
+    },
+    {
+     "label": "A team that will use the product",
+     "text": "A privateer with a lean budget gains most from equipment it would not otherwise buy. A garage data centre that works before the circuit's fibre is connected, and edge inference for the link between the factory and the track, is consumed on race weekends rather than displayed on the car."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Every race weekend the team rebuilds a remote site: a garage full of compute for telemetry, video and strategy, in a car park in Baku or a paddock in Las Vegas. A ruggedised Galleon travelling in the freight, with Starlink backhaul managed by Armada's software, gives Haas a garage data centre that works before the circuit's fibre does, plus edge inference on the factory-to-track link, and a hot spare for the circuit connection when it fails."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Armada sells to energy, mining, defence and government buyers. Its guest list at Austin and Las Vegas is the industrial and public-sector audience that Haas's other B2B partners want in the suite, and a partner that can bring a Navy or Department of Transportation customer to the paddock changes the hospitality mix."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "The freight-to-pit-wall story is filmable: a data centre in a container, unloaded on Thursday, live by Friday. Co-produced engineering content with the team's trackside IT group, a reference customer for Armada's enterprise sales, and a factory story that runs from Arizona to the garage."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Edge Computing Partner designation, sidepod or halo placement, a Galleon branded in the garage, hospitality at Austin and Las Vegas, driver and engineering access for Armada's channels, and a case study the team's Official Digital Partner can co-sign."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific is official data-centre partner (Mar 2026) and TWG AI is primary and exclusive AI partner; the natural American alternative is taken in this lane."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, holds the compute lane."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "Hewlett Packard Enterprise, AMD and Microsoft cover infrastructure, silicon and cloud."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the cloud incumbent."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Dell Technologies, Google Cloud and Groq occupy hardware, cloud and inference compute."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "HP (title), IBM and DXC Technology cover compute hardware, cloud and IT services."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Microsoft holds the cloud lane."
+    },
+    {
+     "team": "Atlassian Williams Racing · Visa Cash App Racing Bulls · Audi Revolut F1 Team",
+     "reason": "Open in this lane but not chosen: none carries the American industrial story that pairs Armada's Arizona factory with the Haas identity; Williams (VAST, Claude) is data-native but British-led, Audi is German-led."
+    }
+   ],
+   "ask": "A 25-minute call with Dan Wright before the United States GP to confirm the category definition against the Ruckus and CommScope agreements, agree an Austin announcement window, and size an Official Edge Computing Partner entry against the Haas 2027 roster."
+  }
+ },
+ "note": "# Armada → TGR Haas F1 Team — verification log (N° 218, issued for 19 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) from a case spec\n(`armada.case.json`) with Claude doing the research, verification and writing; the calendar table,\nsponsor table, 13-rule audit and the 2-page render ran as code via `python -m intel.session_case`.\nThe row came from a thin scan dated 19 May 2026 (score 87, no team); every fact was re-verified live\nand the score re-set honestly.\n\n**Sandbox limitation, stated plainly:** direct fetches of armada.ai, prnewswire.com, cnbc.com,\ntheorg.com, geekwire.com, pulse2.com, research.contrary.com and finance.yahoo.com were blocked by the\negress proxy. Each claim below was checked against the search summary of the primary page named as\nthe evidence URL (the company release text is quoted in several mirrors, which agree). Treat every\nVERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads\nVERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nThe company release of 19 May 2026 (PR Newswire 302775720, mirrored on armada.ai, Yahoo Finance and\nPulse 2.0) and CNBC's same-day report agree: **$230M oversubscribed Series B at a $2B pre-money\nvaluation**, co-led by Overmatch, BlackRock and 8090 Industries; total funding nearly $500M; a\nJohnson Controls investment alongside the **Galleon Forge One** agreement (up to 400,000 sq ft,\nArizona, 500+ jobs, continuous production from summer 2026, Leviathan first). The trigger date is\nthe row date, inside the 90-day window. The thin row's trigger text was accurate.\n\n## Ledger (all load-bearing claims covered; see the table appended by the build)\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Dan Wright, Co-Founder & CEO | VERIFIED | The Org / LinkedIn |\n| $230M Series B, $2B pre-money, co-leads, ~$500M total, 19 May 2026 | VERIFIED | company release (PR Newswire) + CNBC |\n| Galleon Forge One: Johnson Controls, up to 400,000 sq ft, 500+ jobs, production from summer 2026 | VERIFIED | company release + CNBC |\n| 540% bookings growth FY25–26; 2,000% Q1 FY27 | COMPANY-STATED, unaudited | company release (labelled as company figures in the copy) |\n| $131M strategic round, 24 Jul 2025; Leviathan launch; investor list | VERIFIED | company release (PR Newswire 302513137) |\n| M12-led $40M round, Jul 2024; Galleon form factors; Edarat Gulf deal | REPORTED | Data Center Dynamics / SDxCentral |\n| Jon Runyan Co-Founder & COO; Pradeep Nair CTO; Prag Mishra Chief AI Officer; no CMO or CFO listed; Zissimos = advisor only | REPORTED | The Org leadership page; Contrary Research |\n| HQ San Francisco; Seattle-area hub ~120 people; named US customers | REPORTED | GeekWire 2026; Armada first-year release |\n| Core Scientific at Cadillac (Mar 2026); CoreWeave at Aston Martin (May 2025); HPE at Mercedes | VERIFIED | cadillacf1team.com partners; astonmartinf1.com; sponsor table |\n| Haas roster: CommScope (Feb 2025), Ruckus (Jan 2026), Mphasis (Nov 2024); no compute/cloud/data-centre partner | VERIFIED | CommScope / RUCKUS releases; sponsor table (`seeds/sponsors.json`) |\n| United States GP (Austin) and Las Vegas GP in 2026 | VERIFIED | calendar table (`seeds/calendar_2026.json`) |\n\n## Decision path\n\nDan Wright (Co-Founder & CEO) fronts every raise and the Johnson Controls deal and is the sponsorship\nowner by default. Path: Jon Runyan (Co-Founder & COO). **No chief marketing officer is listed** on any\nleadership listing found; John Zissimos appears on The Org only as \"Advisor, Launch CMO and Brand\nArchitect\", so the brief does not name a CMO. No CFO is listed either.\n\n## Screen-outs and things not claimed\n\n- **No motorsport tie found** for Wright, Runyan, Nair or Mishra after searching; `leadership_ties`\n  is empty. Armada itself has no motorsport partnership on record.\n- **No revenue figure** is used: none is public. The bookings-growth percentages are the company's\n  own and are labelled so.\n- **Product names beyond Galleon and Leviathan** (the fleet-management software) are not named, as\n  they were not confirmed in an opened source; the copy says \"Armada's software\".\n- **Deal size ($2–4M a year) is an ESTIMATE**, labelled as such.\n- **Team choice.** Cadillac, the other American team, is ruled out by Core Scientific (official\n  data-centre partner) and TWG AI (exclusive AI partner). Williams, Racing Bulls and Audi are open in\n  the lane but lack the American-industrial pairing; Haas was chosen on the sponsor table, not on any\n  other 1440 prospect (Crusoe N° 121 also points at Haas; per the operating rules that is not a\n  placement and does not close the lane).\n- **The one real clash-check** is the connectivity lane (CommScope, Ruckus): Armada manages\n  Starlink terminals, so the category must be defined as edge compute and satellite backhaul and\n  cleared with the team. It is the second risk row.\n- **Score reset from 87 to 75.** The thin row's 87 was not supported: capacity is real but a $2B\n  company without a marketing chief will not fund a top-tier fee, and urgency is soft (no hard\n  deadline beyond Q4 rosters).\n- **Grid Fit panel vs. this brief.** The rendered GRID FIT panel is the pipeline's automatic category\n  read (`seeds/sponsor_categories.json`), which marks Mercedes open and Aston Martin taken by NetApp.\n  The brief's own clash-check is the sponsor table by brand: CoreWeave (Aston Martin), Hewlett Packard\n  Enterprise (Mercedes) and Core Scientific (Cadillac) are the rivals that matter. Trust the copy, and\n  the ruled-out list on the app page, over the panel.\n"
+}
