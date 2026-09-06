@@ -1,0 +1,14 @@
+{
+ "company": "Strava",
+ "date": "2026-05-05",
+ "number": 227,
+ "verdict": "stale",
+ "reason": "The row's trigger is the confidential IPO filing. Re-verified live: The Information reported the confidential submission on 8 Jan 2026 (SiliconANGLE, 8 Jan 2026) and Strava's own press release confirming the confidential submission of a draft registration statement is dated 2 Feb 2026 (press.strava.com). The row sits on 5 May 2026; 2 Feb is 92 days before it and 8 Jan is 117 days before it, both outside the 90-day trigger window. No fresher capital or identity trigger was found inside the window: the S-1 had not been made public by 5 May (no public filing on EDGAR as of mid-2026 per Forge/IPO trackers), the April 2026 product release (Annual Best Efforts, ten new languages) is a feature update, the CFO (Matt Anderson) and CMO (Louisa Wee) appointments date from Aug 2025 and the Runna / The Breakaway acquisitions from Apr-May 2025. This is the spec's own §9 stale-trigger case (pipeline/tests/fixtures/production_signals.py STRAVA): the thin row carried the January date and an aggregator source. Re-surface only on a public S-1 flip or a priced offering.",
+ "sources": [
+  "https://press.strava.com/articles/strava-confidential-submission-of-draft-registration-statement-for-IPO",
+  "https://siliconangle.com/2026/01/08/strava-makes-confidential-ipo-filing-amid-subscription-revenue-growth/",
+  "https://forgeglobal.com/strava_ipo/",
+  "https://press.strava.com/articles/strava-finalizes-leadership-team-for-next-stage-of-growth",
+  "https://frontpacksports.com/strava-april-2026-update/"
+ ]
+}
