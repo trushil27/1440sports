@@ -1,0 +1,348 @@
+{
+ "run_date": "2026-06-05",
+ "signal_date": "2026-06-04",
+ "stem": "supabase",
+ "number": 202,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Supabase",
+  "signal_date": "2026-06-04",
+  "score": 75,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Paul Copplestone",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://supabase.com/blog/supabase-series-f",
+  "industry_meta": "Developer Platform · Open-Source Postgres Backend · San Francisco (remote-first)",
+  "recommended_team": "Atlassian Williams Racing",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$500M Series F led by GIC at a $10.5B post-money valuation, announced 4 Jun 2026; Series E $100M at $5B (Oct 2025); Series D $200M at $2B (Apr 2025)",
+   "investors": "GIC (lead); Accel, Y Combinator, Craft, Felicis, Peak XV and Coatue returning; Stripe (second investment) and Salesforce Ventures; total raised over $1B",
+   "revenue": null,
+   "trigger": "$500M Series F at a $10.5B post-money valuation, announced 4 Jun 2026 (company blog; CNBC, TechCrunch)",
+   "competitor_signal": "Oracle (Red Bull), Google Cloud and Dell (McLaren), Confluent and Dynatrace (Racing Bulls) occupy the database, cloud and data lanes; no open-source database or backend platform on any 2026 car",
+   "strategic_hook": "Supabase says Claude Code has been the largest contributor to new databases on its platform since the start of 2026; Claude is Official Thinking Partner of Atlassian Williams Racing (multi-year, 2026)",
+   "us_presence": "US company (Supabase Inc., San Francisco), remote-first; founded 2020",
+   "alumni_match": null,
+   "taxonomy_category": "B1",
+   "ops_fit_note": "MODE A: Postgres, auth and realtime backend for the team's fan, partner and internal applications",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 18,
+   "brand_fit": 14,
+   "urgency": 12,
+   "ops_fit": 14,
+   "ops_fit_subscores": {
+    "product_to_need": 5,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "copplestone"
+   ],
+   "url": "https://theorg.com/org/supabase",
+   "excerpt": "Supabase leadership as listed by The Org and the company's own posts: Paul Copplestone, Co-Founder and CEO; Ant Wilson, Co-Founder and CTO; Scott Buxton, CFO; Rory Wilding, COO and Chief Commercial Officer; Tracy Lane, General Counsel. No chief marketing officer is listed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$500m",
+    "$10.5b",
+    "gic",
+    "4 jun",
+    "4 june",
+    "series f",
+    "funding round",
+    "over $1b",
+    "past $1b",
+    "$1b"
+   ],
+   "url": "https://supabase.com/blog/supabase-series-f",
+   "excerpt": "Supabase, 4 Jun 2026: a $500 million Series F led by GIC at a $10.5 billion post-money valuation; existing investors Accel, Y Combinator, Craft, Felicis, Peak XV and Coatue participated, Stripe made a second investment and Salesforce Ventures joined; total capital raised now exceeds $1 billion. Confirmed by CNBC (4 Jun) and TechCrunch (5 Jun).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$5b",
+    "$2b",
+    "october 2025",
+    "april 2025",
+    "series e",
+    "series d",
+    "eight months",
+    "seven months"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/supabase-raises-100m-at-5b-valuation-co-led-by-accel-and-peak-xv-302573153.html",
+   "excerpt": "Supabase, Oct 2025: $100 million Series E at a $5 billion valuation co-led by Accel and Peak XV, four months after a $200 million Series D at $2 billion led by Accel (Apr 2025, with Coatue, Y Combinator, Craft and Felicis). The Series F came seven to eight months after the Series E.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "250,000",
+    "9 million",
+    "600%",
+    "60%",
+    "claude code",
+    "multigres"
+   ],
+   "url": "https://supabase.com/blog/supabase-series-f",
+   "excerpt": "Series F post and coverage (TechCrunch, TipRanks, Elets CIO): more than 250,000 customers and over 9 million developers; database launches on Supabase grew 600% in the past year, over 60% of them created by AI tools, with Claude Code the largest contributor since the start of 2026; Multigres, an open-source horizontal-scaling layer for Postgres, released in preview alongside the round.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "wilding",
+    "buxton",
+    "ant wilson",
+    "no chief marketing",
+    "developer-led"
+   ],
+   "url": "https://theorg.com/org/supabase/org-chart/rory-wilding",
+   "excerpt": "The Org / LinkedIn: Rory Wilding, COO and CCO at Supabase; Scott Buxton, CFO; Ant Wilson, Co-Founder and CTO. No CMO appears on any leadership listing found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "san francisco",
+    "remote",
+    "2020"
+   ],
+   "url": "https://www.crunchbase.com/organization/supabase",
+   "excerpt": "Crunchbase / Craft: Supabase founded in 2020 by Paul Copplestone and Ant Wilson; headquarters listed as San Francisco; the company is fully remote (some profiles list Singapore).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "claude",
+    "thinking partner",
+    "williams"
+   ],
+   "url": "https://www.williamsf1.com/articles/0f1eece4-e632-49c9-a767-148159bbbf87/anthropic-atlassian-williams-f1-team-multi-year-partnership-claude-official-thinking-partner",
+   "excerpt": "Atlassian Williams F1 Team, 2026: multi-year partnership with Anthropic naming Claude the team's Official Thinking Partner; Claude branding on the FW48 from the February livery reveal; Claude works alongside the team's engineers, strategists and operations staff.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "atlassian",
+    "vast",
+    "keeper",
+    "oracle",
+    "google cloud",
+    "dell",
+    "confluent",
+    "dynatrace",
+    "microsoft",
+    "netapp",
+    "ibm",
+    "core scientific",
+    "twg ai"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): Williams — Atlassian title, VAST (data platform / storage), Keeper (identity security), Airia, Brillio, Claude; no database or backend-platform partner. Red Bull: Oracle. McLaren: Google Cloud, Dell. Racing Bulls: Confluent, Dynatrace. Mercedes and Alpine: Microsoft. Aston Martin: NetApp, Cognizant, ServiceNow, CoreWeave. Ferrari: HP, IBM. Cadillac: Core Scientific, TWG AI, IFS.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "british gp",
+    "5 july",
+    "5 jul",
+    "austrian gp",
+    "las vegas",
+    "austin"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar; silverstone.co.uk, racingnews365.com)",
+   "excerpt": "2026 F1 calendar table with dates from silverstone.co.uk and RacingNews365: Austrian GP on 28 June, British GP at Silverstone on 5 July 2026; United States GP (Austin) in late October and Las Vegas GP in November.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Supabase",
+  "industry_meta": "Developer Platform · Open-Source Postgres Backend",
+  "hq": "San Francisco (remote-first; founded 2020)",
+  "ticker": "Private ($10.5B post-money; $500M Series F, Jun 2026)",
+  "deck": "Supabase, the open-source Postgres backend that more than 9 million developers build on, closed a $500M Series F led by GIC at a $10.5B post-money valuation on 4 June 2026, doubling the $5B it set eight months earlier and taking total funding past $1B.",
+  "score": 75,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Atlassian Williams Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Supabase announced on 4 June a $500M Series F led by GIC, with Accel, Y Combinator, Craft, Felicis, Peak XV and Coatue returning, a second investment from Stripe and a first from Salesforce Ventures. The post-money valuation is $10.5B, up from $5B at the October 2025 Series E and $2B at the April 2025 Series D; total capital raised now exceeds $1B. The company reports more than 250,000 customers and over 9 million developers, and says database launches grew 600% in the past year, with over 60% created by AI coding tools.",
+  "the_case_p2": "The grid has already priced developer infrastructure: Atlassian holds the Williams title, Oracle sits on the Red Bull, Google Cloud and Dell on the McLaren. What none of them owns is the open-source Postgres layer beneath the AI-coding boom. Supabase says Claude Code has been the largest single creator of new databases on its platform this year, and Claude already races on the Williams. That is a warm path, not a cold call.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 4 June; brand budgets reset in the quarter after a raise, and this is the largest in the company's history. The British GP on 5 July is Williams' home race and falls inside the window; teams settle their 2027 rosters in the fourth quarter.",
+  "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+  "why_team_para": "Williams carries the most developer-native roster in Formula 1: Atlassian as title partner, VAST for data infrastructure, Keeper for identity security and, since February, Claude as Official Thinking Partner. There is no database or backend-platform partner on the car. Supabase's own release credits Claude Code as the top creator of new databases this year, so the introduction runs through a relationship Williams already has.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Supabase is the Postgres, authentication and realtime backend for the software Williams ships around the car: fan and ticketing apps, partner portals, and the internal tools engineers build with Claude. Multigres, previewed with the round, gives those systems scale on race weekends. In return: Official Developer Platform designation, sidepod placement, British GP hospitality and a co-produced engineering series with the Claude programme.",
+  "deal_arch_para": "Entry as Official Developer Platform Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the next raise or a listing window. Estimated $3-5M a year, part-payable in platform credits. Scope: livery placement, developer activations at the British GP and the US rounds, content with the Claude programme, first refusal on a database category in 2030.",
+  "decision_maker_name": "Paul Copplestone",
+  "decision_maker_role": "Co-Founder & CEO, Supabase",
+  "decision_maker_bio": "Copplestone co-founded Supabase in 2020 with CTO Ant Wilson and fronts every raise; a first sports partnership is his call. Path: Rory Wilding, COO and Chief Commercial Officer, and Scott Buxton, CFO. No chief marketing officer is listed; marketing is developer-led.",
+  "opening_angle_intro": "Lead with the Claude Code number.",
+  "opening_angle_quote": "&ldquo;Paul, Claude Code is the biggest creator of Supabase databases this year, and Claude already races on the Williams. The developer-platform lane there is open and the British GP is five weeks out. 25 minutes to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round closed 4 Jun; British GP inside window."
+   ],
+   [
+    "CAPACITY",
+    "18",
+    "/ 20",
+    "$500M raise at $10.5B; over $1B raised."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Developer brand; strong Claude-Williams adjacency."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "No hard deadline beyond Q4 rosters."
+   ],
+   [
+    "OPS FIT",
+    "14",
+    "/ 20",
+    "MODE A: backend for team applications."
+   ]
+  ],
+  "risks": [
+   [
+    "DEVELOPER-LED BRAND",
+    "Supabase grew on open source and community with no chief marketing officer; a Formula 1 spend is off-pattern.",
+    "Frame it as developer reach, not a billboard: Claude, Atlassian and the paddock as a developer stage, paid partly in credits."
+   ],
+   [
+    "VALUATION PACE",
+    "A valuation doubled in eight months invites scrutiny; a visible sponsorship can read as excess to investors.",
+    "Size the entry modestly, tie it to measurable developer sign-ups, and announce it alongside product news such as Multigres."
+   ]
+  ],
+  "bottom_line": "A $500M raise at $10.5B, more than 9 million developers, and Claude Code as the top creator of Supabase databases put Supabase at peak brand-investment capacity with a warm route onto the one car Claude already races on. The developer-platform lane at Williams is open and the British GP sits inside the window.",
+  "signals": [
+   "funding_event",
+   "category_whitespace",
+   "partner_adjacency"
+  ],
+  "footer_company": "SUPABASE",
+  "footer_date": "5 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 4 June 2026 Supabase announced a $500M Series F led by GIC at a $10.5B post-money valuation, with Accel, Y Combinator, Craft, Felicis, Peak XV and Coatue returning, Stripe investing for a second time and Salesforce Ventures joining. Total capital raised now exceeds $1B. The company announced it on its own blog; CNBC and TechCrunch confirmed the figures."
+    },
+    {
+     "label": "Valuation doubled in eight months",
+     "text": "The Series E in October 2025 priced the company at $5B; the Series D in April 2025 at $2B. A company re-priced from $2B to $10.5B inside fourteen months has a story to tell enterprise buyers and, eventually, public markets, and now has the budget to tell it."
+    },
+    {
+     "label": "The AI-coding tailwind",
+     "text": "Supabase says database launches on its platform grew 600% in the past year and that over 60% of new databases are created by AI tools, with Claude Code the largest contributor since the start of 2026. That is the same Claude that races on the Williams: the partnership story writes itself."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The British GP on 5 July is Williams' home race and sits five weeks from the announcement; the United States GP in Austin and the Las Vegas GP follow in the autumn, close to Supabase's US customer base. Teams settle their 2027 partner rosters in the fourth quarter, so a deal agreed over the summer can launch in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Williams carries Atlassian as title partner, VAST for data infrastructure, Keeper for identity security, Airia and Brillio on the technology side and Claude as Official Thinking Partner. No database, backend or developer-platform brand is on the car: Official Developer Platform Partner is a clean category at a team-partner price."
+    },
+    {
+     "label": "The warm path",
+     "text": "Supabase's own funding announcement names Claude Code as the biggest creator of new Supabase databases this year. Claude has been on the Williams since the February livery reveal, working with the team's engineers and strategists. The introduction can run through a relationship Williams already has, and the activation can pair the coding agent with the database it builds on."
+    },
+    {
+     "label": "A roster that speaks to developers",
+     "text": "Atlassian sells to the same software teams Supabase does. A Williams sponsorship puts Supabase next to Jira, Bitbucket and Claude on the one car in Formula 1 that already reads as a developer stack, rather than as a lone logo on a consumer-brand livery."
+    },
+    {
+     "label": "Story and market fit",
+     "text": "A remote-first company with founders from outside Silicon Valley and a global developer community fits a British team with a global fan base and US ambitions. The British GP gives a home stage; Austin and Las Vegas give the US one."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Supabase provides the Postgres database, authentication, storage and realtime layer for the applications Williams ships around the car: fan and ticketing apps, partner and hospitality portals, and the internal dashboards and tools engineers and strategists build with Claude. Multigres, released in preview with the round, gives those systems horizontal scale on race weekends when traffic spikes."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A platform used by more than 9 million developers brings a developer audience Williams' existing partners want to reach, plus a guest list of founders, investors and enterprise engineering leaders for the British GP and the US rounds."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "Co-produced engineering content with the Claude programme: how a race team builds and ships software in a week, the coding agent and the database on one car, and a factory reference customer for Supabase's enterprise sales."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Developer Platform Partner designation, sidepod or engine-cover placement, British GP and US-round hospitality, driver and engineering access for Supabase's channels, and a developer-community activation at Silverstone."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the database incumbent; a direct category conflict."
+    },
+    {
+     "team": "McLaren F1 Team",
+     "reason": "Google Cloud (owner of Firebase, the product Supabase positions itself against) and Dell hold the cloud and hardware lanes."
+    },
+    {
+     "team": "Mercedes-AMG Petronas · BWT Alpine",
+     "reason": "Microsoft holds the cloud lane at both; SAP also sits on the Mercedes."
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "reason": "IBM, HP and DXC Technology cover data, compute and cloud services."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Confluent (data streaming) and Dynatrace occupy the adjacent data lanes; crowded."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "NetApp, CoreWeave, Cognizant and ServiceNow make the technology roster crowded; no developer-ecosystem tie."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific, TWG AI and IFS hold the compute, AI and software lanes on the inaugural roster."
+    },
+    {
+     "team": "Audi F1 Team · TGR Haas F1 Team",
+     "reason": "Open but not chosen: neither carries the Claude tie that gives Williams a warm path."
+    }
+   ],
+   "ask": "A 25-minute call with Paul Copplestone before the British GP to walk through the Claude Code connection, agree a Silverstone or Austin announcement window, and size an Official Developer Platform Partner entry against Williams' 2027 roster."
+  }
+ },
+ "note": "# Supabase → Atlassian Williams Racing — verification log (N° 202, 5 Jun 2026)\n\nBuilt in-session at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) with Claude acting as\nscanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor\ntable, 13-rule audit and the 2-page render ran as code. The case sits on the row's date, 5 Jun 2026,\nin rebuild mode; `supabase.run.json` is the case record `python -m intel.backfill --cases` imports.\n\n**Sandbox limitation, stated plainly:** direct fetches of supabase.com, prnewswire.com, cnbc.com,\ntechcrunch.com and williamsf1.com were blocked by the egress proxy. Each claim below was checked\nagainst the search summary of the primary page named as the evidence URL. Treat every VERIFIED line\nas REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE\nCIRCULATION.\n\n## The trigger\n\nSupabase announced the **$500M Series F led by GIC at a $10.5B post-money valuation** on its own\nblog on 4 Jun 2026 (company-announced, not merely reported); CNBC (4 Jun) and TechCrunch (5 Jun)\ncarry the same figures. The thin row's \"$10B\" is TechCrunch's rounding; the brief uses the company's\n$10.5B. The row's date is 5 Jun; the trigger is one day earlier, inside the 90-day window.\n\n## Ledger (claims verified against search summaries of the primary pages)\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Paul Copplestone, Co-Founder & CEO | VERIFIED | The Org, Supabase posts |\n| Ant Wilson CTO; Scott Buxton CFO; Rory Wilding COO/CCO; Tracy Lane GC; no CMO listed | VERIFIED | The Org, LinkedIn |\n| $500M Series F, GIC lead, $10.5B post-money, 4 Jun 2026; investors as listed; total > $1B | VERIFIED (company) | supabase.com/blog/supabase-series-f; CNBC; TechCrunch |\n| Series E $100M at $5B (Oct 2025); Series D $200M at $2B (Apr 2025) | VERIFIED (company) | PR Newswire Series E release; Series D coverage |\n| 250,000+ customers; 9M+ developers; database launches +600% in a year; >60% via AI tools; Claude Code largest contributor since Jan 2026; Multigres preview | REPORTED (company figures via coverage) | Series F post as summarised by TechCrunch, TipRanks, Elets CIO |\n| Founded 2020; San Francisco; remote-first | VERIFIED | Crunchbase, Craft (some profiles list Singapore) |\n| Claude Official Thinking Partner of Williams (multi-year, 2026) | VERIFIED | williamsf1.com |\n| Grid occupancy (Williams roster; Oracle, Google Cloud/Dell, Confluent/Dynatrace, Microsoft, NetApp, IBM, Core Scientific/TWG AI) | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Austrian GP 28 Jun; British GP 5 Jul 2026; Austin and Las Vegas in the autumn | VERIFIED | calendar table + silverstone.co.uk / RacingNews365 |\n\n## Screen-outs and things not claimed\n\n- **No motorsport tie found** for Copplestone, Wilson, Wilding or Buxton; `leadership_ties` is empty after checking.\n- **No revenue or ARR figure** is used: none is public.\n- **Headquarters** is given as San Francisco (Supabase Inc.); the company is fully remote and some profiles list Singapore. Not load-bearing.\n- **Deal size ($3-5M a year) is an ESTIMATE**, labelled as such.\n- **The score is 75, not the thin row's 83.** What holds it back: no chief marketing officer and a developer-led, community marketing culture (brand fit 14); no hard deadline (urgency 12); the operational workstream is the team's application layer, not race data (ops fit 14).\n\n## Decision path\n\nCEO Paul Copplestone (owner of a first sports partnership) → Rory Wilding, COO & Chief Commercial Officer → Scott Buxton, CFO. No CMO exists on the leadership listings found; say so on the first call rather than guessing a marketing counterpart.\n"
+}
