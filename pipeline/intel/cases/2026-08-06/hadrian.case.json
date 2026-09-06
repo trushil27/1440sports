@@ -1,0 +1,368 @@
+{
+ "run_date": "2026-08-06",
+ "signal_date": "2026-08-06",
+ "stem": "hadrian",
+ "number": 150,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Hadrian",
+  "signal_date": "2026-08-06",
+  "score": 74,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Chris Power",
+  "role": "Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+  "industry_meta": "Advanced Manufacturing · Automated Precision-Parts Factories for Aerospace & Defence · Torrance, California",
+  "recommended_team": "Cadillac F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$1.37B Series D at a $7.87B valuation, company-announced 6 Aug 2026 (Axios: just shy of $8B); follows a $260M Series C in 2025 that opened the Arizona factory",
+   "investors": "Co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead",
+   "revenue": "",
+   "trigger": "$1.37B Series D at a $7.87B valuation to build highly automated factories, announced 6 Aug 2026",
+   "competitor_signal": "Haas Automation (machine tools) is on TGR Haas' roster; DMG Mori and Hexagon sit at Red Bull; United Machining at Alpine; Cadillac's 2026 roster has no machining or precision-parts partner",
+   "strategic_hook": "Cadillac F1 Team is building its car-manufacturing headquarters in Fishers, Indiana, with power units in Charlotte; Hadrian sells automated precision-parts factories in Torrance, Mesa and Muscle Shoals to America's aerospace and defence primes",
+   "us_presence": "Headquartered in Torrance, California; factories in Mesa, Arizona and Muscle Shoals, Alabama; a Los Angeles headquarters and San Francisco engineering hub are planned (Axios)",
+   "alumni_match": "",
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: high-mix, low-volume precision machined and additive metal parts, which Hadrian says it delivers 10x faster at half the cost, for a debut team assembling a US supply chain from zero"
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 17,
+   "brand_fit": 13,
+   "urgency": 12,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 7,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   }
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "chris power",
+    "founder & ceo",
+    "founder and ceo",
+    "australia",
+    "2019"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026), Crunchbase and LA Business Journal: Chris Power is Founder and CEO of Hadrian. Forbes: Power arrived in the United States from Australia in 2019 to build a high-tech plant making precision metal parts for aerospace and defence customers.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1.37b",
+    "$7.87b",
+    "series d",
+    "6 aug",
+    "wcm",
+    "washington harbour",
+    "valor",
+    "137 ventures",
+    "baillie gifford",
+    "jpmorgan",
+    "$8b",
+    "funding round"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026; Axios exclusive, GovCon Wire, Manufacturing Dive the same day): $1.37 billion Series D equity financing to accelerate the build-out of domestic manufacturing capacity for defence, aerospace and industrial systems; valuation $7.87 billion (Axios: 'just shy of $8 billion'); co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead; proceeds fund new factories, expanded R&D and additional production capabilities.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$260m",
+    "series c",
+    "arizona site"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/hadrian-raises-260m-to-build-ai-powered-factories-for-america-adds-full-product-manufacturing-opens-arizona-site-302508179.html",
+   "excerpt": "Hadrian release (PRNewswire, 2025): $260M Series C to build AI-powered factories, adding full product manufacturing and opening the Arizona site.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "torrance",
+    "mesa",
+    "muscle shoals",
+    "alabama",
+    "los angeles",
+    "san francisco",
+    "munitions",
+    "autonomous systems",
+    "axios"
+   ],
+   "url": "https://www.axios.com/2026/08/06/hadrian-series-d-defense-production",
+   "excerpt": "Axios (6 Aug 2026) and the Series D release: Hadrian is headquartered in Torrance, California (19501 South Western Avenue per Torrance Economic Development), with factories in Mesa, Arizona and Muscle Shoals, Alabama; a new Los Angeles headquarters and a San Francisco engineering and R&D hub are being planned; management names munitions and autonomous systems as the next production lines.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "fortastra",
+    "30 jul",
+    "spacecraft",
+    "satellite"
+   ],
+   "url": "https://www.satellitetoday.com/manufacturing/2026/07/30/fortastra-and-hadrian-sign-national-security-spacecraft-manufacturing-mou/",
+   "excerpt": "Via Satellite (30 Jul 2026) and SpaceNews: Fortastra and Hadrian signed an MoU on national-security spacecraft manufacturing; Hadrian joins design-for-manufacturability reviews of Fortastra satellite buses and brings precision machining and additive manufacturing to shorten satellite production timelines.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "west owens",
+    "cfo",
+    "october 2024",
+    "terrawatt",
+    "solarcity",
+    "no chief marketing",
+    "head of marketing"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/advanced-manufacturing-startup-hadrian-announces-veteran-finance-executive-west-owens-as-chief-financial-officer-302290017.html",
+   "excerpt": "Hadrian release (PRNewswire, 29 Oct 2024): West Owens appointed Chief Financial Officer, joining from TerraWatt Infrastructure (CFO) and previously SolarCity (VP Structured Finance). Leadership listings (Craft, The Org, LeadIQ) show a chief operating officer and a head of marketing below C-level but no chief marketing officer; Peter Feaver (National Security Advisor) and Wallis Laughrey (VP Munitions) joined in 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "10x",
+    "half the cost",
+    "halve",
+    "precision component",
+    "precision-parts",
+    "precision machined"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/advanced-manufacturing-startup-hadrian-announces-veteran-finance-executive-west-owens-as-chief-financial-officer-302290017.html",
+   "excerpt": "Hadrian, in its own releases: its mission is a series of highly automated precision-component factories so that space and defence manufacturers get parts 10x faster and at half the cost for rockets, satellites, jets and drones; capabilities include precision machined and additive manufacturing (Via Satellite, Jul 2026).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "fishers",
+    "indiana",
+    "450,000",
+    "charlotte",
+    "silverstone",
+    "cologne",
+    "michigan"
+   ],
+   "url": "https://www.motorsport.com/f1/news/cadillac-gives-update-on-its-under-construction-f1-infrastructure/10845451/",
+   "excerpt": "Motorsport.com, Grande Prêmio and local Indiana reporting (2025-26): Cadillac F1 Team's 450,000 sq ft headquarters and race shop in Fishers, Indiana handles the majority of car production; power-unit manufacturing is in Charlotte, North Carolina; a Silverstone, UK facility develops parts and wind-tunnel model components; the team also uses General Motors facilities in North Carolina and Michigan and Toyota's wind tunnel in Cologne.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "haas automation",
+    "dmg mori",
+    "hexagon",
+    "united machining",
+    "3d systems",
+    "tenneco",
+    "ifs",
+    "komatsu",
+    "camozzi",
+    "roboze",
+    "skf",
+    "brembo",
+    "boeing",
+    "no machining",
+    "precision-parts partner",
+    "core scientific",
+    "twg ai"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Cadillac F1 Team 2026 roster — TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli, Alpinestars, TWG Motorsports, General Motors; no machining, machine-tool or precision-parts partner. TGR Haas: Haas Automation, Haas Tooling. Red Bull: DMG Mori, Hexagon, Siemens. Alpine: United Machining, 3D Systems, Boeing. Williams: Komatsu. Audi: Camozzi. Racing Bulls: Roboze, Siemens. Ferrari: SKF, Brembo, Garrett, OMR Automotive. McLaren: Greene Tweed.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "united states gp",
+    "us gp",
+    "miami gp"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: United States GP (Austin) in late October, Las Vegas GP in November; Miami GP in the spring.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Hadrian",
+  "industry_meta": "Advanced Manufacturing · Automated Precision-Parts Factories",
+  "hq": "Torrance, California (factories in Mesa, AZ and Muscle Shoals, AL)",
+  "ticker": "Private ($7.87B; $1.37B Series D, Aug 2026)",
+  "deck": "Hadrian, the Torrance-based builder of highly automated precision-parts factories for America's aerospace and defence primes, announced a $1.37B Series D at a $7.87B valuation on 6 August, co-led by WCM, Washington Harbour, Valor, 137 Ventures and Baillie Gifford with JPMorganChase as anchor co-lead.",
+  "score": 74,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Cadillac F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "The round is company-announced: $1.37B of Series D equity at a $7.87B valuation, co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead. It follows the $260M Series C in 2025 that opened the Mesa, Arizona factory alongside Torrance and Muscle Shoals, Alabama. Proceeds fund new factories, R&D and production lines in munitions and autonomous systems, and a Los Angeles headquarters and San Francisco engineering hub are planned (Axios). A week earlier Hadrian signed a national-security spacecraft manufacturing MoU with Fortastra.",
+  "the_case_p2": "The identity moment is the pivot from parts supplier to American industrial platform: Hadrian's own framing is 'America's industrial renewal', and its product is speed, high-mix, low-volume metal parts it says arrive 10x faster at half the cost. That is the exact problem a debut Formula 1 team faces, and the American one is building its supply chain from an empty site in Indiana this season.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 6 August and the new lines and headquarters are funded now. The United States GP in Austin (late October) and Las Vegas (November) fall inside the window, and Cadillac closes its 2027 roster in the fourth quarter of its first season.",
+  "why_team_label": "WHY CADILLAC F1 TEAM",
+  "why_team_para": "Cadillac is the American debutant: a 450,000 sq ft headquarters in Fishers, Indiana for car production, power units in Charlotte, a Silverstone satellite for wind-tunnel parts, and General Motors plants behind it. Its 2026 roster (TWG AI, Core Scientific, IFS, Tenneco) has no machining, machine-tool or precision-parts partner, while Haas Automation owns that lane at TGR Haas, DMG Mori and Hexagon at Red Bull, and United Machining at Alpine. Reindustrialising America is the story both brands tell.",
+  "value_section": true,
+  "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. An F1 car is thousands of one-off machined metal parts, uprights, brackets, gearbox and suspension components, redesigned race by race. Hadrian's automated factories in Torrance and Mesa are built for that high-mix, low-volume work, in the same country as Fishers. As supplier-partner it shortens lead times and adds US capacity inside cost-cap value-in-kind rules. In return: Official Advanced Manufacturing Partner, livery, Austin and Las Vegas hospitality.",
+  "deal_arch_para": "Entry as Official Advanced Manufacturing Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the Fishers ramp and Hadrian's new lines. Estimated $3-5M a year, part-payable in manufactured parts. Scope: sidepod or wing placement, factory-to-track content, US-race hospitality for Hadrian's customers.",
+  "decision_maker_name": "Chris Power",
+  "decision_maker_role": "Founder & CEO, Hadrian",
+  "decision_maker_bio": "Power, Australian-born, moved to the US in 2019 and founded Hadrian to build automated precision-parts factories; he fronts every raise. Path: West Owens, CFO since October 2024 (formerly TerraWatt, SolarCity). No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the empty site in Indiana.",
+  "opening_angle_quote": "&ldquo;Chris, Cadillac is building an F1 parts chain from scratch in Fishers; you build automated factories for exactly that kind of part. The manufacturing lane on the American car is open. 25 minutes before Austin?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Round 6 Aug; Austin and Las Vegas inside the window."
+   ],
+   [
+    "CAPACITY",
+    "17",
+    "/ 20",
+    "$1.37B raised at $7.87B; capital is earmarked for factories."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "Defence supplier, B2B; American-renewal story fits Cadillac."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "No hard deadline beyond Q4 rosters; HQ move only planned."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: precision parts for a team building a US chain."
+   ]
+  ],
+  "risks": [
+   [
+    "DEFENCE OPTICS",
+    "Hadrian makes parts for munitions, jets and drones; GM, TWG and Formula 1 must accept a defence supplier on the car.",
+    "Boeing sits on Alpine's roster; position Hadrian as advanced manufacturing and keep munitions out of activation copy."
+   ],
+   [
+    "INSIDE GM'S TENT",
+    "GM has vast machining capacity and Tenneco is already a component partner; the team may see no gap.",
+    "Pitch speed on one-off parts, not volume: the lane is lead time."
+   ]
+  ],
+  "bottom_line": "A company-announced $1.37B Series D at $7.87B, new factories and production lines, and an 'industrial renewal' identity put Hadrian at peak brand-investment motive; Cadillac's Fishers build gives it a real manufacturing workstream and an open lane. Defence optics and GM's own capacity hold the score at 74.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "us_market"
+  ],
+  "footer_company": "HADRIAN",
+  "footer_date": "6 AUG 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 6 August Hadrian announced a $1.37B Series D at a $7.87B valuation, co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead. It is a company release, reported the same day by Axios, GovCon Wire and Manufacturing Dive."
+    },
+    {
+     "label": "From parts to platform",
+     "text": "The $260M Series C in 2025 added full product manufacturing and opened the Mesa, Arizona site. The Series D funds new factories, expanded R&D and production lines in munitions and autonomous systems, and Axios reports a new Los Angeles headquarters and a San Francisco engineering hub are being planned. A company moving from supplier to platform needs a brand its customers, recruits and Washington recognise."
+    },
+    {
+     "label": "Programme momentum",
+     "text": "On 30 July Hadrian signed a national-security spacecraft manufacturing MoU with Fortastra, joining design reviews of its satellite buses to cut production time. Each such programme is a milestone the partnership can be timed to."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The United States GP in Austin (late October) and the Las Vegas GP (November) are the US rounds left in 2026, and Cadillac closes its 2027 partner roster in the fourth quarter of its debut season. A deal agreed before Austin can be announced there and activated in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The empty site",
+     "text": "Cadillac is building a 450,000 sq ft headquarters and race shop in Fishers, Indiana that will handle the majority of car production, with power units in Charlotte and a Silverstone satellite for wind-tunnel components. A team standing up an F1 supply chain in the United States in one season is the only team on the grid with Hadrian's exact problem."
+    },
+    {
+     "label": "The open lane",
+     "text": "Per the sponsor table, Cadillac's 2026 roster carries TWG AI, Core Scientific, IFS, Tenneco, Claro, Jim Beam and Tommy Hilfiger, and no machining, machine-tool or precision-parts partner. Official Advanced Manufacturing Partner is a clean category on a greenfield roster."
+    },
+    {
+     "label": "One story",
+     "text": "Cadillac's F1 entry is sold as American manufacturing on the world stage; Hadrian's mission statement is America's industrial renewal. The two narratives need no translation, and both sell to the same Washington and Wall Street audiences."
+    },
+    {
+     "label": "Precedent on the grid",
+     "text": "Machining and metrology partners already race: Haas Automation at TGR Haas, DMG Mori and Hexagon at Red Bull, United Machining at Alpine. Teams buy this category when the partner can actually make parts; Hadrian can."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "An F1 car is thousands of one-off machined metal parts, uprights, brackets, inserts, gearbox and suspension components, redesigned race by race. Hadrian's automated factories in Torrance and Mesa are built for exactly this high-mix, low-volume work, which it says it delivers 10x faster at half the cost. For a team whose Indiana plant is still being commissioned, a domestic aerospace-grade supplier shortens lead times and adds capacity inside the cost cap's value-in-kind rules."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Hadrian's customers are aerospace and defence primes and its investors include JPMorganChase and Baillie Gifford; its guest list for Austin and Las Vegas is the industrial and financial audience Cadillac's other B2B partners want in the suite."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "A factory-to-track story filmed in Mesa and Fishers: the part designed on Monday and on the car on Friday. Hadrian gains a reference customer whose parts are the most scrutinised metal in sport, useful in every defence sales conversation."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Advanced Manufacturing Partner designation, sidepod or wing placement, hospitality at the United States and Las Vegas rounds, driver and engineering access for Hadrian's recruiting and customer channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "Haas Automation and Haas Tooling, the owner's own machine-tool businesses, hold the manufacturing lane."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "DMG Mori (machine tools), Hexagon (metrology) and Siemens occupy manufacturing technology."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "United Machining and 3D Systems hold machining and additive; Boeing covers aerospace."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Roboze (additive) and Siemens on the roster."
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "reason": "A crowded component roster (SKF, Brembo, Garrett, OMR Automotive) and no American story."
+    },
+    {
+     "team": "Atlassian Williams Racing · Audi F1 Team",
+     "reason": "Komatsu (Williams) and Camozzi (Audi) sit in industrial machinery and automation; neither is a US team."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team · McLaren F1 Team · Mercedes-AMG Petronas",
+     "reason": "Open but not chosen: British teams without the American industrial identity that gives Cadillac the fit."
+    }
+   ],
+   "ask": "A 25-minute call with Chris Power before the United States GP to scope a parts-supply pilot for the Fishers programme, agree an Austin announcement window and size an Official Advanced Manufacturing Partner entry against Cadillac's 2027 roster."
+  }
+ },
+ "note": "# Hadrian → Cadillac F1 Team — verification log (N° 150, issued for 6 Aug 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY`), with Claude as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and 2-page render ran as code. The thin row's source was an aggregator (techstartups.com); the primary source is Hadrian's own release on PRNewswire.\n\n**Sandbox limitation, stated plainly:** prnewswire.com, axios.com, hadrian.co, theorg.com and motorsport.com were not fetched directly (egress-blocked or not attempted); every claim was checked against search summaries of the primary page named in the evidence. Treat VERIFIED lines as REPORTED until a person opens the link; confidence is MEDIUM.\n\n## The trigger\n\nCompany-announced (PRNewswire, 6 Aug 2026; Axios exclusive, GovCon Wire, Manufacturing Dive, Connect CRE same day): $1.37B Series D at a $7.87B valuation (Axios: 'just shy of $8B'); co-leads WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures, Baillie Gifford; JPMorganChase Strategic Investment Group anchor co-lead. Two corrections to the row: (1) the 'new LA HQ confirmed' is only *planned* per Axios; (2) the Fortastra MoU (30 Jul 2026, Via Satellite / SpaceNews) concerns national-security spacecraft, not munitions; munitions and autonomous systems are separately named as the next production lines.\n\n## Decision path\n\nChris Power, Founder & CEO (release, Crunchbase, LA Business Journal; Forbes: Australian-born, in the US since 2019). West Owens, CFO since 29 Oct 2024 (PRNewswire; ex-TerraWatt, ex-SolarCity). Leadership listings show a COO and a head of marketing whose full names are not given on the public listings found, so they are not named; **no chief marketing officer is listed**. 2026 additions: Peter Feaver (National Security Advisor), Wallis Laughrey (VP Munitions).\n\n## Leadership ties\n\n`none found` after checking Power and Owens for F1 / FE / motorsport sponsorship history; the only motorsport hit for Torrance was Garrett Motorsport, unrelated.\n\n## Team fit\n\nJudged only against `seeds/sponsors.json`: Cadillac's 2026 roster has no machining / machine-tool / precision-parts partner; Tenneco (components) is noted as adjacent in the second risk. Conflicting teams named in `extended.ruled_out`. Cadillac facilities (Fishers 450,000 sq ft, Charlotte, Silverstone, GM plants, Cologne tunnel) from Motorsport.com / Grande Prêmio / Indiana local press.\n\n## Not claimed\n\n- No revenue figure: none public.\n- Deal size ($3-5M a year) is an ESTIMATE.\n- '10x faster at half the cost' is Hadrian's own claim, attributed as such.\n- No post-trigger material event found between 6 Aug and 6 Sep 2026.\n- Defence exposure is flagged as the first risk; the reputational call is the MD's.\n"
+}
