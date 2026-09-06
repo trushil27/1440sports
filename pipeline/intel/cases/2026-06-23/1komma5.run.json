@@ -1,0 +1,812 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-06-23",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-0ur9yty4/2026-06-23/1komma5.pdf",
+     "web": "/tmp/case-pdf-0ur9yty4/2026-06-23/1komma5.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "1KOMMA5°",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 16
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "resurfaced: 1Komma5° last surfaced 2026-05-26 (expansion); new trigger other:financing programme; FE rotation day (Tue/Fri)",
+     "company": "1KOMMA5°",
+     "decision": "selected",
+     "signal_date": "2026-06-17"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "1KOMMA5°",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "resurfaced: 1Komma5° last surfaced 2026-05-26 (expansion); new trigger other:financing programme; FE rotation day (Tue/Fri)",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 15,
+    "ops_fit": 13,
+    "ranking": 70,
+    "urgency": 14,
+    "capacity": 12,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 3,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Mahindra Racing",
+   "source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "trigger_date": "2026-06-17",
+   "trigger_reason": "financing programme"
+  }
+ ],
+ "brief": {
+  "number": 182,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-0ur9yty4/2026-06-23/1komma5.web.html",
+  "brief_data": {
+   "hq": "Hamburg",
+   "deck": "1KOMMA5°, the Hamburg home-electrification group running Europe's largest residential virtual power plant, mobilised a €1bn customer-financing programme with European banks and investors on 17 June 2026 and, manager magazin reports, has its CEO on an IPO roadshow with 2026 revenue expected near €660M.",
+   "risks": [
+    {
+     "label": "HALO, NOT WORKSTREAM",
+     "detail": "A racing team does not buy home solar; the value is audience and story, and Mahindra has been rebuilding from the back of the field.",
+     "counter": "Price it as media and hospitality; tie renewals to reach in Germany, Spain and the Netherlands."
+    },
+    {
+     "label": "IPO TIMING HAS SLIPPED",
+     "detail": "A 2026 listing was the hope when the pre-IPO financing closed in December 2024; a delayed IPO can freeze marketing spend.",
+     "counter": "Structure year one as GEN4-launch activation with an IPO-year option."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private, pre-IPO (€150M pre-IPO financing Dec 2024, extended Jul 2025)",
+   "company": "1KOMMA5°",
+   "gridfit": [
+    {
+     "team": "Mahindra Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "TAKEN",
+     "detail": "Shell",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "financing_programme",
+    "ipo_preparation",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://1komma5.com/en/press/press-releases/1komma5-extends-pre-ipo-round/",
+    "https://ecapital.vc/news/manager-magazin-bericht-1komma5-setzt-wachstumskurs-fort-und-bereitet-moglichen-borsengang-vor/",
+    "https://1komma5.com/en/press/press-releases/1komma5-raises-pre-ipo-round-of-150-million-euro/",
+    "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+    "https://www.shell.co.uk/about-us/news-and-publications/media-releases/2019-media-releases/smart-energy-storage-systems.html",
+    "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-meldet-umsatzrekord-und-profitables-wachstum/",
+    "https://1komma5.com/en/group/who-we-are/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Philipp Schröder before the GEN4 season opens to test whether an IPO-year brand platform is on the table, confirm the marketing owner, and size an Official Home Energy Partner entry against Mahindra Racing's Season 13 roster.",
+    "value": [
+     {
+      "text": "Home energy is not a race-team workstream, and the brief does not pretend it is. The story is the same at both scales: Heartbeat AI pools some 40,000 networked homes into Europe's largest residential virtual power plant and trades their flexibility; a Formula E driver harvests and deploys a fixed battery over a race. Mahindra's race content can carry a Heartbeat-led energy-management series with real engineers on both sides.",
+      "label": "Halo with mechanics (Mode B)"
+     },
+     {
+      "text": "A consumer brand with 170,000 customers and a €1bn financing programme brings media spend, showroom footfall and a dealer network to a team whose partners are corporate. Hospitality at Berlin and Zandvoort puts 1KOMMA5°'s investors and installer partners in Mahindra's guest list.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Showroom activations in Berlin and Madrid on race weekends; a virtual-power-plant explainer built around race-weekend energy data; Tech Mahindra as a natural software counterpart for Heartbeat AI's European rollout.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Home Energy Partner designation, car and race-suit placement at every round, a content series with team engineers, hospitality at Berlin, Zandvoort, Madrid and London, and driver appearances at 1KOMMA5° showrooms in E-Prix cities.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 17 June 2026 1KOMMA5° announced, with leading European investors and banks, a financing volume of up to one billion euros so that homeowners in Germany can buy photovoltaic systems, battery storage, heat pumps and wallboxes on monthly instalments over terms of up to 25 years at 5.99%, with free early repayment. It is a customer-demand programme, not a corporate raise, and the company is subsidising it.",
+      "label": "Trigger"
+     },
+     {
+      "text": "On 18 June manager magazin reported that 1KOMMA5° is preparing a possible IPO with its CEO already on a roadshow, and that 2026 revenue is projected at around €660M with profitability at EBITDA level. This is press reporting summarised by the company's investor eCAPITAL; the company has not confirmed a listing date, and the brief says so.",
+      "label": "IPO preparations, reported"
+     },
+     {
+      "text": "Revenue was about €520M in 2024, up from €450M in 2023, with organic growth of 36%; the group has around 2,500 staff, more than 170,000 systems installed and operates in Germany, Sweden, Finland, Denmark, the Netherlands, Spain and Australia. The €150M pre-IPO financing of December 2024 was led by CalSTRS and extended in July 2025 by Sabancı Climate Ventures; the valuation has not been disclosed.",
+      "label": "The base"
+     },
+     {
+      "text": "Formula E's GEN4 era opens with the Jeddah E-Prix on 18-19 December 2026; partner rosters for the debut season are closed in the autumn. The 2027 European swing, Berlin E-Prix (8-9 May), Zandvoort E-Prix (18-19 June) and Madrid E-Prix (26-27 June), lands in three of 1KOMMA5°'s seven markets, in what the company hopes is its IPO year.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Mahindra Racing's roster is Mahindra & Mahindra as title partner and Tech Mahindra in technology, nothing in energy, batteries or home electrification. Official Home Energy Partner is a clean category at a price a pre-IPO company can carry, on a team whose commercial list has room.",
+      "label": "The open lane"
+     },
+     {
+      "text": "In November 2025 Mahindra Racing committed to race as a full manufacturer through the GEN4 era to 2030, building its own powertrain at Banbury. A three-season deal from the GEN4 debut sits inside that commitment, with a manufacturer that is not going anywhere.",
+      "label": "A horizon that matches"
+     },
+     {
+      "text": "The obvious German pairing, Porsche, sits inside the Volkswagen Group, whose energy subsidiary Elli launches a vehicle-to-grid tariff-and-charger offer for German households in the fourth quarter of 2026, a direct competitor to Heartbeat AI; Cupra Kiro shares the same parent. Mahindra has no European home-energy arm. Schröder's 2021 Porsche founder profile is a warm contact, not an open lane.",
+      "label": "No group conflict"
+     },
+     {
+      "text": "Berlin, Zandvoort and Madrid in 2027 are in Germany, the Netherlands and Spain, three of 1KOMMA5°'s markets, and London and Monaco carry the investor audience a pre-IPO company wants in its hospitality. Formula E's city-centre format reaches homeowners, the buyer of a home energy system, in a way a permanent circuit does not.",
+      "label": "Where it races"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Porsche Formula E Team",
+      "reason": "Volkswagen Group's Elli launches a vehicle-to-grid tariff-and-charger offer for German households in Q4 2026, competing directly with Heartbeat AI; Schröder's 2021 Porsche founder profile is a contact, not an opening."
+     },
+     {
+      "team": "Cupra Kiro",
+      "reason": "Volkswagen Group brand; the same Elli conflict."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell sits on the roster and owns sonnen, a direct competitor in German home storage."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "TotalEnergies holds the energy lane."
+     },
+     {
+      "team": "Envision Racing",
+      "reason": "Owned by Envision Group, a renewable-energy and battery group; the category is the owner's."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "Castrol, a bp brand, brings an energy major onto the car."
+     },
+     {
+      "team": "Nissan Formula E Team",
+      "reason": "Open but not chosen: a Japanese works team with Nissan alone on the roster and no European home story."
+     },
+     {
+      "team": "Andretti Formula E",
+      "reason": "Open but not chosen: a US-facing roster (TWG AI, Quest Global, Crowe UK, Reflo) for a company with no US presence."
+     },
+     {
+      "team": "Citroën Racing",
+      "reason": "Open but not chosen: a Stellantis newcomer with no path found."
+     }
+    ]
+   },
+   "date_long": "23 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Mahindra Racing",
+   "value_mode": "B",
+   "bottom_line": "A €1bn customer programme, a reported IPO roadshow and €520M of revenue give 1KOMMA5° the motive and the means for its first European brand platform. Mahindra Racing's roster has no energy brand, its GEN4 commitment runs to 2030, and Berlin, Zandvoort and Madrid in 2027 are 1KOMMA5°'s home markets.",
+   "footer_date": "23 JUN 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "€1bn programme 17 Jun; IPO roadshow reported; GEN4 opens 18 Dec.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 12,
+     "note": "€520M revenue in 2024; pre-IPO capital; German demand soft.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 16,
+     "note": "Consumer electrification brand; European city races are its markets.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 14,
+     "note": "IPO window; debut-season deals close this autumn.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 13,
+     "note": "MODE B halo; open lane; on-car story.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 17 June 1KOMMA5° announced, with European investors and banks, a financing programme of up to one billion euros so German homeowners can buy solar, storage, heat pumps and wallboxes on instalments of up to 25 years at 5.99%. Next day manager magazin reported IPO preparations, the CEO on a roadshow, and 2026 revenue projected around €660M with EBITDA profitability. The base is real: revenue of €520M in 2024, up from €450M, 2,500 staff, 170,000 systems installed, and €150M of pre-IPO financing led by CalSTRS in December 2024.",
+   "the_case_p2": "Formula E's team rosters carry energy majors and battery makers, not the home. Shell sits with Lola Yamaha ABT and owns sonnen, a direct rival in German home storage; TotalEnergies sits with DS Penske; Envision Group, a wind and battery group, owns Envision Racing; Castrol, a bp brand, is at Jaguar TCS Racing. No team carries a residential energy brand, yet Berlin, Zandvoort and Madrid are raced in countries where 1KOMMA5° sells.",
+   "track_label": "",
+   "brief_number": "182",
+   "claims_total": 16,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "Private, pre-IPO: €150M pre-IPO financing led by CalSTRS closed December 2024, extended in July 2025 with S…",
+     "value": "€150M",
+     "claim_id": 670,
+     "verified": true,
+     "source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/"
+    },
+    {
+     "fact": "Revenue about €520M in 2024, up from €450M in 2023 (company release, 17 Feb 2025); 2026 revenue projected a…",
+     "value": "€520M",
+     "claim_id": 672,
+     "verified": true,
+     "source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/"
+    },
+    {
+     "fact": "€1bn customer-financing programme for solar, storage, heat pumps and wallboxes announced 17 Jun 2026 with E…",
+     "value": "€1b",
+     "claim_id": 673,
+     "verified": true,
+     "source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/"
+    },
+    {
+     "fact": "On 17 June 1KOMMA5° announced, with European investors and banks, a financing programme of up to one billio…",
+     "value": "5.99%",
+     "claim_id": 680,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "Next day manager magazin reported IPO preparations, the CEO on a roadshow, and 2026 revenue projected aroun…",
+     "value": "€660M",
+     "claim_id": 681,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Home Energy · Solar, Storage, Heat Pumps · Virtual Power Plant",
+   "value_content": "MODE B - halo with mechanics. Heartbeat AI pools 40,000 networked home systems into Europe's largest residential virtual power plant; Formula E's energy management, harvesting and deploying a fixed battery over a race, is the same story at car scale. Mechanics: 1KOMMA5° on car and race suits at the European rounds; a Heartbeat-led energy series in Mahindra's race content; showroom activations in Berlin and Madrid on race weekends.",
+   "value_section": true,
+   "why_team_para": "Mahindra Racing is a founding Formula E team, based in Banbury, that committed in November 2025 to race as a manufacturer through the GEN4 era to 2030. Its roster is the shortest on the grid: Mahindra & Mahindra as title and Tech Mahindra, no energy, battery or home-electrification brand. Unlike Porsche and Cupra Kiro, it has no group energy arm competing with Heartbeat AI, and it races Berlin, Zandvoort and Madrid, 1KOMMA5°'s markets.",
+   "deal_arch_para": "Entry as Official Home Energy Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15 (2026/27 to 2028/29), covering the GEN4 debut and the listing window. Estimated €1.5-2.5M a year in cash and media. Scope: car and race-suit placement, a Heartbeat AI content series, Berlin and Zandvoort hospitality, showroom activations.",
+   "footer_company": "1KOMMA5°",
+   "why_team_label": "WHY MAHINDRA RACING",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;A pre-IPO consumer brand needs European awareness in the quarters before it lists, and the €1bn programme is its biggest customer push yet. Formula E's GEN4 era opens in Jeddah on 18 December; partner deals for the debut season close this autumn, and Berlin, Zandvoort and Madrid follow in 2027.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Schröder ran Tesla Germany and sonnen before co-founding 1KOMMA5° in 2021; Porsche profiled him as a founder-pioneer that year, his only motorsport-adjacent tie. Path: Micha Grueber, Co-Founder and CFO, who owns the IPO; Jannik Schall, Co-Founder and Chief Product Officer. No group chief marketing officer is listed.",
+   "decision_maker_name": "Philipp Schröder",
+   "decision_maker_role": "Co-Founder & CEO, 1KOMMA5°",
+   "opening_angle_intro": "Lead with the IPO year and the empty Mahindra roster.",
+   "opening_angle_quote": "&ldquo;Philipp, you have a billion euros to put into German homes and a roadshow to run; Mahindra Racing has no energy brand on the car and races Berlin, Zandvoort and Madrid in your IPO year. 25 minutes before the GEN4 season opens?&rdquo;",
+   "value_section_label": "VALUE TO MAHINDRA RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Philipp Schröder, Co-Founder & CEO at 1KOMMA5°",
+   "cited_source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/en/press/press-releases/1komma5-extends-pre-ipo-round/",
+     "excerpt": "1KOMMA5° press release, 28 Jul 2025, quotes Philipp Schröder, CEO and co-founder of 1KOMMA5°; Slush speaker page and company profiles: formerly Managing Director of Tesla Germany and of sonnen.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Philipp Schröder, Co-Founder & CEO, 1KOMMA5° at 1KOMMA5°",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/en/press/press-releases/1komma5-extends-pre-ipo-round/",
+     "excerpt": "1KOMMA5° press release, 28 Jul 2025, quotes Philipp Schröder, CEO and co-founder of 1KOMMA5°; Slush speaker page and company profiles: formerly Managing Director of Tesla Germany and of sonnen.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Private, pre-IPO: €150M pre-IPO financing led by CalSTRS closed December 2024, extended in July 2025 with Sabancı Climate Ventures; valuation not disclosed",
+   "cited_source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ecapital.vc/news/manager-magazin-bericht-1komma5-setzt-wachstumskurs-fort-und-bereitet-moglichen-borsengang-vor/",
+     "excerpt": "manager magazin report of 18 Jun 2026 (summarised by investor eCAPITAL and by mainsights.io): 1KOMMA5° is preparing a possible IPO with the CEO already on a roadshow; 2026 revenue projected around €660 million with profitability at EBITDA level; the new no-down-payment financing model and Heartbeat AI scaling are the focus. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "1KOMMA5°, the Hamburg home-electrification group running Europe's largest residential virtual power plant, mobilised a €1bn customer-financing programme with European banks and investors on 17 June 2026 and, manager magazin reports, has its CEO on an IPO roadshow with 2026 revenue expected near €660M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+     "excerpt": "1KOMMA5° press release, 17 Jun 2026 (also pv magazine, Solarserver 18 Jun): in cooperation with leading European investors and banks the company mobilises a financing volume of one billion euros for private photovoltaic systems, battery storage, heat pumps and wallboxes; financing cost reduced to 5.99%, terms up to 25 years, free special and early repayment; aimed at homeowners in Germany.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "CalSTRS (lead), G2 Venture Partners, 2150, Norrsken, Hamilton Lane, b2venture, Eurazeo, eCAPITAL; Sabancı Climate Ventures (July 2025)",
+   "cited_source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/en/press/press-releases/1komma5-raises-pre-ipo-round-of-150-million-euro/",
+     "excerpt": "1KOMMA5° press release, 20 Dec 2024 (Sifted, Tech.eu, Bloomberg same day): €150 million pre-IPO financing led by CalSTRS with G2 Venture Partners, 2150, Norrsken, Hamilton Lane, b2venture, Eurazeo and eCAPITAL; total funding above €450 million; the company hopes to list in 2026 (Bloomberg headline). Valuation not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 17 June 1KOMMA5° announced, with European investors and banks, a financing programme of up to one billion euros so German homeowners can buy solar, storage, heat pumps and wallboxes on instalments of up to 25 years at 5.99%.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+     "excerpt": "1KOMMA5° press release, 17 Jun 2026 (also pv magazine, Solarserver 18 Jun): in cooperation with leading European investors and banks the company mobilises a financing volume of one billion euros for private photovoltaic systems, battery storage, heat pumps and wallboxes; financing cost reduced to 5.99%, terms up to 25 years, free special and early repayment; aimed at homeowners in Germany.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Revenue about €520M in 2024, up from €450M in 2023 (company release, 17 Feb 2025); 2026 revenue projected around €660M with EBITDA profitability (manager magazin, reported)",
+   "cited_source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ecapital.vc/news/manager-magazin-bericht-1komma5-setzt-wachstumskurs-fort-und-bereitet-moglichen-borsengang-vor/",
+     "excerpt": "manager magazin report of 18 Jun 2026 (summarised by investor eCAPITAL and by mainsights.io): 1KOMMA5° is preparing a possible IPO with the CEO already on a roadshow; 2026 revenue projected around €660 million with profitability at EBITDA level; the new no-down-payment financing model and Heartbeat AI scaling are the focus. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Next day manager magazin reported IPO preparations, the CEO on a roadshow, and 2026 revenue projected around €660M with EBITDA profitability.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ecapital.vc/news/manager-magazin-bericht-1komma5-setzt-wachstumskurs-fort-und-bereitet-moglichen-borsengang-vor/",
+     "excerpt": "manager magazin report of 18 Jun 2026 (summarised by investor eCAPITAL and by mainsights.io): 1KOMMA5° is preparing a possible IPO with the CEO already on a roadshow; 2026 revenue projected around €660 million with profitability at EBITDA level; the new no-down-payment financing model and Heartbeat AI scaling are the focus. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "€1bn customer-financing programme for solar, storage, heat pumps and wallboxes announced 17 Jun 2026 with European banks and investors (5.99%, terms up to 25 years); manager magazin reported IPO preparations and a CEO roadshow on 18 Jun 2026",
+   "cited_source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+     "excerpt": "1KOMMA5° press release, 17 Jun 2026 (also pv magazine, Solarserver 18 Jun): in cooperation with leading European investors and banks the company mobilises a financing volume of one billion euros for private photovoltaic systems, battery storage, heat pumps and wallboxes; financing cost reduced to 5.99%, terms up to 25 years, free special and early repayment; aimed at homeowners in Germany.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The base is real: revenue of €520M in 2024, up from €450M, 2,500 staff, 170,000 systems installed, and €150M of pre-IPO financing led by CalSTRS in December 2024.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ecapital.vc/news/manager-magazin-bericht-1komma5-setzt-wachstumskurs-fort-und-bereitet-moglichen-borsengang-vor/",
+     "excerpt": "manager magazin report of 18 Jun 2026 (summarised by investor eCAPITAL and by mainsights.io): 1KOMMA5° is preparing a possible IPO with the CEO already on a roadshow; 2026 revenue projected around €660 million with profitability at EBITDA level; the new no-down-payment financing model and Heartbeat AI scaling are the focus. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Formula E team rosters carry energy majors, not home-energy brands: Shell (Lola Yamaha ABT), TotalEnergies (DS Penske), Envision Group (Envision Racing owner), Castrol (Jaguar TCS Racing); Mahindra Racing's roster is Mahindra & Mahindra and Tech Mahindra only",
+   "cited_source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.shell.co.uk/about-us/news-and-publications/media-releases/2019-media-releases/smart-energy-storage-systems.html",
+     "excerpt": "Shell UK media release, 2019: Shell agreed to acquire sonnen, the German residential smart-storage and energy-services company, making it a wholly owned subsidiary.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "WHY NOW A pre-IPO consumer brand needs European awareness in the quarters before it lists, and the €1bn programme is its biggest customer push yet.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+     "excerpt": "1KOMMA5° press release, 17 Jun 2026 (also pv magazine, Solarserver 18 Jun): in cooperation with leading European investors and banks the company mobilises a financing volume of one billion euros for private photovoltaic systems, battery storage, heat pumps and wallboxes; financing cost reduced to 5.99%, terms up to 25 years, free special and early repayment; aimed at homeowners in Germany.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Heartbeat AI pools about 40,000 networked home systems into Europe's largest residential virtual power plant; Formula E Season 13 (GEN4) opens in Jeddah on 18 Dec 2026 and races Berlin, Zandvoort and Madrid in 2027, all 1KOMMA5° markets",
+   "cited_source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-meldet-umsatzrekord-und-profitables-wachstum/",
+     "excerpt": "1KOMMA5° press release, 17 Feb 2025 (pv magazine same day): record revenue of about €520 million in 2024, up from €450 million in 2023; organic revenue up 36% from €360 million to €490 million; growth profitable; 40,000 networked energy systems, Europe's largest virtual power plant for private households; 80 locations and 26 showrooms from Helsinki to Adelaide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A €1bn customer programme, a reported IPO roadshow and €520M of revenue give 1KOMMA5° the motive and the means for its first European brand platform.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+     "excerpt": "1KOMMA5° press release, 17 Jun 2026 (also pv magazine, Solarserver 18 Jun): in cooperation with leading European investors and banks the company mobilises a financing volume of one billion euros for private photovoltaic systems, battery storage, heat pumps and wallboxes; financing cost reduced to 5.99%, terms up to 25 years, free special and early repayment; aimed at homeowners in Germany.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "None; operates in Germany, Sweden, Finland, Denmark, the Netherlands, Spain and Australia",
+   "cited_source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/en/group/who-we-are/",
+     "excerpt": "1KOMMA5° about page: founded in 2021 in Hamburg; around 2,500 employees; more than 170,000 energy systems installed; the group operates in Germany, Sweden, Finland, Denmark, the Netherlands, Spain and Australia; Heartbeat pools customers' photovoltaics, storage, heat pumps and charge points into a virtual power plant.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 17 June 2026 1KOMMA5° announced, with leading European investors and banks, a financing volume of up to one billion euros so that homeowners in Germany can buy photovoltaic systems, battery storage, heat pumps and wallboxes on monthly instalments over terms of up to 25 years at 5.99%, with free early repayment.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+     "excerpt": "1KOMMA5° press release, 17 Jun 2026 (also pv magazine, Solarserver 18 Jun): in cooperation with leading European investors and banks the company mobilises a financing volume of one billion euros for private photovoltaic systems, battery storage, heat pumps and wallboxes; financing cost reduced to 5.99%, terms up to 25 years, free special and early repayment; aimed at homeowners in Germany.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "financing programme",
+   "cited_source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+     "excerpt": "1KOMMA5° press release, 17 Jun 2026 (also pv magazine, Solarserver 18 Jun): in cooperation with leading European investors and banks the company mobilises a financing volume of one billion euros for private photovoltaic systems, battery storage, heat pumps and wallboxes; financing cost reduced to 5.99%, terms up to 25 years, free special and early repayment; aimed at homeowners in Germany.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "On 18 June manager magazin reported that 1KOMMA5° is preparing a possible IPO with its CEO already on a roadshow, and that 2026 revenue is projected at around €660M with profitability at EBITDA level.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ecapital.vc/news/manager-magazin-bericht-1komma5-setzt-wachstumskurs-fort-und-bereitet-moglichen-borsengang-vor/",
+     "excerpt": "manager magazin report of 18 Jun 2026 (summarised by investor eCAPITAL and by mainsights.io): 1KOMMA5° is preparing a possible IPO with the CEO already on a roadshow; 2026 revenue projected around €660 million with profitability at EBITDA level; the new no-down-payment financing model and Heartbeat AI scaling are the focus. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Revenue was about €520M in 2024, up from €450M in 2023, with organic growth of 36%;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-meldet-umsatzrekord-und-profitables-wachstum/",
+     "excerpt": "1KOMMA5° press release, 17 Feb 2025 (pv magazine same day): record revenue of about €520 million in 2024, up from €450 million in 2023; organic revenue up 36% from €360 million to €490 million; growth profitable; 40,000 networked energy systems, Europe's largest virtual power plant for private households; 80 locations and 26 showrooms from Helsinki to Adelaide.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The €150M pre-IPO financing of December 2024 was led by CalSTRS and extended in July 2025 by Sabancı Climate Ventures;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ecapital.vc/news/manager-magazin-bericht-1komma5-setzt-wachstumskurs-fort-und-bereitet-moglichen-borsengang-vor/",
+     "excerpt": "manager magazin report of 18 Jun 2026 (summarised by investor eCAPITAL and by mainsights.io): 1KOMMA5° is preparing a possible IPO with the CEO already on a roadshow; 2026 revenue projected around €660 million with profitability at EBITDA level; the new no-down-payment financing model and Heartbeat AI scaling are the focus. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "A consumer brand with 170,000 customers and a €1bn financing programme brings media spend, showroom footfall and a dealer network to a team whose partners are corporate.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+     "excerpt": "1KOMMA5° press release, 17 Jun 2026 (also pv magazine, Solarserver 18 Jun): in cooperation with leading European investors and banks the company mobilises a financing volume of one billion euros for private photovoltaic systems, battery storage, heat pumps and wallboxes; financing cost reduced to 5.99%, terms up to 25 years, free special and early repayment; aimed at homeowners in Germany.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Jeddah E-Prix on 18-19 December 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Berlin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455; spec §3.4 | note: Tempelhof, double-header race 1",
+     "excerpt": "round 7: Berlin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Zandvoort E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: MASCOT Zandvoort Circuit — new venue, double-header race 1",
+     "excerpt": "round 14: Zandvoort E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Madrid E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: Circuito de Madrid Jarama-RACE — new venue",
+     "excerpt": "round 6: Madrid E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
