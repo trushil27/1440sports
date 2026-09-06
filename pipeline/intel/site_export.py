@@ -498,6 +498,14 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
 
     checks = load_checks()
     checked_rows = attach_signal_checks(entries, checks)
+    # Who to actually call: the marketing / commercial owner, not just the founder the
+    # capital event put in the headline (operator request, 6 Sep 2026).
+    from intel.contacts import attach as attach_contacts
+    from intel.contacts import load_contacts
+    from intel.contacts import summary as contacts_summary
+
+    contacts = load_contacts()
+    contact_rows = attach_contacts(entries, contacts)
     entries.sort(key=lambda e: (e["date"], e.get("trigger_date") or ""), reverse=True)
     # Where each unbuilt signal sits in the automatic build queue (newest first — the same
     # order intel.rebuild_queue.backlog works through), so the app can say when it lands.
@@ -551,9 +559,11 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
         "team_display": display,
         "renewals": RENEWALS,
         "checks_meta": {**checks_summary(checks), "rows_checked": checked_rows},
+        "contacts_meta": {**contacts_summary(contacts), "rows_with_contacts": contact_rows},
         "review_meta": {
             "reviewed_at": "2026-09-05",
             "screened": sum(1 for e in entries if e["review"]["status"] == "screened_out"),
+            "with_contacts": contact_rows,
             "duplicates": sum(1 for e in entries if e["review"]["status"] == "duplicate_of"),
             "flagged": sum(1 for e in entries if e["review"]["status"] == "keep_flagged"),
         },
