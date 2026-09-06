@@ -86,3 +86,52 @@ def test_no_retry_when_the_scanner_cannot_take_an_addendum(session, migrated_dat
         stages=stages,
     )
     assert out.status == "no_signal" and "freshness_retry" not in (out.summary or {})
+
+
+def test_fallback_window_admits_an_older_trigger_labelled(session, migrated_database, tmp_path):
+    """No retry possible (plain scanner), nothing inside 14 days: a 20-day-old round is admitted
+    under the 30-day fallback, and the run says so."""
+    load_seeds(session)
+    settings = Settings(
+        database_url=migrated_database,
+        execution_mode="dry_run",
+        pdf_storage_dir=str(tmp_path / "briefs"),
+        anthropic_api_key="x",
+    )
+    stages = run_daily.Stages(
+        verifier=FakeVerifier(),
+        writer=FakeWriter([_block(RAMP_WRITTEN)]),
+        font_stack="june",
+        distribute=False,
+    )
+    run_date = dt.date(2026, 6, 16)
+    out = run_daily.run_day(
+        run_date, settings, lambda d: [_sig(signal_date="2026-05-27")], session, stages=stages
+    )
+    assert out.status == "success", out.summary
+    assert out.summary["fallback_window"] == 30
+    rows = out.summary["candidate_list"]
+    assert [r["decision"] for r in rows] == ["stale", "selected"]
+    assert rows[1]["reason"].startswith("fallback window 30 days: trigger 20 days old")
+
+
+def test_fallback_off_keeps_the_no_signal(session, migrated_database, tmp_path):
+    load_seeds(session)
+    settings = Settings(
+        database_url=migrated_database,
+        execution_mode="dry_run",
+        pdf_storage_dir=str(tmp_path / "briefs"),
+        anthropic_api_key="x",
+        freshness_fallback_days=0,
+    )
+    stages = run_daily.Stages(
+        verifier=FakeVerifier(), writer=FakeWriter([]), font_stack="june", distribute=False
+    )
+    out = run_daily.run_day(
+        dt.date(2026, 6, 17),
+        settings,
+        lambda d: [_sig(signal_date="2026-05-27")],
+        session,
+        stages=stages,
+    )
+    assert out.status == "no_signal" and "fallback_window" not in out.summary

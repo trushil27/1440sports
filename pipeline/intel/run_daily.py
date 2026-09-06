@@ -148,6 +148,8 @@ def triage(
     settings: Settings,
     rebuild: bool = False,
     rank_offset: int = 0,
+    window_override: int | None = None,
+    note: str | None = None,
 ) -> list[Candidate]:
     """Persist every candidate with its decision. Returns the eligible ones (decision pending).
     One log line per candidate (company, signal date, decision, reason) so a run can be read
@@ -175,7 +177,7 @@ def triage(
         session.add(cand)
         session.flush()
 
-        window = (
+        window = window_override or (
             settings.freshness_days_alumni if sig.track == 2 else settings.freshness_days_track1
         )
         fr = freshness.check_freshness(sig.signal_date, run_date, window)
@@ -183,6 +185,8 @@ def triage(
         if not fr.fresh:
             cand.decision, cand.decision_reason = CandidateDecision.stale, fr.reason
             continue
+        if note:
+            cand.decision_reason = f"{note}: trigger {fr.age_days} days old"
 
         bl = dedup.check_blocklist(session, norm, run_date)
         if bl.blocked:
@@ -478,6 +482,38 @@ def run_day(
                 progress(f"retry returned {len(more)} signals; triaging")
                 eligible = triage(session, run, more, run_date, settings, rank_offset=len(signals))
                 signals = list(signals) + list(more)
+    fallback_used: int | None = None
+    fb = settings.freshness_fallback_days
+    if not eligible and signals and not stages.rebuild and fb > settings.freshness_days_track1:
+        # Still nothing inside the window: admit the freshest of the stale candidates up to the
+        # fallback age, labelled — a call the MD can still make, with the age stated.
+        older = [
+            c
+            for c in session.scalars(
+                select(Candidate).where(
+                    Candidate.run_id == run.id, Candidate.decision == CandidateDecision.stale
+                )
+            ).all()
+            if c.trigger_date and 0 <= (run_date - c.trigger_date).days <= fb
+        ]
+        if older:
+            progress(
+                f"nothing inside {settings.freshness_days_track1} days — fallback window {fb} "
+                f"days admits {len(older)} candidate(s)"
+            )
+            sigs = [_signal_of(c) for c in older]
+            eligible = triage(
+                session,
+                run,
+                sigs,
+                run_date,
+                settings,
+                rank_offset=len(signals),
+                window_override=fb,
+                note=f"fallback window {fb} days",
+            )
+            signals = list(signals) + sigs
+            fallback_used = fb
     ordered = rank_eligible(eligible, run_date)
     shortlist = ordered[: settings.max_verification_attempts]
     progress(
@@ -561,6 +597,7 @@ def run_day(
             for c in all_cands
         ],
         **({"freshness_retry": True} if retried else {}),
+        **({"fallback_window": fallback_used} if fallback_used else {}),
         **({"rebuild": True} if stages.rebuild else {}),
     }
     run.finished_at = dt.datetime.now(dt.UTC)

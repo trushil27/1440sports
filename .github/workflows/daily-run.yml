@@ -57,6 +57,8 @@ jobs:
       APP_BASE_URL: ${{ vars.APP_BASE_URL || 'https://trushil27.github.io/1440sports/' }}
       DESK_API_URL: ${{ vars.DESK_API_URL }}
       REBUILD_BACKLOG_PER_RUN: ${{ vars.REBUILD_BACKLOG_PER_RUN || '6' }}
+      FRESHNESS_DAYS_TRACK1: ${{ vars.FRESHNESS_DAYS_TRACK1 || '14' }}
+      FRESHNESS_FALLBACK_DAYS: ${{ vars.FRESHNESS_FALLBACK_DAYS || '30' }}
       PDF_STORAGE_DIR: storage/briefs
       SITE_DIR: storage/site
       PYTHONPATH: pipeline

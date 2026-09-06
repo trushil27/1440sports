@@ -49,6 +49,13 @@ class Settings(BaseModel):
     md_threshold: int = Field(default=70, description="Minimum score to produce a brief (§6.4).")
     freshness_days_track1: int = Field(default=14, description="Track 1 trigger window (§6.2).")
     freshness_days_alumni: int = Field(default=90, description="Alumni-move window (§6.2).")
+    freshness_fallback_days: int = Field(
+        default=30,
+        description=(
+            "If nothing is inside the Track-1 window even after the dated retry, candidates up "
+            "to this many days old are admitted, labelled with their age. 0 = off."
+        ),
+    )
     dedup_window_days: int = Field(default=30, description="surfaced_log lookback (§6.3).")
     max_verification_attempts: int = Field(
         default=3, description="Candidates tried after a block (§6.5)."
