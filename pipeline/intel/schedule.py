@@ -148,6 +148,14 @@ def main(argv: list[str] | None = None) -> int:
     # "Build the full case" requests from the app (Netlify form) → full rebuilds, then the
     # static app: export every brief + the sponsor grid; deploy when configured. Neither may
     # fail the run — the brief has already been stored and sent.
+    # Publish the app now, so today's signal is live the moment it is sent; the backlog builds
+    # below can take an hour and republish again when they are done.
+    try:
+        from intel import site_export
+
+        print("site (after send):", site_export.publish(settings))
+    except Exception as exc:  # noqa: BLE001 — best effort by design
+        print(f"site export skipped: {exc}")
     if outcome is not None:  # the models are answering: work the queue and the backlog
         try:
             from intel import rebuild_queue
