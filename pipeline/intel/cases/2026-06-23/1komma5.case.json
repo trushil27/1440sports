@@ -1,0 +1,492 @@
+{
+ "run_date": "2026-06-23",
+ "signal_date": "2026-06-17",
+ "stem": "1komma5",
+ "number": 182,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "1KOMMA5°",
+  "signal_date": "2026-06-17",
+  "score": 70,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Philipp Schröder",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+  "industry_meta": "Home Electrification · Solar, Storage, Heat Pumps · Virtual Power Plant · Hamburg",
+  "recommended_team": "Mahindra Racing",
+  "recommended_series": "FE",
+  "timing_label": "HOT",
+  "trigger_reason": "financing programme",
+  "key_facts": {
+   "funding": "Private, pre-IPO: €150M pre-IPO financing led by CalSTRS closed December 2024, extended in July 2025 with Sabancı Climate Ventures; valuation not disclosed",
+   "investors": "CalSTRS (lead), G2 Venture Partners, 2150, Norrsken, Hamilton Lane, b2venture, Eurazeo, eCAPITAL; Sabancı Climate Ventures (July 2025)",
+   "revenue": "Revenue about €520M in 2024, up from €450M in 2023 (company release, 17 Feb 2025); 2026 revenue projected around €660M with EBITDA profitability (manager magazin, reported)",
+   "trigger": "€1bn customer-financing programme for solar, storage, heat pumps and wallboxes announced 17 Jun 2026 with European banks and investors (5.99%, terms up to 25 years); manager magazin reported IPO preparations and a CEO roadshow on 18 Jun 2026",
+   "competitor_signal": "Formula E team rosters carry energy majors, not home-energy brands: Shell (Lola Yamaha ABT), TotalEnergies (DS Penske), Envision Group (Envision Racing owner), Castrol (Jaguar TCS Racing); Mahindra Racing's roster is Mahindra & Mahindra and Tech Mahindra only",
+   "strategic_hook": "Heartbeat AI pools about 40,000 networked home systems into Europe's largest residential virtual power plant; Formula E Season 13 (GEN4) opens in Jeddah on 18 Dec 2026 and races Berlin, Zandvoort and Madrid in 2027, all 1KOMMA5° markets",
+   "us_presence": "None; operates in Germany, Sweden, Finland, Denmark, the Netherlands, Spain and Australia",
+   "alumni_match": null,
+   "taxonomy_category": "F4",
+   "ops_fit_note": "MODE B: halo with mechanics; home energy is not a team workstream, but the virtual-power-plant story mirrors Formula E energy management and the European rounds are 1KOMMA5°'s consumer markets",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 15,
+   "capacity": 12,
+   "brand_fit": 16,
+   "urgency": 14,
+   "ops_fit": 13,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "schröder",
+    "schroder",
+    "co-founder & ceo",
+    "tesla",
+    "sonnen"
+   ],
+   "url": "https://1komma5.com/en/press/press-releases/1komma5-extends-pre-ipo-round/",
+   "excerpt": "1KOMMA5° press release, 28 Jul 2025, quotes Philipp Schröder, CEO and co-founder of 1KOMMA5°; Slush speaker page and company profiles: formerly Managing Director of Tesla Germany and of sonnen.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "one billion",
+    "€1bn",
+    "1 billion",
+    "billion euros",
+    "5.99",
+    "25 years",
+    "17 june",
+    "17 jun",
+    "financing programme"
+   ],
+   "url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-mobilisiert-1-milliarde-euro-fuer-private-energiesysteme/",
+   "excerpt": "1KOMMA5° press release, 17 Jun 2026 (also pv magazine, Solarserver 18 Jun): in cooperation with leading European investors and banks the company mobilises a financing volume of one billion euros for private photovoltaic systems, battery storage, heat pumps and wallboxes; financing cost reduced to 5.99%, terms up to 25 years, free special and early repayment; aimed at homeowners in Germany.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "manager magazin",
+    "€660m",
+    "660",
+    "roadshow",
+    "ebitda",
+    "18 june",
+    "18 jun",
+    "possible ipo",
+    "ipo"
+   ],
+   "url": "https://ecapital.vc/news/manager-magazin-bericht-1komma5-setzt-wachstumskurs-fort-und-bereitet-moglichen-borsengang-vor/",
+   "excerpt": "manager magazin report of 18 Jun 2026 (summarised by investor eCAPITAL and by mainsights.io): 1KOMMA5° is preparing a possible IPO with the CEO already on a roadshow; 2026 revenue projected around €660 million with profitability at EBITDA level; the new no-down-payment financing model and Heartbeat AI scaling are the focus. Reported, not company-confirmed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "€520m",
+    "520",
+    "€450m",
+    "450",
+    "36%",
+    "€490m",
+    "490",
+    "40,000",
+    "virtual power plant",
+    "17 feb",
+    "2024"
+   ],
+   "url": "https://1komma5.com/de/magazin/pressemitteilungen/1komma5-meldet-umsatzrekord-und-profitables-wachstum/",
+   "excerpt": "1KOMMA5° press release, 17 Feb 2025 (pv magazine same day): record revenue of about €520 million in 2024, up from €450 million in 2023; organic revenue up 36% from €360 million to €490 million; growth profitable; 40,000 networked energy systems, Europe's largest virtual power plant for private households; 80 locations and 26 showrooms from Helsinki to Adelaide.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "€150m",
+    "150",
+    "calstrs",
+    "g2 venture",
+    "2150",
+    "norrsken",
+    "hamilton lane",
+    "b2venture",
+    "eurazeo",
+    "ecapital",
+    "december 2024",
+    "20 dec"
+   ],
+   "url": "https://1komma5.com/en/press/press-releases/1komma5-raises-pre-ipo-round-of-150-million-euro/",
+   "excerpt": "1KOMMA5° press release, 20 Dec 2024 (Sifted, Tech.eu, Bloomberg same day): €150 million pre-IPO financing led by CalSTRS with G2 Venture Partners, 2150, Norrsken, Hamilton Lane, b2venture, Eurazeo and eCAPITAL; total funding above €450 million; the company hopes to list in 2026 (Bloomberg headline). Valuation not disclosed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "sabanc",
+    "28 july",
+    "july 2025",
+    "€100m",
+    "100 million",
+    "heartbeat"
+   ],
+   "url": "https://1komma5.com/en/press/press-releases/1komma5-extends-pre-ipo-round/",
+   "excerpt": "1KOMMA5° press release, 28 Jul 2025: Sabancı Climate Ventures joins as a new investor, extending the €150 million pre-IPO financing; from 2025 to 2027 the company plans to invest more than €100 million in its Heartbeat AI software business.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "2,500",
+    "170,000",
+    "sweden",
+    "finland",
+    "denmark",
+    "netherlands",
+    "spain",
+    "australia",
+    "hamburg",
+    "2021",
+    "founded"
+   ],
+   "url": "https://1komma5.com/en/group/who-we-are/",
+   "excerpt": "1KOMMA5° about page: founded in 2021 in Hamburg; around 2,500 employees; more than 170,000 energy systems installed; the group operates in Germany, Sweden, Finland, Denmark, the Netherlands, Spain and Australia; Heartbeat pools customers' photovoltaics, storage, heat pumps and charge points into a virtual power plant.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "schall",
+    "chief product officer",
+    "grueber",
+    "grüber",
+    "chief financial officer",
+    "cfo",
+    "team page",
+    "no group chief marketing"
+   ],
+   "url": "https://1komma5.com/en/group/team/",
+   "excerpt": "1KOMMA5° group team page (search listing): Philipp Schröder, CEO and founder; Jannik Schall, Co-Founder and Chief Product Officer. Micha Grueber, Co-Founder and CFO since 2021 (1KOMMA5° LinkedIn post; Crunchbase). No group chief marketing officer is listed on the team page; third-party listings name a DACH marketing lead, not verified.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "porsche",
+    "pioneers",
+    "profiled"
+   ],
+   "url": "https://newsroom.porsche.com/en/2021/innovation/porsche-pioneer-founder-philipp-schroeder-1komma5grad-26901.html",
+   "excerpt": "Porsche Newsroom, 2021, '#PioneersForPorsche: Philipp Schröder, the founding spirit behind 1KOMMA5°': Porsche's founder-profile series featured Schröder; a brand relationship, not a sponsorship.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "owns sonnen",
+    "shell"
+   ],
+   "url": "https://www.shell.co.uk/about-us/news-and-publications/media-releases/2019-media-releases/smart-energy-storage-systems.html",
+   "excerpt": "Shell UK media release, 2019: Shell agreed to acquire sonnen, the German residential smart-storage and energy-services company, making it a wholly owned subsidiary.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "elli",
+    "vehicle-to-grid",
+    "v2g",
+    "fourth quarter of 2026",
+    "q4 2026",
+    "volkswagen"
+   ],
+   "url": "https://www.volkswagen-group.com/en/press-releases/electric-vehicle-batteries-as-grid-storage-volkswagen-and-elli-to-launch-vehicle-to-grid-offer-20329",
+   "excerpt": "Volkswagen Group press release, April 2026: Volkswagen and its energy subsidiary Elli launch a vehicle-to-grid offer for private customers in Germany from the fourth quarter of 2026 (pre-registration from June 2026), combining EV, app, electricity tariff, smart meter, bidirectional charger and installation; further European countries to follow.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "envision group",
+    "wind",
+    "aesc"
+   ],
+   "url": "https://envision-racing.com/envision/",
+   "excerpt": "Envision Racing / Envision Group: Envision, a Shanghai-headquartered renewable-energy and smart-energy group (wind turbines, storage, AESC batteries), is majority owner of Envision Racing.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "castrol",
+    "bp brand"
+   ],
+   "url": "https://www.bp.com/en_us/united-states/home/what-we-do/advanced-fuels-and-lubricants/castrol.html",
+   "excerpt": "bp: Castrol is bp's lubricants brand (acquired with Burmah-Castrol in 2000); in 2025 bp agreed to sell a 65% stake in Castrol to Stonepeak, completion expected by end-2026 (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "banbury",
+    "bertrand",
+    "2030",
+    "gen4",
+    "manufacturer",
+    "founding",
+    "november 2025",
+    "26 nov"
+   ],
+   "url": "https://www.fia.com/news/mahindra-racing-commits-formula-e-gen4-era-until-2030",
+   "excerpt": "FIA / Formula E, 26 Nov 2025: Mahindra Racing, a founding Formula E team, commits as a full manufacturer to the GEN4 era through 2030; team principal Frédéric Bertrand announced it in Bengaluru. Wikipedia: the team is based in Banbury, England, racing under an Indian licence.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "nadir",
+    "back of the field",
+    "rebuilding"
+   ],
+   "url": "https://www.motorsport.com/formula-e/news/how-mahindra-recovered-from-its-formula-e-nadir-and-where-it-is-headed-in-2026/10772125/",
+   "excerpt": "Motorsport.com, 2026: 'How Mahindra bounced back from its Formula E nadir and where it is headed in 2026' — the team has been rebuilding from the back of the field in recent seasons (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "harsh market",
+    "demand soft",
+    "sinkender nachfrage",
+    "german demand"
+   ],
+   "url": "https://sifted.eu/articles/enpal-1komma5-zolar-solar-giants",
+   "excerpt": "Sifted: 'Enpal, 1Komma5, Zolar: Germany's solar giants adapt to harsh market realities'; pv magazine (17 Feb 2025): 1KOMMA5° grew revenue despite falling German demand for photovoltaic systems and heat pumps (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "mahindra & mahindra",
+    "tech mahindra",
+    "totalenergies",
+    "shell",
+    "envision",
+    "castrol",
+    "nissan",
+    "porsche",
+    "cupra",
+    "kiro",
+    "twg ai",
+    "quest global",
+    "crowe",
+    "reflo",
+    "abb",
+    "no energy"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md + data/teams.json)",
+   "excerpt": "Sponsor table (FE): Mahindra Racing — Mahindra & Mahindra (title), Tech Mahindra; no energy, battery or home-electrification partner. Lola Yamaha ABT: Shell. DS Penske: TotalEnergies. Envision Racing: Envision Group (title/owner). Jaguar TCS Racing: Castrol. Porsche Formula E Team: Porsche. Cupra Kiro: Cupra, Kiro. Nissan Formula E Team: Nissan. Andretti: TWG AI, Quest Global, Crowe UK, Reflo, Nissan powertrain. Championship: ABB (title), Google Cloud, Julius Baer, PIF.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "18 december",
+    "18-19 december",
+    "jeddah",
+    "berlin",
+    "zandvoort",
+    "madrid",
+    "london",
+    "monaco",
+    "15-16 august",
+    "8-9 may",
+    "18-19 june",
+    "26-27 june",
+    "season 13",
+    "2027"
+   ],
+   "url": "seeds/calendar_fe.json (FE Season 12 and Season 13 calendars)",
+   "excerpt": "FE calendar table: Season 12 closes with the London E-Prix double-header on 15-16 Aug 2026. Season 13 (GEN4) opens with the Jeddah E-Prix on 18-19 Dec 2026, then Mexico City, Austin, Miami, São Paulo, Sanya, Berlin E-Prix 8-9 May 2027, Monaco 15-16 May, London 29-30 May, Zandvoort E-Prix 18-19 Jun 2027, Madrid E-Prix 26-27 Jun 2027, Shanghai, Tokyo.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "1KOMMA5°",
+  "industry_meta": "Home Energy · Solar, Storage, Heat Pumps · Virtual Power Plant",
+  "hq": "Hamburg",
+  "ticker": "Private, pre-IPO (€150M pre-IPO financing Dec 2024, extended Jul 2025)",
+  "deck": "1KOMMA5°, the Hamburg home-electrification group running Europe's largest residential virtual power plant, mobilised a €1bn customer-financing programme with European banks and investors on 17 June 2026 and, manager magazin reports, has its CEO on an IPO roadshow with 2026 revenue expected near €660M.",
+  "score": 70,
+  "timing_label": "HOT",
+  "series_label": "FE",
+  "team_label": "Mahindra Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 17 June 1KOMMA5° announced, with European investors and banks, a financing programme of up to one billion euros so German homeowners can buy solar, storage, heat pumps and wallboxes on instalments of up to 25 years at 5.99%. Next day manager magazin reported IPO preparations, the CEO on a roadshow, and 2026 revenue projected around €660M with EBITDA profitability. The base is real: revenue of €520M in 2024, up from €450M, 2,500 staff, 170,000 systems installed, and €150M of pre-IPO financing led by CalSTRS in December 2024.",
+  "the_case_p2": "Formula E's team rosters carry energy majors and battery makers, not the home. Shell sits with Lola Yamaha ABT and owns sonnen, a direct rival in German home storage; TotalEnergies sits with DS Penske; Envision Group, a wind and battery group, owns Envision Racing; Castrol, a bp brand, is at Jaguar TCS Racing. No team carries a residential energy brand, yet Berlin, Zandvoort and Madrid are raced in countries where 1KOMMA5° sells.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;A pre-IPO consumer brand needs European awareness in the quarters before it lists, and the €1bn programme is its biggest customer push yet. Formula E's GEN4 era opens in Jeddah on 18 December; partner deals for the debut season close this autumn, and Berlin, Zandvoort and Madrid follow in 2027.",
+  "why_team_label": "WHY MAHINDRA RACING",
+  "why_team_para": "Mahindra Racing is a founding Formula E team, based in Banbury, that committed in November 2025 to race as a manufacturer through the GEN4 era to 2030. Its roster is the shortest on the grid: Mahindra & Mahindra as title and Tech Mahindra, no energy, battery or home-electrification brand. Unlike Porsche and Cupra Kiro, it has no group energy arm competing with Heartbeat AI, and it races Berlin, Zandvoort and Madrid, 1KOMMA5°'s markets.",
+  "value_section": true,
+  "value_section_label": "VALUE TO MAHINDRA RACING",
+  "value_mode": "B",
+  "value_content": "MODE B - halo with mechanics. Heartbeat AI pools 40,000 networked home systems into Europe's largest residential virtual power plant; Formula E's energy management, harvesting and deploying a fixed battery over a race, is the same story at car scale. Mechanics: 1KOMMA5° on car and race suits at the European rounds; a Heartbeat-led energy series in Mahindra's race content; showroom activations in Berlin and Madrid on race weekends.",
+  "deal_arch_para": "Entry as Official Home Energy Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15 (2026/27 to 2028/29), covering the GEN4 debut and the listing window. Estimated €1.5-2.5M a year in cash and media. Scope: car and race-suit placement, a Heartbeat AI content series, Berlin and Zandvoort hospitality, showroom activations.",
+  "decision_maker_name": "Philipp Schröder",
+  "decision_maker_role": "Co-Founder & CEO, 1KOMMA5°",
+  "decision_maker_bio": "Schröder ran Tesla Germany and sonnen before co-founding 1KOMMA5° in 2021; Porsche profiled him as a founder-pioneer that year, his only motorsport-adjacent tie. Path: Micha Grueber, Co-Founder and CFO, who owns the IPO; Jannik Schall, Co-Founder and Chief Product Officer. No group chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the IPO year and the empty Mahindra roster.",
+  "opening_angle_quote": "&ldquo;Philipp, you have a billion euros to put into German homes and a roadshow to run; Mahindra Racing has no energy brand on the car and races Berlin, Zandvoort and Madrid in your IPO year. 25 minutes before the GEN4 season opens?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "15",
+    "/ 20",
+    "€1bn programme 17 Jun; IPO roadshow reported; GEN4 opens 18 Dec."
+   ],
+   [
+    "CAPACITY",
+    "12",
+    "/ 20",
+    "€520M revenue in 2024; pre-IPO capital; German demand soft."
+   ],
+   [
+    "BRAND FIT",
+    "16",
+    "/ 20",
+    "Consumer electrification brand; European city races are its markets."
+   ],
+   [
+    "URGENCY",
+    "14",
+    "/ 20",
+    "IPO window; debut-season deals close this autumn."
+   ],
+   [
+    "OPS FIT",
+    "13",
+    "/ 20",
+    "MODE B halo; open lane; on-car story."
+   ]
+  ],
+  "risks": [
+   [
+    "HALO, NOT WORKSTREAM",
+    "A racing team does not buy home solar; the value is audience and story, and Mahindra has been rebuilding from the back of the field.",
+    "Price it as media and hospitality; tie renewals to reach in Germany, Spain and the Netherlands."
+   ],
+   [
+    "IPO TIMING HAS SLIPPED",
+    "A 2026 listing was the hope when the pre-IPO financing closed in December 2024; a delayed IPO can freeze marketing spend.",
+    "Structure year one as GEN4-launch activation with an IPO-year option."
+   ]
+  ],
+  "bottom_line": "A €1bn customer programme, a reported IPO roadshow and €520M of revenue give 1KOMMA5° the motive and the means for its first European brand platform. Mahindra Racing's roster has no energy brand, its GEN4 commitment runs to 2030, and Berlin, Zandvoort and Madrid in 2027 are 1KOMMA5°'s home markets.",
+  "signals": [
+   "financing_programme",
+   "ipo_preparation",
+   "category_whitespace"
+  ],
+  "footer_company": "1KOMMA5°",
+  "footer_date": "23 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 17 June 2026 1KOMMA5° announced, with leading European investors and banks, a financing volume of up to one billion euros so that homeowners in Germany can buy photovoltaic systems, battery storage, heat pumps and wallboxes on monthly instalments over terms of up to 25 years at 5.99%, with free early repayment. It is a customer-demand programme, not a corporate raise, and the company is subsidising it."
+    },
+    {
+     "label": "IPO preparations, reported",
+     "text": "On 18 June manager magazin reported that 1KOMMA5° is preparing a possible IPO with its CEO already on a roadshow, and that 2026 revenue is projected at around €660M with profitability at EBITDA level. This is press reporting summarised by the company's investor eCAPITAL; the company has not confirmed a listing date, and the brief says so."
+    },
+    {
+     "label": "The base",
+     "text": "Revenue was about €520M in 2024, up from €450M in 2023, with organic growth of 36%; the group has around 2,500 staff, more than 170,000 systems installed and operates in Germany, Sweden, Finland, Denmark, the Netherlands, Spain and Australia. The €150M pre-IPO financing of December 2024 was led by CalSTRS and extended in July 2025 by Sabancı Climate Ventures; the valuation has not been disclosed."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Formula E's GEN4 era opens with the Jeddah E-Prix on 18-19 December 2026; partner rosters for the debut season are closed in the autumn. The 2027 European swing, Berlin E-Prix (8-9 May), Zandvoort E-Prix (18-19 June) and Madrid E-Prix (26-27 June), lands in three of 1KOMMA5°'s seven markets, in what the company hopes is its IPO year."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Mahindra Racing's roster is Mahindra & Mahindra as title partner and Tech Mahindra in technology, nothing in energy, batteries or home electrification. Official Home Energy Partner is a clean category at a price a pre-IPO company can carry, on a team whose commercial list has room."
+    },
+    {
+     "label": "A horizon that matches",
+     "text": "In November 2025 Mahindra Racing committed to race as a full manufacturer through the GEN4 era to 2030, building its own powertrain at Banbury. A three-season deal from the GEN4 debut sits inside that commitment, with a manufacturer that is not going anywhere."
+    },
+    {
+     "label": "No group conflict",
+     "text": "The obvious German pairing, Porsche, sits inside the Volkswagen Group, whose energy subsidiary Elli launches a vehicle-to-grid tariff-and-charger offer for German households in the fourth quarter of 2026, a direct competitor to Heartbeat AI; Cupra Kiro shares the same parent. Mahindra has no European home-energy arm. Schröder's 2021 Porsche founder profile is a warm contact, not an open lane."
+    },
+    {
+     "label": "Where it races",
+     "text": "Berlin, Zandvoort and Madrid in 2027 are in Germany, the Netherlands and Spain, three of 1KOMMA5°'s markets, and London and Monaco carry the investor audience a pre-IPO company wants in its hospitality. Formula E's city-centre format reaches homeowners, the buyer of a home energy system, in a way a permanent circuit does not."
+    }
+   ],
+   "value": [
+    {
+     "label": "Halo with mechanics (Mode B)",
+     "text": "Home energy is not a race-team workstream, and the brief does not pretend it is. The story is the same at both scales: Heartbeat AI pools some 40,000 networked homes into Europe's largest residential virtual power plant and trades their flexibility; a Formula E driver harvests and deploys a fixed battery over a race. Mahindra's race content can carry a Heartbeat-led energy-management series with real engineers on both sides."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A consumer brand with 170,000 customers and a €1bn financing programme brings media spend, showroom footfall and a dealer network to a team whose partners are corporate. Hospitality at Berlin and Zandvoort puts 1KOMMA5°'s investors and installer partners in Mahindra's guest list."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "Showroom activations in Berlin and Madrid on race weekends; a virtual-power-plant explainer built around race-weekend energy data; Tech Mahindra as a natural software counterpart for Heartbeat AI's European rollout."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Home Energy Partner designation, car and race-suit placement at every round, a content series with team engineers, hospitality at Berlin, Zandvoort, Madrid and London, and driver appearances at 1KOMMA5° showrooms in E-Prix cities."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Porsche Formula E Team",
+     "reason": "Volkswagen Group's Elli launches a vehicle-to-grid tariff-and-charger offer for German households in Q4 2026, competing directly with Heartbeat AI; Schröder's 2021 Porsche founder profile is a contact, not an opening."
+    },
+    {
+     "team": "Cupra Kiro",
+     "reason": "Volkswagen Group brand; the same Elli conflict."
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "reason": "Shell sits on the roster and owns sonnen, a direct competitor in German home storage."
+    },
+    {
+     "team": "DS Penske",
+     "reason": "TotalEnergies holds the energy lane."
+    },
+    {
+     "team": "Envision Racing",
+     "reason": "Owned by Envision Group, a renewable-energy and battery group; the category is the owner's."
+    },
+    {
+     "team": "Jaguar TCS Racing",
+     "reason": "Castrol, a bp brand, brings an energy major onto the car."
+    },
+    {
+     "team": "Nissan Formula E Team",
+     "reason": "Open but not chosen: a Japanese works team with Nissan alone on the roster and no European home story."
+    },
+    {
+     "team": "Andretti Formula E",
+     "reason": "Open but not chosen: a US-facing roster (TWG AI, Quest Global, Crowe UK, Reflo) for a company with no US presence."
+    },
+    {
+     "team": "Citroën Racing",
+     "reason": "Open but not chosen: a Stellantis newcomer with no path found."
+    }
+   ],
+   "ask": "A 25-minute call with Philipp Schröder before the GEN4 season opens to test whether an IPO-year brand platform is on the table, confirm the marketing owner, and size an Official Home Energy Partner entry against Mahindra Racing's Season 13 roster."
+  }
+ },
+ "note": "# 1KOMMA5° → Mahindra Racing — verification log (N° 182, row of 23 Jun 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost for the desk row dated 23 Jun 2026 (batch 11). **The row's\nrecorded trigger was wrong**: 'reported €150M pre-IPO funding' (Dealroom) is the round of 20 Dec 2024, extended\n28 Jul 2025, both far outside the 90-day window. The real fresh event is the **€1bn customer-financing programme\nannounced by the company on 17 Jun 2026**, followed by manager magazin's 18 Jun report of IPO preparations.\n`signal_date` is 2026-06-17. The repo's §9.2 note (a May-2026 1Komma5° brief with a fabricated revenue figure and a\nphantom investor) was read first: every figure and investor here comes from a company release or a named report.\n\n**Sandbox limitation, stated plainly:** 1komma5.com, newsroom.porsche.com, volkswagen-group.com and shell.co.uk\nwere blocked by the egress proxy. Every claim was checked against the search summary of the primary page named as\nthe evidence URL. Treat VERIFIED as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE\nCIRCULATION.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Philipp Schröder, Co-Founder & CEO; ex-Tesla Germany, ex-sonnen | VERIFIED | company releases; Slush profile |\n| €1bn financing programme, 5.99%, up to 25 years, Germany, 17 Jun 2026 | VERIFIED | 1komma5.com press release; pv magazine; Solarserver |\n| IPO preparations, CEO roadshow, ~€660M 2026 revenue, EBITDA-profitable | REPORTED | manager magazin (18 Jun 2026) via eCAPITAL, mainsights |\n| Revenue ~€520M 2024 (from €450M); organic +36% to €490M; 40,000 networked systems | VERIFIED | company release 17 Feb 2025; pv magazine |\n| €150M pre-IPO, CalSTRS lead + co-investors, 20 Dec 2024; hope to list 2026 | VERIFIED / REPORTED | company release; Sifted; Tech.eu; Bloomberg |\n| Sabancı Climate Ventures extension, 28 Jul 2025; €100M+ Heartbeat AI investment 2025-27 | VERIFIED | company release |\n| ~2,500 staff; 170,000+ systems; seven markets; founded 2021 Hamburg | VERIFIED | company about page |\n| Jannik Schall Co-Founder & CPO; Micha Grueber Co-Founder & CFO; no group CMO listed | VERIFIED / REPORTED | company team page (listing); company LinkedIn post; Crunchbase |\n| Porsche 'Pioneers' profile of Schröder, 2021 | VERIFIED | newsroom.porsche.com |\n| Shell owns sonnen | VERIFIED | Shell UK release 2019 |\n| VW/Elli V2G offer for German households from Q4 2026 | VERIFIED | Volkswagen Group release, Apr 2026 |\n| Envision Group = renewable-energy/battery group, owner of Envision Racing | VERIFIED | envision-racing.com; Envision Group |\n| Castrol is a bp brand (65% stake sale to Stonepeak pending) | VERIFIED / REPORTED | bp.com |\n| Mahindra Racing: founding team, Banbury, manufacturer commitment to 2030 (26 Nov 2025), Bertrand | VERIFIED | FIA; fiaformulae.com |\n| Mahindra rebuilding from the back of the field | REPORTED | Motorsport.com |\n| German residential demand soft | REPORTED | Sifted; pv magazine |\n| FE rosters and calendar (Season 12 London 15-16 Aug 2026; Season 13 Jeddah 18-19 Dec 2026, Berlin 8-9 May, Zandvoort 18-19 Jun, Madrid 26-27 Jun 2027) | VERIFIED | sponsor table; calendar table |\n\n## Leadership ties\n\n- **Philipp Schröder**: featured in Porsche's 2021 '#PioneersForPorsche' founder series — a brand relationship with a\n  Formula E manufacturer, not a sponsorship deal. Recorded; it argues for a Porsche approach but the Elli conflict\n  rules Porsche out as the lane.\n- Jannik Schall, Micha Grueber: searched; **none found**. 1KOMMA5° is not in the sponsor table.\n\n## Screen-outs and things not claimed\n\n- **Valuation**: none disclosed after any round; the ~$2.4B figure on aggregator pages is not used.\n- **The row's Dealroom trigger** (€150M pre-IPO) is stale and is not the trigger here.\n- **Heartbeat AI's '500 MW of flexibility'** appears in secondary coverage but was not seen in a company statement\n  this session; the verified 40,000-systems figure (Feb 2025) is used instead.\n- **FE rosters in the sponsor table are thin** (Porsche's real partner list includes Mobil 1, TAG Heuer, NetApp,\n  TDK; Mahindra added Valvoline in 2026). None of those is a home-energy brand, so the lane call stands, but the\n  operator should check mahindraracing.com/partners before pitching.\n- **Deal size (€1.5-2.5M a year) is an ESTIMATE**, labelled as such.\n- **Score 70 is the floor, not a stretch**: capacity 12 reflects an undisclosed valuation and a soft German market;\n  ops fit 13 is a halo. What would move it up: a filed IPO prospectus, or a UK launch that makes London a home market.\n\n## Tier label\n\nThe engine's own thresholds map a score of 70 to **HOT** (85 HOT TOP TIER / 70 HOT / 55 WARM), so the\nribbon and the timing window both read HOT. Read it as the **bottom of HOT**: 70 is the floor, reached on a fresh\ncompany-announced trigger and an open lane, not on capacity (12/20) or a real workstream (ops fit 13/20, MODE B).\n\n## Since the row date (for the operator)\n\nSeason 12 closed at London (15-16 Aug 2026). No IPO filing or new equity round found through 6 Sep 2026.\n"
+}

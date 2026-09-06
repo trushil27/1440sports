@@ -1,0 +1,427 @@
+{
+ "run_date": "2026-06-25",
+ "signal_date": "2026-05-13",
+ "stem": "nebiusgroup",
+ "number": 179,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Nebius Group",
+  "signal_date": "2026-05-13",
+  "score": 74,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Arkady Volozh",
+  "role": "Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://nebius.com/newsroom/nebius-reports-first-quarter-2026-financial-results",
+  "industry_meta": "AI Cloud · GPU Compute Infrastructure · Amsterdam (Nasdaq: NBIS)",
+  "recommended_team": "Audi Revolut F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "quarterly results",
+  "key_facts": {
+   "funding": "Public company (Nasdaq: NBIS); $2B direct equity investment from Nvidia announced 11 Mar 2026",
+   "investors": "Nvidia ($2B equity, 11 Mar 2026); contracted backlog above $50B including Microsoft (up to $19.4B) and Meta ($27B)",
+   "revenue": "Q1 2026 revenue $399M, up 684% from $50.9M a year earlier (13 May 2026)",
+   "trigger": "Q1 2026 results on 13 May 2026: revenue $399M (+684%), contracted power above 3.5 GW, year-end guidance raised to over 4 GW, up to 1.2 GW secured for an owned AI factory in Pennsylvania",
+   "competitor_signal": "CoreWeave is Aston Martin Aramco's Official AI Cloud Computing Partner (May 2025); Core Scientific and TWG AI sit on Cadillac's inaugural roster; Oracle (Red Bull title), Microsoft (Mercedes, Alpine), Dell Technologies (McLaren), HP and IBM (Ferrari) hold the cloud and compute lanes; Hewlett Packard Enterprise departed Audi in the last twelve months",
+   "strategic_hook": "Amsterdam-headquartered; the final Dutch GP at Zandvoort on 23 Aug 2026 is its home race; Audi develops its power unit at Neuburg, the only F1 operational site in Germany, on virtual simulation",
+   "us_presence": "US data centres in New Jersey (up to 300 MW) and Kansas City; up to 1.2 GW of power and land secured in Pennsylvania for an owned AI factory",
+   "alumni_match": null,
+   "taxonomy_category": "C1",
+   "ops_fit_note": "MODE A: elastic GPU clusters with EU data residency for Neuburg power-unit simulation (combustion, energy-recovery and battery models, dyno correlation) and Hinwil machine-learning surrogates outside the aero-testing restrictions",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 15,
+   "capacity": 19,
+   "brand_fit": 13,
+   "urgency": 13,
+   "ops_fit": 14,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "volozh",
+    "founder & ceo",
+    "july 2024"
+   ],
+   "url": "https://nebius.com/newsroom/nebius-reports-first-quarter-2026-financial-results",
+   "excerpt": "Nebius Q1 2026 release and shareholder letter (13 May 2026): Arkady Volozh, founder and CEO, signs the quarterly letter to shareholders; Simply Wall St management profile: Chief Executive Officer and Director since July 2024; founder of Yandex (Wikipedia).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$399m",
+    "684%",
+    "$50.9m",
+    "3.5 gw",
+    "4 gw",
+    "1.2 gw",
+    "pennsylvania",
+    "13 may",
+    "quarterly results",
+    "first-quarter",
+    "first quarter"
+   ],
+   "url": "https://nebius.com/newsroom/nebius-reports-first-quarter-2026-financial-results",
+   "excerpt": "Nebius, 13 May 2026 (BusinessWire; 6-K exhibit 99.1): first-quarter revenue $399 million, up 684% from $50.9 million a year earlier; AI cloud 98% of revenue; contracted power capacity above 3.5 GW, ahead of the prior 3 GW year-end target, guidance raised to over 4 GW by end-2026; up to 1.2 GW of power and land secured for a new, owned AI factory in Pennsylvania.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$50b",
+    "$19.4b",
+    "$27b",
+    "$46b",
+    "microsoft",
+    "meta",
+    "backlog"
+   ],
+   "url": "https://www.fool.com/investing/2026/04/19/nebius-has-landed-46-billion-in-ai-cloud-deals-cou/",
+   "excerpt": "Motley Fool (19 Apr 2026) and Investing.com: Nebius has landed $46 billion of AI cloud deals with investment-grade customers, a Microsoft agreement worth up to $19.4 billion (Sep 2025) and a $27 billion Meta agreement (Dec 2025); total contracted backlog above $50 billion running through 2031 (company Q1 2026 commentary).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$2b",
+    "nvidia",
+    "11 march",
+    "11 mar"
+   ],
+   "url": "https://www.cnbc.com/2026/03/11/nebius-nvidia-ai-cloud.html",
+   "excerpt": "CNBC, 11 Mar 2026, and NVIDIA investor release 'NVIDIA and Nebius Partner to Scale Full-Stack AI Cloud': Nvidia invests $2 billion in Nebius as part of a strategic partnership; Nebius shares rose 16% on the news.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "amsterdam",
+    "nasdaq",
+    "nbis",
+    "full-stack"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260513568820/en/Nebius-reports-first-quarter-2026-financial-results",
+   "excerpt": "Company boilerplate in Nebius releases: Nebius Group N.V. (Nasdaq: NBIS), headquartered in Amsterdam, is an AI cloud company building the full-stack platform for developers and companies, from data and model training to production deployment.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "finland",
+    "france",
+    "iceland",
+    "london",
+    "paris",
+    "mäntsälä",
+    "mantsala",
+    "75 mw",
+    "lappeenranta",
+    "310 mw",
+    "europe"
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/nebius-expands-european-presence-announces-deployment-in-estonia-and-second-data-center-in-m%C3%A4nts%C3%A4l%C3%A4-finland/",
+   "excerpt": "Nebius newsroom and DCD: owned data centre at Mäntsälä, Finland, being tripled to 75 MW (up to 60,000 GPUs); a 310 MW AI factory announced at Lappeenranta, Finland, on 31 Mar 2026 with first capacity in 2027; leased capacity in London (Ark), Paris (Equinix), Iceland (Verne, Keflavik) and Israel; an Estonia deployment and a second Mäntsälä site announced Aug 2026 (after this brief's date).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "300 mw",
+    "new jersey",
+    "kansas city"
+   ],
+   "url": "https://nebius.com/newsroom/nebius-accelerates-us-expansion-adding-up-to-300-mw-capacity-at-new-data-center-in-new-jersey",
+   "excerpt": "Nebius newsroom: a phased New Jersey data centre expandable to 300 MW, first capacity from summer 2025; incremental capacity at the existing Kansas City colocation deployment.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "boroditsky",
+    "chief revenue officer",
+    "may 2025",
+    "bounds",
+    "chief marketing officer",
+    "alonso",
+    "chief financial officer",
+    "june 2025",
+    "irvine",
+    "5 august",
+    "august 2026"
+   ],
+   "url": "https://nebius.com/newsroom/nebius-appoints-lindsey-irvine-as-chief-marketing-officer",
+   "excerpt": "Leadership: Marc Boroditsky appointed Chief Revenue Officer, 28 May 2025 (Nebius release via TipRanks); Dado Alonso, Chief Financial Officer since June 2025 (Simply Wall St management profile); Daniel Bounds introduced by Nebius as Chief Marketing Officer (Nebius X post, Oct 2025; LinkedIn); Lindsey Irvine appointed Chief Marketing Officer on 5 Aug 2026 (Nebius newsroom), after this brief's date, with Bounds as outgoing CMO.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "3.6",
+    "echo",
+    "24 june",
+    "24 jun",
+    "aether"
+   ],
+   "url": "https://nebius.com/newsroom/nebius-ai-cloud-3-6-strengthens-developer-experience-and-governance-for-production-operations",
+   "excerpt": "Nebius, 24 Jun 2026: Nebius AI Cloud 3.6 'Aether' adds developer-experience, security, governance and storage improvements and introduces Nebius Echo, a natural-language agent for controlling cloud infrastructure from the console; the Nebius Builder Program opened in early preview.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "neuburg",
+    "hinwil",
+    "2022",
+    "virtual simulation",
+    "simulation",
+    "only",
+    "germany"
+   ],
+   "url": "https://www.audi-mediacenter.com/en/press-releases/development-of-the-audi-power-unit-for-formula-1-significant-milestones-and-goals-achieved-16078",
+   "excerpt": "Audi MediaCenter: Audi has developed its Formula 1 power unit at Neuburg an der Donau since spring 2022, the only operational location of an F1 team in Germany; virtual simulations and digital development tools are particularly important because the new power units could not be tested on track until early 2026; the race cars are developed and built at Hinwil.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "23 august",
+    "zandvoort",
+    "dutch gp",
+    "dutch grand prix",
+    "final",
+    "eight weeks"
+   ],
+   "url": "https://dutchgp.com/en/date-f1-dutch-gp-2026/",
+   "excerpt": "Dutch Grand Prix organisation and Wikipedia: the 2026 Formula 1 Heineken Dutch Grand Prix at Circuit Zandvoort on 23 August 2026 is the final scheduled edition before the race leaves the calendar.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "quarter in a week",
+    "swung"
+   ],
+   "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/nebius-the-50-billion-backlog-that-couldn-t-shield-a-25-percent-weekly/69711564",
+   "excerpt": "ad-hoc-news market coverage (2026): Nebius shares fell about 25% in a single week despite the $50 billion backlog; the stock has traded as much as 36% below its peak (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "coreweave",
+    "core scientific",
+    "twg ai",
+    "oracle",
+    "dell technologies",
+    "hp",
+    "ibm",
+    "hewlett packard enterprise",
+    "revolut",
+    "extreme networks",
+    "mphasis",
+    "commscope",
+    "dynatrace",
+    "confluent",
+    "google",
+    "cloud lane",
+    "no cloud"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Audi F1 Team — Audi (works parent), Revolut (title, joined 2026), Camozzi, Sabelt, JigSpace, Extreme Networks, Libertex, bp/Castrol, adidas, NinjaOne and others; Hewlett Packard Enterprise departed in the last 12 months; no cloud or GPU-compute partner. Aston Martin: CoreWeave. Cadillac: Core Scientific, TWG AI. Red Bull: Oracle (title). Mercedes and Alpine: Microsoft. McLaren: Dell Technologies, Google/Chrome, Groq, Cisco. Ferrari: HP, IBM. Racing Bulls: Dynatrace, Confluent. Haas: Mphasis, CommScope. Williams: VAST, Keeper, Airia, Brillio.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "us gp",
+    "united states gp"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: Dutch GP round 14 (Zandvoort, August), US GP (Austin) round 19 in late October, Las Vegas GP round 22 in November.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Nebius Group",
+  "industry_meta": "AI Cloud · GPU Compute Infrastructure",
+  "hq": "Amsterdam",
+  "ticker": "Nasdaq: NBIS ($2B Nvidia investment, Mar 2026)",
+  "deck": "Nebius Group, the Amsterdam-headquartered, Nasdaq-listed AI cloud that Nvidia backed with $2B in March, reported first-quarter revenue of $399M, up 684%, contracted power above 3.5 GW and a backlog past $50B on 13 May 2026, and secured up to 1.2 GW for an owned AI factory in Pennsylvania.",
+  "score": 74,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Audi Revolut F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Nebius reported on 13 May that first-quarter revenue reached $399M, up 684% from $50.9M a year earlier; contracted power passed 3.5 GW, year-end guidance rose above 4 GW, and up to 1.2 GW was secured for an owned AI factory in Pennsylvania. Behind it sits a backlog above $50B, including a Microsoft agreement worth up to $19.4B and a $27B Meta agreement, plus Nvidia's $2B equity investment of 11 March. On 24 June Nebius shipped AI Cloud 3.6 with Echo, a natural-language console agent: the cadence of a company selling to enterprises, not only labs.",
+  "the_case_p2": "The neocloud archetype is already priced on the grid: CoreWeave is Aston Martin Aramco's Official AI Cloud Computing Partner and Core Scientific sits on Cadillac's inaugural roster, while Oracle is Red Bull's title partner and Microsoft sits at Mercedes and Alpine. Nebius is the European in the group, headquartered in Amsterdam with sites in Finland, France, the UK and Iceland, and its home race, the final Dutch GP at Zandvoort, falls on 23 August.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Q1 print landed on 13 May and the Nvidia stake in March; brand budgets follow such quarters. The last Dutch GP at Zandvoort on 23 August is a one-time home stage for an Amsterdam company, eight weeks out, and teams close 2027 rosters in the fourth quarter.",
+  "why_team_label": "WHY AUDI REVOLUT F1 TEAM",
+  "why_team_para": "Audi is the newest works team, with the only F1 base in Germany: its power unit has been developed at Neuburg since 2022, where Audi says virtual simulation carries the programme because the new units could not run on track until 2026. Hewlett Packard Enterprise left the roster in the last twelve months and no cloud or GPU partner replaced it; Revolut holds the title, Extreme Networks the network lane. A European AI cloud with Finnish, French and UK sites answers a German manufacturer's data-residency rules.",
+  "value_section": true,
+  "value_section_label": "VALUE TO AUDI REVOLUT F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Neuburg's power-unit programme lives on simulation: combustion, energy-recovery and battery models, dyno correlation. Hinwil adds the aerodynamic and race-strategy load allowed outside the testing restrictions. Nebius supplies elastic GPU clusters with EU data residency, on demand, at the peaks. In return: Official AI Cloud Partner status, sidepod placement, Zandvoort and Austin hospitality for Nebius' enterprise buyers.",
+  "deal_arch_para": "Entry as Official AI Cloud Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, the first full seasons of Audi's works programme. Estimated $5-8M a year, part-payable in GPU capacity. Scope: sidepod placement, naming of the team's AI compute environment, Zandvoort and US-race hospitality, engineering content from Neuburg.",
+  "decision_maker_name": "Arkady Volozh",
+  "decision_maker_role": "Founder & CEO, Nebius Group",
+  "decision_maker_bio": "Volozh founded Yandex and has led Nebius since July 2024; he signs its largest commitments and its quarterly shareholder letters. Path: Marc Boroditsky, Chief Revenue Officer since May 2025; Daniel Bounds, Chief Marketing Officer; Dado Alonso, Chief Financial Officer since June 2025.",
+  "opening_angle_intro": "Lead with Zandvoort and the empty Audi compute lane.",
+  "opening_angle_quote": "&ldquo;Arkady, Nvidia put $2B behind you and Microsoft and Meta put $46B of contracts; the last Dutch GP is eight weeks away and Audi has no cloud partner. 25 minutes to see how a Zandvoort announcement would work?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "15",
+    "/ 20",
+    "Q1 on 13 May; Zandvoort on 23 Aug inside the window."
+   ],
+   [
+    "CAPACITY",
+    "19",
+    "/ 20",
+    "$50B+ backlog; $2B from Nvidia; Nasdaq-listed."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "Developer-facing B2B brand; European sovereignty story."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "Final Dutch GP is a one-time home stage; Q4 rosters."
+   ],
+   [
+    "OPS FIT",
+    "14",
+    "/ 20",
+    "MODE A: GPU clusters for Neuburg simulation."
+   ]
+  ],
+  "risks": [
+   [
+    "VOLATILE EQUITY",
+    "Nebius shares have swung by a quarter in a week; marketing budgets get cut when the tape turns.",
+    "Take part of the fee in compute capacity, which Nebius has in surplus as sites come online."
+   ],
+   [
+    "MICROSOFT ADJACENCY",
+    "Nebius' largest customer holds the cloud lane at Mercedes and Alpine; an Audi deal must not read as competing with a customer.",
+    "Audi's lane is empty; Nebius sells capacity, not a hyperscaler brand, and Microsoft stays a customer."
+   ]
+  ],
+  "bottom_line": "$399M of quarterly revenue up 684%, more than $50B of contracted backlog and $2B from Nvidia give Nebius the capacity and the motive; Audi's compute lane is empty and simulation-hungry, and the last Dutch GP on 23 August is a home stage that will not come again.",
+  "signals": [
+   "earnings_inflection",
+   "category_whitespace",
+   "home_race"
+  ],
+  "footer_company": "NEBIUS GROUP",
+  "footer_date": "25 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 13 May 2026 Nebius reported first-quarter revenue of $399M, up 684% from $50.9M a year earlier, with AI cloud 98% of the total. Contracted power passed 3.5 GW, ahead of the old year-end target, and guidance was raised to more than 4 GW by the end of 2026. The company also secured up to 1.2 GW of power and land for its first owned AI factory in Pennsylvania."
+    },
+    {
+     "label": "Capital behind it",
+     "text": "Nvidia announced a $2B direct equity investment in Nebius on 11 March 2026. The contracted backlog exceeds $50B, including a Microsoft agreement worth up to $19.4B and a $27B Meta agreement. A company with that order book buys brand to sell the enterprise tier, not to raise money."
+    },
+    {
+     "label": "Product cadence",
+     "text": "On 24 June Nebius released AI Cloud 3.6 'Aether' with Echo, a natural-language agent for running cloud infrastructure from the console, and opened a Builder Program. The audience Nebius now courts is the enterprise buyer and the CIO, the audience a Formula 1 paddock reaches."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The final Dutch GP at Zandvoort on 23 August 2026 is eight weeks from this brief: a one-time home stage for an Amsterdam company that will not recur. The US GP in Austin (late October) and the Las Vegas GP (November) follow, and teams close 2027 rosters in the fourth quarter."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Audi's 2026 roster carries Revolut as title partner, bp/Castrol in fuel and lubricants, Extreme Networks in networking, NinjaOne in IT management and a set of consumer and lifestyle brands. Hewlett Packard Enterprise, the previous compute-hardware partner, is listed as departed in the last twelve months. No cloud, GPU or AI-compute partner: Official AI Cloud Partner is a clean category on a works team still building its list."
+    },
+    {
+     "label": "A team that will use the product",
+     "text": "Audi has developed its power unit at Neuburg since 2022, the only Formula 1 operational site in Germany, and says virtual simulation carries the programme because the new units could not run on track until 2026. Hinwil builds the car. A GPU cloud is consumed in both places, in combustion and energy-recovery modelling, dyno correlation and machine-learning surrogates, not just displayed on the sidepod."
+    },
+    {
+     "label": "The European story",
+     "text": "Nebius is headquartered in Amsterdam with owned capacity in Finland, a 310 MW factory announced at Lappeenranta, and sites in Paris, London and Iceland. It positions itself as a European AI cloud with EU data residency, which a German manufacturer's procurement and data teams can accept where a US hyperscaler needs exceptions."
+    },
+    {
+     "label": "The home race",
+     "text": "Zandvoort on 23 August is the last Dutch Grand Prix on the calendar. An Amsterdam company announcing a Formula 1 partnership at its own home race, eight weeks after this brief, is a story the Dutch business press writes itself; a 2027 activation then runs through Austin and Las Vegas where Nebius' US customers sit."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Elastic GPU clusters for the simulation load at Neuburg (power-unit combustion, energy-recovery and battery models, dyno correlation) and at Hinwil (machine-learning surrogates, race-strategy and driver-in-loop simulation outside the aerodynamic-testing restrictions). Capacity is rented at peaks rather than bought, with EU data residency and Nebius' own storage and orchestration stack."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Nebius sells to enterprises, AI labs and hyperscalers; its guests at Zandvoort, Austin and Las Vegas are CIOs and infrastructure investors, the audience Audi's B2B partners want in the suite. A counterparty with more than $50B of contracted backlog and Nvidia on the cap table is a credible three-year partner."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "Engineering content from Neuburg on how a power unit is developed in simulation, co-produced with Nebius; a reference customer for Nebius' enterprise sales in German industry; a European AI-infrastructure story told on a European works team."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official AI Cloud Partner designation, sidepod placement, naming of the team's AI compute environment, hospitality at Zandvoort and the US rounds, and driver and engineering access for Nebius' customer events."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, is a direct rival."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific and TWG AI occupy the compute and AI lanes on the inaugural roster."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the cloud incumbent."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Sister team of Oracle Red Bull Racing; Dynatrace and Confluent hold the data-platform lane."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team · BWT Alpine F1 Team",
+     "reason": "Microsoft holds the cloud lane at both, and Microsoft is Nebius' largest customer."
+    },
+    {
+     "team": "McLaren F1 Team",
+     "reason": "Dell Technologies, Google and Groq cover compute, cloud and inference."
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "reason": "HP (title) and IBM cover compute hardware and cloud services."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Open but not chosen: a UK team with a US owner and no European or home-race angle for Nebius."
+    },
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "Open but not chosen: Mphasis and CommScope hold IT services and networking; a US-owned team without the European story."
+    }
+   ],
+   "ask": "A 25-minute call with Arkady Volozh before the Dutch GP to test a Zandvoort announcement window, confirm the Neuburg simulation workstream with Audi, and size an Official AI Cloud Partner entry against Audi's 2027 roster."
+  }
+ },
+ "note": "# Nebius Group → Audi Revolut F1 Team — verification log (N° 179, row of 25 Jun 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost for the desk row dated 25 Jun 2026 (batch 11). The row's\ntrigger was an aggregator tag set sourced from a Futurum earnings commentary; the real event inside the 90-day\nwindow is the **Q1 2026 results of 13 May 2026** (the Nvidia $2B investment of 11 Mar 2026 is 106 days before the\nrow and is used as context, not trigger). `signal_date` is 2026-05-13. The 24 Jun product release (AI Cloud 3.6)\nis the row's own-day event and is cited as cadence.\n\n**Sandbox limitation, stated plainly:** nebius.com, sec.gov, businesswire.com, audi-mediacenter.com and\nnewsroom sites were blocked by the egress proxy. Every claim was checked against the search summary of the\nprimary page named as the evidence URL. Treat VERIFIED as REPORTED until a person opens the link. Confidence\nMEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Arkady Volozh, Founder & CEO (CEO since July 2024) | VERIFIED | Q1 2026 release / shareholder letter; Simply Wall St |\n| Q1 2026 revenue $399M, +684% from $50.9M; contracted power >3.5 GW; guidance >4 GW; up to 1.2 GW Pennsylvania; 13 May | VERIFIED | nebius.com newsroom; BusinessWire; 6-K ex. 99.1 |\n| Backlog >$50B; Microsoft up to $19.4B; Meta $27B; $46B of investment-grade deals | REPORTED (company figures via Motley Fool, Investing.com) | fool.com 19 Apr 2026 |\n| Nvidia $2B equity investment, 11 Mar 2026 | VERIFIED | CNBC; NVIDIA investor release |\n| HQ Amsterdam, Nasdaq: NBIS | VERIFIED | release boilerplate |\n| European sites: Mäntsälä (to 75 MW), Lappeenranta 310 MW (31 Mar 2026), London, Paris, Iceland | VERIFIED / REPORTED | nebius.com newsroom; DCD |\n| US: New Jersey up to 300 MW; Kansas City | VERIFIED | nebius.com newsroom |\n| Boroditsky CRO (28 May 2025); Alonso CFO (Jun 2025); Bounds CMO (Nebius' own channel, Oct 2025); Irvine CMO from 5 Aug 2026 | VERIFIED / REPORTED | Nebius releases; Nebius X post; Simply Wall St |\n| AI Cloud 3.6 'Aether' + Echo, 24 Jun 2026 | VERIFIED | nebius.com newsroom |\n| Audi PU developed at Neuburg since 2022; only F1 site in Germany; simulation-led; Hinwil builds the car | VERIFIED | Audi MediaCenter |\n| Final Dutch GP, Zandvoort, 23 Aug 2026 | VERIFIED | dutchgp.com; Wikipedia |\n| Shares fell ~25% in a week (risk row) | REPORTED | ad-hoc-news |\n| Audi roster (Revolut title; HPE departed; no cloud partner); rivals per team | VERIFIED | sponsor table |\n| Dutch GP, US GP (Austin), Las Vegas GP on the 2026 calendar | VERIFIED | calendar table |\n\n## Decision path, dated honestly\n\nAs of the row date (25 Jun 2026) the sponsorship owner is **Volozh (CEO)** with **Boroditsky (CRO)** and\n**Bounds (CMO)** as the commercial path and **Alonso (CFO)** on budget. On **5 Aug 2026 Nebius appointed Lindsey\nIrvine as CMO** (Bounds outgoing); for a live approach today, Irvine is the marketing owner.\n\n## Leadership ties\n\nSearched Volozh, Boroditsky, Alonso and Nebius as a company for F1/FE/motorsport links: **none found**. Nebius is\nnot in the sponsor table.\n\n## Screen-outs and things not claimed\n\n- **Missouri gigawatt site**: reported by secondary sites only; left out.\n- **Net income / EBITDA margin** figures circulating for Q1 vary by outlet; left out.\n- **Deal size ($5-8M a year) is an ESTIMATE**, labelled as such.\n- **Team choice**: Williams and Haas are open lanes too; Audi was chosen for the European sovereignty story, the\n  simulation-led Neuburg programme and the departed HPE slot, and because Zandvoort gives a dated home-race hook.\n  The Racing Bulls lane is open on paper but sits inside the Red Bull group's Oracle relationship.\n- **Avride / Toloka / ClickHouse** stakes are not used; Avride's autonomous-driving work could read as competing\n  with a Volkswagen Group programme and is left out of the pitch.\n\n## Since the row date (for the operator)\n\n$775M first secured debt facility (17 Jul 2026); Q2 2026 results (12 Aug): AI cloud revenue $575M, ARR $3.0B, contracted\npower target raised to 5 GW; Lindsey Irvine appointed CMO (5 Aug); Estonia deployment and second Mäntsälä site (Aug).\nThe Dutch GP has now been run (23 Aug), so a live approach should re-anchor on Austin and Las Vegas.\n"
+}

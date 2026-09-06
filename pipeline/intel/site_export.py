@@ -306,10 +306,14 @@ def brief_entry(
     rv = {"status": "keep"}
     if not engine_row:
         rv = review_for(review or {}, card["date"], card["company"])
-        if rv == {"status": "keep"} and shown_date != card["date"]:
-            # Decisions taken from the app (case screen-outs) are keyed by the date the row
-            # is SHOWN on — the sweep date for swept rows — not the stored run date.
-            rv = review_for(review or {}, shown_date, card["company"])
+        if shown_date != card["date"]:
+            # A row can be reviewed under either date: its stored run date, or the date it is
+            # SHOWN on (sweep rows, and rows clamped to the engine's first day). Take the
+            # other lookup when this one found nothing, and always prefer a decision taken
+            # after a full case check — that is the most recent, best-sourced judgment.
+            alt = review_for(review or {}, shown_date, card["company"])
+            if rv == {"status": "keep"} or alt.get("reason_code") == "case_screen":
+                rv = alt if alt != {"status": "keep"} else rv
     entry = {
         **card,
         "key": f"{card['date']}|{company_norm(card['company'])}",
