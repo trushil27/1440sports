@@ -1,0 +1,194 @@
+{
+ "run_date": "2026-09-05",
+ "signal_date": "2026-08-12",
+ "stem": "formenergy",
+ "number": 129,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Form Energy",
+  "signal_date": "2026-08-12",
+  "score": 70,
+  "tier": "WARM",
+  "track": 1,
+  "person": "Mateo Jaramillo",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+  "industry_meta": "Energy Storage · Iron-Air 100-Hour Batteries · Somerville, Massachusetts / Weirton, West Virginia",
+  "recommended_team": "Andretti Formula E",
+  "recommended_series": "FE",
+  "timing_label": "WARM",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$750M Series G announced 12 Aug 2026, led by T. Rowe Price; total equity raised over $2B; Axios reports a $1.75B pre-money valuation, down from about $3B in October 2024",
+   "investors": "T. Rowe Price (lead); new: Sequoia Capital, Janus Henderson, Franklin Templeton, PEAK6; existing: Breakthrough Energy Ventures, Coatue, TPG Rise Climate, GE Vernova, Energy Impact Partners, Prelude Ventures, Engine Ventures, Capricorn, NGP, Gigascale, M&G Catalyst, Blindspot, Dustin Moskovitz and Cari Tuna",
+   "revenue": "",
+   "trigger": "$750M Series G announced 12 Aug 2026 to scale Form Factory 1 in Weirton, West Virginia and fund deployments; announced backlog up from roughly 20 GWh to 80 GWh",
+   "competitor_signal": "No energy-storage brand on any Formula E team roster in the sponsor table; Envision Group (owner of Envision Racing) owns the battery maker Envision AESC; TotalEnergies at DS Penske and Shell at Lola Yamaha ABT hold energy lanes; Google Cloud is a championship-level technology partner",
+   "strategic_hook": "300 MW / 30 GWh, 100-hour iron-air system for Google and Xcel Energy at Pine Island, Minnesota (Feb 2026; TechCrunch reports Google paid about $1B), 12 GWh for Crusoe's AI data centres (Mar 2026); Axios and TechCrunch report a listing being prepared for 2027",
+   "us_presence": "HQ Somerville, Massachusetts; Form Factory 1 in Weirton, West Virginia (550,000 sq ft on a former steel-mill site, about 400 employees, planned 500 MW a year by 2028); first commercial system at Cambridge, Minnesota",
+   "alumni_match": "",
+   "taxonomy_category": "D1",
+   "ops_fit_note": "MODE B halo: a 100-hour iron-air battery has no race-day role; value is the US utility, regulator and hyperscaler audience at Austin and Miami in a pre-IPO window"
+  },
+  "score_breakdown": {
+   "timing": 15,
+   "capacity": 14,
+   "brand_fit": 15,
+   "urgency": 14,
+   "ops_fit": 12,
+   "ops_fit_subscores": {
+    "product_to_need": 2,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 3
+   }
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": ["jaramillo", "wiley", "govil", "sloan", "powerwall", "tesla", "no chief marketing", "president and coo", "president & coo"],
+   "url": "https://formenergy.com/about/",
+   "excerpt": "Form Energy leadership page and team pages (search summaries; domain egress-blocked): Mateo Jaramillo, Co-Founder and CEO, previously at Tesla's energy division where he helped launch Powerwall (Boston Globe); Ted Wiley, Co-Founder, President and Chief Operating Officer (leadership page as of 17 Aug 2026; Crunchbase; The Org). Company announcements: Navneet Govil appointed Chief Financial Officer (formerly CFO of SoftBank Investment Advisers) and Wes Sloan appointed Chief Operating Officer from Panasonic Energy North America. No chief marketing officer is listed; the company lists a Vice President of Communications and Corporate Affairs.",
+   "method": "manual"
+  },
+  {
+   "needles": ["$750m", "series g", "12 aug", "12 august", "t. rowe", "rowe price", "sequoia", "janus", "franklin templeton", "peak6", "$2b", "ge vernova", "coatue", "tpg", "80 gwh", "20 gwh", "backlog", "order book", "funding round", "weirton", "prelude", "engine ventures", "capricorn", "moskovitz", "gigascale", "energy impact", "ngp", "m&g", "blindspot"],
+   "url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+   "method": "manual"
+  },
+  {
+   "needles": ["$1.75b", "$3b", "down round", "down from", "october 2024", "pre-money", "listing", "2027", "ipo", "axios", "public"],
+   "url": "https://www.axios.com/pro/climate-deals/2026/08/12/form-energy-valuation-series-g-lower",
+   "excerpt": "Axios Pro Climate Deals, 12 Aug 2026 (search summary): Form Energy raised the Series G at a $1.75 billion pre-money valuation, down from about $3 billion pre-money in October 2024. Axios (28 Jan 2026) and TechCrunch (26 Feb 2026) report the company preparing an initial public offering in 2027; Latitude Media, Aug 2026: 'Is Form ready for the public market?'. Reported, not company-confirmed.",
+   "method": "manual"
+  },
+  {
+   "needles": ["30 gwh", "300 mw", "pine island", "xcel", "google", "$1b", "1.9 gw", "2028", "100-hour", "100 hours", "largest battery"],
+   "url": "https://techcrunch.com/2026/02/26/google-paid-startup-form-energy-1b-for-its-massive-100-hour-battery/",
+   "excerpt": "TechCrunch, 24 and 26 Feb 2026, Energy-Storage.News 25 Feb 2026, Xcel Energy newsroom (search summaries): Google's 1.9 GW clean-energy agreement with Xcel Energy for its Pine Island, Minnesota data centre includes a 300 MW / 30 GWh Form Energy iron-air system able to run at full output for 100 hours, the largest battery system by energy capacity announced to date; 1.4 GW of wind and 200 MW of solar alongside; modules built at Form Factory 1 in Weirton; installations online in phases 2028-2031. TechCrunch reports Google paid Form Energy approximately $1 billion (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": ["crusoe", "12 gwh", "ceraweek"],
+   "url": "https://www.energy-storage.news/form-energy-signs-12gwh-agreement-to-supply-multi-day-iron-air-batteries-to-new-us-ai-data-centres/",
+   "excerpt": "Energy-Storage.News and Renewable Energy World, 26 Mar 2026 (search summaries): Form Energy signed a 12 GWh strategic capacity agreement with AI data-centre developer Crusoe, announced at CERAWeek 2026 in Houston; reserved volume, pricing and delivery terms from 2027; all systems built at Form Factory 1, Weirton.",
+   "method": "manual"
+  },
+  {
+   "needles": ["550,000", "steel", "400 people", "400 employees", "500 mw", "850,000", "750 employees", "factory 1", "form factory", "cambridge", "great river", "1.5 mw", "150 mwh", "early 2027"],
+   "url": "https://formenergy.com/form-factory-1/",
+   "excerpt": "Form Energy Form Factory 1 page, WTOV9 and Weirton press (search summaries): Form Factory 1 in Weirton, West Virginia is a 550,000-square-foot plant built in about a year on the site of a former steel mill; nearly 400 employees; expansion to around 850,000 square feet, more than 750 employees and at least 500 MW of batteries a year by 2028; commercial production and initial shipments on track for early 2027. First commercial installation: Great River Energy's 1.5 MW, 100-hour Cambridge Energy Storage Project in Minnesota.",
+   "method": "manual"
+  },
+  {
+   "needles": ["somerville", "2017", "mit", "chiang", "woodford", "ferrara", "eighty four"],
+   "url": "https://en.wikipedia.org/wiki/Form_Energy",
+   "excerpt": "Wikipedia / Crunchbase / MIT News (search summaries): Form Energy founded in 2017, headquartered in Somerville, Massachusetts; founders Mateo Jaramillo, Yet-Ming Chiang, Ted Wiley, William Woodford and Marco Ferrara; R&D in Somerville, advanced manufacturing team in Eighty Four, Pennsylvania.",
+   "method": "manual"
+  },
+  {
+   "needles": ["indianapolis", "twg motorsports", "cadillac", "nissan powertrain", "gen4", "dennis", "drugovich", "american team", "season 13"],
+   "url": "https://andrettiglobal.com/news/2026/07/andretti-formula-e-to-partner-with-nissan-for-formula-e-gen4-era/",
+   "excerpt": "Andretti Global, Jul 2026 (search summary; domain egress-blocked): Andretti Formula E will run Nissan powertrains as a customer team for the GEN4 era under a multi-year agreement from Season 13; Jake Dennis continues, joined by Felipe Drugovich. Andretti Global is based at 8278 Georgetown Road, Indianapolis; its parent TWG Motorsports also operates the Cadillac Formula 1 team with General Motors from 2026 (Wikipedia / The Race / twgmotorsports.com).",
+   "method": "manual"
+  },
+  {
+   "needles": ["ds automobiles", "withdraw", "own powertrain", "registered", "unregistered", "penske"],
+   "url": "https://www.motorsport.com/formula-e/news/how-penske-could-stay-in-formula-e-after-ds-exit/10818280/",
+   "excerpt": "Motorsport.com, 2026 (search summary): DS Automobiles announced in March 2026 that it withdraws from Formula E at the end of the 2025-26 season rather than invest in a GEN4 powertrain; Penske intends to continue with its own powertrain but at the time of the report had not yet registered with the FIA and Formula E for Season 13.",
+   "method": "manual"
+  },
+  {
+   "needles": ["twg ai", "quest global", "crowe", "reflo", "envision group", "envision aesc", "aesc", "totalenergies", "shell", "castrol", "tdk", "google cloud", "sponsor table", "roster", "energy lane", "lane is open", "no energy", "energy or storage", "championship"],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §1-2 + Andretti Global / Formula E, Sep 2026)",
+   "excerpt": "Sponsor table: Andretti Formula E — TWG AI (AI, primary partner), Quest Global (engineering services), Crowe UK (audit/advisory), Reflo (sustainable sportswear), TWG Motorsports (parent), Nissan powertrain from Season 13; no energy, storage or utility brand. Championship level: Google Cloud (cloud / technology, multi-year). Envision Racing — Envision Group (title/parent; group includes wind-turbine maker Envision Energy and battery maker Envision AESC). DS Penske — DS Automobiles, Penske Autosport, TotalEnergies (lubricants), Mouser, TTI, Molex, KYOCERA AVX. Lola Yamaha ABT — Shell. Jaguar TCS Racing — TCS, Castrol. Porsche — TDK named official technology partner in team_profiles. Nissan, Mahindra, Cupra Kiro and Citroën carry no energy partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": ["austin", "miami", "jeddah", "18 dec", "18 december", "6 feb", "6 february", "20 feb", "20 february", "circuit of the americas", "e-prix"],
+   "url": "seeds/calendar_fe.json (Formula E Season 13 calendar, announced 23 Jun 2026)",
+   "excerpt": "Formula E Season 13 calendar table: GEN4 opener Jeddah E-Prix double-header 18-19 Dec 2026; Mexico City 16 Jan 2027; Austin E-Prix at Circuit of The Americas 6 Feb 2027 (new venue); Miami E-Prix 20 Feb 2027; London at Brands Hatch 29-30 May 2027; Tokyo finale 24-25 Jul 2027.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Form Energy",
+  "industry_meta": "Energy Storage · Iron-Air 100-Hour Batteries",
+  "hq": "Somerville, Massachusetts (factory in Weirton, West Virginia)",
+  "ticker": "Private ($750M Series G, Aug 2026; $1.75B pre-money reported)",
+  "deck": "Form Energy, the Somerville iron-air battery maker building Google's 30 GWh, 100-hour system in Minnesota, closed a $750M Series G led by T. Rowe Price on 12 August 2026, taking total equity past $2B as its announced backlog jumped from roughly 20 GWh to 80 GWh.",
+  "score": 70,
+  "timing_label": "WARM",
+  "series_label": "FE",
+  "team_label": "Andretti Formula E",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Form announced the $750M Series G on 12 August, led by T. Rowe Price, with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 new to the register. Total equity passes $2B; proceeds scale Form Factory 1 in Weirton, West Virginia. Axios reports the round priced at $1.75B pre-money, down from about $3B in October 2024. The order book explains the investors' patience: an announced backlog of 80 GWh, led by the 300 MW / 30 GWh Google and Xcel Energy system in Minnesota, and 12 GWh for Crusoe's AI data centres.",
+  "the_case_p2": "Weirton is the story a sponsor buys: a 550,000-square-foot battery plant on a former steel-mill site, around 400 people and a planned 500 MW a year by 2028, shipping 100-hour batteries to utilities and hyperscalers. Axios and TechCrunch report a listing being prepared for 2027. A down round is a reason to build the brand, not to hide: the next four quarters decide whether Form is priced as a manufacturer or a technology bet.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series G closed on 12 August, and a reported 2027 listing puts brand-building inside the next four quarters. Formula E's GEN4 era opens in Jeddah on 18 December; the new Austin E-Prix on 6 February 2027 and Miami on 20 February give an American storage brand two home rounds before any roadshow.",
+  "why_team_label": "WHY ANDRETTI FORMULA E",
+  "why_team_para": "Andretti is the American team on the grid, run from Indianapolis; parent TWG Motorsports also operates the Cadillac F1 team. The roster is TWG AI, Quest Global, Crowe UK and Reflo; the sponsor table shows no energy or storage brand, so the lane is open. Google Cloud is the championship's technology partner and Google is Form's anchor customer: the ecosystem already overlaps. For a utility-and-hyperscaler brand, an American car at Austin and Miami is the right stage.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+  "value_mode": "B",
+  "value_content": "MODE B - halo, said plainly: a 100-hour iron-air battery has no race-day role. The mechanics are commercial. Official Energy Storage Partner status and sidepod placement on the American car; Austin and Miami hospitality for utility executives, regulators and hyperscaler energy buyers; Weirton factory content pairing a steel-town rebuild with the team's GEN4 debut; and pre-listing visibility to the capital-markets audience already in the Formula E paddock.",
+  "deal_arch_para": "Entry as Official Energy Storage Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15 (2026/27 to 2028/29), bridging the reported 2027 listing and the first Google and Crusoe deliveries. Estimated $1.5-2.5M a year. Scope: sidepod branding, Austin and Miami hospitality, factory and grid content, driver visits to Weirton, and a utility-customer programme through TWG Motorsports.",
+  "decision_maker_name": "Mateo Jaramillo",
+  "decision_maker_role": "Co-Founder & CEO, Form Energy",
+  "decision_maker_bio": "Jaramillo co-founded Form in 2017 after helping launch Tesla's Powerwall and fronts every raise. Path: Ted Wiley, Co-Founder, President and COO; Navneet Govil, CFO, formerly of SoftBank Investment Advisers; Wes Sloan, incoming COO from Panasonic Energy. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with Weirton and the listing.",
+  "opening_angle_quote": "&ldquo;Mateo, you have 80 GWh of backlog, a steel-town factory and a listing to price. The American Formula E team races in Austin and Miami in February with an open energy lane. 25 minutes to see what a three-season seat costs?&rdquo;",
+  "score_cells": [
+   ["TIMING", "15", "/ 20", "Round closed 12 Aug; GEN4 opener in December, Austin and Miami in February."],
+   ["CAPACITY", "14", "/ 20", "$750M raised, over $2B in total; down round, proceeds go to Weirton."],
+   ["BRAND FIT", "15", "/ 20", "American reindustrialisation, Google and AI power; strong adjacency."],
+   ["URGENCY", "14", "/ 20", "Reported 2027 listing is the trigger; not company-confirmed."],
+   ["OPS FIT", "12", "/ 20", "MODE B: no race-day use; open lane, US rounds, ecosystem overlap."]
+  ],
+  "risks": [
+   ["DOWN ROUND, FACTORY MONEY", "Series G priced at $1.75B pre-money against about $3B in 2024; proceeds are earmarked for Weirton and deployments.", "Price the entry under $3M a year and tie it to the listing narrative the board is already funding."],
+   ["HALO, NOT WORKSTREAM", "Iron-air batteries have no role in the garage; value rests on audience, content and timing.", "Measure renewal on utility and hyperscaler meetings at Austin and Miami, not on lap time."]
+  ],
+  "bottom_line": "$750M closed on 12 August, an 80 GWh order book led by Google and Crusoe, a West Virginia factory and a reported 2027 listing: Form Energy needs a national brand within the year and has the story to carry one. Andretti's energy lane is open and two US E-Prix fall in February.",
+  "signals": ["funding_event", "ipo_window", "us_stage"],
+  "footer_company": "FORM ENERGY",
+  "footer_date": "5 SEP 2026",
+  "extended": {
+   "why_now": [
+    {"label": "Trigger", "text": "Form Energy announced a $750M Series G on 12 August 2026, led by T. Rowe Price, with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 joining existing investors including Breakthrough Energy Ventures, Coatue, TPG Rise Climate and GE Vernova. Total equity raised now exceeds $2B. The proceeds scale Form Factory 1 in Weirton, West Virginia, and fund commercial deployments."},
+    {"label": "A down round, read honestly", "text": "Axios reports the round priced at $1.75B pre-money, down from about $3B in October 2024. That is a reason to build the brand rather than a reason to pass: the investors who took the lower price are the ones who want the company recognised as an industrial manufacturer before it lists. Axios and TechCrunch report a listing being prepared for 2027; the brief treats that as reported, not confirmed."},
+    {"label": "The order book", "text": "Announced backlog rose from roughly 20 GWh to 80 GWh. The anchor is the 300 MW / 30 GWh Google and Xcel Energy system at Pine Island, Minnesota, announced in February 2026 as the largest battery system by energy capacity yet announced, with TechCrunch reporting Google paid about $1B. Crusoe signed for 12 GWh at CERAWeek in March 2026 for its AI data centres. Deliveries from Weirton begin in 2027."},
+    {"label": "Calendar window", "text": "Formula E's GEN4 era opens with the Jeddah double-header on 18-19 December 2026. The new Austin E-Prix at Circuit of The Americas on 6 February 2027 and the Miami E-Prix on 20 February 2027 put an American brand in front of a US audience twice in a month, before any listing roadshow."}
+   ],
+   "why_team": [
+    {"label": "The open lane", "text": "Andretti Formula E's roster is TWG AI as primary and AI partner, Quest Global for engineering services, Crowe UK for audit and advisory, Reflo for sustainable sportswear and TWG Motorsports as owner, with Nissan powertrains from Season 13. The sponsor table shows no energy, storage or utility brand on the team: Official Energy Storage Partner is a clean category at a team-partner price."},
+    {"label": "The American team", "text": "Andretti is run from Indianapolis, the only US-owned team on the Formula E grid, and its parent TWG Motorsports also operates the Cadillac Formula 1 team with General Motors. A company whose story is a West Virginia steel town rebuilt around batteries belongs on the American car."},
+    {"label": "Ecosystem overlap", "text": "Google Cloud is the championship's technology partner and Google is Form's anchor customer through the Pine Island system. Crusoe, Form's 12 GWh data-centre customer, is itself courting the grid. The paddock Form would join already contains the customers it sells to."},
+    {"label": "A story the team can tell", "text": "Formula E's on-track narrative is energy management. Form's product stores power for a hundred hours to carry a grid through days without wind or sun. The contrast, a forty-five-minute race against a four-day battery, is a content line the team can run all season without inventing a technical link that does not exist."}
+   ],
+   "value": [
+    {"label": "Honest MODE B halo", "text": "An iron-air battery is a grid asset; it will not sit in the garage or power the pit lane. The partnership's value is commercial and should be sold that way: an American storage brand on an American car in a championship built on electrification, in the year before a reported listing."},
+    {"label": "Commercial lift for the team", "text": "Form brings the guest list the team's other partners want to meet: utility executives, state regulators, hyperscaler energy buyers and the bankers around a 2027 listing. Hospitality at Austin and Miami, and a utility-customer programme through TWG Motorsports, turn those guests into pipeline for both sides."},
+    {"label": "Content and ecosystem", "text": "Factory-floor content from Weirton, driver visits to a steel-town plant, co-produced explainers on multi-day storage against race-day energy recovery, and joint activations with the championship's Google Cloud programme where Formula E allows."},
+    {"label": "What the team gives back", "text": "Official Energy Storage Partner designation, sidepod branding, Austin and Miami hospitality, driver and engineering access for Form's channels, and visibility to the capital-markets audience that follows the series."}
+   ],
+   "ruled_out": [
+    {"team": "DS Penske", "reason": "DS Automobiles leaves Formula E at the end of Season 12 and Penske's Season 13 entry with its own GEN4 powertrain was not yet registered at the last report; TotalEnergies holds the energy lane in any case."},
+    {"team": "Envision Racing", "reason": "The team's owner, Envision Group, includes the battery maker Envision AESC and the wind and storage business Envision Energy: a storage brand on that car competes with the owner. Paysafe became title partner on 14 August 2026."},
+    {"team": "Lola Yamaha ABT Formula E Team", "reason": "Shell is the energy partner."},
+    {"team": "Jaguar TCS Racing", "reason": "Castrol occupies the energy and lubricants lane; the team's open categories are listed as none."},
+    {"team": "Porsche Formula E Team", "reason": "TDK, a battery and component maker, is the official technology partner; a storage brand would clash."},
+    {"team": "Nissan Formula E Team · Mahindra Racing · Cupra Kiro · Citroën Racing", "reason": "Open but not chosen: manufacturer entries with no US base; none offers the American audience or the ecosystem overlap that Andretti does."}
+   ],
+   "ask": "A 25-minute call with Mateo Jaramillo before the Jeddah opener to confirm the Series G terms and the listing timetable on the record, agree an Austin E-Prix announcement window, and size an Official Energy Storage Partner entry at Andretti Formula E for Seasons 13-15."
+  }
+ },
+ "note": "# Form Energy → Andretti Formula E — verification log (N° 129, 5 Sep 2026)\n\nBuilt in-session at no API cost with Claude as scanner, verifier and writer through the\npipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page\nrender ran as code. `formenergy.run.json` is the case record.\n\n**Sandbox limitation, stated plainly:** direct fetches of formenergy.com, axios.com,\ntechcrunch.com, energy-storage.news, andrettiglobal.com and motorsport.com were blocked by the\negress proxy. Every claim below was checked against the search summary of the primary page named\nas the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link.\nConfidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, corrected\n\nThe desk row carried '~$4.3B (PitchBook estimate)' and a trigger date of 11 Aug. Both are wrong:\nthe company release is dated **12 Aug 2026**, and Axios reports the Series G priced at **$1.75B\npre-money, down from about $3B in October 2024** — a down round. The brief says so in the deck,\nthe case, the first risk row and the app page. The '2027 listing' is reported by Axios and\nTechCrunch, not company-confirmed, and is labelled reported wherever it appears.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Mateo Jaramillo, Co-Founder & CEO; ex-Tesla energy (Powerwall) | VERIFIED | formenergy.com/team (summary); Boston Globe |\n| Ted Wiley, Co-Founder, President & COO; Navneet Govil CFO; Wes Sloan COO (new); no CMO listed | VERIFIED | formenergy.com/about (summary, 17 Aug 2026); company announcements; Crunchbase / The Org |\n| $750M Series G, 12 Aug 2026, T. Rowe Price lead, investor list, >$2B total equity, backlog 20→80 GWh | VERIFIED | Form Energy release (summary); TechCrunch; Mercom; Boston Globe |\n| $1.75B pre-money, down from ~$3B (Oct 2024) | REPORTED | Axios Pro, 12 Aug 2026 |\n| 2027 listing being prepared | REPORTED | Axios 28 Jan 2026; TechCrunch 26 Feb 2026 |\n| 300 MW / 30 GWh Google–Xcel system, Pine Island MN; 1.9 GW deal; phases 2028-31 | VERIFIED | TechCrunch 24 Feb 2026; Energy-Storage.News; Xcel newsroom (summaries) |\n| Google paid ~$1B | REPORTED | TechCrunch 26 Feb 2026 |\n| Crusoe 12 GWh agreement, CERAWeek Mar 2026, deliveries from 2027 | VERIFIED | Energy-Storage.News / Renewable Energy World (summaries) |\n| Weirton: 550,000 sq ft, former steel site, ~400 staff, ≥500 MW/yr by 2028, shipments early 2027 | VERIFIED | formenergy.com/form-factory-1 (summary); WTOV9 |\n| HQ Somerville; founded 2017; founders | VERIFIED | Wikipedia; Crunchbase; MIT News |\n| Andretti: Indianapolis; TWG Motorsports also operates Cadillac F1; Nissan GEN4; Dennis + Drugovich | VERIFIED | andrettiglobal.com (summary); Wikipedia; The Race |\n| DS Automobiles exit after Season 12; Penske entry unregistered at last report | REPORTED | Motorsport.com |\n| Andretti roster; Google Cloud championship partner; Envision Group, TotalEnergies, Shell, Castrol lanes | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Jeddah 18-19 Dec 2026; Austin 6 Feb 2027; Miami 20 Feb 2027 | VERIFIED | calendar table (`seeds/calendar_fe.json`) |\n\n## Screen-outs and things not claimed\n\n- **No motorsport tie found** for Jaramillo, Wiley, Govil or Sloan after three searches (beware the\n  'Phorm Energy' NASCAR and 'Monster Energy' name collisions); `leadership_ties` is empty.\n- **No revenue figure** is used: none is public.\n- **COO** is stated both ways because the sources conflict: the leadership page (17 Aug 2026) lists\n  Wiley as President and COO; a company announcement names Wes Sloan as incoming COO.\n- **Deal size ($1.5-2.5M a year) is an ESTIMATE**, labelled as such.\n- **DS Penske** (the desk row's team) is ruled out transparently: DS leaves after Season 12 and\n  Penske's Season 13 entry was unregistered at the last report.\n- **Andretti is also the team recommended for N° 128 Antora Energy** the same day. That is not a\n  placement; the desk judges whitespace against the sponsor table only. Both are honest MODE B\n  halos with different audiences (Antora: industrial heat and hyperscalers; Form: utilities,\n  regulators and a listing).\n- **Crusoe** (N° 121) is named as a customer only; it holds no grid seat.\n- **Score 70, not the desk row's 74**: down round, factory-earmarked capital, MODE B, listing only reported.\n"
+}

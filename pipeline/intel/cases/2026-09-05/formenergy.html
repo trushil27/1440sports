@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Form Energy</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "FORM ENERGY · 5 SEP 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 129</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 129 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Form Energy</h1>
+  <div class="classline">Energy Storage · Iron-Air 100-Hour Batteries · Somerville, Massachusetts (factory in Weirton, West Virginia) · Private ($750M Series G, Aug 2026; $1.75B pre-money reported)</div>
+
+  <div class="lede">Form Energy, the Somerville iron-air battery maker building Google's 30 GWh, 100-hour system in Minnesota, closed a $750M Series G led by T. Rowe Price on 12 August 2026, taking total equity past $2B as its announced backlog jumped from roughly 20 GWh to 80 GWh.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">70</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Andretti Formula E</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Form announced the $750M Series G on 12 August, led by T. Rowe Price, with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 new to the register. Total equity passes $2B; proceeds scale Form Factory 1 in Weirton, West Virginia. Axios reports the round priced at $1.75B pre-money, down from about $3B in October 2024. The order book explains the investors' patience: an announced backlog of 80 GWh, led by the 300 MW / 30 GWh Google and Xcel Energy system in Minnesota, and 12 GWh for Crusoe's AI data centres.</p>
+<p>Weirton is the story a sponsor buys: a 550,000-square-foot battery plant on a former steel-mill site, around 400 people and a planned 500 MW a year by 2028, shipping 100-hour batteries to utilities and hyperscalers. Axios and TechCrunch report a listing being prepared for 2027. A down round is a reason to build the brand, not to hide: the next four quarters decide whether Form is priced as a manufacturer or a technology bet.</p>
+  <h2>Why Now</h2>
+  <p>The Series G closed on 12 August, and a reported 2027 listing puts brand-building inside the next four quarters. Formula E's GEN4 era opens in Jeddah on 18 December; the new Austin E-Prix on 6 February 2027 and Miami on 20 February give an American storage brand two home rounds before any roadshow.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$750M</div><div class="pfk">$750M Series G announced 12 Aug 2026, led by T. Rowe Price; total equity raised over $2B; Axios reports a $…</div></div>
+    <div class="pf"><div class="pfv">$2B</div><div class="pfk">Rowe Price on 12 August 2026, taking total equity past $2B as its announced backlog jumped from roughly 20…</div></div>
+    <div class="pf"><div class="pfv">$1.75B</div><div class="pfk">Axios reports the round priced at $1.75B pre-money, down from about $3B in October 2024.</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (sponsor table; 10 of 35 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Andretti Formula E<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Lola Yamaha ABT Formula E Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Shell</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Citroën Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Cupra Kiro</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">$750M closed on 12 August, an 80 GWh order book led by Google and Crusoe, a West Virginia factory and a reported 2027 listing: Form Energy needs a national brand within the year and has the story to carry one. Andretti's energy lane is open and two US E-Prix fall in February.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">ipo window</span><span class="flag">us stage</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 129</span>
+  </div>
+
+  <h2>WHY ANDRETTI FORMULA E</h2>
+  <p>Andretti is the American team on the grid, run from Indianapolis; parent TWG Motorsports also operates the Cadillac F1 team. The roster is TWG AI, Quest Global, Crowe UK and Reflo; the sponsor table shows no energy or storage brand, so the lane is open. Google Cloud is the championship's technology partner and Google is Form's anchor customer: the ecosystem already overlaps. For a utility-and-hyperscaler brand, an American car at Austin and Miami is the right stage.</p>
+
+  <h2>VALUE TO ANDRETTI FORMULA E &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B - halo, said plainly: a 100-hour iron-air battery has no race-day role. The mechanics are commercial. Official Energy Storage Partner status and sidepod placement on the American car; Austin and Miami hospitality for utility executives, regulators and hyperscaler energy buyers; Weirton factory content pairing a steel-town rebuild with the team's GEN4 debut; and pre-listing visibility to the capital-markets audience already in the Formula E paddock.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official Energy Storage Partner. <b class="hl">THREE YEARS</b>, Seasons 13-15 (2026/27 to 2028/29), bridging the reported 2027 listing and the first Google and Crusoe deliveries. Estimated $1.5-2.5M a year. Scope: sidepod branding, Austin and Miami hospitality, factory and grid content, driver visits to Weirton, and a utility-customer programme through TWG Motorsports.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Mateo Jaramillo</div>
+        <div class="role">Co-Founder &amp; CEO, Form Energy · <span class="vtag">verified</span></div>
+        <div class="bio">Jaramillo co-founded Form in 2017 after helping launch Tesla's Powerwall and fronts every raise. Path: Ted Wiley, Co-Founder, President and COO; Navneet Govil, CFO, formerly of SoftBank Investment Advisers; Wes Sloan, incoming COO from Panasonic Energy. No chief marketing officer is listed.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with Weirton and the listing.</div>      <div class="quote">“Mateo, you have 80 GWh of backlog, a steel-town factory and a listing to price. The American Formula E team races in Austin and Miami in February with an open energy lane. 25 minutes to see what a three-season seat costs?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Round closed 12 Aug; GEN4 opener in December, Austin and Miami in February.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">$750M raised, over $2B in total; down round, proceeds go to Weirton.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">American reindustrialisation, Google and AI power; strong adjacency.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Reported 2027 listing is the trigger; not company-confirmed.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">MODE B: no race-day use; open lane, US rounds, ecosystem overlap.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">DOWN ROUND, FACTORY MONEY</span> &nbsp;<span class="rc">Series G priced at $1.75B pre-money against about $3B in 2024; proceeds are earmarked for Weirton and deployments. <b>Counter:</b> Price the entry under $3M a year and tie it to the listing narrative the board is already funding.</span></div>
+  <div class="risk"><span class="rt">HALO, NOT WORKSTREAM</span> &nbsp;<span class="rc">Iron-air batteries have no role in the garage; value rests on audience, content and timing. <b>Counter:</b> Measure renewal on utility and hyperscaler meetings at Austin and Miami, not on lap time.</span></div>
+
+  <h2>Sources <span class="panelnote">— 16 of 16 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://formenergy.com/about/</li><li>https://formenergy.com/form-energy-secures-750m-in-series-g-financing/</li><li>https://www.axios.com/pro/climate-deals/2026/08/12/form-energy-valuation-series-g-lower</li><li>https://techcrunch.com/2026/02/26/google-paid-startup-form-energy-1b-for-its-massive-100-hour-battery/</li>  </ul>
+</div>
+</body>
+</html>
