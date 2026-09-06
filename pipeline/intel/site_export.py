@@ -625,7 +625,44 @@ def write_site(data: dict[str, Any], out_dir: Path, src: Path = SITE_SRC) -> Pat
         .replace(DATA_TOKEN, payload.replace("</", "<\\/"), 1)
     )
     (out_dir / "index.html").write_text(html, encoding="utf-8")
+    _write_brief_pages(data, out_dir)
     return out_dir / "index.html"
+
+
+def _write_brief_pages(data: dict[str, Any], out_dir: Path) -> int:
+    """A real page per brief at ``brief/<n>/index.html``.
+
+    The emailed link used to be ``…/#/brief/127`` — a hash fragment, which reads like an
+    internal anchor rather than an address (operator, 6 Sep 2026). Each full case already
+    renders a complete, self-contained, brand-styled page, so it is written out as its own
+    directory and the link becomes ``…/brief/127/``. Static, no server rewrite, works the
+    same on GitHub Pages, Netlify or anywhere else."""
+    written = 0
+    for e in data.get("briefs") or []:
+        page, number = e.get("page_html"), e.get("number")
+        if not page or number is None or int(number) < 0:
+            continue
+        folder = out_dir / "brief" / str(number)
+        folder.mkdir(parents=True, exist_ok=True)
+        nav = "font-family:'Poppins',Arial,sans-serif;font-size:11px;letter-spacing:.16em;"
+        nav += "text-transform:uppercase;padding:14px 22px;border-bottom:1px solid #ddd9d0;"
+        nav += "background:#fbfaf7"
+        link = 'style="color:#191a48;text-decoration:none"'
+        pdf = ""
+        if e.get("pdf_url"):
+            pdf = (
+                " &nbsp;\u00b7&nbsp; "
+                f'<a href="../../{e["pdf_url"]}" '
+                'style="color:#9a6b1f;text-decoration:none">2-page PDF</a>'
+            )
+        back = (
+            f'<div style="{nav}">'
+            f'<a href="../../" {link}>&larr; 1440 Intelligence Desk</a>{pdf}</div>'
+        )
+        html = page.replace("<body>", "<body>\n" + back, 1) if "<body>" in page else back + page
+        (folder / "index.html").write_text(html, encoding="utf-8")
+        written += 1
+    return written
 
 
 def zip_dir(folder: Path) -> bytes:

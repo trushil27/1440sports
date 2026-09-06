@@ -26,12 +26,13 @@ PANEL = "#f4f3ee"
 
 
 def brief_url(app_base_url: str, number: int | str) -> str:
-    """The app is a hash-routed single page, so a brief lives at ``<base>/#/brief/<n>``.
+    """``<base>/brief/<n>/`` — a real address, not an in-page anchor.
 
-    The old link was built by string-joining a base that already ended in "/" with "/brief/N",
-    which produced a double slash AND dropped the "#" — the address in the MD's inbox opened
-    the site's front page at best. Both are fixed here."""
-    return f"{(app_base_url or '').rstrip('/')}/#/brief/{number}"
+    The export writes each brief as its own static page (``site_export._write_brief_pages``),
+    so the link needs no "#" and no server rewrite. It read as ``…/#/brief/127`` before, which
+    looks like an internal fragment in an email (operator, 6 Sep 2026); and before that it was
+    ``…//brief/127``, which opened the front page because the app is hash-routed internally."""
+    return f"{(app_base_url or '').rstrip('/')}/brief/{number}/"
 
 
 def _verdict(d: dict[str, Any]) -> str:

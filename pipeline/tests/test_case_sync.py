@@ -50,12 +50,9 @@ def test_site_export_ships_pdfs_for_full_cases(session, tmp_path, monkeypatch):
     assert any(n.endswith("-crusoe.pdf") for n in pdfs)
     row = next(e for e in data["briefs"] if e["company"] == "Crusoe")
     assert row["pdf_url"].startswith("pdf/") and "pdf_path" not in row
-    # The home card carries the latest full case's PDF (Fluidstack N° 127 from 6 Sep 2026,
-    # or whichever case is newest as the repo grows).
-    latest = max(
-        (e for e in data["briefs"] if e.get("pdf_url")), key=lambda e: (e["date"], e["number"])
-    )
-    assert data["today"]["pdf_url"] == latest["pdf_url"]
+    # The home card carries the PDF of the brief it is actually showing.
+    today_row = next(e for e in data["briefs"] if e["number"] == data["today"]["number"])
+    assert data["today"]["pdf_url"] == today_row["pdf_url"]
     assert "pdf_path" not in (out / "data.json").read_text(encoding="utf-8")
 
 

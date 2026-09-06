@@ -66,9 +66,12 @@ def test_web_page_renders_the_long_form_sections_self_contained(tmp_path):
         "The ask",
         "25-minute call",
         '<b class="hl">FOUR YEARS</b>',
-        "data-theme",
+        # The desk is the brand's light scheme on every device (operator decision,
+        # 6 Sep 2026) — no dark palette, so a phone in dark mode still shows navy on white.
+        "color-scheme: light",
     ):
         assert needle in html, needle
+    assert "prefers-color-scheme: dark" not in html and 'data-theme="dark"' not in html
     # the short PDF paragraphs are the fallback only when the long form is absent
     assert "MODE B - real operational value" not in html
     plain = render.render_web_html(ramp_brief_data())
