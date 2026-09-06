@@ -1,0 +1,379 @@
+{
+ "run_date": "2026-07-22",
+ "signal_date": "2026-07-22",
+ "stem": "glow",
+ "number": 160,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Glow",
+  "signal_date": "2026-07-22",
+  "score": 71,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Roi Tiger",
+  "role": "CEO & Co-Founder",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.glow.io/news/glow-emerges-from-stealth-with-180-million",
+  "industry_meta": "Cybersecurity · AI-Era Endpoint Security · Tel Aviv & Palo Alto",
+  "recommended_team": "TGR Haas F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "stealth exit with funding",
+  "key_facts": {
+   "funding": "$180M raised at a $1.2B valuation, led by Sequoia, Cyberstarts, Greenoaks and Redpoint Ventures with Index Ventures, Swish Ventures, Lux Capital, Operator Collective and Holly Ventures (company release, 22 Jul 2026); reported by CTech as three rounds in about a year: $20M seed, $60M Series A at $400M, $100M Series B",
+   "investors": "Sequoia, Cyberstarts, Greenoaks, Redpoint Ventures (leads); Index Ventures, Swish Ventures, Lux Capital, Operator Collective, Holly Ventures",
+   "revenue": "",
+   "trigger": "Emerged from stealth on 22 Jul 2026 with $180M in funding at a $1.2B valuation; funds a US go-to-market team and Glow Labs",
+   "competitor_signal": "CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, 1Password (Red Bull), Cato Networks at Alpine, NinjaOne at Audi; Haas carries no cybersecurity product partner",
+   "strategic_hook": "Prevention-first control of software, AI agents and developer tools on employee devices; COO Emily Heath sat on the Wiz board through its $32B sale to Google (company release)",
+   "us_presence": "Offices in Tel Aviv and Palo Alto, California; about 100 staff, roughly 65 in Israel (reported); the raise funds a US go-to-market team",
+   "alumni_match": "",
+   "taxonomy_category": "C2",
+   "ops_fit_note": "MODE A: endpoint control of developer tools, package managers and AI agents on engineering and trackside devices; C2 cybersecurity; Haas lists cybersecurity (product) as an open category",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 13,
+   "brand_fit": 15,
+   "urgency": 13,
+   "ops_fit": 14,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 1,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "roi tiger",
+    "tiger",
+    "omer singer",
+    "ophir arie",
+    "arnon joseph",
+    "emily heath",
+    "degnan",
+    "no chief marketing officer",
+    "onavo",
+    "vp of engineering",
+    "chief product officer"
+   ],
+   "url": "https://www.glow.io/about",
+   "excerpt": "Glow leadership (company about page and 22 Jul 2026 release): Roi Tiger, CEO & Co-Founder (nine years at Meta, most recently VP of Engineering, after Meta acquired Onavo, the company he founded); Omer Singer, CTO & Co-Founder (former Head of Cybersecurity Strategy, Snowflake); Ophir Arie, VP R&D & Co-Founder (former VP R&D, Claroty); Arnon Joseph, Chief Product Officer (eight years at Meta, Senior Director of Product); Emily Heath, Chief Operating Officer (former CISO at United Airlines and DocuSign, Wiz board member through its $32B acquisition by Google, former partner at Cyberstarts); Patti Degnan, Chief Information Security Officer (former Operating Partner, Andreessen Horowitz). No chief marketing officer or CFO is listed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$180m",
+    "$1.2b",
+    "sequoia",
+    "cyberstarts",
+    "greenoaks",
+    "redpoint",
+    "22 jul",
+    "22 july",
+    "stealth",
+    "glow labs",
+    "go-to-market",
+    "funding round",
+    "index ventures",
+    "lux capital",
+    "prevention",
+    "ai agents",
+    "developer tools",
+    "healthcare",
+    "financial services",
+    "npm"
+   ],
+   "url": "https://www.glow.io/news/glow-emerges-from-stealth-with-180-million",
+   "excerpt": "Glow release, 22 Jul 2026 (GlobeNewswire; glow.io newsroom; TechCrunch, SecurityWeek, Help Net Security summaries): Glow emerged from stealth with $180 million in funding at a $1.2 billion valuation; the round was led by Sequoia, Cyberstarts, Greenoaks and Redpoint Ventures, with participation from Index Ventures, Swish Ventures, Lux Capital, Operator Collective and Holly Ventures. Prevention-first endpoint platform: specialised AI agents map the environment, analyse risk and enforce policy, deciding which software, AI agents and developer tools may run on employee devices; it has blocked malicious npm packages in customer environments and flagged devices where EDR tools were missing or degraded. Paying customers in healthcare, retail and financial services. Funds accelerate the go-to-market team in the United States and expand Glow Labs, the research arm. Tiger: 'Prevention was always the right answer in security. It just never worked at enterprise scale without blocking the business. AI solves that.'",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$20m",
+    "$60m",
+    "$400m",
+    "$100m",
+    "three rounds",
+    "seed",
+    "series a",
+    "series b",
+    "100 staff",
+    "100 people",
+    "65 ",
+    "tel aviv",
+    "palo alto",
+    "2025",
+    "a year old"
+   ],
+   "url": "https://www.calcalistech.com/ctechnews/article/hky511mc4gx",
+   "excerpt": "CTech (Calcalist), 22 Jul 2026, and SecurityWeek: Glow, founded in 2025 and based in Tel Aviv and Palo Alto, raised the $180M across three rounds in roughly a year — a $20M seed led by Sequoia and Cyberstarts, a $60M Series A led by Index Ventures with Greenoaks at a $400M valuation, and a $100M Series B — reported figures; the company release gives only the $180M total. About 100 employees, roughly 65 in Israel (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "wiz",
+    "$32b",
+    "google"
+   ],
+   "url": "https://www.glow.io/news/glow-emerges-from-stealth-with-180-million",
+   "excerpt": "Company release, 22 Jul 2026: Chief Operating Officer Emily Heath was a member of the Board of Directors of Wiz through its $32 billion acquisition by Google and a former partner at Cyberstarts.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "kannapolis",
+    "banbury",
+    "maranello",
+    "toyota gazoo",
+    "mphasis",
+    "commscope",
+    "ruckus",
+    "orion180",
+    "three us races",
+    "home races",
+    "open category",
+    "open product category"
+   ],
+   "url": "https://www.haasf1team.com/news/inside-hq-exploring-our-us-base",
+   "excerpt": "Haas F1 Team: headquarters in Kannapolis, North Carolina, race operations in Banbury, UK, and a design office in Maranello, Italy. Toyota Gazoo Racing is title and technical partner for 2026; Mphasis is Official Digital Partner (IT services incl. data, analytics, cyber and AI services, Nov 2024); CommScope Official Connectivity Partner with Ruckus branding from 2026; Orion180 insurance. Team profile (data/teams.json): 'cybersecurity (product)' is an open category; Mphasis is a services integrator, treated as channel not lock. Three US rounds each season (Miami, Austin, Las Vegas).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "crowdstrike",
+    "bitdefender",
+    "keeper",
+    "1password",
+    "cato",
+    "ninjaone",
+    "sentinelone",
+    "cisco",
+    "okta",
+    "no cybersecurity",
+    "no security",
+    "six security vendors",
+    "six vendors",
+    "haas automation",
+    "alpinestars"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): Haas 2026 roster — Toyota Gazoo Racing (title), Haas Automation, Haas Tooling, Mphasis, CommScope, Ruckus, Orion180, UChicago Medicine, Infobip, Alpinestars, Pirelli, Schuberth, Taittinger, Travis Mathew, Play & Go, MGM Rewards, New Era, Vellamo Water, Zoomex, IC, Castore, FIX Network, Singha; no cybersecurity product partner. Security elsewhere: CrowdStrike (Mercedes), Bitdefender (Ferrari), Keeper (Williams), 1Password (Red Bull), Cato Networks (Alpine, joined 2026), NinjaOne (Audi, joined), Cisco and Okta (McLaren), SentinelOne (Aston Martin; table status departed, extension announced Feb 2024).",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "united states gp",
+    "miami",
+    "hungarian",
+    "dutch",
+    "october",
+    "november",
+    "24 circuits",
+    "24 rounds"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table (24 rounds): after 22 July the season continues with the Hungarian GP, Dutch GP, Italian GP, Spanish GP (Madrid), Azerbaijan GP, Singapore GP, United States GP (Austin, October), Mexico City GP, São Paulo GP, Las Vegas GP (November), Qatar GP and Abu Dhabi GP. Miami GP is the first US round (May).",
+   "method": "calendar"
+  },
+  {
+   "needles": [
+    "$2-4m",
+    "$2–4m",
+    "estimate"
+   ],
+   "url": "engine/methodology.md (deal-size estimate)",
+   "excerpt": "Deal size is a 1440 ESTIMATE ($2-4M a year for an official-partner endpoint-security entry at Haas, part-payable in product), labelled as such in the brief; not a company or team figure.",
+   "method": "manual"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Glow",
+  "industry_meta": "Cybersecurity · AI-Era Endpoint Security",
+  "hq": "Tel Aviv & Palo Alto (founded 2025)",
+  "ticker": "Private ($1.2B; $180M raised, Jul 2026)",
+  "deck": "Glow, the Tel Aviv and Palo Alto endpoint-security company founded in 2025 by former Meta engineering VP Roi Tiger, emerged from stealth on 22 July 2026 with $180M raised at a $1.2B valuation, led by Sequoia, Cyberstarts, Greenoaks and Redpoint, with paying customers and a US go-to-market team to build.",
+  "score": 71,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "TGR Haas F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Glow's release states $180M in funding at a $1.2B valuation, led by Sequoia, Cyberstarts, Greenoaks and Redpoint Ventures, with Index, Swish, Lux, Operator Collective and Holly Ventures participating; CTech reports it as three rounds in about a year, a $20M seed, a $60M Series A at $400M and a $100M Series B. The product is prevention-first: it decides which software, AI agents and developer tools may run on employee devices rather than detecting them afterwards. Paying customers span healthcare, retail and financial services; the money goes to a US go-to-market team and Glow Labs.",
+  "the_case_p2": "Cybersecurity is the grid's most-sold technology category, and every vendor bought the same thing: CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Cato Networks at Alpine, a paddock full of the CISOs they sell to. Glow's leadership has run that playbook from inside: COO Emily Heath sat on Wiz's board through its $32B sale to Google and was a Cyberstarts partner. A stealth exit with $180M is when a company buys its stage.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The stealth exit was 22 July and the stated use of funds is a US go-to-market team; the first brand budget follows the first sales hires. The United States GP in October and the Las Vegas GP in November sit inside the window, and teams close 2027 rosters in the fourth quarter.",
+  "why_team_label": "WHY TGR HAAS F1 TEAM",
+  "why_team_para": "Haas lists cybersecurity as an open product category: Toyota Gazoo Racing as title and technical partner, Mphasis for digital services, CommScope and Ruckus for connectivity, and no security vendor. Mphasis sells cyber services, a channel for a deployment rather than a clash. The lean American privateer prices an entry a 100-person company can carry, Kannapolis sits in Glow's chosen sales market, and three US races a year put Glow in front of the CISOs it is hiring to reach.",
+  "value_section": true,
+  "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. A race team's engineers run exactly the tools Glow polices: developer environments, package managers, AI agents and copilots on laptops that travel to 24 circuits. Glow maps what runs on every device, blocks risky packages and unsanctioned agents before they execute, and flags devices whose detection tools have gone quiet. Deployment across Kannapolis, Banbury and the trackside estate, a published case study, Glow Labs research on the team's threat surface.",
+  "deal_arch_para": "Entry as Official Endpoint Security Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the US go-to-market build and the next raise. Estimated $2-4M a year, part-payable in product. Scope: sidepod or halo placement, deployment across the team's devices, US-race hospitality for CISO prospects, Glow Labs content.",
+  "decision_maker_name": "Roi Tiger",
+  "decision_maker_role": "CEO & Co-Founder, Glow",
+  "decision_maker_bio": "Tiger founded Onavo, acquired by Meta, then spent nine years there, latterly as VP of Engineering; he fronts the launch and the raise. Path: Emily Heath, COO (former CISO of United Airlines and DocuSign, Wiz board); Arnon Joseph, Chief Product Officer. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the category precedent.",
+  "opening_angle_quote": "&ldquo;Roi, six security vendors already buy F1 to reach CISOs, and the American team has no security partner. You have just left stealth with $180M and a US sales team to build; a Haas deployment is reference customer and stage in one. 25 minutes before Austin?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Stealth exit 22 Jul; Austin and Las Vegas inside the window."
+   ],
+   [
+    "CAPACITY",
+    "13",
+    "/ 20",
+    "$180M raised at $1.2B; ~100 staff, no revenue disclosed."
+   ],
+   [
+    "BRAND FIT",
+    "15",
+    "/ 20",
+    "CISO-selling category with six grid precedents."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "US go-to-market build funded now; no listing in view."
+   ],
+   [
+    "OPS FIT",
+    "14",
+    "/ 20",
+    "MODE A: C2 endpoint control of dev tools and AI agents; Haas lane open."
+   ]
+  ],
+  "risks": [
+   [
+    "EARLY-STAGE CAPACITY",
+    "Glow is a year old with about 100 staff and no disclosed revenue; the $180M funds research and sales before brand.",
+    "Price at the Haas partner tier with product as part-payment; make the deployment the first proof point."
+   ],
+   [
+    "CROWDED CATEGORY",
+    "Six security vendors already hold F1 seats; a seventh, unknown logo can be invisible.",
+    "Lead with the prevention-first, AI-agent story the incumbents do not tell, and the Wiz-alumni leadership."
+   ]
+  ],
+  "bottom_line": "A $180M stealth exit at $1.2B, a Sequoia and Cyberstarts syndicate, paying customers and a funded US sales build put Glow at the start of its brand-spend cycle. Haas lists cybersecurity as an open category, the grid has proved security vendors buy F1 to reach CISOs, and two US races remain inside the window.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "category_whitespace"
+  ],
+  "footer_company": "GLOW",
+  "footer_date": "22 JUL 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 22 July 2026 Glow emerged from stealth with $180M in funding at a $1.2B valuation. The company's release names the leads, Sequoia, Cyberstarts, Greenoaks and Redpoint Ventures, and the participants, Index Ventures, Swish Ventures, Lux Capital, Operator Collective and Holly Ventures, and states the use of funds: accelerating the go-to-market team in the United States and expanding Glow Labs, its research arm."
+    },
+    {
+     "label": "Three rounds in a year",
+     "text": "CTech reports the $180M as a $20M seed led by Sequoia and Cyberstarts, a $60M Series A led by Index Ventures with Greenoaks at a $400M valuation, and a $100M Series B, all in roughly a year; the company itself gives only the total, so the split is reported, not confirmed. Whatever the split, a company that tripled its valuation inside a year before showing a product has investors expecting a category to be built, and category-building is brand spend."
+    },
+    {
+     "label": "The first brand budget follows the first sales hires",
+     "text": "The stated use of funds is a US go-to-market team. A security vendor's first brand line typically opens with its first enterprise sales cycle, and CISO-facing hospitality is what the other six security vendors on the grid bought. Glow is at the front of that cycle, not the end of it."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The United States GP in Austin (October) and the Las Vegas GP (November) are the US rounds left in 2026, and teams close their 2027 partner rosters in the fourth quarter. A deal agreed before Austin can be announced in Glow's chosen sales market and activated in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "An explicitly open lane",
+     "text": "Haas carries Toyota Gazoo Racing as title and technical partner, Mphasis as Official Digital Partner, CommScope and Ruckus for connectivity and Orion180 for insurance, and no security vendor. The team profile lists cybersecurity (product) as an open category; Mphasis sells cyber services, so it is a channel for a deployment rather than a clash."
+    },
+    {
+     "label": "Priced for a 100-person company",
+     "text": "Haas is the grid's lean American privateer. Its partner tier is one a year-old company with $180M can carry without distorting its budget, and product can form part of the consideration. The bigger teams' security lanes are taken; the open ones at Cadillac and Racing Bulls come without the explicit open-category listing Haas has."
+    },
+    {
+     "label": "American team, American sales market",
+     "text": "Glow's raise funds a US go-to-market team from a Palo Alto base. Haas is headquartered in Kannapolis, North Carolina, with three home races a year at Miami, Austin and Las Vegas, where the CISOs Glow is hiring to reach already gather."
+    },
+    {
+     "label": "Ruled out by the table",
+     "text": "CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, 1Password (Red Bull), Cato Networks at Alpine and NinjaOne at Audi each hold a security or endpoint lane; McLaren carries Cisco and Okta; Aston Martin has a SentinelOne history. Of the open teams, Haas combines the open-category listing, the US identity and a price that fits."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "A Formula 1 engineering staff runs the tools Glow polices: developer environments, package managers, AI coding agents and copilots on laptops that join a different circuit network 24 weekends a year. Glow's living asset inventory maps what runs on every device, its policy engine blocks risky packages and unsanctioned agents before they execute, and it flags devices where detection tools have gone quiet, the gaps the release says it has already found at customers."
+    },
+    {
+     "label": "Cost-cap arithmetic",
+     "text": "Prevention that stops software and agents at the door reduces the alert load on a small IT team, which matters to a privateer spending inside the FIA cost cap. Product can form part of the consideration, lowering the cash element of the deal."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Glow sells to CISOs and security leaders at enterprises in healthcare, retail and financial services, an audience Haas's current partners do not bring to the suite. US-race hospitality for those prospects and a factory reference story give the team a new guest list and Glow its first named reference deployment."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Endpoint Security Partner designation, sidepod or halo placement, a published deployment case study with the team's IT leadership, hospitality at Miami, Austin and Las Vegas, and driver and engineering access for Glow's customer events and Glow Labs content."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "CrowdStrike holds the cybersecurity lane; endpoint protection is a direct clash."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "Bitdefender is the cybersecurity partner and an endpoint rival."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Keeper occupies identity and privileged-access security."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "1Password holds the security lane."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Cato Networks joined in 2026 and covers security."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "NinjaOne (endpoint management) joined the roster; the endpoint lane is crowded."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Cisco covers security and networking and Okta covers identity."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "SentinelOne, Official Cybersecurity Partner since 2021 with an extension announced in February 2024, is a direct endpoint rival; the table lists it as departed, so the lane is contested at best."
+    },
+    {
+     "team": "Cadillac F1 Team · Visa Cash App Racing Bulls",
+     "reason": "Open but not chosen: neither lists cybersecurity as an open category the way Haas does, and Cadillac's partner tier is priced above a year-old company."
+    }
+   ],
+   "ask": "A 25-minute call with Roi Tiger before the United States GP to confirm the round structure on the record, walk through a Haas device deployment, and size an Official Endpoint Security Partner entry, part-paid in product, against the team's 2027 roster."
+  }
+ },
+ "note": "# Glow → TGR Haas F1 Team — verification log (N° 160, brief dated 22 Jul 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost from a case spec: Claude did the research and writing; the pipeline's calendar and sponsor-table checks, 13-rule audit and 2-page render ran as code. The brief is issued for the date the signal sits on in the desk (22 Jul 2026), which is also the trigger date.\n\n**Sandbox limitation, stated plainly:** direct fetches of glow.io, globenewswire.com, techcrunch.com, securityweek.com and calcalistech.com were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nCompany-announced: Glow's release of 22 Jul 2026 (GlobeNewswire, mirrored on glow.io, Yahoo Finance; TechCrunch, SecurityWeek and Help Net Security coverage) states $180M in funding at a $1.2B valuation, the leads and participants, paying customers and the use of funds. The thin row's source (GlobeNewswire) is the same release; the company newsroom copy is now the evidence URL.\n\n## Corrections to the thin row\n\n- The row called it a \"$180M Series A\". The company release gives only the $180M total; CTech reports three rounds (seed, Series A, Series B). The brief says \"$180M raised\" and labels the split as reported.\n- The row scored Glow 87 (HOT TOP TIER). That is inflated for a year-old company with about 100 staff and no disclosed revenue. Re-scored 71 (HOT): capacity 13 and ops fit 14 hold it back, and the first risk row says so. Brand fit 15 rests on the six security vendors already buying F1 to reach CISOs, a precedent the sponsor table documents.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| $180M at $1.2B; leads Sequoia, Cyberstarts, Greenoaks, Redpoint; participants Index, Swish, Lux, Operator Collective, Holly; 22 Jul 2026; use of funds (US go-to-market, Glow Labs) | VERIFIED (company release via search summary) | glow.io newsroom; GlobeNewswire |\n| Three rounds: $20M seed, $60M Series A at $400M, $100M Series B; ~100 staff, ~65 in Israel | REPORTED | CTech 22 Jul 2026; SecurityWeek |\n| Founded 2025; Tel Aviv and Palo Alto | VERIFIED / REPORTED | SecurityWeek; TechCrunch |\n| Leadership: Roi Tiger CEO (Meta VP Eng, Onavo founder); Omer Singer CTO; Ophir Arie VP R&D; Arnon Joseph CPO; Emily Heath COO (Wiz board through the $32B Google acquisition, ex-Cyberstarts partner); Patti Degnan CISO; no CMO listed | VERIFIED | company release and about page (search summaries); Pulse2 on the Degnan appointment |\n| Product: prevention-first control of software, AI agents and developer tools; blocked malicious npm packages; flagged devices with missing or degraded EDR; customers in healthcare, retail, financial services | VERIFIED (company release) | glow.io; Help Net Security |\n| Haas: Kannapolis HQ, Banbury, Maranello; TGR title 2026; Mphasis, CommScope/Ruckus, Orion180; cybersecurity (product) open | VERIFIED | haasf1team.com; team profile |\n| Haas roster and security lanes across the grid | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| United States GP (Oct), Las Vegas GP (Nov), Miami GP; 24 rounds | VERIFIED | calendar table (`seeds/calendar_2026.json`) |\n\n## Screen-outs and things not claimed\n\n- **Leadership ties:** no Glow leader found with prior F1/FE employment or sponsorship history; `leadership_ties` empty after checking. Emily Heath's Wiz board seat is a marketing-playbook signal, not a motorsport tie, and is described as such.\n- **Revenue:** none disclosed; none used. The \"28-day average resolution\" and \"living asset inventory\" metrics appear in coverage but are not load-bearing here.\n- **The Haas deployment** in VALUE is a proposal, written as one; Glow has no motorsport customer.\n- **Deal size $2-4M a year** is a 1440 ESTIMATE, labelled as such.\n"
+}
