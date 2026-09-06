@@ -1,0 +1,13 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": { "builder": "DOCKERFILE", "dockerfilePath": "Dockerfile" },
+  "deploy": {
+    "startCommand": "/app/pipeline/entrypoint.sh uvicorn intel.desk_api:get_app --factory --host 0.0.0.0 --port $PORT",
+    "healthcheckPath": "/health",
+    "restartPolicyType": "ON_FAILURE"
+  },
+  "_notes": [
+    "Second Railway service from the same repo: the desk build service behind the app's 'Build the full case' button.",
+    "Service → Settings → Config-as-code path: pipeline/railway.desk.json. Same variables as the daily job (DATABASE_URL, ANTHROPIC_API_KEY, PDF_STORAGE_DIR, GITHUB_TOKEN…); Networking → Generate Domain, then set DESK_API_URL=https://<that domain> on the DAILY JOB so the export embeds it."
+  ]
+}

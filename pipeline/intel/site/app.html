@@ -265,7 +265,6 @@
   const bySeries = (s) => live().filter((b) => b.series === s);
   const teamDisplay = (t) => (D.team_display && D.team_display[t]) || t;
   const teamsFor = (series) => (D.teams || []).filter((t) => t.series === series);
-  const REPO = 'trushil27/1440sports';
   const onNetlify = () => /netlify\.app$|1440sports\.com$/.test(location.hostname);
   function bindRebuild() {
     document.querySelectorAll('[data-rebuild]').forEach((btn) => btn.addEventListener('click', () => requestRebuild(btn.dataset.rebuild)));
@@ -274,24 +273,49 @@
     const b = all().find((x) => String(x.number) === String(number));
     if (!b) return;
     const panel = $('#reqpanel');
-    const cmd = `python -m intel.rebuild "${b.company}" --date ${b.date}`;
-    const issueUrl = `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(`Rebuild: ${b.company} (${b.date})`)}&body=${encodeURIComponent(`Build the full case for ${b.company}, signal of ${b.date}.\n\nCommand: ${cmd}`)}`;
-    let queued = false;
-    if (onNetlify()) {
-      try {
-        const body = new URLSearchParams({ 'form-name': 'rebuild', company: b.company, date: b.date, label: b.label });
-        const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
-        queued = r.ok;
-      } catch (e) { queued = false; }
-    }
     panel.hidden = false;
-    panel.innerHTML = `<div class="note ${queued ? 'info' : ''}" style="margin-top:16px">
-      <b>${queued ? 'Queued.' : 'Request the full case.'}</b> ${queued ? `The next run builds the full case for ${esc(b.company)} and it appears here.` : `Open a one-line request on GitHub (the daily job reads the queue), or run the command on the daily-job service.`}
-      <div class="actions" style="margin-top:10px">${queued ? '' : `<a class="btn gold" href="${issueUrl}" target="_blank" rel="noreferrer noopener">Open request</a>`}<button type="button" class="btn" id="copycmd">Copy command</button></div>
-      <div style="margin-top:10px"><code>${esc(cmd)}</code></div></div>`;
-    const copy = $('#copycmd');
-    if (copy) copy.addEventListener('click', async () => { try { await navigator.clipboard.writeText(cmd); copy.textContent = 'Copied'; } catch (e) { copy.textContent = 'Select and copy above'; } });
-    panel.scrollIntoView({ block: 'nearest' });
+    const api = (D.desk_api || '').replace(/\/$/, '');
+    if (!api) {
+      if (onNetlify()) {
+        try {
+          const body = new URLSearchParams({ 'form-name': 'rebuild', company: b.company, date: b.date, label: b.label });
+          const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+          if (r.ok) { panel.innerHTML = `<div class="note info" style="margin-top:16px"><b>Queued.</b> The next daily run builds the full case for ${esc(b.company)} and it appears here.</div>`; return; }
+        } catch (e) { /* fall through */ }
+      }
+      panel.innerHTML = `<div class="note" style="margin-top:16px"><b>Build service not connected.</b> The desk build service is not deployed yet, so this button cannot start a build from here. Once it is live, one click builds the full case in about five minutes.</div>`;
+      return;
+    }
+    panel.innerHTML = `<div class="note info" style="margin-top:16px"><b>Starting…</b> Asking the desk to build the full case for ${esc(b.company)}.</div>`;
+    let req;
+    try {
+      const r = await fetch(api + '/build', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ number: Number(number) }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) { panel.innerHTML = `<div class="note" style="margin-top:16px"><b>Not started.</b> ${esc(j.detail || ('HTTP ' + r.status))}</div>`; return; }
+      req = j.request;
+    } catch (e) {
+      panel.innerHTML = `<div class="note" style="margin-top:16px"><b>Not reachable.</b> The desk build service did not answer (${esc(String(e))}). Try again in a minute.</div>`;
+      return;
+    }
+    const render = (q) => {
+      const st = q.status;
+      const msg = st === 'done' ? `<b>Built.</b> ${esc(b.company)} is now a full case${q.result_number ? ' (N° ' + esc(q.result_number) + ')' : ''}. <a href="#" id="reloadnow">Reload the app</a> to open it.`
+        : st === 'failed' ? `<b>Build failed.</b> ${esc(q.error || 'The pipeline could not verify or render this case. The daily job will retry.')}`
+        : st === 'running' ? `<b>Building…</b> Live research, claim-by-claim verification, the 13-rule audit, then the 2-page PDF and the long-form page. About five minutes.`
+        : `<b>Queued.</b> Another case is being built first; yours starts right after.`;
+      panel.innerHTML = `<div class="note ${st === 'failed' ? '' : 'info'}" style="margin-top:16px">${msg}</div>`;
+      const rl = $('#reloadnow');
+      if (rl) rl.addEventListener('click', (ev) => { ev.preventDefault(); location.reload(); });
+    };
+    render(req);
+    const poll = async () => {
+      try {
+        const r = await fetch(api + '/build/' + req.id);
+        if (r.ok) { const q = await r.json(); render(q); if (q.status === 'done' || q.status === 'failed') return; }
+      } catch (e) { /* keep polling */ }
+      setTimeout(poll, 15000);
+    };
+    setTimeout(poll, 15000);
   }
 
   // ---- views ----
@@ -302,7 +326,7 @@
     if (b.deal_update) out.push(`<span class="badge navy">Now partner · ${esc(teamDisplay(b.deal_update.team))}</span>`);
     if (b.check) {
       if (!b.deal_update && (b.check.motorsport_status || '') === 'EXISTING_PARTNER') out.push('<span class="badge navy">Existing partner</span>');
-      if (b.check.corrections && b.check.corrections.length) out.push('<span class="badge warn">Corrected</span>');
+      if ((b.check.corrections && b.check.corrections.length) || b.check.person_status === 'CHANGED') out.push('<span class="badge warn">Corrected</span>');
       if (b.check.updates && b.check.updates.length) out.push(`<span class="badge info">${b.check.updates.length} update${b.check.updates.length > 1 ? 's' : ''}</span>`);
     }
     return out.join(' ');
@@ -403,32 +427,42 @@
         <dt>Score</dt><dd>${esc(b.score != null ? b.score + ' / 100 · ' + (b.tier || '') : '—')}</dd>
         <dt>Team</dt><dd>${esc(teamDisplay(b.team) || '—')}</dd>
         <dt>Decision-maker</dt><dd>${esc(b.person || '—')}${b.role ? ' · ' + esc(b.role) : ''}</dd>
-        <dt>Trigger</dt><dd>${esc(b.trigger || '—')}${b.trigger_date ? ' · ' + fmtDate(b.trigger_date) : ''}</dd>
+        <dt>Trigger date</dt><dd>${b.trigger_date ? fmtDate(b.trigger_date) : '—'}</dd>
         <dt>Horizon</dt><dd>${esc(b.horizon || '—')}</dd>
-        <dt>Verification</dt><dd><span class="badge ${verClass(b.verification)}">${verLabel(b.verification)}</span></dd>
         <dt>Source</dt><dd>${b.source_url ? `<a href="${esc(b.source_url)}" target="_blank" rel="noreferrer noopener">${esc(b.source_url)}</a>` : '—'}</dd>
         ${b.also_surfaced && b.also_surfaced.length ? `<dt>Also surfaced</dt><dd>${b.also_surfaced.map(fmtDate).join(' · ')} — folded into this case</dd>` : ''}
       </dl>
-      ${b.deal_update ? '' : `<div class="cta"><div><span class="k">Full case</span><p>Runs the whole pipeline for ${esc(b.company)} on the daily-job service: live research, claim-by-claim verification, the 13-rule audit, then the 2-page PDF and the long-form page. Ready in the app after the next run.</p></div><button type="button" class="btn" data-rebuild="${b.number}">Build the full case</button></div>`}
+      ${b.deal_update ? '' : `<div class="cta"><div><span class="k">Full case</span><p>One click builds the Crusoe-standard case for ${esc(b.company)}: live research, claim-by-claim verification, the 13-rule audit, the 2-page PDF and the long-form page. About five minutes.</p></div><button type="button" class="btn" data-rebuild="${b.number}">Build the full case</button></div>`}
       <div id="reqpanel" hidden></div>
     </div>`;
   }
 
   function checkPanel(b) {
     const c = b.check;
-    const reasons = (b.check_reasons || []).join('; ');
-    const partner = b.partner_note ? `<div class="note"><b>Existing partner.</b> ${esc(b.partner_note)} The lane this signal pointed at is not open; treat the row as a closed case unless the tie has ended.</div>` : '';
-    const corr = (c.corrections && c.corrections.length) ? `<div class="vrow"><div class="vk">Corrections</div><div class="vv"><ul>${c.corrections.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div></div>` : '';
-    const upd = (c.updates && c.updates.length) ? `<div class="vrow"><div class="vk">Since then</div><div class="vv"><ul>${c.updates.map((u) => `<li><b>${esc(u.date || '')}</b> ${esc(u.event || '')} ${u.url ? link(u.url) : ''}</li>`).join('')}</ul></div></div>` : '';
-    return partner + `<div class="vpanel">
-      <div class="vhead"><span class="k">Verification · checked ${esc(c.checked_at || '')} · confidence ${esc(c.confidence || '—')}</span><span class="badge ${verClass(b.verification)}">${verLabel(b.verification)}</span>${reasons ? `<span class="sm">${esc(reasons)}</span>` : ''}</div>
-      <div class="vrow"><div class="vk">Trigger</div><div class="vv"><span class="badge ${stClass(c.trigger_status)}">${stLabel(c.trigger_status)}</span> ${esc(c.evidence_excerpt || '')} ${c.evidence_url ? '<br>' + link(c.evidence_url) : ''}</div></div>
-      ${corr}
-      <div class="vrow"><div class="vk">Decision-maker</div><div class="vv"><span class="badge ${stClass(c.person_status)}">${stLabel(c.person_status)}</span> ${esc(c.person_note || '')}</div></div>
-      <div class="vrow"><div class="vk">Motorsport ties</div><div class="vv"><span class="badge ${stClass(c.motorsport_status)}">${stLabel(c.motorsport_status)}</span> ${esc(c.motorsport_note || '')}</div></div>
-      ${upd}
-      ${c.notes ? `<div class="vrow"><div class="vk">Desk note</div><div class="vv">${esc(c.notes)}</div></div>` : ''}
-    </div>`;
+    const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return u; } };
+    const src = c.evidence_url ? `<a href="${esc(c.evidence_url)}" target="_blank" rel="noreferrer noopener">${esc(host(c.evidence_url))}</a>` : '';
+    const partner = b.partner_note ? `<div class="note"><b>Existing partner.</b> ${esc(b.partner_note)}</div>` : '';
+    const rows = [];
+    if (c.trigger_status === 'CONFIRMED' || c.trigger_status === 'CORRECTED') {
+      rows.push(`<div class="vrow"><div class="vk">${c.trigger_status === 'CORRECTED' ? 'Verified, corrected' : 'Verified'}</div><div class="vv">${esc(c.evidence_excerpt || '')}${src ? ' · ' + src : ''}</div></div>`);
+      if (c.corrections && c.corrections.length) rows.push(`<div class="vrow"><div class="vk">Corrections</div><div class="vv"><ul>${c.corrections.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div></div>`);
+    } else if (c.trigger_status === 'CONTRADICTED') {
+      rows.push(`<div class="vrow"><div class="vk">Contradicted</div><div class="vv">${esc(c.evidence_excerpt || c.notes || '')}${src ? ' · ' + src : ''}</div></div>`);
+    } else {
+      rows.push(`<div class="vrow"><div class="vk">Not confirmed</div><div class="vv">The trigger could not be confirmed against a primary source yet. ${esc(c.notes || '')}</div></div>`);
+    }
+    if (c.person_status === 'CHANGED') {
+      rows.push(`<div class="vrow"><div class="vk">Decision-maker updated</div><div class="vv">${esc(c.person_note || '')}</div></div>`);
+    } else if (c.person_status === 'NOT_FOUND') {
+      rows.push(`<div class="vrow"><div class="vk">Decision-maker</div><div class="vv"><span class="badge warn">Not confirmed</span> ${esc(c.person_note || '')}</div></div>`);
+    }
+    if (c.motorsport_status && c.motorsport_status !== 'NONE_FOUND' && !b.partner_note) {
+      rows.push(`<div class="vrow"><div class="vk">Motorsport</div><div class="vv"><span class="badge ${stClass(c.motorsport_status)}">${stLabel(c.motorsport_status)}</span> ${esc(c.motorsport_note || '')}</div></div>`);
+    }
+    if (c.updates && c.updates.length) {
+      rows.push(`<div class="vrow"><div class="vk">Since then</div><div class="vv"><ul>${c.updates.slice(0, 3).map((u) => `<li><b>${esc(u.date || '')}</b> ${esc(u.event || '')}${u.url ? ' · <a href="' + esc(u.url) + '" target="_blank" rel="noreferrer noopener">' + esc(host(u.url)) + '</a>' : ''}</li>`).join('')}</ul></div></div>`);
+    }
+    return partner + `<div class="vpanel"><div class="vhead"><span class="k">Verification · ${esc(c.checked_at || '')}</span><span class="badge ${verClass(b.verification)}">${verLabel(b.verification)}</span></div>${rows.join('')}</div>`;
   }
 
   function sponsorsView(series) {

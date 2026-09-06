@@ -970,7 +970,7 @@ def apply_signal_checks(session: Session, path: Path | str | None = None) -> dic
     on the trigger claim and on the person claim, the brief's verification status from the
     verdict (contradicted → blocked), and the whole record in ``brief_data['signal_check']``.
     Idempotent per (company, checked_at). Rows that carry a full case are left alone."""
-    from intel.checks import CONTRADICTED, VERIFIED, load_checks, verdict
+    from intel.checks import CONTRADICTED, VERIFIED, load_checks, screen_reason, verdict
 
     checks = load_checks(path)
     seen: set[int] = set()
@@ -995,9 +995,11 @@ def apply_signal_checks(session: Session, path: Path | str | None = None) -> dic
             if brief.web_html_path:
                 continue
             prior = (brief.brief_data or {}).get("signal_check") or {}
-            if prior.get("checked_at") == rec.get("checked_at") and prior.get(
-                "trigger_status"
-            ) == rec.get("trigger_status"):
+            same = all(
+                prior.get(k) == rec.get(k)
+                for k in ("checked_at", "trigger_status", "person_status", "motorsport_status")
+            )
+            if same:
                 skipped += 1
                 continue
             v, reasons = verdict(rec)
@@ -1029,7 +1031,7 @@ def apply_signal_checks(session: Session, path: Path | str | None = None) -> dic
                         model="claude-fact-check-2026-09-05",
                     )
                 )
-            if v == CONTRADICTED:
+            if v == CONTRADICTED or screen_reason(rec):
                 brief.verification_status = VerificationStatus.blocked
             elif v == VERIFIED:
                 brief.verification_status = VerificationStatus.verified

@@ -97,6 +97,14 @@ class Settings(BaseModel):
     )
     pages_repo: str = Field(default="trushil27/1440sports", description="owner/repo for Pages.")
     pages_branch: str = Field(default="gh-pages", description="Branch GitHub Pages serves.")
+    desk_api_url: str | None = Field(
+        default=None,
+        description=(
+            "Public URL of the desk build service (intel.desk_api on Railway); exported into "
+            "the app so 'Build the full case' works without any sign-in."
+        ),
+    )
+    desk_max_builds_per_hour: int = Field(default=6, description="Abuse guard on the public URL.")
     rebuild_backlog_per_run: int = Field(
         default=4,
         description="Historical signals rebuilt as full cases after each daily run (0 = off).",

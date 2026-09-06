@@ -365,7 +365,7 @@ def attach_signal_checks(entries: list[dict[str, Any]], checks: dict[str, dict[s
     """Put each company's live fact-check on its kept row and let it decide the row's status.
     A row that already carries a full case (its own claims ledger + page) keeps its own status;
     the check is attached for the record. Returns the number of rows checked."""
-    from intel.checks import verdict
+    from intel.checks import screen_reason, verdict
 
     n = 0
     for e in entries:
@@ -379,10 +379,10 @@ def attach_signal_checks(entries: list[dict[str, Any]], checks: dict[str, dict[s
         e["check_reasons"] = reasons
         if not e.get("page_html"):
             e["verification"] = v
-        if (rec.get("motorsport_status") or "").upper() == "EXISTING_PARTNER" and not e.get(
-            "deal_update"
-        ):
-            e["partner_note"] = rec.get("motorsport_note")
+        why = screen_reason(rec)
+        if why and not e.get("page_html"):
+            # existing partner / blocklisted: leaves the lists like the September clean-up
+            e["review"] = {"status": "screened_out", "reason": why, "reason_code": "check"}
         n += 1
     return n
 
@@ -481,6 +481,7 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
         "generated_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
         "execution_mode": settings.execution_mode,
         "operator_email": settings.operator_email,
+        "desk_api": settings.desk_api_url,
         "today": today,
         "briefs": entries,
         "sponsors": sponsors,

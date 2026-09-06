@@ -76,6 +76,9 @@ def test_verdict_rules():
         "verified"
     )
     assert checks.verdict({"trigger_status": "CONFIRMED", "person_status": "CHANGED"})[0] == (
+        "verified"
+    )
+    assert checks.verdict({"trigger_status": "CONFIRMED", "person_status": "NOT_FOUND"})[0] == (
         "needs_review"
     )
     assert checks.verdict({"trigger_status": "NOT_FOUND"})[0] == "needs_review"
@@ -98,7 +101,8 @@ def test_checks_attach_at_export_and_apply_to_the_ledger(session, tmp_path, monk
     by = {e["company"]: e for e in data["briefs"]}
     assert by["Antora Energy"]["verification"] == "verified"
     assert by["Antora Energy"]["check"]["corrections"]
-    assert by["BYD"]["partner_note"].startswith("BYD is an official partner")
+    assert by["BYD"]["review"]["status"] == "screened_out"  # existing partner leaves the lists
+    assert by["BYD"]["review"]["reason"].startswith("existing partner: BYD is an official")
     assert by["Waymo"]["verification"] == "contradicted"
     assert data["checks_meta"]["records"] == 3 and data["checks_meta"]["rows_checked"] == 3
 
@@ -117,5 +121,7 @@ def test_checks_attach_at_export_and_apply_to_the_ledger(session, tmp_path, monk
     assert trig.verifications[-1].evidence_url == "https://example.com/antora"
     waymo = session.scalar(select(Brief).where(Brief.brief_data["company"].astext == "Waymo"))
     assert waymo.verification_status == VerificationStatus.blocked
+    byd = session.scalar(select(Brief).where(Brief.brief_data["company"].astext == "BYD"))
+    assert byd.verification_status == VerificationStatus.blocked  # existing partner
     again = backfill.apply_signal_checks(session, path)
     assert again["applied"] == 0 and again["skipped"] == 3

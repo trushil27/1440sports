@@ -50,9 +50,10 @@ def load_checks(path: Path | str | None = None) -> dict[str, dict[str, Any]]:
 def verdict(rec: dict[str, Any]) -> tuple[str, list[str]]:
     """The signal's verification status from a check record, with the reasons.
 
-    verified      trigger CONFIRMED or CORRECTED, person CONFIRMED or NA
+    verified      trigger CONFIRMED or CORRECTED, person CONFIRMED, CHANGED (the check names
+                  the current holder with a source — a correction, shown as such) or NA
     contradicted  trigger CONTRADICTED
-    needs_review  anything else (event or person not found, person changed)
+    needs_review  anything else (event not found, person not confirmed)
     An existing motorsport partner does not change the verdict — the facts may be right — but
     the app flags it separately, because the lane is not open.
     """
@@ -69,9 +70,21 @@ def verdict(rec: dict[str, Any]) -> tuple[str, list[str]]:
     if person == "NOT_FOUND":
         reasons.append("named person not confirmed in that role")
     if person == "CHANGED":
-        reasons.append("role holder has changed")
-    ok = trig in ("CONFIRMED", "CORRECTED") and person in ("CONFIRMED", "NA")
+        reasons.append("decision-maker updated")
+    ok = trig in ("CONFIRMED", "CORRECTED") and person in ("CONFIRMED", "CHANGED", "NA")
     return (VERIFIED if ok else NEEDS_REVIEW), reasons
+
+
+def screen_reason(rec: dict[str, Any]) -> str | None:
+    """Why a checked signal must leave the lists even when its facts hold: the company already
+    sits on the grid (an existing F1 / FE partner or supplier) or is on the desk's hard blocklist.
+    Same treatment as the September clean-up of existing sponsors (TDK, Nissan …)."""
+    if (rec.get("motorsport_status") or "").upper() == "EXISTING_PARTNER":
+        return "existing partner: " + (rec.get("motorsport_note") or "").strip()
+    notes = rec.get("notes") or ""
+    if "DESK BLOCK" in notes.upper() or "hard blocklist" in notes.lower():
+        return "on the 1440 hard blocklist"
+    return None
 
 
 def summary(checks: dict[str, dict[str, Any]]) -> dict[str, Any]:
@@ -88,6 +101,7 @@ def summary(checks: dict[str, dict[str, Any]]) -> dict[str, Any]:
         "existing_partner": sum(
             1 for r in recs if (r.get("motorsport_status") or "").upper() == "EXISTING_PARTNER"
         ),
+        "screened": sum(1 for r in recs if screen_reason(r)),
         "corrected": sum(1 for r in recs if r.get("corrections")),
         "checked_at": next((r.get("checked_at") for r in recs if r.get("checked_at")), None),
     }

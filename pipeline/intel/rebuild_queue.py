@@ -121,10 +121,18 @@ def process(
     run = runner or rebuild_mod.rebuild
     done = load_done(settings)
     results: list[dict[str, Any]] = []
+    # clicks that reached the desk build service but were not built yet (service restarted,
+    # rate-limited, or the service is not deployed and only the queue table exists)
+    try:
+        from intel.desk_api import drain
+
+        results += drain(settings, limit=limit, runner=run)
+    except Exception as exc:  # noqa: BLE001 — table missing on an old schema, etc.
+        print(f"rebuild queue: desk queue skipped ({exc})")
     requests: list[dict] = []
     if settings.netlify_auth_token and settings.netlify_site_id:
         requests += fetch_requests(settings.netlify_auth_token, settings.netlify_site_id, http)
-    try:
+    try:  # legacy: issues titled "Rebuild: …" still work for the operator
         requests += fetch_issue_requests(http=http)
     except Exception as exc:  # noqa: BLE001 — GitHub unreachable must not stop Netlify requests
         print(f"rebuild queue: GitHub issues unavailable ({exc})")

@@ -146,6 +146,15 @@ exports any brief as a case record.
 **Automatic refresh of the live app:** with `GITHUB_TOKEN` on Railway the daily job republishes
 `gh-pages` itself (`intel/pages.py`, Git Data API); without it the site only changes when `site/`
 is pushed. The container backfill tolerates the missing `briefs/` folder in the image.
+**Signal checks (6 Sep 2026, MD: "verify every single signal"):** `data/signal_checks.json` = one
+live fact-check record per shown signal (trigger + figures, person, motorsport ties, updates), made
+by parallel checkers from search summaries; `intel/checks.py` holds the verdict rules; the export
+attaches each record (`check` panel in the app, row status from the verdict) and `backfill
+--checks` writes it into the ledger. Contradicted rows are blocked (hidden). Rows the checkers
+could not reach for search budget are "Check", never guessed.
+**Desk build service (6 Sep 2026, MD: "build the case by clicking the button, no GitHub"):**
+`intel/desk_api.py` + migration 0005 `rebuild_requests` + `pipeline/railway.desk.json`; the app
+calls `DESK_API_URL` (exported into data.json) and polls until the case is built and republished.
 Known spec gaps (documented in commits): the Phase 2.1.8 audit *code* and the 2.1.6/2.1.8
 prompt texts were not in the export — rules are ported from `spec/production_roadmap.md`.
 Decisions taken so far are in the build-brief thread: repo = this one; Railway + Vercel;

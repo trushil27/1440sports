@@ -175,6 +175,13 @@ class BriefAction(enum.StrEnum):
     contacted = "contacted"
 
 
+class RebuildStatus(enum.StrEnum):
+    queued = "queued"
+    running = "running"
+    done = "done"
+    failed = "failed"
+
+
 def _enum(e: type[enum.Enum], name: str) -> Enum:
     return Enum(e, name=name, values_callable=lambda x: [m.value for m in x])
 
@@ -474,6 +481,28 @@ class CalendarEvent(Base):
 
 
 # --- app-facing tables ------------------------------------------------------------------
+
+
+class RebuildRequest(Base):
+    """A *Build the full case* click from the app (0005). Worked off by the desk build
+    service straight away and by the daily job for anything left queued."""
+
+    __tablename__ = "rebuild_requests"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    brief_number: Mapped[int | None] = mapped_column(Integer)
+    company: Mapped[str] = mapped_column(Text, nullable=False)
+    date: Mapped[dt.date] = mapped_column(Date, nullable=False)
+    status: Mapped[RebuildStatus] = mapped_column(
+        _enum(RebuildStatus, "rebuild_status"), nullable=False, default=RebuildStatus.queued
+    )
+    requested_at: Mapped[dt.datetime] = mapped_column(DateTime(timezone=True), default=_now)
+    started_at: Mapped[dt.datetime | None] = mapped_column(DateTime(timezone=True))
+    finished_at: Mapped[dt.datetime | None] = mapped_column(DateTime(timezone=True))
+    result_brief_id: Mapped[int | None] = mapped_column(Integer)
+    result_number: Mapped[int | None] = mapped_column(Integer)
+    error: Mapped[str | None] = mapped_column(Text)
+    requester: Mapped[str | None] = mapped_column(Text)
 
 
 class BriefActionLog(Base):

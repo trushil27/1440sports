@@ -13,6 +13,7 @@ goes into the hosting platform's variable store.
 | App page per brief (long-form WHY NOW / WHY THIS TEAM / VALUE, `<company>.web.html` next to the PDF; served at `/api/briefs/{n}/page`, embedded in the web app) | `pipeline/intel/templates/brief_web.html.j2`, `render.render_web` | written by the daily job |
 | Database + migrations | `db/` (Alembic) | Railway Postgres |
 | API | `api/intel_api/`, entry `uvicorn intel_api.app:get_app --factory` | Railway service |
+| Desk build service (the app's *Build the full case* button) | `pipeline/intel/desk_api.py`, entry `uvicorn intel.desk_api:get_app --factory`, config `pipeline/railway.desk.json` | Railway service |
 | Web app (PWA) | `web/` | Vercel |
 | Reference data seeds | `pipeline/intel/seeds/` — `python -m intel.seed` | run after migrations |
 | History backfill | `pipeline/intel/backfill.py` — `python -m intel.backfill` | run once |
@@ -148,11 +149,23 @@ tokens: repository `trushil27/1440sports`, permission *Contents: Read and write*
 as allowed. Nobody needs to log in anywhere for the daily refresh: Railway's cron starts the job,
 the job emails the brief and republishes the app. Netlify remains an alternative deploy target.
 
-**Build the full case for any past signal.** From the app, *Build the full case* queues the
-request: on Netlify it posts the `rebuild` form; elsewhere it opens a prefilled GitHub issue
-titled `Rebuild: <Company> (<date>)` (the daily job reads open issues with that prefix — no token
-needed on a public repo) and always shows the command. `intel.rebuild_queue` runs before each
-export (up to 3 rebuilds per run, remembered in `<pdf_storage_dir>/rebuild_done.json`), then
+**Build the full case for any past signal — one click, no sign-in.** The app's *Build the full
+case* button calls the **desk build service** (`intel.desk_api`, a second Railway service from
+the same image): it queues the click in `rebuild_requests` (migration 0005), runs the full pipeline
+for that company at once in a background thread, then re-exports and republishes the app, so the
+case appears after a reload (about five minutes). Only existing signals can be requested, one
+build at a time, `DESK_MAX_BUILDS_PER_HOUR` (6) per hour.
+
+Deploy it once: Railway → *New service* → same GitHub repo → Settings → Config-as-code path
+`pipeline/railway.desk.json` → Variables: the same set as the daily job (`DATABASE_URL`,
+`ANTHROPIC_API_KEY`, `PDF_STORAGE_DIR` + the same volume, `GITHUB_TOKEN`, `EXECUTION_MODE`) →
+Networking → *Generate domain*. Then on the **daily job** set `DESK_API_URL=https://<that domain>`
+and run the export once (or wait for the next run): the app embeds the URL and the button goes
+live. Without it the button says "Build service not connected" — it never sends anyone to GitHub.
+
+`intel.rebuild_queue` still runs before each export: it drains the same queue table (clicks that
+arrived while the service was down), the legacy Netlify form and `Rebuild: …` issues (up to 3
+rebuilds per run, remembered in `<pdf_storage_dir>/rebuild_done.json`), then
 works through the **backlog**: `REBUILD_BACKLOG_PER_RUN` (default 4) unverified historical signals
 per run, newest first, skipping screened / merged / already-verified rows — so the whole log becomes
 verified full cases over the following weeks without anyone clicking. By hand:
