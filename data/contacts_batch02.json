@@ -1,0 +1,331 @@
+{
+  "checked_at": "2026-09-06",
+  "method": "Company leadership/newsroom pages were the target of record for every person here, but this sandbox's egress proxy blocks direct fetches of company domains (eaton.com, exa.ai, fireworks.ai, firmus.co, fluidstack.io, glow.io, hadrian.co, helsing.ai, hightouch.com, honeywellaerospace.com), so each page was read through live web-search summaries of it. status 'verified' = a company-owned page (leadership page, newsroom release, blog author page, SEC/spin-off release) names the person in that role; status 'reported' = only a credible secondary (trade press, wire) does. Nobody here is recorded from a LinkedIn headline or a data-broker profile alone; where brokers were the only source, the person is named in the company note as unconfirmed rather than listed.",
+  "companies": [
+    {
+      "company": "Eaton",
+      "no_cmo": true,
+      "note": "Checked Eaton's corporate-officers listing and its 2025-26 appointment releases: there is no group Chief Marketing Officer among the senior leadership team. Global marketing sits at director or divisional-VP level (data-broker records name Camie Hanily, Global Marketing & Communications Director, and Andrew Agan, VP Global Marketing for Crouse-Hinds/B-Line/Oil & Gas — neither confirmed on an Eaton page, so neither is listed here). A sponsorship therefore has to be bought against a division P&L, not a group marketing budget. Two live inflections shape who to call: Eaton announced on 26 Jan 2026 that it will spin off the Mobility Group (https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/mobility-group-spin-off.html), which is where the supercharger/driveline heritage sits, and the EMEA presidency changed hands on 1 Jun 2025. Motorsport: checked, no current Eaton motorsport programme or team partnership found — the motorsport adjacency is product heritage (Eaton superchargers, driveline) inside the business being separated, not a sponsorship history.",
+      "people": [
+        {
+          "name": "Omar Zaire",
+          "role": "President, Corporate and Electrical Sector, EMEA",
+          "seat": "regional",
+          "source_url": "https://tedmag.com/eaton-names-president-corporate-and-electrical-sector-emea/",
+          "note": "The right seat for a European series: owns Eaton's corporate presence and the Electrical P&L across EMEA. In post since 1 Jun 2025, succeeding Tim Darkes; 27 years in the electrical industry, 16 of them at Eaton; reports to Heath Monesmith, COO of the Electrical Sector. A first-year regional president with a brand-building mandate is the most approachable budget in the group.",
+          "status": "reported"
+        },
+        {
+          "name": "Scott Adams",
+          "role": "President, eMobility",
+          "seat": "commercial",
+          "source_url": "https://www.truckinginfo.com/news/eaton-announces-president-of-emobility-segment",
+          "note": "Divisional P&L owner for electrification — the natural buyer of an F1-2026 / Formula E electrification story. Named 31 Jan 2026, reporting to Joao Faria, president of the Vehicle Group; came up through eMobility as SVP of product strategy, sales AND marketing, so he has personally run the marketing function this group otherwise lacks. Caveat: his division is inside the Mobility Group Eaton is spinning off, so a three-year commitment signed here may be signed by a different company by the time it runs.",
+          "status": "reported"
+        },
+        {
+          "name": "Paulo Ruiz",
+          "role": "Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://www.eaton.com/content/dam/eaton/company/news-insights/media-gallery/paulo-ruiz-bio.pdf",
+          "note": "Brief's named contact, confirmed still CEO — in seat since 1 Jun 2025, after a year as president and COO. Ran the Industrial Sector (Aerospace, Vehicle, Mobility, Filtration) before that, so he knows the electrification and vehicle businesses from the inside. Electrical engineer by training. With no group CMO, an approach that reaches him has to be framed as strategy, not marketing spend.",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "company": "Exa",
+      "no_cmo": true,
+      "note": "CORRECTION TO THE BRIEF: the brief names Jeff Wang as CEO & Co-founder. Will Bryk is co-founder and CEO of Exa; Jeff Wang is a co-founder without a published officer title. Do not address a pitch to Jeff Wang as chief executive. No marketing officer is named anywhere on the company's own pages — Exa deliberately runs compound product/marketing/sales roles (its own YC careers listing is for a 'Growth' IC and a Growth Marketing Manager), so there is no marketing seat to sell to; the buyer here is the CEO. A 'Head of Strategy & Marketing at Exa' surfaces in search but belongs to a different company of the same name and is not recorded. Exa raised a $250M Series C led by a16z (Benchmark, Y Combinator, NVIDIA Ventures participating) at a $2.2B valuation, and named Jeff Pinner CTO in Aug 2026 — a fresh CTO appointment found only via secondary summary, so not listed as a contact.",
+      "people": [
+        {
+          "name": "Will Bryk",
+          "role": "Co-Founder & Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://exa.ai/about",
+          "note": "The actual decision-maker and the only realistic buyer at this stage — a founder-led company with no marketing officer. Harvard CS; early engineer at Cresta. Fronts the company publicly (AI Engineer speaker circuit) and posts Exa's scale numbers himself (80bn pages served, 1.4tn URLs tracked, Aug 2026), so he owns the brand narrative personally.",
+          "status": "verified"
+        },
+        {
+          "name": "Jeff Wang",
+          "role": "Co-Founder",
+          "seat": "executive",
+          "source_url": "https://techcrunch.com/2024/07/16/exa-raises-17m-lightspeed-nvidia-ycombinator-google-ai-models",
+          "note": "Co-founded Exa with Bryk in 2021 (they met studying CS at Harvard); ex-Plaid. Named as co-founder in the funding coverage and on his own company email address, but no CEO, COO or president title is published for him — the brief's 'CEO & Co-founder' is wrong. Still worth knowing as the second founder in the room.",
+          "status": "reported"
+        }
+      ]
+    },
+    {
+      "company": "Fireworks AI",
+      "no_cmo": true,
+      "note": "No CMO, VP Marketing or CRO is named on the company team page. This is a live vacancy rather than an absence of function: Fireworks' own Greenhouse board carries open Head of Product Marketing and Head of Marketing Operations reqs (https://job-boards.greenhouse.io/fireworksai/jobs/4260883009), plus a Paid Growth Marketer — so the marketing seat is being built right now and is worth re-checking before an approach. Data brokers list Bardia Shahali as VP of Sales since Jan 2024 (ex-Head of Revenue at Roboflow); no company-owned page confirms him, so he is not recorded as the commercial owner. The company is founder-and-engineer-led throughout: the co-founding team is almost entirely ex-Meta PyTorch (Benny Chen, Chenyu Zhao, Dmytro Ivchenko, James Reed) plus ex-Google Vertex AI.",
+      "people": [
+        {
+          "name": "Lin Qiao",
+          "role": "Chief Executive Officer & Co-Founder",
+          "seat": "executive",
+          "source_url": "https://fireworks.ai/team",
+          "note": "Brief's named contact, confirmed still CEO and co-founder. Led PyTorch at Meta before founding Fireworks. With no marketing owner in place she is the buyer as well as the cheque — and she is already on the public-platform circuit (HumanX San Francisco Apr 2026, RAISE Summit 2026), which is the register a sponsorship pitch should meet her in.",
+          "status": "verified"
+        },
+        {
+          "name": "Dmytro Dzhulgakov",
+          "role": "Co-Founder & Chief Technology Officer",
+          "seat": "technical",
+          "source_url": "https://fireworks.ai/team",
+          "note": "The technical counterpart who would have to want any real engineering workstream — a PyTorch core maintainer at Meta before co-founding the company; Sequoia's founder profile carries the CTO title. Matters here because Fireworks' product (fast, cheap inference) only earns a MODE-A motorsport story if it is deployed against a team's actual compute problem.",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "company": "Firmus Technologies",
+      "no_cmo": true,
+      "note": "CORRECTION TO THE BRIEF: the brief names 'David Burt — CEO & Founder'. No David Burt appears anywhere in Firmus Technologies' leadership; the company is run by co-CEOs Oliver Curtis and Tim Rosenfield, who founded it (with Jonathan Levi). Searching the name returns an unrelated David Burt of DeltaTerra Capital. Treat the brief's decision-maker as wrong, not merely stale. No CMO, CRO or commercial officer is named: the published leadership is co-CEOs, COO Cameron Hanson, CFO Kirsty Godfrey-Billy (Sep 2025) and General Counsel Lachlan Pfeiffer (28 Jul 2026), plus board additions Grant Dempsey (incoming chair) and Mike Ferraro (ex-Alumina CEO, ex-BHP chief legal counsel, Nov 2025). Context that shapes the call: HQ moved to Singapore with the data-centre builds staying in Australia, a $505M raise, an MoU with the Singapore port authority for seawater-cooled AI compute, and an ASX IPO in prospect — so the identity moment is real, but there is no marketing office to sell into and both co-CEOs would have to be worked in parallel.",
+      "people": [
+        {
+          "name": "Tim Rosenfield",
+          "role": "Co-Founder & Co-Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://firmus.co/about",
+          "note": "The public-facing half of the co-CEO pair — speaks as co-founder and co-CEO at TechWeek Singapore 2026 and fronts the 'AI Factory' narrative (liquid-first architecture, FactoryOS, grid-integrated UPS). If one of the two owns brand by default, it is him.",
+          "status": "reported"
+        },
+        {
+          "name": "Oliver Curtis",
+          "role": "Co-Founder & Co-Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://firmus.co/about",
+          "note": "The other co-CEO and co-founder. A co-CEO structure means no single cheque signer — any multi-year commitment needs both, which is a real deal-velocity risk to price into the approach.",
+          "status": "reported"
+        },
+        {
+          "name": "Cameron Hanson",
+          "role": "Chief Operating Officer",
+          "seat": "commercial",
+          "source_url": "https://firmus.co/careers",
+          "note": "The only operating officer below the co-CEOs listed on a company page; with no CRO or CMO, the commercial path runs through him. Listed on Firmus' own careers page leadership section.",
+          "status": "reported"
+        }
+      ]
+    },
+    {
+      "company": "Fluidstack",
+      "no_cmo": true,
+      "note": "No marketing officer is named on Fluidstack's own leadership release, which sets out COO, VP Sales, VP Product and General Counsel and stops there. A data-broker record shows a former CMO (Elizabeth Clor) having departed with no announced replacement — unconfirmed on any company page, so treated only as a hint that the seat existed and is now empty. The commercial path is unusually strong for a company this young and is where the pitch should land: a president who owns customers and a COO who scaled The Trade Desk. Scale context: an $11bn AI-factory deal, ~$18bn valuation reported Sep 2026, and Google/Anthropic data-centre builds — capacity is not the constraint, attention is. London roots make it a plausible European-series buyer.",
+      "people": [
+        {
+          "name": "Cesar Maklary",
+          "role": "Co-Founder & President",
+          "seat": "commercial",
+          "source_url": "https://fluidstack.io/blog/fluidstack-strengthens-leadership-team-with-key-executive-hires-to-drive-next-phase-of-growth",
+          "note": "Co-founder who owns the customer-facing side of the business — the commercial owner to call in the absence of a CMO.",
+          "status": "verified"
+        },
+        {
+          "name": "Rob Perdue",
+          "role": "Chief Operating Officer",
+          "seat": "commercial",
+          "source_url": "https://fluidstack.io/blog/fluidstack-strengthens-leadership-team-with-key-executive-hires-to-drive-next-phase-of-growth",
+          "note": "The single most useful name here for a sponsorship conversation: former COO of The Trade Desk (NASDAQ: TTD), which he helped grow from $1m to $700m of revenue and $20m to $22bn of enterprise value. He has spent a career inside the advertising and brand-spend industry, so he will read a three-year motorsport programme in media terms without needing it explained.",
+          "status": "verified"
+        },
+        {
+          "name": "Gary Wu",
+          "role": "Co-Founder & Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://fluidstack.io/blog/fluidstack-strengthens-leadership-team-with-key-executive-hires-to-drive-next-phase-of-growth",
+          "note": "Brief's named contact, confirmed still co-founder and CEO.",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "company": "Glow",
+      "no_cmo": true,
+      "note": "Checked the company's launch release and about page: the named leadership is CEO, CTO, VP R&D, Chief Product Officer, COO and CISO — no marketing officer of any level. Glow came out of stealth on 22 Jul 2026 with $180m at a $1.2bn valuation (Sequoia, Cyberstarts, Greenoaks, Redpoint leading; Index, Swish, Lux, Operator Collective, Holly participating) and says the money goes into building the US go-to-market team — so the marketing seat is likely to be filled within months and should be re-checked before any approach. A nine-week-old brand with a $180m war chest and no CMO is early for a three-year commitment, but it is exactly the moment a brand-build argument lands with a founder.",
+      "people": [
+        {
+          "name": "Emily Heath",
+          "role": "Chief Operating Officer",
+          "seat": "commercial",
+          "source_url": "https://www.glow.io/news/glow-emerges-from-stealth-with-180-million",
+          "note": "The operating owner in the absence of a CMO, and the one executive here who has lived inside a heavily-sponsored brand: former CISO of United Airlines (and of Docusign). She has seen what an airline does with sponsorship inventory from the inside, which is a rare starting point in a cyber company.",
+          "status": "verified"
+        },
+        {
+          "name": "Roi Tiger",
+          "role": "Co-Founder & Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://www.glow.io/news/glow-emerges-from-stealth-with-180-million",
+          "note": "Brief's named contact, confirmed CEO and co-founder. Nine years at Meta, most recently VP of Engineering, having arrived via the Onavo acquisition. A founder who has run consumer-scale distribution inside Meta will judge a sponsorship on reach and measurement, not on hospitality.",
+          "status": "verified"
+        },
+        {
+          "name": "Omer Singer",
+          "role": "Co-Founder & Chief Technology Officer",
+          "seat": "technical",
+          "source_url": "https://www.glow.io/news/glow-emerges-from-stealth-with-180-million",
+          "note": "Former Head of Cybersecurity Strategy at Snowflake. The technical counterpart if the pitch is a real endpoint-security workstream with a team rather than a logo — a racing team's engineering endpoints are a genuine use case, so this seat has to want it.",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "company": "Hadrian",
+      "no_cmo": true,
+      "note": "No marketing officer is confirmed on a Hadrian-owned page. Data-broker and aggregator records show a Chief Growth Officer (Steve Finney) and a VP of Sales (variously Jeff Hemenway or Michael Razem) — none of which any company page or press release corroborates, and the same Steve Finney name appears as Chief Growth Officer of GRVTY in a Sep 2026 announcement, so it may be the wrong person entirely. None of them is recorded here. What IS on the record from Hadrian's own newsroom is a run of 2026 hires into security, munitions, finance and operations (Caleb Sima as Chief Security Officer and Wallis Laughrey as VP Munitions, 15 Jun 2026), a $260m raise, a $1.6bn valuation, Factory Four near Huntsville AL at 2.2m sq ft, a Mesa expansion and a new additive-manufacturing division. A defence manufacturer scaling this hard, with no verified marketing owner, is a founder-only sale.",
+      "people": [
+        {
+          "name": "Chris Power",
+          "role": "Founder & Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://www.hadrian.co/press",
+          "note": "Brief's named contact, confirmed still founder and CEO. He is the company's entire public voice — CNBC (Aug 2026), Milken Global Conference 2026, Forbes — and with no verifiable marketing seat beneath him he is both the buyer and the cheque. Pitch the American-reindustrialisation narrative he already tells, not media value.",
+          "status": "verified"
+        },
+        {
+          "name": "West Owens",
+          "role": "Chief Financial Officer",
+          "seat": "executive",
+          "source_url": "https://www.prnewswire.com/news-releases/advanced-manufacturing-startup-hadrian-announces-veteran-finance-executive-west-owens-as-chief-financial-officer-302290017.html",
+          "note": "The gatekeeper on a three-year commitment at a company spending heavily on factories. Recorded because he is the only other Hadrian executive with a sponsorship-relevant veto whose title is confirmed by a real announcement rather than a broker.",
+          "status": "reported"
+        }
+      ]
+    },
+    {
+      "company": "Helsing",
+      "no_cmo": false,
+      "note": "The brief names no decision-maker; this fills the gap, and Helsing is the strongest decision path in this batch — a real Chief Marketing Officer, hired from the top of German media, sitting under a co-CEO structure with a European brand problem to solve. Governance to know: Daniel Ek chairs the company and Anita Szarek joined as CFO in Apr 2026. Any approach has to survive the obvious question of whether a defence-AI brand belongs on a race car, so the CMO is not just the buyer here, he is the person who has to want to make that argument internally.",
+      "people": [
+        {
+          "name": "Johannes Boie",
+          "role": "Chief Marketing Officer",
+          "seat": "marketing",
+          "source_url": "https://helsing.ai/newsroom/johannes-boie-joins-helsing-as-chief-marketing-officer",
+          "note": "THE call. Announced on Helsing's own newsroom as CMO, hired out of German national media — former editor-in-chief of Welt am Sonntag and of Bild. A CMO whose career was made in mass-audience media, at a company that has to build public legitimacy across Europe, is an unusually receptive buyer for a mainstream sports platform.",
+          "status": "verified"
+        },
+        {
+          "name": "Torsten Reil",
+          "role": "Co-Founder & Co-Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://helsing.ai/company",
+          "note": "Co-CEO and the more consumer-facing of the pair. Founded NaturalMotion — a games and simulation-technology company — before Helsing, so he has run a brand aimed at a mass audience and will understand simulation/AI crossover with a race team on its technical merits. Publicly outspoken (Bloomberg, conference stages).",
+          "status": "verified"
+        },
+        {
+          "name": "Gundbert Scherf",
+          "role": "Co-Founder & Co-Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://helsing.ai/company",
+          "note": "The other co-CEO: former German defence-ministry official and McKinsey partner, and the institutional/government-facing half of the leadership. Co-CEO means both must agree; he is the one likeliest to test a sponsorship against political optics.",
+          "status": "verified"
+        },
+        {
+          "name": "Niklas Kohler",
+          "role": "Co-Founder, President & Chief Product Officer",
+          "seat": "technical",
+          "source_url": "https://helsing.ai/company",
+          "note": "Co-founder holding product; the technical counterpart for any AI/simulation workstream with a team. Recorded as reported because the president/CPO combination is carried by secondary profiles rather than quoted verbatim from the company page.",
+          "status": "reported"
+        }
+      ]
+    },
+    {
+      "company": "Hightouch",
+      "no_cmo": true,
+      "note": "The brief names no decision-maker. Hightouch has no CMO but it does have a senior marketing owner — VP of Marketing & Growth — and, unusually for this batch, marketing IS the product: Hightouch sells an AI marketing and customer-data platform, so a sponsorship would be bought by people who buy and measure marketing for a living, and who could run the campaign measurement themselves. Governance: a co-CEO structure, Kashish Gupta and Tejas Manohar, with co-founder Josh Curl as CTO; Series D, ~594 staff as of 30 Jun 2026, ~$1.2bn valuation.",
+      "people": [
+        {
+          "name": "Brian Kotlyar",
+          "role": "VP of Marketing & Growth",
+          "seat": "marketing",
+          "source_url": "https://hightouch.com/authors/brian-kotlyar",
+          "note": "THE call — the marketing owner, with his own author page on the company site. Ex-SVP Marketing at New Relic (where he helped triple the growth rate as a public company) and before that Sprinklr, Intercom and Dachis Group. A career B2B marketer who has run brand spend at public-company scale will interrogate a three-year commitment on attribution, so bring the measurement story.",
+          "status": "verified"
+        },
+        {
+          "name": "Josh Kanagy",
+          "role": "Head of Revenue",
+          "seat": "commercial",
+          "source_url": "https://hightouch.com/blog/josh-kanagy-head-of-revenue",
+          "note": "Commercial owner, announced on Hightouch's own blog (Oct 2024) as Head of Revenue; broker records now carry the CRO title, so expect the title to have hardened. Ex-SVP Global Enterprise Sales at Sprinklr through its IPO, plus Salesforce and Foursquare — he and Kotlyar overlapped at Sprinklr, which means one warm introduction reaches both seats.",
+          "status": "verified"
+        },
+        {
+          "name": "Kashish Gupta",
+          "role": "Co-Founder & Co-Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://startups.hubspot.com/magazine/issue01/kashish-gupta-of-hightouch",
+          "note": "Co-founded Hightouch in 2019 with Tejas Manohar, who is the other co-CEO; both would sign. Recorded as reported: the co-CEO titles come from editorial and profile pages rather than a Hightouch leadership page.",
+          "status": "reported"
+        }
+      ]
+    },
+    {
+      "company": "Honeywell Aerospace",
+      "no_cmo": true,
+      "note": "Division/spin-off note, as asked: this is Honeywell Aerospace Technologies, which separated from Honeywell as an independent, publicly traded company in the second half of 2026 (>$15bn of 2024 sales, one of the largest pure-play aerospace suppliers). Do not pitch group Honeywell — the aerospace company has its own CEO, board and balance sheet now. No CMO appears on the aerospace leadership page or in any of the spin-off executive announcements (CEO, CFO Josh Jepsen from 23 Feb 2026, GC John Donofrio, and business-unit CEOs Bob Buddecke for Electronic Solutions, Dave Marinick for Engines & Power Systems, Rich DeGraff for Control Systems); brand and marketing sit inside the commercial and strategy remit. MOTORSPORT TIE, and it is a real one: Honeywell's Garrett turbocharger business partnered with Scuderia Ferrari on F1 turbocharging from the 2014 1.6L V6 turbo rules through at least 2017, and Garrett's F1 lineage runs back to the Renault turbo era of the late 1970s — the group has done an F1 technical partnership before and knows what it costs. Caveat to state honestly: Garrett Motion was spun out in 2018, so the turbo asset itself no longer sits here. Second tie worth knowing: Craig Arnold, Eaton's former CEO, is independent chair of the Honeywell Aerospace board — the same person connects both large-cap names in this batch.",
+      "people": [
+        {
+          "name": "Ben Driggs",
+          "role": "Senior Vice President, Chief Commercial and Strategy Officer",
+          "seat": "commercial",
+          "source_url": "https://www.honeywellaerospace.com/us/en/company/leadership",
+          "note": "The buyer by default: with no CMO in the structure, brand and commercial strategy both sit with him. Came up through the aviation aftermarket (previously president of Americas Aftermarket) and is on the aerospace leadership page. Any sponsorship case has to be argued as commercial strategy for a newly independent company that needs to establish an identity apart from Honeywell.",
+          "status": "verified"
+        },
+        {
+          "name": "Anthony Florian",
+          "role": "President, EMEA and India, Honeywell Aerospace Technologies",
+          "seat": "regional",
+          "source_url": "https://www.aerotime.aero/articles/honeywell-safer-smarter-more-efficient-flight-2",
+          "note": "The regional seat for a European series — owns EMEA and India for the aerospace business. Recorded as reported: the title comes from trade press rather than a page I could read directly, so confirm it on the leadership page before the approach.",
+          "status": "reported"
+        },
+        {
+          "name": "Jim Currier",
+          "role": "President & Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://www.honeywell.com/us/en/press/2025/11/honeywell-announces-ceo-and-board-chair-for-aerospace-spin-off",
+          "note": "The brief names no decision-maker; this is him. Announced 3 Nov 2025 to lead the independent company, having run Honeywell's Aerospace Technologies segment since Aug 2023 and been in the aerospace business since 2006 — his own background is aftermarket growth, customer experience, M&A and sales, which is the right frame for a brand-establishment pitch to a freshly listed company.",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "company": "Horizon3.ai",
+      "no_cmo": false,
+      "note": "The cleanest decision path in this batch: a CMO appointed on 7 Jan 2026 and a CRO in post, both under a founder-CEO who is unchanged. A CMO eight months into the job is still setting the brand and the budget, which is the best moment to arrive. No motorsport tie found in any leader's history — checked.",
+      "people": [
+        {
+          "name": "Andres Botero",
+          "role": "Chief Marketing Officer",
+          "seat": "marketing",
+          "source_url": "https://horizon3.ai/news/press-release/horizon3-appoints-chief-marketing-officer/",
+          "note": "THE call, and the timing is the point: appointed 7 Jan 2026 with a mandate over global marketing strategy, and more than twenty years of category-defining growth marketing behind him. New CMOs buy category-defining platforms; announce-to-approach gap is short enough that his first-year plan is still being written.",
+          "status": "verified"
+        },
+        {
+          "name": "Matt Hartley",
+          "role": "Chief Revenue Officer",
+          "seat": "commercial",
+          "source_url": "https://horizon3.ai/about-us/",
+          "note": "Commercial owner alongside Botero; the pair would co-sign a go-to-market spend of this size. Robert Cariddi also appears as a strategic advisor on the CRO side.",
+          "status": "reported"
+        },
+        {
+          "name": "Snehal Antani",
+          "role": "Co-Founder & Chief Executive Officer",
+          "seat": "executive",
+          "source_url": "https://horizon3.ai/about-us/",
+          "note": "Brief's named contact, confirmed still co-founder and CEO. Former CTO of JSOC, CTO at Splunk and CIO at GE Capital — an operator who has held enterprise budgets, not just built product. He is the cheque, but with a CMO now in place he is no longer the first call.",
+          "status": "verified"
+        }
+      ]
+    }
+  ]
+}
