@@ -1,0 +1,677 @@
+{
+ "run": {
+  "id": 132,
+  "date": "2026-06-09",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-blq18_ca/2026-06-09/honeywellaerospace.pdf",
+     "web": "/tmp/case-pdf-blq18_ca/2026-06-09/honeywellaerospace.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Honeywell Aerospace",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 11
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 196,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 200,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "resurfaced: Honeywell Aerospace last surfaced 2026-06-09 (acquisition); new trigger ipo_roadshow; top ranking score",
+     "company": "Honeywell Aerospace",
+     "decision": "selected",
+     "signal_date": "2026-06-05"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Honeywell Aerospace",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "resurfaced: Honeywell Aerospace last surfaced 2026-06-09 (acquisition); new trigger ipo_roadshow; top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 17,
+    "ops_fit": 11,
+    "ranking": 71,
+    "urgency": 13,
+    "capacity": 18,
+    "brand_fit": 12,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 1,
+     "on_camera": 2,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 12
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Aston Martin Aramco F1 Team",
+   "source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "trigger_date": "2026-06-05",
+   "trigger_reason": "spin-off listing"
+  }
+ ],
+ "brief": {
+  "number": 199,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-blq18_ca/2026-06-09/honeywellaerospace.web.html",
+  "brief_data": {
+   "hq": "Phoenix, Arizona",
+   "deck": "Honeywell Aerospace, the $17.4B-revenue avionics, engines and electrification supplier, becomes a standalone Nasdaq company on 29 June 2026: Honeywell's board set the 15 June record date on 5 June, and the separation gives one of aviation's biggest suppliers its own balance sheet, ticker and brand budget for the first time.",
+   "risks": [
+    {
+     "label": "NO MARKETING OWNER",
+     "detail": "No chief marketing officer is named in the Form 10 or the spin-off releases; no obvious sponsor sits below the CEO.",
+     "counter": "Go straight to Currier with a spin-off brand-launch framing and ask who owns brand."
+    },
+    {
+     "label": "SUPPLIER, NOT SPONSOR",
+     "detail": "No Honeywell Formula 1 sponsorship is on record, and the power unit is Honda's and homologated, so product cannot go on the car.",
+     "counter": "Anchor on Boeing and Atlas Air as precedents and keep the workstream outside the regulated unit."
+    }
+   ],
+   "score": 71,
+   "ticker": "Nasdaq: HONA (regular-way from 29 Jun 2026; HONAV when-issued from 15 Jun)",
+   "company": "Honeywell Aerospace",
+   "gridfit": [
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "spinoff",
+    "public_listing",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://www.honeywell.com/us/en/press/2026/01/honeywell-reports-fourth-quarter-2025-results-with-adjusted-sales-and-adjusted-earnings-above-high-end-of-guidance-issues-2026-outlook",
+    "https://www.honeywell.com/us/en/press/2025/11/honeywell-announces-ceo-and-board-chair-for-aerospace-spin-off",
+    "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+    "https://www.aerospacetestinginternational.com/news/electric-hybrid/honeywells-1mw-generator-for-hybrid-electric-aircraft-passes-testing-milestone.html",
+    "https://www.honeywell.com/us/en/news/press-releases/2026/03/honeywell-announces-filing-of-form-10-registration-statement-for-planned-spin-off-of-honeywell-aerospace"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Jim Currier before the 15 June record date to ask who owns brand at the new company, test appetite for a first-race-weekend announcement at the British GP, and size an Official Aerospace Technology Partner entry against Aston Martin's 2027 roster.",
+    "value": [
+     {
+      "text": "A new listed company's identity told through precision engineering on a global broadcast in its first hundred days: the Honeywell Aerospace name on the car from the British GP, the first race weekend after the 29 June listing, with the US rounds in Austin and Las Vegas timed to the first results as an independent company.",
+      "label": "Brand launch (Mode B)"
+     },
+     {
+      "text": "Thermal-management and electrical-machine know-how from the 1-megawatt generator programme applied to test rigs, cooling and energy-store integration at the AMR Technology Campus, with the homologated power unit left to Honda; a joint engineering series for the team's channels.",
+      "label": "Engineering exchange, outside the regulated unit"
+     },
+     {
+      "text": "Airline, defence, business-aviation and institutional-investor guests at the British GP and the US rounds, the audience Aston Martin's Aramco and technology partners already court, plus a reference story for the team's own aerospace-grade supply chain.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Official Aerospace Technology Partner designation, sidepod placement, British GP and US-round hospitality, driver and engineering access, and a first-year brand-launch activation timed to the 29 June listing.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 5 June 2026 Honeywell's board set 15 June as the record date for the spin-off of Honeywell Aerospace and confirmed distribution at 12:01 a.m. New York time on 29 June, one Honeywell Aerospace share for every two Honeywell shares. When-issued trading as HONAV starts on or about 15 June; regular-way trading on Nasdaq as HONA on 29 June. The Form 10 was filed on 3 March.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Until 29 June the aerospace business has been a segment of a conglomerate; from that day it has its own investors, its own annual report and its own marketing budget. Spin-offs spend their first hundred days establishing an identity with investors, customers and recruits, and that is the budget a team partnership would come from.",
+      "label": "A brand that must stand on its own"
+     },
+     {
+      "text": "The business reported 2025 net sales of $17.4B, up 12% organically, led by commercial aftermarket and defence and space. Capacity is not the question; appetite is. No Honeywell Formula 1 sponsorship is on record and no chief marketing officer is named, which is why the score stops at 71 despite a hard listing date inside the window.",
+      "label": "Scale, honestly"
+     },
+     {
+      "text": "Regular-way trading begins the day after the Austrian GP on 28 June; the British GP on 5 July is the first race weekend as an independent company, at the home of the recommended team. The United States GP in Austin and the Las Vegas GP follow in the autumn near the Phoenix headquarters and the US investor base.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Aston Martin Aramco carries Aramco as title partner, Honda supplying the power unit from 2026, Atlas Air in the cargo-aviation lane, and Arm, CoreWeave, NetApp, Cognizant and ServiceNow on technology. Bombardier, a business-jet maker and Honeywell customer, has departed, so no aerospace-engineering brand is on the car: Official Aerospace Technology Partner is a clean category.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Boeing sits on the Alpine, which closes that car to a supplier that sells to Boeing and its rivals alike. No other team carries an aerospace or aviation story on the livery; Aston Martin already has one through Atlas Air and its former business-jet partnership, so the audience and the hospitality format exist.",
+      "label": "The only aerospace-shaped roster"
+     },
+     {
+      "text": "Formula 1's 2026 rules lean harder on the electrical side of the power unit. Honeywell's 1-megawatt aerospace generator ran at 1.02 MVA and 900 kW continuously at about 97% efficiency and roughly 8 kW/kg, and doubles as a motor. The regulated power unit is Honda's, but thermal management, test rigs and electrical engineering exchange with the Silverstone campus are open ground.",
+      "label": "The hybrid-era engineering story"
+     },
+     {
+      "text": "A Phoenix-headquartered, Nasdaq-listed company with a British team gives the US rounds a home-market story and the British GP a first-weekend stage; Honeywell Aerospace's UK sites and European airline customers give the Silverstone hospitality a customer list.",
+      "label": "UK and US at once"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Boeing is on the roster; an aerospace OEM occupies the lane and is a Honeywell customer."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "A credible alternative for a Phoenix company, not chosen: the aerospace-engineering story and the departed business-jet slot sit at Silverstone, and Cadillac's inaugural roster is being built around AI and consumer brands."
+     },
+     {
+      "team": "McLaren F1 Team · Visa Cash App Racing Bulls",
+      "reason": "Etihad Airways (McLaren) and Hahn Air (Racing Bulls) hold aviation lanes on crowded technology rosters; Siemens covers industrial at Racing Bulls."
+     },
+     {
+      "team": "Atlassian Williams Racing · Audi · Haas · Ferrari · Mercedes · Red Bull",
+      "reason": "Open but not chosen: none carries an aviation or aerospace story on the car for a supplier brand to join."
+     }
+    ]
+   },
+   "date_long": "09 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Aston Martin Aramco F1 Team",
+   "value_mode": "B",
+   "bottom_line": "A $17.4B business listing on its own on 29 June, an open aerospace-engineering lane at Aston Martin and a British GP a week later give Honeywell Aerospace a clean brand-launch play. It scores 71: no marketing owner is named, the halo is B2B, and the power-unit rules limit what can run on the car.",
+   "footer_date": "9 JUN 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Listing 29 Jun; British GP inside window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 18,
+     "note": "$17.4B 2025 sales, 12% organic growth.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 12,
+     "note": "B2B and defence supplier; precision halo only.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Listing is a hard date; no marketing owner.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 11,
+     "note": "Electrification adjacency; power-unit rules limit.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Honeywell announced on 5 June that its board has set 15 June 2026 as the record date for the spin-off of Honeywell Aerospace, with distribution on 29 June on a one-for-two basis; the shares trade when-issued as HONAV from around 15 June and regular-way on Nasdaq as HONA from 29 June. The business reported 2025 net sales of $17.4B, up 12% organically, led by commercial aftermarket and defence. Headquartered in Phoenix, it is led by Jim Currier as President and CEO with Josh Jepsen as CFO, chaired by former Eaton chief Craig Arnold.",
+   "the_case_p2": "Aerospace is already on the grid: Boeing sits on the Alpine, Atlas Air on the Aston Martin, and Bombardier, a Honeywell customer, has left the Aston Martin roster. The engines-and-avionics tier has never taken a seat. That leaves a supplier-grade engineering story, from megawatt electric machines to thermal management, without a grid home just as Formula 1's new hybrid era begins and a British team starts its Honda power-unit years.",
+   "track_label": "",
+   "brief_number": "199",
+   "claims_total": 15,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "2025 net sales $17.4B, up 12% organically (Honeywell fourth-quarter release, 29 Jan 2026)",
+     "value": "$17.4B",
+     "claim_id": 686,
+     "verified": true,
+     "source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split"
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Aerospace · Avionics, Propulsion & Electrification",
+   "value_content": "MODE B - brand launch with an engineering exchange. The car carries the new company's name through its first hundred days as a listing; hospitality at the British GP and the US rounds hosts airline, defence and investor guests. Outside the regulated power unit, Honeywell's electrical-machine and thermal-management engineers work with the Silverstone campus on cooling and test rigs: aerospace-grade know-how for the team, a technical story for Honeywell.",
+   "value_section": true,
+   "why_team_para": "Aston Martin is the one team where an aerospace supplier's story is already on the car: Aramco as title partner, Honda supplying the power unit from 2026, Atlas Air in the cargo-aviation lane, Arm and CoreWeave on compute. Bombardier's business-jet slot has departed, so the aerospace-engineering lane at Silverstone is open. Honeywell's 1-megawatt generator, about 97% efficient and usable as a motor, speaks to the hybrid era better than any consumer brand could.",
+   "deal_arch_para": "Entry as Official Aerospace Technology Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, the company's first three years as a listed business. Estimated $5-8M a year. Scope: sidepod placement, the engineering exchange above, hospitality at the British GP and the US rounds for airline, defence and investor guests.",
+   "footer_company": "HONEYWELL AEROSPACE",
+   "why_team_label": "WHY ASTON MARTIN ARAMCO F1 TEAM",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Regular-way trading starts 29 June, the day after the Austrian GP; the British GP on 5 July is the company's first race weekend as an independent listing. A spin-off's first hundred days set its brand, and the marketing budget is now Honeywell Aerospace's own to spend.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Currier, 60, has run Honeywell's aerospace business since August 2023 and led it into the spin-off. Path: Josh Jepsen, CFO since February 2026 (ex-Deere), and business-unit presidents Bob Buddecke, Dave Marinick and Rich DeGraff. No chief marketing officer is named in the spin-off filings.",
+   "decision_maker_name": "James Currier",
+   "decision_maker_role": "President & CEO, Honeywell Aerospace",
+   "opening_angle_intro": "Lead with the first race weekend as an independent company.",
+   "opening_angle_quote": "&ldquo;Jim, Honeywell Aerospace trades on its own from 29 June and the British GP is its first race weekend as a listed company. Aston Martin's aerospace lane is open and the hybrid era needs your electrification story. 25 minutes before the record date?&rdquo;",
+   "value_section_label": "VALUE TO ASTON MARTIN ARAMCO F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "James Currier, President & Chief Executive Officer at Honeywell Aerospace",
+   "cited_source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/press/2025/11/honeywell-announces-ceo-and-board-chair-for-aerospace-spin-off",
+     "excerpt": "Honeywell, Nov 2025: Jim (James) Currier named President and Chief Executive Officer of Honeywell Aerospace; president and CEO of Honeywell Aerospace Technologies since August 2023, almost two decades in senior Honeywell roles. Form 10-12B: James Currier, 60, President and CEO since the spin-off.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "James Currier, President & CEO, Honeywell Aerospace at Honeywell Aerospace",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/press/2025/11/honeywell-announces-ceo-and-board-chair-for-aerospace-spin-off",
+     "excerpt": "Honeywell, Nov 2025: Jim (James) Currier named President and Chief Executive Officer of Honeywell Aerospace; president and CEO of Honeywell Aerospace Technologies since August 2023, almost two decades in senior Honeywell roles. Form 10-12B: James Currier, 60, President and CEO since the spin-off.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Spin-off from Honeywell: record date 15 Jun 2026, distribution 29 Jun 2026, one Honeywell Aerospace share for every two Honeywell shares; Nasdaq HONA regular-way from 29 Jun (when-issued HONAV from about 15 Jun)",
+   "cited_source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+     "excerpt": "Honeywell, 5 Jun 2026: the Board set 15 June 2026 as the record date for the spin-off of Honeywell Aerospace; distribution expected at 12:01 a.m. New York time on 29 June 2026 at one Honeywell Aerospace share for every two Honeywell shares; when-issued trading on Nasdaq as HONAV from on or about 15 June, regular-way trading as HONA from 29 June; a Honeywell reverse stock split accompanies the separation. Investing.com (5 Jun) confirms.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Honeywell Aerospace, the $17.4B-revenue avionics, engines and electrification supplier, becomes a standalone Nasdaq company on 29 June 2026: Honeywell's board set the 15 June record date on 5 June, and the separation gives one of aviation's biggest suppliers its own balance sheet, ticker and brand budget for the first time.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+     "excerpt": "Honeywell, 5 Jun 2026: the Board set 15 June 2026 as the record date for the spin-off of Honeywell Aerospace; distribution expected at 12:01 a.m. New York time on 29 June 2026 at one Honeywell Aerospace share for every two Honeywell shares; when-issued trading on Nasdaq as HONAV from on or about 15 June, regular-way trading as HONA from 29 June; a Honeywell reverse stock split accompanies the separation. Investing.com (5 Jun) confirms.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Distributed pro rata to Honeywell shareholders; no external capital raise",
+   "cited_source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+     "excerpt": "Honeywell, 5 Jun 2026: the Board set 15 June 2026 as the record date for the spin-off of Honeywell Aerospace; distribution expected at 12:01 a.m. New York time on 29 June 2026 at one Honeywell Aerospace share for every two Honeywell shares; when-issued trading on Nasdaq as HONAV from on or about 15 June, regular-way trading as HONA from 29 June; a Honeywell reverse stock split accompanies the separation. Investing.com (5 Jun) confirms.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The business reported 2025 net sales of $17.4B, up 12% organically, led by commercial aftermarket and defence.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/press/2026/01/honeywell-reports-fourth-quarter-2025-results-with-adjusted-sales-and-adjusted-earnings-above-high-end-of-guidance-issues-2026-outlook",
+     "excerpt": "Honeywell fourth-quarter 2025 release (29 Jan 2026) and the Aerospace 8-K: Aerospace Technologies 2025 net sales $17,404 million, up 13% reported and 12% organic versus 2024, led by commercial aftermarket and defence and space; fourth-quarter organic growth 21%.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "2025 net sales $17.4B, up 12% organically (Honeywell fourth-quarter release, 29 Jan 2026)",
+   "cited_source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/press/2026/01/honeywell-reports-fourth-quarter-2025-results-with-adjusted-sales-and-adjusted-earnings-above-high-end-of-guidance-issues-2026-outlook",
+     "excerpt": "Honeywell fourth-quarter 2025 release (29 Jan 2026) and the Aerospace 8-K: Aerospace Technologies 2025 net sales $17,404 million, up 13% reported and 12% organic versus 2024, led by commercial aftermarket and defence and space; fourth-quarter organic growth 21%.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $17.4B business listing on its own on 29 June, an open aerospace-engineering lane at Aston Martin and a British GP a week later give Honeywell Aerospace a clean brand-launch play.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+     "excerpt": "Honeywell, 5 Jun 2026: the Board set 15 June 2026 as the record date for the spin-off of Honeywell Aerospace; distribution expected at 12:01 a.m. New York time on 29 June 2026 at one Honeywell Aerospace share for every two Honeywell shares; when-issued trading on Nasdaq as HONAV from on or about 15 June, regular-way trading as HONA from 29 June; a Honeywell reverse stock split accompanies the separation. Investing.com (5 Jun) confirms.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Honeywell board sets the record date and the 29 Jun 2026 distribution for the Honeywell Aerospace spin-off, announced 5 Jun 2026",
+   "cited_source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+     "excerpt": "Honeywell, 5 Jun 2026: the Board set 15 June 2026 as the record date for the spin-off of Honeywell Aerospace; distribution expected at 12:01 a.m. New York time on 29 June 2026 at one Honeywell Aerospace share for every two Honeywell shares; when-issued trading on Nasdaq as HONAV from on or about 15 June, regular-way trading as HONA from 29 June; a Honeywell reverse stock split accompanies the separation. Investing.com (5 Jun) confirms.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Honeywell's 1-megawatt generator, about 97% efficient and usable as a motor, speaks to the hybrid era better than any consumer brand could.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.aerospacetestinginternational.com/news/electric-hybrid/honeywells-1mw-generator-for-hybrid-electric-aircraft-passes-testing-milestone.html",
+     "excerpt": "Aerospace Testing International and Honeywell Aerospace's own pages: Honeywell's 1-megawatt generator for hybrid-electric aircraft operated at 1.02 MVA and ran continuously at 900 kW, at about 97% efficiency and roughly 8 kW/kg; the machine can also be used as a 1-megawatt motor without modification; paired with the HGT1700 APU it forms a turbogenerator that runs on biofuel, jet fuel or diesel.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Boeing sits on the Alpine roster and Atlas Air on Aston Martin's; Bombardier has departed Aston Martin; no aerospace engines-or-avionics supplier is on any F1 car",
+   "cited_source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Atlas Air → Aston Martin Aramco F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "The business reported 2025 net sales of $17.4B, up 12% organically, led by commercial aftermarket and defence and space.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/press/2026/01/honeywell-reports-fourth-quarter-2025-results-with-adjusted-sales-and-adjusted-earnings-above-high-end-of-guidance-issues-2026-outlook",
+     "excerpt": "Honeywell fourth-quarter 2025 release (29 Jan 2026) and the Aerospace 8-K: Aerospace Technologies 2025 net sales $17,404 million, up 13% reported and 12% organic versus 2024, led by commercial aftermarket and defence and space; fourth-quarter organic growth 21%.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Honeywell's 1-megawatt aerospace generator ran at 1.02 MVA and 900 kW continuously at about 97% efficiency and 8 kW/kg and doubles as a motor: an electrification story for F1's hybrid era",
+   "cited_source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.aerospacetestinginternational.com/news/electric-hybrid/honeywells-1mw-generator-for-hybrid-electric-aircraft-passes-testing-milestone.html",
+     "excerpt": "Aerospace Testing International and Honeywell Aerospace's own pages: Honeywell's 1-megawatt generator for hybrid-electric aircraft operated at 1.02 MVA and ran continuously at 900 kW, at about 97% efficiency and roughly 8 kW/kg; the machine can also be used as a 1-megawatt motor without modification; paired with the HGT1700 APU it forms a turbogenerator that runs on biofuel, jet fuel or diesel.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Honeywell's 1-megawatt aerospace generator ran at 1.02 MVA and 900 kW continuously at about 97% efficiency and roughly 8 kW/kg, and doubles as a motor.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.aerospacetestinginternational.com/news/electric-hybrid/honeywells-1mw-generator-for-hybrid-electric-aircraft-passes-testing-milestone.html",
+     "excerpt": "Aerospace Testing International and Honeywell Aerospace's own pages: Honeywell's 1-megawatt generator for hybrid-electric aircraft operated at 1.02 MVA and ran continuously at 900 kW, at about 97% efficiency and roughly 8 kW/kg; the machine can also be used as a 1-megawatt motor without modification; paired with the HGT1700 APU it forms a turbogenerator that runs on biofuel, jet fuel or diesel.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquarters Phoenix, Arizona; Nasdaq listing",
+   "cited_source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/news/press-releases/2026/03/honeywell-announces-filing-of-form-10-registration-statement-for-planned-spin-off-of-honeywell-aerospace",
+     "excerpt": "Honeywell, 3 Mar 2026: Form 10 registration statement filed with the SEC for the planned spin-off of Honeywell Aerospace, to be headquartered in Phoenix, Arizona, and listed on Nasdaq (Flight Global, Dealroom coverage).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austrian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 10: Austrian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "spin-off listing",
+   "cited_source_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-board-of-directors-sets-record-date-and-announces-expected-timing-for-spin-off-of-honeywell-aerospace-and-honeywell-reverse-stock-split",
+     "excerpt": "Honeywell, 5 Jun 2026: the Board set 15 June 2026 as the record date for the spin-off of Honeywell Aerospace; distribution expected at 12:01 a.m. New York time on 29 June 2026 at one Honeywell Aerospace share for every two Honeywell shares; when-issued trading on Nasdaq as HONAV from on or about 15 June, regular-way trading as HONA from 29 June; a Honeywell reverse stock split accompanies the separation. Investing.com (5 Jun) confirms.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
