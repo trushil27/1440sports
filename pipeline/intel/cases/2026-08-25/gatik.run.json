@@ -1,0 +1,817 @@
+{
+ "run": {
+  "id": 188,
+  "date": "2026-08-25",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-xb4nzp_2/2026-08-25/gatik.pdf",
+     "web": "/tmp/case-pdf-xb4nzp_2/2026-08-25/gatik.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Gatik",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 17
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 252,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 256,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "FE rotation day (Tue/Fri)",
+     "company": "Gatik",
+     "decision": "selected",
+     "signal_date": "2026-08-25"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Gatik",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "FE rotation day (Tue/Fri)",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 17,
+    "ops_fit": 12,
+    "ranking": 71,
+    "urgency": 12,
+    "capacity": 16,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 3,
+     "product_to_need": 3,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Lola Yamaha ABT Formula E Team",
+   "source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+   "trigger_date": "2026-08-25",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 234,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-xb4nzp_2/2026-08-25/gatik.web.html",
+  "brief_data": {
+   "hq": "Santa Clara, California",
+   "deck": "Gatik announced a $200M Series D on 25 August, co-led by the Qatar Investment Authority and Koch Disruptive Technologies, on more than $600M of contracted driverless freight. A direct peer already runs on a Formula 1 car; no Formula E team carries an autonomy partner.",
+   "risks": [
+    {
+     "label": "OFF-BRAND RISK",
+     "detail": "A driverless-freight company's proposition is that its trucks are unexciting and safe. Racing says the opposite, and no autonomy peer but Zoox has bought motorsport.",
+     "counter": "Zoox answered it in Formula 1. Buy the engineering story - perception, simulation, validation - and activate at the rounds where the customers already are."
+    },
+    {
+     "label": "THE MONEY IS SPOKEN FOR",
+     "detail": "The $200M was raised to put 100+ driverless trucks on the road by the end of 2026 and reach mass production with Isuzu in 2027, not to buy brand.",
+     "counter": "Formula E prices the designation at a fraction of Formula 1, and a three-year term spreads it across the production ramp."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private ($200M Series D, Aug 2026)",
+   "company": "Gatik",
+   "gridfit": [
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://theorg.com/org/gatik/org-chart/gautam-narang",
+    "https://qia.qa/en/Newsroom/Pages/QIA-Co-Leads-Gatiks-$200-Million-Series-D-Financing-to-Support-the-Expansion-of-Driverless-Commercial-Freight.aspx",
+    "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+    "https://www.williamsf1.com/articles/867f9cfc-800c-4002-afa4-1836ab8533d5/williams-racing-zoox-f1-first-autonomous-vehicle-partnership",
+    "https://gatik.ai/news/press-releases/isuzu-invests-us30-million-in-gatik-to-develop-autonomous-driving-logistics-business/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Gautam Narang inside the post-round budget cycle to test whether Gatik wants a visible brand at all, and if so to size an Official Autonomous Technology Partner entry at Lola Yamaha ABT against Season 13, with activation aimed at the Austin E-Prix and the Miami E-Prix.",
+    "value": [
+     {
+      "text": "There is no operational workstream here and the brief does not pretend otherwise. No Formula E team will deploy an autonomous middle-mile freight stack, and any claim that it would is a claim 1440 will not make. What follows is what the partnership actually delivers on both sides.",
+      "label": "Mode B, stated honestly"
+     },
+     {
+      "text": "Its first technology partner and a designation it has never sold, at a moment when its commercial roster is three consumer-goods brands. A co-produced engineering content strand pairing Lola's constructor heritage and Yamaha's powertrain work with a driverless-freight story that reads as engineering rather than advertising. And a partner whose growth is contracted rather than speculative.",
+      "label": "What the team gets"
+     },
+     {
+      "text": "A category designation nobody else in autonomous freight holds. Hospitality at the Austin, Miami and Tokyo rounds for the retail and CPG buyers it sells to - Walmart, Kroger and PepsiCo all operate at scale in those markets - and for QIA, Koch, ARK and Millennium on the investor side. A recruiting channel into perception, controls and simulation engineering, where motorsport and autonomy hire from the same pool.",
+      "label": "What Gatik gets"
+     },
+     {
+      "text": "Official Autonomous Technology Partner, three years across Seasons 13 to 15 so the term covers the Isuzu mass-production launch in 2027. Estimated at $1.5-3M a year - an estimate, not a quoted price. Scope: sidepod and halo placement, naming rights on the team's data and simulation programme, hospitality at the US and Tokyo rounds, and joint engineering content.",
+      "label": "The commercial shape"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Gatik announced $200M of Series D financing on 25 August 2026 from its Santa Clara headquarters, co-led by the Qatar Investment Authority and Koch Disruptive Technologies, with Millennium Management, ARK Invest and Intact Private Capital participating. Both Gatik's and QIA's own newsrooms carry it, so the round is company-confirmed rather than reported.",
+      "label": "The trigger"
+     },
+     {
+      "text": "Gatik states more than $600M of contracted revenue, 85,000 completed fully driverless orders and 99% on-time delivery. Its network is the middle mile: ambient, refrigerated and frozen goods on high-frequency regional routes between distribution centres and stores for Walmart, Kroger and PepsiCo. These are the company's own figures from its release, not audited accounts.",
+      "label": "The business under the round"
+     },
+     {
+      "text": "Isuzu put $30M into Gatik in 2024 and the two are jointly developing a chassis built for a Level 4 system, running on NVIDIA compute, targeting mass production from 2027. Gatik is aiming for more than 100 driverless trucks by the end of 2026 and thousands beyond that. A brand programme agreed now runs into that ramp rather than trailing it.",
+      "label": "The production clock"
+     },
+     {
+      "text": "Formula E teams close Season 13 rosters through the autumn. The season opens at the Jeddah E-Prix on 18 December 2026 and runs 21 races across 13 cities, with the Austin E-Prix on 6 February 2027, the Miami E-Prix two weeks later and the Tokyo E-Prix closing on 24-25 July 2027.",
+      "label": "The calendar"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "The sponsor table shows no autonomy, ADAS or autonomous-vehicle partner on any 2026 Formula E roster. In Formula 1 the same category is already sold: Zoox has been an Official Regional Partner of Atlassian Williams Racing since November 2024, in what both parties called Formula 1's first autonomous-vehicle partnership. The archetype is proven and the Formula E version of it is unsold.",
+      "label": "An empty category, and a proven one"
+     },
+     {
+      "text": "Lola Yamaha ABT's major partners are Castore, OMP and Shell - sportswear, race suits and lubricants - beside the Lola Cars, Yamaha and ABT Sportsline parents. There is no software, data, AI or technology partner. That means an autonomous-technology designation is available as a first rather than as an addition, and the partner sits beside a constructor brand rather than behind a car marque.",
+      "label": "The thinnest technology roster on the grid"
+     },
+     {
+      "text": "Gatik's chassis partner and investor is Isuzu, which is co-developing the Level 4 truck for 2027. That rules out the Formula E entries fronted by commercial-vehicle makers - Nissan, Mahindra, Citroen and Cupra Kiro through the Volkswagen Group - because Isuzu could reasonably object to its autonomy partner branding a rival manufacturer's works team. Lola is a constructor, ABT is an operator and Yamaha builds engines and components, so none of them competes with Isuzu.",
+      "label": "No manufacturer conflict"
+     },
+     {
+      "text": "Three reasons. The Formula 1 autonomy lane is held by a direct peer at Williams, so entering Formula 1 means either following Zoox or partnering a team that has already been passed over for it. Formula E races on city streets, which is where public and regulatory acceptance of driverless vehicles is actually contested. And a Formula E designation is affordable for a company whose $200M round is earmarked for fleet and safety validation, which a Formula 1 team-major position is not.",
+      "label": "Why Formula E and not Formula 1"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Zoox holds the autonomous-vehicle designation there since November 2024 - a direct category rival."
+     },
+     {
+      "team": "Andretti Formula E",
+      "reason": "TWG AI is the primary partner and Official Artificial Intelligence Partner; an autonomy company reads as the same lane."
+     },
+     {
+      "team": "Envision Racing",
+      "reason": "Sand Technologies occupies the AI lane on the roster."
+     },
+     {
+      "team": "Nissan Formula E Team",
+      "reason": "Works entry of a manufacturer that builds light commercial vehicles - a conflict with Gatik's Isuzu alliance."
+     },
+     {
+      "team": "Mahindra Racing",
+      "reason": "Same manufacturer conflict through Mahindra's commercial-vehicle business, and Tech Mahindra already holds the technology lane."
+     },
+     {
+      "team": "Cupra Kiro · Citroën Racing",
+      "reason": "Volkswagen Group and Stellantis entries; both groups build the commercial vehicles Gatik's OEM partner competes against."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "TCS is title partner and an IT-services giant; the technology story is already told, and Chase locks financial services."
+     },
+     {
+      "team": "Porsche Formula E Team",
+      "reason": "TDK holds the official technology designation; title rights are open but priced as title rights."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "DS Automobiles is reported to be leaving Formula E after the London finale, so the entry's Season 13 identity is unsettled."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "Ceva Logistics sits on the roster and DHL is the championship logistics partner in both series; the freight adjacency is crowded."
+     }
+    ]
+   },
+   "date_long": "25 AUG 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Lola Yamaha ABT Formula E Team",
+   "value_mode": "B",
+   "bottom_line": "A $200M Series D on 25 August, more than $600M of contracted revenue and a direct peer already running on a Formula 1 car put Gatik at the moment an autonomy brand decides whether to become visible. Formula E has never sold an autonomy seat, and the Lola Yamaha ABT roster carries no technology partner at all.",
+   "footer_date": "25 AUG 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round announced 25 Aug; Season 13 rosters close this autumn.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 16,
+     "note": "$200M Series D on $600M+ of contracted revenue; QIA and Koch behind it.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Zoox proves the category buys racing; the buyer is still a supply-chain VP.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No deadline; the 2027 Isuzu launch is the only clock.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 12,
+     "note": "MODE B: a designation and a stage, not a team workstream.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Gatik announced $200M of Series D financing from Santa Clara on 25 August, co-led by the Qatar Investment Authority and Koch Disruptive Technologies, with Millennium Management, ARK Invest and Intact Private Capital following. The company reports more than $600M of contracted revenue, 85,000 completed fully driverless orders and 99% on-time delivery, moving ambient, refrigerated and frozen goods between distribution centres and stores for Walmart, Kroger and PepsiCo. It is targeting more than 100 driverless trucks by the end of 2026.",
+   "the_case_p2": "Motorsport has priced this category once already. In November 2024 Zoox, Amazon's robotaxi business, became an Official Regional Partner of Atlassian Williams Racing in Formula 1's first autonomous-vehicle partnership, running on the car at that team's American races. It answers the obvious objection - that a safety-first autonomy company has no business in racing - because a direct peer made the argument first, and won it.",
+   "track_label": "",
+   "brief_number": "234",
+   "claims_total": 16,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$200M Series D co-led by the Qatar Investment Authority and Koch Disruptive Technologies, announced 25 Augu…",
+     "value": "$200M",
+     "claim_id": 1881,
+     "verified": true,
+     "source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/"
+    },
+    {
+     "fact": "QIA and Koch Disruptive Technologies as co-leads, with Millennium Management, ARK Invest and Intact Private…",
+     "value": "$30M",
+     "claim_id": 1882,
+     "verified": true,
+     "source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/"
+    },
+    {
+     "fact": "More than $600M of contracted revenue, 85,000 completed fully driverless orders and 99% on-time delivery, p…",
+     "value": "$600M",
+     "claim_id": 1883,
+     "verified": true,
+     "source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/"
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Autonomous Freight · Middle-Mile Driverless Trucking",
+   "value_content": "MODE B - halo, said plainly: no race team will run a driverless-freight stack. What the team gets is its first technology partner and a naming lane it has never sold; a content strand pairing constructor engineering with autonomy; hospitality at the Austin, Miami and Tokyo rounds for Walmart, Kroger and PepsiCo buyers and for QIA, Koch and ARK; and a recruiting channel into perception and controls engineering.",
+   "value_section": true,
+   "why_team_para": "The sponsor table records no autonomy, software or data partner anywhere on the Formula E grid, and Lola Yamaha ABT carries the thinnest technology roster on it: Castore, OMP and Shell beside the Lola Cars, Yamaha and ABT Sportsline parents. An autonomous-technology designation would be a first there, not a slot. Yamaha's Japanese engineering base sits alongside Gatik's Isuzu alliance rather than against it, and Season 13 finishes in Tokyo.",
+   "deal_arch_para": "Entry as Official Autonomous Technology Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, running to the Isuzu mass-production launch. Estimated $1.5-3M a year. Scope: sidepod and halo placement, naming rights on the team's data and simulation programme, US and Tokyo hospitality, joint engineering content.",
+   "footer_company": "GATIK",
+   "why_team_label": "WHY LOLA YAMAHA ABT",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series D landed on 25 August and category budgets are written in the quarter after a raise. Formula E teams close Season 13 rosters this autumn; the season opens at the Jeddah E-Prix in December, and the Austin E-Prix and the Miami E-Prix follow in February 2027.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 234",
+   "decision_maker_bio": "Narang co-founded Gatik with Arjun Narang and Apeksha Kumavat and fronts every raise; a first sports partnership is his call. Path: Paul Dilaura, chief commercial officer, who owns commercial spend, and Patrick Archambault, chief financial officer. No chief marketing officer is listed.",
+   "decision_maker_name": "Gautam Narang",
+   "decision_maker_role": "CEO & Co-Founder, Gatik",
+   "opening_angle_intro": "Lead with Zoox, not with the trucks.",
+   "opening_angle_quote": "&ldquo;Gautam, Zoox took Formula 1's first autonomous-vehicle seat at Williams in 2024. No Formula E team has sold one yet and it costs a fraction of that. 25 minutes to look at the Lola Yamaha ABT numbers?&rdquo;",
+   "value_section_label": "VALUE TO LOLA YAMAHA ABT",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Gautam Narang, CEO & Co-Founder at Gatik",
+   "cited_source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://theorg.com/org/gatik/org-chart/gautam-narang",
+     "excerpt": "Gatik leadership as listed by the company, The Org and Craft: Gautam Narang, CEO and Co-Founder; Arjun Narang, CTO and Co-Founder; Apeksha Kumavat, Chief Engineer and Co-Founder; Patrick Archambault, Chief Financial Officer; Paul Dilaura, Chief Commercial Officer; Judi Otteson, Chief Legal Officer. No chief marketing officer is listed. No motorsport role appears in any leader's history.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Gautam Narang, CEO & Co-Founder, Gatik at Gatik",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://theorg.com/org/gatik/org-chart/gautam-narang",
+     "excerpt": "Gatik leadership as listed by the company, The Org and Craft: Gautam Narang, CEO and Co-Founder; Arjun Narang, CTO and Co-Founder; Apeksha Kumavat, Chief Engineer and Co-Founder; Patrick Archambault, Chief Financial Officer; Paul Dilaura, Chief Commercial Officer; Judi Otteson, Chief Legal Officer. No chief marketing officer is listed. No motorsport role appears in any leader's history.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$200M Series D co-led by the Qatar Investment Authority and Koch Disruptive Technologies, announced 25 August 2026",
+   "cited_source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://qia.qa/en/Newsroom/Pages/QIA-Co-Leads-Gatiks-$200-Million-Series-D-Financing-to-Support-the-Expansion-of-Driverless-Commercial-Freight.aspx",
+     "excerpt": "Gatik and the Qatar Investment Authority newsrooms, 25 Aug 2026: Gatik announced $200 million in Series D financing co-led by QIA and Koch Disruptive Technologies, with participation from Millennium Management, ARK Invest, Intact Private Capital and others, as demand accelerates for driverless commercial freight across Fortune 50 retail, grocery and CPG supply chains. Announced from Gatik's Santa Clara, California headquarters and carried by Business Wire, Forbes (25 Aug) and PYMNTS.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Gatik announced a $200M Series D on 25 August, co-led by the Qatar Investment Authority and Koch Disruptive Technologies, on more than $600M of contracted driverless freight.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://qia.qa/en/Newsroom/Pages/QIA-Co-Leads-Gatiks-$200-Million-Series-D-Financing-to-Support-the-Expansion-of-Driverless-Commercial-Freight.aspx",
+     "excerpt": "Gatik and the Qatar Investment Authority newsrooms, 25 Aug 2026: Gatik announced $200 million in Series D financing co-led by QIA and Koch Disruptive Technologies, with participation from Millennium Management, ARK Invest, Intact Private Capital and others, as demand accelerates for driverless commercial freight across Fortune 50 retail, grocery and CPG supply chains. Announced from Gatik's Santa Clara, California headquarters and carried by Business Wire, Forbes (25 Aug) and PYMNTS.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "QIA and Koch Disruptive Technologies as co-leads, with Millennium Management, ARK Invest and Intact Private Capital participating; Isuzu invested $30M in 2024",
+   "cited_source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://qia.qa/en/Newsroom/Pages/QIA-Co-Leads-Gatiks-$200-Million-Series-D-Financing-to-Support-the-Expansion-of-Driverless-Commercial-Freight.aspx",
+     "excerpt": "Gatik and the Qatar Investment Authority newsrooms, 25 Aug 2026: Gatik announced $200 million in Series D financing co-led by QIA and Koch Disruptive Technologies, with participation from Millennium Management, ARK Invest, Intact Private Capital and others, as demand accelerates for driverless commercial freight across Fortune 50 retail, grocery and CPG supply chains. Announced from Gatik's Santa Clara, California headquarters and carried by Business Wire, Forbes (25 Aug) and PYMNTS.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Gatik announced $200M of Series D financing from Santa Clara on 25 August, co-led by the Qatar Investment Authority and Koch Disruptive Technologies, with Millennium Management, ARK Invest and Intact Private Capital following.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://qia.qa/en/Newsroom/Pages/QIA-Co-Leads-Gatiks-$200-Million-Series-D-Financing-to-Support-the-Expansion-of-Driverless-Commercial-Freight.aspx",
+     "excerpt": "Gatik and the Qatar Investment Authority newsrooms, 25 Aug 2026: Gatik announced $200 million in Series D financing co-led by QIA and Koch Disruptive Technologies, with participation from Millennium Management, ARK Invest, Intact Private Capital and others, as demand accelerates for driverless commercial freight across Fortune 50 retail, grocery and CPG supply chains. Announced from Gatik's Santa Clara, California headquarters and carried by Business Wire, Forbes (25 Aug) and PYMNTS.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "More than $600M of contracted revenue, 85,000 completed fully driverless orders and 99% on-time delivery, per the company's own announcement",
+   "cited_source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+     "excerpt": "Gatik's own Series D announcement, 25 Aug 2026: more than $600 million in contracted revenue, 85,000 fully driverless orders completed and 99% on-time delivery. Gatik's network covers the middle mile, moving ambient, refrigerated and frozen goods on high-frequency regional routes between distribution centres and stores for enterprises including Walmart, Kroger and PepsiCo. The company is targeting more than 100 driverless trucks by the end of 2026 and thousands in the years ahead. Corroborated by Forbes, FleetOwner and Sourcing Journal, 25-26 Aug 2026. Deal size in the brief ($1.5-3M a year) is 1440's own ESTIMATE, not a quoted or reported price.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The company reports more than $600M of contracted revenue, 85,000 completed fully driverless orders and 99% on-time delivery, moving ambient, refrigerated and frozen goods between distribution centres and stores for Walmart, Kroger and PepsiCo.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+     "excerpt": "Gatik's own Series D announcement, 25 Aug 2026: more than $600 million in contracted revenue, 85,000 fully driverless orders completed and 99% on-time delivery. Gatik's network covers the middle mile, moving ambient, refrigerated and frozen goods on high-frequency regional routes between distribution centres and stores for enterprises including Walmart, Kroger and PepsiCo. The company is targeting more than 100 driverless trucks by the end of 2026 and thousands in the years ahead. Corroborated by Forbes, FleetOwner and Sourcing Journal, 25-26 Aug 2026. Deal size in the brief ($1.5-3M a year) is 1440's own ESTIMATE, not a quoted or reported price.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$200M Series D announced from Santa Clara on 25 August 2026",
+   "cited_source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://qia.qa/en/Newsroom/Pages/QIA-Co-Leads-Gatiks-$200-Million-Series-D-Financing-to-Support-the-Expansion-of-Driverless-Commercial-Freight.aspx",
+     "excerpt": "Gatik and the Qatar Investment Authority newsrooms, 25 Aug 2026: Gatik announced $200 million in Series D financing co-led by QIA and Koch Disruptive Technologies, with participation from Millennium Management, ARK Invest, Intact Private Capital and others, as demand accelerates for driverless commercial freight across Fortune 50 retail, grocery and CPG supply chains. Announced from Gatik's Santa Clara, California headquarters and carried by Business Wire, Forbes (25 Aug) and PYMNTS.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $200M Series D on 25 August, more than $600M of contracted revenue and a direct peer already running on a Formula 1 car put Gatik at the moment an autonomy brand decides whether to become visible.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://qia.qa/en/Newsroom/Pages/QIA-Co-Leads-Gatiks-$200-Million-Series-D-Financing-to-Support-the-Expansion-of-Driverless-Commercial-Freight.aspx",
+     "excerpt": "Gatik and the Qatar Investment Authority newsrooms, 25 Aug 2026: Gatik announced $200 million in Series D financing co-led by QIA and Koch Disruptive Technologies, with participation from Millennium Management, ARK Invest, Intact Private Capital and others, as demand accelerates for driverless commercial freight across Fortune 50 retail, grocery and CPG supply chains. Announced from Gatik's Santa Clara, California headquarters and carried by Business Wire, Forbes (25 Aug) and PYMNTS.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Zoox, Amazon's robotaxi business, has been an Official Regional Partner of Atlassian Williams Racing since November 2024 in Formula 1's first autonomous-vehicle partnership; no autonomy partner appears on any Formula E roster",
+   "cited_source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.williamsf1.com/articles/867f9cfc-800c-4002-afa4-1836ab8533d5/williams-racing-zoox-f1-first-autonomous-vehicle-partnership",
+     "excerpt": "Williams Racing and GlobeNewswire, 13 Nov 2024: Zoox, the autonomous ride-hailing company and independent subsidiary of Amazon, became an Official Regional Partner of Williams Racing in a multi-year agreement — the first time an autonomous-vehicle company had partnered a Formula 1 team. Zoox branding runs on the car at the team's American races. The sponsor table records Zoox as active at Atlassian Williams Racing and Luminar as departed from Mercedes.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Gatik announced $200M of Series D financing on 25 August 2026 from its Santa Clara headquarters, co-led by the Qatar Investment Authority and Koch Disruptive Technologies, with Millennium Management, ARK Invest and Intact Private Capital participating.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://qia.qa/en/Newsroom/Pages/QIA-Co-Leads-Gatiks-$200-Million-Series-D-Financing-to-Support-the-Expansion-of-Driverless-Commercial-Freight.aspx",
+     "excerpt": "Gatik and the Qatar Investment Authority newsrooms, 25 Aug 2026: Gatik announced $200 million in Series D financing co-led by QIA and Koch Disruptive Technologies, with participation from Millennium Management, ARK Invest, Intact Private Capital and others, as demand accelerates for driverless commercial freight across Fortune 50 retail, grocery and CPG supply chains. Announced from Gatik's Santa Clara, California headquarters and carried by Business Wire, Forbes (25 Aug) and PYMNTS.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Isuzu, a $30M investor since 2024, is jointly developing a Level 4 chassis with Gatik on NVIDIA compute for mass production from 2027; the fleet target is more than 100 driverless trucks by the end of 2026",
+   "cited_source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+     "excerpt": "Gatik's own Series D announcement, 25 Aug 2026: more than $600 million in contracted revenue, 85,000 fully driverless orders completed and 99% on-time delivery. Gatik's network covers the middle mile, moving ambient, refrigerated and frozen goods on high-frequency regional routes between distribution centres and stores for enterprises including Walmart, Kroger and PepsiCo. The company is targeting more than 100 driverless trucks by the end of 2026 and thousands in the years ahead. Corroborated by Forbes, FleetOwner and Sourcing Journal, 25-26 Aug 2026. Deal size in the brief ($1.5-3M a year) is 1440's own ESTIMATE, not a quoted or reported price.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Gatik states more than $600M of contracted revenue, 85,000 completed fully driverless orders and 99% on-time delivery.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+     "excerpt": "Gatik's own Series D announcement, 25 Aug 2026: more than $600 million in contracted revenue, 85,000 fully driverless orders completed and 99% on-time delivery. Gatik's network covers the middle mile, moving ambient, refrigerated and frozen goods on high-frequency regional routes between distribution centres and stores for enterprises including Walmart, Kroger and PepsiCo. The company is targeting more than 100 driverless trucks by the end of 2026 and thousands in the years ahead. Corroborated by Forbes, FleetOwner and Sourcing Journal, 25-26 Aug 2026. Deal size in the brief ($1.5-3M a year) is 1440's own ESTIMATE, not a quoted or reported price.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquarters in Santa Clara, California, running driverless middle-mile routes for Walmart, Kroger and PepsiCo",
+   "cited_source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+     "excerpt": "Gatik's own Series D announcement, 25 Aug 2026: more than $600 million in contracted revenue, 85,000 fully driverless orders completed and 99% on-time delivery. Gatik's network covers the middle mile, moving ambient, refrigerated and frozen goods on high-frequency regional routes between distribution centres and stores for enterprises including Walmart, Kroger and PepsiCo. The company is targeting more than 100 driverless trucks by the end of 2026 and thousands in the years ahead. Corroborated by Forbes, FleetOwner and Sourcing Journal, 25-26 Aug 2026. Deal size in the brief ($1.5-3M a year) is 1440's own ESTIMATE, not a quoted or reported price.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Isuzu put $30M into Gatik in 2024 and the two are jointly developing a chassis built for a Level 4 system, running on NVIDIA compute, targeting mass production from 2027.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://gatik.ai/news/press-releases/isuzu-invests-us30-million-in-gatik-to-develop-autonomous-driving-logistics-business/",
+     "excerpt": "Gatik and Business Wire, May 2024: Isuzu invested US$30 million in Gatik to develop an autonomous-driving logistics business in North America, the two companies jointly designing a new chassis compatible with an autonomous-driving system, targeting a Level 4 commercial-vehicle business and mass production from 2027. Gatik's Level 4 trucks run on NVIDIA compute (Gatik/Isuzu/NVIDIA announcement, Mar 2025); Gatik operates medium-duty Isuzu trucks.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://qia.qa/en/Newsroom/Pages/QIA-Co-Leads-Gatiks-$200-Million-Series-D-Financing-to-Support-the-Expansion-of-Driverless-Commercial-Freight.aspx",
+     "excerpt": "Gatik and the Qatar Investment Authority newsrooms, 25 Aug 2026: Gatik announced $200 million in Series D financing co-led by QIA and Koch Disruptive Technologies, with participation from Millennium Management, ARK Invest, Intact Private Capital and others, as demand accelerates for driverless commercial freight across Fortune 50 retail, grocery and CPG supply chains. Announced from Gatik's Santa Clara, California headquarters and carried by Business Wire, Forbes (25 Aug) and PYMNTS.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "And a Formula E designation is affordable for a company whose $200M round is earmarked for fleet and safety validation, which a Formula 1 team-major position is not.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://qia.qa/en/Newsroom/Pages/QIA-Co-Leads-Gatiks-$200-Million-Series-D-Financing-to-Support-the-Expansion-of-Driverless-Commercial-Freight.aspx",
+     "excerpt": "Gatik and the Qatar Investment Authority newsrooms, 25 Aug 2026: Gatik announced $200 million in Series D financing co-led by QIA and Koch Disruptive Technologies, with participation from Millennium Management, ARK Invest, Intact Private Capital and others, as demand accelerates for driverless commercial freight across Fortune 50 retail, grocery and CPG supply chains. Announced from Gatik's Santa Clara, California headquarters and carried by Business Wire, Forbes (25 Aug) and PYMNTS.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Estimated at $1.5-3M a year - an estimate, not a quoted price.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://gatik.ai/news/press-releases/gatik-raises-200-million-series-d-led-by-qia-and-kdt/",
+     "excerpt": "Gatik's own Series D announcement, 25 Aug 2026: more than $600 million in contracted revenue, 85,000 fully driverless orders completed and 99% on-time delivery. Gatik's network covers the middle mile, moving ambient, refrigerated and frozen goods on high-frequency regional routes between distribution centres and stores for enterprises including Walmart, Kroger and PepsiCo. The company is targeting more than 100 driverless trucks by the end of 2026 and thousands in the years ahead. Corroborated by Forbes, FleetOwner and Sourcing Journal, 25-26 Aug 2026. Deal size in the brief ($1.5-3M a year) is 1440's own ESTIMATE, not a quoted or reported price.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Jeddah E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix and the Miami E-Prix follow in February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Jeddah E-Prix on 18 December 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Miami E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: Miami International Autodrome (Hard Rock Stadium)",
+     "excerpt": "round 3: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Tokyo E-Prix closing on 24-25 July 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/1074658 (Season 13 calendar: Tokyo night double-header finale, 24-25 Jul 2027) | note: season finale, night double-header race 1",
+     "excerpt": "round 20: Tokyo E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
