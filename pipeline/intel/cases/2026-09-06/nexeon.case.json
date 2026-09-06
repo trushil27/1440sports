@@ -1,0 +1,331 @@
+{
+ "run_date": "2026-09-06",
+ "signal_date": "2026-08-31",
+ "stem": "nexeon",
+ "number": 241,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Nexeon",
+  "signal_date": "2026-08-31",
+  "score": 70,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Scott Brown",
+  "role": "Chief Executive Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+  "industry_meta": "Battery Materials · Silicon Anodes for Lithium-Ion Cells · Oxfordshire, UK",
+  "recommended_team": "Jaguar TCS Racing",
+  "recommended_series": "FE",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "£100 million ($133 million) round completed on 31 August 2026, including £52.6 million ($70 million) from the UK National Wealth Fund; roughly $400 million raised since the company was founded in 2006",
+   "investors": "National Wealth Fund (£52.6 million), with the Korea Development Bank and Honda Xcelerator Ventures as the other new investors",
+   "revenue": null,
+   "trigger": "The National Wealth Fund committed £52.6 million on 31 August 2026, completing Nexeon's £100 million investment round",
+   "competitor_signal": "Jaguar TCS Racing runs TCS as title partner with Castrol and a Jaguar powertrain; at Envision Racing the title partner Envision Group runs its own energy and battery business and Teijin holds the materials lane",
+   "strategic_hook": "A binding long-term supply agreement with Panasonic, a top-five global EV cell manufacturer, with commercial material from early 2025; the Gunsan plant in South Korea came online in December 2025",
+   "us_presence": "Headquartered in Oxfordshire, UK, with an application engineering and customer support centre in Yokohama, Japan and the commercial plant at Gunsan, South Korea",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE B: Formula E's battery is a spec component, so the value is audience, recruitment and technical credibility with cell makers and carmakers rather than a part on the car",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 13,
+   "brand_fit": 15,
+   "urgency": 12,
+   "ops_fit": 13,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "scott brown",
+    "brown has led"
+   ],
+   "url": "https://www.deeptechleaders.com/companies-we-advise/scott-brown-ceo-nexeon",
+   "excerpt": "Dr Scott Brown joined Nexeon as Chief Executive Officer in June 2009. He holds a PhD in Chemistry and an MBA with Distinction from Oxford Brookes University. Under his leadership Nexeon has scaled from early stage to a globally recognised developer of silicon-based anode materials and has raised circa $400m in funding. Corroborated by Nexeon's own leadership listing and The Org.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "£52.6",
+    "£100",
+    "national wealth fund",
+    "korea development bank",
+    "honda xcelerator",
+    "31 august",
+    "funding round",
+    "$133",
+    "$70"
+   ],
+   "url": "https://www.nationalwealthfund.org.uk/news-and-publications/news/national-wealth-fund-backs-uk-battery-innovator-nexeon-in-100m-investment-round/",
+   "excerpt": "National Wealth Fund, 31 August 2026: a £52.6 million ($70 million) investment into UK battery innovator Nexeon, completing Nexeon's latest investment round totalling £100 million ($133 million / €116.7 million). Other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money supports expansion of Nexeon's UK operations and the commercialisation of next-generation battery technology. Nexeon's silicon anode materials enable higher energy density lithium-ion cells, reducing charging times and extending EV range. Carried the same week by New Electronics, BusinessGreen, Electronics Weekly, BusinessCloud, reNEWS and EU-Startups; a small number of outlets dated their reports 1 September.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$400 million",
+    "circa $400m",
+    "2006"
+   ],
+   "url": "https://www.deeptechleaders.com/companies-we-advise/scott-brown-ceo-nexeon",
+   "excerpt": "Nexeon was founded in 2006 and has raised circa $400m in funding under Scott Brown, prior to the £100 million round completed in August 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "panasonic",
+    "gunsan",
+    "oci",
+    "monosilane",
+    "december 2025",
+    "silicon anode",
+    "yokohama",
+    "oxfordshire"
+   ],
+   "url": "https://www.nexeonglobal.com/media/first-commercial-volume-production-site",
+   "excerpt": "Nexeon: a binding long-term supply agreement for silicon anode material with Panasonic, a top-five global EV cell manufacturer, with supply of commercial material beginning in early 2025. Nexeon's first commercial volume production site sits on land adjacent to OCI's Gunsan plant in South Korea, with a fenceline supply of monosilane from OCI; the facility - the world's first commercial-scale silicon anode production plant - came online in December 2025. Nexeon is headquartered in Oxfordshire, UK, with an application engineering and customer support centre in Yokohama, Japan.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "tony cochrane",
+    "david lamb",
+    "no chief marketing"
+   ],
+   "url": "https://theorg.com/org/nexeon/teams/leadership-team",
+   "excerpt": "Nexeon leadership listing: Dr Scott Brown, Chief Executive Officer; David Lamb, Chief Financial Officer; Tony Cochrane, Chief Commercial Officer; David Jewell and Luke Hammond in operating roles. No chief marketing officer is listed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "tcs",
+    "castrol",
+    "envision",
+    "teijin",
+    "materials partner",
+    "jaguar powertrain",
+    "sand technologies",
+    "mouser",
+    "kyocera",
+    "molex",
+    "tech mahindra",
+    "quest global",
+    "reflo",
+    "twg ai",
+    "hugo boss",
+    "tag heuer",
+    "shell",
+    "yamaha",
+    "nagase",
+    "stellantis",
+    "cupra"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Formula E sponsor table: Jaguar TCS Racing - TCS (title), Castrol, Jaguar (powertrain); no battery, cell-chemistry or materials partner. Envision Racing - Envision Group (title), Sand Technologies, Teijin, Genpact. Nissan Formula E Team - Nissan, Coral, Crowe, Nagase, Castrol. Porsche Formula E Team - Porsche, TAG Heuer, Hugo Boss. DS Penske - DS Automobiles, Penske Autosport, Mouser Electronics, TTI Inc., Molex, KYOCERA AVX, TotalEnergies. Mahindra Racing - Mahindra & Mahindra, Tech Mahindra. Andretti Formula E - Andretti Global, TWG AI, Quest Global, Crowe UK, Reflo, Nissan powertrain. Lola Yamaha ABT Formula E Team - Lola Cars, Yamaha, ABT Sportsline, Castore, OMP, Shell. Cupra Kiro - Cupra, Kiro. Citroen Racing - Citroen, Stellantis.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "jeddah e-prix",
+    "london e-prix",
+    "brands hatch",
+    "gen4",
+    "zandvoort",
+    "austin e-prix"
+   ],
+   "url": "seeds/calendar_fe.json + https://www.fiaformulae.com/en/news/1074657/",
+   "excerpt": "Formula E calendar table: the 2026-27 season - the GEN4 era - opens with a Jeddah E-Prix double-header on 18-19 December 2026 and runs 21 races across 13 cities, with new venues at the Circuit of The Americas (Austin E-Prix) and MASCOT Zandvoort Circuit, and the London E-Prix moving to Brands Hatch on 29-30 May 2027. Formula E lists Jaguar, Nissan, Citroen, Lola Cars, Mahindra and Porsche among the manufacturers committed to GEN4, with Opel joining from Season 13.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Nexeon",
+  "industry_meta": "Battery Materials · Silicon Anodes for Lithium-Ion Cells",
+  "hq": "Oxfordshire, UK (plant at Gunsan, South Korea)",
+  "ticker": "Private (£100M round, Aug 2026)",
+  "deck": "Nexeon, the Oxfordshire silicon-anode company whose materials cut lithium-ion charging times, closed a £100 million round on 31 August with £52.6 million from the UK National Wealth Fund, alongside the Korea Development Bank and Honda Xcelerator Ventures - state money to scale a British battery business.",
+  "score": 70,
+  "timing_label": "HOT",
+  "series_label": "FE",
+  "team_label": "Jaguar TCS Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "The National Wealth Fund committed £52.6 million on 31 August 2026, completing a £100 million round that also brought in the Korea Development Bank and Honda Xcelerator Ventures. Nexeon has raised roughly $400 million since 2006. The money is for UK expansion and commercialisation, and it lands on a business that is already shipping: the world's first commercial-scale silicon anode plant, at Gunsan in South Korea next to OCI's monosilane supply, came online in December 2025 against a binding long-term agreement with Panasonic.",
+  "the_case_p2": "Silicon anodes raise energy density and cut charging time, which is the specification the electric-vehicle argument still turns on. A state investor putting money behind that in Britain is a policy statement as much as a financing, and policy statements want an audience. Nexeon has a Japanese engineering centre, a Korean plant and a British head office; what it does not yet have is a public face.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 31 August. Formula E's GEN4 era opens at the Jeddah E-Prix in December, and the London E-Prix moves to Brands Hatch next season, giving a British company a home round again. Partner tables settle before the opener.",
+  "why_team_label": "WHY JAGUAR TCS RACING",
+  "why_team_para": "Jaguar TCS Racing runs with TCS as title partner and Castrol alongside a Jaguar powertrain, and carries no battery, cell-chemistry or materials partner. Jaguar is one of the manufacturers committed to GEN4, so the engineering audience is a works one. British company, British team, and from next season a British home round at Brands Hatch. For a materials business that sells to cell makers and the carmakers behind them, that is the right room.",
+  "value_section": true,
+  "value_section_label": "VALUE TO JAGUAR TCS RACING",
+  "value_mode": "B",
+  "value_content": "MODE B - halo, with concrete mechanics. Formula E's battery is a spec part, so Nexeon cannot supply the car and this brief will not pretend otherwise. What it can do: a named partnership on a works electric programme, garage and livery presence, hospitality for cell makers and carmakers at the Middle East and British rounds, joint fast-charge content with the team's engineers, and a recruiting platform for British battery talent.",
+  "deal_arch_para": "Entry as Official Battery Materials Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, matching the GEN4 cycle and the ramp of the Gunsan plant. Estimated £0.8-1.5M a year, part-payable in engineering and content support. Scope: garage and sidepod placement, a technical-content series with the team, and hospitality at the European and Middle East rounds.",
+  "decision_maker_name": "Dr Scott Brown",
+  "decision_maker_role": "Chief Executive Officer, Nexeon",
+  "decision_maker_bio": "Brown has led Nexeon since June 2009 and has raised roughly $400 million for it, so a first sports partnership is his call. Path: Tony Cochrane, Chief Commercial Officer, and David Lamb, Chief Financial Officer. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the home round, not the logo.",
+  "opening_angle_quote": "&ldquo;Scott, the National Wealth Fund has just put £52.6 million behind a British battery business, and Formula E's British works team has an open materials lane the season its home round moves to Brands Hatch. 25 minutes?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round closed 31 Aug; GEN4 opens in Jeddah in December."
+   ],
+   [
+    "CAPACITY",
+    "13",
+    "/ 20",
+    "£100M raised, ~$400M before it, but pre-profit and earmarked."
+   ],
+   [
+    "BRAND FIT",
+    "15",
+    "/ 20",
+    "British battery story, British team, British home round."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "No hard deadline beyond the Season 13 roster window."
+   ],
+   [
+    "OPS FIT",
+    "13",
+    "/ 20",
+    "MODE B: the race battery is spec; value is audience, not parts."
+   ]
+  ],
+  "risks": [
+   [
+    "THE RACE BATTERY IS A SPEC PART",
+    "Formula E teams do not choose their cell chemistry, so a materials partner puts no component on the car and the technical story has to be told honestly.",
+    "Sell the room, not the part: the paddock holds the cell makers and carmakers Nexeon needs in front of it."
+   ],
+   [
+    "THE MONEY IS EARMARKED",
+    "A round led by a state investor is committed to UK expansion and commercialisation, so a sponsorship line competes with plant spend.",
+    "Price at Formula E team rates and stage it, weighting year one to content and recruitment rather than rights."
+   ]
+  ],
+  "bottom_line": "A £100 million round with £52.6 million of UK state money behind it, a Korean plant already running and a Panasonic agreement signed, put Nexeon at the point where a British battery business has to become known. Jaguar TCS Racing has an open materials lane, and Britain gets its home round back at Brands Hatch.",
+  "signals": [
+   "funding_event",
+   "state_backed_capital",
+   "category_whitespace"
+  ],
+  "footer_company": "NEXEON",
+  "footer_date": "6 SEP 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "The UK National Wealth Fund announced a £52.6 million ($70 million) investment in Nexeon on 31 August 2026, completing a £100 million ($133 million) round whose other new investors are the Korea Development Bank and Honda Xcelerator Ventures. The money is for expanding Nexeon's UK operations and commercialising its next-generation battery technology."
+    },
+    {
+     "label": "This is not a first round",
+     "text": "Nexeon was founded in 2006 and had raised roughly $400 million before this one. It is past the science: the world's first commercial-scale silicon anode plant, at Gunsan in South Korea beside OCI's monosilane supply, came online in December 2025, against a binding long-term supply agreement with Panasonic, a top-five global EV cell manufacturer."
+    },
+    {
+     "label": "A state investor changes the brief",
+     "text": "When a sovereign fund puts money into a private company, the company acquires a public argument to make - British industrial capability, jobs, supply-chain sovereignty. That argument needs a stage, and the marketing budget to make it usually appears in the first year after the round rather than the third."
+    },
+    {
+     "label": "The calendar window",
+     "text": "Formula E's GEN4 era opens with the Jeddah E-Prix double-header on 18-19 December 2026, and the 2026-27 season brings the London E-Prix to Brands Hatch on 29-30 May 2027, with new rounds at the Circuit of The Americas and Zandvoort. Teams settle their partner tables before the opener, so the decision window is this autumn."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Jaguar TCS Racing's partner table is TCS as title partner, Castrol, and the Jaguar powertrain. No battery, cell-chemistry or materials partner sits on it, so Official Battery Materials Partner is a clean designation rather than a shared one."
+    },
+    {
+     "label": "A works engineering audience",
+     "text": "Formula E lists Jaguar among the manufacturers committed to GEN4. A works entry means the people who specify cells and manage energy are inside the team, and the carmaker behind them is the kind of customer a silicon-anode supplier spends years trying to reach."
+    },
+    {
+     "label": "British to British, with a home round",
+     "text": "Nexeon is headquartered in Oxfordshire; Jaguar TCS Racing is a British team; and from the 2026-27 season the London E-Prix runs at Brands Hatch. A UK state-backed battery company gets a British stage on which to make a British industrial argument."
+    },
+    {
+     "label": "Where the customers actually are",
+     "text": "Nexeon sells to cell manufacturers and to the carmakers who buy from them. The Formula E paddock is Jaguar, Nissan, Citroen, Lola Cars, Mahindra and Porsche, with Opel joining. Few trade events put that many electrification buyers in one place eleven weekends a year."
+    }
+   ],
+   "value": [
+    {
+     "label": "What this is not (Mode B, stated plainly)",
+     "text": "Formula E's battery is a spec component. Nexeon cannot supply the race car, and no part of this proposal depends on pretending it can. The value is audience, credibility and recruitment, and pricing it as anything else would be dishonest to both sides."
+    },
+    {
+     "label": "The commercial mechanic",
+     "text": "Hospitality at the Middle East and British rounds aimed at cell makers, carmakers and their purchasing and engineering leads - the specific people who qualify an anode material - plus a named designation that gives Nexeon's sales team a credential it does not have to explain."
+    },
+    {
+     "label": "Content the team can use",
+     "text": "Fast charging and energy density are the two things a Formula E audience already understands, and they are exactly what Nexeon's materials do. A joint technical-content series with the team's engineers gives Jaguar TCS Racing programming that is about the sport rather than about a sponsor."
+    },
+    {
+     "label": "Recruitment, which is the hidden budget",
+     "text": "British battery engineering is a small and contested hiring market. A works Formula E association is the most efficient graduate-recruitment platform a UK materials company can buy, and that budget line is easier to defend than a media one."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Envision Racing",
+     "reason": "Title partner Envision Group runs its own energy and battery business, and Teijin already holds the materials lane - a direct conflict."
+    },
+    {
+     "team": "Nissan Formula E Team",
+     "reason": "Nissan's own cell supply arrangements sit above the team, and Castrol and Nagase already occupy the technical partner slots."
+    },
+    {
+     "team": "Porsche Formula E Team",
+     "reason": "A manufacturer team with its own cell and materials supply chain; TAG Heuer and Hugo Boss hold the visible partner slots."
+    },
+    {
+     "team": "DS Penske",
+     "reason": "Mouser Electronics, TTI Inc., Molex and KYOCERA AVX fill the components and electronics lane, with TotalEnergies on energy."
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "reason": "Shell holds the energy and chemistry-adjacent lane, and Yamaha's powertrain programme owns the technical story."
+    },
+    {
+     "team": "Mahindra Racing",
+     "reason": "Room on the table, but the pull is Indian and Nexeon's customers, plant and state backer sit in the UK, Korea and Japan."
+    },
+    {
+     "team": "Andretti Formula E",
+     "reason": "TWG AI, Quest Global, Crowe UK and Reflo occupy the technology, engineering-services and materials-adjacent lanes."
+    },
+    {
+     "team": "Cupra Kiro · Citroen Racing",
+     "reason": "Both have space, but neither offers the works battery-engineering audience or the British home-round story that carries this case."
+    }
+   ],
+   "ask": "A 25-minute call with Scott Brown before the autumn roster round to size an Official Battery Materials Partner entry at Jaguar TCS Racing on a three-year term across Seasons 13-15, and to agree whether Tony Cochrane runs it as customer marketing or Nexeon runs it as a recruitment and public-argument programme."
+  }
+ },
+ "note": "# Nexeon → Jaguar TCS Racing — verification log (N° 241, 6 Sep 2026)\n\nBuilt in-session at no model-API cost: Claude acted as scanner, verifier and writer through the\npipeline's injectable stages; freshness, dedup, scoring, the claims ledger with the calendar and\nsponsor-table checks, the 13-rule audit and the strict 2-page render ran as code.\n\n**Sandbox limitation, stated plainly:** direct fetches of nationalwealthfund.org.uk,\nnexeonglobal.com, theorg.com, fiaformulae.com and the trade press were blocked by the egress\nproxy. Every claim below was checked against the search summary of the primary page named as its\nevidence URL. Treat each VERIFIED line as REPORTED until a person opens the link. Confidence is\nMEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, and a date worth checking\n\n**31 August 2026** — the National Wealth Fund announced a £52.6 million ($70 million) investment\ncompleting Nexeon's £100 million ($133 million) round. The NWF's own newsroom is the primary\nsource. Trade coverage clustered on 31 August and 1 September (EU-Startups carried it under an\nAugust URL, Electronics Weekly and WOWTALE under 1 September), so the brief uses 31 August and\n**the first thing to confirm on a call is the announcement date**. Either way the trigger sits\nwell inside the 90-day window.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| NWF £52.6M ($70M) completing a £100M ($133M / €116.7M) round, 31 Aug 2026 | VERIFIED | nationalwealthfund.org.uk newsroom |\n| Korea Development Bank and Honda Xcelerator Ventures are the other new investors | VERIFIED | same release |\n| Money is for UK expansion and commercialisation of next-generation battery technology | VERIFIED | same release |\n| Silicon anode materials raise energy density, cut charging time, extend EV range | VERIFIED | same release; Nexeon product pages |\n| Founded 2006; circa $400m raised before this round; Scott Brown CEO since June 2009, PhD Chemistry, MBA Oxford Brookes | VERIFIED | Nexeon leadership profile / Deep Tech Leaders |\n| David Lamb CFO; Tony Cochrane Chief Commercial Officer; no CMO listed | VERIFIED | Nexeon leadership listing (The Org) |\n| Binding long-term supply agreement with Panasonic; commercial material from early 2025 | VERIFIED | Nexeon media release |\n| Gunsan plant beside OCI's monosilane supply, world's first commercial-scale silicon anode facility, online December 2025 | VERIFIED | Nexeon media release; electrive |\n| HQ Oxfordshire; application engineering and customer support centre in Yokohama | VERIFIED | Nexeon site |\n| Jaguar TCS Racing = TCS (title), Castrol, Jaguar powertrain; no battery/materials partner; other FE rosters as quoted | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| GEN4 season opens Jeddah 18-19 Dec 2026; London E-Prix at Brands Hatch 29-30 May 2027; new COTA and Zandvoort rounds; Jaguar among committed GEN4 manufacturers | VERIFIED | calendar table + fiaformulae.com |\n\n## Screen-outs and things deliberately not claimed\n\n- **Leadership ties: none found.** No Formula E or Formula 1 history was found for Scott Brown,\n  Tony Cochrane or David Lamb after checking. `leadership_ties` is empty, not assumed.\n- **No revenue figure** is used: Nexeon is private and none is public.\n- **No claim of a supply relationship with Jaguar Land Rover.** None was found; the case does not\n  need one and does not imply one.\n- **MODE B is stated on the page, not hidden.** Formula E's battery is a spec component, so the\n  brief says outright that Nexeon cannot supply the race car. Every mechanic offered — audience,\n  hospitality, content, recruitment — is one that survives that fact.\n- **Deal size (£0.8-1.5M a year) is an ESTIMATE**, labelled as such and set at Formula E team\n  rates.\n\n## Why not the other teams\n\nJudged only against `seeds/sponsors.json`, never against other 1440 prospects. Envision Racing is\nthe hard conflict — its title partner runs a battery business and Teijin holds materials — and\nevery other conflicting team is named in `extended.ruled_out` with the partner that closes the\nlane.\n\n## Honest brake on the score\n\n70/100, which is the threshold and not a point above it. Capacity is the brake: Nexeon is\npre-profit and this round is state money earmarked for plant and commercialisation, so a\nsponsorship line has to be argued for. Ops fit is 13 because the race car's battery is a spec\npart — this is a Mode B case with concrete mechanics, not an engineering partnership dressed up\nas one. If the MD wants only Mode A signals, this one should be passed over, and the brief says\nso rather than inflating the number to hide it.\n"
+}
