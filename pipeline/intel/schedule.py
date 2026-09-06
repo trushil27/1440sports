@@ -14,6 +14,7 @@ slot (the other exits immediately). The daily job then:
 from __future__ import annotations
 
 import datetime as dt
+import json
 import sys
 import time
 from zoneinfo import ZoneInfo
@@ -110,6 +111,27 @@ def main(argv: list[str] | None = None) -> int:
         outcome = None
 
     if outcome is not None:
+        try:
+            from pathlib import Path
+
+            rec_dir = Path(settings.pdf_storage_dir) / "runs"
+            rec_dir.mkdir(parents=True, exist_ok=True)
+            rec = rec_dir / f"{run_date.isoformat()}-run{outcome.run_id}.json"
+            rec.write_text(
+                json.dumps(
+                    {
+                        "status": outcome.status,
+                        "brief_id": outcome.brief_id,
+                        "summary": outcome.summary,
+                    },
+                    indent=1,
+                    default=str,
+                ),
+                encoding="utf-8",
+            )
+            print(f"run record: {rec}")
+        except Exception as exc:  # noqa: BLE001
+            print(f"run record skipped: {exc}")
         wait = 0.0 if no_wait else seconds_until_send(send_at=send_at)
         if wait > 0:
             print(f"waiting {int(wait)}s until {send_at:%H:%M} Europe/London")

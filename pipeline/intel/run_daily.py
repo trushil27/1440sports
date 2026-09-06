@@ -147,11 +147,14 @@ def triage(
     run_date: dt.date,
     settings: Settings,
     rebuild: bool = False,
+    rank_offset: int = 0,
 ) -> list[Candidate]:
-    """Persist every candidate with its decision. Returns the eligible ones (decision pending)."""
+    """Persist every candidate with its decision. Returns the eligible ones (decision pending).
+    One log line per candidate (company, signal date, decision, reason) so a run can be read
+    from its log alone."""
     now = dt.datetime.combine(run_date, dt.time(hour=6), tzinfo=settings.tz)
     eligible: list[Candidate] = []
-    for rank, sig in enumerate(signals, start=1):
+    for rank, sig in enumerate(signals, start=rank_offset + 1):
         norm = company_norm(sig.company)
         tkey = dedup.trigger_key(sig.trigger_text)
         series = Series(sig.recommended_series) if sig.recommended_series in ("F1", "FE") else None
@@ -211,6 +214,14 @@ def triage(
             continue
         eligible.append(cand)
     session.flush()
+    for cand in session.scalars(select(Candidate).where(Candidate.run_id == run.id)).all():
+        if cand.rank and cand.rank > rank_offset:
+            progress(
+                f"  {cand.rank:>2}. {cand.company_raw} · signal {cand.raw_json.get('signal_date')}"
+                f" · {cand.decision.value}"
+                + (f" — {cand.decision_reason}" if cand.decision_reason else "")
+                + (f" · score {cand.score_total}" if cand.score_total is not None else "")
+            )
     return eligible
 
 
@@ -224,6 +235,22 @@ def rank_eligible(eligible: list[Candidate], run_date: dt.date) -> list[Candidat
         rest = [c for c in by_score if c.series != Series.FE]
         return fe + rest
     return by_score
+
+
+def _scan_more(scanner, run_date: dt.date, settings: Settings, addendum: str):
+    """The freshness retry: an injected scanner that accepts an addendum gets it; the real
+    scanner runs with the addendum appended to its prompt."""
+    import inspect
+
+    if scanner is None:
+        return run_scan(run_date, settings=settings, addendum=addendum).signals
+    try:
+        n_params = len(inspect.signature(scanner).parameters)
+    except (TypeError, ValueError):
+        n_params = 1
+    if n_params >= 2:
+        return scanner(run_date, addendum)
+    return []
 
 
 def _signal_of(cand: Candidate) -> ScannedSignal:
@@ -419,6 +446,38 @@ def run_day(
 
     progress(f"scan returned {len(signals)} signals; triaging (freshness, dedup, score)")
     eligible = triage(session, run, signals, run_date, settings, rebuild=stages.rebuild)
+    retried = False
+    if not eligible and signals and not stages.rebuild:
+        # Every candidate fell outside the window: ask once more, for the window only. The
+        # scanner tends to return the best-known rounds; a dated retry finds the week's news.
+        stale = [c for c in run.candidates if c.decision == CandidateDecision.stale]
+        if len(stale) >= max(1, int(0.8 * len(signals))):
+            window = settings.freshness_days_track1
+            since = run_date - dt.timedelta(days=window)
+            listing = "; ".join(
+                f"{c.company_raw} ({c.trigger_date or 'undated'})" for c in stale[:12]
+            )
+            addendum = (
+                f"RETRY. Every candidate in your previous answer was older than the {window}-day "
+                f"window (you returned: {listing}). Search again and return ONLY companies whose "
+                f"trigger event is dated between {since.isoformat()} and {run_date.isoformat()} "
+                "inclusive — this week's funding rounds, IPO filings and pricings, spin-offs, "
+                "mega-contracts and leadership appointments. Do not return any company listed "
+                "above. If you find fewer than 8, return what you find."
+            )
+            progress(
+                f"all {len(stale)} candidates stale — retrying the scan for {since}..{run_date}"
+            )
+            try:
+                more = _scan_more(scanner, run_date, settings, addendum)
+            except ScanFailed as exc:
+                progress(f"retry scan failed: {exc}")
+                more = []
+            if more:
+                retried = True
+                progress(f"retry returned {len(more)} signals; triaging")
+                eligible = triage(session, run, more, run_date, settings, rank_offset=len(signals))
+                signals = list(signals) + list(more)
     ordered = rank_eligible(eligible, run_date)
     shortlist = ordered[: settings.max_verification_attempts]
     progress(
@@ -481,12 +540,27 @@ def run_day(
             cand.decision_reason = "eligible but outranked"
 
     counts: dict[str, int] = {}
-    for c in run.candidates:
+    all_cands = session.scalars(
+        select(Candidate).where(Candidate.run_id == run.id).order_by(Candidate.rank, Candidate.id)
+    ).all()  # a query, not the relationship: the retry added rows after it was loaded
+    for c in all_cands:
         counts[c.decision.value] = counts.get(c.decision.value, 0) + 1
     run.summary = {
         "candidates": len(signals),
         "decisions": counts,
         "verification": verification_log,
+        "candidate_list": [
+            {
+                "rank": c.rank,
+                "company": c.company_raw,
+                "signal_date": (c.raw_json or {}).get("signal_date"),
+                "decision": c.decision.value,
+                "reason": c.decision_reason,
+                "score": c.score_total,
+            }
+            for c in all_cands
+        ],
+        **({"freshness_retry": True} if retried else {}),
         **({"rebuild": True} if stages.rebuild else {}),
     }
     run.finished_at = dt.datetime.now(dt.UTC)

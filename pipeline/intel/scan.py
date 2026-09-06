@@ -147,9 +147,11 @@ def scanner_system_prompt() -> str:
     return system.replace(_REGRESSED_EXAMPLE_TAIL, _V213_EXAMPLE_TAIL)
 
 
-def scanner_prompts(today: dt.date) -> tuple[str, str]:
+def scanner_prompts(today: dt.date, addendum: str | None = None) -> tuple[str, str]:
     system = scanner_system_prompt().replace(_TODAY_TOKEN, today.isoformat())
     user = load_prompt("scanner_v218_user.txt")
+    if addendum:
+        user = user.rstrip() + "\n\n" + addendum.strip() + "\n"
     return system, user
 
 
@@ -186,10 +188,12 @@ def run_scan(
     today: dt.date,
     client: MessagesClient | None = None,
     settings: Settings | None = None,
+    addendum: str | None = None,
 ) -> ScanResult:
+    """One scanner turn. ``addendum`` is appended to the user prompt (the freshness retry)."""
     settings = settings or get_settings()
     client = client or AnthropicText()
-    system, user = scanner_prompts(today)
+    system, user = scanner_prompts(today, addendum)
     messages: list[dict] = [{"role": "user", "content": user}]
     last_error: str | None = None
     raw = ""
