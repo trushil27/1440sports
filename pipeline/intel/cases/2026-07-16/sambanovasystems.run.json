@@ -1,0 +1,736 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-07-16",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-bh3ywytf/2026-07-16/sambanovasystems.pdf",
+     "web": "/tmp/case-pdf-bh3ywytf/2026-07-16/sambanovasystems.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "SambaNova Systems",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 77,
+     "reason": "top ranking score",
+     "company": "SambaNova Systems",
+     "decision": "selected",
+     "signal_date": "2026-07-08"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "SambaNova Systems",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 77,
+   "score_breakdown": {
+    "cap": null,
+    "base": 77,
+    "total": 77,
+    "timing": 17,
+    "ops_fit": 15,
+    "ranking": 77,
+    "urgency": 13,
+    "capacity": 18,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 77,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 77,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "TGR Haas F1 Team",
+   "source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "trigger_date": "2026-07-08",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 161,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-bh3ywytf/2026-07-16/sambanovasystems.web.html",
+  "brief_data": {
+   "hq": "Palo Alto, California (founded 2017)",
+   "deck": "SambaNova, the Palo Alto AI-chip maker, completed the first close of a $1B Series F at an $11B post-money valuation on 8 July 2026, led by General Atlantic, five months after a $350M Series E at a reported $2.2B. JPMorganChase was named an on-premises inference customer the same day.",
+   "risks": [
+    {
+     "label": "SECOND CLOSE UNCONFIRMED",
+     "detail": "The 8 July release called it a first close with more expected within weeks; no completion had been announced by early September.",
+     "counter": "Anchor on the $1B first close; ask for the final size and the IPO timetable on the call."
+    },
+    {
+     "label": "GROQ GOT THERE FIRST",
+     "detail": "McLaren's Groq deal owns the inference-chip narrative on the grid; a second entrant risks reading as a copy.",
+     "counter": "Sell the on-premises deployment and the JPMorgan private-inference story: a system in the factory, not a logo."
+    }
+   ],
+   "score": 77,
+   "ticker": "Private ($11B post-money; $1B Series F first close, Jul 2026)",
+   "company": "SambaNova Systems",
+   "gridfit": [
+    {
+     "team": "TGR Haas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://www.businesswire.com/news/home/20260612257950/en/SambaNova-Names-Engineering-and-Finance-Leaders-to-Accelerate-Growth-as-Customer-Demand-Surges",
+    "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+    "https://www.cnbc.com/2026/02/24/intel-partners-with-sambanova-after-buyout-talks-reportedly-failed.html"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Rodrigo Liang before the United States GP to confirm the size of the completed Series F and the listing timetable, and to size an Official AI Inference Partner entry, part-paid in systems, against Haas's 2027 roster.",
+    "value": [
+     {
+      "text": "An SN40L system installed at the Banbury operations base running open-weight models on the team's own data: post-session strategy analysis, telemetry anomaly detection across the car's sensor streams, engineering-document and simulation copilots for a small engineering staff. Data never leaves the building, which matters to a team whose design office sits inside Ferrari's home town.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Systems and support can form part of the consideration, so the team gains inference capacity without cost-cap capital. The SN50, shipping from the second half of 2026, gives the partnership a hardware refresh story in each of the three years.",
+      "label": "Cost-cap arithmetic"
+     },
+     {
+      "text": "SambaNova's buyers are CIOs and CTOs at banks, sovereign AI programmes and neo-clouds, an audience Haas's current partners do not bring. Hospitality at Miami, Austin and Las Vegas for those accounts, and a factory reference deployment SambaNova can show every prospect.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Official AI Inference Partner designation, sidepod or rear-wing placement, naming of the team's inference environment, driver and engineering access for SambaNova's customer events, and engineering content from Banbury and Kannapolis on how the system is used.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 8 July 2026 SambaNova announced the first close of $1B in strategic financing as part of a Series F at an $11B post-money valuation, led by General Atlantic with Seligman Ventures, T. Rowe Price Associates and Capital Group, and with BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis among new and existing investors. The company said a second close was expected in the coming weeks; none had been announced by early September, so the brief anchors on the first close.",
+      "label": "Trigger"
+     },
+     {
+      "text": "In December 2025 Bloomberg reported Intel in advanced talks to buy SambaNova for about $1.6B including debt. The talks stalled; in February 2026 Intel instead took a stake in a $350M Series E at a reported ~$2.2B valuation and signed a multi-year partnership. Five months later the company priced at $11B. A business re-rated that fast has a story to tell to enterprise, sovereign and public-market audiences, and the money to tell it.",
+      "label": "A fivefold re-rating in five months"
+     },
+     {
+      "text": "The same day, JPMorganChase was named an inference-infrastructure customer, with SN40L and SN50 systems powering secure on-premises inference at the bank. The SN50 begins shipping in the second half of 2026 with SoftBank as first deployment partner in Japan; Saudi Aramco and OVHcloud are among named customers. Each shipment milestone is a moment a partnership can be timed to.",
+      "label": "JPMorganChase and the SN50 ramp"
+     },
+     {
+      "text": "The United States GP in October and the Las Vegas GP in November are the US rounds left in 2026, and teams close 2027 partner rosters in the fourth quarter. Rodrigo Liang has said an IPO in 2027, most likely in the US, is under consideration (reported); a deal agreed before Austin runs through the listing year.",
+      "label": "Calendar and listing window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Haas carries Toyota Gazoo Racing as title and technical partner, Mphasis as Official Digital Partner, CommScope and Ruckus for connectivity, Orion180, Haas Automation and Haas Tooling, but no compute, AI, cloud or chip partner. Official AI Inference Partner is a clean category. Mphasis sells IT services, including AI services, so it is a channel for a deployment, not a lock on the lane.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Haas is the grid's lean privateer, operating from Kannapolis, Banbury and a design office in Maranello with a fraction of the headcount of the works teams. Capability installed by a partner, an inference system the team could not otherwise justify inside the cost cap, is worth more to Haas than to a team with its own data-centre programme.",
+      "label": "A team that needs the capability"
+     },
+     {
+      "text": "SambaNova is headquartered in Palo Alto and sells to US banks, sovereign programmes and neo-clouds. Haas is the American team with three home rounds a year: Miami, Austin and Las Vegas, where the enterprise and capital-markets audience SambaNova needs for a 2027 listing already gathers.",
+      "label": "American team, American buyers"
+     },
+     {
+      "text": "Groq became an Official Partner of McLaren in September 2025 with its LPU chip on the car from the Singapore GP. That proved teams buy inference silicon. SambaNova's difference is the on-premises system: a deployment at Haas would be the JPMorgan story at racing speed, not a logo.",
+      "label": "The precedent, and the difference"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Groq is Official Partner and the inference-chip incumbent; Google Cloud and Dell also hold cloud and hardware."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "AMD, Snapdragon and Hewlett Packard Enterprise cover silicon and compute."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "ARM holds the chip lane and CoreWeave the AI compute lane."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Core Scientific (data centre) and TWG AI occupy compute and AI."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and the compute incumbent."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Microsoft holds cloud and IndraMind joined in the AI lane."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "HP (title) and IBM cover hardware and compute."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Claude and Airia occupy the AI lanes; VAST holds the data platform."
+     },
+     {
+      "team": "Audi Revolut F1 Team · Visa Cash App Racing Bulls",
+      "reason": "Open but not chosen: Audi's roster already carries ElevenLabs in AI, and Racing Bulls lacks the US identity and home races that fit a Palo Alto company heading for a US listing."
+     }
+    ]
+   },
+   "date_long": "16 JUL 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "TGR Haas F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $1B first close at $11B, a fivefold re-rating in five months, JPMorganChase on-premises and an IPO under consideration put SambaNova at peak brand-investment authority. Haas has no compute or chip partner, Groq at McLaren proved the category, and two US races remain inside the window.",
+   "footer_date": "16 JUL 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "First close 8 Jul, second pending; Austin and Las Vegas in window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 18,
+     "note": "$1B first close at $11B; ~$2.5B raised in total (reported).",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "B2B silicon brand; a listing narrative needs a stage.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "IPO under consideration for 2027 (reported); no filing.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: on-premises inference; no AI or chip partner at Haas.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "General Atlantic led the $1B first close, with Seligman Ventures, T. Rowe Price Associates and Capital Group, alongside BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures and Vista Equity Partners; a second close was expected within weeks. Five months earlier SambaNova raised a $350M Series E with Intel after Bloomberg-reported takeover talks near $1.6B stalled, so the price has risen roughly fivefold since February. Proceeds expand production of the SN40L and the SN50, shipping in the second half of 2026 with SoftBank first. Liang says a 2027 IPO is under consideration (reported).",
+   "the_case_p2": "The grid has a precedent: McLaren named Groq an Official Partner in September 2025, putting an inference chip on the car from the Singapore GP with a pitch of fast, cost-efficient intelligence for analysis and development. SambaNova is the other US inference-silicon company at scale, now with JPMorganChase running its systems on-premises. It has no seat, and it is the one with a public-market clock starting to run.",
+   "track_label": "",
+   "brief_number": "161",
+   "claims_total": 17,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$1B first close of a Series F at an $11B post-money valuation, led by General Atlantic with Seligman Ventur…",
+     "value": "$1B",
+     "claim_id": 663,
+     "verified": true,
+     "source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/"
+    },
+    {
+     "fact": "Five months earlier SambaNova raised a $350M Series E with Intel after Bloomberg-reported takeover talks ne…",
+     "value": "$350M",
+     "claim_id": 674,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Inference Infrastructure · Chips & Systems",
+   "value_content": "MODE A - operational. An SN40L system at Banbury running open-weight models on the team's own data: strategy post-processing between sessions, telemetry anomaly detection, engineering-document and simulation copilots, none of it leaving the building. JPMorganChase chose SambaNova for that private, on-premises inference. The hardware can form part of the consideration for a cost-capped team; for SambaNova, a reference deployment to show every sovereign and enterprise buyer.",
+   "value_section": true,
+   "why_team_para": "Haas is the American team with no compute, AI or chip partner: Toyota Gazoo Racing as title and technical partner, Mphasis for digital services, CommScope and Ruckus for connectivity, no silicon. It is the lean privateer, so a partner that installs capability the team could not buy is worth more here than anywhere. Kannapolis and Banbury give SambaNova a US and a UK site; three home races put the brand in front of its buyers.",
+   "deal_arch_para": "Entry as Official AI Inference Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the SN50 ramp and a possible 2027 listing. Estimated $4-7M a year, part-payable in systems and support. Scope: sidepod or rear-wing placement, naming of the team's inference environment, US-race hospitality, engineering content from Banbury.",
+   "footer_company": "SAMBANOVA SYSTEMS",
+   "why_team_label": "WHY TGR HAAS F1 TEAM",
+   "claims_verified": 17,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The first close landed on 8 July with a second expected within weeks, and the SN50 ships in the second half of 2026. The United States GP in October and the Las Vegas GP in November fall inside the window, and a 2027 listing makes 2027 the brand-build year.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Liang co-founded SambaNova in 2017 with Stanford professors Kunle Olukotun and Christopher Ré after leading processor development at Sun Microsystems and Oracle. Path: Annie Shea Weckesser, Chief Marketing Officer; Harry Ault, Chief Revenue Officer; Matt Padfield, CFO since June 2026.",
+   "decision_maker_name": "Rodrigo Liang",
+   "decision_maker_role": "Co-Founder & CEO, SambaNova Systems",
+   "opening_angle_intro": "Lead with the Groq precedent.",
+   "opening_angle_quote": "&ldquo;Rodrigo, Groq put its chip on a McLaren the season it needed the story. You have just raised $1B at $11B with a listing in view, and the American team has no silicon partner. JPMorgan runs you on-premises; a race team could. 25 minutes before Austin?&rdquo;",
+   "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Rodrigo Liang, Co-Founder & CEO at SambaNova Systems",
+   "cited_source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260612257950/en/SambaNova-Names-Engineering-and-Finance-Leaders-to-Accelerate-Growth-as-Customer-Demand-Surges",
+     "excerpt": "SambaNova leadership: Rodrigo Liang, Co-Founder & CEO (previously SVP at Oracle overseeing SPARC processor and ASIC development, and at Sun Microsystems; Stanford EE); Annie Shea Weckesser, Chief Marketing Officer (LinkedIn / The Org); Harry Ault, Chief Revenue Officer (Crunchbase / The Org); Matt Padfield appointed Chief Financial Officer on 12 Jun 2026 (BusinessWire release, previously Group VP Corporate FP&A at Coherent, acting CFO at Synaptics). Clyde Hosein is listed as President & COO on The Org, but Equilar records his tenure as Apr 2025–Mar 2026, so he is not used in the path.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Rodrigo Liang, Co-Founder & CEO, SambaNova Systems at SambaNova Systems",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260612257950/en/SambaNova-Names-Engineering-and-Finance-Leaders-to-Accelerate-Growth-as-Customer-Demand-Surges",
+     "excerpt": "SambaNova leadership: Rodrigo Liang, Co-Founder & CEO (previously SVP at Oracle overseeing SPARC processor and ASIC development, and at Sun Microsystems; Stanford EE); Annie Shea Weckesser, Chief Marketing Officer (LinkedIn / The Org); Harry Ault, Chief Revenue Officer (Crunchbase / The Org); Matt Padfield appointed Chief Financial Officer on 12 Jun 2026 (BusinessWire release, previously Group VP Corporate FP&A at Coherent, acting CFO at Synaptics). Clyde Hosein is listed as President & COO on The Org, but Equilar records his tenure as Apr 2025–Mar 2026, so he is not used in the path.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1B first close of a Series F at an $11B post-money valuation, led by General Atlantic with Seligman Ventures, T. Rowe Price Associates and Capital Group (company release, 8 Jul 2026); second close expected within weeks; $350M Series E in Feb 2026 at a reported ~$2.2B",
+   "cited_source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+     "excerpt": "SambaNova / General Atlantic release, 8 Jul 2026 (also TechCrunch, Bloomberg, Quartz): first close of $1 billion in strategic financing as part of a Series F, valuing the company at $11 billion post-money; led by General Atlantic with significant investment from Seligman Ventures, T. Rowe Price Associates, Inc. and Capital Group; new and existing investors include BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis. A second close is expected in the coming weeks (none announced as of 6 Sep 2026). Proceeds expand production capacity and deployments for enterprise, sovereign AI and neo-cloud customers. JPMorganChase selected SambaNova as an inference-infrastructure partner, with SN40L and SN50 systems powering secure on-premises inference at the bank (TechCrunch / The AI Insider, 8 Jul 2026).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "SambaNova, the Palo Alto AI-chip maker, completed the first close of a $1B Series F at an $11B post-money valuation on 8 July 2026, led by General Atlantic, five months after a $350M Series E at a reported $2.2B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+     "excerpt": "SambaNova / General Atlantic release, 8 Jul 2026 (also TechCrunch, Bloomberg, Quartz): first close of $1 billion in strategic financing as part of a Series F, valuing the company at $11 billion post-money; led by General Atlantic with significant investment from Seligman Ventures, T. Rowe Price Associates, Inc. and Capital Group; new and existing investors include BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis. A second close is expected in the coming weeks (none announced as of 6 Sep 2026). Proceeds expand production capacity and deployments for enterprise, sovereign AI and neo-cloud customers. JPMorganChase selected SambaNova as an inference-infrastructure partner, with SN40L and SN50 systems powering secure on-premises inference at the bank (TechCrunch / The AI Insider, 8 Jul 2026).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "General Atlantic (lead), Seligman Ventures, T. Rowe Price Associates, Capital Group, BlackRock, Intel Capital, Qatar Investment Authority, Battery Ventures, Vista Equity Partners, Volantis",
+   "cited_source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+     "excerpt": "SambaNova / General Atlantic release, 8 Jul 2026 (also TechCrunch, Bloomberg, Quartz): first close of $1 billion in strategic financing as part of a Series F, valuing the company at $11 billion post-money; led by General Atlantic with significant investment from Seligman Ventures, T. Rowe Price Associates, Inc. and Capital Group; new and existing investors include BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis. A second close is expected in the coming weeks (none announced as of 6 Sep 2026). Proceeds expand production capacity and deployments for enterprise, sovereign AI and neo-cloud customers. JPMorganChase selected SambaNova as an inference-infrastructure partner, with SN40L and SN50 systems powering secure on-premises inference at the bank (TechCrunch / The AI Insider, 8 Jul 2026).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "General Atlantic led the $1B first close, with Seligman Ventures, T.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+     "excerpt": "SambaNova / General Atlantic release, 8 Jul 2026 (also TechCrunch, Bloomberg, Quartz): first close of $1 billion in strategic financing as part of a Series F, valuing the company at $11 billion post-money; led by General Atlantic with significant investment from Seligman Ventures, T. Rowe Price Associates, Inc. and Capital Group; new and existing investors include BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis. A second close is expected in the coming weeks (none announced as of 6 Sep 2026). Proceeds expand production capacity and deployments for enterprise, sovereign AI and neo-cloud customers. JPMorganChase selected SambaNova as an inference-infrastructure partner, with SN40L and SN50 systems powering secure on-premises inference at the bank (TechCrunch / The AI Insider, 8 Jul 2026).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$1B Series F first close at $11B post-money announced 8 Jul 2026; JPMorganChase named as an on-premises inference-infrastructure customer the same day",
+   "cited_source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+     "excerpt": "SambaNova / General Atlantic release, 8 Jul 2026 (also TechCrunch, Bloomberg, Quartz): first close of $1 billion in strategic financing as part of a Series F, valuing the company at $11 billion post-money; led by General Atlantic with significant investment from Seligman Ventures, T. Rowe Price Associates, Inc. and Capital Group; new and existing investors include BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis. A second close is expected in the coming weeks (none announced as of 6 Sep 2026). Proceeds expand production capacity and deployments for enterprise, sovereign AI and neo-cloud customers. JPMorganChase selected SambaNova as an inference-infrastructure partner, with SN40L and SN50 systems powering secure on-premises inference at the bank (TechCrunch / The AI Insider, 8 Jul 2026).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Five months earlier SambaNova raised a $350M Series E with Intel after Bloomberg-reported takeover talks near $1.6B stalled, so the price has risen roughly fivefold since February.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.cnbc.com/2026/02/24/intel-partners-with-sambanova-after-buyout-talks-reportedly-failed.html",
+     "excerpt": "CNBC, 24 Feb 2026, and DCD: after Bloomberg-reported acquisition talks with Intel near $1.6 billion (including debt) stalled in Dec 2025–Jan 2026, Intel and SambaNova agreed a multi-year partnership with Intel investing in a $350 million Series E (Feb 2026) at an implied valuation of roughly $2.2 billion (reported). The July first close at $11B is a roughly fivefold re-rating in five months (TechCrunch).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Groq at McLaren (Official Partner, inference chip on the car since the 2025 Singapore GP); AMD at Mercedes; ARM (Aston Martin); CoreWeave at Aston Martin; Core Scientific and TWG AI at Cadillac; Haas carries no compute, AI or chip partner",
+   "cited_source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Groq → McLaren F1 Team (team_major, active); AMD → Mercedes-AMG Petronas F1 Team (team_major, active); CoreWeave → Aston Martin Aramco F1 Team (team_major, active); TWG AI → Cadillac F1 Team (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $1B first close at $11B, a fivefold re-rating in five months, JPMorganChase on-premises and an IPO under consideration put SambaNova at peak brand-investment authority.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+     "excerpt": "SambaNova / General Atlantic release, 8 Jul 2026 (also TechCrunch, Bloomberg, Quartz): first close of $1 billion in strategic financing as part of a Series F, valuing the company at $11 billion post-money; led by General Atlantic with significant investment from Seligman Ventures, T. Rowe Price Associates, Inc. and Capital Group; new and existing investors include BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis. A second close is expected in the coming weeks (none announced as of 6 Sep 2026). Proceeds expand production capacity and deployments for enterprise, sovereign AI and neo-cloud customers. JPMorganChase selected SambaNova as an inference-infrastructure partner, with SN40L and SN50 systems powering secure on-premises inference at the bank (TechCrunch / The AI Insider, 8 Jul 2026).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "On-premises inference for a cost-capped team: SN40L systems running open-weight models on the team's own data, the JPMorganChase private-inference story at a race team; Rodrigo Liang says an IPO in 2027 is under consideration (reported)",
+   "cited_source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260612257950/en/SambaNova-Names-Engineering-and-Finance-Leaders-to-Accelerate-Growth-as-Customer-Demand-Surges",
+     "excerpt": "SambaNova leadership: Rodrigo Liang, Co-Founder & CEO (previously SVP at Oracle overseeing SPARC processor and ASIC development, and at Sun Microsystems; Stanford EE); Annie Shea Weckesser, Chief Marketing Officer (LinkedIn / The Org); Harry Ault, Chief Revenue Officer (Crunchbase / The Org); Matt Padfield appointed Chief Financial Officer on 12 Jun 2026 (BusinessWire release, previously Group VP Corporate FP&A at Coherent, acting CFO at Synaptics). Clyde Hosein is listed as President & COO on The Org, but Equilar records his tenure as Apr 2025–Mar 2026, so he is not used in the path.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 8 July 2026 SambaNova announced the first close of $1B in strategic financing as part of a Series F at an $11B post-money valuation, led by General Atlantic with Seligman Ventures, T.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+     "excerpt": "SambaNova / General Atlantic release, 8 Jul 2026 (also TechCrunch, Bloomberg, Quartz): first close of $1 billion in strategic financing as part of a Series F, valuing the company at $11 billion post-money; led by General Atlantic with significant investment from Seligman Ventures, T. Rowe Price Associates, Inc. and Capital Group; new and existing investors include BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis. A second close is expected in the coming weeks (none announced as of 6 Sep 2026). Proceeds expand production capacity and deployments for enterprise, sovereign AI and neo-cloud customers. JPMorganChase selected SambaNova as an inference-infrastructure partner, with SN40L and SN50 systems powering secure on-premises inference at the bank (TechCrunch / The AI Insider, 8 Jul 2026).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Palo Alto, California; founded 2017 out of Stanford by Rodrigo Liang, Kunle Olukotun and Christopher Ré",
+   "cited_source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260612257950/en/SambaNova-Names-Engineering-and-Finance-Leaders-to-Accelerate-Growth-as-Customer-Demand-Surges",
+     "excerpt": "SambaNova leadership: Rodrigo Liang, Co-Founder & CEO (previously SVP at Oracle overseeing SPARC processor and ASIC development, and at Sun Microsystems; Stanford EE); Annie Shea Weckesser, Chief Marketing Officer (LinkedIn / The Org); Harry Ault, Chief Revenue Officer (Crunchbase / The Org); Matt Padfield appointed Chief Financial Officer on 12 Jun 2026 (BusinessWire release, previously Group VP Corporate FP&A at Coherent, acting CFO at Synaptics). Clyde Hosein is listed as President & COO on The Org, but Equilar records his tenure as Apr 2025–Mar 2026, so he is not used in the path.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "In December 2025 Bloomberg reported Intel in advanced talks to buy SambaNova for about $1.6B including debt.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.cnbc.com/2026/02/24/intel-partners-with-sambanova-after-buyout-talks-reportedly-failed.html",
+     "excerpt": "CNBC, 24 Feb 2026, and DCD: after Bloomberg-reported acquisition talks with Intel near $1.6 billion (including debt) stalled in Dec 2025–Jan 2026, Intel and SambaNova agreed a multi-year partnership with Intel investing in a $350 million Series E (Feb 2026) at an implied valuation of roughly $2.2 billion (reported). The July first close at $11B is a roughly fivefold re-rating in five months (TechCrunch).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+     "excerpt": "SambaNova / General Atlantic release, 8 Jul 2026 (also TechCrunch, Bloomberg, Quartz): first close of $1 billion in strategic financing as part of a Series F, valuing the company at $11 billion post-money; led by General Atlantic with significant investment from Seligman Ventures, T. Rowe Price Associates, Inc. and Capital Group; new and existing investors include BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis. A second close is expected in the coming weeks (none announced as of 6 Sep 2026). Proceeds expand production capacity and deployments for enterprise, sovereign AI and neo-cloud customers. JPMorganChase selected SambaNova as an inference-infrastructure partner, with SN40L and SN50 systems powering secure on-premises inference at the bank (TechCrunch / The AI Insider, 8 Jul 2026).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "in February 2026 Intel instead took a stake in a $350M Series E at a reported ~$2.2B valuation and signed a multi-year partnership.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.cnbc.com/2026/02/24/intel-partners-with-sambanova-after-buyout-talks-reportedly-failed.html",
+     "excerpt": "CNBC, 24 Feb 2026, and DCD: after Bloomberg-reported acquisition talks with Intel near $1.6 billion (including debt) stalled in Dec 2025–Jan 2026, Intel and SambaNova agreed a multi-year partnership with Intel investing in a $350 million Series E (Feb 2026) at an implied valuation of roughly $2.2 billion (reported). The July first close at $11B is a roughly fivefold re-rating in five months (TechCrunch).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Singapore GP",
+   "cited_source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 18: Singapore GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Five months later the company priced at $11B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+     "excerpt": "SambaNova / General Atlantic release, 8 Jul 2026 (also TechCrunch, Bloomberg, Quartz): first close of $1 billion in strategic financing as part of a Series F, valuing the company at $11 billion post-money; led by General Atlantic with significant investment from Seligman Ventures, T. Rowe Price Associates, Inc. and Capital Group; new and existing investors include BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis. A second close is expected in the coming weeks (none announced as of 6 Sep 2026). Proceeds expand production capacity and deployments for enterprise, sovereign AI and neo-cloud customers. JPMorganChase selected SambaNova as an inference-infrastructure partner, with SN40L and SN50 systems powering secure on-premises inference at the bank (TechCrunch / The AI Insider, 8 Jul 2026).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Singapore GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 18: Singapore GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

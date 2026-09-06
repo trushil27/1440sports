@@ -1,0 +1,798 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-07-06",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-pi1rh6uw/2026-07-06/energyx.pdf",
+     "web": "/tmp/case-pdf-pi1rh6uw/2026-07-06/energyx.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "EnergyX",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 16
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "resurfaced: EnergyX last surfaced 2026-07-06 (funding_round); new trigger other:strategic investment; top ranking score",
+     "company": "EnergyX",
+     "decision": "selected",
+     "signal_date": "2026-07-06"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "EnergyX",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "resurfaced: EnergyX last surfaced 2026-07-06 (funding_round); new trigger other:strategic investment; top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 16,
+    "ops_fit": 13,
+    "ranking": 71,
+    "urgency": 14,
+    "capacity": 13,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 3,
+     "product_to_need": 3,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Andretti Formula E",
+   "source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+   "trigger_date": "2026-07-06",
+   "trigger_reason": "strategic investment"
+  }
+ ],
+ "brief": {
+  "number": 166,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-pi1rh6uw/2026-07-06/energyx.web.html",
+  "brief_data": {
+   "hq": "Austin, Texas",
+   "deck": "EnergyX, the Austin lithium-extraction company backed by General Motors and POSCO, announced a $225M strategic equity investment from Eni on 6 July 2026 for a minority stake in its Black Giant project in Chile, alongside a $690M debt letter of intent from the US EXIM Bank. An energy major has underwritten the flagship.",
+   "risks": [
+    {
+     "label": "PROJECT MONEY, NOT BRAND MONEY",
+     "detail": "Eni's $225M goes into Project Black Giant, not the corporate budget; the company is pre-revenue and its filings report losses.",
+     "counter": "Size the entry small, tie it to Austin and the shareholder programme, and let year one earn year two."
+    },
+    {
+     "label": "RETAIL-FUNDED PROFILE",
+     "detail": "A company that raises from 40,000 small investors invites scrutiny of its promotional spend.",
+     "counter": "Frame it as shareholder engagement and OEM-facing storytelling with a stated budget, never a vanity buy."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private (Reg A+ retail-funded; $225M Eni, Jul 2026)",
+   "company": "EnergyX",
+   "gridfit": [
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "TAKEN",
+     "detail": "Shell",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "strategic_investment",
+    "home_race",
+    "open_category"
+   ],
+   "sources": [
+    "https://energyx.com/company/teague-egan/",
+    "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+    "https://investors.gm.com/news-releases/news-release-details/gm-leads-50-million-funding-round-energyx-unlock-us-based-0/",
+    "https://energyx.com/press-release/american-made-lithium-project-lonestar/",
+    "https://techcrunch.com/2024/10/04/why-energyx-raised-75m-from-small-investors-even-after-taking-vc-money-from-gm-and-others/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Teague Egan before the Season 13 launch to test the GM introduction to TWG Motorsports, agree an Austin E-Prix activation, and size a small Official Lithium Partner entry against Andretti's GEN4 roster.",
+    "value": [
+     {
+      "text": "Formula E runs a single-specification battery, so no EnergyX lithium enters the car and there is no engineering workstream. The value is narrative and commercial, and it is concrete: the car becomes the end of a supply chain that starts at EnergyX's plants.",
+      "label": "Halo, stated honestly (Mode B)"
+     },
+     {
+      "text": "EnergyX brings Eni, General Motors and POSCO relationships, a critical-minerals policy audience and an unusually large retail shareholder base that can be given a reason to attend Austin and Miami. That is a hospitality programme the team can sell to its other partners.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Plant-to-track films from the Smackover and Chile, driver visits to Project Lonestar, joint presence at US energy and mining forums, and a story about where a battery begins that the championship itself likes to tell.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Lithium and Critical-Minerals Partner designation, rear-wing or sidepod placement on the GEN4 car, hospitality at the two US rounds with a shareholder allocation, driver and team access for EnergyX's investor channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 6 July 2026 EnergyX announced a $225M strategic equity investment from Eni for a minority stake in Project Black Giant in Chile, with Eni taking rights to up to about 25% of future lithium output. The equity sits alongside a $690M debt-financing letter of intent from the US EXIM Bank, and total project cost is estimated just below $1B including financing.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Eni joins General Motors (Series B lead, April 2023) and POSCO as strategic investors. For a company that has funded itself in part through a $75M Regulation A+ offering to about 40,000 retail investors, a supermajor's cheque changes how bankers, OEMs and the public markets read it, which is exactly when a brand programme earns its keep.",
+      "label": "An energy major's endorsement"
+     },
+     {
+      "text": "Season 12 ends with the London E-Prix in mid-August; Season 13, the first with the GEN4 car, opens in Jeddah in December. Teams are rebuilding their rosters around the new car now, and a partner signed before the launch is on the car for the whole first GEN4 season.",
+      "label": "The GEN4 season"
+     },
+     {
+      "text": "The Austin E-Prix is on 6 February 2027 and the Miami E-Prix on 20 February. EnergyX is headquartered in Austin; its first US plant, Project Lonestar in the Smackover region of Texas and Arkansas, came online in March 2026. There is no more natural place to launch the partnership.",
+      "label": "A home race"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Andretti's roster is TWG AI as primary partner, Nissan for GEN4 powertrains from Season 13, Quest Global, Crowe UK and Reflo, with TWG Motorsports and Andretti Global as owners. There is no energy, battery or materials partner, and the team's profile lists several commercial categories as open.",
+      "label": "The open lane"
+     },
+     {
+      "text": "General Motors led EnergyX's Series B. TWG Motorsports, Andretti's owner, is General Motors' partner in the Cadillac F1 Team, which carries both names on its 2026 roster. The introduction can run through people who already sit at the same table.",
+      "label": "The ownership link"
+     },
+     {
+      "text": "An Austin lithium company on an American team at the Austin and Miami rounds, with a US critical-minerals story that plays to the policy and OEM audience Andretti already hosts.",
+      "label": "The American team"
+     },
+     {
+      "text": "The energy lanes at DS Penske (TotalEnergies), Lola Yamaha ABT (Shell) and Jaguar TCS Racing (Castrol) are taken; Envision Racing's owner runs a battery maker; Nissan, Porsche, Citroën and Cupra are manufacturer entries with their own supply chains; Mahindra is open but has no US or GM link.",
+      "label": "Why not the others"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "DS Penske",
+      "reason": "TotalEnergies holds the energy lane."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell is on the roster."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "Castrol occupies energy and lubricants."
+     },
+     {
+      "team": "Envision Racing",
+      "reason": "Title partner Envision Group runs battery maker Envision AESC; a lithium supplier would sit inside the owner's own value chain."
+     },
+     {
+      "team": "Nissan Formula E Team · Porsche Formula E Team · Citroën Racing · Cupra Kiro",
+      "reason": "Manufacturer entries with their own battery supply chains; not a partner lane."
+     },
+     {
+      "team": "Mahindra Racing",
+      "reason": "Open but not chosen: no US round tie and no link to EnergyX's investors."
+     }
+    ]
+   },
+   "date_long": "06 JUL 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Andretti Formula E",
+   "value_mode": "B",
+   "bottom_line": "A $225M Eni investment plus a $690M EXIM letter of intent give EnergyX an energy major's endorsement at the moment the GEN4 era opens, with a home race in Austin on 6 February 2027 and an American team whose roster carries no energy partner. Small, honest MODE B entry; move before the season launch.",
+   "footer_date": "6 JUL 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Eni closed 6 Jul; GEN4 season launch and Austin inside the horizon.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 13,
+     "note": "$225M is project equity; corporate brand budget unproven, pre-revenue.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "Lithium and the electric car; natural FE story, MODE B only.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 14,
+     "note": "Home race 6 Feb 2027; retail base to reward; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 13,
+     "note": "Spec battery: no in-car workstream; open lane, strong story.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 6 July EnergyX announced a $225M equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta region designed for 52,500 tonnes a year of lithium carbonate across two phases, with Eni taking rights to up to 25% of output. It sits on top of a $690M debt letter of intent from the US EXIM Bank; total project cost is put just below $1B. General Motors led the $50M Series B in April 2023; a $75M Regulation A+ raise built about 40,000 retail shareholders (reported).",
+   "the_case_p2": "Formula E is the world championship built around the electric car, and the lithium that goes into it has no name on the grid. Energy majors do: TotalEnergies at DS Penske, Shell at Lola Yamaha ABT, Castrol at Jaguar. EnergyX now carries an energy major's endorsement, an American home base and a Chilean flagship, and its first US plant, Project Lonestar in the Smackover, came online in March.",
+   "track_label": "",
+   "brief_number": "166",
+   "claims_total": 20,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$225M strategic equity investment from Eni for a minority stake in Project Black Giant, announced 6 Jul 202…",
+     "value": "$225M",
+     "claim_id": 658,
+     "verified": true,
+     "source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/"
+    },
+    {
+     "fact": "Eni (2026, project-level); General Motors led a $50M Series B in Apr 2023 with Elohim Partners and IMM Inve…",
+     "value": "$50M",
+     "claim_id": 659,
+     "verified": true,
+     "source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/"
+    },
+    {
+     "fact": "It sits on top of a $690M debt letter of intent from the US EXIM Bank;",
+     "value": "$690M",
+     "claim_id": 669,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "total project cost is put just below $1B.",
+     "value": "$1B",
+     "claim_id": 670,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "a $75M Regulation A+ raise built about 40,000 retail shareholders (reported).",
+     "value": "$75M",
+     "claim_id": 672,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Energy · Lithium / Direct Lithium Extraction",
+   "value_content": "MODE B - halo, stated honestly: Formula E runs a spec battery, so no EnergyX lithium enters the car. The mechanics are concrete: a lithium-to-lap supply-chain story told from the Smackover plant to the Austin grid; hospitality at Austin and Miami for the company's retail shareholders and strategic investors; a US critical-minerals narrative the team can carry into policy and OEM conversations; driver content on where a battery begins.",
+   "value_section": true,
+   "why_team_para": "Andretti is the American team, owned by TWG Motorsports, with TWG AI as primary partner, Nissan GEN4 powertrains from Season 13 and Quest Global, Crowe UK and Reflo alongside. There is no energy, battery or materials partner, and the roster is being rebuilt for the new car. The ownership link is real: General Motors, EnergyX's Series B lead, is TWG Motorsports' partner in the Cadillac F1 Team. Austin and Miami in February 2027 are home rounds for the team and for EnergyX.",
+   "deal_arch_para": "Entry as Official Lithium and Critical-Minerals Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, spanning Black Giant's build and a probable listing. Estimated $1.5-3M a year. Scope: rear-wing or sidepod placement on the GEN4 car, Austin and Miami hospitality with a shareholder allocation, plant-to-track content.",
+   "footer_company": "ENERGYX",
+   "why_team_label": "WHY ANDRETTI FORMULA E",
+   "claims_verified": 20,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Eni's money arrived on 6 July; Season 12 ends with the London E-Prix in mid-August and Season 13 opens in Jeddah in December with the GEN4 car. The Austin E-Prix on 6 February 2027 is a home race for an Austin company, and a partner signed before the launch is on the car for it.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Egan founded EnergyX in 2018 and has fronted every raise, including the retail offering; a first motorsport deal is his call. Path: Kellee Khalil, Chief Marketing Officer, who owns brand strategy; Mayank Sharma, Chief Financial Officer; Juan Carlos Barrera, President of Lithium, South America, for the Chile story.",
+   "decision_maker_name": "Teague Egan",
+   "decision_maker_role": "Founder, Chairman & CEO, EnergyX",
+   "opening_angle_intro": "Lead with the home race.",
+   "opening_angle_quote": "&ldquo;Teague, the Austin E-Prix is on 6 February and no lithium company is on a Formula E car. Andretti is the American team, GM sits beside its owner in Formula 1, and the GEN4 roster is open. 25 minutes to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Teague Egan, Founder, Chairman & CEO at EnergyX",
+   "cited_source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/company/teague-egan/",
+     "excerpt": "EnergyX company page: Teague Egan founded EnergyX in 2018 and serves as Chairman and Chief Executive Officer; quoted as Founder and CEO in the 6 Jul 2026 Eni release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Teague Egan, Founder, Chairman & CEO, EnergyX at EnergyX",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/company/teague-egan/",
+     "excerpt": "EnergyX company page: Teague Egan founded EnergyX in 2018 and serves as Chairman and Chief Executive Officer; quoted as Founder and CEO in the 6 Jul 2026 Eni release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$225M strategic equity investment from Eni for a minority stake in Project Black Giant, announced 6 Jul 2026; supplements a $690M debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1B including financing costs",
+   "cited_source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "EnergyX, the Austin lithium-extraction company backed by General Motors and POSCO, announced a $225M strategic equity investment from Eni on 6 July 2026 for a minority stake in its Black Giant project in Chile, alongside a $690M debt letter of intent from the US EXIM Bank.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Eni (2026, project-level); General Motors led a $50M Series B in Apr 2023 with Elohim Partners and IMM Investment Global (POSCO Holdings a major contributor to IMM's vehicle); about 40,000 retail investors through a $75M Regulation A+ offering completed in 2024 (reported)",
+   "cited_source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 6 July EnergyX announced a $225M equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta region designed for 52,500 tonnes a year of lithium carbonate across two phases, with Eni taking rights to up to 25% of output.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$225M strategic equity investment from Eni in Project Black Giant, announced 6 Jul 2026",
+   "cited_source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It sits on top of a $690M debt letter of intent from the US EXIM Bank;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No lithium, battery-materials or mining brand on the Formula E grid; energy majors sit on DS Penske (TotalEnergies), Lola Yamaha ABT (Shell) and Jaguar TCS (Castrol); Envision Racing's owner Envision Group runs battery maker Envision AESC",
+   "cited_source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+     "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json, team_profiles.json): Andretti Formula E — TWG AI (primary partner, 2026), TWG Motorsports and Andretti Global (owners), Nissan (GEN4 powertrain from Season 13), Porsche (powertrain to end of Season 12), Quest Global, Crowe UK, Reflo; profile lists enterprise software, fintech and identity/security as open categories; no energy, battery or materials partner. DS Penske — TotalEnergies, Mouser, TTI, Molex, KYOCERA AVX. Lola Yamaha ABT — Shell, Castore, OMP. Jaguar TCS Racing — TCS, Castrol. Envision Racing — Envision Group (title; the group runs battery maker Envision AESC), Sand Technologies, Teijin. Mahindra Racing — Mahindra & Mahindra, Tech Mahindra. Citroën Racing — Stellantis. Cupra Kiro — Cupra, Kiro. Nissan and Porsche — works teams. Cadillac F1 Team — General Motors (parent) and TWG Motorsports on the 2026 roster.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "total project cost is put just below $1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "General Motors, EnergyX's Series B lead, is the parent of the Cadillac F1 Team alongside TWG Motorsports, which also owns Andretti Formula E; Austin E-Prix on 6 Feb 2027 is a home race for an Austin-headquartered company",
+   "cited_source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.gm.com/news-releases/news-release-details/gm-leads-50-million-funding-round-energyx-unlock-us-based-0/",
+     "excerpt": "General Motors investor release, Apr 2023: GM leads a $50 million Series B financing in EnergyX, with participation from Elohim Partners and IMM Investment Global; POSCO Holdings is a major contributor to IMM's fund vehicle. EnergyX's own release on the POSCO-linked South Korean syndicate investment confirms the strategic investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "General Motors led the $50M Series B in April 2023;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://investors.gm.com/news-releases/news-release-details/gm-leads-50-million-funding-round-energyx-unlock-us-based-0/",
+     "excerpt": "General Motors investor release, Apr 2023: GM leads a $50 million Series B financing in EnergyX, with participation from Elohim Partners and IMM Investment Global; POSCO Holdings is a major contributor to IMM's fund vehicle. EnergyX's own release on the POSCO-linked South Korean syndicate investment confirms the strategic investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Austin, Texas; Project Lonestar 250-tonne-a-year DLE demonstration plant in the Smackover region of Texas and Arkansas commissioned Mar 2026; about 50,000 acres of Smackover brine holdings",
+   "cited_source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/american-made-lithium-project-lonestar/",
+     "excerpt": "EnergyX releases (Mar 2026 and the Pantera acquisition release): Project Lonestar, the company's first US project, a 250-tonne-a-year DLE demonstration plant in the Smackover region spanning Texas and Arkansas, commissioned March 2026; roughly 35,000 gross acres of Smackover brine acquired from Pantera in Arkansas plus 12,500 acres in Texas, nearly 50,000 acres in total; Project Lonestar targets 12,500 tonnes a year in a first phase by 2028. EnergyX is headquartered in Austin, Texas (company site).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "a $75M Regulation A+ raise built about 40,000 retail shareholders (reported).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2024/10/04/why-energyx-raised-75m-from-small-investors-even-after-taking-vc-money-from-gm-and-others/",
+     "excerpt": "TechCrunch, 4 Oct 2024, and EnergyX/DealMaker release: EnergyX raised $75 million from retail investors under Regulation A+ (the maximum in a 12-month window), completed in late 2024; the company cites nearly 40,000 investors alongside GM, POSCO and Eni. Texarkana Today (2026, from SEC filings): a broader offering launched July 2025 had sold about 3.67 million shares for roughly $36.6 million by 1 April 2026. Reported figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "strategic investment",
+   "cited_source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $225M Eni investment plus a $690M EXIM letter of intent give EnergyX an energy major's endorsement at the moment the GEN4 era opens, with a home race in Austin on 6 February 2027 and an American team whose roster carries no energy partner.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix on 6 Feb 2027",
+   "cited_source_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 6 July 2026 EnergyX announced a $225M strategic equity investment from Eni for a minority stake in Project Black Giant in Chile, with Eni taking rights to up to about 25% of future lithium output.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The equity sits alongside a $690M debt-financing letter of intent from the US EXIM Bank, and total project cost is estimated just below $1B including financing.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+     "excerpt": "EnergyX press release (PR Newswire, 6 Jul 2026): $225 million strategic equity investment from Eni for a minority stake in Project Black Giant, a lithium brine and refining project in Chile's Antofagasta Region; designed to produce 52,500 tonnes a year of lithium carbonate across its first two phases; more than 100,000 acres of mining tenements in the Domeyko Range near Salar de Punta Negra; Eni receives rights to up to about 25% of future production; EnergyX's GET-Lit direct lithium extraction platform, backed by more than 150 patents; the equity supplements a $690 million debt-financing letter of intent from the US EXIM Bank; total project capital expenditure estimated just below $1 billion including financing costs. Teague Egan, Founder and CEO, quoted. Mirrored by Eni's own release of the same date.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "For a company that has funded itself in part through a $75M Regulation A+ offering to about 40,000 retail investors, a supermajor's cheque changes how bankers, OEMs and the public markets read it, which is exactly when a brand programme earns its keep.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2024/10/04/why-energyx-raised-75m-from-small-investors-even-after-taking-vc-money-from-gm-and-others/",
+     "excerpt": "TechCrunch, 4 Oct 2024, and EnergyX/DealMaker release: EnergyX raised $75 million from retail investors under Regulation A+ (the maximum in a 12-month window), completed in late 2024; the company cites nearly 40,000 investors alongside GM, POSCO and Eni. Texarkana Today (2026, from SEC filings): a broader offering launched July 2025 had sold about 3.67 million shares for roughly $36.6 million by 1 April 2026. Reported figures.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 12 calendar (ExCeL London finale) | note: ExCeL, double-header race 1 — season finale weekend",
+     "excerpt": "round 16: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The Austin E-Prix on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "opening_angle_quote",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Austin E-Prix is on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Miami E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: Miami International Autodrome (Hard Rock Stadium)",
+     "excerpt": "round 3: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

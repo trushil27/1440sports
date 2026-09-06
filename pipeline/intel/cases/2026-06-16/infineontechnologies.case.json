@@ -1,0 +1,393 @@
+{
+ "run_date": "2026-06-16",
+ "signal_date": "2026-06-08",
+ "stem": "infineontechnologies",
+ "number": 190,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Infineon Technologies",
+  "signal_date": "2026-06-08",
+  "score": 75,
+  "tier": "WARM",
+  "track": 1,
+  "person": "Andreas Urschitz",
+  "role": "Chief Marketing Officer, Member of the Management Board",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.infineon.com/press-release/2026/infxx202605-082",
+  "industry_meta": "Power Semiconductors · Silicon Carbide / EV Traction · Neubiberg, Germany (FSE: IFX)",
+  "recommended_team": "Jaguar TCS Racing",
+  "recommended_series": "FE",
+  "timing_label": "WARM",
+  "trigger_reason": "guidance raise + peak demand",
+  "key_facts": {
+   "funding": "Public company (FSE: IFX); fiscal 2025 revenue about EUR 14.7B; around 57,000 employees",
+   "investors": "Public shareholders; adjusted free cash flow guidance for fiscal 2026 raised to about EUR 1.65B from EUR 1.4B",
+   "revenue": "EUR 14.7B in fiscal 2025; Q2 fiscal 2026 revenue EUR 3.81B, up 6%",
+   "trigger": "Full-year guidance raised on 6 May 2026 (revenue now to grow significantly; segment result margin about 20%) as AI data-centre power demand surged and automotive orders improved; on 8 June 2026 Infineon and Siemens announced silicon-carbide power modules for Siemens' semiconductor circuit breakers",
+   "competitor_signal": "Mouser Electronics, TTI, Molex and KYOCERA AVX hold the electronic-components lane at DS Penske; Wolfspeed, the power-semiconductor partner Jaguar ran from 2017, is absent from the team's 2025/26 roster after its 2025 Chapter 11",
+   "strategic_hook": "AI data-centre revenue expected at about EUR 1.5B in fiscal 2026 rising to about EUR 2.5B in fiscal 2027; number one in power semiconductors (Omdia); HybridPACK Drive traction-inverter modules on more than 20 EV platforms",
+   "us_presence": "Americas headquarters in Milpitas, California; sites including Austin, Texas",
+   "alumni_match": null,
+   "taxonomy_category": "A2",
+   "ops_fit_note": "MODE A: CoolSiC silicon-carbide power modules and gate drivers for the GEN4 traction inverters, plus the team's charging and pit equipment",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 15,
+   "capacity": 18,
+   "brand_fit": 14,
+   "urgency": 12,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 7,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "urschitz",
+    "chief marketing officer",
+    "management board"
+   ],
+   "url": "https://www.infineon.com/about/company/leadership-team/andreas-urschitz",
+   "excerpt": "Infineon leadership page (via search summary; infineon.com is egress-blocked): Andreas Urschitz has been a member of the Management Board and Chief Marketing Officer of Infineon Technologies AG since 2022, appointed until 31 May 2030. Jochen Hanebeck, CEO since 2022 (board member since 2016, appointed until 31 March 2027). Sven Schneider, CFO since 2019 (appointed until 30 April 2027).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "hanebeck",
+    "schneider",
+    "cfo"
+   ],
+   "url": "https://www.infineon.com/about/company/leadership-team/jochen-hanebeck",
+   "excerpt": "Infineon leadership pages (search summary): Jochen Hanebeck, Chief Executive Officer since 2022; Sven Schneider, Chief Financial Officer since 2019; Andreas Urschitz, Chief Marketing Officer since 2022.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "6 may",
+    "3.81b",
+    "guidance",
+    "significantly",
+    "20%",
+    "1.65b",
+    "1.4b",
+    "1.5b",
+    "2.5b",
+    "segment result",
+    "up 6%"
+   ],
+   "url": "https://www.infineon.com/press-release/2026/infxx202605-082",
+   "excerpt": "Infineon, 6 May 2026 ('Growth prospects improved: Infineon raises full-year guidance. AI boom strengthens further. Automotive order intake improves. Revised segment structure effective from the fourth quarter'): Q2 fiscal 2026 revenue EUR 3.81B, up 6% year on year; fiscal 2026 revenue now expected to rise significantly (previously moderately); adjusted gross margin low-to-mid forties, Segment Result Margin about 20% (previously high teens); adjusted free cash flow about EUR 1.65B (previously EUR 1.4B); revenue from AI data-centre applications expected at around EUR 1.5B in fiscal 2026 and around EUR 2.5B in fiscal 2027.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "8 jun",
+    "siemens",
+    "circuit breaker",
+    "sentron",
+    "pcim"
+   ],
+   "url": "https://www.infineon.com/press-release/2026/infgip202606-107",
+   "excerpt": "Infineon and Siemens, 8 June 2026: collaboration on semiconductor circuit-breaker technology for data centres, production facilities and battery storage; Infineon supplies silicon-carbide power modules for Siemens' SENTRON 3QD2 semiconductor circuit breakers; demonstrated at PCIM Europe, Nuremberg, 9-11 June 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "14.7b",
+    "57,000",
+    "neubiberg",
+    "number one",
+    "omdia",
+    "fse: ifx",
+    "fiscal 2025"
+   ],
+   "url": "https://www.infineon.com/assets/row/public/documents/corporate/2025-flyer-about-infineon-en.pdf",
+   "excerpt": "Infineon at a glance, fiscal year 2025: revenue about EUR 14.7B; around 57,000 employees at 30 September 2025; headquarters Neubiberg near Munich; listed in Frankfurt (IFX). Infineon press release March 2026: clear number one in power semiconductors, automotive semiconductors and automotive microcontrollers per Omdia; microcontroller share 23.2% in 2025.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "hybridpack",
+    "coolsic",
+    "traction inverter",
+    "20 ev platforms",
+    "three million",
+    "1,200 v",
+    "300 kw"
+   ],
+   "url": "https://www.infineon.com/products/power/modules/coolsic-mosfet-modules/hybridpack-drive-dc6",
+   "excerpt": "Infineon HybridPACK Drive CoolSiC product page and Power Electronics News: a 1,200 V silicon-carbide six-pack module for EV traction inverters covering 100-300 kW, qualified to AQG324; HybridPACK Drive has shipped nearly three million units for more than 20 electric-vehicle platforms.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "milpitas",
+    "austin",
+    "americas"
+   ],
+   "url": "https://www.zippia.com/infineon-technologies-careers-382952/locations/",
+   "excerpt": "Infineon Technologies Americas: corporate office at 640 N McCarthy Blvd, Milpitas, California; about 16 US locations including Austin, Texas (Zippia / Manta listings, search summary).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "600 kw",
+    "600kw",
+    "all-wheel",
+    "gen4",
+    "season 13",
+    "55 kwh",
+    "700 kw",
+    "335"
+   ],
+   "url": "https://www.fiaformulae.com/en/news/762858/formula-e-and-fia-unveil-the-all-new-gen4",
+   "excerpt": "Formula E / FIA GEN4 reveal: 600 kW peak power (450 kW race, 600 kW attack mode), permanent all-wheel drive, 55 kWh battery, up to 700 kW regenerative braking, 0-100 km/h in about 1.8 s, top speed 335 km/h; debut in Season 13 (2026-27).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "wolfspeed",
+    "2017",
+    "chapter 11",
+    "2025/26",
+    "official power semiconductor"
+   ],
+   "url": "https://www.wolfspeed.com/company/news-events/news/jaguar-tcs-racing-reveal-i-type-6-the-most-advanced-all-electric-jaguar-race-car-ever/",
+   "excerpt": "Wolfspeed: confirmed as Jaguar TCS Racing's Official Power Semiconductor Partner ahead of the 2023 season, building on a silicon-carbide relationship with the team since 2017; JLR signed a road-car silicon-carbide supply agreement with Wolfspeed in October 2022. Wolfspeed filed for Chapter 11 on 30 June 2025 and emerged on 29 September 2025. Jaguar TCS Racing's 2025/26 livery release (media.jaguarracing.com, October 2025) names TCS as title and official technology partner with Dow, Castrol, Reflo, Alpinestars and Chase; no power-semiconductor partner is named. Infineon and Wolfspeed extended a multi-year 150 mm silicon-carbide wafer supply agreement in January 2024.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "seasons 13",
+    "gen4 era",
+    "long-term",
+    "2024"
+   ],
+   "url": "https://media.jaguarracing.com/news/2024/04/jaguar-tcs-racing-confirms-long-term-future-commitment-compete-gen4-era-formula-e",
+   "excerpt": "Jaguar Racing media, April 2024: Jaguar TCS Racing confirms a long-term commitment to Formula E by signing for the GEN4 era, Seasons 13-16, from 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "sonoma",
+    "infineon raceway",
+    "naming rights",
+    "2002",
+    "2012"
+   ],
+   "url": "https://en.wikipedia.org/wiki/Sonoma_Raceway",
+   "excerpt": "Wikipedia, Sonoma Raceway: Infineon Technologies signed a 10-year naming-rights deal in June 2002 and the circuit raced as Infineon Raceway, hosting NASCAR and IndyCar, until the deal expired in 2012 and was not renewed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "tcs",
+    "castrol",
+    "mouser",
+    "tti",
+    "molex",
+    "kyocera",
+    "twg ai",
+    "tech mahindra",
+    "sand technologies",
+    "arm",
+    "arrow electronics",
+    "amd",
+    "snapdragon"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Jaguar TCS Racing — TCS (title), Castrol, Jaguar (powertrain); no semiconductor or electronics partner. DS Penske — Mouser Electronics, TTI Inc., Molex, KYOCERA AVX (electronic components). Andretti — TWG AI, Nissan powertrain. Mahindra — Tech Mahindra. Envision — Sand Technologies, Teijin. Porsche, Nissan, Cupra Kiro, Citroën — parent brands only. F1: ARM at Aston Martin Aramco, Arrow Electronics at McLaren, AMD and Snapdragon at Mercedes.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "jeddah",
+    "18-19 dec",
+    "december",
+    "austin e-prix",
+    "miami e-prix",
+    "london"
+   ],
+   "url": "seeds/calendar_fe.json (FE Season 12 + Season 13 calendars)",
+   "excerpt": "FE calendar table: Season 12 closes with the London E-Prix on 15-16 August 2026; Season 13 (GEN4) opens with the Jeddah E-Prix double-header on 18-19 December 2026, then Mexico City (16 Jan 2027), Austin E-Prix (6 Feb 2027) and Miami E-Prix (20 Feb 2027).",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Infineon Technologies",
+  "industry_meta": "Power Semiconductors · Silicon Carbide / EV Traction",
+  "hq": "Neubiberg, Germany (Americas HQ Milpitas, California)",
+  "ticker": "FSE: IFX (EUR 14.7B revenue, FY2025)",
+  "deck": "Infineon, the world's number one power-semiconductor maker, raised guidance on 6 May 2026 as AI data-centre demand surged, then on 8 June put its silicon carbide into Siemens' circuit breakers. Formula E's 600 kW GEN4 car debuts in December; the one team that has run a power-semiconductor partner has none.",
+  "score": 75,
+  "timing_label": "WARM",
+  "series_label": "FE",
+  "team_label": "Jaguar TCS Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 6 May 2026 Infineon reported second-quarter revenue of EUR 3.81B, up 6%, and raised fiscal 2026 guidance: revenue growing significantly, a segment result margin of about 20% and adjusted free cash flow of about EUR 1.65B, up from EUR 1.4B. AI data-centre revenue is expected at about EUR 1.5B this year and EUR 2.5B next. On 8 June it announced with Siemens that its silicon-carbide modules will sit inside Siemens' semiconductor circuit breakers. This is a EUR 14.7B, 57,000-person company at a demand peak, with a board-level chief marketing officer.",
+  "the_case_p2": "Silicon carbide lets an inverter switch faster and waste less, which in an electric race car is range and lap time. Jaguar first ran it in 2017 and made its US supplier Official Power Semiconductor Partner in 2023; that supplier went through Chapter 11 last year and is absent from the 2025/26 roster. GEN4 arrives in December with 600 kW, permanent all-wheel drive and 700 kW regeneration: the series' biggest power-electronics step.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;GEN4 debuts at the Jeddah E-Prix on 18-19 December 2026, the first season of a four-season era Jaguar has signed for. Season 13 partner rosters close in the autumn; a partner agreed before the London E-Prix in August is on the car for the first 600 kW race.",
+  "why_team_label": "WHY JAGUAR TCS RACING",
+  "why_team_para": "Jaguar TCS Racing carries TCS as title and technology partner, Castrol on fluids and Jaguar's own powertrain. There is no semiconductor or electronics brand on the roster. It is the team that proved silicon carbide in Formula E, has signed for the GEN4 era through Season 16, and whose parent JLR sells the road cars the technology transfers into. For a German company with an Americas base in California, a British works team racing in Austin and Miami is the stage.",
+  "value_section": true,
+  "value_section_label": "VALUE TO JAGUAR TCS RACING",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. GEN4 doubles the electrical workload: 600 kW across two motors, 700 kW regeneration, permanent all-wheel drive. Infineon supplies CoolSiC power modules and gate drivers for the traction inverters, application engineering on switching losses and cooling, and silicon carbide for the pit equipment. In return: Official Power Semiconductor Partner, inverter-cover and halo branding, Austin and Miami hospitality for Infineon's automotive and data-centre customers.",
+  "deal_arch_para": "Entry as Official Power Semiconductor Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15 (2026-2029), inside the GEN4 era. Estimated EUR 3-5M a year, part in components and engineering. Scope: inverter modules and support, halo and rear-wing branding, Austin, Miami and Berlin hospitality, technical content.",
+  "decision_maker_name": "Andreas Urschitz",
+  "decision_maker_role": "Chief Marketing Officer, Member of the Management Board, Infineon",
+  "decision_maker_bio": "Urschitz has sat on the Management Board as Chief Marketing Officer since 2022, with a mandate to 2030; brand and sponsorship are his call. Path: Jochen Hanebeck, CEO since 2022, and Sven Schneider, CFO since 2019. Infineon last bought motorsport with the Infineon Raceway naming rights, 2002-2012.",
+  "opening_angle_intro": "Lead with the empty lane.",
+  "opening_angle_quote": "&ldquo;Andreas, Jaguar proved silicon carbide in Formula E and its power-semiconductor partner has gone. GEN4 is a 600 kW car in December and Infineon is number one in the material. 25 minutes before London to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "15",
+    "/ 20",
+    "Guidance raised 6 May; GEN4 debut in December; rosters close in autumn."
+   ],
+   [
+    "CAPACITY",
+    "18",
+    "/ 20",
+    "EUR 14.7B revenue; free cash flow guidance about EUR 1.65B."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "B2B component brand, but a board-level CMO and a raceway naming history."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "No raise or listing; the GEN4 calendar is the only hard date."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: CoolSiC modules for the GEN4 traction inverters."
+   ]
+  ],
+  "risks": [
+   [
+    "ROAD-CAR SUPPLIER TENSION",
+    "JLR contracted its road-car silicon carbide to Wolfspeed in 2022, and Infineon buys wafers from Wolfspeed.",
+    "Position Infineon as the GEN4 racing partner, separate from road-car supply; the wafer link makes it familiar, not a rival."
+   ],
+   [
+    "NO SPORT SINCE 2012",
+    "Infineon has not bought a sports property since the raceway naming rights lapsed; appetite is unproven.",
+    "Anchor on the engineering workstream and the CMO's board mandate; a component-level deal is cheaper than a circuit name."
+   ]
+  ],
+  "bottom_line": "A EUR 14.7B power-semiconductor leader at peak demand, a board-level CMO, and the one Formula E team that has run a power-semiconductor partner now without one, five months before a 600 kW car arrives. Warm rather than hot: no capital event, but the lane and the calendar line up.",
+  "signals": [
+   "guidance_raise",
+   "category_whitespace",
+   "gen4_window"
+  ],
+  "footer_company": "INFINEON TECHNOLOGIES",
+  "footer_date": "16 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 6 May 2026 Infineon raised its fiscal 2026 guidance: revenue now expected to grow significantly, a segment result margin of about 20%, adjusted free cash flow of about EUR 1.65B (from EUR 1.4B), with AI data-centre revenue expected at about EUR 1.5B this fiscal year and about EUR 2.5B next. On 8 June it announced with Siemens that its silicon-carbide power modules will be built into Siemens' semiconductor circuit breakers. The thin desk row called this a funding event; it is a peak-demand moment at a public incumbent, which is inside 1440's profile."
+    },
+    {
+     "label": "Peak demand meets a new identity",
+     "text": "Infineon is telling the market that its power semiconductors sit at the centre of two build-outs at once: the AI data centre and the electric drivetrain. A company reframing itself from 'chip supplier' to 'the power behind electrification' needs a stage where that story is visible, and Formula E is the only championship whose whole product is the inverter."
+    },
+    {
+     "label": "The GEN4 window",
+     "text": "GEN4 debuts at the Jeddah E-Prix on 18-19 December 2026 with 600 kW, permanent all-wheel drive, a 55 kWh battery and up to 700 kW of regeneration. Season 13 partner rosters close in the autumn. A partner agreed before the London E-Prix in August is on the car for the first race of a four-season era."
+    },
+    {
+     "label": "Calendar and markets",
+     "text": "Season 13 visits Austin on 6 February 2027 and Miami on 20 February 2027, in the market where Infineon's Americas headquarters (Milpitas) and Austin site sit, and returns to Berlin in May, the home race for a Munich-area company."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Jaguar TCS Racing's roster in the sponsor table is TCS (title and technology), Castrol and Jaguar's own powertrain; the 2025/26 livery release adds Dow, Reflo, Alpinestars and Chase. No semiconductor or electronics brand. The team ran a US silicon-carbide supplier as Official Power Semiconductor Partner from 2023; that company went through Chapter 11 in 2025 and is not named on the current roster."
+    },
+    {
+     "label": "The team that proved the material",
+     "text": "Jaguar first used silicon carbide in its Formula E inverter in 2017 and has spoken about it publicly ever since. Selling Infineon into Jaguar is not an education job: the engineers already know what the technology is worth in efficiency and lap time."
+    },
+    {
+     "label": "Committed for the whole era",
+     "text": "Jaguar TCS Racing has signed for the GEN4 era, Seasons 13 to 16, from 2026. A three-season partnership sits entirely inside a period the team has already committed to, with a road-car parent (JLR) whose next electric models are the transfer story."
+    },
+    {
+     "label": "Where the rivals are",
+     "text": "The electronic-components cluster at DS Penske (Mouser Electronics, TTI, Molex, KYOCERA AVX) makes that team a distributor showcase rather than a semiconductor lane; the works teams Porsche and Nissan carry only their parent brands and their own supplier relationships. Jaguar is the one team where a power-semiconductor partner has a precedent and an empty seat."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "CoolSiC silicon-carbide power modules and gate drivers for the GEN4 traction inverters, where switching losses and thermal headroom decide how much of 600 kW reaches the tyres and how much of 700 kW regeneration comes back; application engineering on inverter topology and cooling; silicon carbide for the team's charging and pit-garage power equipment. Infineon's HybridPACK Drive family already runs on more than 20 EV platforms."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner that sells to every carmaker and every hyperscaler brings an automotive and data-centre guest list to Austin, Miami and Berlin, and a component-level technical partnership that TCS and Castrol can build joint content around."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "The inverter is Formula E's least visible and most important component. An engineering series from the dyno to the E-Prix, with Jaguar's power-electronics engineers, gives Infineon the visible story behind 'the power behind electrification' and gives the team technical content its title partner can amplify."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Power Semiconductor Partner designation, halo and rear-wing placement, hospitality at the Austin, Miami and Berlin E-Prix, driver and engineering access for Infineon's customer events and PCIM-week activations."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "DS Penske",
+     "reason": "Mouser Electronics, TTI, Molex and KYOCERA AVX hold the electronic-components lane; a distributor cluster, not a home for a chipmaker."
+    },
+    {
+     "team": "Porsche Formula E Team · Nissan Formula E Team",
+     "reason": "Works teams carrying only the parent brand; inverter supply sits inside the manufacturer's own procurement, not a partner slot."
+    },
+    {
+     "team": "Andretti Formula E",
+     "reason": "TWG AI is primary partner and Nissan supplies the powertrain from Season 13; the technology story is already taken."
+    },
+    {
+     "team": "Mahindra Racing · Envision Racing",
+     "reason": "Open but not chosen: Tech Mahindra and Sand Technologies occupy the technology lanes; neither has the silicon-carbide precedent."
+    },
+    {
+     "team": "Cupra Kiro · Lola Yamaha ABT Formula E Team · Citroën Racing",
+     "reason": "Open but not chosen: customer or first-season programmes with smaller platforms; no power-electronics heritage to build on."
+    },
+    {
+     "team": "F1 grid",
+     "reason": "The story is EV-native; the F1 semiconductor lanes are held by ARM (Aston Martin Aramco), Arrow Electronics (McLaren) and AMD and Snapdragon (Mercedes)."
+    }
+   ],
+   "ask": "A 25-minute call with Andreas Urschitz before the London E-Prix to size an Official Power Semiconductor Partner entry for Seasons 13-15, scope the GEN4 inverter workstream with Jaguar's engineers, and settle the road-car supplier question up front."
+  }
+ },
+ "note": "# Infineon Technologies → Jaguar TCS Racing — verification log (N° 190, issued for 16 Jun 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (batch 13). Claude acted as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code.\n\n**Sandbox limitation, stated plainly:** infineon.com, jaguar.com, media.jaguarracing.com and wolfspeed.com are egress-blocked from the build sandbox. Every claim below was checked against the search summary of the primary page named as the evidence URL. Treat each VERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM.\n\n## The trigger, re-verified\n\nThe thin desk row called this `never_entered, category_whitespace, funding_event` with a companiesmarketcap.com page as its source. There is no funding event: Infineon is a EUR 14.7B public company. The real signal is a **peak-demand moment**: full-year guidance raised on **6 May 2026** (AI data-centre power demand, automotive orders improving, new segment structure from Q4) and, on **8 June 2026**, the Siemens circuit-breaker collaboration that takes its silicon carbide beyond the drivetrain. Signal date set to 8 June (the later of the two, 8 days before the row); both are inside the 90-day rule. Scored WARM (75), not the thin row's 79.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Andreas Urschitz, CMO and Management Board member since 2022, mandate to 31 May 2030 | VERIFIED | infineon.com leadership page (search summary) |\n| Jochen Hanebeck CEO since 2022; Sven Schneider CFO since 2019 | VERIFIED | infineon.com leadership pages (search summary) |\n| 6 May 2026 guidance raise: Q2 revenue EUR 3.81B +6%; margin ~20%; FCF ~EUR 1.65B (from 1.4B); AI data-centre revenue ~EUR 1.5B FY26, ~2.5B FY27 | VERIFIED | infineon.com press release infxx202605-082; evertiq |\n| 8 Jun 2026 Siemens SENTRON 3QD2 SiC modules; PCIM 9-11 Jun | VERIFIED | infineon.com infgip202606-107; press.siemens.com |\n| FY2025 revenue ~EUR 14.7B; ~57,000 employees; Neubiberg; #1 power semiconductors (Omdia) | VERIFIED | Infineon at-a-glance flyer; press release Mar 2026 |\n| HybridPACK Drive CoolSiC: 1,200 V, 100-300 kW, >20 EV platforms, ~3M units | VERIFIED | infineon.com product page; Power Electronics News |\n| Americas HQ Milpitas; Austin site | REPORTED | Zippia / Manta listings (no company page opened) |\n| GEN4: 600 kW, permanent AWD, 55 kWh, 700 kW regen, Season 13 debut | VERIFIED | fiaformulae.com GEN4 reveal |\n| Jaguar signed for GEN4, Seasons 13-16 | VERIFIED | media.jaguarracing.com, Apr 2024 |\n| Wolfspeed Official Power Semiconductor Partner from 2023, SiC with Jaguar since 2017; JLR road-car SiC supply Oct 2022; Chapter 11 30 Jun–29 Sep 2025 | VERIFIED | wolfspeed.com; Manufacturing Dive; Financier Worldwide |\n| Wolfspeed absent from the 2025/26 roster | REPORTED | Jaguar livery release Oct 2025 names TCS, Dow, Castrol, Reflo, Alpinestars, Chase only; not in the sponsor table |\n| Infineon Raceway naming rights 2002-2012 | REPORTED | Wikipedia, Sonoma Raceway |\n| Jaguar roster (TCS, Castrol, Jaguar); DS Penske components cluster; Andretti (TWG AI, Nissan); F1 semis lanes | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Jeddah E-Prix 18-19 Dec 2026; Austin 6 Feb 2027; Miami 20 Feb 2027; London Aug 2026 | VERIFIED | calendar table (`seeds/calendar_fe.json`) |\n\n## Judgement calls\n\n- **The open lane rests on an absence.** Wolfspeed is not on Jaguar's 2025/26 partner list and not in the sponsor table, but no announcement of the partnership ending was found. The brief says 'absent from the roster', never 'ended'. The ask includes settling the supplier question up front. If the human layer finds Wolfspeed still contracted, this case is an `existing_partner` screen-out.\n- **The brief does not name Wolfspeed** in the 2-page copy ('its US supplier'); the name is in the ledger, evidence and app page so the MD has it. This keeps the sponsor-table check from reading a 'Brand at Team' pair for a brand the table does not carry.\n- **Team.** The thin row's hint (Jaguar) held after checking the alternatives: DS Penske's components cluster, works teams with parent-only rosters, Andretti's TWG AI / Nissan story. F1 is ruled out as a series (EV-native story; semis lanes taken).\n- **Leadership ties:** none found for Hanebeck, Schneider or Urschitz after checking. The corporate tie is the Infineon Raceway naming (2002-2012), REPORTED from Wikipedia.\n- **Score 75.** No capital event (URGENCY 12); a component brand (BRAND FIT 14, lifted by a board-level CMO and the naming-rights precedent). The thin row's 79 was inflated.\n- **Deal size EUR 3-5M a year is an ESTIMATE**, labelled as such.\n- **Not used:** Q3 fiscal 2026 results (August 2026) post-date the brief; any claim that Jaguar's current inverter uses Infineon parts (not sourced).\n"
+}

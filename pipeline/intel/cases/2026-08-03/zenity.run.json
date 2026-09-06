@@ -1,0 +1,657 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-08-03",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-7qy68jbh/2026-08-03/zenity.pdf",
+     "web": "/tmp/case-pdf-7qy68jbh/2026-08-03/zenity.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Zenity",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 9
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 72,
+     "reason": "top ranking score",
+     "company": "Zenity",
+     "decision": "selected",
+     "signal_date": "2026-08-03"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Zenity",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 72,
+   "score_breakdown": {
+    "cap": null,
+    "base": 72,
+    "total": 72,
+    "timing": 17,
+    "ops_fit": 15,
+    "ranking": 72,
+    "urgency": 12,
+    "capacity": 14,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 72,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 72,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+   "trigger_date": "2026-08-03",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 155,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-7qy68jbh/2026-08-03/zenity.web.html",
+  "brief_data": {
+   "hq": "New York (commercial) · Tel Aviv (R&D); founded 2021",
+   "deck": "Zenity, the AI-agent security company founded in Tel Aviv and run commercially from New York, announced a $125M Series C led by Norwest on 3 August, with SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures joining. Total funding is about $185M; the valuation was not disclosed.",
+   "risks": [
+    {
+     "label": "TWG AI EXCLUSIVITY",
+     "detail": "TWG AI is Cadillac's exclusive AI partner; an 'AI security' brand could be read as an AI partner and blocked.",
+     "counter": "Enter as cybersecurity, position Zenity as agent governance, and clear the language with TWG first."
+    },
+    {
+     "label": "SCALE AND PRICE",
+     "detail": "About $185M raised, no disclosed valuation and no marketing officer; Cadillac's 'fewer, bigger, better' policy is priced for larger cheques.",
+     "counter": "Part-pay in licences the team would buy anyway and step fees up over the three years."
+    }
+   ],
+   "score": 72,
+   "ticker": "Private (valuation undisclosed; $125M Series C, Aug 2026)",
+   "company": "Zenity",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "TAKEN",
+     "detail": "CrowdStrike",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Cisco",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "TAKEN",
+     "detail": "Keeper",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "analyst_verdict"
+   ],
+   "sources": [
+    "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+    "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Ben Kliger before the United States GP to test appetite for a 2027 start, clear the AI-partner language with Cadillac's TWG AI exclusivity, and size an Official AI Security Partner entry, part-paid in licences, against the team's 2027 roster.",
+    "value": [
+     {
+      "text": "An inventory of every AI agent in the team's estate and what each can reach; least-privilege enforcement before an agent touches design, supplier or strategy data; runtime detection of prompt injection and intent drift. Engineers use agents freely, and the security lead can see what they did.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner selling to Fortune 500 security and IT leaders brings a guest list of CIOs and CISOs to Austin and Las Vegas, the audience Cadillac's B2B partners want in the suite.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "'Agents in the garage': co-produced content on how a new Formula 1 team lets its engineers use AI safely, a Cadillac reference deployment for Zenity's enterprise sales, and a story that fits a debutant building everything from scratch.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official AI Security Partner designation in the cybersecurity category, garage and car placement, Austin and Las Vegas hospitality, driver and engineering access for Zenity's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Zenity announced a $125M Series C led by Norwest on 3 August 2026, with Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures joining and Vertex, Third Point, DTCP and Intel Capital returning. The company release, Fortune and Calcalist carry the same figures; the valuation was not disclosed.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Gartner's 17 April 2026 report named Zenity 'the company to beat' in AI agent governance. A category leader has a short window to turn an analyst's verdict into market awareness before better-funded platforms crowd in; the Series C is explicitly for global expansion.",
+      "label": "Analyst verdict"
+     },
+     {
+      "text": "More than 230 employees, sales, marketing and operations run from New York, and a customer base of Fortune 500 and Global 2000 enterprises, SoftBank Corp among them. The audience in a Formula 1 suite is the audience Zenity already sells to.",
+      "label": "A company built for the enterprise buyer"
+     },
+     {
+      "text": "The United States GP in Austin (late October) and the Las Vegas GP (November) are the two US rounds left in 2026; teams close 2027 partner rosters in the fourth quarter. A deal agreed before Austin can be announced there and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Cadillac's debut roster carries TWG AI as exclusive AI partner, Core Scientific for the data centre, IFS for enterprise software, plus Claro, Jim Beam, Tenneco and Tommy Hilfiger. No cybersecurity partner, and no team on the grid has an AI-agent security partner: the category is Zenity's to name.",
+      "label": "The open lane"
+     },
+     {
+      "text": "A team assembling factories, suppliers and systems in 2026 is deploying AI agents inside Copilot-class tools and its own exclusive AI programme at the same moment, with no legacy controls to retrofit. That is the customer profile Zenity's platform was designed for.",
+      "label": "A greenfield estate adopting agents"
+     },
+     {
+      "text": "Zenity runs sales, marketing and operations from New York and sells to Fortune 500 CIOs and CISOs. Cadillac is the GM-backed American flag-bearer with a commercial team hired to reach exactly that enterprise audience.",
+      "label": "An American commercial fit"
+     },
+     {
+      "text": "Every other cybersecurity lane on the grid is occupied, from CrowdStrike at Mercedes to Cato Networks at Alpine. Haas and Racing Bulls are open but lack the AI programme that makes agent security a live workstream rather than a logo.",
+      "label": "Why not the others"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "CrowdStrike holds the cybersecurity lane; Microsoft also on the roster."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "Bitdefender is the cybersecurity partner."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "1Password holds security; Oracle is title partner."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Keeper Security holds identity and access security, the nearest lane to agent governance."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Okta, Cisco with Splunk, and Rubrik (joined 2026) crowd the security lane."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Cato Networks and SEALSQ joined for 2026; Microsoft on the roster."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "NinjaOne and Extreme Networks cover IT management and networking."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "SentinelOne is marked as departed within the last 12 months in the sponsor table, but no end has been announced; treated as occupied."
+     },
+     {
+      "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+      "reason": "Open but not chosen: neither runs an AI programme that makes agent security a live workstream."
+     }
+    ]
+   },
+   "date_long": "03 AUG 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $125M Series C led by Norwest, with SoftBank, Hitachi and LG, Gartner's 'company to beat' verdict and an untouched agent-security lane at the American debutant put Zenity in a window to buy category ownership, with Austin and Las Vegas inside it. An undisclosed valuation, no marketing officer and Cadillac's price point hold the score at 72.",
+   "footer_date": "3 AUG 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round announced 3 Aug; Austin and Las Vegas inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 14,
+     "note": "$125M raise, ~$185M total; valuation undisclosed; 230 staff.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "B2B security brand; CIO and CISO audience; New York base.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "Category race after Gartner's verdict; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: agent inventory and control for a greenfield estate.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Qumra Capital joined the new investors; Vertex Ventures, Third Point Ventures, DTCP and Intel Capital returned. The $38M Series B, co-led by Third Point and DTCP with Microsoft's M12, closed in October 2024. In April Gartner named Zenity 'the company to beat' in AI agent governance. Founders Ben Kliger and Michael Bargury built security products together at Microsoft; the company now employs more than 230 people, about 150 in Israel, runs sales, marketing and operations from New York, and counts Fortune 500 and Global 2000 enterprises, SoftBank Corp among them, as customers.",
+   "the_case_p2": "Every AI agent an enterprise deploys, from Microsoft Copilot to custom builds, acts with someone's permissions; Zenity inventories them, limits what they can reach and detects when their intent drifts. The grid has bought defence in depth, CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Rubrik at McLaren, but nobody has bought the agent layer. The Norwest-led Series C funds exactly the global expansion a sponsorship serves.",
+   "track_label": "",
+   "brief_number": "155",
+   "claims_total": 14,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$125M Series C led by Norwest, announced 3 Aug 2026; total funding about $185M (company; Fortune reports $1…",
+     "value": "$125M",
+     "claim_id": 661,
+     "verified": true,
+     "source_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents"
+    },
+    {
+     "fact": "Total funding is about $185M;",
+     "value": "$185M",
+     "claim_id": 670,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "The $38M Series B, co-led by Third Point and DTCP with Microsoft's M12, closed in October 2024.",
+     "value": "$38M",
+     "claim_id": 671,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Cybersecurity · AI Agent Security & Governance",
+   "value_content": "MODE A - operational. Zenity inventories every AI agent in the team's estate and what each can reach; enforces least privilege before an agent touches design, supplier or strategy data; and watches agent behaviour at runtime for prompt injection and intent drift. For a first-season team standing up Copilot beside an exclusive AI programme, it is the control layer that lets engineers use agents without exposing the car.",
+   "value_section": true,
+   "why_team_para": "Cadillac's debut roster has TWG AI as exclusive AI partner, Core Scientific for the data centre and IFS for enterprise software, and no cybersecurity partner, so the agent-security lane is clean. A team assembling its estate in 2026 is adopting agents inside Copilot and its own AI programme at the same moment, with no legacy controls to retrofit. Zenity's New York commercial base and Fortune 500 customer list match an American flag-bearer selling to enterprise CIOs.",
+   "deal_arch_para": "Entry as Official AI Security Partner, in the cybersecurity category. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the expansion the Series C funds. Estimated $2-4M a year, part in platform licences. Scope: garage and car placement, an 'agents in the garage' content series, Austin and Las Vegas hospitality for CISOs and CIOs, a Cadillac reference deployment.",
+   "footer_company": "ZENITY",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 14,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series C closed on 3 August with a global-expansion mandate, and Gartner's April verdict gives the brand a window to own its category before rivals catch up. The United States GP in Austin (late October) and Las Vegas (November) sit inside the horizon; teams settle 2027 rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 155",
+   "decision_maker_bio": "Kliger co-founded Zenity in 2021 with CTO Michael Bargury after leading security products together at Microsoft, is based in New York. Path: Bargury, and Keren Herscovici, VP Finance and Corporate Development. No chief marketing officer is listed; marketing is led at director level (reported).",
+   "decision_maker_name": "Ben Kliger",
+   "decision_maker_role": "CEO & Co-founder, Zenity",
+   "opening_angle_intro": "Lead with Gartner and the empty agent lane.",
+   "opening_angle_quote": "&ldquo;Ben, Gartner says you are the company to beat, and no Formula 1 team has an AI-agent security partner. Cadillac is building its estate from zero this year. 25 minutes before Austin to see what that lane is worth?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Ben Kliger, CEO & Co-founder at Zenity",
+   "cited_source_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe",
+     "excerpt": "Calcalist (CTech), 3 Aug 2026: Zenity was founded in 2021 by Unit 8200 veterans Ben Kliger, CEO, and Michael Bargury, CTO, who previously led cloud and operational-technology security products together at Microsoft. Crunchbase: Kliger is based in New York.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Ben Kliger, CEO & Co-founder, Zenity at Zenity",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe",
+     "excerpt": "Calcalist (CTech), 3 Aug 2026: Zenity was founded in 2021 by Unit 8200 veterans Ben Kliger, CEO, and Michael Bargury, CTO, who previously led cloud and operational-technology security products together at Microsoft. Crunchbase: Kliger is based in New York.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$125M Series C led by Norwest, announced 3 Aug 2026; total funding about $185M (company; Fortune reports $180M); valuation not disclosed",
+   "cited_source_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+     "excerpt": "Zenity newsroom / Business Wire, 3 Aug 2026 (search summary; page blocked to the sandbox): $125M Series C led by Norwest; new investors Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures; existing investors Vertex Ventures, Third Point Ventures, DTCP and Intel Capital participated; total funding approximately $185M; proceeds for product development, global expansion and enterprise demand for AI-agent security.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Zenity, the AI-agent security company founded in Tel Aviv and run commercially from New York, announced a $125M Series C led by Norwest on 3 August, with SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures joining.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe",
+     "excerpt": "Calcalist (CTech), 3 Aug 2026: Zenity was founded in 2021 by Unit 8200 veterans Ben Kliger, CEO, and Michael Bargury, CTO, who previously led cloud and operational-technology security products together at Microsoft. Crunchbase: Kliger is based in New York.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Norwest (lead); new: Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures, LG Technology Ventures; returning: Vertex Ventures, Third Point Ventures, DTCP, Intel Capital",
+   "cited_source_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+     "excerpt": "Zenity newsroom / Business Wire, 3 Aug 2026 (search summary; page blocked to the sandbox): $125M Series C led by Norwest; new investors Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures; existing investors Vertex Ventures, Third Point Ventures, DTCP and Intel Capital participated; total funding approximately $185M; proceeds for product development, global expansion and enterprise demand for AI-agent security.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Total funding is about $185M;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+     "excerpt": "Zenity newsroom / Business Wire, 3 Aug 2026 (search summary; page blocked to the sandbox): $125M Series C led by Norwest; new investors Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures; existing investors Vertex Ventures, Third Point Ventures, DTCP and Intel Capital participated; total funding approximately $185M; proceeds for product development, global expansion and enterprise demand for AI-agent security.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$125M Series C led by Norwest, announced 3 Aug 2026",
+   "cited_source_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+     "excerpt": "Zenity newsroom / Business Wire, 3 Aug 2026 (search summary; page blocked to the sandbox): $125M Series C led by Norwest; new investors Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures; existing investors Vertex Ventures, Third Point Ventures, DTCP and Intel Capital participated; total funding approximately $185M; proceeds for product development, global expansion and enterprise demand for AI-agent security.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The $38M Series B, co-led by Third Point and DTCP with Microsoft's M12, closed in October 2024.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe",
+     "excerpt": "Calcalist (CTech), 3 Aug 2026: Zenity was founded in 2021 by Unit 8200 veterans Ben Kliger, CEO, and Michael Bargury, CTO, who previously led cloud and operational-technology security products together at Microsoft. Crunchbase: Kliger is based in New York.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Okta and Rubrik at McLaren, Cato Networks at Alpine, and Red Bull's 1Password; no team carries an AI-agent security partner; Cadillac carries no cybersecurity partner",
+   "cited_source_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "CrowdStrike → Mercedes-AMG Petronas F1 Team (team_major, active); Bitdefender → Scuderia Ferrari (team_major, active); Keeper → Atlassian Williams Racing (team_major, active); Rubrik → McLaren F1 Team (team_major, joined); Cato Networks → BWT Alpine F1 Team (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $125M Series C led by Norwest, with SoftBank, Hitachi and LG, Gartner's 'company to beat' verdict and an untouched agent-security lane at the American debutant put Zenity in a window to buy category ownership, with Austin and Las Vegas inside it.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+     "excerpt": "Zenity newsroom / Business Wire, 3 Aug 2026 (search summary; page blocked to the sandbox): $125M Series C led by Norwest; new investors Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures; existing investors Vertex Ventures, Third Point Ventures, DTCP and Intel Capital participated; total funding approximately $185M; proceeds for product development, global expansion and enterprise demand for AI-agent security.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Gartner named Zenity 'the company to beat' in AI agent governance in a 17 Apr 2026 report; more than 230 employees, about 150 in Israel; sales, marketing and operations run from New York; Fortune 500 and Global 2000 customers including SoftBank Corp",
+   "cited_source_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+     "excerpt": "Zenity newsroom / Business Wire, 3 Aug 2026 (search summary; page blocked to the sandbox): $125M Series C led by Norwest; new investors Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures; existing investors Vertex Ventures, Third Point Ventures, DTCP and Intel Capital participated; total funding approximately $185M; proceeds for product development, global expansion and enterprise demand for AI-agent security.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Zenity announced a $125M Series C led by Norwest on 3 August 2026, with Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures joining and Vertex, Third Point, DTCP and Intel Capital returning.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+     "excerpt": "Zenity newsroom / Business Wire, 3 Aug 2026 (search summary; page blocked to the sandbox): $125M Series C led by Norwest; new investors Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures; existing investors Vertex Ventures, Third Point Ventures, DTCP and Intel Capital participated; total funding approximately $185M; proceeds for product development, global expansion and enterprise demand for AI-agent security.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Sales, marketing and operations run from New York; CEO based in New York; R&D in Tel Aviv",
+   "cited_source_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe",
+     "excerpt": "Calcalist, 3 Aug 2026: more than 230 employees worldwide, about 150 in Israel; R&D in Tel Aviv, sales, marketing and operations managed from New York; customers include Fortune 500 and Global 2000 enterprises across financial services, healthcare, pharmaceuticals, manufacturing and technology; SoftBank Corp is a customer (company release).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://zenity.io/company-overview/newsroom/company-news/zenity-raises-125-million-to-secure-the-era-of-1-billion-ai-agents",
+     "excerpt": "Zenity newsroom / Business Wire, 3 Aug 2026 (search summary; page blocked to the sandbox): $125M Series C led by Norwest; new investors Qumra Capital, SoftBank Vision Fund 2, Hitachi Ventures and LG Technology Ventures; existing investors Vertex Ventures, Third Point Ventures, DTCP and Intel Capital participated; total funding approximately $185M; proceeds for product development, global expansion and enterprise demand for AI-agent security.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

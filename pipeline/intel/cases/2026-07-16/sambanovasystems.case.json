@@ -1,0 +1,389 @@
+{
+ "run_date": "2026-07-16",
+ "signal_date": "2026-07-08",
+ "stem": "sambanovasystems",
+ "number": 161,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "SambaNova Systems",
+  "signal_date": "2026-07-08",
+  "score": 77,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Rodrigo Liang",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+  "industry_meta": "AI Inference Infrastructure · Chips & Systems · Palo Alto, California",
+  "recommended_team": "TGR Haas F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$1B first close of a Series F at an $11B post-money valuation, led by General Atlantic with Seligman Ventures, T. Rowe Price Associates and Capital Group (company release, 8 Jul 2026); second close expected within weeks; $350M Series E in Feb 2026 at a reported ~$2.2B",
+   "investors": "General Atlantic (lead), Seligman Ventures, T. Rowe Price Associates, Capital Group, BlackRock, Intel Capital, Qatar Investment Authority, Battery Ventures, Vista Equity Partners, Volantis",
+   "revenue": "",
+   "trigger": "$1B Series F first close at $11B post-money announced 8 Jul 2026; JPMorganChase named as an on-premises inference-infrastructure customer the same day",
+   "competitor_signal": "Groq at McLaren (Official Partner, inference chip on the car since the 2025 Singapore GP); AMD at Mercedes; ARM (Aston Martin); CoreWeave at Aston Martin; Core Scientific and TWG AI at Cadillac; Haas carries no compute, AI or chip partner",
+   "strategic_hook": "On-premises inference for a cost-capped team: SN40L systems running open-weight models on the team's own data, the JPMorganChase private-inference story at a race team; Rodrigo Liang says an IPO in 2027 is under consideration (reported)",
+   "us_presence": "HQ Palo Alto, California; founded 2017 out of Stanford by Rodrigo Liang, Kunle Olukotun and Christopher Ré",
+   "alumni_match": "",
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: on-premises inference systems for strategy post-processing, telemetry analytics and engineering copilots; A1 race-strategy decision support; no AI or chip partner at Haas",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 18,
+   "brand_fit": 14,
+   "urgency": 13,
+   "ops_fit": 15,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "rodrigo liang",
+    "weckesser",
+    "padfield",
+    "harry ault",
+    "chief marketing officer",
+    "sun microsystems",
+    "hosein"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260612257950/en/SambaNova-Names-Engineering-and-Finance-Leaders-to-Accelerate-Growth-as-Customer-Demand-Surges",
+   "excerpt": "SambaNova leadership: Rodrigo Liang, Co-Founder & CEO (previously SVP at Oracle overseeing SPARC processor and ASIC development, and at Sun Microsystems; Stanford EE); Annie Shea Weckesser, Chief Marketing Officer (LinkedIn / The Org); Harry Ault, Chief Revenue Officer (Crunchbase / The Org); Matt Padfield appointed Chief Financial Officer on 12 Jun 2026 (BusinessWire release, previously Group VP Corporate FP&A at Coherent, acting CFO at Synaptics). Clyde Hosein is listed as President & COO on The Org, but Equilar records his tenure as Apr 2025–Mar 2026, so he is not used in the path.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1b",
+    "$11b",
+    "general atlantic",
+    "seligman",
+    "t. rowe",
+    "capital group",
+    "blackrock",
+    "qatar investment",
+    "second close",
+    "8 jul",
+    "8 july",
+    "first close",
+    "funding round",
+    "jpmorgan"
+   ],
+   "url": "https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/",
+   "excerpt": "SambaNova / General Atlantic release, 8 Jul 2026 (also TechCrunch, Bloomberg, Quartz): first close of $1 billion in strategic financing as part of a Series F, valuing the company at $11 billion post-money; led by General Atlantic with significant investment from Seligman Ventures, T. Rowe Price Associates, Inc. and Capital Group; new and existing investors include BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis. A second close is expected in the coming weeks (none announced as of 6 Sep 2026). Proceeds expand production capacity and deployments for enterprise, sovereign AI and neo-cloud customers. JPMorganChase selected SambaNova as an inference-infrastructure partner, with SN40L and SN50 systems powering secure on-premises inference at the bank (TechCrunch / The AI Insider, 8 Jul 2026).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$350m",
+    "$2.2b",
+    "$1.6b",
+    "intel",
+    "series e",
+    "fivefold",
+    "five months",
+    "february"
+   ],
+   "url": "https://www.cnbc.com/2026/02/24/intel-partners-with-sambanova-after-buyout-talks-reportedly-failed.html",
+   "excerpt": "CNBC, 24 Feb 2026, and DCD: after Bloomberg-reported acquisition talks with Intel near $1.6 billion (including debt) stalled in Dec 2025–Jan 2026, Intel and SambaNova agreed a multi-year partnership with Intel investing in a $350 million Series E (Feb 2026) at an implied valuation of roughly $2.2 billion (reported). The July first close at $11B is a roughly fivefold re-rating in five months (TechCrunch).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "sn40l",
+    "sn50",
+    "softbank",
+    "aramco",
+    "ipo",
+    "2027",
+    "listing",
+    "$2.5b",
+    "$2.48b",
+    "2017",
+    "olukotun",
+    "stanford",
+    "palo alto",
+    "ovhcloud"
+   ],
+   "url": "https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/",
+   "excerpt": "TechCrunch, 8 Jul 2026, and DCD (SN50 launch, Mar 2026): SN40L launched Sep 2023; the SN50 begins shipping in the second half of 2026 with SoftBank as first deployment partner at its AI data centres in Japan; named customers include JPMorganChase, Saudi Aramco, Intel and OVHcloud. Liang said the company is considering an IPO in 2027, most likely in the US (reported). Founded 2017 in Palo Alto by Rodrigo Liang, Kunle Olukotun and Christopher Ré out of Stanford research; Tracxn puts total funding at about $2.48B over six rounds (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "groq",
+    "singapore",
+    "lpu",
+    "26 sep",
+    "september 2025"
+   ],
+   "url": "https://groq.com/newsroom/mclaren-racing-announces-groq-as-an-official-partner-of-the-mclaren-formula-1-team",
+   "excerpt": "McLaren Racing / Groq, 26 Sep 2025: Groq named an Official Partner of the McLaren Formula 1 Team; the Groq logo on the cars from the 2025 Singapore Grand Prix; Groq's LPU inference chip to support the team with analysis, development and real-time insight, 'fast, cost-efficient intelligence'.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "kannapolis",
+    "banbury",
+    "maranello",
+    "toyota gazoo",
+    "mphasis",
+    "commscope",
+    "ruckus",
+    "orion180",
+    "home races",
+    "three us rounds"
+   ],
+   "url": "https://www.haasf1team.com/news/inside-hq-exploring-our-us-base",
+   "excerpt": "Haas F1 Team: headquarters in Kannapolis, North Carolina (CNC shop producing VF-26 components), race operations in Banbury, UK, and a design office in Maranello, Italy. Toyota Gazoo Racing became title partner for 2026 after a multi-year technical partnership signed Oct 2024; Mphasis is Official Digital Partner (Nov 2024, IT services incl. data, analytics, cyber and AI services); CommScope Official Connectivity Partner (Feb 2025) with Ruckus branding from 2026; Orion180 insurance (Oct 2024). Three US rounds each season (Miami, United States GP in Austin, Las Vegas).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "no compute",
+    "no ai",
+    "chip partner",
+    "amd",
+    "arm ",
+    "arm (",
+    "coreweave",
+    "core scientific",
+    "twg ai",
+    "oracle",
+    "microsoft",
+    "google cloud",
+    "dell",
+    "hewlett",
+    "snapdragon",
+    "claude",
+    "airia",
+    "indramind",
+    "elevenlabs",
+    "haas automation",
+    "alpinestars",
+    "confluent",
+    "dynatrace"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): Haas 2026 roster — Toyota Gazoo Racing (title), Haas Automation, Haas Tooling, Mphasis, CommScope, Ruckus, Orion180, UChicago Medicine, Infobip, Alpinestars, Pirelli, Schuberth, Taittinger, Travis Mathew, Play & Go, MGM Rewards, New Era, Vellamo Water, Zoomex, IC, Castore, FIX Network, Singha; no compute, AI, cloud or chip partner (team profile: Mphasis is a services integrator, treated as channel not lock). Elsewhere: Groq (McLaren), AMD, Snapdragon and Hewlett Packard Enterprise (Mercedes), ARM and CoreWeave (Aston Martin), Core Scientific and TWG AI (Cadillac), Oracle (Red Bull), Microsoft (Mercedes, Alpine), Google Cloud and Dell (McLaren), Claude and Airia (Williams), IndraMind (Alpine), ElevenLabs (Audi), Confluent and Dynatrace (Racing Bulls).",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "united states gp",
+    "miami",
+    "belgian",
+    "hungarian",
+    "october",
+    "november"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: after 16 July the season continues with the Belgian GP, Hungarian GP, Dutch GP, Italian GP, Spanish GP (Madrid), Azerbaijan GP, Singapore GP, United States GP (Austin, October), Mexico City GP, São Paulo GP, Las Vegas GP (November), Qatar GP and Abu Dhabi GP. Miami GP is the season's first US round (May).",
+   "method": "calendar"
+  },
+  {
+   "needles": [
+    "$4-7m",
+    "$4–7m",
+    "estimate"
+   ],
+   "url": "engine/methodology.md (deal-size estimate)",
+   "excerpt": "Deal size is a 1440 ESTIMATE ($4-7M a year for an official-partner AI inference entry at Haas, part-payable in systems and support), labelled as such in the brief; not a company or team figure.",
+   "method": "manual"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "SambaNova Systems",
+  "industry_meta": "AI Inference Infrastructure · Chips & Systems",
+  "hq": "Palo Alto, California (founded 2017)",
+  "ticker": "Private ($11B post-money; $1B Series F first close, Jul 2026)",
+  "deck": "SambaNova, the Palo Alto AI-chip maker, completed the first close of a $1B Series F at an $11B post-money valuation on 8 July 2026, led by General Atlantic, five months after a $350M Series E at a reported $2.2B. JPMorganChase was named an on-premises inference customer the same day.",
+  "score": 77,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "TGR Haas F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "General Atlantic led the $1B first close, with Seligman Ventures, T. Rowe Price Associates and Capital Group, alongside BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures and Vista Equity Partners; a second close was expected within weeks. Five months earlier SambaNova raised a $350M Series E with Intel after Bloomberg-reported takeover talks near $1.6B stalled, so the price has risen roughly fivefold since February. Proceeds expand production of the SN40L and the SN50, shipping in the second half of 2026 with SoftBank first. Liang says a 2027 IPO is under consideration (reported).",
+  "the_case_p2": "The grid has a precedent: McLaren named Groq an Official Partner in September 2025, putting an inference chip on the car from the Singapore GP with a pitch of fast, cost-efficient intelligence for analysis and development. SambaNova is the other US inference-silicon company at scale, now with JPMorganChase running its systems on-premises. It has no seat, and it is the one with a public-market clock starting to run.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The first close landed on 8 July with a second expected within weeks, and the SN50 ships in the second half of 2026. The United States GP in October and the Las Vegas GP in November fall inside the window, and a 2027 listing makes 2027 the brand-build year.",
+  "why_team_label": "WHY TGR HAAS F1 TEAM",
+  "why_team_para": "Haas is the American team with no compute, AI or chip partner: Toyota Gazoo Racing as title and technical partner, Mphasis for digital services, CommScope and Ruckus for connectivity, no silicon. It is the lean privateer, so a partner that installs capability the team could not buy is worth more here than anywhere. Kannapolis and Banbury give SambaNova a US and a UK site; three home races put the brand in front of its buyers.",
+  "value_section": true,
+  "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. An SN40L system at Banbury running open-weight models on the team's own data: strategy post-processing between sessions, telemetry anomaly detection, engineering-document and simulation copilots, none of it leaving the building. JPMorganChase chose SambaNova for that private, on-premises inference. The hardware can form part of the consideration for a cost-capped team; for SambaNova, a reference deployment to show every sovereign and enterprise buyer.",
+  "deal_arch_para": "Entry as Official AI Inference Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the SN50 ramp and a possible 2027 listing. Estimated $4-7M a year, part-payable in systems and support. Scope: sidepod or rear-wing placement, naming of the team's inference environment, US-race hospitality, engineering content from Banbury.",
+  "decision_maker_name": "Rodrigo Liang",
+  "decision_maker_role": "Co-Founder & CEO, SambaNova Systems",
+  "decision_maker_bio": "Liang co-founded SambaNova in 2017 with Stanford professors Kunle Olukotun and Christopher Ré after leading processor development at Sun Microsystems and Oracle. Path: Annie Shea Weckesser, Chief Marketing Officer; Harry Ault, Chief Revenue Officer; Matt Padfield, CFO since June 2026.",
+  "opening_angle_intro": "Lead with the Groq precedent.",
+  "opening_angle_quote": "&ldquo;Rodrigo, Groq put its chip on a McLaren the season it needed the story. You have just raised $1B at $11B with a listing in view, and the American team has no silicon partner. JPMorgan runs you on-premises; a race team could. 25 minutes before Austin?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "First close 8 Jul, second pending; Austin and Las Vegas in window."
+   ],
+   [
+    "CAPACITY",
+    "18",
+    "/ 20",
+    "$1B first close at $11B; ~$2.5B raised in total (reported)."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "B2B silicon brand; a listing narrative needs a stage."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "IPO under consideration for 2027 (reported); no filing."
+   ],
+   [
+    "OPS FIT",
+    "15",
+    "/ 20",
+    "MODE A: on-premises inference; no AI or chip partner at Haas."
+   ]
+  ],
+  "risks": [
+   [
+    "SECOND CLOSE UNCONFIRMED",
+    "The 8 July release called it a first close with more expected within weeks; no completion had been announced by early September.",
+    "Anchor on the $1B first close; ask for the final size and the IPO timetable on the call."
+   ],
+   [
+    "GROQ GOT THERE FIRST",
+    "McLaren's Groq deal owns the inference-chip narrative on the grid; a second entrant risks reading as a copy.",
+    "Sell the on-premises deployment and the JPMorgan private-inference story: a system in the factory, not a logo."
+   ]
+  ],
+  "bottom_line": "A $1B first close at $11B, a fivefold re-rating in five months, JPMorganChase on-premises and an IPO under consideration put SambaNova at peak brand-investment authority. Haas has no compute or chip partner, Groq at McLaren proved the category, and two US races remain inside the window.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "category_whitespace"
+  ],
+  "footer_company": "SAMBANOVA SYSTEMS",
+  "footer_date": "16 JUL 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 8 July 2026 SambaNova announced the first close of $1B in strategic financing as part of a Series F at an $11B post-money valuation, led by General Atlantic with Seligman Ventures, T. Rowe Price Associates and Capital Group, and with BlackRock, Intel Capital, the Qatar Investment Authority, Battery Ventures, Vista Equity Partners and Volantis among new and existing investors. The company said a second close was expected in the coming weeks; none had been announced by early September, so the brief anchors on the first close."
+    },
+    {
+     "label": "A fivefold re-rating in five months",
+     "text": "In December 2025 Bloomberg reported Intel in advanced talks to buy SambaNova for about $1.6B including debt. The talks stalled; in February 2026 Intel instead took a stake in a $350M Series E at a reported ~$2.2B valuation and signed a multi-year partnership. Five months later the company priced at $11B. A business re-rated that fast has a story to tell to enterprise, sovereign and public-market audiences, and the money to tell it."
+    },
+    {
+     "label": "JPMorganChase and the SN50 ramp",
+     "text": "The same day, JPMorganChase was named an inference-infrastructure customer, with SN40L and SN50 systems powering secure on-premises inference at the bank. The SN50 begins shipping in the second half of 2026 with SoftBank as first deployment partner in Japan; Saudi Aramco and OVHcloud are among named customers. Each shipment milestone is a moment a partnership can be timed to."
+    },
+    {
+     "label": "Calendar and listing window",
+     "text": "The United States GP in October and the Las Vegas GP in November are the US rounds left in 2026, and teams close 2027 partner rosters in the fourth quarter. Rodrigo Liang has said an IPO in 2027, most likely in the US, is under consideration (reported); a deal agreed before Austin runs through the listing year."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Haas carries Toyota Gazoo Racing as title and technical partner, Mphasis as Official Digital Partner, CommScope and Ruckus for connectivity, Orion180, Haas Automation and Haas Tooling, but no compute, AI, cloud or chip partner. Official AI Inference Partner is a clean category. Mphasis sells IT services, including AI services, so it is a channel for a deployment, not a lock on the lane."
+    },
+    {
+     "label": "A team that needs the capability",
+     "text": "Haas is the grid's lean privateer, operating from Kannapolis, Banbury and a design office in Maranello with a fraction of the headcount of the works teams. Capability installed by a partner, an inference system the team could not otherwise justify inside the cost cap, is worth more to Haas than to a team with its own data-centre programme."
+    },
+    {
+     "label": "American team, American buyers",
+     "text": "SambaNova is headquartered in Palo Alto and sells to US banks, sovereign programmes and neo-clouds. Haas is the American team with three home rounds a year: Miami, Austin and Las Vegas, where the enterprise and capital-markets audience SambaNova needs for a 2027 listing already gathers."
+    },
+    {
+     "label": "The precedent, and the difference",
+     "text": "Groq became an Official Partner of McLaren in September 2025 with its LPU chip on the car from the Singapore GP. That proved teams buy inference silicon. SambaNova's difference is the on-premises system: a deployment at Haas would be the JPMorgan story at racing speed, not a logo."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "An SN40L system installed at the Banbury operations base running open-weight models on the team's own data: post-session strategy analysis, telemetry anomaly detection across the car's sensor streams, engineering-document and simulation copilots for a small engineering staff. Data never leaves the building, which matters to a team whose design office sits inside Ferrari's home town."
+    },
+    {
+     "label": "Cost-cap arithmetic",
+     "text": "Systems and support can form part of the consideration, so the team gains inference capacity without cost-cap capital. The SN50, shipping from the second half of 2026, gives the partnership a hardware refresh story in each of the three years."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "SambaNova's buyers are CIOs and CTOs at banks, sovereign AI programmes and neo-clouds, an audience Haas's current partners do not bring. Hospitality at Miami, Austin and Las Vegas for those accounts, and a factory reference deployment SambaNova can show every prospect."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official AI Inference Partner designation, sidepod or rear-wing placement, naming of the team's inference environment, driver and engineering access for SambaNova's customer events, and engineering content from Banbury and Kannapolis on how the system is used."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Groq is Official Partner and the inference-chip incumbent; Google Cloud and Dell also hold cloud and hardware."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "AMD, Snapdragon and Hewlett Packard Enterprise cover silicon and compute."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "ARM holds the chip lane and CoreWeave the AI compute lane."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific (data centre) and TWG AI occupy compute and AI."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the compute incumbent."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Microsoft holds cloud and IndraMind joined in the AI lane."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "HP (title) and IBM cover hardware and compute."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Claude and Airia occupy the AI lanes; VAST holds the data platform."
+    },
+    {
+     "team": "Audi Revolut F1 Team · Visa Cash App Racing Bulls",
+     "reason": "Open but not chosen: Audi's roster already carries ElevenLabs in AI, and Racing Bulls lacks the US identity and home races that fit a Palo Alto company heading for a US listing."
+    }
+   ],
+   "ask": "A 25-minute call with Rodrigo Liang before the United States GP to confirm the size of the completed Series F and the listing timetable, and to size an Official AI Inference Partner entry, part-paid in systems, against Haas's 2027 roster."
+  }
+ },
+ "note": "# SambaNova Systems → TGR Haas F1 Team — verification log (N° 161, brief dated 16 Jul 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost from a case spec: Claude did the research and writing; the pipeline's calendar and sponsor-table checks, 13-rule audit and 2-page render ran as code. The brief is issued for the date the signal sits on in the desk (16 Jul 2026); the trigger is the 8 Jul 2026 first close, inside the 90-day window.\n\n**Sandbox limitation, stated plainly:** direct fetches of generalatlantic.com, sambanova.ai, businesswire.com, techcrunch.com, cnbc.com, bloomberg.com and theorg.com were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nCompany-announced: the SambaNova release of 8 Jul 2026 (carried by General Atlantic, BusinessWire, TechCrunch, Bloomberg, Quartz) states the $1B first close at $11B post-money, the lead and named investors, the expected second close and the use of proceeds. The JPMorganChase inference-infrastructure selection was reported the same day (TechCrunch, The AI Insider). The thin row's source (TechCrunch) is a credible secondary; the primary release is now the evidence URL.\n\n## Corrections to the thin row\n\n- The thin row (8 Jul) said \"CEO publicly on record strongly considering IPO\". The sourced wording is that Liang said an IPO in 2027, most likely in the US, is under consideration; the brief says \"under consideration (reported)\" and scores URGENCY 13, not higher.\n- The row's series/team hint (Haas) was checked against the sponsor table and kept on merit: no compute, AI, cloud or chip partner on the Haas roster.\n- Scored 77, matching the row's 77 but with a different composition: capacity 18 on the $1B close, ops fit 15 (MODE A on-premises inference, product-to-need 6 because the team use is a proposal, not a deployment).\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| $1B Series F first close at $11B post-money; General Atlantic lead; Seligman, T. Rowe Price, Capital Group; BlackRock, Intel Capital, QIA, Battery, Vista, Volantis; second close expected | VERIFIED (company release via search summary) | generalatlantic.com; BusinessWire |\n| JPMorganChase inference-infrastructure partner, SN40L/SN50 on-premises | REPORTED | TechCrunch; The AI Insider, 8 Jul 2026 |\n| $350M Series E, Feb 2026, Intel strategic investment and multi-year partnership; implied ~$2.2B | REPORTED | CNBC 24 Feb 2026; DCD |\n| Intel takeover talks near $1.6B incl. debt stalled | REPORTED | Bloomberg (Dec 2025 / 21 Jan 2026) via DCD, EE Times |\n| SN40L (Sep 2023), SN50 shipping H2 2026, SoftBank first deployment; customers Saudi Aramco, OVHcloud | REPORTED | DCD (Mar 2026); TechCrunch |\n| IPO in 2027, most likely US, under consideration | REPORTED | TechCrunch / IndexBox interview summary |\n| Founded 2017 Palo Alto by Liang, Olukotun, Ré; Liang ex-Oracle SVP (SPARC) and Sun | VERIFIED | sambanova.ai about page; Clay / MWC bios |\n| Total funding ~$2.48B | REPORTED (Tracxn) | brief says \"reported\" |\n| Annie Shea Weckesser CMO; Harry Ault CRO; Matt Padfield CFO (12 Jun 2026) | VERIFIED / REPORTED | BusinessWire 12 Jun 2026; LinkedIn; The Org; Crunchbase |\n| Clyde Hosein President & COO | CONFLICTING — not used | The Org lists him; Equilar records tenure Apr 2025–Mar 2026 |\n| Groq Official Partner of McLaren, logo from 2025 Singapore GP | VERIFIED | groq.com newsroom; PR Newswire 26 Sep 2025 |\n| Haas: Kannapolis HQ, Banbury race ops, Maranello design office; TGR title 2026; Mphasis, CommScope/Ruckus, Orion180 | VERIFIED | haasf1team.com; formula1.com |\n| Haas roster and rival lanes across the grid | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| United States GP (Oct), Las Vegas GP (Nov), Miami GP 2026 | VERIFIED | calendar table (`seeds/calendar_2026.json`) |\n\n## Screen-outs and things not claimed\n\n- **Leadership ties:** no SambaNova leader found with prior F1/FE employment or sponsorship history; `leadership_ties` empty after checking.\n- **Revenue:** not public; none used.\n- **Mohsen Moazami** (Vice Chair, Global Strategy and Partnerships) joined in August 2026, after the brief date; not used.\n- **The Haas deployment** described in VALUE is a proposal, written as one; no SambaNova system is deployed at any F1 team.\n- **Deal size $4-7M a year** is a 1440 ESTIMATE, labelled as such.\n"
+}

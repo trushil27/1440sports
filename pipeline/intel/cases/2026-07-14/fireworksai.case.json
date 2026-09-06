@@ -1,0 +1,412 @@
+{
+ "run_date": "2026-07-14",
+ "signal_date": "2026-07-16",
+ "stem": "fireworksai",
+ "number": 162,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Fireworks AI",
+  "signal_date": "2026-07-16",
+  "score": 77,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Lin Qiao",
+  "role": "CEO & Co-Founder",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+  "industry_meta": "AI Infrastructure · Inference Cloud for Open Models · Redwood City, California",
+  "recommended_team": "Visa Cash App Racing Bulls",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$1.505B Series D at a $17.5B post-money valuation, led by Atreides Management, Index Ventures and TCV (company release, 16 Jul 2026); $250M Series C at $4B in Oct 2025; total funding about $1.8B (reported)",
+   "investors": "Atreides Management, Index Ventures, TCV (leads); Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC",
+   "revenue": "Annualised revenue run-rate above $1B, up fivefold year on year (company statement, Jul 2026; not audited)",
+   "trigger": "$1.505B Series D at $17.5B announced 16 Jul 2026, above the $15B Bloomberg reported it was seeking in May",
+   "competitor_signal": "Groq at McLaren (inference chip, Official Partner since Sep 2025); CoreWeave at Aston Martin (Official AI Cloud Computing Partner, May 2025); Oracle at Red Bull; Microsoft at Mercedes; Racing Bulls carries no AI-inference, cloud or model partner",
+   "strategic_hook": "The inference layer on Racing Bulls' Confluent real-time data stream: open-weight models fine-tuned on the team's own telemetry, hosted by Fireworks; customers include Uber, DoorDash, Notion, Samsung and Verizon (reported)",
+   "us_presence": "HQ Redwood City, California; founded 2022 by seven former Meta PyTorch engineers; about 200 staff, headcount planned to reach 600 by end-2026 (CEO to CNBC)",
+   "alumni_match": "",
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: hosted inference for telemetry and strategy copilots on the team's Confluent stream; A1 race-strategy decision support; no inference, cloud or model partner at Racing Bulls",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 19,
+   "brand_fit": 14,
+   "urgency": 12,
+   "ops_fit": 15,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "lin qiao",
+    "qiao",
+    "dzhulgakov",
+    "pytorch",
+    "no chief marketing officer",
+    "cfo",
+    "seven former",
+    "chief technology officer"
+   ],
+   "url": "https://fireworks.ai/team",
+   "excerpt": "Fireworks AI leadership (company team page; Contrary Research; Index Ventures): Lin Qiao, CEO & Co-Founder (Senior Director of Engineering at Meta 2015-2022, led PyTorch; previously LinkedIn and IBM; PhD UC Santa Barbara); Dmytro Dzhulgakov, CTO & Co-Founder (PyTorch core maintainer); co-founders Benny Chen, Chenyu Zhao, Dmytro Ivchenko, James Reed and Pawel Garbacki, seven former Meta PyTorch engineers, founded late 2022. No chief marketing officer, COO or chief revenue officer is named on the listings found; a CFO exists but is not named on them (recorded as a gap, not guessed).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1.505b",
+    "$1.5b",
+    "$17.5b",
+    "atreides",
+    "tcv",
+    "16 jul",
+    "16 july",
+    "nvidia",
+    "lightspeed",
+    "evantic",
+    "bessemer",
+    "ontario teachers",
+    "lone pine",
+    "$1b",
+    "fivefold",
+    "40 trillion",
+    "15 trillion",
+    "run-rate",
+    "funding round",
+    "series d"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$15b",
+    "27 may",
+    "bloomberg",
+    "in talks",
+    "above"
+   ],
+   "url": "https://www.bloomberg.com/news/articles/2026-05-27/fireworks-ai-in-talks-for-funding-at-15-billion-valuation",
+   "excerpt": "Bloomberg, 27 May 2026 (via Investing.com, TradingView): Fireworks AI in talks to raise at a $15 billion valuation with Index Ventures set to co-lead; the round priced above that on 16 Jul at $17.5B.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$250m",
+    "$4b",
+    "series c",
+    "october 2025",
+    "$1.8b",
+    "$1.83b",
+    "fourfold",
+    "nine months",
+    "$52m",
+    "$552m",
+    "2024",
+    "series b",
+    "$327m"
+   ],
+   "url": "https://www.businesswire.com/news/home/20251028604819/en/Fireworks-AI-Raises-$250M-Series-C-to-Lead-the-AI-Inference-Market",
+   "excerpt": "Fireworks release, 28 Oct 2025: $250M Series C at a $4B valuation led by Lightspeed, Index Ventures and Evantic with Sequoia participating; total funding then $327M. Bloomberg, 11 Jul 2024: $52M round led by Sequoia at a $552M valuation with Nvidia, AMD and MongoDB. Seedtable / toflow put total funding after the Series D at about $1.83B (reported). $4B in Oct 2025 to $17.5B in Jul 2026 is roughly fourfold in nine months.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "uber",
+    "doordash",
+    "notion",
+    "samsung",
+    "verizon",
+    "cursor",
+    "600",
+    "200 people",
+    "about 200",
+    "headcount",
+    "redwood city",
+    "san mateo",
+    "2022",
+    "cnbc"
+   ],
+   "url": "https://www.cnbc.com/2026/07/16/fireworks-nvidia-cloud-ai-startup-value.html",
+   "excerpt": "CNBC, 16 Jul 2026, and Contrary Research: Fireworks is headquartered in Redwood City, California (Crunchbase address; CNBC's interview dateline says San Mateo) and was founded in 2022. Named customers include Uber, DoorDash, Notion, Samsung, Verizon, Cursor and Upwork; Cursor once accounted for more than half of revenue and the mix has since diversified. Qiao told CNBC the company employs around 200 people and expects headcount to reach 600 by the end of 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "confluent",
+    "million data points",
+    "pit wall",
+    "1 oct",
+    "october 2025",
+    "halo",
+    "dynatrace",
+    "rebeldot",
+    "neural concept",
+    "faenza",
+    "milton keynes"
+   ],
+   "url": "https://www.confluent.io/press-release/confluent-and-visa-cash-app-racing-bulls-partnership/",
+   "excerpt": "Confluent release, 1 Oct 2025: multi-year partnership with Visa Cash App Racing Bulls; Confluent's data streaming platform creates a real-time flow between car, pit wall and factory, each car producing more than a million data points a second; logo on the halo and upper sidepods from the Singapore Grand Prix. Dynatrace is Official Observability and Performance Analytics Technology Partner (Dynatrace investor release); RebelDot is a technology partner since 2025; Neural Concept's engineering AI is used in aerodynamic development as an official supplier (BusinessWire, 3 Jun 2025). Team base in Faenza, Italy, with aero and design facilities at the Red Bull Technology Campus in Milton Keynes since January 2025.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "groq",
+    "coreweave",
+    "september 2025",
+    "may 2025",
+    "singapore",
+    "wind tunnel"
+   ],
+   "url": "https://groq.com/newsroom/mclaren-racing-announces-groq-as-an-official-partner-of-the-mclaren-formula-1-team",
+   "excerpt": "McLaren Racing / Groq, 26 Sep 2025: Groq an Official Partner of the McLaren F1 Team, logo on the cars from the 2025 Singapore Grand Prix, LPU inference chip supporting analysis, development and real-time insight. Aston Martin Aramco, 22 May 2025: CoreWeave Official AI Cloud Computing Partner, multi-year; wind tunnel named the CoreWeave Wind Tunnel.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "no ai-inference",
+    "no inference",
+    "no cloud",
+    "oracle",
+    "microsoft",
+    "google cloud",
+    "dell",
+    "core scientific",
+    "twg ai",
+    "claude",
+    "airia",
+    "indramind",
+    "elevenlabs",
+    "hewlett",
+    "ibm",
+    "randstad",
+    "siemens",
+    "visa",
+    "cash app",
+    "nouryon"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): Visa Cash App Racing Bulls 2026 roster — Visa, Cash App, Randstad, Pirelli, Riedel, Siemens, XM Trading, Hugo, Tudor, NEFT Vodka, Piquadro, Hugo Eyewear, RebelDot, Airtasker, Dynatrace, Student.com, Roboze, Hahn Air, Cefla, Yugo, Mobil 1, Confluent, Ford (powertrain), Nouryon; no AI-inference, cloud or model partner. Elsewhere: Groq, Google Cloud, Dell and Gemini (McLaren); CoreWeave and ARM (Aston Martin); Oracle (Red Bull); Microsoft, Hewlett Packard Enterprise, AMD and Meta AI (Mercedes); Microsoft and IndraMind (Alpine); HP and IBM (Ferrari); Claude, Airia and VAST (Williams); Core Scientific and TWG AI (Cadillac); ElevenLabs (Audi).",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "united states gp",
+    "belgian",
+    "hungarian",
+    "october",
+    "november",
+    "24 "
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table (24 rounds): after mid-July the season continues with the Belgian GP, Hungarian GP, Dutch GP, Italian GP, Spanish GP (Madrid), Azerbaijan GP, Singapore GP, United States GP (Austin, October), Mexico City GP, São Paulo GP, Las Vegas GP (November), Qatar GP and Abu Dhabi GP.",
+   "method": "calendar"
+  },
+  {
+   "needles": [
+    "$3-5m",
+    "$3–5m",
+    "estimate"
+   ],
+   "url": "engine/methodology.md (deal-size estimate)",
+   "excerpt": "Deal size is a 1440 ESTIMATE ($3-5M a year for an official-partner AI inference entry at Racing Bulls, part-payable in inference credits), labelled as such in the brief; not a company or team figure.",
+   "method": "manual"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Fireworks AI",
+  "industry_meta": "AI Infrastructure · Inference Cloud for Open Models",
+  "hq": "Redwood City, California (founded 2022)",
+  "ticker": "Private ($17.5B; $1.505B Series D, Jul 2026)",
+  "deck": "Fireworks AI, the Redwood City inference cloud founded by the Meta engineers behind PyTorch, announced a $1.505B Series D at a $17.5B valuation on 16 July 2026, led by Atreides, Index Ventures and TCV with Nvidia participating, as annualised revenue passed $1B, fivefold in a year on the company's figures.",
+  "score": 77,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Visa Cash App Racing Bulls",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Bloomberg reported on 27 May that Fireworks was in talks at $15B with Index co-leading; the round priced above that on 16 July at $17.5B, led by Atreides Management, Index Ventures and TCV, with Nvidia, Lightspeed, Evantic, Bessemer, Menlo, Insight, Ontario Teachers' and Lone Pine participating. It follows a $250M Series C at $4B in October 2025, a fourfold step in nine months; total funding is about $1.8B (reported). The company says annualised revenue passed $1B, up fivefold, and tokens served rose from 15 to over 40 trillion a day. Headcount goes from about 200 to 600 by year-end.",
+  "the_case_p2": "Inference has been sold to the grid twice: Groq at McLaren since September 2025 and CoreWeave at Aston Martin since May 2025, each signed in the year the vendor needed a public story. Fireworks is the inference company whose customers, Uber, DoorDash, Notion, Samsung and Verizon, are names a paddock recognises, and it has no seat. A $17.5B private company with $1B of revenue has the public market as its next audience.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 16 July and headcount is set to triple by December; brand budgets follow the hiring plan. The United States GP in October and the Las Vegas GP in November fall inside the window, and teams close 2027 rosters in the fourth quarter.",
+  "why_team_label": "WHY VISA CASH APP RACING BULLS",
+  "why_team_para": "Racing Bulls has built the grid's most explicit real-time data stack without an inference layer: Confluent streams more than a million data points a second between car, pit wall and factory, Dynatrace is Official Observability and Performance Analytics partner, RebelDot builds software, and there is no AI-inference, cloud or model partner. Faenza and the Milton Keynes aero site are fed by that stream. A challenger team with a younger audience suits a developer-first brand, priced below the works teams.",
+  "value_section": true,
+  "value_section_label": "VALUE TO VISA CASH APP RACING BULLS",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. The inference layer on the Confluent stream: open-weight models fine-tuned on the team's own telemetry and strategy history, served at low latency for engineer copilots during sessions and for post-session analysis, hosted by Fireworks so no cost-cap capital is spent. Fireworks runs this shape for Uber and DoorDash. Part of the consideration in inference credits; for Fireworks, a reference deployment to show enterprise buyers.",
+  "deal_arch_para": "Entry as Official AI Inference Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the hiring plan and any listing window. Estimated $3-5M a year, part-payable in inference credits. Scope: sidepod or halo placement, naming of the team's model environment, US-race hospitality for enterprise accounts, engineering content from Faenza.",
+  "decision_maker_name": "Lin Qiao",
+  "decision_maker_role": "CEO & Co-Founder, Fireworks AI",
+  "decision_maker_bio": "Qiao led PyTorch at Meta as Senior Director of Engineering before founding Fireworks in 2022 with six PyTorch colleagues; she fronts every raise. Path: Dmytro Dzhulgakov, CTO and Co-Founder. No chief marketing officer, COO, chief revenue officer or CFO is named on the company's listings.",
+  "opening_angle_intro": "Lead with the stack that lacks a brain.",
+  "opening_angle_quote": "&ldquo;Lin, Racing Bulls streams a million data points a second and has no inference partner on top of it. You have just raised $1.5B at $17.5B with revenue past $1B; Groq and CoreWeave took their seats at this stage. 25 minutes before Austin?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round 16 Jul; Austin and Las Vegas inside the window."
+   ],
+   [
+    "CAPACITY",
+    "19",
+    "/ 20",
+    "$1.5B raise at $17.5B; $1B+ run-rate (company figure)."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Developer-first B2B brand; enterprise names to show."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "No listing stated; headcount tripling by December."
+   ],
+   [
+    "OPS FIT",
+    "15",
+    "/ 20",
+    "MODE A: inference on the Confluent stream; lane open."
+   ]
+  ],
+  "risks": [
+   [
+    "REVENUE IS A COMPANY FIGURE",
+    "The $1B run-rate and fivefold growth are company statements, not audited; Cursor was once over half of revenue.",
+    "Anchor capacity on the closed round; ask for the customer mix on the call."
+   ],
+   [
+    "TWO INFERENCE LOGOS ALREADY",
+    "Groq at McLaren and CoreWeave at Aston Martin own the narrative; a third entrant can read as late.",
+    "Sell the fine-tuned-on-your-data deployment on the Confluent stream, not a chip logo or a wind-tunnel name."
+   ]
+  ],
+  "bottom_line": "A $1.505B Series D at $17.5B, revenue past $1B on the company's figures and headcount tripling put Fireworks at peak brand-investment authority. Racing Bulls has the real-time data stack and no inference partner, Groq at McLaren and CoreWeave at Aston Martin proved the category, and two US races remain inside the window.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "category_whitespace"
+  ],
+  "footer_company": "FIREWORKS AI",
+  "footer_date": "14 JUL 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 16 July 2026 Fireworks announced a $1.505B Series D at a $17.5B post-money valuation, led by Atreides Management, Index Ventures and TCV, with Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital and 20VC among the participants. Bloomberg had reported on 27 May that the company was in talks at $15B; it priced above that."
+    },
+    {
+     "label": "Fourfold in nine months",
+     "text": "The Series C of October 2025 was $250M at $4B, led by Lightspeed, Index Ventures and Evantic with Sequoia participating, and brought total funding to $327M; two years earlier Sequoia led a $52M round at $552M with Nvidia, AMD and MongoDB. Total funding after the Series D is about $1.8B (reported). A company re-priced fourfold in nine months has a story for enterprise buyers and, eventually, the public market."
+    },
+    {
+     "label": "Revenue and scale, on the company's figures",
+     "text": "Fireworks says annualised revenue run-rate has passed $1B, fivefold year on year, and that tokens served rose from 15 trillion to more than 40 trillion a day. Named customers include Uber, DoorDash, Notion, Samsung, Verizon, Cursor and Upwork; Cursor once provided more than half of revenue and the mix has since diversified. Lin Qiao told CNBC headcount is about 200 and will reach 600 by the end of 2026. None of these numbers is audited, and the brief says so."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The United States GP in Austin (October) and the Las Vegas GP (November) are the US rounds left in 2026, and teams close their 2027 partner rosters in the fourth quarter. A deal agreed before Austin lands in the same quarter as the hiring plan and is activated in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "A data stack without an inference layer",
+     "text": "Racing Bulls carries Confluent for real-time data streaming (more than a million data points a second between car, pit wall and factory, multi-year since October 2025), Dynatrace as Official Observability and Performance Analytics Technology Partner, RebelDot as a software partner, and Neural Concept's engineering AI in aerodynamic development. There is no AI-inference, cloud or model partner: Official AI Inference Partner is a clean category that completes a stack the team has already advertised."
+    },
+    {
+     "label": "A challenger team at a challenger price",
+     "text": "Racing Bulls is the Red Bull sister team with a younger audience and a partner tier priced below the works teams. For a developer-first brand whose buyers are engineering leaders, the fit is closer than a luxury-coded works team, and the price leaves room for inference credits to form part of the consideration."
+    },
+    {
+     "label": "Two sites fed by one stream",
+     "text": "The team is based in Faenza, Italy, with aerodynamic and design facilities at the Red Bull Technology Campus in Milton Keynes since January 2025. Both consume the Confluent stream; an inference layer serves both without on-premises capital."
+    },
+    {
+     "label": "Ruled out by the table",
+     "text": "Groq at McLaren, CoreWeave at Aston Martin, Oracle at Red Bull, Microsoft at Mercedes and Alpine, HP and IBM at Ferrari, Core Scientific and TWG AI at Cadillac, Claude and Airia at Williams and ElevenLabs at Audi each occupy the compute, cloud or AI lane. Haas is open but has no comparable real-time data stack to complete."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Open-weight models fine-tuned on the team's own telemetry and strategy history, served by Fireworks at low latency: engineer copilots that answer questions over live session data, anomaly detection on the million-points-a-second stream, and post-session analysis across the archive. Fireworks runs this shape for Uber, DoorDash and Notion; the team supplies the data and Confluent supplies the pipe."
+    },
+    {
+     "label": "Cost-cap arithmetic",
+     "text": "Hosted inference means no on-premises hardware or cost-cap capital, and inference credits can form part of the consideration. The team gains a capability it would otherwise have to build; the partnership carries a usage story that grows each season."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Fireworks sells to engineering and platform leaders at enterprises such as Uber, DoorDash, Samsung and Verizon, an audience the team's current partners do not bring. US-race hospitality for those accounts and a reference deployment give Racing Bulls a new guest list and Fireworks a customer story it can show on a car."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official AI Inference Partner designation, sidepod or halo placement alongside Confluent, naming of the team's model environment, hospitality at Austin and Las Vegas, and engineering content from Faenza and Milton Keynes on how the models are used."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Groq holds the inference lane; Google Cloud and Dell cover cloud and hardware."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "CoreWeave is Official AI Cloud Computing Partner, a direct rival."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the cloud incumbent."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team · BWT Alpine F1 Team",
+     "reason": "Microsoft holds the cloud lane at both; Mercedes also carries Meta AI and AMD."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "HP (title) and IBM cover compute and cloud services."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific and TWG AI occupy compute and AI."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Claude is Official Thinking Partner and Airia holds the AI-platform lane; VAST holds data."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "ElevenLabs holds the AI lane."
+    },
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "Open but not chosen: no real-time data stack comparable to Racing Bulls' Confluent and Dynatrace stack for an inference layer to complete."
+    }
+   ],
+   "ask": "A 25-minute call with Lin Qiao before the United States GP to confirm the customer mix behind the $1B run-rate, walk through an inference deployment on Racing Bulls' data stream, and size an Official AI Inference Partner entry, part-paid in credits, against the team's 2027 roster."
+  }
+ },
+ "note": "# Fireworks AI → Visa Cash App Racing Bulls — verification log (N° 162, brief dated 14 Jul 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost from a case spec: Claude did the research and writing; the pipeline's calendar and sponsor-table checks, 13-rule audit and 2-page render ran as code.\n\n**Date note, stated plainly:** the desk row sits on 14 Jul 2026 and cites a Sacra profile, but the Series D was announced by the company on 16 Jul 2026, two days after the row's date. The brief keeps the row's issue date (14 Jul) and takes the trigger date from the announcement (16 Jul); the pipeline's freshness rule keeps a trigger dated after the run date. Everything in the brief rests on the 16 Jul release and the 27 May Bloomberg report, not on the Sacra estimate.\n\n**Sandbox limitation, stated plainly:** direct fetches of fireworks.ai, businesswire.com, cnbc.com, bloomberg.com and confluent.io were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nCompany-announced: Fireworks' release of 16 Jul 2026 (BusinessWire, fireworks.ai blog, mirrored by OTPP and Fortune; CNBC and Quartz coverage) states the $1.505B Series D at $17.5B, the leads and participants, the $1B annualised run-rate and the token volumes.\n\n## Corrections to the thin row\n\n- The row said \"ARR estimated ~$800M May 2026, up from $305M end-2025\" from Sacra. Those are third-party estimates and are not used; the brief uses the company's own statement (run-rate above $1B, fivefold year on year) and labels it a company figure, unaudited.\n- \"4.4× Series C valuation in 9 months\": $4B (Oct 2025) to $17.5B (Jul 2026) is about 4.4×; the brief says \"roughly fourfold\".\n- \"Pre-IPO brand-awareness phase initiated\": no IPO statement by the company or its CEO was found. URGENCY is scored 12 and the brief does not claim a listing.\n- The row scored 88; re-scored 77. Capacity 19 is earned by the round; brand fit 14 and urgency 12 hold it back, and the decision path is thin (no CMO, COO or CRO named), which the bio says.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| $1.505B Series D at $17.5B; Atreides, Index, TCV leads; Nvidia, Lightspeed, Evantic, Bessemer, Menlo, Insight, OTPP, Lone Pine, 20VC; 16 Jul 2026 | VERIFIED (company release via search summary) | BusinessWire; fireworks.ai blog |\n| Run-rate above $1B, fivefold; 40T tokens/day from 15T | COMPANY FIGURE (unaudited) | same release; CNBC |\n| Bloomberg 27 May: talks at $15B, Index co-lead | REPORTED | Bloomberg via Investing.com / TradingView |\n| Series C $250M at $4B (28 Oct 2025); total then $327M; 2024 $52M at $552M led by Sequoia; total now ~$1.8B | VERIFIED / REPORTED | BusinessWire 28 Oct 2025; Bloomberg 11 Jul 2024; Seedtable (total, reported) |\n| Customers Uber, DoorDash, Notion, Samsung, Verizon, Cursor, Upwork; Cursor once >50% of revenue; ~200 staff to 600 by end-2026 | REPORTED (CEO to CNBC) | CNBC 16 Jul 2026 |\n| HQ Redwood City; founded 2022 by seven ex-Meta PyTorch engineers | VERIFIED / conflicting dateline | Crunchbase address (Redwood City); CNBC interview dateline says San Mateo; Contrary Research |\n| Lin Qiao CEO (led PyTorch at Meta); Dmytro Dzhulgakov CTO; no CMO/COO/CRO named; CFO unnamed | VERIFIED / GAP | fireworks.ai team page; Contrary; Index Ventures |\n| Confluent multi-year partnership, >1M data points/s, halo and upper sidepods from Singapore GP (1 Oct 2025) | VERIFIED | confluent.io release; BusinessWire |\n| Dynatrace Official Observability and Performance Analytics partner; RebelDot; Neural Concept engineering AI (3 Jun 2025) | VERIFIED | Dynatrace IR release; rebeldot.com; BusinessWire |\n| Faenza base; Milton Keynes aero/design at the Red Bull Technology Campus from Jan 2025 | VERIFIED | Motorsport Week; PlanetF1 |\n| Groq at McLaren (26 Sep 2025); CoreWeave at Aston Martin (22 May 2025) | VERIFIED | groq.com; astonmartinf1.com |\n| Racing Bulls roster and rival lanes across the grid | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| United States GP (Oct), Las Vegas GP (Nov) 2026 | VERIFIED | calendar table (`seeds/calendar_2026.json`) |\n\n## Screen-outs and things not claimed\n\n- **Leadership ties:** no Fireworks leader found with prior F1/FE employment or sponsorship history; `leadership_ties` empty after checking.\n- **Neural Concept** is an official supplier to Racing Bulls (Jun 2025) but is not in the sponsor table; it is named descriptively on the app page, not as a roster row, and it works in aerodynamic design, not inference.\n- **The Racing Bulls deployment** in VALUE is a proposal, written as one; Fireworks has no motorsport customer.\n- **Deal size $3-5M a year** is a 1440 ESTIMATE, labelled as such.\n"
+}

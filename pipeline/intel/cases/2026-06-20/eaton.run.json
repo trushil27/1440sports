@@ -1,0 +1,849 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-06-20",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-o7v0_vhi/2026-06-20/eaton.pdf",
+     "web": "/tmp/case-pdf-o7v0_vhi/2026-06-20/eaton.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Eaton",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 19
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 76,
+     "reason": "resurfaced: Eaton last surfaced 2026-06-20 (other:never entered category whitespace funding event); new trigger other:spin off reverse morris trust; top ranking score",
+     "company": "Eaton",
+     "decision": "selected",
+     "signal_date": "2026-06-10"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Eaton",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "resurfaced: Eaton last surfaced 2026-06-20 (other:never entered category whitespace funding event); new trigger other:spin off reverse morris trust; top ranking score",
+   "score_total": 76,
+   "score_breakdown": {
+    "cap": null,
+    "base": 76,
+    "total": 76,
+    "timing": 16,
+    "ops_fit": 15,
+    "ranking": 76,
+    "urgency": 13,
+    "capacity": 19,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 76,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 76,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+   "trigger_date": "2026-06-10",
+   "trigger_reason": "spin-off / Reverse Morris Trust"
+  }
+ ],
+ "brief": {
+  "number": 188,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-o7v0_vhi/2026-06-20/eaton.web.html",
+  "brief_data": {
+   "hq": "Dublin (operations run from the United States)",
+   "deck": "Eaton, the $27.4B intelligent-power group, agreed on 10 June 2026 to separate its Mobility business and combine it with Dana in a ~$5.1B Reverse Morris Trust, taking about $1.1B in cash. What remains is a pure electrical and aerospace company riding a 240% surge in US data-centre orders.",
+   "risks": [
+    {
+     "label": "INDUSTRIAL B2B BRAND",
+     "detail": "Eaton sells to utilities, contractors and data-centre builders, not consumers; F1 reach alone is a weak argument.",
+     "counter": "Sell the specification: three greenfield sites and a pit-wall power reference its data-centre customers recognise."
+    },
+    {
+     "label": "BANDWIDTH UNTIL CLOSING",
+     "detail": "Until the Dana deal closes in Q1 2027, management attention and the corporate story are spoken for.",
+     "counter": "Agree terms in Q4 2026 and time the announcement to closing; the deal sets the launch date."
+    }
+   ],
+   "score": 76,
+   "ticker": "NYSE: ETN ($27.4B sales, 2025)",
+   "company": "Eaton",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "TAKEN",
+     "detail": "Ford, Siemens",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "label": "TAKEN",
+     "detail": "Ford, Siemens",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Schneider Electric",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "spin_off",
+    "identity_reset",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://www.eaton.com/us/en-us/company/about-us/leadership-team/corporate-officers/paulo-ruiz.html",
+    "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-first-quarter-2026-results.html",
+    "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+    "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-fourth-quarter-2025-results.html",
+    "https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/jan/0119-f1.html"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Paulo Ruiz before the United States GP to size an Official Power Management Partner entry against Cadillac's 2027 roster, scope the Fishers and Silverstone power specification, and align the announcement with the Dana closing.",
+    "value": [
+     {
+      "text": "Medium-voltage switchgear, power distribution, uninterruptible power and circuit protection for the Fishers, Concord and Silverstone sites, with the same monitoring and energy-management layer Eaton sells to data-centre operators applied to dyno rooms, simulators and machine shops. Trackside, Eaton power-quality and backup equipment runs the garage and pit-wall systems at 24 rounds.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Eaton brings the buyers of the AI build-out, utilities, hyperscalers, contractors and industrial groups, to Cadillac's hospitality at the three US rounds, and a founding-partner story for a team whose inventory is still being priced.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "The build of an F1 headquarters from the switchgear up is a story Eaton can tell to every data-centre customer: engineering films from Fishers, a pit-wall power reference, and a case study that maps a race garage onto an AI factory.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Power Management Partner designation, engine-cover or halo placement, hospitality at the United States GP, Miami GP and Las Vegas GP, driver and engineering access for Eaton's customer events.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 10 June 2026 Eaton signed definitive agreements to separate its Mobility business and combine it with Dana Incorporated in a Reverse Morris Trust. The transaction is valued at about $5.1B; Eaton shareholders will own at least 50.1% of the combined company and Eaton receives a cash distribution of about $1.1B. Closing is expected in the first quarter of 2027, subject to shareholder and regulatory approvals.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The vehicle and mobility heritage leaves with Dana. What remains is intelligent power: electrical equipment for data centres, utilities, buildings and industry, plus aerospace. A company that has just redrawn its perimeter has to tell customers, investors and recruits what it now stands for, and that is when brand budgets are re-cut.",
+      "label": "A company changing what it is"
+     },
+     {
+      "text": "First-quarter 2026 sales were a record $7.5B, up 17%; Electrical Americas reached $3.6B, up 20%, with data-centre orders up about 240% and sector backlog up 48%. In March Eaton and NVIDIA unveiled the Beam Rubin DSX platform for 800-volt AI factories. Eaton is selling into the largest capital build-out in the US economy and has raised 2026 organic growth guidance to 10%.",
+      "label": "Peak demand"
+     },
+     {
+      "text": "Teams close their 2027 partner rosters in the fourth quarter. The United States GP (Austin) in late October and the Las Vegas GP in November are the US stages inside that window; a deal agreed before Austin can be announced in the US and launched in full when the Dana transaction closes in Q1 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Cadillac's inaugural 2026 roster is Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger and TWG AI. There is no electrical-equipment, power or energy brand. Official Power Management Partner is a clean category on a team whose commercial inventory is still being built.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Cadillac is the only entry owned by an American manufacturer, General Motors, with TWG Motorsports. Eaton is the incumbent US name in switchgear, UPS and power distribution, Dublin-domiciled but run from the United States. The pairing reads naturally in Austin, Miami and Las Vegas, where Eaton's utility, data-centre and industrial customers sit.",
+      "label": "An American works team"
+     },
+     {
+      "text": "A $200M, 400,000 sq ft headquarters is under construction in Fishers, Indiana; a power-unit facility runs in Concord, North Carolina; European operations are led from Silverstone. New buildings are specified once. A power partner who arrives during the fit-out becomes part of the building, not a sticker on it.",
+      "label": "Three sites to power"
+     },
+     {
+      "text": "Siemens sits on the rosters of both Red Bull teams and Schneider Electric joined McLaren for 2026. Neither can be displaced; Cadillac is the one competitive, well-funded team where the category has never been sold.",
+      "label": "Rivals are elsewhere"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Oracle Red Bull Racing · Visa Cash App Racing Bulls",
+      "reason": "Siemens, a direct electrical-equipment rival, is on both rosters."
+     },
+     {
+      "team": "McLaren F1 Team",
+      "reason": "Schneider Electric joined for 2026; Arrow Electronics also holds the electronics lane."
+     },
+     {
+      "team": "Formula E grid (all teams)",
+      "reason": "ABB is the championship title partner and Eaton's closest global rival; the category is spoken for at series level."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Open but not chosen: the AMR Technology Campus and wind tunnel are already built and powered, and the roster is technology-heavy (ARM, Cognizant, NetApp, CoreWeave) under an energy title partner."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "Open but not chosen: Signify, HPE and AMD crowd the electrical and technology lanes; no greenfield site to specify."
+     },
+     {
+      "team": "Atlassian Williams Racing · BWT Alpine F1 Team · Audi Revolut F1 Team · Scuderia Ferrari HP · TGR Haas F1 Team",
+      "reason": "Open but not chosen: no US works story and no new campus; Duracell (Williams), Eni (Alpine) and Extreme Networks (Audi) sit near the lane."
+     }
+    ]
+   },
+   "date_long": "20 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $27.4B company becomes pure-play intelligent power in Q1 2027, with about $1.1B of cash and data-centre orders up 240%. Cadillac is fitting out three sites and its inaugural roster carries no electrical brand; the lane and the launch date are both open.",
+   "footer_date": "20 JUN 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Dana signed 10 June, closing Q1 2027; Austin and Las Vegas inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 19,
+     "note": "$27.4B 2025 sales; ~$1.1B cash from the Dana deal.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "Industrial B2B; the new identity is the asset, not consumer reach.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Closing sets a natural launch date; no listing or raise catalyst.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: switchgear, UPS and power quality for three new sites.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 10 June 2026 Eaton signed definitive agreements to separate its Mobility business and combine it with Dana in a Reverse Morris Trust valued at about $5.1B. Eaton shareholders keep at least 50.1% of the combined company, Eaton receives roughly $1.1B in cash, and closing is expected in the first quarter of 2027. The vehicle heritage leaves; intelligent power stays. First-quarter sales were a record $7.5B, up 17%, Electrical Americas reached $3.6B, up 20%, data-centre orders rose about 240% and organic growth guidance went to 10%.",
+   "the_case_p2": "The identity reset arrives with money and a story: 2025 sales were a record $27.4B, and in March Eaton and NVIDIA unveiled the Beam Rubin DSX platform for 800-volt AI factories. Every F1 factory, wind tunnel and garage is a power problem, and from 2026 the cars draw about half their output electrically. The electrical-equipment category on the grid is held by two European rivals, Siemens and Schneider Electric; the American incumbent is absent.",
+   "track_label": "",
+   "brief_number": "188",
+   "claims_total": 19,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "Public company (NYSE: ETN); 2025 sales a record $27.4B, up 10%; Q1 2026 sales $7.5B, up 17%",
+     "value": "$27.4B",
+     "claim_id": 660,
+     "verified": true,
+     "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html"
+    },
+    {
+     "fact": "Public shareholders; Eaton shareholders will hold at least 50.1% of the Dana-Mobility combination",
+     "value": "50.1%",
+     "claim_id": 661,
+     "verified": true,
+     "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html"
+    },
+    {
+     "fact": "Definitive agreements signed 10 June 2026 to separate the Mobility business and combine it with Dana in a ~…",
+     "value": "$5.1B",
+     "claim_id": 663,
+     "verified": true,
+     "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html"
+    },
+    {
+     "fact": "What remains is a pure electrical and aerospace company riding a 240% surge in US data-centre orders.",
+     "value": "240%",
+     "claim_id": 670,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "First-quarter sales were a record $7.5B, up 17%, Electrical Americas reached $3.6B, up 20%, data-centre ord…",
+     "value": "$7.5B",
+     "claim_id": 673,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Intelligent Power Management · Industrial Electrical Equipment",
+   "value_content": "MODE A - operational. Three Cadillac sites are being fitted out at once. Eaton supplies the medium-voltage switchgear, power distribution, UPS and circuit protection for Fishers, Concord and Silverstone, with data-centre-grade monitoring across dyno rooms and simulators. Trackside, Eaton power-quality and backup kit runs the garage and pit wall. In return: Official Power Management Partner, engine-cover or halo placement, Austin and Las Vegas hospitality for Eaton's utility and data-centre buyers.",
+   "value_section": true,
+   "why_team_para": "Cadillac is the first American works entry in a generation: General Motors and TWG Motorsports, a $200M, 400,000 sq ft headquarters under construction in Fishers, Indiana, a power-unit facility in Concord, North Carolina, and a European base at Silverstone. Its inaugural roster is Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger and TWG AI: no electrical, power or energy brand. Eaton is the US incumbent in switchgear and UPS; a new campus is specified once.",
+   "deal_arch_para": "Entry as Official Power Management Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, bridging the Dana closing and the first seasons of the pure-play Eaton. Estimated $5-8M a year, part in equipment and engineering. Scope: campus and trackside power infrastructure, engine-cover or halo branding, US-race hospitality, engineering content from the Fishers build.",
+   "footer_company": "EATON",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 19,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Dana agreement was signed on 10 June and closes in the first quarter of 2027: the window in which Eaton decides what the remaining company stands for. Teams close 2027 rosters in Q4, and the United States GP (Austin) and Las Vegas GP sit inside it.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Ruiz became CEO on 1 June 2025 after 18 years at Siemens and a start at Fiat; the Dana deal is his first major reshaping. Path: David Foster, EVP and CFO since 2 March 2026, and Heath Monesmith, President and COO, Electrical Sector. No CMO is listed.",
+   "decision_maker_name": "Paulo Ruiz",
+   "decision_maker_role": "Chief Executive Officer, Eaton",
+   "opening_angle_intro": "Lead with the reshaping.",
+   "opening_angle_quote": "&ldquo;Paulo, when Dana closes, Eaton is a pure power company for the first time. Cadillac is fitting out three sites and carries no power brand. 25 minutes before Austin to see what an American works team on Eaton power looks like?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Paulo Ruiz, Chief Executive Officer at Eaton",
+   "cited_source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/about-us/leadership-team/corporate-officers/paulo-ruiz.html",
+     "excerpt": "Eaton leadership page (via search summary; eaton.com is egress-blocked): Paulo Ruiz, chief executive officer since 1 June 2025; president and COO from 2 September 2024; joined Eaton in 2019 after more than 18 years at Siemens (CEO of Dresser-Rand, segment head high-voltage products) and earlier roles at Fiat.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Paulo Ruiz, Chief Executive Officer, Eaton at Eaton",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/about-us/leadership-team/corporate-officers/paulo-ruiz.html",
+     "excerpt": "Eaton leadership page (via search summary; eaton.com is egress-blocked): Paulo Ruiz, chief executive officer since 1 June 2025; president and COO from 2 September 2024; joined Eaton in 2019 after more than 18 years at Siemens (CEO of Dresser-Rand, segment head high-voltage products) and earlier roles at Fiat.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Public company (NYSE: ETN); 2025 sales a record $27.4B, up 10%; Q1 2026 sales $7.5B, up 17%",
+   "cited_source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-first-quarter-2026-results.html",
+     "excerpt": "Eaton, 4 May 2026 (Business Wire / SEC exhibit 99): record first-quarter 2026 sales of $7.5B, up 17% with 10% organic growth; Electrical Americas sales a record $3.6B, up 20%; Electrical Americas data-centre orders up about 240% and data-centre revenue up about 50% versus Q1 2025; Electrical sector backlog up 48%; 2026 organic growth guidance raised to 10% from 8% at the midpoint.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Eaton, the $27.4B intelligent-power group, agreed on 10 June 2026 to separate its Mobility business and combine it with Dana in a ~$5.1B Reverse Morris Trust, taking about $1.1B in cash.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+     "excerpt": "Eaton, 11 June 2026 (SEC exhibit 99.1 dated 11 June; Dana release the same day): on 10 June 2026 Eaton entered definitive agreements with Dana Incorporated to separate its Mobility business and combine it with Dana in a Reverse Morris Trust. Transaction value about $5.1B; Eaton shareholders to own at least 50.1% of the combined company, Dana shareholders about 49.9%; Eaton receives a cash distribution of approximately $1.1B; the combined company expects ~$11B pro forma revenue and ~$1.7B 2026 adjusted EBITDA including $250M run-rate synergies; closing expected in the first quarter of 2027 subject to approvals. Paulo Ruiz: 'a major milestone in Eaton's 2030 growth strategy'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Public shareholders; Eaton shareholders will hold at least 50.1% of the Dana-Mobility combination",
+   "cited_source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+     "excerpt": "Eaton, 11 June 2026 (SEC exhibit 99.1 dated 11 June; Dana release the same day): on 10 June 2026 Eaton entered definitive agreements with Dana Incorporated to separate its Mobility business and combine it with Dana in a Reverse Morris Trust. Transaction value about $5.1B; Eaton shareholders to own at least 50.1% of the combined company, Dana shareholders about 49.9%; Eaton receives a cash distribution of approximately $1.1B; the combined company expects ~$11B pro forma revenue and ~$1.7B 2026 adjusted EBITDA including $250M run-rate synergies; closing expected in the first quarter of 2027 subject to approvals. Paulo Ruiz: 'a major milestone in Eaton's 2030 growth strategy'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "What remains is a pure electrical and aerospace company riding a 240% surge in US data-centre orders.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-first-quarter-2026-results.html",
+     "excerpt": "Eaton, 4 May 2026 (Business Wire / SEC exhibit 99): record first-quarter 2026 sales of $7.5B, up 17% with 10% organic growth; Electrical Americas sales a record $3.6B, up 20%; Electrical Americas data-centre orders up about 240% and data-centre revenue up about 50% versus Q1 2025; Electrical sector backlog up 48%; 2026 organic growth guidance raised to 10% from 8% at the midpoint.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "$27.4B in 2025; Q1 2026 $7.5B with Electrical Americas at $3.6B",
+   "cited_source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-first-quarter-2026-results.html",
+     "excerpt": "Eaton, 4 May 2026 (Business Wire / SEC exhibit 99): record first-quarter 2026 sales of $7.5B, up 17% with 10% organic growth; Electrical Americas sales a record $3.6B, up 20%; Electrical Americas data-centre orders up about 240% and data-centre revenue up about 50% versus Q1 2025; Electrical sector backlog up 48%; 2026 organic growth guidance raised to 10% from 8% at the midpoint.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 10 June 2026 Eaton signed definitive agreements to separate its Mobility business and combine it with Dana in a Reverse Morris Trust valued at about $5.1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+     "excerpt": "Eaton, 11 June 2026 (SEC exhibit 99.1 dated 11 June; Dana release the same day): on 10 June 2026 Eaton entered definitive agreements with Dana Incorporated to separate its Mobility business and combine it with Dana in a Reverse Morris Trust. Transaction value about $5.1B; Eaton shareholders to own at least 50.1% of the combined company, Dana shareholders about 49.9%; Eaton receives a cash distribution of approximately $1.1B; the combined company expects ~$11B pro forma revenue and ~$1.7B 2026 adjusted EBITDA including $250M run-rate synergies; closing expected in the first quarter of 2027 subject to approvals. Paulo Ruiz: 'a major milestone in Eaton's 2030 growth strategy'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Definitive agreements signed 10 June 2026 to separate the Mobility business and combine it with Dana in a ~$5.1B Reverse Morris Trust; ~$1.1B cash to Eaton; closing expected Q1 2027",
+   "cited_source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+     "excerpt": "Eaton, 11 June 2026 (SEC exhibit 99.1 dated 11 June; Dana release the same day): on 10 June 2026 Eaton entered definitive agreements with Dana Incorporated to separate its Mobility business and combine it with Dana in a Reverse Morris Trust. Transaction value about $5.1B; Eaton shareholders to own at least 50.1% of the combined company, Dana shareholders about 49.9%; Eaton receives a cash distribution of approximately $1.1B; the combined company expects ~$11B pro forma revenue and ~$1.7B 2026 adjusted EBITDA including $250M run-rate synergies; closing expected in the first quarter of 2027 subject to approvals. Paulo Ruiz: 'a major milestone in Eaton's 2030 growth strategy'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Eaton shareholders keep at least 50.1% of the combined company, Eaton receives roughly $1.1B in cash, and closing is expected in the first quarter of 2027.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+     "excerpt": "Eaton, 11 June 2026 (SEC exhibit 99.1 dated 11 June; Dana release the same day): on 10 June 2026 Eaton entered definitive agreements with Dana Incorporated to separate its Mobility business and combine it with Dana in a Reverse Morris Trust. Transaction value about $5.1B; Eaton shareholders to own at least 50.1% of the combined company, Dana shareholders about 49.9%; Eaton receives a cash distribution of approximately $1.1B; the combined company expects ~$11B pro forma revenue and ~$1.7B 2026 adjusted EBITDA including $250M run-rate synergies; closing expected in the first quarter of 2027 subject to approvals. Paulo Ruiz: 'a major milestone in Eaton's 2030 growth strategy'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Siemens sits on the rosters of Oracle Red Bull Racing and Visa Cash App Racing Bulls; Schneider Electric joined McLaren F1 Team for 2026; ABB is the Formula E championship title partner",
+   "cited_source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+     "excerpt": "Sponsor table: Cadillac F1 Team inaugural 2026 roster — TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco (all 'joined' for 2026; Tommy Hilfiger, Pirelli and Alpinestars per the team's launch materials); no electrical, power or energy brand. Siemens: Oracle Red Bull Racing and Visa Cash App Racing Bulls. Schneider Electric: McLaren F1 Team (joined 2026); Arrow Electronics also McLaren. ABB: Formula E championship title partner since 2018. Aston Martin Aramco: Aramco title, ARM, Cognizant, NetApp, CoreWeave. Mercedes: Signify, HPE, AMD. Williams: Duracell, Komatsu. Alpine: Eni. Audi: Extreme Networks. Haas: Haas Automation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "First-quarter sales were a record $7.5B, up 17%, Electrical Americas reached $3.6B, up 20%, data-centre orders rose about 240% and organic growth guidance went to 10%.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-first-quarter-2026-results.html",
+     "excerpt": "Eaton, 4 May 2026 (Business Wire / SEC exhibit 99): record first-quarter 2026 sales of $7.5B, up 17% with 10% organic growth; Electrical Americas sales a record $3.6B, up 20%; Electrical Americas data-centre orders up about 240% and data-centre revenue up about 50% versus Q1 2025; Electrical sector backlog up 48%; 2026 organic growth guidance raised to 10% from 8% at the midpoint.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Eaton-NVIDIA Beam Rubin DSX platform for 800 V DC AI factories (16 Mar 2026); Electrical Americas data-centre orders up about 240% in Q1 2026",
+   "cited_source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-first-quarter-2026-results.html",
+     "excerpt": "Eaton, 4 May 2026 (Business Wire / SEC exhibit 99): record first-quarter 2026 sales of $7.5B, up 17% with 10% organic growth; Electrical Americas sales a record $3.6B, up 20%; Electrical Americas data-centre orders up about 240% and data-centre revenue up about 50% versus Q1 2025; Electrical sector backlog up 48%; 2026 organic growth guidance raised to 10% from 8% at the midpoint.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The identity reset arrives with money and a story: 2025 sales were a record $27.4B, and in March Eaton and NVIDIA unveiled the Beam Rubin DSX platform for 800-volt AI factories.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-fourth-quarter-2025-results.html",
+     "excerpt": "Eaton, February 2026 (fourth-quarter release, Yahoo Finance mirror): full-year 2025 sales a record $27.4B, up 10% from 2024. Boilerplate: Eaton Corporation plc is an intelligent power management company headquartered in Dublin, listed on the NYSE as ETN.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Electrical Americas is the largest segment ($3.6B Q1 2026 sales); Dublin-domiciled, NYSE-listed, run from the United States",
+   "cited_source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-first-quarter-2026-results.html",
+     "excerpt": "Eaton, 4 May 2026 (Business Wire / SEC exhibit 99): record first-quarter 2026 sales of $7.5B, up 17% with 10% organic growth; Electrical Americas sales a record $3.6B, up 20%; Electrical Americas data-centre orders up about 240% and data-centre revenue up about 50% versus Q1 2025; Electrical sector backlog up 48%; 2026 organic growth guidance raised to 10% from 8% at the midpoint.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $27.4B company becomes pure-play intelligent power in Q1 2027, with about $1.1B of cash and data-centre orders up 240%.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+     "excerpt": "Eaton, 11 June 2026 (SEC exhibit 99.1 dated 11 June; Dana release the same day): on 10 June 2026 Eaton entered definitive agreements with Dana Incorporated to separate its Mobility business and combine it with Dana in a Reverse Morris Trust. Transaction value about $5.1B; Eaton shareholders to own at least 50.1% of the combined company, Dana shareholders about 49.9%; Eaton receives a cash distribution of approximately $1.1B; the combined company expects ~$11B pro forma revenue and ~$1.7B 2026 adjusted EBITDA including $250M run-rate synergies; closing expected in the first quarter of 2027 subject to approvals. Paulo Ruiz: 'a major milestone in Eaton's 2030 growth strategy'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "spin-off / Reverse Morris Trust",
+   "cited_source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+     "excerpt": "Eaton, 11 June 2026 (SEC exhibit 99.1 dated 11 June; Dana release the same day): on 10 June 2026 Eaton entered definitive agreements with Dana Incorporated to separate its Mobility business and combine it with Dana in a Reverse Morris Trust. Transaction value about $5.1B; Eaton shareholders to own at least 50.1% of the combined company, Dana shareholders about 49.9%; Eaton receives a cash distribution of approximately $1.1B; the combined company expects ~$11B pro forma revenue and ~$1.7B 2026 adjusted EBITDA including $250M run-rate synergies; closing expected in the first quarter of 2027 subject to approvals. Paulo Ruiz: 'a major milestone in Eaton's 2030 growth strategy'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Cadillac is the first American works entry in a generation: General Motors and TWG Motorsports, a $200M, 400,000 sq ft headquarters under construction in Fishers, Indiana, a power-unit facility in Concord, North Carolina, and a European base at Silverstone.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/jan/0119-f1.html",
+     "excerpt": "GM News (19 Jan 2026) and Inside INdiana Business / Indianapolis Business Journal: the Cadillac F1 Team is owned by General Motors and TWG Motorsports (CEO Dan Towriss); its $200M, 400,000 sq ft headquarters in Fishers, Indiana is under construction and will employ about 300 people; the team also operates a power-unit facility in Concord, North Carolina, a site in Warren, Michigan, and European operations from Silverstone, England.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The transaction is valued at about $5.1B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+     "excerpt": "Eaton, 11 June 2026 (SEC exhibit 99.1 dated 11 June; Dana release the same day): on 10 June 2026 Eaton entered definitive agreements with Dana Incorporated to separate its Mobility business and combine it with Dana in a Reverse Morris Trust. Transaction value about $5.1B; Eaton shareholders to own at least 50.1% of the combined company, Dana shareholders about 49.9%; Eaton receives a cash distribution of approximately $1.1B; the combined company expects ~$11B pro forma revenue and ~$1.7B 2026 adjusted EBITDA including $250M run-rate synergies; closing expected in the first quarter of 2027 subject to approvals. Paulo Ruiz: 'a major milestone in Eaton's 2030 growth strategy'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Eaton shareholders will own at least 50.1% of the combined company and Eaton receives a cash distribution of about $1.1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-mobility-group-enters-agreement-to-combine-with-dana.html",
+     "excerpt": "Eaton, 11 June 2026 (SEC exhibit 99.1 dated 11 June; Dana release the same day): on 10 June 2026 Eaton entered definitive agreements with Dana Incorporated to separate its Mobility business and combine it with Dana in a Reverse Morris Trust. Transaction value about $5.1B; Eaton shareholders to own at least 50.1% of the combined company, Dana shareholders about 49.9%; Eaton receives a cash distribution of approximately $1.1B; the combined company expects ~$11B pro forma revenue and ~$1.7B 2026 adjusted EBITDA including $250M run-rate synergies; closing expected in the first quarter of 2027 subject to approvals. Paulo Ruiz: 'a major milestone in Eaton's 2030 growth strategy'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "First-quarter 2026 sales were a record $7.5B, up 17%;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-first-quarter-2026-results.html",
+     "excerpt": "Eaton, 4 May 2026 (Business Wire / SEC exhibit 99): record first-quarter 2026 sales of $7.5B, up 17% with 10% organic growth; Electrical Americas sales a record $3.6B, up 20%; Electrical Americas data-centre orders up about 240% and data-centre revenue up about 50% versus Q1 2025; Electrical sector backlog up 48%; 2026 organic growth guidance raised to 10% from 8% at the midpoint.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Electrical Americas reached $3.6B, up 20%, with data-centre orders up about 240% and sector backlog up 48%.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-first-quarter-2026-results.html",
+     "excerpt": "Eaton, 4 May 2026 (Business Wire / SEC exhibit 99): record first-quarter 2026 sales of $7.5B, up 17% with 10% organic growth; Electrical Americas sales a record $3.6B, up 20%; Electrical Americas data-centre orders up about 240% and data-centre revenue up about 50% versus Q1 2025; Electrical sector backlog up 48%; 2026 organic growth guidance raised to 10% from 8% at the midpoint.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Eaton is selling into the largest capital build-out in the US economy and has raised 2026 organic growth guidance to 10%.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-first-quarter-2026-results.html",
+     "excerpt": "Eaton, 4 May 2026 (Business Wire / SEC exhibit 99): record first-quarter 2026 sales of $7.5B, up 17% with 10% organic growth; Electrical Americas sales a record $3.6B, up 20%; Electrical Americas data-centre orders up about 240% and data-centre revenue up about 50% versus Q1 2025; Electrical sector backlog up 48%; 2026 organic growth guidance raised to 10% from 8% at the midpoint.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "A $200M, 400,000 sq ft headquarters is under construction in Fishers, Indiana;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/jan/0119-f1.html",
+     "excerpt": "GM News (19 Jan 2026) and Inside INdiana Business / Indianapolis Business Journal: the Cadillac F1 Team is owned by General Motors and TWG Motorsports (CEO Dan Towriss); its $200M, 400,000 sq ft headquarters in Fishers, Indiana is under construction and will employ about 300 people; the team also operates a power-unit facility in Concord, North Carolina, a site in Warren, Michigan, and European operations from Silverstone, England.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Miami GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 6: Miami GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

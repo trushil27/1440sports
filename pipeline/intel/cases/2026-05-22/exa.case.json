@@ -1,0 +1,377 @@
+{
+ "run_date": "2026-05-22",
+ "signal_date": "2026-05-20",
+ "stem": "exa",
+ "number": 213,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Exa",
+  "signal_date": "2026-05-20",
+  "score": 72,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Will Bryk",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://exa.ai/blog/announcing-series-c",
+  "industry_meta": "AI Search Infrastructure · Search API for AI Agents · San Francisco",
+  "recommended_team": "Atlassian Williams Racing",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$250M Series C led by Andreessen Horowitz at a $2.2B valuation, announced 20 May 2026 (Exa blog; Bloomberg)",
+   "investors": "Andreessen Horowitz (lead, Series C); Benchmark led the $85M Series B at $700M in September 2025; Lightspeed led the $22M Series A in July 2024; Y Combinator and NVentures participated",
+   "revenue": "",
+   "trigger": "$250M Series C led by Andreessen Horowitz at a $2.2B valuation, announced 20 May 2026",
+   "competitor_signal": "Google Cloud at McLaren and Microsoft at Mercedes and Alpine are the search incumbents on the grid; Meta AI at Mercedes, TWG AI at Cadillac and Cognition at Aston Martin Aramco show AI brands taking seats",
+   "strategic_hook": "Exa is a native Claude connector and MCP server; Claude is Atlassian Williams Racing's Official Thinking Partner from 2026",
+   "us_presence": "HQ San Francisco; founded 2021 out of Y Combinator",
+   "alumni_match": "",
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: live web retrieval for the research agents Williams already runs on Claude; a lighter workstream than compute, scored as such",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 16,
+   "brand_fit": 13,
+   "urgency": 12,
+   "ops_fit": 14,
+   "ops_fit_subscores": {
+    "product_to_need": 5,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "will bryk",
+    "bryk"
+   ],
+   "url": "https://exa.ai/blog/announcing-series-c",
+   "excerpt": "Exa blog, 20 May 2026, posted by Will Bryk, CEO & Co-founder: Exa raised a $250M Series C at a $2.2B valuation led by a16z. The desk row named Jeff Wang as CEO; the company's own post and a16z's announcement name Will Bryk as CEO and Jeff Wang as co-founder.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$250m",
+    "$2.2b",
+    "andreessen",
+    "20 may",
+    "series c",
+    "a16z",
+    "funding round"
+   ],
+   "url": "https://exa.ai/blog/announcing-series-c",
+   "excerpt": "Exa blog, 20 May 2026: $250M Series C at a $2.2B valuation led by a16z; funds go to next-generation models and infrastructure for hundreds of thousands of searches per second. Bloomberg, 20 May 2026: Exa Labs Inc., San Francisco, raised $250 million at a $2.2 billion valuation led by Andreessen Horowitz, more than tripling the $700 million set last fall.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$85m",
+    "$700m",
+    "benchmark",
+    "september 2025",
+    "series b",
+    "$22m",
+    "lightspeed",
+    "july 2024",
+    "series a",
+    "y combinator",
+    "nventures",
+    "$357m",
+    "three rounds"
+   ],
+   "url": "https://siliconangle.com/2025/09/03/nvidia-backs-85m-round-ai-search-startup-exa/",
+   "excerpt": "SiliconANGLE, 3 Sep 2025: $85M Series B at a $700M valuation led by Benchmark with Lightspeed, Y Combinator and NVentures; followed a $22M Series A led by Lightspeed in July 2024 (TechCrunch, 16 Jul 2024). With the $250M Series C the three announced rounds total $357M.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "5,000",
+    "400,000",
+    "cursor",
+    "hubspot",
+    "customers",
+    "developers"
+   ],
+   "url": "https://www.bloomberg.com/news/articles/2026-05-20/andreessen-backed-ai-search-startup-exa-valued-at-2-2-billion",
+   "excerpt": "Bloomberg, 20 May 2026: over 5,000 enterprise customers including Cursor, Cognition and HubSpot; Exa blog: powers search for Cursor, Cognition, HubSpot, OpenRouter, Monday.com and over 400,000 developers. No revenue disclosed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "marcus holm",
+    "holm",
+    "cro",
+    "launchdarkly",
+    "revenue chief",
+    "go-to-market"
+   ],
+   "url": "https://exa.ai/blog/announcing-series-c",
+   "excerpt": "Exa blog, 20 May 2026: Marcus Holm, President of LaunchDarkly, joins as Exa's CRO to lead the global go-to-market organisation, hiring across sales, solutions and marketing.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "jeff wang",
+    "mcardle",
+    "harvard",
+    "2021",
+    "cfo",
+    "cmo",
+    "coo",
+    "first dedicated finance"
+   ],
+   "url": "https://a16z.com/announcement/investing-in-exa/",
+   "excerpt": "a16z announcement: founded in 2021 by Will Bryk and Jeff Wang, Harvard classmates; Dan McArdle is Co-Founder & CTO (Tracxn / Exa about page). Exa's VP Finance posting (Ashby) says the role reports to co-founder Jeff Wang and will be Exa's first dedicated finance leader. No CFO, COO or CMO is listed on any leadership source found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "san francisco",
+    "shotwell"
+   ],
+   "url": "https://www.bloomberg.com/news/articles/2026-05-20/andreessen-backed-ai-search-startup-exa-valued-at-2-2-billion",
+   "excerpt": "Bloomberg, 20 May 2026: Exa Labs Inc. is San Francisco-based; California filing lists 430 Shotwell Street, San Francisco (BizProfile).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "claude connector",
+    "connector",
+    "mcp",
+    "thinking partner",
+    "claude"
+   ],
+   "url": "https://claude.com/connectors/exa",
+   "excerpt": "Claude connector directory lists Exa as a native connector; exa.ai/mcp documents the open-source Exa MCP server for Claude, Cursor and VS Code. Atlassian Williams F1 Team, 2026: multi-year partnership with Anthropic naming Claude the team's Official Thinking Partner, working alongside Williams' engineers, strategists and operations teams (williamsf1.com).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "google cloud",
+    "microsoft",
+    "meta ai",
+    "twg ai",
+    "cognition",
+    "oracle",
+    "coreweave",
+    "elevenlabs",
+    "vast",
+    "keeper",
+    "atlassian",
+    "airia",
+    "brillio",
+    "hp ",
+    "ibm",
+    "search or retrieval partner",
+    "aston martin"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Williams — Atlassian (title), VAST, Keeper, Airia, Brillio, Claude (Anthropic, joined 2026); no search or retrieval partner. McLaren: Google Cloud, Dell. Mercedes: Microsoft, Meta AI. Alpine: Microsoft. Aston Martin Aramco: CoreWeave, Cognition (joined 2026). Cadillac: TWG AI, Core Scientific. Red Bull: Oracle (title). Ferrari: HP, IBM. Audi: ElevenLabs (joined), Hewlett Packard Enterprise (departed, last 12 months).",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "monaco",
+    "british gp",
+    "silverstone",
+    "7 june",
+    "5 july",
+    "spanish",
+    "austrian"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar; dates per formula1.com via ESPN / F1 Experiences)",
+   "excerpt": "2026 F1 calendar table: Monaco GP (round 8, 5-7 June), Spanish GP Barcelona (12-14 June), Austrian GP (26-28 June), British GP (3-5 July). Dates from the formula1.com 2026 calendar as summarised by ESPN and F1 Experiences.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Exa",
+  "industry_meta": "AI Search Infrastructure · Search API for AI Agents",
+  "hq": "San Francisco (founded 2021, Y Combinator)",
+  "ticker": "Private ($2.2B; $250M Series C, May 2026)",
+  "deck": "Exa, the search engine built for AI agents, announced a $250M Series C led by Andreessen Horowitz at a $2.2B valuation on 20 May 2026, more than tripling the $700M Benchmark set in September. It powers search for Cursor, Cognition and HubSpot and ships as a native Claude connector.",
+  "score": 72,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Atlassian Williams Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 20 May Exa announced a $250M Series C led by Andreessen Horowitz at a $2.2B valuation, confirmed by Bloomberg the same day. It follows an $85M Series B led by Benchmark at $700M in September 2025 and a $22M Series A led by Lightspeed in July 2024. Exa says more than 5,000 companies and 400,000 developers use its search API, Cursor, Cognition and HubSpot among them. The money funds next-generation models, infrastructure for hundreds of thousands of searches a second, and a go-to-market build-out under Marcus Holm, joining as CRO from LaunchDarkly.",
+  "the_case_p2": "AI brands have moved onto the grid quickly: Claude races on the Williams, Cognition joined Aston Martin Aramco, Meta AI sits at Mercedes and TWG AI at Cadillac. Exa is the search layer beneath those agents, and the companies it positions against are already on cars, Google Cloud at McLaren and Microsoft at Mercedes and Alpine. A challenger with a $250M war chest and a new revenue chief has a story to tell against them.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round was announced on 20 May; a first sports partnership is a decision for the quarter after a raise, when a new CRO is setting the brand budget. Monaco GP (7 June) and the British GP (5 July) fall inside the window, and 2027 rosters close in the autumn.",
+  "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+  "why_team_para": "Williams runs the most software-native roster on the grid: Atlassian as title partner, VAST Data for the data platform, Keeper for identity, Airia and Brillio, and since February Claude as Official Thinking Partner inside engineering and strategy. No search or retrieval partner sits on the car. Exa is a native Claude connector, so the introduction runs through a partnership Williams already trusts, and the product plugs into a workflow the team already uses.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Williams engineers, strategists and commercial staff already work with Claude; Exa gives those agents live web retrieval: regulation and technical-directive monitoring, supplier and parts discovery, rival upgrade tracking from open sources, and media and prospect research through Websets. It is a lighter workstream than compute. In return: Official AI Search Partner designation, livery presence and British GP hospitality for Exa's developer audience.",
+  "deal_arch_para": "Entry as Official AI Search Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the go-to-market build-out and any listing window. Estimated $2-4M a year, part-payable in API credits for the team's agents. Scope: sidepod or halo placement, naming of the team's research-agent stack, British GP hospitality, developer content with the Claude programme.",
+  "decision_maker_name": "Will Bryk",
+  "decision_maker_role": "Co-Founder & CEO, Exa",
+  "decision_maker_bio": "Bryk co-founded Exa in 2021 with Jeff Wang, a Harvard classmate, and CTO Dan McArdle, and fronts every raise; a first sports partnership is his call. Path: Marcus Holm, incoming CRO, owns go-to-market; Jeff Wang oversees finance. No CMO, CFO or COO is listed.",
+  "opening_angle_intro": "Lead with the Claude connection.",
+  "opening_angle_quote": "&ldquo;Will, Exa is already a Claude connector and Claude already races on the Williams. Cognition took its seat at Aston Martin in its breakout year; the search lane at Williams is open. 25 minutes before Monaco to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round announced 20 May; Monaco and the British GP inside the window."
+   ],
+   [
+    "CAPACITY",
+    "16",
+    "/ 20",
+    "$250M raise at $2.2B; $357M across three rounds; no revenue disclosed."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "Developer API brand; low consumer reach, strong AI narrative."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "No listing signal; the CRO hire is the brand-build trigger."
+   ],
+   [
+    "OPS FIT",
+    "14",
+    "/ 20",
+    "MODE A: live retrieval for agents Williams already runs."
+   ]
+  ],
+  "risks": [
+   [
+    "THIN WORKSTREAM",
+    "Web retrieval for research agents is real but modest next to a compute or data partner; the team may see a logo, not a tool.",
+    "Scope a 90-day pilot inside the Claude workflow before the commercial term; size part of the fee in API credits."
+   ],
+   [
+    "CROWDED TECHNOLOGY TIER",
+    "Williams already carries Claude, VAST, Keeper, Airia and Brillio; a further technology name risks second billing.",
+    "Take a defined Official AI Search Partner category with its own on-car placement."
+   ]
+  ],
+  "bottom_line": "A $250M round at $2.2B, a new revenue chief with a go-to-market mandate, and a native connection to the Claude programme already on the Williams give Exa the budget, the motive and a warm path. The search lane at Williams is open, and Monaco and the British GP sit inside the window.",
+  "signals": [
+   "funding_event",
+   "partner_adjacency",
+   "category_precedent"
+  ],
+  "footer_company": "EXA",
+  "footer_date": "22 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 20 May 2026 Exa announced a $250M Series C led by Andreessen Horowitz at a $2.2B valuation, on its own blog and confirmed by Bloomberg the same day. The valuation has more than tripled since the $85M Series B at $700M led by Benchmark in September 2025."
+    },
+    {
+     "label": "A go-to-market build-out",
+     "text": "The round came with a commercial hire: Marcus Holm, President of LaunchDarkly, joins as Chief Revenue Officer to build the global go-to-market organisation across sales, solutions and marketing. A company assembling its first real marketing function after a raise is the moment a first sports partnership gets decided."
+    },
+    {
+     "label": "The category is moving onto the grid",
+     "text": "In the last year Claude joined Williams, Cognition joined Aston Martin Aramco, Meta AI joined Mercedes and TWG AI launched with Cadillac. AI brands are using F1 to reach engineers, buyers and capital markets at once; Exa sells into exactly those AI companies and has not yet chosen a stage."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Monaco GP (5-7 June), the Spanish GP in Barcelona (12-14 June), the Austrian GP (26-28 June) and the British GP (3-5 July) all fall inside the 6-10 week window. A deal agreed before Silverstone can be announced at the British GP and activated in full for 2027, when teams close their partner rosters in the autumn."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Williams carries Atlassian as title partner, VAST for the data platform, Keeper for identity security, Airia and Brillio on the technology tier, and Claude as Official Thinking Partner. No search, retrieval or knowledge partner sits on the car: Official AI Search Partner is a clean category at a team-partner price."
+    },
+    {
+     "label": "The warm path",
+     "text": "Exa is a native Claude connector and publishes an open-source MCP server; Claude has worked alongside Williams' engineers, strategists and operations teams since the February 2026 livery reveal. The introduction runs through a partner Williams already trusts, and the product plugs into a workflow the team already uses."
+    },
+    {
+     "label": "A team that will use the product",
+     "text": "Williams' revival is data-led. Live web retrieval for the team's agents is consumed in the factory and on the pit wall, which separates a technology partner from a logo. The workstream is lighter than compute or data, and the brief scores it honestly at 14 out of 20."
+    },
+    {
+     "label": "Audience fit",
+     "text": "Exa sells to developers and AI companies; Williams' partner roster is the most software-native on the grid, and its hospitality already gathers CIOs, CTOs and founders. The British GP, the team's home race, is the natural stage for a developer-facing brand with a San Francisco base."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Exa's search API and Websets give Williams' Claude-based agents live retrieval from the open web: FIA regulation and technical-directive monitoring, supplier and parts discovery, tracking of rivals' publicly reported upgrades, media monitoring, and sponsor-prospect research for the commercial team. Delivered as API capacity, it costs the team nothing inside the cost cap."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner that sells to AI-native companies brings founders, engineering leaders and venture investors to the British GP and Las Vegas suites, the audience Williams' technology partners want alongside them."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "Co-produced engineering content with the Claude programme (how the team's agents search, verify and decide), a Williams reference case for Exa's enterprise sales, and developer activations across Exa's 400,000-developer community and Williams' digital channels."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official AI Search Partner designation, sidepod or halo placement, naming of the team's research-agent stack, British GP hospitality, and driver and engineering access for Exa's channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Google Cloud holds the technology lane; Google is the search incumbent Exa positions against."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "Microsoft and Meta AI both sit on the roster; the search and AI lanes are taken."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Microsoft holds the cloud and AI lane."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "Cognition, an Exa customer, and CoreWeave already hold the AI tier; Exa would sit behind its own customer."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and sells its own enterprise search and AI stack."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "HP (title) and IBM cover compute and enterprise AI."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "TWG AI holds the AI lane on the inaugural roster."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "ElevenLabs holds the AI-startup slot; open otherwise, but no warm path."
+    },
+    {
+     "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+     "reason": "Open but not chosen: neither carries the Claude connection that gives Williams a warm path."
+    }
+   ],
+   "ask": "A 25-minute call with Will Bryk before the Monaco GP to confirm the go-to-market budget with Marcus Holm, agree a 90-day pilot inside the Claude workflow at Williams, and size an Official AI Search Partner entry against the team's 2027 roster."
+  }
+ },
+ "note": "# Exa → Atlassian Williams Racing — verification log (N° 213, issued for 22 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (batch 18): Claude did the research, verification and writing; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code (`python -m intel.session_case exa.case.json build`). The brief is issued for the desk row's date, 22 May 2026; the trigger is dated 20 May 2026 (2 days before the row, inside the 90-day window).\n\n**Sandbox limitation, stated plainly:** direct fetches of exa.ai, a16z.com, bloomberg.com, williamsf1.com and the calendar sites were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## What the thin row got wrong\n\n- **Person.** The row named *Jeff Wang, CEO & Co-founder*. Exa's own Series C post is signed by **Will Bryk, CEO & Co-founder**; a16z's investment note and Lightspeed's profiles name Bryk as CEO and Jeff Wang as co-founder. Dan McArdle is Co-Founder & CTO. The brief is addressed to Bryk.\n- **Source.** The row cited Bloomberg; the primary source is the company's blog post of 20 May 2026 (Bloomberg confirms the same figures the same day).\n- **Score.** The row carried 84. Re-scored at 72: the workstream is lighter than a compute or data partner, the brand is a developer API with little consumer reach, and there is no listing signal.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| $250M Series C led by Andreessen Horowitz at $2.2B, 20 May 2026 | VERIFIED (company post) + REPORTED (Bloomberg) | exa.ai/blog/announcing-series-c; Bloomberg 20 May 2026 |\n| $85M Series B at $700M led by Benchmark, Sep 2025; $22M Series A led by Lightspeed, Jul 2024; YC and NVentures | VERIFIED | Exa Series B post / SiliconANGLE 3 Sep 2025; TechCrunch 16 Jul 2024 |\n| $357M across three rounds | DERIVED (22 + 85 + 250) | the three announcements above |\n| >5,000 companies, 400,000 developers; Cursor, Cognition, HubSpot | VERIFIED (company post) | exa.ai blog; Bloomberg |\n| Marcus Holm joins as CRO from LaunchDarkly (President) | VERIFIED | exa.ai blog, 20 May 2026 |\n| Will Bryk CEO; Jeff Wang co-founder; Dan McArdle CTO; founded 2021; Harvard | VERIFIED | exa.ai blog; a16z announcement; Lightspeed profile |\n| No CMO, CFO or COO listed; finance reports to Jeff Wang | VERIFIED (absence) | Exa VP Finance posting (Ashby, dated Jun 2026, after the brief date; the absence also holds at 22 May) |\n| HQ San Francisco | VERIFIED | Bloomberg; California filing (430 Shotwell St) |\n| Exa is a native Claude connector / MCP server | VERIFIED | claude.com/connectors/exa; exa.ai/mcp |\n| Claude is Williams' Official Thinking Partner (multi-year, 2026) | VERIFIED | williamsf1.com |\n| Grid occupancy (Google Cloud/McLaren, Microsoft/Mercedes+Alpine, Meta AI/Mercedes, TWG AI/Cadillac, Cognition+CoreWeave/Aston Martin, Oracle/Red Bull, HP+IBM/Ferrari, ElevenLabs/Audi; Williams roster) | VERIFIED | sponsor table `seeds/sponsors.json` |\n| Monaco GP 5-7 Jun, Spanish GP 12-14 Jun, Austrian GP 26-28 Jun, British GP 3-5 Jul | VERIFIED | calendar table + formula1.com dates via ESPN / F1 Experiences |\n\n## Screen-outs and things not claimed\n\n- **No revenue figure** is used: Exa has not disclosed revenue (Bloomberg). Third-party estimates (Sacra) are not used.\n- **No motorsport tie found** for Bryk, Wang, McArdle or Holm after checking; `leadership_ties` is empty.\n- **Exa is not a partner of any F1 or FE team** (checked against the sponsor table and a live search of 2026 AI partnerships).\n- **Employee count** (Tracxn: 121 at Jan 2026) is not used in the brief.\n- **Deal size ($2-4M a year) is an ESTIMATE**, labelled as such.\n- **MODE A is claimed with a caveat:** the workstream (live retrieval for the Claude-based agents Williams already runs) is real but lighter than compute or data; ops fit is scored 14/20 and the first risk row says so.\n\n## Decision path\n\nWill Bryk (Co-Founder & CEO) is the sponsorship owner. Path: Marcus Holm (incoming CRO, go-to-market) and Jeff Wang (co-founder; finance reports to him). Technical counterpart: Dan McArdle (Co-Founder & CTO). No CMO is listed.\n"
+}

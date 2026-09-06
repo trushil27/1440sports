@@ -1,0 +1,735 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-06-22",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-tsb8f556/2026-06-22/baseten.pdf",
+     "web": "/tmp/case-pdf-tsb8f556/2026-06-22/baseten.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Baseten",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 76,
+     "reason": "top ranking score",
+     "company": "Baseten",
+     "decision": "selected",
+     "signal_date": "2026-06-22"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Baseten",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 76,
+   "score_breakdown": {
+    "cap": null,
+    "base": 76,
+    "total": 76,
+    "timing": 17,
+    "ops_fit": 15,
+    "ranking": 76,
+    "urgency": 13,
+    "capacity": 17,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 76,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 76,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "TGR Haas F1 Team",
+   "source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+   "trigger_date": "2026-06-22",
+   "trigger_reason": "Series F announced"
+  }
+ ],
+ "brief": {
+  "number": 184,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-tsb8f556/2026-06-22/baseten.web.html",
+  "brief_data": {
+   "hq": "San Francisco (founded 2019)",
+   "deck": "Baseten, the inference platform behind Cursor, Abridge and Lovable, announced a $1.5B Series F on 22 June in two tranches at $13B and $11B, led by Altimeter, Conviction and Spark Capital. It is the fourth raise in 18 months for a company whose revenue grew 20x in a year.",
+   "risks": [
+    {
+     "label": "NO REVENUE ON RECORD",
+     "detail": "Baseten reports growth multiples, not revenue; Sacra's ~$600M annualised figure is an outside estimate.",
+     "counter": "Anchor on the announced round and named customers; ask for the enterprise revenue mix on the first call."
+    },
+    {
+     "label": "CROWDED ARCHETYPE",
+     "detail": "CoreWeave, Core Scientific, Oracle, Microsoft and Google Cloud all carry AI or cloud messaging; another infrastructure logo can read as a follower.",
+     "counter": "Position inference, not compute, as the category, and Haas as the team whose engineering budget it changes most."
+    }
+   ],
+   "score": 76,
+   "ticker": "Private ($13B; $1.5B Series F, Jun 2026)",
+   "company": "Baseten",
+   "gridfit": [
+    {
+     "team": "TGR Haas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://www.baseten.co/about-us/",
+    "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+    "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+    "https://www.bloomberg.com/news/articles/2026-01-20/ai-inference-startup-baseten-raises-300-million-at-5-billion-valuation",
+    "https://sacra.com/c/baseten/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Tuhin Srivastava before the US GP in Austin to test the enterprise-brand need, size an Official AI Inference Partner entry against TGR Haas F1 Team's 2027 roster, and agree an Austin announcement window.",
+    "value": [
+     {
+      "text": "Serving the team's trained models at race weekends: race-strategy and tyre-degradation models, computer vision on pit-lane and onboard video, telemetry anomaly detection. Baseten hosts them from cloud regions near each circuit with autoscaling, so latency and cost fit a small team's weekend.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner selling to CIOs and AI-native founders brings a guest list of enterprise buyers and investors to Austin and Las Vegas, the audience Haas's B2B partners (Mphasis, CommScope, Infobip) want in the suite.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Co-produced engineering content on how a small team uses AI at the track; a reference customer for Baseten's enterprise sales; a developer programme around the team's public data that reaches Baseten's core audience.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official AI Inference Partner designation, sidepod or engine-cover placement, naming of the model-serving environment, hospitality at Austin and Las Vegas, driver and engineering access for Baseten's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 22 June 2026 Baseten announced a $1.5B Series F in two tranches at $13B and $11B valuations, led by Altimeter Capital, Conviction and Spark Capital and co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital, Greylock, IVP, Verified Capital and 01A. Total raised now exceeds $2B (company release).",
+      "label": "Trigger"
+     },
+     {
+      "text": "BOND led $150M at $2.15B in September 2025; IVP and CapitalG led $300M at $5B in January 2026; the June financing prices the company at up to $13B. Four raises in 18 months is a company that expects to be much larger, and public, soon.",
+      "label": "Six times the price in nine months"
+     },
+     {
+      "text": "The release says headcount will triple in 2026 to meet enterprise demand, and the customer list (Abridge, Clay, Cursor, Lovable, Mercor, OpenEvidence) is AI-native companies rather than large enterprises. Selling to CIOs is a brand problem, which is what a Formula 1 partnership is for. Sacra estimates annualised revenue at about $600M as of March 2026; that is an estimate, not a company figure.",
+      "label": "From developers to enterprises"
+     },
+     {
+      "text": "The US GP in Austin (late October) and the Las Vegas GP (November) are the US rounds left in 2026, and teams close their 2027 rosters in the fourth quarter. A deal agreed before Austin can be announced at the American team's home race and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "TGR Haas F1 Team carries Toyota Gazoo Racing as title partner with Mphasis (digital), CommScope (connectivity), Ruckus and Infobip on the technology side. No cloud, GPU or AI-inference partner: Official AI Inference Partner is a clean category at the lowest team-partner price on the grid.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Haas runs the leanest engineering operation in Formula 1 and has always bought what others build, from Ferrari power units to Toyota's design and manufacturing services. An inference platform that removes the need to own GPUs is the same trade: capacity without capital.",
+      "label": "A team that buys capacity"
+     },
+     {
+      "text": "Haas is the only US-owned team; Baseten is a San Francisco company entering enterprise sales in the US market. Austin is the team's home race and the natural announcement stage; Las Vegas and Miami follow.",
+      "label": "American team, American company"
+     },
+     {
+      "text": "The grid has priced the archetype (CoreWeave at Aston Martin, Core Scientific at Cadillac) but those are clouds. Baseten runs on 18 clouds; it competes with none of the team's existing partners and would sit alongside Toyota's technical programme rather than under a hyperscaler's brand.",
+      "label": "Precedent without conflict"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, owns the AI infrastructure lane."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Core Scientific and TWG AI occupy the compute and AI lanes."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and cloud incumbent."
+     },
+     {
+      "team": "Mercedes-AMG Petronas · BWT Alpine",
+      "reason": "Microsoft holds the cloud lane at both."
+     },
+     {
+      "team": "McLaren F1 Team",
+      "reason": "Google Cloud and Dell occupy cloud and hardware."
+     },
+     {
+      "team": "Scuderia Ferrari",
+      "reason": "HP (title) and IBM cover compute and cloud services."
+     },
+     {
+      "team": "Audi F1 Team",
+      "reason": "Hewlett Packard Enterprise on the roster; lane crowded."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Claude is Official Thinking Partner and VAST the data platform; the AI lane there is defined by Anthropic, and a second AI infrastructure brand would sit under it."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Open (Dynatrace, Confluent, Siemens) and a credible second choice, but it is the Red Bull group's second team under Oracle's title relationship at the senior team."
+     }
+    ]
+   },
+   "date_long": "22 JUN 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "TGR Haas F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $1.5B raise at $13B, a fourth round in 18 months and a stated pivot to enterprise selling put Baseten at peak brand-investment authority. The AI lane at Haas is open, the workstream is real, and two US races remain inside the window.",
+   "footer_date": "22 JUN 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round announced 22 Jun; Austin and Las Vegas in window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 17,
+     "note": "$1.5B raise at $13B; more than $2B raised in total.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Developer brand turning enterprise; B2B infrastructure.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Enterprise push and hiring; no hard deadline beyond Q4.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: serving the team's models at race weekends.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Baseten's own release of 22 June puts the numbers on record: $1.5B across two tranches at $13B and $11B, co-led by Sands Capital and Wellington, with Greylock, IVP, Battery and D.E. Shaw Ventures behind them; more than $2B raised in total. The price has moved from $2.15B in September 2025 to $5B in January to $13B now. The platform serves more than 1 billion inference calls a day across 87 clusters on 18 clouds, revenue grew 20x in a year, and headcount is to triple in 2026 as the company builds an enterprise sales motion.",
+   "the_case_p2": "That last point is the opening. A developer-led brand that must now sell to CIOs needs a stage its rivals already occupy: CoreWeave took Aston Martin Aramco's AI cloud seat in May 2025 and Core Scientific sits on Cadillac's car. Baseten is the inference layer that runs on those clouds, not one of them, and it has no seat.",
+   "track_label": "",
+   "brief_number": "184",
+   "claims_total": 14,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$1.5B Series F announced 22 Jun 2026 in two tranches at $13B and $11B valuations, led by Altimeter Capital,…",
+     "value": "$1.5B",
+     "claim_id": 646,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference"
+    },
+    {
+     "fact": "Altimeter, Conviction, Spark Capital (leads); Sands Capital, Wellington (co-leads); Battery Ventures, Black…",
+     "value": "$300M",
+     "claim_id": 647,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference"
+    },
+    {
+     "fact": "more than $2B raised in total.",
+     "value": "$2B",
+     "claim_id": 656,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "The price has moved from $2.15B in September 2025 to $5B in January to $13B now.",
+     "value": "$2.15B",
+     "claim_id": 657,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Infrastructure · Inference Platform",
+   "value_content": "MODE A - operational. The models a team trains (strategy and tyre-degradation, computer vision on pit-lane and onboard video, telemetry anomaly detection) must be served at race weekends at low latency and at a cost a small team can carry. Baseten runs them from cloud regions near each circuit with autoscaling, so Haas gets an inference layer under Toyota's data without buying GPUs. In return: Official AI Inference Partner, livery, US-race hospitality.",
+   "value_section": true,
+   "why_team_para": "Haas is the American team with the leanest engineering operation on the grid, backed since 2026 by Toyota Gazoo Racing as title and technical partner. Its technology roster is Mphasis, CommScope, Ruckus and Infobip; there is no cloud, GPU or AI-inference partner, so the lane is clean. A team that buys engineering capacity rather than building it is the natural first customer for compute you do not own; Austin is its home race.",
+   "deal_arch_para": "Entry as Official AI Inference Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the enterprise build-out and a probable listing window. Estimated $3-5M a year, part-payable in platform credits. Scope: sidepod placement, naming of the team's model-serving environment, US-race hospitality, engineering content with the Toyota programme.",
+   "footer_company": "BASETEN",
+   "why_team_label": "WHY TGR HAAS F1 TEAM",
+   "claims_verified": 14,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series F was announced on 22 June and brand budgets are set in the quarter after a raise. Austin in late October and Las Vegas in November are the US stages left in 2026, and teams close 2027 partner rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 184",
+   "decision_maker_bio": "Srivastava co-founded Baseten in San Francisco in 2019 with Amir Haghighat (CTO), Philip Howes (Chief Scientist) and Pankaj Gupta, and fronts every raise; a first sports partnership is his call. Path: Matt Slagle, Chief Revenue Officer, who owns the enterprise motion. No CMO or CFO is listed.",
+   "decision_maker_name": "Tuhin Srivastava",
+   "decision_maker_role": "CEO & Co-Founder, Baseten",
+   "opening_angle_intro": "Lead with the enterprise pivot.",
+   "opening_angle_quote": "&ldquo;Tuhin, you have raised $1.5B to sell inference to enterprises, and CoreWeave already bought the Aston Martin seat to sell them compute. The American team has an open AI lane and its home race in October. 25 minutes before Austin to see how it prices?&rdquo;",
+   "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Tuhin Srivastava, CEO & Co-Founder at Baseten",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.baseten.co/about-us/",
+     "excerpt": "Baseten leadership (company about page and author pages, via search summary; Contrary Research profile): founded in 2019 in San Francisco by Tuhin Srivastava (CEO and Co-Founder), Amir Haghighat (CTO and Co-Founder), Philip Howes (Co-Founder and Chief Scientist) and Pankaj Gupta (Co-Founder). Srivastava previously founded Shape and was a data scientist at Gumroad.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Tuhin Srivastava, CEO & Co-Founder, Baseten at Baseten",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.baseten.co/about-us/",
+     "excerpt": "Baseten leadership (company about page and author pages, via search summary; Contrary Research profile): founded in 2019 in San Francisco by Tuhin Srivastava (CEO and Co-Founder), Amir Haghighat (CTO and Co-Founder), Philip Howes (Co-Founder and Chief Scientist) and Pankaj Gupta (Co-Founder). Srivastava previously founded Shape and was a data scientist at Gumroad.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1.5B Series F announced 22 Jun 2026 in two tranches at $13B and $11B valuations, led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management; more than $2B raised to date (company release)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Baseten, the inference platform behind Cursor, Abridge and Lovable, announced a $1.5B Series F on 22 June in two tranches at $13B and $11B, led by Altimeter, Conviction and Spark Capital.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Altimeter, Conviction, Spark Capital (leads); Sands Capital, Wellington (co-leads); Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital, Greylock, IVP, Verified Capital, 01A; earlier rounds led by IVP and CapitalG ($300M at $5B, Jan 2026) and BOND ($150M at $2.15B, Sep 2025)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Baseten's own release of 22 June puts the numbers on record: $1.5B across two tranches at $13B and $11B, co-led by Sands Capital and Wellington, with Greylock, IVP, Battery and D.E.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Baseten announced a $1.5B Series F on 22 Jun 2026 at up to a $13B valuation, its fourth raise in 18 months",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "more than $2B raised in total.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CoreWeave is Official AI Cloud Computing Partner of Aston Martin Aramco (May 2025); Core Scientific and TWG AI sit on Cadillac's roster; Oracle, Microsoft, Google Cloud, HP, IBM and HPE hold the cloud lanes elsewhere",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+     "excerpt": "Aston Martin Aramco, 22 May 2025: CoreWeave joins as Official AI Cloud Computing Partner in a multi-year partnership; the wind tunnel is named the CoreWeave Wind Tunnel.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The price has moved from $2.15B in September 2025 to $5B in January to $13B now.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Revenue up 20x and inference volume up 40x in a year; more than 1 billion inference calls a day across 87 clusters on 18 clouds; headcount to triple in 2026 as enterprise go-to-market expands",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten Series F release, 22 Jun 2026: over the last year revenue grew 20x and inference volume 40x; the platform processes more than 1 billion inference calls a day across 87 clusters on 18 clouds; customers include Abridge, Clay, Cursor, Lovable, Mercor and OpenEvidence; the company plans to triple headcount in 2026 to meet enterprise demand.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $1.5B raise at $13B, a fourth round in 18 months and a stated pivot to enterprise selling put Baseten at peak brand-investment authority.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Founded 2019 and headquartered in San Francisco; customers include Abridge, Clay, Cursor, Lovable, Mercor and OpenEvidence",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.baseten.co/about-us/",
+     "excerpt": "Baseten leadership (company about page and author pages, via search summary; Contrary Research profile): founded in 2019 in San Francisco by Tuhin Srivastava (CEO and Co-Founder), Amir Haghighat (CTO and Co-Founder), Philip Howes (Co-Founder and Chief Scientist) and Pankaj Gupta (Co-Founder). Srivastava previously founded Shape and was a data scientist at Gumroad.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 22 June 2026 Baseten announced a $1.5B Series F in two tranches at $13B and $11B valuations, led by Altimeter Capital, Conviction and Spark Capital and co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Series F announced",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Total raised now exceeds $2B (company release).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "BOND led $150M at $2.15B in September 2025;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-01-20/ai-inference-startup-baseten-raises-300-million-at-5-billion-valuation",
+     "excerpt": "Bloomberg, 20 Jan 2026, and Business Wire, 23 Jan 2026: Baseten raised $300M at a $5B valuation led by IVP and CapitalG with Nvidia participating; the Series D of $150M at a $2.15B valuation, led by BOND, closed in September 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "IVP and CapitalG led $300M at $5B in January 2026;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-01-20/ai-inference-startup-baseten-raises-300-million-at-5-billion-valuation",
+     "excerpt": "Bloomberg, 20 Jan 2026, and Business Wire, 23 Jan 2026: Baseten raised $300M at a $5B valuation led by IVP and CapitalG with Nvidia participating; the Series D of $150M at a $2.15B valuation, led by BOND, closed in September 2025.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "the June financing prices the company at up to $13B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260622645563/en/Baseten-Raises-$1.5-Billion-to-Power-the-Next-Era-of-AI-Inference",
+     "excerpt": "Baseten, 22 Jun 2026 (Business Wire; also Yahoo Finance and the company blog 'Announcing our Series F'): $1.5 billion Series F led by Altimeter Capital, Conviction and Spark Capital, co-led by Sands Capital and Wellington Management, with Battery Ventures, Blackbird, D.E. Shaw Ventures, Durable Capital Partners, Greylock, IVP, Verified Capital and 01A participating; investments across two tranches at $13 billion and $11 billion valuations; more than $2 billion raised to date. Sacra and MLQ describe it as the company's fourth fundraise in 18 months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Sacra estimates annualised revenue at about $600M as of March 2026;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://sacra.com/c/baseten/",
+     "excerpt": "Sacra (research estimate, not company-reported): about $600M annualised revenue in March 2026, up from about $200M in December 2025. An ESTIMATE, labelled as such wherever used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

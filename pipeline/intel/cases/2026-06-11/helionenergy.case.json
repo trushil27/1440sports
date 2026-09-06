@@ -1,0 +1,413 @@
+{
+ "run_date": "2026-06-11",
+ "signal_date": "2026-06-04",
+ "stem": "helionenergy",
+ "number": 195,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Helion Energy",
+  "signal_date": "2026-06-04",
+  "score": 70,
+  "tier": "HOT",
+  "track": 1,
+  "person": "David Kirtley",
+  "role": "Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+  "industry_meta": "Fusion Energy · Clean Power Generation · Everett, Washington",
+  "recommended_team": "Andretti Formula E",
+  "recommended_series": "FE",
+  "timing_label": "WARM",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$465M Series G led by Thrive Capital at a $15.5B post-money valuation, announced 4 Jun 2026; total raised $1.5B; prior round $425M Series F at $5.425B (28 Jan 2025)",
+   "investors": "Thrive Capital (lead); new: Lux Capital, Peak XV Partners, BoxGroup, Anti Fund, Alta Park Capital, Bill Ford; returning: Lightspeed, SoftBank Vision Fund 2, Mithril, Capricorn, Good Ventures",
+   "revenue": null,
+   "trigger": "$465M Series G at a $15.5B valuation, announced 4 Jun 2026",
+   "competitor_signal": "Shell sits with Lola Yamaha ABT and TotalEnergies with DS Penske; Castrol with Jaguar TCS Racing; Envision Racing is owned by Envision Group, a wind, storage and battery company; Andretti Formula E carries no energy partner",
+   "strategic_hook": "Orion, the first fusion power plant, under construction in Malaga, Washington since July 2025 to supply Microsoft by 2028; Polaris demonstrated deuterium-tritium fusion at 150 million degrees Celsius in February 2026",
+   "us_presence": "HQ Everett, Washington; founded 2013; Orion plant in Chelan County, Washington; Nucor 500 MW plant agreement",
+   "alumni_match": null,
+   "taxonomy_category": "D1",
+   "ops_fit_note": "MODE B halo: clean-energy narrative for FE's US rounds, policy and talent audiences; no in-car workstream",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 15,
+   "brand_fit": 16,
+   "urgency": 11,
+   "ops_fit": 12,
+   "ops_fit_subscores": {
+    "product_to_need": 3,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "kirtley",
+    "founder & ceo",
+    "founder and ceo",
+    "2013"
+   ],
+   "url": "https://www.crunchbase.com/person/david-kirtley",
+   "excerpt": "David Kirtley, Founder & Chief Executive Officer of Helion Energy (Crunchbase; LinkedIn; GeekWire 2026 profile); Helion founded in 2013 and headquartered in Everett, Washington.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$465m",
+    "$15.5b",
+    "thrive",
+    "4 jun",
+    "4 june",
+    "series g",
+    "$1.5b",
+    "funding round",
+    "lux capital",
+    "peak xv",
+    "boxgroup",
+    "anti fund",
+    "alta park",
+    "bill ford",
+    "lightspeed",
+    "softbank",
+    "mithril",
+    "capricorn",
+    "good ventures",
+    "nearly tripl",
+    "almost tripl",
+    "triple"
+   ],
+   "url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$425m",
+    "$5.425b",
+    "$5.4b",
+    "28 jan",
+    "january 2025",
+    "series f"
+   ],
+   "url": "https://www.helionenergy.com/newsroom/helion-announces-425m-series-f-investment-to-scale-commercialized-fusion-power",
+   "excerpt": "Helion newsroom / Business Wire, 28 Jan 2025: $425 million Series F at a $5.425 billion post-money valuation, bringing total invested to over $1 billion; new investors Lightspeed, SoftBank Vision Fund 2 and a university endowment; existing investors including Sam Altman, Mithril, Capricorn, Good Ventures and Nucor.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "orion",
+    "malaga",
+    "chelan",
+    "microsoft",
+    "2028",
+    "50 mw",
+    "july 2025",
+    "power plant",
+    "licen"
+   ],
+   "url": "https://www.helionenergy.com/newsroom/helion-secures-land-and-begins-building-site-of-worlds-first-fusion-power-plant",
+   "excerpt": "Helion newsroom / Business Wire, 30 Jul 2025: Helion secured land and began building at the site of Orion, its first fusion power plant, in Malaga, Chelan County, Washington, to supply Microsoft's data centres in the state by 2028. Helion newsroom (May 2023) and CNBC: the world's first fusion power purchase agreement, with Microsoft, targets a plant online in 2028 delivering 50 MW or more after a one-year ramp. Washington Department of Health issued Helion a Radioactive Materials License and a Radioactive Air Emissions License for the Orion facility (425business.com).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "polaris",
+    "150 million",
+    "deuterium",
+    "february 2026",
+    "feb 2026",
+    "tritium"
+   ],
+   "url": "https://www.helionenergy.com/newsroom/helion-achieves-new-fusion-energy-milestones",
+   "excerpt": "Helion newsroom, Feb 2026 (also TechCrunch 13 Feb 2026, GeekWire, ANS Nuclear Newswire): Polaris became the first privately developed fusion machine to demonstrate measurable deuterium-tritium fusion and reached plasma temperatures of 150 million degrees Celsius; Helion is the first private company licensed to possess and use tritium for fusion demonstrations.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "nucor",
+    "500 mw",
+    "2030"
+   ],
+   "url": "https://www.helionenergy.com/newsroom/helion-nucor-collaboration-to-deploy-500-mw-fusion-power-plant",
+   "excerpt": "Helion newsroom / Nucor / PR Newswire, Sep 2023: agreement to develop a 500 MW fusion power plant supplying a Nucor steelmaking facility, targeting operations from 2030.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "altman",
+    "openai",
+    "march 2026",
+    "board"
+   ],
+   "url": "https://techcrunch.com/2026/03/23/sam-altman-openai-fusion-energy-board-helion/",
+   "excerpt": "TechCrunch, 23 Mar 2026 (also The Star, Outlook Business): Sam Altman stepped down from Helion's board as OpenAI and Helion explore working together at significant scale; he keeps a financial interest and recuses himself from any deal negotiation.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "jain",
+    "cfo",
+    "thompson",
+    "chief business operations",
+    "no cmo",
+    "no chief marketing",
+    "waymo"
+   ],
+   "url": "https://theorg.com/org/helion-energy/org-chart/pragav-jain",
+   "excerpt": "Pragav Jain, Chief Financial Officer, Helion (The Org; Crunchbase; LinkedIn; NYSE Live interview on deploying the Series G, June 2026); joined July 2024 from Waymo, where he was Head of Corporate & Strategic Finance, after Goldman Sachs. Savanna Thompson, Chief Business Operations Officer (LinkedIn). No chief marketing officer is listed on any leadership listing found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "everett",
+    "washington",
+    "founded 2013",
+    "us presence"
+   ],
+   "url": "https://www.crunchbase.com/organization/helion-energy",
+   "excerpt": "Helion Energy: headquartered in Everett, Washington; founded 2013 (Crunchbase; Wikipedia; GeekWire).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "twg ai",
+    "quest global",
+    "crowe",
+    "reflo",
+    "shell",
+    "totalenergies",
+    "castrol",
+    "envision",
+    "abb",
+    "pif",
+    "tws motorsports",
+    "twg motorsports",
+    "cadillac",
+    "porsche",
+    "no energy partner",
+    "energy partner",
+    "mahindra",
+    "cupra",
+    "lola",
+    "ds penske",
+    "jaguar"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Andretti Formula E — TWG AI (primary partner, Official AI Partner, Jan 2026), Quest Global (engineering services, three years), Crowe UK, Reflo, Andretti Global and TWG Motorsports (parent); Porsche powertrain through Season 12; no energy, power or fuel partner. Lola Yamaha ABT: Shell. DS Penske: TotalEnergies. Jaguar TCS Racing: Castrol. Envision Racing: Envision Group (title; wind turbines, storage, green hydrogen, Envision AESC batteries). Series level: ABB (title), PIF (sustainability), Google Cloud. TWG Motorsports is also the parent of the Cadillac F1 Team. Mahindra Racing and Cupra Kiro carry no energy partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "miami",
+    "jeddah",
+    "season 13",
+    "gen4",
+    "december",
+    "february 2027"
+   ],
+   "url": "seeds/calendar_fe.json (Formula E Season 13, fiaformulae.com 23 Jun 2026)",
+   "excerpt": "Formula E Season 13 (2026-27, GEN4 era) calendar table: opens with the Jeddah E-Prix double-header on 18-19 December 2026; Austin E-Prix on 6 February 2027 (new US round) and Miami E-Prix on 20 February 2027.",
+   "method": "calendar"
+  },
+  {
+   "needles": [
+    "motorsport",
+    "none found",
+    "no fe",
+    "never"
+   ],
+   "url": "https://www.fiaformulae.com/en/partners",
+   "excerpt": "Live searches (6 Sep 2026): no Helion partnership with any Formula E or F1 team, series or race; no motorsport background found for Kirtley, Jain or Thompson.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1.5-3m",
+    "estimate",
+    "mode b"
+   ],
+   "url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "excerpt": "Deal size is a 1440 ESTIMATE calibrated to a pre-revenue, capital-intensive company; the value section is an honest MODE B halo (fusion does not power a Formula E car).",
+   "method": "manual"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Helion Energy",
+  "industry_meta": "Fusion Energy · Clean Power Generation",
+  "hq": "Everett, Washington (founded 2013)",
+  "ticker": "Private ($15.5B post-money; $465M Series G, Jun 2026)",
+  "deck": "Helion, the fusion company building the world's first fusion power plant for Microsoft, announced on 4 June 2026 a $465M Series G led by Thrive Capital at a $15.5B valuation, nearly triple its January 2025 mark, taking total funding to $1.5B as it moves from lab milestone to construction site.",
+  "score": 70,
+  "timing_label": "WARM",
+  "series_label": "FE",
+  "team_label": "Andretti Formula E",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 4 June Helion announced a $465M Series G led by Thrive Capital at a $15.5B post-money valuation, with Lux Capital, Peak XV, BoxGroup and Bill Ford joining Lightspeed, SoftBank Vision Fund 2 and Good Ventures; total raised is $1.5B, nearly triple the $5.425B set by the $425M Series F in January 2025. The story is physical: Orion, the first fusion power plant, has been under construction in Malaga, Washington since July 2025 to supply Microsoft by 2028, and in February Polaris became the first private machine to demonstrate deuterium-tritium fusion at 150 million degrees.",
+  "the_case_p2": "Fusion is the definitive clean-energy story and Formula E is the championship built to prove clean mobility; pairing the two is the most on-message sustainability partnership on any grid, and Helion has never touched motorsport. The energy lane belongs to incumbents: Shell sits with Lola Yamaha ABT, TotalEnergies with DS Penske, Castrol with Jaguar. The counterweight: Helion is pre-revenue and pouring capital into reactors, so this is a measured brand and talent platform.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 4 June and Helion is at peak visibility as it moves from Polaris to a licensed construction site. Season 13, the GEN4 era, opens in Jeddah in December and the Austin E-Prix in February 2027 brings Formula E to a new US city; rosters are set now.",
+  "why_team_label": "WHY ANDRETTI FORMULA E",
+  "why_team_para": "Andretti is the American team on the grid, with TWG AI as primary partner, Quest Global on engineering, Crowe UK and Reflo alongside; it carries no energy, power or fuel partner, so a clean-energy lane is open outright. Envision Racing is owned by an energy group that would not cede its own story; Jaguar, DS Penske and Lola Yamaha ABT carry oil majors. Andretti gives Helion the two US rounds, Austin and Miami, and a parent that also owns the Cadillac F1 entry.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+  "value_mode": "B",
+  "value_content": "MODE B - halo, with concrete mechanics. Fusion does not power a Formula E car, so the substance is narrative, audience and talent: co-produced content pairing the first fusion plant with the first GEN4 season; hospitality at Austin and Miami for the utilities, hyperscalers and policymakers Helion must win; a joint STEM recruiting platform as Helion hires physicists and engineers. In return: Official Clean Energy Partner status, livery presence, driver access.",
+  "deal_arch_para": "Entry as Official Clean Energy Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, spanning Orion's construction and its 2028 delivery to Microsoft. Estimated $1.5-3M a year, sized to a pre-revenue company and stepped up at first power. Scope: energy-category exclusivity, GEN4 content, Austin and Miami hospitality, a talent programme.",
+  "decision_maker_name": "David Kirtley",
+  "decision_maker_role": "Founder & CEO, Helion Energy",
+  "decision_maker_bio": "Kirtley founded Helion in 2013 and fronts every raise, customer deal and milestone; a first sports partnership is his call. Path: Pragav Jain, CFO since July 2024 (ex-Waymo, Goldman Sachs), and Savanna Thompson, Chief Business Operations Officer. No CMO listed.",
+  "opening_angle_intro": "Lead with the stage, not the signage.",
+  "opening_angle_quote": "&ldquo;David, fusion is the clean-energy story and Formula E is the stage built to prove clean mobility. No energy brand sits with the American team, and Austin joins the calendar in February. 25 minutes on a milestone-linked partnership before the Season 13 opener?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Round closed 4 Jun; GEN4 rosters set before December."
+   ],
+   [
+    "CAPACITY",
+    "15",
+    "/ 20",
+    "$1.5B raised at $15.5B, but pre-revenue and capex-first."
+   ],
+   [
+    "BRAND FIT",
+    "16",
+    "/ 20",
+    "Clean energy on the clean-mobility grid; narrative-perfect."
+   ],
+   [
+    "URGENCY",
+    "11",
+    "/ 20",
+    "No hard deadline; Orion's 2028 delivery is the milestone."
+   ],
+   [
+    "OPS FIT",
+    "12",
+    "/ 20",
+    "MODE B: halo, audience and talent; no in-car workstream."
+   ]
+  ],
+  "risks": [
+   [
+    "PRE-REVENUE, CAPEX-FIRST",
+    "The $465M is for reactors and Orion; a sponsorship can read as off-strategy to a founder-led deep-tech board.",
+    "Pitch a modest, milestone-linked brand and talent platform that steps up at first power, not heavy signage."
+   ],
+   [
+    "HALO, NOT WORKSTREAM",
+    "Fusion does not power a Formula E car, so no operational integration anchors renewal.",
+    "Anchor renewal on measured outcomes: policy and utility audiences at Austin and Miami, hiring funnel, content reach."
+   ]
+  ],
+  "bottom_line": "A $465M round at $15.5B on 4 June, a licensed fusion plant under construction for Microsoft and a first-of-its-kind Polaris result put Helion at peak brand-investment visibility; the clean-energy lane at the American Formula E team is open as the GEN4 era and a new Austin E-Prix arrive.",
+  "signals": [
+   "funding_event",
+   "category_whitespace",
+   "never_entered"
+  ],
+  "footer_company": "HELION ENERGY",
+  "footer_date": "11 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 4 June 2026 Helion announced a $465M Series G led by Thrive Capital at a $15.5B post-money valuation, with Lux Capital, Peak XV Partners, BoxGroup, Anti Fund, Alta Park Capital and Bill Ford joining Lightspeed, SoftBank Vision Fund 2, Mithril, Capricorn and Good Ventures. Total raised is $1.5B. The release is Helion's own, so the figures are VERIFIED."
+    },
+    {
+     "label": "Valuation nearly tripled in seventeen months",
+     "text": "The $425M Series F of 28 January 2025 valued Helion at $5.425B; the Series G nearly triples that. A company re-priced this fast has a story to tell to utilities, regulators, hyperscaler customers and the talent it is hiring, and a budget to tell it with."
+    },
+    {
+     "label": "From lab to construction site",
+     "text": "Orion, the first fusion power plant, has been under construction in Malaga, Chelan County, Washington since July 2025 under the world's first fusion power purchase agreement, supplying Microsoft by 2028 at 50 MW or more. In February 2026 Polaris became the first privately developed machine to demonstrate deuterium-tritium fusion and reach 150 million degrees Celsius. Each milestone from here is a moment a partnership can be timed to."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Season 13, the GEN4 era, opens with the Jeddah E-Prix double-header on 18-19 December 2026; the Austin E-Prix on 6 February 2027 is a new US round and the Miami E-Prix follows on 20 February. Teams are setting partner rosters for the new car now, so a deal agreed over the summer launches with GEN4."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Andretti Formula E carries TWG AI as primary partner and Official AI Partner, Quest Global on engineering services, Crowe UK and Reflo, with Andretti Global and TWG Motorsports as parents. There is no energy, power or fuel partner: Official Clean Energy Partner is a clean category with exclusivity available."
+    },
+    {
+     "label": "The American team for a US audience",
+     "text": "Helion's next customers and gatekeepers are US utilities, hyperscalers and state and federal regulators. Andretti is the American entry on the grid, Austin and Miami are the two US rounds, and the Andretti name carries in Washington and Indianapolis in a way no European works team can match."
+    },
+    {
+     "label": "Why not the sustainability-first independent",
+     "text": "Envision Racing is the obvious thematic match, but it is owned by Envision Group, a wind-turbine, storage, green-hydrogen and battery company whose entire purpose for the team is to carry its own energy story. A fusion brand on that car competes with the owner's message."
+    },
+    {
+     "label": "A path to a bigger stage",
+     "text": "TWG Motorsports, Andretti's parent, also owns the Cadillac F1 Team. A Formula E relationship that works gives Helion a known counterparty for a Formula 1 conversation when Orion is delivering power."
+    }
+   ],
+   "value": [
+    {
+     "label": "Narrative (Mode B)",
+     "text": "Fusion is the definitive clean-energy story and Formula E is the championship built to prove clean mobility. Co-produced content pairing the first fusion power plant with the first GEN4 season gives Andretti the grid's strongest sustainability narrative and Helion a global stage as it moves from lab to grid."
+    },
+    {
+     "label": "Audience the team can sell",
+     "text": "Hospitality at Austin and Miami for utilities, hyperscaler energy buyers, regulators and investors is a guest list Andretti's other B2B partners want in the suite, and it is the audience Helion has to win for offtake and licensing."
+    },
+    {
+     "label": "Talent and STEM",
+     "text": "Helion is hiring physicists and engineers at speed; a joint recruiting and STEM programme built on the team's engineering content gives both sides a measurable outcome that does not depend on signage."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Clean Energy Partner designation with category exclusivity, livery presence sized to the fee, driver and engineering access, GEN4 launch content and Austin and Miami hospitality."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Envision Racing",
+     "reason": "Owned by Envision Group (wind, storage, hydrogen, AESC batteries); the energy story on that car belongs to the owner."
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "reason": "Shell is a team partner in the energy lane."
+    },
+    {
+     "team": "DS Penske",
+     "reason": "TotalEnergies is a team partner in the energy lane."
+    },
+    {
+     "team": "Jaguar TCS Racing",
+     "reason": "Castrol holds the fuel and lubricants lane."
+    },
+    {
+     "team": "Nissan Formula E Team · Porsche Formula E Team · Citroën Racing",
+     "reason": "Manufacturer works teams whose energy story is the parent's own electrification programme."
+    },
+    {
+     "team": "Mahindra Racing · Cupra Kiro",
+     "reason": "Open but not chosen: neither offers the US audience or the American-team platform Helion needs."
+    }
+   ],
+   "ask": "A 25-minute call with David Kirtley before the Season 13 roster closes to test a milestone-linked Official Clean Energy Partner entry at Andretti Formula E, launching with GEN4 in December and stepping up at Orion's first power."
+  }
+ },
+ "note": "# Helion Energy → Andretti Formula E — verification log (N° 195, issued for 11 Jun 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY` in the sandbox), with Claude acting as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code from the case spec `helionenergy.case.json`.\n\n**Sandbox limitation, stated plainly:** helionenergy.com, businesswire.com, geekwire.com and techcrunch.com were blocked by the egress proxy. Every claim below was checked against the search summary of the primary page named as the evidence URL. Treat VERIFIED lines as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nThe row's trigger holds: **$465M Series G led by Thrive Capital at $15.5B post-money, announced 4 Jun 2026** (7 days before the row), in Helion's own release. Total raised $1.5B. The prior mark was $5.425B (Series F, 28 Jan 2025), so \"nearly triple\" is arithmetic, not spin.\n\n## The team, re-checked\n\nThe thin row suggested Envision Racing. Envision Racing is owned by **Envision Group**, which designs and sells wind turbines, storage, green-hydrogen systems and Envision AESC batteries; the team exists to carry the owner's energy story, so a fusion brand on that car competes with the title. The case is pointed at **Andretti Formula E**: no energy, power or fuel partner in the sponsor table, the American team for a US-facing company, and the two US rounds (Austin, new for Season 13, and Miami). Post-row update: on 24 Jul 2026 Nissan announced it will supply Andretti's GEN4 powertrain from Season 13 (Porsche's supply ends with Season 12); the sponsor table already carries both rows, but the brief, issued for 11 June, does not mention the switch because it was not public on that date.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| David Kirtley, Founder & CEO; founded 2013; HQ Everett, WA | VERIFIED | Crunchbase, LinkedIn, GeekWire 2026 profile |\n| $465M Series G, Thrive lead, $15.5B post-money, 4 Jun 2026; total $1.5B; investor list | VERIFIED | helionenergy.com newsroom / Business Wire (20260604) |\n| $425M Series F at $5.425B, 28 Jan 2025 | VERIFIED | helionenergy.com newsroom / Business Wire |\n| Orion in Malaga, Chelan County, WA; construction from July 2025; Microsoft PPA, 2028, 50 MW or more after a one-year ramp; state licences | VERIFIED | helionenergy.com newsroom (30 Jul 2025; May 2023); CNBC; 425business.com |\n| Polaris D-T fusion at 150 million °C, Feb 2026; tritium licence | VERIFIED | helionenergy.com newsroom; TechCrunch 13 Feb 2026; GeekWire |\n| Nucor 500 MW plant agreement (2023, target 2030) | VERIFIED | helionenergy.com newsroom; Nucor |\n| Sam Altman left the board, Mar 2026, as OpenAI explores buying Helion power | REPORTED | TechCrunch 23 Mar 2026 |\n| Pragav Jain, CFO since Jul 2024 (ex-Waymo, Goldman Sachs); Savanna Thompson, Chief Business Operations Officer; no CMO listed | VERIFIED | The Org / Crunchbase / LinkedIn; NYSE Live (Jun 2026) |\n| Andretti roster (TWG AI, Quest Global, Crowe UK, Reflo, TWG Motorsports); energy lane: Shell (Lola Yamaha ABT), TotalEnergies (DS Penske), Castrol (Jaguar); Envision Group owns Envision Racing; TWG Motorsports also parent of Cadillac F1 | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Season 13 opener Jeddah 18-19 Dec 2026; Austin E-Prix 6 Feb 2027; Miami E-Prix 20 Feb 2027 | VERIFIED | calendar table (`seeds/calendar_fe.json`, fiaformulae.com 23 Jun 2026) |\n\n## Decision path\n\nSponsorship owner: **David Kirtley, Founder & CEO** (no CMO exists; brand decisions sit with the founder). Path: **Pragav Jain, CFO** and **Savanna Thompson, Chief Business Operations Officer**. Co-founder and CTO Chris Pihl appears on third-party listings only and is not named in the brief.\n\n## Leadership ties\n\n`leadership_ties: []` — Kirtley, Jain and Thompson searched against F1/FE/motorsport; none found. No Helion partnership with any team, series or race on the Formula E or F1 partner pages.\n\n## Screen-outs and things not claimed\n\n- **No revenue figure**: Helion is pre-revenue; none is claimed.\n- **Nvidia is not listed as an investor** in the Series F or Series G releases found; the earlier repo record's Nvidia mention is not repeated.\n- **Sam Altman** is not used as a hook: he left the board in March 2026, so the case rests on Microsoft, Nucor, Orion and Polaris.\n- **Deal size ($1.5-3M a year) is an ESTIMATE**, sized to a pre-revenue company and labelled as such.\n- **MODE B is stated as MODE B**: fusion does not power a Formula E car; ops fit is scored 12/20 accordingly and the total is 70, not the row's 73.\n"
+}

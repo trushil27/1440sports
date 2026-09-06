@@ -61,7 +61,7 @@ BEFORE CIRCULATION.
   Both recommendations are judged against real grid occupancy only, as the operating rules require;
   neither is a placement.
 
-## Ledger as built (N° 154, 24 verified)
+## Ledger as built (N° 154, 23 verified)
 
 | Section | Type | Load-bearing | Status | Claim |
 |---|---|---|---|---|
@@ -74,15 +74,14 @@ BEFORE CIRCULATION.
 | key_facts | revenue | yes | verified | ARR approaching $100M with 120% year-on-year ARR growth (company release; TechCrunch, reported) |
 | the_case_p1 | revenue | yes | verified | TechCrunch puts ARR near $100M (reported). |
 | key_facts | date | yes | verified | $250M Series E at a valuation above $2B, announced 3 Aug 2026 |
-| the_case_p2 | funding | yes | verified | A $2B category leader with no seat, and a marketer who has watched one taken. |
-| key_facts | sponsorship | yes | verified | CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Okta and Rubrik at McLaren, Cato Networks at Alpine, and Red Bull's 1Password; Cadillac car |
 | bottom_line | revenue | yes | verified | $250M at more than $2B, 120% ARR growth, a CMO who has seen an F1 deal built and an open cybersecurity lane at the American debutant put Horizon3 at peak author |
-| key_facts | other | yes | verified | CMO Andres Botero joined on 7 Jan 2026 from Rubrik, whose multi-year McLaren partnership was announced on 28 Jan 2026; international expansion with offices in A |
+| key_facts | sponsorship | yes | verified | CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Okta and Rubrik at McLaren, Cato Networks at Alpine, and Red Bull's 1Password; Cadillac car |
 | extended | funding | no | verified | Horizon3 announced a $250M Series E at a valuation above $2B on 3 August 2026, co-led by NightDragon and NEA, with seven new investors including Sapphire Ventur |
-| key_facts | other | yes | verified | Headquartered in San Francisco; founders from Joint Special Operations Command; SAIC among new investors |
+| key_facts | other | yes | verified | CMO Andres Botero joined on 7 Jan 2026 from Rubrik, whose multi-year McLaren partnership was announced on 28 Jan 2026; international expansion with offices in A |
 | extended | funding | no | verified | The June 2025 Series D, $100M led by NEA, valued the company at $650M (reported). |
-| trigger | date | yes | verified | funding round |
+| key_facts | other | yes | verified | Headquartered in San Francisco; founders from Joint Special Operations Command; SAIC among new investors |
 | extended | revenue | no | verified | Fourteen months later the price is above $2B, on 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them Fortune 10. |
+| trigger | date | yes | verified | funding round |
 | extended | revenue | no | verified | Cadillac's hospitality reaches CISOs, CIOs and federal buyers at Austin and Las Vegas, the audience a $100M-ARR security company selling to Fortune 10 accounts  |
 | extended | funding | no | verified | Open but not chosen: neither offers the American greenfield estate and premium positioning that match a $2B company. |
 | why_now_callout | event | yes | verified | The United States GP |

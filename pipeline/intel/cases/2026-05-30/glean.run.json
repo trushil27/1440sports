@@ -1,0 +1,667 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-05-30",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-d3902dbf/2026-05-30/glean.pdf",
+     "web": "/tmp/case-pdf-d3902dbf/2026-05-30/glean.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Glean",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 10
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "resurfaced: Glean last surfaced 2026-05-07 (funding_round); new trigger other:revenue milestone; top ranking score",
+     "company": "Glean",
+     "decision": "selected",
+     "signal_date": "2026-05-28"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Glean",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "resurfaced: Glean last surfaced 2026-05-07 (funding_round); new trigger other:revenue milestone; top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 14,
+    "ops_fit": 15,
+    "ranking": 70,
+    "urgency": 11,
+    "capacity": 16,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Mahindra Racing",
+   "source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+   "trigger_date": "2026-05-28",
+   "trigger_reason": "revenue milestone"
+  }
+ ],
+ "brief": {
+  "number": 210,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-d3902dbf/2026-05-30/glean.web.html",
+  "brief_data": {
+   "hq": "Palo Alto, California",
+   "deck": "Glean, the Palo Alto 'Work AI' platform, crossed $300M in annual recurring revenue on 28 May 2026, tripling in fifteen months, on the $7.2B valuation set by its $150M Series F. It has never entered motorsport, and Formula E's Work AI lane is open as the Gen4 era approaches.",
+   "risks": [
+    {
+     "label": "NO CAPITAL EVENT",
+     "detail": "The trigger is a revenue milestone, not a raise; a company growing this fast may keep every dollar in direct go-to-market.",
+     "counter": "Fund part of the fee in seats; measure the deal on enterprise pipeline from the group and the paddock."
+    },
+    {
+     "label": "ADJACENT INCUMBENT",
+     "detail": "Tech Mahindra builds AI tooling through the team and could be read as holding the AI lane.",
+     "counter": "Scope exclusivity to the Work AI platform; integrators are Glean's channel, not its rival."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private ($7.2B, Series F Jun 2025)",
+   "company": "Glean",
+   "gridfit": [
+    {
+     "team": "Mahindra Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "revenue_milestone",
+    "category_whitespace",
+    "never_entered"
+   ],
+   "sources": [
+    "https://www.glean.com/authors/mattkix",
+    "https://www.glean.com/press/glean-raises-150m-series-f-at-7-2b-valuation-to-accelerate-enterprise-ai-agent-innovation-globally",
+    "https://x.com/jainarvind/status/2060077511212445874",
+    "https://www.businessofgcc.com/gcc-data/companies/glean-technologies-inc-india-bengaluru",
+    "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Matt Kixmoeller before the London E-Prix to size an Official Work AI Partner entry against Mahindra Racing's Season 13 roster, agree a team deployment scoped with Tech Mahindra, and set an announcement window with the Gen4 car.",
+    "value": [
+     {
+      "text": "A racing team runs on documents: technical regulations and homologation files, supplier and freight records, simulation and test reports, sponsor and hospitality contracts. Glean connects those sources, respects who is allowed to see what, and gives engineers, operations and commercial staff one assistant and a set of agents that answer from the team's own knowledge. The team gets hours back every week; the parent group can extend the same deployment to chosen functions.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Glean's buyers are CIOs and heads of IT at large enterprises, the audience Formula E's paddock is built to host. A partner that brings that guest list to London, Berlin and the new Austin and Miami rounds strengthens every other B2B conversation the team is having.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A working deployment is a story: how a Formula E team finds what it knows before a race weekend, told through the engineers who use it. That content serves Glean's enterprise sales and Mahindra's technology positioning at the same time, and gives the Mahindra Group a visible AI programme with a global stage.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Work AI Partner designation, car and garage branding, category exclusivity for the Work AI platform, hospitality at the London finale and at the Season 13 rounds, driver and engineering access, and a reference account inside one of India's largest industrial groups.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 28 May 2026 CEO Arvind Jain announced that Glean had passed $300M in annual recurring revenue, five months after $200M and roughly three times the level of fifteen months earlier; TechCrunch reported it the same day. The figure is company-stated, not audited, and the brief says so.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The last capital event is a year old: the $150M Series F at $7.2B closed in June 2025. What has changed since is demand. A company that has tripled revenue in fifteen months moves from proving the product to building the brand that keeps winning enterprise accounts against Microsoft, Google and the model labs, and that is when a global platform earns its place in the budget.",
+      "label": "Why this is the moment"
+     },
+     {
+      "text": "Formula E's Gen4 era begins with Season 13 in December 2026 and Mahindra Racing has committed as a manufacturer through 2030. Teams settle their Season 13 partner rosters over the summer, so a decision taken before the London E-Prix finale on 15-16 August can be announced with the new car.",
+      "label": "The Gen4 clock"
+     },
+     {
+      "text": "No raise, no listing and no hard deadline: urgency is scored 11 of 20 and timing 14. The case is strong on capacity and fit, not on a forcing event, and the brief does not pretend otherwise.",
+      "label": "What holds the score back"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Mahindra Racing carries Mahindra & Mahindra as parent and title and Tech Mahindra as its engineering and IT-services partner, and nothing else in enterprise software. Official Work AI Partner is a clean category at a team-partner price, with exclusivity scoped to the Work AI platform so it sits beside Tech Mahindra rather than against it.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Glean sells to large, multi-business enterprises whose knowledge is scattered across systems. The Mahindra Group is exactly that, and Glean's largest base outside the US is its Bengaluru centre of more than 450 people. A team deployment that extends into group functions is a reference account, not just a logo.",
+      "label": "A parent that is the customer"
+     },
+     {
+      "text": "Mahindra Racing's Gen4 commitment as a manufacturer, announced 26 November 2025, runs to at least 2030. A three-season term from Season 13 sits entirely inside it, which removes the exit risk that undermines multi-year deals with customer teams.",
+      "label": "A manufacturer committed to 2030"
+     },
+     {
+      "text": "TWG AI is Andretti's Official Artificial Intelligence partner, Sand Technologies backs Envision on AI and TCS, an IT-services group with its own AI practice, holds Jaguar's title. The remaining teams are open but carry neither the enterprise-software adjacency nor the India and US story that makes Mahindra the natural first deployment.",
+      "label": "Why not the others"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Andretti Formula E",
+      "reason": "TWG AI is the programme's Official Artificial Intelligence partner and primary partner; the AI lane is taken."
+     },
+     {
+      "team": "Envision Racing",
+      "reason": "Sand Technologies holds the AI partnership."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "TCS, an IT-services group with its own enterprise AI practice, is title partner; a Work AI platform would clash with the title sponsor's positioning."
+     },
+     {
+      "team": "Porsche Formula E Team · Nissan Formula E Team · DS Penske · Cupra Kiro · Lola Yamaha ABT Formula E Team · Citroën Racing",
+      "reason": "Open but not chosen: no enterprise-software adjacency and none of the India and US operating story that makes Mahindra the natural first deployment; DS Penske's roster is electronics distribution."
+     }
+    ]
+   },
+   "date_long": "30 MAY 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Mahindra Racing",
+   "value_mode": "A",
+   "bottom_line": "$300M ARR crossed on 28 May, a $7.2B valuation and about $768M raised put Glean at the moment enterprise brands start spending on credibility. Formula E's Work AI lane is open, Mahindra is committed through 2030, and Season 13 rosters close over the summer.",
+   "footer_date": "30 MAY 2026",
+   "score_cells": [
+    {
+     "num": 14,
+     "note": "$300M ARR crossed 28 May; no capital event, Series F is a year old.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 16,
+     "note": "$7.2B valuation, about $768M raised, $300M ARR.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Enterprise B2B brand; FE paddock is its CIO audience.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 11,
+     "note": "No hard deadline beyond Season 13 rosters; category could close.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: knowledge platform the team and parent would use.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "CEO Arvind Jain announced on 28 May that ARR has passed $300M, five months after $200M and roughly three times the level of fifteen months earlier. The company raised $150M at $7.2B in June 2025 in a Series F led by Wellington Management, taking total funding to about $768M, and bought document-intelligence start-up Aryn on 11 March 2026. There has been no new round in 2026: this is a demand inflection, not a capital one, and the score says so. The buyers Glean must now win are enterprise CIOs, Formula E's paddock audience.",
+   "the_case_p2": "The enterprise-AI archetype is already on the grid. TWG AI is Official Artificial Intelligence partner of Andretti's programme; Sand Technologies backs Envision; Google Cloud is the championship's cloud partner. None of them sells a Work AI platform to end users, so a Glean-class brand would arrive first in its category. Mahindra Racing, committed as a manufacturer to the Gen4 era through 2030, pairs an Indian engineering parent with Glean's biggest office beyond America.",
+   "track_label": "",
+   "brief_number": "210",
+   "claims_total": 17,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$150M Series F at a $7.2B valuation led by Wellington Management (10 Jun 2025); total raised about $768M; n…",
+     "value": "$150M",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/"
+    },
+    {
+     "fact": "$300M ARR, company-stated on 28 May 2026; $200M in December 2025; roughly three times the level of fifteen…",
+     "value": "$300M",
+     "claim_id": 623,
+     "verified": true,
+     "source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/"
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Enterprise AI · Work AI Platform",
+   "value_content": "MODE A - operational. A Formula E team and its parent run on scattered knowledge: homologation and regulation documents, supplier and freight data, simulation reports, sponsor contracts. Glean indexes it all with permissions intact and puts an assistant and agents on top for engineers, operations and commercial staff. A team deployment, extended to chosen Mahindra Group functions, gives Mahindra measurable hours back and Glean a referenceable flagship inside one of India's largest industrial groups.",
+   "value_section": true,
+   "why_team_para": "Mahindra Racing's roster is Mahindra & Mahindra as parent and title and Tech Mahindra as IT-services partner; there is no enterprise-software brand. Its Gen4 manufacturer commitment through 2030, made on 26 November 2025, de-risks a three-year term. Glean's largest base outside the US is its Bengaluru centre of more than 450 people, and the Mahindra Group is the multi-business enterprise it sells into. Exclusivity is scoped to the Work AI platform, not to AI, since Tech Mahindra builds AI tooling through the team.",
+   "deal_arch_para": "Entry as Official Work AI Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Season 13 to Season 15 (2026-27 to 2028-29), inside the Gen4 commitment. Estimated $2-3M a year, part-payable in seats. Scope: Work AI platform exclusivity, car and garage branding, a working team deployment, London and Bengaluru hospitality, engineering content.",
+   "footer_company": "GLEAN",
+   "why_team_label": "WHY MAHINDRA RACING",
+   "claims_verified": 17,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The $300M mark landed on 28 May, and brand budgets reset in the quarter after a milestone like it. Season 12 closes at the London E-Prix on 15-16 August and the Gen4 era opens at the Jeddah E-Prix in December, so Season 13 rosters are settled over the summer.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Kixmoeller runs Glean's marketing after leading marketing at Ghost Autonomy and marketing, product and strategy at Pure Storage, a Mercedes F1 technical partner since 2016. Path: Arvind Jain, co-founder and CEO; Amar Maletira, COO, ex-CEO of Rackspace. No CFO confirmed.",
+   "decision_maker_name": "Matt \"Kix\" Kixmoeller",
+   "decision_maker_role": "Chief Marketing Officer, Glean",
+   "opening_angle_intro": "Lead with the category and the clock.",
+   "opening_angle_quote": "&ldquo;Kix, you watched Pure Storage put its name on a Mercedes. Glean just crossed $300M ARR and Formula E's Work AI lane is open, with Mahindra committed to 2030. 25 minutes before the London E-Prix?&rdquo;",
+   "value_section_label": "VALUE TO MAHINDRA RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Matt \"Kix\" Kixmoeller, Chief Marketing Officer at Glean",
+   "cited_source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.glean.com/authors/mattkix",
+     "excerpt": "Glean's own author page: Matt \"Kix\" Kixmoeller is Chief Marketing Officer at Glean; before Glean he led marketing at Ghost Autonomy and marketing and product at Pure Storage. The Org and Crunchbase list him as CMO.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Matt \"Kix\" Kixmoeller, Chief Marketing Officer, Glean at Glean",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.glean.com/authors/mattkix",
+     "excerpt": "Glean's own author page: Matt \"Kix\" Kixmoeller is Chief Marketing Officer at Glean; before Glean he led marketing at Ghost Autonomy and marketing and product at Pure Storage. The Org and Crunchbase list him as CMO.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$150M Series F at a $7.2B valuation led by Wellington Management (10 Jun 2025); total raised about $768M; no new round in 2026",
+   "cited_source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.glean.com/press/glean-raises-150m-series-f-at-7-2b-valuation-to-accelerate-enterprise-ai-agent-innovation-globally",
+     "excerpt": "Glean press release, 10 Jun 2025: $150M Series F at a $7.2B valuation led by Wellington Management; new investors Khosla Ventures, Bicycle Capital, Geodesic Capital and Archerman Capital; existing investors Altimeter, Capital One Ventures, Citi, Coatue, DST Global, General Catalyst, ICONIQ, IVP, Kleiner Perkins, Latitude Capital, Lightspeed, Sapphire Ventures and Sequoia Capital. Crunchbase News: total raised roughly $768M; the Series E ($260M at $4.6B) closed nine months earlier. No round announced in 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Glean, the Palo Alto 'Work AI' platform, crossed $300M in annual recurring revenue on 28 May 2026, tripling in fifteen months, on the $7.2B valuation set by its $150M Series F.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://x.com/jainarvind/status/2060077511212445874",
+     "excerpt": "CEO Arvind Jain, 28 May 2026: Glean has surpassed $300M ARR, five months after crossing $200M and growing about 3x over the past fifteen months. TechCrunch the same day: top line crosses $300M, up from $100M in early 2025 and $200M by December 2025. Company-stated figure; not audited.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Wellington Management (Series F lead); Khosla Ventures, Sequoia Capital, Lightspeed, Kleiner Perkins, ICONIQ, General Catalyst, Coatue and DST Global among the backers",
+   "cited_source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.glean.com/press/glean-raises-150m-series-f-at-7-2b-valuation-to-accelerate-enterprise-ai-agent-innovation-globally",
+     "excerpt": "Glean press release, 10 Jun 2025: $150M Series F at a $7.2B valuation led by Wellington Management; new investors Khosla Ventures, Bicycle Capital, Geodesic Capital and Archerman Capital; existing investors Altimeter, Capital One Ventures, Citi, Coatue, DST Global, General Catalyst, ICONIQ, IVP, Kleiner Perkins, Latitude Capital, Lightspeed, Sapphire Ventures and Sequoia Capital. Crunchbase News: total raised roughly $768M; the Series E ($260M at $4.6B) closed nine months earlier. No round announced in 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "CEO Arvind Jain announced on 28 May that ARR has passed $300M, five months after $200M and roughly three times the level of fifteen months earlier.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://x.com/jainarvind/status/2060077511212445874",
+     "excerpt": "CEO Arvind Jain, 28 May 2026: Glean has surpassed $300M ARR, five months after crossing $200M and growing about 3x over the past fifteen months. TechCrunch the same day: top line crosses $300M, up from $100M in early 2025 and $200M by December 2025. Company-stated figure; not audited.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "$300M ARR, company-stated on 28 May 2026; $200M in December 2025; roughly three times the level of fifteen months earlier",
+   "cited_source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://x.com/jainarvind/status/2060077511212445874",
+     "excerpt": "CEO Arvind Jain, 28 May 2026: Glean has surpassed $300M ARR, five months after crossing $200M and growing about 3x over the past fifteen months. TechCrunch the same day: top line crosses $300M, up from $100M in early 2025 and $200M by December 2025. Company-stated figure; not audited.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The company raised $150M at $7.2B in June 2025 in a Series F led by Wellington Management, taking total funding to about $768M, and bought document-intelligence start-up Aryn on 11 March 2026.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.glean.com/press/glean-raises-150m-series-f-at-7-2b-valuation-to-accelerate-enterprise-ai-agent-innovation-globally",
+     "excerpt": "Glean press release, 10 Jun 2025: $150M Series F at a $7.2B valuation led by Wellington Management; new investors Khosla Ventures, Bicycle Capital, Geodesic Capital and Archerman Capital; existing investors Altimeter, Capital One Ventures, Citi, Coatue, DST Global, General Catalyst, ICONIQ, IVP, Kleiner Perkins, Latitude Capital, Lightspeed, Sapphire Ventures and Sequoia Capital. Crunchbase News: total raised roughly $768M; the Series E ($260M at $4.6B) closed nine months earlier. No round announced in 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "ARR crossed $300M, announced by CEO Arvind Jain on 28 May 2026 and reported by TechCrunch the same day; the $150M Series F at $7.2B dates from June 2025",
+   "cited_source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://x.com/jainarvind/status/2060077511212445874",
+     "excerpt": "CEO Arvind Jain, 28 May 2026: Glean has surpassed $300M ARR, five months after crossing $200M and growing about 3x over the past fifteen months. TechCrunch the same day: top line crosses $300M, up from $100M in early 2025 and $200M by December 2025. Company-stated figure; not audited.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "WHY NOW The $300M mark landed on 28 May, and brand budgets reset in the quarter after a milestone like it.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://x.com/jainarvind/status/2060077511212445874",
+     "excerpt": "CEO Arvind Jain, 28 May 2026: Glean has surpassed $300M ARR, five months after crossing $200M and growing about 3x over the past fifteen months. TechCrunch the same day: top line crosses $300M, up from $100M in early 2025 and $200M by December 2025. Company-stated figure; not audited.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "TWG AI is Andretti's Official Artificial Intelligence partner; Sand Technologies (AI) sits with Envision; TCS is Jaguar's title partner; Google Cloud is the championship's cloud partner; no Work AI platform is on the FE grid",
+   "cited_source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json (spec/active_sponsor_db.md + data/teams.json)",
+     "excerpt": "Sponsor table: Mahindra Racing — Mahindra & Mahindra (parent / title), Tech Mahindra (software / tech integrator); no other partner listed. Andretti Formula E — TWG AI (Official Artificial Intelligence partner, primary partner of the FE programme). Envision Racing — Sand Technologies (AI), Teijin. Jaguar TCS Racing — TCS title (IT services). Championship level — Google Cloud (cloud / technology), Julius Baer. No Work AI or enterprise-software platform on any FE team roster.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "$300M ARR crossed on 28 May, a $7.2B valuation and about $768M raised put Glean at the moment enterprise brands start spending on credibility.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://x.com/jainarvind/status/2060077511212445874",
+     "excerpt": "CEO Arvind Jain, 28 May 2026: Glean has surpassed $300M ARR, five months after crossing $200M and growing about 3x over the past fifteen months. TechCrunch the same day: top line crosses $300M, up from $100M in early 2025 and $200M by December 2025. Company-stated figure; not audited.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Mahindra Racing committed as a manufacturer to the Gen4 era through 2030 (26 Nov 2025); Glean's largest base outside the US is its Bengaluru centre of more than 450 people",
+   "cited_source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businessofgcc.com/gcc-data/companies/glean-technologies-inc-india-bengaluru",
+     "excerpt": "Craft / Business of GCC listings: headquarters 3000 El Camino Real, Palo Alto, California; offices in San Francisco, New York, Nashville, London and Bengaluru. The Bengaluru centre, established 2022 with a formal office launch in July 2024, is Glean's largest investment outside the US and grew from 150 to more than 450 people in its first year (reported).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "On 28 May 2026 CEO Arvind Jain announced that Glean had passed $300M in annual recurring revenue, five months after $200M and roughly three times the level of fifteen months earlier;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://x.com/jainarvind/status/2060077511212445874",
+     "excerpt": "CEO Arvind Jain, 28 May 2026: Glean has surpassed $300M ARR, five months after crossing $200M and growing about 3x over the past fifteen months. TechCrunch the same day: top line crosses $300M, up from $100M in early 2025 and $200M by December 2025. Company-stated figure; not audited.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Palo Alto, California; offices in San Francisco, New York, Nashville, London and Bengaluru",
+   "cited_source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businessofgcc.com/gcc-data/companies/glean-technologies-inc-india-bengaluru",
+     "excerpt": "Craft / Business of GCC listings: headquarters 3000 El Camino Real, Palo Alto, California; offices in San Francisco, New York, Nashville, London and Bengaluru. The Bengaluru centre, established 2022 with a formal office launch in July 2024, is Glean's largest investment outside the US and grew from 150 to more than 450 people in its first year (reported).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The last capital event is a year old: the $150M Series F at $7.2B closed in June 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.glean.com/press/glean-raises-150m-series-f-at-7-2b-valuation-to-accelerate-enterprise-ai-agent-innovation-globally",
+     "excerpt": "Glean press release, 10 Jun 2025: $150M Series F at a $7.2B valuation led by Wellington Management; new investors Khosla Ventures, Bicycle Capital, Geodesic Capital and Archerman Capital; existing investors Altimeter, Capital One Ventures, Citi, Coatue, DST Global, General Catalyst, ICONIQ, IVP, Kleiner Perkins, Latitude Capital, Lightspeed, Sapphire Ventures and Sequoia Capital. Crunchbase News: total raised roughly $768M; the Series E ($260M at $4.6B) closed nine months earlier. No round announced in 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "revenue milestone",
+   "cited_source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://x.com/jainarvind/status/2060077511212445874",
+     "excerpt": "CEO Arvind Jain, 28 May 2026: Glean has surpassed $300M ARR, five months after crossing $200M and growing about 3x over the past fifteen months. TechCrunch the same day: top line crosses $300M, up from $100M in early 2025 and $200M by December 2025. Company-stated figure; not audited.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 12 calendar (ExCeL London finale) | note: ExCeL, double-header race 1 — season finale weekend",
+     "excerpt": "round 16: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Jeddah E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

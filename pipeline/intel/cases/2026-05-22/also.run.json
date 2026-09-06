@@ -1,0 +1,814 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-05-22",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-9cbtpuzd/2026-05-22/also.pdf",
+     "web": "/tmp/case-pdf-9cbtpuzd/2026-05-22/also.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Also",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 18
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "Also",
+     "decision": "selected",
+     "signal_date": "2026-03-31"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Also",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 15,
+    "ops_fit": 14,
+    "ranking": 70,
+    "urgency": 13,
+    "capacity": 13,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 3,
+     "product_to_need": 5,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Visa Cash App Racing Bulls",
+   "source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery",
+   "trigger_date": "2026-03-31",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 214,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-9cbtpuzd/2026-05-22/also.web.html",
+  "brief_data": {
+   "hq": "Palo Alto (spun out of Rivian, March 2025)",
+   "deck": "Also, the small-EV company spun out of Rivian, closed a $200M Series C led by Greenoaks on 31 March 2026 with DoorDash as strategic investor, taking funding to $305M at a $1B valuation. Its president built Specialized's product line, and Specialized just took the bike lane at Audi.",
+   "risks": [
+    {
+     "label": "PRE-REVENUE HARDWARE",
+     "detail": "The TM-B has not yet shipped at scale; a consumer hardware company can slip its dates and cut marketing first.",
+     "counter": "Structure year one as product-led (fleet in kind, modest fee) with cash stepping up as deliveries land."
+    },
+    {
+     "label": "OEM SENSITIVITY",
+     "detail": "Rivian holds a minority stake and chairs the board; Ford supplies the power unit from 2026.",
+     "counter": "Position Also as the independent company it is; test the Ford and Rivian sensitivities on the first call."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private ($1B; $200M Series C, Mar 2026)",
+   "company": "Also",
+   "gridfit": [
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "spin_off"
+   ],
+   "sources": [
+    "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+    "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+    "https://www.bikeradar.com/news/specialized-audi-f1-team-collaboration",
+    "https://www.geekwire.com/2026/rivian-spinout-also-lands-in-seattle-with-rei-vet-leading-micromobility-startups-new-office-and-retail-hub/",
+    "https://rivian.com/newsroom/article/rivian-spins-out-micromobility-business-into-new-startup-also-inc",
+    "https://techcrunch.com/2025/10/22/rivian-spinoff-also-reveals-a-high-end-modular-e-bike-for-4500/",
+    "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Chris Yu before the Monaco GP to size a product-led Official Mobility Partner entry at Racing Bulls for 2027, agree the fleet plan, and test the Ford and Rivian sensitivities with the team.",
+    "value": [
+     {
+      "text": "A TM-B fleet for the team's daily mobility at all 24 rounds: track rides for drivers and engineers, paddock commutes for mechanics and hospitality staff, recovery rides for the drivers' performance programme. The removable 240W battery doubles as a power bank for trackside crews. As the cargo quad enters production it takes over short-haul paddock logistics.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A design-led consumer brand with a Rivian pedigree brings a launch-year marketing budget, a product the drivers can be filmed on, and a hospitality guest list of retail, mobility and venture contacts at Monaco and Las Vegas.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A team-liveried TM-B edition, driver and mechanic content on the bikes, and a paddock-to-city story that fits Also's mission of replacing short car trips. The DoorDash autonomy programme gives a second chapter for 2028 when the delivery vehicles are on the road.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Mobility Partner designation, rear-wing or halo placement, kit presence, hospitality at Monaco and Las Vegas, and driver access for Also's launch content.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 31 March 2026 Also announced its $200M Series C closed, led by Greenoaks with DoorDash joining as strategic investor alongside Prysm Capital, together with a multi-year commercial agreement to develop autonomous last-mile delivery vehicles for DoorDash and a board-observer seat for DoorDash co-founder Stanley Tang. TechCrunch puts total funding at $305M and the valuation at $1B. Greenoaks' investment was first reported by Bloomberg in July 2025; the desk row dated the round to May, which is wrong.",
+      "label": "Trigger"
+     },
+     {
+      "text": "On 21 May 2026, the day before this brief, Specialized announced a multi-year partnership with Audi Revolut F1 Team as official bicycle and e-bike supplier for 2026 and 2027, providing the fleet the team uses for daily mobility, training and recovery. That is the first e-bike partnership on the F1 grid and the template for this one.",
+      "label": "The category clock started at Audi"
+     },
+     {
+      "text": "The $4,500 TM-B Launch Edition, revealed in October 2025, begins US deliveries this spring, with Europe to follow; about 350 people now work across Palo Alto, Seattle and a new commercial team in Ghent. A company with its first product and a fresh raise decides its launch marketing now.",
+      "label": "First product, first budget"
+     },
+     {
+      "text": "Monaco GP (5-7 June) and the British GP (3-5 July) fall inside the window; the US GP in Austin and the Las Vegas GP in the autumn are the home-market stages a US launch would be timed to. A deal agreed before Silverstone can be announced in the US and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Racing Bulls carries Visa and Cash App, Randstad, Siemens, Hugo, Tudor, Dynatrace, Confluent, Yugo, Student.com, Airtasker, Mobil 1 and Nouryon, with Ford supplying the power unit from 2026. No bicycle, e-bike or mobility partner is on the roster: Official Mobility Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Visa, Cash App, Yugo, Student.com and Airtasker are consumer brands aimed at a younger audience; a $4,500 design-led e-bike from a Rivian spin-out sells to the same people. The team's partner list is the closest thing on the grid to Also's customer profile.",
+      "label": "The audience"
+     },
+     {
+      "text": "Track rides, paddock commutes and recovery sessions are daily work for a race team; the Specialized deal at Audi shows a team taking a bike fleet as an operational supply, not a logo. Also's removable batteries add a trackside power-bank role no other bike brand offers.",
+      "label": "A team that will use the product"
+     },
+     {
+      "text": "Ford's role at Racing Bulls is a power-unit supply through Red Bull Powertrains, not a brand exclusivity; Rivian holds a minority stake in Also and RJ Scaringe chairs its board. The brief treats this as a sensitivity to test on the first call, not a bar, and rules out the works and OEM-owned teams where it would be.",
+      "label": "The OEM question, answered honestly"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "Specialized is the team's official bicycle and e-bike partner for 2026 and 2027; a direct rival."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Zoox, Amazon's autonomous-vehicle company, sits on the roster; Also's DoorDash autonomy programme would clash."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Mobilize Financial Services, Renault's mobility brand, holds the mobility lane."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "General Motors is the parent; a Rivian-born brand will not sit on GM's car."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Toyota Gazoo Racing technical partnership; OEM sensitivity for a Rivian spin-out."
+     },
+     {
+      "team": "Mercedes-AMG Petronas · Scuderia Ferrari HP · McLaren Mastercard · Aston Martin Aramco",
+      "reason": "Works or car-maker-branded teams: OEM sensitivity, and partner prices beyond a first-product company."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Open on category, but a 30-plus partner roster at senior-team prices; the junior team is the right first step."
+     }
+    ]
+   },
+   "date_long": "22 MAY 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Visa Cash App Racing Bulls",
+   "value_mode": "A",
+   "bottom_line": "A $200M Series C with DoorDash aboard, a first product shipping this spring, and a president who built the product line of the brand that just took the e-bike lane at Audi give Also the budget, the motive and the template. Racing Bulls has the audience and the open slot, and Monaco sits inside the window.",
+   "footer_date": "22 MAY 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Series C 31 Mar; Specialized precedent 21 May; Monaco in the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 13,
+     "note": "$305M raised at $1B; first product still shipping; small fee.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "Design-led consumer EV; Rivian halo; electrification story.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "US deliveries this spring; category clock started at Audi.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 14,
+     "note": "MODE A: team mobility fleet on the Specialized template.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Also spun out of Rivian in March 2025 with $105M from Rivian and Eclipse after three years inside the carmaker as Project Inder. Bloomberg reported Greenoaks' $200M at a $1B valuation in July 2025; the Series C was announced closed on 31 March 2026 with DoorDash joining alongside Prysm Capital, a multi-year agreement to build autonomous last-mile delivery vehicles, and DoorDash co-founder Stanley Tang as board observer. Total funding is $305M. The first product, the $4,500 TM-B e-bike revealed in October 2025, starts US deliveries this spring; about 350 staff work in Palo Alto, Seattle and Ghent.",
+   "the_case_p2": "The category precedent landed this week: Specialized became Audi Revolut F1 Team's official bicycle and e-bike partner for 2026 and 2027, supplying the fleet the team rides for daily mobility, training and recovery. Chris Yu spent more than ten years at Specialized as chief product and technology officer before co-founding Also. The template exists, the man who built the incumbent's product now runs the challenger, and the challenger has a fresh $200M to spend.",
+   "track_label": "",
+   "brief_number": "214",
+   "claims_total": 19,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$200M Series C led by Greenoaks with DoorDash (strategic) and Prysm Capital, announced 31 March 2026; total…",
+     "value": "$200M",
+     "claim_id": 642,
+     "verified": true,
+     "source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery"
+    },
+    {
+     "fact": "Greenoaks (lead); DoorDash; Prysm Capital; Rivian and Eclipse ($105M at the March 2025 spin-out)",
+     "value": "$105M",
+     "claim_id": 643,
+     "verified": true,
+     "source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery"
+    },
+    {
+     "fact": "Total funding is $305M.",
+     "value": "$305M",
+     "claim_id": 653,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "The first product, the $4,500 TM-B e-bike revealed in October 2025, starts US deliveries this spring;",
+     "value": "$4,500",
+     "claim_id": 654,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Electric Micromobility · Small EVs / Autonomous Delivery (Rivian spin-out)",
+   "value_content": "MODE A - operational. The Specialized template, run by the team that built it: a TM-B fleet for track rides, paddock commutes and driver recovery sessions at every round, the removable battery doubling as a 240W power bank for trackside crews, and the cargo quad for paddock logistics once in production. In return: Official Mobility Partner designation, livery and kit presence, Monaco and Las Vegas hospitality, and the drivers on the bikes on camera.",
+   "value_section": true,
+   "why_team_para": "Racing Bulls carries Visa and Cash App at the front, with Yugo, Student.com, Airtasker and Hugo behind them: a roster built for a younger consumer audience, the buyer of a $4,500 design-led e-bike. No bicycle, e-bike or mobility partner sits on the team. Ford supplies the power unit from 2026, a supply agreement rather than a brand exclusivity, so a Rivian-born partner is a conversation, not a bar. It is the grid's natural first-timer stage: a team-partner price and 24 rounds of paddock use.",
+   "deal_arch_para": "Entry as Official Mobility Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the TM-B ramp, the DoorDash delivery programme and a probable further raise. Estimated $1-2M a year plus product, with the fleet supplied in kind. Scope: rear-wing or halo placement, a team-liveried TM-B edition, Monaco and Las Vegas hospitality, driver content on the bikes.",
+   "footer_company": "ALSO",
+   "why_team_label": "WHY VISA CASH APP RACING BULLS",
+   "claims_verified": 19,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Specialized's Audi deal was announced on 21 May, the day before this brief, and makes e-bikes a live F1 category. Also's US deliveries begin this spring on a fresh $200M. Monaco GP (7 June) and the British GP (5 July) fall inside the window; the US GP and Las Vegas follow in the autumn.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 214",
+   "decision_maker_bio": "Yu co-founded Also with RJ Scaringe after more than a decade at Specialized as chief product and technology officer and a spell as Rivian's VP of future programmes; he runs the company. Path: Ben Steele, Chief Commercial Officer (ex-REI); Scaringe chairs the board. No CEO or CMO title is listed.",
+   "decision_maker_name": "Chris Yu",
+   "decision_maker_role": "Co-Founder & President, Also",
+   "opening_angle_intro": "Lead with the Specialized precedent.",
+   "opening_angle_quote": "&ldquo;Chris, Specialized just took the bike lane at Audi with the product line you built. The challenger belongs on a car too, and Racing Bulls has the audience and the open slot. 25 minutes before Monaco to see the fleet plan?&rdquo;",
+   "value_section_label": "VALUE TO VISA CASH APP RACING BULLS",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Chris Yu, Co-Founder & President at Also",
+   "cited_source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+     "excerpt": "Chris Yu is Co-founder & President of Also (micromobility.io interview; GeekWire 2026: co-founded by Rivian founder and CEO RJ Scaringe alongside Chris Yu, Rivian's former vice president of future programs, who serves as Also's president). Yahoo Finance / Business Insider: Yu spent more than 10 years at Specialized Bicycle Components as chief product and technology officer. No CEO title is listed on any source found; the desk row's 'Undisclosed CEO' is replaced by the president.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Chris Yu, Co-Founder & President, Also at Also",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+     "excerpt": "Chris Yu is Co-founder & President of Also (micromobility.io interview; GeekWire 2026: co-founded by Rivian founder and CEO RJ Scaringe alongside Chris Yu, Rivian's former vice president of future programs, who serves as Also's president). Yahoo Finance / Business Insider: Yu spent more than 10 years at Specialized Bicycle Components as chief product and technology officer. No CEO title is listed on any source found; the desk row's 'Undisclosed CEO' is replaced by the president.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$200M Series C led by Greenoaks with DoorDash (strategic) and Prysm Capital, announced 31 March 2026; total funding $305M at a $1B valuation (TechCrunch)",
+   "cited_source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Also, the small-EV company spun out of Rivian, closed a $200M Series C led by Greenoaks on 31 March 2026 with DoorDash as strategic investor, taking funding to $305M at a $1B valuation.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Greenoaks (lead); DoorDash; Prysm Capital; Rivian and Eclipse ($105M at the March 2025 spin-out)",
+   "cited_source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Also spun out of Rivian in March 2025 with $105M from Rivian and Eclipse after three years inside the carmaker as Project Inder.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://rivian.com/newsroom/article/rivian-spins-out-micromobility-business-into-new-startup-also-inc",
+     "excerpt": "Rivian newsroom, March 2025: Rivian spins out its micromobility business into Also, Inc. with $105M from Eclipse; Rivian holds a minority stake and RJ Scaringe chairs Also's board. TechCrunch: the project began inside Rivian in 2022 as Project Inder.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$200M Series C closed with DoorDash as strategic investor and a multi-year autonomous-delivery agreement, announced 31 March 2026",
+   "cited_source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Bloomberg reported Greenoaks' $200M at a $1B valuation in July 2025;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Specialized became Audi Revolut F1 Team's official bicycle and e-bike partner for 2026-27, announced 21 May 2026; no other bicycle, e-bike or micromobility partner sits on the F1 grid",
+   "cited_source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bikeradar.com/news/specialized-audi-f1-team-collaboration",
+     "excerpt": "BikeRadar / Pinkbike, 21 May 2026: Specialized announced a multi-year partnership with Audi Revolut F1 Team as the team's Official Bicycle and Electric Bicycle Supplier for the 2026 and 2027 seasons, supplying Tarmac road bikes and Vado e-bikes for the team's daily mobility, training and recovery.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Total funding is $305M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Chris Yu, Co-Founder & President, spent more than ten years at Specialized as chief product and technology officer; Also is a Rivian spin-out with RJ Scaringe as chairman",
+   "cited_source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+     "excerpt": "Chris Yu is Co-founder & President of Also (micromobility.io interview; GeekWire 2026: co-founded by Rivian founder and CEO RJ Scaringe alongside Chris Yu, Rivian's former vice president of future programs, who serves as Also's president). Yahoo Finance / Business Insider: Yu spent more than 10 years at Specialized Bicycle Components as chief product and technology officer. No CEO title is listed on any source found; the desk row's 'Undisclosed CEO' is replaced by the president.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The first product, the $4,500 TM-B e-bike revealed in October 2025, starts US deliveries this spring;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2025/10/22/rivian-spinoff-also-reveals-a-high-end-modular-e-bike-for-4500/",
+     "excerpt": "TechCrunch, 22 Oct 2025: Also revealed the TM-B, a modular e-bike at $4,500 for the Launch Edition, with a pedal-by-wire drive and a removable battery that works as a power bank with two bidirectional USB-C ports at 240 watts; the launch line-up also included a cargo quad (PR Newswire, Oct 2025). InsideEVs / E-Mountainbike: Launch Edition deliveries in the US from spring 2026, Europe later.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Palo Alto; Seattle office opened April 2026; about 350 staff across Palo Alto, Seattle and Ghent, Belgium",
+   "cited_source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.geekwire.com/2026/rivian-spinout-also-lands-in-seattle-with-rei-vet-leading-micromobility-startups-new-office-and-retail-hub/",
+     "excerpt": "GeekWire, 2026: Ben Steele, Also's chief commercial officer and a nine-year REI veteran, heads the new Seattle office, opened in April with 38 employees; Also employs roughly 350 people across Palo Alto, Seattle and a new commercial team in Ghent, Belgium. No CEO or chief marketing officer is named on any source found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The template exists, the man who built the incumbent's product now runs the challenger, and the challenger has a fresh $200M to spend.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Also's US deliveries begin this spring on a fresh $200M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $200M Series C with DoorDash aboard, a first product shipping this spring, and a president who built the product line of the brand that just took the e-bike lane at Audi give Also the budget, the motive and the template.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Racing Bulls carries Visa and Cash App at the front, with Yugo, Student.com, Airtasker and Hugo behind them: a roster built for a younger consumer audience, the buyer of a $4,500 design-led e-bike.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2025/10/22/rivian-spinoff-also-reveals-a-high-end-modular-e-bike-for-4500/",
+     "excerpt": "TechCrunch, 22 Oct 2025: Also revealed the TM-B, a modular e-bike at $4,500 for the Launch Edition, with a pedal-by-wire drive and a removable battery that works as a power bank with two bidirectional USB-C ports at 240 watts; the launch line-up also included a cargo quad (PR Newswire, Oct 2025). InsideEVs / E-Mountainbike: Launch Edition deliveries in the US from spring 2026, Europe later.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 31 March 2026 Also announced its $200M Series C closed, led by Greenoaks with DoorDash joining as strategic investor alongside Prysm Capital, together with a multi-year commercial agreement to develop autonomous last-mile delivery vehicles for DoorDash and a board-observer seat for DoorDash co-founder Stanley Tang.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "TechCrunch puts total funding at $305M and the valuation at $1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/",
+     "excerpt": "TechCrunch, 31 Mar 2026: DoorDash participated in Also's $200 million Series C led by Greenoaks Capital, alongside Prysm Capital; the raise brings total funding to $305 million at a $1 billion valuation; multi-year agreement to build autonomous last-mile delivery vehicles; DoorDash co-founder and head of DoorDash Labs Stanley Tang joins as board observer. Company release: 'ALSO Announces Strategic Partnership with DoorDash' (PR Newswire, 31 Mar 2026; ridealso.com blog). Dealroom reports total funding of $505M; the company-adjacent TechCrunch figure ($305M) is used.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The $4,500 TM-B Launch Edition, revealed in October 2025, begins US deliveries this spring, with Europe to follow;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2025/10/22/rivian-spinoff-also-reveals-a-high-end-modular-e-bike-for-4500/",
+     "excerpt": "TechCrunch, 22 Oct 2025: Also revealed the TM-B, a modular e-bike at $4,500 for the Launch Edition, with a pedal-by-wire drive and a removable battery that works as a power bank with two bidirectional USB-C ports at 240 watts; the launch line-up also included a cargo quad (PR Newswire, Oct 2025). InsideEVs / E-Mountainbike: Launch Edition deliveries in the US from spring 2026, Europe later.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "a $4,500 design-led e-bike from a Rivian spin-out sells to the same people.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2025/10/22/rivian-spinoff-also-reveals-a-high-end-modular-e-bike-for-4500/",
+     "excerpt": "TechCrunch, 22 Oct 2025: Also revealed the TM-B, a modular e-bike at $4,500 for the Launch Edition, with a pedal-by-wire drive and a removable battery that works as a power bank with two bidirectional USB-C ports at 240 watts; the launch line-up also included a cargo quad (PR Newswire, Oct 2025). InsideEVs / E-Mountainbike: Launch Edition deliveries in the US from spring 2026, Europe later.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "M. Monaco GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 8: Monaco GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Monaco GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 8: Monaco GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

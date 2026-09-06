@@ -1,0 +1,384 @@
+{
+ "run_date": "2026-06-30",
+ "signal_date": "2026-06-17",
+ "stem": "odyssey",
+ "number": 175,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Odyssey",
+  "signal_date": "2026-06-17",
+  "score": 70,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Oliver Cameron",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+  "industry_meta": "Physical AI · World Models / Real-Time Simulation · Palo Alto (offices in London and Zurich)",
+  "recommended_team": "Audi Revolut F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$310M Series B at a $1.45B valuation led by Natural Capital, announced 17 Jun 2026 (Business Wire release; TechCrunch)",
+   "investors": "Natural Capital (lead); Amazon, AMD Ventures, GV, EQT, IQT; NVentures backed the Series A in February 2026; total funding $337M (Crunchbase)",
+   "revenue": null,
+   "trigger": "$310M Series B at $1.45B on 17 Jun 2026; AWS named Odyssey's preferred cloud provider in the same announcement",
+   "competitor_signal": "Red Bull carries Ansys and Siemens in engineering simulation; IndraMind joined Alpine for 2026 across trackside engineering and simulation; Claude sits at Williams and TWG AI at Cadillac",
+   "strategic_hook": "Odyssey has a Zurich office on the doorstep of Audi's Hinwil chassis base; Audi's first F1 season has a roster built from scratch with no simulation partner",
+   "us_presence": "HQ Palo Alto, California; offices in London and Zurich",
+   "alumni_match": null,
+   "taxonomy_category": "A2",
+   "ops_fit_note": "MODE A: real-time, physics-accurate world models for driver-in-the-loop track environments and synthetic vision data; Audi's Hinwil simulation group trials the API",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 14,
+   "brand_fit": 13,
+   "urgency": 13,
+   "ops_fit": 14,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "oliver cameron",
+    "cameron",
+    "inman",
+    "hawke",
+    "grieve",
+    "no chief marketing",
+    "no cmo"
+   ],
+   "url": "https://odyssey.ml/about",
+   "excerpt": "Odyssey's own pages name the leadership: Oliver Cameron, Co-Founder & CEO; Jeff Hawke, Co-Founder & CTO; James Grieve, VP of Engineering; Jessica Inman, VP of GTM & Operations. No chief marketing officer and no CFO are listed anywhere.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$310m",
+    "$1.45b",
+    "natural capital",
+    "17 jun",
+    "series b",
+    "funding round",
+    "amd ventures",
+    "iqt",
+    "eqt",
+    "$337m"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "nventures",
+    "february",
+    "series a",
+    "$27m"
+   ],
+   "url": "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/",
+   "excerpt": "TechCrunch, 17 Jun 2026: NVentures, Nvidia's venture arm, backed Odyssey's Series A in February 2026; the company had raised about $27 million before the Series B (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "aws",
+    "trainium",
+    "preferred cloud",
+    "odyssey-2",
+    "starchild",
+    "api",
+    "world model",
+    "physics"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "excerpt": "Company release, 17 Jun 2026: AWS becomes Odyssey's preferred cloud provider, with AWS Trainium chips among the hardware; Odyssey-2 Max advanced physics-accuracy in general world simulation, Starchild-1 is the first real-time multimodal world model, and Odyssey-2 Pro ships through an API for robotics and long-horizon simulation use cases.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "voyage",
+    "cruise",
+    "wayve",
+    "2023",
+    "founded"
+   ],
+   "url": "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/",
+   "excerpt": "TechCrunch: Odyssey was founded in 2023 by CEO Oliver Cameron, co-founder and CEO of Voyage (acquired by GM's Cruise, where he became VP of product), and CTO Jeff Hawke, formerly an engineer at Wayve.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "palo alto",
+    "london",
+    "zurich",
+    "fifty",
+    "headcount"
+   ],
+   "url": "https://odyssey.ml/careers",
+   "excerpt": "Odyssey careers page: offices in Palo Alto (headquarters), London and Zurich; a team of roughly fifty in June 2026 (reported counts range from 46 to 55), scaling toward 100+.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "hinwil",
+    "neuburg",
+    "bicester",
+    "binotto",
+    "revolut",
+    "works team",
+    "first season",
+    "audi"
+   ],
+   "url": "https://www.audi.com/en/audi-revolut-f1r-team-17952",
+   "excerpt": "audi.com: Audi enters Formula 1 in 2026 with its own works team; chassis in Hinwil (Zurich, Switzerland), power unit in Neuburg (Germany), technology centre in Bicester (UK); Revolut confirmed as title partner in July 2025; Mattia Binotto is CEO and Team Principal.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "indramind",
+    "indra"
+   ],
+   "url": "https://media.alpinecars.com/bwt-alpine-formula-one-team-announces-technological-partnership-with-indra-group/?lang=eng",
+   "excerpt": "Alpine media site: technological partnership with Indra Group for 2026 puts the IndraMind sovereign-AI platform into the team's operating ecosystem, across trackside engineering, simulation and long-term performance analysis.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "extreme networks",
+    "jigspace",
+    "elevenlabs",
+    "ninjaone",
+    "additive industries",
+    "hewlett packard",
+    "ansys",
+    "siemens",
+    "claude",
+    "twg ai",
+    "google cloud",
+    "groq",
+    "oracle",
+    "g42",
+    "microsoft",
+    "coreweave",
+    "servicenow",
+    "cognizant",
+    "hp ",
+    "ibm",
+    "toyota gazoo",
+    "mphasis",
+    "zoox",
+    "vast",
+    "amd",
+    "dell",
+    "3d systems",
+    "dynatrace",
+    "roster"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Audi F1 Team 2026 — Audi (works), Revolut (title), Extreme Networks, JigSpace, ElevenLabs, NinjaOne, Camozzi, Sabelt, Libertex, bp/Castrol, adidas and others; Additive Industries and Hewlett Packard Enterprise departed in the last 12 months; no simulation, vehicle-dynamics or AI-modelling partner. Red Bull: Oracle, Siemens, Ansys. Racing Bulls: Siemens, Dynatrace. Mercedes: G42, AMD, Microsoft (joined 2026). McLaren: Google Cloud, Groq, Dell. Williams: Claude, Zoox, VAST. Cadillac: TWG AI. Aston Martin: CoreWeave, ServiceNow, Cognizant. Ferrari: HP, IBM. Alpine: Microsoft, 3D Systems, IndraMind (joined 2026). Haas: Toyota Gazoo Racing, Mphasis.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "monza",
+    "italian",
+    "austin",
+    "las vegas",
+    "british",
+    "dutch"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: British GP in early July, Dutch GP and Italian GP (Monza) in late August and early September, US GP (Austin) in October and Las Vegas GP in November.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Odyssey",
+  "industry_meta": "Physical AI · World Models / Real-Time Simulation",
+  "hq": "Palo Alto, California (offices in London and Zurich)",
+  "ticker": "Private ($310M Series B at $1.45B, Jun 2026)",
+  "deck": "Odyssey, the Palo Alto world-model lab founded by the Voyage and Wayve autonomy veterans, closed a $310M Series B at a $1.45B valuation on 17 June 2026, led by Natural Capital with Amazon, AMD Ventures, GV, EQT and IQT, and named AWS its preferred cloud provider.",
+  "score": 70,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Audi Revolut F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Odyssey announced on 17 June a $310M Series B at a $1.45B valuation, led by Natural Capital with Amazon, AMD Ventures, GV, EQT and IQT participating; total funding stands at $337M (Crunchbase). NVentures had backed the Series A only in February. Founded in 2023 by Oliver Cameron, who founded Voyage and ran product at Cruise, and Jeff Hawke, formerly of Wayve, the company ships physics-accurate world models, Odyssey-2 Max and the real-time Starchild-1, through an API. AWS becomes its preferred cloud provider, with Trainium chips in the mix.",
+  "the_case_p2": "A world model is a simulator that learns physics from video and runs in real time. That is a tool for a race team's simulation group, not a chatbot, and it arrives in the year the grid has to learn a new car from scratch. Odyssey has a Zurich office on Hinwil's doorstep, a founding team fluent in vehicles, and a fresh $310M that will be spent on being known to enterprise buyers.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 17 June; a lab that has just taken $310M from Amazon, AMD and GV spends the next two quarters becoming visible to buyers. Audi's first season is the one moment a new technical partner gets an origin story, and 2027 rosters close in the fourth quarter.",
+  "why_team_label": "WHY AUDI REVOLUT F1 TEAM",
+  "why_team_para": "Audi enters Formula 1 in 2026 as a works team, chassis in Hinwil and power unit in Neuburg, with Revolut as title partner and a roster built from scratch: Extreme Networks, JigSpace, ElevenLabs and NinjaOne on the technology side. Nothing covers vehicle-dynamics or world simulation, a lane almost no team has branded. Additive Industries and Hewlett Packard Enterprise left within twelve months, so engineering slots are being re-let. A Zurich office suits a Hinwil team.",
+  "value_section": true,
+  "value_section_label": "VALUE TO AUDI REVOLUT F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Real-time, physics-accurate world models generate interactive track environments from video: new or resurfaced circuits for the driver-in-the-loop simulator before a laser scan exists, wet and low-light conditions on demand, synthetic footage to train the team's vision analytics. Audi's Hinwil simulation group trials the API under engineering supervision; Odyssey gets a named Formula 1 engineering reference for its enterprise sales.",
+  "deal_arch_para": "Entry as Official World Simulation Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning Audi's first regulation cycle. Estimated $2-4M a year, part-payable in model access and compute. Scope: sidepod or halo placement, naming of the simulation programme, Hinwil engineering content, hospitality at Monza, Austin and Las Vegas.",
+  "decision_maker_name": "Oliver Cameron",
+  "decision_maker_role": "Co-Founder & CEO, Odyssey",
+  "decision_maker_bio": "Cameron founded Voyage, sold it to Cruise and ran product there; he fronts every Odyssey raise, and a first sports partnership is his call. Path: Jessica Inman, VP of GTM & Operations (commercial), and Jeff Hawke, Co-Founder & CTO (technical counterpart). No chief marketing officer or CFO is listed.",
+  "opening_angle_intro": "Lead with the simulator, not the logo.",
+  "opening_angle_quote": "&ldquo;Oliver, your models learn physics from video and run in real time; Audi's Hinwil simulation group still builds its worlds by hand. You have a Zurich office and a fresh $310M to be seen with. 25 minutes before Monza to walk through a pilot?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Round closed 17 Jun; summer shutdown sits inside the window."
+   ],
+   [
+    "CAPACITY",
+    "14",
+    "/ 20",
+    "$310M raise at $1.45B: mid-tier; a team of about fifty."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "Autonomy-born simulation lab; B2B, not yet a public name."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "Go-to-market push after AWS deal; no hard deadline."
+   ],
+   [
+    "OPS FIT",
+    "14",
+    "/ 20",
+    "MODE A pilot in simulation; unproven in a race team."
+   ]
+  ],
+  "risks": [
+   [
+    "UNPROVEN IN A RACE TEAM",
+    "No F1 team has used a generative world model in its simulator; Audi's engineers may see a research tool, not a product.",
+    "Frame year one as a paid pilot with named deliverables; the partnership badge follows a working track environment."
+   ],
+   [
+    "SMALL TEAM, BIG ROUND",
+    "About fifty people run a $1.45B company; a sponsorship can outrun the bandwidth to activate it.",
+    "Keep the scope narrow: one workstream, one hospitality calendar, model access in kind."
+   ]
+  ],
+  "bottom_line": "A $310M round at $1.45B backed by Amazon, AMD and GV, an AWS compute deal, and a Zurich office beside Formula 1's newest works team put Odyssey at peak authority to sign a first sports partnership. The world-simulation lane at Audi is open, and the pilot is real engineering work.",
+  "signals": [
+   "funding_event",
+   "category_whitespace",
+   "never_entered"
+  ],
+  "footer_company": "ODYSSEY",
+  "footer_date": "30 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 17 June 2026 Odyssey announced a $310M Series B at a $1.45B valuation, led by Natural Capital with Amazon, AMD Ventures, GV, EQT and IQT participating, and named AWS its preferred cloud provider. The release is the company's own (Business Wire) and TechCrunch, SiliconANGLE and HPCwire carried it the same day; total funding is $337M per Crunchbase."
+    },
+    {
+     "label": "Two rounds in four months",
+     "text": "NVentures backed the Series A in February 2026; four months later the Series B priced the company at $1.45B. A lab that has re-priced that fast has a story to tell to enterprise buyers, robotics customers and the public markets, and the budget to tell it."
+    },
+    {
+     "label": "The product is a simulator",
+     "text": "Odyssey-2 Max is a physics-accurate general world simulator; Starchild-1 runs in real time across modalities; Odyssey-2 Pro ships through an API. These are simulation products sold to robotics and long-horizon-simulation customers, which is the language a Formula 1 vehicle-dynamics group already speaks."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The Dutch and Italian GPs fall inside the six-to-ten-week window after the row's date, with the US GP in Austin and the Las Vegas GP later in the year for the American audience. Teams close 2027 partner rosters in the fourth quarter; a pilot agreed before Monza can be announced in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Audi's 2026 roster was built from nothing: Revolut as title partner, Extreme Networks, JigSpace, ElevenLabs and NinjaOne on the technology side, bp/Castrol, adidas and the rest. No partner covers vehicle-dynamics, driver-in-the-loop or world simulation, a lane the sponsor table shows almost no team has branded. Additive Industries and Hewlett Packard Enterprise left within the last twelve months, so engineering slots are being re-let."
+    },
+    {
+     "label": "Zurich to Hinwil",
+     "text": "Odyssey keeps an office in Zurich; Audi's chassis operation is in Hinwil, in the same canton. A partner whose engineers can be at the simulator in an afternoon is worth more to a new works team than one flying in from California."
+    },
+    {
+     "label": "A team learning a new car",
+     "text": "Audi's first Formula 1 season is also the first season of a new regulation set, with a Neuburg-built power unit and a Hinwil chassis. Simulation is where a new entrant closes the experience gap, and a technical partner that helps do it earns a story the team will tell on camera."
+    },
+    {
+     "label": "Why not the investor-linked teams",
+     "text": "AMD's presence at Mercedes and GV's link to Google Cloud at McLaren would give Odyssey a warm path, but both rosters already carry AI and cloud incumbents, and both are priced at the top of the grid. Audi offers the open lane at a price a $310M company can carry."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "World models that learn physics from video can generate interactive track environments: new or resurfaced circuits for the driver-in-the-loop simulator before a laser scan exists, wet, dusk and night conditions on demand, and synthetic onboard footage to train the team's own vision analytics. Audi's Hinwil simulation group trials the API under engineering supervision; the deliverable is a working environment, not a demo."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner backed by Amazon, AMD and GV brings enterprise and robotics buyers, and their investors, into the Audi suite at Monza, Austin and Las Vegas, the audience Audi's technology partners want to meet."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "The simulator as a story: co-produced engineering content on how a new team builds a track it has never raced, a Formula 1 reference customer for Odyssey's enterprise sales, and an AWS-compute-to-Hinwil narrative the team can carry to its own partners."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official World Simulation Partner designation, sidepod or halo placement, naming of the simulation programme, Hinwil engineering content, driver and engineering access for Odyssey's channels, and hospitality at Monza, Austin and Las Vegas."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "IndraMind joined for 2026 across trackside engineering, simulation and performance analysis; Microsoft holds cloud and data. The thin row's hint, but the lane is taken."
+    },
+    {
+     "team": "Oracle Red Bull Racing · Visa Cash App Racing Bulls",
+     "reason": "Ansys and Siemens are the simulation incumbents at Red Bull; Siemens sits at Racing Bulls too."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "AMD is an investor-linked partner, but G42, Microsoft (joined 2026) and AMD already crowd the AI and compute lane at a top-tier price."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Google Cloud, Groq and Dell occupy cloud, AI inference and hardware."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Claude is Official Thinking Partner and Zoox, an Amazon company, is on the roster; the AI lane is spoken for."
+    },
+    {
+     "team": "Cadillac F1 Team · Aston Martin Aramco F1 Team",
+     "reason": "TWG AI at Cadillac; CoreWeave, ServiceNow and Cognizant at Aston Martin."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "HP (title) and IBM cover compute and AI services."
+    },
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "Toyota Gazoo Racing supplies the team's simulation and development programme; Mphasis covers data and AI services."
+    }
+   ],
+   "ask": "A 25-minute call with Oliver Cameron before the Italian GP to scope a paid simulation pilot with Audi's Hinwil group, agree what a 2027 Official World Simulation Partner entry would cost, and confirm who at Odyssey owns partnerships after the round."
+  }
+ },
+ "note": "# Odyssey → Audi Revolut F1 Team — verification log (N° 175, row of 30 Jun 2026)\n\nBuilt in-session at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) from a case spec: Claude did the research and writing; the pipeline's code stages (freshness, dedup, scoring, the claims ledger with calendar and sponsor-table checks, the 13-rule audit, the 2-page render, the app page) ran unchanged via `python -m intel.session_case`. Rebuild of a historical row: the desk showed this signal on 30 Jun 2026 with a thin scan (score 72, team hint Alpine, source TechCrunch).\n\n**Sandbox limitation, stated plainly:** direct fetches of businesswire.com, odyssey.ml, techcrunch.com, hpcwire.com, morningstar.com, audi.com and media.alpinecars.com were blocked by the egress proxy. Each claim was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, re-verified\n\nThe thin row's trigger holds. Odyssey's own Business Wire release of 17 Jun 2026 announces the $310M Series B at a $1.45B valuation led by Natural Capital, with Amazon, AMD Ventures, GV, EQT and IQT participating, and AWS as preferred cloud provider; TechCrunch, SiliconANGLE and HPCwire carried it the same day. 13 days before the row's date — inside the window. The thin row's person (Oliver Cameron, Co-Founder & CEO) is correct.\n\n## Team choice: Audi, not the hinted Alpine\n\nThe thin row hinted Alpine. The sponsor table shows IndraMind (Indra Group's sovereign-AI platform) joined Alpine for 2026, and Alpine's own media site says it runs across trackside engineering, simulation and performance analysis — the exact lane Odyssey would take. Alpine is ruled out. Audi Revolut F1 Team has no simulation, vehicle-dynamics or AI-modelling partner in the table, Additive Industries and HPE left within the last 12 months, and Odyssey's Zurich office sits next to Audi's Hinwil chassis base. Investor-linked teams (AMD at Mercedes, GV/Google at McLaren) are named as warm paths but ruled out on crowding and price.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Oliver Cameron, Co-Founder & CEO; Jeff Hawke, Co-Founder & CTO; James Grieve, VP Engineering; Jessica Inman, VP GTM & Operations; no CMO or CFO listed | VERIFIED (search summary) | odyssey.ml |\n| $310M Series B at $1.45B, led by Natural Capital; Amazon, AMD Ventures, GV, EQT, IQT; 17 Jun 2026 | VERIFIED (company release) | Business Wire |\n| Total funding $337M | REPORTED | Crunchbase / TechCrunch |\n| NVentures backed the Series A, Feb 2026; ~$27M raised before the B | REPORTED | TechCrunch |\n| AWS preferred cloud provider; Trainium; Odyssey-2 Max, Odyssey-2 Pro (API), Starchild-1 | VERIFIED (company release) | Business Wire |\n| Founded 2023; Cameron (Voyage founder, Cruise VP product); Hawke (Wayve) | REPORTED | TechCrunch |\n| HQ Palo Alto; offices London and Zurich; ~50 staff | REPORTED (counts vary 46–55) | odyssey.ml careers, Built In |\n| Audi works entry 2026; Hinwil chassis, Neuburg power unit, Bicester tech centre; Revolut title (Jul 2025); Binotto CEO/TP | VERIFIED (search summary) | audi.com |\n| IndraMind at Alpine across engineering and simulation | VERIFIED (search summary) | media.alpinecars.com |\n| Grid occupancy (Audi roster; Red Bull Ansys/Siemens; Mercedes G42/AMD/Microsoft; McLaren Google Cloud/Groq/Dell; Williams Claude/Zoox; Cadillac TWG AI; Aston CoreWeave/ServiceNow/Cognizant; Ferrari HP/IBM; Haas TGR/Mphasis) | VERIFIED | sponsor table |\n| British, Dutch, Italian, US, Las Vegas GPs on the 2026 calendar | VERIFIED | calendar table (dates are not seeded; month placements are stated approximately) |\n\n## Screen-outs and things not claimed\n\n- **No motorsport tie found** for Cameron, Hawke, Grieve or Inman after checking; `leadership_ties` is empty.\n- **No revenue figure** is used: none is public.\n- **Deal size ($2–4M a year) is an ESTIMATE**, labelled as such.\n- **The MODE A workstream is a pilot, not a proven deployment**: no F1 team is known to run a generative world model in its simulator. The first risk row says so and the ask is a paid pilot.\n- **Score 70, not the thin scan's 72 or higher**: capacity is mid-tier (a $1.45B company with ~50 staff), brand fit is B2B and not yet a public name, and the ops fit is unproven in a race team.\n"
+}

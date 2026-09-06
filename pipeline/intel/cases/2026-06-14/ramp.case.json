@@ -1,0 +1,401 @@
+{
+ "run_date": "2026-06-14",
+ "signal_date": "2026-06-04",
+ "stem": "ramp",
+ "number": 191,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Ramp",
+  "signal_date": "2026-06-04",
+  "score": 83,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Eric Glyman",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+  "industry_meta": "Corporate Cards / Spend Management · Expense Software · New York",
+  "recommended_team": "Visa Cash App Racing Bulls",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$750M Series F at a $44B valuation, announced 4 June 2026; valued at $16B in June 2025",
+   "investors": "Led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw, Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors include Founders Fund, Thrive Capital, Coatue, Khosla Ventures and General Catalyst",
+   "revenue": "More than $1B in annualized revenue and free-cash-flow positive (company, 4 June 2026); run-rate revenue above $1.5B reported by Bloomberg",
+   "trigger": "$750M Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan, announced 4 June 2026",
+   "competitor_signal": "Airwallex, Workday and Mastercard sit on McLaren's roster; SAP at Mercedes; Revolut is Audi's title partner from 2026; Mobilize Financial Services at Alpine; MoneyGram at Haas",
+   "strategic_hook": "Ramp cards run on the Visa network (Ramp Visa Commercial Card, issued by Sutton Bank) and Visa is a Ramp customer; Billhop acquisition (13 Mar 2026) opens direct onboarding of UK- and EU-headquartered businesses from summer 2026",
+   "us_presence": "Headquartered in New York with offices in Miami and San Francisco; more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma",
+   "alumni_match": null,
+   "taxonomy_category": "C1",
+   "ops_fit_note": "MODE A: Ramp as the team's card and spend platform across 24 rounds; EU onboarding from summer 2026 makes a European team a launch reference",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 18,
+   "capacity": 19,
+   "brand_fit": 16,
+   "urgency": 14,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "glyman",
+    "co-founder & ceo",
+    "co-founder and ceo"
+   ],
+   "url": "https://ramp.com/authors/eric-glyman",
+   "excerpt": "Ramp author page (search summary; ramp.com is egress-blocked): Eric Glyman, Co-Founder and CEO of Ramp (styled Co-Founder & Co-CEO from July 2026). Ramp was founded in March 2019 by Eric Glyman, Karim Atiyeh and Gene Lee (Wikipedia).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$750m",
+    "$44b",
+    "iconiq",
+    "gic",
+    "ontario teachers",
+    "4 jun",
+    "series f",
+    "$1b",
+    "annualized",
+    "free-cash-flow",
+    "free cash flow",
+    "70,000",
+    "uber",
+    "shopify",
+    "anduril",
+    "figma",
+    "goldman",
+    "d.e. shaw",
+    "insight partners",
+    "founders fund",
+    "thrive",
+    "funding round"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$16b",
+    "$1.5b",
+    "run-rate",
+    "bloomberg",
+    "tripled",
+    "june 2025"
+   ],
+   "url": "https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/",
+   "excerpt": "TechCrunch, 4 June 2026: the $44B valuation nearly triples the $16B Ramp was valued at in June 2025; Bloomberg reports run-rate revenue now above $1.5B (reported, not company-stated).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "visa network",
+    "visa commercial card",
+    "sutton bank",
+    "run on the visa",
+    "visa card",
+    "on visa"
+   ],
+   "url": "https://support.ramp.com/hc/en-us/categories/360002060114-General",
+   "excerpt": "Ramp support centre and Bankrate review: the Ramp Visa Commercial Card is issued by Sutton Bank (and Celtic Bank), Members FDIC, pursuant to a license from Visa U.S.A. Inc., and runs on the Visa network.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "billhop",
+    "13 mar",
+    "london",
+    "stockholm",
+    "summer 2026",
+    "uk and eu",
+    "uk- and eu",
+    "european"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/ramp-acquires-billhop-to-expand-access-for-uk-and-european-customers-302712928.html",
+   "excerpt": "Ramp press release, 13 March 2026: Ramp acquired Billhop, a payments platform licensed in the UK and Sweden; Ramp opens its first international offices in London and Stockholm and will begin onboarding businesses headquartered in the UK and EU directly from summer 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "snow league",
+    "22 apr",
+    "crossfit",
+    "official exclusive corporate card",
+    "sports property",
+    "sport"
+   ],
+   "url": "https://thesnowleague.com/news/ramp-named-official-exclusive-corporate-card-and-preferred-fintech-partner/",
+   "excerpt": "The Snow League, 22 April 2026: Ramp named Official Exclusive Corporate Card and Preferred FinTech Partner in a multi-season agreement; Ramp powers the league's financial operations. CrossFit has also named Ramp its official corporate card (reported, The Barbell Spin; date not confirmed).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "atiyeh",
+    "petrie",
+    "charles",
+    "kennedy",
+    "co-ceo",
+    "27 jul",
+    "no chief marketing officer",
+    "no cmo",
+    "marketing"
+   ],
+   "url": "https://www.americanbanker.com/news/ramp-ceo-invites-co-founder-karim-atiyeh-to-share-top-job",
+   "excerpt": "American Banker (July 2026) and FinTech Futures (21 Jan 2025): Karim Atiyeh, Co-Founder and CTO, oversaw risk, operations and marketing and was named Co-CEO alongside Eric Glyman on 27 July 2026, after this brief's date; Rahul Sengottuvelu became CTO. Will Petrie was promoted to Chief Financial Officer and Geoff Charles to Chief Product Officer on 21 January 2025; Colin Kennedy is Chief Business Officer (joined from Stripe, April 2021). No chief marketing officer appears on any leadership listing found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "new york",
+    "miami and san francisco",
+    "2019",
+    "gene lee"
+   ],
+   "url": "https://en.wikipedia.org/wiki/Ramp_(company)",
+   "excerpt": "Wikipedia: Ramp Business Corporation, founded March 2019 by Eric Glyman, Karim Atiyeh and Gene Lee; headquartered in New York City with offices in Miami and San Francisco; corporate charge cards, expense management and bill-payment software.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "approached",
+    "human layer",
+    "do not re-pitch",
+    "already in conversation"
+   ],
+   "url": "data/approached.json",
+   "excerpt": "data/approached.json (updated 16 Jun 2026): Ramp — 'approached by human layer'; was the weekly DECISION GO on 14 Jun 2026 recommending Visa Cash App Racing Bulls; marked do not re-pitch cold.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "cash app",
+    "siemens",
+    "dynatrace",
+    "confluent",
+    "randstad",
+    "tudor",
+    "airwallex",
+    "workday",
+    "mastercard",
+    "sap",
+    "oracle",
+    "revolut",
+    "coinbase",
+    "circle",
+    "pepperstone",
+    "public",
+    "moneygram",
+    "mobilize",
+    "unicredit",
+    "vantage",
+    "kraken",
+    "stephens",
+    "spend management"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table and team profile: Visa Cash App Racing Bulls — Visa and Cash App (title-style), Randstad, Siemens, Dynatrace, Confluent, Tudor, Hugo, XM Trading and others; the team profile lists 'spend management (complements Visa, not conflicting)' as an open category. McLaren: Airwallex, Workday, Mastercard. Mercedes: SAP. Oracle Red Bull Racing: Oracle, Visa. Audi: Revolut (joined 2026). Aston Martin Aramco: Coinbase, Circle, Pepperstone, Public. Haas: MoneyGram. Alpine: Mobilize Financial Services. Ferrari: UniCredit, Vantage. Williams: Kraken, Stephens.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "miami",
+    "italian gp",
+    "british gp",
+    "monza"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: British GP in July, Italian GP in September, United States GP (Austin) in late October, Las Vegas GP in November; Miami GP in May.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Ramp",
+  "industry_meta": "Corporate Cards / Spend Management · Expense Software",
+  "hq": "New York (offices in Miami and San Francisco)",
+  "ticker": "Private ($44B; $750M Series F, Jun 2026)",
+  "deck": "Ramp, the New York corporate-card and spend-management platform, announced a $750M Series F at a $44B valuation on 4 June 2026, led by ICONIQ, GIC and Ontario Teachers', nearly tripling its $16B mark of a year ago. It has passed $1B in annualized revenue and is free-cash-flow positive.",
+  "score": 83,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Visa Cash App Racing Bulls",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 4 June 2026 Ramp announced a $750M primary Series F at a $44B valuation, led by ICONIQ, GIC and Ontario Teachers' Pension Plan, with Goldman Sachs Alternatives, D.E. Shaw, Morgan Stanley Investment Management and Insight Partners joining. The company says it has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 businesses, among them Visa, Uber, Shopify, Anduril and Figma; Bloomberg puts run-rate revenue above $1.5B. In March it bought Billhop to open London and Stockholm offices and onboard UK- and EU-headquartered businesses directly from summer 2026.",
+  "the_case_p2": "Ramp has started buying sport: in April it became Official Exclusive Corporate Card of The Snow League in a multi-season deal. Its cards run on the Visa network and Visa is a customer. Fintech is the fastest-growing category on the grid, but this lane is corporate cards and spend software, not consumer payments, and it belongs to no team. Note: the 1440 human layer has already approached Ramp; this brief refreshes that conversation.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 4 June and European onboarding opens this summer, so Ramp needs a European stage in the quarter it arrives. Teams close 2027 rosters in Q4; the Italian GP in September is the home race, and the United States GP (Austin) and Las Vegas GP follow.",
+  "why_team_label": "WHY VISA CASH APP RACING BULLS",
+  "why_team_para": "Racing Bulls is titled by Visa and Cash App, with Siemens, Dynatrace, Confluent and Randstad on the roster. Spend management is listed as an open category that complements Visa rather than conflicting with it. Ramp's cards are Visa cards, so the title partner gains a card programme on its own car, not a rival. The team's younger, digital audience matches the founder-led firms Ramp sells to, and an Italian team is the first European reference Ramp can name.",
+  "value_section": true,
+  "value_section_label": "VALUE TO VISA CASH APP RACING BULLS",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Ramp becomes the team's card and spend platform: corporate cards for travelling staff at 24 rounds, automated expense capture, vendor and bill payments and real-time spend controls that map to cost-cap reporting. With EU onboarding opening this summer, Racing Bulls is Ramp's European launch reference. In return: Official Corporate Card and Spend Management Partner, a Ramp-Visa card activation, sidepod placement and Austin and Las Vegas hospitality for Ramp's CFO audience.",
+  "deal_arch_para": "Entry as Official Corporate Card and Spend Management Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the European launch and a probable listing window. Estimated $4-7M a year, part in platform services. Scope: sidepod and helmet placement, a co-branded card activation with Visa, US-race hospitality, finance content.",
+  "decision_maker_name": "Eric Glyman",
+  "decision_maker_role": "Co-Founder & CEO, Ramp",
+  "decision_maker_bio": "Glyman co-founded Ramp in 2019 and fronts every raise; a first F1 deal is his call. Path: Karim Atiyeh, Co-Founder and CTO, who oversees risk, operations and marketing; Will Petrie, CFO since January 2025. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the Visa connection.",
+  "opening_angle_quote": "&ldquo;Eric, your cards are Visa cards and Visa's name is on the Racing Bulls. You open Europe this summer, the team is Italian, the spend lane is open. 25 minutes before Monza to see what a Ramp card on that car does?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "18",
+    "/ 20",
+    "Round closed 4 June; Europe opens this summer; Monza and Austin inside the window."
+   ],
+   [
+    "CAPACITY",
+    "19",
+    "/ 20",
+    "$750M raised at $44B; $1B+ annualized revenue; cash-flow positive."
+   ],
+   [
+    "BRAND FIT",
+    "16",
+    "/ 20",
+    "Founder-led fintech already buying sport; B2B audience."
+   ],
+   [
+    "URGENCY",
+    "14",
+    "/ 20",
+    "Listing talk and a European launch; no hard deadline beyond Q4."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: card and spend platform for a travelling team."
+   ]
+  ],
+  "risks": [
+   [
+    "ALREADY APPROACHED",
+    "The 1440 human layer has already approached Ramp on this recommendation; a cold re-pitch would look uncoordinated.",
+    "Use this brief as the refreshed dossier inside the live conversation, routed through whoever holds the relationship."
+   ],
+   [
+    "EUROPE NOT YET LIVE",
+    "Direct onboarding of EU-based businesses starts only in summer 2026, and Cash App's parent Block also sells to businesses.",
+    "Make the team the European launch customer; agree the category carve-out (corporate cards, spend software) with Visa and Cash App up front."
+   ]
+  ],
+  "bottom_line": "A $750M raise at $44B, $1B+ in annualized revenue and a Visa card programme give Ramp the budget and the warm path onto the Visa-titled Racing Bulls, where spend management is an open lane and Europe opens this summer. Already approached by the human layer: refresh, do not re-pitch.",
+  "signals": [
+   "funding_event",
+   "category_whitespace",
+   "partner_adjacency",
+   "already_approached"
+  ],
+  "footer_company": "RAMP",
+  "footer_date": "14 JUN 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 4 June 2026 Ramp announced a $750M primary Series F at a $44B valuation, led by ICONIQ, GIC and Ontario Teachers' Pension Plan, with Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital as new investors. The company states it has surpassed $1B in annualized revenue and is free-cash-flow positive; Bloomberg reports run-rate revenue above $1.5B."
+    },
+    {
+     "label": "Price nearly tripled in a year",
+     "text": "Ramp was valued at $16B in June 2025. A company re-priced to $44B in twelve months has a public-market story to build and a budget to build it with; the investor list (pension funds, sovereign wealth, crossover managers) is the roster of a company preparing for a listing."
+    },
+    {
+     "label": "Europe opens this summer",
+     "text": "Ramp acquired Billhop, a UK- and Sweden-licensed payments platform, on 13 March 2026, is opening its first international offices in London and Stockholm, and begins onboarding businesses headquartered in the UK and EU directly from summer 2026. A European team partner announced in the same quarter is the launch campaign."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Teams close their 2027 partner rosters in the fourth quarter. The Italian GP in September is Racing Bulls' home race; the United States GP (Austin) in late October and the Las Vegas GP in November are the US stages where Ramp's customers and investors sit. A deal agreed before Monza can be announced at home and activated in the US."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Racing Bulls carries Visa and Cash App as title partners, with Siemens, Dynatrace, Confluent, Randstad, Tudor and Hugo on the roster. The team profile lists spend management as an open category that complements Visa rather than conflicting with it. Official Corporate Card and Spend Management Partner is a clean designation."
+    },
+    {
+     "label": "The warm path",
+     "text": "Ramp's cards are Visa cards, issued by Sutton Bank under a Visa licence, and Visa itself is a Ramp customer. The introduction runs through the title partner, and the activation puts a Visa-network card programme on the Visa-titled car rather than a competing scheme."
+    },
+    {
+     "label": "A team that will use the product",
+     "text": "A travelling team of a few hundred people at 24 rounds generates the expense, procurement and vendor-payment load Ramp is built for, under a cost cap that rewards real-time spend control. The platform is consumed in the finance office, not just displayed on the sidepod."
+    },
+    {
+     "label": "Audience and geography",
+     "text": "Racing Bulls is the younger, digital-first team in the Red Bull family; Ramp sells to founder-led companies. The team is based in Italy, which makes it the first European customer reference Ramp can name as it opens London and Stockholm."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Ramp as the team's card and spend platform: physical and virtual corporate cards for travelling staff, automated receipt and expense capture in the garage, vendor onboarding and bill payment, procurement approvals and real-time spend dashboards that feed cost-cap reporting. Ramp's finance-automation and AI tools cut the month-end load on a small finance team."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Ramp brings 70,000 business customers and a CFO audience to Austin and Las Vegas hospitality, a co-branded card activation the title partner can promote, and a US fintech brand for the team's American races."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "The finance office behind a race team is an unusual, honest content vein: how a cost-capped team spends, approves and reports across 24 rounds, told through Ramp's product. Joint content with Visa on the card programme extends the reach."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Corporate Card and Spend Management Partner designation, sidepod and helmet placement, the Ramp-Visa card activation, hospitality at the Italian GP, United States GP and Las Vegas GP, and driver and team-principal access for Ramp's customer events."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "McLaren F1 Team",
+     "reason": "Airwallex, Workday and Mastercard hold the payments, finance-software and card-network lanes."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "SAP is on the roster; SAP Concur is the incumbent expense-management product."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle, whose NetSuite is a finance-system incumbent, is title partner; Visa is already present but the senior team is the crowded one."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "Revolut, whose business product includes expense management, is title partner from 2026."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "Coinbase, Circle, Pepperstone and Public make it the most fintech-crowded roster on the grid."
+    },
+    {
+     "team": "TGR Haas F1 Team · BWT Alpine F1 Team · Scuderia Ferrari HP",
+     "reason": "MoneyGram (Haas), Mobilize Financial Services (Alpine) and UniCredit and Vantage (Ferrari) occupy the payments and finance lanes."
+    },
+    {
+     "team": "Atlassian Williams Racing · Cadillac F1 Team",
+     "reason": "Open but not chosen: Kraken and Stephens sit near the lane at Williams; Cadillac has no Visa tie and no European base for the launch story."
+    }
+   ],
+   "ask": "Not a cold call: the 1440 human layer has already approached Ramp. Refresh the live conversation with Eric Glyman before the Italian GP: confirm the European launch timing, agree a category carve-out with Visa and Cash App, and size an Official Corporate Card and Spend Management Partner entry against the 2027 roster."
+  }
+ },
+ "note": "# Ramp → Visa Cash App Racing Bulls — verification log (N° 191, issued for 14 Jun 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (batch 13). Claude acted as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code.\n\n**Already approached.** `data/approached.json` records Ramp as approached by the 1440 human layer on the strength of the 14 Jun 2026 weekly DECISION GO (Racing Bulls). This case is built as the exemplar-standard refresh of that recommendation, not a new cold pitch: the deck's closing sentence, the first risk row, the bottom line and the app-page ask all say so.\n\n**Sandbox limitation, stated plainly:** ramp.com, prnewswire.com, gic.com.sg, morningstar.com and techcrunch.com are egress-blocked from the build sandbox. Every claim below was checked against the search summary of the primary page named as the evidence URL. Treat each VERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM.\n\n## The trigger, re-verified\n\nThe thin row's trigger (reported $750M at $44B, TechCrunch 4 Jun 2026) is confirmed by Ramp's own press release on PR Newswire the same day, mirrored by GIC's newsroom. Signal date 4 June (10 days before the row).\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Eric Glyman, Co-Founder & CEO (Co-CEO with Atiyeh from 27 Jul 2026, after this brief) | VERIFIED | ramp.com author page; American Banker Jul 2026 |\n| Karim Atiyeh Co-Founder & CTO overseeing risk, ops and marketing; Will Petrie CFO and Geoff Charles CPO (21 Jan 2025); Colin Kennedy CBO; no CMO listed | VERIFIED | FinTech Futures 21 Jan 2025; American Banker; ramp.com author pages |\n| $750M Series F at $44B, 4 Jun 2026; leads ICONIQ, GIC, OTPP; new and existing investors | VERIFIED | PR Newswire release; GIC newsroom mirror |\n| >$1B annualized revenue; FCF positive; >70,000 customers incl. Visa, Uber, Shopify, Anduril, Figma | VERIFIED | PR Newswire release |\n| Run-rate revenue >$1.5B | REPORTED | Bloomberg via TechCrunch |\n| $16B valuation Jun 2025 | REPORTED | TechCrunch 4 Jun 2026 |\n| Ramp Visa Commercial Card issued by Sutton Bank under Visa licence | VERIFIED | support.ramp.com; Bankrate |\n| Billhop acquisition 13 Mar 2026; London and Stockholm offices; UK/EU direct onboarding from summer 2026 | VERIFIED | PR Newswire release 13 Mar 2026; Bloomberg |\n| Snow League Official Exclusive Corporate Card, 22 Apr 2026 | VERIFIED | thesnowleague.com |\n| CrossFit official corporate card | REPORTED | The Barbell Spin (date unconfirmed; not used in the 2-page copy) |\n| HQ New York; offices Miami, San Francisco; founded Mar 2019 (Glyman, Atiyeh, Gene Lee) | REPORTED | Wikipedia |\n| Racing Bulls roster (Visa, Cash App, Siemens, Dynatrace, Confluent, Randstad, Tudor, Hugo); 'spend management' open category | VERIFIED | sponsor table + team profile (`seeds/`) |\n| Rival lanes: Airwallex/Workday/Mastercard (McLaren), SAP (Mercedes), Oracle+Visa (Red Bull), Revolut (Audi), Coinbase/Circle/Pepperstone/Public (Aston Martin), MoneyGram (Haas), Mobilize (Alpine), UniCredit/Vantage (Ferrari), Kraken/Stephens (Williams) | VERIFIED | sponsor table |\n| Italian GP (Sep), United States GP (Austin, late Oct), Las Vegas GP (Nov) in 2026 | VERIFIED | calendar table |\n\n## Judgement calls\n\n- **Team.** Racing Bulls holds after re-checking: the team profile names spend management as an open category that complements Visa; Ramp's cards are Visa cards; the team is Italian, which fits the summer-2026 European launch. Cadillac (US, open lane) is the fallback and is named in the ruled-out list.\n- **Cash App adjacency.** Cash App is consumer P2P, but its parent Block sells to businesses (Square). The brief asks for a category carve-out up front rather than assuming one.\n- **Europe.** MODE A depends on Ramp being able to serve an Italian entity; direct EU onboarding starts only in summer 2026 per Ramp's own release. Stated as the second risk, not hidden.\n- **Score 83, not 84.** Same capacity and timing as the exemplar; a point off OPS FIT because the European product is not yet live at the brief's date.\n- **Leadership ties:** none found for Glyman, Atiyeh, Petrie, Charles or Kennedy after checking; Ramp's sports deals (Snow League, CrossFit) are corporate, not personal.\n- **Deal size $4–7M a year is an ESTIMATE**, labelled as such.\n- **Post-date facts kept out of the 2-page copy:** the 27 Jul 2026 Co-CEO change and the Jul 2026 Canada launch (both after 14 Jun 2026) are noted on the app page and here only.\n"
+}

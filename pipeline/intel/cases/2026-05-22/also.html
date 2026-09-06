@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Also</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "ALSO · 22 MAY 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 214</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 214 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Also</h1>
+  <div class="classline">Electric Micromobility · Small EVs / Autonomous Delivery (Rivian spin-out) · Palo Alto (spun out of Rivian, March 2025) · Private ($1B; $200M Series C, Mar 2026)</div>
+
+  <div class="lede">Also, the small-EV company spun out of Rivian, closed a $200M Series C led by Greenoaks on 31 March 2026 with DoorDash as strategic investor, taking funding to $305M at a $1B valuation. Its president built Specialized's product line, and Specialized just took the bike lane at Audi.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">70</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Visa Cash App Racing Bulls</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Also spun out of Rivian in March 2025 with $105M from Rivian and Eclipse after three years inside the carmaker as Project Inder. Bloomberg reported Greenoaks' $200M at a $1B valuation in July 2025; the Series C was announced closed on 31 March 2026 with DoorDash joining alongside Prysm Capital, a multi-year agreement to build autonomous last-mile delivery vehicles, and DoorDash co-founder Stanley Tang as board observer. Total funding is $305M. The first product, the $4,500 TM-B e-bike revealed in October 2025, starts US deliveries this spring; about 350 staff work in Palo Alto, Seattle and Ghent.</p>
+<p>The category precedent landed this week: Specialized became Audi Revolut F1 Team's official bicycle and e-bike partner for 2026 and 2027, supplying the fleet the team rides for daily mobility, training and recovery. Chris Yu spent more than ten years at Specialized as chief product and technology officer before co-founding Also. The template exists, the man who built the incumbent's product now runs the challenger, and the challenger has a fresh $200M to spend.</p>
+  <h2>Why Now</h2>
+  <p>Specialized's Audi deal was announced on 21 May, the day before this brief, and makes e-bikes a live F1 category. Also's US deliveries begin this spring on a fresh $200M. Monaco GP (7 June) and the British GP (5 July) fall inside the window; the US GP and Las Vegas follow in the autumn.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$200M</div><div class="pfk">$200M Series C led by Greenoaks with DoorDash (strategic) and Prysm Capital, announced 31 March 2026; total…</div></div>
+    <div class="pf"><div class="pfv">$105M</div><div class="pfk">Greenoaks (lead); DoorDash; Prysm Capital; Rivian and Eclipse ($105M at the March 2025 spin-out)</div></div>
+    <div class="pf"><div class="pfv">$305M</div><div class="pfk">Total funding is $305M.</div></div>
+    <div class="pf"><div class="pfv">$4,500</div><div class="pfk">The first product, the $4,500 TM-B e-bike revealed in October 2025, starts US deliveries this spring;</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (sponsor table; 49 of 346 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Visa Cash App Racing Bulls<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Mercedes-AMG Petronas F1 Team</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Oracle Red Bull Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Scuderia Ferrari HP</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A $200M Series C with DoorDash aboard, a first product shipping this spring, and a president who built the product line of the brand that just took the e-bike lane at Audi give Also the budget, the motive and the template. Racing Bulls has the audience and the open slot, and Monaco sits inside the window.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">category precedent</span><span class="flag">spin off</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 214</span>
+  </div>
+
+  <h2>WHY VISA CASH APP RACING BULLS</h2>
+  <p>Racing Bulls carries Visa and Cash App at the front, with Yugo, Student.com, Airtasker and Hugo behind them: a roster built for a younger consumer audience, the buyer of a $4,500 design-led e-bike. No bicycle, e-bike or mobility partner sits on the team. Ford supplies the power unit from 2026, a supply agreement rather than a brand exclusivity, so a Rivian-born partner is a conversation, not a bar. It is the grid's natural first-timer stage: a team-partner price and 24 rounds of paddock use.</p>
+
+  <h2>VALUE TO VISA CASH APP RACING BULLS &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A - operational. The Specialized template, run by the team that built it: a TM-B fleet for track rides, paddock commutes and driver recovery sessions at every round, the removable battery doubling as a 240W power bank for trackside crews, and the cargo quad for paddock logistics once in production. In return: Official Mobility Partner designation, livery and kit presence, Monaco and Las Vegas hospitality, and the drivers on the bikes on camera.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official Mobility Partner. <b class="hl">THREE YEARS</b>, 2027-2029, spanning the TM-B ramp, the DoorDash delivery programme and a probable further raise. Estimated $1-2M a year plus product, with the fleet supplied in kind. Scope: rear-wing or halo placement, a team-liveried TM-B edition, Monaco and Las Vegas hospitality, driver content on the bikes.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Chris Yu</div>
+        <div class="role">Co-Founder &amp; President, Also · <span class="vtag">verified</span></div>
+        <div class="bio">Yu co-founded Also with RJ Scaringe after more than a decade at Specialized as chief product and technology officer and a spell as Rivian's VP of future programmes; he runs the company. Path: Ben Steele, Chief Commercial Officer (ex-REI); Scaringe chairs the board. No CEO or CMO title is listed.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the Specialized precedent.</div>      <div class="quote">“Chris, Specialized just took the bike lane at Audi with the product line you built. The challenger belongs on a car too, and Racing Bulls has the audience and the open slot. 25 minutes before Monaco to see the fleet plan?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Series C 31 Mar; Specialized precedent 21 May; Monaco in the window.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">$305M raised at $1B; first product still shipping; small fee.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">15 <span>/ 20</span></div>
+      <div class="why">Design-led consumer EV; Rivian halo; electrification story.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">US deliveries this spring; category clock started at Audi.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A: team mobility fleet on the Specialized template.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">PRE-REVENUE HARDWARE</span> &nbsp;<span class="rc">The TM-B has not yet shipped at scale; a consumer hardware company can slip its dates and cut marketing first. <b>Counter:</b> Structure year one as product-led (fleet in kind, modest fee) with cash stepping up as deliveries land.</span></div>
+  <div class="risk"><span class="rt">OEM SENSITIVITY</span> &nbsp;<span class="rc">Rivian holds a minority stake and chairs the board; Ford supplies the power unit from 2026. <b>Counter:</b> Position Also as the independent company it is; test the Ford and Rivian sensitivities on the first call.</span></div>
+
+  <h2>Sources <span class="panelnote">— 19 of 19 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also</li><li>https://techcrunch.com/2026/03/31/rivian-spinoff-also-will-build-autonomous-delivery-vehicles-for-doordash/</li><li>https://www.bikeradar.com/news/specialized-audi-f1-team-collaboration</li><li>https://www.geekwire.com/2026/rivian-spinout-also-lands-in-seattle-with-rei-vet-leading-micromobility-startups-new-office-and-retail-hub/</li><li>https://rivian.com/newsroom/article/rivian-spins-out-micromobility-business-into-new-startup-also-inc</li><li>https://techcrunch.com/2025/10/22/rivian-spinoff-also-reveals-a-high-end-modular-e-bike-for-4500/</li><li>https://ridealso.com/blogs/all/also-partners-with-doordash-to-accelerate-autonomous-delivery</li>  </ul>
+</div>
+</body>
+</html>

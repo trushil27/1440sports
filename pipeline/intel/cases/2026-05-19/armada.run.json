@@ -1,0 +1,681 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-05-19",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-r30fp1gj/2026-05-19/armada.pdf",
+     "web": "/tmp/case-pdf-r30fp1gj/2026-05-19/armada.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Armada",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 11
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 75,
+     "reason": "top ranking score",
+     "company": "Armada",
+     "decision": "selected",
+     "signal_date": "2026-05-19"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Armada",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 75,
+   "score_breakdown": {
+    "cap": null,
+    "base": 75,
+    "total": 75,
+    "timing": 17,
+    "ops_fit": 16,
+    "ranking": 75,
+    "urgency": 12,
+    "capacity": 15,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 75,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 75,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "TGR Haas F1 Team",
+   "source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+   "trigger_date": "2026-05-19",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 218,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-r30fp1gj/2026-05-19/armada.web.html",
+  "brief_data": {
+   "hq": "San Francisco (founded late 2022)",
+   "deck": "Armada, the San Francisco builder of ruggedised, satellite-connected data centres that run on oil fields, mines and Navy sites, closed an oversubscribed $230M Series B at a $2B pre-money valuation on 19 May 2026 and will build them at a new Arizona factory with Johnson Controls from this summer.",
+   "risks": [
+    {
+     "label": "SCALE OF SPEND",
+     "detail": "A $2B company with no marketing chief; a multi-million F1 fee competes with factory capital.",
+     "counter": "Size the entry at the Haas price point; structure part of it as equipment and managed services."
+    },
+    {
+     "label": "NETWORK LANE OVERLAP",
+     "detail": "Ruckus and CommScope hold connectivity at Haas; Armada manages Starlink terminals, which the team could read as the same lane.",
+     "counter": "Define the category as edge compute and satellite backhaul, and clear it with Haas before the first call."
+    }
+   ],
+   "score": 75,
+   "ticker": "Private ($2B pre-money; $230M Series B, May 2026)",
+   "company": "Armada",
+   "gridfit": [
+    {
+     "team": "TGR Haas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "us_manufacturing"
+   ],
+   "sources": [
+    "https://theorg.com/org/armada-2/org-chart/dan-wright",
+    "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+    "https://www.cadillacf1team.com/partners"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Dan Wright before the United States GP to confirm the category definition against the Ruckus and CommScope agreements, agree an Austin announcement window, and size an Official Edge Computing Partner entry against the Haas 2027 roster.",
+    "value": [
+     {
+      "text": "Every race weekend the team rebuilds a remote site: a garage full of compute for telemetry, video and strategy, in a car park in Baku or a paddock in Las Vegas. A ruggedised Galleon travelling in the freight, with Starlink backhaul managed by Armada's software, gives Haas a garage data centre that works before the circuit's fibre does, plus edge inference on the factory-to-track link, and a hot spare for the circuit connection when it fails.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Armada sells to energy, mining, defence and government buyers. Its guest list at Austin and Las Vegas is the industrial and public-sector audience that Haas's other B2B partners want in the suite, and a partner that can bring a Navy or Department of Transportation customer to the paddock changes the hospitality mix.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "The freight-to-pit-wall story is filmable: a data centre in a container, unloaded on Thursday, live by Friday. Co-produced engineering content with the team's trackside IT group, a reference customer for Armada's enterprise sales, and a factory story that runs from Arizona to the garage.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Edge Computing Partner designation, sidepod or halo placement, a Galleon branded in the garage, hospitality at Austin and Las Vegas, driver and engineering access for Armada's channels, and a case study the team's Official Digital Partner can co-sign.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 19 May 2026 Armada announced a $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M. The figures come from the company's own release and were carried by CNBC the same day.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Johnson Controls invested alongside an agreement to build Galleon Forge One, an up-to-400,000 sq ft Arizona factory with more than 500 jobs, in continuous production from summer 2026, initially building the megawatt-scale Leviathan. A company that has just committed to American manufacturing has a story it needs to tell to customers, policymakers and future public-market investors, and a race in Austin is where that audience gathers.",
+      "label": "A factory, not just a round"
+     },
+     {
+      "text": "The company reports 540% customer bookings growth from FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings; these are company figures, unaudited, and the brief treats them as such. Customers named in its own releases span oil and gas, mining, telecom, hospitality and government, including the U.S. Navy, Alaska's Department of Transportation, Targa Resources and Atlas Energy.",
+      "label": "Demand is the proof point"
+     },
+     {
+      "text": "The Miami GP has just run; the United States GP in Austin (October) and the Las Vegas GP (November) are the American rounds left in 2026, and teams settle their 2027 partner rosters in the fourth quarter. A deal agreed over the summer can be announced at Austin and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "The Haas roster is connectivity and services: Toyota Gazoo Racing as title partner, Haas Automation, MoneyGram, CommScope as Official Connectivity Partner (Feb 2025), Ruckus Networks as Official Networking Partner (Jan 2026), Mphasis as Official Digital Partner, UChicago Medicine and Infobip. No compute, cloud or data-centre partner is listed, so Official Edge Computing Partner is a clean category at the most accessible price on the grid.",
+      "label": "The open lane"
+     },
+     {
+      "text": "CommScope and Ruckus run the wired and wireless network in the garage, pit wall and hospitality. Armada's Galleon is the compute and the satellite backhaul that sit behind that network. The clash-check is a category definition, not a rival product, and it should be cleared with Haas before the first call.",
+      "label": "Complementary, not a clash"
+     },
+     {
+      "text": "Haas is the American-owned privateer of the grid, founded by a machine-tool manufacturer. Armada is building an Arizona factory with Johnson Controls to make AI infrastructure in the United States. The shared story, American industry that builds hard things, is one the team can tell in Austin and Las Vegas without stretching.",
+      "label": "Two American industrial brands"
+     },
+     {
+      "text": "A privateer with a lean budget gains most from equipment it would not otherwise buy. A garage data centre that works before the circuit's fibre is connected, and edge inference for the link between the factory and the track, is consumed on race weekends rather than displayed on the car.",
+      "label": "A team that will use the product"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Core Scientific is official data-centre partner (Mar 2026) and TWG AI is primary and exclusive AI partner; the natural American alternative is taken in this lane."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, holds the compute lane."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "Hewlett Packard Enterprise, AMD and Microsoft cover infrastructure, silicon and cloud."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and the cloud incumbent."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Dell Technologies, Google Cloud and Groq occupy hardware, cloud and inference compute."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "HP (title), IBM and DXC Technology cover compute hardware, cloud and IT services."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Microsoft holds the cloud lane."
+     },
+     {
+      "team": "Atlassian Williams Racing · Visa Cash App Racing Bulls · Audi Revolut F1 Team",
+      "reason": "Open in this lane but not chosen: none carries the American industrial story that pairs Armada's Arizona factory with the Haas identity; Williams (VAST, Claude) is data-native but British-led, Audi is German-led."
+     }
+    ]
+   },
+   "date_long": "19 MAY 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "TGR Haas F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $230M round at $2B pre-money, a factory in production this summer and a product that is literally a data centre for remote sites give Armada budget, story and a real garage workstream at once. The compute lane at the American privateer is open and two US races remain inside the window.",
+   "footer_date": "19 MAY 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round closed 19 May; Arizona production from summer; Austin and Las Vegas in window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "$230M raise at $2B pre-money; nearly $500M raised; marketing budget still modest.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "American-built AI infrastructure for hard places; industrial customer base.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "Rivals hold data-centre lanes at three teams; no hard deadline beyond Q4 rosters.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: a travelling garage data centre with satellite backhaul.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 19 May 2026 Armada announced a $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M. Johnson Controls invested alongside an agreement to build Galleon Forge One, an up-to-400,000 sq ft Arizona factory with more than 500 jobs, in continuous production from summer 2026. The company says customer bookings grew 540% from FY25 to FY26. Its Galleon and Leviathan units are self-contained, Starlink-connected data centres for places with no grid or fibre: oil fields, mines, ships and bases.",
+   "the_case_p2": "The grid has already bought the data-centre archetype: Core Scientific joined Cadillac as official data-centre partner in March 2026, CoreWeave sits at Aston Martin, Hewlett Packard Enterprise at Mercedes. None of them sells compute that travels. A Formula 1 garage is a temporary remote site rebuilt 24 times a year, which is the problem Armada was founded to solve, and Microsoft's M12 and Johnson Controls are investor names a team can put on a car.",
+   "track_label": "",
+   "brief_number": "218",
+   "claims_total": 16,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$230M oversubscribed Series B at a $2B pre-money valuation, announced 19 May 2026 in a company release and…",
+     "value": "$230M",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html"
+    },
+    {
+     "fact": "The company says customer bookings grew 540% from FY25 to FY26.",
+     "value": "540%",
+     "claim_id": 631,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Edge AI Infrastructure · Modular, Satellite-Connected Data Centres",
+   "value_content": "MODE A - operational. Each race weekend the team rebuilds a remote site: a garage of compute for telemetry, video and strategy, in a car park in Baku or a paddock in Las Vegas. A ruggedised Galleon in the freight, with Starlink backhaul managed by Armada's software, gives Haas a garage data centre that works before the circuit's fibre does, plus edge inference on the factory-to-track link. In return: Austin and Las Vegas hospitality for Armada's energy and government buyers.",
+   "value_section": true,
+   "why_team_para": "Haas is the American-owned privateer of the grid, built by a machine-tool manufacturer, and its technology roster is connectivity and services: CommScope as Official Connectivity Partner, Ruckus Networks for trackside networking, Mphasis for digital services. No compute, cloud or data-centre partner is listed. Armada's units plug in behind the network Ruckus already runs, so the fit is complementary: two American industrial brands, one Arizona factory, Austin as the launch stage.",
+   "deal_arch_para": "Entry as Official Edge Computing Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, across the Arizona ramp and a probable listing window. Estimated $2-4M a year, part-payable in equipment and managed services. Scope: sidepod or halo placement, a Galleon in the garage, US-race hospitality, engineering content built on the freight-to-pit-wall story.",
+   "footer_company": "ARMADA",
+   "why_team_label": "WHY TGR HAAS F1 TEAM",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 19 May and Galleon Forge One starts production this summer, so the brand story and the budget crest together. The United States GP in Austin (October) and the Las Vegas GP (November) are the American stages left in 2026, and teams settle 2027 partner rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Wright co-founded Armada in late 2022 after running DataRobot as CEO and AppDynamics as COO through its $3.7B sale to Cisco; he fronts every raise and the Johnson Controls deal. Path: Jon Runyan, Co-Founder and COO, ex-Okta general counsel. No chief marketing officer is listed.",
+   "decision_maker_name": "Dan Wright",
+   "decision_maker_role": "Co-Founder & CEO, Armada",
+   "opening_angle_intro": "Lead with the garage as a remote site.",
+   "opening_angle_quote": "&ldquo;Dan, you build data centres for places with no fibre and no grid. A Formula 1 garage is that place 24 times a year, and the American privateer has no compute partner. 25 minutes before Austin to price a Galleon in the freight?&rdquo;",
+   "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Dan Wright, Co-Founder & CEO at Armada",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://theorg.com/org/armada-2/org-chart/dan-wright",
+     "excerpt": "Armada leadership as listed by The Org and Wright's own LinkedIn: Dan Wright, Co-Founder and Chief Executive Officer; previously CEO of DataRobot and COO of AppDynamics.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Dan Wright, Co-Founder & CEO, Armada at Armada",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://theorg.com/org/armada-2/org-chart/dan-wright",
+     "excerpt": "Armada leadership as listed by The Org and Wright's own LinkedIn: Dan Wright, Co-Founder and Chief Executive Officer; previously CEO of DataRobot and COO of AppDynamics.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$230M oversubscribed Series B at a $2B pre-money valuation, announced 19 May 2026 in a company release and reported by CNBC; total funding nearly $500M",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Armada, the San Francisco builder of ruggedised, satellite-connected data centres that run on oil fields, mines and Navy sites, closed an oversubscribed $230M Series B at a $2B pre-money valuation on 19 May 2026 and will build them at a new Arizona factory with Johnson Controls from this summer.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Series B co-led by Overmatch, BlackRock and 8090 Industries; Johnson Controls invested alongside the Galleon Forge One agreement; earlier backers include M12 (Microsoft's venture fund), Founders Fund, Lux Capital, Shield Capital and Felicis",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 19 May 2026 Armada announced a $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$230M Series B at a $2B pre-money valuation plus a Johnson Controls agreement for Galleon Forge One, an up-to-400,000 sq ft Arizona factory, announced 19 May 2026",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The company says customer bookings grew 540% from FY25 to FY26.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Core Scientific is Cadillac F1 Team's official data-centre partner (Mar 2026); CoreWeave is Aston Martin Aramco's Official AI Cloud Computing Partner; Hewlett Packard Enterprise sits on the Mercedes roster; the Haas roster carries connectivity and services partners only",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.cadillacf1team.com/partners",
+     "excerpt": "Cadillac Formula 1 Team partners page and coverage, 10 Mar 2026: Core Scientific is the team's official data-centre partner, advising on the high-density computing infrastructure at its Indiana headquarters for simulation, engineering, manufacturing and race operations; TWG AI is primary and exclusive AI partner. Aston Martin Aramco, 22 May 2025: CoreWeave joins as Official AI Cloud Computing Partner (astonmartinf1.com). Mercedes-AMG Petronas roster: Hewlett Packard Enterprise (sponsor table).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $230M round at $2B pre-money, a factory in production this summer and a product that is literally a data centre for remote sites give Armada budget, story and a real garage workstream at once.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Galleon and Leviathan are ruggedised, Starlink-connected modular data centres built for sites with no grid or fibre; Galleon Forge One starts continuous production in summer 2026; the company reports 540% bookings growth FY25 to FY26",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Hewlett Packard Enterprise at Mercedes.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Hewlett Packard Enterprise → Mercedes-AMG Petronas F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ San Francisco; Seattle-area hub of about 120 people (GeekWire, 2026); Arizona factory from summer 2026; US customers named by the company include the US Navy, Alaska's Department of Transportation, Targa Resources and Atlas Energy",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The company reports 540% customer bookings growth from FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-to-accelerate-deployment-of-the-us-ai-stack-and-support-explosive-customer-demand--302775720.html",
+     "excerpt": "Armada company release (PR Newswire 302775720) and CNBC, 19 May 2026: $230M oversubscribed Series B at a $2B pre-money valuation, co-led by Overmatch, BlackRock and 8090 Industries, taking total funding to nearly $500M; agreement with new investor Johnson Controls for Galleon Forge One, an up-to-400,000 sq ft Arizona factory creating more than 500 jobs, in continuous production from summer 2026 and initially building the Leviathan megawatt-scale modular AI data centre; the company states 540% customer bookings growth FY25 to FY26 and a 2,000% year-on-year rise in Q1 FY27 bookings (company figures, unaudited). Quote from Dan Wright, Co-Founder and CEO: 'At Galleon Forge One, we will do what America does best: build the industrial base to win.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Miami GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 6: Miami GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

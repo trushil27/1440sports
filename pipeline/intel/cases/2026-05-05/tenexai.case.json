@@ -1,0 +1,389 @@
+{
+ "run_date": "2026-05-05",
+ "signal_date": "2026-03-31",
+ "stem": "tenexai",
+ "number": 228,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "TENEX.AI",
+  "signal_date": "2026-03-31",
+  "score": 71,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Eric Foster",
+  "role": "Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://tenex.ai/news/series-b/",
+  "industry_meta": "Cybersecurity · AI-native Managed Detection & Response · Sarasota FL",
+  "recommended_team": "Cadillac F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round and president appointment",
+  "key_facts": {
+   "funding": "$250M Series B led by Crosspoint Capital Partners with Shield Capital and DeepWork Capital, announced 31 Mar 2026; valuation above $1B (Bloomberg, reported)",
+   "investors": "Crosspoint Capital Partners (lead, Series A and B), Andreessen Horowitz, Shield Capital, DeepWork Capital, Florida Opportunity Fund",
+   "revenue": "$25M contracted revenue within a year of launch (company statement in the 31 Mar 2026 Series B release)",
+   "trigger": "$250M Series B at a reported valuation above $1B, and former Charles Schwab CISO Bashar Abouseido appointed President, both announced 31 Mar 2026",
+   "competitor_signal": "CrowdStrike at Mercedes, Keeper at Williams, Bitdefender at Ferrari, Okta at McLaren, Cato Networks at Alpine, NinjaOne at Audi, and Red Bull's 1Password; SentinelOne has left Aston Martin; Cadillac, Haas and Racing Bulls carry no cybersecurity partner",
+   "strategic_hook": "318% year-on-year growth and first place on IT-Harvest's 2026 Cyber 150; the round funds 250-plus hires in 2026, expansion into EMEA and deeper Google Cloud SecOps and Microsoft Sentinel integrations",
+   "us_presence": "World headquarters in Sarasota, Florida; around 100 staff, targeting about 300 by end-2026 (Business Observer, reported)",
+   "alumni_match": null,
+   "taxonomy_category": "C2",
+   "ops_fit_note": "MODE A: AI-native 24/7 security operations for a debut team standing up IT across Silverstone, Charlotte and Fishers",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 15,
+   "capacity": 13,
+   "brand_fit": 13,
+   "urgency": 14,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 7,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "eric foster"
+   ],
+   "url": "https://tenex.ai/meet-the-tenexers/",
+   "excerpt": "TENEX.AI leadership page (search summary; tenex.ai egress-blocked): Eric Foster, Founder and CEO — three-time CISO, early RiskIQ employee, former President of Stairwell. Also listed: Bashar Abouseido (President), Ryan Shreve (Co-Founder, CFO/COO), Venkata Koppaka (CTO).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$250m",
+    "crosspoint",
+    "shield capital",
+    "deepwork",
+    "31 mar",
+    "31 march",
+    "series b",
+    "$1b",
+    "318%",
+    "250 hires",
+    "250-plus",
+    "emea",
+    "europe, the middle east",
+    "funding round",
+    "cyber 150",
+    "google cloud secops",
+    "microsoft sentinel",
+    "$25m",
+    "contracted revenue",
+    "first customer contract"
+   ],
+   "url": "https://tenex.ai/news/series-b/",
+   "excerpt": "TENEX.AI press release, 31 Mar 2026: $250M Series B led by Crosspoint Capital Partners with participation from Shield Capital and DeepWork Capital, less than a year after launch, with $25M of contracted revenue; 318% year-over-year growth and #1 on IT-Harvest's 2026 Cyber 150; funds 250-plus hires in 2026 (engineers, sales, SOC analysts), expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. Bloomberg (31 Mar 2026, 'Google Partner Tenex Raises $250 Million for AI Security Tools') puts the valuation at more than $1 billion — reported, not in the company release. Business Observer (15 May 2026): first customer contract landed March 2025.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "abouseido",
+    "president",
+    "schwab"
+   ],
+   "url": "https://tenex.ai/bashar-abouseido-president-press-release/",
+   "excerpt": "TENEX.AI press release, 31 Mar 2026: Bashar Abouseido appointed President; previously Senior Vice President and Chief Information Security Officer at Charles Schwab (led security for the TD Ameritrade integration), earlier security leadership at Thomson Reuters and Rockwell Automation.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$27m",
+    "series a",
+    "andreessen",
+    "a16z",
+    "florida opportunity fund",
+    "september 2025"
+   ],
+   "url": "https://tenex.ai/news/tenex-seriesa/",
+   "excerpt": "TENEX.AI: $27M Series A led by Crosspoint Capital Partners with Andreessen Horowitz and Shield Capital, plus DeepWork Capital and the Florida Opportunity Fund; Business Observer covered the raise on 11 Sep 2025 and its May 2026 profile dates it to September 2025. Company reported more than $10M revenue in its first six months and multiple Fortune 500 customers.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "sarasota",
+    "florida",
+    "100 staff",
+    "about 300",
+    "world headquarters",
+    "around 100"
+   ],
+   "url": "https://www.businessobserverfl.com/news/2026/may/15/entrepreneur-eric-foster/",
+   "excerpt": "Business Observer, 15 May 2026 (search summary; site egress-blocked): Sarasota-based TENEX.AI posted $25M contracted revenue in the year after its first contract (March 2025); raised $250M in March 2026 and $27M in September 2025; around 100 employees, hiring about 200 more by year-end to reach roughly 300. World HQ in Sarasota, FL per the company's Florida Opportunity Fund release.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "shreve",
+    "cfo",
+    "coo",
+    "richard rogers",
+    "cmo",
+    "chief marketing officer",
+    "4 june",
+    "4 jun",
+    "jacqueline kelly"
+   ],
+   "url": "https://tenex.ai/news/tenex-ai-appoints-richard-rogers-as-chief-marketing-officer-to-accelerate-global-growth/",
+   "excerpt": "TENEX.AI, 4 Jun 2026: Richard Rogers appointed Chief Marketing Officer (previously CMO at ExtraHop) — after this row's date; before it, Jacqueline Kelly is listed as VP of Marketing and no CMO was named. Ryan Shreve is Co-Founder and CFO/COO (LinkedIn; Crunchbase lists CFO).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "fortune 500",
+    "global 2000",
+    "fortune 200"
+   ],
+   "url": "https://tenex.ai/about-us/",
+   "excerpt": "TENEX.AI about page and Series A release: customers across the Fortune 200, Fortune 500 and Global 2000, high-growth fintech and the largest US residential solar company.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "zscaler",
+    "25 jun",
+    "global cybersecurity partner"
+   ],
+   "url": "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-and-zscaler-redefine-speed-and-security",
+   "excerpt": "Aston Martin Aramco F1 Team, 25 Jun 2026: multi-year partnership naming Zscaler Global Cybersecurity Partner (Zero Trust Exchange securing car design, race strategy and track-to-AMRTC data). After this row's date; closes the Aston Martin lane.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "silverstone",
+    "fishers",
+    "charlotte",
+    "warren"
+   ],
+   "url": "https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/jan/0119-f1.html",
+   "excerpt": "GM News, 19 Jan 2026: the Cadillac Formula 1 Team designs and builds its cars at a Silverstone facility while the Fishers, Indiana campus is under construction; US bases at Fishers, Concord/Charlotte (North Carolina) and Warren, Michigan; the 2026 car is coordinated from Silverstone (Motorsport.com).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "crowdstrike",
+    "keeper",
+    "bitdefender",
+    "1password",
+    "okta",
+    "cisco",
+    "rubrik",
+    "cato networks",
+    "ninjaone",
+    "extreme networks",
+    "sentinelone",
+    "ifs",
+    "core scientific",
+    "twg ai",
+    "mphasis",
+    "dynatrace",
+    "no cybersecurity partner",
+    "no security partner",
+    "entirely inaugural"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Mercedes — CrowdStrike; Williams — Keeper; Ferrari — Bitdefender; Red Bull — 1Password; McLaren — Cisco, Splunk, Okta, Rubrik (joined); Alpine — Cato Networks (joined 2026); Audi — NinjaOne (joined), Extreme Networks; Aston Martin — SentinelOne departed; Racing Bulls — Dynatrace (observability); Haas — Mphasis (services). Cadillac's 2026 roster is entirely inaugural (TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli, Alpinestars, TWG Motorsports, GM) with no cybersecurity partner; team profile lists cybersecurity as an open category.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "miami",
+    "austin",
+    "las vegas",
+    "united states"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: Miami GP (round 6, run 3 May 2026), United States GP (Austin, round 19, late October), Las Vegas GP (round 22, November).",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "TENEX.AI",
+  "industry_meta": "Cybersecurity · AI-native Managed Detection & Response",
+  "hq": "Sarasota, Florida",
+  "ticker": "Private (>$1B reported; $250M Series B, Mar 2026)",
+  "deck": "TENEX.AI, the Sarasota-based AI-native security operations firm, closed a $250M Series B led by Crosspoint Capital Partners on 31 March 2026 at a valuation Bloomberg put above $1B, a year after its first customer contract, and named former Charles Schwab CISO Bashar Abouseido President the same day.",
+  "score": 71,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Cadillac F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 31 March 2026 TENEX.AI announced a $250M Series B led by Crosspoint Capital Partners, with Shield Capital and DeepWork Capital, at a valuation Bloomberg reported above $1B. The company stated $25M of contracted revenue within a year of launch and 318% year-on-year growth, first on IT-Harvest's 2026 Cyber 150. The capital funds 250-plus hires in 2026, expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. The same day it named former Charles Schwab CISO Bashar Abouseido President. <font name='Poppins-Bold' size='9.5'>A UNICORN BUILDING A GLOBAL BRAND FROM FLORIDA.</font>",
+  "the_case_p2": "Cybersecurity is the most contested technology lane in Formula 1: CrowdStrike at Mercedes, Keeper at Williams, Bitdefender at Ferrari, Red Bull's 1Password, Okta at McLaren, Cato Networks at Alpine and NinjaOne at Audi, with the SentinelOne seat at Aston Martin newly vacated. Managed detection and response is a different product: a round-the-clock security operations service. That leaves Haas, Racing Bulls and Cadillac as open seats, one of them starting from nothing.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series B closed on 31 March; a brand budget sized for 250-plus hires and an EMEA launch is being set this quarter. Cadillac settles its second-season partner roster between the summer break and the United States GP in Austin, so an approach in May lands before the 2027 inventory is priced.",
+  "why_team_label": "WHY CADILLAC F1 TEAM",
+  "why_team_para": "Cadillac has no cybersecurity partner and no legacy security stack: its 2026 roster is entirely inaugural, IFS runs the operations software, Core Scientific the data centre and TWG AI the models, and the seat for the service that watches over all of it is open. A debut American team, run from Silverstone while Fishers and Charlotte come online, is standing up its security operation now, exactly when an AI-native SOC is bought. TENEX.AI's Fortune 500 buyers are the audience in the Austin and Las Vegas suites.",
+  "value_section": true,
+  "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. A race team's attack surface is its data: design files at Silverstone, telemetry from every circuit, supplier links into GM. TENEX.AI would run the team's security operations centre: AI agents triaging every alert, human analysts governing response, cover across US and UK time zones, an incident-response retainer for race weekends, and integration with the Google or Microsoft security tooling the team standardises on. On camera: the pit-wall data it protects.",
+  "deal_arch_para": "Entry as Official Cybersecurity Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the move into Fishers and a possible listing window. Estimated $2-4M a year, part in service value. Scope: sidepod or halo placement, naming of the team's security operations centre, Miami, Austin and Las Vegas hospitality for CISO customers, a co-authored case study on securing a team from day one.",
+  "decision_maker_name": "Eric Foster",
+  "decision_maker_role": "Founder & CEO, TENEX.AI",
+  "decision_maker_bio": "Foster founded TENEX.AI after three CISO tours and a presidency at Stairwell; he fronts every raise. Path: Bashar Abouseido, President since 31 March 2026; Ryan Shreve, Co-Founder, CFO and COO. No CMO was listed at this date; Richard Rogers joined as CMO on 4 June 2026.",
+  "opening_angle_intro": "Lead with the greenfield roster.",
+  "opening_angle_quote": "&ldquo;Eric, Cadillac is building a Formula 1 team's IT from nothing and has no security partner; CrowdStrike and Keeper took their seats years ago. A debut team's SOC is a story only one company gets to tell. 25 minutes?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "15",
+    "/ 20",
+    "Round closed 31 Mar; Miami just passed."
+   ],
+   [
+    "CAPACITY",
+    "13",
+    "/ 20",
+    "$250M raised; $25M contracted revenue is thin."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "B2B security brand; US debut-team story."
+   ],
+   [
+    "URGENCY",
+    "14",
+    "/ 20",
+    "250 hires, EMEA launch; no hard deadline."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: SOC for a greenfield team."
+   ]
+  ],
+  "risks": [
+   [
+    "SCALE VERSUS DEAL SIZE",
+    "$25M of contracted revenue makes a mid-tier F1 fee a large share of the business.",
+    "Take part of the fee in service value and stage cash against the 2027 roster."
+   ],
+   [
+    "VALUATION IS REPORTED",
+    "The above-$1B valuation is Bloomberg's, absent from the company release.",
+    "Anchor on the $250M round and $25M contracted revenue, both company-stated; confirm on the call."
+   ]
+  ],
+  "bottom_line": "A $250M Series B at a reported $1B-plus valuation, a president hired from Charles Schwab and a 250-hire, EMEA-bound growth plan put TENEX.AI at the moment a brand platform gets funded. Cadillac's debut roster has no security partner, and the SOC it needs is the product TENEX.AI sells.",
+  "signals": [
+   "funding_event",
+   "executive_hire",
+   "open_category"
+  ],
+  "footer_company": "TENEX.AI",
+  "footer_date": "5 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 31 March 2026 TENEX.AI announced a $250M Series B led by Crosspoint Capital Partners, with Shield Capital and DeepWork Capital, and the same day appointed former Charles Schwab CISO Bashar Abouseido as President. Bloomberg reported the valuation at more than $1B; that figure is press-reported, not in the company release, and the brief says so."
+    },
+    {
+     "label": "A year-one business at unicorn scale",
+     "text": "The company states $25M of contracted revenue within a year of launch, 318% year-on-year growth and first place on IT-Harvest's 2026 Cyber 150. Its first customer contract landed in March 2025. A business that young does not yet have a brand; the round is what pays for one."
+    },
+    {
+     "label": "Budget is being allocated now",
+     "text": "The stated uses of the $250M are 250-plus hires in 2026 across engineering, sales and SOC analysts, expansion into Europe, the Middle East and Africa, and deeper Google Cloud SecOps and Microsoft Sentinel integrations. An EMEA launch by a Florida company is the classic moment a global brand platform gets bought."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The Miami GP ran on 3 May 2026, two days before this row; the remaining US rounds are the United States GP in Austin in late October and the Las Vegas GP in November. Cadillac settles its 2027 partner roster between the summer break and Austin, so a first conversation in May sits ahead of the inventory being priced."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Cadillac's 2026 roster is entirely inaugural: TWG AI, Claro, Core Scientific, IFS, Jim Beam, Tenneco, Tommy Hilfiger, Pirelli, Alpinestars and TWG Motorsports, with General Motors as parent. IFS runs operations software, Core Scientific the data centre and TWG AI the models. There is no cybersecurity partner, and the team profile lists cybersecurity as an open category."
+    },
+    {
+     "label": "A team standing up its security from nothing",
+     "text": "Cadillac is designing and building its cars at Silverstone while its Fishers, Indiana campus is under construction, with US bases in Charlotte and Warren. A team building its IT estate across two countries in year one is choosing its security operations model now, and a managed 24/7 SOC is the product built for a team that has no security team of its own yet."
+    },
+    {
+     "label": "An American story for an American team",
+     "text": "TENEX.AI is headquartered in Sarasota, Florida, funded in part by the Florida Opportunity Fund, and sells to Fortune 500 and Global 2000 buyers. Cadillac is the American flag-bearer on the grid; a US security unicorn protecting the US debut team is a story both sides can sell at home."
+    },
+    {
+     "label": "Why not the other open seats",
+     "text": "Haas and Racing Bulls also carry no cybersecurity partner. Haas has Mphasis providing data, analytics and security services, which crowds the lane, and Racing Bulls' roster is built for a younger consumer audience. Cadillac offers the cleanest category, the strongest US-market fit and the greenfield workstream."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "A race team's most valuable assets are data: car design files, race strategy, real-time telemetry between the track and the factory, and supplier links into GM. TENEX.AI would run the team's security operations centre: AI agents triaging and investigating every alert in under a minute, human analysts governing every response, continuous cover across US and UK time zones, and an incident-response retainer for race weekends."
+    },
+    {
+     "label": "Fit with the stack Cadillac already chose",
+     "text": "TENEX.AI's service is built on Google Cloud SecOps and integrates with Microsoft Sentinel. Whichever security tooling Cadillac standardises on, the managed layer sits on top rather than replacing it, which keeps the partnership out of the way of the IFS and Core Scientific relationships."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "TENEX.AI sells to CISOs at Fortune 500 and Global 2000 companies. That guest list, hosted at Miami, Austin and Las Vegas, is the enterprise audience Cadillac's B2B partners want in the suite, and a security reference at the newest team on the grid is a sales asset for TENEX.AI's EMEA launch."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Cybersecurity Partner designation, sidepod or halo placement, naming of the team's security operations centre, hospitality at the three US rounds, and a co-authored case study on securing a Formula 1 team from day one, which is content no established team can offer."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "CrowdStrike holds the cybersecurity lane."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Keeper holds identity and access security."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "Bitdefender is the security partner."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "1Password occupies the security lane."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Cisco, Splunk, Okta and Rubrik cover security, identity, observability and data resilience."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Cato Networks joined the roster for 2026."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "NinjaOne and Extreme Networks crowd the IT-security lane."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "SentinelOne's seat was vacant on this row's date, but the team named Zscaler Global Cybersecurity Partner on 25 June 2026, so the lane is now closed."
+    },
+    {
+     "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+     "reason": "Open but not chosen: Mphasis provides security services at Haas, and Racing Bulls' roster targets a younger consumer audience."
+    }
+   ],
+   "ask": "A 25-minute call with Eric Foster to confirm the valuation on the record, walk through Cadillac's security operating model, and size an Official Cybersecurity Partner entry against the team's 2027 roster before the summer break."
+  }
+ },
+ "note": "# TENEX.AI → Cadillac F1 Team — verification log (N° 228, row dated 5 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost for the desk row dated 5 May 2026 (batch 21). Claude acted as researcher, verifier and writer; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code via `intel.session_case`.\n\n**Sandbox limitation, stated plainly:** direct fetches of tenex.ai, businessobserverfl.com, scworld.com and theorg.com were blocked by the egress proxy. Every claim below was checked against the search summary of the primary page named as the evidence URL (company press releases on tenex.ai, Bloomberg's 31 Mar 2026 report, the Business Observer's March and May 2026 coverage). Treat each VERIFIED line as REPORTED until a person opens the link; confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger\n\nThe thin row's trigger holds: the $250M Series B and the Abouseido appointment were both announced by the company on **31 Mar 2026**, 35 days before the row's date — inside the 90-day window. The thin row's source (tech-insider.org) is an aggregator; the primary source is the company release `tenex.ai/news/series-b/`, with Bloomberg (31 Mar 2026) as the credible secondary. The **valuation above $1B is Bloomberg's figure** and is not in the company release; the brief labels it reported every time.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Eric Foster, Founder & CEO | VERIFIED (search summary) | tenex.ai leadership page; Crunchbase |\n| $250M Series B led by Crosspoint, with Shield Capital and DeepWork Capital, 31 Mar 2026 | VERIFIED (search summary) | tenex.ai/news/series-b; Wilson Sonsini deal note |\n| Valuation above $1B | REPORTED | Bloomberg, 31 Mar 2026; SC Media |\n| $25M contracted revenue within a year of launch; first contract March 2025 | VERIFIED (company statement) | Series B release; Business Observer 15 May 2026 |\n| 318% YoY growth; #1 on IT-Harvest 2026 Cyber 150 | VERIFIED (company statement) | Series B release; tenex.ai Cyber 150 post |\n| Use of funds: 250-plus hires in 2026, EMEA expansion, Google Cloud SecOps + Microsoft Sentinel | VERIFIED (company statement) | Series B release |\n| Bashar Abouseido President, ex-SVP & CISO Charles Schwab | VERIFIED (search summary) | tenex.ai press release 31 Mar 2026 |\n| $27M Series A (Crosspoint lead; a16z, Shield Capital; DeepWork, Florida Opportunity Fund) | VERIFIED (search summary) | tenex.ai Series A release; Business Observer 11 Sep 2025 |\n| Series A month | REPORTED | Business Observer dates it to September 2025; one aggregator summary said 27 Oct 2025 — the brief does not use a month |\n| World HQ Sarasota, FL; ~100 staff, ~300 targeted by end-2026 | REPORTED | Business Observer 15 May 2026; tenex.ai Florida HQ release |\n| Ryan Shreve, Co-Founder, CFO/COO | REPORTED | LinkedIn / Crunchbase (CFO) |\n| No CMO at the row date; Richard Rogers CMO from 4 Jun 2026; Jacqueline Kelly VP Marketing | VERIFIED (search summary) | tenex.ai CMO release, 4 Jun 2026 |\n| Cadillac roster entirely inaugural; no cybersecurity partner; cyber rivals at Mercedes, Williams, Ferrari, Red Bull, McLaren, Alpine, Audi; SentinelOne departed Aston Martin | VERIFIED | sponsor table (`seeds/sponsors.json`), team profile |\n| Zscaler named Aston Martin's Global Cybersecurity Partner, 25 Jun 2026 | VERIFIED (search summary) | astonmartinf1.com; GlobeNewswire |\n| Cadillac run from Silverstone while Fishers is built; Charlotte and Warren bases | VERIFIED (search summary) | GM News 19 Jan 2026; Motorsport.com |\n| Miami GP 3 May 2026; Austin late Oct; Las Vegas Nov | VERIFIED | calendar table + formula1.com results page |\n\n## Post-row-date facts (used only where labelled)\n\n- Richard Rogers named CMO on 4 Jun 2026 — noted in the decision path so the MD calls the right person now.\n- Aston Martin named Zscaler Global Cybersecurity Partner on 25 Jun 2026 — used only to rule Aston Martin out on the app page.\n- 27 May 2026: TENEX.AI named a launch partner for Google AI Threat Defense; 17 Jun 2026: an NFL team as a client (Business Observer). Not used in the brief.\n- Business Observer's 15 May 2026 profile is headlined on an IPO ambition; treated as reporting, not a company statement, and not used in the score.\n\n## Screen-outs and things not claimed\n\n- **Leadership ties: none found.** Foster (three-time CISO; RiskIQ; Stairwell), Abouseido (Schwab, Thomson Reuters, Rockwell), Shreve, Rogers (ExtraHop) — no F1/FE or sponsorship-deal history surfaced. One profile summary lists cars and motorsport among Foster's hobbies; unverified and not used.\n- **Score is un-inflated.** The thin row's 89 is not supported: $25M contracted revenue is thin for a mid-tier F1 fee (capacity 13), the brand is B2B security with no consumer pull (brand fit 13), and there is no hard external deadline (urgency 14). 71 is a HOT signal on the strength of the open lane and the real workstream, not on capacity.\n- **Deal size ($2-4M a year) is an ESTIMATE**, labelled as such.\n- **A podcast claim of $43M ARR in year one** was found but contradicts the company's own $25M contracted-revenue statement; not used.\n"
+}

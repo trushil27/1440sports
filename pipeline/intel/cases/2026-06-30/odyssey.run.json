@@ -1,0 +1,715 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-06-30",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-wc_qfcbs/2026-06-30/odyssey.pdf",
+     "web": "/tmp/case-pdf-wc_qfcbs/2026-06-30/odyssey.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Odyssey",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "resurfaced: Odyssey last surfaced 2026-06-30 (other:never entered funding event category whitespace); new trigger funding_round; top ranking score",
+     "company": "Odyssey",
+     "decision": "selected",
+     "signal_date": "2026-06-17"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Odyssey",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "resurfaced: Odyssey last surfaced 2026-06-30 (other:never entered funding event category whitespace); new trigger funding_round; top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 16,
+    "ops_fit": 14,
+    "ranking": 70,
+    "urgency": 13,
+    "capacity": 14,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Audi Revolut F1 Team",
+   "source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "trigger_date": "2026-06-17",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 175,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-wc_qfcbs/2026-06-30/odyssey.web.html",
+  "brief_data": {
+   "hq": "Palo Alto, California (offices in London and Zurich)",
+   "deck": "Odyssey, the Palo Alto world-model lab founded by the Voyage and Wayve autonomy veterans, closed a $310M Series B at a $1.45B valuation on 17 June 2026, led by Natural Capital with Amazon, AMD Ventures, GV, EQT and IQT, and named AWS its preferred cloud provider.",
+   "risks": [
+    {
+     "label": "UNPROVEN IN A RACE TEAM",
+     "detail": "No F1 team has used a generative world model in its simulator; Audi's engineers may see a research tool, not a product.",
+     "counter": "Frame year one as a paid pilot with named deliverables; the partnership badge follows a working track environment."
+    },
+    {
+     "label": "SMALL TEAM, BIG ROUND",
+     "detail": "About fifty people run a $1.45B company; a sponsorship can outrun the bandwidth to activate it.",
+     "counter": "Keep the scope narrow: one workstream, one hospitality calendar, model access in kind."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private ($310M Series B at $1.45B, Jun 2026)",
+   "company": "Odyssey",
+   "gridfit": [
+    {
+     "team": "Audi Revolut F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "never_entered"
+   ],
+   "sources": [
+    "https://odyssey.ml/about",
+    "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+    "https://odyssey.ml/careers"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Oliver Cameron before the Italian GP to scope a paid simulation pilot with Audi's Hinwil group, agree what a 2027 Official World Simulation Partner entry would cost, and confirm who at Odyssey owns partnerships after the round.",
+    "value": [
+     {
+      "text": "World models that learn physics from video can generate interactive track environments: new or resurfaced circuits for the driver-in-the-loop simulator before a laser scan exists, wet, dusk and night conditions on demand, and synthetic onboard footage to train the team's own vision analytics. Audi's Hinwil simulation group trials the API under engineering supervision; the deliverable is a working environment, not a demo.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner backed by Amazon, AMD and GV brings enterprise and robotics buyers, and their investors, into the Audi suite at Monza, Austin and Las Vegas, the audience Audi's technology partners want to meet.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "The simulator as a story: co-produced engineering content on how a new team builds a track it has never raced, a Formula 1 reference customer for Odyssey's enterprise sales, and an AWS-compute-to-Hinwil narrative the team can carry to its own partners.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official World Simulation Partner designation, sidepod or halo placement, naming of the simulation programme, Hinwil engineering content, driver and engineering access for Odyssey's channels, and hospitality at Monza, Austin and Las Vegas.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 17 June 2026 Odyssey announced a $310M Series B at a $1.45B valuation, led by Natural Capital with Amazon, AMD Ventures, GV, EQT and IQT participating, and named AWS its preferred cloud provider. The release is the company's own (Business Wire) and TechCrunch, SiliconANGLE and HPCwire carried it the same day; total funding is $337M per Crunchbase.",
+      "label": "Trigger"
+     },
+     {
+      "text": "NVentures backed the Series A in February 2026; four months later the Series B priced the company at $1.45B. A lab that has re-priced that fast has a story to tell to enterprise buyers, robotics customers and the public markets, and the budget to tell it.",
+      "label": "Two rounds in four months"
+     },
+     {
+      "text": "Odyssey-2 Max is a physics-accurate general world simulator; Starchild-1 runs in real time across modalities; Odyssey-2 Pro ships through an API. These are simulation products sold to robotics and long-horizon-simulation customers, which is the language a Formula 1 vehicle-dynamics group already speaks.",
+      "label": "The product is a simulator"
+     },
+     {
+      "text": "The Dutch and Italian GPs fall inside the six-to-ten-week window after the row's date, with the US GP in Austin and the Las Vegas GP later in the year for the American audience. Teams close 2027 partner rosters in the fourth quarter; a pilot agreed before Monza can be announced in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Audi's 2026 roster was built from nothing: Revolut as title partner, Extreme Networks, JigSpace, ElevenLabs and NinjaOne on the technology side, bp/Castrol, adidas and the rest. No partner covers vehicle-dynamics, driver-in-the-loop or world simulation, a lane the sponsor table shows almost no team has branded. Additive Industries and Hewlett Packard Enterprise left within the last twelve months, so engineering slots are being re-let.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Odyssey keeps an office in Zurich; Audi's chassis operation is in Hinwil, in the same canton. A partner whose engineers can be at the simulator in an afternoon is worth more to a new works team than one flying in from California.",
+      "label": "Zurich to Hinwil"
+     },
+     {
+      "text": "Audi's first Formula 1 season is also the first season of a new regulation set, with a Neuburg-built power unit and a Hinwil chassis. Simulation is where a new entrant closes the experience gap, and a technical partner that helps do it earns a story the team will tell on camera.",
+      "label": "A team learning a new car"
+     },
+     {
+      "text": "AMD's presence at Mercedes and GV's link to Google Cloud at McLaren would give Odyssey a warm path, but both rosters already carry AI and cloud incumbents, and both are priced at the top of the grid. Audi offers the open lane at a price a $310M company can carry.",
+      "label": "Why not the investor-linked teams"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "IndraMind joined for 2026 across trackside engineering, simulation and performance analysis; Microsoft holds cloud and data. The thin row's hint, but the lane is taken."
+     },
+     {
+      "team": "Oracle Red Bull Racing · Visa Cash App Racing Bulls",
+      "reason": "Ansys and Siemens are the simulation incumbents at Red Bull; Siemens sits at Racing Bulls too."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "AMD is an investor-linked partner, but G42, Microsoft (joined 2026) and AMD already crowd the AI and compute lane at a top-tier price."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Google Cloud, Groq and Dell occupy cloud, AI inference and hardware."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Claude is Official Thinking Partner and Zoox, an Amazon company, is on the roster; the AI lane is spoken for."
+     },
+     {
+      "team": "Cadillac F1 Team · Aston Martin Aramco F1 Team",
+      "reason": "TWG AI at Cadillac; CoreWeave, ServiceNow and Cognizant at Aston Martin."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "HP (title) and IBM cover compute and AI services."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Toyota Gazoo Racing supplies the team's simulation and development programme; Mphasis covers data and AI services."
+     }
+    ]
+   },
+   "date_long": "30 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Audi Revolut F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A $310M round at $1.45B backed by Amazon, AMD and GV, an AWS compute deal, and a Zurich office beside Formula 1's newest works team put Odyssey at peak authority to sign a first sports partnership. The world-simulation lane at Audi is open, and the pilot is real engineering work.",
+   "footer_date": "30 JUN 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Round closed 17 Jun; summer shutdown sits inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 14,
+     "note": "$310M raise at $1.45B: mid-tier; a team of about fifty.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "Autonomy-born simulation lab; B2B, not yet a public name.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Go-to-market push after AWS deal; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 14,
+     "note": "MODE A pilot in simulation; unproven in a race team.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Odyssey announced on 17 June a $310M Series B at a $1.45B valuation, led by Natural Capital with Amazon, AMD Ventures, GV, EQT and IQT participating; total funding stands at $337M (Crunchbase). NVentures had backed the Series A only in February. Founded in 2023 by Oliver Cameron, who founded Voyage and ran product at Cruise, and Jeff Hawke, formerly of Wayve, the company ships physics-accurate world models, Odyssey-2 Max and the real-time Starchild-1, through an API. AWS becomes its preferred cloud provider, with Trainium chips in the mix.",
+   "the_case_p2": "A world model is a simulator that learns physics from video and runs in real time. That is a tool for a race team's simulation group, not a chatbot, and it arrives in the year the grid has to learn a new car from scratch. Odyssey has a Zurich office on Hinwil's doorstep, a founding team fluent in vehicles, and a fresh $310M that will be spent on being known to enterprise buyers.",
+   "track_label": "",
+   "brief_number": "175",
+   "claims_total": 15,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$310M Series B at a $1.45B valuation led by Natural Capital, announced 17 Jun 2026 (Business Wire release;…",
+     "value": "$310M",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation"
+    },
+    {
+     "fact": "Natural Capital (lead); Amazon, AMD Ventures, GV, EQT, IQT; NVentures backed the Series A in February 2026;…",
+     "value": "$337M",
+     "claim_id": 622,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation"
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Physical AI · World Models / Real-Time Simulation",
+   "value_content": "MODE A - operational. Real-time, physics-accurate world models generate interactive track environments from video: new or resurfaced circuits for the driver-in-the-loop simulator before a laser scan exists, wet and low-light conditions on demand, synthetic footage to train the team's vision analytics. Audi's Hinwil simulation group trials the API under engineering supervision; Odyssey gets a named Formula 1 engineering reference for its enterprise sales.",
+   "value_section": true,
+   "why_team_para": "Audi enters Formula 1 in 2026 as a works team, chassis in Hinwil and power unit in Neuburg, with Revolut as title partner and a roster built from scratch: Extreme Networks, JigSpace, ElevenLabs and NinjaOne on the technology side. Nothing covers vehicle-dynamics or world simulation, a lane almost no team has branded. Additive Industries and Hewlett Packard Enterprise left within twelve months, so engineering slots are being re-let. A Zurich office suits a Hinwil team.",
+   "deal_arch_para": "Entry as Official World Simulation Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning Audi's first regulation cycle. Estimated $2-4M a year, part-payable in model access and compute. Scope: sidepod or halo placement, naming of the simulation programme, Hinwil engineering content, hospitality at Monza, Austin and Las Vegas.",
+   "footer_company": "ODYSSEY",
+   "why_team_label": "WHY AUDI REVOLUT F1 TEAM",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 17 June; a lab that has just taken $310M from Amazon, AMD and GV spends the next two quarters becoming visible to buyers. Audi's first season is the one moment a new technical partner gets an origin story, and 2027 rosters close in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Cameron founded Voyage, sold it to Cruise and ran product there; he fronts every Odyssey raise, and a first sports partnership is his call. Path: Jessica Inman, VP of GTM & Operations (commercial), and Jeff Hawke, Co-Founder & CTO (technical counterpart). No chief marketing officer or CFO is listed.",
+   "decision_maker_name": "Oliver Cameron",
+   "decision_maker_role": "Co-Founder & CEO, Odyssey",
+   "opening_angle_intro": "Lead with the simulator, not the logo.",
+   "opening_angle_quote": "&ldquo;Oliver, your models learn physics from video and run in real time; Audi's Hinwil simulation group still builds its worlds by hand. You have a Zurich office and a fresh $310M to be seen with. 25 minutes before Monza to walk through a pilot?&rdquo;",
+   "value_section_label": "VALUE TO AUDI REVOLUT F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Oliver Cameron, Co-Founder & CEO at Odyssey",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://odyssey.ml/about",
+     "excerpt": "Odyssey's own pages name the leadership: Oliver Cameron, Co-Founder & CEO; Jeff Hawke, Co-Founder & CTO; James Grieve, VP of Engineering; Jessica Inman, VP of GTM & Operations. No chief marketing officer and no CFO are listed anywhere.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Oliver Cameron, Co-Founder & CEO, Odyssey at Odyssey",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://odyssey.ml/about",
+     "excerpt": "Odyssey's own pages name the leadership: Oliver Cameron, Co-Founder & CEO; Jeff Hawke, Co-Founder & CTO; James Grieve, VP of Engineering; Jessica Inman, VP of GTM & Operations. No chief marketing officer and no CFO are listed anywhere.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$310M Series B at a $1.45B valuation led by Natural Capital, announced 17 Jun 2026 (Business Wire release; TechCrunch)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Odyssey, the Palo Alto world-model lab founded by the Voyage and Wayve autonomy veterans, closed a $310M Series B at a $1.45B valuation on 17 June 2026, led by Natural Capital with Amazon, AMD Ventures, GV, EQT and IQT, and named AWS its preferred cloud provider.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Natural Capital (lead); Amazon, AMD Ventures, GV, EQT, IQT; NVentures backed the Series A in February 2026; total funding $337M (Crunchbase)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Odyssey announced on 17 June a $310M Series B at a $1.45B valuation, led by Natural Capital with Amazon, AMD Ventures, GV, EQT and IQT participating;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$310M Series B at $1.45B on 17 Jun 2026; AWS named Odyssey's preferred cloud provider in the same announcement",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "total funding stands at $337M (Crunchbase).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Red Bull carries Ansys and Siemens in engineering simulation; IndraMind joined Alpine for 2026 across trackside engineering and simulation; Claude sits at Williams and TWG AI at Cadillac",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "TWG AI → Cadillac F1 Team (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Odyssey has a Zurich office on Hinwil's doorstep, a founding team fluent in vehicles, and a fresh $310M that will be spent on being known to enterprise buyers.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Odyssey has a Zurich office on the doorstep of Audi's Hinwil chassis base; Audi's first F1 season has a roster built from scratch with no simulation partner",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://odyssey.ml/careers",
+     "excerpt": "Odyssey careers page: offices in Palo Alto (headquarters), London and Zurich; a team of roughly fifty in June 2026 (reported counts range from 46 to 55), scaling toward 100+.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "a lab that has just taken $310M from Amazon, AMD and GV spends the next two quarters becoming visible to buyers.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Palo Alto, California; offices in London and Zurich",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://odyssey.ml/careers",
+     "excerpt": "Odyssey careers page: offices in Palo Alto (headquarters), London and Zurich; a team of roughly fifty in June 2026 (reported counts range from 46 to 55), scaling toward 100+.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $310M round at $1.45B backed by Amazon, AMD and GV, an AWS compute deal, and a Zurich office beside Formula 1's newest works team put Odyssey at peak authority to sign a first sports partnership.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 17 June 2026 Odyssey announced a $310M Series B at a $1.45B valuation, led by Natural Capital with Amazon, AMD Ventures, GV, EQT and IQT participating, and named AWS its preferred cloud provider.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "total funding is $337M per Crunchbase.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "four months later the Series B priced the company at $1.45B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Audi offers the open lane at a price a $310M company can carry.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-%24310-Million-to-Accelerate-World-Simulation",
+     "excerpt": "Business Wire, 17 Jun 2026 (company release): Odyssey raised a $310 million Series B at a $1.45 billion valuation led by Natural Capital, with participation from Amazon, AMD Ventures, GV, EQT, IQT and others; existing backers include Jeff Dean, Elad Gil, Kyle Vogt, Garry Tan, Qasar Younis and Guillermo Rauch. TechCrunch and Crunchbase News (same day) put total funding at $337 million.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Italian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 15: Italian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

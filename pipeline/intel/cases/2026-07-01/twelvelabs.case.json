@@ -1,0 +1,403 @@
+{
+ "run_date": "2026-07-01",
+ "signal_date": "2026-07-01",
+ "stem": "twelvelabs",
+ "number": 172,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "TwelveLabs",
+  "signal_date": "2026-07-01",
+  "score": 71,
+  "tier": "WARM",
+  "track": 1,
+  "person": "Jae Lee",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+  "industry_meta": "Video AI · Video Understanding Models / Media Technology · San Francisco & Seoul",
+  "recommended_team": "Visa Cash App Racing Bulls",
+  "recommended_series": "F1",
+  "timing_label": "WARM",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$100M Series B co-led by NEA and NAVER Ventures, announced 1 Jul 2026 (company release, GlobeNewswire); total funding roughly $150M",
+   "investors": "NEA and NAVER Ventures (co-leads); Amazon (strategic); Radical Ventures, Korea Investment Partners, Index Ventures; new investors Quadrille Capital and Red Bull Ventures",
+   "revenue": "",
+   "trigger": "$100M Series B, announced 1 Jul 2026",
+   "competitor_signal": "No F1 team carries a video-intelligence partner in the sponsor table; nearest incumbents are cloud and data platforms (Oracle at Red Bull, Dynatrace and Confluent at Racing Bulls, Microsoft at Mercedes and Alpine, Google Cloud at McLaren)",
+   "strategic_hook": "Red Bull Ventures, the group's corporate venture arm, joined the round and calls TwelveLabs its most prominent investment; Amazon made AWS the preferred cloud in a multi-year Trainium commitment; NFL Media and Maple Leaf Sports & Entertainment already use the models on game footage",
+   "us_presence": "HQ San Francisco with Seoul; new offices planned in New York and London",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: searchable video archive (onboard, garage, broadcast) for the content team and the Creator Platform, and the same search for engineering review; no video-AI partner on the Racing Bulls roster",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 13,
+   "brand_fit": 14,
+   "urgency": 11,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 6,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 4
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "jae lee"
+   ],
+   "url": "https://theorg.com/org/twelve-labs/org-chart/jae-lee",
+   "excerpt": "The Org / World Economic Forum profile: Jae Lee, Co-Founder & CEO of TwelveLabs; UC Berkeley computer-science graduate; previously lead data scientist at Korea's Ministry of National Defense. Company founded in 2021 by Jae Lee, Aiden Lee, Dave Chung and Sungjun Kim.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$100m",
+    "series b",
+    "nea",
+    "naver",
+    "red bull ventures",
+    "amazon",
+    "$150m",
+    "trainium",
+    "new york",
+    "london",
+    "1 jul",
+    "funding round",
+    "quadrille",
+    "radical ventures"
+   ],
+   "url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+   "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "nfl media",
+    "maple leaf",
+    "mlse",
+    "marengo",
+    "pegasus",
+    "exact moments",
+    "game footage",
+    "searchable"
+   ],
+   "url": "https://www.twelvelabs.io/solutions/sports-and-broadcasting",
+   "excerpt": "TwelveLabs sports and broadcasting page and AWS case study (search summaries): Marengo, a multimodal embedding model that makes every moment in a video findable by what is in it; Pegasus, a video-language model that generates summaries and structured metadata. NFL Media's Senior Director of Media Management says it is essential to access exact moments in games to package content for fans; Maple Leaf Sports & Entertainment uses Marengo to make game footage searchable by text queries such as a player getting emotional after a win.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "yoon kim",
+    "president",
+    "chief strategy",
+    "sk telecom",
+    "siri",
+    "soyoung",
+    "head of business development",
+    "no chief marketing",
+    "chief marketing officer",
+    "cmo",
+    "december 2024"
+   ],
+   "url": "https://www.twelvelabs.io/blog/twelve-labs-secures-30-million-in-funding-validating-the-importance-of-twelve-labs-video-understanding-technology-to-the-ai-ecosystem",
+   "excerpt": "TwelveLabs, Dec 2024 (search summary; The Org): Yoon Kim hired as President and Chief Strategy Officer, previously Partner at Saehan Ventures, CTO of SK Telecom and leader of Apple's Siri speech teams after the Novauris acquisition; splits time between San Francisco and Seoul. Leadership listings show Aiden Lee (CTO & Co-Founder), Soyoung Lee (Co-Founder, Head of Business Development) and Dave Chung (Co-Founder, APAC go-to-market). No chief marketing officer is listed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$30m",
+    "databricks",
+    "snowflake",
+    "in-q-tel",
+    "hubspot"
+   ],
+   "url": "https://www.twelvelabs.io/blog/twelve-labs-secures-30-million-in-funding-validating-the-importance-of-twelve-labs-video-understanding-technology-to-the-ai-ecosystem",
+   "excerpt": "TwelveLabs, Dec 2024: $30M strategic funding from Databricks, SK Telecom, Snowflake Ventures, HubSpot Ventures and In-Q-Tel.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "san francisco",
+    "seoul",
+    "2021",
+    "berkeley",
+    "ministry of national defense",
+    "aiden lee"
+   ],
+   "url": "https://www.weforum.org/people/jae-lee/",
+   "excerpt": "World Economic Forum / Craft profiles: TwelveLabs is headquartered in the San Francisco Bay Area with an APAC office in Seoul; founded 2021; Jae Lee holds a UC Berkeley computer-science degree and was lead data scientist at Korea's Ministry of National Defense; Aiden Lee is CTO and co-founder, based in Seoul.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "€200m",
+    "nai-tseng chen",
+    "fuschl",
+    "corporate venture",
+    "most prominent investment",
+    "launched in 2025",
+    "sabrina jones"
+   ],
+   "url": "https://www.trendingtopics.eu/red-bull-ventures-investments/",
+   "excerpt": "Trending Topics (Austria), 2026, and Global Venturing: Red Bull Ventures is the corporate venture arm of Red Bull GmbH, based in Fuschl am See, launched in 2025 with a €200 million target fund, led by Nai-Tseng Chen (Red Bull's Global Head of Corporate Finance, at the company since 2003) and Sabrina Jones; its most prominent investment is the US-Korean video AI company Twelve Labs. Investment focus includes media and entertainment technologies and sports.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "60 per cent",
+    "creator platform",
+    "peter bayer",
+    "sector",
+    "graffiti",
+    "monitoring report"
+   ],
+   "url": "https://sector.world/2026/07/inside-the-creator-platform-how-vcarb-opened-f1s-doors-to-gen-z/",
+   "excerpt": "Sector, Jul 2026 (search summary): Racing Bulls CEO Peter Bayer says the team's content was rated excellent by 60 per cent of fans in F1's most recent monitoring report, clear of the chasing pack; the Creator Platform, two years in the building, gives young fans real work inside the team (a graffiti artist on the São Paulo garage, fan DJs at team parties, an emerging designer inside HUGO's design operation), with thousands of applicants per call.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "lindblad",
+    "lawson",
+    "4 million",
+    "2.3 million",
+    "instagram",
+    "tiktok",
+    "youngest"
+   ],
+   "url": "https://www.motorsport.com/f1/news/arvid-lindblad-opens-up-on-liam-lawson-relationship-at-racing-bulls/10846808/",
+   "excerpt": "Motorsport.com, Aug 2026 (search summary): Liam Lawson and rookie Arvid Lindblad are Racing Bulls' 2026 pairing and appear together in the team's social videos; the team has four million Instagram followers and 2.3 million on TikTok, one of the sport's strongest online followings. Formula1.com: Lindblad scored points on debut with P8.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "agentforce",
+    "salesforce",
+    "neural concept"
+   ],
+   "url": "https://www.salesforce.com/news/press-releases/2026/06/22/vcarb-salesforce-partnership-announcement/",
+   "excerpt": "Salesforce, 22 Jun 2026: Racing Bulls deploys Agentforce 360 and Slack for fan engagement, hospitality and team operations (the Salesforce Intelligence Centre on garage screens). Neural Concept (Jun 2025) supplies engineering AI for design. Neither is a video or media-technology product; neither appears in the desk's sponsor-table snapshot for the team.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "dynatrace",
+    "confluent",
+    "oracle",
+    "visa",
+    "cash app",
+    "hugo",
+    "tudor",
+    "microsoft",
+    "google cloud",
+    "claude",
+    "twg ai",
+    "coreweave",
+    "meta ai",
+    "title",
+    "randstad",
+    "siemens"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md, data/teams.json): Visa Cash App Racing Bulls — Visa, Cash App, Randstad, Siemens, Hugo, Tudor, Dynatrace (observability), Confluent (data streaming), RebelDot, Airtasker, Roboze and others; no video, media-technology or AI partner. Oracle Red Bull Racing: Oracle title (cloud and AI). Mercedes and Alpine: Microsoft; Mercedes also Meta AI. McLaren: Google Cloud. Williams: Claude. Cadillac: TWG AI. Aston Martin: CoreWeave. No team carries a video-intelligence partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "united states gp",
+    "us gp",
+    "italian gp",
+    "belgian gp",
+    "dutch gp",
+    "hungarian gp",
+    "miami"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: Belgian GP (17-19 Jul), Hungarian GP (24-26 Jul), Dutch GP (21-23 Aug), Italian GP (4-6 Sep), US GP at Austin (23-25 Oct), Las Vegas GP (19-21 Nov); dates from formula1.com.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "TwelveLabs",
+  "industry_meta": "Video AI · Video Understanding Models / Media Technology",
+  "hq": "San Francisco & Seoul (founded 2021)",
+  "ticker": "Private (~$150M raised; $100M Series B, Jul 2026)",
+  "deck": "TwelveLabs, the San Francisco and Seoul video-understanding company whose models let broadcasters search footage by what happens in it, closed a $100M Series B on 1 July 2026 co-led by NEA and NAVER Ventures, with Amazon as strategic investor and Red Bull Ventures joining the cap table.",
+  "score": 71,
+  "timing_label": "WARM",
+  "series_label": "F1",
+  "team_label": "Visa Cash App Racing Bulls",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "TwelveLabs announced on 1 July 2026 a $100M Series B co-led by NEA and NAVER Ventures, with Amazon, Radical Ventures, Korea Investment Partners, Index Ventures, Quadrille Capital and Red Bull Ventures, taking total funding to roughly $150M. Amazon made AWS its preferred cloud in a multi-year commitment built on Trainium chips. The money opens offices in New York and London alongside San Francisco and Seoul. Its Marengo and Pegasus models already serve NFL Media and Maple Leaf Sports & Entertainment, which use them to find exact moments in game footage and package content faster.",
+  "the_case_p2": "Red Bull Ventures, the group's corporate venture arm launched in 2025 with a €200M fund and led by Nai-Tseng Chen, Red Bull's Global Head of Corporate Finance, calls TwelveLabs its most prominent investment. That is a structural introduction to both Red Bull teams, not a sponsorship. The grid's nearest incumbents are cloud and data platforms, which TwelveLabs runs on rather than against, so the category is a new line on a roster, not a displacement.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 1 July, and the New York and London offices it funds are a brand programme in the two cities where sports media buys technology. Teams set 2027 rosters in the fourth quarter; the United States GP (Austin, October) and Las Vegas GP (November) are the US stages.",
+  "why_team_label": "WHY VISA CASH APP RACING BULLS",
+  "why_team_para": "Racing Bulls is the grid's content team: CEO Peter Bayer told Sector that 60 per cent of fans rated its content excellent in F1's latest monitoring report, clear of the field, and its Creator Platform puts young fans to work inside the team. The technology roster is data and observability, Dynatrace and Confluent, with no video-AI partner. Red Bull Ventures already holds TwelveLabs equity, so the introduction exists, and the entry price fits a company that has raised $150M.",
+  "value_section": true,
+  "value_section_label": "VALUE TO VISA CASH APP RACING BULLS",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. Every session produces hours of onboard, garage and broadcast video nobody can search. TwelveLabs indexes it: the content team finds Lindblad's debut points or every Lawson pit stop from one camera in seconds, cuts clips while the session runs, and hands the Creator Platform tagged footage. Engineers get the same search over pit-stop and incident video. In return: a named partnership, livery presence, Austin and Las Vegas hospitality.",
+  "deal_arch_para": "Entry as Official Video Intelligence Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the New York and London build-out and the next raise. Estimated $1.5-2.5M a year, part-payable in platform usage. Scope: nose or endplate placement, naming of the video-search environment, Creator Platform integration, US hospitality.",
+  "decision_maker_name": "Jae Lee",
+  "decision_maker_role": "Co-Founder & CEO, TwelveLabs",
+  "decision_maker_bio": "Lee co-founded TwelveLabs in 2021 after data-science work at Korea's Ministry of National Defense and a UC Berkeley degree; he fronts every raise. Path: Yoon Kim, President and Chief Strategy Officer since December 2024 (ex-SK Telecom CTO, Apple Siri), and co-founder Soyoung Lee, Head of Business Development. No CMO is listed.",
+  "opening_angle_intro": "Lead with the Red Bull Ventures link.",
+  "opening_angle_quote": "&ldquo;Jae, Red Bull Ventures backed you a month ago, and its racing teams sit on the most valuable video archive in sport nobody can search. Racing Bulls has no video partner. 25 minutes before Austin to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round closed 1 Jul; Austin and Las Vegas inside the year."
+   ],
+   [
+    "CAPACITY",
+    "13",
+    "/ 20",
+    "$100M Series B; ~$150M raised in total: entry-tier budget."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Sports-media customer base; Red Bull Ventures on the cap table."
+   ],
+   [
+    "URGENCY",
+    "11",
+    "/ 20",
+    "Office expansion and the next raise; no hard deadline."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: searchable video archive for content and engineering."
+   ]
+  ],
+  "risks": [
+   [
+    "CAPACITY",
+    "Roughly $150M raised in total; a multi-year sponsorship competes with the New York and London office spend just announced.",
+    "Size it at the entry tier, part-paid in platform usage, with the Red Bull group as reference customer."
+   ],
+   [
+    "INVESTOR, NOT PARTNER",
+    "Red Bull Ventures is a minority participant; nothing obliges the racing teams to buy or brand the product.",
+    "Use the introduction, then win the deal on a paid pilot with the content team first."
+   ]
+  ],
+  "bottom_line": "A $100M Series B, Amazon as preferred cloud and Red Bull Ventures on the cap table give TwelveLabs a fresh budget and a structural path into the Red Bull teams. The video-intelligence lane at Racing Bulls is open and the product would be used every race weekend.",
+  "signals": [
+   "funding_event",
+   "investor_adjacency",
+   "operational_fit"
+  ],
+  "footer_company": "TWELVELABS",
+  "footer_date": "1 JUL 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 1 July 2026 TwelveLabs announced a $100M Series B co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures. Total funding is roughly $150M. This is a company release, so the figures are confirmed."
+    },
+    {
+     "label": "Amazon as preferred cloud",
+     "text": "Amazon used the round to make AWS the company's preferred cloud in a multi-year commitment: inference optimised on Trainium chips, new models launching on AWS first. A hyperscaler betting on a video model is the signal that the product has crossed from research into production media workflows."
+    },
+    {
+     "label": "Offices in the two sports-media capitals",
+     "text": "The company is opening offices in New York and London alongside San Francisco and Seoul, and expanding in Los Angeles. Those are the cities where leagues, broadcasters and rights-holders buy technology, and a racing team's content operation is the reference customer that sells to all of them."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Teams close 2027 partner rosters in the fourth quarter. The United States GP in Austin (October) and the Las Vegas GP (November) are the two US stages on which a San Francisco company would announce, with the Belgian, Hungarian, Dutch and Italian GPs inside the working window for a paid pilot."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Racing Bulls' technology roster is Dynatrace (observability), Confluent (data streaming), Siemens and Randstad, joined in June 2026 by a Salesforce Agentforce deployment for fan engagement and hospitality. Nothing on the roster indexes, searches or understands video. Official Video Intelligence Partner is a new line, not a displacement, and Racing Bulls partnerships are priced below the front of the grid."
+    },
+    {
+     "label": "The group path",
+     "text": "Red Bull Ventures, Red Bull GmbH's corporate venture arm launched in 2025 with a €200M fund and led by Nai-Tseng Chen, the group's Global Head of Corporate Finance, joined the Series B and describes TwelveLabs as its most prominent investment. The introduction to both Red Bull teams therefore exists at group level; the sponsorship still has to be won on product."
+    },
+    {
+     "label": "The content team of the grid",
+     "text": "CEO Peter Bayer says 60 per cent of fans rated the team's content excellent in F1's latest monitoring report, clear of the field. Its Creator Platform has spent two years giving young fans real work inside the team, from a graffiti artist on the São Paulo garage to a designer inside HUGO's studio. A team whose differentiator is content is the team that will use a video-search product every weekend."
+    },
+    {
+     "label": "Why not Oracle Red Bull Racing",
+     "text": "The same group path leads to the senior team, but Oracle's title partnership puts cloud and AI at the centre of that team's story and TwelveLabs has just named AWS its preferred cloud. At Racing Bulls there is no cloud incumbent to argue with, and the entry price matches a company that has raised $150M."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Every session produces hours of onboard, garage, pit-lane and broadcast video that sits in folders nobody can search. Marengo indexes it by what actually happens in the frame; Pegasus writes the metadata. The content team can ask for Lindblad's debut points celebration, every Lawson pit stop from the left camera, or the moment the garage reacts to a result, and cut clips while the session is still running."
+    },
+    {
+     "label": "Fuel for the Creator Platform",
+     "text": "The Creator Platform gives young fans real production work. A searchable, tagged archive is the raw material they need, delivered as text queries rather than a media-asset-management training course, which is how the programme scales from a handful of creators to thousands of applicants."
+    },
+    {
+     "label": "Engineering review",
+     "text": "The same search runs over pit-stop and incident footage: every stop, every wheel-gun angle, every unsafe release across a season, retrieved by description rather than timestamp. It is the video equivalent of what Dynatrace and Confluent do for the team's data streams."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Video Intelligence Partner designation, nose or rear-wing endplate placement, naming of the team's video-search environment, Creator Platform integration, hospitality at Austin and Las Vegas, and a racing reference customer for TwelveLabs' New York and London sales teams."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Same group path, but Oracle's title deal makes cloud and AI the team's story and TwelveLabs runs on AWS; a direct tension, not a category clash."
+    },
+    {
+     "team": "Mercedes-AMG Petronas · BWT Alpine",
+     "reason": "Microsoft holds the cloud and AI lane at both; Mercedes also carries Meta AI."
+    },
+    {
+     "team": "McLaren F1 Team",
+     "reason": "Google Cloud holds the cloud and AI lane; video AI would sit inside it."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Claude is the team's AI partner; a second AI brand on the roster is a hard sell."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "TWG AI is the inaugural AI partner."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "CoreWeave holds the AI-cloud lane; no Red Bull group path."
+    },
+    {
+     "team": "TGR Haas F1 Team · Scuderia Ferrari · Audi F1 Team",
+     "reason": "Open lanes but no investor path and, at Ferrari and Audi, a partner price beyond a company with $150M raised."
+    }
+   ],
+   "ask": "A 25-minute call with Jae Lee before the United States GP to confirm appetite for a first sports partnership, propose a paid pilot with the Racing Bulls content team over the autumn rounds, and size an Official Video Intelligence Partner entry against the 2027 roster."
+  }
+ },
+ "note": "# TwelveLabs → Visa Cash App Racing Bulls — verification log (N° 172, issued for 1 Jul 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY`), with Claude acting as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code from `twelvelabs.case.json`. The desk row sat on 1 Jul 2026 with no team; this case names one.\n\n**Sandbox limitation, stated plainly:** direct fetches of globenewswire.com, twelvelabs.io, sportsvideo.org and the team sites were blocked by the egress proxy. Each claim was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, and the correction to the thin row\n\nThe round is company-announced (GlobeNewswire, 1 Jul 2026) and covered by Sports Video Group, The Elec and PYMNTS. **$100M Series B co-led by NEA and NAVER Ventures; Red Bull Ventures a new, minority investor.** The thin row's phrase \"structural warm-intro to Oracle Red Bull Racing commercial team\" was the desk's inference: Red Bull Ventures is a group-level investor, which is a path, not a warm introduction to any team's commercial staff, and the brief says so. The team recommended is Racing Bulls, not Red Bull Racing, because Oracle's title deal makes cloud and AI that team's story while TwelveLabs has just named AWS its preferred cloud.\n\nTotal funding: the release summary says roughly $150M; one secondary (The Elec) says $200M. The brief uses the company's figure.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Jae Lee, Co-Founder & CEO; founded 2021; UC Berkeley; Korea Ministry of National Defense | VERIFIED | The Org; World Economic Forum profile |\n| Yoon Kim, President & Chief Strategy Officer (Dec 2024; ex-SK Telecom CTO, Apple Siri); Soyoung Lee co-founder, Head of BD; Aiden Lee CTO; no CMO listed | VERIFIED | twelvelabs.io blog, Dec 2024; The Org |\n| $100M Series B; co-leads and participants; ~$150M total | VERIFIED | GlobeNewswire company release, 1 Jul 2026 |\n| AWS preferred cloud; Trainium; new offices New York, London; LA expansion | VERIFIED | company release, 1 Jul 2026 |\n| $30M strategic round (Databricks, SK Telecom, Snowflake Ventures, HubSpot Ventures, In-Q-Tel), Dec 2024 | VERIFIED | twelvelabs.io blog |\n| NFL Media and MLSE use Marengo / Pegasus on game footage | VERIFIED | twelvelabs.io sports page; AWS case study |\n| Red Bull Ventures: launched 2025, €200M fund, Fuschl am See, led by Nai-Tseng Chen and Sabrina Jones; TwelveLabs its most prominent investment | REPORTED | Trending Topics (Austria); Global Venturing; deutsche-startups.de |\n| Racing Bulls content rated excellent by 60 per cent of fans (Bayer); Creator Platform | REPORTED | Sector, Jul 2026 (Bayer interview) |\n| Lawson / Lindblad pairing; 4M Instagram, 2.3M TikTok; Lindblad P8 on debut | REPORTED | Motorsport.com, Aug 2026; formula1.com |\n| Salesforce Agentforce deployment (Jun 2026) and Neural Concept (Jun 2025) at Racing Bulls (app page only; not in the sponsor-table snapshot) | VERIFIED | salesforce.com press release |\n| Rosters: Racing Bulls (Dynatrace, Confluent, Siemens, Randstad, Visa, Cash App, Hugo, Tudor); Red Bull (Oracle title); Mercedes/Alpine (Microsoft; Meta AI); McLaren (Google Cloud); Williams (Claude); Cadillac (TWG AI); Aston Martin (CoreWeave) | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Belgian, Hungarian, Dutch, Italian, US (Austin), Las Vegas GPs on the 2026 calendar | VERIFIED | calendar table; dates from formula1.com |\n\n## Screen-outs and things not claimed\n\n- **No motorsport tie found** for Jae Lee, Aiden Lee, Yoon Kim, Soyoung Lee or Dave Chung after searching; the only link to motorsport is the Red Bull Ventures shareholding. `leadership_ties` is empty.\n- **No revenue figure** is used: none is public.\n- **Deal size ($1.5-2.5M a year) is an ESTIMATE**, labelled as such.\n- **Capacity is what holds the score back** (13/20): a company with ~$150M raised in total is an entry-tier sponsor, which is why the recommendation is Racing Bulls and a paid pilot first.\n- The Salesforce and Neural Concept relationships at Racing Bulls are named on the app page only, because the desk's sponsor-table snapshot (20 May 2026) predates the June 2026 Salesforce announcement.\n\n## Decision path\n\nJae Lee (Co-Founder & CEO) fronts every raise and would own a first sports partnership. Path: Yoon Kim (President & Chief Strategy Officer) for strategy and partnerships; Soyoung Lee (Co-Founder, Head of Business Development) for the commercial conversation. No chief marketing officer is listed on any leadership listing found.\n"
+}

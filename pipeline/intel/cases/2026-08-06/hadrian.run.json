@@ -1,0 +1,694 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-08-06",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-z6adtuy0/2026-08-06/hadrian.pdf",
+     "web": "/tmp/case-pdf-z6adtuy0/2026-08-06/hadrian.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Hadrian",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 12
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 74,
+     "reason": "top ranking score",
+     "company": "Hadrian",
+     "decision": "selected",
+     "signal_date": "2026-08-06"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Hadrian",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 74,
+   "score_breakdown": {
+    "cap": null,
+    "base": 74,
+    "total": 74,
+    "timing": 16,
+    "ops_fit": 16,
+    "ranking": 74,
+    "urgency": 12,
+    "capacity": 17,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 74,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 74,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "trigger_date": "2026-08-06",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 150,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-z6adtuy0/2026-08-06/hadrian.web.html",
+  "brief_data": {
+   "hq": "Torrance, California (factories in Mesa, AZ and Muscle Shoals, AL)",
+   "deck": "Hadrian, the Torrance-based builder of highly automated precision-parts factories for America's aerospace and defence primes, announced a $1.37B Series D at a $7.87B valuation on 6 August, co-led by WCM, Washington Harbour, Valor, 137 Ventures and Baillie Gifford with JPMorganChase as anchor co-lead.",
+   "risks": [
+    {
+     "label": "DEFENCE OPTICS",
+     "detail": "Hadrian makes parts for munitions, jets and drones; GM, TWG and Formula 1 must accept a defence supplier on the car.",
+     "counter": "Boeing sits on Alpine's roster; position Hadrian as advanced manufacturing and keep munitions out of activation copy."
+    },
+    {
+     "label": "INSIDE GM'S TENT",
+     "detail": "GM has vast machining capacity and Tenneco is already a component partner; the team may see no gap.",
+     "counter": "Pitch speed on one-off parts, not volume: the lane is lead time."
+    }
+   ],
+   "score": 74,
+   "ticker": "Private ($7.87B; $1.37B Series D, Aug 2026)",
+   "company": "Hadrian",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "us_market"
+   ],
+   "sources": [
+    "https://www.prnewswire.com/news-releases/hadrian-raises-260m-to-build-ai-powered-factories-for-america-adds-full-product-manufacturing-opens-arizona-site-302508179.html",
+    "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+    "https://www.axios.com/2026/08/06/hadrian-series-d-defense-production"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Chris Power before the United States GP to scope a parts-supply pilot for the Fishers programme, agree an Austin announcement window and size an Official Advanced Manufacturing Partner entry against Cadillac's 2027 roster.",
+    "value": [
+     {
+      "text": "An F1 car is thousands of one-off machined metal parts, uprights, brackets, inserts, gearbox and suspension components, redesigned race by race. Hadrian's automated factories in Torrance and Mesa are built for exactly this high-mix, low-volume work, which it says it delivers 10x faster at half the cost. For a team whose Indiana plant is still being commissioned, a domestic aerospace-grade supplier shortens lead times and adds capacity inside the cost cap's value-in-kind rules.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Hadrian's customers are aerospace and defence primes and its investors include JPMorganChase and Baillie Gifford; its guest list for Austin and Las Vegas is the industrial and financial audience Cadillac's other B2B partners want in the suite.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A factory-to-track story filmed in Mesa and Fishers: the part designed on Monday and on the car on Friday. Hadrian gains a reference customer whose parts are the most scrutinised metal in sport, useful in every defence sales conversation.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Advanced Manufacturing Partner designation, sidepod or wing placement, hospitality at the United States and Las Vegas rounds, driver and engineering access for Hadrian's recruiting and customer channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 6 August Hadrian announced a $1.37B Series D at a $7.87B valuation, co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead. It is a company release, reported the same day by Axios, GovCon Wire and Manufacturing Dive.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The $260M Series C in 2025 added full product manufacturing and opened the Mesa, Arizona site. The Series D funds new factories, expanded R&D and production lines in munitions and autonomous systems, and Axios reports a new Los Angeles headquarters and a San Francisco engineering hub are being planned. A company moving from supplier to platform needs a brand its customers, recruits and Washington recognise.",
+      "label": "From parts to platform"
+     },
+     {
+      "text": "On 30 July Hadrian signed a national-security spacecraft manufacturing MoU with Fortastra, joining design reviews of its satellite buses to cut production time. Each such programme is a milestone the partnership can be timed to.",
+      "label": "Programme momentum"
+     },
+     {
+      "text": "The United States GP in Austin (late October) and the Las Vegas GP (November) are the US rounds left in 2026, and Cadillac closes its 2027 partner roster in the fourth quarter of its debut season. A deal agreed before Austin can be announced there and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Cadillac is building a 450,000 sq ft headquarters and race shop in Fishers, Indiana that will handle the majority of car production, with power units in Charlotte and a Silverstone satellite for wind-tunnel components. A team standing up an F1 supply chain in the United States in one season is the only team on the grid with Hadrian's exact problem.",
+      "label": "The empty site"
+     },
+     {
+      "text": "Per the sponsor table, Cadillac's 2026 roster carries TWG AI, Core Scientific, IFS, Tenneco, Claro, Jim Beam and Tommy Hilfiger, and no machining, machine-tool or precision-parts partner. Official Advanced Manufacturing Partner is a clean category on a greenfield roster.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Cadillac's F1 entry is sold as American manufacturing on the world stage; Hadrian's mission statement is America's industrial renewal. The two narratives need no translation, and both sell to the same Washington and Wall Street audiences.",
+      "label": "One story"
+     },
+     {
+      "text": "Machining and metrology partners already race: Haas Automation at TGR Haas, DMG Mori and Hexagon at Red Bull, United Machining at Alpine. Teams buy this category when the partner can actually make parts; Hadrian can.",
+      "label": "Precedent on the grid"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Haas Automation and Haas Tooling, the owner's own machine-tool businesses, hold the manufacturing lane."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "DMG Mori (machine tools), Hexagon (metrology) and Siemens occupy manufacturing technology."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "United Machining and 3D Systems hold machining and additive; Boeing covers aerospace."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Roboze (additive) and Siemens on the roster."
+     },
+     {
+      "team": "Scuderia Ferrari",
+      "reason": "A crowded component roster (SKF, Brembo, Garrett, OMR Automotive) and no American story."
+     },
+     {
+      "team": "Atlassian Williams Racing · Audi F1 Team",
+      "reason": "Komatsu (Williams) and Camozzi (Audi) sit in industrial machinery and automation; neither is a US team."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team · McLaren F1 Team · Mercedes-AMG Petronas",
+      "reason": "Open but not chosen: British teams without the American industrial identity that gives Cadillac the fit."
+     }
+    ]
+   },
+   "date_long": "06 AUG 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A company-announced $1.37B Series D at $7.87B, new factories and production lines, and an 'industrial renewal' identity put Hadrian at peak brand-investment motive; Cadillac's Fishers build gives it a real manufacturing workstream and an open lane. Defence optics and GM's own capacity hold the score at 74.",
+   "footer_date": "6 AUG 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Round 6 Aug; Austin and Las Vegas inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 17,
+     "note": "$1.37B raised at $7.87B; capital is earmarked for factories.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "Defence supplier, B2B; American-renewal story fits Cadillac.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No hard deadline beyond Q4 rosters; HQ move only planned.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: precision parts for a team building a US chain.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "The round is company-announced: $1.37B of Series D equity at a $7.87B valuation, co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead. It follows the $260M Series C in 2025 that opened the Mesa, Arizona factory alongside Torrance and Muscle Shoals, Alabama. Proceeds fund new factories, R&D and production lines in munitions and autonomous systems, and a Los Angeles headquarters and San Francisco engineering hub are planned (Axios). A week earlier Hadrian signed a national-security spacecraft manufacturing MoU with Fortastra.",
+   "the_case_p2": "The identity moment is the pivot from parts supplier to American industrial platform: Hadrian's own framing is 'America's industrial renewal', and its product is speed, high-mix, low-volume metal parts it says arrive 10x faster at half the cost. That is the exact problem a debut Formula 1 team faces, and the American one is building its supply chain from an empty site in Indiana this season.",
+   "track_label": "",
+   "brief_number": "150",
+   "claims_total": 14,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$1.37B Series D at a $7.87B valuation, company-announced 6 Aug 2026 (Axios: just shy of $8B); follows a $26…",
+     "value": "$1.37B",
+     "claim_id": 646,
+     "verified": true,
+     "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html"
+    },
+    {
+     "fact": "It follows the $260M Series C in 2025 that opened the Mesa, Arizona factory alongside Torrance and Muscle S…",
+     "value": "$260M",
+     "claim_id": 656,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Advanced Manufacturing · Automated Precision-Parts Factories",
+   "value_content": "MODE A - operational. An F1 car is thousands of one-off machined metal parts, uprights, brackets, gearbox and suspension components, redesigned race by race. Hadrian's automated factories in Torrance and Mesa are built for that high-mix, low-volume work, in the same country as Fishers. As supplier-partner it shortens lead times and adds US capacity inside cost-cap value-in-kind rules. In return: Official Advanced Manufacturing Partner, livery, Austin and Las Vegas hospitality.",
+   "value_section": true,
+   "why_team_para": "Cadillac is the American debutant: a 450,000 sq ft headquarters in Fishers, Indiana for car production, power units in Charlotte, a Silverstone satellite for wind-tunnel parts, and General Motors plants behind it. Its 2026 roster (TWG AI, Core Scientific, IFS, Tenneco) has no machining, machine-tool or precision-parts partner, while Haas Automation owns that lane at TGR Haas, DMG Mori and Hexagon at Red Bull, and United Machining at Alpine. Reindustrialising America is the story both brands tell.",
+   "deal_arch_para": "Entry as Official Advanced Manufacturing Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the Fishers ramp and Hadrian's new lines. Estimated $3-5M a year, part-payable in manufactured parts. Scope: sidepod or wing placement, factory-to-track content, US-race hospitality for Hadrian's customers.",
+   "footer_company": "HADRIAN",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 14,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 6 August and the new lines and headquarters are funded now. The United States GP in Austin (late October) and Las Vegas (November) fall inside the window, and Cadillac closes its 2027 roster in the fourth quarter of its first season.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Power, Australian-born, moved to the US in 2019 and founded Hadrian to build automated precision-parts factories; he fronts every raise. Path: West Owens, CFO since October 2024 (formerly TerraWatt, SolarCity). No chief marketing officer is listed.",
+   "decision_maker_name": "Chris Power",
+   "decision_maker_role": "Founder & CEO, Hadrian",
+   "opening_angle_intro": "Lead with the empty site in Indiana.",
+   "opening_angle_quote": "&ldquo;Chris, Cadillac is building an F1 parts chain from scratch in Fishers; you build automated factories for exactly that kind of part. The manufacturing lane on the American car is open. 25 minutes before Austin?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Chris Power, Founder & CEO at Hadrian",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026), Crunchbase and LA Business Journal: Chris Power is Founder and CEO of Hadrian. Forbes: Power arrived in the United States from Australia in 2019 to build a high-tech plant making precision metal parts for aerospace and defence customers.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Chris Power, Founder & CEO, Hadrian at Hadrian",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026), Crunchbase and LA Business Journal: Chris Power is Founder and CEO of Hadrian. Forbes: Power arrived in the United States from Australia in 2019 to build a high-tech plant making precision metal parts for aerospace and defence customers.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1.37B Series D at a $7.87B valuation, company-announced 6 Aug 2026 (Axios: just shy of $8B); follows a $260M Series C in 2025 that opened the Arizona factory",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026; Axios exclusive, GovCon Wire, Manufacturing Dive the same day): $1.37 billion Series D equity financing to accelerate the build-out of domestic manufacturing capacity for defence, aerospace and industrial systems; valuation $7.87 billion (Axios: 'just shy of $8 billion'); co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead; proceeds fund new factories, expanded R&D and additional production capabilities.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Hadrian, the Torrance-based builder of highly automated precision-parts factories for America's aerospace and defence primes, announced a $1.37B Series D at a $7.87B valuation on 6 August, co-led by WCM, Washington Harbour, Valor, 137 Ventures and Baillie Gifford with JPMorganChase as anchor co-lead.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026; Axios exclusive, GovCon Wire, Manufacturing Dive the same day): $1.37 billion Series D equity financing to accelerate the build-out of domestic manufacturing capacity for defence, aerospace and industrial systems; valuation $7.87 billion (Axios: 'just shy of $8 billion'); co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead; proceeds fund new factories, expanded R&D and additional production capabilities.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026; Axios exclusive, GovCon Wire, Manufacturing Dive the same day): $1.37 billion Series D equity financing to accelerate the build-out of domestic manufacturing capacity for defence, aerospace and industrial systems; valuation $7.87 billion (Axios: 'just shy of $8 billion'); co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead; proceeds fund new factories, expanded R&D and additional production capabilities.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The round is company-announced: $1.37B of Series D equity at a $7.87B valuation, co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026; Axios exclusive, GovCon Wire, Manufacturing Dive the same day): $1.37 billion Series D equity financing to accelerate the build-out of domestic manufacturing capacity for defence, aerospace and industrial systems; valuation $7.87 billion (Axios: 'just shy of $8 billion'); co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead; proceeds fund new factories, expanded R&D and additional production capabilities.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$1.37B Series D at a $7.87B valuation to build highly automated factories, announced 6 Aug 2026",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026; Axios exclusive, GovCon Wire, Manufacturing Dive the same day): $1.37 billion Series D equity financing to accelerate the build-out of domestic manufacturing capacity for defence, aerospace and industrial systems; valuation $7.87 billion (Axios: 'just shy of $8 billion'); co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead; proceeds fund new factories, expanded R&D and additional production capabilities.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It follows the $260M Series C in 2025 that opened the Mesa, Arizona factory alongside Torrance and Muscle Shoals, Alabama.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-260m-to-build-ai-powered-factories-for-america-adds-full-product-manufacturing-opens-arizona-site-302508179.html",
+     "excerpt": "Hadrian release (PRNewswire, 2025): $260M Series C to build AI-powered factories, adding full product manufacturing and opening the Arizona site.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Haas Automation (machine tools) is on TGR Haas' roster; DMG Mori and Hexagon sit at Red Bull; United Machining at Alpine; Cadillac's 2026 roster has no machining or precision-parts partner",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "United Machining → BWT Alpine F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A company-announced $1.37B Series D at $7.87B, new factories and production lines, and an 'industrial renewal' identity put Hadrian at peak brand-investment motive;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026; Axios exclusive, GovCon Wire, Manufacturing Dive the same day): $1.37 billion Series D equity financing to accelerate the build-out of domestic manufacturing capacity for defence, aerospace and industrial systems; valuation $7.87 billion (Axios: 'just shy of $8 billion'); co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead; proceeds fund new factories, expanded R&D and additional production capabilities.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Cadillac F1 Team is building its car-manufacturing headquarters in Fishers, Indiana, with power units in Charlotte; Hadrian sells automated precision-parts factories in Torrance, Mesa and Muscle Shoals to America's aerospace and defence primes",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.axios.com/2026/08/06/hadrian-series-d-defense-production",
+     "excerpt": "Axios (6 Aug 2026) and the Series D release: Hadrian is headquartered in Torrance, California (19501 South Western Avenue per Torrance Economic Development), with factories in Mesa, Arizona and Muscle Shoals, Alabama; a new Los Angeles headquarters and a San Francisco engineering and R&D hub are being planned; management names munitions and autonomous systems as the next production lines.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "sponsorship",
+   "load_bearing": false,
+   "text": "Hexagon at Red Bull",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Hexagon → Oracle Red Bull Racing (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in Torrance, California; factories in Mesa, Arizona and Muscle Shoals, Alabama; a Los Angeles headquarters and San Francisco engineering hub are planned (Axios)",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.axios.com/2026/08/06/hadrian-series-d-defense-production",
+     "excerpt": "Axios (6 Aug 2026) and the Series D release: Hadrian is headquartered in Torrance, California (19501 South Western Avenue per Torrance Economic Development), with factories in Mesa, Arizona and Muscle Shoals, Alabama; a new Los Angeles headquarters and a San Francisco engineering and R&D hub are being planned; management names munitions and autonomous systems as the next production lines.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "sponsorship",
+   "load_bearing": false,
+   "text": "United Machining at Alpine.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "United Machining → BWT Alpine F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026; Axios exclusive, GovCon Wire, Manufacturing Dive the same day): $1.37 billion Series D equity financing to accelerate the build-out of domestic manufacturing capacity for defence, aerospace and industrial systems; valuation $7.87 billion (Axios: 'just shy of $8 billion'); co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead; proceeds fund new factories, expanded R&D and additional production capabilities.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 6 August Hadrian announced a $1.37B Series D at a $7.87B valuation, co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+     "excerpt": "Hadrian release (PRNewswire, 6 Aug 2026; Axios exclusive, GovCon Wire, Manufacturing Dive the same day): $1.37 billion Series D equity financing to accelerate the build-out of domestic manufacturing capacity for defence, aerospace and industrial systems; valuation $7.87 billion (Axios: 'just shy of $8 billion'); co-led by WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford, with JPMorganChase's Strategic Investment Group as anchor co-lead; proceeds fund new factories, expanded R&D and additional production capabilities.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The $260M Series C in 2025 added full product manufacturing and opened the Mesa, Arizona site.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/hadrian-raises-260m-to-build-ai-powered-factories-for-america-adds-full-product-manufacturing-opens-arizona-site-302508179.html",
+     "excerpt": "Hadrian release (PRNewswire, 2025): $260M Series C to build AI-powered factories, adding full product manufacturing and opening the Arizona site.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

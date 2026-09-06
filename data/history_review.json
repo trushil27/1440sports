@@ -64,8 +64,17 @@
    "reason": "on the hard blocklist"
   },
   "2026-05-05|Blitzy": {
-   "status": "keep_flagged",
-   "reason": "second row names 'Undisclosed Founding Team' and a different round (Series B / Northzone) — the two rows contradict each other"
+   "status": "screened_out",
+   "reason": "below threshold: The trigger is real and fresh: Blitzy announced a $200M Series B led by Northzone at a $1.4B valuation on 5 May 2026 (BusinessWire; Boston Globe; Crunchbase News), with PSG, Battery Ventures, Jump Capital, Morgan Creek Digital and Defiant joining and Flybridge, Link Ventures, NFX, Picus Capital and Venture Guides returning. The founders are verified: Brian Elliott (CEO; former Army Ranger, West Point, Harvard MBA) and Sid Pardeshi (CTO; seven years at Nvidia, 25+ patents), Kendall Square, Cambridge MA, founded 2023, ~80 staff, ~$206M raised in total (PitchBook via the Globe). Re-scored honestly against the 5-pillar model it does not clear the MD threshold of 70: capacity 13/20 (a $1.4B company with ~$206M raised in total and 80 people is a $1-2M-a-year partner at most), brand fit 11/20 (an enterprise developer tool with no marketing leadership listed and no consumer or capital-markets audience that a Formula 1 platform reaches), urgency 12/20 (no listing, no product launch tied to a race calendar), timing 16/20, ops fit 13/20 (a plausible but generic 'modernise the team's in-house software' workstream; Cognition at Aston Martin, Claude at Williams and Gemini at McLaren already own the AI-coding lane on the grid with an order of magnitude more capital, so Blitzy would enter as a follower). Total 65/100. The thin row's 78 was inflated by the unicorn headline. Not built; re-surface on a Series C above $5B, a named CMO or CRO hire, or a Fortune 500 customer announcement with a racing tie. No motorsport tie found for either founder after checking.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.businesswire.com/news/home/20260505342338/en/Blitzy-Raises-$200-Million-at-$1.4-Billion-Valuation-to-Advance-Autonomous-Software-Development-for-the-Enterprise",
+    "https://www.bostonglobe.com/2026/05/05/business/blitzy-ai-software-cambridge-unicorn-startup/",
+    "https://news.crunchbase.com/ai/blitzy-funding-valuation-autonomous-software-development-vibe-coding-startups/",
+    "https://www.prnewswire.com/news-releases/nvidia-serial-inventor-raises-4-4m-with-blitzy-to-build-autonomous-enterprise-software-development-platform-302245210.html",
+    "https://techfundingnews.com/ex-nvidia-architects-ai-coding-startup-blitzy-raises-200m-led-by-northzone-at-1-4b-valuation/"
+   ],
+   "screened_at": "2026-09-06"
   },
   "2026-05-07|Cerebras Systems": {
    "status": "screened_out",
@@ -89,8 +98,17 @@
    "of": "2026-05-08|Lime (Neutron Holdings)"
   },
   "2026-05-12|SnapLogic": {
-   "status": "keep_flagged",
-   "reason": "an earlier brief on SnapLogic was found to contain a fabricated fact; re-verify every claim before use"
+   "status": "screened_out",
+   "reason": "below threshold: The trigger is confirmed against the company release (SnapLogic newsroom / GlobeNewswire, 12 May 2026): Molly Matthews, formerly CEO of Pushpay, appointed President; Anjana Kashyap promoted to Chief Customer Officer and Cassie Capano to Chief People Officer (not Chief Product Officer, as the thin row implied); Brad Stewart is CEO since founder Gaurav Dhillon retired to Chairman in Aug 2025. It does not clear the bar for a three-year F1 deal, and the honest score is in the low 60s, below the 70 threshold the pipeline enforces: the event is an internal leadership expansion, not a capital or identity inflection (last round the $165M Series H at a $1B valuation in Dec 2021; no funding, IPO or acquisition event found in 2026); capacity for a multi-million annual fee is unproven with no public revenue since the company's own '$100M+ ARR'-era disclosures; no competitor forces the timing (the earlier brief N 009/N 004 claim that rival Confluent 'sits on the Williams livery' was the fabrication flagged in data/history_review.json - Confluent is a Visa Cash App Racing Bulls partner in the sponsor table, and Matthews was described as 'ex-Microsoft enterprise GTM', which the release does not support); and the integration category has no motorsport-native workstream beyond generic team-systems integration. Decision path recorded for the file: President Molly Matthews; CEO Brad Stewart; CMO Dayle Hall (appointed Jan 2020; still listed on third-party org charts, not re-confirmed on the company page, which was egress-blocked). No motorsport tie found for any leader; beware the Snap Inc. (Snapchat) F1 collision in searches. Re-open on a capital event.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-appoints-molly-matthews-president-leadership-expansion",
+    "https://www.globenewswire.com/news-release/2026/05/12/3292933/0/en/snaplogic-appoints-enterprise-leader-molly-matthews-as-president-and-expands-customer-and-people-leadership.html",
+    "https://www.businesswire.com/news/home/20250813069558/en/SnapLogic-Achieves-Record-Quarter-and-Year-Founder-and-CEO-Gaurav-Dhillon-Retires-as-Company-Accelerates-Growth-Trajectory",
+    "https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-raises-165-million",
+    "https://www.businesswire.com/news/home/20200108005227/en/SnapLogic-Appoints-Dayle-Hall-as-Chief-Marketing-Officer"
+   ],
+   "screened_at": "2026-09-06"
   },
   "2026-05-12|Exaforce": {
    "status": "screened_out",
@@ -98,8 +116,17 @@
    "reason": "$725M valuation — under the $1B capacity gate"
   },
   "2026-05-18|Decart AI": {
-   "status": "keep_flagged",
-   "reason": "two rows with different scores (87 / 91) for the same round; keep one, re-score"
+   "status": "screened_out",
+   "reason": "existing partner: The trigger is real: a $300M Series B led by Radical Ventures with NVIDIA participating at a reported ~$4B valuation, announced 18-19 May 2026, with DOS 2.0 launched alongside it (The Next Web, CTech; the decart.ai release was egress-blocked and is confirmed only through those summaries). The signal has since been overtaken: Bloomberg / Fortune reported on 13 Aug 2026 that Anthropic is in talks to buy Decart for about $6B, and CTech reported later in August that the two sides are exchanging advanced drafts at roughly $7B, paid mostly in Anthropic stock, with Decart having walked away from a higher NVIDIA offer; no signing had been reported as of 6 Sep 2026. Anthropic's Claude is already on the grid as Atlassian Williams Racing's Official Thinking Partner (multi-year, 2026), so the budget owner after signing would be an existing F1 partner, and an independent Decart sponsorship pitch has no counterparty with authority to commit to a three-year deal while the sale is being papered. Screened rather than built: re-open only if the Anthropic deal collapses. Also corrected from the thin row: the 'NVIDIA and Amazon AWS Trainium partnerships' are an NVIDIA investment in the round and a Trainium3 deployment of the Lucy2 model, not announced strategic partnerships; the earlier 5 May duplicate row with the same source URL should be dropped.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://thenextweb.com/news/decart-300-million-radical-ventures-world-models",
+    "https://www.calcalistech.com/ctechnews/article/sjt9ncukgl",
+    "https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-decart-for-6-billion/",
+    "https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion",
+    "https://www.calcalistech.com/ctechnews/article/b1evv3aufg"
+   ],
+   "screened_at": "2026-09-06"
   },
   "2026-05-19|Nourish": {
    "status": "screened_out",
@@ -143,8 +170,17 @@
    "reason": "Ramp is on the approached list"
   },
   "2026-06-01|Mind Robotics": {
-   "status": "keep_flagged",
-   "reason": "decision-maker 'TBC — Rivian spin-out CEO' — no named person"
+   "status": "screened_out",
+   "reason": "below threshold: The row's trigger ($500M Series A co-led by Accel and Andreessen Horowitz) is real but dated 11 Mar 2026 (Business Wire; TechCrunch), and it was superseded inside the window by a $400M round led by Kleiner Perkins announced 13 May 2026 (Business Wire), taking total funding past $1B at a valuation press reports put at about $3.4B (eWeek, GuruFocus; not stated in the release). Mind Robotics was spun out of Rivian in November 2025 (Palo Alto HQ; a $115M seed led by Eclipse) and is a genuine born-big spin-off in the catalyst-radar sense. Not built, because the decision path fails the trust gate: the company publishes no leadership page and names no executive other than RJ Scaringe, its founder, who is Rivian's CEO and is described by CNBC (13 Jun 2026) as executive chair and acting CEO of Mind; no CMO, CFO, COO or president is disclosed anywhere found. A sponsorship owner and path cannot be named without inventing one. The thin row's person was TBC for that reason. Honest re-score is also under the line: timing 17, capacity 15, brand fit 12, urgency 11, ops fit 13 (MODE B halo; no on-car workstream; Rivian pedigree conflicts with the eight OEM works teams on the FE grid, leaving Andretti, where TWG AI holds the AI lane, Envision and Cupra Kiro) = 68. Motorsport ties: none found for Scaringe. Re-surface when Mind names a CEO or CMO, or when Rivian's own brand becomes the sponsor entity; Cupra Kiro (Porsche powertrain, Cupra title through GEN4) and Envision Racing are the only FE lanes without an OEM or AI conflict.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.businesswire.com/news/home/20260513731983/en/Mind-Robotics-Announces-$400M-in-New-Funding-to-Expand-Industrial-Robotics-Deployment",
+    "https://secure.businesswire.com/news/home/20260311414783/en/Mind-Robotics-Announces-%24500M-Financing-to-Support-Deployment-of-AI-Powered-Robots-at-Industrial-Scale",
+    "https://techcrunch.com/2026/05/13/rivian-spinoff-mind-robotics-raises-another-400m/",
+    "https://www.cnbc.com/2026/06/13/rivian-humanoid-robots.html",
+    "https://www.forbes.com/sites/edgarsten/2026/05/19/rivian-founders-new-company-aims-to-evolve-humanoid-robots/"
+   ],
+   "screened_at": "2026-09-06"
   },
   "2026-06-05|Bridgestone": {
    "status": "screened_out",
@@ -187,8 +223,16 @@
    "reason": "Wiz is part of Google Cloud, a McLaren partner; the repo already excluded it"
   },
   "2026-06-18|Odyssey AI": {
-   "status": "keep_flagged",
-   "reason": "decision-maker 'Undisclosed' — the repo brief on Odyssey names the founders; use that"
+   "status": "screened_out",
+   "reason": "duplicate: The desk row 'Odyssey AI' (closed $310M Series B in the week of 12-18 June 2026; generative world-model AI; CEO undisclosed) is the same company as Odyssey: on 17 June 2026 Odyssey (odyssey.ml, CEO Oliver Cameron, CTO Jeff Hawke) announced a $310M Series B at a $1.45B valuation led by Natural Capital with Amazon, AMD Ventures, GV, EQT and IQT participating, plus an AWS preferred-cloud agreement. The row's Crunchbase News source is the weekly biggest-rounds column that describes that round. Batch 10 is building the full case for Odyssey as N° 175, so this row folds into it rather than becoming a second case. Note for the human layer: Qasar Younis, CEO of Applied Intuition (row 192 in this batch), is an existing Odyssey investor.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://odyssey.ml/our-series-b",
+    "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/",
+    "https://www.hpcwire.com/off-the-wire/odyssey-raises-310m-series-b-to-advance-ai-world-models/",
+    "https://news.crunchbase.com/venture/biggest-funding-rounds-cybersecurity-defense-startup-ai-odyssey-leads/"
+   ],
+   "screened_at": "2026-09-06"
   },
   "2026-07-01|Joulent": {
    "status": "screened_out",
@@ -208,8 +252,17 @@
    "reason": "$100M Series B; valuation not stated — capacity unproven"
   },
   "2026-06-24|Taktile": {
-   "status": "keep_flagged",
-   "reason": "$189M total raised; valuation not stated — capacity unproven"
+   "status": "screened_out",
+   "reason": "below threshold: The trigger is real and fresh: Taktile announced a $110M Series C led by Growth Equity at Goldman Sachs Alternatives on 24 June 2026 (company release on taktile.com, BusinessWire and am.gs.com; Fortune exclusive the same day), with Balderton Capital, Index Ventures, Tiger Global, Y Combinator and Dig Ventures; total funding $184M (the row's $189M is wrong). The company is not an F1/FE partner and no motorsport tie was found for co-founder & CEO Maik Taro Wehmeyer or co-founder & CPTO Maximilian Eber. It fails the bar on capacity and fit, not on facts: the valuation is undisclosed (Wehmeyer declined to give one to Fortune), no revenue is public, $184M raised in total is the whole war chest of a company that is opening offices (New York HQ, Berlin, London, São Paulo, Iași) and scaling a sales team; a three-year team partnership would consume a material share of the round. The product (an agentic decision platform for banks and insurers: credit underwriting, claims, financial-crime decisions) has no workstream a race team would use, so the case would be MODE B halo with a B2B audience reachable more cheaply through banking conferences. Honest 5-pillar score: timing 17, capacity 10, brand fit 12, urgency 12, ops fit 9 = 60/100, below the 70 threshold the pipeline enforces (run_daily marks such candidates below_threshold), and inflating to 70 would violate the standard. The row's 83 was an aggregator-scored figure. Two operational claims in the row (a CRO hired from Wiz; a São Paulo office opened within 30 days of the raise) appear only on aggregator pages (bouncewatch.com, techstartups.com); the company release names São Paulo as an office but does not announce a CRO; third-party listings still show Dr. Niklas Guske as COO/CRO; treat both as unverified. Grid note for a future look: the fintech lane is crowded (Visa and Cash App at Racing Bulls, Revolut at Audi, Mastercard, Goldman Sachs and Airwallex at McLaren, Kraken and Stephens at Williams, MoneyGram at Haas) but no decisioning/AI-for-financial-institutions partner sits on any roster; the São Paulo GP (November) and a new São Paulo office would be the hook if capacity ever clears. Recommendation: WATCH; revisit after a disclosed valuation or a Series D.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://taktile.com/articles/taktile-secures-110m-in-goldman-sachs-led-series-c-to-power-ai-transformation-in-financial-institutions",
+    "https://www.businesswire.com/news/home/20260624713959/en/Taktile-Secures-$110M-in-Goldman-Sachs-Led-Series-C-to-Power-AI-Transformation-in-Financial-Institutions",
+    "https://am.gs.com/en-us/advisors/news/press-release/2026/taktile-110m-growth-equity-series-c-goldman-sachs-ai",
+    "https://fortune.com/2026/06/24/exclusive-taktile-goldman-sachs-ai-bank-insurance-funding/",
+    "https://taktile.com/about"
+   ],
+   "screened_at": "2026-09-06"
   },
   "2026-06-30|Alan": {
    "status": "screened_out",
@@ -288,8 +341,17 @@
    "of": "2026-06-04|Databricks"
   },
   "2026-07-28|Ominimo": {
-   "status": "keep_flagged",
-   "reason": "€20.1M round — the valuation carries it, the round does not; confirm"
+   "status": "screened_out",
+   "reason": "contradicted: Screened on 6 Sep 2026 after live re-verification. (1) The row's decision-maker is wrong: it names 'Balázs Balogh, CEO & Co-Founder'; every primary and secondary source found (The Insurer, EU-Startups, Vestbee, The Recursive, Crunchbase, the company's own quotes) names Dušan Komar as Co-Founder & CEO, with Laslo Horvath (CTO) and Dennis Weinbender (Chief Pricing and Data Officer) as co-founders and Luka Bucan as Group COO; no Balázs Balogh is associated with Ominimo. A load-bearing decision-maker claim that does not survive verification blocks a case. (2) The trigger itself is real but smaller than the row implies: on 27-28 Jul 2026 Ominimo announced the first part of an ongoing Series B, EUR 20.1M (USD 22.5M) from EBRD Venture Capital at a EUR 1.4B (USD 1.6B) valuation, 15 months after a EUR 10M Series A from Zurich Insurance Group at EUR 200M; total external funding is therefore about EUR 30M. 'US market entry confirmed for 2027' is in the sources only as a target. (3) Re-scored honestly the signal does not clear the 70 threshold: timing 15, capacity 11 (a profitable Budapest-based managing general agent with ~100 staff, ~EUR 307M annualised gross written premium and ~1M customers in Hungary, Poland, the Netherlands and Sweden, but EUR 30M raised in total; an F1 entry would be a multiple of its equity funding), brand fit 15 (consumer motor insurance is a natural F1 category and the lane is open outside Orion180 at Haas and AON at Ferrari), urgency 12 (European expansion and a 2027 US target), ops fit 9 (MODE B halo only; no team workstream) = 62/100. Keep on the radar: a larger second close of the Series B, or a carrier licence with a marketing budget behind a US launch, would re-open the case; the Hungarian GP (Budapest) and Dutch GP (Zandvoort) sit in its home markets.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.theinsurer.com/ti/news/hungarian-insurtech-ominimo-valued-at-16-billion-in-ebrd-led-round-2026-07-28/",
+    "https://www.eu-startups.com/2026/07/profitable-serbian-hungarian-insurtech-ominimo-hits-unicorn-status-two-years-after-launch-raises-e20-1-million-at-e1-4-billion-valuation/",
+    "https://www.vestbee.com/insights/articles/ominimo-raises-series-b-at-1-6-b-valuation",
+    "https://www.therecursive.com/1st-serbian-unicorn-ominimo-1-6b-valuation-ebrd-series-b/",
+    "https://techcrunch.com/2025/04/10/ai-insurtech-ominimo-bags-its-first-investment-at-a-220m-valuation/"
+   ],
+   "screened_at": "2026-09-06"
   },
   "2026-07-29|Freehand": {
    "status": "screened_out",
@@ -660,6 +722,149 @@
     "https://voltagrid.com/news",
     "https://www.datacenterdynamics.com/en/news/voltagrid-raises-1bn-from-blackstone-and-halliburton-to-expand-power-system-offering-for-data-centers/",
     "https://www.powermag.com/oracle-taps-voltagrid-for-2-3-gw-modular-gas-fleet-to-power-ai-data-centers-across-texas/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-05-05|Advanced Machine Intelligence (AMI Labs)": {
+   "status": "screened_out",
+   "reason": "below threshold: The event is real but the signal does not clear the desk's 70/100 bar, so no case was built. Verified: AMI Labs (Paris, founded December 2025 by Yann LeCun) announced a $1.03B seed round at a $3.5B pre-money valuation on 9-10 March 2026 (TechCrunch 9 Mar, Bloomberg 10 Mar), co-led by Cathay Innovation, Greycroft, Hiro Capital, HV Capital and Bezos Expeditions, with NVIDIA, Temasek, Samsung and Toyota Ventures among participants. The thin row's details were inaccurate: the round was a seed round, not an 'institutional funding round'; it was announced on 9-10 March, not 13 March; and Yann LeCun's title is Executive Chairman (founder), not 'Co-Founder / Chief AI Scientist' — the CEO is Alexandre LeBrun, with Laurent Solly (ex-Meta VP Europe) as COO. Honest score: capacity 18 (cash-rich), timing 12 (57 days old, no window), brand fit 9, urgency 7, ops fit 9 = 55/100 (WARM). What holds it back: a four-month-old research laboratory with no product (first partner is Nabla, a digital-health startup; stated targets are healthcare, robotics, wearables and industrial automation), no revenue, no marketing function and no stated brand motive; a sponsorship would be a talent-recruitment halo only. World models for physical systems could in principle feed race simulation, but nothing deployable exists to point at and no team-side workstream can be named without inventing it. No F1 or Formula E partner conflict exists (no AMI Labs partnership with any team or with Renault/Alpine/Stellantis found). Leadership ties: none found. Revisit only if AMI Labs ships a product for physical-systems simulation, names a commercial lead, or a French works team (Citroën Racing in FE, Alpine in F1) goes public with an AI-model need — then a French sovereign-AI flagship on a French team becomes a real case.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://techcrunch.com/2026/03/09/yann-lecuns-ami-labs-raises-1-03-billion-to-build-world-models/",
+    "https://www.bloomberg.com/news/articles/2026-03-10/yann-lecun-s-new-ai-startup-raises-1-billion-in-seed-funding",
+    "https://www.hpcwire.com/aiwire/2026/03/11/yann-lecuns-ami-secures-1b-seed-to-develop-ai-world-models/",
+    "https://sifted.eu/articles/alexandre-lebrun-nabla-ami-labs",
+    "https://medium.com/toyota-ventures/building-intelligent-ai-systems-that-understand-the-real-world-our-investment-in-ami-labs-9b5332af210a"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-05-05|Strava": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger is the confidential IPO filing. Re-verified live: The Information reported the confidential submission on 8 Jan 2026 (SiliconANGLE, 8 Jan 2026) and Strava's own press release confirming the confidential submission of a draft registration statement is dated 2 Feb 2026 (press.strava.com). The row sits on 5 May 2026; 2 Feb is 92 days before it and 8 Jan is 117 days before it, both outside the 90-day trigger window. No fresher capital or identity trigger was found inside the window: the S-1 had not been made public by 5 May (no public filing on EDGAR as of mid-2026 per Forge/IPO trackers), the April 2026 product release (Annual Best Efforts, ten new languages) is a feature update, the CFO (Matt Anderson) and CMO (Louisa Wee) appointments date from Aug 2025 and the Runna / The Breakaway acquisitions from Apr-May 2025. This is the spec's own §9 stale-trigger case (pipeline/tests/fixtures/production_signals.py STRAVA): the thin row carried the January date and an aggregator source. Re-surface only on a public S-1 flip or a priced offering.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://press.strava.com/articles/strava-confidential-submission-of-draft-registration-statement-for-IPO",
+    "https://siliconangle.com/2026/01/08/strava-makes-confidential-ipo-filing-amid-subscription-revenue-growth/",
+    "https://forgeglobal.com/strava_ipo/",
+    "https://press.strava.com/articles/strava-finalizes-leadership-team-for-next-stage-of-growth",
+    "https://frontpacksports.com/strava-april-2026-update/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-05-12|Isomorphic Labs": {
+   "status": "screened_out",
+   "reason": "below threshold: The trigger is confirmed against the company release (isomorphiclabs.com press / PR Newswire 302769674, 12 May 2026): a $2.1B Series B led by Thrive Capital with existing backers Alphabet and GV and new investors MGX, Temasek, CapitalG and the UK Sovereign AI Fund, to scale the IsoDDE drug-design engine and take the first internal candidates towards the clinic. Two items in the thin row are wrong: no chief marketing officer was hired (the 2026 leadership change is Max Jaderberg to President from 1 Jan 2026; the 'CMO' the row picked up was Dr Ben Wolf, Chief Medical Officer, June 2025), and no headcount-expansion announcement was found. The case does not clear the bar and would score in the low 50s, below the 70 threshold: Isomorphic is a London-based, Alphabet-controlled AI drug-design lab whose capital is earmarked for R&D and clinical programmes, whose audiences are pharma partners (Novartis, Lilly, J&J) and AI talent, and whose leadership (CEO Sir Demis Hassabis, President Max Jaderberg, COO Pamela Carroll, CSO Miles Congreve, CTO Sergei Yakneen) lists no CMO or commercial-marketing owner, so there is no sponsorship decision path; there is no operational workstream a race team would use, only a halo; and Alphabet already occupies F1 through Google's McLaren partnership (Google/Chrome, Android, Gemini, Google Cloud on the McLaren roster in the sponsor table), so an Alphabet-family brand on any other car is implausible and on McLaren it is Google's lane, not Isomorphic's. No motorsport tie found for any leader. Screened; re-open only if Isomorphic builds a commercial-marketing function or Alphabet's F1 posture changes.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.isomorphiclabs.com/press/isomorphic-labs-funding",
+    "https://www.prnewswire.com/news-releases/isomorphic-labs-secures-2-1-billion-funding-to-scale-its-ai-drug-design-engine-302769674.html",
+    "https://www.fiercebiotech.com/biotech/alphabets-ai-biotech-isomorphic-labs-bags-21b-series-b-fuel-next-gen-drug-design-model",
+    "https://www.isomorphiclabs.com/articles/isomorphic-labs-to-appoint-max-jaderberg-as-president",
+    "https://www.isomorphiclabs.com/our-team"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-01|Mach Industries": {
+   "status": "screened_out",
+   "reason": "below threshold: The trigger is real and inside the window: Mach Industries announced a $300M Series C at a $1.8B valuation on 1 Jun 2026 (company blog; TechCrunch same day), co-led by Infinite Capital and Ribbit Capital with Bedrock, Sequoia and Khosla following on, about 4x the $470M valuation of the $100M Series B of June 2025. On 19 May 2026 it bought solid-rocket-motor maker Exquadrum for $50M in cash and equity (85 staff, 70,000 sq ft in Victorville) and relaunched it as Mach Energetics, a commercial propulsion division. Leadership is verifiable: Ethan Thornton, Founder and CEO; Nathan Diller, President and Chief Strategy Officer (Feb 2026); Gary Hobart, CFO (Aug 2025); no CMO found. Motorsport ties of the leaders: none found. Not built, on an honest re-score: Mach is a weapons manufacturer (Viper jet-powered VTOL, Glide weapons-launching glider, Dart counter-drone interceptor, Pike long-range munitions launcher, Stratos surveillance) whose customer is the Pentagon. No weapons or munitions maker holds a partner seat on the F1 or FE grid, the sponsor table has no such category, and Formula E's sustainability positioning excludes it outright; the brand-fit pillar scores below 12, which under the scanner's OF gate removes operational fit from the ranking total and leaves the signal in the 40s, not the thin row's 83. Capital-inflection and deal capacity are genuine, but an ownable, team-approvable category lane does not exist for this company today. Re-surface only if Mach Energetics (commercial propulsion) or an aerospace-manufacturing sub-brand becomes the sponsor entity, which would need a fresh brand-fit assessment.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://machindustries.com/articles/mach-industries-raises-300-million-in-series-c-funding",
+    "https://techcrunch.com/2026/06/01/defense-tech-darling-mach-industries-hits-1-8b-valuation-a-4x-jump-in-a-year/",
+    "https://techcrunch.com/2026/05/19/mach-industries-just-spent-50m-to-solve-a-major-defense-tech-problem/",
+    "https://www.prnewswire.com/news-releases/nathan-diller-joins-mach-industries-as-president-and-chief-strategy-officer-302683105.html",
+    "https://www.prnewswire.com/news-releases/mach-industries-appoints-gary-hobart-as-chief-financial-officer-302532641.html"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-11|Snyk": {
+   "status": "screened_out",
+   "reason": "contradicted: The row's trigger (funding_event: 'reported $7.4B valuation, ~$300M ARR, IPO ambitions', sourced to an aggregator) is not an event in the 90 days before 11 Jun 2026. The $7.4B figure is the Series G of December 2022 ($196.5M led by QIA, a mark-down from $8.5B in September 2021); no round, tender or IPO filing occurred in the window, and the ARR figure could not be sourced. The only in-window events run the other way: CEO Peter McKay stepped down in April 2026 with CFO Ken MacAskill as interim CEO (no permanent CEO named as of September 2026), followed in June 2026 by a fourth round of layoffs (about 90 jobs, the Israel development centre closed) as AI code-scanning agents erode demand. An interim, finance-led CEO cutting headcount is a contraction, not the capital-plus-identity inflection the standard requires for a three-year commitment; the row's 'CEO & CFO' title also omitted 'interim'. No motorsport tie was found for any Snyk leader and Snyk holds no F1/FE position. Re-open only if a permanent CEO is appointed alongside a capital event.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.globenewswire.com/news-release/2022/12/12/2572306/0/en/Snyk-Closes-196-5-Million-Series-G-Funding-at-7-4-Billion-Valuation.html",
+    "https://www.tipranks.com/news/private-companies/snyk-adjusts-leadership-structure-amid-renewed-focus-on-ai-security",
+    "https://www.thestack.technology/snyk-ceo-steps-down-better-ai-knowledge/",
+    "https://www.bostonglobe.com/2026/07/14/business/rapid7-layoffs-snyk-cybersecurity-jobs/",
+    "https://www.govinfosecurity.com/snyk-reportedly-cuts-90-jobs-to-accelerate-ai-strategy-a-32081"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-13|Applied Intuition": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger is 'funding_event (Series F)'. Applied Intuition's Series F ($600M fundraise and tender offer at a $15B valuation, co-led by BlackRock-managed funds and Kleiner Perkins; about $200M primary and $400M secondary) was announced on 17 June 2025, almost a year before the row's date of 13 June 2026 and far outside the 90-day rule. No 2026 capital or identity event was found: searches of the company newsroom and press for 2026 return only customer and product news (an expanded Stellantis STLA Brain collaboration on 21 May 2026, the Japan launch of its autonomous-driving system, a CNBC Disruptor 50 listing on 19 May 2026), none of which is a capital-plus-identity inflection. The company is a credible future target (physical-AI simulation and validation is a real MODE A workstream; founder-led, no public CMO; CEO Qasar Younis is an investor in Odyssey), so re-scan it on its next raise, tender or listing step rather than shipping a signal on a year-old round.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.appliedintuition.com/press-releases/series-f",
+    "https://www.prnewswire.com/in/news-releases/applied-intuition-closes-series-f-at-15-billion-valuation-accelerating-vehicle-intelligence-across-all-moving-machines-302483698.html",
+    "https://www.stellantis.com/en/news/press-releases/2026/may/stellantis-and-applied-intuition-expand-collaboration-with-stla-brain-to-advance-vehicle-software-and-enhance-customer-experience",
+    "https://www.cnbc.com/2026/05/19/applied-intuition-cnbc-disruptor-50-ranking.html",
+    "https://www.appliedintuition.com/press-releases"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-24|Sila Nanotechnologies": {
+   "status": "screened_out",
+   "reason": "contradicted: The row records a funding event on 24 June 2026 (source: a bitget.com wiki page, an aggregator). No capital event happened in the 90 days before that date. Live check of Sila's own press page and the wires: the only June 2026 events are an ITC Section 337 / district-court patent complaint against Chinese silicon-carbon anode importers filed on 18 June 2026 (with Georgia Tech Research Corporation; instituted by the USITC on 21 July) and a Washington Department of Ecology notice-of-construction application for a small battery pilot at Moses Lake (comment period to 11 June). Neither is a capital or identity inflection. The real triggers came AFTER the row: a $300M private round co-led by Atreides Management and Sutter Hill Ventures (joined by 8VC, Bessemer, Matrix, T. Rowe Price funds) announced 21 July 2026, and a conditional $1.4B loan commitment from the U.S. Department of War announced 7 August 2026. Valuation undisclosed (the ~$3.3B figure dates from Feb 2021). Gene Berdichevsky is confirmed as co-founder and CEO; no motorsport tie found for any Sila leader; Sila is not in the sponsor table. Fit note for a future row: Formula E battery supply is a spec contract (GEN4 battery by Podium AT), so a silicon-anode story at Nissan Formula E Team would be a MODE B halo, and Sila's only named automotive customer is Mercedes-Benz, which is not in Formula E. Recommendation: do not build on this date; re-run as a fresh row dated 2026-07-21 (the $300M round) or 2026-08-07 (the $1.4B DoW commitment), where the capital inflection is real.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.silanano.com/press/press-releases/sila-secures-300-million-in-private-funding-to-ramp-gigascale-anode-manufacturing-and-strengthen-americas-technology-sovereignty",
+    "https://www.businesswire.com/news/home/20260807648387/en/Sila-Receives-Conditional-$1.4-Billion-Loan-Commitment-from-U.S.-Department-of-War-to-Accelerate-Domestic-Battery-Technology-Manufacturing",
+    "https://www.silanano.com/press/press-releases/sila-files-u-s-itc-district-court-actions-to-protect-american-battery-innovation",
+    "https://www.usitc.gov/press_room/news_release/2026/er0721_68943.htm",
+    "https://ecology.wa.gov/events/aq/notice-of-construction-applications/sila-nanotechnologies-comment-ends-6-11-26"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-07-02|Higgsfield AI": {
+   "status": "screened_out",
+   "reason": "below threshold: The trigger is real and has since been confirmed, but an honestly scored case does not clear the pipeline's threshold, so no brief is issued. Trigger: on 30 Jun 2026 The Information (relayed by Dealroom and TechTimes) reported Higgsfield in talks to raise $300-500M at a $5B pre-money valuation on a $500M annualised run-rate (~70% enterprise); the company confirmed a $400M Series B at a $5.4B valuation led by DST Global on 17 Aug 2026 (PR Newswire, San Francisco), stating $700M annualised revenue, 30M users and 390 of the Fortune 500 as customers; Accel had led an $80M Series A extension at $1.3B in Jan 2026. Leadership verified: Alex Mashrabov (Co-Founder & CEO, ex-Head of Generative AI at Snap), Mahi de Silva (Co-Founder & Chief Strategy Officer), Yerzat Dulat (CTO), Kevin Kim (Head of Product & Marketing); no CMO or CFO listed; no motorsport tie found for any of them. The team the row suggested, Visa Cash App Racing Bulls, survives the sponsor table (no AI or creative-tools partner; the grid's other generative-AI partners are Claude at Williams, Gemini at McLaren, Meta AI at Mercedes, ElevenLabs at Audi, IndraMind at Alpine, TWG AI at Cadillac) and its Creator Platform is a genuine audience match. What stops the case is brand fit: Forbes reported on 11 Feb 2026 that marketing kits distributed through the Higgsfield Earn creator programme contained racist videos and non-consensual deepfakes, that some 'AI' clips were stock templates with the company's logo added, and that creators reported unpaid work and account bans; no public remediation was found. Scored honestly on the five pillars (timing 16, capacity 17, brand fit 11, urgency 14, ops fit 13 = 71), brand fit sits below the operational-fit gate (>= 12), so the pipeline's ranking score drops to 58 against the 70 threshold and the run reports below_threshold. Raising brand fit to 12 to pass the gate would be the score inflation the standard forbids: a rights-holder's due diligence would find the Forbes record on the first search. Re-open if Higgsfield publishes a content-policy and creator-programme remediation, or if a team-side conversation confirms the record is not disqualifying; the research above is enough to rebuild the case in a session at that point (recommended team Racing Bulls, MODE A content operations, estimated $2-4M a year, Official Creative AI Partner).",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://dealroom.co/news/136662-ai-video-startup-higgsfield-eyes-500m-raise-at-5b-valuation/",
+    "https://www.techtimes.com/articles/319394/20260630/ai-video-startup-higgsfield-hits-500m-revenue-eyes-5b-funding-round.htm",
+    "https://www.prnewswire.com/news-releases/higgsfield-raises-400-million-series-b-financing-at-5-4-billion-valuation-with-annualized-revenue-reaching-700-million-302852430.html",
+    "https://techcrunch.com/2026/08/17/higgsfield-raises-400m-series-b-quadrupling-its-valuation-in-8-months-to-5-4b/",
+    "https://siliconangle.com/2026/01/15/higgsfield-raises-80m-1-3b-valuation-scale-ai-video-platform/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-07-30|Onyx Security": {
+   "status": "screened_out",
+   "reason": "below threshold: The trigger is real and current: a $113M Series B led by Bessemer Venture Partners, announced 29 Jul 2026 (Business Wire), with Cyberstarts, TCV, Conviction, FirstMark, Vintage, QuantumLight and G Squared; total funding $153M; valuation about $640M (Calcalist, reported, not company-confirmed); revenue quadrupled since the company left stealth in March 2026 with $40M ($5M seed from Cyberstarts, $35M Series A led by Conviction); HQ New York and Tel Aviv; 70+ staff across Israel, the US and Canada; Fortune 500 customers in banking, insurance, energy and technology. Leadership: Maxim Bar Kogan, Co-founder & CEO (ex-Unit 8200); Gil Elbaz, Co-founder & Chief AI Officer; Tim Youngblood, Chief Strategy Officer (former CISO of T-Mobile, McDonald's, Kimberly-Clark, Dell); Mark Loewenstein, VP Marketing; Rob Witmer, VP Sales; no CMO or CFO listed; no motorsport tie found for any leader. Honest score 64/100: timing 16, capacity 11, brand fit 12, urgency 11, ops fit 14. A company four months out of stealth, with a reported (not confirmed) valuation under $1B, ~$150M raised and a 70-person team, does not have the capacity or brand maturity for a multi-year Formula 1 partnership; the pipeline's MD threshold is 70 and the case cannot honestly reach it. The open lanes it would have fitted (cybersecurity at TGR Haas or Cadillac; no team has an AI-agent security partner) are recorded in the Zenity case (N° 155), a direct rival with Gartner's 'company to beat' verdict, 230 staff and ~$185M raised, which was built instead. Re-run if Onyx confirms a $1B+ round or names a CMO.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.businesswire.com/news/home/20260729713522/en/Onyx-Security-Raises-$113M-Series-B-to-Control-Advanced-AI-Quadrupling-Revenue-since-Stealth-Launch-Four-Months-Ago",
+    "https://www.onyx.security/blog/onyx-113m-series-b-keeping-humans-in-control-as-ai-becomes-smarter",
+    "https://www.calcalistech.com/ctechnews/article/b1fsjydszg",
+    "https://www.securityweek.com/onyx-security-raises-113-million-to-control-ai-agents-in-the-enterprise/",
+    "https://www.businesswire.com/news/home/20260311837993/en/Onyx-Security-Launches-with-$40M-in-Funding-to-Build-the-Secure-AI-Control-Plane-for-the-Agentic-Era"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|Einride": {
+   "status": "screened_out",
+   "reason": "contradicted: The listing is real (business combination with Legato Merger Corp. III closed 9 Jun 2026; ADSs trading on Nasdaq as ENRD from 10 Jun 2026, pre-money equity value ~$1.35B, $113M PIPE) but the desk row's premise is contradicted by the live numbers. (1) Capacity: first results as a public company (18 Aug 2026) show H1 2026 revenue of SEK 273M (~$27M) and a net loss of SEK 1.12B; the shares traded at $4.81 on 1 Sep 2026 for a market capitalisation of roughly $0.7B (small-cap), well below the ~$1.35B the transaction was struck at. A multi-year Formula E entry at $1.5-2.5M a year would be 5-10% of annual revenue for a loss-making company whose guidance is a EUR 85-95M run-rate by December 2026; the scanner's capacity gate ($1B+ valuation or $100M+ ARR) is not met on either leg. (2) The '~$219M raised' in the row is not in any source: guidance was ~$333M gross including the PIPE and up to $220M of trust cash BEFORE redemptions, and the closing 8-K exhibit (sec.gov) is egress-blocked, so the actual proceeds are unverified. (3) Category: DHL is Formula E's founding championship-level logistics partner (renewed for Season 12), so an electric-freight carrier sits inside a championship partner's category at every team. (4) Timing: the listing sits 87 days before the row's date, at the edge of the 90-day window; the fresher event (H1 results, 18 Aug) is not a brand-budget trigger. Honest score on the 5-pillar model is in the mid-50s (capacity <10, timing ~11), below the MD threshold of 70, so no case can clear the bar. Leadership for the record: Roozbeh Charli, CEO (from CFO, May 2025); Robert Falck, Founder and Executive Chairman; Anubhav Verma, CFO (Jan 2026); Corinne Aaron, CMO (since Aug 2023, ex-Tesla EMEA marketing) — a real CMO, which is unusual and worth remembering. No motorsport tie found for any of them. Re-surface if Einride raises growth equity or lands a large US freight contract that lifts the capacity gate.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/0002002038/000182912626006250/legatomerger3_ex99-1.htm",
+    "https://www.einride.tech/press/einride-reports-first-half-2026-results",
+    "https://www.globenewswire.com/news-release/2026/08/18/3346669/0/en/einride-reports-first-half-2026-results.html",
+    "https://finance.yahoo.com/quote/ENRD/key-statistics/",
+    "https://www.einride.tech/press/leadership"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|Omterra (Siemens Energy industrial spin-off)": {
+   "status": "screened_out",
+   "reason": "contradicted: The prospect as recorded does not exist. 'Omterra' is the new corporate brand of Siemens Energy ITSELF (and Siemens Gamesa), announced 14 Jul 2026 because the Siemens brand licence from the 2020 spin-off is time-limited; rebranding rolls out in stages from later in 2026. The carve-out is a different thing: on 25 Aug 2026 Siemens Energy's supervisory board approved the legal and operational separation of its Transformation of Industry business area (steam turbines, compressors, electrolysers; ~17,000 employees; ~EUR 5.7B revenue in fiscal 2025; Q3 FY26 revenue EUR 1.5B at 14.3% margin), with options ranging from external investors to a capital-markets transaction and Siemens Energy retaining a significant minority stake; Bloomberg-reported value above EUR 10B; CVC, EQT, Bain, Brookfield and KKR reported as interested. That unit has NO announced name, NO announced chief executive or leadership team of its own, NO brand and NO decided structure (IPO or private-equity sale), so the verified named decision-maker and decision path the standard requires cannot exist yet; the only people to call today are Siemens Energy's board (CEO Christian Bruch) and Anne-Laure de Chammard, listed on Siemens Energy board profiles as Executive Vice President for Transformation of Industry — confirm she leads the carve-out before any contact. Two category hazards for whenever it does surface: on the Formula E side ABB, the championship's title partner, is a direct electrification and grid rival; on the F1 side Siemens AG (a separate company since 2020) is the FIA's Official Digital Twin Sponsor and a McLaren and Ferrari partner, an adjacency the desk must not conflate with the prospect. The Versigent archetype is right and the catalyst is real, so put it on the catalyst radar: re-surface when the carve-out has a name, a CEO and a transaction structure, at which point the born-big spin-off case (new brand from zero, EUR 5.7B revenue) is worth building properly, most likely for F1 given the ABB clash in Formula E.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.siemens-energy.com/global/en/home/press-releases/omterra-brand-announcement.html",
+    "https://www.powermag.com/siemens-energy-will-shed-the-siemens-name-rebrand-as-omterra/",
+    "https://finance.yahoo.com/energy/articles/siemens-energy-plans-carve-transformation-031500771.html",
+    "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/siemens-energy-s-10-billion-breakup-plan-puts-the-parent-s-shares-in/70004431",
+    "https://fuelcellsworks.com/2026/08/26/electrolyzer/siemens-energy-is-spinning-out-its-industrial-unit-and-the-electrolyser-business-goes-with-it"
    ],
    "screened_at": "2026-09-06"
   }

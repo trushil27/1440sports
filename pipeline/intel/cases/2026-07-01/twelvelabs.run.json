@@ -1,0 +1,727 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-07-01",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-lctk1j00/2026-07-01/twelvelabs.pdf",
+     "web": "/tmp/case-pdf-lctk1j00/2026-07-01/twelvelabs.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "TwelveLabs",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 14
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "top ranking score",
+     "company": "TwelveLabs",
+     "decision": "selected",
+     "signal_date": "2026-07-01"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "TwelveLabs",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 17,
+    "ops_fit": 16,
+    "ranking": 71,
+    "urgency": 11,
+    "capacity": 13,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 4,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Visa Cash App Racing Bulls",
+   "source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+   "trigger_date": "2026-07-01",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 172,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-lctk1j00/2026-07-01/twelvelabs.web.html",
+  "brief_data": {
+   "hq": "San Francisco & Seoul (founded 2021)",
+   "deck": "TwelveLabs, the San Francisco and Seoul video-understanding company whose models let broadcasters search footage by what happens in it, closed a $100M Series B on 1 July 2026 co-led by NEA and NAVER Ventures, with Amazon as strategic investor and Red Bull Ventures joining the cap table.",
+   "risks": [
+    {
+     "label": "CAPACITY",
+     "detail": "Roughly $150M raised in total; a multi-year sponsorship competes with the New York and London office spend just announced.",
+     "counter": "Size it at the entry tier, part-paid in platform usage, with the Red Bull group as reference customer."
+    },
+    {
+     "label": "INVESTOR, NOT PARTNER",
+     "detail": "Red Bull Ventures is a minority participant; nothing obliges the racing teams to buy or brand the product.",
+     "counter": "Use the introduction, then win the deal on a paid pilot with the content team first."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private (~$150M raised; $100M Series B, Jul 2026)",
+   "company": "TwelveLabs",
+   "gridfit": [
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "investor_adjacency",
+    "operational_fit"
+   ],
+   "sources": [
+    "https://theorg.com/org/twelve-labs/org-chart/jae-lee",
+    "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Jae Lee before the United States GP to confirm appetite for a first sports partnership, propose a paid pilot with the Racing Bulls content team over the autumn rounds, and size an Official Video Intelligence Partner entry against the 2027 roster.",
+    "value": [
+     {
+      "text": "Every session produces hours of onboard, garage, pit-lane and broadcast video that sits in folders nobody can search. Marengo indexes it by what actually happens in the frame; Pegasus writes the metadata. The content team can ask for Lindblad's debut points celebration, every Lawson pit stop from the left camera, or the moment the garage reacts to a result, and cut clips while the session is still running.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "The Creator Platform gives young fans real production work. A searchable, tagged archive is the raw material they need, delivered as text queries rather than a media-asset-management training course, which is how the programme scales from a handful of creators to thousands of applicants.",
+      "label": "Fuel for the Creator Platform"
+     },
+     {
+      "text": "The same search runs over pit-stop and incident footage: every stop, every wheel-gun angle, every unsafe release across a season, retrieved by description rather than timestamp. It is the video equivalent of what Dynatrace and Confluent do for the team's data streams.",
+      "label": "Engineering review"
+     },
+     {
+      "text": "Official Video Intelligence Partner designation, nose or rear-wing endplate placement, naming of the team's video-search environment, Creator Platform integration, hospitality at Austin and Las Vegas, and a racing reference customer for TwelveLabs' New York and London sales teams.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 1 July 2026 TwelveLabs announced a $100M Series B co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures. Total funding is roughly $150M. This is a company release, so the figures are confirmed.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Amazon used the round to make AWS the company's preferred cloud in a multi-year commitment: inference optimised on Trainium chips, new models launching on AWS first. A hyperscaler betting on a video model is the signal that the product has crossed from research into production media workflows.",
+      "label": "Amazon as preferred cloud"
+     },
+     {
+      "text": "The company is opening offices in New York and London alongside San Francisco and Seoul, and expanding in Los Angeles. Those are the cities where leagues, broadcasters and rights-holders buy technology, and a racing team's content operation is the reference customer that sells to all of them.",
+      "label": "Offices in the two sports-media capitals"
+     },
+     {
+      "text": "Teams close 2027 partner rosters in the fourth quarter. The United States GP in Austin (October) and the Las Vegas GP (November) are the two US stages on which a San Francisco company would announce, with the Belgian, Hungarian, Dutch and Italian GPs inside the working window for a paid pilot.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Racing Bulls' technology roster is Dynatrace (observability), Confluent (data streaming), Siemens and Randstad, joined in June 2026 by a Salesforce Agentforce deployment for fan engagement and hospitality. Nothing on the roster indexes, searches or understands video. Official Video Intelligence Partner is a new line, not a displacement, and Racing Bulls partnerships are priced below the front of the grid.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Red Bull Ventures, Red Bull GmbH's corporate venture arm launched in 2025 with a €200M fund and led by Nai-Tseng Chen, the group's Global Head of Corporate Finance, joined the Series B and describes TwelveLabs as its most prominent investment. The introduction to both Red Bull teams therefore exists at group level; the sponsorship still has to be won on product.",
+      "label": "The group path"
+     },
+     {
+      "text": "CEO Peter Bayer says 60 per cent of fans rated the team's content excellent in F1's latest monitoring report, clear of the field. Its Creator Platform has spent two years giving young fans real work inside the team, from a graffiti artist on the São Paulo garage to a designer inside HUGO's studio. A team whose differentiator is content is the team that will use a video-search product every weekend.",
+      "label": "The content team of the grid"
+     },
+     {
+      "text": "The same group path leads to the senior team, but Oracle's title partnership puts cloud and AI at the centre of that team's story and TwelveLabs has just named AWS its preferred cloud. At Racing Bulls there is no cloud incumbent to argue with, and the entry price matches a company that has raised $150M.",
+      "label": "Why not Oracle Red Bull Racing"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Same group path, but Oracle's title deal makes cloud and AI the team's story and TwelveLabs runs on AWS; a direct tension, not a category clash."
+     },
+     {
+      "team": "Mercedes-AMG Petronas · BWT Alpine",
+      "reason": "Microsoft holds the cloud and AI lane at both; Mercedes also carries Meta AI."
+     },
+     {
+      "team": "McLaren F1 Team",
+      "reason": "Google Cloud holds the cloud and AI lane; video AI would sit inside it."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Claude is the team's AI partner; a second AI brand on the roster is a hard sell."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "TWG AI is the inaugural AI partner."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "CoreWeave holds the AI-cloud lane; no Red Bull group path."
+     },
+     {
+      "team": "TGR Haas F1 Team · Scuderia Ferrari · Audi F1 Team",
+      "reason": "Open lanes but no investor path and, at Ferrari and Audi, a partner price beyond a company with $150M raised."
+     }
+    ]
+   },
+   "date_long": "01 JUL 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Visa Cash App Racing Bulls",
+   "value_mode": "A",
+   "bottom_line": "A $100M Series B, Amazon as preferred cloud and Red Bull Ventures on the cap table give TwelveLabs a fresh budget and a structural path into the Red Bull teams. The video-intelligence lane at Racing Bulls is open and the product would be used every race weekend.",
+   "footer_date": "1 JUL 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round closed 1 Jul; Austin and Las Vegas inside the year.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 13,
+     "note": "$100M Series B; ~$150M raised in total: entry-tier budget.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Sports-media customer base; Red Bull Ventures on the cap table.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 11,
+     "note": "Office expansion and the next raise; no hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: searchable video archive for content and engineering.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "TwelveLabs announced on 1 July 2026 a $100M Series B co-led by NEA and NAVER Ventures, with Amazon, Radical Ventures, Korea Investment Partners, Index Ventures, Quadrille Capital and Red Bull Ventures, taking total funding to roughly $150M. Amazon made AWS its preferred cloud in a multi-year commitment built on Trainium chips. The money opens offices in New York and London alongside San Francisco and Seoul. Its Marengo and Pegasus models already serve NFL Media and Maple Leaf Sports & Entertainment, which use them to find exact moments in game footage and package content faster.",
+   "the_case_p2": "Red Bull Ventures, the group's corporate venture arm launched in 2025 with a €200M fund and led by Nai-Tseng Chen, Red Bull's Global Head of Corporate Finance, calls TwelveLabs its most prominent investment. That is a structural introduction to both Red Bull teams, not a sponsorship. The grid's nearest incumbents are cloud and data platforms, which TwelveLabs runs on rather than against, so the category is a new line on a roster, not a displacement.",
+   "track_label": "",
+   "brief_number": "172",
+   "claims_total": 15,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$100M Series B co-led by NEA and NAVER Ventures, announced 1 Jul 2026 (company release, GlobeNewswire); tot…",
+     "value": "$100M",
+     "claim_id": 643,
+     "verified": true,
+     "source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html"
+    },
+    {
+     "fact": "Red Bull Ventures, the group's corporate venture arm launched in 2025 with a €200M fund and led by Nai-Tsen…",
+     "value": "€200M",
+     "claim_id": 653,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Video AI · Video Understanding Models / Media Technology",
+   "value_content": "MODE A - operational. Every session produces hours of onboard, garage and broadcast video nobody can search. TwelveLabs indexes it: the content team finds Lindblad's debut points or every Lawson pit stop from one camera in seconds, cuts clips while the session runs, and hands the Creator Platform tagged footage. Engineers get the same search over pit-stop and incident video. In return: a named partnership, livery presence, Austin and Las Vegas hospitality.",
+   "value_section": true,
+   "why_team_para": "Racing Bulls is the grid's content team: CEO Peter Bayer told Sector that 60 per cent of fans rated its content excellent in F1's latest monitoring report, clear of the field, and its Creator Platform puts young fans to work inside the team. The technology roster is data and observability, Dynatrace and Confluent, with no video-AI partner. Red Bull Ventures already holds TwelveLabs equity, so the introduction exists, and the entry price fits a company that has raised $150M.",
+   "deal_arch_para": "Entry as Official Video Intelligence Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the New York and London build-out and the next raise. Estimated $1.5-2.5M a year, part-payable in platform usage. Scope: nose or endplate placement, naming of the video-search environment, Creator Platform integration, US hospitality.",
+   "footer_company": "TWELVELABS",
+   "why_team_label": "WHY VISA CASH APP RACING BULLS",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 1 July, and the New York and London offices it funds are a brand programme in the two cities where sports media buys technology. Teams set 2027 rosters in the fourth quarter; the United States GP (Austin, October) and Las Vegas GP (November) are the US stages.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 172",
+   "decision_maker_bio": "Lee co-founded TwelveLabs in 2021 after data-science work at Korea's Ministry of National Defense and a UC Berkeley degree; he fronts every raise. Path: Yoon Kim, President and Chief Strategy Officer since December 2024 (ex-SK Telecom CTO, Apple Siri), and co-founder Soyoung Lee, Head of Business Development. No CMO is listed.",
+   "decision_maker_name": "Jae Lee",
+   "decision_maker_role": "Co-Founder & CEO, TwelveLabs",
+   "opening_angle_intro": "Lead with the Red Bull Ventures link.",
+   "opening_angle_quote": "&ldquo;Jae, Red Bull Ventures backed you a month ago, and its racing teams sit on the most valuable video archive in sport nobody can search. Racing Bulls has no video partner. 25 minutes before Austin to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO VISA CASH APP RACING BULLS",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Jae Lee, Co-Founder & CEO at TwelveLabs",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://theorg.com/org/twelve-labs/org-chart/jae-lee",
+     "excerpt": "The Org / World Economic Forum profile: Jae Lee, Co-Founder & CEO of TwelveLabs; UC Berkeley computer-science graduate; previously lead data scientist at Korea's Ministry of National Defense. Company founded in 2021 by Jae Lee, Aiden Lee, Dave Chung and Sungjun Kim.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Jae Lee, Co-Founder & CEO, TwelveLabs at TwelveLabs",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://theorg.com/org/twelve-labs/org-chart/jae-lee",
+     "excerpt": "The Org / World Economic Forum profile: Jae Lee, Co-Founder & CEO of TwelveLabs; UC Berkeley computer-science graduate; previously lead data scientist at Korea's Ministry of National Defense. Company founded in 2021 by Jae Lee, Aiden Lee, Dave Chung and Sungjun Kim.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$100M Series B co-led by NEA and NAVER Ventures, announced 1 Jul 2026 (company release, GlobeNewswire); total funding roughly $150M",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "TwelveLabs, the San Francisco and Seoul video-understanding company whose models let broadcasters search footage by what happens in it, closed a $100M Series B on 1 July 2026 co-led by NEA and NAVER Ventures, with Amazon as strategic investor and Red Bull Ventures joining the cap table.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "NEA and NAVER Ventures (co-leads); Amazon (strategic); Radical Ventures, Korea Investment Partners, Index Ventures; new investors Quadrille Capital and Red Bull Ventures",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "TwelveLabs announced on 1 July 2026 a $100M Series B co-led by NEA and NAVER Ventures, with Amazon, Radical Ventures, Korea Investment Partners, Index Ventures, Quadrille Capital and Red Bull Ventures, taking total funding to roughly $150M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$100M Series B, announced 1 Jul 2026",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Red Bull Ventures, the group's corporate venture arm launched in 2025 with a €200M fund and led by Nai-Tseng Chen, Red Bull's Global Head of Corporate Finance, calls TwelveLabs its most prominent investment.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No F1 team carries a video-intelligence partner in the sponsor table; nearest incumbents are cloud and data platforms (Oracle at Red Bull, Dynatrace and Confluent at Racing Bulls, Microsoft at Mercedes and Alpine, Google Cloud at McLaren)",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Oracle → Oracle Red Bull Racing (team_title, active); Confluent → Visa Cash App Racing Bulls (team_major, active); Microsoft → Mercedes-AMG Petronas F1 Team (team_major, joined); Google Cloud → McLaren F1 Team (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $100M Series B, Amazon as preferred cloud and Red Bull Ventures on the cap table give TwelveLabs a fresh budget and a structural path into the Red Bull teams.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Red Bull Ventures, the group's corporate venture arm, joined the round and calls TwelveLabs its most prominent investment; Amazon made AWS the preferred cloud in a multi-year Trainium commitment; NFL Media and Maple Leaf Sports & Entertainment already use the models on game footage",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Red Bull Ventures already holds TwelveLabs equity, so the introduction exists, and the entry price fits a company that has raised $150M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ San Francisco with Seoul; new offices planned in New York and London",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 1 July 2026 TwelveLabs announced a $100M Series B co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Total funding is roughly $150M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Red Bull Ventures, Red Bull GmbH's corporate venture arm launched in 2025 with a €200M fund and led by Nai-Tseng Chen, the group's Global Head of Corporate Finance, joined the Series B and describes TwelveLabs as its most prominent investment.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "At Racing Bulls there is no cloud incumbent to argue with, and the entry price matches a company that has raised $150M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Open lanes but no investor path and, at Ferrari and Audi, a partner price beyond a company with $150M raised.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html",
+     "excerpt": "Company release, GlobeNewswire, 1 Jul 2026 (search summary; Sports Video Group and The Elec, 2 Jul): TwelveLabs raised $100 million in Series B funding co-led by NEA and NAVER Ventures, with Amazon as strategic investor, existing investors Radical Ventures, Korea Investment Partners and Index Ventures, and new investors Quadrille Capital and Red Bull Ventures; total funding roughly $150 million. Amazon made AWS the preferred cloud in a multi-year commitment with inference optimised on AWS Trainium and new models launching there first. New offices planned in New York and London alongside San Francisco and Seoul, with expansion in Los Angeles.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

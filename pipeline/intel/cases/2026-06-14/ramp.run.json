@@ -1,0 +1,771 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-06-14",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-4tm3gx0b/2026-06-14/ramp.pdf",
+     "web": "/tmp/case-pdf-4tm3gx0b/2026-06-14/ramp.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Ramp",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 15
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 83,
+     "reason": "top ranking score",
+     "company": "Ramp",
+     "decision": "selected",
+     "signal_date": "2026-06-04"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Ramp",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 83,
+   "score_breakdown": {
+    "cap": null,
+    "base": 83,
+    "total": 83,
+    "timing": 18,
+    "ops_fit": 16,
+    "ranking": 83,
+    "urgency": 14,
+    "capacity": 19,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 3,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 83,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 83,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Visa Cash App Racing Bulls",
+   "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "trigger_date": "2026-06-04",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 191,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-4tm3gx0b/2026-06-14/ramp.web.html",
+  "brief_data": {
+   "hq": "New York (offices in Miami and San Francisco)",
+   "deck": "Ramp, the New York corporate-card and spend-management platform, announced a $750M Series F at a $44B valuation on 4 June 2026, led by ICONIQ, GIC and Ontario Teachers', nearly tripling its $16B mark of a year ago. It has passed $1B in annualized revenue and is free-cash-flow positive.",
+   "risks": [
+    {
+     "label": "ALREADY APPROACHED",
+     "detail": "The 1440 human layer has already approached Ramp on this recommendation; a cold re-pitch would look uncoordinated.",
+     "counter": "Use this brief as the refreshed dossier inside the live conversation, routed through whoever holds the relationship."
+    },
+    {
+     "label": "EUROPE NOT YET LIVE",
+     "detail": "Direct onboarding of EU-based businesses starts only in summer 2026, and Cash App's parent Block also sells to businesses.",
+     "counter": "Make the team the European launch customer; agree the category carve-out (corporate cards, spend software) with Visa and Cash App up front."
+    }
+   ],
+   "score": 83,
+   "ticker": "Private ($44B; $750M Series F, Jun 2026)",
+   "company": "Ramp",
+   "gridfit": [
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "label": "PRIME LANE",
+     "detail": "documented open category: spend management (complements Visa, not conflicting)",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "partner_adjacency",
+    "already_approached"
+   ],
+   "sources": [
+    "https://ramp.com/authors/eric-glyman",
+    "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+    "https://support.ramp.com/hc/en-us/categories/360002060114-General",
+    "https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/"
+   ],
+   "extended": {
+    "ask": "Not a cold call: the 1440 human layer has already approached Ramp. Refresh the live conversation with Eric Glyman before the Italian GP: confirm the European launch timing, agree a category carve-out with Visa and Cash App, and size an Official Corporate Card and Spend Management Partner entry against the 2027 roster.",
+    "value": [
+     {
+      "text": "Ramp as the team's card and spend platform: physical and virtual corporate cards for travelling staff, automated receipt and expense capture in the garage, vendor onboarding and bill payment, procurement approvals and real-time spend dashboards that feed cost-cap reporting. Ramp's finance-automation and AI tools cut the month-end load on a small finance team.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Ramp brings 70,000 business customers and a CFO audience to Austin and Las Vegas hospitality, a co-branded card activation the title partner can promote, and a US fintech brand for the team's American races.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "The finance office behind a race team is an unusual, honest content vein: how a cost-capped team spends, approves and reports across 24 rounds, told through Ramp's product. Joint content with Visa on the card programme extends the reach.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Corporate Card and Spend Management Partner designation, sidepod and helmet placement, the Ramp-Visa card activation, hospitality at the Italian GP, United States GP and Las Vegas GP, and driver and team-principal access for Ramp's customer events.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 4 June 2026 Ramp announced a $750M primary Series F at a $44B valuation, led by ICONIQ, GIC and Ontario Teachers' Pension Plan, with Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital as new investors. The company states it has surpassed $1B in annualized revenue and is free-cash-flow positive; Bloomberg reports run-rate revenue above $1.5B.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Ramp was valued at $16B in June 2025. A company re-priced to $44B in twelve months has a public-market story to build and a budget to build it with; the investor list (pension funds, sovereign wealth, crossover managers) is the roster of a company preparing for a listing.",
+      "label": "Price nearly tripled in a year"
+     },
+     {
+      "text": "Ramp acquired Billhop, a UK- and Sweden-licensed payments platform, on 13 March 2026, is opening its first international offices in London and Stockholm, and begins onboarding businesses headquartered in the UK and EU directly from summer 2026. A European team partner announced in the same quarter is the launch campaign.",
+      "label": "Europe opens this summer"
+     },
+     {
+      "text": "Teams close their 2027 partner rosters in the fourth quarter. The Italian GP in September is Racing Bulls' home race; the United States GP (Austin) in late October and the Las Vegas GP in November are the US stages where Ramp's customers and investors sit. A deal agreed before Monza can be announced at home and activated in the US.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Racing Bulls carries Visa and Cash App as title partners, with Siemens, Dynatrace, Confluent, Randstad, Tudor and Hugo on the roster. The team profile lists spend management as an open category that complements Visa rather than conflicting with it. Official Corporate Card and Spend Management Partner is a clean designation.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Ramp's cards are Visa cards, issued by Sutton Bank under a Visa licence, and Visa itself is a Ramp customer. The introduction runs through the title partner, and the activation puts a Visa-network card programme on the Visa-titled car rather than a competing scheme.",
+      "label": "The warm path"
+     },
+     {
+      "text": "A travelling team of a few hundred people at 24 rounds generates the expense, procurement and vendor-payment load Ramp is built for, under a cost cap that rewards real-time spend control. The platform is consumed in the finance office, not just displayed on the sidepod.",
+      "label": "A team that will use the product"
+     },
+     {
+      "text": "Racing Bulls is the younger, digital-first team in the Red Bull family; Ramp sells to founder-led companies. The team is based in Italy, which makes it the first European customer reference Ramp can name as it opens London and Stockholm.",
+      "label": "Audience and geography"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "McLaren F1 Team",
+      "reason": "Airwallex, Workday and Mastercard hold the payments, finance-software and card-network lanes."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "SAP is on the roster; SAP Concur is the incumbent expense-management product."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle, whose NetSuite is a finance-system incumbent, is title partner; Visa is already present but the senior team is the crowded one."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "Revolut, whose business product includes expense management, is title partner from 2026."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Coinbase, Circle, Pepperstone and Public make it the most fintech-crowded roster on the grid."
+     },
+     {
+      "team": "TGR Haas F1 Team · BWT Alpine F1 Team · Scuderia Ferrari HP",
+      "reason": "MoneyGram (Haas), Mobilize Financial Services (Alpine) and UniCredit and Vantage (Ferrari) occupy the payments and finance lanes."
+     },
+     {
+      "team": "Atlassian Williams Racing · Cadillac F1 Team",
+      "reason": "Open but not chosen: Kraken and Stephens sit near the lane at Williams; Cadillac has no Visa tie and no European base for the launch story."
+     }
+    ]
+   },
+   "date_long": "14 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Visa Cash App Racing Bulls",
+   "value_mode": "A",
+   "bottom_line": "A $750M raise at $44B, $1B+ in annualized revenue and a Visa card programme give Ramp the budget and the warm path onto the Visa-titled Racing Bulls, where spend management is an open lane and Europe opens this summer. Already approached by the human layer: refresh, do not re-pitch.",
+   "footer_date": "14 JUN 2026",
+   "score_cells": [
+    {
+     "num": 18,
+     "note": "Round closed 4 June; Europe opens this summer; Monza and Austin inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 19,
+     "note": "$750M raised at $44B; $1B+ annualized revenue; cash-flow positive.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 16,
+     "note": "Founder-led fintech already buying sport; B2B audience.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 14,
+     "note": "Listing talk and a European launch; no hard deadline beyond Q4.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: card and spend platform for a travelling team.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 4 June 2026 Ramp announced a $750M primary Series F at a $44B valuation, led by ICONIQ, GIC and Ontario Teachers' Pension Plan, with Goldman Sachs Alternatives, D.E. Shaw, Morgan Stanley Investment Management and Insight Partners joining. The company says it has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 businesses, among them Visa, Uber, Shopify, Anduril and Figma; Bloomberg puts run-rate revenue above $1.5B. In March it bought Billhop to open London and Stockholm offices and onboard UK- and EU-headquartered businesses directly from summer 2026.",
+   "the_case_p2": "Ramp has started buying sport: in April it became Official Exclusive Corporate Card of The Snow League in a multi-season deal. Its cards run on the Visa network and Visa is a customer. Fintech is the fastest-growing category on the grid, but this lane is corporate cards and spend software, not consumer payments, and it belongs to no team. Note: the 1440 human layer has already approached Ramp; this brief refreshes that conversation.",
+   "track_label": "",
+   "brief_number": "191",
+   "claims_total": 19,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$750M Series F at a $44B valuation, announced 4 June 2026; valued at $16B in June 2025",
+     "value": "$750M",
+     "claim_id": 664,
+     "verified": true,
+     "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html"
+    },
+    {
+     "fact": "More than $1B in annualized revenue and free-cash-flow positive (company, 4 June 2026); run-rate revenue ab…",
+     "value": "$1B",
+     "claim_id": 666,
+     "verified": true,
+     "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html"
+    },
+    {
+     "fact": "Bloomberg puts run-rate revenue above $1.5B.",
+     "value": "$1.5B",
+     "claim_id": 677,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Corporate Cards / Spend Management · Expense Software",
+   "value_content": "MODE A - operational. Ramp becomes the team's card and spend platform: corporate cards for travelling staff at 24 rounds, automated expense capture, vendor and bill payments and real-time spend controls that map to cost-cap reporting. With EU onboarding opening this summer, Racing Bulls is Ramp's European launch reference. In return: Official Corporate Card and Spend Management Partner, a Ramp-Visa card activation, sidepod placement and Austin and Las Vegas hospitality for Ramp's CFO audience.",
+   "value_section": true,
+   "why_team_para": "Racing Bulls is titled by Visa and Cash App, with Siemens, Dynatrace, Confluent and Randstad on the roster. Spend management is listed as an open category that complements Visa rather than conflicting with it. Ramp's cards are Visa cards, so the title partner gains a card programme on its own car, not a rival. The team's younger, digital audience matches the founder-led firms Ramp sells to, and an Italian team is the first European reference Ramp can name.",
+   "deal_arch_para": "Entry as Official Corporate Card and Spend Management Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the European launch and a probable listing window. Estimated $4-7M a year, part in platform services. Scope: sidepod and helmet placement, a co-branded card activation with Visa, US-race hospitality, finance content.",
+   "footer_company": "RAMP",
+   "why_team_label": "WHY VISA CASH APP RACING BULLS",
+   "claims_verified": 19,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 4 June and European onboarding opens this summer, so Ramp needs a European stage in the quarter it arrives. Teams close 2027 rosters in Q4; the Italian GP in September is the home race, and the United States GP (Austin) and Las Vegas GP follow.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Glyman co-founded Ramp in 2019 and fronts every raise; a first F1 deal is his call. Path: Karim Atiyeh, Co-Founder and CTO, who oversees risk, operations and marketing; Will Petrie, CFO since January 2025. No chief marketing officer is listed.",
+   "decision_maker_name": "Eric Glyman",
+   "decision_maker_role": "Co-Founder & CEO, Ramp",
+   "opening_angle_intro": "Lead with the Visa connection.",
+   "opening_angle_quote": "&ldquo;Eric, your cards are Visa cards and Visa's name is on the Racing Bulls. You open Europe this summer, the team is Italian, the spend lane is open. 25 minutes before Monza to see what a Ramp card on that car does?&rdquo;",
+   "value_section_label": "VALUE TO VISA CASH APP RACING BULLS",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Eric Glyman, Co-Founder & CEO at Ramp",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ramp.com/authors/eric-glyman",
+     "excerpt": "Ramp author page (search summary; ramp.com is egress-blocked): Eric Glyman, Co-Founder and CEO of Ramp (styled Co-Founder & Co-CEO from July 2026). Ramp was founded in March 2019 by Eric Glyman, Karim Atiyeh and Gene Lee (Wikipedia).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Eric Glyman, Co-Founder & CEO, Ramp at Ramp",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ramp.com/authors/eric-glyman",
+     "excerpt": "Ramp author page (search summary; ramp.com is egress-blocked): Eric Glyman, Co-Founder and CEO of Ramp (styled Co-Founder & Co-CEO from July 2026). Ramp was founded in March 2019 by Eric Glyman, Karim Atiyeh and Gene Lee (Wikipedia).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$750M Series F at a $44B valuation, announced 4 June 2026; valued at $16B in June 2025",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Ramp, the New York corporate-card and spend-management platform, announced a $750M Series F at a $44B valuation on 4 June 2026, led by ICONIQ, GIC and Ontario Teachers', nearly tripling its $16B mark of a year ago.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw, Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors include Founders Fund, Thrive Capital, Coatue, Khosla Ventures and General Catalyst",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "It has passed $1B in annualized revenue and is free-cash-flow positive.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "More than $1B in annualized revenue and free-cash-flow positive (company, 4 June 2026); run-rate revenue above $1.5B reported by Bloomberg",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 4 June 2026 Ramp announced a $750M primary Series F at a $44B valuation, led by ICONIQ, GIC and Ontario Teachers' Pension Plan, with Goldman Sachs Alternatives, D.E.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$750M Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan, announced 4 June 2026",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The company says it has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 businesses, among them Visa, Uber, Shopify, Anduril and Figma;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Airwallex, Workday and Mastercard sit on McLaren's roster; SAP at Mercedes; Revolut is Audi's title partner from 2026; Mobilize Financial Services at Alpine; MoneyGram at Haas",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "SAP → Mercedes-AMG Petronas F1 Team (team_major, active); Mobilize Financial Services → BWT Alpine F1 Team (team_major, active); MoneyGram → MoneyGram Haas F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Bloomberg puts run-rate revenue above $1.5B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/",
+     "excerpt": "TechCrunch, 4 June 2026: the $44B valuation nearly triples the $16B Ramp was valued at in June 2025; Bloomberg reports run-rate revenue now above $1.5B (reported, not company-stated).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Ramp cards run on the Visa network (Ramp Visa Commercial Card, issued by Sutton Bank) and Visa is a Ramp customer; Billhop acquisition (13 Mar 2026) opens direct onboarding of UK- and EU-headquartered businesses from summer 2026",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://support.ramp.com/hc/en-us/categories/360002060114-General",
+     "excerpt": "Ramp support centre and Bankrate review: the Ramp Visa Commercial Card is issued by Sutton Bank (and Celtic Bank), Members FDIC, pursuant to a license from Visa U.S.A. Inc., and runs on the Visa network.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $750M raise at $44B, $1B+ in annualized revenue and a Visa card programme give Ramp the budget and the warm path onto the Visa-titled Racing Bulls, where spend management is an open lane and Europe opens this summer.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in New York with offices in Miami and San Francisco; more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "The company states it has surpassed $1B in annualized revenue and is free-cash-flow positive;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Bloomberg reports run-rate revenue above $1.5B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/",
+     "excerpt": "TechCrunch, 4 June 2026: the $44B valuation nearly triples the $16B Ramp was valued at in June 2025; Bloomberg reports run-rate revenue now above $1.5B (reported, not company-stated).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Ramp was valued at $16B in June 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/",
+     "excerpt": "TechCrunch, 4 June 2026: the $44B valuation nearly triples the $16B Ramp was valued at in June 2025; Bloomberg reports run-rate revenue now above $1.5B (reported, not company-stated).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "A company re-priced to $44B in twelve months has a public-market story to build and a budget to build it with;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+     "excerpt": "Ramp press release, PR Newswire, 4 June 2026: Ramp raised a $750M primary Series F at a $44B valuation led by ICONIQ, GIC and Ontario Teachers' Pension Plan; new investors Goldman Sachs Alternatives, D.E. Shaw & Co., Morgan Stanley Investment Management, Generation Investment Management, Insight Partners and BroadLight Capital; existing investors participating include Founders Fund, Lightspeed, D1 Capital, T. Rowe Price, General Catalyst, Thrive Capital, Coatue, Khosla Ventures and Stripes. Ramp has surpassed $1B in annualized revenue, is free-cash-flow positive and serves more than 70,000 customers including Visa, Uber, Shopify, Anduril and Figma.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Italian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 15: Italian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Italian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 15: Italian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,611 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-05-07",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-40_w2vgf/2026-05-07/paypal.pdf",
+     "web": "/tmp/case-pdf-40_w2vgf/2026-05-07/paypal.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "PayPal",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 6
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 83,
+     "reason": "resurfaced: PayPal last surfaced 2026-05-07 (leadership_change); new trigger other:leadership change; top ranking score",
+     "company": "PayPal",
+     "decision": "selected",
+     "signal_date": "2026-04-29"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "PayPal",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "resurfaced: PayPal last surfaced 2026-05-07 (leadership_change); new trigger other:leadership change; top ranking score",
+   "score_total": 83,
+   "score_breakdown": {
+    "cap": null,
+    "base": 83,
+    "total": 83,
+    "timing": 18,
+    "ops_fit": 15,
+    "ranking": 83,
+    "urgency": 13,
+    "capacity": 20,
+    "brand_fit": 17,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 17
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "Enrique Lores (HP CEO, Nov 2019 to Feb 2026) and Antonio Lucio (HP EVP & Chief Marketing & Corporate Affairs Officer from Jan 2024) signed HP's Ferrari title partnership in Apr 2024"
+    },
+    "scanner_score": 83,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 83,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Scuderia Ferrari HP",
+   "source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+   "trigger_date": "2026-04-29",
+   "trigger_reason": "leadership change"
+  }
+ ],
+ "brief": {
+  "number": 224,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-40_w2vgf/2026-05-07/paypal.web.html",
+  "brief_data": {
+   "hq": "San Jose, California",
+   "deck": "PayPal named Antonio Lucio Chief Marketing & Corporate Affairs Officer on 29 April 2026, inside a reorganisation into three businesses under new CEO Enrique Lores, effective 2 June. Both men ran HP when it became Ferrari's title partner in 2024. A $33.2B-revenue payments brand has a Formula 1-literate top team.",
+   "risks": [
+    {
+     "label": "TWO MONTHS BEFORE THE SEAT",
+     "detail": "Lucio starts on 2 June; until then the brief has no owner and the restructure consumes the executive team.",
+     "counter": "Open through Lores and Keller in May; land the paper for Lucio's first fortnight."
+    },
+    {
+     "label": "HP OPTICS",
+     "detail": "PayPal's CEO and CMO have just left HP, Ferrari's title partner; sharing a car could read as trading on the old employer.",
+     "counter": "Structure as a payments-category deal sized independently of HP, with no shared assets."
+    }
+   ],
+   "score": 83,
+   "ticker": "NASDAQ: PYPL",
+   "company": "PayPal",
+   "gridfit": [
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "label": "TAKEN",
+     "detail": "Cash App, Visa",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "leadership_change",
+    "leadership_tie",
+    "category_precedent"
+   ],
+   "sources": [
+    "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+    "https://newsroom.paypal-corp.com/2026-02-03-PayPal-Appoints-Enrique-Lores-as-Chief-Executive-Officer-and-David-W-Dorman-as-Independent-Board-Chair",
+    "https://newsroom.paypal-corp.com/2023-04-12-PHOENIX-SUNS-AND-PAYPAL-EXTEND-PARTNERSHIP-AGREEMENT-THROUGH-2026-NBA-SEASON-WITH-A-FOCUS-ON-ENHANCING-FAN-EXPERIENCE-AND-COMMUNITY-INVESTMENT",
+    "https://newsroom.paypal-corp.com/2026-02-03-PayPal-Reports-Fourth-Quarter-and-Full-Year-2025-Results"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Antonio Lucio in his first fortnight (2 June onward), opened through Enrique Lores or Frank Keller in May, to test appetite for a Ferrari payments partnership, agree a US-round announcement window, and size an Official Payments Partner entry against Ferrari's 2027 roster.",
+    "value": [
+     {
+      "text": "PayPal and Venmo as the checkout and wallet layer across Ferrari's online store, ticketing and hospitality bookings, with Pay Later offered on high-ticket merchandise and Venmo activated for the US fan base around the US GP and Las Vegas. Conversion and basket data shared under contract so the team can see what the partnership moves.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner with hundreds of millions of consumer accounts and a merchant network brings a US audience of small businesses, developers and enterprise clients to hospitality at the US rounds, alongside the HP programme's technology guests.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A checkout-to-pit-wall story: how a race weekend's fan transactions run on PayPal, co-produced with Ferrari's digital team; Venmo social-payment moments around Miami and Las Vegas; Ferrari as a named enterprise reference for PayPal's merchant business.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Payments Partner designation, rear-wing endplate or halo placement, integration rights across store and ticketing, US-round hospitality, and driver and garage access for PayPal and Venmo channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 29 April 2026 PayPal announced a strategic reorganisation into three operating units, Checkout Solutions & PayPal under Frank Keller, Consumer Financial Services & Venmo under Alexis Sowa (interim) and Payment Services & Crypto under Jeff Pomeroy (interim), effective 2 June. Antonio Lucio joins from HP as Chief Marketing & Corporate Affairs Officer and Anshu Bhardwaj becomes Chief AI Transformation & Simplification Officer; Diego Scotti and Michelle Gill leave.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Enrique Lores became President and CEO on 1 March 2026 after six years running HP; the reorganisation is his first structural decision, taken inside sixty days, with a stated aim of getting closer to the consumer and simplifying how the company works. Brand rebuilds follow structures like this, and the executive who will run it arrives on 2 June.",
+      "label": "A new CEO's first move"
+     },
+     {
+      "text": "PayPal reported 2025 net revenue of $33.2B, up 4%, total payment volume of $1.79T, up 7%, and net income of $5.2B on 3 February 2026. It already spends on sport at scale: a Phoenix Suns jersey patch since 2018, extended through the 2026 NBA season, and the PayPal Park naming rights in San Jose.",
+      "label": "The base"
+     },
+     {
+      "text": "From the 7 May row date the European rounds run from Monaco through Monza; the US GP and Las Vegas fall in the last quarter of the calendar. Teams close their 2027 partner rosters in the fourth quarter, so a conversation opened in May lands as Lucio takes the seat and can be announced at a US round.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Ferrari's roster carries HP as title partner and UniCredit, BingX, Vantage and AON on the finance side; there is no payments, wallet or checkout partner. Official Payments Partner is a clean category at the team with the largest global following.",
+      "label": "The open lane"
+     },
+     {
+      "text": "HP announced its multi-year Ferrari title partnership on 24 April 2024 with Enrique Lores as CEO and Antonio Lucio as Chief Marketing & Corporate Affairs Officer; the livery debuted at the Miami GP that May. The two executives now running PayPal have negotiated with Maranello's commercial team, sat in its hospitality and seen its fan-commerce numbers. That is a leadership tie of the warmest class.",
+      "label": "The warm path"
+     },
+     {
+      "text": "Ferrari sells to fans directly: store, tickets, hospitality, esports. PayPal's checkout, Pay Later and Venmo are used in the transaction, not just shown on the car, which separates a payments partner from a logo.",
+      "label": "A team that will use the product"
+     },
+     {
+      "text": "Cadillac's debut roster has no finance partner and PayPal is a San Jose company, so the American entry was weighed. It was not chosen: it has no relationship path, no comparable fan-commerce volume in year one, and the Ferrari tie is the asset the desk can activate now. Cadillac stays the fallback if Ferrari's board declines a payments partner.",
+      "label": "Why not the US-first alternative"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Visa is a team partner; direct payments rival."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Visa and Cash App share the team name; two payments rivals on one car."
+     },
+     {
+      "team": "McLaren F1 Team",
+      "reason": "Mastercard is title partner from 2026."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "MoneyGram, a money-transfer rival, remains a team partner."
+     },
+     {
+      "team": "Audi F1 Team",
+      "reason": "Revolut is title partner; a fintech wallet rival."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Mobilize Financial Services and eToro occupy the finance and wallet positions."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Coinbase, CoinPayments and Circle crowd the digital-payments lane."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "Nu joined this season and Nuvei departed within the last 12 months; the lane is warm and contested."
+     },
+     {
+      "team": "Atlassian Williams Racing · Cadillac F1 Team",
+      "reason": "Open but not chosen: Williams carries Kraken and three banks; Cadillac is the US fallback without the Ferrari relationship path."
+     }
+    ]
+   },
+   "date_long": "07 MAY 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Scuderia Ferrari HP",
+   "value_mode": "A",
+   "bottom_line": "A new CEO and CMO who signed Ferrari's title deal from HP, a reorganisation effective 2 June, $33.2B of revenue and a sports-sponsorship habit at NBA and MLS scale put PayPal at peak brand-investment authority. Ferrari's payments lane is open; Visa, Mastercard and American Express already race.",
+   "footer_date": "7 MAY 2026",
+   "score_cells": [
+    {
+     "num": 18,
+     "note": "CMO named 29 Apr, in seat 2 Jun; new CEO's first restructure.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 20,
+     "note": "$33.2B revenue, $5.2B net income; NBA and MLS deals in place.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 17,
+     "note": "Consumer and merchant brand; payments precedent across the grid.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "No hard deadline; Visa, Mastercard, Amex entrenched at league level.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: checkout and wallet across store, ticketing and hospitality.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 29 April PayPal announced a reorganisation into three operating units, Checkout Solutions & PayPal, Consumer Financial Services & Venmo, and Payment Services & Crypto, effective 2 June, with Antonio Lucio joining from HP as Chief Marketing & Corporate Affairs Officer and Diego Scotti departing. It is the first structural move by Enrique Lores, President and CEO since 1 March after six years running HP. The base is large: 2025 revenue of $33.2B, total payment volume of $1.79T and net income of $5.2B, reported on 3 February.",
+   "the_case_p2": "The pair have done this before. HP announced its multi-year title partnership with Ferrari on 24 April 2024 with Lores as CEO and Lucio as chief marketing and corporate affairs officer; the HP livery debuted at the Miami GP weeks later. PayPal already buys sports, a Phoenix Suns jersey patch since 2018 and the PayPal Park naming rights in San Jose, yet has nothing in Formula 1 while Visa, Mastercard and American Express do.",
+   "track_label": "",
+   "brief_number": "224",
+   "claims_total": 14,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "Public: NASDAQ PYPL; 2025 revenue $33.2B (+4%), total payment volume $1.79T (+7%), net income $5.2B (result…",
+     "value": "$33.2B",
+     "claim_id": 642,
+     "verified": true,
+     "source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth"
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Payments · Digital Wallets / Checkout",
+   "value_content": "MODE A - operational. PayPal and Venmo as the checkout and wallet layer for Ferrari's fan commerce: the online store, ticketing and hospitality bookings, Esports and Driver Academy programmes, with Pay Later at checkout for high-ticket merchandise and Venmo for the US fan base at the US GP and Las Vegas. In return: Official Payments Partner designation, paddock hospitality for merchant and enterprise clients, and content alongside the HP programme.",
+   "value_section": true,
+   "why_team_para": "Ferrari's roster has no payments partner: the finance names are UniCredit, BingX, Vantage and AON, and HP is the title partner that Lores and Lucio signed from the other side of the table. That relationship is the warm path: the two executives who put HP on the car know Maranello's commercial team, its hospitality and its e-commerce audience. Ferrari's global fan base and merchandise business give a checkout and wallet brand a real transaction surface.",
+   "deal_arch_para": "Entry as Official Payments Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, matching Lucio's brand-rebuild horizon. Estimated $8-12M a year, part in kind via checkout integration. Scope: rear-wing endplate or halo placement, checkout and wallet integration across store and ticketing, US-round hospitality, and a co-branded Pay Later and Venmo campaign around the US rounds.",
+   "footer_company": "PAYPAL",
+   "why_team_label": "WHY SCUDERIA FERRARI HP",
+   "claims_verified": 14,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Lucio takes the chair on 2 June with a mandate to rebuild the brand under a new CEO; first-hundred-day platform decisions are made before the summer. The European rounds from Monaco, then the US GP and Las Vegas, sit inside the window, and teams close 2027 rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Lucio joins PayPal on 2 June from HP, where he was EVP and Chief Marketing & Corporate Affairs Officer when HP signed Ferrari; earlier CMO of Facebook. Path: Enrique Lores, President & CEO; Jamie Miller, Chief Financial and Operating Officer; Frank Keller, President, Checkout Solutions & PayPal.",
+   "decision_maker_name": "Antonio Lucio",
+   "decision_maker_role": "Chief Marketing & Corporate Affairs Officer, PayPal (from 2 June 2026)",
+   "opening_angle_intro": "Lead with the Ferrari relationship they already own.",
+   "opening_angle_quote": "&ldquo;Antonio, you and Enrique put HP on the Ferrari; the payments lane on that same car is open, and Visa and Mastercard are already on the grid. 25 minutes before your 2 June start to see how PayPal takes it?&rdquo;",
+   "value_section_label": "VALUE TO SCUDERIA FERRARI HP",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Antonio Lucio, Chief Marketing & Corporate Affairs Officer at PayPal",
+   "cited_source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+     "excerpt": "PayPal newsroom, 29 Apr 2026 (also investor.pypl.com, PRNewswire and the 8-K exhibit): strategic reorganisation into three operating units, Checkout Solutions & PayPal (Frank Keller, President), Consumer Financial Services & Venmo (Alexis Sowa, interim lead) and Payment Services & Crypto (Jeff Pomeroy, interim lead), effective 2 June 2026; Antonio Lucio joins as Chief Marketing & Corporate Affairs Officer from HP, where he was EVP, Chief Marketing and Corporate Affairs Officer; Anshu Bhardwaj appointed Chief AI Transformation & Simplification Officer. Diego Scotti departs effective 2 June and Michelle Gill exits (Marketing Week, Adweek, MediaPost).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Antonio Lucio, Chief Marketing & Corporate Affairs Officer, PayPal (from 2 June 2026) at PayPal",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+     "excerpt": "PayPal newsroom, 29 Apr 2026 (also investor.pypl.com, PRNewswire and the 8-K exhibit): strategic reorganisation into three operating units, Checkout Solutions & PayPal (Frank Keller, President), Consumer Financial Services & Venmo (Alexis Sowa, interim lead) and Payment Services & Crypto (Jeff Pomeroy, interim lead), effective 2 June 2026; Antonio Lucio joins as Chief Marketing & Corporate Affairs Officer from HP, where he was EVP, Chief Marketing and Corporate Affairs Officer; Anshu Bhardwaj appointed Chief AI Transformation & Simplification Officer. Diego Scotti departs effective 2 June and Michelle Gill exits (Marketing Week, Adweek, MediaPost).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Public: NASDAQ PYPL; 2025 revenue $33.2B (+4%), total payment volume $1.79T (+7%), net income $5.2B (results of 3 Feb 2026)",
+   "cited_source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-02-03-PayPal-Appoints-Enrique-Lores-as-Chief-Executive-Officer-and-David-W-Dorman-as-Independent-Board-Chair",
+     "excerpt": "PayPal newsroom, 3 Feb 2026: the board appointed Enrique Lores President and CEO effective 1 Mar 2026, succeeding Alex Chriss; Lores had served on the PayPal board for nearly five years and as chair since July 2024; Jamie Miller, Chief Financial and Operating Officer, served as interim CEO until 1 March; David W. Dorman named independent board chair.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $33.2B-revenue payments brand has a Formula 1-literate top team.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-02-03-PayPal-Reports-Fourth-Quarter-and-Full-Year-2025-Results",
+     "excerpt": "PayPal newsroom, 3 Feb 2026, fourth-quarter and full-year 2025 results: net revenues up 4% to $33.2 billion; total payment volume up 7% to $1.79 trillion; transaction margin dollars up about 6%; net income $5.2 billion. NASDAQ: PYPL.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "2025 net revenue $33.2B, up 4% (PayPal newsroom, 3 Feb 2026)",
+   "cited_source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-02-03-PayPal-Appoints-Enrique-Lores-as-Chief-Executive-Officer-and-David-W-Dorman-as-Independent-Board-Chair",
+     "excerpt": "PayPal newsroom, 3 Feb 2026: the board appointed Enrique Lores President and CEO effective 1 Mar 2026, succeeding Alex Chriss; Lores had served on the PayPal board for nearly five years and as chair since July 2024; Jamie Miller, Chief Financial and Operating Officer, served as interim CEO until 1 March; David W. Dorman named independent board chair.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The base is large: 2025 revenue of $33.2B, total payment volume of $1.79T and net income of $5.2B, reported on 3 February.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-02-03-PayPal-Appoints-Enrique-Lores-as-Chief-Executive-Officer-and-David-W-Dorman-as-Independent-Board-Chair",
+     "excerpt": "PayPal newsroom, 3 Feb 2026: the board appointed Enrique Lores President and CEO effective 1 Mar 2026, succeeding Alex Chriss; Lores had served on the PayPal board for nearly five years and as chair since July 2024; Jamie Miller, Chief Financial and Operating Officer, served as interim CEO until 1 March; David W. Dorman named independent board chair.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Antonio Lucio appointed Chief Marketing & Corporate Affairs Officer on 29 Apr 2026 inside a reorganisation into three operating units effective 2 June, under Enrique Lores, President and CEO since 1 Mar 2026",
+   "cited_source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+     "excerpt": "PayPal newsroom, 29 Apr 2026 (also investor.pypl.com, PRNewswire and the 8-K exhibit): strategic reorganisation into three operating units, Checkout Solutions & PayPal (Frank Keller, President), Consumer Financial Services & Venmo (Alexis Sowa, interim lead) and Payment Services & Crypto (Jeff Pomeroy, interim lead), effective 2 June 2026; Antonio Lucio joins as Chief Marketing & Corporate Affairs Officer from HP, where he was EVP, Chief Marketing and Corporate Affairs Officer; Anshu Bhardwaj appointed Chief AI Transformation & Simplification Officer. Diego Scotti departs effective 2 June and Michelle Gill exits (Marketing Week, Adweek, MediaPost).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A new CEO and CMO who signed Ferrari's title deal from HP, a reorganisation effective 2 June, $33.2B of revenue and a sports-sponsorship habit at NBA and MLS scale put PayPal at peak brand-investment authority.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+     "excerpt": "PayPal newsroom, 29 Apr 2026 (also investor.pypl.com, PRNewswire and the 8-K exhibit): strategic reorganisation into three operating units, Checkout Solutions & PayPal (Frank Keller, President), Consumer Financial Services & Venmo (Alexis Sowa, interim lead) and Payment Services & Crypto (Jeff Pomeroy, interim lead), effective 2 June 2026; Antonio Lucio joins as Chief Marketing & Corporate Affairs Officer from HP, where he was EVP, Chief Marketing and Corporate Affairs Officer; Anshu Bhardwaj appointed Chief AI Transformation & Simplification Officer. Diego Scotti departs effective 2 June and Michelle Gill exits (Marketing Week, Adweek, MediaPost).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Visa at Red Bull and Racing Bulls, Cash App at Racing Bulls, Mastercard as McLaren title partner, MoneyGram at Haas, Revolut as Audi title partner; American Express is an F1 official partner; no PayPal or Venmo position anywhere on the grid",
+   "cited_source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Visa → Oracle Red Bull Racing (team_major, active); Cash App → Visa Cash App Racing Bulls (team_major, active); MoneyGram → MoneyGram Haas F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "PayPal reported 2025 net revenue of $33.2B, up 4%, total payment volume of $1.79T, up 7%, and net income of $5.2B on 3 February 2026.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-02-03-PayPal-Appoints-Enrique-Lores-as-Chief-Executive-Officer-and-David-W-Dorman-as-Independent-Board-Chair",
+     "excerpt": "PayPal newsroom, 3 Feb 2026: the board appointed Enrique Lores President and CEO effective 1 Mar 2026, succeeding Alex Chriss; Lores had served on the PayPal board for nearly five years and as chair since July 2024; Jamie Miller, Chief Financial and Operating Officer, served as interim CEO until 1 March; David W. Dorman named independent board chair.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Lores and Lucio were HP's CEO and Chief Marketing & Corporate Affairs Officer when HP announced its Ferrari title partnership on 24 Apr 2024; Ferrari's roster has no payments partner",
+   "cited_source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+     "excerpt": "PayPal newsroom, 29 Apr 2026 (also investor.pypl.com, PRNewswire and the 8-K exhibit): strategic reorganisation into three operating units, Checkout Solutions & PayPal (Frank Keller, President), Consumer Financial Services & Venmo (Alexis Sowa, interim lead) and Payment Services & Crypto (Jeff Pomeroy, interim lead), effective 2 June 2026; Antonio Lucio joins as Chief Marketing & Corporate Affairs Officer from HP, where he was EVP, Chief Marketing and Corporate Affairs Officer; Anshu Bhardwaj appointed Chief AI Transformation & Simplification Officer. Diego Scotti departs effective 2 June and Michelle Gill exits (Marketing Week, Adweek, MediaPost).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Miami GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 6: Miami GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ San Jose, California; Phoenix Suns jersey-patch partner since 2018 (extended through the 2026 NBA season) and PayPal Park naming rights at the San Jose Earthquakes",
+   "cited_source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2023-04-12-PHOENIX-SUNS-AND-PAYPAL-EXTEND-PARTNERSHIP-AGREEMENT-THROUGH-2026-NBA-SEASON-WITH-A-FOCUS-ON-ENHANCING-FAN-EXPERIENCE-AND-COMMUNITY-INVESTMENT",
+     "excerpt": "PayPal newsroom, 12 Apr 2023: Phoenix Suns and PayPal extend their partnership through the 2026 NBA season; PayPal has been the Suns' first and only jersey-patch partner since 2018 and is Official Payments Partner with branding throughout Footprint Center. Sportico, 2021: PayPal Park is the naming-rights home of the San Jose Earthquakes' 18,000-seat MLS stadium, under three miles from PayPal's San Jose headquarters.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Enrique Lores (HP CEO, Nov 2019 to Feb 2026) and Antonio Lucio (HP EVP & Chief Marketing & Corporate Affairs Officer from Jan 2024) signed HP's Ferrari title partnership in Apr 2024",
+   "cited_source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+     "excerpt": "PayPal newsroom, 29 Apr 2026 (also investor.pypl.com, PRNewswire and the 8-K exhibit): strategic reorganisation into three operating units, Checkout Solutions & PayPal (Frank Keller, President), Consumer Financial Services & Venmo (Alexis Sowa, interim lead) and Payment Services & Crypto (Jeff Pomeroy, interim lead), effective 2 June 2026; Antonio Lucio joins as Chief Marketing & Corporate Affairs Officer from HP, where he was EVP, Chief Marketing and Corporate Affairs Officer; Anshu Bhardwaj appointed Chief AI Transformation & Simplification Officer. Diego Scotti departs effective 2 June and Michelle Gill exits (Marketing Week, Adweek, MediaPost).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "leadership change",
+   "cited_source_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://newsroom.paypal-corp.com/2026-04-29-PayPal-Announces-Strategic-Reorganization-to-Accelerate-Growth",
+     "excerpt": "PayPal newsroom, 29 Apr 2026 (also investor.pypl.com, PRNewswire and the 8-K exhibit): strategic reorganisation into three operating units, Checkout Solutions & PayPal (Frank Keller, President), Consumer Financial Services & Venmo (Alexis Sowa, interim lead) and Payment Services & Crypto (Jeff Pomeroy, interim lead), effective 2 June 2026; Antonio Lucio joins as Chief Marketing & Corporate Affairs Officer from HP, where he was EVP, Chief Marketing and Corporate Affairs Officer; Anshu Bhardwaj appointed Chief AI Transformation & Simplification Officer. Diego Scotti departs effective 2 June and Michelle Gill exits (Marketing Week, Adweek, MediaPost).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  }
+ ]
+}

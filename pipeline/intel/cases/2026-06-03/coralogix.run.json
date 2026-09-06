@@ -1,0 +1,714 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-06-03",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-f54u03or/2026-06-03/coralogix.pdf",
+     "web": "/tmp/case-pdf-f54u03or/2026-06-03/coralogix.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Coralogix",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 12
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 73,
+     "reason": "top ranking score",
+     "company": "Coralogix",
+     "decision": "selected",
+     "signal_date": "2026-06-03"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Coralogix",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 73,
+   "score_breakdown": {
+    "cap": null,
+    "base": 73,
+    "total": 73,
+    "timing": 17,
+    "ops_fit": 16,
+    "ranking": 73,
+    "urgency": 12,
+    "capacity": 15,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 73,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 73,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Atlassian Williams Racing",
+   "source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+   "trigger_date": "2026-06-03",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 204,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-f54u03or/2026-06-03/coralogix.web.html",
+  "brief_data": {
+   "hq": "Boston, Massachusetts and Ramat Gan, Israel",
+   "deck": "Coralogix, the Boston- and Ramat Gan-based AI-native observability platform, closed a $200M Series F on 3 June 2026 co-led by Advent, CPPIB and Greenfield at a reported $1.6B valuation, eleven months after its $115M Series E, on more than 5,000 customers and revenue growing over 60% a year.",
+   "risks": [
+    {
+     "label": "VALUATION IS REPORTED",
+     "detail": "The $1.6B figure is press-reported; the company release states only the round and the $550M total.",
+     "counter": "Pitch on the announced round; confirm the valuation on the first call."
+    },
+    {
+     "label": "MID-SIZE BUDGET",
+     "detail": "A company of this size may see a seven-figure fee as a big share of its brand budget.",
+     "counter": "Take part of the fee in platform credits; phase livery up in year two."
+    }
+   ],
+   "score": 73,
+   "ticker": "Private (~$1.6B reported; $200M Series F, Jun 2026)",
+   "company": "Coralogix",
+   "gridfit": [
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Cisco, Splunk",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "label": "TAKEN",
+     "detail": "Dynatrace",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://coralogix.com/about/",
+    "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+    "https://craft.co/coralogix/locations",
+    "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+    "https://www.globenewswire.com/news-release/2025/06/17/3100564/0/en/Coralogix-Raises-115M-E-Round-at-1B-Valuation-to-Advance-AI-Powered-Observability.html"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Brian Mullen before the British GP to confirm the valuation on the record, agree a Silverstone or Austin announcement window, and size an Official Observability Partner entry against Williams' 2027 roster.",
+    "value": [
+     {
+      "text": "Monitoring for the trackside-to-factory data pipeline, simulation and CFD job queues, pit-wall applications and the fan-facing digital estate: logs, metrics and traces analysed in-stream, with the AI agent, Olly, investigating incidents in plain language for engineers who are not observability specialists.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner that sells to CIOs, platform and security leaders brings a guest list of enterprise buyers to Silverstone, Austin and Las Vegas, the audience Williams' B2B partners want in the suite, and a reference customer story for Coralogix's own sales team.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Co-produced engineering content with the team's data partners: how a race weekend's data is stored, secured, reasoned over and monitored. A factory case study, developer-community events around race weekends and driver access for Coralogix's channels.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Observability Partner designation, sidepod or engine-cover placement, naming of the team's monitoring stack, hospitality at Silverstone, Austin and Las Vegas, and engineering access for customer and community programmes.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Coralogix announced a $200M Series F on 3 June 2026, co-led by Advent, CPPIB and Greenfield with Brighton Park Capital participating, taking total funding to $550M. The company release does not state a valuation; TechCrunch and Calcalist report $1.6B, and the brief says reported wherever that figure appears.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The $115M Series E led by NewView Capital closed on 17 June 2025 at a valuation above $1B. Raising again within a year, at a higher price and with a growth-equity house leading, is the profile of a company preparing to be known outside its developer base, which is exactly when a brand platform gets budget.",
+      "label": "Two rounds in eleven months"
+     },
+     {
+      "text": "TechCrunch reports more than 5,000 customers, revenue growing over 60% year on year, around 30 accounts spending above $1M a year and more than half of enterprise customers using the company's AI agent, Olly, or their own models to investigate incidents. The buyers of that product are the CIOs, platform and security leaders who fill an F1 hospitality suite.",
+      "label": "The numbers behind it"
+     },
+     {
+      "text": "The British GP at Silverstone on 5 July is Williams' home race and sits inside the six-to-ten-week window; Belgium and Hungary follow before the summer break, when teams shape 2027 partner rosters. A deal agreed in July can be announced at Austin or Las Vegas and run in full from 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Williams carries Atlassian as title partner, VAST on the data platform, Keeper on identity security, Airia and Brillio on technology and Claude as Official Thinking Partner. None of them monitors the estate itself: Official Observability Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "The pitch writes itself alongside the partners already there: the data lives on VAST, identity is protected by Keeper, the engineers work with Claude, and Coralogix watches the pipeline that ties them together. That is a coherent technology narrative the team can put on camera, not a logo in isolation.",
+      "label": "A roster that tells the story"
+     },
+     {
+      "text": "Williams' revival is data-led, and a midfield team with a cost cap has more reason than a front-runner to want monitoring that does not require indexing everything. Consumption inside the factory is what separates a technology partner from a sponsor.",
+      "label": "A team that will use the product"
+     },
+     {
+      "text": "Headquartered in Boston with a second base in Ramat Gan, Coralogix gets a home race at Silverstone for its European customers and Miami, Austin and Las Vegas for its US enterprise base.",
+      "label": "American story, British home"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Splunk, through Cisco, holds the observability and APM lane."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Dynatrace is a direct observability rival on the roster; Confluent covers data streaming."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "IBM sits on the roster and sells the Instana observability product; DXC and Bitdefender crowd the IT lane."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "ServiceNow, whose Cloud Observability product competes with Coralogix, plus Cognizant, NetApp and CoreWeave crowd the enterprise IT lane."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "CrowdStrike, TeamViewer, Hewlett Packard Enterprise, Microsoft and Meta AI: the deepest IT roster on the grid, at the highest price."
+     },
+     {
+      "team": "Oracle Red Bull Racing · BWT Alpine",
+      "reason": "Oracle and Microsoft are title or cloud incumbents whose platforms carry their own monitoring tooling."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "NinjaOne holds IT management, an adjacent lane; open but not chosen."
+     },
+     {
+      "team": "Cadillac F1 Team · TGR Haas F1 Team",
+      "reason": "Open but not chosen: neither carries the data-platform, identity and AI roster that makes Williams' observability story coherent."
+     }
+    ]
+   },
+   "date_long": "03 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Atlassian Williams Racing",
+   "value_mode": "A",
+   "bottom_line": "A $200M Series F on 3 June, more than 5,000 customers growing over 60% and an observability lane no Williams partner covers make Coralogix a MODE A workstream with a warm route through the team's data roster. A reported valuation and a mid-size budget hold the score at 73.",
+   "footer_date": "3 JUN 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Raise closed 3 Jun; Silverstone on 5 Jul inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "$200M fresh at $1.6B (reported); $550M raised in total.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "Developer-known B2B brand; little mainstream recognition.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No listing date; the AI-agent monitoring race is the clock.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: in-stream monitoring of the telemetry-to-factory estate.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Coralogix announced the $200M Series F on 3 June 2026: co-led by Advent, CPPIB and Greenfield, with Brighton Park Capital participating, taking total funding to $550M. TechCrunch and Calcalist put the valuation at $1.6B, up from the $1B-plus mark of the $115M Series E led by NewView Capital in June 2025. TechCrunch reports more than 5,000 customers, revenue growing over 60% year on year and around 30 accounts above $1M a year, with over half of enterprise customers running its AI agent, Olly. Founded in Israel in 2015, it is headquartered in Boston.",
+   "the_case_p2": "Observability is already priced on the grid: Splunk sits on McLaren through Cisco and Dynatrace on Visa Cash App Racing Bulls, both selling monitoring of the kind of data estate a race team runs. Coralogix is the challenger those incumbents are measured against in analyst comparisons, and a round of this size is when a developer-known brand goes looking for a wider enterprise audience: the CIOs and platform leaders who fill F1 hospitality suites.",
+   "track_label": "",
+   "brief_number": "204",
+   "claims_total": 15,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$200M Series F announced 3 Jun 2026, co-led by Advent, CPPIB and Greenfield with Brighton Park Capital part…",
+     "value": "$200M",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html"
+    },
+    {
+     "fact": "Advent, CPPIB and Greenfield co-led; Brighton Park Capital; the $115M Series E of 17 Jun 2025 was led by Ne…",
+     "value": "$115M",
+     "claim_id": 622,
+     "verified": true,
+     "source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html"
+    },
+    {
+     "fact": "TechCrunch and Calcalist put the valuation at $1.6B, up from the $1B-plus mark of the $115M Series E led by…",
+     "value": "$1.6B",
+     "claim_id": 631,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "TechCrunch reports more than 5,000 customers, revenue growing over 60% year on year and around 30 accounts…",
+     "value": "60%",
+     "claim_id": 632,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Enterprise Software · AI-Native Observability / Data Platform",
+   "value_content": "MODE A - operational. A Formula 1 team is a distributed data business: trackside telemetry streamed to the factory, simulation and CFD queues, pit-wall applications and a fan-facing digital estate, all producing logs, metrics and traces around the clock. Coralogix's in-stream analytics monitors that pipeline without indexing every byte; its agent, Olly, investigates incidents in plain language. In return: a named partnership, livery presence and race-weekend hospitality for its enterprise buyers.",
+   "value_section": true,
+   "why_team_para": "Williams carries the most data-led roster in the paddock: Atlassian as title partner, VAST on the data platform, Keeper on identity and Claude as Official Thinking Partner. No partner monitors the estate itself, so the observability lane at Grove is open. McLaren holds Splunk through Cisco, Racing Bulls hold Dynatrace, and IBM at Ferrari and ServiceNow at Aston Martin sell observability products. Boston adds an American story for Miami, Austin and Las Vegas.",
+   "deal_arch_para": "Entry as Official Observability Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the post-raise growth push and a possible listing window. Estimated $3-5M a year, part-payable in platform credits. Scope: sidepod or engine-cover placement, naming of the team's monitoring stack, Silverstone, Austin and Las Vegas hospitality, engineering content with the data partners.",
+   "footer_company": "CORALOGIX",
+   "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series F closed on 3 June; the quarter after a raise is when brand budgets are set. The British GP at Silverstone on 5 July, Williams' home race, falls inside the six-to-ten-week window, and teams shape their 2027 partner rosters through the summer break.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Mullen owns Coralogix's marketing and partner ecosystem; as InfluxData's CMO he grew the InfluxDB community past one million developers. Path: Ariel Assaraf, Co-Founder and CEO, signs; Matt Handler, President and COO; Eran Hadad, CFO; Yoni Farin, Co-Founder and CTO, owns the workstream.",
+   "decision_maker_name": "Brian Mullen",
+   "decision_maker_role": "Chief Marketing Officer, Coralogix",
+   "opening_angle_intro": "Lead with the data roster and the open lane.",
+   "opening_angle_quote": "&ldquo;Brian, Williams has VAST for the data, Keeper for identity and Claude on the car, and nobody watching the pipeline underneath. Splunk and Dynatrace already took their seats elsewhere. 25 minutes before Silverstone to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Brian Mullen, Chief Marketing Officer at Coralogix",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://coralogix.com/about/",
+     "excerpt": "Coralogix About page, as returned in search: Brian Mullen, Chief Marketing Officer, leads global marketing strategy and the partner ecosystem (brand, demand generation, product marketing, strategic alliances); previously senior go-to-market roles at Twilio, Nexus Venture Partners and InfluxData, where he was CMO and helped grow the InfluxDB community past one million developers.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Brian Mullen, Chief Marketing Officer, Coralogix at Coralogix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://coralogix.com/about/",
+     "excerpt": "Coralogix About page, as returned in search: Brian Mullen, Chief Marketing Officer, leads global marketing strategy and the partner ecosystem (brand, demand generation, product marketing, strategic alliances); previously senior go-to-market roles at Twilio, Nexus Venture Partners and InfluxData, where he was CMO and helped grow the InfluxDB community past one million developers.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$200M Series F announced 3 Jun 2026, co-led by Advent, CPPIB and Greenfield with Brighton Park Capital participating; total funding $550M; valuation $1.6B reported by TechCrunch and Calcalist, not stated in the company release",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+     "excerpt": "Coralogix press release, GlobeNewswire, 3 Jun 2026: raised $200 million in Series F funding co-led by Advent, CPPIB and Greenfield, with participation from Brighton Park Capital, bringing total funding to $550 million; positioned as the observability backbone for the age of AI. Alek Ferro of Advent quoted. Also on coralogix.com/blog and adventinternational.com.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Coralogix, the Boston- and Ramat Gan-based AI-native observability platform, closed a $200M Series F on 3 June 2026 co-led by Advent, CPPIB and Greenfield at a reported $1.6B valuation, eleven months after its $115M Series E, on more than 5,000 customers and revenue growing over 60% a year.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+     "excerpt": "Coralogix press release, GlobeNewswire, 3 Jun 2026: raised $200 million in Series F funding co-led by Advent, CPPIB and Greenfield, with participation from Brighton Park Capital, bringing total funding to $550 million; positioned as the observability backbone for the age of AI. Alek Ferro of Advent quoted. Also on coralogix.com/blog and adventinternational.com.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Advent, CPPIB and Greenfield co-led; Brighton Park Capital; the $115M Series E of 17 Jun 2025 was led by NewView Capital at a $1B-plus valuation",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+     "excerpt": "Coralogix press release, GlobeNewswire, 3 Jun 2026: raised $200 million in Series F funding co-led by Advent, CPPIB and Greenfield, with participation from Brighton Park Capital, bringing total funding to $550 million; positioned as the observability backbone for the age of AI. Alek Ferro of Advent quoted. Also on coralogix.com/blog and adventinternational.com.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Coralogix announced the $200M Series F on 3 June 2026: co-led by Advent, CPPIB and Greenfield, with Brighton Park Capital participating, taking total funding to $550M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+     "excerpt": "Coralogix press release, GlobeNewswire, 3 Jun 2026: raised $200 million in Series F funding co-led by Advent, CPPIB and Greenfield, with participation from Brighton Park Capital, bringing total funding to $550 million; positioned as the observability backbone for the age of AI. Alek Ferro of Advent quoted. Also on coralogix.com/blog and adventinternational.com.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$200M Series F co-led by Advent, CPPIB and Greenfield, announced 3 Jun 2026",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+     "excerpt": "Coralogix press release, GlobeNewswire, 3 Jun 2026: raised $200 million in Series F funding co-led by Advent, CPPIB and Greenfield, with participation from Brighton Park Capital, bringing total funding to $550 million; positioned as the observability backbone for the age of AI. Alek Ferro of Advent quoted. Also on coralogix.com/blog and adventinternational.com.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "TechCrunch and Calcalist put the valuation at $1.6B, up from the $1B-plus mark of the $115M Series E led by NewView Capital in June 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+     "excerpt": "TechCrunch, 3 Jun 2026: the Series F values Coralogix at $1.6 billion; customer base north of 5,000; revenue growing more than 60% year over year; roughly 30 enterprise accounts spending over $1 million annually; more than half of enterprise customers use its AI agent Olly or their own AI models through command-line and agentic interfaces. Calcalist (Ctech), 3 Jun 2026, also reports the $1.6 billion valuation. The company release does not state a valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Splunk sits on McLaren through Cisco and Dynatrace on Visa Cash App Racing Bulls: two observability rivals already on the grid",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Dynatrace → Visa Cash App Racing Bulls (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "TechCrunch reports more than 5,000 customers, revenue growing over 60% year on year and around 30 accounts above $1M a year, with over half of enterprise customers running its AI agent, Olly.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+     "excerpt": "TechCrunch, 3 Jun 2026: the Series F values Coralogix at $1.6 billion; customer base north of 5,000; revenue growing more than 60% year over year; roughly 30 enterprise accounts spending over $1 million annually; more than half of enterprise customers use its AI agent Olly or their own AI models through command-line and agentic interfaces. Calcalist (Ctech), 3 Jun 2026, also reports the $1.6 billion valuation. The company release does not state a valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "More than 5,000 customers, revenue growing over 60% year on year and around 30 accounts above $1M a year; more than half of enterprise customers use its AI agent Olly or their own models (TechCrunch, 3 Jun 2026)",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+     "excerpt": "Coralogix press release, GlobeNewswire, 3 Jun 2026: raised $200 million in Series F funding co-led by Advent, CPPIB and Greenfield, with participation from Brighton Park Capital, bringing total funding to $550 million; positioned as the observability backbone for the age of AI. Alek Ferro of Advent quoted. Also on coralogix.com/blog and adventinternational.com.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $200M Series F on 3 June, more than 5,000 customers growing over 60% and an observability lane no Williams partner covers make Coralogix a MODE A workstream with a warm route through the team's data roster.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+     "excerpt": "Coralogix press release, GlobeNewswire, 3 Jun 2026: raised $200 million in Series F funding co-led by Advent, CPPIB and Greenfield, with participation from Brighton Park Capital, bringing total funding to $550 million; positioned as the observability backbone for the age of AI. Alek Ferro of Advent quoted. Also on coralogix.com/blog and adventinternational.com.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered at 225 Franklin Street, Boston, with a second headquarters in Ramat Gan, Israel, and a US office in San Francisco",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://craft.co/coralogix/locations",
+     "excerpt": "Craft / Coralogix company listings: headquarters 225 Franklin Street, Boston, MA 02110; second headquarters Menachem Begin 156, Ramat Gan, Israel; offices in Boston, San Francisco, Dublin, London, Gurgaon, Bangalore, Berlin and Bucharest. Founded 2015; about 500 employees worldwide as of spring 2025 (Calcalist).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Coralogix announced a $200M Series F on 3 June 2026, co-led by Advent, CPPIB and Greenfield with Brighton Park Capital participating, taking total funding to $550M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+     "excerpt": "Coralogix press release, GlobeNewswire, 3 Jun 2026: raised $200 million in Series F funding co-led by Advent, CPPIB and Greenfield, with participation from Brighton Park Capital, bringing total funding to $550 million; positioned as the observability backbone for the age of AI. Alek Ferro of Advent quoted. Also on coralogix.com/blog and adventinternational.com.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/06/03/3306135/0/en/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai.html",
+     "excerpt": "Coralogix press release, GlobeNewswire, 3 Jun 2026: raised $200 million in Series F funding co-led by Advent, CPPIB and Greenfield, with participation from Brighton Park Capital, bringing total funding to $550 million; positioned as the observability backbone for the age of AI. Alek Ferro of Advent quoted. Also on coralogix.com/blog and adventinternational.com.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "TechCrunch and Calcalist report $1.6B, and the brief says reported wherever that figure appears.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+     "excerpt": "TechCrunch, 3 Jun 2026: the Series F values Coralogix at $1.6 billion; customer base north of 5,000; revenue growing more than 60% year over year; roughly 30 enterprise accounts spending over $1 million annually; more than half of enterprise customers use its AI agent Olly or their own AI models through command-line and agentic interfaces. Calcalist (Ctech), 3 Jun 2026, also reports the $1.6 billion valuation. The company release does not state a valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The $115M Series E led by NewView Capital closed on 17 June 2025 at a valuation above $1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2025/06/17/3100564/0/en/Coralogix-Raises-115M-E-Round-at-1B-Valuation-to-Advance-AI-Powered-Observability.html",
+     "excerpt": "Coralogix press release, 17 Jun 2025: $115 million Series E led by NewView Capital with CPPIB and NextEquity, at a valuation above $1 billion (up from $650 million); existing investors Advent International, Brighton Park Capital, Revaia, Greenfield Partners, Red Dot, O.G. Tech, Joule and Maor returned. The June 2026 Series F followed 11 months later.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "TechCrunch reports more than 5,000 customers, revenue growing over 60% year on year, around 30 accounts spending above $1M a year and more than half of enterprise customers using the company's AI agent, Olly, or their own models to investigate incidents.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+     "excerpt": "TechCrunch, 3 Jun 2026: the Series F values Coralogix at $1.6 billion; customer base north of 5,000; revenue growing more than 60% year over year; roughly 30 enterprise accounts spending over $1 million annually; more than half of enterprise customers use its AI agent Olly or their own AI models through command-line and agentic interfaces. Calcalist (Ctech), 3 Jun 2026, also reports the $1.6 billion valuation. The company release does not state a valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "British GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 11: British GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

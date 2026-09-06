@@ -1,0 +1,732 @@
+{
+ "run": {
+  "id": 131,
+  "date": "2026-09-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-m4iai5qt/2026-09-05/formenergy.pdf",
+     "web": "/tmp/case-pdf-m4iai5qt/2026-09-05/formenergy.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Form Energy",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 14
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 195,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 199,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "Form Energy",
+     "decision": "selected",
+     "signal_date": "2026-08-12"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Form Energy",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 15,
+    "ops_fit": 12,
+    "ranking": 70,
+    "urgency": 14,
+    "capacity": 14,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 3,
+     "product_to_need": 2,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Andretti Formula E",
+   "source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "trigger_date": "2026-08-12",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 129,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-m4iai5qt/2026-09-05/formenergy.web.html",
+  "brief_data": {
+   "hq": "Somerville, Massachusetts (factory in Weirton, West Virginia)",
+   "deck": "Form Energy, the Somerville iron-air battery maker building Google's 30 GWh, 100-hour system in Minnesota, closed a $750M Series G led by T. Rowe Price on 12 August 2026, taking total equity past $2B as its announced backlog jumped from roughly 20 GWh to 80 GWh.",
+   "risks": [
+    {
+     "label": "DOWN ROUND, FACTORY MONEY",
+     "detail": "Series G priced at $1.75B pre-money against about $3B in 2024; proceeds are earmarked for Weirton and deployments.",
+     "counter": "Price the entry under $3M a year and tie it to the listing narrative the board is already funding."
+    },
+    {
+     "label": "HALO, NOT WORKSTREAM",
+     "detail": "Iron-air batteries have no role in the garage; value rests on audience, content and timing.",
+     "counter": "Measure renewal on utility and hyperscaler meetings at Austin and Miami, not on lap time."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private ($750M Series G, Aug 2026; $1.75B pre-money reported)",
+   "company": "Form Energy",
+   "gridfit": [
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "TAKEN",
+     "detail": "Shell",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "ipo_window",
+    "us_stage"
+   ],
+   "sources": [
+    "https://formenergy.com/about/",
+    "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+    "https://www.axios.com/pro/climate-deals/2026/08/12/form-energy-valuation-series-g-lower",
+    "https://techcrunch.com/2026/02/26/google-paid-startup-form-energy-1b-for-its-massive-100-hour-battery/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Mateo Jaramillo before the Jeddah opener to confirm the Series G terms and the listing timetable on the record, agree an Austin E-Prix announcement window, and size an Official Energy Storage Partner entry at Andretti Formula E for Seasons 13-15.",
+    "value": [
+     {
+      "text": "An iron-air battery is a grid asset; it will not sit in the garage or power the pit lane. The partnership's value is commercial and should be sold that way: an American storage brand on an American car in a championship built on electrification, in the year before a reported listing.",
+      "label": "Honest MODE B halo"
+     },
+     {
+      "text": "Form brings the guest list the team's other partners want to meet: utility executives, state regulators, hyperscaler energy buyers and the bankers around a 2027 listing. Hospitality at Austin and Miami, and a utility-customer programme through TWG Motorsports, turn those guests into pipeline for both sides.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Factory-floor content from Weirton, driver visits to a steel-town plant, co-produced explainers on multi-day storage against race-day energy recovery, and joint activations with the championship's Google Cloud programme where Formula E allows.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Energy Storage Partner designation, sidepod branding, Austin and Miami hospitality, driver and engineering access for Form's channels, and visibility to the capital-markets audience that follows the series.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Form Energy announced a $750M Series G on 12 August 2026, led by T. Rowe Price, with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 joining existing investors including Breakthrough Energy Ventures, Coatue, TPG Rise Climate and GE Vernova. Total equity raised now exceeds $2B. The proceeds scale Form Factory 1 in Weirton, West Virginia, and fund commercial deployments.",
+      "label": "Trigger"
+     },
+     {
+      "text": "Axios reports the round priced at $1.75B pre-money, down from about $3B in October 2024. That is a reason to build the brand rather than a reason to pass: the investors who took the lower price are the ones who want the company recognised as an industrial manufacturer before it lists. Axios and TechCrunch report a listing being prepared for 2027; the brief treats that as reported, not confirmed.",
+      "label": "A down round, read honestly"
+     },
+     {
+      "text": "Announced backlog rose from roughly 20 GWh to 80 GWh. The anchor is the 300 MW / 30 GWh Google and Xcel Energy system at Pine Island, Minnesota, announced in February 2026 as the largest battery system by energy capacity yet announced, with TechCrunch reporting Google paid about $1B. Crusoe signed for 12 GWh at CERAWeek in March 2026 for its AI data centres. Deliveries from Weirton begin in 2027.",
+      "label": "The order book"
+     },
+     {
+      "text": "Formula E's GEN4 era opens with the Jeddah double-header on 18-19 December 2026. The new Austin E-Prix at Circuit of The Americas on 6 February 2027 and the Miami E-Prix on 20 February 2027 put an American brand in front of a US audience twice in a month, before any listing roadshow.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Andretti Formula E's roster is TWG AI as primary and AI partner, Quest Global for engineering services, Crowe UK for audit and advisory, Reflo for sustainable sportswear and TWG Motorsports as owner, with Nissan powertrains from Season 13. The sponsor table shows no energy, storage or utility brand on the team: Official Energy Storage Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Andretti is run from Indianapolis, the only US-owned team on the Formula E grid, and its parent TWG Motorsports also operates the Cadillac Formula 1 team with General Motors. A company whose story is a West Virginia steel town rebuilt around batteries belongs on the American car.",
+      "label": "The American team"
+     },
+     {
+      "text": "Google Cloud is the championship's technology partner and Google is Form's anchor customer through the Pine Island system. Crusoe, Form's 12 GWh data-centre customer, is itself courting the grid. The paddock Form would join already contains the customers it sells to.",
+      "label": "Ecosystem overlap"
+     },
+     {
+      "text": "Formula E's on-track narrative is energy management. Form's product stores power for a hundred hours to carry a grid through days without wind or sun. The contrast, a forty-five-minute race against a four-day battery, is a content line the team can run all season without inventing a technical link that does not exist.",
+      "label": "A story the team can tell"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "DS Penske",
+      "reason": "DS Automobiles leaves Formula E at the end of Season 12 and Penske's Season 13 entry with its own GEN4 powertrain was not yet registered at the last report; TotalEnergies holds the energy lane in any case."
+     },
+     {
+      "team": "Envision Racing",
+      "reason": "The team's owner, Envision Group, includes the battery maker Envision AESC and the wind and storage business Envision Energy: a storage brand on that car competes with the owner. Paysafe became title partner on 14 August 2026."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell is the energy partner."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "Castrol occupies the energy and lubricants lane; the team's open categories are listed as none."
+     },
+     {
+      "team": "Porsche Formula E Team",
+      "reason": "TDK, a battery and component maker, is the official technology partner; a storage brand would clash."
+     },
+     {
+      "team": "Nissan Formula E Team · Mahindra Racing · Cupra Kiro · Citroën Racing",
+      "reason": "Open but not chosen: manufacturer entries with no US base; none offers the American audience or the ecosystem overlap that Andretti does."
+     }
+    ]
+   },
+   "date_long": "05 SEP 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Andretti Formula E",
+   "value_mode": "B",
+   "bottom_line": "$750M closed on 12 August, an 80 GWh order book led by Google and Crusoe, a West Virginia factory and a reported 2027 listing: Form Energy needs a national brand within the year and has the story to carry one. Andretti's energy lane is open and two US E-Prix fall in February.",
+   "footer_date": "5 SEP 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Round closed 12 Aug; GEN4 opener in December, Austin and Miami in February.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 14,
+     "note": "$750M raised, over $2B in total; down round, proceeds go to Weirton.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "American reindustrialisation, Google and AI power; strong adjacency.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 14,
+     "note": "Reported 2027 listing is the trigger; not company-confirmed.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 12,
+     "note": "MODE B: no race-day use; open lane, US rounds, ecosystem overlap.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Form announced the $750M Series G on 12 August, led by T. Rowe Price, with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 new to the register. Total equity passes $2B; proceeds scale Form Factory 1 in Weirton, West Virginia. Axios reports the round priced at $1.75B pre-money, down from about $3B in October 2024. The order book explains the investors' patience: an announced backlog of 80 GWh, led by the 300 MW / 30 GWh Google and Xcel Energy system in Minnesota, and 12 GWh for Crusoe's AI data centres.",
+   "the_case_p2": "Weirton is the story a sponsor buys: a 550,000-square-foot battery plant on a former steel-mill site, around 400 people and a planned 500 MW a year by 2028, shipping 100-hour batteries to utilities and hyperscalers. Axios and TechCrunch report a listing being prepared for 2027. A down round is a reason to build the brand, not to hide: the next four quarters decide whether Form is priced as a manufacturer or a technology bet.",
+   "track_label": "",
+   "brief_number": "129",
+   "claims_total": 16,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$750M Series G announced 12 Aug 2026, led by T. Rowe Price; total equity raised over $2B; Axios reports a $…",
+     "value": "$750M",
+     "claim_id": 664,
+     "verified": true,
+     "source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/"
+    },
+    {
+     "fact": "Rowe Price on 12 August 2026, taking total equity past $2B as its announced backlog jumped from roughly 20…",
+     "value": "$2B",
+     "claim_id": 673,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "Axios reports the round priced at $1.75B pre-money, down from about $3B in October 2024.",
+     "value": "$1.75B",
+     "claim_id": 676,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Energy Storage · Iron-Air 100-Hour Batteries",
+   "value_content": "MODE B - halo, said plainly: a 100-hour iron-air battery has no race-day role. The mechanics are commercial. Official Energy Storage Partner status and sidepod placement on the American car; Austin and Miami hospitality for utility executives, regulators and hyperscaler energy buyers; Weirton factory content pairing a steel-town rebuild with the team's GEN4 debut; and pre-listing visibility to the capital-markets audience already in the Formula E paddock.",
+   "value_section": true,
+   "why_team_para": "Andretti is the American team on the grid, run from Indianapolis; parent TWG Motorsports also operates the Cadillac F1 team. The roster is TWG AI, Quest Global, Crowe UK and Reflo; the sponsor table shows no energy or storage brand, so the lane is open. Google Cloud is the championship's technology partner and Google is Form's anchor customer: the ecosystem already overlaps. For a utility-and-hyperscaler brand, an American car at Austin and Miami is the right stage.",
+   "deal_arch_para": "Entry as Official Energy Storage Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15 (2026/27 to 2028/29), bridging the reported 2027 listing and the first Google and Crusoe deliveries. Estimated $1.5-2.5M a year. Scope: sidepod branding, Austin and Miami hospitality, factory and grid content, driver visits to Weirton, and a utility-customer programme through TWG Motorsports.",
+   "footer_company": "FORM ENERGY",
+   "why_team_label": "WHY ANDRETTI FORMULA E",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series G closed on 12 August, and a reported 2027 listing puts brand-building inside the next four quarters. Formula E's GEN4 era opens in Jeddah on 18 December; the new Austin E-Prix on 6 February 2027 and Miami on 20 February give an American storage brand two home rounds before any roadshow.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 129",
+   "decision_maker_bio": "Jaramillo co-founded Form in 2017 after helping launch Tesla's Powerwall and fronts every raise. Path: Ted Wiley, Co-Founder, President and COO; Navneet Govil, CFO, formerly of SoftBank Investment Advisers; Wes Sloan, incoming COO from Panasonic Energy. No chief marketing officer is listed.",
+   "decision_maker_name": "Mateo Jaramillo",
+   "decision_maker_role": "Co-Founder & CEO, Form Energy",
+   "opening_angle_intro": "Lead with Weirton and the listing.",
+   "opening_angle_quote": "&ldquo;Mateo, you have 80 GWh of backlog, a steel-town factory and a listing to price. The American Formula E team races in Austin and Miami in February with an open energy lane. 25 minutes to see what a three-season seat costs?&rdquo;",
+   "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Mateo Jaramillo, Co-Founder & CEO at Form Energy",
+   "cited_source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/about/",
+     "excerpt": "Form Energy leadership page and team pages (search summaries; domain egress-blocked): Mateo Jaramillo, Co-Founder and CEO, previously at Tesla's energy division where he helped launch Powerwall (Boston Globe); Ted Wiley, Co-Founder, President and Chief Operating Officer (leadership page as of 17 Aug 2026; Crunchbase; The Org). Company announcements: Navneet Govil appointed Chief Financial Officer (formerly CFO of SoftBank Investment Advisers) and Wes Sloan appointed Chief Operating Officer from Panasonic Energy North America. No chief marketing officer is listed; the company lists a Vice President of Communications and Corporate Affairs.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Mateo Jaramillo, Co-Founder & CEO, Form Energy at Form Energy",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/about/",
+     "excerpt": "Form Energy leadership page and team pages (search summaries; domain egress-blocked): Mateo Jaramillo, Co-Founder and CEO, previously at Tesla's energy division where he helped launch Powerwall (Boston Globe); Ted Wiley, Co-Founder, President and Chief Operating Officer (leadership page as of 17 Aug 2026; Crunchbase; The Org). Company announcements: Navneet Govil appointed Chief Financial Officer (formerly CFO of SoftBank Investment Advisers) and Wes Sloan appointed Chief Operating Officer from Panasonic Energy North America. No chief marketing officer is listed; the company lists a Vice President of Communications and Corporate Affairs.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$750M Series G announced 12 Aug 2026, led by T. Rowe Price; total equity raised over $2B; Axios reports a $1.75B pre-money valuation, down from about $3B in October 2024",
+   "cited_source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Form Energy, the Somerville iron-air battery maker building Google's 30 GWh, 100-hour system in Minnesota, closed a $750M Series G led by T.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "T. Rowe Price (lead); new: Sequoia Capital, Janus Henderson, Franklin Templeton, PEAK6; existing: Breakthrough Energy Ventures, Coatue, TPG Rise Climate, GE Vernova, Energy Impact Partners, Prelude Ventures, Engine Ventures, Capricorn, NGP, Gigascale, M&G Catalyst, Blindspot, Dustin Moskovitz and Cari Tuna",
+   "cited_source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Rowe Price on 12 August 2026, taking total equity past $2B as its announced backlog jumped from roughly 20 GWh to 80 GWh.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$750M Series G announced 12 Aug 2026 to scale Form Factory 1 in Weirton, West Virginia and fund deployments; announced backlog up from roughly 20 GWh to 80 GWh",
+   "cited_source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Form announced the $750M Series G on 12 August, led by T.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No energy-storage brand on any Formula E team roster in the sponsor table; Envision Group (owner of Envision Racing) owns the battery maker Envision AESC; TotalEnergies at DS Penske and Shell at Lola Yamaha ABT hold energy lanes; Google Cloud is a championship-level technology partner",
+   "cited_source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "TotalEnergies → DS Penske (team_major, active); Shell → Lola Yamaha ABT Formula E Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Total equity passes $2B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "300 MW / 30 GWh, 100-hour iron-air system for Google and Xcel Energy at Pine Island, Minnesota (Feb 2026; TechCrunch reports Google paid about $1B), 12 GWh for Crusoe's AI data centres (Mar 2026); Axios and TechCrunch report a listing being prepared for 2027",
+   "cited_source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.axios.com/pro/climate-deals/2026/08/12/form-energy-valuation-series-g-lower",
+     "excerpt": "Axios Pro Climate Deals, 12 Aug 2026 (search summary): Form Energy raised the Series G at a $1.75 billion pre-money valuation, down from about $3 billion pre-money in October 2024. Axios (28 Jan 2026) and TechCrunch (26 Feb 2026) report the company preparing an initial public offering in 2027; Latitude Media, Aug 2026: 'Is Form ready for the public market?'. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Axios reports the round priced at $1.75B pre-money, down from about $3B in October 2024.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.axios.com/pro/climate-deals/2026/08/12/form-energy-valuation-series-g-lower",
+     "excerpt": "Axios Pro Climate Deals, 12 Aug 2026 (search summary): Form Energy raised the Series G at a $1.75 billion pre-money valuation, down from about $3 billion pre-money in October 2024. Axios (28 Jan 2026) and TechCrunch (26 Feb 2026) report the company preparing an initial public offering in 2027; Latitude Media, Aug 2026: 'Is Form ready for the public market?'. Reported, not company-confirmed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Somerville, Massachusetts; Form Factory 1 in Weirton, West Virginia (550,000 sq ft on a former steel-mill site, about 400 employees, planned 500 MW a year by 2028); first commercial system at Cambridge, Minnesota",
+   "cited_source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$750M closed on 12 August, an 80 GWh order book led by Google and Crusoe, a West Virginia factory and a reported 2027 listing: Form Energy needs a national brand within the year and has the story to carry one.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Form Energy announced a $750M Series G on 12 August 2026, led by T.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Total equity raised now exceeds $2B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "excerpt": "Form Energy release, 12 Aug 2026 (search summary; also TechCrunch, Mercom, Energy-Storage.News, Boston Globe 12 Aug 2026): $750 million Series G led by T. Rowe Price; new investors Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 Investments; existing investors Prelude Ventures, Engine Ventures, TPG Rise Climate, Capricorn's Technology Impact Funds, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale Capital, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot Ventures and M&G Catalyst Fund; total equity raised to date over $2 billion; proceeds accelerate manufacturing scale-up at Form Factory 1 in Weirton, West Virginia and commercial deployments; commercial backlog expanded from approximately 20 GWh to 80 GWh (projects with Xcel Energy and Google, Crusoe and FuturEnergy Ireland). Jaramillo: 'Powering the AI economy requires reliable, scalable, and cost-effective energy solutions.'",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The anchor is the 300 MW / 30 GWh Google and Xcel Energy system at Pine Island, Minnesota, announced in February 2026 as the largest battery system by energy capacity yet announced, with TechCrunch reporting Google paid about $1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/02/26/google-paid-startup-form-energy-1b-for-its-massive-100-hour-battery/",
+     "excerpt": "TechCrunch, 24 and 26 Feb 2026, Energy-Storage.News 25 Feb 2026, Xcel Energy newsroom (search summaries): Google's 1.9 GW clean-energy agreement with Xcel Energy for its Pine Island, Minnesota data centre includes a 300 MW / 30 GWh Form Energy iron-air system able to run at full output for 100 hours, the largest battery system by energy capacity announced to date; 1.4 GW of wind and 200 MW of solar alongside; modules built at Form Factory 1 in Weirton; installations online in phases 2028-2031. TechCrunch reports Google paid Form Energy approximately $1 billion (reported).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix at Circuit of The Americas on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Miami E-Prix on 20 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026)",
+     "excerpt": "round 5: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

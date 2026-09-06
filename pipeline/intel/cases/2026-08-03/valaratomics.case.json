@@ -1,0 +1,339 @@
+{
+ "run_date": "2026-08-03",
+ "signal_date": "2026-08-03",
+ "stem": "valaratomics",
+ "number": 152,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Valar Atomics",
+  "signal_date": "2026-08-03",
+  "score": 70,
+  "tier": "WARM",
+  "track": 1,
+  "person": "Isaiah Taylor",
+  "role": "Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+  "industry_meta": "Advanced Nuclear · Factory-Built Small Modular Reactors for AI Data Centres · El Segundo, California",
+  "recommended_team": "Andretti Formula E",
+  "recommended_series": "FE",
+  "timing_label": "WARM",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$1B Series B led by Sequoia, company-announced 3 Aug 2026, with a $200M credit facility led by Erebor Bank with J.P. Morgan, Crescent Cove and Hercules Capital; valuation $6B per Bloomberg and TechCrunch, not disclosed by the company",
+   "investors": "Sequoia (lead; Shaun Maguire joins the board), Atreides, Point72, Snowpoint and Valor Equity Partners among participants",
+   "revenue": "",
+   "trigger": "$1B Series B led by Sequoia plus a $200M credit facility, announced 3 Aug 2026; reported $6B valuation",
+   "competitor_signal": "No nuclear or firm-power brand on any Formula E roster; TotalEnergies sits at DS Penske, Shell at Lola Yamaha ABT and Castrol at Jaguar TCS Racing; Andretti's roster carries no energy partner",
+   "strategic_hook": "Ward 250 reached criticality on 18 Jun 2026 at the Utah San Rafael Energy Lab under the DOE Reactor Pilot Program, powered an NVIDIA Blackwell chip on 1 Jul, and Taylor stood in the Oval Office on 24 Jul as one of four reactor CEOs the President honoured",
+   "us_presence": "Headquartered in El Segundo, California; Ward 250 test reactor in Emery County, Utah; a 30 MW water-free AI facility in Utah under joint feasibility study with NVIDIA",
+   "alumni_match": "",
+   "taxonomy_category": "B2",
+   "ops_fit_note": "MODE B: halo with mechanics; a reactor is not a race-team input, so value runs through the 'electric racing needs firm clean power' story, the Austin and Miami rounds, and Andretti's American and AI-partner identity"
+  },
+  "score_breakdown": {
+   "timing": 15,
+   "capacity": 16,
+   "brand_fit": 14,
+   "urgency": 13,
+   "ops_fit": 12,
+   "ops_fit_subscores": {
+    "product_to_need": 2,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 3
+   }
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "isaiah taylor",
+    "taylor",
+    "founder & ceo",
+    "founder and ceo",
+    "shahzad",
+    "mark mitchell",
+    "chief nuclear",
+    "kriel",
+    "no chief marketing",
+    "2023",
+    "el segundo"
+   ],
+   "url": "https://www.deseret.com/business/2026/03/17/isaiah-taylor-who-founded-valar-atomics-is-bringing-nuclear-power-online/",
+   "excerpt": "Deseret News (17 Mar 2026), the company announcement and The Org: Isaiah Taylor is founder and CEO of Valar Atomics, founded in July 2023 and headquartered in El Segundo, California. Muhammad Shahzad is President (since November 2025; formerly President and CFO of Relativity Space). Mark Mitchell, formerly president of Ultra Safe Nuclear Corporation, is Chief Nuclear Officer. Willem Kriel came out of retirement to help lead engineering. No chief marketing officer or commercial lead is named on any listing found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1b",
+    "series b",
+    "sequoia",
+    "maguire",
+    "3 aug",
+    "$200m",
+    "erebor",
+    "j.p. morgan",
+    "crescent cove",
+    "hercules",
+    "$6b",
+    "atreides",
+    "point72",
+    "snowpoint",
+    "valor",
+    "$2b",
+    "funding round",
+    "three times"
+   ],
+   "url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+   "excerpt": "Valar Atomics announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1 billion Series B led by Sequoia, with Shaun Maguire joining the board; Atreides, Point72, Snowpoint, Valor Equity Partners and others participated; a $200 million credit facility led by Erebor Bank as administrative agent with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg puts the valuation at $6 billion including the new money, about three times the roughly $2 billion of the prior round months earlier; the company did not disclose the figure (Canary Media). TechCrunch had reported talks at $6B on 17 Jul 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "criticality",
+    "18 jun",
+    "reactor pilot program",
+    "san rafael",
+    "emery county",
+    "national lab",
+    "second reactor",
+    "air force",
+    "5 mw",
+    "nine months"
+   ],
+   "url": "https://www.energy.gov/articles/department-energy-celebrates-second-advanced-reactor-achieving-criticality",
+   "excerpt": "US Department of Energy release, World Nuclear News, ANS Nuclear Newswire (22 Jun 2026) and POWER: Valar's Ward 250, a TRISO-fuelled high-temperature gas reactor, completed a zero-power fuelled criticality demonstration on 18 Jun 2026 at the Utah San Rafael Energy Lab in Emery County, Utah, under the DOE Reactor Pilot Program, the first DOE-authorised reactor built outside a national laboratory and the second to reach criticality under the programme ahead of the 4 July target; the reactor was flown from California by US Air Force cargo aircraft in February and the site was empty nine months earlier.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "blackwell",
+    "nvidia",
+    "1 jul",
+    "30 mw",
+    "30-megawatt",
+    "100 kw",
+    "water-free",
+    "waterless",
+    "feasibility"
+   ],
+   "url": "https://www.deseret.com/u-s-world/2026/07/01/valar-atomics-nvidia-milestone/",
+   "excerpt": "Deseret News and Bloomberg (1 Jul 2026): Valar connected Ward 250, running at roughly 100 kW thermal through a thermoelectric generator, to an NVIDIA Blackwell-architecture RTX Spark machine and ran a website live on stage, the first time a US advanced reactor has powered an AI chip; Valar and NVIDIA announced a joint feasibility study for a 30 MW water-free AI computing facility in Utah using closed-loop cooling. An early proof of concept, not a commercial deployment.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "oval office",
+    "24 jul",
+    "president",
+    "white house",
+    "four"
+   ],
+   "url": "https://www.bloomberg.com/news/articles/2026-07-24/trump-to-host-nuclear-energy-ceos-for-advanced-reactor-milestone",
+   "excerpt": "Bloomberg and The Washington Times (24 Jul 2026): the President hosted the CEOs of four advanced-reactor companies, Valar Atomics among them, in the Oval Office after their reactors reached criticality, beating the goal of three by the 4 July anniversary; Isaiah Taylor stood behind the President and spoke.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "totalenergies",
+    "shell",
+    "castrol",
+    "envision group",
+    "twg ai",
+    "quest global",
+    "crowe",
+    "reflo",
+    "nissan",
+    "porsche",
+    "no energy partner",
+    "no nuclear",
+    "firm-power",
+    "abb",
+    "pif"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Andretti Formula E — Porsche (powertrain, Season 12), Nissan (powertrain from Season 13), Andretti Global, TWG AI, Quest Global, Crowe UK, Reflo, TWG Motorsports; no energy, fuel or power partner. DS Penske: TotalEnergies. Lola Yamaha ABT: Shell. Jaguar TCS Racing: Castrol. Nissan: Castrol (unverified). Envision Racing: Envision Group (renewables owner). Series level: ABB (title), PIF, Google Cloud, DHL, Julius Baer, Hankook, Saudia. No nuclear or firm-power brand on any Formula E roster.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin e-prix",
+    "miami e-prix",
+    "jeddah",
+    "season 13",
+    "18 december",
+    "6 february",
+    "20 february"
+   ],
+   "url": "seeds/calendar_fe.json (FE Season 13 calendar, fiaformulae.com 23 Jun 2026)",
+   "excerpt": "FE Season 13 (2026-27) calendar table: Jeddah E-Prix opens the season on 18-19 Dec 2026; Austin E-Prix 6 Feb 2027; Miami E-Prix 20 Feb 2027.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Valar Atomics",
+  "industry_meta": "Advanced Nuclear · Factory-Built Small Modular Reactors",
+  "hq": "El Segundo, California (reactor site: Emery County, Utah)",
+  "ticker": "Private ($6B reported; $1B Series B, Aug 2026)",
+  "deck": "Valar Atomics, the El Segundo nuclear start-up whose Ward 250 reactor went critical in Utah in June and powered an NVIDIA Blackwell chip on 1 July, announced a $1B Series B led by Sequoia on 3 August with a $200M credit facility; Bloomberg puts the valuation at $6B.",
+  "score": 70,
+  "timing_label": "WARM",
+  "series_label": "FE",
+  "team_label": "Andretti Formula E",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "The round is company-announced: $1B of Series B equity led by Sequoia, whose Shaun Maguire joins the board, with Atreides, Point72, Snowpoint and Valor Equity Partners participating, plus a $200M credit facility led by Erebor Bank with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg and TechCrunch report a $6B valuation, about three times the prior round; the company has not disclosed it. The engineering is real: Ward 250 reached criticality on 18 June at the Utah San Rafael Energy Lab under the DOE Reactor Pilot Program, the first DOE-authorised reactor built outside a national laboratory.",
+  "the_case_p2": "The identity moment is public and presidential: on 1 July Ward 250 powered an NVIDIA Blackwell chip live on stage, the first US advanced reactor to run an AI chip, and the two companies announced a study for a 30 MW water-free AI facility in Utah. On 24 July Taylor stood in the Oval Office as one of four reactor CEOs the President honoured. A company selling firm power to hyperscalers needs a brand beyond the trade press.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 3 August and teams settle Season 13 rosters this autumn before the Jeddah opener on 18 December; the Austin E-Prix on 6 February and the Miami E-Prix on 20 February 2027 put two US rounds in front of the utilities, hyperscalers and regulators Valar sells to.",
+  "why_team_label": "WHY ANDRETTI FORMULA E",
+  "why_team_para": "Andretti is the American team in an electric championship, and its roster already carries TWG AI, an AI-infrastructure brand in the market Valar's reactors serve. The sponsor table shows no energy, fuel or power partner at Andretti and no nuclear or firm-power brand anywhere in Formula E, while TotalEnergies holds the energy lane at DS Penske, Shell at Lola Yamaha ABT and Castrol at Jaguar. An electric series asked where its power comes from meets an American reactor company with an answer.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+  "value_mode": "B",
+  "value_content": "MODE B - halo with mechanics. A reactor is not a race-team input, and the brief says so. The value is commercial: Official Clean Firm Power Partner, an American energy story alongside TWG AI on the car, and Austin and Miami hospitality for utilities, hyperscalers, governors and federal officials no other Andretti partner brings. Valar gets a public stage; the team gets livery, content and a partner with $1B to spend on being known.",
+  "deal_arch_para": "Entry as Official Clean Firm Power Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, spanning the Utah facility study and first commercial orders. Estimated $1.5-2.5M a year. Scope: sidepod placement, Austin and Miami hospitality, a power-behind-the-grid content series, driver visits to Utah.",
+  "decision_maker_name": "Isaiah Taylor",
+  "decision_maker_role": "Founder & CEO, Valar Atomics",
+  "decision_maker_bio": "Taylor founded Valar in El Segundo in July 2023 and is its public face, from the Oval Office to the Utah launch stage. Path: Muhammad Shahzad, President, formerly President and CFO of Relativity Space; Mark Mitchell, Chief Nuclear Officer. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the question the series cannot dodge.",
+  "opening_angle_quote": "&ldquo;Isaiah, Formula E races on electricity and gets asked where it comes from; you just powered an NVIDIA chip from a reactor on stage. The American team has no power partner and races in Austin and Miami in February. 25 minutes?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "15",
+    "/ 20",
+    "Round 3 Aug; off-season, but Season 13 rosters close before 18 Dec."
+   ],
+   [
+    "CAPACITY",
+    "16",
+    "/ 20",
+    "$1B equity plus $200M credit; capital is for reactors, not marketing."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Deep-tech energy, profile-matched; nuclear optics in FE to manage."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "Utah 30 MW study and first orders; no deal deadline."
+   ],
+   [
+    "OPS FIT",
+    "12",
+    "/ 20",
+    "MODE B halo; lane open; reactor is not a race input."
+   ]
+  ],
+  "risks": [
+   [
+    "SERIES OPTICS",
+    "Formula E markets itself on sustainability; a fission brand may draw objection from the promoter, the team's owner or NGOs.",
+    "Clear it with team and series early; frame as clean firm power for electrification."
+   ],
+   [
+    "PROOF OF CONCEPT ONLY",
+    "Ward 250 ran at about 100 kW thermal for a demo; commercial power is years away, and the $6B is Bloomberg's figure, not the company's.",
+    "Anchor on the DOE milestone and the Oval Office; confirm the valuation on the first call."
+   ]
+  ],
+  "bottom_line": "A company-announced $1B Series B led by Sequoia, a DOE-recognised reactor and an Oval Office moment put Valar at peak brand-investment motive with an American story built for Andretti and an open energy lane in Formula E. The halo-only value and nuclear optics in an electric series hold the score at the 70 threshold.",
+  "signals": [
+   "funding_event",
+   "policy_milestone",
+   "us_market"
+  ],
+  "footer_company": "VALAR ATOMICS",
+  "footer_date": "3 AUG 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 3 August Valar Atomics announced a $1B Series B led by Sequoia, with Shaun Maguire joining the board and Atreides, Point72, Snowpoint and Valor Equity Partners participating, alongside a $200M credit facility led by Erebor Bank with J.P. Morgan, Crescent Cove and Hercules Capital. Bloomberg and TechCrunch report a $6B valuation, about three times the roughly $2B of the prior round months earlier; the company itself did not disclose it, and the brief says so."
+    },
+    {
+     "label": "The reactor is real",
+     "text": "Ward 250, a TRISO-fuelled high-temperature gas reactor flown to Utah by US Air Force cargo aircraft in February, reached criticality on 18 June at the Utah San Rafael Energy Lab in Emery County under the Department of Energy's Reactor Pilot Program, the first DOE-authorised reactor built outside a national laboratory and the second to go critical under the programme. The site had been empty nine months earlier."
+    },
+    {
+     "label": "The public moment",
+     "text": "On 1 July Ward 250 powered an NVIDIA Blackwell chip live on stage and hosted a website, the first time a US advanced reactor has run an AI chip, and Valar and NVIDIA announced a joint study for a 30 MW water-free AI computing facility in Utah. On 24 July the President hosted Taylor and three other reactor CEOs in the Oval Office. The company is, for the first time, a brand the public has seen."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Season 13 opens in Jeddah on 18 December and teams settle rosters this autumn. The Austin E-Prix on 6 February and the Miami E-Prix on 20 February 2027 are the two US rounds, in front of the utilities, hyperscalers, state governors and federal officials Valar sells to."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The American team",
+     "text": "Andretti is the US entry in Formula E, and its two US home rounds fall within three weeks of each other in February. Valar's customers and regulators are American; the Oval Office is its most valuable photograph. No other Formula E team gives the story a home crowd."
+    },
+    {
+     "label": "The open lane",
+     "text": "Per the sponsor table, Andretti carries Porsche and, from Season 13, Nissan as powertrain partners, Andretti Global, TWG AI, Quest Global, Crowe UK and Reflo, and no energy, fuel or power partner. No nuclear or firm-power brand sits on any Formula E roster; Official Clean Firm Power Partner is a clean category."
+    },
+    {
+     "label": "The AI adjacency",
+     "text": "TWG AI is already on the Andretti car; Valar's first commercial customers are AI data centres, and its Utah facility study is with NVIDIA. Power and compute on one livery is a story the two partners can tell together."
+    },
+    {
+     "label": "Where the electricity comes from",
+     "text": "Formula E is asked at every round where its power comes from. A partner whose product is clean firm electricity, on the American car, answers that question in a way a fuel or lubricant brand cannot."
+    }
+   ],
+   "value": [
+    {
+     "label": "Halo with mechanics (Mode B)",
+     "text": "A reactor is not a race-team input and the brief does not pretend otherwise. The value is commercial and narrative: Official Clean Firm Power Partner designation, an American energy story next to TWG AI on the car, and a power-behind-the-grid content series filmed at the Utah site."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Valar's guest list for Austin and Miami is utilities, hyperscalers, state governors and federal energy officials, an audience no current Andretti partner brings to the suite and one that Quest Global and TWG AI would value."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "Driver visits to Emery County, a reactor-to-race-track series on how firm power feeds an electric grid, and a reference story Valar can use with every regulator and utility it approaches."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Clean Firm Power Partner designation, sidepod placement, hospitality at the Austin and Miami rounds, driver and engineering access for Valar's recruiting and public-affairs channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "DS Penske",
+     "reason": "TotalEnergies holds the energy lane."
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "reason": "Shell holds the energy lane."
+    },
+    {
+     "team": "Jaguar TCS Racing · Nissan Formula E Team",
+     "reason": "Castrol sits on both rosters in the energy and lubricants lane; neither is an American team."
+    },
+    {
+     "team": "Envision Racing",
+     "reason": "Owned by Envision Group, a wind and battery company; a fission brand on that car contradicts the owner's identity."
+    },
+    {
+     "team": "Porsche Formula E Team · Mahindra Racing · Cupra Kiro · Citroën Racing",
+     "reason": "Open but not chosen: manufacturer teams without the American home rounds or the AI-partner adjacency that gives Andretti the fit."
+    }
+   ],
+   "ask": "A 25-minute call with Isaiah Taylor before Andretti settles its Season 13 roster to test the series and team on a nuclear partner, confirm the valuation on the record and size an Official Clean Firm Power Partner entry built around the Austin and Miami rounds."
+  }
+ },
+ "note": "# Valar Atomics → Andretti Formula E — verification log (N° 152, issued for 3 Aug 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY`), with Claude as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and 2-page render ran as code. The thin row's source (TechCrunch) is a credible secondary; the primary source is the company's own announcement on valaratomics.com.\n\n**Sandbox limitation, stated plainly:** valaratomics.com, deseret.com, energy.gov, world-nuclear-news.org, canarymedia.com and bloomberg.com were egress-blocked; every claim was checked against search summaries of the primary page named in the evidence. Treat VERIFIED lines as REPORTED until a person opens the link; confidence is MEDIUM.\n\n## The trigger\n\nCompany announcement (3 Aug 2026), Bloomberg and TechCrunch the same day: $1B Series B led by Sequoia (Shaun Maguire to the board); Atreides, Point72, Snowpoint, Valor Equity Partners among participants; $200M credit facility led by Erebor Bank with J.P. Morgan, Crescent Cove and Hercules Capital. **The $6B valuation is Bloomberg's and TechCrunch's, not the company's** (Canary Media: the company did not disclose it); the brief says 'reported' and the second risk row repeats it.\n\nRow corrections: the Ward 250 / NVIDIA demo was 1 Jul 2026 (not part of the 3 Aug event); the 'presidential Oval Office tie-in 24 Jul 2026' is CONFIRMED by Bloomberg and The Washington Times (an earlier check could not find it); 'DOE Reactor Pilot Program selected' is CONFIRMED by the DOE release on criticality (18 Jun 2026).\n\n## Decision path\n\nIsaiah Taylor, Founder & CEO (company announcement; Deseret News; Wikipedia). Muhammad Shahzad, President since Nov 2025 (The Org; Deseret News describes him as former president and CFO of Relativity Space). Mark Mitchell, Chief Nuclear Officer (ex-president, Ultra Safe Nuclear). Willem Kriel, engineering lead. **No CMO or commercial lead is listed** on any source found.\n\n## Leadership ties\n\n`none found` after checking Taylor, Shahzad and Mitchell for F1 / FE / motorsport sponsorship history; searches for Valar with Formula 1 / Formula E returned only generic partner lists.\n\n## Team fit\n\nJudged only against `seeds/sponsors.json`: no energy / fuel / power partner at Andretti; no nuclear or firm-power brand on any FE roster; TWG AI (AI infrastructure) is an adjacency, not a clash. Conflicting teams named in `extended.ruled_out`. **Series-policy risk is the first risk row:** a fission brand in a championship marketed on sustainability needs clearance from the team, its owner TWG and the promoter before any pitch; the ask says so.\n\n## Not claimed\n\n- No revenue figure: none exists.\n- Deal size ($1.5-2.5M a year) is an ESTIMATE.\n- Ward 250's nameplate (5 MW thermal per trade press) is not used in the brief; the demo ran at about 100 kW thermal, said plainly.\n- MODE B is stated honestly: a reactor is not a race-team input.\n- No post-trigger material event found between 3 Aug and 6 Sep 2026.\n"
+}

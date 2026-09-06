@@ -1,0 +1,421 @@
+{
+ "run_date": "2026-05-15",
+ "signal_date": "2026-05-13",
+ "stem": "andurilindustries",
+ "number": 220,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Anduril Industries",
+  "signal_date": "2026-05-13",
+  "score": 79,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Jeff Miller",
+  "role": "Chief Marketing Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+  "industry_meta": "Defence Technology · Autonomous Systems / Lattice Software · Costa Mesa, California",
+  "recommended_team": "Cadillac F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$5B Series H at a $61B valuation, announced 13 May 2026, led by Thrive Capital and Andreessen Horowitz; total raised more than $11B over eight rounds (company announcement via TechCrunch, Bloomberg, GovConWire)",
+   "investors": "Thrive Capital and Andreessen Horowitz (returning leads); the prior round was $2.5B at a $30.5B valuation in June 2025",
+   "revenue": null,
+   "trigger": "$5B Series H at a $61B valuation, doubling the $30.5B set in June 2025, announced 13 May 2026",
+   "competitor_signal": "No defence-technology partner on any F1 team; Boeing is a BWT Alpine team partner (aerospace and defence prime); Zoox sits at Williams (autonomous vehicles); Anduril is already in motorsport as Official Defense Partner of NASCAR and Hendrick Motorsports primary sponsor through 2028",
+   "strategic_hook": "GM Defense and Anduril signed a teaming agreement in October 2023 on autonomy, battery electrification and propulsion; Cadillac F1 Team is General Motors' works entry, so the introduction runs through the parent",
+   "us_presence": "HQ Costa Mesa, California; Arsenal-1, a $1B hyperscale factory in Columbus, Ohio, targeting production from July 2026; US Army enterprise contract with a $20B ceiling awarded 13 March 2026",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE B halo with concrete mechanics: three US rounds on GM's works team, GM Defense teaming, engineering-recruitment content, warfighter programmes carried over from the Hendrick deal; TWG AI's exclusive AI-partner status rules out an AI-software workstream",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 18,
+   "capacity": 20,
+   "brand_fit": 15,
+   "urgency": 14,
+   "ops_fit": 12,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "jeff miller"
+   ],
+   "url": "https://www.odwyerpr.com/story/public/21267/2024-05-15/move-anduril-names-miller-first-marketing-chief.html",
+   "excerpt": "O'Dwyer's PR News, 15 May 2024: Anduril names Jeff Miller its first marketing chief, joining from Cruise (VP of marketing) after Snapchat, PepsiCo and Ogilvy & Mather. A 2026 'CMO Insider' interview (Yahoo) and Cannes Lions 2026 coverage describe him as Anduril's chief marketing officer; The Org's chart still lists 'VP of Marketing'. The title is stated as chief marketing officer with that caveat in the note.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$5b",
+    "$61b",
+    "13 may",
+    "thrive",
+    "andreessen",
+    "$11b",
+    "eight rounds",
+    "series h",
+    "funding round",
+    "$30.5b",
+    "$2.5b",
+    "june 2025",
+    "doubl"
+   ],
+   "url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+   "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$20b",
+    "13 march",
+    "13 mar",
+    "army",
+    "ten-year",
+    "10-year",
+    "enterprise contract"
+   ],
+   "url": "https://www.army.mil/article/291074/u_s_army_awards_enterprise_contract_for_it_commercial_solutions",
+   "excerpt": "U.S. Army (army.mil), 13 Mar 2026, with Bloomberg, TechCrunch and DefenseScoop the following day: the Army awarded Anduril a ten-year enterprise contract with a ceiling of up to $20 billion, consolidating more than 120 separate procurement actions into one framework centred on the Lattice software; the $20 billion is a maximum potential value, not an obligated amount.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "arsenal-1",
+    "arsenal",
+    "$1b",
+    "columbus",
+    "ohio",
+    "july",
+    "hyperscale"
+   ],
+   "url": "https://breakingdefense.com/2025/01/anduril-picks-columbus-for-new-arsenal-factory-targets-july-2026-to-begin-production/",
+   "excerpt": "Breaking Defense and Manufacturing Dive, Jan 2025; Ohio Governor's office; Ohio Tech News, 2026: Anduril chose Columbus, Ohio for Arsenal-1, a $1 billion hyperscale manufacturing facility, targeting July 2026 to begin production; 2026 coverage reports the plant 'goes live in days'.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "nascar",
+    "hendrick",
+    "byron",
+    "coronado",
+    "san diego",
+    "official defense partner",
+    "2028",
+    "cup race",
+    "cup series",
+    "naval base",
+    "warfighter",
+    "veteran",
+    "motorsport already",
+    "already sponsors",
+    "already in motorsport",
+    "already bought",
+    "template"
+   ],
+   "url": "https://www.hendrickmotorsports.com/news/2025/10/22/anduril-joins-hendrick-motorsports-primary-nascar-sponsor-william-byron-through-2028",
+   "excerpt": "Hendrick Motorsports, 22 Oct 2025 (also anduril.com/news and RACER): Anduril joins as a primary sponsor of William Byron's No. 24 for two Cup races a season from 2026 through 2028, with joint programmes for warfighters and their families. NASCAR, 14 Aug 2025: Anduril is Official Defense Partner of NASCAR and presenting sponsor of NASCAR San Diego Weekend; the Anduril 250 'Race the Base' Cup Series street race ran at Naval Base Coronado on 21 June 2026 (Wikipedia, Jayski; 2.28 million Prime Video viewers reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "gm defense",
+    "teaming agreement",
+    "october 2023",
+    "general motors",
+    "works team",
+    "works entry",
+    "the parent",
+    "parent already"
+   ],
+   "url": "https://www.gmdefensellc.com/site/us/en/gm-defense/home/news-and-events/news.detail.html/Pages/news/us/en/2023/oct/1010-gmdefense.html",
+   "excerpt": "GM Defense LLC, 10 Oct 2023 (also PR Newswire 301951785, C4ISRNET): GM Defense, a subsidiary of General Motors, and Anduril Industries announce a teaming agreement to collaborate on defence programme capture, focused on autonomy, battery electrification and new propulsion technologies and on integrating Anduril technologies with GM Defense mobility solutions; both showed Infantry Squad Vehicle variants with Anduril systems at AUSA 2023. Cadillac F1 Team is General Motors' works entry (cadillacf1team.com; sponsor table: General Motors, TWG Motorsports).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "listing",
+    "ipo",
+    "2027",
+    "s-1",
+    "public markets",
+    "go public"
+   ],
+   "url": "https://forgeglobal.com/anduril_ipo/",
+   "excerpt": "Forge Global and Investing.com, mid-2026: Anduril has not filed an S-1 or announced an IPO date; Palmer Luckey said in October 2025 the company would list 'in the next few years' and wants to be profitable first; analysts expect a listing in 2027 or later, with the May 2026 round reducing near-term pressure. Treated in the brief as an expectation, not a fact.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "steckman",
+    "grimm",
+    "schimpf",
+    "luckey",
+    "costa mesa",
+    "2017",
+    "cruise",
+    "snapchat",
+    "pepsico",
+    "ogilvy",
+    "cannes",
+    "recruit",
+    "chairman",
+    "stephens"
+   ],
+   "url": "https://www.ocbj.com/defense-2/anduril-names-2-presidents/",
+   "excerpt": "Orange County Business Journal; Anduril 'Key Leadership Promotions' release; PR Newswire (Air board release, 2026); Wikipedia: Anduril Industries, headquartered in Costa Mesa, California, founded 2017 by Palmer Luckey, Trae Stephens, Matt Grimm, Joe Chen and Brian Schimpf. Brian Schimpf is CEO; Trae Stephens chairman; Matthew Steckman President and Chief Business Officer; Matt Grimm Co-Founder and Chief Operating Officer; Palmer Luckey co-founder and public face. Jeff Miller, marketing chief since May 2024 (ex-Cruise, Snapchat, PepsiCo, Ogilvy), spoke at Cannes Lions 2026 on marketing as an engineering-recruitment tool.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "cadillac",
+    "twg ai",
+    "core scientific",
+    "ifs",
+    "tenneco",
+    "jim beam",
+    "tommy hilfiger",
+    "claro",
+    "indiana",
+    "first season",
+    "debut",
+    "exclusive ai",
+    "exclusive",
+    "fewer, bigger"
+   ],
+   "url": "https://www.cadillacf1team.com/partners",
+   "excerpt": "Cadillac Formula 1 Team partners page and coverage (SportsPro, BlackBook Motorsport, Feb–Mar 2026): 2026 debut-season roster of TWG AI (primary and exclusive AI partner, Feb 2026), Core Scientific (official data-centre partner, Mar 2026, for the Indiana headquarters), IFS (enterprise software, Jan 2026), Tenneco (official technical partner), Jim Beam, Tommy Hilfiger, Claro (América Movil), Pirelli, Alpinestars, with General Motors and TWG Motorsports as owners; team profile: not seeking a title sponsor in the debut year, 'fewer, bigger, better'. No aerospace, defence or autonomy partner.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "boeing",
+    "alpine",
+    "zoox",
+    "williams",
+    "aerospace"
+   ],
+   "url": "https://www.alpinef1.com/partners/team-partner-boeing",
+   "excerpt": "BWT Alpine F1 Team partners page: Boeing (Boeing Research & Technology) is a team partner in 2026, with nearly a decade of collaboration with Enstone on CFD, additive manufacturing and advanced materials. Sponsor table: Zoox (Amazon's autonomous-vehicle company) is an active Atlassian Williams Racing partner.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "aramco",
+    "aston martin",
+    "oracle",
+    "red bull",
+    "mercedes",
+    "mclaren",
+    "ferrari",
+    "haas",
+    "toyota",
+    "audi",
+    "racing bulls",
+    "siemens",
+    "hexagon",
+    "ansys",
+    "arm",
+    "cognizant"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): no defence-technology brand on any 2026 F1 roster. Alpine: Boeing. Williams: Zoox, Komatsu, Claude. Aston Martin: Aramco (title), ARM, Cognizant, CoreWeave. Red Bull: Oracle (title), Siemens, Hexagon, Ansys. Haas: Toyota Gazoo Racing (title), Haas Automation. Cadillac: TWG AI, Core Scientific, IFS, Tenneco, Jim Beam, Tommy Hilfiger, Claro, General Motors, TWG Motorsports. Mercedes, McLaren, Ferrari, Audi, Racing Bulls: no US-identity or defence partner in the lane.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "miami",
+    "united states gp",
+    "us gp",
+    "three us rounds",
+    "fourth quarter"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table (24 rounds): Miami GP (round 6, early May, already run on the row date), United States GP (Austin, round 19, October) and Las Vegas GP (round 22, November) are the three US rounds; the season closes with Qatar and Abu Dhabi in December.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Anduril Industries",
+  "industry_meta": "Defence Technology · Autonomous Systems / Lattice Software",
+  "hq": "Costa Mesa, California (founded 2017)",
+  "ticker": "Private ($61B; $5B Series H, May 2026)",
+  "deck": "Anduril, the Costa Mesa defence-technology company that already sponsors NASCAR and Hendrick Motorsports, announced a $5B Series H at a $61B valuation on 13 May 2026, doubling its price in a year, weeks before its first NASCAR title race and the start of production at its $1B Ohio factory.",
+  "score": 79,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Cadillac F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 13 May 2026 Anduril announced a $5B Series H led by Thrive Capital and Andreessen Horowitz at a $61B valuation, double the $30.5B set in June 2025, taking total funding past $11B over eight rounds. The demand behind it is public: the US Army awarded a ten-year enterprise contract with a $20B ceiling on 13 March 2026, and Arsenal-1, a $1B factory in Columbus, Ohio, targets production from July. Anduril has bought motorsport already: Official Defense Partner of NASCAR, title sponsor of June's San Diego weekend at Naval Base Coronado, and Hendrick's William Byron through 2028.",
+  "the_case_p2": "That NASCAR programme is the tell. A company that put a Cup Series event on a naval base to recruit engineers and tell a rebuild-the-arsenal story has a template Formula 1 can scale: three US rounds, a global engineering audience and a listing expected in 2027. General Motors is the bridge. GM Defense signed a teaming agreement with Anduril in October 2023 on autonomy and electrification, and Cadillac is GM's works team.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 13 May; the NASCAR debut at Coronado is in June and Arsenal-1 starts production in July, so budget, motorsport template and manufacturing story crest together. The United States GP in Austin (October) and the Las Vegas GP (November) fall inside the window; 2027 rosters close in the fourth quarter.",
+  "why_team_label": "WHY CADILLAC F1 TEAM",
+  "why_team_para": "Cadillac is General Motors' American works entry, in its first season with a deliberately small roster: TWG AI, Core Scientific, IFS, Tenneco, Jim Beam, Tommy Hilfiger, Claro. No aerospace, defence or autonomy partner is on it, and the parent already works with Anduril through GM Defense, so the introduction is warm on both sides. Three US rounds give a Costa Mesa brand home stages, and a debut team prices entry below the established grid.",
+  "value_section": true,
+  "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+  "value_mode": "B",
+  "value_content": "MODE B - halo with concrete mechanics. TWG AI holds Cadillac's exclusive AI lane, so this is not a software workstream. It is: livery and garage presence at Miami, Austin and Las Vegas; engineering-recruitment content, the job Anduril's marketing chief says marketing does, filmed at Arsenal-1 and the team's Indiana headquarters; warfighter-family programmes carried over from the Hendrick deal; hospitality for Pentagon, Congressional and allied guests at the US rounds.",
+  "deal_arch_para": "Entry as Official Defence Technology Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, bridging the Hendrick term and a probable listing. Estimated $8-12M a year, the top of Cadillac's partner tier. Scope: engine-cover or rear-wing placement, US-round hospitality, recruitment and manufacturing content, a joint GM Defense and Cadillac engineering story.",
+  "decision_maker_name": "Jeff Miller",
+  "decision_maker_role": "Chief Marketing Officer, Anduril Industries",
+  "decision_maker_bio": "Anduril's first marketing chief, hired in May 2024 from Cruise, where he was VP of marketing, after Snapchat, PepsiCo and Ogilvy; he built the NASCAR and Hendrick programmes. Path: Matthew Steckman, President and Chief Business Officer; Matt Grimm, Co-Founder and COO; Brian Schimpf, CEO.",
+  "opening_angle_intro": "Lead with the NASCAR template.",
+  "opening_angle_quote": "&ldquo;Jeff, you put a Cup Series event on a naval base. Formula 1 gives you Austin, Las Vegas and Miami, a global engineering audience, and GM's own works team, whose parent already works with you. 25 minutes before Austin to size the Cadillac lane?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "18",
+    "/ 20",
+    "Round 13 May; NASCAR debut June; Arsenal-1 July; Austin and Las Vegas in window."
+   ],
+   [
+    "CAPACITY",
+    "20",
+    "/ 20",
+    "$5B raise at $61B; more than $11B raised; $20B Army contract ceiling."
+   ],
+   [
+    "BRAND FIT",
+    "15",
+    "/ 20",
+    "Proven motorsport buyer; American engineering story; defence sensitivities."
+   ],
+   [
+    "URGENCY",
+    "14",
+    "/ 20",
+    "Listing expected 2027; 2027 rosters close in Q4; Hendrick term runs to 2028."
+   ],
+   [
+    "OPS FIT",
+    "12",
+    "/ 20",
+    "MODE B: halo with recruitment and US-round mechanics; AI lane held by TWG."
+   ]
+  ],
+  "risks": [
+   [
+    "BRAND SAFETY",
+    "A weapons maker on a Formula 1 car will draw scrutiny from teams, promoters and a European fan base NASCAR did not test.",
+    "Lead with the Boeing-at-Alpine precedent and Cadillac's American identity; agree product-imagery rules up front."
+   ],
+   [
+    "CATEGORY DEFINITION",
+    "TWG AI is Cadillac's exclusive AI partner and Anduril's Lattice is AI software; the lane must be defence technology, not AI.",
+    "Define the lane as defence and autonomous systems and clear it with TWG before the first call."
+   ]
+  ],
+  "bottom_line": "A $5B round at $61B, a $20B Army contract ceiling, a factory starting in July and a NASCAR programme already running put Anduril at peak brand-investment authority with a proven appetite for motorsport. GM Defense gives a warm path into Cadillac, the defence lane on the grid is open and two US races remain inside the window.",
+  "signals": [
+   "funding_event",
+   "motorsport_precedent",
+   "partner_adjacency"
+  ],
+  "footer_company": "ANDURIL INDUSTRIES",
+  "footer_date": "15 MAY 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 13 May 2026 Anduril announced a $5B Series H led by Thrive Capital and Andreessen Horowitz at a $61B valuation, double the $30.5B set by the $2.5B round of June 2025; total funding is now more than $11B over eight rounds. The company announced the round itself and Bloomberg, TechCrunch and GovConWire carried it the same day. Revenue is not disclosed and the brief uses no revenue figure."
+    },
+    {
+     "label": "The demand behind the price",
+     "text": "The US Army awarded Anduril a ten-year enterprise contract with a $20B ceiling on 13 March 2026, consolidating more than 120 procurement actions into one framework built around the Lattice software. The ceiling is a maximum, not an obligated amount, and the brief says so. Arsenal-1, the $1B hyperscale factory in Columbus, Ohio, targets production from July 2026."
+    },
+    {
+     "label": "Motorsport is already in the budget",
+     "text": "Anduril is Official Defense Partner of NASCAR and presenting sponsor of the NASCAR San Diego weekend; the Anduril 250 'Race the Base' Cup Series street race ran at Naval Base Coronado on 21 June 2026. It is also a primary sponsor of Hendrick Motorsports' William Byron for two Cup races a season from 2026 through 2028. The question for Anduril is not whether to buy motorsport but whether to scale it to a global engineering audience."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The Miami GP has just run; the United States GP in Austin (October) and the Las Vegas GP (November) are the US rounds left in 2026, and teams close their 2027 partner rosters in the fourth quarter. A listing is expected by analysts in 2027 or later; a partnership agreed over the summer can be announced at Austin and run through the listing window."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The warm path",
+     "text": "GM Defense, a General Motors subsidiary, signed a teaming agreement with Anduril in October 2023 on autonomy, battery electrification and new propulsion, and the two showed Infantry Squad Vehicles fitted with Anduril systems at AUSA that year. Cadillac F1 Team is General Motors' works entry. The introduction can run through a relationship both sides already value."
+    },
+    {
+     "label": "The open lane",
+     "text": "Cadillac's debut roster is deliberately small: TWG AI as primary and exclusive AI partner, Core Scientific for data-centre infrastructure, IFS for enterprise software, Tenneco as technical partner, Jim Beam, Tommy Hilfiger and Claro. No aerospace, defence or autonomy partner is on it, and the team has said it is not seeking a title sponsor in year one, so a top-tier team partner is the largest seat on offer."
+    },
+    {
+     "label": "American identity, US stages",
+     "text": "A Costa Mesa company that used a naval base for its first NASCAR event gets an American works team, an Indiana headquarters, and Miami, Austin and Las Vegas as home rounds. The 'rebuild the arsenal' story and Cadillac's American-engineering debut are the same story told twice."
+    },
+    {
+     "label": "Price of entry",
+     "text": "A first-season team prices its partner tier below the established grid, and its inventory is not yet crowded. For a brand that spends on two Cup races a season with Hendrick, the step up to a three-year F1 seat is proportionate to a $5B raise."
+    }
+   ],
+   "value": [
+    {
+     "label": "Halo with concrete mechanics (Mode B)",
+     "text": "TWG AI holds Cadillac's exclusive AI lane, so the brief does not claim a Lattice-on-the-pit-wall workstream. What Anduril brings is a brand that recruits engineers: co-produced content across Arsenal-1 and the Indiana headquarters, engineering-talent programmes with the team, and a manufacturing story that runs from a hyperscale factory to a race car built in the same country."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Anduril's guest list is Pentagon, Congressional, allied-government and prime-contractor audiences, plus the venture and public-market investors who priced the $61B round. Hospitality at Miami, Austin and Las Vegas puts that audience in Cadillac's suite alongside its other B2B partners."
+    },
+    {
+     "label": "Programmes that already exist",
+     "text": "The Hendrick agreement carries warfighter and military-family programmes; the same mechanics translate to the US rounds, with GM Defense as a natural co-sponsor. Content from the Coronado event gives the team a template rather than a blank page."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Defence Technology Partner designation, engine-cover or rear-wing placement, US-round hospitality, driver and engineering access for recruitment content, and a joint GM Defense and Cadillac engineering story for Anduril's channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Boeing, an aerospace and defence prime, is a team partner; a direct category clash."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Zoox occupies the autonomous-systems lane; Claude's Anthropic tie adds a second software overlap."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "Aramco is title partner; a US defence prime beside a Saudi state energy title is a governance question for both sides."
+    },
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "Open and American-owned, but Toyota-titled and without the GM Defense relationship that gives Cadillac a warm path."
+    },
+    {
+     "team": "Oracle Red Bull Racing · Visa Cash App Racing Bulls",
+     "reason": "Open in the lane, but Austrian-owned with no US identity; Siemens, Hexagon and Ansys hold the engineering-software lanes at Red Bull."
+    },
+    {
+     "team": "Mercedes-AMG Petronas · McLaren Mastercard · Scuderia Ferrari HP · Audi Revolut",
+     "reason": "Open in the lane but European heritage teams with no US identity; not chosen."
+    }
+   ],
+   "ask": "A 25-minute call with Jeff Miller before the United States GP to test the F1 step-up against the NASCAR programme, confirm the category definition with TWG AI, and size an Official Defence Technology Partner entry against Cadillac's 2027 roster."
+  }
+ },
+ "note": "# Anduril Industries → Cadillac F1 Team — verification log (N° 220, issued for 15 May 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) from a case spec\n(`andurilindustries.case.json`) with Claude doing the research, verification and writing; the calendar\ntable, sponsor table, 13-rule audit and the 2-page render ran as code via `python -m intel.session_case`.\nThe row came from a thin scan dated 15 May 2026 (score 86, no team, person Palmer Luckey); the trigger\nwas corrected, the sponsorship owner re-identified and the score re-set.\n\n**Sandbox limitation, stated plainly:** direct fetches of anduril.com, techcrunch.com, bloomberg.com,\narmy.mil, hendrickmotorsports.com, nascar.com, gmdefensellc.com, theorg.com and cadillacf1team.com were\nblocked by the egress proxy. Each claim below was checked against the search summary of the primary page\nnamed as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link.\nConfidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, corrected\n\nThe thin row said \"$5B financing round; prior $4B round Mar 2026 at a reported $60B valuation\". The\nround is real but the shape was wrong: **$5B Series H at a $61B valuation, announced 13 May 2026** (not\n15 May), led by Thrive Capital and Andreessen Horowitz; the **prior round was $2.5B at $30.5B in June\n2025** — there was no $4B March 2026 round. The \"$20B US Army contract\" is confirmed as a ten-year\nenterprise contract with a **$20B ceiling** (army.mil, 13 Mar 2026), a maximum rather than an obligated\namount. `signal_date` is 13 May; the row date 15 May is the run date. Inside the 90-day window.\n\n## The finding the thin row missed\n\n**Anduril already buys motorsport.** It is Official Defense Partner of NASCAR and presenting sponsor of\nthe NASCAR San Diego weekend (NASCAR, 14 Aug 2025); the Anduril 250 \"Race the Base\" Cup Series street\nrace ran at Naval Base Coronado on 21 June 2026; and it is a primary sponsor of Hendrick Motorsports'\nWilliam Byron for two Cup races a season 2026–2028 (Hendrick, 22 Oct 2025). None of this is F1 or FE,\nso Anduril is not an existing grid partner, but it is the warmest signal class: a marketing chief who\nhas structured motorsport deals. `leadership_ties` therefore records **Jeff Miller — built the NASCAR\nand Hendrick programmes (2025)**. No F1/FE tie was found for Schimpf, Steckman, Grimm, Stephens or\nLuckey after checking.\n\n## Ledger (all load-bearing claims covered; see the table appended by the build)\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Jeff Miller, marketing chief since May 2024 (ex-Cruise VP marketing) | VERIFIED | O'Dwyer's PR News, 15 May 2024 |\n| Miller's title: chief marketing officer | REPORTED (2026 'CMO Insider' interview; Cannes Lions 2026 coverage); The Org still shows VP of Marketing | note in bio |\n| $5B Series H, $61B, Thrive + a16z, >$11B over eight rounds, 13 May 2026 | VERIFIED (company announcement via TechCrunch / Bloomberg / GovConWire) | evidence URL |\n| Prior round $2.5B at $30.5B, June 2025 | REPORTED | Yahoo Finance / TechCrunch |\n| US Army enterprise contract, $20B ceiling, 13 Mar 2026 | VERIFIED | army.mil |\n| Arsenal-1: $1B, Columbus, Ohio, production target July 2026 | VERIFIED | Breaking Defense / Ohio Governor's office |\n| NASCAR Official Defense Partner; San Diego weekend; Coronado race 21 Jun 2026 | VERIFIED | NASCAR / Hendrick / Wikipedia |\n| Hendrick primary sponsor of William Byron, two Cup races a season, 2026–2028 | VERIFIED | hendrickmotorsports.com |\n| GM Defense–Anduril teaming agreement, Oct 2023 | VERIFIED | gmdefensellc.com; PR Newswire |\n| Leadership: Schimpf CEO, Stephens chairman, Steckman President & CBO, Grimm COO, Luckey co-founder; HQ Costa Mesa | VERIFIED | OCBJ; company promotions release; Wikipedia |\n| Cadillac roster (TWG AI exclusive AI, Core Scientific, IFS, Tenneco, Jim Beam, Tommy Hilfiger, Claro); GM works entry; no title sponsor sought | VERIFIED | cadillacf1team.com partners; sponsor table |\n| Boeing at Alpine; Zoox at Williams | VERIFIED | alpinef1.com; sponsor table |\n| IPO expected 2027 or later; no S-1 | REPORTED (expectation, labelled) | Forge Global; Investing.com |\n| United States GP (Austin), Las Vegas GP, Miami GP in 2026 | VERIFIED | calendar table (`seeds/calendar_2026.json`) |\n\n## Decision path\n\n**Jeff Miller** (chief marketing officer; Anduril's first marketing hire, May 2024) owns brand spend and\nbuilt the NASCAR and Hendrick programmes, so he is the sponsorship owner rather than Palmer Luckey.\nPath: Matthew Steckman (President & Chief Business Officer), Matt Grimm (Co-Founder & COO), Brian\nSchimpf (CEO); Palmer Luckey is the brand principal. No CFO is named in the sources opened.\n\n## Screen-outs and things not claimed\n\n- **Revenue is not used.** Pre-IPO market sites report ~$2.2B for 2025 and ~$4.3B 2026 guidance; these\n  are not company disclosures and are left out of the brief.\n- **No Lattice-on-the-pit-wall workstream is claimed.** TWG AI is Cadillac's primary and exclusive AI\n  partner; the value section is an honest MODE B with named mechanics, and the second risk row is the\n  category definition.\n- **Brand safety is the first risk row**, not a footnote: a weapons maker on an F1 car will be tested by\n  a European fan base and by team and promoter policies in a way NASCAR did not test. The Boeing-at-Alpine\n  precedent and Cadillac's American identity are the counters; activation rules on product imagery must\n  be agreed up front.\n- **Team choice.** Alpine (Boeing) and Williams (Zoox) are ruled out on category; Aston Martin on the\n  Aramco title; Haas is open but lacks the GM Defense path; Red Bull, Racing Bulls and the European\n  heritage teams have no US identity. Cadillac was chosen on the sponsor table and the GM relationship.\n- **Grid Fit panel vs. this brief.** The rendered GRID FIT panel is the pipeline's automatic category read\n  (`seeds/sponsor_categories.json`), which has no defence category; trust the ruled-out list on the app\n  page over the panel.\n- **Deal size ($8–12M a year) is an ESTIMATE**, labelled as such.\n- **Score reset from 86 to 79.** Capacity and timing are at the ceiling; brand fit and ops fit are held\n  back by defence sensitivities and by the absence of a real operational workstream.\n"
+}
