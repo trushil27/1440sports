@@ -1,0 +1,708 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-06-11",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-_4zin7o8/2026-06-11/helionenergy.pdf",
+     "web": "/tmp/case-pdf-_4zin7o8/2026-06-11/helionenergy.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Helion Energy",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "Helion Energy",
+     "decision": "selected",
+     "signal_date": "2026-06-04"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Helion Energy",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 16,
+    "ops_fit": 12,
+    "ranking": 70,
+    "urgency": 11,
+    "capacity": 15,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 3,
+     "product_to_need": 3,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Andretti Formula E",
+   "source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "trigger_date": "2026-06-04",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 195,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-_4zin7o8/2026-06-11/helionenergy.web.html",
+  "brief_data": {
+   "hq": "Everett, Washington (founded 2013)",
+   "deck": "Helion, the fusion company building the world's first fusion power plant for Microsoft, announced on 4 June 2026 a $465M Series G led by Thrive Capital at a $15.5B valuation, nearly triple its January 2025 mark, taking total funding to $1.5B as it moves from lab milestone to construction site.",
+   "risks": [
+    {
+     "label": "PRE-REVENUE, CAPEX-FIRST",
+     "detail": "The $465M is for reactors and Orion; a sponsorship can read as off-strategy to a founder-led deep-tech board.",
+     "counter": "Pitch a modest, milestone-linked brand and talent platform that steps up at first power, not heavy signage."
+    },
+    {
+     "label": "HALO, NOT WORKSTREAM",
+     "detail": "Fusion does not power a Formula E car, so no operational integration anchors renewal.",
+     "counter": "Anchor renewal on measured outcomes: policy and utility audiences at Austin and Miami, hiring funnel, content reach."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private ($15.5B post-money; $465M Series G, Jun 2026)",
+   "company": "Helion Energy",
+   "gridfit": [
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Envision Racing",
+     "label": "TAKEN",
+     "detail": "Envision Group",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "TAKEN",
+     "detail": "Shell",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "never_entered"
+   ],
+   "sources": [
+    "https://www.crunchbase.com/person/david-kirtley",
+    "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+    "https://www.helionenergy.com/newsroom/helion-secures-land-and-begins-building-site-of-worlds-first-fusion-power-plant",
+    "https://www.helionenergy.com/newsroom/helion-announces-425m-series-f-investment-to-scale-commercialized-fusion-power"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with David Kirtley before the Season 13 roster closes to test a milestone-linked Official Clean Energy Partner entry at Andretti Formula E, launching with GEN4 in December and stepping up at Orion's first power.",
+    "value": [
+     {
+      "text": "Fusion is the definitive clean-energy story and Formula E is the championship built to prove clean mobility. Co-produced content pairing the first fusion power plant with the first GEN4 season gives Andretti the grid's strongest sustainability narrative and Helion a global stage as it moves from lab to grid.",
+      "label": "Narrative (Mode B)"
+     },
+     {
+      "text": "Hospitality at Austin and Miami for utilities, hyperscaler energy buyers, regulators and investors is a guest list Andretti's other B2B partners want in the suite, and it is the audience Helion has to win for offtake and licensing.",
+      "label": "Audience the team can sell"
+     },
+     {
+      "text": "Helion is hiring physicists and engineers at speed; a joint recruiting and STEM programme built on the team's engineering content gives both sides a measurable outcome that does not depend on signage.",
+      "label": "Talent and STEM"
+     },
+     {
+      "text": "Official Clean Energy Partner designation with category exclusivity, livery presence sized to the fee, driver and engineering access, GEN4 launch content and Austin and Miami hospitality.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 4 June 2026 Helion announced a $465M Series G led by Thrive Capital at a $15.5B post-money valuation, with Lux Capital, Peak XV Partners, BoxGroup, Anti Fund, Alta Park Capital and Bill Ford joining Lightspeed, SoftBank Vision Fund 2, Mithril, Capricorn and Good Ventures. Total raised is $1.5B. The release is Helion's own, so the figures are VERIFIED.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The $425M Series F of 28 January 2025 valued Helion at $5.425B; the Series G nearly triples that. A company re-priced this fast has a story to tell to utilities, regulators, hyperscaler customers and the talent it is hiring, and a budget to tell it with.",
+      "label": "Valuation nearly tripled in seventeen months"
+     },
+     {
+      "text": "Orion, the first fusion power plant, has been under construction in Malaga, Chelan County, Washington since July 2025 under the world's first fusion power purchase agreement, supplying Microsoft by 2028 at 50 MW or more. In February 2026 Polaris became the first privately developed machine to demonstrate deuterium-tritium fusion and reach 150 million degrees Celsius. Each milestone from here is a moment a partnership can be timed to.",
+      "label": "From lab to construction site"
+     },
+     {
+      "text": "Season 13, the GEN4 era, opens with the Jeddah E-Prix double-header on 18-19 December 2026; the Austin E-Prix on 6 February 2027 is a new US round and the Miami E-Prix follows on 20 February. Teams are setting partner rosters for the new car now, so a deal agreed over the summer launches with GEN4.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Andretti Formula E carries TWG AI as primary partner and Official AI Partner, Quest Global on engineering services, Crowe UK and Reflo, with Andretti Global and TWG Motorsports as parents. There is no energy, power or fuel partner: Official Clean Energy Partner is a clean category with exclusivity available.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Helion's next customers and gatekeepers are US utilities, hyperscalers and state and federal regulators. Andretti is the American entry on the grid, Austin and Miami are the two US rounds, and the Andretti name carries in Washington and Indianapolis in a way no European works team can match.",
+      "label": "The American team for a US audience"
+     },
+     {
+      "text": "Envision Racing is the obvious thematic match, but it is owned by Envision Group, a wind-turbine, storage, green-hydrogen and battery company whose entire purpose for the team is to carry its own energy story. A fusion brand on that car competes with the owner's message.",
+      "label": "Why not the sustainability-first independent"
+     },
+     {
+      "text": "TWG Motorsports, Andretti's parent, also owns the Cadillac F1 Team. A Formula E relationship that works gives Helion a known counterparty for a Formula 1 conversation when Orion is delivering power.",
+      "label": "A path to a bigger stage"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Envision Racing",
+      "reason": "Owned by Envision Group (wind, storage, hydrogen, AESC batteries); the energy story on that car belongs to the owner."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell is a team partner in the energy lane."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "TotalEnergies is a team partner in the energy lane."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "Castrol holds the fuel and lubricants lane."
+     },
+     {
+      "team": "Nissan Formula E Team · Porsche Formula E Team · Citroën Racing",
+      "reason": "Manufacturer works teams whose energy story is the parent's own electrification programme."
+     },
+     {
+      "team": "Mahindra Racing · Cupra Kiro",
+      "reason": "Open but not chosen: neither offers the US audience or the American-team platform Helion needs."
+     }
+    ]
+   },
+   "date_long": "11 JUN 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Andretti Formula E",
+   "value_mode": "B",
+   "bottom_line": "A $465M round at $15.5B on 4 June, a licensed fusion plant under construction for Microsoft and a first-of-its-kind Polaris result put Helion at peak brand-investment visibility; the clean-energy lane at the American Formula E team is open as the GEN4 era and a new Austin E-Prix arrive.",
+   "footer_date": "11 JUN 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Round closed 4 Jun; GEN4 rosters set before December.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "$1.5B raised at $15.5B, but pre-revenue and capex-first.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 16,
+     "note": "Clean energy on the clean-mobility grid; narrative-perfect.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 11,
+     "note": "No hard deadline; Orion's 2028 delivery is the milestone.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 12,
+     "note": "MODE B: halo, audience and talent; no in-car workstream.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 4 June Helion announced a $465M Series G led by Thrive Capital at a $15.5B post-money valuation, with Lux Capital, Peak XV, BoxGroup and Bill Ford joining Lightspeed, SoftBank Vision Fund 2 and Good Ventures; total raised is $1.5B, nearly triple the $5.425B set by the $425M Series F in January 2025. The story is physical: Orion, the first fusion power plant, has been under construction in Malaga, Washington since July 2025 to supply Microsoft by 2028, and in February Polaris became the first private machine to demonstrate deuterium-tritium fusion at 150 million degrees.",
+   "the_case_p2": "Fusion is the definitive clean-energy story and Formula E is the championship built to prove clean mobility; pairing the two is the most on-message sustainability partnership on any grid, and Helion has never touched motorsport. The energy lane belongs to incumbents: Shell sits with Lola Yamaha ABT, TotalEnergies with DS Penske, Castrol with Jaguar. The counterweight: Helion is pre-revenue and pouring capital into reactors, so this is a measured brand and talent platform.",
+   "track_label": "",
+   "brief_number": "195",
+   "claims_total": 15,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$465M Series G led by Thrive Capital at a $15.5B post-money valuation, announced 4 Jun 2026; total raised $…",
+     "value": "$465M",
+     "claim_id": 640,
+     "verified": true,
+     "source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power"
+    },
+    {
+     "fact": "total raised is $1.5B, nearly triple the $5.425B set by the $425M Series F in January 2025.",
+     "value": "$1.5B",
+     "claim_id": 650,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Fusion Energy · Clean Power Generation",
+   "value_content": "MODE B - halo, with concrete mechanics. Fusion does not power a Formula E car, so the substance is narrative, audience and talent: co-produced content pairing the first fusion plant with the first GEN4 season; hospitality at Austin and Miami for the utilities, hyperscalers and policymakers Helion must win; a joint STEM recruiting platform as Helion hires physicists and engineers. In return: Official Clean Energy Partner status, livery presence, driver access.",
+   "value_section": true,
+   "why_team_para": "Andretti is the American team on the grid, with TWG AI as primary partner, Quest Global on engineering, Crowe UK and Reflo alongside; it carries no energy, power or fuel partner, so a clean-energy lane is open outright. Envision Racing is owned by an energy group that would not cede its own story; Jaguar, DS Penske and Lola Yamaha ABT carry oil majors. Andretti gives Helion the two US rounds, Austin and Miami, and a parent that also owns the Cadillac F1 entry.",
+   "deal_arch_para": "Entry as Official Clean Energy Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, spanning Orion's construction and its 2028 delivery to Microsoft. Estimated $1.5-3M a year, sized to a pre-revenue company and stepped up at first power. Scope: energy-category exclusivity, GEN4 content, Austin and Miami hospitality, a talent programme.",
+   "footer_company": "HELION ENERGY",
+   "why_team_label": "WHY ANDRETTI FORMULA E",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 4 June and Helion is at peak visibility as it moves from Polaris to a licensed construction site. Season 13, the GEN4 era, opens in Jeddah in December and the Austin E-Prix in February 2027 brings Formula E to a new US city; rosters are set now.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Kirtley founded Helion in 2013 and fronts every raise, customer deal and milestone; a first sports partnership is his call. Path: Pragav Jain, CFO since July 2024 (ex-Waymo, Goldman Sachs), and Savanna Thompson, Chief Business Operations Officer. No CMO listed.",
+   "decision_maker_name": "David Kirtley",
+   "decision_maker_role": "Founder & CEO, Helion Energy",
+   "opening_angle_intro": "Lead with the stage, not the signage.",
+   "opening_angle_quote": "&ldquo;David, fusion is the clean-energy story and Formula E is the stage built to prove clean mobility. No energy brand sits with the American team, and Austin joins the calendar in February. 25 minutes on a milestone-linked partnership before the Season 13 opener?&rdquo;",
+   "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "David Kirtley, Founder & CEO at Helion Energy",
+   "cited_source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.crunchbase.com/person/david-kirtley",
+     "excerpt": "David Kirtley, Founder & Chief Executive Officer of Helion Energy (Crunchbase; LinkedIn; GeekWire 2026 profile); Helion founded in 2013 and headquartered in Everett, Washington.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "David Kirtley, Founder & CEO, Helion Energy at Helion Energy",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.crunchbase.com/person/david-kirtley",
+     "excerpt": "David Kirtley, Founder & Chief Executive Officer of Helion Energy (Crunchbase; LinkedIn; GeekWire 2026 profile); Helion founded in 2013 and headquartered in Everett, Washington.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$465M Series G led by Thrive Capital at a $15.5B post-money valuation, announced 4 Jun 2026; total raised $1.5B; prior round $425M Series F at $5.425B (28 Jan 2025)",
+   "cited_source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Helion, the fusion company building the world's first fusion power plant for Microsoft, announced on 4 June 2026 a $465M Series G led by Thrive Capital at a $15.5B valuation, nearly triple its January 2025 mark, taking total funding to $1.5B as it moves from lab milestone to construction site.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Thrive Capital (lead); new: Lux Capital, Peak XV Partners, BoxGroup, Anti Fund, Alta Park Capital, Bill Ford; returning: Lightspeed, SoftBank Vision Fund 2, Mithril, Capricorn, Good Ventures",
+   "cited_source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 4 June Helion announced a $465M Series G led by Thrive Capital at a $15.5B post-money valuation, with Lux Capital, Peak XV, BoxGroup and Bill Ford joining Lightspeed, SoftBank Vision Fund 2 and Good Ventures;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$465M Series G at a $15.5B valuation, announced 4 Jun 2026",
+   "cited_source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "total raised is $1.5B, nearly triple the $5.425B set by the $425M Series F in January 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Shell sits with Lola Yamaha ABT and TotalEnergies with DS Penske; Castrol with Jaguar TCS Racing; Envision Racing is owned by Envision Group, a wind, storage and battery company; Andretti Formula E carries no energy partner",
+   "cited_source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "TotalEnergies → DS Penske (team_major, active); Castrol → Jaguar TCS Racing (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $465M round at $15.5B on 4 June, a licensed fusion plant under construction for Microsoft and a first-of-its-kind Polaris result put Helion at peak brand-investment visibility;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Orion, the first fusion power plant, under construction in Malaga, Washington since July 2025 to supply Microsoft by 2028; Polaris demonstrated deuterium-tritium fusion at 150 million degrees Celsius in February 2026",
+   "cited_source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-secures-land-and-begins-building-site-of-worlds-first-fusion-power-plant",
+     "excerpt": "Helion newsroom / Business Wire, 30 Jul 2025: Helion secured land and began building at the site of Orion, its first fusion power plant, in Malaga, Chelan County, Washington, to supply Microsoft's data centres in the state by 2028. Helion newsroom (May 2023) and CNBC: the world's first fusion power purchase agreement, with Microsoft, targets a plant online in 2028 delivering 50 MW or more after a one-year ramp. Washington Department of Health issued Helion a Radioactive Materials License and a Radioactive Air Emissions License for the Orion facility (425business.com).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 4 June 2026 Helion announced a $465M Series G led by Thrive Capital at a $15.5B post-money valuation, with Lux Capital, Peak XV Partners, BoxGroup, Anti Fund, Alta Park Capital and Bill Ford joining Lightspeed, SoftBank Vision Fund 2, Mithril, Capricorn and Good Ventures.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Everett, Washington; founded 2013; Orion plant in Chelan County, Washington; Nucor 500 MW plant agreement",
+   "cited_source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.crunchbase.com/person/david-kirtley",
+     "excerpt": "David Kirtley, Founder & Chief Executive Officer of Helion Energy (Crunchbase; LinkedIn; GeekWire 2026 profile); Helion founded in 2013 and headquartered in Everett, Washington.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Total raised is $1.5B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power",
+     "excerpt": "Helion newsroom / Business Wire, 4 Jun 2026 (also GeekWire, ESG Today, The Information): $465 million Series G led by Thrive Capital at a $15.5 billion post-money valuation; total invested to date $1.5 billion. New investors Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners and Ford Motor Company Executive Chairman Bill Ford; existing investors Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2 and a university endowment. Nearly triple the prior valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The $425M Series F of 28 January 2025 valued Helion at $5.425B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.helionenergy.com/newsroom/helion-announces-425m-series-f-investment-to-scale-commercialized-fusion-power",
+     "excerpt": "Helion newsroom / Business Wire, 28 Jan 2025: $425 million Series F at a $5.425 billion post-money valuation, bringing total invested to over $1 billion; new investors Lightspeed, SoftBank Vision Fund 2 and a university endowment; existing investors including Sam Altman, Mithril, Capricorn, Good Ventures and Nucor.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix in February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Jeddah E-Prix double-header on 18-19 December 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Miami E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: Miami International Autodrome (Hard Rock Stadium)",
+     "excerpt": "round 3: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
