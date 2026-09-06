@@ -287,7 +287,14 @@ def build_gridfit(
             (
                 weight,
                 GridRow(
-                    team=team, recommended=recommended, status=status, label=label, detail=detail
+                    # The sponsor table keys teams by their long-standing name; the brief
+                    # shows the 2026 entry name (team_profiles display_name) so GRID FIT
+                    # and the recommended-team label agree ("TGR Haas", not "MoneyGram Haas").
+                    team=prof.get("display_name") or team,
+                    recommended=recommended,
+                    status=status,
+                    label=label,
+                    detail=detail,
                 ),
             )
         )

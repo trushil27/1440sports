@@ -59,6 +59,12 @@ def review_for(review: dict[str, dict[str, Any]], date: str, company: str) -> di
         "reason": d.get("reason"),
         "reason_code": d.get("reason_code"),
     }
+    # Screen-outs decided by a full case check carry their sources and date, so the app can
+    # show the judgment (why the desk did not build the case) rather than a missing row.
+    if d.get("sources"):
+        out["sources"] = list(d["sources"])[:5]
+    if d.get("screened_at"):
+        out["screened_at"] = d["screened_at"]
     if d.get("of"):
         parts = d["of"].split("|")
         out["of"] = f"{parts[0]}|{company_norm(parts[1])}"
@@ -296,15 +302,18 @@ def brief_entry(
     d = brief.brief_data or {}
     series, inferred = infer_series(card, d)
     engine_row = not brief.historical or bool(d.get("rebuilt")) or bool(d.get("engine_case_key"))
-    rv = (
-        {"status": "keep"}
-        if engine_row
-        else review_for(review or {}, card["date"], card["company"])
-    )
+    shown_date = surfaced_date(brief, card["date"])
+    rv = {"status": "keep"}
+    if not engine_row:
+        rv = review_for(review or {}, card["date"], card["company"])
+        if rv == {"status": "keep"} and shown_date != card["date"]:
+            # Decisions taken from the app (case screen-outs) are keyed by the date the row
+            # is SHOWN on — the sweep date for swept rows — not the stored run date.
+            rv = review_for(review or {}, shown_date, card["company"])
     entry = {
         **card,
         "key": f"{card['date']}|{company_norm(card['company'])}",
-        "date": surfaced_date(brief, card["date"]),
+        "date": shown_date,
         "review": rv,
         "source_label": "engine" if engine_row else d.get("historical_source"),
         "series": series,
@@ -370,7 +379,9 @@ def attach_signal_checks(entries: list[dict[str, Any]], checks: dict[str, dict[s
 
     n = 0
     for e in entries:
-        if e["review"]["status"] not in ("keep", "keep_flagged"):
+        status = e["review"]["status"]
+        case_screened = status == "screened_out" and e["review"].get("reason_code") == "case_screen"
+        if status not in ("keep", "keep_flagged") and not case_screened:
             continue
         rec = checks.get(company_norm(e["company"]))
         if rec is None:
@@ -378,11 +389,12 @@ def attach_signal_checks(entries: list[dict[str, Any]], checks: dict[str, dict[s
         v, reasons = verdict(rec)
         e["check"] = rec
         e["check_reasons"] = reasons
-        if not e.get("page_html"):
+        if not e.get("page_html") and not case_screened:
             e["verification"] = v
         why = screen_reason(rec)
         if why and not e.get("page_html"):
-            # existing partner / blocklisted: leaves the lists like the September clean-up
+            # existing partner / blocklisted: leaves the lists like the September clean-up.
+            # The grid fact outranks a case builder's "stale" verdict on the same row.
             e["review"] = {"status": "screened_out", "reason": why, "reason_code": "check"}
         n += 1
     return n

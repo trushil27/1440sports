@@ -50,13 +50,15 @@ def test_gridfit_sees_cloud_rivals_for_a_gpu_cloud_company(session):
     assert "cloud" in lane
     rows, _ = render.build_gridfit(session, "F1", "MoneyGram Haas F1 Team", lane, lane, max_rows=11)
     by_team = {r.team: r for r in rows}
-    assert by_team["MoneyGram Haas F1 Team"].recommended
-    assert by_team["MoneyGram Haas F1 Team"].status == "open"
+    # GRID FIT rows carry the 2026 entry name (team_profiles display_name), not the
+    # sponsor-table key, so the block agrees with the recommended-team label.
+    assert by_team["TGR Haas F1 Team"].recommended
+    assert by_team["TGR Haas F1 Team"].status == "open"
     assert by_team["Oracle Red Bull Racing"].label == "TAKEN"
     assert "Oracle" in by_team["Oracle Red Bull Racing"].detail
     assert by_team["Aston Martin Aramco F1 Team"].label == "TAKEN"
     assert "CoreWeave" in by_team["Aston Martin Aramco F1 Team"].detail
     assert "Aramco" not in by_team["Aston Martin Aramco F1 Team"].detail  # fuel is not a rival
     assert "Core Scientific" in by_team["Cadillac F1 Team"].detail
-    assert "Google Cloud" in by_team["McLaren F1 Team"].detail
+    assert "Google Cloud" in by_team["McLaren Mastercard F1 Team"].detail  # 2026 entry name
     assert by_team["Mercedes-AMG Petronas F1 Team"].label == "TAKEN"  # Microsoft

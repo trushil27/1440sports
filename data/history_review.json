@@ -1,90 +1,476 @@
 {
-  "_meta": {
-    "what": "Row-by-row review of the 128 n8n daily-signal rows (May–Sep 2026) and the repo's own briefs, done 5 Sep 2026 after the MD saw the first app export and said several entries 'look irrelevant and bad' (TDK, Disney+, Nissan …). Applied at export time (intel/site_export.py) — the database keeps every row; the app shows screened rows under 'Screened out' with the reason, collapses duplicates into the kept row, and tags rows that still need a human check.",
-    "how": "Each row was checked against: the live sponsor table (existing F1/FE partner → screened), the blocklist and the approached list, the ICP (B2B, deal-capable, capacity ≥ $1B valuation or $100M ARR or public), whether the row is a rights-holder/team/broadcaster rather than a prospect, duplicate entries of the same trigger, and obvious data faults (undisclosed decision-maker, wrong source, inconsistent facts).",
-    "statuses": "screened_out (with reason code) · duplicate_of (kept key) · keep_flagged (needs a human check before it is shown as a clean signal) · keep (default for anything not listed)",
-    "reason_codes": {
-      "existing_partner": "already an F1 / FE / team partner (sponsor table or the row itself says so)",
-      "rights_holder": "a team, the championship, a broadcaster or a supplier — not a prospect",
-      "blocklisted": "on the hard blocklist",
-      "approached": "already approached by the 1440 team — never re-pitch cold",
-      "off_profile": "consumer / B2C, or a category with no B2B sponsorship logic",
-      "no_trigger": "no capital or leadership event — an association, not a signal",
-      "below_capacity": "fails the capacity gate (valuation < $1B and no $100M ARR / listing)",
-      "too_early": "seed / first institutional money; brand budget not there yet",
-      "category_conflict": "conflicts with a supplier category the series already locks (tyres, fuel)"
-    },
-    "key": "date|company (company as recorded); matched case-insensitively on the normalised company name"
+ "_meta": {
+  "what": "Row-by-row review of the 128 n8n daily-signal rows (May–Sep 2026) and the repo's own briefs, done 5 Sep 2026 after the MD saw the first app export and said several entries 'look irrelevant and bad' (TDK, Disney+, Nissan …). Applied at export time (intel/site_export.py) — the database keeps every row; the app shows screened rows under 'Screened out' with the reason, collapses duplicates into the kept row, and tags rows that still need a human check.",
+  "how": "Each row was checked against: the live sponsor table (existing F1/FE partner → screened), the blocklist and the approached list, the ICP (B2B, deal-capable, capacity ≥ $1B valuation or $100M ARR or public), whether the row is a rights-holder/team/broadcaster rather than a prospect, duplicate entries of the same trigger, and obvious data faults (undisclosed decision-maker, wrong source, inconsistent facts).",
+  "statuses": "screened_out (with reason code) · duplicate_of (kept key) · keep_flagged (needs a human check before it is shown as a clean signal) · keep (default for anything not listed)",
+  "reason_codes": {
+   "existing_partner": "already an F1 / FE / team partner (sponsor table or the row itself says so)",
+   "rights_holder": "a team, the championship, a broadcaster or a supplier — not a prospect",
+   "blocklisted": "on the hard blocklist",
+   "approached": "already approached by the 1440 team — never re-pitch cold",
+   "off_profile": "consumer / B2C, or a category with no B2B sponsorship logic",
+   "no_trigger": "no capital or leadership event — an association, not a signal",
+   "below_capacity": "fails the capacity gate (valuation < $1B and no $100M ARR / listing)",
+   "too_early": "seed / first institutional money; brand budget not there yet",
+   "category_conflict": "conflicts with a supplier category the series already locks (tyres, fuel)"
   },
-  "rows": {
-    "2025-05-07|Supabase": {"status": "keep_flagged", "reason": "row is dated 7 May 2025 for an April-2025 Series D; the June-2026 Series F row is the live signal"},
-    "2026-01-01|Strava": {"status": "keep_flagged", "reason": "1 Jan date and an aggregator source (acquinox) — confirm the S-1 date against SEC before showing as a signal"},
-    "2026-03-10|Nexthop AI": {"status": "keep_flagged", "reason": "three rows name two different CEOs (Anshul Sadana vs Rocco Bova); decision-maker must be verified"},
-    "2026-03-31|TENEX.AI": {"status": "keep_flagged", "reason": "source is a secondary blog; valuation not stated — capacity unproven"},
-    "2026-04-21|Fortescue Zero": {"status": "screened_out", "reason_code": "existing_partner", "reason": "already Formula E's official PIT BOOST partner; the row itself says so"},
-    "2026-04-29|Hightouch": {"status": "duplicate_of", "of": "2026-04-27|Hightouch"},
-    "2026-05-04|Sierra": {"status": "screened_out", "reason_code": "blocklisted", "reason": "Sierra is on the hard blocklist"},
-    "2026-05-04|Sierra Technologies": {"status": "screened_out", "reason_code": "blocklisted", "reason": "Sierra is on the hard blocklist"},
-    "2026-05-05|Shield AI": {"status": "screened_out", "reason_code": "blocklisted", "reason": "Shield AI is on the hard blocklist (alumni route already worked)"},
-    "2026-05-05|Omni Analytics": {"status": "screened_out", "reason_code": "blocklisted", "reason": "on the hard blocklist"},
-    "2026-05-05|Blitzy": {"status": "keep_flagged", "reason": "second row names 'Undisclosed Founding Team' and a different round (Series B / Northzone) — the two rows contradict each other"},
-    "2026-05-07|Cerebras Systems": {"status": "screened_out", "reason_code": "blocklisted", "reason": "Cerebras Systems is on the hard blocklist"},
-    "2026-05-07|PayPal": {"status": "keep_flagged", "reason": "leadership trigger only (new CMO); consumer-facing fintech — confirm the B2B angle before pitching"},
-    "2026-05-07|Glean": {"status": "keep_flagged", "reason": "source URL is a Cadillac sponsorship article, not a Glean source; the repo brief N° 002 is the verified version"},
-    "2026-05-08|Nscale": {"status": "duplicate_of", "of": "2026-03-01|Nscale"},
-    "2026-05-08|Lime": {"status": "duplicate_of", "of": "2026-05-08|Lime (Neutron Holdings)"},
-    "2026-05-12|SnapLogic": {"status": "keep_flagged", "reason": "an earlier brief on SnapLogic was found to contain a fabricated fact; re-verify every claim before use"},
-    "2026-05-12|Exaforce": {"status": "screened_out", "reason_code": "below_capacity", "reason": "$725M valuation — under the $1B capacity gate"},
-    "2026-05-18|Decart AI": {"status": "keep_flagged", "reason": "two rows with different scores (87 / 91) for the same round; keep one, re-score"},
-    "2026-05-19|Nourish": {"status": "screened_out", "reason_code": "off_profile", "reason": "consumer telehealth (GLP-1) — no B2B motorsport logic"},
-    "2026-05-20|Farther": {"status": "screened_out", "reason_code": "off_profile", "reason": "wealth-management RIA; retail-investor audience, no team workstream"},
-    "2026-05-21|Mercury": {"status": "duplicate_of", "of": "2026-05-20|Mercury"},
-    "2026-05-25|Also (Rivian Spinout)": {"status": "duplicate_of", "of": "2026-05-22|Also (Rivian Spinout)"},
-    "2026-05-22|Also (Rivian Spinout)": {"status": "keep_flagged", "reason": "decision-maker recorded as 'Undisclosed CEO' in one row and Iain Mosely in the other — verify"},
-    "2026-05-26|1Komma5°": {"status": "keep_flagged", "reason": "trigger is a market-expansion note, not a capital event, and the source is an EV-startup listicle; the repo brief on 1KOMMA5° is the verified version"},
-    "2026-05-27|Thea Energy": {"status": "screened_out", "reason_code": "below_capacity", "reason": "$130M total private investment — under the capacity gate"},
-    "2026-05-28|Ramp": {"status": "screened_out", "reason_code": "approached", "reason": "Ramp is on the approached list — the human layer is already in contact"},
-    "2026-06-04|Ramp": {"status": "screened_out", "reason_code": "approached", "reason": "Ramp is on the approached list"},
-    "2026-06-01|Mind Robotics": {"status": "keep_flagged", "reason": "decision-maker 'TBC — Rivian spin-out CEO' — no named person"},
-    "2026-06-05|Bridgestone": {"status": "screened_out", "reason_code": "category_conflict", "reason": "tyre supplier — the category is locked series-wide (Pirelli in F1, Hankook in FE)"},
-    "2026-06-10|Anthropic": {"status": "screened_out", "reason_code": "existing_partner", "reason": "Claude is on the Atlassian Williams Racing roster (sponsor table, joined 2026)"},
-    "2026-06-10|Cyera": {"status": "screened_out", "reason_code": "approached", "reason": "Cyera is on the approached list"},
-    "2026-06-10|NinjaOne": {"status": "screened_out", "reason_code": "existing_partner", "reason": "NinjaOne joined the Audi F1 Team roster for 2026 (sponsor table)"},
-    "2026-08-19|NinjaOne": {"status": "screened_out", "reason_code": "existing_partner", "reason": "NinjaOne is an Audi F1 Team partner"},
-    "2026-06-13|Octopus Energy": {"status": "screened_out", "reason_code": "no_trigger", "reason": "no capital or leadership event — a narrative association; Kraken (its spin-out) is on the approached list"},
-    "2026-06-13|Ent.AI": {"status": "screened_out", "reason_code": "too_early", "reason": "$100M seed, out of stealth — no brand budget yet (repo: WATCH)"},
-    "2026-06-15|Wiz": {"status": "screened_out", "reason_code": "existing_partner", "reason": "Wiz is part of Google Cloud, a McLaren partner; the repo already excluded it"},
-    "2026-06-18|Odyssey AI": {"status": "keep_flagged", "reason": "decision-maker 'Undisclosed' — the repo brief on Odyssey names the founders; use that"},
-    "2026-07-01|Joulent": {"status": "keep_flagged", "reason": "decision-maker undisclosed; source is a weekly round-up — verify the company and round directly"},
-    "2026-07-01|TwelveLabs": {"status": "keep_flagged", "reason": "$100M Series B; valuation not stated — capacity unproven"},
-    "2026-06-24|Taktile": {"status": "keep_flagged", "reason": "$189M total raised; valuation not stated — capacity unproven"},
-    "2026-06-30|Alan": {"status": "screened_out", "reason_code": "off_profile", "reason": "consumer health insurance"},
-    "2026-07-06|Emergent": {"status": "keep_flagged", "reason": "source is a scouting feed; company identity and round need a primary source"},
-    "2026-07-07|EDX Markets": {"status": "screened_out", "reason_code": "below_capacity", "reason": "$76M Series C, valuation not stated"},
-    "2026-07-13|Helion Energy": {"status": "duplicate_of", "of": "2026-06-05|Helion Energy"},
-    "2026-07-15|Neko Health": {"status": "screened_out", "reason_code": "off_profile", "reason": "consumer health clinics"},
-    "2026-07-16|Tinder (Match Group)": {"status": "screened_out", "reason_code": "existing_partner", "reason": "already a Formula E partner (London E-Prix 2026) — the row describes the deal, not a prospect"},
-    "2026-07-18|Tinder (Match Group)": {"status": "screened_out", "reason_code": "existing_partner", "reason": "already a Formula E partner"},
-    "2026-07-18|TDK Corporation": {"status": "screened_out", "reason_code": "existing_partner", "reason": "already Tokyo E-Prix title partner and FE official partner — the row describes the deal"},
-    "2026-07-21|Sila": {"status": "duplicate_of", "of": "2026-07-21|Sila Nanotechnologies"},
-    "2026-07-24|Andretti Formula E": {"status": "screened_out", "reason_code": "rights_holder", "reason": "an FE team, not a prospect (team-side news: Nissan powertrain deal)"},
-    "2026-07-24|Nissan Motor Co. (GEN4 FE Programme)": {"status": "screened_out", "reason_code": "rights_holder", "reason": "Nissan is an FE manufacturer and team owner — team-side news, not a prospect"},
-    "2026-07-27|Databricks": {"status": "duplicate_of", "of": "2026-06-04|Databricks"},
-    "2026-08-27|Databricks": {"status": "duplicate_of", "of": "2026-06-04|Databricks"},
-    "2026-06-04|Databricks": {"status": "keep_flagged", "reason": "the repo gates Databricks as over-saturated (existing sports/tech partnerships); four rows with drifting facts — re-verify before use"},
-    "2026-05-07|Databricks": {"status": "duplicate_of", "of": "2026-06-04|Databricks"},
-    "2026-07-28|Ominimo": {"status": "keep_flagged", "reason": "€20.1M round — the valuation carries it, the round does not; confirm"},
-    "2026-07-29|Freehand": {"status": "screened_out", "reason_code": "below_capacity", "reason": "$75M Series B, valuation not stated"},
-    "2026-08-07|giffgaff": {"status": "screened_out", "reason_code": "existing_partner", "reason": "already a Formula E championship partner — the row describes the deal"},
-    "2026-08-10|Sennheiser": {"status": "screened_out", "reason_code": "existing_partner", "reason": "already Formula E's Official Sound Provider — the row describes the deal"},
-    "2026-08-12|Disney+ / ESPN": {"status": "screened_out", "reason_code": "rights_holder", "reason": "a broadcast-rights deal for the championship, not a sponsorship prospect"},
-    "2026-08-12|Yulu": {"status": "screened_out", "reason_code": "below_capacity", "reason": "$93M Series C; India-only micromobility, valuation not stated"},
-    "2026-08-14|Dataiku": {"status": "keep_flagged", "reason": "trigger is IPO-underwriter chatter from an outlook page; needs a primary source"},
-    "2026-08-24|Oura Health": {"status": "duplicate_of", "of": "2026-05-21|Oura Health"},
-    "2026-08-26|Nissan Formula E Team": {"status": "screened_out", "reason_code": "rights_holder", "reason": "an FE team, not a prospect — driver-retention news"},
-    "2026-09-01|Nike": {"status": "screened_out", "reason_code": "off_profile", "reason": "consumer apparel in talks with Formula One Management directly — not a team-partnership prospect on the B2B profile"},
-    "2026-05-20|Primer": {"status": "keep_flagged", "reason": "three rows with three scores (85 / 79 / 76) for one round; keep one, re-score"},
-    "2026-06-22|Lime (Neutron Holdings)": {"status": "keep_flagged", "reason": "the IPO roadshow row cites the May S-1 article as its source — confirm the roadshow date"},
-    "2026-06-04|Ramp|note": {"status": "keep", "reason": "(unused key — kept for the record: the 4 Jun row lists '$4.4B valuation', a typo for $44B)"}
+  "key": "date|company (company as recorded); matched case-insensitively on the normalised company name",
+  "case_screens_applied_at": "2026-09-06"
+ },
+ "rows": {
+  "2025-05-07|Supabase": {
+   "status": "keep_flagged",
+   "reason": "row is dated 7 May 2025 for an April-2025 Series D; the June-2026 Series F row is the live signal"
+  },
+  "2026-01-01|Strava": {
+   "status": "keep_flagged",
+   "reason": "1 Jan date and an aggregator source (acquinox) — confirm the S-1 date against SEC before showing as a signal"
+  },
+  "2026-03-10|Nexthop AI": {
+   "status": "keep_flagged",
+   "reason": "three rows name two different CEOs (Anshul Sadana vs Rocco Bova); decision-maker must be verified"
+  },
+  "2026-03-31|TENEX.AI": {
+   "status": "keep_flagged",
+   "reason": "source is a secondary blog; valuation not stated — capacity unproven"
+  },
+  "2026-04-21|Fortescue Zero": {
+   "status": "screened_out",
+   "reason_code": "existing_partner",
+   "reason": "already Formula E's official PIT BOOST partner; the row itself says so"
+  },
+  "2026-04-29|Hightouch": {
+   "status": "duplicate_of",
+   "of": "2026-04-27|Hightouch"
+  },
+  "2026-05-04|Sierra": {
+   "status": "screened_out",
+   "reason_code": "blocklisted",
+   "reason": "Sierra is on the hard blocklist"
+  },
+  "2026-05-04|Sierra Technologies": {
+   "status": "screened_out",
+   "reason_code": "blocklisted",
+   "reason": "Sierra is on the hard blocklist"
+  },
+  "2026-05-05|Shield AI": {
+   "status": "screened_out",
+   "reason_code": "blocklisted",
+   "reason": "Shield AI is on the hard blocklist (alumni route already worked)"
+  },
+  "2026-05-05|Omni Analytics": {
+   "status": "screened_out",
+   "reason_code": "blocklisted",
+   "reason": "on the hard blocklist"
+  },
+  "2026-05-05|Blitzy": {
+   "status": "keep_flagged",
+   "reason": "second row names 'Undisclosed Founding Team' and a different round (Series B / Northzone) — the two rows contradict each other"
+  },
+  "2026-05-07|Cerebras Systems": {
+   "status": "screened_out",
+   "reason_code": "blocklisted",
+   "reason": "Cerebras Systems is on the hard blocklist"
+  },
+  "2026-05-07|PayPal": {
+   "status": "keep_flagged",
+   "reason": "leadership trigger only (new CMO); consumer-facing fintech — confirm the B2B angle before pitching"
+  },
+  "2026-05-07|Glean": {
+   "status": "keep_flagged",
+   "reason": "source URL is a Cadillac sponsorship article, not a Glean source; the repo brief N° 002 is the verified version"
+  },
+  "2026-05-08|Nscale": {
+   "status": "duplicate_of",
+   "of": "2026-03-01|Nscale"
+  },
+  "2026-05-08|Lime": {
+   "status": "duplicate_of",
+   "of": "2026-05-08|Lime (Neutron Holdings)"
+  },
+  "2026-05-12|SnapLogic": {
+   "status": "keep_flagged",
+   "reason": "an earlier brief on SnapLogic was found to contain a fabricated fact; re-verify every claim before use"
+  },
+  "2026-05-12|Exaforce": {
+   "status": "screened_out",
+   "reason_code": "below_capacity",
+   "reason": "$725M valuation — under the $1B capacity gate"
+  },
+  "2026-05-18|Decart AI": {
+   "status": "keep_flagged",
+   "reason": "two rows with different scores (87 / 91) for the same round; keep one, re-score"
+  },
+  "2026-05-19|Nourish": {
+   "status": "screened_out",
+   "reason_code": "off_profile",
+   "reason": "consumer telehealth (GLP-1) — no B2B motorsport logic"
+  },
+  "2026-05-20|Farther": {
+   "status": "screened_out",
+   "reason_code": "off_profile",
+   "reason": "wealth-management RIA; retail-investor audience, no team workstream"
+  },
+  "2026-05-21|Mercury": {
+   "status": "duplicate_of",
+   "of": "2026-05-20|Mercury"
+  },
+  "2026-05-25|Also (Rivian Spinout)": {
+   "status": "duplicate_of",
+   "of": "2026-05-22|Also (Rivian Spinout)"
+  },
+  "2026-05-22|Also (Rivian Spinout)": {
+   "status": "keep_flagged",
+   "reason": "decision-maker recorded as 'Undisclosed CEO' in one row and Iain Mosely in the other — verify"
+  },
+  "2026-05-26|1Komma5°": {
+   "status": "keep_flagged",
+   "reason": "trigger is a market-expansion note, not a capital event, and the source is an EV-startup listicle; the repo brief on 1KOMMA5° is the verified version"
+  },
+  "2026-05-27|Thea Energy": {
+   "status": "screened_out",
+   "reason_code": "below_capacity",
+   "reason": "$130M total private investment — under the capacity gate"
+  },
+  "2026-05-28|Ramp": {
+   "status": "screened_out",
+   "reason_code": "approached",
+   "reason": "Ramp is on the approached list — the human layer is already in contact"
+  },
+  "2026-06-04|Ramp": {
+   "status": "screened_out",
+   "reason_code": "approached",
+   "reason": "Ramp is on the approached list"
+  },
+  "2026-06-01|Mind Robotics": {
+   "status": "keep_flagged",
+   "reason": "decision-maker 'TBC — Rivian spin-out CEO' — no named person"
+  },
+  "2026-06-05|Bridgestone": {
+   "status": "screened_out",
+   "reason_code": "category_conflict",
+   "reason": "tyre supplier — the category is locked series-wide (Pirelli in F1, Hankook in FE)"
+  },
+  "2026-06-10|Anthropic": {
+   "status": "screened_out",
+   "reason_code": "existing_partner",
+   "reason": "Claude is on the Atlassian Williams Racing roster (sponsor table, joined 2026)"
+  },
+  "2026-06-10|Cyera": {
+   "status": "screened_out",
+   "reason_code": "approached",
+   "reason": "Cyera is on the approached list"
+  },
+  "2026-06-10|NinjaOne": {
+   "status": "screened_out",
+   "reason_code": "existing_partner",
+   "reason": "NinjaOne joined the Audi F1 Team roster for 2026 (sponsor table)"
+  },
+  "2026-08-19|NinjaOne": {
+   "status": "screened_out",
+   "reason_code": "existing_partner",
+   "reason": "NinjaOne is an Audi F1 Team partner"
+  },
+  "2026-06-13|Octopus Energy": {
+   "status": "screened_out",
+   "reason_code": "no_trigger",
+   "reason": "no capital or leadership event — a narrative association; Kraken (its spin-out) is on the approached list"
+  },
+  "2026-06-13|Ent.AI": {
+   "status": "screened_out",
+   "reason_code": "too_early",
+   "reason": "$100M seed, out of stealth — no brand budget yet (repo: WATCH)"
+  },
+  "2026-06-15|Wiz": {
+   "status": "screened_out",
+   "reason_code": "existing_partner",
+   "reason": "Wiz is part of Google Cloud, a McLaren partner; the repo already excluded it"
+  },
+  "2026-06-18|Odyssey AI": {
+   "status": "keep_flagged",
+   "reason": "decision-maker 'Undisclosed' — the repo brief on Odyssey names the founders; use that"
+  },
+  "2026-07-01|Joulent": {
+   "status": "keep_flagged",
+   "reason": "decision-maker undisclosed; source is a weekly round-up — verify the company and round directly"
+  },
+  "2026-07-01|TwelveLabs": {
+   "status": "keep_flagged",
+   "reason": "$100M Series B; valuation not stated — capacity unproven"
+  },
+  "2026-06-24|Taktile": {
+   "status": "keep_flagged",
+   "reason": "$189M total raised; valuation not stated — capacity unproven"
+  },
+  "2026-06-30|Alan": {
+   "status": "screened_out",
+   "reason_code": "off_profile",
+   "reason": "consumer health insurance"
+  },
+  "2026-07-06|Emergent": {
+   "status": "screened_out",
+   "reason": "contradicted: The row is contradicted on its date and its person. Emergent's $130M Series C at a $1.5B post-money valuation (led by Creaegis, with Claypond, Sentinel Global, Khosla Ventures, SoftBank Vision Fund 2, Lightspeed and Y Combinator; total raised $230M) was announced on 15 July 2026 (Business Wire, company newsroom, TechCrunch, Bloomberg) — nine days AFTER the 6 July date this row sits on, so no such event existed on the row's date and a brief issued for 6 July cannot honestly cite it. The named decision-maker 'Siddharth Agarwal, CEO & Co-Founder' does not appear in any source: Emergent was founded in 2025 by Mukund Jha (CEO) and Madhav Jha (CTO). The row's source was an aggregator (scouts.yutori.com). The event itself is real and fresh — if the desk wants it, re-queue it as a new row dated 15 July 2026 with Mukund Jha as the decision-maker.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.businesswire.com/news/home/20260715082819/en/Emergent-Raises-Series-C-at-$1.5B-Valuation-to-Help-Entrepreneurs-and-SMBs-Build-the-Software-Their-Businesses-Run-On",
+    "https://emergent.sh/news/emergent-now-a-unicorn-at-1-5-billion-valuation",
+    "https://techcrunch.com/2026/07/15/indian-ai-coding-startup-emergent-becomes-a-unicorn-just-over-a-year-after-launch/",
+    "https://www.bloomberg.com/news/articles/2026-07-15/indian-ai-startup-emergent-valued-at-1-5-billion-in-fundraising"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-07-07|EDX Markets": {
+   "status": "screened_out",
+   "reason_code": "below_capacity",
+   "reason": "$76M Series C, valuation not stated"
+  },
+  "2026-07-13|Helion Energy": {
+   "status": "duplicate_of",
+   "of": "2026-06-05|Helion Energy"
+  },
+  "2026-07-15|Neko Health": {
+   "status": "screened_out",
+   "reason_code": "off_profile",
+   "reason": "consumer health clinics"
+  },
+  "2026-07-16|Tinder (Match Group)": {
+   "status": "screened_out",
+   "reason_code": "existing_partner",
+   "reason": "already a Formula E partner (London E-Prix 2026) — the row describes the deal, not a prospect"
+  },
+  "2026-07-18|Tinder (Match Group)": {
+   "status": "screened_out",
+   "reason_code": "existing_partner",
+   "reason": "already a Formula E partner"
+  },
+  "2026-07-18|TDK Corporation": {
+   "status": "screened_out",
+   "reason_code": "existing_partner",
+   "reason": "already Tokyo E-Prix title partner and FE official partner — the row describes the deal"
+  },
+  "2026-07-21|Sila": {
+   "status": "duplicate_of",
+   "of": "2026-07-21|Sila Nanotechnologies"
+  },
+  "2026-07-24|Andretti Formula E": {
+   "status": "screened_out",
+   "reason_code": "rights_holder",
+   "reason": "an FE team, not a prospect (team-side news: Nissan powertrain deal)"
+  },
+  "2026-07-24|Nissan Motor Co. (GEN4 FE Programme)": {
+   "status": "screened_out",
+   "reason_code": "rights_holder",
+   "reason": "Nissan is an FE manufacturer and team owner — team-side news, not a prospect"
+  },
+  "2026-07-27|Databricks": {
+   "status": "duplicate_of",
+   "of": "2026-06-04|Databricks"
+  },
+  "2026-08-27|Databricks": {
+   "status": "duplicate_of",
+   "of": "2026-06-04|Databricks"
+  },
+  "2026-06-04|Databricks": {
+   "status": "keep_flagged",
+   "reason": "the repo gates Databricks as over-saturated (existing sports/tech partnerships); four rows with drifting facts — re-verify before use"
+  },
+  "2026-05-07|Databricks": {
+   "status": "duplicate_of",
+   "of": "2026-06-04|Databricks"
+  },
+  "2026-07-28|Ominimo": {
+   "status": "keep_flagged",
+   "reason": "€20.1M round — the valuation carries it, the round does not; confirm"
+  },
+  "2026-07-29|Freehand": {
+   "status": "screened_out",
+   "reason_code": "below_capacity",
+   "reason": "$75M Series B, valuation not stated"
+  },
+  "2026-08-07|giffgaff": {
+   "status": "screened_out",
+   "reason_code": "existing_partner",
+   "reason": "already a Formula E championship partner — the row describes the deal"
+  },
+  "2026-08-10|Sennheiser": {
+   "status": "screened_out",
+   "reason_code": "existing_partner",
+   "reason": "already Formula E's Official Sound Provider — the row describes the deal"
+  },
+  "2026-08-12|Disney+ / ESPN": {
+   "status": "screened_out",
+   "reason_code": "rights_holder",
+   "reason": "a broadcast-rights deal for the championship, not a sponsorship prospect"
+  },
+  "2026-08-12|Yulu": {
+   "status": "screened_out",
+   "reason_code": "below_capacity",
+   "reason": "$93M Series C; India-only micromobility, valuation not stated"
+  },
+  "2026-08-14|Dataiku": {
+   "status": "screened_out",
+   "reason": "stale: The trigger is not a 14 Aug 2026 event. Morgan Stanley and Citigroup were engaged for a US IPO in October 2025 (Reuters exclusive, via Yahoo Finance), with a listing expected in the first half of 2026; the recorded source is an IPO-outlook page (microventures.com) that re-surfaced that appointment, so the real trigger date is about ten months before the row's date, far outside the 90-day window. No S-1 has appeared on EDGAR and IPO trackers (Forge, Capital.com) state that Dataiku 'has not yet filed', so the pre-IPO window the row describes has slipped and is unconfirmed. No funding round, acquisition or other dated event was found between June and September 2026. The 'Disney+/ESPN FE broadcast deal' line in the trigger is a Formula E rights-holder event unrelated to Dataiku. The last priced round is the $200M Series F at $3.7B (late 2022). Florian Douetteau is confirmed as Co-Founder and CEO. No motorsport tie found. Re-surface on a public S-1 or a priced round.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://finance.yahoo.com/news/exclusive-ai-data-analytics-startup-165722584.html",
+    "https://forgeglobal.com/dataiku_ipo/",
+    "https://capital.com/en-int/learn/ipo/dataiku-ipo",
+    "https://microventures.com/2026-ipo-outlook",
+    "https://www.fintechfutures.com/data-privacy-security/dataiku-bags-200m-series-f-funding-at-3-7bn-valuation"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-08-24|Oura Health": {
+   "status": "duplicate_of",
+   "of": "2026-05-21|Oura Health"
+  },
+  "2026-08-26|Nissan Formula E Team": {
+   "status": "screened_out",
+   "reason_code": "rights_holder",
+   "reason": "an FE team, not a prospect — driver-retention news"
+  },
+  "2026-09-01|Nike": {
+   "status": "screened_out",
+   "reason_code": "off_profile",
+   "reason": "consumer apparel in talks with Formula One Management directly — not a team-partnership prospect on the B2B profile"
+  },
+  "2026-05-20|Primer": {
+   "status": "keep_flagged",
+   "reason": "three rows with three scores (85 / 79 / 76) for one round; keep one, re-score"
+  },
+  "2026-06-22|Lime (Neutron Holdings)": {
+   "status": "keep_flagged",
+   "reason": "the IPO roadshow row cites the May S-1 article as its source — confirm the roadshow date"
+  },
+  "2026-06-04|Ramp|note": {
+   "status": "keep",
+   "reason": "(unused key — kept for the record: the 4 Jun row lists '$4.4B valuation', a typo for $44B)"
+  },
+  "2026-06-20|Crusoe Energy / Crusoe Cloud": {
+   "status": "duplicate_of",
+   "of": "2026-09-05|Crusoe",
+   "reason": "Crusoe already has a full verified case: N° 121 Crusoe → TGR Haas F1 Team (80/100), built 5 Sep 2026 (pipeline/intel/cases/2026-09-05/crusoe.run.json, crusoe.pdf, crusoe-verification.md). The 20 Jun 2026 row rests on the same company story (the $1.4B Series E at a $10B+ valuation, October 2025, and Crunchbase's 2026 IPO-candidate list) and adds no new trigger; the Crunchbase forecast is a secondary aggregator, not an event. Not rebuilt: the desk should merge this row into N° 121.",
+   "reason_code": "case_screen",
+   "sources": [
+    "pipeline/intel/cases/2026-09-05/crusoe-verification.md",
+    "https://news.crunchbase.com/public/crunchbase-predicts-15-companies-ipo-ai-fintech-defense-forecast-2026/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-07-04|DSV": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger ('DSV completed the acquisition of DB Schenker') is real but dated 30 April 2025: DSV company announcement 1154 confirms completion of the Schenker acquisition from Deutsche Bahn for approx. DKK 106.7bn (EUR 14.3bn) on that day, with Jens H. Lund quoted as Group CEO. That is 14 months before the row's date of 4 July 2026, far outside the 90-day trigger window. No fresh capital or identity inflection was found inside the window: DSV's June-July 2026 news is a Hillsboro, Oregon contract-logistics groundbreaking (17 Jun 2026), the H1 2026 results call notice (23 Jun 2026) and the H1 report itself (22 Jul 2026, after the row's date), all routine. Two further reasons not to build: DSV already runs a motorsport logistics sponsorship (Official Logistics Partner of Porsche Motorsport North America for 2026, announced Feb 2026, relationship since Aug 2023), so the 'no motorsport' framing of the thin row is wrong; and the F1 logistics lane is held at championship level by DHL (Official Logistics Partner since 2004) with Ceva Logistics on the Ferrari roster and DP World on McLaren's, so 'category whitespace' does not survive the sponsor table either. Re-open only on a new DSV-originated catalyst (a further transaction, a US listing, or a stated brand-building programme).",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://investor.dsv.com/news-releases/news-release-details/dsv-1154-dsv-completes-acqusition-schenker",
+    "https://www.globenewswire.com/news-release/2025/04/30/3070963/0/en/DSV-1154-DSV-COMPLETES-THE-ACQUSITION-OF-SCHENKER.html",
+    "https://www.dsv.com/en-us/about-dsv/press/news/us/2026/06/dsv-breaks-ground-on-new-facility-in-portland-oregon",
+    "https://investor.dsv.com/news-releases/news-release-details/dsv-1170-interim-financial-report-h1-2026",
+    "https://newsroom.porsche.com/en_US/2026/motorsport/dsv-named-official-logistics-partner-of-porsche-motorsport-north-america.html"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-07-11|Nexthop AI": {
+   "status": "screened_out",
+   "reason": "stale: The trigger is real but not fresh: Nexthop AI announced its oversubscribed $500M Series B (led by Lightspeed Venture Partners, with Andreessen Horowitz, Altimeter and existing investors; $4.2B valuation) on 10 March 2026 via Business Wire and its own newsroom. The row sits on 11 July 2026, 123 days later, outside the 90-day window. The row's trigger date (11 Jul) and named person (Rocco Bova, CEO) are both wrong: the company's founder and CEO is Anshul Sadana, and no new Nexthop AI funding or corporate event was found in July 2026 (only a March 2025 $110M launch round and the March 2026 Series B). Source was an aggregator (techbible.ai). Not built; re-queue only on a new catalyst.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://nexthop.ai/news-and-event/nexthop-ai-accelerates-into-hypergrowth-with-oversubscribed-500m-series-b-funding-catapulting-the-companys-valuation-to-4-2-billion/",
+    "https://www.businesswire.com/news/home/20260310574112/en/Nexthop-AI-Accelerates-Into-Hypergrowth-With-Oversubscribed-$500M-Series-B-Funding-Catapulting-the-Companys-Valuation-to-$4.2-Billion",
+    "https://siliconangle.com/2026/03/10/ai-networking-startup-nexthop-ai-raises-500m-launches-new-switches/",
+    "https://www.businesswire.com/news/home/20250325719035/en/Nexthop-AI-Launches-with-$110M-in-Funding-to-Build-More-Efficient-Al-Infrastructure-for-Hyperscalers"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-08-07|Harvey AI": {
+   "status": "screened_out",
+   "reason": "contradicted: The row's trigger ('Series G filed August 2026; reported $500M raise at $15.5B valuation under active negotiation') is not a closed event. The Information (7 Aug 2026), relayed by SiliconANGLE, PYMNTS and TechStartups the same day, reports only that Harvey is IN TALKS to raise at least $500M at a $15.5B valuation with Lightspeed circling; no filing, company announcement or close was found in searches through 6 Sep 2026. The last closed round is the $200M at $11B co-led by GIC and Sequoia (CNBC, 25 Mar 2026), which is 135 days before the row date and outside the 90-day window. The 'global office openings Paris, Singapore, Chicago' were announced or opened in January-July 2026 (Harvey blog), before the trigger date. What is real - ARR above $300M and about 1,000 staff across 12 offices - is a growth story, not a capital-plus-identity inflection. Re-open if and when the round closes on the record; the AI lane on the F1 grid is also crowded (Claude at Williams, CoreWeave and Cognition at Aston Martin, Groq at McLaren, Meta AI at Mercedes, TWG AI at Cadillac, ElevenLabs at Audi), so a future case would need a clean legal/enterprise-software lane, not an AI lane.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.theinformation.com/articles/harvey-talks-raise-funding-15-5-billion-valuation",
+    "https://siliconangle.com/2026/08/07/legal-ai-startup-harvey-reportedly-raising-500m-15-5b-valuation/",
+    "https://www.pymnts.com/news/investment-tracker/2026/harvey-targets-15-5-billion-valuation-as-revenue-surges-past-350-million/",
+    "https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html",
+    "https://www.harvey.ai/blog/author/winston-weinberg"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|BYD": {
+   "status": "screened_out",
+   "reason": "stale: The recorded trigger (trial production at the Szeged, Hungary plant, electrive report of 2 Feb 2026) is more than 90 days before the row's date: 5 Sep 2026 is 215 days after the report, and the Mayor of Szeged had confirmed trial production in January 2026. The row's forward-looking facts have also moved: series production, recorded as 'expected from Q2 2026', has been reported as delayed to the fourth quarter of 2026 (just-auto, 'BYD sets Hungary production for fourth quarter of 2026'), and the '1 MW ultra-fast chargers live in Europe in 2026' line traces to a September 2025 CnEVPost item, not to the trigger. The only in-window motorsport fact is that Executive Vice President Stella Li met F1 CEO Stefano Domenicali (5 Jun 2026) and FIA president Mohammed Ben Sulayem (6 Jun 2026) at the Monaco GP about a manufacturer-level F1 entry (team, power unit or technical partner), and Li has said BYD 'will never participate in Formula 1 just to put a sticker on the side of a car'; Formula E CEO Jeff Dodds says the series remains in regular talks with BYD. Those are direct manufacturer-to-rights-holder negotiations, not a team-sponsorship lane an agency can originate, and they sit 92 days before the row's date. No BYD/Denza partnership with Envision Racing or any FE team was found. Re-surface only on a fresh, dated event: series production actually starting at Szeged, or a BYD announcement of the form its F1/FE involvement will take.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.electrive.com/2026/02/02/byd-begins-trial-production-of-passenger-cars-in-hungary/",
+    "https://www.just-auto.com/news/byd-hungary-production-q4-2026/",
+    "https://cnevpost.com/2025/09/11/byd-to-start-production-hungarian-plant-2025-1-mw-chargers-europe-2026/",
+    "https://www.planetf1.com/news/byd-f1-fia-monaco-gp-meetings-update",
+    "https://www.planetf1.com/news/byd-formula-1-plans-sticker-on-the-side-technology-partner"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|InstaVolt": {
+   "status": "screened_out",
+   "reason": "stale: The trigger sits 110 days before the row's date, outside the 90-day window: on 18 May 2026 InstaVolt announced £250m of committed debt financing from an oversubscribed lender consortium (Close Brothers, Investec, KfW IPEX-Bank, Lloyds, National Wealth Fund, NatWest, Rabobank, Santander, Société Générale) plus a £40m equity investment from owner EQT Infrastructure (Transport + Energy, BusinessGreen, InstaVolt newsroom). The recorded row understated it as 'funding size not stated'; the corrected figures do not change the verdict, and debt raised for charger and battery-storage capex is not a brand budget. The one in-window event is the agreed sale of the Spanish and Portuguese businesses to Powerdot (announced 1-2 Jul 2026, terms undisclosed) so that investment concentrates on the UK and Ireland: a divestment that narrows the footprint rather than a capital or identity inflection, leaving a UK-only network whose home stage (London E-Prix, Brands Hatch, May 2027) is a single-market activation. The battery-storage programme (five new sites, 20 more planned for 2026) is a £2.5m investment (Renewable Energy Magazine, 8 May 2026). Delvin Lane confirmed as CEO. No motorsport tie found; Jaguar TCS Racing's roster carries no charging-network partner, so the lane itself is open. Re-surface on a disclosed equity round, an IPO or sale process, or a UK partnership that brings a marketing budget.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://transportandenergy.com/2026/05/18/instavolt-secures-250m-in-debt-financing/",
+    "https://www.businessgreen.com/news/4529834/major-milestone-instavolt-hails-250m-debt-financing-boost",
+    "https://www.energylivenews.com/2026/05/18/charging-rollout-to-speed-up-as-instavolt-gets-funding/",
+    "https://instavolt.co.uk/news/ev-charging-network-announces-significant-funding/",
+    "https://www.electrive.com/2026/07/02/instavolt-sells-iberian-charging-business-to-powerdot/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|Lunar Energy": {
+   "status": "screened_out",
+   "reason": "stale: The only capital event is the $232M announcement of 4 Feb 2026 (a $102M Series D led by B Capital and Prelude Ventures on top of a previously unannounced $130M Series C led by Activate Capital; company release on GlobeNewswire, confirmed by TechCrunch, Canary Media and pv magazine). That is 213 days before the row's date, far outside the 90-day window. A live search for any Lunar Energy or Kunal Girotra announcement in June, July, August or September 2026 found nothing newer than the February round; the company's own press page lists no later release. Valuation was never stated, so capacity was unconfirmed anyway. Re-surface only on a new primary event (a new round, a manufacturing or utility-programme announcement from the company).",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.globenewswire.com/news-release/2026/02/04/3232099/0/en/Lunar-Energy-raises-232-million-to-scale-home-battery-deployments-and-AI-powered-VPP-software-to-meet-surging-demand-for-affordable-electricity.html",
+    "https://techcrunch.com/2026/02/04/lunar-energy-raises-232m-to-deploy-home-batteries-that-prop-up-the-grid/",
+    "https://www.canarymedia.com/articles/climatetech-finance/lunar-energy-lands-232m-home-batteries",
+    "https://www.lunarenergy.com/press"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|Polestar": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger, the $300M equity financing announced 15 Mar 2026 (Business Wire / media.polestar.com), is 174 days before the row's date; the $400M financing before it (Feathertop Funding / SMBC and Standard Chartered, put option to Geely Sweden Holdings, announced 1 Feb 2026) is older still. Nothing inside the 90-day window is a capital or identity inflection: the only fresh event is the Q2 select and H1 2026 results of 3 Sep 2026, which cut retail sales 4% year on year (17,296 cars), lowered 2026 volume guidance to low-to-mid single-digit growth, and confirmed the U.S. market exit after the 2026 model year under the Connected Vehicle Rule — a retrenchment, not a brand-budget moment. Two structural problems would remain even with a fresh trigger: Polestar is a car manufacturer, so the only Formula E form is a Cupra-style brand title on a customer entry rather than a sponsorship, and the thin row's team, Cupra Kiro, is titled by a rival electric performance brand. Re-surface only on a manufacturer-level announcement (a Formula E registration or a customer-team title deal) from Polestar itself.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.businesswire.com/news/home/20260315522127/en/Polestar-announces-new-equity-financing-of-USD-300-million",
+    "https://www.businesswire.com/news/home/20260201126190/en/Polestar-Announces-Equity-Financing-of-USD-400-Million",
+    "https://www.morningstar.com/news/business-wire/20260903500553/polestar-reports-second-quarter-select-and-h1-2026-financial-results",
+    "https://finance.yahoo.com/markets/stocks/articles/polestar-q2-2026-sales-slip-132848878.html",
+    "https://investors.polestar.com/news-events/press-releases"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|Rivian": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger is an InsideEVs feature of 14 Apr 2026 quoting management's 'inflection year' language — a secondary source 144 days before the row's date, outside the 90-day window. The fresh primary event inside the window is the Q2 2026 print (Rivian newsroom and SEC 8-K, 30 Jul 2026): R2 customer deliveries began 9 Jun, Q2 deliveries were 12,194, revenue $1.658B (+27%), 2026 delivery guidance raised to 65,000–70,000 — but the same release cut 2026 capital expenditure by about $250M at the midpoint and the quarter's net loss was $837M, so it is a cost-discipline quarter, not a brand-budget expansion. Marketing sits under a Chief Customer Officer (Greg Revelle, appointed 12 Jan 2026) with no CMO planned, and the company's 2026 brand spend is going into owned R2 events (SXSW, city block parties, the Caruso showroom and charging deal). The Formula E form is the harder problem: Rivian is a manufacturer, not a Gen4-registered one, so its only route is a Cupra-style brand title on a customer entry. The thin row's team, DS Penske, loses DS at the end of Season 12 (announced 20 Mar 2026) and Penske had still not registered as a manufacturer or announced its Season 13 alignment (The Race, motorsport.com), which the repo's team profile marks 'do not target until resolved'. Re-surface if Penske announces a Season 13 identity that leaves a title lane open, or if Rivian itself signals a motorsport programme.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://insideevs.com/features/793324/rivian-slate-lucid-update-2026/",
+    "https://rivian.com/newsroom/article/rivian-releases-second-quarter-2026-financial-results",
+    "https://www.cnbc.com/2026/07/30/rivian-rivn-q2-2026-earnings.html",
+    "https://rivian.com/newsroom/article/rivian-hires-greg-revelle-chief-customer-officer",
+    "https://www.motorsport.com/formula-e/news/ds-automobiles-pull-out-formula-e-2025-26-season/10806449/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|Wärtsilä Energy Storage (RCT Solutions joint venture)": {
+   "status": "screened_out",
+   "reason": "contradicted: The event is real and in-window (Wärtsilä stock-exchange release, 15 Jun 2026: its global Energy Storage business, about 480 employees and EUR 694 million net sales, goes into a 50/50 joint venture with RCT Solutions GmbH; Energy Storage ceases to be a reporting segment from Q2 2026; RCT's Peter Fath becomes CEO of the venture after closing), but the row's thesis, a deal-capable standalone brand scored 70 with a 6-10 week horizon, is contradicted by the same primary source. Closing was only 'expected in the third quarter of 2026' subject to regulatory approvals AND 'arrangement of a financing package'; no completion, legal name or brand has been announced as of 5 Sep 2026 (searched Wärtsilä newsroom, Inderes, Energy-Storage.News, MarketScreener), so there is no company, leadership page or marketing owner to approach. The release states the venture 'is expected to be loss-making in 2026 driven by recent low order intake as well as costs related to transformation actions, consisting mainly of write-down of capitalized R&D', with an estimated EUR -40 to -50 million impact on Wärtsilä's 2026 operating result and positive results only 'towards the end of 2027'. A carve-out arranged to stop the parent reporting a loss-making segment, still raising its financing, is not a business that funds a multi-year Formula E partnership in 2026-27; an honest score is in the 50s (capacity and urgency both weak), below the 70 threshold, so no case is built. Sponsor-table context for a future re-look: Envision Group (Envision Racing's title parent) is the grid's incumbent battery/storage name and rules that team out; Shell sits on Lola Yamaha ABT and TotalEnergies on DS Penske in the energy category; ABB is the championship title partner. No motorsport tie found for Wärtsilä or RCT leadership. Re-surface at closing, once the venture has a name, a leadership page and a financing package, and reassess against the 2027 Formula E season.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.wartsila.com/media/news/15-06-2026-inside-information-wartsila-to-establish-a-joint-venture-for-its-global-energy-storage-business-with-rct-solutions-gmbh-and-discontinue-energy-storage-as-a-separate-reporting-segment-3763438",
+    "https://www.inderes.fi/en/releases/inside-information-wartsila-to-establish-a-joint-venture-for-its-global-energy-storage-business-with-rct-solutions-gmbh-and-discontinue-energy-storage-as-a-separate-reporting-segment",
+    "https://www.energy-storage.news/wartsila-wraps-energy-storage-business-into-joint-venture-with-solar-manufacturer-rct-solutions/",
+    "https://www.wartsila.com/media/news/21-07-2026-wartsila-s-half-year-financial-report-january-june-2026-3773763",
+    "https://www.marketscreener.com/news/wartsila-corporation-and-rct-solutions-gmbh-establish-joint-venture-for-global-energy-storage-busine-ce7f5cdedb8bf724"
+   ],
+   "screened_at": "2026-09-06"
   }
+ }
 }

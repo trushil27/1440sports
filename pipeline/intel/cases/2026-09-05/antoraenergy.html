@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Antora Energy</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "ANTORA ENERGY · 5 SEP 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 128</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 128 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Antora Energy</h1>
+  <div class="classline">Energy Storage · Thermal Batteries for Industry &amp; Data Centres · Sunnyvale, California (factory in San Jose) · Private ($550M Series C, Jul 2026; $2.47B reported)</div>
+
+  <div class="lede">Antora, the Californian thermal-battery maker whose 5 GWh South Dakota system is one of the largest storage projects in the world, closed an oversubscribed $550M Series C on 30 July 2026, co-led by G2 Venture Partners and Eclipse, to build a second US factory for industry and data centres.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">71</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">WARM</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">FE</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">Andretti Formula E</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Antora announced on 30 July that it had closed $550M of Series C funding, co-led by G2 Venture Partners and Eclipse, with Ribbit Capital, Salesforce Ventures, StepStone and John Doerr joining Breakthrough Energy Ventures, Lowercarbon and Decarbonization Partners. Total funding stands at $770M; Crunchbase News reports a $2.47B valuation, which the company has not stated. The money funds a second US manufacturing hub and large projects. The proof point landed in May: a 50 MW / 5 GWh thermal battery at POET's Big Stone City plant, built in under twelve months and now delivering energy.</p>
+<p>Bloomberg framed the raise around the data-centre boom: Antora stores cheap electricity as heat in solid carbon blocks and returns it around the clock as heat or power, the load-shifting story hyperscalers and utilities are buying. The company says it has signed agreements with hyperscale operators but has not named them. A brand that sells to industrial CFOs, utilities and data-centre developers now needs a national stage on which to say 'reindustrialise America' out loud.</p>
+  <h2>Why Now</h2>
+  <p>The round closed on 30 July; the second-factory site is the next announcement. Formula E's GEN4 era opens in Jeddah on 18 December, and Season 13 adds a new Austin E-Prix on 6 February 2027 with Miami a fortnight later: two US rounds in Antora's first year at scale.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$550M</div><div class="pfk">$550M Series C closed 30 Jul 2026, co-led by G2 Venture Partners and Eclipse; total funding $770M; valuatio…</div></div>
+    <div class="pf"><div class="pfv">$770M</div><div class="pfk">Total funding stands at $770M;</div></div>
+    <div class="pf"><div class="pfv">$2.47B</div><div class="pfk">Crunchbase News reports a $2.47B valuation, which the company has not stated.</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the FE grid (sponsor table; 10 of 35 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">Andretti Formula E<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Lola Yamaha ABT Formula E Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Shell</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Citroën Racing</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Cupra Kiro</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">A $550M round closed on 30 July, one of the largest cleantech raises of the year, a 5 GWh proof plant running in South Dakota, and two US E-Prix in February: Antora has the budget, the story and the stage. Andretti's energy lane is open and its owner offers a path to F1.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">us stage</span><span class="flag">category open</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 128</span>
+  </div>
+
+  <h2>WHY ANDRETTI FORMULA E</h2>
+  <p>Andretti Formula E is the American team on the grid, run from Indianapolis by TWG Motorsports, which also operates the Cadillac F1 team. Its roster is TWG AI, Quest Global, Crowe UK and Reflo, and the sponsor table shows no energy or storage brand: the lane is open. GEN4 brings Nissan powertrains, Jake Dennis and Felipe Drugovich. For Antora the audience matters more than the podium: industrial buyers, utilities and hyperscalers at Austin and Miami, on an American car.</p>
+
+  <h2>VALUE TO ANDRETTI FORMULA E &nbsp;<span class="mode">— <b>MODE B</b> (tech serves the team operation)</span></h2>
+  <p>MODE B - halo, stated honestly: a 50 MW thermal battery has no place in a garage. The mechanics are commercial. Official Energy Storage Partner designation and sidepod placement; hospitality at Austin and Miami for utility, hyperscaler and industrial buyers and state policymakers; co-produced content setting stored heat against the team's race-day energy management; and a step-up path to F1 through the same owner as Antora scales.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official Energy Storage Partner. <b class="hl">THREE YEARS</b>, Seasons 13-15 (2026/27 to 2028/29), covering the second-factory build and the first hyperscaler projects. Estimated $1.5-2.5M a year. Scope: sidepod branding, Austin and Miami hospitality, engineering content, an industrial-customer programme through TWG Motorsports, and an option to step up to the Cadillac F1 team from 2028.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Andrew Ponec</div>
+        <div class="role">Co-Founder &amp; CEO, Antora Energy · <span class="vtag">verified</span></div>
+        <div class="bio">Ponec co-founded Antora with Justin Briggs and David Bierman and fronts every raise; a first sports partnership is his call. Path: Bierman, Co-Founder and Chief Commercial Officer; Briggs, Co-Founder and COO, who owns policy and communications; Rene Griemens, CFO. No chief marketing officer is listed.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the American stage.</div>      <div class="quote">“Andrew, you just raised $550M to reindustrialise America. The American Formula E team races in Austin and Miami in February with an open energy lane, and its owner also runs the Cadillac F1 team. 25 minutes to see what the seat costs?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">Round closed 30 Jul; GEN4 opener in December, Austin and Miami in February.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">$550M raised, $770M in total; capital is earmarked for factories.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Electrification and US reindustrialisation; B2B industrial audience.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">No listing or deadline; second-factory launch is the soft trigger.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">MODE B: no trackside use; open lane, US rounds, owner path to F1.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">HALO, NOT WORKSTREAM</span> &nbsp;<span class="rc">Thermal batteries do not run a race car; the value is audience and brand, not engineering. <b>Counter:</b> Tie renewal to a pipeline metric: utility and hyperscaler meetings booked at Austin and Miami.</span></div>
+  <div class="risk"><span class="rt">VALUATION IS REPORTED</span> &nbsp;<span class="rc">The $2.47B valuation comes from Crunchbase News, not the company; the raise is earmarked for factories. <b>Counter:</b> Anchor on the confirmed $550M and $770M totals and price the entry under $3M a year.</span></div>
+
+  <h2>Sources <span class="panelnote">— 15 of 15 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://www.antora.com/company</li><li>https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America</li><li>https://www.bloomberg.com/news/articles/2026-07-30/battery-startup-raises-550-million-amid-boom-in-ai-data-centers</li><li>https://news.crunchbase.com/clean-tech-and-energy/battery-storage-startup-antora-550m-series-c/</li>  </ul>
+</div>
+</body>
+</html>

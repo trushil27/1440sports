@@ -1,0 +1,410 @@
+{
+ "run_date": "2026-08-12",
+ "signal_date": "2026-08-12",
+ "stem": "lovable",
+ "number": 147,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Lovable",
+  "signal_date": "2026-08-12",
+  "score": 72,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Anton Osika",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://lovable.dev/blog/series-c",
+  "industry_meta": "AI Software Creation · App-Building Platform · Stockholm",
+  "recommended_team": "TGR Haas F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$400M Series C at a $13.3B valuation, announced 12 Aug 2026, led by Menlo Ventures and co-led by the Scaleup Europe Fund managed by EQT; doubles the $6.6B set at the $330M Series B of 18 Dec 2025",
+   "investors": "Menlo Ventures (lead), Scaleup Europe Fund / EQT (co-lead); Balderton, Carmignac, Kaszek, LTS Growth, Tencent, World Innovation Lab, Regent; returning Accel, CapitalG, DST, HubSpot Ventures, Salesforce Ventures (reported)",
+   "revenue": "Company-stated revenue run rate approaching $600M by end of August 2026, up from $500M in June (reported by Dealroom and Tech Startups from the Series C release)",
+   "trigger": "$400M Series C at $13.3B, announced 12 Aug 2026",
+   "competitor_signal": "Salesforce, a Lovable investor, deployed Agentforce 360 with Visa Cash App Racing Bulls in June 2026; Google is on the McLaren car; Microsoft holds the software lane at Alpine; Atlassian is Williams' title partner",
+   "strategic_hook": "US expansion: Stockholm stays HQ while offices open in San Francisco, New York and Boston with about 450 hires planned this year; Cerebras inference partnership announced 5 Aug 2026",
+   "us_presence": "Stockholm HQ; San Francisco office with the CMO based there; New York and Boston offices planned (reported)",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: the leanest team on the grid builds its own internal tools, hospitality and partner-activation apps on Lovable without engineering time; fan build-an-app activations at the US rounds",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 18,
+   "brand_fit": 14,
+   "urgency": 11,
+   "ops_fit": 12,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "anton osika",
+    "osika"
+   ],
+   "url": "https://www.forbes.com/sites/aliciapark/2025/12/19/ai-startup-lovable-just-minted-one-of-europes-youngest-ever-self-made-billionaires/",
+   "excerpt": "Forbes, 19 Dec 2025: Anton Osika is co-founder and CEO of Lovable; Fabian Hedin is co-founder and CTO; the two founded the company in Stockholm in 2023 and each hold roughly 24 percent.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$400m",
+    "$13.3b",
+    "12 aug",
+    "menlo",
+    "scaleup europe",
+    "series c",
+    "funding round"
+   ],
+   "url": "https://lovable.dev/blog/series-c",
+   "excerpt": "Lovable, 12 Aug 2026 ('We just raised $400M in Series C funding to help people run their businesses'): $400M Series C at a $13.3B valuation led by Menlo Ventures and co-led by the Scaleup Europe Fund managed by EQT; more than 60 million projects created since the November 2024 launch; Lovable-built apps receive more than 900 million visits a month. Confirmed the same day by TechCrunch and Bloomberg.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$6.6b",
+    "$330m",
+    "18 dec",
+    "series b",
+    "capitalg",
+    "atlassian ventures",
+    "$1.8b",
+    "$200m"
+   ],
+   "url": "https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/",
+   "excerpt": "TechCrunch, 18 Dec 2025: Lovable raised a $330M Series B at a $6.6B valuation led by CapitalG and Menlo Ventures, with Khosla, DST Global, EQT Growth, NVentures, Salesforce Ventures, Databricks Ventures, Atlassian Ventures, HubSpot Ventures and returning Accel and Creandum among others; it followed a $200M Series A at $1.8B in July 2025.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$600m",
+    "$500m",
+    "run rate",
+    "run-rate",
+    "revenue"
+   ],
+   "url": "https://dealroom.co/news/144597-lovable-raises-400m-at-13-3b-valuation-eyes-600m-revenue-run-rate/",
+   "excerpt": "Dealroom News and Tech Startups, 12 Aug 2026: the round follows Lovable passing $500M in annualised run-rate revenue in June 2026; the company said it expects to reach about $600M by the end of August 2026. Company-stated, not audited.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "balderton",
+    "carmignac",
+    "kaszek",
+    "tencent",
+    "world innovation lab",
+    "regent",
+    "accel",
+    "dst",
+    "hubspot",
+    "salesforce ventures"
+   ],
+   "url": "https://technode.com/2026/08/13/tencent-backs-lovable-in-400-million-series-c-at-13-3-billion-valuation/",
+   "excerpt": "TechNode, 13 Aug 2026, and Vestbee: the Series C also brought in Balderton Capital and Carmignac (Europe), Kaszek Ventures and LTS Growth (Latin America), Tencent and World Innovation Lab (Asia) and Regent (United States), with returning investors including Accel, CapitalG, DST, HubSpot Ventures and Salesforce Ventures.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "san francisco",
+    "new york",
+    "boston",
+    "450",
+    "us expansion",
+    "stockholm"
+   ],
+   "url": "https://www.citybiz.co/article/891106/swedish-vibe-coding-startup-lovable-raises-400m-plans-u-s-expansion/",
+   "excerpt": "citybiz, Aug 2026: Stockholm remains headquarters; Lovable plans offices in San Francisco, New York and Boston and about 450 hires this year across machine learning, product, infrastructure and security; CEO Anton Osika said the money will go on product, infrastructure and hiring so people can both build and run businesses on Lovable.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "cmo",
+    "chief marketing officer",
+    "chief of staff"
+   ],
+   "url": "https://lovable.dev/careers/chief-of-staff-marketing-1030f9",
+   "excerpt": "Lovable careers, 2026: the company is hiring a Chief of Staff to its CMO, a role that bridges San Francisco and Stockholm; the CMO is based in San Francisco. No public leadership page names the CMO, a CFO or a COO; the executives named in press are Osika (CEO) and Hedin (CTO).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "cerebras",
+    "5 aug"
+   ],
+   "url": "https://www.globenewswire.com/news-release/2026/08/05/3339403/0/en/lovable-and-cerebras-partner-to-power-ai-software-creation-on-the-world-s-fastest-inference-platform.html",
+   "excerpt": "GlobeNewswire, 5 Aug 2026: Lovable and Cerebras Systems announce a partnership under which Lovable runs selected latency-sensitive workloads on dedicated Cerebras capacity; more than 50 million projects built on Lovable since November 2024.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "claude",
+    "anthropic"
+   ],
+   "url": "https://claude.com/customers/lovable",
+   "excerpt": "Anthropic customer case study: Lovable is built around Claude, with Lovable's platform layer turning the model's output into deployed applications; the company serves non-technical founders, teams and enterprises across 150 countries.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "agentforce",
+    "racing bulls",
+    "june 2026"
+   ],
+   "url": "https://www.marketscreener.com/news/salesforce-and-visa-cash-app-racing-bulls-announce-partnership-to-deploy-agentforce-360-and-slack-fo-ce7f5cd3df8ff420",
+   "excerpt": "Salesforce and Visa Cash App Racing Bulls, June 2026: partnership deploying Agentforce 360 and Slack across fan engagement, hospitality and race-day operations.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "mphasis",
+    "infobip",
+    "commscope",
+    "ruckus",
+    "toyota gazoo",
+    "haas automation",
+    "google",
+    "android",
+    "workday",
+    "dropbox",
+    "freshworks",
+    "groq",
+    "microsoft",
+    "oracle",
+    "sap",
+    "teamviewer",
+    "g42",
+    "servicenow",
+    "cognizant",
+    "coreweave",
+    "hp",
+    "ibm",
+    "dxc",
+    "dynatrace",
+    "confluent",
+    "twg ai",
+    "revolut",
+    "extreme networks",
+    "jigspace",
+    "atlassian",
+    "vast",
+    "keeper",
+    "salesforce"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md §2, data/teams.json): Haas — Toyota Gazoo Racing (title), Haas Automation, Haas Tooling, Mphasis (Official Digital Partner, services), Infobip, CommScope, Ruckus, Alpinestars; no software-creation, developer-platform or AI-application partner. McLaren: Google/Chrome, Android, Workday, Dropbox, Freshworks, Groq, Splunk, Cisco, Dell. Alpine: Microsoft. Red Bull: Oracle (title), Ansys, Siemens, 1Password. Mercedes: SAP, TeamViewer, G42, CrowdStrike, HPE, AMD. Aston Martin: ServiceNow, Cognizant, CoreWeave, NetApp, Arm. Ferrari: HP (title), IBM, DXC Technology, Genesys. Racing Bulls: Dynatrace, Confluent, RebelDot; Salesforce (championship-level, Agentforce with the team from June 2026). Cadillac: TWG AI, Core Scientific. Audi: Revolut (title), Extreme Networks, JigSpace. Williams: Atlassian (title), VAST, Keeper, Airia, Brillio.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "dutch",
+    "italian",
+    "united states",
+    "austin",
+    "las vegas",
+    "miami",
+    "mexico"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: Dutch GP and Italian GP follow the summer break; the United States GP (Austin) in October, the Mexico City GP, then the Las Vegas GP in November; Miami GP in May.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Lovable",
+  "industry_meta": "AI Software Creation · App-Building Platform",
+  "hq": "Stockholm (US offices opening: San Francisco, New York, Boston)",
+  "ticker": "Private ($13.3B; $400M Series C, Aug 2026)",
+  "deck": "Lovable, the Stockholm platform on which non-engineers build and run software, announced a $400M Series C at a $13.3B valuation on 12 August, led by Menlo Ventures and co-led by EQT's Scaleup Europe Fund, doubling the $6.6B price set in December and funding a US office push.",
+  "score": 72,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "TGR Haas F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Lovable confirmed on 12 August a $400M Series C at $13.3B, led by Menlo Ventures and co-led by the Scaleup Europe Fund managed by EQT, with Balderton, Kaszek, Tencent and Regent joining and Accel, CapitalG, DST and Salesforce Ventures returning. The price has doubled since the $330M Series B at $6.6B on 18 December 2025. The company says revenue run rate passed $500M in June and should reach about $600M by end-August; more than 60 million projects have been built on the platform and its apps draw over 900 million visits a month.",
+  "the_case_p2": "The money is earmarked for scale and for America: Stockholm stays headquarters while offices open in San Francisco, New York and Boston, with about 450 hires planned this year and a chief marketing officer already based in San Francisco. A brand whose customers are founders and business owners in 150 countries now needs a stage those customers watch. It has never bought sport; the first seat is the one that defines the category.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 12 August and a US marketing build-out follows it. The Dutch and Italian GPs open the run-in; the United States GP in October and Las Vegas in November are the American stages, and teams settle 2027 rosters in the fourth quarter.",
+  "why_team_label": "WHY TGR HAAS F1 TEAM",
+  "why_team_para": "Haas is the American team and the leanest on the grid: Toyota Gazoo Racing as title partner, Haas Automation selling to small manufacturers, Mphasis for digital services, Infobip for fan messaging, CommScope and Ruckus for networks. No software-creation, developer-platform or AI-application partner sits on the car. The category is open at a mid-grid price, in front of the Austin, Miami and Las Vegas crowds Lovable's US offices are opening to reach.",
+  "value_section": true,
+  "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. A small team runs on tools its engineers never have time to build: hospitality guest lists, freight and travel trackers, partner microsites, driver-content pages. Lovable lets commercial and operations staff build them in days on the enterprise tier. At the US rounds, a build-your-race-app activation puts fans on the platform. In return: Official Software Creation Partner, sidepod or mirror placement, US-race hospitality, founder content.",
+  "deal_arch_para": "Entry as Official Software Creation Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, covering the US build-out and a probable listing window. Estimated $3-5M a year, part-payable in enterprise seats. Scope: sidepod or mirror placement, the team's internal-tools programme, Austin, Miami and Las Vegas hospitality, founder-and-driver content.",
+  "decision_maker_name": "Anton Osika",
+  "decision_maker_role": "Co-Founder & CEO, Lovable",
+  "decision_maker_bio": "Osika co-founded Lovable in Stockholm in 2023 and fronts every raise; a first sports partnership is his call. Path: Fabian Hedin, Co-Founder and CTO, and the San Francisco-based CMO, not named on any leadership page. No CFO or COO is publicly named.",
+  "opening_angle_intro": "Lead with the American stage.",
+  "opening_angle_quote": "&ldquo;Anton, you have just raised $400M to take Lovable to America, and the American team has no software-creation partner. Austin is eleven weeks away. 25 minutes to see what a three-year seat at Haas would cost and return?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round closed 12 Aug; Austin and Las Vegas inside the window."
+   ],
+   [
+    "CAPACITY",
+    "18",
+    "/ 20",
+    "$400M raise at $13.3B; ~$600M run rate (company-stated)."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Founder and SMB audience; no sport history; US push."
+   ],
+   [
+    "URGENCY",
+    "11",
+    "/ 20",
+    "No hard deadline; category still forming; listing talk only."
+   ],
+   [
+    "OPS FIT",
+    "12",
+    "/ 20",
+    "MODE A: internal tools for a lean team; light on the car."
+   ]
+  ],
+  "risks": [
+   [
+    "CATEGORY IN FLUX",
+    "Anthropic, whose Claude models Lovable is built on, is building its own app builder; rivals are raising at pace and the label 'vibe coding' may not last three years.",
+    "Structure the designation around 'software creation' rather than a product name; a three-year seat is itself the differentiator."
+   ],
+   [
+    "UNNAMED MARKETING OWNER",
+    "The CMO exists (San Francisco, per the company's own hiring) but no leadership page names them, and there is no public CFO or COO.",
+    "Go through Osika, who fronts every raise; ask him to bring the CMO to the first call."
+   ]
+  ],
+  "bottom_line": "A $400M round at $13.3B, a company-stated run rate near $600M and a US office build-out put Lovable at peak brand-investment authority. Haas is the American team with the software-creation lane open, and two US races sit inside the window.",
+  "signals": [
+   "funding_event",
+   "us_expansion",
+   "category_open"
+  ],
+  "footer_company": "LOVABLE",
+  "footer_date": "12 AUG 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 12 August Lovable announced a $400M Series C at a $13.3B valuation, led by Menlo Ventures and co-led by the Scaleup Europe Fund managed by EQT, and confirmed the same day by TechCrunch and Bloomberg. The company's own release is the primary source; the run-rate figures in it are company-stated and unaudited."
+    },
+    {
+     "label": "Price doubled in eight months",
+     "text": "The Series B of 18 December 2025 raised $330M at $6.6B; the Series A in July 2025 was $200M at $1.8B. A company re-priced from $1.8B to $13.3B in thirteen months has a story to tell to founders, enterprise buyers and, in time, public-market investors, and a budget to tell it with."
+    },
+    {
+     "label": "The US build-out",
+     "text": "Stockholm remains headquarters, but the round funds offices in San Francisco, New York and Boston and about 450 hires this year. The chief marketing officer is already based in San Francisco. A brand moving its marketing centre of gravity to America needs American reach; F1's US rounds are the most concentrated business audience in sport."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The Dutch and Italian GPs open the run-in after the summer break; the United States GP in Austin (October) and the Las Vegas GP (November) are the American stages left in 2026. Teams close 2027 partner rosters in the fourth quarter, so a deal agreed before Austin can be announced in the US and activated in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Haas carries Toyota Gazoo Racing as title partner, Haas Automation and Haas Tooling, Mphasis as a digital-services partner, Infobip for fan messaging, CommScope and Ruckus for networking, Alpinestars for kit. Nothing on the roster builds software; Official Software Creation Partner is a clean category and Mphasis, a services integrator, is a channel rather than a rival."
+    },
+    {
+     "label": "The American team",
+     "text": "Haas is the only US-owned team that has raced for a decade, with a Kannapolis base and an owner whose machine-tool business sells to the small manufacturers who are exactly the founders and operators Lovable serves. The Miami, Austin and Las Vegas rounds are its home races, and Lovable's new offices are being opened to reach the same audience."
+    },
+    {
+     "label": "A team that will use the product",
+     "text": "The leanest operation on the grid has the longest list of unbuilt tools. Hospitality, logistics, partner reporting and content sites built by the people who need them, not by race engineers, is the demonstration Lovable sells to every business customer."
+    },
+    {
+     "label": "Price and access",
+     "text": "A mid-grid team offers a first-time sports buyer a full partner designation, on-car placement and hospitality at a fraction of a front-running team's price, with direct access to the team's leadership for a founder-led company."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Internal applications for the commercial and operations staff: guest and hospitality management for the US rounds, freight and travel trackers, partner-activation microsites, driver and content pages, sponsor reporting dashboards. Built on Lovable in days, hosted on the enterprise tier, with the team's data staying inside its own accounts."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner with tens of millions of builders and founders as customers brings a guest list of entrepreneurs, venture investors and enterprise buyers to Austin, Miami and Las Vegas, the audience Haas's B2B partners want in the suite, and a platform for co-marketing with the team's other technology partners."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "Build-your-race-app fan activations at the US rounds; founder-and-driver content around what the team built and shipped that week; a reference customer story Lovable's enterprise sales team can tell to every business that runs on tight budgets."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Software Creation Partner designation, sidepod or mirror placement, hospitality at Austin, Miami and Las Vegas, driver and team access for Lovable's channels, and naming of the team's internal-tools programme."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "The warmest path on paper (Atlassian Ventures invested in the Series B; Lovable is built on Claude, Williams' thinking partner) but Atlassian is title partner and holds the software lane; only viable as an Atlassian-endorsed co-activation, not a clean category."
+    },
+    {
+     "team": "McLaren F1 Team",
+     "reason": "Google and Android occupy AI and developer platforms; Workday, Dropbox, Freshworks and Groq crowd the software roster."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Microsoft, owner of GitHub Copilot, is a direct rival in AI-assisted software creation."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and sells its own low-code application platform."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "SAP, TeamViewer and G42 hold enterprise software and AI."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "ServiceNow, Cognizant and CoreWeave occupy application platforms, services and AI compute."
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "reason": "HP (title), IBM and DXC Technology cover software and services."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Salesforce deployed Agentforce 360 with the team in June 2026; Confluent, Dynatrace and Octave crowd the software lane."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "TWG AI is the inaugural AI partner; Core Scientific holds compute."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "Open but not chosen: a first-year works team prices above a first sports seat and offers no US story; Extreme Networks and JigSpace on the roster."
+    }
+   ],
+   "ask": "A 25-minute call with Anton Osika before the United States GP to confirm the marketing owner, agree an Austin or Las Vegas announcement window, and size an Official Software Creation Partner entry against Haas's 2027 roster."
+  }
+ },
+ "note": "# Lovable → TGR Haas F1 Team — verification log (N° 147, 12 Aug 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) from a case spec (`lovable.case.json`), with Claude acting as scanner, verifier and writer; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code (`python -m intel.session_case`). Issued for the row's date, 12 Aug 2026, the day of the trigger.\n\n**Sandbox limitation, stated plainly:** lovable.dev, techcrunch.com, bloomberg.com, theorg.com and wikipedia.org were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL (several independent summaries agree on every figure). Treat every VERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, honestly labelled\n\nLovable's own release of 12 Aug 2026 (`lovable.dev/blog/series-c`) announces the **$400M Series C at $13.3B**, led by Menlo Ventures and co-led by the Scaleup Europe Fund managed by EQT; TechCrunch and Bloomberg confirmed it the same day. The desk row's **'$500M ARR' is corrected**: the company says run rate passed $500M in June and expects about $600M by end-August 2026 (Dealroom / Tech Startups from the release), company-stated and unaudited, and the brief says so. The row's **'CMO-level hires expected' and 'explicit global brand expansion' are not in any source** and are not used; what IS sourced is a CMO already in post in San Francisco (Lovable's own Chief of Staff, Marketing posting) and the US office plan (citybiz).\n\n## Decision path\n\n- **Anton Osika, Co-Founder & CEO** — VERIFIED (Forbes profile; Cooley; every round announcement). Fronts every raise.\n- **Fabian Hedin, Co-Founder & CTO** — VERIFIED (Forbes).\n- **CMO** — exists and is based in San Francisco (Lovable careers: 'Chief of Staff to our CMO … bridging SF and Stockholm'), but **no leadership page names them**; searched 'Lovable chief marketing officer' and appointment wires without a name. The brief says so rather than guessing.\n- **No public CFO or COO** found after checking; stated as a GAP in the bio and the second risk.\n- **Leadership ties:** Osika, Hedin — searched 'Formula 1 / motorsport / racing'; `none found`.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| $400M Series C at $13.3B, 12 Aug 2026, Menlo lead, Scaleup Europe Fund (EQT) co-lead | VERIFIED (company release, via summaries; TechCrunch, Bloomberg) | lovable.dev/blog/series-c |\n| Balderton, Carmignac, Kaszek, LTS Growth, Tencent, WiL, Regent new; Accel, CapitalG, DST, HubSpot Ventures, Salesforce Ventures returning | REPORTED | TechNode 13 Aug 2026; Vestbee |\n| Series B $330M at $6.6B, 18 Dec 2025, CapitalG + Menlo; Atlassian Ventures participated; Series A $200M at $1.8B, Jul 2025 | REPORTED | TechCrunch 18 Dec 2025; Cooley |\n| Run rate >$500M (June), ~$600M expected end-Aug 2026 | REPORTED, company-stated | Dealroom News; Tech Startups |\n| >60M projects; >900M visits/month | REPORTED, company-stated | Series C release via Vestbee / edtechinnovationhub; Osika on X |\n| Stockholm HQ; SF, NY, Boston offices; ~450 hires in 2026 | REPORTED | citybiz; Lovable on Threads |\n| CMO based in San Francisco; no named CMO/CFO/COO | VERIFIED (company careers page) | lovable.dev/careers |\n| Cerebras partnership, 5 Aug 2026 | VERIFIED (wire) | GlobeNewswire |\n| Lovable built on Claude | VERIFIED | claude.com/customers/lovable |\n| Salesforce + Racing Bulls Agentforce 360, June 2026 | REPORTED | MarketScreener |\n| Haas roster (Toyota Gazoo Racing, Haas Automation/Tooling, Mphasis, Infobip, CommScope, Ruckus); rival lanes at McLaren, Alpine, Red Bull, Mercedes, Aston Martin, Ferrari, Racing Bulls, Cadillac, Audi, Williams | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Dutch, Italian, United States (Austin), Las Vegas, Miami GPs on the 2026 calendar | VERIFIED | calendar table (`seeds/calendar_2026.json`) |\n\n## Team choice and screen-outs\n\nTGR Haas F1 Team chosen from the sponsor table: no software-creation, developer-platform or AI-application partner; Mphasis is a services integrator (channel, not rival, per `team_profiles.json`). Two 2026 additions not yet in the table were checked live and do not conflict: **Emburse** (Official Travel and Expense Solution Partner, June 2026) and **Exein** (Official Physical AI Security Partner from the Belgian GP). Williams is the warmest path (Atlassian Ventures investor; Claude on the car) but the title partner holds the software lane, so it is ruled out unless Atlassian endorses a co-activation — stated in `ruled_out`. Alpine (Microsoft/GitHub Copilot) and Red Bull (Oracle) are direct-rival lanes. Tencent is a Series C investor: check partner politics on any team with a rival Chinese-tech sponsor before signing.\n\n## Things not claimed\n\n- **Deal size ($3-5M a year) is an ESTIMATE**, labelled as such.\n- **No listing date** is claimed; 'probable listing window' is judgment.\n- Employee counts vary by source (146 FTE core team in March 2026 vs ~1,000 including contractors) and are not used.\n- The desk's original score of 84 was inflated by the unsourced CMO-hire and brand-expansion lines; re-scored honestly at 72 (urgency 11: no deadline; ops fit 12: the workstream is real but light on the car).\n"
+}

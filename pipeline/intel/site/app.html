@@ -200,6 +200,15 @@
   @media (max-width: 560px) { .vpanel .vrow { grid-template-columns: 1fr; gap: 4px; } }
 
   /* brief reader */
+  details.screened { margin-top: 22px; }
+  details.screened summary { cursor: pointer; list-style: none; }
+  details.screened summary::-webkit-details-marker { display: none; }
+  details.screened .rule { display: flex; }
+  details.screened .sub { margin: 8px 0 10px; color: var(--muted); max-width: 80ch; }
+  details.screened td.why { font-size: 12.5px; line-height: 1.45; max-width: 60ch; white-space: normal; }
+  details.more { display: inline; }
+  details.more summary { display: inline; cursor: pointer; color: var(--gold-ink, #8a6b34); font-size: 12px; text-decoration: underline dotted; }
+  details.more[open] summary { display: block; margin-top: 4px; }
   .reader { background: var(--panel); border: 1px solid var(--hair); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
   .reader iframe { width: 100%; height: calc(100vh - 210px); min-height: 720px; border: 0; background: #fbfaf7; }
   .detail { background: var(--panel); border: 1px solid var(--hair); border-radius: var(--radius); padding: 26px 30px; box-shadow: var(--shadow); font-family: var(--serif); font-size: 16.5px; }
@@ -406,7 +415,27 @@
       <div class="head"><div><div class="eyebrow">Signals</div><h1>${title}</h1><p class="sub">${rows.length} signals, newest first.${inferred ? ` ${inferred} older rows had no series recorded; theirs is inferred from the text and marked.` : ''}${flagged ? ` ${flagged} carry a "Check" tag: kept, but a detail needs a human look before they are pitched.` : ''}</p></div>
       </div>
       <div class="toolbar"><input id="q" type="search" placeholder="Search company, team, trigger…"><select id="tier"><option value="">All tiers</option><option>HOT TOP TIER</option><option>HOT</option><option>WARM</option></select><span class="seg"><button data-hist="all" class="on">All</button><button data-hist="live">Engine briefs</button><button data-hist="hist">Historical</button></span></div>
-      <div id="list">${table(rows)}</div>`;
+      <div id="list">${table(rows)}</div>
+      ${screenedBlock(series)}`;
+  }
+
+  // Screen-outs decided by a full case check: the desk looked, verified, and chose not to
+  // build — shown with the reason, because that judgment is part of the product.
+  const screened = (series) => all().filter((b) => b.review.status === 'screened_out' && b.review.reason_code === 'case_screen' && (series === 'all' || b.series === series));
+  function screenedBlock(series) {
+    const rows = screened(series);
+    if (!rows.length) return '';
+    return `<details class="screened"><summary><span class="rule"><span>Screened out after a full check</span><span class="cnt">${rows.length}</span></span></summary>
+      <p class="sub">Signals the desk researched in full and decided not to build into a case: the trigger was outside the 90-day window, was contradicted by the primary source, or the company already sits on the grid. Each carries the reason and the sources.</p>
+      <div class="tablewrap"><table><thead><tr><th>Date</th><th>Company</th><th>Series</th><th>Verdict</th><th>Why</th></tr></thead><tbody>
+      ${rows.map((b) => { const m = /^([a-z ]+):\s*/i.exec(b.review.reason || ''); const verdict = m ? m[1] : 'screened'; const why = m ? (b.review.reason || '').slice(m[0].length) : (b.review.reason || ''); const cut = why.search(/\.\s+[A-Z]/); const lead = cut > 40 && cut < why.length - 30 ? why.slice(0, cut + 1) : why; const rest = lead.length < why.length ? why.slice(lead.length).trim() : ''; const src = (b.review.sources || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(' '); return `<tr>
+        <td class="date">${fmtDate(b.date)}</td>
+        <td class="co">${esc(b.company)}</td>
+        <td>${esc(b.series || '—')}</td>
+        <td><span class="badge warn">${esc(verdict)}</span></td>
+        <td class="why">${esc(lead)}${rest ? ` <details class="more"><summary>full reasoning</summary>${esc(rest)}</details>` : ''}${src ? ' <span class="sm">' + src + '</span>' : ''}</td>
+      </tr>`; }).join('')}
+      </tbody></table></div></details>`;
   }
 
 
