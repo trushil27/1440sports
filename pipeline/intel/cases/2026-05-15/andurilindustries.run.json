@@ -1,0 +1,751 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-05-15",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-ro_23z5s/2026-05-15/andurilindustries.pdf",
+     "web": "/tmp/case-pdf-ro_23z5s/2026-05-15/andurilindustries.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Anduril Industries",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 15
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 79,
+     "reason": "top ranking score",
+     "company": "Anduril Industries",
+     "decision": "selected",
+     "signal_date": "2026-05-13"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Anduril Industries",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 79,
+   "score_breakdown": {
+    "cap": null,
+    "base": 79,
+    "total": 79,
+    "timing": 18,
+    "ops_fit": 12,
+    "ranking": 79,
+    "urgency": 14,
+    "capacity": 20,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 79,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 79,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+   "trigger_date": "2026-05-13",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 220,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-ro_23z5s/2026-05-15/andurilindustries.web.html",
+  "brief_data": {
+   "hq": "Costa Mesa, California (founded 2017)",
+   "deck": "Anduril, the Costa Mesa defence-technology company that already sponsors NASCAR and Hendrick Motorsports, announced a $5B Series H at a $61B valuation on 13 May 2026, doubling its price in a year, weeks before its first NASCAR title race and the start of production at its $1B Ohio factory.",
+   "risks": [
+    {
+     "label": "BRAND SAFETY",
+     "detail": "A weapons maker on a Formula 1 car will draw scrutiny from teams, promoters and a European fan base NASCAR did not test.",
+     "counter": "Lead with the Boeing-at-Alpine precedent and Cadillac's American identity; agree product-imagery rules up front."
+    },
+    {
+     "label": "CATEGORY DEFINITION",
+     "detail": "TWG AI is Cadillac's exclusive AI partner and Anduril's Lattice is AI software; the lane must be defence technology, not AI.",
+     "counter": "Define the lane as defence and autonomous systems and clear it with TWG before the first call."
+    }
+   ],
+   "score": 79,
+   "ticker": "Private ($61B; $5B Series H, May 2026)",
+   "company": "Anduril Industries",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "motorsport_precedent",
+    "partner_adjacency"
+   ],
+   "sources": [
+    "https://www.odwyerpr.com/story/public/21267/2024-05-15/move-anduril-names-miller-first-marketing-chief.html",
+    "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+    "https://www.hendrickmotorsports.com/news/2025/10/22/anduril-joins-hendrick-motorsports-primary-nascar-sponsor-william-byron-through-2028",
+    "https://www.gmdefensellc.com/site/us/en/gm-defense/home/news-and-events/news.detail.html/Pages/news/us/en/2023/oct/1010-gmdefense.html",
+    "https://www.army.mil/article/291074/u_s_army_awards_enterprise_contract_for_it_commercial_solutions",
+    "https://breakingdefense.com/2025/01/anduril-picks-columbus-for-new-arsenal-factory-targets-july-2026-to-begin-production/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Jeff Miller before the United States GP to test the F1 step-up against the NASCAR programme, confirm the category definition with TWG AI, and size an Official Defence Technology Partner entry against Cadillac's 2027 roster.",
+    "value": [
+     {
+      "text": "TWG AI holds Cadillac's exclusive AI lane, so the brief does not claim a Lattice-on-the-pit-wall workstream. What Anduril brings is a brand that recruits engineers: co-produced content across Arsenal-1 and the Indiana headquarters, engineering-talent programmes with the team, and a manufacturing story that runs from a hyperscale factory to a race car built in the same country.",
+      "label": "Halo with concrete mechanics (Mode B)"
+     },
+     {
+      "text": "Anduril's guest list is Pentagon, Congressional, allied-government and prime-contractor audiences, plus the venture and public-market investors who priced the $61B round. Hospitality at Miami, Austin and Las Vegas puts that audience in Cadillac's suite alongside its other B2B partners.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "The Hendrick agreement carries warfighter and military-family programmes; the same mechanics translate to the US rounds, with GM Defense as a natural co-sponsor. Content from the Coronado event gives the team a template rather than a blank page.",
+      "label": "Programmes that already exist"
+     },
+     {
+      "text": "Official Defence Technology Partner designation, engine-cover or rear-wing placement, US-round hospitality, driver and engineering access for recruitment content, and a joint GM Defense and Cadillac engineering story for Anduril's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 13 May 2026 Anduril announced a $5B Series H led by Thrive Capital and Andreessen Horowitz at a $61B valuation, double the $30.5B set by the $2.5B round of June 2025; total funding is now more than $11B over eight rounds. The company announced the round itself and Bloomberg, TechCrunch and GovConWire carried it the same day. Revenue is not disclosed and the brief uses no revenue figure.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The US Army awarded Anduril a ten-year enterprise contract with a $20B ceiling on 13 March 2026, consolidating more than 120 procurement actions into one framework built around the Lattice software. The ceiling is a maximum, not an obligated amount, and the brief says so. Arsenal-1, the $1B hyperscale factory in Columbus, Ohio, targets production from July 2026.",
+      "label": "The demand behind the price"
+     },
+     {
+      "text": "Anduril is Official Defense Partner of NASCAR and presenting sponsor of the NASCAR San Diego weekend; the Anduril 250 'Race the Base' Cup Series street race ran at Naval Base Coronado on 21 June 2026. It is also a primary sponsor of Hendrick Motorsports' William Byron for two Cup races a season from 2026 through 2028. The question for Anduril is not whether to buy motorsport but whether to scale it to a global engineering audience.",
+      "label": "Motorsport is already in the budget"
+     },
+     {
+      "text": "The Miami GP has just run; the United States GP in Austin (October) and the Las Vegas GP (November) are the US rounds left in 2026, and teams close their 2027 partner rosters in the fourth quarter. A listing is expected by analysts in 2027 or later; a partnership agreed over the summer can be announced at Austin and run through the listing window.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "GM Defense, a General Motors subsidiary, signed a teaming agreement with Anduril in October 2023 on autonomy, battery electrification and new propulsion, and the two showed Infantry Squad Vehicles fitted with Anduril systems at AUSA that year. Cadillac F1 Team is General Motors' works entry. The introduction can run through a relationship both sides already value.",
+      "label": "The warm path"
+     },
+     {
+      "text": "Cadillac's debut roster is deliberately small: TWG AI as primary and exclusive AI partner, Core Scientific for data-centre infrastructure, IFS for enterprise software, Tenneco as technical partner, Jim Beam, Tommy Hilfiger and Claro. No aerospace, defence or autonomy partner is on it, and the team has said it is not seeking a title sponsor in year one, so a top-tier team partner is the largest seat on offer.",
+      "label": "The open lane"
+     },
+     {
+      "text": "A Costa Mesa company that used a naval base for its first NASCAR event gets an American works team, an Indiana headquarters, and Miami, Austin and Las Vegas as home rounds. The 'rebuild the arsenal' story and Cadillac's American-engineering debut are the same story told twice.",
+      "label": "American identity, US stages"
+     },
+     {
+      "text": "A first-season team prices its partner tier below the established grid, and its inventory is not yet crowded. For a brand that spends on two Cup races a season with Hendrick, the step up to a three-year F1 seat is proportionate to a $5B raise.",
+      "label": "Price of entry"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Boeing, an aerospace and defence prime, is a team partner; a direct category clash."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Zoox occupies the autonomous-systems lane; Claude's Anthropic tie adds a second software overlap."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Aramco is title partner; a US defence prime beside a Saudi state energy title is a governance question for both sides."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Open and American-owned, but Toyota-titled and without the GM Defense relationship that gives Cadillac a warm path."
+     },
+     {
+      "team": "Oracle Red Bull Racing · Visa Cash App Racing Bulls",
+      "reason": "Open in the lane, but Austrian-owned with no US identity; Siemens, Hexagon and Ansys hold the engineering-software lanes at Red Bull."
+     },
+     {
+      "team": "Mercedes-AMG Petronas · McLaren Mastercard · Scuderia Ferrari HP · Audi Revolut",
+      "reason": "Open in the lane but European heritage teams with no US identity; not chosen."
+     }
+    ]
+   },
+   "date_long": "15 MAY 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "B",
+   "bottom_line": "A $5B round at $61B, a $20B Army contract ceiling, a factory starting in July and a NASCAR programme already running put Anduril at peak brand-investment authority with a proven appetite for motorsport. GM Defense gives a warm path into Cadillac, the defence lane on the grid is open and two US races remain inside the window.",
+   "footer_date": "15 MAY 2026",
+   "score_cells": [
+    {
+     "num": 18,
+     "note": "Round 13 May; NASCAR debut June; Arsenal-1 July; Austin and Las Vegas in window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 20,
+     "note": "$5B raise at $61B; more than $11B raised; $20B Army contract ceiling.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "Proven motorsport buyer; American engineering story; defence sensitivities.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 14,
+     "note": "Listing expected 2027; 2027 rosters close in Q4; Hendrick term runs to 2028.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 12,
+     "note": "MODE B: halo with recruitment and US-round mechanics; AI lane held by TWG.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 13 May 2026 Anduril announced a $5B Series H led by Thrive Capital and Andreessen Horowitz at a $61B valuation, double the $30.5B set in June 2025, taking total funding past $11B over eight rounds. The demand behind it is public: the US Army awarded a ten-year enterprise contract with a $20B ceiling on 13 March 2026, and Arsenal-1, a $1B factory in Columbus, Ohio, targets production from July. Anduril has bought motorsport already: Official Defense Partner of NASCAR, title sponsor of June's San Diego weekend at Naval Base Coronado, and Hendrick's William Byron through 2028.",
+   "the_case_p2": "That NASCAR programme is the tell. A company that put a Cup Series event on a naval base to recruit engineers and tell a rebuild-the-arsenal story has a template Formula 1 can scale: three US rounds, a global engineering audience and a listing expected in 2027. General Motors is the bridge. GM Defense signed a teaming agreement with Anduril in October 2023 on autonomy and electrification, and Cadillac is GM's works team.",
+   "track_label": "",
+   "brief_number": "220",
+   "claims_total": 15,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$5B Series H at a $61B valuation, announced 13 May 2026, led by Thrive Capital and Andreessen Horowitz; tot…",
+     "value": "$5B",
+     "claim_id": 640,
+     "verified": true,
+     "source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/"
+    },
+    {
+     "fact": "Thrive Capital and Andreessen Horowitz (returning leads); the prior round was $2.5B at a $30.5B valuation i…",
+     "value": "$2.5B",
+     "claim_id": 641,
+     "verified": true,
+     "source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/"
+    },
+    {
+     "fact": "The demand behind it is public: the US Army awarded a ten-year enterprise contract with a $20B ceiling on 1…",
+     "value": "$20B",
+     "claim_id": 650,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Defence Technology · Autonomous Systems / Lattice Software",
+   "value_content": "MODE B - halo with concrete mechanics. TWG AI holds Cadillac's exclusive AI lane, so this is not a software workstream. It is: livery and garage presence at Miami, Austin and Las Vegas; engineering-recruitment content, the job Anduril's marketing chief says marketing does, filmed at Arsenal-1 and the team's Indiana headquarters; warfighter-family programmes carried over from the Hendrick deal; hospitality for Pentagon, Congressional and allied guests at the US rounds.",
+   "value_section": true,
+   "why_team_para": "Cadillac is General Motors' American works entry, in its first season with a deliberately small roster: TWG AI, Core Scientific, IFS, Tenneco, Jim Beam, Tommy Hilfiger, Claro. No aerospace, defence or autonomy partner is on it, and the parent already works with Anduril through GM Defense, so the introduction is warm on both sides. Three US rounds give a Costa Mesa brand home stages, and a debut team prices entry below the established grid.",
+   "deal_arch_para": "Entry as Official Defence Technology Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, bridging the Hendrick term and a probable listing. Estimated $8-12M a year, the top of Cadillac's partner tier. Scope: engine-cover or rear-wing placement, US-round hospitality, recruitment and manufacturing content, a joint GM Defense and Cadillac engineering story.",
+   "footer_company": "ANDURIL INDUSTRIES",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 13 May; the NASCAR debut at Coronado is in June and Arsenal-1 starts production in July, so budget, motorsport template and manufacturing story crest together. The United States GP in Austin (October) and the Las Vegas GP (November) fall inside the window; 2027 rosters close in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Anduril's first marketing chief, hired in May 2024 from Cruise, where he was VP of marketing, after Snapchat, PepsiCo and Ogilvy; he built the NASCAR and Hendrick programmes. Path: Matthew Steckman, President and Chief Business Officer; Matt Grimm, Co-Founder and COO; Brian Schimpf, CEO.",
+   "decision_maker_name": "Jeff Miller",
+   "decision_maker_role": "Chief Marketing Officer, Anduril Industries",
+   "opening_angle_intro": "Lead with the NASCAR template.",
+   "opening_angle_quote": "&ldquo;Jeff, you put a Cup Series event on a naval base. Formula 1 gives you Austin, Las Vegas and Miami, a global engineering audience, and GM's own works team, whose parent already works with you. 25 minutes before Austin to size the Cadillac lane?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Jeff Miller, Chief Marketing Officer at Anduril Industries",
+   "cited_source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.odwyerpr.com/story/public/21267/2024-05-15/move-anduril-names-miller-first-marketing-chief.html",
+     "excerpt": "O'Dwyer's PR News, 15 May 2024: Anduril names Jeff Miller its first marketing chief, joining from Cruise (VP of marketing) after Snapchat, PepsiCo and Ogilvy & Mather. A 2026 'CMO Insider' interview (Yahoo) and Cannes Lions 2026 coverage describe him as Anduril's chief marketing officer; The Org's chart still lists 'VP of Marketing'. The title is stated as chief marketing officer with that caveat in the note.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Jeff Miller, Chief Marketing Officer, Anduril Industries at Anduril Industries",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.odwyerpr.com/story/public/21267/2024-05-15/move-anduril-names-miller-first-marketing-chief.html",
+     "excerpt": "O'Dwyer's PR News, 15 May 2024: Anduril names Jeff Miller its first marketing chief, joining from Cruise (VP of marketing) after Snapchat, PepsiCo and Ogilvy & Mather. A 2026 'CMO Insider' interview (Yahoo) and Cannes Lions 2026 coverage describe him as Anduril's chief marketing officer; The Org's chart still lists 'VP of Marketing'. The title is stated as chief marketing officer with that caveat in the note.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$5B Series H at a $61B valuation, announced 13 May 2026, led by Thrive Capital and Andreessen Horowitz; total raised more than $11B over eight rounds (company announcement via TechCrunch, Bloomberg, GovConWire)",
+   "cited_source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Anduril, the Costa Mesa defence-technology company that already sponsors NASCAR and Hendrick Motorsports, announced a $5B Series H at a $61B valuation on 13 May 2026, doubling its price in a year, weeks before its first NASCAR title race and the start of production at its $1B Ohio factory.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Thrive Capital and Andreessen Horowitz (returning leads); the prior round was $2.5B at a $30.5B valuation in June 2025",
+   "cited_source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "On 13 May 2026 Anduril announced a $5B Series H led by Thrive Capital and Andreessen Horowitz at a $61B valuation, double the $30.5B set in June 2025, taking total funding past $11B over eight rounds.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$5B Series H at a $61B valuation, doubling the $30.5B set in June 2025, announced 13 May 2026",
+   "cited_source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The demand behind it is public: the US Army awarded a ten-year enterprise contract with a $20B ceiling on 13 March 2026, and Arsenal-1, a $1B factory in Columbus, Ohio, targets production from July.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.army.mil/article/291074/u_s_army_awards_enterprise_contract_for_it_commercial_solutions",
+     "excerpt": "U.S. Army (army.mil), 13 Mar 2026, with Bloomberg, TechCrunch and DefenseScoop the following day: the Army awarded Anduril a ten-year enterprise contract with a ceiling of up to $20 billion, consolidating more than 120 separate procurement actions into one framework centred on the Lattice software; the $20 billion is a maximum potential value, not an obligated amount.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No defence-technology partner on any F1 team; Boeing is a BWT Alpine team partner (aerospace and defence prime); Zoox sits at Williams (autonomous vehicles); Anduril is already in motorsport as Official Defense Partner of NASCAR and Hendrick Motorsports primary sponsor through 2028",
+   "cited_source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.hendrickmotorsports.com/news/2025/10/22/anduril-joins-hendrick-motorsports-primary-nascar-sponsor-william-byron-through-2028",
+     "excerpt": "Hendrick Motorsports, 22 Oct 2025 (also anduril.com/news and RACER): Anduril joins as a primary sponsor of William Byron's No. 24 for two Cup races a season from 2026 through 2028, with joint programmes for warfighters and their families. NASCAR, 14 Aug 2025: Anduril is Official Defense Partner of NASCAR and presenting sponsor of NASCAR San Diego Weekend; the Anduril 250 'Race the Base' Cup Series street race ran at Naval Base Coronado on 21 June 2026 (Wikipedia, Jayski; 2.28 million Prime Video viewers reported).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $5B round at $61B, a $20B Army contract ceiling, a factory starting in July and a NASCAR programme already running put Anduril at peak brand-investment authority with a proven appetite for motorsport.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "GM Defense and Anduril signed a teaming agreement in October 2023 on autonomy, battery electrification and propulsion; Cadillac F1 Team is General Motors' works entry, so the introduction runs through the parent",
+   "cited_source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.gmdefensellc.com/site/us/en/gm-defense/home/news-and-events/news.detail.html/Pages/news/us/en/2023/oct/1010-gmdefense.html",
+     "excerpt": "GM Defense LLC, 10 Oct 2023 (also PR Newswire 301951785, C4ISRNET): GM Defense, a subsidiary of General Motors, and Anduril Industries announce a teaming agreement to collaborate on defence programme capture, focused on autonomy, battery electrification and new propulsion technologies and on integrating Anduril technologies with GM Defense mobility solutions; both showed Infantry Squad Vehicle variants with Anduril systems at AUSA 2023. Cadillac F1 Team is General Motors' works entry (cadillacf1team.com; sponsor table: General Motors, TWG Motorsports).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 13 May 2026 Anduril announced a $5B Series H led by Thrive Capital and Andreessen Horowitz at a $61B valuation, double the $30.5B set by the $2.5B round of June 2025;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Costa Mesa, California; Arsenal-1, a $1B hyperscale factory in Columbus, Ohio, targeting production from July 2026; US Army enterprise contract with a $20B ceiling awarded 13 March 2026",
+   "cited_source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.army.mil/article/291074/u_s_army_awards_enterprise_contract_for_it_commercial_solutions",
+     "excerpt": "U.S. Army (army.mil), 13 Mar 2026, with Bloomberg, TechCrunch and DefenseScoop the following day: the Army awarded Anduril a ten-year enterprise contract with a ceiling of up to $20 billion, consolidating more than 120 separate procurement actions into one framework centred on the Lattice software; the $20 billion is a maximum potential value, not an obligated amount.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "total funding is now more than $11B over eight rounds.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The US Army awarded Anduril a ten-year enterprise contract with a $20B ceiling on 13 March 2026, consolidating more than 120 procurement actions into one framework built around the Lattice software.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.army.mil/article/291074/u_s_army_awards_enterprise_contract_for_it_commercial_solutions",
+     "excerpt": "U.S. Army (army.mil), 13 Mar 2026, with Bloomberg, TechCrunch and DefenseScoop the following day: the Army awarded Anduril a ten-year enterprise contract with a ceiling of up to $20 billion, consolidating more than 120 separate procurement actions into one framework centred on the Lattice software; the $20 billion is a maximum potential value, not an obligated amount.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Arsenal-1, the $1B hyperscale factory in Columbus, Ohio, targets production from July 2026.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://breakingdefense.com/2025/01/anduril-picks-columbus-for-new-arsenal-factory-targets-july-2026-to-begin-production/",
+     "excerpt": "Breaking Defense and Manufacturing Dive, Jan 2025; Ohio Governor's office; Ohio Tech News, 2026: Anduril chose Columbus, Ohio for Arsenal-1, a $1 billion hyperscale manufacturing facility, targeting July 2026 to begin production; 2026 coverage reports the plant 'goes live in days'.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "For a brand that spends on two Cup races a season with Hendrick, the step up to a three-year F1 seat is proportionate to a $5B raise.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Anduril's guest list is Pentagon, Congressional, allied-government and prime-contractor audiences, plus the venture and public-market investors who priced the $61B round.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+     "excerpt": "TechCrunch, Bloomberg and GovConWire, 13 May 2026, reporting the company announcement 'Anduril Announces $5B Series H Raise as it Scales to Meet the Demands of Evolving Modern Warfare': a $5 billion Series H led by returning investors Thrive Capital and Andreessen Horowitz at a $61 billion valuation, double the $30.5 billion set by the $2.5 billion round of June 2025; total funding now more than $11 billion over eight rounds. CEO Brian Schimpf: the financing funds manufacturing capacity, R&D and the infrastructure to field defence systems at scale. Revenue is not disclosed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Miami GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 6: Miami GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
