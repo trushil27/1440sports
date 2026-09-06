@@ -630,24 +630,25 @@ def write_site(data: dict[str, Any], out_dir: Path, src: Path = SITE_SRC) -> Pat
 
 
 def _write_brief_pages(data: dict[str, Any], out_dir: Path) -> int:
-    """A real page per brief at ``brief/<n>/index.html``.
+    """A real page per brief at ``<n>/index.html``, with ``brief/<n>/`` kept as an alias.
 
     The emailed link used to be ``…/#/brief/127`` — a hash fragment, which reads like an
     internal anchor rather than an address (operator, 6 Sep 2026). Each full case already
     renders a complete, self-contained, brand-styled page, so it is written out as its own
-    directory and the link becomes ``…/brief/127/``. Static, no server rewrite, works the
-    same on GitHub Pages, Netlify or anywhere else."""
+    directory and the link becomes ``…/127`` — as short as an address can be without a
+    domain of our own (operator, 6 Sep 2026). ``…/brief/127/`` still resolves, so links
+    already sent keep working. Static, no server rewrite, identical on GitHub Pages,
+    Netlify or an organisation site."""
     written = 0
     for e in data.get("briefs") or []:
         page, number = e.get("page_html"), e.get("number")
         if not page or number is None or int(number) < 0:
             continue
-        folder = out_dir / "brief" / str(number)
-        folder.mkdir(parents=True, exist_ok=True)
+        folders = [out_dir / str(number), out_dir / "brief" / str(number)]
         nav = "font-family:'Poppins',Arial,sans-serif;font-size:11px;letter-spacing:.16em;"
         nav += "text-transform:uppercase;padding:14px 22px;border-bottom:1px solid #ddd9d0;"
         nav += "background:#fbfaf7"
-        link = 'style="color:#191a48;text-decoration:none"'
+        link = 'style="color:#191a48;text-decoration:none"'  # depth fixed per folder below
         pdf = ""
         if e.get("pdf_url"):
             pdf = (
@@ -660,7 +661,11 @@ def _write_brief_pages(data: dict[str, Any], out_dir: Path) -> int:
             f'<a href="../../" {link}>&larr; 1440 Intelligence Desk</a>{pdf}</div>'
         )
         html = page.replace("<body>", "<body>\n" + back, 1) if "<body>" in page else back + page
-        (folder / "index.html").write_text(html, encoding="utf-8")
+        for folder in folders:
+            folder.mkdir(parents=True, exist_ok=True)
+            depth = "../" * len(folder.relative_to(out_dir).parts)
+            page_html = html.replace("../../", depth)
+            folder.joinpath("index.html").write_text(page_html, encoding="utf-8")
         written += 1
     return written
 

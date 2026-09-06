@@ -26,13 +26,13 @@ PANEL = "#f4f3ee"
 
 
 def brief_url(app_base_url: str, number: int | str) -> str:
-    """``<base>/brief/<n>/`` — a real address, not an in-page anchor.
+    """``<base>/<n>`` — the shortest real address the desk can have without its own domain.
 
     The export writes each brief as its own static page (``site_export._write_brief_pages``),
     so the link needs no "#" and no server rewrite. It read as ``…/#/brief/127`` before, which
     looks like an internal fragment in an email (operator, 6 Sep 2026); and before that it was
     ``…//brief/127``, which opened the front page because the app is hash-routed internally."""
-    return f"{(app_base_url or '').rstrip('/')}/brief/{number}/"
+    return f"{(app_base_url or '').rstrip('/')}/{number}"
 
 
 def _verdict(d: dict[str, Any]) -> str:

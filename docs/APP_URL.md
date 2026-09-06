@@ -12,7 +12,7 @@ setting either way.
 
 ## Option A — Netlify (fastest, already built, ~5 minutes)
 
-Result: **`https://1440-intelligence.netlify.app/#/brief/127`** — or whatever name you claim.
+Result: **`https://1440-intelligence.netlify.app/127`** — or whatever name you claim.
 
 The code for this already exists (`intel/netlify.py`), and the daily job deploys there
 automatically as soon as the two secrets are present.
@@ -36,7 +36,7 @@ Done. The next daily run deploys the desk there and every email link points at i
 
 ## Option B — a free GitHub organisation (no third party, best-looking URL)
 
-Result: **`https://1440sports-intel.github.io/#/brief/127`** — no personal name, no DNS, no
+Result: **`https://1440sports-intel.github.io/127`** — no personal name, no DNS, no
 outside service.
 
 This repo does **not** move. A second, site-only repo receives the built app, so nothing
@@ -79,3 +79,18 @@ email link changes; `intel.mail_brief.brief_url` builds the address from it.
 
 If DNS ever becomes available, `docs/APP_DOMAIN.md` has the custom-domain route, which beats
 both.
+
+---
+
+## How short can the link get?
+
+`https://1440sports-intel.github.io/127` is the floor without a domain of our own.
+
+* The **path** is already one segment: each brief is written to `site/<number>/index.html`,
+  so brief 127 is `/127`. (`/brief/127/` still resolves, so any link already sent keeps
+  working.)
+* The **host** cannot shrink further. `https://1440sports-intel` on its own is not a valid
+  web address — every public address needs a registered domain ending such as `.com` or
+  `.io`, and `1440sports-intel.github.io` IS that ending, provided free by GitHub. Dropping
+  `.github.io` means owning a domain, which means a DNS record. If that ever becomes
+  possible, `docs/APP_DOMAIN.md` turns the link into `https://intel.1440sports.com/127`.

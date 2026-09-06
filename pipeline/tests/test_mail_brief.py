@@ -27,14 +27,14 @@ def test_link_is_a_real_page_address():
     # static page, so the link is a plain address.
     assert (
         mail_brief.brief_url("https://trushil27.github.io/1440sports/", 127)
-        == "https://trushil27.github.io/1440sports/brief/127/"
+        == "https://trushil27.github.io/1440sports/127"
     )
     assert mail_brief.brief_url("https://1440sports-intel.github.io", 9) == (
-        "https://1440sports-intel.github.io/brief/9/"
+        "https://1440sports-intel.github.io/9"
     )
     # no "#", and no double slash from a base that already ends in one
     assert "#" not in mail_brief.brief_url("https://x.test///", 1)
-    assert mail_brief.brief_url("https://x.test///", 1) == "https://x.test/brief/1/"
+    assert mail_brief.brief_url("https://x.test///", 1) == "https://x.test/1"
 
 
 def test_plain_text_body_is_sectioned_not_one_block():
@@ -43,14 +43,14 @@ def test_plain_text_body_is_sectioned_not_one_block():
         assert heading in body, heading
     assert "Fluidstack — 76/100 · HOT" in body
     assert "Gary Wu" in body
-    assert "https://trushil27.github.io/1440sports/brief/127/" in body
+    assert "https://trushil27.github.io/1440sports/127" in body
     # the verdict comes before the detail, so a phone reader gets the call first
     assert body.index("THE CALL") < body.index("THE SIGNAL")
 
 
 def test_html_card_carries_the_facts_and_one_button():
     html = mail_brief.brief_html(_brief(), _settings())
-    assert html.count('<a href="https://trushil27.github.io/1440sports/brief/127/"') == 1
+    assert html.count('<a href="https://trushil27.github.io/1440sports/127"') == 1
     for bit in (
         "Fluidstack",
         "76/100",
