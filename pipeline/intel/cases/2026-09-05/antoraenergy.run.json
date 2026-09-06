@@ -1,0 +1,715 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-09-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-hwyj7meq/2026-09-05/antoraenergy.pdf",
+     "web": "/tmp/case-pdf-hwyj7meq/2026-09-05/antoraenergy.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Antora Energy",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "top ranking score",
+     "company": "Antora Energy",
+     "decision": "selected",
+     "signal_date": "2026-07-30"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Antora Energy",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 16,
+    "ops_fit": 13,
+    "ranking": 71,
+    "urgency": 12,
+    "capacity": 16,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 3,
+     "product_to_need": 3,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Andretti Formula E",
+   "source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+   "trigger_date": "2026-07-30",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 128,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-hwyj7meq/2026-09-05/antoraenergy.web.html",
+  "brief_data": {
+   "hq": "Sunnyvale, California (factory in San Jose)",
+   "deck": "Antora, the Californian thermal-battery maker whose 5 GWh South Dakota system is one of the largest storage projects in the world, closed an oversubscribed $550M Series C on 30 July 2026, co-led by G2 Venture Partners and Eclipse, to build a second US factory for industry and data centres.",
+   "risks": [
+    {
+     "label": "HALO, NOT WORKSTREAM",
+     "detail": "Thermal batteries do not run a race car; the value is audience and brand, not engineering.",
+     "counter": "Tie renewal to a pipeline metric: utility and hyperscaler meetings booked at Austin and Miami."
+    },
+    {
+     "label": "VALUATION IS REPORTED",
+     "detail": "The $2.47B valuation comes from Crunchbase News, not the company; the raise is earmarked for factories.",
+     "counter": "Anchor on the confirmed $550M and $770M totals and price the entry under $3M a year."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private ($550M Series C, Jul 2026; $2.47B reported)",
+   "company": "Antora Energy",
+   "gridfit": [
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "TAKEN",
+     "detail": "Shell",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "us_stage",
+    "category_open"
+   ],
+   "sources": [
+    "https://www.antora.com/company",
+    "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+    "https://www.bloomberg.com/news/articles/2026-07-30/battery-startup-raises-550-million-amid-boom-in-ai-data-centers",
+    "https://news.crunchbase.com/clean-tech-and-energy/battery-storage-startup-antora-550m-series-c/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Andrew Ponec before the Jeddah opener to confirm the round and the second-factory timeline on the record, agree an Austin E-Prix announcement window, and size an Official Energy Storage Partner entry at Andretti Formula E for Seasons 13-15.",
+    "value": [
+     {
+      "text": "A 50 MW thermal battery is an industrial asset; it will not sit in the garage or power the pit lane. The partnership's value is commercial and it should be sold that way: an American energy brand on an American car in a championship built on electrification.",
+      "label": "Honest MODE B halo"
+     },
+     {
+      "text": "Antora brings a guest list the team's other partners want to meet: utility executives, industrial plant owners, hyperscaler energy buyers and state policymakers. Hospitality at Austin and Miami, and a shared industrial-customer programme through TWG Motorsports, turn those guests into pipeline for both sides.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Co-produced explainers on stored heat versus race-day energy recovery, factory-floor content from San Jose and the second US hub, and driver appearances at Antora customer sites and industry events. TWG AI's presence on the same car gives an AI-and-energy pairing that mirrors the data-centre story Antora sells.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Energy Storage Partner designation, sidepod branding, Austin and Miami hospitality, driver and engineering access for Antora's channels, and a documented option to step up to the Cadillac F1 programme under the same ownership.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Antora closed an oversubscribed $550M Series C on 30 July 2026, co-led by G2 Venture Partners and Eclipse, with Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures joining existing backers Decarbonization Partners, Breakthrough Energy Ventures, Lowercarbon Capital, Trust Ventures and Impact Science Ventures. Total funding is $770M. Crunchbase News reports a $2.47B valuation; the company has not stated one, so the brief treats it as reported.",
+      "label": "Trigger"
+     },
+     {
+      "text": "On 19 May 2026 Antora and POET commissioned a 50 MW / 5 GWh thermal battery at POET's Big Stone City bioprocessing plant in South Dakota, more than 200 batteries, built in under twelve months and one of the largest storage installations in the world. The raise ten weeks later is the scale-up money: a second US manufacturing hub and large projects. A company moving from first plant to national roll-out is at the point where a brand gets built.",
+      "label": "Proof plant, then capital"
+     },
+     {
+      "text": "Bloomberg headlined the round 'amid boom in AI data centers'. Antora says it has signed agreements with hyperscale data-centre operators but has not named them or disclosed capacity. The buyers it needs to reach next are utility executives, industrial CFOs and hyperscaler energy teams, and the message is cheap, round-the-clock power made in America.",
+      "label": "The data-centre framing"
+     },
+     {
+      "text": "Formula E's GEN4 era opens with the Jeddah double-header on 18-19 December 2026. Season 13 then brings a new Austin E-Prix at Circuit of The Americas on 6 February 2027 and the Miami E-Prix on 20 February 2027. A deal agreed this autumn puts Antora on an American car for both US rounds in its first season.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Andretti Formula E's roster is TWG AI as primary and AI partner, Quest Global for engineering services, Crowe UK for audit and advisory, Reflo for sustainable sportswear and TWG Motorsports as owner, with Nissan powertrains from Season 13. The sponsor table shows no energy, storage or utility brand on the team: Official Energy Storage Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Andretti is run from Indianapolis, the only US-owned team on the Formula E grid, and its parent TWG Motorsports also operates the Cadillac Formula 1 team with General Motors. An American energy company whose pitch is reindustrialisation belongs on the American car, and the same owner gives a credible route to F1 if Antora's scale and budget grow.",
+      "label": "The American team"
+     },
+     {
+      "text": "Austin on 6 February 2027 is a new venue at Circuit of The Americas and Miami follows on 20 February. Both sit in the states and markets where Antora's industrial and utility customers and the data-centre developers it is courting are based.",
+      "label": "Two US rounds in one month"
+     },
+     {
+      "text": "Formula E's on-track narrative is energy management: how much you store, how efficiently you recover it and when you deploy it. Antora's business is storing cheap electricity and releasing it when it is worth most. That is a content line the team can run all season without inventing a technical link that does not exist.",
+      "label": "A story the team can tell"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Envision Racing",
+      "reason": "The team's owner, Envision Group, includes the battery maker Envision AESC and the wind and storage business Envision Energy: an energy-storage brand on that car competes with the owner. Paysafe also became title partner on 14 August 2026."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "TotalEnergies holds the energy lane; the rest of the roster is electronic components (Mouser, TTI, Molex, KYOCERA AVX)."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell is the energy partner."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "Castrol occupies the energy and lubricants lane; the team's open categories are listed as none."
+     },
+     {
+      "team": "Porsche Formula E Team",
+      "reason": "TDK, a battery and component maker, is the official technology partner; a storage brand would clash."
+     },
+     {
+      "team": "Nissan Formula E Team · Mahindra Racing · Cupra Kiro · Citroën Racing",
+      "reason": "Open but not chosen: manufacturer entries with no US base or US rounds story; none offers the American audience or the F1 step-up that Andretti does."
+     }
+    ]
+   },
+   "date_long": "05 SEP 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Andretti Formula E",
+   "value_mode": "B",
+   "bottom_line": "A $550M round closed on 30 July, one of the largest cleantech raises of the year, a 5 GWh proof plant running in South Dakota, and two US E-Prix in February: Antora has the budget, the story and the stage. Andretti's energy lane is open and its owner offers a path to F1.",
+   "footer_date": "5 SEP 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Round closed 30 Jul; GEN4 opener in December, Austin and Miami in February.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 16,
+     "note": "$550M raised, $770M in total; capital is earmarked for factories.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Electrification and US reindustrialisation; B2B industrial audience.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No listing or deadline; second-factory launch is the soft trigger.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 13,
+     "note": "MODE B: no trackside use; open lane, US rounds, owner path to F1.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Antora announced on 30 July that it had closed $550M of Series C funding, co-led by G2 Venture Partners and Eclipse, with Ribbit Capital, Salesforce Ventures, StepStone and John Doerr joining Breakthrough Energy Ventures, Lowercarbon and Decarbonization Partners. Total funding stands at $770M; Crunchbase News reports a $2.47B valuation, which the company has not stated. The money funds a second US manufacturing hub and large projects. The proof point landed in May: a 50 MW / 5 GWh thermal battery at POET's Big Stone City plant, built in under twelve months and now delivering energy.",
+   "the_case_p2": "Bloomberg framed the raise around the data-centre boom: Antora stores cheap electricity as heat in solid carbon blocks and returns it around the clock as heat or power, the load-shifting story hyperscalers and utilities are buying. The company says it has signed agreements with hyperscale operators but has not named them. A brand that sells to industrial CFOs, utilities and data-centre developers now needs a national stage on which to say 'reindustrialise America' out loud.",
+   "track_label": "",
+   "brief_number": "128",
+   "claims_total": 15,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$550M Series C closed 30 Jul 2026, co-led by G2 Venture Partners and Eclipse; total funding $770M; valuatio…",
+     "value": "$550M",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America"
+    },
+    {
+     "fact": "Total funding stands at $770M;",
+     "value": "$770M",
+     "claim_id": 631,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "Crunchbase News reports a $2.47B valuation, which the company has not stated.",
+     "value": "$2.47B",
+     "claim_id": 632,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Energy Storage · Thermal Batteries for Industry & Data Centres",
+   "value_content": "MODE B - halo, stated honestly: a 50 MW thermal battery has no place in a garage. The mechanics are commercial. Official Energy Storage Partner designation and sidepod placement; hospitality at Austin and Miami for utility, hyperscaler and industrial buyers and state policymakers; co-produced content setting stored heat against the team's race-day energy management; and a step-up path to F1 through the same owner as Antora scales.",
+   "value_section": true,
+   "why_team_para": "Andretti Formula E is the American team on the grid, run from Indianapolis by TWG Motorsports, which also operates the Cadillac F1 team. Its roster is TWG AI, Quest Global, Crowe UK and Reflo, and the sponsor table shows no energy or storage brand: the lane is open. GEN4 brings Nissan powertrains, Jake Dennis and Felipe Drugovich. For Antora the audience matters more than the podium: industrial buyers, utilities and hyperscalers at Austin and Miami, on an American car.",
+   "deal_arch_para": "Entry as Official Energy Storage Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15 (2026/27 to 2028/29), covering the second-factory build and the first hyperscaler projects. Estimated $1.5-2.5M a year. Scope: sidepod branding, Austin and Miami hospitality, engineering content, an industrial-customer programme through TWG Motorsports, and an option to step up to the Cadillac F1 team from 2028.",
+   "footer_company": "ANTORA ENERGY",
+   "why_team_label": "WHY ANDRETTI FORMULA E",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 30 July; the second-factory site is the next announcement. Formula E's GEN4 era opens in Jeddah on 18 December, and Season 13 adds a new Austin E-Prix on 6 February 2027 with Miami a fortnight later: two US rounds in Antora's first year at scale.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 128",
+   "decision_maker_bio": "Ponec co-founded Antora with Justin Briggs and David Bierman and fronts every raise; a first sports partnership is his call. Path: Bierman, Co-Founder and Chief Commercial Officer; Briggs, Co-Founder and COO, who owns policy and communications; Rene Griemens, CFO. No chief marketing officer is listed.",
+   "decision_maker_name": "Andrew Ponec",
+   "decision_maker_role": "Co-Founder & CEO, Antora Energy",
+   "opening_angle_intro": "Lead with the American stage.",
+   "opening_angle_quote": "&ldquo;Andrew, you just raised $550M to reindustrialise America. The American Formula E team races in Austin and Miami in February with an open energy lane, and its owner also runs the Cadillac F1 team. 25 minutes to see what the seat costs?&rdquo;",
+   "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Andrew Ponec, Co-Founder & CEO at Antora Energy",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.antora.com/company",
+     "excerpt": "Antora company page (search summary; domain egress-blocked): Andrew Ponec, Co-Founder and CEO; Justin Briggs, Co-Founder and COO, overseeing business operations, policy, communications, talent and EHS; David Bierman, Co-Founder and Chief Commercial Officer. Crunchbase and The Org list Rene Griemens as Chief Financial Officer (former CFO of Volocopter and Kreditech). No chief marketing officer appears on any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Andrew Ponec, Co-Founder & CEO, Antora Energy at Antora Energy",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.antora.com/company",
+     "excerpt": "Antora company page (search summary; domain egress-blocked): Andrew Ponec, Co-Founder and CEO; Justin Briggs, Co-Founder and COO, overseeing business operations, policy, communications, talent and EHS; David Bierman, Co-Founder and Chief Commercial Officer. Crunchbase and The Org list Rene Griemens as Chief Financial Officer (former CFO of Volocopter and Kreditech). No chief marketing officer appears on any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$550M Series C closed 30 Jul 2026, co-led by G2 Venture Partners and Eclipse; total funding $770M; valuation of $2.47B reported by Crunchbase News, not stated by the company",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+     "excerpt": "Antora press release on Business Wire, 30 Jul 2026 (search summary; page egress-blocked): 'Antora Closes $550 Million in Series C Funding to Meet Surging Energy Demand and Reindustrialize America'. Oversubscribed round co-led by G2 Venture Partners and Eclipse; new investors Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures; existing investors Decarbonization Partners, Impact Science Ventures, Trust Ventures, Breakthrough Energy Ventures and Lowercarbon Capital. Proceeds accelerate large-scale projects, expand production and establish a second U.S. manufacturing hub. No valuation stated.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Antora, the Californian thermal-battery maker whose 5 GWh South Dakota system is one of the largest storage projects in the world, closed an oversubscribed $550M Series C on 30 July 2026, co-led by G2 Venture Partners and Eclipse, to build a second US factory for industry and data centres.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+     "excerpt": "Antora press release on Business Wire, 30 Jul 2026 (search summary; page egress-blocked): 'Antora Closes $550 Million in Series C Funding to Meet Surging Energy Demand and Reindustrialize America'. Oversubscribed round co-led by G2 Venture Partners and Eclipse; new investors Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures; existing investors Decarbonization Partners, Impact Science Ventures, Trust Ventures, Breakthrough Energy Ventures and Lowercarbon Capital. Proceeds accelerate large-scale projects, expand production and establish a second U.S. manufacturing hub. No valuation stated.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "G2 Venture Partners and Eclipse (co-leads); new: Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group, Liberty Mutual Strategic Ventures; existing: Decarbonization Partners, Breakthrough Energy Ventures, Lowercarbon Capital, Trust Ventures, Impact Science Ventures",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+     "excerpt": "Antora press release on Business Wire, 30 Jul 2026 (search summary; page egress-blocked): 'Antora Closes $550 Million in Series C Funding to Meet Surging Energy Demand and Reindustrialize America'. Oversubscribed round co-led by G2 Venture Partners and Eclipse; new investors Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures; existing investors Decarbonization Partners, Impact Science Ventures, Trust Ventures, Breakthrough Energy Ventures and Lowercarbon Capital. Proceeds accelerate large-scale projects, expand production and establish a second U.S. manufacturing hub. No valuation stated.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Antora announced on 30 July that it had closed $550M of Series C funding, co-led by G2 Venture Partners and Eclipse, with Ribbit Capital, Salesforce Ventures, StepStone and John Doerr joining Breakthrough Energy Ventures, Lowercarbon and Decarbonization Partners.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+     "excerpt": "Antora press release on Business Wire, 30 Jul 2026 (search summary; page egress-blocked): 'Antora Closes $550 Million in Series C Funding to Meet Surging Energy Demand and Reindustrialize America'. Oversubscribed round co-led by G2 Venture Partners and Eclipse; new investors Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures; existing investors Decarbonization Partners, Impact Science Ventures, Trust Ventures, Breakthrough Energy Ventures and Lowercarbon Capital. Proceeds accelerate large-scale projects, expand production and establish a second U.S. manufacturing hub. No valuation stated.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$550M Series C closed 30 Jul 2026 to build a second US thermal-battery factory and deploy large-scale projects",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+     "excerpt": "Antora press release on Business Wire, 30 Jul 2026 (search summary; page egress-blocked): 'Antora Closes $550 Million in Series C Funding to Meet Surging Energy Demand and Reindustrialize America'. Oversubscribed round co-led by G2 Venture Partners and Eclipse; new investors Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures; existing investors Decarbonization Partners, Impact Science Ventures, Trust Ventures, Breakthrough Energy Ventures and Lowercarbon Capital. Proceeds accelerate large-scale projects, expand production and establish a second U.S. manufacturing hub. No valuation stated.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Total funding stands at $770M;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://news.crunchbase.com/clean-tech-and-energy/battery-storage-startup-antora-550m-series-c/",
+     "excerpt": "Crunchbase News, 30 Jul 2026 (search summary): the Series C closed at a $2.47 billion valuation; San Jose-based Antora has raised $770 million since its 2017 inception; $150 million Series B in February 2024. The valuation is press-reported, not in the company release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No energy-storage brand on any Formula E team roster in the sponsor table; the closest lanes are Envision Group (owner of Envision Racing, which also owns the battery maker Envision AESC), TotalEnergies at DS Penske and Shell at Lola Yamaha ABT",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "TotalEnergies → DS Penske (team_major, active); Shell → Lola Yamaha ABT Formula E Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Crunchbase News reports a $2.47B valuation, which the company has not stated.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://news.crunchbase.com/clean-tech-and-energy/battery-storage-startup-antora-550m-series-c/",
+     "excerpt": "Crunchbase News, 30 Jul 2026 (search summary): the Series C closed at a $2.47 billion valuation; San Jose-based Antora has raised $770 million since its 2017 inception; $150 million Series B in February 2024. The valuation is press-reported, not in the company release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "50 MW / 5 GWh thermal battery commissioned at POET's Big Stone City plant in South Dakota on 19 May 2026, built in under 12 months; Bloomberg framed the raise around the AI data-centre boom",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-07-30/battery-startup-raises-550-million-amid-boom-in-ai-data-centers",
+     "excerpt": "Bloomberg, 30 Jul 2026 ('Battery Startup Raises $550 Million Amid Boom in AI Data Centers', search summary): Antora raised $550 million to expand production of thermal batteries that help heavy industry and data centres lower costs and run on renewable power; the money funds a second factory; Andrew Ponec is CEO and co-founder. Antora stores low-cost electricity as heat in insulated blocks of solid carbon and delivers it around the clock as heat or power. Energy-Storage.News / Latitude Media: Antora says it has signed agreements with hyperscale data-centre operators but has not named them or disclosed capacity.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $550M round closed on 30 July, one of the largest cleantech raises of the year, a 5 GWh proof plant running in South Dakota, and two US E-Prix in February: Antora has the budget, the story and the stage.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+     "excerpt": "Antora press release on Business Wire, 30 Jul 2026 (search summary; page egress-blocked): 'Antora Closes $550 Million in Series C Funding to Meet Surging Energy Demand and Reindustrialize America'. Oversubscribed round co-led by G2 Venture Partners and Eclipse; new investors Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures; existing investors Decarbonization Partners, Impact Science Ventures, Trust Ventures, Breakthrough Energy Ventures and Lowercarbon Capital. Proceeds accelerate large-scale projects, expand production and establish a second U.S. manufacturing hub. No valuation stated.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Sunnyvale, California; thermal-battery factory in San Jose expanded with two new facilities in spring 2026; second US manufacturing hub funded by the Series C",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+     "excerpt": "Antora press release on Business Wire, 30 Jul 2026 (search summary; page egress-blocked): 'Antora Closes $550 Million in Series C Funding to Meet Surging Energy Demand and Reindustrialize America'. Oversubscribed round co-led by G2 Venture Partners and Eclipse; new investors Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures; existing investors Decarbonization Partners, Impact Science Ventures, Trust Ventures, Breakthrough Energy Ventures and Lowercarbon Capital. Proceeds accelerate large-scale projects, expand production and establish a second U.S. manufacturing hub. No valuation stated.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Antora closed an oversubscribed $550M Series C on 30 July 2026, co-led by G2 Venture Partners and Eclipse, with Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures joining existing backers Decarbonization Partners, Breakthrough Energy Ventures, Lowercarbon Capital, Trust Ventures and Impact Science Ventures.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+     "excerpt": "Antora press release on Business Wire, 30 Jul 2026 (search summary; page egress-blocked): 'Antora Closes $550 Million in Series C Funding to Meet Surging Energy Demand and Reindustrialize America'. Oversubscribed round co-led by G2 Venture Partners and Eclipse; new investors Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures; existing investors Decarbonization Partners, Impact Science Ventures, Trust Ventures, Breakthrough Energy Ventures and Lowercarbon Capital. Proceeds accelerate large-scale projects, expand production and establish a second U.S. manufacturing hub. No valuation stated.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+     "excerpt": "Antora press release on Business Wire, 30 Jul 2026 (search summary; page egress-blocked): 'Antora Closes $550 Million in Series C Funding to Meet Surging Energy Demand and Reindustrialize America'. Oversubscribed round co-led by G2 Venture Partners and Eclipse; new investors Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures; existing investors Decarbonization Partners, Impact Science Ventures, Trust Ventures, Breakthrough Energy Ventures and Lowercarbon Capital. Proceeds accelerate large-scale projects, expand production and establish a second U.S. manufacturing hub. No valuation stated.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Total funding is $770M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://news.crunchbase.com/clean-tech-and-energy/battery-storage-startup-antora-550m-series-c/",
+     "excerpt": "Crunchbase News, 30 Jul 2026 (search summary): the Series C closed at a $2.47 billion valuation; San Jose-based Antora has raised $770 million since its 2017 inception; $150 million Series B in February 2024. The valuation is press-reported, not in the company release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Crunchbase News reports a $2.47B valuation;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://news.crunchbase.com/clean-tech-and-energy/battery-storage-startup-antora-550m-series-c/",
+     "excerpt": "Crunchbase News, 30 Jul 2026 (search summary): the Series C closed at a $2.47 billion valuation; San Jose-based Antora has raised $770 million since its 2017 inception; $150 million Series B in February 2024. The valuation is press-reported, not in the company release.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Austin E-Prix on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix at Circuit of The Americas on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Miami E-Prix on 20 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026)",
+     "excerpt": "round 5: Miami E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "run_date": "2026-09-05",
+ "signal_date": "2026-07-30",
+ "stem": "antoraenergy",
+ "number": 128,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Antora Energy",
+  "signal_date": "2026-07-30",
+  "score": 71,
+  "tier": "WARM",
+  "track": 1,
+  "person": "Andrew Ponec",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+  "industry_meta": "Energy Storage · Thermal Batteries for Industry & Data Centres · Sunnyvale, California",
+  "recommended_team": "Andretti Formula E",
+  "recommended_series": "FE",
+  "timing_label": "WARM",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$550M Series C closed 30 Jul 2026, co-led by G2 Venture Partners and Eclipse; total funding $770M; valuation of $2.47B reported by Crunchbase News, not stated by the company",
+   "investors": "G2 Venture Partners and Eclipse (co-leads); new: Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group, Liberty Mutual Strategic Ventures; existing: Decarbonization Partners, Breakthrough Energy Ventures, Lowercarbon Capital, Trust Ventures, Impact Science Ventures",
+   "revenue": "",
+   "trigger": "$550M Series C closed 30 Jul 2026 to build a second US thermal-battery factory and deploy large-scale projects",
+   "competitor_signal": "No energy-storage brand on any Formula E team roster in the sponsor table; the closest lanes are Envision Group (owner of Envision Racing, which also owns the battery maker Envision AESC), TotalEnergies at DS Penske and Shell at Lola Yamaha ABT",
+   "strategic_hook": "50 MW / 5 GWh thermal battery commissioned at POET's Big Stone City plant in South Dakota on 19 May 2026, built in under 12 months; Bloomberg framed the raise around the AI data-centre boom",
+   "us_presence": "HQ Sunnyvale, California; thermal-battery factory in San Jose expanded with two new facilities in spring 2026; second US manufacturing hub funded by the Series C",
+   "alumni_match": "",
+   "taxonomy_category": "D1",
+   "ops_fit_note": "MODE B halo: no trackside use for a 50 MW thermal battery; value is the US industrial and hyperscaler audience at Austin and Miami"
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 16,
+   "brand_fit": 14,
+   "urgency": 12,
+   "ops_fit": 13,
+   "ops_fit_subscores": {
+    "product_to_need": 3,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 3
+   }
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": ["ponec", "briggs", "bierman", "griemens", "chief commercial", "no chief marketing"],
+   "url": "https://www.antora.com/company",
+   "excerpt": "Antora company page (search summary; domain egress-blocked): Andrew Ponec, Co-Founder and CEO; Justin Briggs, Co-Founder and COO, overseeing business operations, policy, communications, talent and EHS; David Bierman, Co-Founder and Chief Commercial Officer. Crunchbase and The Org list Rene Griemens as Chief Financial Officer (former CFO of Volocopter and Kreditech). No chief marketing officer appears on any listing found.",
+   "method": "manual"
+  },
+  {
+   "needles": ["$550m", "series c", "30 jul", "30 july", "g2 venture", "eclipse", "second u.s. manufacturing", "second us", "second factory", "ribbit", "salesforce ventures", "stepstone", "doerr", "westly", "liberty mutual", "activate", "oversubscribed", "funding round", "reindustriali"],
+   "url": "https://www.businesswire.com/news/home/20260730278399/en/Antora-Closes-$550-Million-in-Series-C-Funding-to-Meet-Surging-Energy-Demand-and-Reindustrialize-America",
+   "excerpt": "Antora press release on Business Wire, 30 Jul 2026 (search summary; page egress-blocked): 'Antora Closes $550 Million in Series C Funding to Meet Surging Energy Demand and Reindustrialize America'. Oversubscribed round co-led by G2 Venture Partners and Eclipse; new investors Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures; existing investors Decarbonization Partners, Impact Science Ventures, Trust Ventures, Breakthrough Energy Ventures and Lowercarbon Capital. Proceeds accelerate large-scale projects, expand production and establish a second U.S. manufacturing hub. No valuation stated.",
+   "method": "manual"
+  },
+  {
+   "needles": ["$2.47b", "$770m", "crunchbase", "reported", "san jose", "2017"],
+   "url": "https://news.crunchbase.com/clean-tech-and-energy/battery-storage-startup-antora-550m-series-c/",
+   "excerpt": "Crunchbase News, 30 Jul 2026 (search summary): the Series C closed at a $2.47 billion valuation; San Jose-based Antora has raised $770 million since its 2017 inception; $150 million Series B in February 2024. The valuation is press-reported, not in the company release.",
+   "method": "manual"
+  },
+  {
+   "needles": ["bloomberg", "data-centre", "data centre", "data center", "hyperscaler", "hyperscale", "carbon block", "solid carbon", "around the clock", "heat or power"],
+   "url": "https://www.bloomberg.com/news/articles/2026-07-30/battery-startup-raises-550-million-amid-boom-in-ai-data-centers",
+   "excerpt": "Bloomberg, 30 Jul 2026 ('Battery Startup Raises $550 Million Amid Boom in AI Data Centers', search summary): Antora raised $550 million to expand production of thermal batteries that help heavy industry and data centres lower costs and run on renewable power; the money funds a second factory; Andrew Ponec is CEO and co-founder. Antora stores low-cost electricity as heat in insulated blocks of solid carbon and delivers it around the clock as heat or power. Energy-Storage.News / Latitude Media: Antora says it has signed agreements with hyperscale data-centre operators but has not named them or disclosed capacity.",
+   "method": "manual"
+  },
+  {
+   "needles": ["5 gwh", "50 mw", "poet", "big stone", "south dakota", "19 may", "twelve months", "12 months", "200 thermal", "grok"],
+   "url": "https://www.antora.com/insights/big-stone-release",
+   "excerpt": "Antora newsroom, 19 May 2026 (search summary; pv magazine USA, ESS News, Power Technology carry the same): Antora and POET commissioned a 50 MW / 5 GWh thermal battery system at POET's Big Stone City bioprocessing facility in South Dakota, more than 200 thermal batteries, advanced from construction to delivering energy in under 12 months, one of the largest energy-storage installations in the world; Grok Ventures provided the project financing.",
+   "method": "manual"
+  },
+  {
+   "needles": ["$150m", "series b", "february 2024", "feb 2024", "decarbonization partners", "blackrock", "temasek"],
+   "url": "https://www.antora.com/insights/series-b",
+   "excerpt": "Antora newsroom, 22 Feb 2024 (search summary; ARPA-E and ESG Today carry the same): $150 million Series B led by Decarbonization Partners (BlackRock and Temasek), with Emerson Collective, GS Futures, The Nature Conservancy and a NextEra Energy Resources subsidiary, alongside existing investors Trust Ventures, Lowercarbon Capital, Breakthrough Energy Ventures, BHP Ventures, Overture and Grok Ventures.",
+   "method": "manual"
+  },
+  {
+   "needles": ["sunnyvale", "50,000", "two new facilities", "spring 2026", "doubling", "factory", "manufacturing"],
+   "url": "https://www.antora.com/insights/ca-manufacturing",
+   "excerpt": "Antora newsroom (search summaries of antora.com/insights/manufacturing-facility, Oct 2023, and antora.com/insights/ca-manufacturing, spring 2026): a 50,000-square-foot thermal-battery factory in San Jose, California; in spring 2026 two new facilities were added, doubling manufacturing capacity with space for subcomponent manufacturing, R&D and warehousing. Company directory listings give the headquarters as Sunnyvale, California.",
+   "method": "manual"
+  },
+  {
+   "needles": ["indianapolis", "twg motorsports", "cadillac", "nissan powertrain", "gen4", "dennis", "drugovich", "american team", "season 13"],
+   "url": "https://andrettiglobal.com/news/2026/07/andretti-formula-e-to-partner-with-nissan-for-formula-e-gen4-era/",
+   "excerpt": "Andretti Global, Jul 2026 (search summary; domain egress-blocked): Andretti Formula E will run Nissan powertrains as a customer team for the GEN4 era under a multi-year agreement from Season 13; Jake Dennis continues, joined by Felipe Drugovich. Andretti Global is based at 8278 Georgetown Road, Indianapolis; its parent TWG Motorsports also operates the Cadillac Formula 1 team with General Motors from 2026 (Wikipedia / The Race / twgmotorsports.com).",
+   "method": "manual"
+  },
+  {
+   "needles": ["twg ai", "quest global", "crowe", "reflo", "envision group", "envision aesc", "aesc", "totalenergies", "shell", "castrol", "tdk", "sponsor table", "roster", "energy lane", "lane is open", "no energy", "energy or storage"],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + Andretti Global / Formula E, Sep 2026)",
+   "excerpt": "Sponsor table: Andretti Formula E — TWG AI (AI, primary partner), Quest Global (engineering services), Crowe UK (audit/advisory), Reflo (sustainable sportswear), TWG Motorsports (parent), Nissan powertrain from Season 13; no energy, storage or utility brand. Envision Racing — Envision Group (title/parent; its group includes wind-turbine maker Envision Energy and battery maker Envision AESC, per envision-group.com). DS Penske — TotalEnergies (lubricants) plus Mouser, TTI, Molex, KYOCERA AVX. Lola Yamaha ABT — Shell. Jaguar TCS Racing — TCS, Castrol. Porsche — TDK named official technology partner in team_profiles. Nissan, Mahindra, Cupra Kiro and Citroën carry no energy partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": ["austin", "miami", "jeddah", "18 dec", "18 december", "6 feb", "6 february", "20 feb", "20 february", "circuit of the americas", "e-prix"],
+   "url": "seeds/calendar_fe.json (Formula E Season 13 calendar, announced 23 Jun 2026)",
+   "excerpt": "Formula E Season 13 calendar table: GEN4 opener Jeddah E-Prix double-header 18-19 Dec 2026; Mexico City 16 Jan 2027; Austin E-Prix at Circuit of The Americas 6 Feb 2027 (new venue); Miami E-Prix 20 Feb 2027; London at Brands Hatch 29-30 May 2027; Tokyo finale 24-25 Jul 2027.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Antora Energy",
+  "industry_meta": "Energy Storage · Thermal Batteries for Industry & Data Centres",
+  "hq": "Sunnyvale, California (factory in San Jose)",
+  "ticker": "Private ($550M Series C, Jul 2026; $2.47B reported)",
+  "deck": "Antora, the Californian thermal-battery maker whose 5 GWh South Dakota system is one of the largest storage projects in the world, closed an oversubscribed $550M Series C on 30 July 2026, co-led by G2 Venture Partners and Eclipse, to build a second US factory for industry and data centres.",
+  "score": 71,
+  "timing_label": "WARM",
+  "series_label": "FE",
+  "team_label": "Andretti Formula E",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Antora announced on 30 July that it had closed $550M of Series C funding, co-led by G2 Venture Partners and Eclipse, with Ribbit Capital, Salesforce Ventures, StepStone and John Doerr joining Breakthrough Energy Ventures, Lowercarbon and Decarbonization Partners. Total funding stands at $770M; Crunchbase News reports a $2.47B valuation, which the company has not stated. The money funds a second US manufacturing hub and large projects. The proof point landed in May: a 50 MW / 5 GWh thermal battery at POET's Big Stone City plant, built in under twelve months and now delivering energy.",
+  "the_case_p2": "Bloomberg framed the raise around the data-centre boom: Antora stores cheap electricity as heat in solid carbon blocks and returns it around the clock as heat or power, the load-shifting story hyperscalers and utilities are buying. The company says it has signed agreements with hyperscale operators but has not named them. A brand that sells to industrial CFOs, utilities and data-centre developers now needs a national stage on which to say 'reindustrialise America' out loud.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 30 July; the second-factory site is the next announcement. Formula E's GEN4 era opens in Jeddah on 18 December, and Season 13 adds a new Austin E-Prix on 6 February 2027 with Miami a fortnight later: two US rounds in Antora's first year at scale.",
+  "why_team_label": "WHY ANDRETTI FORMULA E",
+  "why_team_para": "Andretti Formula E is the American team on the grid, run from Indianapolis by TWG Motorsports, which also operates the Cadillac F1 team. Its roster is TWG AI, Quest Global, Crowe UK and Reflo, and the sponsor table shows no energy or storage brand: the lane is open. GEN4 brings Nissan powertrains, Jake Dennis and Felipe Drugovich. For Antora the audience matters more than the podium: industrial buyers, utilities and hyperscalers at Austin and Miami, on an American car.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+  "value_mode": "B",
+  "value_content": "MODE B - halo, stated honestly: a 50 MW thermal battery has no place in a garage. The mechanics are commercial. Official Energy Storage Partner designation and sidepod placement; hospitality at Austin and Miami for utility, hyperscaler and industrial buyers and state policymakers; co-produced content setting stored heat against the team's race-day energy management; and a step-up path to F1 through the same owner as Antora scales.",
+  "deal_arch_para": "Entry as Official Energy Storage Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15 (2026/27 to 2028/29), covering the second-factory build and the first hyperscaler projects. Estimated $1.5-2.5M a year. Scope: sidepod branding, Austin and Miami hospitality, engineering content, an industrial-customer programme through TWG Motorsports, and an option to step up to the Cadillac F1 team from 2028.",
+  "decision_maker_name": "Andrew Ponec",
+  "decision_maker_role": "Co-Founder & CEO, Antora Energy",
+  "decision_maker_bio": "Ponec co-founded Antora with Justin Briggs and David Bierman and fronts every raise; a first sports partnership is his call. Path: Bierman, Co-Founder and Chief Commercial Officer; Briggs, Co-Founder and COO, who owns policy and communications; Rene Griemens, CFO. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the American stage.",
+  "opening_angle_quote": "&ldquo;Andrew, you just raised $550M to reindustrialise America. The American Formula E team races in Austin and Miami in February with an open energy lane, and its owner also runs the Cadillac F1 team. 25 minutes to see what the seat costs?&rdquo;",
+  "score_cells": [
+   ["TIMING", "16", "/ 20", "Round closed 30 Jul; GEN4 opener in December, Austin and Miami in February."],
+   ["CAPACITY", "16", "/ 20", "$550M raised, $770M in total; capital is earmarked for factories."],
+   ["BRAND FIT", "14", "/ 20", "Electrification and US reindustrialisation; B2B industrial audience."],
+   ["URGENCY", "12", "/ 20", "No listing or deadline; second-factory launch is the soft trigger."],
+   ["OPS FIT", "13", "/ 20", "MODE B: no trackside use; open lane, US rounds, owner path to F1."]
+  ],
+  "risks": [
+   ["HALO, NOT WORKSTREAM", "Thermal batteries do not run a race car; the value is audience and brand, not engineering.", "Tie renewal to a pipeline metric: utility and hyperscaler meetings booked at Austin and Miami."],
+   ["VALUATION IS REPORTED", "The $2.47B valuation comes from Crunchbase News, not the company; the raise is earmarked for factories.", "Anchor on the confirmed $550M and $770M totals and price the entry under $3M a year."]
+  ],
+  "bottom_line": "A $550M round closed on 30 July, one of the largest cleantech raises of the year, a 5 GWh proof plant running in South Dakota, and two US E-Prix in February: Antora has the budget, the story and the stage. Andretti's energy lane is open and its owner offers a path to F1.",
+  "signals": ["funding_event", "us_stage", "category_open"],
+  "footer_company": "ANTORA ENERGY",
+  "footer_date": "5 SEP 2026",
+  "extended": {
+   "why_now": [
+    {"label": "Trigger", "text": "Antora closed an oversubscribed $550M Series C on 30 July 2026, co-led by G2 Venture Partners and Eclipse, with Ribbit Capital, Salesforce Ventures, Activate Capital, John Doerr, Westly Group, StepStone Group and Liberty Mutual Strategic Ventures joining existing backers Decarbonization Partners, Breakthrough Energy Ventures, Lowercarbon Capital, Trust Ventures and Impact Science Ventures. Total funding is $770M. Crunchbase News reports a $2.47B valuation; the company has not stated one, so the brief treats it as reported."},
+    {"label": "Proof plant, then capital", "text": "On 19 May 2026 Antora and POET commissioned a 50 MW / 5 GWh thermal battery at POET's Big Stone City bioprocessing plant in South Dakota, more than 200 batteries, built in under twelve months and one of the largest storage installations in the world. The raise ten weeks later is the scale-up money: a second US manufacturing hub and large projects. A company moving from first plant to national roll-out is at the point where a brand gets built."},
+    {"label": "The data-centre framing", "text": "Bloomberg headlined the round 'amid boom in AI data centers'. Antora says it has signed agreements with hyperscale data-centre operators but has not named them or disclosed capacity. The buyers it needs to reach next are utility executives, industrial CFOs and hyperscaler energy teams, and the message is cheap, round-the-clock power made in America."},
+    {"label": "Calendar window", "text": "Formula E's GEN4 era opens with the Jeddah double-header on 18-19 December 2026. Season 13 then brings a new Austin E-Prix at Circuit of The Americas on 6 February 2027 and the Miami E-Prix on 20 February 2027. A deal agreed this autumn puts Antora on an American car for both US rounds in its first season."}
+   ],
+   "why_team": [
+    {"label": "The open lane", "text": "Andretti Formula E's roster is TWG AI as primary and AI partner, Quest Global for engineering services, Crowe UK for audit and advisory, Reflo for sustainable sportswear and TWG Motorsports as owner, with Nissan powertrains from Season 13. The sponsor table shows no energy, storage or utility brand on the team: Official Energy Storage Partner is a clean category at a team-partner price."},
+    {"label": "The American team", "text": "Andretti is run from Indianapolis, the only US-owned team on the Formula E grid, and its parent TWG Motorsports also operates the Cadillac Formula 1 team with General Motors. An American energy company whose pitch is reindustrialisation belongs on the American car, and the same owner gives a credible route to F1 if Antora's scale and budget grow."},
+    {"label": "Two US rounds in one month", "text": "Austin on 6 February 2027 is a new venue at Circuit of The Americas and Miami follows on 20 February. Both sit in the states and markets where Antora's industrial and utility customers and the data-centre developers it is courting are based."},
+    {"label": "A story the team can tell", "text": "Formula E's on-track narrative is energy management: how much you store, how efficiently you recover it and when you deploy it. Antora's business is storing cheap electricity and releasing it when it is worth most. That is a content line the team can run all season without inventing a technical link that does not exist."}
+   ],
+   "value": [
+    {"label": "Honest MODE B halo", "text": "A 50 MW thermal battery is an industrial asset; it will not sit in the garage or power the pit lane. The partnership's value is commercial and it should be sold that way: an American energy brand on an American car in a championship built on electrification."},
+    {"label": "Commercial lift for the team", "text": "Antora brings a guest list the team's other partners want to meet: utility executives, industrial plant owners, hyperscaler energy buyers and state policymakers. Hospitality at Austin and Miami, and a shared industrial-customer programme through TWG Motorsports, turn those guests into pipeline for both sides."},
+    {"label": "Content and ecosystem", "text": "Co-produced explainers on stored heat versus race-day energy recovery, factory-floor content from San Jose and the second US hub, and driver appearances at Antora customer sites and industry events. TWG AI's presence on the same car gives an AI-and-energy pairing that mirrors the data-centre story Antora sells."},
+    {"label": "What the team gives back", "text": "Official Energy Storage Partner designation, sidepod branding, Austin and Miami hospitality, driver and engineering access for Antora's channels, and a documented option to step up to the Cadillac F1 programme under the same ownership."}
+   ],
+   "ruled_out": [
+    {"team": "Envision Racing", "reason": "The team's owner, Envision Group, includes the battery maker Envision AESC and the wind and storage business Envision Energy: an energy-storage brand on that car competes with the owner. Paysafe also became title partner on 14 August 2026."},
+    {"team": "DS Penske", "reason": "TotalEnergies holds the energy lane; the rest of the roster is electronic components (Mouser, TTI, Molex, KYOCERA AVX)."},
+    {"team": "Lola Yamaha ABT Formula E Team", "reason": "Shell is the energy partner."},
+    {"team": "Jaguar TCS Racing", "reason": "Castrol occupies the energy and lubricants lane; the team's open categories are listed as none."},
+    {"team": "Porsche Formula E Team", "reason": "TDK, a battery and component maker, is the official technology partner; a storage brand would clash."},
+    {"team": "Nissan Formula E Team · Mahindra Racing · Cupra Kiro · Citroën Racing", "reason": "Open but not chosen: manufacturer entries with no US base or US rounds story; none offers the American audience or the F1 step-up that Andretti does."}
+   ],
+   "ask": "A 25-minute call with Andrew Ponec before the Jeddah opener to confirm the round and the second-factory timeline on the record, agree an Austin E-Prix announcement window, and size an Official Energy Storage Partner entry at Andretti Formula E for Seasons 13-15."
+  }
+ },
+ "note": "# Antora Energy → Andretti Formula E — verification log (N° 128, 5 Sep 2026)\n\nBuilt in-session at no API cost with Claude as scanner, verifier and writer through the\npipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page\nrender ran as code. `antoraenergy.run.json` is the case record.\n\n**Sandbox limitation, stated plainly:** direct fetches of antora.com, businesswire.com,\nbloomberg.com, news.crunchbase.com, theorg.com, andrettiglobal.com, twgmotorsports.com and the\ntrade press (pv magazine, Energy-Storage.News, ESG Today, Canary Media) were blocked by the\negress proxy. Every claim below was checked against the search summary of the primary page\nnamed as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link.\nConfidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, honestly labelled\n\nThe $550M Series C (30 Jul 2026, co-led by G2 Venture Partners and Eclipse) is company-announced\n(Business Wire and antora.com/insights/series-c) and carried by Bloomberg, Crunchbase News,\nEnergy-Storage.News, ESG Today and pv magazine. **The $2.47B valuation is NOT in the company\nrelease**; it appears in Crunchbase News and secondary aggregators. The brief says 'reported' every\ntime it appears and the second risk row is VALUATION IS REPORTED. The desk row's investor list was\ncorrected: Breakthrough Energy Ventures and Lowercarbon are EXISTING backers, not new participants.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Andrew Ponec, Co-Founder & CEO | VERIFIED | antora.com/company (summary); Crunchbase; Bloomberg |\n| Justin Briggs, Co-Founder & COO (policy, communications); David Bierman, Co-Founder & CCO; Rene Griemens, CFO; no CMO listed | VERIFIED | antora.com/company (summary); Crunchbase / The Org person profiles |\n| $550M Series C, 30 Jul 2026, G2 + Eclipse co-leads, investor list, second US manufacturing hub | VERIFIED | Business Wire release (summary) |\n| $770M total funding; 2017 inception; San Jose base | REPORTED | Crunchbase News, 30 Jul 2026 |\n| $2.47B valuation | REPORTED | Crunchbase News (not in the release) |\n| Data-centre framing; signed but unnamed hyperscaler agreements | REPORTED | Bloomberg 30 Jul 2026; Energy-Storage.News / Latitude Media |\n| 50 MW / 5 GWh POET Big Stone City system, 19 May 2026, >200 batteries, <12 months | VERIFIED | antora.com/insights/big-stone-release (summary); pv magazine, Power Technology |\n| $150M Series B, Feb 2024, Decarbonization Partners lead | VERIFIED | antora.com/insights/series-b (summary); ARPA-E |\n| HQ Sunnyvale; San Jose factory; two new facilities spring 2026 | REPORTED | antora.com manufacturing posts (summaries); directory listings |\n| Andretti: Indianapolis base; TWG Motorsports also operates Cadillac F1; Nissan GEN4 powertrain; Dennis + Drugovich | VERIFIED | andrettiglobal.com (summary); Wikipedia; The Race |\n| Andretti roster (TWG AI, Quest Global, Crowe UK, Reflo); no energy partner; Envision Group, TotalEnergies, Shell, Castrol lanes | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Jeddah 18-19 Dec 2026; Austin 6 Feb 2027; Miami 20 Feb 2027 | VERIFIED | calendar table (`seeds/calendar_fe.json`) |\n\n## Screen-outs and things not claimed\n\n- **No motorsport tie found** for Ponec, Briggs, Bierman or Griemens after two searches; `leadership_ties` is empty.\n- **No revenue figure** is used: none is public.\n- **Founding year** is left out of the brief: Crunchbase News says 2017, Bierman's bio says 2018.\n- **Hyperscaler customers** are not named because Antora has not named them.\n- **Deal size ($1.5-2.5M a year) is an ESTIMATE**, labelled as such.\n- **Envision Racing** is ruled out on the owner's own battery business (Envision AESC) and the new\n  Paysafe title partnership (14 Aug 2026, not yet in the sponsor table, so it is named only on the\n  app page, never as a 'Brand at Team' sentence in the brief).\n- **Score 71, not the desk row's 76**: MODE B halo, capital earmarked for factories, no external deadline.\n"
+}
