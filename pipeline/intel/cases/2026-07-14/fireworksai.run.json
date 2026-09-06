@@ -1,0 +1,902 @@
+{
+ "run": {
+  "id": 132,
+  "date": "2026-07-14",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-im3up1nz/2026-07-14/fireworksai.pdf",
+     "web": "/tmp/case-pdf-im3up1nz/2026-07-14/fireworksai.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Fireworks AI",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 21
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 196,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 200,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 77,
+     "reason": "top ranking score",
+     "company": "Fireworks AI",
+     "decision": "selected",
+     "signal_date": "2026-07-16"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Fireworks AI",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 77,
+   "score_breakdown": {
+    "cap": null,
+    "base": 77,
+    "total": 77,
+    "timing": 17,
+    "ops_fit": 15,
+    "ranking": 77,
+    "urgency": 12,
+    "capacity": 19,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 77,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 77,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Visa Cash App Racing Bulls",
+   "source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "trigger_date": "2026-07-16",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 162,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-im3up1nz/2026-07-14/fireworksai.web.html",
+  "brief_data": {
+   "hq": "Redwood City, California (founded 2022)",
+   "deck": "Fireworks AI, the Redwood City inference cloud founded by the Meta engineers behind PyTorch, announced a $1.505B Series D at a $17.5B valuation on 16 July 2026, led by Atreides, Index Ventures and TCV with Nvidia participating, as annualised revenue passed $1B, fivefold in a year on the company's figures.",
+   "risks": [
+    {
+     "label": "REVENUE IS A COMPANY FIGURE",
+     "detail": "The $1B run-rate and fivefold growth are company statements, not audited; Cursor was once over half of revenue.",
+     "counter": "Anchor capacity on the closed round; ask for the customer mix on the call."
+    },
+    {
+     "label": "TWO INFERENCE LOGOS ALREADY",
+     "detail": "Groq at McLaren and CoreWeave at Aston Martin own the narrative; a third entrant can read as late.",
+     "counter": "Sell the fine-tuned-on-your-data deployment on the Confluent stream, not a chip logo or a wind-tunnel name."
+    }
+   ],
+   "score": 77,
+   "ticker": "Private ($17.5B; $1.505B Series D, Jul 2026)",
+   "company": "Fireworks AI",
+   "gridfit": [
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies, Google Cloud",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "CoreWeave, NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "TAKEN",
+     "detail": "Microsoft",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "category_whitespace"
+   ],
+   "sources": [
+    "https://fireworks.ai/team",
+    "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+    "https://www.cnbc.com/2026/07/16/fireworks-nvidia-cloud-ai-startup-value.html",
+    "https://www.bloomberg.com/news/articles/2026-05-27/fireworks-ai-in-talks-for-funding-at-15-billion-valuation",
+    "https://www.businesswire.com/news/home/20251028604819/en/Fireworks-AI-Raises-$250M-Series-C-to-Lead-the-AI-Inference-Market"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Lin Qiao before the United States GP to confirm the customer mix behind the $1B run-rate, walk through an inference deployment on Racing Bulls' data stream, and size an Official AI Inference Partner entry, part-paid in credits, against the team's 2027 roster.",
+    "value": [
+     {
+      "text": "Open-weight models fine-tuned on the team's own telemetry and strategy history, served by Fireworks at low latency: engineer copilots that answer questions over live session data, anomaly detection on the million-points-a-second stream, and post-session analysis across the archive. Fireworks runs this shape for Uber, DoorDash and Notion; the team supplies the data and Confluent supplies the pipe.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Hosted inference means no on-premises hardware or cost-cap capital, and inference credits can form part of the consideration. The team gains a capability it would otherwise have to build; the partnership carries a usage story that grows each season.",
+      "label": "Cost-cap arithmetic"
+     },
+     {
+      "text": "Fireworks sells to engineering and platform leaders at enterprises such as Uber, DoorDash, Samsung and Verizon, an audience the team's current partners do not bring. US-race hospitality for those accounts and a reference deployment give Racing Bulls a new guest list and Fireworks a customer story it can show on a car.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Official AI Inference Partner designation, sidepod or halo placement alongside Confluent, naming of the team's model environment, hospitality at Austin and Las Vegas, and engineering content from Faenza and Milton Keynes on how the models are used.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 16 July 2026 Fireworks announced a $1.505B Series D at a $17.5B post-money valuation, led by Atreides Management, Index Ventures and TCV, with Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital and 20VC among the participants. Bloomberg had reported on 27 May that the company was in talks at $15B; it priced above that.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The Series C of October 2025 was $250M at $4B, led by Lightspeed, Index Ventures and Evantic with Sequoia participating, and brought total funding to $327M; two years earlier Sequoia led a $52M round at $552M with Nvidia, AMD and MongoDB. Total funding after the Series D is about $1.8B (reported). A company re-priced fourfold in nine months has a story for enterprise buyers and, eventually, the public market.",
+      "label": "Fourfold in nine months"
+     },
+     {
+      "text": "Fireworks says annualised revenue run-rate has passed $1B, fivefold year on year, and that tokens served rose from 15 trillion to more than 40 trillion a day. Named customers include Uber, DoorDash, Notion, Samsung, Verizon, Cursor and Upwork; Cursor once provided more than half of revenue and the mix has since diversified. Lin Qiao told CNBC headcount is about 200 and will reach 600 by the end of 2026. None of these numbers is audited, and the brief says so.",
+      "label": "Revenue and scale, on the company's figures"
+     },
+     {
+      "text": "The United States GP in Austin (October) and the Las Vegas GP (November) are the US rounds left in 2026, and teams close their 2027 partner rosters in the fourth quarter. A deal agreed before Austin lands in the same quarter as the hiring plan and is activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Racing Bulls carries Confluent for real-time data streaming (more than a million data points a second between car, pit wall and factory, multi-year since October 2025), Dynatrace as Official Observability and Performance Analytics Technology Partner, RebelDot as a software partner, and Neural Concept's engineering AI in aerodynamic development. There is no AI-inference, cloud or model partner: Official AI Inference Partner is a clean category that completes a stack the team has already advertised.",
+      "label": "A data stack without an inference layer"
+     },
+     {
+      "text": "Racing Bulls is the Red Bull sister team with a younger audience and a partner tier priced below the works teams. For a developer-first brand whose buyers are engineering leaders, the fit is closer than a luxury-coded works team, and the price leaves room for inference credits to form part of the consideration.",
+      "label": "A challenger team at a challenger price"
+     },
+     {
+      "text": "The team is based in Faenza, Italy, with aerodynamic and design facilities at the Red Bull Technology Campus in Milton Keynes since January 2025. Both consume the Confluent stream; an inference layer serves both without on-premises capital.",
+      "label": "Two sites fed by one stream"
+     },
+     {
+      "text": "Groq at McLaren, CoreWeave at Aston Martin, Oracle at Red Bull, Microsoft at Mercedes and Alpine, HP and IBM at Ferrari, Core Scientific and TWG AI at Cadillac, Claude and Airia at Williams and ElevenLabs at Audi each occupy the compute, cloud or AI lane. Haas is open but has no comparable real-time data stack to complete.",
+      "label": "Ruled out by the table"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Groq holds the inference lane; Google Cloud and Dell cover cloud and hardware."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "CoreWeave is Official AI Cloud Computing Partner, a direct rival."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and the cloud incumbent."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team · BWT Alpine F1 Team",
+      "reason": "Microsoft holds the cloud lane at both; Mercedes also carries Meta AI and AMD."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "HP (title) and IBM cover compute and cloud services."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Core Scientific and TWG AI occupy compute and AI."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Claude is Official Thinking Partner and Airia holds the AI-platform lane; VAST holds data."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "ElevenLabs holds the AI lane."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "Open but not chosen: no real-time data stack comparable to Racing Bulls' Confluent and Dynatrace stack for an inference layer to complete."
+     }
+    ]
+   },
+   "date_long": "14 JUL 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Visa Cash App Racing Bulls",
+   "value_mode": "A",
+   "bottom_line": "A $1.505B Series D at $17.5B, revenue past $1B on the company's figures and headcount tripling put Fireworks at peak brand-investment authority. Racing Bulls has the real-time data stack and no inference partner, Groq at McLaren and CoreWeave at Aston Martin proved the category, and two US races remain inside the window.",
+   "footer_date": "14 JUL 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round 16 Jul; Austin and Las Vegas inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 19,
+     "note": "$1.5B raise at $17.5B; $1B+ run-rate (company figure).",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "Developer-first B2B brand; enterprise names to show.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No listing stated; headcount tripling by December.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: inference on the Confluent stream; lane open.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Bloomberg reported on 27 May that Fireworks was in talks at $15B with Index co-leading; the round priced above that on 16 July at $17.5B, led by Atreides Management, Index Ventures and TCV, with Nvidia, Lightspeed, Evantic, Bessemer, Menlo, Insight, Ontario Teachers' and Lone Pine participating. It follows a $250M Series C at $4B in October 2025, a fourfold step in nine months; total funding is about $1.8B (reported). The company says annualised revenue passed $1B, up fivefold, and tokens served rose from 15 to over 40 trillion a day. Headcount goes from about 200 to 600 by year-end.",
+   "the_case_p2": "Inference has been sold to the grid twice: Groq at McLaren since September 2025 and CoreWeave at Aston Martin since May 2025, each signed in the year the vendor needed a public story. Fireworks is the inference company whose customers, Uber, DoorDash, Notion, Samsung and Verizon, are names a paddock recognises, and it has no seat. A $17.5B private company with $1B of revenue has the public market as its next audience.",
+   "track_label": "",
+   "brief_number": "162",
+   "claims_total": 22,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$1.505B Series D at a $17.5B post-money valuation, led by Atreides Management, Index Ventures and TCV (comp…",
+     "value": "$1.505B",
+     "claim_id": 685,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution"
+    },
+    {
+     "fact": "Annualised revenue run-rate above $1B, up fivefold year on year (company statement, Jul 2026; not audited)",
+     "value": "$1B",
+     "claim_id": 687,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution"
+    },
+    {
+     "fact": "Bloomberg reported on 27 May that Fireworks was in talks at $15B with Index co-leading;",
+     "value": "$15B",
+     "claim_id": 695,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "the round priced above that on 16 July at $17.5B, led by Atreides Management, Index Ventures and TCV, with…",
+     "value": "$17.5B",
+     "claim_id": 696,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "It follows a $250M Series C at $4B in October 2025, a fourfold step in nine months;",
+     "value": "$250M",
+     "claim_id": 697,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "total funding is about $1.8B (reported).",
+     "value": "$1.8B",
+     "claim_id": 698,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Infrastructure · Inference Cloud for Open Models",
+   "value_content": "MODE A - operational. The inference layer on the Confluent stream: open-weight models fine-tuned on the team's own telemetry and strategy history, served at low latency for engineer copilots during sessions and for post-session analysis, hosted by Fireworks so no cost-cap capital is spent. Fireworks runs this shape for Uber and DoorDash. Part of the consideration in inference credits; for Fireworks, a reference deployment to show enterprise buyers.",
+   "value_section": true,
+   "why_team_para": "Racing Bulls has built the grid's most explicit real-time data stack without an inference layer: Confluent streams more than a million data points a second between car, pit wall and factory, Dynatrace is Official Observability and Performance Analytics partner, RebelDot builds software, and there is no AI-inference, cloud or model partner. Faenza and the Milton Keynes aero site are fed by that stream. A challenger team with a younger audience suits a developer-first brand, priced below the works teams.",
+   "deal_arch_para": "Entry as Official AI Inference Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the hiring plan and any listing window. Estimated $3-5M a year, part-payable in inference credits. Scope: sidepod or halo placement, naming of the team's model environment, US-race hospitality for enterprise accounts, engineering content from Faenza.",
+   "footer_company": "FIREWORKS AI",
+   "why_team_label": "WHY VISA CASH APP RACING BULLS",
+   "claims_verified": 22,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 16 July and headcount is set to triple by December; brand budgets follow the hiring plan. The United States GP in October and the Las Vegas GP in November fall inside the window, and teams close 2027 rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Qiao led PyTorch at Meta as Senior Director of Engineering before founding Fireworks in 2022 with six PyTorch colleagues; she fronts every raise. Path: Dmytro Dzhulgakov, CTO and Co-Founder. No chief marketing officer, COO, chief revenue officer or CFO is named on the company's listings.",
+   "decision_maker_name": "Lin Qiao",
+   "decision_maker_role": "CEO & Co-Founder, Fireworks AI",
+   "opening_angle_intro": "Lead with the stack that lacks a brain.",
+   "opening_angle_quote": "&ldquo;Lin, Racing Bulls streams a million data points a second and has no inference partner on top of it. You have just raised $1.5B at $17.5B with revenue past $1B; Groq and CoreWeave took their seats at this stage. 25 minutes before Austin?&rdquo;",
+   "value_section_label": "VALUE TO VISA CASH APP RACING BULLS",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Lin Qiao, CEO & Co-Founder at Fireworks AI",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://fireworks.ai/team",
+     "excerpt": "Fireworks AI leadership (company team page; Contrary Research; Index Ventures): Lin Qiao, CEO & Co-Founder (Senior Director of Engineering at Meta 2015-2022, led PyTorch; previously LinkedIn and IBM; PhD UC Santa Barbara); Dmytro Dzhulgakov, CTO & Co-Founder (PyTorch core maintainer); co-founders Benny Chen, Chenyu Zhao, Dmytro Ivchenko, James Reed and Pawel Garbacki, seven former Meta PyTorch engineers, founded late 2022. No chief marketing officer, COO or chief revenue officer is named on the listings found; a CFO exists but is not named on them (recorded as a gap, not guessed).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Lin Qiao, CEO & Co-Founder, Fireworks AI at Fireworks AI",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://fireworks.ai/team",
+     "excerpt": "Fireworks AI leadership (company team page; Contrary Research; Index Ventures): Lin Qiao, CEO & Co-Founder (Senior Director of Engineering at Meta 2015-2022, led PyTorch; previously LinkedIn and IBM; PhD UC Santa Barbara); Dmytro Dzhulgakov, CTO & Co-Founder (PyTorch core maintainer); co-founders Benny Chen, Chenyu Zhao, Dmytro Ivchenko, James Reed and Pawel Garbacki, seven former Meta PyTorch engineers, founded late 2022. No chief marketing officer, COO or chief revenue officer is named on the listings found; a CFO exists but is not named on them (recorded as a gap, not guessed).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1.505B Series D at a $17.5B post-money valuation, led by Atreides Management, Index Ventures and TCV (company release, 16 Jul 2026); $250M Series C at $4B in Oct 2025; total funding about $1.8B (reported)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Fireworks AI, the Redwood City inference cloud founded by the Meta engineers behind PyTorch, announced a $1.505B Series D at a $17.5B valuation on 16 July 2026, led by Atreides, Index Ventures and TCV with Nvidia participating, as annualised revenue passed $1B, fivefold in a year on the company's figures.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://fireworks.ai/team",
+     "excerpt": "Fireworks AI leadership (company team page; Contrary Research; Index Ventures): Lin Qiao, CEO & Co-Founder (Senior Director of Engineering at Meta 2015-2022, led PyTorch; previously LinkedIn and IBM; PhD UC Santa Barbara); Dmytro Dzhulgakov, CTO & Co-Founder (PyTorch core maintainer); co-founders Benny Chen, Chenyu Zhao, Dmytro Ivchenko, James Reed and Pawel Garbacki, seven former Meta PyTorch engineers, founded late 2022. No chief marketing officer, COO or chief revenue officer is named on the listings found; a CFO exists but is not named on them (recorded as a gap, not guessed).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Atreides Management, Index Ventures, TCV (leads); Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Bloomberg reported on 27 May that Fireworks was in talks at $15B with Index co-leading;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-05-27/fireworks-ai-in-talks-for-funding-at-15-billion-valuation",
+     "excerpt": "Bloomberg, 27 May 2026 (via Investing.com, TradingView): Fireworks AI in talks to raise at a $15 billion valuation with Index Ventures set to co-lead; the round priced above that on 16 Jul at $17.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Annualised revenue run-rate above $1B, up fivefold year on year (company statement, Jul 2026; not audited)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "the round priced above that on 16 July at $17.5B, led by Atreides Management, Index Ventures and TCV, with Nvidia, Lightspeed, Evantic, Bessemer, Menlo, Insight, Ontario Teachers' and Lone Pine participating.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$1.505B Series D at $17.5B announced 16 Jul 2026, above the $15B Bloomberg reported it was seeking in May",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It follows a $250M Series C at $4B in October 2025, a fourfold step in nine months;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20251028604819/en/Fireworks-AI-Raises-$250M-Series-C-to-Lead-the-AI-Inference-Market",
+     "excerpt": "Fireworks release, 28 Oct 2025: $250M Series C at a $4B valuation led by Lightspeed, Index Ventures and Evantic with Sequoia participating; total funding then $327M. Bloomberg, 11 Jul 2024: $52M round led by Sequoia at a $552M valuation with Nvidia, AMD and MongoDB. Seedtable / toflow put total funding after the Series D at about $1.83B (reported). $4B in Oct 2025 to $17.5B in Jul 2026 is roughly fourfold in nine months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Groq at McLaren (inference chip, Official Partner since Sep 2025); CoreWeave at Aston Martin (Official AI Cloud Computing Partner, May 2025); Oracle at Red Bull; Microsoft at Mercedes; Racing Bulls carries no AI-inference, cloud or model partner",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Groq → McLaren F1 Team (team_major, active); CoreWeave → Aston Martin Aramco F1 Team (team_major, active); Oracle → Oracle Red Bull Racing (team_title, active); Microsoft → Mercedes-AMG Petronas F1 Team (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "total funding is about $1.8B (reported).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20251028604819/en/Fireworks-AI-Raises-$250M-Series-C-to-Lead-the-AI-Inference-Market",
+     "excerpt": "Fireworks release, 28 Oct 2025: $250M Series C at a $4B valuation led by Lightspeed, Index Ventures and Evantic with Sequoia participating; total funding then $327M. Bloomberg, 11 Jul 2024: $52M round led by Sequoia at a $552M valuation with Nvidia, AMD and MongoDB. Seedtable / toflow put total funding after the Series D at about $1.83B (reported). $4B in Oct 2025 to $17.5B in Jul 2026 is roughly fourfold in nine months.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "The inference layer on Racing Bulls' Confluent real-time data stream: open-weight models fine-tuned on the team's own telemetry, hosted by Fireworks; customers include Uber, DoorDash, Notion, Samsung and Verizon (reported)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.cnbc.com/2026/07/16/fireworks-nvidia-cloud-ai-startup-value.html",
+     "excerpt": "CNBC, 16 Jul 2026, and Contrary Research: Fireworks is headquartered in Redwood City, California (Crunchbase address; CNBC's interview dateline says San Mateo) and was founded in 2022. Named customers include Uber, DoorDash, Notion, Samsung, Verizon, Cursor and Upwork; Cursor once accounted for more than half of revenue and the mix has since diversified. Qiao told CNBC the company employs around 200 people and expects headcount to reach 600 by the end of 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The company says annualised revenue passed $1B, up fivefold, and tokens served rose from 15 to over 40 trillion a day.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Redwood City, California; founded 2022 by seven former Meta PyTorch engineers; about 200 staff, headcount planned to reach 600 by end-2026 (CEO to CNBC)",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://fireworks.ai/team",
+     "excerpt": "Fireworks AI leadership (company team page; Contrary Research; Index Ventures): Lin Qiao, CEO & Co-Founder (Senior Director of Engineering at Meta 2015-2022, led PyTorch; previously LinkedIn and IBM; PhD UC Santa Barbara); Dmytro Dzhulgakov, CTO & Co-Founder (PyTorch core maintainer); co-founders Benny Chen, Chenyu Zhao, Dmytro Ivchenko, James Reed and Pawel Garbacki, seven former Meta PyTorch engineers, founded late 2022. No chief marketing officer, COO or chief revenue officer is named on the listings found; a CFO exists but is not named on them (recorded as a gap, not guessed).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $17.5B private company with $1B of revenue has the public market as its next audience.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A $1.505B Series D at $17.5B, revenue past $1B on the company's figures and headcount tripling put Fireworks at peak brand-investment authority.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Groq at McLaren",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Groq → McLaren F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CoreWeave at Aston Martin",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "CoreWeave → Aston Martin Aramco F1 Team (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 16 July 2026 Fireworks announced a $1.505B Series D at a $17.5B post-money valuation, led by Atreides Management, Index Ventures and TCV, with Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital and 20VC among the participants.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Bloomberg had reported on 27 May that the company was in talks at $15B;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-05-27/fireworks-ai-in-talks-for-funding-at-15-billion-valuation",
+     "excerpt": "Bloomberg, 27 May 2026 (via Investing.com, TradingView): Fireworks AI in talks to raise at a $15 billion valuation with Index Ventures set to co-lead; the round priced above that on 16 Jul at $17.5B.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The Series C of October 2025 was $250M at $4B, led by Lightspeed, Index Ventures and Evantic with Sequoia participating, and brought total funding to $327M;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "two years earlier Sequoia led a $52M round at $552M with Nvidia, AMD and MongoDB.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Total funding after the Series D is about $1.8B (reported).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Fireworks says annualised revenue run-rate has passed $1B, fivefold year on year, and that tokens served rose from 15 trillion to more than 40 trillion a day.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260716264405/en/Fireworks-Raises-a-$1.5-Billion-Series-D-to-Lead-the-Specialized-Intelligence-Revolution",
+     "excerpt": "Fireworks release, 16 Jul 2026 (BusinessWire; fireworks.ai blog; OTPP; CNBC, Quartz coverage): $1.505 billion Series D at a $17.5 billion valuation, led by Atreides Management, Index Ventures and TCV, with participation from Nvidia, Lightspeed Venture Partners, Evantic Capital, Bessemer Venture Partners, Menlo Ventures, Insight Partners, Ontario Teachers' Pension Plan, Lone Pine Capital, 20VC and others. The company says it has surpassed $1 billion in annualised revenue run-rate, fivefold year on year, and serves more than 40 trillion tokens a day, up from 15 trillion (company figures, not audited).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "A 25-minute call with Lin Qiao before the United States GP to confirm the customer mix behind the $1B run-rate, walk through an inference deployment on Racing Bulls' data stream, and size an Official AI Inference Partner entry, part-paid in credits, against the team's 2027 roster.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://fireworks.ai/team",
+     "excerpt": "Fireworks AI leadership (company team page; Contrary Research; Index Ventures): Lin Qiao, CEO & Co-Founder (Senior Director of Engineering at Meta 2015-2022, led PyTorch; previously LinkedIn and IBM; PhD UC Santa Barbara); Dmytro Dzhulgakov, CTO & Co-Founder (PyTorch core maintainer); co-founders Benny Chen, Chenyu Zhao, Dmytro Ivchenko, James Reed and Pawel Garbacki, seven former Meta PyTorch engineers, founded late 2022. No chief marketing officer, COO or chief revenue officer is named on the listings found; a CFO exists but is not named on them (recorded as a gap, not guessed).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
