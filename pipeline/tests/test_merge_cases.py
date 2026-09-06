@@ -42,7 +42,7 @@ def test_screened_files_become_review_rows(tmp_path):
     )
     _write(
         cases / "2026-06-01" / "broken.screened.json",
-        {"company": "Broken", "date": "2026-06-01", "verdict": "meh"},
+        {"company": "Broken", "date": "2026-06-01", "verdict": ""},  # no verdict: skipped
     )
     review = tmp_path / "history_review.json"
     _write(review, {"_meta": {}, "rows": {"2026-01-01|Strava": {"status": "keep_flagged"}}})

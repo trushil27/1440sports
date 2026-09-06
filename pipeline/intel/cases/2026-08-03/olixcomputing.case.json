@@ -1,0 +1,366 @@
+{
+ "run_date": "2026-08-03",
+ "signal_date": "2026-08-03",
+ "stem": "olixcomputing",
+ "number": 153,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "OLIX Computing",
+  "signal_date": "2026-08-03",
+  "score": 70,
+  "tier": "HOT",
+  "track": 1,
+  "person": "James Dacombe",
+  "role": "Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://olix.com/news/company-raises-series-b",
+  "industry_meta": "AI Semiconductors · Optical Inference Silicon · London",
+  "recommended_team": "Atlassian Williams Racing",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$312M Series B at a $3.3B valuation announced 3 Aug 2026, led by Fundomo; follows a $220M Series A at just over $1B led by Hummingbird in February 2026",
+   "investors": "Fundomo (lead), Arm, Hudson River Trading and Reed Hastings; existing backers Hummingbird, Crane, Plural, Creandum, Phoenix Court and Transition increased commitments; the UK government's Sovereign AI fund also invested (reported)",
+   "revenue": "",
+   "trigger": "$312M Series B at a $3.3B valuation, announced 3 Aug 2026",
+   "competitor_signal": "Groq has been an Official Partner of McLaren since September 2025 with its inference chips on the car; Arm, now an OLIX investor, sits on Aston Martin Aramco's roster; AMD and Snapdragon are Mercedes partners",
+   "strategic_hook": "First AI systems due to customers in the second half of 2027; hiring silicon, compiler, photonics and systems engineers across London, Bristol, Austin, Toronto and San Francisco; former Wise CFO Matt Briers hired as CFO, Stanford's Nick McKeown to the board",
+   "us_presence": "Offices and hiring in Austin and San Francisco; UK company registered in St Albans (Companies House), London-based",
+   "alumni_match": "",
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE B: no product before H2 2027, so year one is brand and engineering-talent halo; a defined evaluation of OLIX inference systems on the team's machine-learning workloads from 2027"
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 15,
+   "brand_fit": 14,
+   "urgency": 11,
+   "ops_fit": 13,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   }
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "james dacombe",
+    "dacombe"
+   ],
+   "url": "https://find-and-update.company-information.service.gov.uk/company/15585099/officers",
+   "excerpt": "Companies House, OLIX COMPUTING LIMITED (15585099): incorporated 22 March 2024, registered office St Albans; James Robert Dacombe director since incorporation. Press (Tech.eu, DCD, 3 Aug 2026): founder and CEO James Dacombe.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$312m",
+    "$3.3b",
+    "3 aug",
+    "fundomo",
+    "hudson river",
+    "reed hastings",
+    "funding round",
+    "tripling",
+    "tripled"
+   ],
+   "url": "https://olix.com/news/company-raises-series-b",
+   "excerpt": "OLIX newsroom, 3 Aug 2026 (search summary; page blocked to the sandbox): $312M Series B at a $3.3B valuation, led by Fundomo with Arm, Hudson River Trading and Netflix co-founder Reed Hastings; existing investors Hummingbird, Crane, Plural, Creandum, Phoenix Court and Transition increased commitments; Professor Nick McKeown joins the board; first AI systems to customers in H2 2027. Tech.eu and DCD (3 Aug 2026) carry the same figures and say the valuation more than tripled in six months.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$220m",
+    "series a",
+    "february",
+    "hummingbird",
+    "just over $1b"
+   ],
+   "url": "https://siliconangle.com/2026/02/11/photonic-ai-chip-startup-olix-nabs-220m-investment/",
+   "excerpt": "SiliconANGLE, 11 Feb 2026, and Dealroom: OLIX (formerly Flux Computing) raised $220M led by Hummingbird Ventures at a valuation just over $1B; earlier backers include Plural, Vertex Ventures, LocalGlobe and Entrepreneurs First.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "sovereign ai",
+    "government"
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/chip-startup-olix-raises-312m-at-33bn-valuation-backed-by-uk-govt-sovereign-ai-venture-fund/",
+   "excerpt": "DCD, 3 Aug 2026: the UK government's Sovereign AI venture fund announced it had invested in OLIX alongside the Series B (reported; amount not disclosed).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "h2 2027",
+    "second half of 2027",
+    "2027",
+    "bristol",
+    "toronto",
+    "austin",
+    "san francisco",
+    "hiring",
+    "recruit"
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/chip-startup-olix-raises-312m-at-33bn-valuation-backed-by-uk-govt-sovereign-ai-venture-fund/",
+   "excerpt": "DCD and Tech.eu, 3 Aug 2026: the financing funds delivery of the first chip to customers in H2 2027, build-out of the custom silicon platform and manufacturing and supply-chain commitments; OLIX is recruiting silicon, compiler, photonics and systems engineers across London, Austin, Bristol, Toronto and San Francisco.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "briers",
+    "wise",
+    "mckeown",
+    "elvidge",
+    "coo",
+    "no chief marketing",
+    "no cmo"
+   ],
+   "url": "https://tech.eu/2026/08/03/uk-chip-startup-olix-raises-ps312m-at-ps33bn-valuation/",
+   "excerpt": "Tech.eu, 3 Aug 2026: former Wise CFO Matt Briers, who took Wise through its 2021 London direct listing, has joined OLIX as CFO; Nick McKeown (Stanford, co-inventor of software-defined networking) joins the board. Tom Elvidge is listed as COO on LinkedIn (reported). No chief marketing officer is named on any listing found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "st albans",
+    "london",
+    "companies house",
+    "2024"
+   ],
+   "url": "https://find-and-update.company-information.service.gov.uk/company/15585099",
+   "excerpt": "Companies House: OLIX COMPUTING LIMITED, active, incorporated 22 March 2024, registered office Arquen House, St Albans AL3 4PQ. Press describes the company as London-based / UK-based.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "groq",
+    "mclaren",
+    "singapore"
+   ],
+   "url": "https://www.mclaren.com/racing/partners/groq/mclaren-racing-announces-groq-as-an-official-partner/",
+   "excerpt": "McLaren Racing, 26 Sep 2025: Groq becomes an Official Partner of the McLaren Formula 1 Team; its LPU inference chips support analysis and real-time insight; Groq logo on the cars from the 2025 Singapore GP.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "arm",
+    "aston martin",
+    "amd",
+    "snapdragon",
+    "atlassian",
+    "vast",
+    "keeper",
+    "airia",
+    "brillio",
+    "claude",
+    "core scientific",
+    "twg ai",
+    "oracle",
+    "microsoft",
+    "google cloud",
+    "dell",
+    "ibm",
+    "hp ",
+    "hewlett",
+    "elevenlabs",
+    "coreweave",
+    "no semiconductor",
+    "no silicon"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Williams — Atlassian (title), VAST, Keeper, Airia, Brillio, Claude (joined 2026); no semiconductor, GPU or AI-compute partner. McLaren: Groq, Dell, Google Cloud, Arrow Electronics. Aston Martin Aramco: ARM, CoreWeave. Mercedes: AMD, Snapdragon, Hewlett Packard Enterprise. Cadillac: Core Scientific, TWG AI. Red Bull: Oracle. Alpine: Microsoft. Ferrari: HP, IBM. Audi: Hewlett Packard Enterprise departed in the last 12 months, ElevenLabs joined.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "united states gp",
+    "british gp",
+    "las vegas",
+    "italian gp",
+    "fourth quarter"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: Italian GP (round 15, early September), United States GP (round 19, Austin, late October), Las Vegas GP (round 22, November); British GP is round 11 (July).",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "OLIX Computing",
+  "industry_meta": "AI Semiconductors · Optical Inference Silicon",
+  "hq": "London (registered St Albans; founded 2024)",
+  "ticker": "Private ($3.3B; $312M Series B, Aug 2026)",
+  "deck": "OLIX, the London AI-chip company founded in 2024 by James Dacombe, announced a $312M Series B at a $3.3B valuation on 3 August, tripling the $1B mark set by its $220M Series A in February. Arm, Hudson River Trading and Reed Hastings joined; the UK's Sovereign AI fund invested.",
+  "score": 70,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Atlassian Williams Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Fundomo led the round; Arm, Hudson River Trading and Reed Hastings joined, and existing backers Hummingbird, Plural, Creandum, Crane, Phoenix Court and Transition increased their commitments. Six months earlier Hummingbird had led a $220M Series A at just over $1B. OLIX builds specialised inference silicon connected by an optical network, with first systems due to customers in the second half of 2027. It is recruiting engineers across London, Bristol, Austin, Toronto and San Francisco, has hired former Wise CFO Matt Briers as CFO and put Stanford's Nick McKeown on the board.",
+  "the_case_p2": "The grid has already priced AI silicon: Groq became an Official Partner of McLaren in September 2025 with its inference chips on the car from Singapore, and Arm, now an OLIX investor, sits on Aston Martin Aramco's roster. OLIX is the British entrant without a seat. A company that must recruit against Nvidia and sell to hyperscalers before its first chip ships has a brand to build, and now the money to build it.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 3 August and the first systems ship in the second half of 2027, so a three-season deal from 2027 straddles launch. Teams settle 2027 rosters in the fourth quarter, and the United States GP in Austin, where OLIX is hiring, falls in late October.",
+  "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+  "why_team_para": "Williams runs a data-native roster: Atlassian as title partner, VAST for the data platform, Keeper for identity, Airia and Brillio, and Claude as Official Thinking Partner. It carries no semiconductor or AI-compute partner, so Official AI Silicon Partner is a clean category. Grove is a British engineering revival to match a British chip champion, and the team's own arc, a rebuilt technical base chasing far larger incumbents, is OLIX's arc.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+  "value_mode": "B",
+  "value_content": "MODE B - halo with concrete mechanics. OLIX has nothing to deploy before the second half of 2027, so year one is brand and talent: the Williams engineering-recruitment platform for a company hiring in five cities; sovereign-AI storytelling with government backing at Silverstone; Austin hospitality for hyperscaler and capital-markets buyers. From 2027, a defined evaluation of OLIX inference systems on Williams' machine-learning workloads, as an early reference deployment.",
+  "deal_arch_para": "Entry as Official AI Silicon Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, bridging first shipments and a probable listing. Estimated $3-5M a year, stepping up with product delivery; a technical-evaluation clause from 2027. Scope: sidepod or halo placement, engineering-recruitment content, British and United States GP hospitality, an early-access reference programme.",
+  "decision_maker_name": "James Dacombe",
+  "decision_maker_role": "Founder & CEO, OLIX Computing",
+  "decision_maker_bio": "Dacombe founded OLIX in 2024 and has fronted both raises, $220M and $312M, six months apart; a first sports partnership is his call. Path: Tom Elvidge, COO (reported), and Matt Briers, CFO, who took Wise through its 2021 London direct listing. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with Groq and the open lane.",
+  "opening_angle_quote": "&ldquo;James, Groq took its seat at McLaren before its chips mattered on track. Williams has no silicon partner and a British engineering story that reads as yours. 25 minutes before Austin to see what a 2027 start looks like?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round announced 3 Aug; Q4 roster window and Austin inside the horizon."
+   ],
+   [
+    "CAPACITY",
+    "15",
+    "/ 20",
+    "$312M at $3.3B, but cash earmarked for silicon and supply chain."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Deep-tech British champion; B2B audience is hyperscalers and talent."
+   ],
+   [
+    "URGENCY",
+    "11",
+    "/ 20",
+    "No hard deadline; product lands H2 2027, so 2027 start is the hook."
+   ],
+   [
+    "OPS FIT",
+    "13",
+    "/ 20",
+    "MODE B until 2027; open silicon lane at Williams."
+   ]
+  ],
+  "risks": [
+   [
+    "PRE-PRODUCT",
+    "No systems ship before the second half of 2027 and the raise is committed to manufacturing and supply-chain obligations.",
+    "Structure fees to step up with delivery and lead with the talent and sovereign-AI story, which needs no product."
+   ],
+   [
+    "NO MARKETING OWNER",
+    "No chief marketing officer is listed; the founder fronts every announcement and a first sponsorship is his call alone.",
+    "Route the commercial case through CFO Matt Briers, who ran a public-market brand story at Wise."
+   ]
+  ],
+  "bottom_line": "$312M at $3.3B, a government-backed sovereign-AI story and an open silicon lane at a British team make OLIX a 2027 partner to sign in the fourth quarter. The pre-product timeline and the absence of a marketing owner hold the score at 70.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "national_story"
+  ],
+  "footer_company": "OLIX COMPUTING",
+  "footer_date": "3 AUG 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "OLIX announced a $312M Series B at a $3.3B valuation on 3 August 2026, led by Fundomo with Arm, Hudson River Trading and Reed Hastings. The company's own newsroom carries the round; Tech.eu, DCD and The Next Web report the same figures."
+    },
+    {
+     "label": "Tripled in six months",
+     "text": "The $220M Series A in February 2026, led by Hummingbird, priced OLIX at just over $1B. Six months later the Series B priced it at $3.3B. A company re-rated that fast, before its first chip ships, is being valued on narrative, and narrative is what a sponsorship builds."
+    },
+    {
+     "label": "The 2027 launch",
+     "text": "First AI systems are due to customers in the second half of 2027. A three-season partnership starting in 2027 puts the brand on the grid in the launch year, with an evaluation clause that turns the halo into a reference deployment once product exists."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Teams close 2027 partner rosters in the fourth quarter. The United States GP in Austin, where OLIX is recruiting, falls in late October; Las Vegas follows in November. A deal agreed before Austin can be announced there and activated in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Williams carries Atlassian as title partner, VAST for the data platform, Keeper for identity security, Airia and Brillio on the technology side, and Claude as Official Thinking Partner. No semiconductor, GPU or AI-compute partner: Official AI Silicon Partner is a clean category at a team-partner price."
+    },
+    {
+     "label": "A British story for a British team",
+     "text": "OLIX is the UK's sovereign-AI chip bet, with the government's Sovereign AI fund on the register. Williams at Grove is the British engineering revival on the grid. The two stories reinforce each other at Silverstone and in Westminster."
+    },
+    {
+     "label": "The same arc",
+     "text": "Williams is rebuilding a technical base against far larger incumbents; OLIX is doing the same against Nvidia. That parallel gives the partnership a narrative the team can tell on camera without stretching."
+    },
+    {
+     "label": "Talent and the United States",
+     "text": "OLIX is hiring in London, Bristol, Austin, Toronto and San Francisco. An F1 engineering brand is a recruitment asset in every one of those markets, and the Austin office gives the United States GP a home-market activation."
+    }
+   ],
+   "value": [
+    {
+     "label": "Halo with mechanics (Mode B)",
+     "text": "Year one carries no product, so the value is brand and talent: co-branded engineering-recruitment content, Williams engineers and OLIX chip designers on the same stage, and sovereign-AI storytelling with government backing. The team gains a partner whose story flatters its own."
+    },
+    {
+     "label": "Reference deployment from 2027",
+     "text": "A defined evaluation of OLIX inference systems on Williams' machine-learning workloads once the first systems ship. If it works, Williams becomes the launch customer story; if it does not, the clause lapses without embarrassment."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "OLIX sells to hyperscalers and model builders; its guest list at Austin and Las Vegas is the CTO and capital-markets audience Williams' B2B partners want in the suite."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official AI Silicon Partner designation, sidepod or halo placement, British and United States GP hospitality, driver and engineering access, and a reference programme once product exists."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Groq, an AI inference-chip maker, has been an Official Partner since September 2025: a direct category rival."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "Arm, now an OLIX investor, sits on the roster alongside CoreWeave; the silicon and AI-compute lanes are taken."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "AMD and Snapdragon occupy the semiconductor lane; Hewlett Packard Enterprise covers compute."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific and TWG AI hold the compute and AI lanes on the debut roster."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the compute incumbent."
+    },
+    {
+     "team": "Scuderia Ferrari HP · BWT Alpine",
+     "reason": "HP and IBM at Ferrari, Microsoft at Alpine: compute hardware and cloud lanes occupied."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "Hewlett Packard Enterprise departed within the last 12 months and ElevenLabs joined; the technology lane is crowded and German-anchored."
+    },
+    {
+     "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+     "reason": "Open but not chosen: neither carries the British engineering story that makes Williams the natural home."
+    }
+   ],
+   "ask": "A 25-minute call with James Dacombe before the United States GP to test appetite for a 2027 start, agree how an Official AI Silicon Partner entry steps up with product delivery, and size it against Williams' 2027 roster."
+  }
+ },
+ "note": "# OLIX Computing → Atlassian Williams Racing — verification log (N° 153, issued for 3 Aug 2026)\n\nBuilt in-session at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) from the batch-6 row\ndated 3 Aug 2026, with Claude acting as scanner, verifier and writer through the pipeline's\ninjectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as\ncode. The desk row's team was null; Williams is this case's own choice from the sponsor table.\n\n**Sandbox limitation, stated plainly:** olix.com, tech.eu, datacenterdynamics.com, siliconangle.com\nand the Companies House pages were blocked by the egress proxy. Every claim was checked against\nthe search summary of the page named as the evidence URL. Treat each VERIFIED line as REPORTED\nuntil a person opens the link. Confidence is MEDIUM; the footer reads VERIFY BEFORE CIRCULATION.\n\n## The thin row, corrected\n\n- \"Largest UK semiconductor raise of 2026\" — **not found in any source**; dropped.\n- \"Valuation tripled in six months from $220M Series A\" conflated round size and valuation:\n  the Series A was **$220M at just over $1B** (Feb 2026); the Series B is **$312M at $3.3B**.\n  The tripling is $1B → $3.3B in six months (Tech.eu, DCD). The brief says exactly that.\n- Trigger date 3 Aug 2026 confirmed by the dated Tech.eu and DCD reports and the company newsroom URL.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| James Dacombe, Founder & CEO; director since incorporation 22 Mar 2024 | VERIFIED | Companies House officers page; Tech.eu, DCD |\n| $312M Series B at $3.3B, 3 Aug 2026; Fundomo lead; Arm, Hudson River Trading, Reed Hastings; existing backers increased | VERIFIED | olix.com newsroom (search summary); Tech.eu; DCD |\n| $220M Series A at just over $1B, Feb 2026, led by Hummingbird | REPORTED | SiliconANGLE 11 Feb 2026; Dealroom |\n| UK government Sovereign AI fund invested | REPORTED | DCD headline and body (amount not disclosed) |\n| First systems to customers H2 2027; hiring across London, Bristol, Austin, Toronto, San Francisco | VERIFIED | olix.com newsroom (search summary); DCD |\n| Matt Briers (ex-Wise CFO) hired as CFO; Nick McKeown to the board | REPORTED | Tech.eu |\n| Tom Elvidge, COO | REPORTED | LinkedIn listing only; flagged \"reported\" in the bio |\n| No CMO | GAP (stated) | no marketing officer on any listing found |\n| Registered office St Albans; incorporated 22 Mar 2024; London-based | VERIFIED | Companies House; press |\n| Groq Official Partner of McLaren, Sep 2025, logo from Singapore | VERIFIED | mclaren.com announcement |\n| Grid occupancy (Williams roster; Groq/McLaren; ARM + CoreWeave/Aston Martin; AMD + Snapdragon + HPE/Mercedes; Core Scientific + TWG AI/Cadillac; Oracle/Red Bull; Microsoft/Alpine; HP + IBM/Ferrari; HPE departed + ElevenLabs/Audi) | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| United States GP (Austin, late Oct), Las Vegas (Nov), Italian GP (Sep), British GP (Jul) | VERIFIED | calendar table (`seeds/calendar_2026.json`) |\n\n## Screen-outs and things not claimed\n\n- **No motorsport tie found** for Dacombe, Briers or Elvidge after checking; `leadership_ties` is empty.\n- **No revenue figure**: none exists; the company is pre-product.\n- **Dacombe's age** (25, per Business Cloud / IBTimes) is used only in a risk row, not as a fact of the case.\n- **Deal size ($3–5M a year) is an ESTIMATE**, labelled as such.\n- **Total funding** is not summed in the copy (sources differ on the pre-Series-A base).\n- MODE B is declared honestly: there is no product to deploy before H2 2027; the evaluation clause is a\n  proposal, not a claim.\n\n## Team choice\n\nWilliams was chosen over the open alternatives (Haas, Racing Bulls) for the British engineering\nstory and the absence of any semiconductor or compute partner on its roster. McLaren (Groq),\nAston Martin (Arm, CoreWeave), Mercedes (AMD, Snapdragon, HPE) and Cadillac (Core Scientific,\nTWG AI) are ruled out by category occupancy in the sponsor table.\n"
+}

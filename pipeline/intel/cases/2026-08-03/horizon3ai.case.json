@@ -1,0 +1,440 @@
+{
+ "run_date": "2026-08-03",
+ "signal_date": "2026-08-03",
+ "stem": "horizon3ai",
+ "number": 154,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Horizon3.ai",
+  "signal_date": "2026-08-03",
+  "score": 78,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Andres Botero",
+  "role": "Chief Marketing Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+  "industry_meta": "Cybersecurity · Autonomous Penetration Testing (NodeZero) · San Francisco",
+  "recommended_team": "Cadillac F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$250M Series E at a valuation above $2B, announced 3 Aug 2026, co-led by NightDragon and NEA; triples the $650M Series D valuation of June 2025 (reported)",
+   "investors": "NightDragon and NEA (co-leads); new: Acrew Capital, Blue Cloud Ventures, Demeter Group, EDBI, PSG, SAIC, Sapphire Ventures; returning: Craft Ventures, Prosperity7 Ventures, Qualcomm Ventures, Ridge Ventures, SignalFire",
+   "revenue": "ARR approaching $100M with 120% year-on-year ARR growth (company release; TechCrunch, reported)",
+   "trigger": "$250M Series E at a valuation above $2B, announced 3 Aug 2026",
+   "competitor_signal": "CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Okta and Rubrik at McLaren, Cato Networks at Alpine, and Red Bull's 1Password; Cadillac carries no cybersecurity partner",
+   "strategic_hook": "CMO Andres Botero joined on 7 Jan 2026 from Rubrik, whose multi-year McLaren partnership was announced on 28 Jan 2026; international expansion with offices in Amsterdam, Australia and Singapore; more than 7,000 organisations protected, four of them Fortune 10",
+   "us_presence": "Headquartered in San Francisco; founders from Joint Special Operations Command; SAIC among new investors",
+   "alumni_match": "",
+   "taxonomy_category": "C2",
+   "ops_fit_note": "MODE A: NodeZero runs continuous autonomous penetration tests across the team's factory, trackside and partner estate, re-testing after each fix"
+  },
+  "score_breakdown": {
+   "timing": 18,
+   "capacity": 17,
+   "brand_fit": 15,
+   "urgency": 12,
+   "ops_fit": 16,
+   "ops_fit_subscores": {
+    "product_to_need": 7,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   }
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "andres botero",
+    "botero",
+    "chief marketing officer",
+    "7 jan"
+   ],
+   "url": "https://horizon3.ai/news/press-release/horizon3-appoints-chief-marketing-officer/",
+   "excerpt": "Horizon3.ai press release, 7 Jan 2026 (search summary; page blocked to the sandbox): Andres Botero appointed Chief Marketing Officer to lead global marketing strategy; most recently CMO at Rubrik, where subscription ARR doubled to over $1B and the company completed its April 2024 IPO (NYSE: RBRK).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$250m",
+    "$2b",
+    "nightdragon",
+    "nea",
+    "3 aug",
+    "series e",
+    "funding round",
+    "oversubscribed",
+    "tripl"
+   ],
+   "url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "acrew",
+    "sapphire",
+    "edbi",
+    "saic",
+    "psg",
+    "demeter",
+    "blue cloud",
+    "craft",
+    "prosperity7",
+    "qualcomm",
+    "ridge",
+    "signalfire"
+   ],
+   "url": "https://www.securityweek.com/horizon3-raises-250-million-to-fund-continuing-growth/",
+   "excerpt": "SecurityWeek and the company release, 3 Aug 2026: new investors Acrew Capital, Blue Cloud Ventures, Demeter Group, EDBI (Singapore), PSG, SAIC and Sapphire Ventures; existing investors Craft Ventures, Prosperity7 Ventures, Qualcomm Ventures, Ridge Ventures and SignalFire participated.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "120%",
+    "7,000",
+    "7,200",
+    "fortune 10",
+    "$100m",
+    "arr"
+   ],
+   "url": "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/",
+   "excerpt": "Company release: 120% year-on-year ARR growth; more than 7,000 organisations protected, four of them Fortune 10 enterprises. TechCrunch, 3 Aug 2026: roughly 7,200–7,300 customers and ARR approaching $100M (reported).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$650m",
+    "series d",
+    "june 2025",
+    "$100m series d"
+   ],
+   "url": "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/",
+   "excerpt": "TechCrunch, 3 Aug 2026: the Series E triples the $650M valuation set at the $100M Series D led by NEA in June 2025 (Business Wire, 10 Jun 2025: Series D with SignalFire, Craft Ventures, 9Yards Capital).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "antani",
+    "pillitiere",
+    "joint special operations",
+    "jsoc",
+    "splunk",
+    "ge capital",
+    "san francisco"
+   ],
+   "url": "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/",
+   "excerpt": "TechCrunch, 3 Aug 2026: San Francisco-based; founders Snehal Antani (CEO) and Anthony Pillitiere met while serving at Joint Special Operations Command. Antani was previously CTO at US Special Operations Command, CTO of Splunk and a CIO within GE Capital (Cybersecurity Summit speaker profile).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "amsterdam",
+    "singapore",
+    "australia",
+    "international",
+    "partner network",
+    "three continents"
+   ],
+   "url": "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/",
+   "excerpt": "TechCrunch, 3 Aug 2026: the funding backs international expansion, with a new Amsterdam office opened in June 2026 and offices in Australia and Singapore, a partner network build-out and continued R&D spend.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "holly grey",
+    "grey",
+    "cfo",
+    "hartley",
+    "cro",
+    "passalacqua",
+    "chief financial"
+   ],
+   "url": "https://horizon3.ai/news/press-release/horizon3-ai-appoints-holly-grey-as-chief-financial-officer-to-drive-scalable-growth-and-operational-excellence/",
+   "excerpt": "Horizon3.ai press release, 19 Aug 2025: Holly Grey appointed Chief Financial Officer (previously CFO of Exabeam). Company listings: Matt Hartley, Chief Revenue Officer; Jill Passalacqua, Chief Legal Officer. No president or COO is listed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "rubrik",
+    "28 jan",
+    "mclaren partnership",
+    "mclaren deal",
+    "indycar"
+   ],
+   "url": "https://www.mclaren.com/racing/partners/rubrik/mclaren-racing-announces-a-multi-year-partnership-with-rubrik/",
+   "excerpt": "McLaren Racing, 28 Jan 2026: multi-year partnership with Rubrik as Official Partner of the McLaren Mastercard F1 Team and the Arrow McLaren IndyCar Team. Botero was Rubrik's CMO from June 2023 (Rubrik press release) until his move to Horizon3 announced 7 Jan 2026; his role in the McLaren deal is not confirmed by any source.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "teixeira",
+    "dinger",
+    "iqbal",
+    "epp",
+    "fewer, bigger",
+    "fewer bigger",
+    "fishers",
+    "charlotte",
+    "silverstone",
+    "general motors",
+    "gm-backed",
+    "debutant",
+    "first season",
+    "first-season"
+   ],
+   "url": "https://www.forbes.com/sites/maurybrown/2025/11/17/cadillac-f1-announces-two-critical-marketing-and-sponsorship-exec-hires/",
+   "excerpt": "Forbes and Sportcal, Nov 2025: Cadillac F1 named Lauren Teixeira chief commercial officer and Willem Dinger chief partnerships officer, reporting to Tyler Epp (global head of commercial strategy), alongside CMO Ahmed Iqbal; the team describes a 'fewer, bigger, better' partnership ecosystem. Operations in Fishers (Indiana), Charlotte (North Carolina) and Silverstone (UK); GM and TWG backed; 2026 is its debut season.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "twg ai",
+    "exclusive ai",
+    "core scientific",
+    "ifs",
+    "data center",
+    "data centre"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260204298262/en/TWG-AI-Joins-the-Cadillac-Formula-1-Team-as-Primary-and-Exclusive-AI-Partner",
+   "excerpt": "Business Wire, 4 Feb 2026: TWG AI becomes primary and exclusive AI partner of the Cadillac Formula 1 Team (multi-year). Core Scientific is Official Data Center Partner (10 Mar 2026); IFS is official technology partner for ERP, procurement, supply chain and engineering management.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "deepfake",
+    "phishing",
+    "fia",
+    "attacked",
+    "cyber threat",
+    "telemetry"
+   ],
+   "url": "https://www.cloudsek.com/blog/racing-into-danger-advanced-cyber-threats-targeting-formula-1-fans-and-teams-ahead-of-the-dutch-grand-prix",
+   "excerpt": "CloudSEK, Aug 2025: threats targeting F1 fans and teams ahead of the Dutch GP included AI deepfakes impersonating executives, phishing and telemetry data theft; researchers exposed an FIA systems loophole in June 2025 (Panda Security).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "crowdstrike",
+    "bitdefender",
+    "1password",
+    "keeper",
+    "okta",
+    "cisco",
+    "cato networks",
+    "sealsq",
+    "ninjaone",
+    "extreme networks",
+    "sentinelone",
+    "dynatrace",
+    "confluent",
+    "mphasis",
+    "oracle",
+    "microsoft",
+    "no cybersecurity partner",
+    "no security partner",
+    "admin by request"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §2 + data/teams.json)",
+   "excerpt": "Sponsor table: Mercedes — CrowdStrike, Microsoft; Ferrari — Bitdefender; Red Bull — 1Password, Oracle; Williams — Keeper; McLaren — Okta, Cisco (Splunk), Rubrik (joined 2026); Alpine — Cato Networks, SEALSQ (joined 2026), Microsoft; Audi — NinjaOne, Extreme Networks, Admin By Request departed; Aston Martin — SentinelOne marked departed within the last 12 months (no end announced live, treated as occupied); Racing Bulls — Dynatrace, Confluent; Haas — Mphasis (services); Cadillac — TWG AI, Core Scientific, IFS, no cybersecurity partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "united states gp",
+    "las vegas",
+    "austin",
+    "fourth quarter",
+    "mexico city",
+    "são paulo"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: United States GP (round 19, Austin, late October), Mexico City GP (round 20), São Paulo GP (round 21), Las Vegas GP (round 22, November).",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Horizon3.ai",
+  "industry_meta": "Cybersecurity · Autonomous Penetration Testing",
+  "hq": "San Francisco (offices in Amsterdam, Australia, Singapore)",
+  "ticker": "Private ($2B+; $250M Series E, Aug 2026)",
+  "deck": "Horizon3, the San Francisco security company whose NodeZero platform attacks customers' networks the way an adversary would, announced a $250M Series E at a valuation above $2B on 3 August, co-led by NightDragon and NEA, tripling the $650M price of its June 2025 Series D in little over a year.",
+  "score": 78,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Cadillac F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "The oversubscribed round brought in Acrew, Blue Cloud Ventures, Demeter, Singapore's EDBI, PSG, SAIC and Sapphire, with Craft, Prosperity7, Qualcomm Ventures, Ridge and SignalFire returning. The company reports 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them Fortune 10; TechCrunch puts ARR near $100M (reported). Founders Snehal Antani and Anthony Pillitiere met at Joint Special Operations Command; Antani was later CTO of Splunk. The money funds international expansion, with offices opened in Amsterdam in June, Australia and Singapore, and a partner network.",
+  "the_case_p2": "Cybersecurity is the most-sold technology category on the grid: CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Okta and Rubrik at McLaren, Cato Networks at Alpine, and Red Bull's 1Password. Every one sells defence. Horizon3 sells the attack, continuously, and its new CMO Andres Botero ran marketing at Rubrik in the period its McLaren partnership was being built. A category leader with no seat, and a marketer who has watched one taken.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 3 August, a CMO arrived in January with a category-leadership mandate, and offices are opening on three continents. The United States GP in Austin (late October) and Las Vegas (November) fall inside the window, and teams close 2027 rosters in the fourth quarter.",
+  "why_team_label": "WHY CADILLAC F1 TEAM",
+  "why_team_para": "Cadillac is the American debutant building its technology roster from scratch under a stated 'fewer, bigger, better' partner policy: IFS runs the enterprise stack, Core Scientific the data centre, TWG AI the exclusive AI programme. It carries no cybersecurity partner, so Official Cybersecurity Partner is cleanly ownable. A first-season estate across Fishers, Charlotte and Silverstone has never been tested in anger, and Horizon3's defence-rooted American story suits a GM-backed flag-bearer.",
+  "value_section": true,
+  "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. NodeZero runs autonomous penetration tests continuously across the team's estate: the Fishers and Silverstone factory networks, the garage network rebuilt at every circuit, supplier and partner integrations, and the Core Scientific and TWG AI environments. Findings are ranked by exploitability and re-tested after each fix, so a small security staff works on what an attacker would actually use.",
+  "deal_arch_para": "Entry as Official Cybersecurity Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the international build-out. Estimated $4-6M a year, part-payable in NodeZero licences. Scope: car and garage placement, naming of the team's security-validation programme, Austin and Las Vegas hospitality for CISOs and federal buyers, content on how a new team defends itself.",
+  "decision_maker_name": "Andres Botero",
+  "decision_maker_role": "Chief Marketing Officer, Horizon3.ai",
+  "decision_maker_bio": "Botero joined on 7 January 2026 from Rubrik, where he was CMO through its April 2024 IPO and while the McLaren partnership announced on 28 January was built; his part in that deal is not confirmed. Sponsor: Snehal Antani, co-founder and CEO. Path: Holly Grey, CFO, and Matt Hartley, CRO.",
+  "opening_angle_intro": "Lead with Rubrik and the empty lane.",
+  "opening_angle_quote": "&ldquo;Andres, you were at Rubrik while its McLaren deal came together. Cadillac has no cybersecurity partner and a first-season estate nobody has attacked yet. 25 minutes before Austin to see what NodeZero on a Formula 1 team looks like?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "18",
+    "/ 20",
+    "Round announced 3 Aug; Austin and Las Vegas inside the window."
+   ],
+   [
+    "CAPACITY",
+    "17",
+    "/ 20",
+    "$250M at $2B+; ARR near $100M growing 120% (reported)."
+   ],
+   [
+    "BRAND FIT",
+    "15",
+    "/ 20",
+    "American, defence-rooted B2B brand; CISO and federal audience."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "Expansion and new CMO, but no listing date or hard deadline."
+   ],
+   [
+    "OPS FIT",
+    "16",
+    "/ 20",
+    "MODE A: continuous autonomous pentesting of a new estate."
+   ]
+  ],
+  "risks": [
+   [
+    "TWG AI EXCLUSIVITY",
+    "TWG AI is Cadillac's exclusive AI partner; an 'AI vs AI' security brand could be read as an AI partner and blocked.",
+    "Enter as cybersecurity, position NodeZero as security validation, and clear the language with TWG first."
+   ],
+   [
+    "FIRST SPORTS DEAL",
+    "Horizon3 has never run a sports partnership, and Cadillac's 'fewer, bigger, better' policy is priced for large cheques.",
+    "Use Botero's Rubrik playbook and pay part of the fee in licences the team would otherwise buy."
+   ]
+  ],
+  "bottom_line": "$250M at more than $2B, 120% ARR growth, a CMO who has seen an F1 deal built and an open cybersecurity lane at the American debutant put Horizon3 at peak authority to move, with Austin and Las Vegas inside the window. The TWG AI exclusivity and a premium first-deal price hold the score at 78.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "leadership_tie"
+  ],
+  "footer_company": "HORIZON3.AI",
+  "footer_date": "3 AUG 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "Horizon3 announced a $250M Series E at a valuation above $2B on 3 August 2026, co-led by NightDragon and NEA, with seven new investors including Sapphire Ventures, PSG, SAIC and Singapore's EDBI. The company release and TechCrunch carry the same figures."
+    },
+    {
+     "label": "Tripled in a year",
+     "text": "The June 2025 Series D, $100M led by NEA, valued the company at $650M (reported). Fourteen months later the price is above $2B, on 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them Fortune 10. A brand re-rated that fast has a story to tell and the budget to tell it."
+    },
+    {
+     "label": "A marketing owner with a mandate",
+     "text": "Andres Botero joined as Chief Marketing Officer on 7 January 2026 from Rubrik, where he was CMO through the April 2024 IPO. Rubrik's multi-year McLaren partnership was announced three weeks after his move; whether he built it is not confirmed, but he has seen the mechanics from the inside."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The United States GP in Austin (late October) and the Las Vegas GP (November) are the two US rounds left in 2026, with Mexico City and São Paulo between them; teams close 2027 partner rosters in the fourth quarter. A deal agreed before Austin can be announced there and activated in full for 2027."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Cadillac's debut roster carries TWG AI as exclusive AI partner, Core Scientific for the data centre, IFS for enterprise software, plus Claro, Jim Beam, Tenneco and Tommy Hilfiger. No cybersecurity partner: Official Cybersecurity Partner is a clean category on a team that has said it wants fewer, bigger partners."
+    },
+    {
+     "label": "A greenfield estate",
+     "text": "New factories in Fishers, Charlotte and Silverstone, a supplier base assembled in two years and a garage network rebuilt at every circuit. F1 teams have faced phishing, deepfake and telemetry-theft campaigns and a 2025 FIA systems loophole. A first-season estate is the one most in need of continuous attack testing."
+    },
+    {
+     "label": "An American story",
+     "text": "Horizon3's founders met at Joint Special Operations Command and SAIC has joined the register. Cadillac is the GM-backed American flag-bearer with a commercial team hired from the Miami GP and Unilever to sell exactly that audience."
+    },
+    {
+     "label": "The buyer in the suite",
+     "text": "Cadillac's hospitality reaches CISOs, CIOs and federal buyers at Austin and Las Vegas, the audience a $100M-ARR security company selling to Fortune 10 accounts wants in the room."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "NodeZero runs autonomous penetration tests continuously across the team's factory networks, trackside infrastructure, supplier integrations and partner environments, ranking findings by exploitability and re-testing after each fix. The team's security staff work from a live attacker's view rather than an annual audit."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A partner that sells to Fortune 10 CISOs and defence agencies brings a guest list of security and federal buyers to the US rounds, the audience Cadillac's B2B partners want alongside them."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "How a brand-new Formula 1 team defends itself: co-produced engineering content on continuous security validation, a reference customer for Horizon3's enterprise sales, and a story that fits a debutant building everything from scratch."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Cybersecurity Partner designation, car and garage placement, naming of the security-validation programme, Austin and Las Vegas hospitality, driver and engineering access for Horizon3's channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "CrowdStrike has held the cybersecurity lane since 2019; Microsoft also on the roster."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "Bitdefender is the cybersecurity partner."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "1Password holds security; Oracle is title partner."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Keeper Security holds identity and access security."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Okta, Cisco with Splunk, and Rubrik (joined 2026) crowd the security lane; Botero's former employer sits there."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Cato Networks and SEALSQ joined for 2026; Microsoft on the roster."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "NinjaOne and Extreme Networks cover IT management and networking; Admin By Request departed within the year."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "SentinelOne is marked as departed within the last 12 months in the sponsor table, but no end has been announced; treated as occupied."
+    },
+    {
+     "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+     "reason": "Open but not chosen: neither offers the American greenfield estate and premium positioning that match a $2B company."
+    }
+   ],
+   "ask": "A 25-minute call with Andres Botero before the United States GP to test appetite for a 2027 start, clear the AI-partner language with Cadillac's TWG AI exclusivity, and size an Official Cybersecurity Partner entry, part-paid in NodeZero licences, against the team's 2027 roster."
+  }
+ },
+ "note": "# Horizon3.ai → Cadillac F1 Team — verification log (N° 154, issued for 3 Aug 2026)\n\nBuilt in-session at no API cost (no `ANTHROPIC_API_KEY` in the sandbox) from the batch-6 row\ndated 3 Aug 2026, with Claude acting as scanner, verifier and writer through the pipeline's\ninjectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as\ncode. The desk row's team was null; Cadillac is this case's own choice from the sponsor table.\n\n**Sandbox limitation, stated plainly:** horizon3.ai, businesswire.com, techcrunch.com,\nsecurityweek.com, mclaren.com and forbes.com were blocked by the egress proxy. Every claim was\nchecked against the search summary of the page named as the evidence URL. Treat each VERIFIED\nline as REPORTED until a person opens the link. Confidence is MEDIUM; the footer reads VERIFY\nBEFORE CIRCULATION.\n\n## The thin row, corrected\n\n- The row's figures (\\$250M Series E, \\$2B valuation, ~\\$100M ARR, 120% growth, 7,200+ customers,\n  four Fortune 10) all check out against the company release and TechCrunch. \"ARR ~\\$100M\" is\n  TechCrunch's figure, not the company's, and is labelled *reported*; the company states 120%\n  ARR growth and \"more than 7,000 organisations\".\n- \"Opened Amsterdam European HQ\" — the Amsterdam office opened in June 2026 (TechCrunch); the\n  \"European HQ\" label is not used in the copy.\n- **Decision-maker changed** from the row's Snehal Antani (CEO) to **Andres Botero, CMO**,\n  appointed 7 Jan 2026: the real sponsorship owner. Antani is the C-level sponsor in the path.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Andres Botero, CMO, appointed 7 Jan 2026; ex-CMO Rubrik (from June 2023; IPO April 2024) | VERIFIED | horizon3.ai press release (search summary); Rubrik release |\n| \\$250M Series E at >\\$2B, 3 Aug 2026, co-led by NightDragon and NEA, oversubscribed | VERIFIED | horizon3.ai / Business Wire release (search summary); TechCrunch; SecurityWeek |\n| New and returning investors (Acrew, Blue Cloud, Demeter, EDBI, PSG, SAIC, Sapphire; Craft, Prosperity7, Qualcomm Ventures, Ridge, SignalFire) | VERIFIED | company release via SecurityWeek |\n| 120% YoY ARR growth; >7,000 organisations; four Fortune 10 | VERIFIED | company release |\n| ARR approaching \\$100M; ~7,200–7,300 customers | REPORTED | TechCrunch, 3 Aug 2026 |\n| Series D \\$100M led by NEA, June 2025, at \\$650M | REPORTED (\\$650M) / VERIFIED (round) | TechCrunch; Business Wire 10 Jun 2025 |\n| Founders met at JSOC; Antani ex-CTO USSOCOM, ex-Splunk CTO; HQ San Francisco | VERIFIED | TechCrunch; Cybersecurity Summit profile |\n| Amsterdam (June 2026), Australia, Singapore offices; partner-network investment | VERIFIED | TechCrunch |\n| Holly Grey CFO (19 Aug 2025); Matt Hartley CRO; Jill Passalacqua CLO; no president/COO listed | VERIFIED | horizon3.ai release; company listings |\n| Rubrik–McLaren multi-year partnership announced 28 Jan 2026 (F1 + IndyCar) | VERIFIED | mclaren.com announcement |\n| Cadillac: no cybersecurity partner; TWG AI exclusive AI partner (4 Feb 2026); Core Scientific data centre (10 Mar 2026); IFS technology partner | VERIFIED | sponsor table; Business Wire; Cadillac F1 |\n| Cadillac commercial team (Epp, Teixeira, Dinger, Iqbal); 'fewer, bigger, better'; Fishers / Charlotte / Silverstone | VERIFIED | Forbes 17 Nov 2025; Sportcal; team profile |\n| Grid occupancy of the cybersecurity lane (CrowdStrike, Bitdefender, 1Password, Keeper, Okta/Cisco/Rubrik, Cato/SEALSQ, NinjaOne/Extreme, SentinelOne departed) | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| F1 threat context (deepfakes, phishing, telemetry theft; FIA loophole June 2025) | REPORTED | CloudSEK; Panda Security |\n| United States GP (Austin, late Oct), Mexico City, São Paulo, Las Vegas (Nov) | VERIFIED | calendar table |\n\n## Leadership ties\n\n- **Andres Botero (CMO)** was Rubrik's CMO from June 2023 until his move was announced on\n  7 Jan 2026; Rubrik's McLaren partnership was announced on 28 Jan 2026. The overlap is real;\n  his personal role in the deal is **not confirmed** by any source, and the brief says so twice.\n  Recorded as a *probable* tie, not a confirmed one.\n- Snehal Antani, Holly Grey, Matt Hartley: **none found** after checking.\n\n## Screen-outs and things not claimed\n\n- **Total funding** is not summed in the copy.\n- **No listing date** is claimed; \"plausible listing window\" is framed as such.\n- **Deal size (\\$4–6M a year) is an ESTIMATE**, labelled as such.\n- **Aston Martin** is not treated as open: the sponsor table marks SentinelOne departed within the\n  last 12 months, but no end to the partnership was found live, so the lane is treated as occupied.\n- Zenity (N° 155 in this batch) is also recommended to Cadillac, in the AI-agent-security lane.\n  Both recommendations are judged against real grid occupancy only, as the operating rules require;\n  neither is a placement.\n"
+}

@@ -123,10 +123,13 @@ def apply_screened(
             skipped.append(f"{f}: {exc}")
             continue
         company, date = s.get("company"), s.get("date") or f.parent.name
-        verdict = (s.get("verdict") or "").strip().lower()
-        if not company or verdict not in SCREEN_VERDICTS:
-            skipped.append(f"{f}: needs company + verdict in {sorted(SCREEN_VERDICTS)}")
+        verdict = (s.get("verdict") or "").strip().lower().replace(" ", "_")
+        if not company or not verdict:
+            skipped.append(f"{f}: needs company + verdict")
             continue
+        # Builders also use verdicts such as below_threshold (an honest score under 70) or
+        # form (a manufacturer whose route is a team entry, not a sponsorship): any named
+        # verdict screens the row out with its reason; only duplicate_of is special.
         key = f"{date}|{company}"
         reason = (s.get("reason") or "").strip()
         sources = [u for u in (s.get("sources") or []) if isinstance(u, str)]

@@ -191,8 +191,17 @@
    "reason": "decision-maker 'Undisclosed' — the repo brief on Odyssey names the founders; use that"
   },
   "2026-07-01|Joulent": {
-   "status": "keep_flagged",
-   "reason": "decision-maker undisclosed; source is a weekly round-up — verify the company and round directly"
+   "status": "screened_out",
+   "reason": "contradicted: The event is real and inside the window, but the signal as recorded does not survive the primary source. The thin row read it as a $1.75B venture-style 'strategic financing' of an 'AI-compute energy infrastructure' company suited to Formula E. The company release (Business Wire, 1 Jul 2026) and National Grid's own release (PR Newswire, 1 Jul 2026) say National Grid Ventures agreed to invest $1.75B for a 35% equity stake in Joulent LLC, a Houston developer of natural-gas power plants that launched from stealth on 22 Jun 2026 after three years of incubation inside Engine No. 1. Its flagship, Project Kilby, is a ~2.67 GW gas-fired facility in West Texas, a 50/50 venture with Chevron, supplying a Microsoft-operated data-centre campus under a 20-year PPA with GE Vernova turbines and first power targeted for 2028. So: (1) the capital is a utility buying into project equity, not a growth round that funds brand-building; (2) the business is gas-fired baseload generation for one hyperscaler customer, which contradicts the Formula E sustainability positioning the row assumed and leaves no consumer or broad-B2B audience a sponsorship would reach; (3) the leadership found (Chris James, Founder & CEO, also founder of Engine No. 1; Brian Boland, EVP, CFO & Head of Strategy; Chris Wissel-Tyson, SVP Growth & Strategy; Noah Tulsky, VP Corporate Development) shows no marketing or brand function, and no motorsport tie was found for any of them. Scored honestly on the five pillars (capacity from project finance, weak brand fit, no urgency beyond the 2026 Chevron FID, no on-car or operational workstream) the company sits well below the 70 threshold, so a built case would be a plausible-sounding company with a logo. Re-open only if Joulent itself announces a corporate brand programme or an F1-relevant energy technology (e.g. trackside power) rather than plant development.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.businesswire.com/news/home/20260701013471/en/Joulent-Secures-$1.75B-Strategic-Investment-from-National-Grid-to-Accelerate-Growth-as-Technology-Driven-Energy-Company-Powering-American-Innovation",
+    "https://www.prnewswire.com/news-releases/national-grid-ventures-to-invest-1-75bn-to-accelerate-power-solutions-for-us-data-centers-and-ai-302815750.html",
+    "https://www.nationalgrid.com/national-grid-ventures-invest-175bn-accelerate-power-solutions-us-data-centers-and-ai",
+    "https://www.businesswire.com/news/home/20260622143711/en/Joulent-Launches-to-Deliver-Multi-Gigawatt-Power-Solutions-for-American-Innovation",
+    "https://www.chevron.com/newsroom/2026/q2/chevron-signs-20-year-power-agreement-with-microsoft-for-west-texas-data-center"
+   ],
+   "screened_at": "2026-09-06"
   },
   "2026-07-01|TwelveLabs": {
    "status": "keep_flagged",
@@ -469,6 +478,188 @@
     "https://www.energy-storage.news/wartsila-wraps-energy-storage-business-into-joint-venture-with-solar-manufacturer-rct-solutions/",
     "https://www.wartsila.com/media/news/21-07-2026-wartsila-s-half-year-financial-report-january-june-2026-3773763",
     "https://www.marketscreener.com/news/wartsila-corporation-and-rct-solutions-gmbh-establish-joint-venture-for-global-energy-storage-busine-ce7f5cdedb8bf724"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-05-29|Cohesity": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger — 'Nvidia-backed; 2026 IPO plans reported' — rests on CNBC's 4 Sep 2025 interview in which CEO Sanjay Poonen said Cohesity could list in 2026 once it has a full year of post-Veritas results. That is 267 days before the row, far outside the 90-day window. A live re-check as of 29 May 2026 found no fresh capital or identity inflection inside the window: no public S-1, no reported confidential filing since the shelved December 2021 one, no new primary round (the last was the Series H at ~$7B in December 2024) and no company-sponsored tender reported in 2026 (secondary-market marks in June 2026 sat near $4.7B per Forge, below the Series H price). What Cohesity did announce in the window is partnership news — a 2026 Google Cloud Partner of the Year award (21 Apr), an expanded HPE alliance (14 May) and a CISA information-sharing partnership (21 May) — none of which is a sponsorship trigger under the standard. The earlier proof hero (N° 001, 29 May 2026, 82/100 → Cadillac F1 Team) was built on the same September 2025 report and should be read as stale for the same reason. Cohesity remains a strong future prospect: re-run the row the day an S-1 (public or reported confidential filing) lands. Carol Carpenter (CMO since Feb 2025) remains the right owner; the Cadillac lane (no data-protection or cybersecurity partner on the inaugural roster) was still open as of this check.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.cnbc.com/2025/09/04/nvidia-backed-cohesity-eyes-2026-ipo-with-valuation-rivaling-17-billion-rubrik.html",
+    "https://www.bloomberg.com/news/articles/2021-12-21/softbank-backed-cohesity-files-confidentially-for-ipo",
+    "https://forgeglobal.com/insights/cohesity-upcoming-ipo-news/",
+    "https://www.businesswire.com/news/home/20260421354808/en/Cohesity-Wins-a-2026-Google-Cloud-Partner-of-the-Year-Award",
+    "https://www.cohesity.com/newsroom/press/cohesity-expands-alliance-with-hpe-to-deliver-cyber-resilience/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-01|Flutterwave": {
+   "status": "screened_out",
+   "reason": "contradicted: The row dates its trigger (Series E at a $3.2B valuation) to 1 Jun 2026, but the Series E was announced on 16 Jun 2026 — Flutterwave's own blog post and PR Newswire release ('Ripple Participates in Flutterwave's Series E'), TechCrunch (2026/06/16) and Bloomberg (2026-06-16) all carry that date — fifteen days AFTER the row. The other events in the row's trigger text are outside the 90-day window: the Mono open-banking acquisition closed in January 2026 (more than four months before the row) and the resulting Nigerian microfinance banking licence followed in April 2026, neither of which is the capital-and-identity inflection the standard requires. The round size was not disclosed; the company said total funding now exceeds $500M. Founder and CEO Olugbenga 'GB' Agboola is correctly named. The Series E is a real, fresh signal for a row dated 16 Jun 2026 or later if the desk wants to re-run it — with the caveat that Flutterwave's markets (Africa, with US and Middle East corridors) do not overlap the 2026 F1 calendar, which has no African round, and a stablecoin-led payments story sits closest to the crowded fintech lanes already on the grid (Visa and Cash App at Racing Bulls, Revolut at Audi, Crypto.com at championship level).",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://flutterwave.com/us/blog/ripple-participates-in-flutterwaves-series-e-with-strategic-investment-to-accelerate-african-stablecoin-payments",
+    "https://www.prnewswire.com/news-releases/ripple-participates-in-flutterwaves-series-e-with-strategic-investment-to-accelerate-african-stablecoin-payments-302801599.html",
+    "https://techcrunch.com/2026/06/16/payments-startup-flutterwave-hits-3-2b-valuation-backed-by-ripple/",
+    "https://www.bloomberg.com/news/articles/2026-06-16/ripple-takes-equity-stake-in-flutterwave-valuing-africa-fintech-at-3-3-billion",
+    "https://techcabal.com/2026/06/16/flutterwave-series-e/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-01|Quantifind": {
+   "status": "screened_out",
+   "reason": "contradicted: The row dates its trigger (a $200M growth financing led by Summit Partners) to 1 Jun 2026, but the primary source — Quantifind's own release on PR Newswire, mirrored on summitpartners.com — is dated 26 Jun 2026, twenty-five days AFTER the row. On 1 Jun 2026 the event had not happened, so the row's trigger date is contradicted (a 26 Jun trigger can only serve a row dated on or after 26 Jun). The row's named person is also wrong: Jeff Scheinrock is not Quantifind's CEO; the company's own listings name co-founder Ari Tuchman as CEO (co-founder John Stockton is a director; Graham Bailey is COO). The round itself is real ($200M led by Summit Partners with Citi Ventures, S&P Global, Deloitte and Stephens Group participating; Summit's Chris Dean joins the board) and the company (Palo Alto-founded AI risk-intelligence platform 'Graphyte' for financial-crime detection, founded 2009) could be re-run as a fresh row dated 26 Jun 2026 or later if the desk wants it — note the F1 fit is thin: a B2B compliance vendor selling to banks and government with no motorsport-native workstream.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.prnewswire.com/news-releases/quantifind-announces-200-million-growth-investment-led-by-summit-partners-to-advance-ai-native-risk-intelligence-and-governed-agentic-middleware-for-modern-risk-operations-302811745.html",
+    "https://www.summitpartners.com/news/quantifind-announces-200-million-growth-investment-to-advance-ai-native-risk-intelligence",
+    "https://fintech.global/2026/06/29/summit-partners-backs-quantifind-in-200m-growth-round/",
+    "https://www.finsmes.com/2026/06/quantifind-raises-200m-in-growth-funding.html",
+    "https://craft.co/quantifind/executives"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-05|Plaid": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger (employee tender offer at a reported $8B valuation) was announced on 26 Feb 2026 (Crunchbase News; TechCrunch 'Plaid valued at $8B in employee share sale', 26 Feb 2026), 99 days before the row's date of 5 Jun 2026 and outside the 90-day window. The other trigger tag, new_leadership, is the hire of Hannah Hughes as Chief Marketing Officer announced 21 Jan 2026 (Financial Narrative), also outside the window. What did happen inside the window was product news, not a capital or identity inflection: the Plaid-OpenAI account-linking partnership (15 May 2026), the Plaid Effects 2026 conference (21 May 2026) and the June product updates (10 Jun 2026). No primary source dates the tender offer inside the window. Not re-scored; re-surface only on a new capital event (a primary raise or an IPO filing). No motorsport partnership found for Plaid; the FE grid's fintech/banking lanes (Julius Baer at championship level) were not the reason for the screen.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://news.crunchbase.com/fintech/plaid-completes-tender-offer-8b-valuation/",
+    "https://techcrunch.com/2026/02/26/plaid-valued-at-8b-in-employee-share-sale/",
+    "https://financialnarrative.org/news/11453814",
+    "https://plaid.com/blog/effects-2026-recap/",
+    "https://plaid.com/blog/product-updates-june-2026/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-09|DeepL": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger — the $300M investment at a $2B valuation led by Index Ventures — is DeepL's own press release of 22 May 2024, more than two years before the row date of 9 June 2026 and far outside the 90-day window; the thin scan re-surfaced an old release. Nothing inside the window (11 Mar – 9 Jun 2026) qualifies as a sponsorship trigger: the only company news is the DeepL Voice-to-Voice product launch (16 Apr 2026) and a restructuring reported on 7 May 2026 in which DeepL cut about 250 jobs, roughly 25% of its workforce, with the CEO citing AI as the reason — a cost-cutting signal, not a capital or brand-investment inflection. No new funding, IPO or valuation event was found (the next recorded transaction, a Mixhalo acquisition, is dated 17 Jun 2026, after the row). No motorsport tie found for Jaroslaw Kutylowski. Re-open only on a new raise, an IPO filing or a return to hiring.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.deepl.com/en/press-release/deepl-announces-300-million-investment-at-2-billion-valuation-fueled-by-global-demand-for-ai-language-solutions",
+    "https://www.businesswire.com/news/home/20240522689624/en/DeepL-Announces-%24300-Million-Investment-at-%242-Billion-Valuation-Fueled-by-Global-Demand-for-AI-Language-Solutions",
+    "https://gigazine.net/gsc_news/en/20260508-deepl-lay-off-250/",
+    "https://techcrunch.com/2026/04/16/deepl-known-for-text-translation-now-wants-to-translate-your-voice/",
+    "https://pitchbook.com/profiles/company/56947-42"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-21|Aumovio SE": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger, Continental's spin-off of its Automotive group and the Frankfurt listing of AUMOVIO SE (ticker AMV0), happened on 18 Sep 2025 (company release; Bloomberg; MarkLines), 276 days before the row's date of 21 Jun 2026 and far outside the 90-day window. Nothing in the window is a capital or identity inflection: Q1 2026 results on 7 May 2026 (adjusted EBIT EUR 106M, 2.4% margin) and 2026 guidance of EUR 17.0-18.5B adjusted sales were routine reporting, and the Capital Markets Day the thin row echoed was 24 Jun 2025. After the row, H1 2026 results on 6 Aug 2026 cut the outlook (adjusted sales EUR 8.6B, down 8.9%; adjusted EBIT margin guidance trimmed to 3.0-4.0%), which argues against a discretionary multi-year sponsorship budget now. Not built; revisit only on a new event (index inclusion, a capital return, or a motorsport-relevant product launch).",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.aumovio.com/en/company/press/press-releases/20250918-listing.html",
+    "https://www.bloomberg.com/news/articles/2025-09-18/aumovio-starts-trading-in-frankfurt-after-continental-spinoff",
+    "https://www.marklines.com/en/news/333032",
+    "https://www.aumovio.com/en/company/press/press-releases/20260507-q1.html",
+    "https://autonews.gasgoo.com/articles/news/aumovio-first-half-sales-86-billion-euros-cuts-full-year-outlook-2085678707032473600"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-22|Commonwealth Fusion Systems": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger, the $863M Series B2, was announced by CFS on 28 Aug 2025 (company release; PR Newswire; Latitude Media), 298 days before the row's date of 22 Jun 2026 and far outside the 90-day window. No fresh capital or identity event was found in Apr-Jun 2026: the next event is the $1B round announced 30 Jul 2026 (TechCrunch, Boston Globe, Utility Dive; total raised about $4B, with pension and sovereign funds), which post-dates this row. CFS remains a strong profile match (deep-tech energy, Andretti Formula E lane open in the sponsor table) and should be re-surfaced as a new signal dated 30 Jul 2026 on that trigger, not rebuilt here.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://cfs.energy/news-and-media/commonwealth-fusion-systems-raises-863-million-series-b2-round-to-accelerate-the-commercialization-of-fusion-energy/",
+    "https://www.prnewswire.com/news-releases/commonwealth-fusion-systems-raises-863-million-series-b2-round-to-accelerate-the-commercialization-of-fusion-energy-302540730.html",
+    "https://www.latitudemedia.com/news/commonwealth-fusion-systems-tops-up-its-series-b-with-863-million/",
+    "https://techcrunch.com/2026/07/30/fusion-power-darling-commonwealth-fusion-systems-raises-another-1b/",
+    "https://www.utilitydive.com/news/what-a-billion-dollar-funding-means-for-commonwealth-fusion-systems-and-its/828515/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-06-29|Niron Magnetics": {
+   "status": "screened_out",
+   "reason": "stale: No funding event existed on the row's date. The row's source, Axios Pro (30 March 2026), reported that Niron was PLANNING to raise about $500M at an anticipated $2-3B valuation — a plan, not a close — and it sits 91 days before the 29 June 2026 row, outside the 90-day window. Niron's last closed round on that date was the $25M strategic round led by Samsung Ventures with Allison Ventures and Magna, announced 20 February 2024 (Business Wire). The only items inside the window are a $400,000 Minnesota Job Skills Partnership grant (6 May 2026) and a 10 June 2026 press release applauding the Magnets Value Chain Support Act of 2026 — policy advocacy, not capital. Every material inflection came AFTER the row: the Aspina supply agreement (13 July 2026), the conditional $150M Department of War Office of Strategic Capital loan commitment for the Sartell, Minnesota plant (7 August 2026) and the $150M loan from the Shakopee Mdewakanton Sioux Community (18-19 August 2026, production planned for 2027). Not built on this date. This is a strong future FE signal — rare-earth-free iron-nitride magnets are a genuine MODE A workstream for Gen4 powertrain motors and Niron's Sartell build is a US identity moment — so re-queue it as a new row dated 7 August 2026 (the OSC commitment) with Jonathan Rowntree, CEO, and re-check whether the ~$500M round Axios described has closed. The thin row's team hint (Nissan Formula E Team) still needs a live roster check at that point.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.axios.com/pro/climate-deals/2026/03/30/niron-magnetics-rare-earth-permanent-magnets",
+    "https://www.businesswire.com/news/home/20240220199737/en/Niron-Magnetics-Secures-Funding-from-Samsung-Ventures-Allison-Transmission-and-Magna-to-Accelerate-Production-of-Rare-Earth-Free-Magnets",
+    "https://nironmagnetics.com/niron-magnetics-applauds-historic-congressional-legislation-recognizing-rare-earth-free-permanent-magnets/",
+    "https://nironmagnetics.com/niron-magnetics-and-aspina-to-develop-rare-earth-free-motor-solutions-across-global-end-markets/",
+    "https://nironmagnetics.com/niron-magnetics-receives-conditional-150-million-department-of-war-commitment/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-07-01|Fairmat": {
+   "status": "screened_out",
+   "reason": "stale: The row's trigger is a funding event that is 15 months old. Fairmat's last round is the EUR 51.5M Series B (EUR 26.5M equity co-led by Bpifrance and Slate VC with Cape Capital, Singular, Temasek, CNP and Pictet, plus EUR 25M of European Investment Bank venture debt) announced on 2 April 2025 (tech.eu, JEC, CompositesWorld, EIB project page) — 455 days before the 1 July 2026 date this row sits on. No 2026 raise, valuation or corporate event was found: the only 2026 news is the set of six partnerships announced at JEC World in early March 2026 (Syensqo prepreg scrap, an Airbus end-of-life R&D contract signed at the end of 2025, Etex, Babolat, Launchpad O&P, Billy Footwear), which is 118 days before the row and is a customer-pipeline update, not a capital or identity inflection. Nothing inside the 90-day window. The row's named person (Benjamin Saada, Founder & CEO) is correct. Two further cautions for any re-queue: Fairmat has no motorsport partnership on record, and the recycled-carbon-fibre lane in F1 is already occupied by team-led programmes (McLaren's recycled carbon fibre trial at the 2023 United States GP; Mercedes-AMG Petronas with INEOS, Toray, Syensqo and Sigmatex for 2025), so a MODE A workstream would have to be negotiated against those in-house efforts. Not built; re-surface only on a Series C or a plant opening announced by Fairmat itself.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://tech.eu/2025/04/02/fairmat-secures-51-5m-series-b-to-close-the-loop-on-material-recycling/",
+    "https://www.jeccomposites.com/news/by-jec/fairmat-raises-e51-5-million-to-triple-production-capacity-and-accelerate-international-expansion/",
+    "https://www.eib.org/en/projects/all/20240797",
+    "https://www.compositesworld.com/news/syensqo-advances-circular-carbon-fiber-composite-recycling-partnership-with-fairmat",
+    "https://www.jeccomposites.com/news/by-jec/fairmat-to-recover-carbon-composite-panels-from-airbus-and-work-with-several-other-fields/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-07-01|LeapXpert": {
+   "status": "screened_out",
+   "reason": "below threshold: The trigger is real and fresh: LeapXpert announced a $180M growth investment led by Riverwood Capital, with existing investor Portage Ventures participating, on 30 June 2026 (company newsroom / PR Newswire, Riverwood's own release, SiliconANGLE, Axios Pro). Jeff Parks of Riverwood joined the board; Houlihan Lokey advised. Prior rounds: $22M Series A+ led by Rockefeller Asset Management (29 Mar 2023, total then $36M) and a $20M Series B led by Portage (21 Jan 2025). No valuation and no revenue figure are disclosed anywhere. The decision path is verifiable from the company's About page: Dima Gutzeit, Founder & CEO; Avi Pardo, Co-founder & CBO; Stephane Mehat, CFO; Ari Applbaum, VP Marketing (no CMO). Leadership ties to F1/FE: none found. The company is not an F1/FE partner and there is no communications-governance rival on the grid (WhatsApp at Mercedes and Infobip at Haas are adjacent, not rivals). Scored honestly against the calibration rules it does not reach the 70 threshold: Timing 16 (round on 30 June, British GP inside the window, summer shutdown mid-window), Capacity 13 (a $180M growth round with no disclosed valuation is mid-tier at best; Riverwood's entry profile is revenue in the tens of millions), Brand Fit 12 (B2B compliance software; the cyber-security lane has F1 precedent, communications compliance has none; not a consumer or motorsport-native story; outside the desk's industrial/electrical/deep-tech lean), Urgency 13 (Forbes Global 2000 push and 'expand the leadership team' are a brand-build phase, no hard deadline), Operational Fit 11 (general enterprise SaaS with no named team need in the taxonomy: product-to-need 3, slot availability 4, on-camera 2, lock-in 2) = 65/100. The thin scan's 85 was inflated. Not built: a plausible company plus a logo is not a signal. Keep as a WARM watch for a mid-grid team's open communications-governance lane (Williams or Racing Bulls carry regulated-finance partners and no rival) and re-score on a disclosed valuation, a revenue print, a first CMO hire, or a US listing filing.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.leapxpert.com/leapxpert-raises-180-million-to-lead-ai-powered-governed-communications/",
+    "https://www.prnewswire.com/news-releases/leapxpert-raises-180-million-to-lead-ai-powered-governed-communications-302814485.html",
+    "https://www.riverwoodcapital.com/rwcm_news/riverwood-capital-leads-180-million-growth-round-investment-in-leapxpert/",
+    "https://siliconangle.com/2026/06/30/leapxpert-lands-180m-extract-intelligence-governed-enterprise-communications/",
+    "https://www.axios.com/pro/fintech-deals/2026/06/30/leapxpert-180-million-sports-finance-prediction-market-compliance"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|Lyten": {
+   "status": "screened_out",
+   "reason": "below threshold: Not an existing F1/FE partner (Lyten's motorsport activity is Lyten Motorsports, an Indianapolis parts venture with INDYCAR Experience and a sponsored two-seat IndyCar, launched 23 May 2025) and not contradicted, but the row's trigger is mis-dated and inflated, and the honest score lands under the MD threshold of 70. The completed acquisition of Northvolt Sweden (Lyten release, 26 Feb 2026) is 190 days before the row's date and therefore stale; the EXIM letters of interest for up to $650M date from 18 Dec 2024, not 2026; and the '$1.33B raised to date' counts those undrawn LOIs as money raised — Lyten's own boilerplate puts equity at more than $625M, the last round being $200M+ from existing investors on 28 Jul 2025 (Yahoo Finance / Mercom; Series B valuation ~$1.5B in Sep 2023, reported). The only event inside the 90-day window is the exclusive MOU of 1 Jul 2026 with KfW, Northvolt Drei Project GmbH and LG Batterie GmbH to progress the purchase of the Northvolt Drei site near Heide (reported price ~€60M, electrive 22 Jun 2026), with a definitive agreement targeted for Q3 2026. An MOU on a distressed-asset purchase is an identity story, not a capital-and-identity inflection: no new equity, the EXIM package undrawn, and the balance sheet committed to restarting Skellefteå, a Polish hub (Mar 2026), Heide and the Reno gigafactory. Honest score ~66/100 (timing 13, capacity 11, brand fit 16, urgency 12, ops fit 14): brand fit is genuinely strong (a lithium-sulfur and 3D Graphene company in an electric series, with an existing motorsport parts business that could supply composite parts for team-developed GEN4 components) and Andretti Formula E would be the team (American, Nissan GEN4 powertrain from 24 Jul 2026, Austin and Miami rounds in Season 13, no battery or materials partner on its roster), but capacity and the weight of the trigger hold it back. Leadership: Dan Cook, Co-Founder, President & CEO (ex-GM, NeXT, Nortel, Cerberus operating executive); no CMO, CCO or CFO found on any listing; no motorsport tie found beyond the company's own INDYCAR Experience sponsorship. Re-open on the definitive Heide agreement or a 2026 equity round, when the same Andretti case clears 70 on capacity.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://lyten.com/2026/07/01/lyten-signs-exclusive-mou-to-progress-acquisition-of-northvolt-drei-assets-in-germany/",
+    "https://www.electrive.com/2026/06/30/germany-accelerates-northvolt-asset-sale-to-lyten/",
+    "https://www.electrive.com/2026/06/22/lyten-to-pay-e60-million-for-northvolt-site-in-heide/",
+    "https://lyten.com/2026/02/26/lyten-completes-acquisition-of-northvolt-sweden-and-establishes-its-first-lyten-industrial-hub-in-sweden/",
+    "https://lyten.com/2024/12/18/lyten-secures-650m-loi-from-the-export-import-bank-of-the-united-states-in-support-of-expanding-lithium-sulfur-battery-manufacturing-in-the-us/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|Slate Auto": {
+   "status": "screened_out",
+   "reason": "stale: The trigger is real but outside the window: the $650M Series C led by TWG Global closed on 13 April 2026 (TechCrunch; WardsAuto; ~$1.4B raised to date), which is 145 days before the row's date against a 90-day limit. Nothing newer qualifies as a capital or identity inflection: reservations opened on 30 June 2026 (InkFreeNews, reported), a factory tour was given on 28 August 2026 (fwbusiness.com, reported) and first deliveries are guided to the fourth quarter of 2026 (WardsAuto) — the start of production is the next real trigger and has not happened. The row is also wrong on the decision-maker: Peter Faricy (ex-Amazon Marketplace, ex-SunPower CEO) has been CEO since March 2026 and runs commercial, digital, finance and legal; founding CEO Chris Barman is President of Vehicles (TechCrunch 9 Mar 2026, electrive 11 Mar 2026). Not contradicted, not an existing F1/FE partner. Worth holding: TWG Global, which led the Series C, owns TWG Motorsports, the parent of Andretti Formula E and co-owner of the Cadillac F1 Team, so the warm path the row noted on the F1 side applies equally to Andretti in FE. Re-open at start of production / first deliveries (Q4 2026) with Faricy as the decision-maker and the Austin (6 Feb 2027) and Miami (20 Feb 2027) E-Prix as the launch window; the $24,950 truck is a consumer-EV story the all-electric series can carry.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://techcrunch.com/2026/04/13/slate-auto-raises-650m-to-fund-its-affordable-ev-truck-plans/",
+    "https://www.wardsauto.com/news/slate-auto-says-650m-boost-will-get-it-to-next-stages-of-production/817388/",
+    "https://gmauthority.com/blog/2026/04/slate-auto-completes-650m-funding-round-as-production-start-nears/",
+    "https://techcrunch.com/2026/03/09/slate-auto-changes-ceo-months-ahead-of-affordable-ev-launch/",
+    "https://www.electrive.com/2026/03/11/slate-auto-appoints-peter-faricy-as-new-ceo/"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|Stegra": {
+   "status": "screened_out",
+   "reason": "below threshold: The trigger is real and inside the window: Stegra announced the closing of a €1.4B financing round on 24 June 2026 (company release via PR Newswire / Morningstar), led by a Wallenberg Investments consortium (existing investors IMAS and Temasek, new investors Bolero and SEB-Stiftelsen) with Altor becoming the second-largest shareholder and Hy24, Just Climate, Scania, Schaeffler, Kobe Steel and others following; the row's own source (tech.eu, 14 Apr 2026) is the agreement-in-principle, not the close. But the round does not clear the 1440 bar on deal-capable capacity, and the pipeline's own MD threshold (70) would refuse it: this is a rescue financing for a pre-revenue plant. Creditors engaged Houlihan Lokey and the board discussed insolvency risk in October 2025 (reported); the company put the extra need at ~SEK 10B in November 2025 (reported); the Boden project carries a ~€1B overrun on a ~€7.5B budget (reported), first steel has slipped repeatedly and the company said the project timeline is 'under review' after the June close (reported, Eurometal / Mining Metal News). The release states the use of proceeds as completing construction and commissioning the Boden plant and fortifying the equity ratio — every euro is committed to the plant, and a Wallenberg/Altor/pension-fund cap table would not sanction a multi-year Formula E budget before first steel. Honest score ~47/100 (timing 12, capacity 6, brand fit 13, urgency 8, ops fit 8): no real MODE A workstream exists for a spec-chassis series, no US presence, no Swedish round or team, and no motorsport tie found for CEO Henrik Henriksson (ex-Scania CEO; Head of Communications Karin Hallstan; CFO Markus Holm from 1 Mar 2026; no CMO or CCO listed). Not contradicted, not an existing partner, not stale — simply not a brand-investment moment. Re-open at first steel / commissioning with the timeline confirmed, when the Porsche and Scania (Cupra/VW Group) offtakes give a customer's-team angle at Porsche Formula E Team or Cupra Kiro.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.morningstar.com/news/pr-newswire/20260624hs91122/stegra-announces-closing-of-14-billion-financing-round",
+    "https://stegra.com/en/news-and-stories/stegra-announces-closing-of-14-billion-financing-round",
+    "https://www.prnewswire.com/news-releases/stegra-has-agreed-in-principle-on-a-1-4-billion-financing-round-led-by-a-wallenberg-investments-consortium-302741384.html",
+    "https://tech.eu/2026/04/14/stegra-bags-1-4bn-rescue-funding-package-for-giant-european-green-steel-plant/",
+    "https://www.miningmetalnews.com/20260415/3396/stegra-raises-eu14bn-boden-project-faces-delays"
+   ],
+   "screened_at": "2026-09-06"
+  },
+  "2026-09-05|VoltaGrid": {
+   "status": "screened_out",
+   "reason": "stale: The trigger is real but outside the window: VoltaGrid announced the $1.0B strategic equity investment from Blackstone Tactical Opportunities and Halliburton ($775M primary, $225M secondary) and the definitive agreement to acquire Propell Energy Technology on 11 May 2026 (GlobeNewswire, company newsroom, Blackstone), 117 days before the row's date against a 90-day limit. The release said both transactions were expected to close in mid-2026, but no closing announcement was found on the company newsroom, GlobeNewswire or Blackstone as of 6 Sep 2026, and no other company announcement falls inside the window: the Oracle 2.3 GW agreement dates from 15 Oct 2025 (POWER, DCD), the $5.0B financing package from November 2025 (company newsroom), and the ABB collaboration extension from March 2026. Not contradicted, not an existing F1/FE partner. Also noted for the human layer: Oracle, VoltaGrid's anchor customer, is title partner of Oracle Red Bull Racing, and ABB, its automation partner, is Formula E's title partner — adjacency to record, not a signal on its own. Re-open on the closing of the Blackstone/Halliburton investment and the Propell acquisition (the row's decision-maker, Nathan Ough, Co-Founder & CEO, stands), when a Houston behind-the-meter power company with a ~7.5 GW order book is a genuine F1-side capacity story around the United States GP.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.globenewswire.com/news-release/2026/05/11/3291825/0/en/voltagrid-announces-1-billion-strategic-equity-investment-from-blackstone-and-halliburton-to-fund-growth-and-acquisition-of-propell.html",
+    "https://www.blackstone.com/news/press/voltagrid-announces-1-billion-strategic-equity-investment-from-blackstone-and-halliburton-to-fund-growth-and-aquisition-of-propell/",
+    "https://voltagrid.com/news",
+    "https://www.datacenterdynamics.com/en/news/voltagrid-raises-1bn-from-blackstone-and-halliburton-to-expand-power-system-offering-for-data-centers/",
+    "https://www.powermag.com/oracle-taps-voltagrid-for-2-3-gw-modular-gas-fleet-to-power-ai-data-centers-across-texas/"
    ],
    "screened_at": "2026-09-06"
   }

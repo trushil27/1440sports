@@ -1,0 +1,795 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-08-07",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-_q2owelj/2026-08-07/firmus.pdf",
+     "web": "/tmp/case-pdf-_q2owelj/2026-08-07/firmus.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Firmus Technologies",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 17
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 72,
+     "reason": "top ranking score",
+     "company": "Firmus Technologies",
+     "decision": "selected",
+     "signal_date": "2026-08-07"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Firmus Technologies",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 72,
+   "score_breakdown": {
+    "cap": null,
+    "base": 72,
+    "total": 72,
+    "timing": 16,
+    "ops_fit": 13,
+    "ranking": 72,
+    "urgency": 15,
+    "capacity": 16,
+    "brand_fit": 12,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 1,
+     "product_to_need": 5,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 12
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 72,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 72,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Atlassian Williams Racing",
+   "source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+   "trigger_date": "2026-08-07",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 148,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-_q2owelj/2026-08-07/firmus.web.html",
+  "brief_data": {
+   "hq": "Singapore (founded in Sydney, 2019); AI Factories in Tasmania",
+   "deck": "Firmus, the Sydney-founded builder of liquid-cooled NVIDIA AI Factories on Tasmanian hydro power, announced a fully subscribed $2B strategic equity round on 7 August at a post-money valuation above $10.5B, backed by Coatue, NVIDIA, Blackstone and Jane Street, with an ASX listing targeted for the fourth quarter.",
+   "risks": [
+    {
+     "label": "FOUNDER HISTORY",
+     "detail": "Co-CEO Oliver Curtis served 12 months in prison for insider trading, released 2017 (Startup Daily); team due diligence will surface it.",
+     "counter": "Route through co-CEO Rosenfield and Chair Dempsey; the ASX process will have handled disclosure."
+    },
+    {
+     "label": "POWER AND COMMUNITY",
+     "detail": "Hydro Tasmania decides on Firmus' 450 MW request only by end-2026; the Tasmanian sites face local opposition (ABC News).",
+     "counter": "Anchor the activation on Batam and Singapore until power is contracted."
+    }
+   ],
+   "score": 72,
+   "ticker": "Private (>$10.5B post-money; ASX listing targeted Q4 2026)",
+   "company": "Firmus Technologies",
+   "gridfit": [
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "ipo_window",
+    "category_precedent"
+   ],
+   "sources": [
+    "https://www.startupdaily.net/topic/funding/ai-data-centre-startup-firmus-just-raised-another-2-85-billion-at-a-whopping-15b-valuation/",
+    "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+    "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+    "https://wilsonassetmanagement.com.au/nvidia-backed-firmus-targets-30b-revenue-ahead-of-ipo-in-fourth-quarter/",
+    "https://techwireasia.com/2026/06/nvidia-firmus-batam-ai-data-centre/",
+    "https://thenextweb.com/news/firmus-asx-ipo-blackstone-ai-data-center-australia",
+    "https://siliconangle.com/2026/04/06/nvidia-backed-firmus-raises-505m-5-5b-valuation-ahead-asx-ipo/",
+    "https://www.kirkland.com/news/press-release/2026/02/kirkland-represents-blackstone-on-ai-infrastructure-company-firmus-us-10-b-df-facility"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Oliver Curtis, or with co-CEO Tim Rosenfield and Chair Grant Dempsey, before the Singapore GP to agree a Singapore announcement window and size an Official AI Factory Partner entry against Williams' 2027 roster ahead of the listing.",
+    "value": [
+     {
+      "text": "Compute for the work outside the aerodynamic-testing restrictions: machine-learning surrogates, driver-in-the-loop and race-strategy simulation, telemetry and video analytics between sessions. Firmus supplies it on demand from liquid-cooled NVIDIA factories it says use 33% less energy and 99% less water than conventional builds, so the team gets capacity it could not fund inside the cost cap and a sustainability line it can defend.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner heading to a public listing brings Australian and Asian institutional investors, bankers and hyperscale customers to Singapore and Melbourne, an audience Williams' B2B partners want in the suite.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A factory-to-pit-wall story: the compute behind the strategy models, filmed in Tasmania and Batam, with co-produced engineering content alongside the team's data partners.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official AI Factory Partner designation, sidepod or engine-cover placement, naming of the team's compute environment, hospitality at the Australian and Singapore rounds, driver and engineering access for Firmus' investor communications.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 7 August Firmus announced full commitments for a $2B strategic equity round at a post-money valuation above $10.5B, with follow-on money from Coatue and NVIDIA, new investment from funds managed by Blackstone, and participation from Jane Street. It is a company release, confirmed by Bloomberg the same day, and takes new equity raised in the past year past $3B.",
+      "label": "Trigger"
+     },
+     {
+      "text": "In April Firmus raised $505M at a $5.5B valuation; four months later the post-money print is above $10.5B. Behind the equity sits a $10B debt facility led by Blackstone and Coatue, signed in February, described as one of the largest private debt financings in Australian history.",
+      "label": "Price doubled in four months"
+     },
+     {
+      "text": "Firmus and its advisers are working towards an ASX float in the final quarter of 2026, after an earlier mid-year target slipped; Wilson Asset Management reports the company wants up to $30B of committed revenue in hand when it launches. A listing of the reported size would rank among the largest technology IPOs in Australian history, and the brand spend that accompanies it is decided in the months before, not after.",
+      "label": "The listing"
+     },
+     {
+      "text": "The Singapore GP in October is an hour from the Batam campus where Firmus will take delivery of up to 170,000 NVIDIA GPUs from the first quarter of 2027; the 2027 season then opens with the Australian GP in Melbourne, in front of the investors the offer is aimed at. A deal agreed before Singapore can be announced there and launched in full at home.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Atlassian, founded in Sydney, became Williams' title partner in 2025 in the largest deal in the team's history. Firmus was founded in Sydney six years ago and is about to ask Australian investors to value it above $10B. Two Sydney technology companies on one car is a story the ASX, the AFR and the Melbourne crowd will read without explanation.",
+      "label": "The Australian car"
+     },
+     {
+      "text": "Per the sponsor table, Williams carries Atlassian, VAST for the data platform, Keeper for identity, Airia, Brillio and Claude as Official Thinking Partner, and no cloud, GPU or AI-compute partner. Official AI Factory Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Williams' revival is data-led, and GPU capacity for surrogate models, simulation and analytics is consumed in the factory rather than merely shown on the car. That is what separates a technology partner from a logo, and it is what Firmus sells.",
+      "label": "A data-native roster"
+     },
+     {
+      "text": "Atlassian, Airwallex and Airtasker have each used a Formula 1 team to take an Australian technology brand global. Firmus would be the fourth, and the first whose product the team itself would run on.",
+      "label": "Precedent"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, is a direct rival."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Core Scientific and TWG AI occupy the compute and AI lanes on the 2026 roster."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and the cloud incumbent."
+     },
+     {
+      "team": "Mercedes-AMG Petronas · BWT Alpine",
+      "reason": "Microsoft holds the cloud lane at both."
+     },
+     {
+      "team": "McLaren F1 Team",
+      "reason": "Google Cloud and Dell Technologies occupy cloud and hardware; Airwallex already owns the Australian-technology story there."
+     },
+     {
+      "team": "Scuderia Ferrari",
+      "reason": "HP (title) and IBM cover compute hardware and cloud services."
+     },
+     {
+      "team": "Audi F1 Team",
+      "reason": "Hewlett Packard Enterprise on the roster in the last 12 months; lane crowded."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls · TGR Haas F1 Team",
+      "reason": "Open but not chosen: Airtasker gives Racing Bulls an Australian thread, but neither roster is data-native and neither carries an Australian title partner."
+     }
+    ]
+   },
+   "date_long": "07 AUG 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Atlassian Williams Racing",
+   "value_mode": "A",
+   "bottom_line": "A company-announced $2B round at more than $10.5B, a $10B debt stack and an ASX listing targeted for the fourth quarter put Firmus at peak brand-investment motive; Williams offers the grid's only Australian-titled car and an open compute lane. Founder history and unresolved Tasmanian power hold the score at 72.",
+   "footer_date": "7 AUG 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Round announced 7 Aug; Singapore GP inside the window; float targeted Q4.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 16,
+     "note": "$2B equity at $10.5B+ and $10B of debt, but earmarked for capex.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 12,
+     "note": "B2B infrastructure; strong Australian tie; founder history to manage.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 15,
+     "note": "Q4 listing target is real but has already slipped once.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 13,
+     "note": "MODE A GPU capacity; lane open at Williams; low on-camera value.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "The round is company-announced: $2B of equity from Coatue, NVIDIA, funds managed by Blackstone and Jane Street, taking new equity raised in the past year past $3B and the valuation from $5.5B in April to more than $10.5B. Beneath it sits a $10B debt facility led by Blackstone and Coatue, signed in February, for Project Southgate: liquid-cooled AI Factories in Tasmania, 36,000 NVIDIA GPUs at the Launceston site, and a 170,000-GPU campus in Batam, Indonesia, from the first quarter of 2027, against which Firmus reports up to $30B of committed revenue over six years.",
+   "the_case_p2": "The identity moment is the listing. Firmus and its advisers are working towards an ASX float in the final quarter of 2026 (Wilson Asset Management, Capital Brief), which at the reported size would rank among the largest technology listings in Australian history. A company about to sell itself to Australian institutions and retail investors needs a brand beyond data-centre engineers, and the local precedent is set: Atlassian, Airwallex and Airtasker all bought Formula 1 for that reason.",
+   "track_label": "",
+   "brief_number": "148",
+   "claims_total": 16,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$2B fully subscribed strategic equity round at a post-money valuation above $10.5B, company-announced 7 Aug…",
+     "value": "$2B",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific"
+    },
+    {
+     "fact": "Coatue and NVIDIA (follow-on), funds managed by Blackstone (new), Jane Street; more than $3B of new equity…",
+     "value": "$3B",
+     "claim_id": 622,
+     "verified": true,
+     "source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific"
+    },
+    {
+     "fact": "Beneath it sits a $10B debt facility led by Blackstone and Coatue, signed in February, for Project Southgat…",
+     "value": "$10B",
+     "claim_id": 631,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Infrastructure · Liquid-Cooled NVIDIA AI Factories",
+   "value_content": "MODE A - operational. Williams' development outside the FIA aerodynamic-testing limits is GPU-bound: machine-learning surrogates, driver-in-loop and strategy simulation, telemetry analytics between sessions. Firmus supplies that capacity from liquid-cooled NVIDIA factories it says use 33% less energy and 99% less water, on demand and outside cost-cap capital. In return: Official AI Factory Partner designation, livery presence, Singapore and Melbourne hospitality for its investor and customer audience.",
+   "value_section": true,
+   "why_team_para": "Williams is the Australian car on the grid: Atlassian, founded in Sydney, became title partner in 2025 in the largest deal in the team's history, and the roster around it is data-native: VAST for the data platform, Keeper for identity, Claude as Official Thinking Partner. The sponsor table shows no cloud, GPU or AI-compute partner at Williams; CoreWeave holds that lane at Aston Martin Aramco, Core Scientific and TWG AI at Cadillac. Two Sydney companies on one car is a story the ASX will read.",
+   "deal_arch_para": "Entry as Official AI Factory Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the listing and the Batam ramp. Estimated $3-5M a year, part-payable in compute. Scope: sidepod placement, naming of the team's compute environment, hospitality at the Australian and Singapore rounds, joint engineering content.",
+   "footer_company": "FIRMUS TECHNOLOGIES",
+   "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 7 August and the float is targeted for the fourth quarter, so the listing's brand budget is being set now. The Singapore GP in October sits an hour from Batam, and the 2027 season opens with the Australian GP in Melbourne, the home market for the offer.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Curtis co-founded Firmus in Sydney in 2019, fronts every raise and holds a reported 19% stake. Path: Tim Rosenfield, Co-Founder and Co-CEO; Kirsty Godfrey-Billy, CFO, ex-Xero; Cameron Hanson, COO; Grant Dempsey, Chair. No chief marketing officer is listed.",
+   "decision_maker_name": "Oliver Curtis",
+   "decision_maker_role": "Co-Founder & Co-CEO, Firmus Technologies",
+   "opening_angle_intro": "Lead with the Australian car.",
+   "opening_angle_quote": "&ldquo;Oliver, Atlassian took Williams to market as the Australian team; you are taking Firmus to the ASX. The compute lane on that car is open and Singapore is an hour from Batam. 25 minutes before the Singapore GP to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Oliver Curtis, Co-Founder & Co-CEO at Firmus Technologies",
+   "cited_source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.startupdaily.net/topic/funding/ai-data-centre-startup-firmus-just-raised-another-2-85-billion-at-a-whopping-15b-valuation/",
+     "excerpt": "Startup Daily (Aug 2026) and cfotech.com.au / iTWire leadership coverage: Oliver Curtis, Co-Founder and Co-CEO, is Firmus' largest shareholder at a 19% stake and fronts each raise; Tim Rosenfield is Co-Founder and Co-CEO; Kirsty Godfrey-Billy is CFO (joined from Xero); Cameron Hanson COO; Daniel Kearney CTO; Nicole Reid Chief People Officer; Grant Dempsey incoming Chair (ex-JP Morgan). No chief marketing officer is named in any leadership listing found. Startup Daily also records that Curtis was sentenced to two years for insider trading a decade ago and served 12 months before release in 2017.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Oliver Curtis, Co-Founder & Co-CEO, Firmus Technologies at Firmus Technologies",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.startupdaily.net/topic/funding/ai-data-centre-startup-firmus-just-raised-another-2-85-billion-at-a-whopping-15b-valuation/",
+     "excerpt": "Startup Daily (Aug 2026) and cfotech.com.au / iTWire leadership coverage: Oliver Curtis, Co-Founder and Co-CEO, is Firmus' largest shareholder at a 19% stake and fronts each raise; Tim Rosenfield is Co-Founder and Co-CEO; Kirsty Godfrey-Billy is CFO (joined from Xero); Cameron Hanson COO; Daniel Kearney CTO; Nicole Reid Chief People Officer; Grant Dempsey incoming Chair (ex-JP Morgan). No chief marketing officer is named in any leadership listing found. Startup Daily also records that Curtis was sentenced to two years for insider trading a decade ago and served 12 months before release in 2017.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$2B fully subscribed strategic equity round at a post-money valuation above $10.5B, company-announced 7 Aug 2026; follows $505M at $5.5B in April 2026 and a $10B debt facility led by Blackstone and Coatue in February 2026",
+   "cited_source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Firmus, the Sydney-founded builder of liquid-cooled NVIDIA AI Factories on Tasmanian hydro power, announced a fully subscribed $2B strategic equity round on 7 August at a post-money valuation above $10.5B, backed by Coatue, NVIDIA, Blackstone and Jane Street, with an ASX listing targeted for the fourth quarter.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Coatue and NVIDIA (follow-on), funds managed by Blackstone (new), Jane Street; more than $3B of new equity raised in the past year (company release)",
+   "cited_source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The round is company-announced: $2B of equity from Coatue, NVIDIA, funds managed by Blackstone and Jane Street, taking new equity raised in the past year past $3B and the valuation from $5.5B in April to more than $10.5B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$2B strategic equity round at a post-money valuation above $10.5B, announced 7 Aug 2026",
+   "cited_source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Beneath it sits a $10B debt facility led by Blackstone and Coatue, signed in February, for Project Southgate: liquid-cooled AI Factories in Tasmania, 36,000 NVIDIA GPUs at the Launceston site, and a 170,000-GPU campus in Batam, Indonesia, from the first quarter of 2027, against which Firmus reports up to $30B of committed revenue over six years.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CoreWeave is Official AI Cloud Computing Partner of Aston Martin Aramco (May 2025); Core Scientific and TWG AI sit on Cadillac's 2026 roster; Williams carries no cloud or GPU-compute partner",
+   "cited_source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+     "excerpt": "Aston Martin Aramco, 22 May 2025: CoreWeave joins as Official AI Cloud Computing Partner in a multi-year partnership. Sponsor table: Core Scientific and TWG AI are on Cadillac F1 Team's 2026 roster.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A company-announced $2B round at more than $10.5B, a $10B debt stack and an ASX listing targeted for the fourth quarter put Firmus at peak brand-investment motive;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Atlassian, founded in Sydney, has been Williams' title partner since 2025; Firmus was founded in Sydney and targets an ASX listing in the fourth quarter of 2026",
+   "cited_source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://wilsonassetmanagement.com.au/nvidia-backed-firmus-targets-30b-revenue-ahead-of-ipo-in-fourth-quarter/",
+     "excerpt": "Wilson Asset Management (AFR-sourced) and Capital Brief, mid-2026: Firmus and its advisers are working to put the offer in front of investors late in the September quarter with an ASX listing in the final quarter of 2026, once financing and customers for the Batam development are secured; the float had earlier been expected in June or July and was described by TheNextWeb as a targeted ~$2bn raise that would rank among the largest technology listings in Australian history. Nothing is confirmed; the timing has slipped once.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "value_content",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Firmus supplies that capacity from liquid-cooled NVIDIA factories it says use 33% less energy and 99% less water, on demand and outside cost-cap capital.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://thenextweb.com/news/firmus-asx-ipo-blackstone-ai-data-center-australia",
+     "excerpt": "TheNextWeb (Apr 2026): Firmus' modular, fully liquid-cooled AI Factories are built to run NVIDIA GPU clusters at high density; the company says its technology cuts energy consumption by 33% and water use by 99% (company claims, not independently verified).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "None found: founded in Sydney in 2019, now Singapore-based (Startup Daily); AI Factories in Tasmania and a 170,000-GPU Batam, Indonesia campus from Q1 2027",
+   "cited_source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techwireasia.com/2026/06/nvidia-firmus-batam-ai-data-centre/",
+     "excerpt": "Tech Wire Asia (Jun 2026), CRN Asia and Light Reading: Firmus' first Indonesian project is a 360 MW AI Factory campus in Batam, close to Singapore, with NVIDIA and DayOne, taking delivery of up to 170,000 NVIDIA GPUs from the first quarter of 2027 into 2028; Firmus said it expects up to US$30 billion of revenue over the agreement's first six years based on committed customer agreements. Initial Batam capacity targeted for Q1 2027.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 7 August Firmus announced full commitments for a $2B strategic equity round at a post-money valuation above $10.5B, with follow-on money from Coatue and NVIDIA, new investment from funds managed by Blackstone, and participation from Jane Street.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "It is a company release, confirmed by Bloomberg the same day, and takes new equity raised in the past year past $3B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "In April Firmus raised $505M at a $5.5B valuation;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://siliconangle.com/2026/04/06/nvidia-backed-firmus-raises-505m-5-5b-valuation-ahead-asx-ipo/",
+     "excerpt": "SiliconANGLE, 6 Apr 2026: Firmus raised $505 million co-led by Coatue and NVIDIA at a $5.5 billion valuation ahead of an anticipated ASX listing.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "four months later the post-money print is above $10.5B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Behind the equity sits a $10B debt facility led by Blackstone and Coatue, signed in February, described as one of the largest private debt financings in Australian history.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "excerpt": "Firmus newsroom (7 Aug 2026; Bloomberg, TechNode Global and Seeking Alpha the same day): full commitments for a USD$2 billion strategic equity investment round with follow-on participation from Coatue and NVIDIA, new investment from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and participation from Jane Street; post-money valuation above USD$10.5 billion; more than $3 billion of new equity raised in the past year; proceeds accelerate Project Southgate in Australia and Asia-Pacific expansion including the Indonesia development. Oliver Curtis, Co-Chief Executive Officer, is the executive quoted.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Wilson Asset Management reports the company wants up to $30B of committed revenue in hand when it launches.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techwireasia.com/2026/06/nvidia-firmus-batam-ai-data-centre/",
+     "excerpt": "Tech Wire Asia (Jun 2026), CRN Asia and Light Reading: Firmus' first Indonesian project is a 360 MW AI Factory campus in Batam, close to Singapore, with NVIDIA and DayOne, taking delivery of up to 170,000 NVIDIA GPUs from the first quarter of 2027 into 2028; Firmus said it expects up to US$30 billion of revenue over the agreement's first six years based on committed customer agreements. Initial Batam capacity targeted for Q1 2027.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Firmus was founded in Sydney six years ago and is about to ask Australian investors to value it above $10B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.kirkland.com/news/press-release/2026/02/kirkland-represents-blackstone-on-ai-infrastructure-company-firmus-us-10-b-df-facility",
+     "excerpt": "Kirkland & Ellis release and DCD, 9 Feb 2026: Firmus secured a US$10 billion debt financing facility led by funds managed by Blackstone Tactical Opportunities and Blackstone Credit & Insurance, supported by Coatue, to fund the next phase of Project Southgate; described as one of the largest private debt financings in Australian history; Southgate expected to scale to 1.6 GW through 2028.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Firmus supplies it on demand from liquid-cooled NVIDIA factories it says use 33% less energy and 99% less water than conventional builds, so the team gets capacity it could not fund inside the cost cap and a sustainability line it can defend.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://thenextweb.com/news/firmus-asx-ipo-blackstone-ai-data-center-australia",
+     "excerpt": "TheNextWeb (Apr 2026): Firmus' modular, fully liquid-cooled AI Factories are built to run NVIDIA GPU clusters at high density; the company says its technology cuts energy consumption by 33% and water use by 99% (company claims, not independently verified).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The Singapore GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 18: Singapore GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Australian GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "opening_angle_quote",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Singapore GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 18: Singapore GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

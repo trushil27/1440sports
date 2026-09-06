@@ -1,0 +1,414 @@
+{
+ "run_date": "2026-07-01",
+ "signal_date": "2026-07-01",
+ "stem": "togetherai",
+ "number": 170,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Together AI",
+  "signal_date": "2026-07-01",
+  "score": 74,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Vipul Ved Prakash",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-$800-Million-at-$8.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All",
+  "industry_meta": "AI Infrastructure · Open-Source AI Cloud / Inference · San Francisco",
+  "recommended_team": "TGR Haas F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$800M Series C at an $8.3B post-money valuation led by Aramco Ventures, announced 1 Jul 2026 (company release, Business Wire)",
+   "investors": "Aramco Ventures (lead); Vista Equity Partners, General Catalyst, Emergence Capital, Nvidia, March Capital, Pegatron, S Ventures and others",
+   "revenue": "Annual bookings above $1.15B in the last quarter (company statement, 1 Jul 2026); no revenue figure disclosed",
+   "trigger": "$800M Series C at $8.3B, announced 1 Jul 2026",
+   "competitor_signal": "CoreWeave is Aston Martin Aramco's Official AI Cloud Computing Partner (May 2025); Core Scientific and TWG AI sit on Cadillac's 2026 roster; Groq is on McLaren's",
+   "strategic_hook": "Lead investor Aramco is F1's Global Partner and the Aston Martin title partner through 2028; Nvidia is an investor; Together's self-service GPU clusters and private open-model inference are a direct engineering workstream for a team without a hyperscaler",
+   "us_presence": "HQ San Francisco; founded 2022",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: self-service GPU clusters for ML surrogates, simulation and analytics; private open-model inference for engineering assistants; no cloud or AI-compute partner on the Haas roster",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 17,
+   "capacity": 18,
+   "brand_fit": 13,
+   "urgency": 12,
+   "ops_fit": 14,
+   "ops_fit_subscores": {
+    "product_to_need": 5,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "vipul ved prakash",
+    "prakash"
+   ],
+   "url": "https://www.together.ai/about-us",
+   "excerpt": "Together AI leadership page (search summary of together.ai/about-us): Vipul Ved Prakash, Founder & CEO; Ce Zhang, Founder & CTO; Chris Ré, Tri Dao (Founder & Chief Scientist) and Percy Liang, Founders; Charles Zedlewski, Chief Product Officer; Kai Mak, Chief Revenue Officer; Meicheng Shi, SVP of Finance. Prakash co-founded the company in June 2022.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$800m",
+    "$8.3b",
+    "aramco ventures",
+    "1 jul",
+    "series c",
+    "$1.15b",
+    "paying customers",
+    "cursor",
+    "50-fold",
+    "fifty",
+    "50 times",
+    "funding round"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-$800-Million-at-$8.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All",
+   "excerpt": "Company release, Business Wire, 1 Jul 2026 (search summary; also TechCrunch and Yahoo Finance the same day): Together AI raised an $800 million Series C at an $8.3 billion post-money valuation, led by Aramco Ventures with Vista Equity Partners, General Catalyst, Emergence Capital, NVIDIA, March Capital, Pegatron, S Ventures (SentinelOne) and others. Annual bookings surpassed $1.15 billion in the last quarter; thousands of paying customers including Cursor, Cognition and Decagon. The company expects its infrastructure footprint to grow roughly 50 times over the next five years.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$305m",
+    "$3.3b",
+    "february 2025",
+    "general catalyst",
+    "series b"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/together-ai-raises-305m-series-b-to-scale-ai-acceleration-cloud-for-open-source-and-enterprise-ai-302380967.html",
+   "excerpt": "Company release, 20 Feb 2025 (search summary; SiliconANGLE and DCD the same day): $305 million Series B led by General Catalyst and co-led by Prosperity7 at a $3.3 billion valuation, with Salesforce Ventures, NVIDIA, Kleiner Perkins, Coatue and others participating.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$240m",
+    "ibm"
+   ],
+   "url": "https://newsroom.ibm.com/2026-08-11-IBM-and-Together-AI-Sign-Multi-Year-Agreement-to-Scale-Open-Source-AI-Inference-with-NVIDIA-AI-Infrastructure-on-IBM-Cloud",
+   "excerpt": "IBM newsroom, 11 Aug 2026 (search summary; BNN Bloomberg the same day): IBM and Together AI signed a US$240 million multi-year agreement for a large-scale inference cluster on IBM Cloud built on NVIDIA HGX B300 systems, expected to be available in the first quarter of 2027.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "ce zhang",
+    "zedlewski",
+    "kai mak",
+    "meicheng shi",
+    "chief revenue",
+    "chief product",
+    "svp finance",
+    "no chief marketing",
+    "no cmo",
+    "chief marketing officer"
+   ],
+   "url": "https://www.together.ai/about-us",
+   "excerpt": "together.ai/about-us (search summary): leadership lists Ce Zhang (Founder & CTO), Charles Zedlewski (Chief Product Officer, ex-COO Temporal), Kai Mak (Chief Revenue Officer, ex-VP Sales Snowflake) and Meicheng Shi (SVP of Finance). No chief marketing officer and no CFO title appear on the page.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "san francisco",
+    "2022",
+    "topsy",
+    "siri",
+    "apple"
+   ],
+   "url": "https://siliconangle.com/2025/02/20/together-ai-raises-305m-ai-optimized-public-cloud/",
+   "excerpt": "SiliconANGLE, 20 Feb 2025: San Francisco-based Together AI, founded in 2022, operates a public cloud optimised to run open-source AI models. Wikipedia / Milken Institute profile: Vipul Ved Prakash previously founded Topsy, the social-media search company acquired by Apple, where he was a senior director leading search and AI for Siri.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "instant gpu clusters",
+    "self-service",
+    "self service",
+    "frontier ai factory",
+    "blackwell",
+    "spin up",
+    "in minutes",
+    "fine-tun",
+    "open-model inference",
+    "open models"
+   ],
+   "url": "https://www.together.ai/blog/together-instant-clusters-ga",
+   "excerpt": "Together AI product pages (search summaries of together.ai and HPCwire, Mar 2025 onward): Together Instant GPU Clusters are fully self-service and spin up in minutes from the console (preview offered up to 64 NVIDIA Hopper GPUs per deployment, InfiniBand-connected); the Frontier AI Factory offers dedicated NVIDIA Blackwell clusters from 1K to 100K+ GPUs; the platform trains, fine-tunes and runs inference for open-source and custom models with private deployment options.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "coreweave"
+   ],
+   "url": "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+   "excerpt": "Aston Martin Aramco, 22 May 2025: CoreWeave joins as Official AI Cloud Computing Partner in a multi-year partnership; the team's wind tunnel is named the CoreWeave Wind Tunnel.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "kannapolis",
+    "north carolina",
+    "american team",
+    "tgr haas",
+    "toyota gazoo",
+    "title partner"
+   ],
+   "url": "https://www.haasf1team.com/news/toyota-gazoo-racing-set-title-partnership-haas-f1-team-2026",
+   "excerpt": "Haas F1 Team, Dec 2025 (search summary): the American team, with operations based in Kannapolis, North Carolina, races as TGR Haas F1 Team from 2026 with Toyota Gazoo Racing as title partner, expanding the multi-year technical partnership signed in October 2024.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "exein",
+    "physical ai"
+   ],
+   "url": "https://www.haasf1team.com/news/tgr-haas-f1-team-announces-exein-official-physical-ai-security-partner",
+   "excerpt": "Haas F1 Team, Jul 2026 (search summary): Exein joins as Official Physical AI Security Partner from the Belgian Grand Prix, securing connected devices, AI agents and cloud workloads at device level. A security partner, not a cloud or compute provider.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "eight ai partnerships",
+    "ampere"
+   ],
+   "url": "https://techhq.com/news/formula-one-ai-partnerships-race-strategy-operations/",
+   "excerpt": "Reuters / TechHQ, May 2026: eight AI partnerships were signed across Formula One and its 11 teams in the past six months, according to Ampere Analysis, covering team operations, race strategy and data handling.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "aramco",
+    "global partner",
+    "core scientific",
+    "twg ai",
+    "groq",
+    "oracle",
+    "microsoft",
+    "google cloud",
+    "dell",
+    "hp ",
+    "hewlett",
+    "mphasis",
+    "commscope",
+    "ruckus",
+    "infobip",
+    "claude",
+    "vast",
+    "dynatrace",
+    "confluent",
+    "amd",
+    "g42",
+    "meta ai",
+    "title"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §1.1, §2 + data/teams.json)",
+   "excerpt": "Sponsor table (spec/active_sponsor_db.md, data/teams.json): Aramco — F1 championship Global Partner (Energy / Fuel) and Aston Martin title partner, deal through end of 2028. Aston Martin: CoreWeave. Cadillac: Core Scientific, TWG AI. McLaren: Google Cloud, Dell Technologies, Groq. Red Bull: Oracle title. Mercedes: Microsoft, Hewlett Packard Enterprise, AMD, G42, Meta AI. Alpine: Microsoft. Ferrari: HP, IBM. Audi: Hewlett Packard Enterprise departed in the last 12 months. Williams: Claude (Anthropic), VAST. Racing Bulls: Dynatrace, Confluent. Haas (TGR Haas F1 Team): Toyota Gazoo Racing, Mphasis, CommScope, Ruckus, Infobip, MoneyGram; no cloud, GPU or AI-compute partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "miami",
+    "dutch gp",
+    "italian gp",
+    "united states gp",
+    "us gp",
+    "belgian gp",
+    "hungarian gp"
+   ],
+   "url": "seeds/calendar_2026.json (F1 2026 calendar)",
+   "excerpt": "2026 F1 calendar table: Miami GP (May), Belgian GP (17-19 Jul), Hungarian GP (24-26 Jul), Dutch GP (21-23 Aug), Italian GP (4-6 Sep), US GP at Austin (23-25 Oct), Las Vegas GP (19-21 Nov); dates from formula1.com.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Together AI",
+  "industry_meta": "AI Infrastructure · Open-Source AI Cloud / Inference",
+  "hq": "San Francisco (founded 2022)",
+  "ticker": "Private ($8.3B post-money; $800M Series C, Jul 2026)",
+  "deck": "Together AI, the San Francisco cloud built for open-source AI, closed an $800M Series C at an $8.3B valuation on 1 July 2026, led by Aramco Ventures with Nvidia, Vista and General Catalyst: two and a half times its February 2025 price, with annual bookings past $1.15B.",
+  "score": 74,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "TGR Haas F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Together AI announced on 1 July 2026 an $800M Series C at an $8.3B post-money valuation, led by Aramco Ventures with Vista Equity Partners, General Catalyst, Emergence Capital, Nvidia, March Capital, Pegatron and S Ventures. Annual bookings topped $1.15B in the last quarter, with thousands of paying customers including Cursor, Cognition and Decagon. The $305M Series B at $3.3B, led by General Catalyst, closed only in February 2025. The company says its infrastructure footprint will grow roughly 50-fold over five years: for an infrastructure business, the brand-building moment arrives with the build-out.",
+  "the_case_p2": "The grid has already priced the neocloud archetype: CoreWeave became Aston Martin Aramco's Official AI Cloud Computing Partner in May 2025, Core Scientific and TWG AI opened on Cadillac's first roster, and Groq holds inference silicon on McLaren's. Aramco, the lead investor here, is both F1's Global Partner and the Aston Martin title, so the ecosystem knows the name; the seat, though, has to be one CoreWeave does not already hold.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 1 July; brand budgets are set in the quarter after a raise, and a 50-fold capacity plan needs a name enterprises recognise. Teams fix 2027 rosters in the fourth quarter; the United States GP (Austin, October) and Las Vegas GP (November) are the stages for a US announcement.",
+  "why_team_label": "WHY TGR HAAS F1 TEAM",
+  "why_team_para": "Haas is the American team, run from Kannapolis, North Carolina, racing in 2026 as TGR Haas F1 Team under Toyota Gazoo Racing's title partnership. Its technology roster is IT services, networking and communications: Mphasis, CommScope, Ruckus, Infobip. There is no cloud, GPU or AI-compute partner, so Official AI Cloud Partner is a clean category at the grid's most accessible price. A San Francisco developer brand gets a US home team, three US rounds and engineers who will use the product.",
+  "value_section": true,
+  "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A - operational. A team without a hyperscaler partner buys compute at list price. Together's self-service GPU clusters spin up in minutes for machine-learning surrogates, strategy and driver-in-loop simulation, and telemetry analytics between sessions; private open-model inference gives engineers assistants that keep team data in-house. In return: a named compute partnership, sidepod presence, and Miami, Austin and Las Vegas hospitality for Together's enterprise buyers.",
+  "deal_arch_para": "Entry as Official AI Cloud Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the 50-fold build-out and a probable listing window. Estimated $3-5M a year, part-payable in compute credits. Scope: sidepod or engine-cover placement, naming of the team's compute environment, US-round hospitality, engineering content.",
+  "decision_maker_name": "Vipul Ved Prakash",
+  "decision_maker_role": "Co-Founder & CEO, Together AI",
+  "decision_maker_bio": "Prakash co-founded Together AI in 2022 after selling Topsy to Apple and leading search and AI for Siri; a first sports partnership is his call. Path: Kai Mak, Chief Revenue Officer, Charles Zedlewski, Chief Product Officer, Meicheng Shi, SVP Finance. No chief marketing officer is listed.",
+  "opening_angle_intro": "Lead with the Aramco connection.",
+  "opening_angle_quote": "&ldquo;Vipul, your lead investor is F1's Global Partner, and CoreWeave took its Aston Martin seat the year it listed. The American team has no compute partner. 25 minutes before Austin to see the numbers?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "17",
+    "/ 20",
+    "Round closed 1 Jul; Austin and Las Vegas inside the year."
+   ],
+   [
+    "CAPACITY",
+    "18",
+    "/ 20",
+    "$800M at $8.3B; annual bookings above $1.15B."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "Developer-facing B2B brand; Aramco and Nvidia on the cap table."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "50-fold build-out and Q4 rosters; no hard deadline."
+   ],
+   [
+    "OPS FIT",
+    "14",
+    "/ 20",
+    "MODE A: self-service GPU clusters and private inference."
+   ]
+  ],
+  "risks": [
+   [
+    "CROWDED ARCHETYPE",
+    "CoreWeave, Core Scientific and Groq already hold grid positions; a fourth AI-cloud logo can read as a follower.",
+    "Make Haas the first team whose compute story is open-source inference, and price it as a product deal."
+   ],
+   [
+    "INVESTOR TIES, NOT PARTNER TIES",
+    "Aramco's F1 money sits at Aston Martin, where CoreWeave holds the lane; the warm path leads to the ecosystem, not to Haas.",
+    "Use Aramco for the F1 introduction; sell Haas on product use and the US rounds."
+   ]
+  ],
+  "bottom_line": "An $800M round at $8.3B, bookings above $1.15B and a 50-fold build-out put Together AI at peak brand-investment authority with an F1-literate lead investor. The compute lane at TGR Haas is open and the US rounds sit inside the planning window.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "investor_adjacency"
+  ],
+  "footer_company": "TOGETHER AI",
+  "footer_date": "1 JUL 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 1 July 2026 Together AI announced an $800M Series C at an $8.3B post-money valuation, led by Aramco Ventures with Vista Equity Partners, General Catalyst, Emergence Capital, Nvidia, March Capital, Pegatron and S Ventures. This is a company release, not a press report, so the figures are confirmed."
+    },
+    {
+     "label": "Price up two and a half times in sixteen months",
+     "text": "The $305M Series B at $3.3B, led by General Catalyst, closed in February 2025. Annual bookings passed $1.15B in the quarter before the Series C, with thousands of paying customers including Cursor, Cognition and Decagon. A company re-priced that fast, selling to developers and enterprises, has a story to tell and a budget to tell it with."
+    },
+    {
+     "label": "A build-out that needs a name",
+     "text": "Management says the infrastructure footprint will grow roughly 50-fold over five years. An infrastructure brand is built while the capacity is built: the enterprise buyers, bankers and hyperscaler partners it must win are exactly the audience an F1 paddock assembles."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Brand budgets are set in the quarter after a raise and teams close 2027 partner rosters in the fourth quarter. The United States GP in Austin (October) and the Las Vegas GP (November) are the two US stages on which a San Francisco company would announce. Since this brief's date, IBM signed a $240M multi-year agreement (11 August 2026) to host a Together AI inference cluster on IBM Cloud from the first quarter of 2027, which strengthens the capacity story rather than changing the recommendation."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "The Haas technology roster is Toyota Gazoo Racing (title), Mphasis (IT services), CommScope and Ruckus (networking) and Infobip (cloud communications), joined in July 2026 by Exein for device-level security. There is no cloud, GPU or AI-compute partner: Official AI Cloud Partner is a clean category, and Haas partnerships are priced below the front of the grid."
+    },
+    {
+     "label": "The American team",
+     "text": "Haas is run from Kannapolis, North Carolina, and is the only US-owned team on the grid until Cadillac's arrival this season. A San Francisco company gets a home team for Miami, Austin and Las Vegas and a story that plays to the US enterprise market where its customers sit."
+    },
+    {
+     "label": "A team that will use the product",
+     "text": "A team without a hyperscaler partner buys its compute at list price. Elastic GPU clusters for surrogate models, simulation and analytics, and private inference for engineering assistants, are consumed in the factory rather than displayed on the car, which is what separates a technology partner from a logo."
+    },
+    {
+     "label": "The ecosystem path",
+     "text": "Aramco, the round's lead investor, is F1's Global Partner and the title partner at Aston Martin through 2028, so the sport already knows the name. That path leads into F1, not to a specific team: at Aston Martin the lane belongs to CoreWeave, which is why the recommendation is Haas."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Together Instant GPU Clusters are self-service and spin up in minutes; the Frontier AI Factory offers dedicated Blackwell clusters at scale. For Haas that means on-demand capacity for machine-learning surrogates, strategy and driver-in-the-loop simulation, and telemetry and video analytics between sessions, without capital tied up inside the cost cap."
+    },
+    {
+     "label": "Private inference for the engineering office",
+     "text": "Open models fine-tuned on the team's own documentation and data, served from private endpoints, give engineers and strategists assistants that never send team data to a third-party model. That is the concrete product a team without a hyperscaler partner cannot buy cheaply elsewhere."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "Together sells to developers, CTOs and hyperscalers. Its guest list at Miami, Austin and Las Vegas is enterprise buyers, investors and bankers: the audience Haas's B2B partners (Mphasis, CommScope, Infobip) want in the suite."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official AI Cloud Partner designation, sidepod or engine-cover placement, naming of the team's compute environment, hospitality at the three US rounds, and co-produced engineering content from Kannapolis for Together's developer channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, is a direct rival; Aramco's title deal does not open that lane."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "Core Scientific and TWG AI occupy the compute and AI lanes on the 2026 roster."
+    },
+    {
+     "team": "McLaren F1 Team",
+     "reason": "Google Cloud, Dell Technologies and Groq cover cloud, hardware and inference silicon."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and the cloud and AI incumbent."
+    },
+    {
+     "team": "Mercedes-AMG Petronas · BWT Alpine",
+     "reason": "Microsoft holds the cloud lane at both; Mercedes also carries Hewlett Packard Enterprise, AMD, G42 and Meta AI."
+    },
+    {
+     "team": "Scuderia Ferrari",
+     "reason": "HP (title) and IBM cover compute hardware and cloud services; IBM is also now Together's own cloud host, which would make the roster conversation awkward rather than warm."
+    },
+    {
+     "team": "Audi F1 Team",
+     "reason": "Hewlett Packard Enterprise on the roster in the last 12 months; lane crowded."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Open compute lane but not chosen: Williams' AI story is Claude's, a closed model, and VAST holds the data platform; Together's brand is open-source inference."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Open but not chosen: Dynatrace and Confluent hold the data lanes, and there is no US identity to match a San Francisco company."
+    }
+   ],
+   "ask": "A 25-minute call with Vipul Ved Prakash before the United States GP to test appetite for a first sports partnership, agree an Austin or Las Vegas announcement window, and size an Official AI Cloud Partner entry against the Haas 2027 roster."
+  }
+ },
+ "note": "# Together AI → TGR Haas F1 Team — verification log (N° 170, issued for 1 Jul 2026)\n\nBuilt in-session on 6 Sep 2026 at no API cost (no `ANTHROPIC_API_KEY`), with Claude acting as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code from `togetherai.case.json`. The row sat on 1 Jul 2026 in the desk as an FE signal with no team; this case moves it to F1 and names the team.\n\n**Sandbox limitation, stated plainly:** direct fetches of together.ai, businesswire.com, prnewswire.com, techcrunch.com and haasf1team.com were blocked by the egress proxy. Each claim below was checked against the search summary of the primary page named as the evidence URL. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence is MEDIUM and the footer reads VERIFY BEFORE CIRCULATION.\n\n## The trigger, and the correction to the thin row\n\nThe round is company-announced (Business Wire, 1 Jul 2026) and Tier-1 covered (TechCrunch, Yahoo Finance, DCD the same day): **$800M Series C at $8.3B post-money, led by Aramco Ventures**. The thin row's framing, \"Aramco Ventures lead investor creates direct FE / Jeddah E-Prix Gen4 ecosystem alignment\", was the earlier writer's inference and does not survive the sponsor table: Aramco's motorsport money is in Formula 1 (championship Global Partner; Aston Martin title through 2028). The series is therefore F1, and the Aramco tie is treated as an ecosystem introduction, not a team path, because CoreWeave holds the AI-cloud lane at Aston Martin.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Vipul Ved Prakash, Co-Founder & CEO | VERIFIED | together.ai/about-us (search summary); The Org; Milken Institute |\n| Kai Mak CRO; Charles Zedlewski CPO; Meicheng Shi SVP Finance; Ce Zhang CTO; no CMO or CFO listed | VERIFIED | together.ai/about-us (search summary) |\n| $800M Series C at $8.3B post-money, led by Aramco Ventures; investors as listed | VERIFIED | Business Wire company release, 1 Jul 2026 |\n| Annual bookings above $1.15B in the last quarter; thousands of paying customers incl. Cursor, Cognition, Decagon | VERIFIED (company statement) | Business Wire, 1 Jul 2026; TechCrunch |\n| Footprint to grow ~50x over five years | VERIFIED (company statement) | Business Wire, 1 Jul 2026 |\n| $305M Series B at $3.3B led by General Catalyst, Feb 2025 | VERIFIED | PR Newswire company release, 20 Feb 2025; SiliconANGLE |\n| HQ San Francisco; founded 2022; Prakash ex-Topsy / Apple (Siri) | VERIFIED | SiliconANGLE; Milken / Wikipedia profile |\n| Instant GPU Clusters (self-service, minutes); Frontier AI Factory (Blackwell, 1K-100K+ GPUs); fine-tuning and private inference | VERIFIED | together.ai product pages; HPCwire, Mar 2025 |\n| IBM $240M multi-year inference cluster on IBM Cloud, 11 Aug 2026, online Q1 2027 (app page only) | VERIFIED | IBM newsroom, 11 Aug 2026; BNN Bloomberg |\n| CoreWeave Official AI Cloud Computing Partner, Aston Martin Aramco, May 2025 | VERIFIED | astonmartinf1.com |\n| Haas: American team, Kannapolis NC; TGR Haas F1 Team from 2026 with Toyota Gazoo Racing title | VERIFIED | haasf1team.com, Dec 2025 |\n| Exein Official Physical AI Security Partner, Jul 2026 (app page only; not in the sponsor table snapshot) | VERIFIED | haasf1team.com, Jul 2026 |\n| Eight AI partnerships in F1 in six months (Ampere Analysis) | REPORTED | Reuters via TechHQ, May 2026 |\n| Rosters: Aramco (F1 Global + Aston Martin title to 2028), Cadillac (Core Scientific, TWG AI), McLaren (Google Cloud, Dell, Groq), Red Bull (Oracle), Mercedes/Alpine (Microsoft), Ferrari (HP, IBM), Audi (HPE, departed), Williams (Claude, VAST), Racing Bulls (Dynatrace, Confluent), Haas (Toyota Gazoo Racing, Mphasis, CommScope, Ruckus, Infobip) | VERIFIED | sponsor table (`seeds/sponsors.json`) |\n| Miami, Belgian, Hungarian, Dutch, Italian, US (Austin), Las Vegas GPs on the 2026 calendar | VERIFIED | calendar table; dates from formula1.com |\n\n## Screen-outs and things not claimed\n\n- **No motorsport tie found** for Prakash, Zhang, Zedlewski, Mak or Shi after searching; `leadership_ties` is empty.\n- **No revenue figure** is used: the company discloses bookings, not revenue, and the copy says bookings.\n- **Deal size ($3-5M a year) is an ESTIMATE**, labelled as such; Haas partnerships are assumed to price below the front of the grid, which is a judgment, not a sourced figure.\n- **\"Only US-owned team until Cadillac\"** (app page) is a description of the 2026 grid, not a sourced quote; Cadillac's parent is General Motors per the sponsor table.\n- The Salesforce name appears as a Together AI customer (company customer page) and is not used in any team sentence.\n\n## Decision path\n\nVipul Ved Prakash (Co-Founder & CEO) fronts every raise and would own a first sports partnership. Commercial path: Kai Mak (Chief Revenue Officer). Product and finance: Charles Zedlewski (Chief Product Officer), Meicheng Shi (SVP Finance). No chief marketing officer is listed on the leadership page, which the brief says.\n"
+}

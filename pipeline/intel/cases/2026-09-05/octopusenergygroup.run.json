@@ -1,0 +1,729 @@
+{
+ "run": {
+  "id": 129,
+  "date": "2026-09-05",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-m54sm53e/2026-09-05/octopusenergygroup.pdf",
+     "web": "/tmp/case-pdf-m54sm53e/2026-09-05/octopusenergygroup.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Octopus Energy Group",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 193,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 197,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 76,
+     "reason": "resurfaced: Octopus Energy Group last surfaced 2026-09-01 (funding_round); new trigger acquisition; top ranking score",
+     "company": "Octopus Energy Group",
+     "decision": "selected",
+     "signal_date": "2026-09-01"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Octopus Energy Group",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "resurfaced: Octopus Energy Group last surfaced 2026-09-01 (funding_round); new trigger acquisition; top ranking score",
+   "score_total": 76,
+   "score_breakdown": {
+    "cap": null,
+    "base": 76,
+    "total": 76,
+    "timing": 16,
+    "ops_fit": 14,
+    "ranking": 76,
+    "urgency": 13,
+    "capacity": 17,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 76,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 76,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Jaguar TCS Racing",
+   "source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "trigger_date": "2026-09-01",
+   "trigger_reason": "acquisition completed"
+  }
+ ],
+ "brief": {
+  "number": 139,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-m54sm53e/2026-09-05/octopusenergygroup.web.html",
+  "brief_data": {
+   "hq": "London",
+   "deck": "Octopus Energy, Britain's largest household supplier with £13.7bn of revenue and 10 million customers, closed its majority investment in US grid-flexibility company Uplight on 1 September, eight months after selling a $1B stake in Kraken at $8.65B. The most EV-native energy brand has never been on an electric racing car.",
+   "risks": [
+    {
+     "label": "KRAKEN IS ALREADY IN PLAY",
+     "detail": "Kraken, the Octopus spin-out, sits on 1440's approached list; the two conversations share a founder.",
+     "counter": "Coordinate with the Kraken lead before contact; position this as the consumer-brand deal, distinct from Kraken's utility software."
+    },
+    {
+     "label": "LOSS-MAKING YEAR",
+     "detail": "FY25 showed a £255m net loss after one-off items, and Octopus markets direct rather than through big sponsorships.",
+     "counter": "Anchor on the Arsenal precedent and the in-kind supply component; size the entry at partner level."
+    }
+   ],
+   "score": 76,
+   "ticker": "Private ($9B, May 2024)",
+   "company": "Octopus Energy Group",
+   "gridfit": [
+    {
+     "team": "Jaguar TCS Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "label": "TAKEN",
+     "detail": "Shell",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "acquisition_completed",
+    "category_whitespace",
+    "sponsorship_precedent"
+   ],
+   "sources": [
+    "https://octopus.energy/press/meet-the-team/",
+    "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+    "https://octopus.energy/press/Octopus-Energy-valuation-increases-to-9bn-following-further-commitments-from-existing-investors/",
+    "https://sifted.eu/articles/octopus-energy-annual-results-2025",
+    "https://www.arsenal.com/news/renewable-energy-partnership-octopus-energy"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Greg Jackson before the Jeddah opener on 18 December to confirm the sponsorship owner, coordinate with the Kraken conversation already in 1440's pipeline, and size an Official Energy Partner entry at Jaguar TCS Racing for Seasons 13-15.",
+    "value": [
+     {
+      "text": "Renewable supply and Electroverse roaming for the team's UK operations and road fleet, and the flexibility analytics Octopus sells to utilities applied to the team's race-weekend energy use and reporting.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "An Intelligent Octopus Go plus Electroverse bundle offered to buyers of the new electric Jaguars in the UK, on the model Ford adopted in September 2025, giving the team's parent a customer proposition and Octopus a premium acquisition channel.",
+      "label": "Commercial workstream for the parent"
+     },
+     {
+      "text": "A consumer brand with 10 million customers brings a mass audience to the London E-Prix and a hospitality guest list of fleet, utility and government buyers. The Arsenal partnership shows Octopus activates for a decade, not a season.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Official Energy Partner designation, car and race-suit placement, London E-Prix hospitality, driver access for Octopus's channels, and co-produced content on charging and grid flexibility.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Octopus Energy Group completed its majority investment in Uplight on 1 September 2026. Uplight stays an independent company, Schneider Electric remains a minority partner, and Nick Chaset becomes Uplight's CEO alongside his role running Octopus Energy US. The stated targets are $1 billion of customer savings and more than doubling flexible capacity to 20 GW over five years.",
+      "label": "Trigger"
+     },
+     {
+      "text": "In December 2025 Octopus sold a $1B stake in Kraken at an $8.65B valuation, with $850M of the proceeds going to the group, and set a mid-2026 target for full separation. The group itself was valued at $9B in May 2024 when Generation Investment Management and CPP Investments increased their stakes. A company that has just re-cut its own identity needs a new way to explain itself to customers and investors.",
+      "label": "A year of capital re-shaping"
+     },
+     {
+      "text": "In the year to 30 April 2025 Octopus recorded £13.7bn of revenue, up 10%, and grew to 10 million customers, including 7.6m UK homes. It reported a £255m net loss after one-off items, which is why the brief sizes the entry at partner level and includes an in-kind supply component.",
+      "label": "The numbers underneath"
+     },
+     {
+      "text": "Formula E's Season 13 opens in Jeddah on 18 December 2026 and reaches London on 29-30 May 2027. A partnership agreed in the fourth quarter is announced at the season launch and activated in full at the home race.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Jaguar TCS Racing carries TCS as title and technology partner, Castrol and the Jaguar powertrain. There is no energy retailer, EV-charging or home-energy brand on the roster, so Official Energy Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "The road brand is relaunching electric-only in 2026 with its first new car sold from Bond Street, the first of three new electric Jaguars. Every buyer needs a home tariff and a public charging network; Octopus sells both, and Ford has already shown that an OEM will integrate Electroverse into its own charging offer.",
+      "label": "Jaguar's relaunch"
+     },
+     {
+      "text": "Britain's largest household supplier and Britain's electric racing team, with a home race in London. The partnership reads as a national story rather than a badge.",
+      "label": "Two British electrification stories"
+     },
+     {
+      "text": "The TCS partnership runs across the team's operations rather than sitting on the car. Octopus's supply, charging and flexibility products fit the same pattern.",
+      "label": "A team that uses its partners"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Envision Racing",
+      "reason": "Titled by Envision Group, a renewables and clean-technology business that competes with Octopus Energy Generation."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell holds the energy and lubricants position on the roster."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "TotalEnergies on the roster, and DS leaves the championship after Season 12."
+     },
+     {
+      "team": "Andretti Formula E",
+      "reason": "Open lane and the natural US alternative, with the Austin E-Prix on 6 February 2027 close to Octopus Energy US in Houston; not chosen because the brand's weight and customer base are British. Revisit if the ask becomes US-led."
+     },
+     {
+      "team": "Nissan Formula E Team · Mahindra Racing · Porsche Formula E Team · Cupra Kiro · Citroën Racing",
+      "reason": "Manufacturer-led entries without the British home story; Nissan's partner rows are unverified for Season 12."
+     }
+    ]
+   },
+   "date_long": "05 SEP 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Jaguar TCS Racing",
+   "value_mode": "A",
+   "bottom_line": "A $9B energy brand whose product is electric driving, fresh from the Uplight close and the Kraken proceeds, with a proven ten-year sports partnership and no presence in electric racing. Jaguar TCS Racing's energy lane is open and the London E-Prix is its home stage.",
+   "footer_date": "5 SEP 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Uplight closed 1 Sep; Season 13 opens 18 Dec, London in May.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 17,
+     "note": "£13.7bn revenue, $9B valuation, $850M from the Kraken sale.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 16,
+     "note": "EV-native consumer brand; Arsenal shows long-term sport intent.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "New group story; no hard deadline beyond Season 13 rosters.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 14,
+     "note": "MODE A: supply, charging and a Jaguar customer bundle.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 1 September Octopus Energy Group completed its majority investment in Uplight, which manages 8.5 GW of flexible load for more than 85 US utilities; Schneider Electric stays as minority partner and Nick Chaset runs Uplight alongside Octopus Energy US. It caps a year of capital re-shaping: $850M of the $1B Kraken stake sale (December 2025, $8.65B valuation) went to Octopus, on top of a $9B valuation set by Generation Investment Management and CPP Investments in May 2024. The year to 30 April 2025 brought £13.7bn of revenue, up 10%, and 10 million customers.",
+   "the_case_p2": "The brand is built on electric cars. Electroverse reaches more than 1 million public chargers in over 40 countries, Ford integrated it into its own charging network in September 2025, and more than half of Britain's 653,000 smart EV-tariff customers are with Octopus. It already knows long-term sport: Arsenal's official energy partner since October 2016. What it lacks is a stage where the product is the sport itself.",
+   "track_label": "",
+   "brief_number": "139",
+   "claims_total": 16,
+   "gridfit_note": "10 of 35 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "Valued at $9B in May 2024 when Generation Investment Management (13%) and CPP Investments (12%) increased t…",
+     "value": "$9B",
+     "claim_id": 621,
+     "verified": true,
+     "source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html"
+    },
+    {
+     "fact": "£13.7bn revenue in the year to 30 April 2025, up 10%, with 10 million customers, a £255m net loss and £1.5b…",
+     "value": "£13.7b",
+     "claim_id": 623,
+     "verified": true,
+     "source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html"
+    },
+    {
+     "fact": "It caps a year of capital re-shaping: $850M of the $1B Kraken stake sale (December 2025, $8.65B valuation)…",
+     "value": "$850M",
+     "claim_id": 631,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Energy Retail & Technology · Renewable Supply, EV Charging, Grid Flexibility",
+   "value_content": "MODE A - operational. Renewable supply and Electroverse roaming for the team's UK operations and road fleet, with Octopus's flexibility analytics applied to race-weekend energy use. The larger workstream is commercial: an Intelligent Octopus Go plus Electroverse bundle for buyers of the new electric Jaguars, on the model Ford adopted in 2025. Return: a category partner, London hospitality for millions of customers, and content putting charging in the racing story.",
+   "value_section": true,
+   "why_team_para": "Jaguar TCS Racing carries TCS as title and technology partner, Castrol and the Jaguar powertrain; there is no energy retailer, EV-charging or home-energy brand on the roster. The road brand relaunches electric-only in 2026 with its first new car sold from Bond Street, so every new owner needs a tariff and a charging network. Two British electrification brands, one home race in London, and a team that runs its technology partners through the garage.",
+   "deal_arch_para": "Entry as Official Energy Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, matching the GEN4 cycle and Jaguar's electric relaunch. Estimated £1.5-3M a season, part-payable in supply and charging services. Scope: car and suit placement, tariff and charging integration for Jaguar customers, London E-Prix hospitality and sustainability reporting.",
+   "footer_company": "OCTOPUS ENERGY GROUP",
+   "why_team_label": "WHY JAGUAR TCS RACING",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Uplight close on 1 September and the Kraken separation give Octopus a new group story to tell, and cash to tell it. Formula E's Season 13 opens in Jeddah on 18 December; a partner signed in the fourth quarter is on the car for the London E-Prix in May 2027.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 139",
+   "decision_maker_bio": "Jackson founded Octopus in 2015 and fronts its partnerships and investors. Path: Rebecca Dibb-Simkin, Chief Product and Marketing Officer, who owns the brand; Stuart Jackson, Co-Founder and CFO; Nick Chaset for any US extension. No separate CMO title.",
+   "decision_maker_name": "Greg Jackson",
+   "decision_maker_role": "Founder & CEO, Octopus Energy Group",
+   "opening_angle_intro": "Lead with the customer overlap.",
+   "opening_angle_quote": "&ldquo;Greg, Octopus has more electric-car customers than anyone in Britain and Jaguar is about to relaunch electric-only; the energy lane on its Formula E car is open and Arsenal proved the model works for you. 25 minutes before the Jeddah opener to map it?&rdquo;",
+   "value_section_label": "VALUE TO JAGUAR TCS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Greg Jackson, Founder & CEO at Octopus Energy Group",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://octopus.energy/press/meet-the-team/",
+     "excerpt": "Octopus Energy Group leadership page (search summary; the page itself is egress-blocked): Greg Jackson CBE, Founder and CEO. WRI profile: grew Octopus from start-up to 10 million customers in 32 countries with a renewables portfolio over $9.5bn.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Greg Jackson, Founder & CEO, Octopus Energy Group at Octopus Energy Group",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://octopus.energy/press/meet-the-team/",
+     "excerpt": "Octopus Energy Group leadership page (search summary; the page itself is egress-blocked): Greg Jackson CBE, Founder and CEO. WRI profile: grew Octopus from start-up to 10 million customers in 32 countries with a renewables portfolio over $9.5bn.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Valued at $9B in May 2024 when Generation Investment Management (13%) and CPP Investments (12%) increased their stakes; $850M of the $1B Kraken stake sale (Dec 2025, $8.65B valuation) went to Octopus",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+     "excerpt": "Octopus Energy Group release, 1 Sep 2026 (Houston / Boulder): Octopus Energy has closed its investment in Uplight, which continues as an independent company; Schneider Electric, an existing investor, continues its backing alongside Octopus's new majority stake; Nick Chaset is named CEO of Uplight alongside his role as CEO of Octopus Energy US; targets of $1 billion in customer savings and more than doubling flexible capacity to 20 GW over five years; Uplight manages 8.5 GW of flexible load across more than 85 utilities including eight of the ten largest in the US. Definitive agreement announced 24 Mar 2026 (Uplight press page). Secondary: Renewable Energy Magazine, 4 Sep 2026; Daily Energy Insider.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Octopus Energy, Britain's largest household supplier with £13.7bn of revenue and 10 million customers, closed its majority investment in US grid-flexibility company Uplight on 1 September, eight months after selling a $1B stake in Kraken at $8.65B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+     "excerpt": "Octopus Energy Group release, 1 Sep 2026 (Houston / Boulder): Octopus Energy has closed its investment in Uplight, which continues as an independent company; Schneider Electric, an existing investor, continues its backing alongside Octopus's new majority stake; Nick Chaset is named CEO of Uplight alongside his role as CEO of Octopus Energy US; targets of $1 billion in customer savings and more than doubling flexible capacity to 20 GW over five years; Uplight manages 8.5 GW of flexible load across more than 85 utilities including eight of the ten largest in the US. Definitive agreement announced 24 Mar 2026 (Uplight press page). Secondary: Renewable Energy Magazine, 4 Sep 2026; Daily Energy Insider.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Generation Investment Management, CPP Investments, Origin Energy, Tokyo Gas; Kraken round led by D1 Capital with Fidelity International, Durable Capital and Ontario Teachers'",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://octopus.energy/press/Octopus-Energy-valuation-increases-to-9bn-following-further-commitments-from-existing-investors/",
+     "excerpt": "Octopus Energy release, 7 May 2024: valuation rises 15% on the last round to $9 billion (£7.2bn) as Generation Investment Management (now 13% of the group) and CPP Investments (now 12%) increase their stakes. Also carried by Generation IM's newsroom and UKTN.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It caps a year of capital re-shaping: $850M of the $1B Kraken stake sale (December 2025, $8.65B valuation) went to Octopus, on top of a $9B valuation set by Generation Investment Management and CPP Investments in May 2024.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+     "excerpt": "Octopus Energy Group release, 1 Sep 2026 (Houston / Boulder): Octopus Energy has closed its investment in Uplight, which continues as an independent company; Schneider Electric, an existing investor, continues its backing alongside Octopus's new majority stake; Nick Chaset is named CEO of Uplight alongside his role as CEO of Octopus Energy US; targets of $1 billion in customer savings and more than doubling flexible capacity to 20 GW over five years; Uplight manages 8.5 GW of flexible load across more than 85 utilities including eight of the ten largest in the US. Definitive agreement announced 24 Mar 2026 (Uplight press page). Secondary: Renewable Energy Magazine, 4 Sep 2026; Daily Energy Insider.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "£13.7bn revenue in the year to 30 April 2025, up 10%, with 10 million customers, a £255m net loss and £1.5bn net assets (filed annual report, reported by Sifted)",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://sifted.eu/articles/octopus-energy-annual-results-2025",
+     "excerpt": "Sifted on the filed FY25 annual report (year to 30 April 2025): revenue £13.7bn, up 10% from £12.4bn; 10 million customers globally, 7.6m UK homes (24% share), 2.4m international; net loss £255m after one-off items (Bulb acquisition costs, final Energy Price Guarantee settlement); £1.5bn net assets. The annual report itself is filed at octopusenergy.group.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The year to 30 April 2025 brought £13.7bn of revenue, up 10%, and 10 million customers.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://sifted.eu/articles/octopus-energy-annual-results-2025",
+     "excerpt": "Sifted on the filed FY25 annual report (year to 30 April 2025): revenue £13.7bn, up 10% from £12.4bn; 10 million customers globally, 7.6m UK homes (24% share), 2.4m international; net loss £255m after one-off items (Bulb acquisition costs, final Energy Price Guarantee settlement); £1.5bn net assets. The annual report itself is filed at octopusenergy.group.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Completed its majority investment in Uplight on 1 Sep 2026 (Schneider Electric stays a minority partner); Nick Chaset becomes Uplight CEO alongside Octopus Energy US",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+     "excerpt": "Octopus Energy Group release, 1 Sep 2026 (Houston / Boulder): Octopus Energy has closed its investment in Uplight, which continues as an independent company; Schneider Electric, an existing investor, continues its backing alongside Octopus's new majority stake; Nick Chaset is named CEO of Uplight alongside his role as CEO of Octopus Energy US; targets of $1 billion in customer savings and more than doubling flexible capacity to 20 GW over five years; Uplight manages 8.5 GW of flexible load across more than 85 utilities including eight of the ten largest in the US. Definitive agreement announced 24 Mar 2026 (Uplight press page). Secondary: Renewable Energy Magazine, 4 Sep 2026; Daily Energy Insider.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $9B energy brand whose product is electric driving, fresh from the Uplight close and the Kraken proceeds, with a proven ten-year sports partnership and no presence in electric racing.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+     "excerpt": "Octopus Energy Group release, 1 Sep 2026 (Houston / Boulder): Octopus Energy has closed its investment in Uplight, which continues as an independent company; Schneider Electric, an existing investor, continues its backing alongside Octopus's new majority stake; Nick Chaset is named CEO of Uplight alongside his role as CEO of Octopus Energy US; targets of $1 billion in customer savings and more than doubling flexible capacity to 20 GW over five years; Uplight manages 8.5 GW of flexible load across more than 85 utilities including eight of the ten largest in the US. Definitive agreement announced 24 Mar 2026 (Uplight press page). Secondary: Renewable Energy Magazine, 4 Sep 2026; Daily Energy Insider.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No energy retailer, EV-charging or home-energy brand on the Jaguar TCS Racing roster (TCS, Castrol, Jaguar); Envision Group titles Envision Racing, Shell sits with Lola Yamaha ABT, TotalEnergies with DS Penske",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "TotalEnergies → DS Penske (team_major, active)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The stated targets are $1 billion of customer savings and more than doubling flexible capacity to 20 GW over five years.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+     "excerpt": "Octopus Energy Group release, 1 Sep 2026 (Houston / Boulder): Octopus Energy has closed its investment in Uplight, which continues as an independent company; Schneider Electric, an existing investor, continues its backing alongside Octopus's new majority stake; Nick Chaset is named CEO of Uplight alongside his role as CEO of Octopus Energy US; targets of $1 billion in customer savings and more than doubling flexible capacity to 20 GW over five years; Uplight manages 8.5 GW of flexible load across more than 85 utilities including eight of the ten largest in the US. Definitive agreement announced 24 Mar 2026 (Uplight press page). Secondary: Renewable Energy Magazine, 4 Sep 2026; Daily Energy Insider.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Octopus already runs a long-term sports partnership: Arsenal's official energy partner since October 2016, with the Emirates Stadium on renewable supply and a fan tariff; Ford integrated Electroverse into its charging network in September 2025",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.arsenal.com/news/renewable-energy-partnership-octopus-energy",
+     "excerpt": "Arsenal.com and the Octopus Group newsroom: Octopus Energy has been Arsenal's official energy partner since October 2016 under a long-term deal; the Emirates Stadium and training facilities run on renewable supply, fans are offered a matching tariff, and Octopus receives stadium branding, hospitality and access to club channels.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "In December 2025 Octopus sold a $1B stake in Kraken at an $8.65B valuation, with $850M of the proceeds going to the group, and set a mid-2026 target for full separation.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+     "excerpt": "Octopus Energy Group release, 1 Sep 2026 (Houston / Boulder): Octopus Energy has closed its investment in Uplight, which continues as an independent company; Schneider Electric, an existing investor, continues its backing alongside Octopus's new majority stake; Nick Chaset is named CEO of Uplight alongside his role as CEO of Octopus Energy US; targets of $1 billion in customer savings and more than doubling flexible capacity to 20 GW over five years; Uplight manages 8.5 GW of flexible load across more than 85 utilities including eight of the ten largest in the US. Definitive agreement announced 24 Mar 2026 (Uplight press page). Secondary: Renewable Energy Magazine, 4 Sep 2026; Daily Energy Insider.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Octopus Energy US is based in Houston, Texas; Uplight in Boulder, Colorado, manages 8.5 GW of flexible load across more than 85 utilities",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+     "excerpt": "Octopus Energy Group release, 1 Sep 2026 (Houston / Boulder): Octopus Energy has closed its investment in Uplight, which continues as an independent company; Schneider Electric, an existing investor, continues its backing alongside Octopus's new majority stake; Nick Chaset is named CEO of Uplight alongside his role as CEO of Octopus Energy US; targets of $1 billion in customer savings and more than doubling flexible capacity to 20 GW over five years; Uplight manages 8.5 GW of flexible load across more than 85 utilities including eight of the ten largest in the US. Definitive agreement announced 24 Mar 2026 (Uplight press page). Secondary: Renewable Energy Magazine, 4 Sep 2026; Daily Energy Insider.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The group itself was valued at $9B in May 2024 when Generation Investment Management and CPP Investments increased their stakes.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://octopus.energy/press/Octopus-Energy-valuation-increases-to-9bn-following-further-commitments-from-existing-investors/",
+     "excerpt": "Octopus Energy release, 7 May 2024: valuation rises 15% on the last round to $9 billion (£7.2bn) as Generation Investment Management (now 13% of the group) and CPP Investments (now 12%) increase their stakes. Also carried by Generation IM's newsroom and UKTN.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "acquisition completed",
+   "cited_source_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.globenewswire.com/news-release/2026/09/01/3354237/0/en/octopus-energy-completes-investment-in-uplight-accelerating-plans-to-save-us-customers-1-billion-and-double-grid-flexibility.html",
+     "excerpt": "Octopus Energy Group release, 1 Sep 2026 (Houston / Boulder): Octopus Energy has closed its investment in Uplight, which continues as an independent company; Schneider Electric, an existing investor, continues its backing alongside Octopus's new majority stake; Nick Chaset is named CEO of Uplight alongside his role as CEO of Octopus Energy US; targets of $1 billion in customer savings and more than doubling flexible capacity to 20 GW over five years; Uplight manages 8.5 GW of flexible load across more than 85 utilities including eight of the ten largest in the US. Definitive agreement announced 24 Mar 2026 (Uplight press page). Secondary: Renewable Energy Magazine, 4 Sep 2026; Daily Energy Insider.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "In the year to 30 April 2025 Octopus recorded £13.7bn of revenue, up 10%, and grew to 10 million customers, including 7.6m UK homes.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://sifted.eu/articles/octopus-energy-annual-results-2025",
+     "excerpt": "Sifted on the filed FY25 annual report (year to 30 April 2025): revenue £13.7bn, up 10% from £12.4bn; 10 million customers globally, 7.6m UK homes (24% share), 2.4m international; net loss £255m after one-off items (Bulb acquisition costs, final Energy Price Guarantee settlement); £1.5bn net assets. The annual report itself is filed at octopusenergy.group.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "It reported a £255m net loss after one-off items, which is why the brief sizes the entry at partner level and includes an in-kind supply component.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://sifted.eu/articles/octopus-energy-annual-results-2025",
+     "excerpt": "Sifted on the filed FY25 annual report (year to 30 April 2025): revenue £13.7bn, up 10% from £12.4bn; 10 million customers globally, 7.6m UK homes (24% share), 2.4m international; net loss £255m after one-off items (Bulb acquisition costs, final Energy Price Guarantee settlement); £1.5bn net assets. The annual report itself is filed at octopusenergy.group.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix in May 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Brands Hatch — new home, double-header race 1",
+     "excerpt": "round 12: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "deal_arch_para",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 12 calendar (ExCeL London finale) | note: ExCeL, double-header race 1 — season finale weekend",
+     "excerpt": "round 16: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Austin E-Prix on 6 February 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Circuit of The Americas — new venue",
+     "excerpt": "round 4: Austin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

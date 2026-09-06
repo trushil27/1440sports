@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Together AI</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "TOGETHER AI · 1 JUL 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 170</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 170 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Together AI</h1>
+  <div class="classline">AI Infrastructure · Open-Source AI Cloud / Inference · San Francisco (founded 2022) · Private ($8.3B post-money; $800M Series C, Jul 2026)</div>
+
+  <div class="lede">Together AI, the San Francisco cloud built for open-source AI, closed an $800M Series C at an $8.3B valuation on 1 July 2026, led by Aramco Ventures with Nvidia, Vista and General Catalyst: two and a half times its February 2025 price, with annual bookings past $1.15B.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">74</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">TGR Haas F1 Team</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>Together AI announced on 1 July 2026 an $800M Series C at an $8.3B post-money valuation, led by Aramco Ventures with Vista Equity Partners, General Catalyst, Emergence Capital, Nvidia, March Capital, Pegatron and S Ventures. Annual bookings topped $1.15B in the last quarter, with thousands of paying customers including Cursor, Cognition and Decagon. The $305M Series B at $3.3B, led by General Catalyst, closed only in February 2025. The company says its infrastructure footprint will grow roughly 50-fold over five years: for an infrastructure business, the brand-building moment arrives with the build-out.</p>
+<p>The grid has already priced the neocloud archetype: CoreWeave became Aston Martin Aramco's Official AI Cloud Computing Partner in May 2025, Core Scientific and TWG AI opened on Cadillac's first roster, and Groq holds inference silicon on McLaren's. Aramco, the lead investor here, is both F1's Global Partner and the Aston Martin title, so the ecosystem knows the name; the seat, though, has to be one CoreWeave does not already hold.</p>
+  <h2>Why Now</h2>
+  <p>The round closed on 1 July; brand budgets are set in the quarter after a raise, and a 50-fold capacity plan needs a name enterprises recognise. Teams fix 2027 rosters in the fourth quarter; the United States GP (Austin, October) and Las Vegas GP (November) are the stages for a US announcement.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$800M</div><div class="pfk">$800M Series C at an $8.3B post-money valuation led by Aramco Ventures, announced 1 Jul 2026 (company relea…</div></div>
+    <div class="pf"><div class="pfv">$1.15B</div><div class="pfk">Annual bookings above $1.15B in the last quarter (company statement, 1 Jul 2026); no revenue figure disclosed</div></div>
+    <div class="pf"><div class="pfv">$305M</div><div class="pfk">The $305M Series B at $3.3B, led by General Catalyst, closed only in February 2025.</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (sponsor table; 49 of 346 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">TGR Haas F1 Team<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">McLaren Mastercard F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Dell Technologies, Google Cloud</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Aston Martin Aramco F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">CoreWeave, NetApp</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Mercedes-AMG Petronas F1 Team</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Microsoft</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">An $800M round at $8.3B, bookings above $1.15B and a 50-fold build-out put Together AI at peak brand-investment authority with an F1-literate lead investor. The compute lane at TGR Haas is open and the US rounds sit inside the planning window.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">category precedent</span><span class="flag">investor adjacency</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 170</span>
+  </div>
+
+  <h2>WHY TGR HAAS F1 TEAM</h2>
+  <p>Haas is the American team, run from Kannapolis, North Carolina, racing in 2026 as TGR Haas F1 Team under Toyota Gazoo Racing's title partnership. Its technology roster is IT services, networking and communications: Mphasis, CommScope, Ruckus, Infobip. There is no cloud, GPU or AI-compute partner, so Official AI Cloud Partner is a clean category at the grid's most accessible price. A San Francisco developer brand gets a US home team, three US rounds and engineers who will use the product.</p>
+
+  <h2>VALUE TO TGR HAAS F1 TEAM &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A - operational. A team without a hyperscaler partner buys compute at list price. Together's self-service GPU clusters spin up in minutes for machine-learning surrogates, strategy and driver-in-loop simulation, and telemetry analytics between sessions; private open-model inference gives engineers assistants that keep team data in-house. In return: a named compute partnership, sidepod presence, and Miami, Austin and Las Vegas hospitality for Together's enterprise buyers.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official AI Cloud Partner. <b class="hl">THREE YEARS</b>, 2027-2029, spanning the 50-fold build-out and a probable listing window. Estimated $3-5M a year, part-payable in compute credits. Scope: sidepod or engine-cover placement, naming of the team's compute environment, US-round hospitality, engineering content.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Vipul Ved Prakash</div>
+        <div class="role">Co-Founder &amp; CEO, Together AI · <span class="vtag">verified</span></div>
+        <div class="bio">Prakash co-founded Together AI in 2022 after selling Topsy to Apple and leading search and AI for Siri; a first sports partnership is his call. Path: Kai Mak, Chief Revenue Officer, Charles Zedlewski, Chief Product Officer, Meicheng Shi, SVP Finance. No chief marketing officer is listed.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the Aramco connection.</div>      <div class="quote">“Vipul, your lead investor is F1's Global Partner, and CoreWeave took its Aston Martin seat the year it listed. The American team has no compute partner. 25 minutes before Austin to see the numbers?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">17 <span>/ 20</span></div>
+      <div class="why">Round closed 1 Jul; Austin and Las Vegas inside the year.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">18 <span>/ 20</span></div>
+      <div class="why">$800M at $8.3B; annual bookings above $1.15B.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">Developer-facing B2B brand; Aramco and Nvidia on the cap table.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">12 <span>/ 20</span></div>
+      <div class="why">50-fold build-out and Q4 rosters; no hard deadline.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A: self-service GPU clusters and private inference.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">CROWDED ARCHETYPE</span> &nbsp;<span class="rc">CoreWeave, Core Scientific and Groq already hold grid positions; a fourth AI-cloud logo can read as a follower. <b>Counter:</b> Make Haas the first team whose compute story is open-source inference, and price it as a product deal.</span></div>
+  <div class="risk"><span class="rt">INVESTOR TIES, NOT PARTNER TIES</span> &nbsp;<span class="rc">Aramco's F1 money sits at Aston Martin, where CoreWeave holds the lane; the warm path leads to the ecosystem, not to Haas. <b>Counter:</b> Use Aramco for the F1 introduction; sell Haas on product use and the US rounds.</span></div>
+
+  <h2>Sources <span class="panelnote">— 17 of 17 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://www.together.ai/about-us</li><li>https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-$800-Million-at-$8.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All</li><li>https://www.together.ai/blog/together-instant-clusters-ga</li><li>https://siliconangle.com/2025/02/20/together-ai-raises-305m-ai-optimized-public-cloud/</li><li>https://www.prnewswire.com/news-releases/together-ai-raises-305m-series-b-to-scale-ai-acceleration-cloud-for-open-source-and-enterprise-ai-302380967.html</li><li>https://newsroom.ibm.com/2026-08-11-IBM-and-Together-AI-Sign-Multi-Year-Agreement-to-Scale-Open-Source-AI-Inference-with-NVIDIA-AI-Infrastructure-on-IBM-Cloud</li>  </ul>
+</div>
+</body>
+</html>

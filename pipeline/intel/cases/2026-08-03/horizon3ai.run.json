@@ -1,0 +1,785 @@
+{
+ "run": {
+  "id": 130,
+  "date": "2026-08-03",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-xxmeqli2/2026-08-03/horizon3ai.pdf",
+     "web": "/tmp/case-pdf-xxmeqli2/2026-08-03/horizon3ai.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Horizon3.ai",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 15
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 194,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 198,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 78,
+     "reason": "top ranking score",
+     "company": "Horizon3.ai",
+     "decision": "selected",
+     "signal_date": "2026-08-03"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Horizon3.ai",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 78,
+   "score_breakdown": {
+    "cap": null,
+    "base": 78,
+    "total": 78,
+    "timing": 18,
+    "ops_fit": 16,
+    "ranking": 78,
+    "urgency": 12,
+    "capacity": 17,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 78,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 78,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "trigger_date": "2026-08-03",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 154,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-xxmeqli2/2026-08-03/horizon3ai.web.html",
+  "brief_data": {
+   "hq": "San Francisco (offices in Amsterdam, Australia, Singapore)",
+   "deck": "Horizon3, the San Francisco security company whose NodeZero platform attacks customers' networks the way an adversary would, announced a $250M Series E at a valuation above $2B on 3 August, co-led by NightDragon and NEA, tripling the $650M price of its June 2025 Series D in little over a year.",
+   "risks": [
+    {
+     "label": "TWG AI EXCLUSIVITY",
+     "detail": "TWG AI is Cadillac's exclusive AI partner; an 'AI vs AI' security brand could be read as an AI partner and blocked.",
+     "counter": "Enter as cybersecurity, position NodeZero as security validation, and clear the language with TWG first."
+    },
+    {
+     "label": "FIRST SPORTS DEAL",
+     "detail": "Horizon3 has never run a sports partnership, and Cadillac's 'fewer, bigger, better' policy is priced for large cheques.",
+     "counter": "Use Botero's Rubrik playbook and pay part of the fee in licences the team would otherwise buy."
+    }
+   ],
+   "score": 78,
+   "ticker": "Private ($2B+; $250M Series E, Aug 2026)",
+   "company": "Horizon3.ai",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "TAKEN",
+     "detail": "CrowdStrike",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "TAKEN",
+     "detail": "Keeper",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "leadership_tie"
+   ],
+   "sources": [
+    "https://horizon3.ai/news/press-release/horizon3-appoints-chief-marketing-officer/",
+    "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+    "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/",
+    "https://www.securityweek.com/horizon3-raises-250-million-to-fund-continuing-growth/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Andres Botero before the United States GP to test appetite for a 2027 start, clear the AI-partner language with Cadillac's TWG AI exclusivity, and size an Official Cybersecurity Partner entry, part-paid in NodeZero licences, against the team's 2027 roster.",
+    "value": [
+     {
+      "text": "NodeZero runs autonomous penetration tests continuously across the team's factory networks, trackside infrastructure, supplier integrations and partner environments, ranking findings by exploitability and re-testing after each fix. The team's security staff work from a live attacker's view rather than an annual audit.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner that sells to Fortune 10 CISOs and defence agencies brings a guest list of security and federal buyers to the US rounds, the audience Cadillac's B2B partners want alongside them.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "How a brand-new Formula 1 team defends itself: co-produced engineering content on continuous security validation, a reference customer for Horizon3's enterprise sales, and a story that fits a debutant building everything from scratch.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Cybersecurity Partner designation, car and garage placement, naming of the security-validation programme, Austin and Las Vegas hospitality, driver and engineering access for Horizon3's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Horizon3 announced a $250M Series E at a valuation above $2B on 3 August 2026, co-led by NightDragon and NEA, with seven new investors including Sapphire Ventures, PSG, SAIC and Singapore's EDBI. The company release and TechCrunch carry the same figures.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The June 2025 Series D, $100M led by NEA, valued the company at $650M (reported). Fourteen months later the price is above $2B, on 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them Fortune 10. A brand re-rated that fast has a story to tell and the budget to tell it.",
+      "label": "Tripled in a year"
+     },
+     {
+      "text": "Andres Botero joined as Chief Marketing Officer on 7 January 2026 from Rubrik, where he was CMO through the April 2024 IPO. Rubrik's multi-year McLaren partnership was announced three weeks after his move; whether he built it is not confirmed, but he has seen the mechanics from the inside.",
+      "label": "A marketing owner with a mandate"
+     },
+     {
+      "text": "The United States GP in Austin (late October) and the Las Vegas GP (November) are the two US rounds left in 2026, with Mexico City and São Paulo between them; teams close 2027 partner rosters in the fourth quarter. A deal agreed before Austin can be announced there and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Cadillac's debut roster carries TWG AI as exclusive AI partner, Core Scientific for the data centre, IFS for enterprise software, plus Claro, Jim Beam, Tenneco and Tommy Hilfiger. No cybersecurity partner: Official Cybersecurity Partner is a clean category on a team that has said it wants fewer, bigger partners.",
+      "label": "The open lane"
+     },
+     {
+      "text": "New factories in Fishers, Charlotte and Silverstone, a supplier base assembled in two years and a garage network rebuilt at every circuit. F1 teams have faced phishing, deepfake and telemetry-theft campaigns and a 2025 FIA systems loophole. A first-season estate is the one most in need of continuous attack testing.",
+      "label": "A greenfield estate"
+     },
+     {
+      "text": "Horizon3's founders met at Joint Special Operations Command and SAIC has joined the register. Cadillac is the GM-backed American flag-bearer with a commercial team hired from the Miami GP and Unilever to sell exactly that audience.",
+      "label": "An American story"
+     },
+     {
+      "text": "Cadillac's hospitality reaches CISOs, CIOs and federal buyers at Austin and Las Vegas, the audience a $100M-ARR security company selling to Fortune 10 accounts wants in the room.",
+      "label": "The buyer in the suite"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "CrowdStrike has held the cybersecurity lane since 2019; Microsoft also on the roster."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "Bitdefender is the cybersecurity partner."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "1Password holds security; Oracle is title partner."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Keeper Security holds identity and access security."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Okta, Cisco with Splunk, and Rubrik (joined 2026) crowd the security lane; Botero's former employer sits there."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Cato Networks and SEALSQ joined for 2026; Microsoft on the roster."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "NinjaOne and Extreme Networks cover IT management and networking; Admin By Request departed within the year."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "SentinelOne is marked as departed within the last 12 months in the sponsor table, but no end has been announced; treated as occupied."
+     },
+     {
+      "team": "TGR Haas F1 Team · Visa Cash App Racing Bulls",
+      "reason": "Open but not chosen: neither offers the American greenfield estate and premium positioning that match a $2B company."
+     }
+    ]
+   },
+   "date_long": "03 AUG 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "A",
+   "bottom_line": "$250M at more than $2B, 120% ARR growth, a CMO who has seen an F1 deal built and an open cybersecurity lane at the American debutant put Horizon3 at peak authority to move, with Austin and Las Vegas inside the window. The TWG AI exclusivity and a premium first-deal price hold the score at 78.",
+   "footer_date": "3 AUG 2026",
+   "score_cells": [
+    {
+     "num": 18,
+     "note": "Round announced 3 Aug; Austin and Las Vegas inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 17,
+     "note": "$250M at $2B+; ARR near $100M growing 120% (reported).",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "American, defence-rooted B2B brand; CISO and federal audience.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "Expansion and new CMO, but no listing date or hard deadline.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "MODE A: continuous autonomous pentesting of a new estate.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "The oversubscribed round brought in Acrew, Blue Cloud Ventures, Demeter, Singapore's EDBI, PSG, SAIC and Sapphire, with Craft, Prosperity7, Qualcomm Ventures, Ridge and SignalFire returning. The company reports 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them Fortune 10; TechCrunch puts ARR near $100M (reported). Founders Snehal Antani and Anthony Pillitiere met at Joint Special Operations Command; Antani was later CTO of Splunk. The money funds international expansion, with offices opened in Amsterdam in June, Australia and Singapore, and a partner network.",
+   "the_case_p2": "Cybersecurity is the most-sold technology category on the grid: CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Okta and Rubrik at McLaren, Cato Networks at Alpine, and Red Bull's 1Password. Every one sells defence. Horizon3 sells the attack, continuously, and its new CMO Andres Botero ran marketing at Rubrik in the period its McLaren partnership was being built. A $2B category leader with no seat, and a marketer who has watched one taken.",
+   "track_label": "",
+   "brief_number": "154",
+   "claims_total": 16,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$250M Series E at a valuation above $2B, announced 3 Aug 2026, co-led by NightDragon and NEA; triples the $…",
+     "value": "$250M",
+     "claim_id": 638,
+     "verified": true,
+     "source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+    },
+    {
+     "fact": "ARR approaching $100M with 120% year-on-year ARR growth (company release; TechCrunch, reported)",
+     "value": "$100M",
+     "claim_id": 640,
+     "verified": true,
+     "source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+    },
+    {
+     "fact": "The company reports 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them…",
+     "value": "120%",
+     "claim_id": 648,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "A $2B category leader with no seat, and a marketer who has watched one taken.",
+     "value": "$2B",
+     "claim_id": 650,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Cybersecurity · Autonomous Penetration Testing",
+   "value_content": "MODE A - operational. NodeZero runs autonomous penetration tests continuously across the team's estate: the Fishers and Silverstone factory networks, the garage network rebuilt at every circuit, supplier and partner integrations, and the Core Scientific and TWG AI environments. Findings are ranked by exploitability and re-tested after each fix, so a small security staff works on what an attacker would actually use.",
+   "value_section": true,
+   "why_team_para": "Cadillac is the American debutant building its technology roster from scratch under a stated 'fewer, bigger, better' partner policy: IFS runs the enterprise stack, Core Scientific the data centre, TWG AI the exclusive AI programme. It carries no cybersecurity partner, so Official Cybersecurity Partner is cleanly ownable. A first-season estate across Fishers, Charlotte and Silverstone has never been tested in anger, and Horizon3's defence-rooted American story suits a GM-backed flag-bearer.",
+   "deal_arch_para": "Entry as Official Cybersecurity Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the international build-out. Estimated $4-6M a year, part-payable in NodeZero licences. Scope: car and garage placement, naming of the team's security-validation programme, Austin and Las Vegas hospitality for CISOs and federal buyers, content on how a new team defends itself.",
+   "footer_company": "HORIZON3.AI",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round closed on 3 August, a CMO arrived in January with a category-leadership mandate, and offices are opening on three continents. The United States GP in Austin (late October) and Las Vegas (November) fall inside the window, and teams close 2027 rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 154",
+   "decision_maker_bio": "Botero joined on 7 January 2026 from Rubrik, where he was CMO through its April 2024 IPO and while the McLaren partnership announced on 28 January was built; his part in that deal is not confirmed. Sponsor: Snehal Antani, co-founder and CEO. Path: Holly Grey, CFO, and Matt Hartley, CRO.",
+   "decision_maker_name": "Andres Botero",
+   "decision_maker_role": "Chief Marketing Officer, Horizon3.ai",
+   "opening_angle_intro": "Lead with Rubrik and the empty lane.",
+   "opening_angle_quote": "&ldquo;Andres, you were at Rubrik while its McLaren deal came together. Cadillac has no cybersecurity partner and a first-season estate nobody has attacked yet. 25 minutes before Austin to see what NodeZero on a Formula 1 team looks like?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Andres Botero, Chief Marketing Officer at Horizon3.ai",
+   "cited_source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-appoints-chief-marketing-officer/",
+     "excerpt": "Horizon3.ai press release, 7 Jan 2026 (search summary; page blocked to the sandbox): Andres Botero appointed Chief Marketing Officer to lead global marketing strategy; most recently CMO at Rubrik, where subscription ARR doubled to over $1B and the company completed its April 2024 IPO (NYSE: RBRK).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Andres Botero, Chief Marketing Officer, Horizon3.ai at Horizon3.ai",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-appoints-chief-marketing-officer/",
+     "excerpt": "Horizon3.ai press release, 7 Jan 2026 (search summary; page blocked to the sandbox): Andres Botero appointed Chief Marketing Officer to lead global marketing strategy; most recently CMO at Rubrik, where subscription ARR doubled to over $1B and the company completed its April 2024 IPO (NYSE: RBRK).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$250M Series E at a valuation above $2B, announced 3 Aug 2026, co-led by NightDragon and NEA; triples the $650M Series D valuation of June 2025 (reported)",
+   "cited_source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Horizon3, the San Francisco security company whose NodeZero platform attacks customers' networks the way an adversary would, announced a $250M Series E at a valuation above $2B on 3 August, co-led by NightDragon and NEA, tripling the $650M price of its June 2025 Series D in little over a year.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "NightDragon and NEA (co-leads); new: Acrew Capital, Blue Cloud Ventures, Demeter Group, EDBI, PSG, SAIC, Sapphire Ventures; returning: Craft Ventures, Prosperity7 Ventures, Qualcomm Ventures, Ridge Ventures, SignalFire",
+   "cited_source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "The company reports 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them Fortune 10;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/",
+     "excerpt": "Company release: 120% year-on-year ARR growth; more than 7,000 organisations protected, four of them Fortune 10 enterprises. TechCrunch, 3 Aug 2026: roughly 7,200–7,300 customers and ARR approaching $100M (reported).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "ARR approaching $100M with 120% year-on-year ARR growth (company release; TechCrunch, reported)",
+   "cited_source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/",
+     "excerpt": "Company release: 120% year-on-year ARR growth; more than 7,000 organisations protected, four of them Fortune 10 enterprises. TechCrunch, 3 Aug 2026: roughly 7,200–7,300 customers and ARR approaching $100M (reported).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "TechCrunch puts ARR near $100M (reported).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$250M Series E at a valuation above $2B, announced 3 Aug 2026",
+   "cited_source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $2B category leader with no seat, and a marketer who has watched one taken.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Okta and Rubrik at McLaren, Cato Networks at Alpine, and Red Bull's 1Password; Cadillac carries no cybersecurity partner",
+   "cited_source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "CrowdStrike → Mercedes-AMG Petronas F1 Team (team_major, active); Bitdefender → Scuderia Ferrari (team_major, active); Keeper → Atlassian Williams Racing (team_major, active); Rubrik → McLaren F1 Team (team_major, joined); Cato Networks → BWT Alpine F1 Team (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "$250M at more than $2B, 120% ARR growth, a CMO who has seen an F1 deal built and an open cybersecurity lane at the American debutant put Horizon3 at peak authority to move, with Austin and Las Vegas inside the window.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "CMO Andres Botero joined on 7 Jan 2026 from Rubrik, whose multi-year McLaren partnership was announced on 28 Jan 2026; international expansion with offices in Amsterdam, Australia and Singapore; more than 7,000 organisations protected, four of them Fortune 10",
+   "cited_source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-appoints-chief-marketing-officer/",
+     "excerpt": "Horizon3.ai press release, 7 Jan 2026 (search summary; page blocked to the sandbox): Andres Botero appointed Chief Marketing Officer to lead global marketing strategy; most recently CMO at Rubrik, where subscription ARR doubled to over $1B and the company completed its April 2024 IPO (NYSE: RBRK).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Horizon3 announced a $250M Series E at a valuation above $2B on 3 August 2026, co-led by NightDragon and NEA, with seven new investors including Sapphire Ventures, PSG, SAIC and Singapore's EDBI.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in San Francisco; founders from Joint Special Operations Command; SAIC among new investors",
+   "cited_source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.securityweek.com/horizon3-raises-250-million-to-fund-continuing-growth/",
+     "excerpt": "SecurityWeek and the company release, 3 Aug 2026: new investors Acrew Capital, Blue Cloud Ventures, Demeter Group, EDBI (Singapore), PSG, SAIC and Sapphire Ventures; existing investors Craft Ventures, Prosperity7 Ventures, Qualcomm Ventures, Ridge Ventures and SignalFire participated.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The June 2025 Series D, $100M led by NEA, valued the company at $650M (reported).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Fourteen months later the price is above $2B, on 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them Fortune 10.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Cadillac's hospitality reaches CISOs, CIOs and federal buyers at Austin and Las Vegas, the audience a $100M-ARR security company selling to Fortune 10 accounts wants in the room.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/",
+     "excerpt": "Company release: 120% year-on-year ARR growth; more than 7,000 organisations protected, four of them Fortune 10 enterprises. TechCrunch, 3 Aug 2026: roughly 7,200–7,300 customers and ARR approaching $100M (reported).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Open but not chosen: neither offers the American greenfield estate and premium positioning that match a $2B company.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+     "excerpt": "Horizon3 press release via Business Wire, 3 Aug 2026 (search summary): $250M Series E at a valuation of more than $2B, oversubscribed, co-led by existing investors NightDragon and NEA, tripling the $650M Series D valuation in just over a year; seven new and five returning investors.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-06"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Miami GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 6: Miami GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,420 @@
+{
+ "run_date": "2026-09-05",
+ "signal_date": "2026-08-12",
+ "stem": "hydrostor",
+ "number": 141,
+ "session_model": "claude-session-2026-09-06",
+ "signal": {
+  "company": "Hydrostor",
+  "signal_date": "2026-08-12",
+  "score": 70,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Curtis VanWalleghem",
+  "role": "Co-Founder & CEO",
+  "horizon_weeks": "6-10",
+  "source_url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+  "industry_meta": "Long-Duration Energy Storage · Advanced Compressed-Air Energy Storage Developer & Operator · Toronto",
+  "recommended_team": "Andretti Formula E",
+  "recommended_series": "FE",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$230M equity investment closed 12 Aug 2026, which includes the conversion of the previously announced note from Canada Growth Fund, Goldman Sachs Alternatives and CPP Investments plus a new strategic round; the new-money portion is not broken out",
+   "investors": "Canada Growth Fund, Goldman Sachs Alternatives, CPP Investments; strategic investors Baker Hughes (investor since 2019, equity plus up to 1.4 GW of equipment orders, Jan 2026), Realize Capital Partners and Hatch; Export Development Canada lent US$55M in Sep 2025",
+   "revenue": null,
+   "trigger": "$230M equity investment announced 12 Aug 2026 to progress a 7 GW pipeline and take the 500 MW Willow Rock project to financial close later in 2026",
+   "competitor_signal": "No energy-storage, utility or grid brand on the Andretti Formula E roster (TWG AI, Quest Global, Crowe UK, Reflo, Nissan powertrain from Season 13); Envision Group, whose AESC arm makes grid-storage batteries, titles Envision Racing",
+   "strategic_hook": "Two flagship projects turn from paper to construction in the same half-year: Willow Rock in Kern County, California (500 MW, 25-year offtake of about $1B with Central Coast Community Energy, licence granted 19 Dec 2025) heads to financial close, and Silver City in Broken Hill (200 MW) won grid-connection approval on 2 Sep 2026",
+   "us_presence": "US headquarters in Denver, Colorado since May 2024; flagship US project Willow Rock in Kern County, California; offices in Sydney and Melbourne",
+   "alumni_match": null,
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE B: no team workstream for cavern-scale storage; halo built on Formula E's own energy story, with Austin and Miami hospitality for utility, regulator and project-finance audiences",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 13,
+   "brand_fit": 14,
+   "urgency": 14,
+   "ops_fit": 13,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 3
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "vanwalleghem",
+    "co-founder & ceo",
+    "co-founder and ceo",
+    "2010"
+   ],
+   "url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "excerpt": "Hydrostor release, 12 Aug 2026, quotes 'CEO and Co-Founder Curtis VanWalleghem' (hydrostor.ca is egress-blocked; text from the Mercom / Mondaq / DWPV mirrors and search summaries). Bloomberg and Crunchbase profiles: Co-Founder and CEO, launched Hydrostor in 2010.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "jon norman",
+    "jordan cole",
+    "beth summers",
+    "president",
+    "chief commercial",
+    "cfo",
+    "no cmo",
+    "no chief marketing"
+   ],
+   "url": "https://hydrostor.ca/our-company/",
+   "excerpt": "Hydrostor company page (search summary; page egress-blocked) and profile pages: Jon Norman, President (LinkedIn; 360 Energy podcast 'Hydrostor Update with President Jon Norman'); Jordan Cole, Chief Commercial Officer (Equilar; ex-Brookfield / Enwave CIO); Beth Summers, Chief Financial Officer (hydrostor.ca/our-company/beth-summers). No chief marketing officer is listed on any leadership listing found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$230m",
+    "$230 million",
+    "12 aug",
+    "12 august",
+    "realize",
+    "hatch",
+    "canada growth fund",
+    "goldman",
+    "cpp investments",
+    "7 gw",
+    "financial close",
+    "funding round",
+    "new-money",
+    "not broken out"
+   ],
+   "url": "https://hydrostor.ca/hydrostor-secures-230-million-to-progress-advanced-compressed-air-energy-storage-projects/",
+   "excerpt": "Hydrostor, 12 Aug 2026: closed a US$230 million equity investment, including previously announced funding from a convertible note committed by Canada Growth Fund Inc., Goldman Sachs Alternatives and Canada Pension Plan Investment Board, plus a strategic equity round with returning investor Baker Hughes, new investors Realize Capital Partners and Hatch Ltd., a Social Finance Fund wholesaler, among others. Funds support the 7 GW global pipeline and propel the 500 MW Willow Rock Energy Storage Center to financial close later this year. Secondary: Mercom Capital; Mondaq; Davies (DWPV) counsel note. The new-money portion is not broken out in the release.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$200m",
+    "$200 million",
+    "$150m",
+    "$50m",
+    "february 2025",
+    "feb 2025",
+    "convertible note"
+   ],
+   "url": "https://www.theglobeandmail.com/business/article-hydrostor-secures-us200-million-in-financing-from-canada-growth-fund/",
+   "excerpt": "Globe and Mail and Hydrostor release, 13 Feb 2025: US$200 million from Canada Growth Fund, Goldman Sachs Alternatives and CPP Investments — a US$150 million convertible note from all three plus a US$50 million convertible development-expenditure loan from Canada Growth Fund; the second major investment by Goldman Sachs and CPP.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "baker hughes",
+    "1.4 gw",
+    "since 2019",
+    "28 jan",
+    "january 2026",
+    "jan 2026"
+   ],
+   "url": "https://investors.bakerhughes.com/news/press-releases/news-details/2026/Baker-Hughes-and-Hydrostor-Deepen-Strategic-Collaboration-to-Advance-Reliable-Resilient-and-Sustainable-Power-Systems/default.aspx",
+   "excerpt": "Baker Hughes release, 28 Jan 2026 (Florence annual meeting): strategic technology solutions and equity agreement; Baker Hughes technology becomes part of Hydrostor's core A-CAES design; up to 1.4 GW of compression, expander, motor and generator equipment orders for flagship projects; Baker Hughes an investor since 2019.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "export development canada",
+    "us$55m",
+    "$55m",
+    "$55 million",
+    "september 2025",
+    "sep 2025"
+   ],
+   "url": "https://www.businesswire.com/news/home/20250916124650/en/Hydrostor-Announces-US$55-Million-in-Funding-From-Export-Development-Canada-to-Finance-Development-Expenditures-for-Late-Stage-Project",
+   "excerpt": "Business Wire, 16 Sep 2025: Hydrostor announces US$55 million from Export Development Canada to finance development expenditures for a late-stage project (Silver City, per Energy-Storage.News and pv magazine Australia).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "willow rock",
+    "500 mw",
+    "kern county",
+    "central coast community energy",
+    "25-year",
+    "$1b",
+    "$1 billion",
+    "about $1b",
+    "19 dec",
+    "december 2025",
+    "$1.5b",
+    "cc power",
+    "50 mw",
+    "california"
+   ],
+   "url": "https://hydrostor.ca/project/willow-rock-energy-storage-center/",
+   "excerpt": "Willow Rock Energy Storage Center: 500 MW / 4,000 MWh A-CAES project in Kern County, California. Central Coast Community Energy signed a 25-year agreement for 200 MW / 1,600 MWh valued at nearly $1 billion (3cenergy.org; Utility Dive). California Energy Commission granted the power-plant licence on 19 Dec 2025 (Business Wire). California Community Power signed a 50 MW offtake for six CCA members on 12 Feb 2026 (Hydrostor release). Project cost reported at about $1.5 billion (CalCCA). Financial close targeted later in 2026 (12 Aug 2026 release).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "silver city",
+    "broken hill",
+    "200 mw",
+    "1,600 mwh",
+    "grid connection",
+    "grid-connection",
+    "2 sep",
+    "2 september",
+    "new south wales"
+   ],
+   "url": "https://www.pv-magazine.com/2026/09/02/hydrostor-secures-grid-connection-for-200-mw-1600-mwh-compressed-air-storage-project-in-australia/",
+   "excerpt": "pv magazine, 2 Sep 2026: Hydrostor secures grid-connection approval for the 200 MW / 1,600 MWh Silver City Energy Storage Centre at Broken Hill, New South Wales, its first Australian project; construction expected to commence in September 2026 subject to approvals (pv magazine Australia). Development approval Feb 2025; Hydrostor holds 100% of the project.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "goderich",
+    "ontario",
+    "world's first",
+    "august 2020",
+    "2020"
+   ],
+   "url": "https://hydrostor.ca/project/the-goderich-a-caes-facility/",
+   "excerpt": "Hydrostor project page and Nov 2019 release with NRStor: Goderich, Ontario is the world's first commercially contracted A-CAES facility, in commercial operation for Ontario's IESO since August 2020.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "denver",
+    "toronto",
+    "sydney",
+    "melbourne",
+    "may 2024",
+    "u.s. headquarters",
+    "us headquarters"
+   ],
+   "url": "https://hydrostor.ca/hydrostor-announces-u-s-headquarters-in-denver-colorado-furthering-commitment-to-u-s-market/",
+   "excerpt": "Hydrostor release, 30 May 2024 (BizWest, 10 Jun 2024): US headquarters opened in Denver, Colorado, growing to more than 30 people. Company page: headquartered in Toronto with offices in Sydney, Melbourne and Denver.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "aesc",
+    "envision group",
+    "envision racing",
+    "envision energy",
+    "grid-storage batteries"
+   ],
+   "url": "https://www.energytrend.com/news/20260427-51300.html",
+   "excerpt": "EnergyTrend, 27 Apr 2026, and Energy-Storage.News: Envision Group's battery arm Envision AESC makes cells for cars and stationary storage, with a 60 GWh energy-storage cell expansion at Yichang and Envision Energy deploying grid batteries in France — a direct competitor to Hydrostor in grid storage. Sponsor table: Envision Group is the title partner of Envision Racing.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "twg ai",
+    "quest global",
+    "crowe uk",
+    "reflo",
+    "nissan powertrain",
+    "nissan",
+    "porsche",
+    "twg motorsports",
+    "andretti global",
+    "castrol",
+    "jaguar tcs",
+    "tcs",
+    "shell",
+    "lola yamaha",
+    "totalenergies",
+    "ds penske",
+    "mahindra",
+    "abb"
+   ],
+   "url": "seeds/sponsors.json (spec/active_sponsor_db.md §4 + data/teams.json)",
+   "excerpt": "Sponsor table: Andretti Formula E carries TWG AI (primary partner, AI / technology), Quest Global (engineering services), Crowe UK (audit / advisory), Reflo (sustainable sportswear), TWG Motorsports and Andretti Global (ownership), Nissan powertrain from Season 13 (Porsche through Season 12) — no energy, storage, utility or grid brand. Envision Racing: Envision Group (title), Sand Technologies, Teijin. Jaguar TCS Racing: TCS, Castrol, Jaguar. Lola Yamaha ABT: Shell. DS Penske: TotalEnergies; DS exits after Season 12. Mahindra Racing: Mahindra & Mahindra, Tech Mahindra. Championship: ABB title.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "austin",
+    "miami",
+    "jeddah",
+    "18 dec",
+    "december 2026",
+    "6 february",
+    "20 february",
+    "february 2027"
+   ],
+   "url": "seeds/calendar_fe.json (FE Season 13 calendar)",
+   "excerpt": "FE Season 13 calendar table: opener in Jeddah 18-19 December 2026; Austin E-Prix 6 February 2027; Miami E-Prix 20 February 2027.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Hydrostor",
+  "industry_meta": "Long-Duration Energy Storage · Advanced Compressed-Air Storage Developer & Operator",
+  "hq": "Toronto (US HQ Denver, Colorado)",
+  "ticker": "Private ($230M equity, Aug 2026; valuation not stated)",
+  "deck": "Hydrostor, the Toronto developer of cavern-scale compressed-air storage backed by Goldman Sachs, CPP Investments and Canada Growth Fund, closed a $230M equity investment on 12 August to carry its 500 MW Willow Rock plant in California to financial close this year and its Australian Silver City project into construction.",
+  "score": 70,
+  "timing_label": "HOT",
+  "series_label": "FE",
+  "team_label": "Andretti Formula E",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "On 12 August Hydrostor closed a $230M equity investment: the conversion of the note committed by Canada Growth Fund, Goldman Sachs Alternatives and CPP Investments in February 2025, plus a strategic round from Baker Hughes, Realize Capital Partners and Hatch. The new-money share is not broken out. It follows US$55M from Export Development Canada in September 2025 and Baker Hughes' January agreement pairing equity with up to 1.4 GW of equipment orders. The money has a stated job: a 7 GW pipeline and Willow Rock, 500 MW in Kern County, to financial close this year.",
+  "the_case_p2": "This is the half-year in which a developer becomes a builder. Willow Rock holds a California licence granted on 19 December 2025 and a 25-year offtake with Central Coast Community Energy worth about $1B; Silver City in Broken Hill won grid-connection approval on 2 September and is due to start construction. Goderich in Ontario has run commercially since 2020. A company about to pour concrete in two countries needs a public identity it lacks.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Financial close on Willow Rock and first construction at Silver City both fall in the fourth quarter, the window in which Formula E teams finalise Season 13 rosters before the Jeddah opener on 18 December. Austin follows on 6 February and Miami on 20 February 2027.",
+  "why_team_label": "WHY ANDRETTI FORMULA E",
+  "why_team_para": "Andretti's roster is TWG AI as primary partner, Quest Global, Crowe UK and Reflo, with Nissan power from Season 13; there is no energy, storage, utility or grid brand on it. It is the American team for a company headquartered in Denver for the US with its first US plant in California; Austin and Miami arrive within weeks of Willow Rock's financial close. Envision Racing, the obvious energy fit, is titled by a rival grid-battery maker.",
+  "value_section": true,
+  "value_section_label": "VALUE TO ANDRETTI FORMULA E",
+  "value_mode": "B",
+  "value_content": "MODE B - halo, honestly stated: a cavern-scale storage developer has no workstream on a race car. The mechanics are commercial. Formula E sells itself as the championship of electrification; a partner that stores electricity for eight hours gives Andretti an energy story its roster lacks. Hydrostor brings utilities, community-choice buyers, regulators and project financiers to Austin and Miami, and a technology narrative for the team's content.",
+  "deal_arch_para": "Entry as Official Energy Storage Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, spanning Willow Rock construction and the first Silver City operations. Estimated $1-2M a season at partner level. Scope: car and suit placement, Austin and Miami hospitality, co-produced content on long-duration storage, and a Willow Rock site activation.",
+  "decision_maker_name": "Curtis VanWalleghem",
+  "decision_maker_role": "Co-Founder & CEO, Hydrostor",
+  "decision_maker_bio": "VanWalleghem launched Hydrostor in 2010 and fronts every raise, so a first brand partnership is his call. Path: Jon Norman, President; Jordan Cole, Chief Commercial Officer, ex-Brookfield; Beth Summers, Chief Financial Officer. No chief marketing officer is listed, which is itself the opening.",
+  "opening_angle_intro": "Lead with the construction moment.",
+  "opening_angle_quote": "&ldquo;Curtis, Willow Rock closes and Silver City breaks ground in the same quarter Formula E launches Season 13; Andretti is the American team with an open energy lane and Austin and Miami in February. 25 minutes before Jeddah to see whether the timing works?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Round closed 12 Aug; Jeddah 18 Dec, Austin and Miami in Feb."
+   ],
+   [
+    "CAPACITY",
+    "13",
+    "/ 20",
+    "$230M includes a note conversion; capital is for projects."
+   ],
+   [
+    "BRAND FIT",
+    "14",
+    "/ 20",
+    "Storage is FE's message, but the audience is B2B."
+   ],
+   [
+    "URGENCY",
+    "14",
+    "/ 20",
+    "Financial close and first construction both in Q4 2026."
+   ],
+   [
+    "OPS FIT",
+    "13",
+    "/ 20",
+    "MODE B: no car workstream; open lane at Andretti."
+   ]
+  ],
+  "risks": [
+   [
+    "PROJECT MONEY, NOT BRAND MONEY",
+    "The $230M includes converted notes and is earmarked for a 7 GW pipeline; no valuation or marketing budget is stated and there is no CMO.",
+    "Size at partner level, hospitality weighted to Austin and Miami; ask for the budget line on the first call."
+   ],
+   [
+    "A HALO WITH NO WORKSTREAM",
+    "Compressed-air caverns have nothing to do on a race car; the deal rests on story and audience.",
+    "Anchor on Formula E's electrification message and a Willow Rock site activation; do not overclaim integration."
+   ]
+  ],
+  "bottom_line": "A well-backed storage developer at the moment its first two utility-scale plants go to financial close and construction, with no brand, no CMO and no rival storage name on the Andretti roster. Partner-level, halo-honest, timed to the Season 13 launch and two US rounds in February.",
+  "signals": [
+   "funding_event",
+   "category_whitespace",
+   "construction_milestone"
+  ],
+  "footer_company": "HYDROSTOR",
+  "footer_date": "5 SEP 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "Hydrostor closed a $230M equity investment on 12 August 2026. It includes the conversion of the previously announced note from Canada Growth Fund, Goldman Sachs Alternatives and CPP Investments and a strategic equity round from returning investor Baker Hughes and new investors Realize Capital Partners and Hatch. The company does not break out the new-money portion, and the brief says so."
+    },
+    {
+     "label": "The capital stack behind it",
+     "text": "February 2025 brought $200M from the same three institutions ($150M convertible note plus a $50M development loan). Export Development Canada added US$55M in September 2025 for Silver City. In January 2026 Baker Hughes, an investor since 2019, paired an equity investment with up to 1.4 GW of equipment orders. Capital of this quality is what makes a multi-year partnership bankable even without a stated valuation."
+    },
+    {
+     "label": "Developer to builder",
+     "text": "Willow Rock in Kern County, California (500 MW) holds a state licence granted on 19 December 2025, a 25-year offtake with Central Coast Community Energy worth about $1B, and a further 50 MW offtake signed with California Community Power in February 2026; financial close is targeted later in 2026. Silver City in Broken Hill (200 MW) won grid-connection approval on 2 September 2026 and is due to start construction. The first plant, Goderich in Ontario, has operated commercially since 2020."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Formula E's Season 13 opens in Jeddah on 18 December 2026; the Austin E-Prix follows on 6 February and the Miami E-Prix on 20 February 2027. A partnership agreed in the fourth quarter is announced at the season launch and activated in the United States within eight weeks."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The open lane",
+     "text": "Andretti Formula E carries TWG AI as primary partner, Quest Global, Crowe UK and Reflo, with Nissan powertrains from Season 13. There is no energy, storage, utility or grid brand on the roster, so Official Energy Storage Partner is a clean category at a partner price."
+    },
+    {
+     "label": "The American team for a US build-out",
+     "text": "Hydrostor's US headquarters is in Denver and its flagship plant is in California. Andretti's Austin and Miami rounds land within weeks of Willow Rock's financial close, in front of the utilities, community-choice buyers and financiers Hydrostor sells to."
+    },
+    {
+     "label": "Why not the energy team",
+     "text": "Envision Racing would be the natural fit, but its title partner Envision Group owns Envision AESC, a maker of grid-storage battery cells with a 60 GWh storage expansion under way. Hydrostor's compressed-air caverns compete with exactly that product."
+    },
+    {
+     "label": "Story fit",
+     "text": "Formula E markets itself as the championship of electrification. Eight-hour storage that firms renewable power is the missing chapter in that story, and Andretti's content programme with TWG AI gives it a home."
+    }
+   ],
+   "value": [
+    {
+     "label": "Halo, honestly stated (Mode B)",
+     "text": "There is no operational workstream: cavern-scale storage has nothing to do on a race car, and the brief does not pretend otherwise. The value is commercial and narrative."
+    },
+    {
+     "label": "Audience the team wants",
+     "text": "Utilities, community-choice aggregators, regulators and project-finance investors are a B2B audience Andretti's hospitality has not yet hosted. Hydrostor brings them to Austin and Miami, and the team's other partners get to meet them."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "Co-produced content on long-duration storage and grid reliability, a Willow Rock site activation with the team's US partners, and a technology narrative that complements TWG AI rather than competing with it."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Energy Storage Partner designation, car and race-suit placement, Austin and Miami hospitality, driver access, and a platform for Hydrostor's first public brand campaign at the moment its plants become visible."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Envision Racing",
+     "reason": "Title partner Envision Group owns Envision AESC, a grid-storage battery maker and direct competitor."
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "reason": "Shell holds the energy position on the roster."
+    },
+    {
+     "team": "DS Penske",
+     "reason": "TotalEnergies on the roster, and DS leaves the championship after Season 12."
+    },
+    {
+     "team": "Jaguar TCS Racing",
+     "reason": "Open lane but a British story; Castrol (a BP brand) sits on the roster and the team has no US rounds of its own to anchor a California build-out."
+    },
+    {
+     "team": "Nissan Formula E Team · Mahindra Racing · Porsche Formula E Team · Cupra Kiro · Citroën Racing",
+     "reason": "Manufacturer-led entries without the American home story; Nissan's partner rows are unverified for Season 12."
+    }
+   ],
+   "ask": "A 25-minute call with Curtis VanWalleghem before the Jeddah opener on 18 December to confirm whether a brand budget exists alongside the project capital, and to size an Official Energy Storage Partner entry at Andretti Formula E for Seasons 13-15 timed to Willow Rock's financial close."
+  }
+ },
+ "note": "# Hydrostor → Andretti Formula E — verification log (N° 141, row of 5 Sep 2026)\n\nBuilt in-session at no API cost on 6 Sep 2026 (batch 3) with Claude as scanner, verifier and writer through `intel.session_case`; the calendar table, sponsor table, 13-rule audit and the 2-page render ran as code.\n\n**Sandbox limitation, stated plainly:** hydrostor.ca, businesswire.com, mondaq.com, mercomcapital.com, dwpv.com and theorg.com are egress-blocked. Every claim was checked against the search summary of the primary page named as the evidence URL. Treat each VERIFIED line as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## The trigger, honestly labelled\n\nHydrostor's release of 12 Aug 2026 states a US$230 million equity investment that *includes previously announced funding from a convertible note* committed by Canada Growth Fund, Goldman Sachs Alternatives and CPP Investments (the US$150M note of Feb 2025), plus a strategic equity round with Baker Hughes (returning), Realize Capital Partners and Hatch (new). The release does not break out the new money. The brief says so in the deck, the case, the capacity cell and the first risk. The thin row's wording (\"secured $230M of equity from CGF, Goldman Sachs and CPP plus Baker Hughes and Hatch\") was correct in names but silent on the conversion; corrected here. Valuation is not stated anywhere and is not claimed.\n\n## Ledger\n\n| Claim | Status | Evidence |\n|---|---|---|\n| Curtis VanWalleghem, Co-Founder & CEO; launched 2010 | VERIFIED | 12 Aug 2026 release quote (summary); Bloomberg / Crunchbase profiles |\n| Jon Norman President; Jordan Cole CCO; Beth Summers CFO; no CMO listed | REPORTED | hydrostor.ca/our-company (summary), LinkedIn, Equilar, 360 Energy podcast. The Org's listing names a different CEO and is disregarded as a data error |\n| $230M equity, 12 Aug 2026; note conversion; Baker Hughes / Realize / Hatch; 7 GW pipeline; Willow Rock financial close later 2026 | VERIFIED | hydrostor.ca release via Mercom / Mondaq / DWPV summaries |\n| $200M Feb 2025 ($150M note + $50M CGF loan) | VERIFIED | Globe and Mail; hydrostor.ca release |\n| US$55M Export Development Canada, Sep 2025 | VERIFIED | Business Wire, 16 Sep 2025 |\n| Baker Hughes: equity + up to 1.4 GW orders, investor since 2019, 28 Jan 2026 | VERIFIED | Baker Hughes investor release |\n| Willow Rock 500 MW, Kern County; CEC licence 19 Dec 2025; 3CE 25-year ~$1B for 200 MW; CC Power 50 MW, 12 Feb 2026; ~$1.5B cost | VERIFIED / REPORTED | hydrostor.ca project page; 3cenergy.org; Utility Dive; Business Wire; CalCCA (cost, reported) |\n| Silver City 200 MW / 1,600 MWh; grid-connection approval 2 Sep 2026; construction due Sep 2026 | VERIFIED | pv magazine, 2 Sep 2026; pv magazine Australia |\n| Goderich commercial since Aug 2020, world's first commercial A-CAES | VERIFIED | hydrostor.ca project page; Nov 2019 release |\n| Denver US HQ (May 2024); Toronto HQ; Sydney, Melbourne | VERIFIED | hydrostor.ca release; BizWest |\n| Envision AESC grid-storage cells; 60 GWh expansion | VERIFIED | EnergyTrend, 27 Apr 2026; Energy-Storage.News |\n| Andretti roster; Envision Group title; Shell, TotalEnergies, Castrol positions | VERIFIED | sponsor table `seeds/sponsors.json` |\n| Jeddah 18-19 Dec 2026; Austin 6 Feb; Miami 20 Feb 2027 | VERIFIED | calendar table `seeds/calendar_fe.json` |\n\n## Decision path\n\nCurtis VanWalleghem (Co-Founder & CEO) fronts every raise and every release; a first brand partnership is his call. Path: Jon Norman (President), Jordan Cole (Chief Commercial Officer), Beth Summers (CFO). No chief marketing officer exists on any listing found; the brief says so rather than inventing one.\n\n## Leadership ties\n\nSearched Hydrostor and its leaders against Formula E / motorsport / racing sponsorship: none found. `leadership_ties` = none found.\n\n## Screen-outs and things not claimed\n\n- **Score is 70, not higher, on purpose.** Capacity 13: the round includes converted notes, capital is earmarked for projects, no valuation or marketing budget exists. Ops fit 13: MODE B with no car workstream. Brand fit 14: on-message for Formula E but a B2B audience.\n- **Envision Racing ruled out** on a real conflict: Envision Group owns Envision AESC, a grid-storage battery maker.\n- **The US DOE loan guarantee** reported for Willow Rock (Utility Dive) is not used: its current status could not be confirmed.\n- **Deal size ($1–2M a season) is an ESTIMATE**, labelled as such.\n- Project cost (~$1.5B) is REPORTED (CalCCA), used once in the note only.\n"
+}
