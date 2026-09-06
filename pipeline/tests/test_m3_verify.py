@@ -70,6 +70,19 @@ def test_event_mentions_are_found_in_free_text():
     assert verify.find_event_mentions("a Mexico City E-Prix activation")[0]["series"] == "FE"
 
 
+def test_funding_rounds_are_not_race_rounds():
+    # Fluidstack N° 127 (6 Sep 2026): "WHY NOW  The round was reported on 3 September" was
+    # read as a race called "WHY NOW The" and contradicted by the calendar table.
+    for text in (
+        "WHY NOW  The round was reported on 3 September; budgets reset after a raise.",
+        "a Series B round led by Jane Street at an $18B valuation",
+        "The round closed in July at $7.5B.",
+    ):
+        assert verify.find_event_mentions(text) == [], text
+    # A real round mention still counts.
+    assert verify.find_event_mentions("the Austin round in October")[0]["place"] == "Austin"
+
+
 def test_phantom_london_race_is_contradicted_by_the_calendar_table(session):
     load_seeds(session)
     draft = verify.ClaimDraft(

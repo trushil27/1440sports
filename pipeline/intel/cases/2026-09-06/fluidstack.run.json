@@ -1,0 +1,782 @@
+{
+ "run": {
+  "id": 128,
+  "date": "2026-09-06",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "rebuild": true,
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/home/user/1440sports/briefs/2026-09-06/fluidstack.pdf",
+     "web": "/home/user/1440sports/briefs/2026-09-06/fluidstack.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Fluidstack",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 16
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 192,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 196,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 76,
+     "reason": "top ranking score",
+     "company": "Fluidstack",
+     "decision": "selected",
+     "signal_date": "2026-09-03"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Fluidstack",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 76,
+   "score_breakdown": {
+    "cap": null,
+    "base": 76,
+    "total": 76,
+    "timing": 17,
+    "ops_fit": 15,
+    "ranking": 76,
+    "urgency": 12,
+    "capacity": 18,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 76,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 76,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Atlassian Williams Racing",
+   "source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "trigger_date": "2026-09-03",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 127,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/home/user/1440sports/briefs/2026-09-06/fluidstack.web.html",
+  "brief_data": {
+   "hq": "New York (founded in Oxford, 2017)",
+   "deck": "Fluidstack, the Oxford-born AI-infrastructure builder now constructing Anthropic's $50B US data-centre programme, has reportedly closed a $1.5B round led by Jane Street at an $18B valuation (Forbes, 3 Sep 2026), more than doubling the $7.5B mark it set only in July.",
+   "risks": [
+    {
+     "label": "REPORTED, NOT CONFIRMED",
+     "detail": "The $1.5B round and the $18B valuation come from Forbes and Crunchbase News; there is no company release.",
+     "counter": "Anchor the pitch on the confirmed Anthropic programme; ask Fluidstack to confirm the round on the first call."
+    },
+    {
+     "label": "CROWDED ARCHETYPE",
+     "detail": "CoreWeave, Core Scientific and Crusoe are all courting or holding grid positions; a fourth neocloud can look like a follower.",
+     "counter": "Position Williams as the only team where the compute partner meets its own anchor customer's brand on the car."
+    }
+   ],
+   "score": 76,
+   "ticker": "Private (~$18B reported; $1.5B round, Sep 2026)",
+   "company": "Fluidstack",
+   "gridfit": [
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies, Google Cloud",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "CoreWeave, NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "TAKEN",
+     "detail": "Microsoft",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "partner_adjacency"
+   ],
+   "sources": [
+    "https://theorg.com/org/fluidstack/org-chart/cesar-maklary",
+    "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+    "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+    "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+    "https://techcrunch.com/2026/04/14/ai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Gary Wu before the United States GP to confirm the round on the record, agree an Austin announcement window, and size an Official AI Compute Partner entry against Williams' 2027 roster.",
+    "value": [
+     {
+      "text": "Compute for the work outside the aerodynamic-testing restrictions: machine-learning surrogates, driver-in-the-loop and race-strategy simulation, telemetry and video analytics between sessions. Fluidstack supplies it on demand; the team gets capacity it could not fund inside the cost cap.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A partner that sells to CIOs, CFOs and hyperscalers brings a guest list of enterprise buyers, investors and bankers to Austin and Las Vegas, the audience Williams' B2B partners want in the suite.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "The model and the compute on one car: co-produced engineering content with the Claude programme, a factory reference customer for Fluidstack's enterprise sales, and a data-centre-to-pit-wall story the team can tell on camera.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official AI Compute Partner designation, engine-cover or sidepod placement, naming of the team's compute environment, hospitality at Austin and Las Vegas, driver and engineering access for Fluidstack's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Forbes reported on 3 September that Fluidstack has raised $1.5B led by Jane Street at an $18B valuation; Crunchbase News puts total funding at just over $2.6B. The company has not announced the round itself, so this is reported, not confirmed, and the brief says so.",
+      "label": "Trigger"
+     },
+     {
+      "text": "In April Bloomberg reported Jane Street in talks at an $18B target; Fluidstack instead closed a ~$750M round at ~$7.5B in July. Two months later the $18B print landed. A company re-priced that fast has a story to tell to enterprise buyers, bankers and the public markets, and a budget to tell it with.",
+      "label": "Price doubled in two months"
+     },
+     {
+      "text": "Anthropic's $50B US infrastructure programme, announced 12 November 2025, starts with Fluidstack-built data centres in Texas and New York, with sites coming online through 2026. Each site that goes live is a milestone the partnership can be timed to.",
+      "label": "The Anthropic build-out"
+     },
+     {
+      "text": "The United States GP in Austin (late October) and the Las Vegas GP (November) are the two US rounds left in 2026; teams close their 2027 partner rosters in the fourth quarter. A deal agreed before Austin can be announced in the US and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Williams carries Atlassian as title partner, VAST Data for the data platform, Keeper for identity security, Airia and Brillio on the technology side, and Claude as Official Thinking Partner. No cloud, GPU or AI-compute partner: Official AI Compute Partner is a clean category at a team-partner price.",
+      "label": "The open lane"
+     },
+     {
+      "text": "Fluidstack builds Anthropic's data centres; Anthropic's Claude has been on the Williams car since the February livery reveal, working with the team's engineers and strategists. The introduction can run through a partner Williams already trusts, and the activation can pair the model with the compute beneath it.",
+      "label": "The warm path"
+     },
+     {
+      "text": "Williams' revival is data-led. Elastic GPU capacity for surrogate models, simulation and analytics is consumed in the factory, not just displayed on the car, which is what separates a technology partner from a logo.",
+      "label": "A team that will use the product"
+     },
+     {
+      "text": "Oxford-founded, now New York-headquartered: a British origin story for a British team and a US identity for the Austin and Las Vegas rounds where Fluidstack's customers and investors sit.",
+      "label": "Story and market fit"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "CoreWeave, Official AI Cloud Computing Partner since May 2025, is a direct rival."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "Core Scientific and TWG AI occupy the compute and AI lanes on the 2026 roster."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and the cloud incumbent."
+     },
+     {
+      "team": "Mercedes-AMG Petronas · BWT Alpine",
+      "reason": "Microsoft holds the cloud lane at both."
+     },
+     {
+      "team": "McLaren F1 Team",
+      "reason": "Google Cloud and Dell Technologies occupy cloud and hardware."
+     },
+     {
+      "team": "Scuderia Ferrari",
+      "reason": "HP (title) and IBM cover compute hardware and cloud services."
+     },
+     {
+      "team": "Audi F1 Team",
+      "reason": "Hewlett Packard Enterprise on the roster in the last 12 months; lane crowded."
+     },
+     {
+      "team": "TGR Haas F1 Team · Racing Bulls",
+      "reason": "Open but not chosen: neither carries the Anthropic tie that gives Williams a warm path."
+     }
+    ]
+   },
+   "date_long": "06 SEP 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Atlassian Williams Racing",
+   "value_mode": "A",
+   "bottom_line": "A reported $1.5B round at $18B, a $50B Anthropic build-out on Fluidstack sites, and Claude already on the Williams put Fluidstack at peak brand-investment authority with a warm path in. The compute lane at Williams is open and two US races remain inside the window.",
+   "footer_date": "6 SEP 2026",
+   "score_cells": [
+    {
+     "num": 17,
+     "note": "Round reported 3 Sep; Austin and Las Vegas inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 18,
+     "note": "$1.5B raise at $18B (reported); ~$2.6B raised in total.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 14,
+     "note": "B2B infrastructure brand; strong Anthropic-Williams tie.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "Listing talk only; no hard deadline beyond Q4 rosters.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "MODE A: elastic GPU capacity outside the aero cap.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Forbes reported on 3 September that Fluidstack raised $1.5B led by Jane Street at an $18B valuation; Crunchbase News puts total funding just over $2.6B. The company has not announced the round. It closed a ~$750M round at ~$7.5B in July after Bloomberg-sourced talks in April, so the price has more than doubled in two months. The business behind it is real: Anthropic's $50B US infrastructure programme, announced 12 Nov 2025, starts with Fluidstack-built data centres in Texas and New York, with sites coming online through 2026.",
+   "the_case_p2": "The grid has already priced this archetype: CoreWeave became Aston Martin Aramco's Official AI Cloud Computing Partner in May 2025, and Core Scientific sits on Cadillac's first roster. Jane Street is the common thread, having committed billions of compute spend to CoreWeave and Crusoe before backing Fluidstack outright. Fluidstack is the one of the three with no seat, and its anchor customer's brand, Claude, already races on a Williams.",
+   "track_label": "",
+   "brief_number": "127",
+   "claims_total": 15,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$1.5B round led by Jane Street at an $18B valuation, reported by Forbes (3 Sep 2026) and Crunchbase News; n…",
+     "value": "$1.5B",
+     "claim_id": 597,
+     "verified": true,
+     "source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/"
+    },
+    {
+     "fact": "Jane Street (lead); total funding just over $2.6B (Crunchbase News)",
+     "value": "$2.6B",
+     "claim_id": 598,
+     "verified": true,
+     "source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/"
+    },
+    {
+     "fact": "Fluidstack, the Oxford-born AI-infrastructure builder now constructing Anthropic's $50B US data-centre prog…",
+     "value": "$50B",
+     "claim_id": 605,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "It closed a ~$750M round at ~$7.5B in July after Bloomberg-sourced talks in April, so the price has more th…",
+     "value": "$750M",
+     "claim_id": 608,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Infrastructure · GPU Cloud / Data-Centre Builder",
+   "value_content": "MODE A - operational. The work outside the FIA aero-testing limits is compute-hungry: machine-learning surrogates, driver-in-loop and strategy simulation, telemetry and video analytics between sessions. Claude already sits in that workflow at Williams; Fluidstack supplies the elastic GPU capacity beneath it, on demand, without cost-cap capital. In return: a named compute partnership, livery presence and Austin and Las Vegas hospitality for Fluidstack's enterprise and capital-markets audience.",
+   "value_section": true,
+   "why_team_para": "Williams has the most data-native roster on the grid: Atlassian as title partner, VAST Data for the data platform, Keeper for identity, and since this season Claude as Official Thinking Partner inside race strategy and car development. There is no cloud or GPU-compute partner. Fluidstack builds Anthropic's compute, so the introduction runs through a partner Williams already trusts. Oxford roots give a British team a home story; New York gives the US rounds one too.",
+   "deal_arch_para": "Entry as Official AI Compute Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the Anthropic build-out and a probable listing window. Estimated $4-7M a year, part-payable in compute credits. Scope: engine-cover or sidepod placement, naming of the team's compute environment, US-race hospitality, engineering content with the Claude programme.",
+   "footer_company": "FLUIDSTACK",
+   "why_team_label": "WHY ATLASSIAN WILLIAMS RACING",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The round was reported on 3 September; brand budgets reset in the quarter after a raise. Austin (late October) and Las Vegas (November) are the US stages left in 2026, and teams close 2027 partner rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Wu co-founded Fluidstack in Oxford in 2017 and fronts every raise; a first sports partnership is his call. Path: César Maklary, Co-Founder and President (commercial), and Rob Perdue, COO since February 2025. No chief marketing officer is listed.",
+   "decision_maker_name": "Gary Wu",
+   "decision_maker_role": "Co-Founder & CEO, Fluidstack",
+   "opening_angle_intro": "Lead with the Claude connection.",
+   "opening_angle_quote": "&ldquo;Gary, Claude already races on the Williams; you build Anthropic's compute. CoreWeave took its seat at Aston Martin in the year of its listing, and the compute lane at Williams is open. 25 minutes before Austin to see the numbers?&rdquo;",
+   "value_section_label": "VALUE TO ATLASSIAN WILLIAMS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Gary Wu, Co-Founder & CEO at Fluidstack",
+   "cited_source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://theorg.com/org/fluidstack/org-chart/cesar-maklary",
+     "excerpt": "Company leadership as listed by Fluidstack / The Org: Gary Wu, Co-Founder and Chief Executive Officer; César Maklary, Co-Founder and President.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Gary Wu, Co-Founder & CEO, Fluidstack at Fluidstack",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://theorg.com/org/fluidstack/org-chart/cesar-maklary",
+     "excerpt": "Company leadership as listed by Fluidstack / The Org: Gary Wu, Co-Founder and Chief Executive Officer; César Maklary, Co-Founder and President.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1.5B round led by Jane Street at an $18B valuation, reported by Forbes (3 Sep 2026) and Crunchbase News; not company-announced",
+   "cited_source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Fluidstack, the Oxford-born AI-infrastructure builder now constructing Anthropic's $50B US data-centre programme, has reportedly closed a $1.5B round led by Jane Street at an $18B valuation (Forbes, 3 Sep 2026), more than doubling the $7.5B mark it set only in July.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Jane Street (lead); total funding just over $2.6B (Crunchbase News)",
+   "cited_source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Forbes reported on 3 September that Fluidstack raised $1.5B led by Jane Street at an $18B valuation;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$1.5B round led by Jane Street at an $18B valuation, reported 3 Sep 2026",
+   "cited_source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Crunchbase News puts total funding just over $2.6B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "CoreWeave is Official AI Cloud Computing Partner of Aston Martin Aramco (May 2025); Core Scientific and TWG AI sit on Cadillac's 2026 roster",
+   "cited_source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-announces-coreweave-as-official-ai-cloud-computing-partner",
+     "excerpt": "Aston Martin Aramco, 22 May 2025: CoreWeave joins as Official AI Cloud Computing Partner in a multi-year partnership; wind tunnel named the CoreWeave Wind Tunnel.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It closed a ~$750M round at ~$7.5B in July after Bloomberg-sourced talks in April, so the price has more than doubled in two months.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/04/14/ai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report/",
+     "excerpt": "TechCrunch, 14 Apr 2026 (Bloomberg-sourced): Jane Street in talks to back Fluidstack at $18B months after it hit $7.5B; Dealroom: a ~$750M round at ~$7–7.5B closed in July 2026 with Google and Anthropic anchoring its data-centre push. Reported figures vary ($750M–$830M).",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Anthropic's $50B US data-centre programme starts with Fluidstack sites in Texas and New York (12 Nov 2025); Claude is Atlassian Williams Racing's Official Thinking Partner (multi-year, 2026)",
+   "cited_source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+     "excerpt": "Anthropic, 12 Nov 2025: a $50 billion investment in American computing infrastructure — data centres built with Fluidstack in Texas and New York, ~800 permanent and ~2,400 construction jobs, sites online through 2026.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The business behind it is real: Anthropic's $50B US infrastructure programme, announced 12 Nov 2025, starts with Fluidstack-built data centres in Texas and New York, with sites coming online through 2026.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+     "excerpt": "Anthropic, 12 Nov 2025: a $50 billion investment in American computing infrastructure — data centres built with Fluidstack in Texas and New York, ~800 permanent and ~2,400 construction jobs, sites online through 2026.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ New York; sites in Texas and New York; founded in Oxford in 2017",
+   "cited_source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+     "excerpt": "Anthropic, 12 Nov 2025: a $50 billion investment in American computing infrastructure — data centres built with Fluidstack in Texas and New York, ~800 permanent and ~2,400 construction jobs, sites online through 2026.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A reported $1.5B round at $18B, a $50B Anthropic build-out on Fluidstack sites, and Claude already on the Williams put Fluidstack at peak brand-investment authority with a warm path in.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Forbes reported on 3 September that Fluidstack has raised $1.5B led by Jane Street at an $18B valuation;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Crunchbase News puts total funding at just over $2.6B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "In April Bloomberg reported Jane Street in talks at an $18B target;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Fluidstack instead closed a ~$750M round at ~$7.5B in July.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/04/14/ai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report/",
+     "excerpt": "TechCrunch, 14 Apr 2026 (Bloomberg-sourced): Jane Street in talks to back Fluidstack at $18B months after it hit $7.5B; Dealroom: a ~$750M round at ~$7–7.5B closed in July 2026 with Google and Anthropic anchoring its data-centre push. Reported figures vary ($750M–$830M).",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Two months later the $18B print landed.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+     "excerpt": "Forbes, 3 Sep 2026: Fluidstack hit an $18 billion valuation in a $1.5 billion round led by Jane Street; Crunchbase News (5 Sep) puts total funding at just over $2.6 billion. No company announcement found — reported, not confirmed.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Anthropic's $50B US infrastructure programme, announced 12 November 2025, starts with Fluidstack-built data centres in Texas and New York, with sites coming online through 2026.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+     "excerpt": "Anthropic, 12 Nov 2025: a $50 billion investment in American computing infrastructure — data centres built with Fluidstack in Texas and New York, ~800 permanent and ~2,400 construction jobs, sites online through 2026.",
+     "notes": "checked in-session against the cited report (search summary; direct fetch egress-blocked)",
+     "model": "claude-session-2026-09-05"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

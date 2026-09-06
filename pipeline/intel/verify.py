@@ -298,7 +298,14 @@ _EVENT_RE = re.compile(
 _STOP_PLACES = {"the", "a", "an", "this", "that", "next", "home", "first", "key", "each"}
 _RACE_NOUN_TAIL = re.compile(
     r"(engineer|engineering|team|car|cars|strategy|control|seat|suit|day|weekend|craft|"
-    r"pace|winning|wins|win|result|programme|program|operations|analytics|data)"
+    r"pace|winning|wins|win|result|programme|program|operations|analytics|data)"
+)
+# A funding round, not a race round: "the round was reported", "Series B round led by",
+# "a $1.5B round at an $18B valuation", "the round closed in July".
+_FUNDING_ROUND_TAIL = re.compile(
+    r"(was|were|is|has|had|led|of|at|that|which|closed|closing|values?|valued|valuing|"
+    r"priced|pricing|reported|announced|brings|bringing|raised|raising|came|comes|"
+    r"in\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|\d))\b"
 )
 
 
@@ -321,6 +328,8 @@ def find_event_mentions(text: str) -> list[dict[str, str | None]]:
         if kind in {"race", "round"}:
             tail = (text or "")[m.end() : m.end() + 24].lstrip().lower()
             if place.endswith(("'s", "’s")) or _RACE_NOUN_TAIL.match(tail):
+                continue
+            if kind == "round" and _FUNDING_ROUND_TAIL.match(tail):
                 continue
         series: str | None = None
         if series_raw in {"F1", "FORMULA1", "FORMULAONE"}:
