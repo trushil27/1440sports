@@ -108,7 +108,10 @@ def test_shadow_mode_sends_the_md_copy_to_the_operator_only(session, migrated_da
     assert mailer.sent[0].subject.startswith("1440 Intelligence Brief")
     assert "SHADOW" not in mailer.sent[0].subject
     # …but a shadow copy is still unmistakable in the body.
-    assert "Shadow mode: operator copy" in mailer.sent[0].body_text
+    # No mode marker anywhere in the body (operator, 7 Sep 2026): the email reads the
+    # same whoever receives it, and the sends table is the record of who got it.
+    assert "Shadow mode" not in mailer.sent[0].body_text
+    assert "operator copy" not in (mailer.sent[0].body_html or "")
     assert _sends(session) == [(OP, "operator_copy", "sent")]
 
 
