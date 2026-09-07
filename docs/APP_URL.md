@@ -14,25 +14,29 @@ setting either way.
 
 ---
 
-## Option A — Netlify (fastest, already built, ~5 minutes)
+## Option A — Netlify: two steps, one secret (~3 minutes)
 
-Result: **`https://1440-intelligence.netlify.app/127`** — or whatever name you claim.
+Result: **`https://1440-intelligence.netlify.app/127`**
 
-The code for this already exists (`intel/netlify.py`), and the daily job deploys there
-automatically as soon as the two secrets are present.
+Everything on the desk's side is done. The daily job now **claims the site itself**: given a
+token and no site id it looks for `1440-intelligence.netlify.app` on the account, creates it
+if it is not there, deploys the app to it, and points every emailed link at it
+(`intel/netlify.py`, `ensure_site`). So the dashboard steps — make a site, rename it, copy
+its id, paste it back as a second secret — are gone. What is left cannot be done from here,
+because it is an account nobody but you can open:
 
-1. Sign up at netlify.com with the 1440 email (free tier is enough — this is a static site).
-2. **Add new site → Deploy manually.** Drag any folder in, even an empty one; you just need a
-   site to exist. It gets a random name.
-3. **Site configuration → Change site name** → `1440-intelligence` (or `1440-signals`,
-   `1440-desk` — whatever is free). This is the name that appears in the URL.
-4. Copy the **Site ID** from Site configuration → General → Site information.
-5. **User settings → Applications → Personal access tokens → New access token.** Copy it.
-6. In GitHub → the repo → Settings → Secrets and variables → Actions:
-   - **Secrets**: `NETLIFY_AUTH_TOKEN` = the token, `NETLIFY_SITE_ID` = the site ID
-   - **Variables**: `APP_BASE_URL` = `https://1440-intelligence.netlify.app`
+1. Sign up at **netlify.com** with the 1440 email (free tier; this is a static site).
+   Then **User settings → Applications → Personal access tokens → New access token**, and
+   copy it.
+2. In GitHub → this repo → **Settings → Secrets and variables → Actions → New repository
+   secret**: name `NETLIFY_AUTH_TOKEN`, value the token.
 
-Done. The next daily run deploys the desk there and every email link points at it.
+That is the whole job. The next daily run creates the site, publishes to it and every link in
+the email reads `1440-intelligence.netlify.app/<number>`.
+
+Optional: set the repo **variable** `NETLIFY_SITE_NAME` to claim a different name (if
+`1440-intelligence` has been taken by someone else the run says so instead of publishing
+somewhere unannounced), or `NETLIFY_SITE_ID` to deploy into a site that already exists.
 
 **Trade-off:** the URL says `netlify.app`. No personal name, but a hosting brand.
 

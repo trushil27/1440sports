@@ -21,6 +21,14 @@
 name: Daily run
 
 on:
+  # The 06:00 trigger. A Claude Routine fires a small session each morning whose whole job is
+  # to write the time into .github/run-now and push it; that push starts this workflow within
+  # seconds. It goes through git rather than the Actions API because a routine's session has
+  # git credentials for this repo but no GitHub API access — a dispatch call from there is
+  # refused. The gate below still decides whether there is work, so the push is always safe.
+  push:
+    branches: [main]
+    paths: [".github/run-now"]
   schedule:
     - cron: "20 4 * * *"
     - cron: "20 5 * * *"
@@ -76,11 +84,13 @@ jobs:
       GRAPH_REFRESH_TOKEN: ${{ secrets.GRAPH_REFRESH_TOKEN }}
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      NETLIFY_SITE_NAME: ${{ vars.NETLIFY_SITE_NAME || '1440-intelligence' }}
       GITHUB_TOKEN: ${{ github.token }}
       PAGES_REPO: ${{ github.repository }}
-      # 1440-intelligence.netlify.app as soon as the Netlify site is configured (operator
-      # decision, 7 Sep 2026); APP_BASE_URL overrides it; the github.io URL is the fallback.
-      APP_BASE_URL: ${{ vars.APP_BASE_URL || (secrets.NETLIFY_SITE_ID && 'https://1440-intelligence.netlify.app') || 'https://trushil27.github.io/1440sports/' }}
+      # The emailed link follows the deploy: the moment NETLIFY_AUTH_TOKEN exists the job
+      # claims 1440-intelligence.netlify.app (operator's choice, 7 Sep 2026) and points every
+      # link there. APP_BASE_URL overrides it; the github.io URL is the fallback until then.
+      APP_BASE_URL: ${{ vars.APP_BASE_URL || (secrets.NETLIFY_AUTH_TOKEN && format('https://{0}.netlify.app', vars.NETLIFY_SITE_NAME || '1440-intelligence')) || 'https://trushil27.github.io/1440sports/' }}
       DESK_API_URL: ${{ vars.DESK_API_URL }}
       REBUILD_BACKLOG_PER_RUN: ${{ vars.REBUILD_BACKLOG_PER_RUN || '1' }}
       FRESHNESS_DAYS_TRACK1: ${{ vars.FRESHNESS_DAYS_TRACK1 || '90' }}

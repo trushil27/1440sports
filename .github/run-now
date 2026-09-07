@@ -1,0 +1,11 @@
+The 06:00 London trigger.
+
+A Claude Routine pushes a new timestamp into this file every morning, and that push starts
+.github/workflows/daily-run.yml. It exists because GitHub the scheduler is not punctual on
+this repo — its cron has arrived four to five hours late every day — while a routine fires
+within minutes of its time. The routine has git access to this repo but not the Actions API,
+so a push is the trigger it can actually pull.
+
+Nothing reads the contents; only the fact that the file changed matters.
+
+2026-09-07T15:45:00Z

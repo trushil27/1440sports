@@ -75,7 +75,8 @@ def test_a_firing_before_five_london_is_held_not_run(tmp_path, monkeypatch):
     assert day_status.too_early(dt.datetime(2026, 11, 2, 5, 48, tzinfo=london)) is False
 
     out = tmp_path / "out"
-    monkeypatch.setattr(day_status, "london_now", lambda: dt.datetime(2026, 11, 2, 4, 48, tzinfo=london))
+    winter_dawn = dt.datetime(2026, 11, 2, 4, 48, tzinfo=london)
+    monkeypatch.setattr(day_status, "london_now", lambda: winter_dawn)
     day_status.main(["--cases", str(tmp_path), "--github-output", str(out)])
     text = out.read_text(encoding="utf-8")
     assert "done=false" in text and "hold=true" in text  # nothing saved, but not yet its hour

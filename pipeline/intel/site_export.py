@@ -701,12 +701,17 @@ def publish(settings: Settings | None = None, session: Session | None = None) ->
             )
         except Exception as exc:  # noqa: BLE001 — the export on disk is still good
             result["pages_error"] = f"{type(exc).__name__}: {str(exc)[:200]}"
-    if settings.netlify_auth_token and settings.netlify_site_id:
-        from intel.netlify import deploy
+    if settings.netlify_auth_token:
+        from intel.netlify import deploy, resolve_site_id
 
-        result["netlify"] = deploy(
-            zip_dir(out_dir), settings.netlify_auth_token, settings.netlify_site_id
-        )
+        # A failed deploy must not fail the run: the day's signal has already been sent and
+        # gh-pages already has the same site. Record why and carry on.
+        try:
+            site_id = resolve_site_id(settings)
+            if site_id:
+                result["netlify"] = deploy(zip_dir(out_dir), settings.netlify_auth_token, site_id)
+        except Exception as exc:  # noqa: BLE001
+            result["netlify_error"] = f"{type(exc).__name__}: {str(exc)[:200]}"
     return result
 
 

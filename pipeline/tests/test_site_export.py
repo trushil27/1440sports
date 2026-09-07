@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 
 import httpx
+import pytest
 
 from intel import netlify, site_export
 from intel.brief_data import Extended
@@ -104,3 +105,59 @@ def test_netlify_zip_deploy_posts_the_archive():
     assert req.headers["authorization"] == "Bearer tok"
     assert req.headers["content-type"] == "application/zip"
     assert req.content.startswith(b"PK")
+
+
+def _netlify_account(sites: dict[str, dict]) -> tuple[httpx.Client, list[httpx.Request]]:
+    """A stand-in Netlify holding `sites` keyed by name, which POST /sites adds to."""
+    calls: list[httpx.Request] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        calls.append(request)
+        path = request.url.path
+        if request.method == "GET" and path.startswith("/api/v1/sites/"):
+            name = path.rsplit("/", 1)[-1].removesuffix(".netlify.app")
+            site = sites.get(name)
+            return httpx.Response(200, json=site) if site else httpx.Response(404, json={})
+        if request.method == "POST" and path == "/api/v1/sites":
+            name = json.loads(request.content)["name"]
+            sites[name] = {"id": f"id-{name}", "name": name}
+            return httpx.Response(201, json=sites[name])
+        raise AssertionError(f"unexpected {request.method} {path}")
+
+    return httpx.Client(transport=httpx.MockTransport(handler)), calls
+
+
+def test_the_desk_claims_its_own_netlify_site_from_the_token_alone():
+    """Setting the link up is ONE secret. Without this the operator has to create the site by
+    hand, copy its id and paste it back as a second secret before any link changes."""
+    http, calls = _netlify_account({})
+    site = netlify.ensure_site("tok", "1440-intelligence", http=http)
+    assert site["id"] == "id-1440-intelligence"
+    assert [(c.method, c.url.path) for c in calls] == [
+        ("GET", "/api/v1/sites/1440-intelligence.netlify.app"),
+        ("POST", "/api/v1/sites"),
+    ]
+
+
+def test_the_site_is_claimed_once_and_reused_after_that():
+    known = {"1440-intelligence": {"id": "abc", "name": "1440-intelligence"}}
+    http, calls = _netlify_account(known)
+    assert netlify.ensure_site("tok", "1440-intelligence", http=http)["id"] == "abc"
+    assert [c.method for c in calls] == ["GET"]  # nothing created a second site
+
+
+def test_a_name_somebody_else_owns_is_reported_not_silently_swapped():
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.method == "GET":
+            return httpx.Response(404, json={})
+        return httpx.Response(422, json={"errors": {"subdomain": ["must be unique"]}})
+
+    with pytest.raises(RuntimeError, match="1440-intelligence"):
+        netlify.ensure_site(
+            "tok", "1440-intelligence", http=httpx.Client(transport=httpx.MockTransport(handler))
+        )
+
+
+def test_an_explicit_site_id_still_wins_and_costs_no_api_call():
+    settings = Settings(netlify_auth_token="tok", netlify_site_id="chosen")
+    assert netlify.resolve_site_id(settings, http=None) == "chosen"

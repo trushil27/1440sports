@@ -99,9 +99,19 @@ class Settings(BaseModel):
     )
     netlify_auth_token: str | None = Field(
         default=None,
-        description="Netlify personal access token; with NETLIFY_SITE_ID the job deploys.",
+        description=(
+            "Netlify personal access token. This alone is enough: the job finds the site named "
+            "NETLIFY_SITE_NAME on the account and creates it if it is not there yet."
+        ),
     )
-    netlify_site_id: str | None = None
+    netlify_site_id: str | None = Field(
+        default=None,
+        description="Deploy to this exact site instead of the one named by NETLIFY_SITE_NAME.",
+    )
+    netlify_site_name: str = Field(
+        default="1440-intelligence",
+        description="The site the desk claims, and so the address in every emailed link.",
+    )
     github_token: str | None = Field(
         default=None,
         description=(
