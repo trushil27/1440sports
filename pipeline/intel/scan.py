@@ -49,8 +49,10 @@ class MessagesClient(Protocol):
     ) -> str: ...
 
 
-# Streaming, so the ceiling can be generous: ten candidates + citations + thinking.
-SCAN_MAX_TOKENS = 32000
+# Streaming, so the ceiling can be generous: ten candidates + citations + thinking. Raised
+# from 32000 on 7 Sep 2026, when run 192 spent the whole budget narrating eight web searches
+# and was cut off before it reached the JSON — the day produced no signal for that alone.
+SCAN_MAX_TOKENS = 64000
 
 
 class AnthropicText:
@@ -79,6 +81,13 @@ class AnthropicText:
                 label="scanner",
             )
         except ModelTurnError as exc:
+            # A turn cut off at the ceiling is not the end of the scan. Hand the partial text
+            # back: run_scan either finds a complete array in it, or retries with "return ONLY
+            # the JSON array", which is short and does not narrate. Failing here instead threw
+            # away a scan that had already done its ten searches (run 192, 7 Sep 2026).
+            if exc.stop_reason == "max_tokens" and exc.text:
+                self.last_usage, self.last_segments = None, 0
+                return exc.text
             raise ScanFailed(str(exc), raw=exc.text) from exc
         except Exception as exc:  # noqa: BLE001 — auth, network, 5xx: the run fails cleanly
             raise ScanFailed(f"scanner call failed: {type(exc).__name__}: {exc}") from exc

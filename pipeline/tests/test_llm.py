@@ -7,11 +7,13 @@ the adapter treated that partial as the final answer.
 
 from __future__ import annotations
 
+import datetime as dt
 from types import SimpleNamespace
 
 import pytest
 
 from intel import brief, scan, verify
+from intel.config import Settings
 from intel.llm import ModelTurnError, complete_text
 
 
@@ -118,16 +120,44 @@ def test_truncation_and_refusal_are_explicit_errors_carrying_the_partial_text():
         )
 
 
-def test_scanner_adapter_resumes_a_paused_scan_and_reports_truncation_as_scan_failed():
+def test_scanner_adapter_resumes_a_paused_scan():
     paused = _resp([_tool_use()], "pause_turn")
     final = _resp([_text("[]")], "end_turn")
     adapter = scan.AnthropicText(FakeClient([paused, final]))
     assert adapter.create_text(model="m", system="s", messages=[], tools=[]) == "[]"
     assert adapter.last_segments == 2
-    truncated = scan.AnthropicText(FakeClient([_resp([_text("[{")], "max_tokens")]))
-    with pytest.raises(scan.ScanFailed, match="truncated") as exc:
-        truncated.create_text(model="m", system="s", messages=[], tools=[])
-    assert exc.value.raw == "[{"
+
+
+def test_a_scan_cut_off_at_the_ceiling_is_handed_back_to_the_retry_not_thrown_away():
+    """Run 192 (7 Sep 2026) narrated eight web searches, hit max_tokens before the JSON, and
+    the day produced no signal. The searches were already done; the retry only has to ask for
+    the array. Failing here discarded all of it."""
+    cut_off = _resp([_text("…let me extract the rest")], "max_tokens")
+    truncated = scan.AnthropicText(FakeClient([cut_off]))
+    assert truncated.create_text(model="m", system="s", messages=[], tools=[]) == (
+        "…let me extract the rest"
+    )
+
+    client = FakeClient(
+        [
+            _resp([_text("I searched ten sources and then ran out of room. [{")], "max_tokens"),
+            _resp([_text('[{"company": "Acme", "score": 78}]')], "end_turn"),
+        ]
+    )
+    result = scan.run_scan(
+        dt.date(2026, 9, 7),
+        client=scan.AnthropicText(client),
+        settings=Settings(scan_candidates_max=10),
+    )
+    assert [s.company for s in result.signals] == ["Acme"] and result.attempts == 2
+    # the second request carries the "return ONLY the JSON array" note, not another full scan
+    assert "ONLY the JSON array" in client.messages.requests[-1]["messages"][-1]["content"]
+
+
+def test_a_scan_truncated_twice_still_fails_with_the_reason():
+    client = FakeClient([_resp([_text("narrating…")], "max_tokens")] * 2)
+    with pytest.raises(scan.ScanFailed, match="unparseable after retry"):
+        scan.run_scan(dt.date(2026, 9, 7), client=scan.AnthropicText(client), settings=Settings())
 
 
 def test_verifier_adapter_resumes_pause_turn_and_never_raises_on_truncation():
