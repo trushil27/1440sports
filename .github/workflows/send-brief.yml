@@ -1,0 +1,82 @@
+# Email a brief that already exists — the card body and the 2-page PDF — to the operator.
+#
+# Every signal the desk shows carries a verified case, a PDF and an app page, but only the
+# day's hero was ever emailed; the backlog cases were published to the app and nothing else.
+# This is the door for the rest: Actions → Send a brief → Run workflow → type the number(s).
+#
+# It runs the mailer and the renderer ONLY — no scanner, verifier or writer — so it costs
+# nothing on the model API. The MD is never a recipient: intel.resend addresses the operator.
+name: Send a brief
+
+on:
+  workflow_dispatch:
+    inputs:
+      numbers:
+        description: "Brief number(s), space separated — e.g. 241, or 241 240"
+        required: true
+        type: string
+      dry_run:
+        description: "Write the .eml to the run's artifact instead of sending it"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: pg
+          POSTGRES_DB: intel
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      DATABASE_URL: postgresql://postgres:pg@localhost:5432/intel
+      OPERATOR_EMAIL: ${{ secrets.OPERATOR_EMAIL }}
+      # No MD_EMAIL and no ANTHROPIC_API_KEY: neither is needed, and their absence is the
+      # guarantee that this workflow cannot mail the MD or spend anything on the model.
+      EXECUTION_MODE: ${{ inputs.dry_run && 'dry_run' || 'shadow' }}
+      GRAPH_TENANT_ID: ${{ secrets.GRAPH_TENANT_ID }}
+      GRAPH_CLIENT_ID: ${{ secrets.GRAPH_CLIENT_ID }}
+      GRAPH_CLIENT_SECRET: ${{ secrets.GRAPH_CLIENT_SECRET }}
+      GRAPH_SENDER: ${{ secrets.GRAPH_SENDER }}
+      GRAPH_REFRESH_TOKEN: ${{ secrets.GRAPH_REFRESH_TOKEN }}
+      PDF_STORAGE_DIR: storage/briefs
+      OUTBOX_DIR: storage/outbox
+      PYTHONPATH: pipeline
+      TZ: Europe/London
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: System libraries for WeasyPrint
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2 fonts-liberation
+      - name: Install
+        run: pip install -q -e "pipeline[render]"
+      - name: Rebuild the desk's memory from the repo
+        run: |
+          python -m alembic -c db/alembic.ini upgrade head
+          python -m intel.seed
+          python -m intel.backfill
+      - name: Send
+        run: python -m intel.resend ${{ inputs.numbers }}
+      - name: Keep the PDFs and outbox as an artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: send-brief-${{ github.run_id }}
+          path: storage
+          retention-days: 7
+          if-no-files-found: ignore
