@@ -161,3 +161,32 @@ def test_a_name_somebody_else_owns_is_reported_not_silently_swapped():
 def test_an_explicit_site_id_still_wins_and_costs_no_api_call():
     settings = Settings(netlify_auth_token="tok", netlify_site_id="chosen")
     assert netlify.resolve_site_id(settings, http=None) == "chosen"
+
+
+def test_a_company_checked_and_rejected_without_a_row_still_appears():
+    """Ore Energy, 7 Sep 2026: the desk held a sourced screen-out (a €37.3m Series A cannot
+    fund a three-year deal) and the app showed nothing at all, because a decision could only
+    attach to an existing row. The judgment IS the product — it gets a row of its own."""
+    entries = [{"company": "Fluidstack", "review": {"status": "keep"}}]
+    review = {
+        "2026-08-04|Ore Energy": {
+            "status": "screened_out",
+            "reason": "capacity: a €37.3m Series A cannot fund a three-year deal",
+            "reason_code": "case_screen",
+            "sources": ["https://example.com/ore"],
+        },
+        "2026-09-06|Fluidstack": {
+            "status": "screened_out",
+            "reason": "already on this row",
+            "reason_code": "case_screen",
+        },
+        "2026-05-01|Someone Else": {"status": "keep"},
+        # a blocklist entry is not a full check: no reasoning, no sources, wrong heading
+        "2026-05-07|Cerebras": {"status": "screened_out", "reason_code": "blocklisted"},
+    }
+    rows = site_export.orphan_screen_rows(entries, review, names={"oreenergy": "Ore Energy"})
+    assert [r["company"] for r in rows] == ["Ore Energy"]  # not Fluidstack: it has a row
+    row = rows[0]
+    assert row["date"] == "2026-08-04" and row["checked_only"] is True
+    assert row["review"]["sources"] == ["https://example.com/ore"]
+    assert row["number"] is None and row["has_page"] is False

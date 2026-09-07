@@ -339,6 +339,98 @@ def brief_entry(
     return entry
 
 
+CASES_DIR = Path(__file__).resolve().parent / "cases"
+
+
+def screened_display_names(cases_dir: Path | None = None) -> dict[str, str]:
+    """normalised company → the name as written, from the screen-out case records.
+
+    ``history_review.json`` is keyed by the normalised name, so a decision on its own would
+    put "oreenergy" in front of the MD. The case record that produced the decision still has
+    the real spelling."""
+    from intel.normalise import company_norm
+
+    names: dict[str, str] = {}
+    for path in sorted((cases_dir or CASES_DIR).glob("*/*.screened.json")):
+        try:
+            company = json.loads(path.read_text(encoding="utf-8")).get("company")
+        except (OSError, ValueError):
+            continue
+        if company:
+            names[company_norm(company)] = company
+    return names
+
+
+def orphan_screen_rows(
+    entries: list[dict[str, Any]],
+    review: dict[str, dict[str, Any]] | None,
+    names: dict[str, str] | None = None,
+) -> list[dict[str, Any]]:
+    """Rows for companies that were checked and screened out but were never desk signals.
+
+    A screen-out is only ever attached to an existing row, so a company the desk looked at,
+    researched and rejected WITHOUT having carried a row for it vanished completely: the work
+    was done and shown nowhere. Ore Energy is the case that exposed it — the desk holds a
+    sourced judgment (a €37.3m Series A cannot fund a three-year deal) that the app did not
+    show, so the same company came back in from another source looking new.
+
+    The judgment is the product, so it gets a row of its own.
+    """
+    from intel.normalise import company_norm
+
+    have = {company_norm(e["company"]) for e in entries}
+    names = screened_display_names() if names is None else names
+    rows: list[dict[str, Any]] = []
+    for key, decision in sorted((review or {}).items(), reverse=True):
+        # Only decisions taken after a FULL check: those carry the reasoning and the sources
+        # the app shows. A blocklist entry is a different statement (already a partner) and
+        # has neither, so it would render as an empty row under the wrong heading.
+        if decision.get("status") != "screened_out" or decision.get("reason_code") != "case_screen":
+            continue
+        date, _, raw = key.partition("|")
+        norm = company_norm(raw)
+        if not raw or norm in have:
+            continue
+        have.add(norm)
+        company = names.get(norm, raw)
+        rows.append(
+            {
+                "key": key,
+                "number": None,
+                "label": None,
+                "date": date,
+                "company": company,
+                "score": None,
+                "tier": None,
+                "series": None,
+                "series_inferred": False,
+                "team": None,
+                "person": None,
+                "role": None,
+                "take": None,
+                "verification": None,
+                "audit": None,
+                "track": 1,
+                "historical": True,
+                "industry": None,
+                "confidence": None,
+                "review": dict(decision),
+                "source_label": None,
+                "deck": None,
+                "bottom_line": None,
+                "trigger": None,
+                "trigger_date": None,
+                "source_url": None,
+                "horizon": None,
+                "signals": [],
+                "has_page": False,
+                "pdf_path": None,
+                "checked_only": True,
+            }
+        )
+    return rows
+
+
 def merge_same_company(entries: list[dict[str, Any]]) -> None:
     """One row per company in the working lists (the MD saw SambaNova twice: a thin n8n row
     and the repo's own brief). The richest entry stays — a full engine page first, then a
@@ -492,6 +584,8 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
     )
     merge_same_company(entries)
     propagate_case_screens(entries)
+    # after the merge, so a screen-out that DOES belong to a surviving row stays on that row
+    entries.extend(orphan_screen_rows(entries, review))
     attach_deal_updates(entries, session.scalars(select(Sponsor)).all())
     from intel.checks import load_checks
     from intel.checks import summary as checks_summary
@@ -691,7 +785,13 @@ def publish(settings: Settings | None = None, session: Session | None = None) ->
     else:
         data = export_data(session, settings)
     index = write_site(data, out_dir)
-    result: dict[str, Any] = {"index": str(index), "briefs": len(data["briefs"])}
+    rows = data["briefs"]
+    checked_only = sum(1 for r in rows if r.get("checked_only"))
+    result: dict[str, Any] = {
+        "index": str(index),
+        "briefs": len(rows) - checked_only,
+        "checked_only": checked_only,
+    }
     if settings.github_token:
         from intel.pages import publish_pages
 

@@ -156,12 +156,23 @@ def scanner_system_prompt() -> str:
     return system.replace(_REGRESSED_EXAMPLE_TAIL, _V213_EXAMPLE_TAIL)
 
 
+#: Added 7 Sep 2026 after two runs in one day spent their whole output budget describing the
+#: searches and were cut off before the array. The searching is the work; the narration is
+#: not, and nothing downstream reads a word of it.
+OUTPUT_DISCIPLINE = (
+    "OUTPUT DISCIPLINE. Do not narrate the searches, summarise what each result said, or "
+    "print working notes between them. Read the sources, then write the JSON array — it must "
+    "be the only thing in your reply. Nothing downstream reads anything else, and a reply "
+    "that runs out of room before the array is a wasted run."
+)
+
+
 def scanner_prompts(today: dt.date, addendum: str | None = None) -> tuple[str, str]:
     system = scanner_system_prompt().replace(_TODAY_TOKEN, today.isoformat())
     user = load_prompt("scanner_v218_user.txt")
     if addendum:
         user = user.rstrip() + "\n\n" + addendum.strip() + "\n"
-    return system, user
+    return system, user.rstrip() + "\n\n" + OUTPUT_DISCIPLINE + "\n"
 
 
 SINGLE_COMPANY_USER = (
@@ -207,11 +218,17 @@ def run_scan(
     last_error: str | None = None
     raw = ""
     for attempt in (1, 2):
+        # The retry gets NO search tools. The searching is already done and paid for by then;
+        # leaving the tools on lets the model search and narrate all over again and run out of
+        # room a second time, which is exactly how 7 Sep 2026 ended with no signal twice. With
+        # no tools the only thing it can do is write the array out of what it already has.
+        tools = (
+            [{**WEB_SEARCH_TOOL, "max_uses": int(settings.scan_search_uses)}]
+            if attempt == 1
+            else []
+        )
         raw = client.create_text(
-            model=settings.scan_model,
-            system=system,
-            messages=messages,
-            tools=[{**WEB_SEARCH_TOOL, "max_uses": int(settings.scan_search_uses)}],
+            model=settings.scan_model, system=system, messages=messages, tools=tools
         )
         try:
             signals = parse_scan_output(raw, min_n=1, max_n=settings.scan_candidates_max)

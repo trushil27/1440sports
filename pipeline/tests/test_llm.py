@@ -180,3 +180,26 @@ def test_writer_adapter_turns_truncation_into_a_parse_error_for_the_retry_path()
     w = brief.AnthropicWriter(FakeClient([_resp([_text("<BRIEF_DATA>{")], "max_tokens")]))
     with pytest.raises(brief.ParseError, match="truncated"):
         w.write(model="m", system="s", user="u")
+
+
+def test_the_retry_scan_carries_no_search_tools():
+    """7 Sep 2026: the first turn spent its budget narrating and was cut off; the retry, still
+    holding the search tools, searched and narrated all over again and was cut off too. The
+    searching is already paid for by then — the retry only has to write the array."""
+    client = FakeClient(
+        [
+            _resp([_text("I searched ten sources and then ran out of room.")], "max_tokens"),
+            _resp([_text('[{"company": "Acme", "score": 71}]')], "end_turn"),
+        ]
+    )
+    scan.run_scan(dt.date(2026, 9, 7), client=scan.AnthropicText(client), settings=Settings())
+    first, second = client.messages.requests[0], client.messages.requests[1]
+    assert first["tools"][0]["name"] == "web_search"
+    assert "tools" not in second  # empty list means the request carries no tools at all
+
+
+def test_the_scanner_is_told_not_to_narrate():
+    _, user = scan.scanner_prompts(dt.date(2026, 9, 7))
+    assert "OUTPUT DISCIPLINE" in user and user.rstrip().endswith("a wasted run.")
+    _, with_addendum = scan.scanner_prompts(dt.date(2026, 9, 7), addendum="Widen the window.")
+    assert "Widen the window." in with_addendum and "OUTPUT DISCIPLINE" in with_addendum
