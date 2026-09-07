@@ -160,6 +160,29 @@ def test_a_scan_truncated_twice_still_fails_with_the_reason():
         scan.run_scan(dt.date(2026, 9, 7), client=scan.AnthropicText(client), settings=Settings())
 
 
+def test_a_failed_scan_reports_both_attempts_and_keeps_the_text_that_had_something():
+    """Run 192 (7 Sep 2026): the record showed only the LAST attempt's error and its text —
+    which was empty — so the first attempt, where the evidence was, was lost."""
+    from intel import llm
+
+    llm.reset_ledger()
+    client = FakeClient(
+        [
+            _resp([_text("I searched and here is what I found, at length…")], "end_turn"),
+            _resp([], "end_turn"),  # the retry answered with nothing at all
+        ]
+    )
+    with pytest.raises(scan.ScanFailed) as exc:
+        scan.run_scan(dt.date(2026, 9, 7), client=scan.AnthropicText(client), settings=Settings())
+    msg = str(exc.value)
+    assert "attempt 1 (" in msg and "attempt 2 (0 chars)" in msg
+    assert exc.value.raw.startswith("I searched")  # the longer text, not the empty last one
+    turns = [r for r in llm.LEDGER if r["label"] == "scanner"]
+    assert [t["stop"] for t in turns] == ["end_turn", "end_turn"]
+    assert turns[0]["blocks"] == {"text": 1} and turns[1]["blocks"] == {} and turns[1]["chars"] == 0
+
+
+
 def test_verifier_adapter_resumes_pause_turn_and_never_raises_on_truncation():
     paused = _resp([_tool_use()], "pause_turn")
     final = _resp(

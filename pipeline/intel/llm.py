@@ -120,12 +120,23 @@ def complete_text(
         segments += 1
         with client.messages.stream(messages=history, **kwargs) as stream:
             response = stream.get_final_message()
-        if (u := _usage_of(response)) is not None:
-            usage.append(u)
-            LEDGER.append({"label": label, "model": model, "usage": u})
-        if text := _text_of(response.content):
+        text = _text_of(response.content)
+        if text:
             texts.append(text)
         stop = getattr(response, "stop_reason", None) or "end_turn"
+        # Shape as well as size: run 192 (7 Sep 2026) ended with an EMPTY text and nothing in
+        # the record said whether the model refused, thought and stopped, or never answered.
+        blocks: dict[str, int] = {}
+        for b in response.content:
+            kind = getattr(b, "type", "?")
+            blocks[kind] = blocks.get(kind, 0) + 1
+        u = _usage_of(response)
+        if u is not None:
+            usage.append(u)
+        LEDGER.append(
+            {"label": label, "model": model, "usage": u, "stop": stop, "blocks": blocks,
+             "chars": len(text)}
+        )
         if stop == "pause_turn":
             if segments > MAX_CONTINUATIONS:
                 raise ModelTurnError(

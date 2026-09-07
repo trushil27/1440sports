@@ -95,3 +95,27 @@ def test_an_unreadable_mailbox_is_a_missing_source_not_a_failed_run():
     assert signals == [] and "unavailable" in note["status"]
     signals, note = inbox.collect(None, None, object())
     assert signals == [] and "no mailbox" in note["status"]
+
+
+def test_the_routine_mail_is_html_by_the_time_it_is_read():
+    """Run 192 (7 Sep 2026) read the mailbox correctly and found nothing: the mail client had
+    dropped the <SIGNALS> tag, wrapped the array in <p> and encoded & as &amp;."""
+    body = (
+        "<div><p>\n[\n  {&quot;company&quot;: &quot;Gridsight&quot;, "
+        "&quot;role&quot;: &quot;Co-founder &amp; CEO&quot;, "
+        "&quot;trigger&quot;: &quot;$26m Series B&quot;, "
+        "&quot;source_url&quot;: &quot;https://esgtoday.com/gridsight&quot;, "
+        "&quot;score&quot;: 59}\n]</p><p>Desk — today's run.</p></div>"
+    )
+    leads = inbox.parse_routine_email(body, RECEIVED)
+    assert [x.company for x in leads] == ["Gridsight"]
+    assert leads[0].role == "Co-founder & CEO" and leads[0].is_candidate
+
+
+def test_escaped_signals_tags_still_delimit_the_block():
+    body = "&lt;SIGNALS&gt;[{\"company\": \"Acme\", \"score\": 70}]&lt;/SIGNALS&gt;<br>prose"
+    assert [x.company for x in inbox.parse_routine_email(body)] == ["Acme"]
+
+
+def test_prose_that_merely_mentions_brackets_is_not_a_signal():
+    assert inbox.parse_routine_email("<p>We looked at [1] and [2] and found nothing.</p>") == []

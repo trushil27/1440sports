@@ -28,6 +28,7 @@ stage decides, the same as any other candidate.
 from __future__ import annotations
 
 import datetime as dt
+import html as html_lib
 import json
 import re
 from dataclasses import dataclass, field
@@ -63,15 +64,66 @@ class Lead:
         return bool(self.company and self.trigger and self.source_url)
 
 
+_TAG = re.compile(r"<[^>]+>")
+
+
+def _plain(body: str) -> str:
+    """What the routine wrote, out of what the mailbox stored.
+
+    The mail is HTML by the time it is read: ``<SIGNALS>`` is an unknown tag and is dropped
+    or escaped, ``&`` inside the JSON becomes ``&amp;``, and the array sits inside ``<p>``
+    tags. Run 192 (7 Sep 2026) read the mailbox correctly and found nothing for exactly this
+    reason. Tags go, entities come back, and the block is looked for both ways."""
+    text = html_lib.unescape(body or "")
+    return _TAG.sub(" ", text)
+
+
+def _first_array_of_companies(text: str) -> list[Any] | None:
+    """The first JSON array in the text whose items are objects with a company — for a mail
+    whose ``<SIGNALS>`` wrapper did not survive. Bracket-balanced, quote-aware."""
+    depth, start, in_str, esc = 0, -1, False, False
+    for i, ch in enumerate(text):
+        if in_str:
+            esc = (ch == "\\") and not esc
+            if ch == '"' and not esc:
+                in_str = False
+            continue
+        if ch == '"':
+            in_str = True
+        elif ch == "[":
+            if depth == 0:
+                start = i
+            depth += 1
+        elif ch == "]" and depth:
+            depth -= 1
+            if depth == 0 and start >= 0:
+                try:
+                    rows = json.loads(text[start : i + 1])
+                except ValueError:
+                    rows = None
+                if isinstance(rows, list) and rows and all(
+                    isinstance(r, dict) and r.get("company") for r in rows
+                ):
+                    return rows
+                start = -1
+    return None
+
+
 def parse_routine_email(body: str, received: dt.datetime | None = None) -> list[Lead]:
-    """The ``<SIGNALS>`` block. A mail without one, or with unreadable JSON, yields nothing —
+    """The ``<SIGNALS>`` block, or the first array of company objects if the wrapper did not
+    survive the mail client. A mail with neither, or with unreadable JSON, yields nothing —
     the routine's prose summary is for the reader, and guessing at it would invent data."""
-    match = SIGNALS_BLOCK.search(body or "")
-    if not match:
-        return []
-    try:
-        rows = json.loads(match.group(1))
-    except ValueError:
+    text = _plain(body)
+    match = SIGNALS_BLOCK.search(body or "") or SIGNALS_BLOCK.search(text)
+    rows: Any = None
+    if match:
+        try:
+            rows = json.loads(html_lib.unescape(match.group(1)))
+        except ValueError:
+            rows = None
+    if rows is None:
+        rows = _first_array_of_companies(text)
+    if rows is None:
         return []
     leads = []
     for row in rows if isinstance(rows, list) else []:

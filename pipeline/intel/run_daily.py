@@ -459,8 +459,23 @@ def run_day(
         if raw_tail:
             progress(f"last scanner text ({len(exc.raw)} chars), tail:\n{raw_tail}")
         if not inbox_signals:
+            usage = llm.ledger_totals()
+            turns = [
+                {k: r.get(k) for k in ("label", "stop", "blocks", "chars")}
+                for r in llm.LEDGER
+                if r.get("label") == "scanner"
+            ]
+            progress(f"scanner turns: {turns}")
+            progress(f"model usage: {usage['calls']} → {usage['tokens']}")
+            progress(f"estimated cost ${usage['estimated_usd']} at list rates")
             run.status, run.error = RunStatus.failed, str(exc)
-            run.summary = {"error": str(exc), "scan_raw_tail": raw_tail, "inbox": inbox_note}
+            run.summary = {
+                "error": str(exc),
+                "scan_raw_tail": raw_tail,
+                "scanner_turns": turns,
+                "usage": usage,
+                "inbox": inbox_note,
+            }
             run.finished_at = dt.datetime.now(dt.UTC)
             session.flush()
             if stages.distribute:

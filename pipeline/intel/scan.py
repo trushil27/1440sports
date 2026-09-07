@@ -215,7 +215,8 @@ def run_scan(
     client = client or AnthropicText()
     system, user = scanner_prompts(today, addendum)
     messages: list[dict] = [{"role": "user", "content": user}]
-    last_error: str | None = None
+    errors: list[str] = []
+    raws: list[str] = []
     raw = ""
     for attempt in (1, 2):
         # The retry gets NO search tools. The searching is already done and paid for by then;
@@ -230,14 +231,20 @@ def run_scan(
         raw = client.create_text(
             model=settings.scan_model, system=system, messages=messages, tools=tools
         )
+        raws.append(raw)
         try:
             signals = parse_scan_output(raw, min_n=1, max_n=settings.scan_candidates_max)
         except ParseError as exc:
-            last_error = str(exc)
+            errors.append(f"attempt {attempt} ({len(raw)} chars): {exc}")
             messages = messages + [
                 {"role": "assistant", "content": raw or "(empty)"},
-                {"role": "user", "content": RETRY_NOTE.format(error=last_error)},
+                {"role": "user", "content": RETRY_NOTE.format(error=str(exc))},
             ]
             continue
         return ScanResult(signals, raw, attempt, settings.scan_model)
-    raise ScanFailed(f"scanner output unparseable after retry: {last_error}", raw=raw)
+    # Both attempts, and the longest text either produced — the last one was empty on 7 Sep
+    # 2026 and the record showed nothing of the first, which is where the evidence was.
+    raise ScanFailed(
+        "scanner output unparseable after retry — " + "; ".join(errors),
+        raw=max(raws, key=len) if raws else "",
+    )
