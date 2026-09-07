@@ -24,9 +24,13 @@ the routine in the Claude app (Routines → Daily sponsorship prospect research 
 
 ## The replacement prompt
 
-Everything the routine already did is kept word for word. Two things are added: the MD's
-Formula E priority, and a delivery step that emails a machine-readable block the desk can
-ingest exactly the way it ingests the n8n log.
+**Corrected 7 Sep 2026.** The first version told the routine to lead with a `<SIGNALS>` JSON
+block. That parses beautifully and reads like spam — the operator opened it and saw a wall of
+braces. A daily email is read by a person first. This version puts a readable digest at the
+top in the desk's own voice and leaves one small machine block at the very bottom, under a
+rule, where nobody has to look at it.
+
+Paste this into the Claude app: Routines → *Daily sponsorship prospect research* → edit prompt.
 
 ```text
 Research and identify B2B sponsorship and activation opportunities for racing teams in F1, Formula E championships, and FE paddock teams.
@@ -35,28 +39,37 @@ Research and identify B2B sponsorship and activation opportunities for racing te
 2. Research 5–10 B2B technology and services companies that could add value to racing operations (e.g., data analytics, logistics, AI/automation, connectivity, sustainability tech, Fintech, Energy) and cross-reference them against current team sponsor lists.
 3. For each prospect, assess fit: Does their product/service integrate into car performance, championship operations, or team infrastructure? Is there a narrative alignment with the team's brand or goals?
 4. Prioritize prospects capable of 3+ year deals with clear activation potential (title rights, technical partnership, paddock presence, or branded integrations).
-5. Compile a daily summary with prospect name, relevant racing team(s), category, rationale, and suggested activation angle.
-6. Make sure we are 50th agency to outreach the prospect and not more than that.
-7. Make that a pdf after every run based on the website and 1440 sports branding with logo.
+5. Make sure we are 50th agency to outreach the prospect and not more than that.
 
 PRIORITY (MD instruction, Sep 2026): FORMULA E over Formula 1. Weight the search towards Formula E teams and FE-suited categories (energy, electrification, storage, charging, industrial, mobility, sustainability). Only put a prospect on F1 when the FE case would be dishonest.
 
-DELIVERY — do this at the end of EVERY run, it is what makes the work usable:
-Email the summary to Trushil.Jani@1440sports.com using the Microsoft 365 connector. Subject exactly: "1440 Routine Signals — <today's date as D Mon YYYY>". The body must start with a machine-readable block so the desk app can ingest it automatically, then your normal prose below it. The block:
+ONLY include a prospect whose trigger event — a funding round, listing, spin-off, major contract or leadership hire — is dated within the last 90 days. Never invent a figure, a name, a date or a source: if you could not verify something, leave it out and say so.
 
-<SIGNALS>
-[{"company": "...", "series": "FE" or "F1", "team": "...", "category": "...", "trigger": "the specific dated event — a funding round, listing, spin-off, contract or leadership move — with its date", "trigger_date": "YYYY-MM-DD", "source_url": "the primary source you actually opened", "person": "the real decision-maker from the company's own leadership page, or null", "role": "...", "score": 0-100, "rationale": "one sentence", "activation_angle": "one sentence"}]
-</SIGNALS>
+DELIVERY — every run, this is what makes the work usable. Email Trushil.Jani@1440sports.com with the subject "1440 Routine Signals — <date as D Mon YYYY>". Write the body for a person to read on a phone in thirty seconds, in this shape and nothing else:
 
-Rules for that block: valid JSON, one object per prospect. Never invent a figure, a name, a date or a source — if you could not verify something, use null and say so in the prose. Only include a prospect whose trigger event is dated within the last 90 days. If a run finds nothing that clears the bar, send the email anyway with an empty list and explain in the prose what you monitored.
+1440 ROUTINE SIGNALS — <date>
+<One sentence: how many candidates, and the single best one.>
 
-If no new high-confidence prospects emerge, note what you monitored and confirm briefly.
+1. <COMPANY> — <FE or F1> — <team>
+   Trigger: <the dated event, with its date>
+   Why: <one sentence on the fit and the open lane>
+   Source: <the primary URL you actually opened>
+
+2. <COMPANY> — …
+
+SCREENED OUT
+<Company>: <one line on why — stale, already a partner, too small.>
+
+---
+DATA (for the desk, ignore)
+<SIGNALS>[{"company": "...", "series": "FE", "team": "...", "trigger": "...", "trigger_date": "YYYY-MM-DD", "source_url": "...", "person": null, "role": null, "score": 0}]</SIGNALS>
+
+Keep the readable part above the rule short: five entries at most, one line each for Trigger, Why and Source. If a run finds nothing that clears the bar, send the email anyway saying what you monitored, with an empty list in the data block.
 ```
 
 ## What happens once it delivers
 
-`intel.routine_inbox` reads those emails, turns each `<SIGNALS>` entry into a candidate row,
-drops anything already in the desk (by normalised company name) and anything on the
-blocklist, and leaves the rest for a full case build under `docs/CASE_SPEC.md`. The routine's
-score is a hint only — every claim is re-verified before a case is written, exactly as the
-n8n rows were.
+The desk reads those emails, drops anything it already holds (by normalised company name) and
+anything on the blocklist, and leaves the rest for a full case build under `docs/CASE_SPEC.md`.
+The routine's score is a hint only — every claim is re-verified before a case is written,
+exactly as the n8n rows were.
