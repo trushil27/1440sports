@@ -33,6 +33,76 @@ RETRY_NOTE = (
 )
 
 
+def _nullable(kind: str) -> dict[str, Any]:
+    return {"type": [kind, "null"]}
+
+
+#: The shape the retry MUST return. Not the whole v2.1 contract — the fields the parser and
+#: the scoring stage read, each nullable, so the model can say "unknown" rather than invent.
+#: Every property is required and nothing else is allowed: that is what lets the API enforce
+#: it. ``parse_scan_output`` reads the array out of the wrapper unchanged.
+_SIGNAL_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "properties": {
+        "company": {"type": "string"},
+        "score": {"type": "integer"},
+        "signal_date": _nullable("string"),
+        "tier": _nullable("string"),
+        "track": {"type": "integer"},
+        "person": _nullable("string"),
+        "role": _nullable("string"),
+        "horizon_weeks": _nullable("string"),
+        "source_url": _nullable("string"),
+        "industry_meta": _nullable("string"),
+        "recommended_team": _nullable("string"),
+        "recommended_series": _nullable("string"),
+        "timing_label": _nullable("string"),
+        "trigger_reason": _nullable("string"),
+        "confidence_level": _nullable("string"),
+        "of_gate_passed": _nullable("boolean"),
+        "key_facts": {
+            "type": "object",
+            "properties": {
+                k: _nullable("string")
+                for k in (
+                    "funding", "investors", "revenue", "trigger", "competitor_signal",
+                    "strategic_hook", "us_presence", "alumni_match", "taxonomy_category",
+                    "ops_fit_note",
+                )
+            },
+            "required": [
+                "funding", "investors", "revenue", "trigger", "competitor_signal",
+                "strategic_hook", "us_presence", "alumni_match", "taxonomy_category",
+                "ops_fit_note",
+            ],
+            "additionalProperties": False,
+        },
+        "score_breakdown": {
+            "type": "object",
+            "properties": {
+                k: {"type": "integer"}
+                for k in ("timing", "capacity", "brand_fit", "urgency", "ops_fit")
+            },
+            "required": ["timing", "capacity", "brand_fit", "urgency", "ops_fit"],
+            "additionalProperties": False,
+        },
+    },
+    "required": [
+        "company", "score", "signal_date", "tier", "track", "person", "role",
+        "horizon_weeks", "source_url", "industry_meta", "recommended_team",
+        "recommended_series", "timing_label", "trigger_reason", "confidence_level",
+        "of_gate_passed", "key_facts", "score_breakdown",
+    ],
+    "additionalProperties": False,
+}
+SCAN_OUTPUT_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "properties": {"signals": {"type": "array", "items": _SIGNAL_SCHEMA}},
+    "required": ["signals"],
+    "additionalProperties": False,
+}
+
+
 class ScanFailed(RuntimeError):
     """The scan produced nothing usable. ``raw`` keeps the last model text for diagnosis."""
 
@@ -45,7 +115,13 @@ class MessagesClient(Protocol):
     """The slice of the Anthropic client we use (so tests can pass a fake)."""
 
     def create_text(
-        self, *, model: str, system: str, messages: list[dict], tools: list[dict]
+        self,
+        *,
+        model: str,
+        system: str,
+        messages: list[dict],
+        tools: list[dict],
+        output_format: dict[str, Any] | None = None,
     ) -> str: ...
 
 
@@ -68,7 +144,13 @@ class AnthropicText:
         self.last_segments: int = 0
 
     def create_text(
-        self, *, model: str, system: str, messages: list[dict], tools: list[dict]
+        self,
+        *,
+        model: str,
+        system: str,
+        messages: list[dict],
+        tools: list[dict],
+        output_format: dict[str, Any] | None = None,
     ) -> str:
         try:
             done = complete_text(
@@ -78,6 +160,7 @@ class AnthropicText:
                 messages=messages,
                 tools=tools,
                 max_tokens=SCAN_MAX_TOKENS,
+                output_format=output_format,
                 label="scanner",
             )
         except ModelTurnError as exc:
@@ -228,8 +311,15 @@ def run_scan(
             if attempt == 1
             else []
         )
+        # The retry is also schema-bound: the API will not let it end as prose or as an empty
+        # reply, which is how the 21:44Z run on 7 Sep 2026 ended. The first attempt is not,
+        # because the searching turn needs room to work and its text is never the product.
         raw = client.create_text(
-            model=settings.scan_model, system=system, messages=messages, tools=tools
+            model=settings.scan_model,
+            system=system,
+            messages=messages,
+            tools=tools,
+            output_format=SCAN_OUTPUT_SCHEMA if attempt == 2 else None,
         )
         raws.append(raw)
         try:

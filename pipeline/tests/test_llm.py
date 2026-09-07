@@ -226,3 +226,42 @@ def test_the_scanner_is_told_not_to_narrate():
     assert "OUTPUT DISCIPLINE" in user and user.rstrip().endswith("a wasted run.")
     _, with_addendum = scan.scanner_prompts(dt.date(2026, 9, 7), addendum="Widen the window.")
     assert "Widen the window." in with_addendum and "OUTPUT DISCIPLINE" in with_addendum
+
+
+def test_the_retry_is_schema_bound_and_the_wrapper_it_returns_parses():
+    """The 21:44Z run on 7 Sep 2026 ended with the retry answering nothing. With a JSON schema
+    on that turn the API cannot return prose or an empty reply; the wrapper object it does
+    return parses through the same extractor as the bare array."""
+    wrapped = (
+        '{"signals": [{"company": "Acme", "score": 74, "signal_date": "2026-09-01", "tier": null,'
+        ' "track": 1, "person": null, "role": null, "horizon_weeks": null,'
+        ' "source_url": "https://x.test/a", "industry_meta": null, "recommended_team": null,'
+        ' "recommended_series": "FE", "timing_label": null, "trigger_reason": "raised",'
+        ' "confidence_level": null, "of_gate_passed": null,'
+        ' "key_facts": {"funding": null, "investors": null, "revenue": null, "trigger": null,'
+        ' "competitor_signal": null, "strategic_hook": null, "us_presence": null,'
+        ' "alumni_match": null, "taxonomy_category": null, "ops_fit_note": null},'
+        ' "score_breakdown": {"timing": 15, "capacity": 15, "brand_fit": 15, "urgency": 14,'
+        ' "ops_fit": 15}}]}'
+    )
+    client = FakeClient(
+        [_resp([_text("narration, no array")], "end_turn"), _resp([_text(wrapped)], "end_turn")]
+    )
+    adapter = scan.AnthropicText(client)
+    result = scan.run_scan(dt.date(2026, 9, 7), client=adapter, settings=Settings())
+    assert [s.company for s in result.signals] == ["Acme"] and result.signals[0].score == 74
+    first, second = client.messages.requests
+    assert "output_config" not in first  # the searching turn is unconstrained
+    fmt = second["output_config"]["format"]
+    assert fmt["type"] == "json_schema" and fmt["schema"] is scan.SCAN_OUTPUT_SCHEMA
+    assert "tools" not in second
+
+
+def test_effort_and_format_share_output_config():
+    client = FakeClient([_resp([_text("{}")], "end_turn")])
+    complete_text(
+        client, model="m", system="s", messages=[], max_tokens=10, effort="low",
+        output_format={"type": "object"},
+    )
+    cfg = client.messages.requests[0]["output_config"]
+    assert cfg["effort"] == "low" and cfg["format"]["schema"] == {"type": "object"}

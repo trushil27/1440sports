@@ -96,6 +96,7 @@ def complete_text(
     max_tokens: int,
     tools: list[dict] | None = None,
     effort: str | None = None,
+    output_format: dict[str, Any] | None = None,
     label: str = "model",
 ) -> Completion:
     """Stream one assistant turn to completion, resuming ``pause_turn`` up to 6 times."""
@@ -109,8 +110,15 @@ def complete_text(
     }
     if tools:
         kwargs["tools"] = tools
+    output_config: dict[str, Any] = {}
     if effort:
-        kwargs["output_config"] = {"effort": effort}
+        output_config["effort"] = effort
+    if output_format:
+        # Structured output: the API constrains the reply to this JSON schema, so a turn
+        # cannot end as prose, or as nothing (run 192, 7 Sep 2026: an empty reply).
+        output_config["format"] = {"type": "json_schema", "schema": output_format}
+    if output_config:
+        kwargs["output_config"] = output_config
 
     history = list(messages)
     texts: list[str] = []

@@ -17,7 +17,7 @@ class FakeClient:
         self.responses = list(responses)
         self.calls: list[dict] = []
 
-    def create_text(self, *, model, system, messages, tools) -> str:
+    def create_text(self, *, model, system, messages, tools, output_format=None) -> str:
         self.calls.append({"model": model, "system": system, "messages": messages, "tools": tools})
         return self.responses.pop(0)
 

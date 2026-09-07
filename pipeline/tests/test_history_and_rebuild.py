@@ -99,7 +99,7 @@ class OneShotClient:
     def __init__(self, text: str) -> None:
         self.text, self.calls = text, []
 
-    def create_text(self, *, model, system, messages, tools):
+    def create_text(self, *, model, system, messages, tools, output_format=None):
         self.calls.append({"system": system, "messages": messages, "tools": tools})
         return self.text
 
