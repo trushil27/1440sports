@@ -98,10 +98,32 @@ _NEGATIVE_FINDING = re.compile(
 )
 
 
+# The scanner also writes "I could not find this" as a value in the FIELD ITSELF:
+# "Not named in source", "CEO (unnamed in source)", "Not available in source", "Not disclosed
+# in source". Those are placeholders for missing data, not claims about the world, and on
+# 7 Sep 2026 they blocked three of ten candidates and cost the desk its daily signal —
+# Joulent's read "[contradicted] Not named in source" because the source DOES name Joulent,
+# so the verifier was checking the placeholder as if it were a fact.
+_SOURCE_PLACEHOLDER = re.compile(
+    r"\b(?:not|un|no)\s*\w*\s*(?:named|available|disclosed|specified|stated|provided|given|"
+    r"identified|mentioned|listed|found)\b[^.]{0,30}\bin\s+(?:the\s+)?(?:source|article|"
+    r"cited\s+source)\b"
+    r"|\bunnamed\s+in\s+source\b|\bnot\s+in\s+source\b",
+    re.IGNORECASE,
+)
+
+
+def is_placeholder(value: str | None) -> bool:
+    """True when the field holds a "could not find it" placeholder rather than a value."""
+    return bool(value) and bool(_SOURCE_PLACEHOLDER.search(value))
+
+
 def is_negative_finding(value: str) -> bool:
     """True when the scanner's field says it looked and found nothing."""
     text = value.strip().strip("—-–").strip()
     if text.lower() in _EMPTY:
+        return True
+    if is_placeholder(text):
         return True
     m = _NEGATIVE_FINDING.match(text)
     # "None — no match among the 5 tracked executives" is a negative finding;
@@ -119,7 +141,9 @@ def claims_from_signal(signal: ScannedSignal) -> list[ClaimDraft]:
     """Deterministic claim extraction from the scanner's structured output."""
     out: list[ClaimDraft] = []
     src = signal.source_url
-    if signal.person:
+    # A placeholder person ("Not named in source", "CEO (unnamed in source)") is the scanner
+    # saying it did not find one. Claiming it makes the brief unverifiable and blocks the day.
+    if signal.person and not is_negative_finding(signal.person) and not is_placeholder(signal.role):
         role = f", {signal.role}" if signal.role else ""
         out.append(
             ClaimDraft(

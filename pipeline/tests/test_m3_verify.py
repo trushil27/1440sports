@@ -327,3 +327,30 @@ def test_negative_key_facts_are_dropped_from_the_ledger():
     texts = [c.text for c in verify.claims_from_signal(sig)]
     assert "$550M Series C at a $2.47B valuation" in texts
     assert not [t for t in texts if t.lower().startswith(("none", "no existing"))]
+
+
+def test_source_placeholders_are_missing_data_not_claims():
+    # 7 Sep 2026: three of ten candidates were blocked and the desk produced no signal
+    # because the scanner's "I could not find it" placeholders were verified as facts —
+    # Joulent's read "[contradicted] Not named in source" because the source DOES name it.
+    for text in (
+        "Not named in source",
+        "CEO (unnamed in source)",
+        "Not available in source",
+        "Not disclosed in source",
+        "not specified in the article",
+    ):
+        assert verify.is_placeholder(text), text
+        assert verify.is_negative_finding(text), text
+    for text in ("Chase Lochmiller", "Chief Marketing Officer", "$1.75B round led by Blackstone"):
+        assert not verify.is_placeholder(text), text
+
+
+def test_a_placeholder_person_yields_no_decision_maker_claim():
+    sig = ps.with_breakdown(ps.PRIMER_B, series="F1")
+    sig.person, sig.role = "Not named in source", "CEO (unnamed in source)"
+    texts = [c.text for c in verify.claims_from_signal(sig)]
+    assert not [t for t in texts if "in source" in t.lower()]
+    # a real person still produces the claim
+    sig.person, sig.role = "Gabriel Le Roux", "CEO & Co-founder"
+    assert any("Gabriel Le Roux" in c.text for c in verify.claims_from_signal(sig))
