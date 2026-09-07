@@ -432,6 +432,9 @@ def run_day(
             )
             is not None
         )
+    from intel import llm
+
+    llm.reset_ledger()
     progress(f"run {run.id} for {run_date} ({settings.execution_mode}): scanning")
     # The desk has three sources, not one: its own scanner, the Claude routine's mail and
     # n8n's. The other two are read first, so that a scanner failure costs the day its own
@@ -606,8 +609,14 @@ def run_day(
     ).all()  # a query, not the relationship: the retry added rows after it was loaded
     for c in all_cands:
         counts[c.decision.value] = counts.get(c.decision.value, 0) + 1
+    usage = llm.ledger_totals()
+    progress(
+        f"model usage: {usage['calls']} → {usage['tokens']} ≈ ${usage['estimated_usd']} "
+        "(estimate at list rates; web-search fees not included)"
+    )
     run.summary = {
         "candidates": len(signals),
+        "usage": usage,
         "sources": {"scanner": scanner_count, **inbox_note},
         **({"scan_error": scan_error} if scan_error else {}),
         "decisions": counts,

@@ -16,6 +16,42 @@ from typing import Any
 
 MAX_CONTINUATIONS = 6
 
+#: Every model call's usage, in order, for the run to total up. Reset per run. This exists
+#: because "how much does one run cost?" (operator, 7 Sep 2026) had no measured answer.
+LEDGER: list[dict[str, Any]] = []
+
+#: $ per million tokens: (input, output). Cache reads bill at 0.1× input, cache writes at
+#: 1.25× input. Anthropic first-party rates, cached 2026-06-24 — an estimate, not an invoice.
+PRICES: dict[str, tuple[float, float]] = {
+    "claude-sonnet-5": (2.0, 10.0),
+    "claude-opus-5": (5.0, 25.0),
+    "claude-haiku-4-5": (1.0, 5.0),
+}
+
+
+def reset_ledger() -> None:
+    LEDGER.clear()
+
+
+def ledger_totals() -> dict[str, Any]:
+    """Tokens by kind, calls by stage, and an estimated dollar cost at the table above."""
+    tokens = {"input": 0, "output": 0, "cache_read": 0, "cache_write": 0}
+    calls: dict[str, int] = {}
+    cost = 0.0
+    for row in LEDGER:
+        u = row["usage"] or {}
+        i, o = int(u.get("input_tokens") or 0), int(u.get("output_tokens") or 0)
+        cr = int(u.get("cache_read_input_tokens") or 0)
+        cw = int(u.get("cache_creation_input_tokens") or 0)
+        tokens["input"] += i
+        tokens["output"] += o
+        tokens["cache_read"] += cr
+        tokens["cache_write"] += cw
+        calls[row["label"]] = calls.get(row["label"], 0) + 1
+        pin, pout = PRICES.get(row["model"], (0.0, 0.0))
+        cost += (i * pin + cr * pin * 0.1 + cw * pin * 1.25 + o * pout) / 1_000_000
+    return {"tokens": tokens, "calls": calls, "estimated_usd": round(cost, 3)}
+
 
 class ModelTurnError(RuntimeError):
     """A turn ended in a state that cannot be parsed or resumed (truncation, refusal)."""
@@ -86,6 +122,7 @@ def complete_text(
             response = stream.get_final_message()
         if (u := _usage_of(response)) is not None:
             usage.append(u)
+            LEDGER.append({"label": label, "model": model, "usage": u})
         if text := _text_of(response.content):
             texts.append(text)
         stop = getattr(response, "stop_reason", None) or "end_turn"

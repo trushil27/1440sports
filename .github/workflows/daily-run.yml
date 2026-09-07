@@ -92,7 +92,10 @@ jobs:
       # link there. APP_BASE_URL overrides it; the github.io URL is the fallback until then.
       APP_BASE_URL: ${{ vars.APP_BASE_URL || (secrets.NETLIFY_AUTH_TOKEN && format('https://{0}.netlify.app', vars.NETLIFY_SITE_NAME || '1440-intelligence')) || 'https://trushil27.github.io/1440sports/' }}
       DESK_API_URL: ${{ vars.DESK_API_URL }}
-      REBUILD_BACKLOG_PER_RUN: ${{ vars.REBUILD_BACKLOG_PER_RUN || '1' }}
+      # 0 = the morning run builds today's signal and nothing else (operator, 7 Sep 2026:
+      # minimum spend). Every shown signal already has its case. Set the repo variable
+      # to 1 to resume turning new unverified rows into full cases, one per morning.
+      REBUILD_BACKLOG_PER_RUN: ${{ vars.REBUILD_BACKLOG_PER_RUN || '0' }}
       FRESHNESS_DAYS_TRACK1: ${{ vars.FRESHNESS_DAYS_TRACK1 || '90' }}
       FRESHNESS_FALLBACK_DAYS: ${{ vars.FRESHNESS_FALLBACK_DAYS || '90' }}
       PDF_STORAGE_DIR: storage/briefs
