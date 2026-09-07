@@ -245,24 +245,46 @@ the hourly spend accordingly — trigger them deliberately, not routinely.
 | 3 pages | Never ships: the renderer raises; the audit failure email says `page_overflow` |
 | `[RUN FAILED] … scanner output unparseable` | The deploy log prints the tail of the last scanner text (also `runs.summary.scan_raw_tail`, visible in `/ops`). "truncated at max_tokens" = raise `SCAN_MAX_TOKENS`; "still paused" = the web-search loop never finished; validation errors name the field the model got wrong |
 
-## The morning run, and why it is not on a clock (7 Sep 2026)
+## What starts the morning run, and when it lands (7 Sep 2026)
 
-GitHub's `schedule` trigger is best-effort. On this repo it has arrived four to five hours
-late every single day: 5 Sep 09:10Z for an 04:30Z cron, 6 Sep 08:45Z and 09:32Z, 7 Sep
-09:34Z and 10:32Z. The job used to check "is it 05:xx in London?" and exit otherwise, so
-every one of those firings was discarded and no signal was produced.
+**It lands at about 06:00 London, and the thing that makes it punctual is not GitHub.**
 
-It now works the other way round:
+GitHub's `schedule` trigger is best-effort and on this repo it has arrived four to five hours
+late every single day: 5 Sep 09:10Z for an 04:30Z cron, 6 Sep 08:45Z and 09:32Z, 7 Sep 09:34Z
+and 10:32Z. No amount of cron tuning fixes that — the delay is on GitHub's side.
 
-* six crons across the morning (04:20-09:20 UTC), so a delay of hours still lands;
-* the gate asks the REPO, not the clock — `python -m intel.day_status` looks for a case
-  record dated today with a real brief number. Present means the signal already went out,
-  and the run exits in seconds without touching the API;
-* `intel.schedule` sends as soon as the run finishes when 06:00 London has already passed,
-  so a late start still delivers rather than waiting for tomorrow.
+So the trigger comes from outside. Two **Claude Routines** — *1440 desk — 06:00 London signal
+(summer trigger)* at `40 4 * * *` UTC and *(winter trigger)* at `40 5 * * *` — each fire a
+small session whose whole job is to append the time to `.github/run-now` and push it.
+`daily-run.yml` fires on any push touching that file, within seconds. A run takes about 15
+minutes, so the brief is in the inbox around 06:00 London.
+
+Why a push and not a `workflow_dispatch` API call: a routine's session has git credentials
+for this repo but **no GitHub API access** — a dispatch from there is refused with "GitHub
+access is not enabled for this session" (tested 7 Sep 2026). Git is the door it can open.
+
+Why two routines: the trigger times are UTC and London is not. The summer routine fires at
+05:40 London from late March, the winter one at 05:40 London from late October; the other one
+lands outside the window and is held. **Nothing has to be changed at the clock change.**
+
+Three layers decide whether a firing does work, in `day_status`:
+
+* **already done** — a case record dated today with a real brief number means the signal has
+  gone out. The run exits in seconds without touching the API, so extra firings are free and
+  the operator is never emailed twice;
+* **too early** — before 05:00 London the run is held. This is what keeps delivery at 06:00
+  when the same UTC trigger becomes an hour earlier in local time;
+* **forced** — Actions → Daily run → Run workflow with **force ticked** overrides both. The
+  input defaults to *false* on purpose: a routine dispatching with no inputs must not inherit
+  a bypass.
+
+The six crons (04:20–09:20 UTC) stay as the fallback for a day the routines are off, and
+`intel.schedule` sends as soon as the run finishes when 06:00 has already passed, so even a
+late start delivers rather than waiting for tomorrow.
 
 The gate step runs before `pip install`, so `intel/day_status.py` is stdlib-only on purpose;
 a test asserts that, because an accidental `from intel.config import …` there would break
 every scheduled run at the first step.
 
-To force a run regardless: Actions → Daily run → Run workflow (force = true).
+To start a run by hand from a terminal, the same door works:
+`date -u +%Y-%m-%dT%H:%M:%SZ >> .github/run-now && git commit -am "run" && git push`.
