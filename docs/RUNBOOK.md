@@ -244,3 +244,25 @@ the hourly spend accordingly — trigger them deliberately, not routinely.
 | A race or partnership blocked a brief | Correct by design: the fixed calendar / sponsor table says it does not exist. Update the table in `/ops` (sponsors) or the seeds only from a Tier 1 source |
 | 3 pages | Never ships: the renderer raises; the audit failure email says `page_overflow` |
 | `[RUN FAILED] … scanner output unparseable` | The deploy log prints the tail of the last scanner text (also `runs.summary.scan_raw_tail`, visible in `/ops`). "truncated at max_tokens" = raise `SCAN_MAX_TOKENS`; "still paused" = the web-search loop never finished; validation errors name the field the model got wrong |
+
+## The morning run, and why it is not on a clock (7 Sep 2026)
+
+GitHub's `schedule` trigger is best-effort. On this repo it has arrived four to five hours
+late every single day: 5 Sep 09:10Z for an 04:30Z cron, 6 Sep 08:45Z and 09:32Z, 7 Sep
+09:34Z and 10:32Z. The job used to check "is it 05:xx in London?" and exit otherwise, so
+every one of those firings was discarded and no signal was produced.
+
+It now works the other way round:
+
+* six crons across the morning (04:20-09:20 UTC), so a delay of hours still lands;
+* the gate asks the REPO, not the clock — `python -m intel.day_status` looks for a case
+  record dated today with a real brief number. Present means the signal already went out,
+  and the run exits in seconds without touching the API;
+* `intel.schedule` sends as soon as the run finishes when 06:00 London has already passed,
+  so a late start still delivers rather than waiting for tomorrow.
+
+The gate step runs before `pip install`, so `intel/day_status.py` is stdlib-only on purpose;
+a test asserts that, because an accidental `from intel.config import …` there would break
+every scheduled run at the first step.
+
+To force a run regardless: Actions → Daily run → Run workflow (force = true).

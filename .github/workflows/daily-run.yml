@@ -4,14 +4,23 @@
 # → write → audit → render → send at 06:00 London), then saves the new case(s) back into the
 # repo and republishes the live app (gh-pages). The repo is the memory.
 #
-# Fires at 04:30 and 05:30 UTC; the London gate below keeps only the one that is 05:30 local.
-# Run it by hand from the Actions tab (workflow_dispatch → force) to test.
+# GitHub cron is best-effort and on this repo it has run FOUR TO FIVE HOURS late every day
+# (5 Sep 09:10Z for an 04:30Z cron; 6 Sep 08:45Z and 09:32Z; 7 Sep 09:34Z and 10:32Z). The job
+# used to gate on "is it 05:xx in London?" and threw every one of those away, so no signal was
+# produced. It now fires hourly across the morning and asks the repo whether today's signal
+# already exists instead of asking the clock: the first firing to land does the work, the rest
+# see the saved case and exit in seconds. intel.schedule sends immediately when the 06:00 slot
+# has already passed, so a late start still delivers.
 name: Daily run
 
 on:
   schedule:
-    - cron: "30 4 * * *"
-    - cron: "30 5 * * *"
+    - cron: "20 4 * * *"
+    - cron: "20 5 * * *"
+    - cron: "20 6 * * *"
+    - cron: "20 7 * * *"
+    - cron: "20 8 * * *"
+    - cron: "20 9 * * *"
   workflow_dispatch:
     inputs:
       force:
@@ -58,7 +67,9 @@ jobs:
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
       GITHUB_TOKEN: ${{ github.token }}
       PAGES_REPO: ${{ github.repository }}
-      APP_BASE_URL: ${{ vars.APP_BASE_URL || 'https://trushil27.github.io/1440sports/' }}
+      # 1440-intelligence.netlify.app as soon as the Netlify site is configured (operator
+      # decision, 7 Sep 2026); APP_BASE_URL overrides it; the github.io URL is the fallback.
+      APP_BASE_URL: ${{ vars.APP_BASE_URL || (secrets.NETLIFY_SITE_ID && 'https://1440-intelligence.netlify.app') || 'https://trushil27.github.io/1440sports/' }}
       DESK_API_URL: ${{ vars.DESK_API_URL }}
       REBUILD_BACKLOG_PER_RUN: ${{ vars.REBUILD_BACKLOG_PER_RUN || '1' }}
       FRESHNESS_DAYS_TRACK1: ${{ vars.FRESHNESS_DAYS_TRACK1 || '90' }}
@@ -68,16 +79,26 @@ jobs:
       PYTHONPATH: pipeline
       TZ: Europe/London
     steps:
-      - name: London slot gate (05:xx local, or a forced run)
+      # The repo, not the clock, decides whether there is work: a saved case record for
+      # today means the signal already went out, whatever time this firing arrived.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Has today's signal already gone out?
         id: gate
         run: |
-          H=$(TZ=Europe/London date +%H)
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
-            echo "run=yes" >> "$GITHUB_OUTPUT"; echo "forced run at $(date)"
-          elif [ "$H" = "05" ]; then
-            echo "run=yes" >> "$GITHUB_OUTPUT"; echo "05:xx Europe/London — this is the slot"
+            echo "run=yes" >> "$GITHUB_OUTPUT"
+            echo "forced run at $(TZ=Europe/London date)"
           else
-            echo "run=no" >> "$GITHUB_OUTPUT"; echo "not the 05:30 Europe/London firing (local hour $H); exiting"
+            PYTHONPATH=pipeline python3 -m intel.day_status --github-output /tmp/day_status
+            if grep -q "done=true" /tmp/day_status; then
+              echo "run=no" >> "$GITHUB_OUTPUT"
+              echo "today is already done — exiting so the MD is not emailed twice"
+            else
+              echo "run=yes" >> "$GITHUB_OUTPUT"
+              echo "no signal saved for today yet (local $(TZ=Europe/London date +%H:%M)) — running"
+            fi
           fi
       - name: Secrets present?
         if: steps.gate.outputs.run == 'yes'
@@ -85,10 +106,6 @@ jobs:
           if [ -z "$ANTHROPIC_API_KEY" ]; then
             echo "::error::ANTHROPIC_API_KEY secret is not set (GitHub → Settings → Secrets and variables → Actions)"; exit 1
           fi
-      - uses: actions/checkout@v4
-        if: steps.gate.outputs.run == 'yes'
-        with:
-          ref: main
       - uses: actions/setup-python@v5
         if: steps.gate.outputs.run == 'yes'
         with:

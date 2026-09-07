@@ -1,5 +1,9 @@
 # Getting the personal name out of the desk link
 
+> **Chosen (operator, 7 Sep 2026): Option A, `1440-intelligence.netlify.app`.**
+> The daily job already points every email link there — it switches the moment the
+> `NETLIFY_SITE_ID` secret exists, so only steps 1-5 below are left to do.
+
 The link in the signal email reads `https://trushil27.github.io/1440sports/#/brief/127`.
 That is a personal GitHub username in a company artefact — fine while only the operator sees
 it, wrong the moment the MD or a client does.
