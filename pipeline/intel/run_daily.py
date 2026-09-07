@@ -433,6 +433,21 @@ def run_day(
             is not None
         )
     progress(f"run {run.id} for {run_date} ({settings.execution_mode}): scanning")
+    # The desk has three sources, not one: its own scanner, the Claude routine's mail and
+    # n8n's. The other two are read first, so that a scanner failure costs the day its own
+    # candidates but not the day itself (operator, 7 Sep 2026).
+    from intel import inbox
+
+    inbox_signals, inbox_note = inbox.collect(session, settings, stages.mailer)
+    if inbox_note.get("status") == "read":
+        progress(
+            f"inbox: {inbox_note['routine']} routine + {inbox_note['n8n']} n8n lead(s) new to the "
+            f"desk → {inbox_note['candidates']} candidate(s), "
+            f"{len(inbox_note['to_research'])} to research"
+        )
+    else:
+        progress(f"inbox: {inbox_note.get('status')}")
+    scan_error: str | None = None
     try:
         signals = scanner(run_date) if scanner else run_scan(run_date, settings=settings).signals
     except ScanFailed as exc:
@@ -440,15 +455,25 @@ def run_day(
         progress(f"scan failed: {exc}")
         if raw_tail:
             progress(f"last scanner text ({len(exc.raw)} chars), tail:\n{raw_tail}")
-        run.status, run.error = RunStatus.failed, str(exc)
-        run.summary = {"error": str(exc), "scan_raw_tail": raw_tail}
-        run.finished_at = dt.datetime.now(dt.UTC)
-        session.flush()
-        if stages.distribute:
-            send.distribute(session, run, settings, stages.mailer, None)
-        return RunOutcome(run.id, run_date, "failed", None, summary=run.summary)
+        if not inbox_signals:
+            run.status, run.error = RunStatus.failed, str(exc)
+            run.summary = {"error": str(exc), "scan_raw_tail": raw_tail, "inbox": inbox_note}
+            run.finished_at = dt.datetime.now(dt.UTC)
+            session.flush()
+            if stages.distribute:
+                send.distribute(session, run, settings, stages.mailer, None)
+            return RunOutcome(run.id, run_date, "failed", None, summary=run.summary)
+        # The other sources have candidates: the day goes on with theirs, and the scanner's
+        # failure is recorded rather than being allowed to cost the MD a signal.
+        progress(f"scan failed but {len(inbox_signals)} candidate(s) came from the other sources")
+        scan_error, signals = str(exc), []
 
-    progress(f"scan returned {len(signals)} signals; triaging (freshness, dedup, score)")
+    scanner_count = len(signals)
+    signals = signals + inbox_signals
+    progress(
+        f"scan returned {scanner_count} signals (+{len(inbox_signals)} from the other sources); "
+        "triaging (freshness, dedup, score)"
+    )
     eligible = triage(session, run, signals, run_date, settings, rebuild=stages.rebuild)
     retried = False
     if not eligible and signals and not stages.rebuild:
@@ -583,6 +608,8 @@ def run_day(
         counts[c.decision.value] = counts.get(c.decision.value, 0) + 1
     run.summary = {
         "candidates": len(signals),
+        "sources": {"scanner": scanner_count, **inbox_note},
+        **({"scan_error": scan_error} if scan_error else {}),
         "decisions": counts,
         "verification": verification_log,
         "candidate_list": [
