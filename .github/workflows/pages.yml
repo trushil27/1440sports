@@ -8,8 +8,11 @@
 #      https://<org>.github.io/ with no personal name and no DNS. This repo does not move:
 #      only the built site is pushed there. See docs/APP_URL.md.
 #
-# The daily job also deploys to Netlify when NETLIFY_AUTH_TOKEN + NETLIFY_SITE_ID are set —
-# a third option that needs no GitHub organisation at all.
+#   3. Netlify — set the NETLIFY_AUTH_TOKEN secret and nothing else. The job claims (and, on
+#      the first run, creates) the site named by NETLIFY_SITE_NAME and publishes there, so the
+#      address has neither a personal name nor a GitHub one. No organisation, no DNS.
+#
+# This workflow needs no model API key and cannot spend anything: it copies files and pushes.
 name: Pages
 
 on:
@@ -28,6 +31,13 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      # The secrets context cannot be read in a step's `if`, so the presence test becomes an
+      # env var here; the values themselves are only used by the Netlify step.
+      HAS_NETLIFY: ${{ secrets.NETLIFY_AUTH_TOKEN != '' }}
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      NETLIFY_SITE_NAME: ${{ vars.NETLIFY_SITE_NAME || '1440-intelligence' }}
     steps:
       - uses: actions/checkout@v4
       - name: Stage the site
@@ -54,6 +64,39 @@ jobs:
         run: |
           cd /tmp/pages
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
+
+      # Netlify, the moment the token exists — so the address is live without waiting for a
+      # daily run (which costs model time; this step costs none).
+      - uses: actions/setup-python@v5
+        if: env.HAS_NETLIFY == 'true'
+        with:
+          python-version: "3.12"
+      - name: Publish to Netlify
+        if: env.HAS_NETLIFY == 'true'
+        env:
+          PYTHONPATH: pipeline
+        run: |
+          pip install -q httpx
+          python - <<'PY'
+          import io, os, zipfile
+          from pathlib import Path
+          from types import SimpleNamespace
+
+          from intel import netlify
+
+          buf = io.BytesIO()
+          with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(Path("site").rglob("*")):
+                  if p.is_file():
+                      z.write(p, p.relative_to("site").as_posix())
+          settings = SimpleNamespace(
+              netlify_auth_token=os.environ["NETLIFY_AUTH_TOKEN"],
+              netlify_site_id=os.environ.get("NETLIFY_SITE_ID") or None,
+              netlify_site_name=os.environ["NETLIFY_SITE_NAME"],
+          )
+          site = netlify.resolve_site_id(settings)
+          print("netlify:", netlify.deploy(buf.getvalue(), settings.netlify_auth_token, site))
+          PY
 
       - name: Publish to ${{ vars.SITE_REPO }} (no personal name in the URL)
         if: vars.SITE_REPO != ''
