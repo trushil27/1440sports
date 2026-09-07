@@ -254,14 +254,24 @@ late every single day: 5 Sep 09:10Z for an 04:30Z cron, 6 Sep 08:45Z and 09:32Z,
 and 10:32Z. No amount of cron tuning fixes that — the delay is on GitHub's side.
 
 So the trigger comes from outside. Two **Claude Routines** — *1440 desk — 06:00 London signal
-(summer trigger)* at `40 4 * * *` UTC and *(winter trigger)* at `40 5 * * *` — each fire a
-small session whose whole job is to append the time to `.github/run-now` and push it.
-`daily-run.yml` fires on any push touching that file, within seconds. A run takes about 15
-minutes, so the brief is in the inbox around 06:00 London.
+(summer trigger)* at `40 4 * * *` UTC and *(winter trigger)* at `40 5 * * *` — both wake the
+same session, **1440 desk — morning trigger** (`session_01G3hCNWwBySGD18tZ5PU5j1`), whose
+whole job is to append the time to `.github/run-now` and push it. `daily-run.yml` fires on any
+push touching that file, within seconds. A run takes about 15 minutes, so the brief is in the
+inbox around 06:00 London.
 
-Why a push and not a `workflow_dispatch` API call: a routine's session has git credentials
-for this repo but **no GitHub API access** — a dispatch from there is refused with "GitHub
-access is not enabled for this session" (tested 7 Sep 2026). Git is the door it can open.
+Two things were established by testing on 7 Sep 2026, and both shaped this:
+
+* **A push, not a `workflow_dispatch` API call.** A session started by a routine has no
+  GitHub API access — a dispatch is refused with "GitHub access is not enabled for this
+  session". Git is the door it can open.
+* **A named session, not a fresh one per firing.** A routine that spawns a *new* session
+  gives it no repository, so it can neither clone nor push, and its firing silently does
+  nothing (that was the first attempt: the session ran, cost money and pushed nothing). The
+  standing trigger session was created with this repo as its source and `main` as its
+  outcome branch, so it already has the working copy and the credentials. **If that session
+  is ever archived, the morning trigger stops** — recreate it the same way (a session with
+  this repo as its source), then repoint both routines at the new id.
 
 Why two routines: the trigger times are UTC and London is not. The summer routine fires at
 05:40 London from late March, the winter one at 05:40 London from late October; the other one
