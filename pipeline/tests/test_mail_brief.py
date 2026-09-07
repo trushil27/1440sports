@@ -71,3 +71,13 @@ def test_missing_fields_are_left_out_rather_than_faked():
     assert "Acme — 71/100" in text
     assert "Decision-maker" not in text and "Decision-maker" not in html
     assert "?" not in text.split("Read the full case")[0].replace("N°", "")
+
+
+def test_the_default_link_target_is_an_address_that_exists():
+    """A caller that forgets APP_BASE_URL must still produce a reachable link. The old default
+    was intel.1440sports.com, a domain nobody owns, and it went out in a real email."""
+    from intel.config import Settings
+
+    base = Settings().app_base_url
+    assert base == "https://1440-intelligence.netlify.app"
+    assert "1440sports.com" not in base

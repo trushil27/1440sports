@@ -47,6 +47,9 @@ jobs:
       GRAPH_CLIENT_SECRET: ${{ secrets.GRAPH_CLIENT_SECRET }}
       GRAPH_SENDER: ${{ secrets.GRAPH_SENDER }}
       GRAPH_REFRESH_TOKEN: ${{ secrets.GRAPH_REFRESH_TOKEN }}
+      # The link in the body comes from here. Without it the config default
+      # (intel.1440sports.com, a domain nobody owns) went out in a real email.
+      APP_BASE_URL: ${{ vars.APP_BASE_URL || (secrets.NETLIFY_AUTH_TOKEN && format('https://{0}.netlify.app', vars.NETLIFY_SITE_NAME || '1440-intelligence')) || 'https://trushil27.github.io/1440sports/' }}
       PDF_STORAGE_DIR: storage/briefs
       OUTBOX_DIR: storage/outbox
       PYTHONPATH: pipeline

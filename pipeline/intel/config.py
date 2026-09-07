@@ -86,7 +86,12 @@ class Settings(BaseModel):
         default=None, description="Delegated-auth fallback if Mail.Send app consent is not granted."
     )
     app_base_url: str = Field(
-        default="https://intel.1440sports.com", description="Link target in emails."
+        # The desk's live address. It was intel.1440sports.com — a domain nobody owns — so
+        # any caller that forgot to pass APP_BASE_URL put a dead link in a real email, which
+        # is exactly what happened to the N° 241 Nexeon send on 7 Sep 2026. A default that
+        # cannot be reached is worse than no default; this one resolves.
+        default="https://1440-intelligence.netlify.app",
+        description="Link target in emails. Workflows override it; this is the fallback.",
     )
     outbox_dir: str = Field(
         default="storage/outbox", description="Dry-run mailer writes .eml here."
