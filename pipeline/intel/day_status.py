@@ -51,12 +51,27 @@ def live_case_for(day: dt.date, cases_dir: Path | str | None = None) -> Path | N
     return None
 
 
-def london_today() -> dt.date:
+def london_now() -> dt.datetime:
     """Stdlib only, deliberately: this runs in the workflow's gate step BEFORE pip install,
     so it must not reach for intel.config (pydantic) or anything else third-party."""
     from zoneinfo import ZoneInfo
 
-    return dt.datetime.now(ZoneInfo("Europe/London")).date()
+    return dt.datetime.now(ZoneInfo("Europe/London"))
+
+
+def london_today() -> dt.date:
+    return london_now().date()
+
+
+#: The signal is for 06:00 London. A firing before this hour is early, not late, and holding
+#: it costs nothing — the next firing an hour later does the work. This is what keeps the
+#: delivery time steady across the October clock change: the same UTC trigger that lands at
+#: 05:40 London in summer lands at 04:40 in winter, and only the guard tells them apart.
+EARLIEST_HOUR = 5
+
+
+def too_early(now: dt.datetime | None = None, earliest: int = EARLIEST_HOUR) -> bool:
+    return (now or london_now()).hour < earliest
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -66,20 +81,30 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--github-output",
         default=os.environ.get("GITHUB_OUTPUT"),
-        help="append 'done=true|false' for a workflow step output",
+        help="append 'done=' and 'hold=' true|false for a workflow step output",
+    )
+    parser.add_argument(
+        "--earliest-hour",
+        type=int,
+        default=EARLIEST_HOUR,
+        help="hold a firing that arrives before this hour, London time (default 5)",
     )
     args = parser.parse_args(sys.argv[1:] if argv is None else argv)
-    day = args.date or london_today()
+    now = london_now()
+    day = args.date or now.date()
     record = live_case_for(day, args.cases)
     done = record is not None
-    print(
-        f"{day}: today's signal is already saved ({record.name})"
-        if done
-        else f"{day}: no signal saved yet — the run should proceed"
-    )
+    early = args.date is None and too_early(now, args.earliest_hour)
+    if done:
+        print(f"{day}: today's signal is already saved ({record.name})")
+    elif early:
+        print(f"{day}: {now:%H:%M} London is before {args.earliest_hour:02d}:00 — holding")
+    else:
+        print(f"{day}: no signal saved yet — the run should proceed")
     if args.github_output:
         with open(args.github_output, "a", encoding="utf-8") as fh:
             fh.write(f"done={'true' if done else 'false'}\n")
+            fh.write(f"hold={'true' if done or early else 'false'}\n")
     return 0
 
 

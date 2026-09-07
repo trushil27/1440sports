@@ -58,7 +58,24 @@ def test_the_gate_runs_without_any_third_party_package():
 def test_github_output_is_written_for_the_workflow_step(tmp_path):
     out = tmp_path / "out"
     day_status.main(["--date", "2026-09-07", "--cases", str(tmp_path), "--github-output", str(out)])
-    assert out.read_text(encoding="utf-8").strip() == "done=false"
+    assert out.read_text(encoding="utf-8").split() == ["done=false", "hold=false"]
     _record(tmp_path / "2026-09-07", "acme", 301)
     day_status.main(["--date", "2026-09-07", "--cases", str(tmp_path), "--github-output", str(out)])
-    assert "done=true" in out.read_text(encoding="utf-8")
+    text = out.read_text(encoding="utf-8")
+    assert "done=true" in text and "hold=true" in text
+
+
+def test_a_firing_before_five_london_is_held_not_run(tmp_path, monkeypatch):
+    """The routine fires at a fixed UTC time; in winter that same instant is an hour earlier
+    in London. The gate — not the trigger — is what keeps the signal landing at 06:00."""
+    from zoneinfo import ZoneInfo
+
+    london = ZoneInfo("Europe/London")
+    assert day_status.too_early(dt.datetime(2026, 11, 2, 4, 48, tzinfo=london)) is True
+    assert day_status.too_early(dt.datetime(2026, 11, 2, 5, 48, tzinfo=london)) is False
+
+    out = tmp_path / "out"
+    monkeypatch.setattr(day_status, "london_now", lambda: dt.datetime(2026, 11, 2, 4, 48, tzinfo=london))
+    day_status.main(["--cases", str(tmp_path), "--github-output", str(out)])
+    text = out.read_text(encoding="utf-8")
+    assert "done=false" in text and "hold=true" in text  # nothing saved, but not yet its hour

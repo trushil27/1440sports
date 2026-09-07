@@ -11,6 +11,13 @@
 # already exists instead of asking the clock: the first firing to land does the work, the rest
 # see the saved case and exit in seconds. intel.schedule sends immediately when the 06:00 slot
 # has already passed, so a late start still delivers.
+#
+# Punctuality comes from OUTSIDE GitHub. A Claude Routine ("1440 desk — 06:00 London signal")
+# dispatches this workflow at 04:40 UTC and a second at 05:40 UTC; routines fire within
+# minutes of their time, so the brief lands about 06:00 London. Whichever of the two is the
+# right one for the season runs and the other is held by the gate below — before 05:00 London
+# is too early, and once the day has a saved case it is done. The six crons stay as a
+# fallback for the day the routine is off; a duplicate firing costs seconds, not an email.
 name: Daily run
 
 on:
@@ -24,9 +31,13 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: "Run now regardless of the 05:30 London slot"
+        # Default FALSE on purpose: the 06:00 Claude Routine dispatches this workflow with no
+        # inputs, and a default of true would let it bypass the gate — running an hour early
+        # once the clocks go back, or issuing a second brief on a day that already has one.
+        # Tick it only to override that (a second signal in one day, or a run before 05:00).
+        description: "Run even if today's signal already went out, or it is before 05:00 London"
         type: boolean
-        default: true
+        default: false
 
 permissions:
   contents: write
@@ -92,9 +103,9 @@ jobs:
             echo "forced run at $(TZ=Europe/London date)"
           else
             PYTHONPATH=pipeline python3 -m intel.day_status --github-output /tmp/day_status
-            if grep -q "done=true" /tmp/day_status; then
+            if grep -q "hold=true" /tmp/day_status; then
               echo "run=no" >> "$GITHUB_OUTPUT"
-              echo "today is already done — exiting so the MD is not emailed twice"
+              echo "holding: today is already done, or it is before 05:00 London"
             else
               echo "run=yes" >> "$GITHUB_OUTPUT"
               echo "no signal saved for today yet (local $(TZ=Europe/London date +%H:%M)) — running"
