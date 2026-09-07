@@ -724,7 +724,7 @@ def write_site(data: dict[str, Any], out_dir: Path, src: Path = SITE_SRC) -> Pat
 
 
 def _write_brief_pages(data: dict[str, Any], out_dir: Path) -> int:
-    """A real page per brief at ``<n>/index.html``, with ``brief/<n>/`` kept as an alias.
+    """A real page per brief at ``<company>/index.html``, with the numeric paths as aliases.
 
     The emailed link used to be ``…/#/brief/127`` — a hash fragment, which reads like an
     internal anchor rather than an address (operator, 6 Sep 2026). Each full case already
@@ -738,7 +738,15 @@ def _write_brief_pages(data: dict[str, Any], out_dir: Path) -> int:
         page, number = e.get("page_html"), e.get("number")
         if not page or number is None or int(number) < 0:
             continue
+        from intel.mail_brief import page_slug
+
+        # The company's own path is what goes in the email: the operator does not want a
+        # number on the end of a link he forwards (7 Sep 2026). The numeric folders stay so
+        # that every link already sent still resolves.
+        slug = page_slug(e.get("company"))
         folders = [out_dir / str(number), out_dir / "brief" / str(number)]
+        if slug and slug != str(number):
+            folders.insert(0, out_dir / slug)
         nav = "font-family:'Poppins',Arial,sans-serif;font-size:11px;letter-spacing:.16em;"
         nav += "text-transform:uppercase;padding:14px 22px;border-bottom:1px solid #ddd9d0;"
         nav += "background:#fbfaf7"

@@ -22,19 +22,18 @@ def _settings(base="https://trushil27.github.io/1440sports/"):
     return SimpleNamespace(app_base_url=base)
 
 
-def test_link_is_a_real_page_address():
-    # ".../#/brief/127" reads as an in-page anchor in an email; each brief is now its own
-    # static page, so the link is a plain address.
+def test_link_is_the_company_page_with_no_number_in_it():
+    # Three shapes so far: "…//brief/127" opened the front page, "…/#/brief/127" reads as an
+    # in-page anchor, "…/127" ends in a number the operator will not forward (7 Sep 2026).
     assert (
-        mail_brief.brief_url("https://trushil27.github.io/1440sports/", 127)
-        == "https://trushil27.github.io/1440sports/127"
+        mail_brief.brief_url("https://1440-intelligence.netlify.app/", 127, "Fluidstack")
+        == "https://1440-intelligence.netlify.app/fluidstack"
     )
-    assert mail_brief.brief_url("https://1440sports-intel.github.io", 9) == (
-        "https://1440sports-intel.github.io/9"
-    )
-    # no "#", and no double slash from a base that already ends in one
-    assert "#" not in mail_brief.brief_url("https://x.test///", 1)
-    assert mail_brief.brief_url("https://x.test///", 1) == "https://x.test/1"
+    assert mail_brief.page_slug("Ore Energy") == "ore-energy"
+    assert mail_brief.page_slug("1Komma5° GmbH") == "1komma5-gmbh"
+    assert "#" not in mail_brief.brief_url("https://x.test///", 1, "Acme")
+    # no usable name: the desk's front page, never a bare number
+    assert mail_brief.brief_url("https://x.test/", 9, None) == "https://x.test"
 
 
 def test_plain_text_body_is_sectioned_not_one_block():
@@ -43,14 +42,14 @@ def test_plain_text_body_is_sectioned_not_one_block():
         assert heading in body, heading
     assert "Fluidstack — 76/100 · HOT" in body
     assert "Gary Wu" in body
-    assert "https://trushil27.github.io/1440sports/127" in body
+    assert "https://trushil27.github.io/1440sports/fluidstack" in body
     # the verdict comes before the detail, so a phone reader gets the call first
     assert body.index("THE CALL") < body.index("THE SIGNAL")
 
 
 def test_html_card_carries_the_facts_and_one_button():
     html = mail_brief.brief_html(_brief(), _settings())
-    assert html.count('<a href="https://trushil27.github.io/1440sports/127"') == 1
+    assert html.count('<a href="https://trushil27.github.io/1440sports/fluidstack"') == 1
     for bit in (
         "Fluidstack",
         "76/100",

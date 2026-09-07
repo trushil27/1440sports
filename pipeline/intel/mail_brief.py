@@ -15,6 +15,7 @@ that are missing are simply left out rather than filled with a placeholder.
 from __future__ import annotations
 
 import html
+import re
 from typing import Any
 
 NAVY = "#191a48"
@@ -25,14 +26,24 @@ HAIR = "#e3e0d8"
 PANEL = "#f4f3ee"
 
 
-def brief_url(app_base_url: str, number: int | str) -> str:
-    """``<base>/<n>`` — the shortest real address the desk can have without its own domain.
+def page_slug(company: str | None) -> str:
+    """A company's own path segment: 'Ore Energy' → 'ore-energy'. Empty if there is no name."""
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", (company or "").lower())).strip("-")
 
-    The export writes each brief as its own static page (``site_export._write_brief_pages``),
-    so the link needs no "#" and no server rewrite. It read as ``…/#/brief/127`` before, which
-    looks like an internal fragment in an email (operator, 6 Sep 2026); and before that it was
-    ``…//brief/127``, which opened the front page because the app is hash-routed internally."""
-    return f"{(app_base_url or '').rstrip('/')}/{number}"
+
+def brief_url(app_base_url: str, number: int | str, company: str | None = None) -> str:
+    """``<base>/<company>`` — the address of one brief, with nothing numeric in it.
+
+    The link has been through three shapes. ``…//brief/127`` opened the front page (the app
+    is hash-routed internally); ``…/#/brief/127`` reads as an in-page anchor in an email;
+    ``…/127`` was short but ends in a number, which the operator did not want to send on
+    (7 Sep 2026). The export writes a page per company as well as per number, so the address
+    can be the company itself and still be a plain static page — no "#", no server rewrite.
+    Numeric paths stay as aliases, so every link already sent keeps working; a brief with no
+    usable name falls back to the desk's front page rather than showing a number."""
+    base = (app_base_url or "").rstrip("/")
+    slug = page_slug(company)
+    return f"{base}/{slug}" if slug else base
 
 
 def _verdict(d: dict[str, Any]) -> str:
@@ -100,7 +111,7 @@ def executive_take(brief, settings) -> str:
     for label, text in _sections(d):
         lines += [label.upper(), text, ""]
     lines += [
-        f"Read the full case:  {brief_url(settings.app_base_url, brief.brief_number)}",
+        f"Read the full case:  {brief_url(settings.app_base_url, brief.brief_number, company)}",
         "The 2-page brief is attached.",
         "",
         "— 1440 Intelligence Engine",
@@ -130,7 +141,7 @@ def brief_html(brief, settings) -> str:
     score = d.get("score", "?")
     tier = (d.get("timing_label") or "").strip()
     number = brief.brief_number
-    url = brief_url(settings.app_base_url, number)
+    url = brief_url(settings.app_base_url, number, company)
     verdict = _verdict(d)
 
     facts = "".join(

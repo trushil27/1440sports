@@ -82,10 +82,11 @@ def test_md_receives_only_a_verified_audited_brief_in_production(
     assert msg.subject.startswith("1440 Intelligence Brief N° ") and msg.subject.endswith(
         "— Ramp — 84/100"
     )
-    # sectioned body (THE CALL / AT A GLANCE / …) and a short link: <base>/<number>, no "#"
+    # sectioned body (THE CALL / AT A GLANCE / …) and the company's own page as the link:
+    # <base>/<company>, no "#" and nothing numeric to forward (operator, 7 Sep 2026)
     assert "THE CALL" in msg.body_text and "AT A GLANCE" in msg.body_text
     link = msg.body_text.split("Read the full case:")[1].split()[0]
-    assert "#" not in link and link.rstrip("/").split("/")[-1].isdigit()
+    assert "#" not in link and link.rstrip("/").split("/")[-1] == "ramp"
     assert msg.attachments and msg.attachments[0].name.endswith(".pdf")
     assert sorted(_sends(session)) == [(MD, "md_brief", "sent"), (OP, "operator_copy", "sent")]
     rows = session.scalars(select(Send)).all()
