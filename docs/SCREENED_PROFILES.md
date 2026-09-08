@@ -65,8 +65,10 @@ field is optional. `leaders[].source` and `sources` are the pages actually opene
 
 ## Workflow
 
-1. `python -m intel.profiles` prints the worklist: every full-check screen-out with no profile
-   yet, with what the desk already knows (date, series, team, industry, trigger, source, why).
+1. The worklist is `data/screened_worklist/profiles-batch-NN.json`: every full-check
+   screen-out with no profile yet, with what the desk already knows about each (date,
+   series, team, industry, trigger, source, why). Regenerate it with
+   `intel.profiles.wanted(export_data(...)["briefs"])` after an export.
 2. Research each company against the standard above. Start from the desk's own record — the
    trigger and the screen-out reasoning already name the round, the investors and often the
    people — and confirm it on the company's pages.
