@@ -444,9 +444,11 @@ def run_day(
     inbox_signals, inbox_note = inbox.collect(session, settings, stages.mailer)
     if inbox_note.get("status") == "read":
         progress(
-            f"inbox: {inbox_note['routine']} routine + {inbox_note['n8n']} n8n lead(s) new to the "
-            f"desk → {inbox_note['candidates']} candidate(s), "
-            f"{len(inbox_note['to_research'])} to research"
+            f"inbox: {inbox_note.get('mails_read', 0)} mail(s) in the window, "
+            f"{inbox_note.get('routine_mails', 0)} routine + {inbox_note.get('n8n_mails', 0)} n8n; "
+            f"offered {inbox_note.get('offered', [])}; already known "
+            f"{inbox_note.get('already_known', [])}; new → {inbox_note['candidates']} "
+            f"candidate(s), {len(inbox_note['to_research'])} to research"
         )
     else:
         progress(f"inbox: {inbox_note.get('status')}")

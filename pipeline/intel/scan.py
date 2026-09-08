@@ -38,17 +38,34 @@ def _nullable(kind: str) -> dict[str, Any]:
 
 
 #: The shape the retry MUST return. Not the whole v2.1 contract — the fields the parser and
-#: the scoring stage read, each nullable, so the model can say "unknown" rather than invent.
-#: Every property is required and nothing else is allowed: that is what lets the API enforce
-#: it. ``parse_scan_output`` reads the array out of the wrapper unchanged.
+#: the scoring stage read. The API allows at most 16 union-typed (nullable) properties per
+#: schema; the first version had 23 and both morning runs on 8 Sep 2026 were refused with a
+#: 400 before the retry could answer. So: the fields where "unknown" must be distinguishable
+#: from "empty" are nullable (13), and the free-text key facts are plain strings where an
+#: empty string means "not found" — the parser already treats those alike. Every property
+#: is required and nothing else is allowed: that is what lets the API enforce the shape.
+#: ``parse_scan_output`` reads the array out of the wrapper unchanged.
+_KEY_FACTS = (
+    "funding",
+    "investors",
+    "revenue",
+    "trigger",
+    "competitor_signal",
+    "strategic_hook",
+    "us_presence",
+    "alumni_match",
+    "taxonomy_category",
+    "ops_fit_note",
+)
+_DIMENSIONS = ("timing", "capacity", "brand_fit", "urgency", "ops_fit")
 _SIGNAL_SCHEMA: dict[str, Any] = {
     "type": "object",
     "properties": {
         "company": {"type": "string"},
         "score": {"type": "integer"},
+        "track": {"type": "integer"},
         "signal_date": _nullable("string"),
         "tier": _nullable("string"),
-        "track": {"type": "integer"},
         "person": _nullable("string"),
         "role": _nullable("string"),
         "horizon_weeks": _nullable("string"),
@@ -62,36 +79,36 @@ _SIGNAL_SCHEMA: dict[str, Any] = {
         "of_gate_passed": _nullable("boolean"),
         "key_facts": {
             "type": "object",
-            "properties": {
-                k: _nullable("string")
-                for k in (
-                    "funding", "investors", "revenue", "trigger", "competitor_signal",
-                    "strategic_hook", "us_presence", "alumni_match", "taxonomy_category",
-                    "ops_fit_note",
-                )
-            },
-            "required": [
-                "funding", "investors", "revenue", "trigger", "competitor_signal",
-                "strategic_hook", "us_presence", "alumni_match", "taxonomy_category",
-                "ops_fit_note",
-            ],
+            "properties": {k: {"type": "string"} for k in _KEY_FACTS},
+            "required": list(_KEY_FACTS),
             "additionalProperties": False,
         },
         "score_breakdown": {
             "type": "object",
-            "properties": {
-                k: {"type": "integer"}
-                for k in ("timing", "capacity", "brand_fit", "urgency", "ops_fit")
-            },
-            "required": ["timing", "capacity", "brand_fit", "urgency", "ops_fit"],
+            "properties": {k: {"type": "integer"} for k in _DIMENSIONS},
+            "required": list(_DIMENSIONS),
             "additionalProperties": False,
         },
     },
     "required": [
-        "company", "score", "signal_date", "tier", "track", "person", "role",
-        "horizon_weeks", "source_url", "industry_meta", "recommended_team",
-        "recommended_series", "timing_label", "trigger_reason", "confidence_level",
-        "of_gate_passed", "key_facts", "score_breakdown",
+        "company",
+        "score",
+        "track",
+        "signal_date",
+        "tier",
+        "person",
+        "role",
+        "horizon_weeks",
+        "source_url",
+        "industry_meta",
+        "recommended_team",
+        "recommended_series",
+        "timing_label",
+        "trigger_reason",
+        "confidence_level",
+        "of_gate_passed",
+        "key_facts",
+        "score_breakdown",
     ],
     "additionalProperties": False,
 }
@@ -101,6 +118,22 @@ SCAN_OUTPUT_SCHEMA: dict[str, Any] = {
     "required": ["signals"],
     "additionalProperties": False,
 }
+#: The API's limit, asserted by a test so the schema can never drift back over it.
+MAX_UNION_PARAMS = 16
+
+
+def count_union_params(schema: Any) -> int:
+    """How many properties in ``schema`` (at any depth) are union-typed — a type array or
+    anyOf — which is what the API caps."""
+    n = 0
+    if isinstance(schema, dict):
+        if isinstance(schema.get("type"), list) or "anyOf" in schema:
+            n += 1
+        for v in schema.values():
+            n += count_union_params(v)
+    elif isinstance(schema, list):
+        n += sum(count_union_params(v) for v in schema)
+    return n
 
 
 class ScanFailed(RuntimeError):

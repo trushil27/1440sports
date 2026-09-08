@@ -60,12 +60,21 @@ def test_the_n8n_subject_names_the_company_and_nothing_more_is_claimed():
 
 def test_both_sources_are_read_from_one_mailbox_and_deduplicated():
     messages = [
-        {"subject": "1440 Routine Signals — 7 Sep 2026", "receivedDateTime": "2026-09-07T09:17:00Z",
-         "body": {"content": ROUTINE_BODY}},
-        {"subject": "1440 Intelligence Brief — Keyfactor — 15 Jul 2026",
-         "receivedDateTime": "2026-09-07T08:00:00Z", "body": {"content": "<html>…</html>"}},
-        {"subject": "1440 Intelligence Brief — Nexeon — 6 Sep 2026",  # already seen above
-         "receivedDateTime": "2026-09-07T07:00:00Z", "body": {"content": "<html>…</html>"}},
+        {
+            "subject": "1440 Routine Signals — 7 Sep 2026",
+            "receivedDateTime": "2026-09-07T09:17:00Z",
+            "body": {"content": ROUTINE_BODY},
+        },
+        {
+            "subject": "1440 Intelligence Brief — Keyfactor — 15 Jul 2026",
+            "receivedDateTime": "2026-09-07T08:00:00Z",
+            "body": {"content": "<html>…</html>"},
+        },
+        {
+            "subject": "1440 Intelligence Brief — Nexeon — 6 Sep 2026",  # already seen above
+            "receivedDateTime": "2026-09-07T07:00:00Z",
+            "body": {"content": "<html>…</html>"},
+        },
         {"subject": "Lunch?", "receivedDateTime": "2026-09-07T06:00:00Z", "body": {"content": "x"}},
     ]
     leads = inbox.leads_from_messages(messages)
@@ -82,6 +91,34 @@ def test_only_candidate_shaped_leads_enter_the_pool_and_the_desk_rescores_them()
     s = signals[0]
     assert s.source_url == "https://www.nationalwealthfund.org.uk/news/nexeon"
     assert s.signal_date == "2026-09-01" and s.person == "Dr. Scott Brown" and s.track == 1
+
+
+def test_the_inbox_note_says_what_was_read_and_why_nothing_was_new(monkeypatch):
+    """8 Sep 2026: "0 routine + 0 n8n" and no way to tell whether the mailbox was empty, the
+    routine's mail was missing, or every lead was already known. Now each step is counted."""
+
+    class Mailer:
+        sender, refresh_token, http = "d@x.test", "rt", None
+
+        def token(self):
+            return "t"
+
+    messages = [
+        {
+            "subject": "1440 Routine Signals — 7 Sep 2026",
+            "receivedDateTime": "2026-09-07T09:17:00Z",
+            "body": {"content": ROUTINE_BODY},
+        },
+        {"subject": "Lunch?", "receivedDateTime": "2026-09-07T06:00:00Z", "body": {"content": "x"}},
+    ]
+    monkeypatch.setattr(inbox.GraphInbox, "read", lambda self, since, limit=40: messages)
+    monkeypatch.setattr(inbox, "known_companies", lambda session: {"nexeon"})
+    signals, note = inbox.collect(None, None, Mailer())
+    assert note["status"] == "read" and note["mails_read"] == 2 and note["routine_mails"] == 1
+    assert note["offered"] == ["Nexeon (routine)", "Gridsight (routine)"]
+    assert note["already_known"] == ["Nexeon"]
+    assert [s.company for s in signals] == []  # Gridsight has no source URL: research, not pool
+    assert note["to_research"] == ["Gridsight"]
 
 
 def test_an_unreadable_mailbox_is_a_missing_source_not_a_failed_run():
@@ -113,7 +150,7 @@ def test_the_routine_mail_is_html_by_the_time_it_is_read():
 
 
 def test_escaped_signals_tags_still_delimit_the_block():
-    body = "&lt;SIGNALS&gt;[{\"company\": \"Acme\", \"score\": 70}]&lt;/SIGNALS&gt;<br>prose"
+    body = '&lt;SIGNALS&gt;[{"company": "Acme", "score": 70}]&lt;/SIGNALS&gt;<br>prose'
     assert [x.company for x in inbox.parse_routine_email(body)] == ["Acme"]
 
 

@@ -182,7 +182,6 @@ def test_a_failed_scan_reports_both_attempts_and_keeps_the_text_that_had_somethi
     assert turns[0]["blocks"] == {"text": 1} and turns[1]["blocks"] == {} and turns[1]["chars"] == 0
 
 
-
 def test_verifier_adapter_resumes_pause_turn_and_never_raises_on_truncation():
     paused = _resp([_tool_use()], "pause_turn")
     final = _resp(
@@ -260,8 +259,23 @@ def test_the_retry_is_schema_bound_and_the_wrapper_it_returns_parses():
 def test_effort_and_format_share_output_config():
     client = FakeClient([_resp([_text("{}")], "end_turn")])
     complete_text(
-        client, model="m", system="s", messages=[], max_tokens=10, effort="low",
+        client,
+        model="m",
+        system="s",
+        messages=[],
+        max_tokens=10,
+        effort="low",
         output_format={"type": "object"},
     )
     cfg = client.messages.requests[0]["output_config"]
     assert cfg["effort"] == "low" and cfg["format"]["schema"] == {"type": "object"}
+
+
+def test_the_retry_schema_stays_under_the_api_union_limit():
+    """Both morning runs on 8 Sep 2026 were refused with a 400: 'Schemas contains too many
+    parameters with union types (23 …, limit: 16)'. The schema is the desk's, so the desk
+    keeps it under the limit — and this test keeps it there."""
+    assert scan.count_union_params(scan.SCAN_OUTPUT_SCHEMA) <= scan.MAX_UNION_PARAMS
+    assert scan.count_union_params({"type": ["string", "null"]}) == 1
+    assert scan.count_union_params({"anyOf": [{"type": "string"}, {"type": "null"}]}) == 1
+    assert scan.count_union_params({"type": "object", "properties": {"a": {"type": "string"}}}) == 0

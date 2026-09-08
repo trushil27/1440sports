@@ -294,7 +294,19 @@ def collect(session: Any, settings: Any, mailer: Any, days: int = 2) -> tuple[li
     try:
         since = dt.datetime.now(dt.UTC) - dt.timedelta(days=days)
         messages = GraphInbox(mailer).read(since)
+        # 8 Sep 2026: "0 routine + 0 n8n" with nothing to say whether the mailbox returned
+        # any mail at all, whether the routine's mail was among it, or whether its leads
+        # were all already known. Each step is now counted.
+        subjects = [(m.get("subject") or "").strip() for m in messages]
+        note["mails_read"] = len(messages)
+        note["routine_mails"] = sum(1 for x in subjects if x.startswith(ROUTINE_SUBJECT))
+        note["n8n_mails"] = sum(1 for x in subjects if x.startswith(N8N_SUBJECT))
+        offered = leads_from_messages(messages)
+        note["offered"] = [f"{x.company} ({x.source})" for x in offered]
         leads = new_leads(session, messages)
+        note["already_known"] = [
+            x.company for x in offered if x.company not in {y.company for y in leads}
+        ]
     except Exception as exc:  # noqa: BLE001
         note["status"] = f"unavailable: {type(exc).__name__}: {str(exc)[:160]}"
         return [], note
