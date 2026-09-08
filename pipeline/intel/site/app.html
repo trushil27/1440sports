@@ -167,11 +167,13 @@
   table.sponsors td.co { min-width: 180px; }
   table.sponsors td.co .note-inline { display: none; }
   table.sponsors td.lvl, table.sponsors td.st, table.sponsors td.num { white-space: nowrap; }
-  table.sponsors td.notes { min-width: 320px; max-width: 52ch; }
-  table.sponsors td.notes .sm { max-width: none; line-height: 1.45; }
+  table.sponsors td.col-cat { min-width: 150px; }
+  table.sponsors td.col-cat .none { color: var(--muted); }
+  table.sponsors td.col-notes { min-width: 320px; max-width: 52ch; }
+  table.sponsors td.col-notes .sm { max-width: none; line-height: 1.45; }
   @media (max-width: 760px) {
     table.sponsors { min-width: 0; width: 100%; }
-    table.sponsors th.cat, table.sponsors td.cat, table.sponsors th.notes, table.sponsors td.notes { display: none; }
+    table.sponsors th.col-cat, table.sponsors td.col-cat, table.sponsors th.col-notes, table.sponsors td.col-notes { display: none; }
     table.sponsors td.co { min-width: 0; }
     table.sponsors td.co .note-inline { display: block; }
     table.sponsors td.lvl, table.sponsors td.st, table.sponsors td.num { white-space: normal; }
@@ -578,8 +580,8 @@
     liveRows.filter((s) => s.category).forEach((s) => { (cats[s.category] = cats[s.category] || []).push(s); });
     const until = (s) => s.until ? `${esc(s.until)} <span class="sm">${s.until_kind === 'confirmed' ? 'confirmed' : 'reported'}</span>` : '<span class="sm">not stated</span>';
     const since = (s) => s.since ? esc(s.since) : `<span class="sm">${s.status === 'joined' ? 'new for ' : 'on the '}${esc(s.season || '')} roster</span>`;
-    const rowsHtml = (list) => `<div class="tablewrap"><table class="sponsors"><thead><tr><th>Brand</th><th class="cat">Category</th><th>Level</th><th>Status</th><th>Since</th><th>Until</th><th class="notes">Notes</th></tr></thead><tbody>
-      ${list.map((s) => `<tr data-brand="${esc(s.brand.toLowerCase())}" data-cat="${esc((s.category || '').toLowerCase())}" data-level="${esc(s.level)}"><td class="co">${esc(s.brand)}${s.category ? `<span class="sm note-inline">${esc(s.category)}</span>` : ''}${s.notes ? `<span class="sm note-inline">${esc(s.notes)}</span>` : ''}</td><td class="cat">${s.category ? `<span class="cat">${esc(s.category)}</span>` : '<span class="sm">—</span>'}</td><td class="lvl"><span class="sm">${esc(levelLabel(s.level))}</span></td><td class="st"><span class="badge ${s.status === 'active' ? 'ok' : (s.status === 'joined' ? 'info' : 'mute')}">${esc(s.status)}</span></td><td class="num">${since(s)}</td><td class="num">${until(s)}</td><td class="notes"><span class="sm">${esc(s.notes || '')}</span></td></tr>`).join('')}
+    const rowsHtml = (list) => `<div class="tablewrap"><table class="sponsors"><thead><tr><th>Brand</th><th class="col-cat">Category</th><th>Level</th><th>Status</th><th>Since</th><th>Until</th><th class="col-notes">Notes</th></tr></thead><tbody>
+      ${list.map((s) => `<tr data-brand="${esc(s.brand.toLowerCase())}" data-cat="${esc((s.category || '').toLowerCase())}" data-level="${esc(s.level)}"><td class="co">${esc(s.brand)}${s.category ? `<span class="sm note-inline">${esc(s.category)}</span>` : ''}${s.notes ? `<span class="sm note-inline">${esc(s.notes)}</span>` : ''}</td><td class="col-cat">${s.category ? `<span class="cat">${esc(s.category)}</span>` : '<span class="none">—</span>'}</td><td class="lvl"><span class="sm">${esc(levelLabel(s.level))}</span></td><td class="st"><span class="badge ${s.status === 'active' ? 'ok' : (s.status === 'joined' ? 'info' : 'mute')}">${esc(s.status)}</span></td><td class="num">${since(s)}</td><td class="num">${until(s)}</td><td class="col-notes"><span class="sm">${esc(s.notes || '')}</span></td></tr>`).join('')}
     </tbody></table></div>`;
     const teamKeys = Object.keys(teams).sort((a, b) => teamDisplay(a).localeCompare(teamDisplay(b)));
     const slug = (t) => 'team-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
