@@ -161,20 +161,38 @@
   .teamblock[open] summary { border-bottom: 1px solid var(--hair); }
   .teamblock .open-cats { padding: 12px 22px 0; font-size: 13px; color: var(--muted); }
   .teamblock .tablewrap { border: 0; border-radius: 0; box-shadow: none; }
-  /* Screened-out company cards */
-  .scr { background: var(--panel); border: 1px solid var(--hair); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 20px; margin: 0 0 14px; }
-  .scr .top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 14px; margin-bottom: 10px; }
-  .scr h2 { margin: 0; font-size: 19px; color: var(--head); }
-  .scr .top .meta { color: var(--muted); font-size: 12.5px; }
-  .scr .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px 22px; }
-  .scr .f { min-width: 0; }
-  .scr .f .k { font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-3, var(--muted)); font-weight: 700; margin-bottom: 3px; }
-  .scr .f .v { font-size: 13.5px; line-height: 1.5; color: var(--ink); overflow-wrap: anywhere; }
-  .scr .f .v.none { color: var(--muted); font-style: italic; }
-  .scr .f.wide { grid-column: 1 / -1; }
-  .scr .why { border-left: 3px solid var(--gold); padding-left: 12px; }
-  .scr ul.leaders { margin: 0; padding-left: 18px; }
-  .scr .src a { margin-right: 6px; }
+  /* Screened-out companies: a compact list, one expandable card each */
+  .scr-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 0 0 14px; }
+  .scr-tools input { flex: 1 1 260px; min-width: 0; border: 1px solid var(--hair); background: var(--panel); color: var(--ink); border-radius: 9px; padding: 10px 14px; font: inherit; font-size: 13.5px; }
+  .scr-tools .n { color: var(--muted); font-size: 12.5px; white-space: nowrap; }
+  details.scr { background: var(--panel); border: 1px solid var(--hair); border-radius: var(--radius); box-shadow: var(--shadow); margin: 0 0 10px; overflow: hidden; }
+  details.scr[open] { border-color: var(--gold); }
+  details.scr > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: center; padding: 14px 18px; }
+  details.scr > summary::-webkit-details-marker { display: none; }
+  details.scr > summary:hover { background: var(--panel-2); }
+  .scr-name { font-size: 16px; font-weight: 700; color: var(--head); overflow-wrap: anywhere; }
+  .scr-line { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; color: var(--muted); font-size: 12.5px; }
+  .scr-line .badge { font-size: 10px; }
+  .scr-summary { grid-column: 1 / -1; color: var(--ink); font-size: 13.5px; line-height: 1.5; }
+  .scr-body { border-top: 1px solid var(--hair); padding: 16px 18px 18px; }
+  .scr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px 24px; }
+  .scr-f { min-width: 0; }
+  .scr-f .k { font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 4px; }
+  .scr-f .v { font-size: 13.5px; line-height: 1.55; color: var(--ink); overflow-wrap: anywhere; }
+  .scr-f .v.none { color: var(--muted); font-style: italic; }
+  .scr-f.wide { grid-column: 1 / -1; }
+  .scr-body ul { margin: 6px 0 0; padding-left: 18px; }
+  .scr-body li { margin: 0 0 5px; line-height: 1.5; }
+  .scr-body ul.people { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .scr-body ul.people li { background: var(--panel-2); border: 1px solid var(--hair); border-radius: 999px; padding: 6px 12px; font-size: 12.5px; margin: 0; }
+  .scr-body details.more { margin-top: 6px; }
+  .scr-body details.more > summary { cursor: pointer; color: var(--link, var(--head)); font-size: 12.5px; font-weight: 600; list-style: none; }
+  .scr-body details.more > summary::-webkit-details-marker { display: none; }
+  .scr-body details.more > summary::before { content: '+ '; }
+  .scr-body details.more[open] > summary::before { content: '− '; }
+  .scr-body .src { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  .scr-body .src a { margin-right: 8px; }
+  .scr-why { border-left: 3px solid var(--gold); padding-left: 12px; }
   .cat { display: inline-block; font-size: 11px; background: var(--panel-2); border-radius: 5px; padding: 3px 8px; color: var(--ink-2); }
   .catgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
   .catcard { background: var(--panel); border: 1px solid var(--hair); border-radius: 12px; padding: 14px 16px; }
@@ -403,7 +421,7 @@
       </div>`;
     }
     return `
-      <div class="head"><div><div class="eyebrow">${esc(D.execution_mode || '')} · generated ${fmtDate((D.generated_at || '').slice(0, 10))}</div><h1>Home</h1><p class="sub">One verified signal a day: who to call, why now, which team. Open any signal to read the case.</p></div></div>
+      <div class="head"><div><div class="eyebrow">Generated ${fmtDate((D.generated_at || '').slice(0, 10))}</div><h1>Home</h1><p class="sub">One verified signal a day: who to call, why now, which team. Open any signal to read the case.</p></div></div>
       ${hero}
       <div class="rule"><span>Signals</span></div>
       <div class="tiles">
@@ -580,39 +598,78 @@
       <div class="rule"><span>Formula E · Season 12 (2025-26) · completed</span><span class="cnt">${s12.length} races</span></div>${s12.length ? rows(s12) : '<div class="tablewrap"><div class="empty">Not loaded.</div></div>'}`;
   }
 
-  // ---- screened-out page: the eliminated companies, in full ----
+  // ---- screened-out page: a compact list; each company opens into a card ----
   function verdictOf(b) { const m = /^([a-z ]+):\s*/i.exec(b.review.reason || ''); return m ? m[1] : 'screened'; }
   function reasonOf(b) { const m = /^([a-z ]+):\s*/i.exec(b.review.reason || ''); return m ? (b.review.reason || '').slice(m[0].length) : (b.review.reason || ''); }
+  // Split prose into sentences without breaking on abbreviations, decimals or "Series D." mid-list.
+  function sentences(text) {
+    const t = String(text || '').replace(/\s+/g, ' ').trim();
+    if (!t) return [];
+    const out = []; let buf = '';
+    for (const piece of t.split(/(?<=[.!?])\s+(?=[A-Z0-9“"(])/)) { buf = buf ? buf + ' ' + piece : piece; if (buf.length > 40 || !/\b(?:approx|c|e\.g|i\.e|vs|no|Mr|Ms|Dr|St|Inc|Ltd|Co|Corp)\.$/i.test(buf)) { out.push(buf); buf = ''; } }
+    if (buf) out.push(buf);
+    return out;
+  }
+  function lead(text, n) { const ss = sentences(text); return { first: ss.slice(0, n).join(' '), rest: ss.slice(n) }; }
   function field(k, v, cls) {
     const has = v != null && String(v).trim() !== '';
-    return `<div class="f${cls ? ' ' + cls : ''}"><div class="k">${esc(k)}</div><div class="v${has ? '' : ' none'}">${has ? v : 'Not on file yet'}</div></div>`;
+    return `<div class="scr-f${cls ? ' ' + cls : ''}"><div class="k">${esc(k)}</div><div class="v${has ? '' : ' none'}">${has ? v : 'Not on file yet'}</div></div>`;
+  }
+  function longField(k, text, cls, n) {
+    if (!text) return field(k, null, cls);
+    const { first, rest } = lead(text, n || 2);
+    const more = rest.length ? `<details class="more"><summary>Read more</summary><ul>${rest.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></details>` : '';
+    return field(k, `${esc(first)}${more}`, cls);
+  }
+  function screenedCard(b) {
+    const p = b.profile || {};
+    const fit = [b.series === 'FE' ? 'Formula E' : b.series === 'F1' ? 'Formula 1' : null, b.team ? teamDisplay(b.team) : null].filter(Boolean).join(' · ');
+    const why = reasonOf(b);
+    const whyLead = lead(why, 2);
+    const funding = p.funding ? [p.funding.status, p.funding.valuation ? `Valuation: ${p.funding.valuation}` : null].filter(Boolean).join(' ') : null;
+    const fundingAsOf = p.funding && p.funding.as_of ? ` <span class="sm">(as of ${fmtDate(p.funding.as_of)})</span>` : '';
+    const trigger = b.trigger ? `${esc(b.trigger)}${b.trigger_date ? ` <span class="sm">(${fmtDate(b.trigger_date)})</span>` : ''}` : null;
+    const site = p.website ? `<a href="${esc(p.website)}" target="_blank" rel="noopener">${esc(p.website.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a>` : null;
+    const leaders = (p.leaders || []).length
+      ? `<ul class="people">${p.leaders.map((l) => `<li>${esc(l.name)}${l.role ? ` <span class="sm">— ${esc(l.role)}</span>` : ''}${l.source ? ` <a href="${esc(l.source)}" target="_blank" rel="noopener" class="sm">↗</a>` : ''}</li>`).join('')}</ul>`
+      : (b.person ? `${esc(b.person)}${b.role ? ` — ${esc(b.role)}` : ''} <span class="sm">(named in the signal)</span>` : null);
+    const src = (b.review.sources || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(' ');
+    const psrc = (p.sources || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(' ');
+    const whyBlock = `<div class="scr-why">${esc(whyLead.first)}${whyLead.rest.length ? `<details class="more"><summary>Full reasoning (${whyLead.rest.length} more points)</summary><ul>${whyLead.rest.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></details>` : ''}${src ? `<div class="src">Sources ${src}</div>` : ''}</div>`;
+    return `<details class="scr" data-name="${esc((b.company + ' ' + verdictOf(b) + ' ' + (b.series || '') + ' ' + (b.team || '') + ' ' + (b.stage || '')).toLowerCase())}">
+      <summary>
+        <div class="scr-name">${esc(b.company)}</div>
+        <div><span class="badge warn">${esc(verdictOf(b))}</span></div>
+        <div class="scr-line">${b.stage ? `<span class="badge info">${esc(b.stage)}</span>` : ''}${fit ? `<span>${esc(fit)}</span>` : ''}<span>Screened ${fmtDate(b.review.screened_at || b.date)}</span>${b.score != null ? `<span>Scored ${esc(b.score)}/100 when surfaced</span>` : ''}${p.confidence ? `<span class="badge ${p.confidence === 'VERIFIED' ? 'ok' : p.confidence === 'GAP' ? 'bad' : 'mute'}">profile ${esc(p.confidence)}</span>` : ''}</div>
+        <div class="scr-summary">${esc(sentences(why)[0] || '')}</div>
+      </summary>
+      <div class="scr-body">
+        <div class="scr-grid">
+          ${longField('Business', p.business || b.industry, '', 2)}
+          ${field('Ideal fit', fit ? esc(fit) : null)}
+          ${p.funding ? field('Funding & valuation', `${esc(lead(funding, 2).first)}${fundingAsOf}${lead(funding, 2).rest.length ? `<details class="more"><summary>Read more</summary><ul>${lead(funding, 2).rest.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></details>` : ''}`) : field('Trigger (as surfaced)', trigger)}
+          ${field('Company page', site)}
+          ${field('Why the desk passed', whyBlock, 'wide')}
+          ${field('Senior leadership', leaders, 'wide')}
+          ${p.brief ? field('About', `${esc(p.brief)}${psrc ? `<div class="src">Profile sources ${psrc}</div>` : ''}`, 'wide') : ''}
+        </div>
+      </div>
+    </details>`;
   }
   function screenedView() {
     const rows = screened('all').slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
     const meta = D.profiles_meta || {};
-    const cards = rows.map((b) => {
-      const p = b.profile || {};
-      const fit = [b.series === 'FE' ? 'Formula E' : b.series === 'F1' ? 'Formula 1' : null, b.team ? teamDisplay(b.team) : null].filter(Boolean).join(' · ');
-      const funding = p.funding ? [p.funding.status, p.funding.valuation ? `Valuation: ${p.funding.valuation}` : null, p.funding.as_of ? `(as of ${fmtDate(p.funding.as_of)})` : null].filter(Boolean).map(esc).join(' ') : null;
-      const trigger = b.trigger ? `${esc(b.trigger)}${b.trigger_date ? ` <span class="sm">(${fmtDate(b.trigger_date)})</span>` : ''}` : null;
-      const leaders = (p.leaders || []).length ? `<ul class="leaders">${p.leaders.map((l) => `<li>${esc(l.name)}${l.role ? ` — ${esc(l.role)}` : ''}${l.source ? ` <a href="${esc(l.source)}" target="_blank" rel="noopener" class="sm">[source]</a>` : ''}</li>`).join('')}</ul>` : (b.person ? `${esc(b.person)}${b.role ? ` — ${esc(b.role)}` : ''} <span class="sm">(from the signal)</span>` : null);
-      const site = p.website ? `<a href="${esc(p.website)}" target="_blank" rel="noopener">${esc(p.website.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a>` : null;
-      const src = (b.review.sources || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(' ');
-      const psrc = (p.sources || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(' ');
-      return `<article class="scr">
-        <div class="top"><h2>${esc(b.company)}</h2><span class="badge warn">${esc(verdictOf(b))}</span><span class="meta">Screened ${fmtDate(b.review.screened_at || b.date)}${b.score != null ? ` · scored ${esc(b.score)}/100 when surfaced` : ''}${p.confidence ? ` · profile ${esc(p.confidence)}` : ''}</span></div>
-        <div class="grid">
-          ${field('Business', p.business ? esc(p.business) : (b.industry ? esc(b.industry) : null))}
-          ${field('Funding & valuation', funding || trigger)}
-          ${field('Ideal fit', fit ? esc(fit) : null)}
-          ${field('Company page', site)}
-          ${field('Why eliminated', `<div class="why">${esc(reasonOf(b))}${src ? ` <span class="src sm">Sources ${src}</span>` : ''}</div>`, 'wide')}
-          ${field('Senior leadership', leaders)}
-          ${field('About', p.brief ? `${esc(p.brief)}${psrc ? ` <span class="src sm">${psrc}</span>` : ''}` : null, 'wide')}
-        </div>
-      </article>`;
-    }).join('');
-    return `<div class="head"><div><div class="eyebrow">Signals</div><h1>Screened out</h1><p class="sub">${rows.length} companies the desk researched in full and decided not to pitch. The judgment is the product: each carries what the company is, where it stands on money, who runs it, the team it was aimed at, and exactly why it was passed on — with sources. "Not on file yet" means the desk has not verified that field, not that it is unknown.${meta.companies ? ` Profiles on file: ${meta.companies}${meta.checked_at ? `, last checked ${fmtDate(meta.checked_at)}` : ''}.` : ''}</p></div></div>${cards || '<p class="sub">Nothing screened out yet.</p>'}`;
+    return `<div class="head"><div><div class="eyebrow">Signals</div><h1>Screened out</h1><p class="sub">${rows.length} companies the desk researched in full and decided not to pitch — with what each is, where it stands on money, who runs it, the team it was aimed at, and why the desk passed, with sources. Open a company to read the card; "Not on file yet" means the desk has not verified that field.</p></div></div>
+      <div class="scr-tools"><input id="scrFilter" type="search" placeholder="Filter by company, verdict, series, team or stage…" aria-label="Filter"><span class="n" id="scrCount">${rows.length} companies${meta.checked_at ? ` · profiles checked ${fmtDate(meta.checked_at)}` : ''}</span></div>
+      <div id="scrList">${rows.map(screenedCard).join('') || '<p class="sub">Nothing screened out yet.</p>'}</div>`;
+  }
+  function bindScreened() {
+    const input = $('#scrFilter'); if (!input) return;
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase(); let n = 0;
+      document.querySelectorAll('#scrList details.scr').forEach((d) => { const show = !q || d.dataset.name.includes(q); d.hidden = !show; if (show) n += 1; });
+      $('#scrCount').textContent = `${n} compan${n === 1 ? 'y' : 'ies'}`;
+    });
   }
 
   // ---- router ----
@@ -625,7 +682,7 @@
     else if (parts[0] === 'brief') { main.innerHTML = briefView(parts[1]); const b = all().find((x) => String(x.number) === String(parts[1])); nav = b && b.series ? b.series : 'all'; bindRebuild(); }
     else if (parts[0] === 'sponsors') { main.innerHTML = sponsorsView(parts[1] || 'F1'); nav = 's' + (parts[1] || 'F1'); bindSponsors(); }
     else if (parts[0] === 'calendar') { main.innerHTML = calendarView(); nav = 'calendar'; }
-    else if (parts[0] === 'screened') { main.innerHTML = screenedView(); nav = 'screened'; }
+    else if (parts[0] === 'screened') { main.innerHTML = screenedView(); nav = 'screened'; bindScreened(); }
     else { main.innerHTML = homeView(); }
     document.querySelectorAll('.side a[data-nav]').forEach((a) => a.classList.toggle('active', a.dataset.nav === nav));
     $('#side').classList.remove('open');
@@ -662,7 +719,7 @@
 
   function boot() {
     $('#cF1').textContent = bySeries('F1').length; $('#cFE').textContent = bySeries('FE').length; $('#cAll').textContent = live().length; $('#cScreened').textContent = screened('all').length;
-    $('#mode').textContent = (D.execution_mode || '') + ' mode';
+    const modeEl = $('#mode'); if (modeEl) modeEl.remove();
     window.addEventListener('hashchange', route); route();
   }
   $('#menu').addEventListener('click', () => $('#side').classList.toggle('open'));
