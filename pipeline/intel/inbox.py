@@ -101,8 +101,10 @@ def _first_array_of_companies(text: str) -> list[Any] | None:
                     rows = json.loads(text[start : i + 1])
                 except ValueError:
                     rows = None
-                if isinstance(rows, list) and rows and all(
-                    isinstance(r, dict) and r.get("company") for r in rows
+                if (
+                    isinstance(rows, list)
+                    and rows
+                    and all(isinstance(r, dict) and r.get("company") for r in rows)
                 ):
                     return rows
                 start = -1
@@ -317,3 +319,49 @@ def collect(session: Any, settings: Any, mailer: Any, days: int = 2) -> tuple[li
     note["candidates"] = len(signals)
     note["status"] = "read"
     return signals, note
+
+
+def enrich(
+    signals: list[Any], today: dt.date, settings: Any, scan_fn: Any = None, cap: int | None = None
+) -> tuple[list[Any], dict[str, Any]]:
+    """Give each lead the record the gate needs, through the desk's own single-company scan.
+
+    8 Sep 2026: the routine offered EnerVenue and Eos Energy; both reached the day's pool and
+    both fell at the gate with "no score_breakdown from scanner" — a lead carries a trigger
+    and a source, not the five scored dimensions, so a lead could never win. Each new lead
+    now gets one single-company scan (a proper record, from the same scanner), capped by
+    ``inbox_scan_max`` so a busy mailbox cannot run up the bill. A scan that fails, or comes
+    back for a different company, leaves the thin lead in place — it fails the gate honestly.
+    """
+    from intel.normalise import company_norm
+
+    limit = settings.inbox_scan_max if cap is None else cap
+    note: dict[str, Any] = {"scanned": [], "kept_thin": []}
+    if not signals or limit <= 0:
+        return signals, note
+    if scan_fn is None:
+        from intel.rebuild import scan_one
+
+        scan_fn = scan_one
+    out = []
+    for sig in signals:
+        if getattr(sig, "score_breakdown", None) is not None or len(note["scanned"]) >= limit:
+            out.append(sig)
+            continue
+        hint = getattr(sig, "trigger_reason", None) or getattr(sig, "trigger_text", None)
+        try:
+            found = scan_fn(sig.company, today, settings=settings, hint=hint)
+        except Exception as exc:  # noqa: BLE001 — a failed scan keeps the lead, not the day
+            note["kept_thin"].append(f"{sig.company}: {type(exc).__name__}")
+            out.append(sig)
+            continue
+        match = next(
+            (f for f in found if company_norm(f.company) == company_norm(sig.company)), None
+        )
+        if match is None or match.score_breakdown is None:
+            note["kept_thin"].append(f"{sig.company}: no matching scored record")
+            out.append(sig)
+            continue
+        note["scanned"].append(sig.company)
+        out.append(match)
+    return out, note

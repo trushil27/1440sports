@@ -156,3 +156,82 @@ def test_escaped_signals_tags_still_delimit_the_block():
 
 def test_prose_that_merely_mentions_brackets_is_not_a_signal():
     assert inbox.parse_routine_email("<p>We looked at [1] and [2] and found nothing.</p>") == []
+
+
+def test_a_thin_lead_is_scored_by_the_desk_s_own_scanner_before_the_gate():
+    """8 Sep 2026: EnerVenue and Eos Energy came from the routine, reached the pool and fell
+    at the gate with "no score_breakdown from scanner". A lead is not a scored record."""
+    from intel.config import Settings
+    from intel.parse import ScannedSignal
+
+    thin = inbox.as_signals(inbox.parse_routine_email(ROUTINE_BODY, RECEIVED))  # Nexeon only
+    assert thin and thin[0].score_breakdown is None
+    calls = []
+
+    def fake_scan(company, today, settings=None, hint=None):
+        calls.append((company, hint))
+        return [
+            ScannedSignal.model_validate(
+                {
+                    "company": "Nexeon",
+                    "score": 74,
+                    "signal_date": "2026-09-01",
+                    "source_url": "https://x.test",
+                    "trigger_reason": "£100m round",
+                    "score_breakdown": {
+                        "timing": 15,
+                        "capacity": 15,
+                        "brand_fit": 15,
+                        "urgency": 14,
+                        "ops_fit": 15,
+                    },
+                }
+            )
+        ]
+
+    out, note = inbox.enrich(thin, dt.date(2026, 9, 8), Settings(), scan_fn=fake_scan)
+    assert note["scanned"] == ["Nexeon"] and out[0].score_breakdown is not None
+    assert calls[0][0] == "Nexeon" and "National Wealth Fund" in calls[0][1]
+
+
+def test_a_failed_or_mismatched_scan_keeps_the_thin_lead_and_the_cap_holds():
+    from intel.config import Settings
+    from intel.parse import ScannedSignal
+
+    a = ScannedSignal.model_validate(
+        {"company": "A", "score": 70, "source_url": "https://a", "trigger_reason": "x"}
+    )
+    b = ScannedSignal.model_validate(
+        {"company": "B", "score": 70, "source_url": "https://b", "trigger_reason": "y"}
+    )
+    c = ScannedSignal.model_validate(
+        {"company": "C", "score": 70, "source_url": "https://c", "trigger_reason": "z"}
+    )
+
+    def scan(company, today, settings=None, hint=None):
+        if company == "A":
+            raise RuntimeError("boom")
+        return [
+            ScannedSignal.model_validate(
+                {
+                    "company": "Someone Else",
+                    "score": 80,
+                    "score_breakdown": {
+                        "timing": 16,
+                        "capacity": 16,
+                        "brand_fit": 16,
+                        "urgency": 16,
+                        "ops_fit": 16,
+                    },
+                }
+            )
+        ]
+
+    out, note = inbox.enrich(
+        [a, b, c], dt.date(2026, 9, 8), Settings(inbox_scan_max=2), scan_fn=scan
+    )
+    assert [s.company for s in out] == ["A", "B", "C"]  # nothing lost, nothing swapped in
+    assert note["kept_thin"] == ["A: RuntimeError", "B: no matching scored record"]
+    assert note["scanned"] == []
+    out, note = inbox.enrich([a], dt.date(2026, 9, 8), Settings(inbox_scan_max=0), scan_fn=scan)
+    assert out == [a] and note == {"scanned": [], "kept_thin": []}

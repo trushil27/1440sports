@@ -442,6 +442,15 @@ def run_day(
     from intel import inbox
 
     inbox_signals, inbox_note = inbox.collect(session, settings, stages.mailer)
+    if inbox_signals and not scanner:
+        # Only with the real scanner (tests inject one): a lead needs the scanner's own
+        # scored record to get past the gate, and that is one bounded call per lead.
+        inbox_signals, scan_note = inbox.enrich(inbox_signals, run_date, settings)
+        inbox_note["scanned"] = scan_note["scanned"]
+        inbox_note["kept_thin"] = scan_note["kept_thin"]
+        progress(
+            f"inbox leads scored by the scanner: {scan_note['scanned']}; kept thin: {scan_note['kept_thin']}"
+        )
     if inbox_note.get("status") == "read":
         progress(
             f"inbox: {inbox_note.get('mails_read', 0)} mail(s) in the window, "

@@ -67,6 +67,13 @@ class Settings(BaseModel):
     max_verification_attempts: int = Field(
         default=3, description="Candidates tried after a block (§6.5)."
     )
+    inbox_scan_max: int = Field(
+        default=3,
+        description=(
+            "Routine/n8n leads new to the desk that get a single-company scan each morning so "
+            "they carry the five-dimension breakdown the gate needs (about $0.12 each). 0 = off."
+        ),
+    )
     scan_candidates_min: int = 8
     scan_candidates_max: int = 12
     timezone: str = "Europe/London"
