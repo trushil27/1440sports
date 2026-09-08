@@ -448,9 +448,8 @@ def run_day(
         inbox_signals, scan_note = inbox.enrich(inbox_signals, run_date, settings)
         inbox_note["scanned"] = scan_note["scanned"]
         inbox_note["kept_thin"] = scan_note["kept_thin"]
-        progress(
-            f"inbox leads scored by the scanner: {scan_note['scanned']}; kept thin: {scan_note['kept_thin']}"
-        )
+        progress(f"inbox leads scored by the scanner: {scan_note['scanned']}")
+        progress(f"inbox leads kept thin: {scan_note['kept_thin']}")
     if inbox_note.get("status") == "read":
         progress(
             f"inbox: {inbox_note.get('mails_read', 0)} mail(s) in the window, "

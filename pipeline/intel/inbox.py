@@ -330,8 +330,9 @@ def enrich(
     both fell at the gate with "no score_breakdown from scanner" — a lead carries a trigger
     and a source, not the five scored dimensions, so a lead could never win. Each new lead
     now gets one single-company scan (a proper record, from the same scanner), capped by
-    ``inbox_scan_max`` so a busy mailbox cannot run up the bill. A scan that fails, or comes
-    back for a different company, leaves the thin lead in place — it fails the gate honestly.
+    ``inbox_scan_max``. The cap counts calls made, not successes, since every call is paid
+    for — so a busy mailbox cannot run up the bill. A scan that fails, or comes back for a
+    different company, leaves the thin lead in place: it fails the gate honestly.
     """
     from intel.normalise import company_norm
 
@@ -344,10 +345,12 @@ def enrich(
 
         scan_fn = scan_one
     out = []
+    attempts = 0
     for sig in signals:
-        if getattr(sig, "score_breakdown", None) is not None or len(note["scanned"]) >= limit:
+        if getattr(sig, "score_breakdown", None) is not None or attempts >= limit:
             out.append(sig)
             continue
+        attempts += 1  # the cap is on calls made, since every call is paid for
         hint = getattr(sig, "trigger_reason", None) or getattr(sig, "trigger_text", None)
         try:
             found = scan_fn(sig.company, today, settings=settings, hint=hint)
