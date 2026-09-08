@@ -600,6 +600,14 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
 
     contacts = load_contacts()
     contact_rows = attach_contacts(entries, contacts)
+    # The eliminated companies as a page of their own: what they are, where they stand on
+    # money, who runs them, and why the desk passed (operator request, 7 Sep 2026).
+    from intel.profiles import attach as attach_profiles
+    from intel.profiles import load_profiles
+    from intel.profiles import summary as profiles_summary
+
+    profiles = load_profiles()
+    profile_rows = attach_profiles(entries, profiles)
     entries.sort(key=lambda e: (e["date"], e.get("trigger_date") or ""), reverse=True)
     # Where each unbuilt signal sits in the automatic build queue (newest first — the same
     # order intel.rebuild_queue.backlog works through), so the app can say when it lands.
@@ -654,6 +662,7 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
         "renewals": RENEWALS,
         "checks_meta": {**checks_summary(checks), "rows_checked": checked_rows},
         "contacts_meta": {**contacts_summary(contacts), "rows_with_contacts": contact_rows},
+        "profiles_meta": {**profiles_summary(profiles), "rows_with_profile": profile_rows},
         "review_meta": {
             "reviewed_at": "2026-09-05",
             "screened": sum(1 for e in entries if e["review"]["status"] == "screened_out"),
