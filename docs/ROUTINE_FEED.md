@@ -39,7 +39,7 @@ Research and identify B2B sponsorship and activation opportunities for racing te
 2. Research 5–10 B2B technology and services companies that could add value to racing operations (e.g., data analytics, logistics, AI/automation, connectivity, sustainability tech, Fintech, Energy) and cross-reference them against current team sponsor lists.
 3. For each prospect, assess fit: Does their product/service integrate into car performance, championship operations, or team infrastructure? Is there a narrative alignment with the team's brand or goals?
 4. Prioritize prospects capable of 3+ year deals with clear activation potential (title rights, technical partnership, paddock presence, or branded integrations).
-5. BE EARLY. The prospects that matter most are companies whose Series C, Series D, Series E (or later) round, or spin-out / carve-out, was announced in the last 30 days — new money and a new brand to build at the same moment, before other agencies have called. Look for those first; name the round stage and its date for every prospect.
+5. BE EARLY. The prospects that matter most are companies whose Series C, Series D, Series E (or later) round, or spin-out / carve-out, was announced in the last 60 days — new money and a new brand to build at the same moment, before other agencies have called. Look for those first; name the round stage and its date for every prospect.
 
 PRIORITY (MD instruction, Sep 2026): FORMULA E over Formula 1. Weight the search towards Formula E teams and FE-suited categories (energy, electrification, storage, charging, industrial, mobility, sustainability). Only put a prospect on F1 when the FE case would be dishonest.
 

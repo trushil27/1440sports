@@ -1185,6 +1185,9 @@ def main(argv: list[str] | None = None) -> None:
             print(json.dumps(attach_pdfs(session, args.pdfs), indent=1, ensure_ascii=False))
         if do_cases:
             print(json.dumps(import_engine_cases(session), indent=1, ensure_ascii=False))
+            from intel.pool import import_pool
+
+            print(json.dumps(import_pool(session, CASES_DIR), indent=1, ensure_ascii=False))
         if do_checks:
             print(json.dumps(apply_signal_checks(session), indent=1, ensure_ascii=False))
         if args.restart_sequence is not None:

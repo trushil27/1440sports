@@ -257,6 +257,26 @@ def rank_eligible(
     return by_score
 
 
+def _scan_with_retry(scanner, run_date: dt.date, settings: Settings, inbox_signals: list):
+    """The day's scan, tried again once if it fails and nothing else is in the pool.
+
+    The scanner has failed on ordinary mornings for reasons that do not repeat (a cut-off
+    reply, an API hiccup). When the mailbox offered candidates the day goes on without it;
+    when it did not, a second full attempt (about $0.12) is cheaper than an empty morning
+    — the operator has said so in as many words (8 Sep 2026)."""
+    attempts = max(1, int(getattr(settings, "scan_full_attempts", 2)))
+    last: ScanFailed | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            return scanner(run_date) if scanner else run_scan(run_date, settings=settings).signals
+        except ScanFailed as exc:
+            last = exc
+            if inbox_signals or attempt == attempts:
+                raise
+            progress(f"scan attempt {attempt} failed ({str(exc)[:120]}); trying once more")
+    raise last  # pragma: no cover — the loop always returns or raises
+
+
 def _scan_more(scanner, run_date: dt.date, settings: Settings, addendum: str):
     """The freshness retry: an injected scanner that accepts an addendum gets it; the real
     scanner runs with the addendum appended to its prompt."""
@@ -478,7 +498,7 @@ def run_day(
         progress(f"inbox: {inbox_note.get('status')}")
     scan_error: str | None = None
     try:
-        signals = scanner(run_date) if scanner else run_scan(run_date, settings=settings).signals
+        signals = _scan_with_retry(scanner, run_date, settings, inbox_signals)
     except ScanFailed as exc:
         raw_tail = (exc.raw or "")[-6000:]
         progress(f"scan failed: {exc}")

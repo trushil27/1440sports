@@ -146,6 +146,13 @@ def sync_cases(session: Session, out_root: Path | str) -> list[dict[str, str]]:
         if record.exists():
             continue
         written.append(export_case(session, brief, out_root, stem))
+    # The rest of the day's pool goes with the case (operator, 8 Sep 2026): runner-ups and
+    # blocked candidates, so tomorrow's start remembers them and the app shows them.
+    from intel.config import get_settings
+    from intel.pool import sync_pool
+
+    for path in sync_pool(session, out_root, get_settings().md_threshold):
+        written.append({"pool": path})
     return written
 
 

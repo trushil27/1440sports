@@ -99,7 +99,8 @@ jobs:
       FRESHNESS_DAYS_TRACK1: ${{ vars.FRESHNESS_DAYS_TRACK1 || '90' }}
       # Be among the first to approach a Series C/D/E or spin-out (operator, 8 Sep 2026): the
       # scanner looks for those inside this many days first; at equal score they rank ahead.
-      PRIORITY_DAYS: ${{ vars.PRIORITY_DAYS || '30' }}
+      # 60 days (operator, 8 Sep 2026: "so we don't miss out").
+      PRIORITY_DAYS: ${{ vars.PRIORITY_DAYS || '60' }}
       FRESHNESS_FALLBACK_DAYS: ${{ vars.FRESHNESS_FALLBACK_DAYS || '90' }}
       PDF_STORAGE_DIR: storage/briefs
       SITE_DIR: storage/site

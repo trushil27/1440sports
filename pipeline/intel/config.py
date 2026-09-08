@@ -68,11 +68,19 @@ class Settings(BaseModel):
         default=3, description="Candidates tried after a block (§6.5)."
     )
     priority_days: int = Field(
-        default=30,
+        default=60,
         description=(
             "The desk wants to be among the first to approach a company after a Series C/D/E "
             "round or a spin-out. The scanner is asked for those inside this many days first, "
             "and at equal score the newest such trigger ranks ahead (operator, 8 Sep 2026)."
+        ),
+    )
+    scan_full_attempts: int = Field(
+        default=2,
+        description=(
+            "Full scans tried before the day is declared failed when no other source offered "
+            "a candidate. The scanner has failed on ordinary mornings; a second try costs "
+            "about $0.12 and has been the difference between a signal and none."
         ),
     )
     inbox_scan_max: int = Field(

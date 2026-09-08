@@ -376,6 +376,32 @@ def screened_display_names(cases_dir: Path | None = None) -> dict[str, str]:
     return names
 
 
+def _screen_row(row: dict[str, Any]) -> dict[str, Any]:
+    """A screen-out with no brief row, in the row shape the app reads."""
+    base = {
+        "key": f"{row['date']}|{row['company']}",
+        "number": None,
+        "label": None,
+        "tier": None,
+        "series_inferred": False,
+        "take": None,
+        "verification": None,
+        "audit": None,
+        "track": 1,
+        "historical": True,
+        "confidence": None,
+        "source_label": None,
+        "deck": None,
+        "bottom_line": None,
+        "horizon": None,
+        "signals": [],
+        "has_page": False,
+        "pdf_path": None,
+        "checked_only": True,
+    }
+    return {**base, **row}
+
+
 def orphan_screen_rows(
     entries: list[dict[str, Any]],
     review: dict[str, dict[str, Any]] | None,
@@ -601,6 +627,15 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
     propagate_case_screens(entries)
     # after the merge, so a screen-out that DOES belong to a surviving row stays on that row
     entries.extend(orphan_screen_rows(entries, review))
+    # candidates the ledger blocked on a contradicted claim (intel.pool): a judgment with its
+    # evidence, shown with the other screen-outs unless the company already has a row
+    from intel.pool import blocked_rows
+
+    have = {company_norm(e["company"]) for e in entries}
+    for row in blocked_rows(CASES_DIR):
+        if company_norm(row["company"]) not in have:
+            have.add(company_norm(row["company"]))
+            entries.append(_screen_row(row))
     attach_deal_updates(entries, session.scalars(select(Sponsor)).all())
     from intel.checks import load_checks
     from intel.checks import summary as checks_summary
