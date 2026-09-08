@@ -218,7 +218,9 @@
   .people { margin: 0 0 18px; }
   .people table { width: 100%; }
   .people td { padding: 11px 16px; vertical-align: top; }
-  .people td.seat { color: var(--label); font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; white-space: nowrap; width: 190px; }
+  .people td.seat { width: 220px; vertical-align: top; }
+  .people td.seat .title { color: var(--head); font-size: 13.5px; font-weight: 700; line-height: 1.35; overflow-wrap: anywhere; }
+  .people td.seat .why { color: var(--label); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; margin-top: 4px; }
   .people td.who b { color: var(--head); font-size: 15px; }
   .people td.who .sm { display: block; color: var(--muted); font-size: 12.5px; margin-top: 2px; }
   .people td.src { text-align: right; white-space: nowrap; }
@@ -504,9 +506,11 @@
     if (!rec) return '';
     const people = rec.people || [];
     if (!people.length && !rec.no_cmo) return '';
+    // The label is the title the person actually holds (operator, 8 Sep 2026: "CEO as CEO,
+    // not Executive owner"); the desk's reason for listing them is the small line under it.
     const rows = people.map((p) => `<tr>
-      <td class="seat">${esc(SEAT_LABEL[p.seat] || p.seat || '')}</td>
-      <td class="who"><b>${esc(p.name)}</b><span class="sm">${esc(p.role || '')}${p.note ? ' — ' + esc(p.note) : ''}</span></td>
+      <td class="seat"><div class="title">${esc(p.role || SEAT_LABEL[p.seat] || p.seat || '')}</div>${p.role && SEAT_LABEL[p.seat] ? `<div class="why">${esc(SEAT_LABEL[p.seat])}</div>` : ''}</td>
+      <td class="who"><b>${esc(p.name)}</b>${p.note ? `<span class="sm">${esc(p.note)}</span>` : ''}</td>
       <td class="src">${p.source_url ? `<a href="${esc(p.source_url)}" target="_blank" rel="noopener">source</a>` : ''}</td>
     </tr>`).join('');
     const noCmo = rec.no_cmo ? `<div class="sm nocmo">No marketing officer is listed on the company's own leadership page${rec.checked_at ? ' (checked ' + fmtDate(rec.checked_at) + ')' : ''}. Approach through the seat above rather than inventing a CMO.</div>` : '';
