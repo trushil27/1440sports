@@ -229,10 +229,26 @@ def triage(
     return eligible
 
 
-def rank_eligible(eligible: list[Candidate], run_date: dt.date) -> list[Candidate]:
-    """Selection order: FE first on Tue/Fri (rotation), then by ranking score desc."""
+def rank_eligible(
+    eligible: list[Candidate], run_date: dt.date, priority_days: int = 30
+) -> list[Candidate]:
+    """Selection order: FE first on Tue/Fri (rotation), then by ranking score desc.
+
+    At equal score, a growth-stage trigger (Series C or later, a spin-out) inside
+    ``priority_days`` ranks ahead, and the newer one first: the desk wants to be among the
+    first to approach those (operator, 8 Sep 2026). The score itself is untouched."""
+    from intel.stage import is_growth_stage, round_stage
+
+    def early(c: Candidate) -> tuple[int, int]:
+        age = (run_date - c.trigger_date).days if c.trigger_date else 10**6
+        stage = round_stage(c.trigger_reason_raw or "")
+        first = 1 if is_growth_stage(stage) and 0 <= age <= priority_days else 0
+        return first, -age
+
     by_score = sorted(
-        eligible, key=lambda c: (c.score_breakdown or {}).get("ranking", 0), reverse=True
+        eligible,
+        key=lambda c: ((c.score_breakdown or {}).get("ranking", 0), *early(c)),
+        reverse=True,
     )
     if score.fe_rotation_day(run_date):
         fe = [c for c in by_score if c.series == Series.FE]
@@ -567,7 +583,7 @@ def run_day(
             )
             signals = list(signals) + sigs
             fallback_used = fb
-    ordered = rank_eligible(eligible, run_date)
+    ordered = rank_eligible(eligible, run_date, settings.priority_days)
     shortlist = ordered[: settings.max_verification_attempts]
     progress(
         f"{len(eligible)} eligible of {len(signals)}; verifying in order: "

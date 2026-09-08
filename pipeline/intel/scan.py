@@ -283,12 +283,32 @@ OUTPUT_DISCIPLINE = (
 )
 
 
-def scanner_prompts(today: dt.date, addendum: str | None = None) -> tuple[str, str]:
+#: Operator, 8 Sep 2026: be very early, not fiftieth. The scanner returned mostly rounds from
+#: seven months ago on its first live morning; this points it at the week's growth-stage
+#: events first and says why.
+def sourcing_priority(today: dt.date, days: int) -> str:
+    since = today - dt.timedelta(days=days)
+    return (
+        f"SOURCING PRIORITY. Look FIRST for companies whose Series C, Series D, Series E (or "
+        f"later) round, or spin-out / carve-out, was announced between {since.isoformat()} and "
+        f"{today.isoformat()}. These are the companies with new money and a new brand to "
+        f"build, and the point is to be among the first to approach them — not the fiftieth. "
+        f"Name the stage in key_facts.funding (e.g. 'Series D, $250m, 3 Sep 2026'). Fill the "
+        f"rest of the list with the best older or earlier-stage triggers only after that."
+    )
+
+
+def scanner_prompts(
+    today: dt.date, addendum: str | None = None, priority_days: int | None = None
+) -> tuple[str, str]:
     system = scanner_system_prompt().replace(_TODAY_TOKEN, today.isoformat())
     user = load_prompt("scanner_v218_user.txt")
     if addendum:
         user = user.rstrip() + "\n\n" + addendum.strip() + "\n"
-    return system, user.rstrip() + "\n\n" + OUTPUT_DISCIPLINE + "\n"
+    days = priority_days if priority_days is not None else get_settings().priority_days
+    return system, (
+        user.rstrip() + "\n\n" + sourcing_priority(today, days) + "\n\n" + OUTPUT_DISCIPLINE + "\n"
+    )
 
 
 SINGLE_COMPANY_USER = (
@@ -329,7 +349,7 @@ def run_scan(
     """One scanner turn. ``addendum`` is appended to the user prompt (the freshness retry)."""
     settings = settings or get_settings()
     client = client or AnthropicText()
-    system, user = scanner_prompts(today, addendum)
+    system, user = scanner_prompts(today, addendum, settings.priority_days)
     messages: list[dict] = [{"role": "user", "content": user}]
     errors: list[str] = []
     raws: list[str] = []

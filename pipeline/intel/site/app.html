@@ -344,6 +344,7 @@
     out.push(`<span class="badge ${verClass(b.verification)}">${verLabel(b.verification)}</span>`);
     if (b.review.status === 'keep_flagged') out.push('<span class="badge warn" title="' + esc(b.review.reason || '') + '">Check</span>');
     if (b.deal_update) out.push(`<span class="badge navy">Now partner · ${esc(teamDisplay(b.deal_update.team))}</span>`);
+    if (b.stage) out.push(`<span class="badge ${/^(Series [C-H]|Spin-out|Pre-IPO|IPO|Growth round)$/.test(b.stage) ? 'info' : 'mute'}" title="Stage of the capital event behind this signal">${esc(b.stage)}</span>`);
     if (b.check) {
       if (!b.deal_update && (b.check.motorsport_status || '') === 'EXISTING_PARTNER') out.push('<span class="badge navy">Existing partner</span>');
       if ((b.check.corrections && b.check.corrections.length) || b.check.person_status === 'CHANGED') out.push('<span class="badge warn">Corrected</span>');

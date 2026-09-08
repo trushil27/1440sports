@@ -67,6 +67,14 @@ class Settings(BaseModel):
     max_verification_attempts: int = Field(
         default=3, description="Candidates tried after a block (§6.5)."
     )
+    priority_days: int = Field(
+        default=30,
+        description=(
+            "The desk wants to be among the first to approach a company after a Series C/D/E "
+            "round or a spin-out. The scanner is asked for those inside this many days first, "
+            "and at equal score the newest such trigger ranks ahead (operator, 8 Sep 2026)."
+        ),
+    )
     inbox_scan_max: int = Field(
         default=3,
         description=(

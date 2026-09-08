@@ -293,6 +293,20 @@ def brief_card(brief: Brief) -> dict[str, Any]:
     }
 
 
+def _stage_of(brief: Brief) -> str | None:
+    """Series C/D/E, spin-out, IPO — from the trigger text or the brief's own funding fact."""
+    from intel.stage import round_stage
+
+    d = brief.brief_data or {}
+    facts = d.get("key_facts") or {}
+    return round_stage(
+        " ".join(
+            str(x or "")
+            for x in (brief.candidate.trigger_reason_raw, facts.get("funding"), d.get("deck"))
+        )
+    )
+
+
 def brief_entry(
     brief: Brief, include_page: bool, review: dict[str, dict[str, Any]] | None = None
 ) -> dict[str, Any]:
@@ -325,6 +339,7 @@ def brief_entry(
         "deck": d.get("deck"),
         "bottom_line": d.get("bottom_line"),
         "trigger": brief.candidate.trigger_reason_raw,
+        "stage": _stage_of(brief),
         "trigger_date": brief.candidate.trigger_date.isoformat()
         if brief.candidate.trigger_date
         else None,
