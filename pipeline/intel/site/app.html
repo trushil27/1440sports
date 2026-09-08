@@ -25,7 +25,8 @@
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .side { transition: none !important; } }
-  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
+  a, .co, .scr-name, .tile .t, .kpi .k { overflow-wrap: anywhere; }
   a { color: inherit; text-decoration: none; }
   button { font: inherit; cursor: pointer; }
   :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
@@ -161,6 +162,20 @@
   .teamblock[open] summary { border-bottom: 1px solid var(--hair); }
   .teamblock .open-cats { padding: 12px 22px 0; font-size: 13px; color: var(--muted); }
   .teamblock .tablewrap { border: 0; border-radius: 0; box-shadow: none; }
+  table.sponsors { min-width: 820px; }
+  table.sponsors th, table.sponsors td { vertical-align: top; }
+  table.sponsors td.co { min-width: 180px; }
+  table.sponsors td.co .note-inline { display: none; }
+  table.sponsors td.lvl, table.sponsors td.st, table.sponsors td.num { white-space: nowrap; }
+  table.sponsors td.notes { min-width: 320px; max-width: 52ch; }
+  table.sponsors td.notes .sm { max-width: none; line-height: 1.45; }
+  @media (max-width: 760px) {
+    table.sponsors { min-width: 0; width: 100%; }
+    table.sponsors th.cat, table.sponsors td.cat, table.sponsors th.notes, table.sponsors td.notes { display: none; }
+    table.sponsors td.co { min-width: 0; }
+    table.sponsors td.co .note-inline { display: block; }
+    table.sponsors td.lvl, table.sponsors td.st, table.sponsors td.num { white-space: normal; }
+  }
   /* Screened-out companies: a compact list, one expandable card each */
   .scr-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 0 0 14px; }
   .scr-tools input { flex: 1 1 260px; min-width: 0; border: 1px solid var(--hair); background: var(--panel); color: var(--ink); border-radius: 9px; padding: 10px 14px; font: inherit; font-size: 13.5px; }
@@ -301,6 +316,8 @@
   const live = () => all().filter((b) => b.review.status === 'keep' || b.review.status === 'keep_flagged');
   const bySeries = (s) => live().filter((b) => b.series === s);
   const teamDisplay = (t) => (D.team_display && D.team_display[t]) || t;
+  const LEVEL_LABEL = { team_title: 'Team title', team_major: 'Team partner', powertrain: 'Powertrain', championship_title: 'Championship title', championship_global: 'Championship global', championship_official: 'Championship official' };
+  const levelLabel = (l) => LEVEL_LABEL[l] || String(l || '').replace(/_/g, ' ');
   const teamsFor = (series) => (D.teams || []).filter((t) => t.series === series);
   const onNetlify = () => /netlify\.app$|1440sports\.com$/.test(location.hostname);
   function bindRebuild() {
@@ -561,8 +578,8 @@
     liveRows.filter((s) => s.category).forEach((s) => { (cats[s.category] = cats[s.category] || []).push(s); });
     const until = (s) => s.until ? `${esc(s.until)} <span class="sm">${s.until_kind === 'confirmed' ? 'confirmed' : 'reported'}</span>` : '<span class="sm">not stated</span>';
     const since = (s) => s.since ? esc(s.since) : `<span class="sm">${s.status === 'joined' ? 'new for ' : 'on the '}${esc(s.season || '')} roster</span>`;
-    const rowsHtml = (list) => `<div class="tablewrap"><table><thead><tr><th>Brand</th><th>Category</th><th>Level</th><th>Status</th><th>Since</th><th>Until</th><th>Notes</th></tr></thead><tbody>
-      ${list.map((s) => `<tr data-brand="${esc(s.brand.toLowerCase())}" data-cat="${esc((s.category || '').toLowerCase())}" data-level="${esc(s.level)}"><td class="co">${esc(s.brand)}</td><td>${s.category ? `<span class="cat">${esc(s.category)}</span>` : '<span class="sm">—</span>'}</td><td><span class="sm">${esc((s.level || '').replace(/_/g, ' '))}</span></td><td><span class="badge ${s.status === 'active' ? 'ok' : (s.status === 'joined' ? 'info' : 'mute')}">${esc(s.status)}</span></td><td class="num">${since(s)}</td><td class="num">${until(s)}</td><td><span class="sm">${esc(s.notes || '')}</span></td></tr>`).join('')}
+    const rowsHtml = (list) => `<div class="tablewrap"><table class="sponsors"><thead><tr><th>Brand</th><th class="cat">Category</th><th>Level</th><th>Status</th><th>Since</th><th>Until</th><th class="notes">Notes</th></tr></thead><tbody>
+      ${list.map((s) => `<tr data-brand="${esc(s.brand.toLowerCase())}" data-cat="${esc((s.category || '').toLowerCase())}" data-level="${esc(s.level)}"><td class="co">${esc(s.brand)}${s.category ? `<span class="sm note-inline">${esc(s.category)}</span>` : ''}${s.notes ? `<span class="sm note-inline">${esc(s.notes)}</span>` : ''}</td><td class="cat">${s.category ? `<span class="cat">${esc(s.category)}</span>` : '<span class="sm">—</span>'}</td><td class="lvl"><span class="sm">${esc(levelLabel(s.level))}</span></td><td class="st"><span class="badge ${s.status === 'active' ? 'ok' : (s.status === 'joined' ? 'info' : 'mute')}">${esc(s.status)}</span></td><td class="num">${since(s)}</td><td class="num">${until(s)}</td><td class="notes"><span class="sm">${esc(s.notes || '')}</span></td></tr>`).join('')}
     </tbody></table></div>`;
     const teamKeys = Object.keys(teams).sort((a, b) => teamDisplay(a).localeCompare(teamDisplay(b)));
     const slug = (t) => 'team-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-');
