@@ -1,0 +1,1015 @@
+{
+ "run": {
+  "id": 192,
+  "date": "2026-09-08",
+  "status": "success",
+  "mode": "shadow",
+  "summary": {
+   "usage": {
+    "calls": {
+     "writer": 2,
+     "scanner": 1,
+     "verifier": 20
+    },
+    "tokens": {
+     "input": 53187,
+     "output": 98129,
+     "cache_read": 1953726,
+     "cache_write": 280633
+    },
+    "estimated_usd": 2.18
+   },
+   "sources": {
+    "n8n": 0,
+    "status": "read",
+    "offered": [
+     "EnerVenue (routine)",
+     "Form Energy (routine)",
+     "Ore Energy (routine)",
+     "Base Power (routine)",
+     "Antora Energy (routine)",
+     "Eos Energy Enterprises (routine)",
+     "Baseten (n8n)"
+    ],
+    "routine": 2,
+    "scanner": 10,
+    "n8n_mails": 6,
+    "candidates": 2,
+    "mails_read": 40,
+    "to_research": [],
+    "already_known": [
+     "Form Energy",
+     "Ore Energy",
+     "Base Power",
+     "Antora Energy",
+     "Baseten"
+    ],
+    "routine_mails": 2
+   },
+   "decisions": {
+    "stale": 6,
+    "selected": 1,
+    "gate_failed": 2,
+    "below_threshold": 2,
+    "verification_blocked": 1
+   },
+   "candidates": 12,
+   "verification": [
+    {
+     "status": "blocked",
+     "company": "Nscale",
+     "stage_a": {
+      "verified": 5,
+      "unverified": 1,
+      "contradicted": 2
+     },
+     "blocking": [
+      "undisclosed pre-IPO round",
+      "IPO round"
+     ],
+     "brief_id": 256,
+     "candidate_id": 261
+    },
+    {
+     "pdf": "storage/briefs/2026-09-08/cognitionai.pdf",
+     "web": "storage/briefs/2026-09-08/cognitionai.web.html",
+     "audit": "pass_after_retry",
+     "status": "verified",
+     "company": "Cognition AI",
+     "stage_a": {
+      "verified": 7
+     },
+     "stage_b": {
+      "verified": 6,
+      "unverified": 1
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 257,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 260,
+     "verification": "needs_review",
+     "audit_attempts": 2
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 86,
+     "reason": "top ranking score",
+     "company": "Cognition AI",
+     "decision": "selected",
+     "signal_date": "2026-09-02"
+    },
+    {
+     "rank": 2,
+     "score": 76,
+     "reason": "contradicted load-bearing claim: undisclosed pre-IPO round | IPO round",
+     "company": "Nscale",
+     "decision": "verification_blocked",
+     "signal_date": "2026-09-04"
+    },
+    {
+     "rank": 3,
+     "score": null,
+     "reason": "trigger 2026-01-23 (day) is 228 days old; window is 90",
+     "company": "Baseten",
+     "decision": "stale",
+     "signal_date": "2026-01-23"
+    },
+    {
+     "rank": 4,
+     "score": 67,
+     "reason": "ranking score 67 < threshold 70",
+     "company": "Wispr",
+     "decision": "below_threshold",
+     "signal_date": "2026-08-17"
+    },
+    {
+     "rank": 5,
+     "score": null,
+     "reason": "trigger 2026-02-12 (day) is 208 days old; window is 90",
+     "company": "Anthropic",
+     "decision": "stale",
+     "signal_date": "2026-02-12"
+    },
+    {
+     "rank": 6,
+     "score": null,
+     "reason": "trigger 2026-02-10 (day) is 210 days old; window is 90",
+     "company": "Runway",
+     "decision": "stale",
+     "signal_date": "2026-02-10"
+    },
+    {
+     "rank": 7,
+     "score": null,
+     "reason": "trigger 2026-02-04 (day) is 216 days old; window is 90",
+     "company": "ElevenLabs",
+     "decision": "stale",
+     "signal_date": "2026-02-04"
+    },
+    {
+     "rank": 8,
+     "score": null,
+     "reason": "trigger 2026-02-05 (day) is 215 days old; window is 90",
+     "company": "Goodfire",
+     "decision": "stale",
+     "signal_date": "2026-02-05"
+    },
+    {
+     "rank": 9,
+     "score": null,
+     "reason": "trigger 2026-02-05 (day) is 215 days old; window is 90",
+     "company": "Fundamental",
+     "decision": "stale",
+     "signal_date": "2026-02-05"
+    },
+    {
+     "rank": 10,
+     "score": 56,
+     "reason": "ranking score 45 < threshold 70",
+     "company": "AlphaSense",
+     "decision": "below_threshold",
+     "signal_date": "2026-09-03"
+    },
+    {
+     "rank": 11,
+     "score": null,
+     "reason": "no score_breakdown from scanner",
+     "company": "EnerVenue",
+     "decision": "gate_failed",
+     "signal_date": "2026-07-27"
+    },
+    {
+     "rank": 12,
+     "score": null,
+     "reason": "no score_breakdown from scanner",
+     "company": "Eos Energy Enterprises",
+     "decision": "gate_failed",
+     "signal_date": "2026-08-24"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Cognition AI",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 86,
+   "score_breakdown": {
+    "cap": null,
+    "base": 86,
+    "total": 86,
+    "timing": 19,
+    "ops_fit": 15,
+    "ranking": 86,
+    "urgency": 16,
+    "capacity": 20,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 86,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 86,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "BWT Alpine",
+   "source_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+   "trigger_date": "2026-09-02",
+   "trigger_reason": "Closing ~$1B round at $47B valuation amid $10B investor demand"
+  },
+  {
+   "rank": 2,
+   "company": "Nscale",
+   "series": "FE",
+   "decision": "verification_blocked",
+   "reason": "contradicted load-bearing claim: undisclosed pre-IPO round | IPO round",
+   "score_total": 76,
+   "score_breakdown": {
+    "cap": null,
+    "base": 76,
+    "total": 76,
+    "timing": 15,
+    "ops_fit": 14,
+    "ranking": 76,
+    "urgency": 15,
+    "capacity": 18,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.bloomberg.com/ai",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 76,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 76,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Envision Racing",
+   "source_url": "https://www.bloomberg.com/ai",
+   "trigger_date": "2026-09-04",
+   "trigger_reason": "Seeking $3.5B in pre-IPO financing for AI cloud buildout"
+  },
+  {
+   "rank": 3,
+   "company": "Baseten",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-01-23 (day) is 228 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Audi F1 Team",
+   "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+   "trigger_date": "2026-01-23",
+   "trigger_reason": "Series E closed at $5B valuation for AI inference/deployment infra"
+  },
+  {
+   "rank": 4,
+   "company": "Wispr",
+   "series": "F1",
+   "decision": "below_threshold",
+   "reason": "ranking score 67 < threshold 70",
+   "score_total": 67,
+   "score_breakdown": {
+    "cap": null,
+    "base": 67,
+    "total": 67,
+    "timing": 15,
+    "ops_fit": 13,
+    "ranking": 67,
+    "urgency": 12,
+    "capacity": 15,
+    "brand_fit": 12,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 3,
+     "product_to_need": 5,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 12
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 67,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 67,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "MoneyGram Haas F1 Team",
+   "source_url": "https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/",
+   "trigger_date": "2026-08-17",
+   "trigger_reason": "Series B at $2B valuation, expanding beyond dictation into meetings/note-taking"
+  },
+  {
+   "rank": 5,
+   "company": "Anthropic",
+   "series": "FE",
+   "decision": "stale",
+   "reason": "trigger 2026-02-12 (day) is 208 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Jaguar TCS Racing",
+   "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+   "trigger_date": "2026-02-12",
+   "trigger_reason": "$30B Series G at $380B valuation, largest AI lab financing on record"
+  },
+  {
+   "rank": 6,
+   "company": "Runway",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-02-10 (day) is 210 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Visa Cash App Racing Bulls",
+   "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+   "trigger_date": "2026-02-10",
+   "trigger_reason": "Series E at $5.3B valuation for media-generation platform"
+  },
+  {
+   "rank": 7,
+   "company": "ElevenLabs",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-02-04 (day) is 216 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+   "trigger_date": "2026-02-04",
+   "trigger_reason": "Series D at $11B valuation; already an Audi AI partner, evaluating second-team expansion"
+  },
+  {
+   "rank": 8,
+   "company": "Goodfire",
+   "series": "FE",
+   "decision": "stale",
+   "reason": "trigger 2026-02-05 (day) is 215 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "DS Penske",
+   "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+   "trigger_date": "2026-02-05",
+   "trigger_reason": "Series B at $1.25B valuation for AI interpretability research lab"
+  },
+  {
+   "rank": 9,
+   "company": "Fundamental",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-02-05 (day) is 215 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Scuderia Ferrari",
+   "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+   "trigger_date": "2026-02-05",
+   "trigger_reason": "Series A at $1.4B valuation for AI decision-modeling research"
+  },
+  {
+   "rank": 10,
+   "company": "AlphaSense",
+   "series": "F1",
+   "decision": "below_threshold",
+   "reason": "ranking score 45 < threshold 70",
+   "score_total": 56,
+   "score_breakdown": {
+    "cap": null,
+    "base": 56,
+    "total": 56,
+    "timing": 10,
+    "ops_fit": 11,
+    "ranking": 45,
+    "urgency": 9,
+    "capacity": 15,
+    "brand_fit": 11,
+    "alumni_boost": 0,
+    "of_gate_applied": false,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 1,
+     "product_to_need": 5,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": false,
+     "brand_fit": 11
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://tech.yahoo.com/ai/articles/ai-startup-alphasense-valued-2-120438909.html",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 45,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 56,
+    "scanner_vs_recomputed_delta": -11
+   },
+   "recommended_team": "Atlassian Williams Racing",
+   "source_url": "https://tech.yahoo.com/ai/articles/ai-startup-alphasense-valued-2-120438909.html",
+   "trigger_date": "2026-09-03",
+   "trigger_reason": "Series E at $2.5B valuation for AI market-intelligence platform"
+  },
+  {
+   "rank": 11,
+   "company": "EnerVenue",
+   "series": "FE",
+   "decision": "gate_failed",
+   "reason": "no score_breakdown from scanner",
+   "score_total": null,
+   "score_breakdown": {},
+   "gate_results": {
+    "gate0_source": {
+     "url": "https://www.ess-news.com/2026/07/31/enervenue-appoints-rahul-mehta-as-chief-revenue-officer-to-build-its-global-commercial-platform-for-the-next-phase-of-growth/",
+     "pass": true,
+     "tier": 2
+    }
+   },
+   "recommended_team": "Mahindra Racing (suggested destination)",
+   "source_url": "https://www.ess-news.com/2026/07/31/enervenue-appoints-rahul-mehta-as-chief-revenue-officer-to-build-its-global-commercial-platform-for-the-next-phase-of-growth/",
+   "trigger_date": "2026-07-27",
+   "trigger_reason": "Appointed Rahul Mehta as Chief Revenue Officer with a mandate to build a global commercial platform"
+  },
+  {
+   "rank": 12,
+   "company": "Eos Energy Enterprises",
+   "series": "FE",
+   "decision": "gate_failed",
+   "reason": "no score_breakdown from scanner",
+   "score_total": null,
+   "score_breakdown": {},
+   "gate_results": {
+    "gate0_source": {
+     "url": "https://www.globenewswire.com/news-release/2026/08/25/3350885/0/en/eos-energy-enterprises-appoints-michelle-buczkowski-as-chief-commercial-officer.html",
+     "pass": true,
+     "tier": 1
+    }
+   },
+   "recommended_team": "DS Penske (suggested destination)",
+   "source_url": "https://www.globenewswire.com/news-release/2026/08/25/3350885/0/en/eos-energy-enterprises-appoints-michelle-buczkowski-as-chief-commercial-officer.html",
+   "trigger_date": "2026-08-24",
+   "trigger_reason": "Appointed Michelle Buczkowski as Chief Commercial Officer, unifying sales, BD and marketing"
+  }
+ ],
+ "brief": {
+  "number": 243,
+  "verification_status": "needs_review",
+  "audit_status": "pass_after_retry",
+  "audit_attempts": 2,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "storage/briefs/2026-09-08/cognitionai.web.html",
+  "brief_data": {
+   "hq": "San Francisco",
+   "deck": "Cognition AI is finalizing a $1 billion round at a $47 billion valuation, with investor demand reported at 10x oversubscription, expected to close September 2026. The raise values its autonomous coding-agent platform, Devin, as engineering teams adopt AI agents to compress software development cycles industry-wide.",
+   "risks": [
+    {
+     "label": "CATEGORY UNPROVEN",
+     "detail": "No AI coding-agent has sponsored an F1 team, leaving positioning unproven.",
+     "counter": "First-mover status lets Cognition define the category before rival AI vendors follow."
+    },
+    {
+     "label": "ROUND COULD SLIP",
+     "detail": "The funding close could slip past September, delaying the visibility window.",
+     "counter": "Opening talks pre-close locks the relationship ahead of the valuation headline."
+    }
+   ],
+   "score": 86,
+   "ticker": "~$47B valuation (round closing September 2026)",
+   "company": "Cognition AI",
+   "gridfit": [
+    {
+     "team": "BWT Alpine F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "catalyst"
+   ],
+   "sources": [
+    "https://www.bloomberg.com/profile/person/24001957",
+    "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+    "https://m.investing.com/news/stock-market-news/cognition-set-to-raise-1-billion-at-47-billion-valuation--bloomberg-4885238?ampMode=1",
+    "https://cognition.com/",
+    "https://en.wikipedia.org/wiki/Cognition_AI"
+   ],
+   "extended": {
+    "ask": "Request 25 minutes with Scott Wu's BD lead before the round closes to scope a three-year technical-partner structure with BWT Alpine.",
+    "value": [
+     {
+      "text": "Devin would be deployed across Alpine's vehicle-simulation code, telemetry-processing tools and pit-wall strategy software, compressing engineering-development cycles during the season.",
+      "label": "Operational Workstream"
+     },
+     {
+      "text": "A live F1 deployment gives Cognition an enterprise reference case for engineering organizations evaluating coding agents at scale, supporting its post-raise sales motion.",
+      "label": "Commercial Lift"
+     },
+     {
+      "text": "Race-weekend content showing Devin inside Alpine's factory and simulation environment creates technical-credibility material for Cognition's enterprise buyers, beyond typical trackside branding.",
+      "label": "Content & Ecosystem"
+     },
+     {
+      "text": "Alpine gains modern engineering tooling to replace legacy software processes left behind by Renault's exit, plus a well-capitalized technical partner entering its growth phase.",
+      "label": "What The Team Gets"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Cognition AI is set to close a $1 billion funding round in September 2026 at a $47 billion valuation, with investor demand reported at 10x oversubscription.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The raise gives Cognition the balance-sheet scale to fund a multi-year sports-marketing commitment without touching product R&D budget, a rare position for a coding-agent startup this early in its growth cycle.",
+      "label": "Budget Moment"
+     },
+     {
+      "text": "The next viable F1 activation windows fall at the Singapore and United States Grand Prix weekends, before the post-raise valuation story ages out of the news cycle.",
+      "label": "Calendar Window"
+     },
+     {
+      "text": "No AI coding-agent company currently holds an F1 sponsorship; well-capitalized rivals in enterprise AI could move on the same open lane once Cognition's raise becomes public knowledge.",
+      "label": "Competitive Clock"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "BWT Alpine's engineering-software stack is being refreshed following Renault's exit from the power-unit program, leaving a technical-category slot open for a modern software partner.",
+      "label": "Open Category Lane"
+     },
+     {
+      "text": "Alpine's engineering and simulation teams run the same software-heavy workflows Cognition's Devin agent is built to accelerate, giving the partnership direct operational relevance rather than pure logo placement.",
+      "label": "Market Overlap"
+     },
+     {
+      "text": "Alpine's factory, simulation facility and race-weekend garage all offer surfaces to demonstrate a coding agent live, rather than confining the brand to trackside signage.",
+      "label": "Activation Platform"
+     },
+     {
+      "text": "A team mid-refresh of its engineering tooling is positioned to actually deploy Devin across live workflows, not just carry the brand passively.",
+      "label": "Consumption Capacity"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "None identified",
+      "reason": "No AI coding-agent sponsorship exists elsewhere on the grid, per current signal data."
+     }
+    ]
+   },
+   "date_long": "08 SEP 2026",
+   "discovery": "scan",
+   "team_label": "BWT ALPINE",
+   "value_mode": "A",
+   "bottom_line": "Cognition's $1B raise at a $47B valuation creates a narrow pre-close visibility window; BWT Alpine's post-Renault engineering-software refresh is the only open technical-partner lane matching Cognition's coding-agent positioning — move before a rival AI vendor claims it.",
+   "footer_date": "8 SEP 2026",
+   "score_cells": [
+    {
+     "num": 19,
+     "note": "Round closing within weeks.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 20,
+     "note": "Raising $1B, ample sponsorship capacity.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 16,
+     "note": "Fits Alpine's software refresh need.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 16,
+     "note": "Pre-close window narrows fast.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 15,
+     "note": "Coding agent maps to engineering workflows.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Cognition AI is set to close a $1 billion funding round in September 2026 at a $47 billion valuation, with demand reported at 10x oversubscription. The raise cements Cognition among the best-capitalized AI infrastructure plays of 2026, positioning its Devin coding-agent platform as a category leader in autonomous software engineering. This is the <font name='Poppins-Bold' size='9.5'>BRAND RECKONING</font> moment: capital of this scale demands a visibility platform matched to its ambition, not just enterprise sales decks and developer conferences.",
+   "the_case_p2": "No AI coding-agent company has entered F1 sponsorship to date, leaving the category entirely open on the grid. Enterprise software and cloud-infrastructure brands have already claimed visibility across multiple teams this season, compressing the window for a fast-moving challenger to secure a technical-partner slot. The lane matching Cognition's engineering-workflow positioning sits open at BWT Alpine.",
+   "track_label": "",
+   "brief_number": "243",
+   "claims_total": 12,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": true,
+   "proof_points": [
+    {
+     "fact": "raising around $1 billion",
+     "value": "$1 b",
+     "claim_id": 1974,
+     "verified": true,
+     "source_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value"
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "2-4 WKS",
+   "industry_meta": "AI Software - Coding Agents - San Francisco",
+   "value_content": "Cognition's Devin agent maps to Alpine's software-engineering pipeline: vehicle-simulation code, telemetry-processing tools and pit-wall strategy software all run on engineering codebases that benefit from autonomous coding-agent acceleration. Deployment surface: factory software-engineering teams, simulation-tool development, telemetry-pipeline maintenance, and race-weekend strategy-software patches — with Devin visible on factory monitors and engineer-facing dashboards as a live technical demonstration.",
+   "value_section": true,
+   "why_team_para": "BWT Alpine's engineering software stack is undergoing refresh following Renault's exit from the power-unit program, opening a technical-category slot for a partner who can supply modern engineering tooling rather than legacy enterprise software. Cognition's Devin platform, built for compressing engineering-workflow cycles, matches that vacancy directly — a coding-agent deployed across Alpine's simulation and vehicle-software teams would be the first AI-native technical partner on the F1 grid.",
+   "deal_arch_para": "A three-year Technical Partner agreement in the estimated $8-12M annual range positions Cognition as Alpine's engineering-software partner through 2029, with activation anchored at Singapore, United States and Abu Dhabi race weekends. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font> secures brand visibility through Cognition's post-raise growth phase, with an option to scale into a Major Partner tier as Devin's enterprise footprint expands.",
+   "footer_company": "COGNITION AI",
+   "why_team_label": "WHY BWT ALPINE",
+   "claims_verified": 11,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The $1B round is scheduled to close this month, creating a narrow pre-close and post-close visibility window before Cognition's valuation story is old news. F1's Singapore and United States race weekends in the coming quarter offer the next viable activation windows before competing capital-flush AI vendors move first.",
+   "confidence_level": "HIGH",
+   "decision_maker_bio": "Co-founder and CEO of Cognition AI since its 2023 founding; previously a competitive programmer, Scott Wu now leads the company's flagship Devin coding-agent product and its enterprise go-to-market strategy as the company scales past its latest funding round.",
+   "decision_maker_name": "Scott Wu",
+   "decision_maker_role": "Co-Founder and CEO, Cognition AI",
+   "opening_angle_intro": "Cognition is closing a record AI funding round while the F1 grid's coding-agent category remains fully open.",
+   "opening_angle_quote": "&ldquo;Cognition's $1 billion round closes this month at a $47 billion valuation — before that story goes cold, can we book 25 minutes?&rdquo;",
+   "value_section_label": "VALUE TO BWT ALPINE",
+   "verification_status": "needs_review",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Scott Wu, CEO at Cognition AI",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.bloomberg.com/profile/person/24001957",
+     "excerpt": "Scott Wu is CEO/Co-Founder at Cognition AI Inc.",
+     "notes": "Bloomberg's own company/person profile confirms Scott Wu is CEO of Cognition AI, corroborated by Cognition's Wikipedia entry listing him as CEO.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Scott Wu, Co-Founder and CEO, Cognition AI at Cognition AI",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://en.wikipedia.org/wiki/Cognition_AI",
+     "excerpt": "Founders: Scott Wu; Steven Hao; Walden Yan; ... Key people: Scott Wu (CEO)",
+     "notes": "Multiple sources including Wikipedia and Bloomberg confirm Scott Wu is Co-Founder and CEO of Cognition AI.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "raising around $1 billion",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+     "excerpt": "Artificial intelligence coding startup Cognition AI Inc. is set to close a new round of funding that would vault its valuation to about $47 billion, according to people familiar with the efforts.",
+     "notes": "Bloomberg's report, corroborated by multiple outlets citing it, confirms Cognition AI is raising around $1 billion at a $47 billion valuation.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Cognition AI is finalizing a $1 billion round at a $47 billion valuation, with investor demand reported at 10x oversubscription, expected to close September 2026.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+     "excerpt": "The company is raising around $1 billion in its latest haul, said the people, who asked not to be identified because the information is private... adding that Cognition received nearly $10 billion in investor interest.",
+     "notes": "Bloomberg (Tier 1) reported on Sept 2, 2026 that Cognition AI is set to close a ~$1 billion round at a $47 billion valuation with nearly $10 billion in investor demand (roughly 10x the raise size), matching the claim's figures and timing.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "undisclosed, round oversubscribed 10x demand",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://m.investing.com/news/stock-market-news/cognition-set-to-raise-1-billion-at-47-billion-valuation--bloomberg-4885238?ampMode=1",
+     "excerpt": "The final raise could exceed $1 billion amid strong investor demand, with Cognition having received nearly $10 billion in investor interest, according to the report.",
+     "notes": "Bloomberg's reporting (corroborated independently by Investing.com's summary of the same report) confirms the round size is still undisclosed/being finalized around $1 billion against nearly $10 billion in investor demand, matching the ~10x oversubscription claim.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Cognition AI is set to close a $1 billion funding round in September 2026 at a $47 billion valuation, with demand reported at 10x oversubscription.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+     "excerpt": "Artificial intelligence coding startup Cognition AI Inc. is set to close a new round of funding that would vault its valuation to about $47 billion, according to people familiar with the efforts.",
+     "notes": "Bloomberg confirms the ~$1B raise at ~$47B valuation with nearly $10B in investor interest (~10x oversubscription), matching all key figures in the claim.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round set to close, Sept 2026",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+     "excerpt": "Artificial intelligence coding startup Cognition AI Inc. is set to close a new round of funding that would vault its valuation to about $47 billion, according to people familiar with the efforts.",
+     "notes": "Bloomberg's September 2026 report directly confirms Cognition AI's funding round set to close around that time.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "WHY NOW The $1B round is scheduled to close this month, creating a narrow pre-close and post-close visibility window before Cognition's valuation story is old news.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+     "excerpt": "Talks are ongoing and details may still change, the people said.",
+     "notes": "Bloomberg and other outlets report Cognition is 'set to close' a ~$1B round at a $47B valuation, but no source confirms a specific closing date within this month, and Bloomberg explicitly notes talks are ongoing and could still change, so the precise 'closes this month' timing claim is unsupported.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "AI coding agent for engineering workflows",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://cognition.com/",
+     "excerpt": "Devin plans, writes, tests, and ships production code inside your existing workflows.",
+     "notes": "Cognition's own site and multiple independent sources confirm Devin is an autonomous AI coding agent built for engineering workflows, though the cited Bloomberg article itself was inaccessible.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Cognition's $1B raise at a $47B valuation creates a narrow pre-close visibility window;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+     "excerpt": "Artificial intelligence coding startup Cognition AI Inc. is set to close a new round of funding that would vault its valuation to about $47 billion, according to people familiar with the efforts. The company is raising around $1 billion in its latest haul, said the people, who asked not to be identified because the information is private.",
+     "notes": "Bloomberg (Tier 1) directly reports the $1B raise and $47B valuation figures, matching the claim's core financial facts, though the deal was still in talks/pre-close at time of reporting.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "US HQ (San Francisco)",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://en.wikipedia.org/wiki/Cognition_AI",
+     "excerpt": "Cognition AI, Inc. ... is an American artificial intelligence (AI) company headquartered in San Francisco, California.",
+     "notes": "Multiple independent sources (Wikipedia, Crunchbase, SF Standard/WSJ-cited reporting) confirm Cognition AI is headquartered in San Francisco, though the specific Bloomberg article could not be fetched directly.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Cognition AI is set to close a $1 billion funding round in September 2026 at a $47 billion valuation, with investor demand reported at 10x oversubscription.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+     "excerpt": "The company is raising around $1 billion in its latest haul, said the people... adding that Cognition received nearly $10 billion in investor interest.",
+     "notes": "Bloomberg reports Cognition is set to close a ~$1 billion round at a $47 billion valuation with nearly $10 billion in investor interest, matching the claim's figures including the roughly 10x oversubscription.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Closing ~$1B round at $47B valuation amid $10B investor demand",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-09-02/ai-startup-cognition-set-to-raise-around-1-billion-at-a-47-billion-value",
+     "excerpt": "The company is raising around $1 billion in its latest haul...The final raise size may exceed that amount as Cognition fields outsize demand for the round, one of the people said, adding that Cognition received nearly $10 billion in investor interest.",
+     "notes": "Bloomberg (Tier 1) reports Cognition AI is closing a ~$1B round at a $47B valuation amid nearly $10B in investor demand, matching the claim exactly.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States Grand Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
