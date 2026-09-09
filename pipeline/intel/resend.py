@@ -46,13 +46,28 @@ def brief_by_number(session: Session, number: int) -> Brief | None:
 
 
 def message_for(brief: Brief, settings: Settings) -> Outgoing:
-    """The same email the daily job sends, addressed to the operator only."""
-    return Outgoing(
-        to=[settings.operator_email or ""],
-        subject=md_subject(brief),
-        body_text=executive_take(brief, settings),
-        body_html=brief_body_html(brief, settings),
-        attachments=_attachment(brief),
+    """The same email the daily job sends, addressed to the operator only — with the
+    verify-before-circulation panel when the brief is not yet MD-eligible, and through the
+    same format guard."""
+    from intel.models import AuditStatus, VerificationStatus
+    from intel.send import guarded
+
+    review = brief.verification_status != VerificationStatus.verified or brief.audit_status not in (
+        AuditStatus.passed,
+        AuditStatus.pass_after_retry,
+    )
+    subject = md_subject(brief)
+    if review:
+        subject = f"[REVIEW] {subject} — VERIFY BEFORE CIRCULATION"
+    return guarded(
+        Outgoing(
+            to=[settings.operator_email or ""],
+            subject=subject,
+            body_text=executive_take(brief, settings),
+            body_html=brief_body_html(brief, settings, review=review),
+            attachments=_attachment(brief),
+        ),
+        settings,
     )
 
 

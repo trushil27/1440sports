@@ -326,3 +326,47 @@ def test_schedule_picks_the_london_slot_across_bst_and_gmt(utc, is_slot):
 def test_seconds_until_send_is_thirty_minutes_from_the_run_slot():
     assert schedule.seconds_until_send(dt.datetime(2026, 7, 1, 4, 30, tzinfo=dt.UTC)) == 1800.0
     assert schedule.seconds_until_send(dt.datetime(2026, 7, 1, 5, 30, tzinfo=dt.UTC)) == 0.0
+
+
+def test_a_needs_review_brief_still_gets_the_card_plus_the_review_panel(
+    session, migrated_database, tmp_path
+):
+    """8-9 Sep 2026: N° 243 and N° 245 both arrived as plain text — the card had only been
+    wired into the fully verified path. Every brief email carries the card now."""
+    load_seeds(session)
+    mailer = FakeMailer()
+    run_daily.run_day(
+        RUN_DATE,
+        _settings(migrated_database, tmp_path),
+        lambda _d: [_ramp_signal()],
+        session,
+        stages=_stages(mailer, verifier=FakeVerifier(default="unverified")),
+    )
+    msg = mailer.sent[-1]
+    assert msg.subject.startswith("[REVIEW] 1440 Intelligence Brief N°")
+    assert msg.body_html and "1440 Sports · Intelligence" in msg.body_html
+    assert "Verify before circulation" in msg.body_html and "[unverified]" in msg.body_html
+    assert "THE CALL" in msg.body_text and "VERIFY BEFORE CIRCULATION" in msg.body_text
+    assert not msg.subject.startswith("[FORMAT GUARD]")
+
+
+def test_the_format_guard_marks_and_strips_a_broken_card(
+    monkeypatch, session, migrated_database, tmp_path
+):
+    """Operator, 9 Sep 2026: "an audit guard around that to make sure the format is not
+    lost". A card that fails the check is never sent as it is."""
+    load_seeds(session)
+    mailer = FakeMailer()
+    monkeypatch.setattr(send, "brief_body_html", lambda b, s, review=False: "<div>oops</div>")
+    run_daily.run_day(
+        RUN_DATE,
+        _settings(migrated_database, tmp_path),
+        lambda _d: [_ramp_signal()],
+        session,
+        stages=_stages(mailer),
+    )
+    msg = mailer.sent[-1]
+    assert msg.subject.startswith("[FORMAT GUARD] ")
+    assert msg.body_html is None  # the broken card is not sent
+    assert msg.body_text.startswith("FORMAT GUARD: this email did not pass the card check")
+    assert "card is missing" in msg.body_text and "THE CALL" in msg.body_text

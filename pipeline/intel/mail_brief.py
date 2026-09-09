@@ -123,7 +123,100 @@ def _esc(s: Any) -> str:
     return html.escape(str(s), quote=True)
 
 
-def brief_html(brief, settings) -> str:
+def review_lines(brief) -> list[str]:
+    """The open claims and audit findings, one line each — what "verify before circulation"
+    actually means for this brief. Empty when everything is verified and the audit passed."""
+    from intel.models import VerificationResult
+
+    lines: list[str] = []
+    for c in getattr(brief, "claims", None) or []:
+        if not c.load_bearing or not c.verifications:
+            continue
+        v = sorted(c.verifications, key=lambda x: (x.checked_at, x.id))[-1]
+        if v.status != VerificationResult.verified:
+            lines.append(f"[{v.status.value}] {c.text}" + (f" — {v.notes}" if v.notes else ""))
+    for v in getattr(brief, "audit_violations", None) or []:
+        lines.append(f"audit rule {v.get('rule')}: {v.get('message') or v.get('note') or ''}")
+    return lines
+
+
+def review_panel_html(brief) -> str:
+    """The same card, plus what still needs a human eye. Only for a brief that is not yet
+    MD-eligible; the fully verified card carries no such panel."""
+    lines = review_lines(brief)
+    status = (getattr(getattr(brief, "verification_status", None), "value", "") or "").replace(
+        "_", " "
+    )
+    audit = (getattr(getattr(brief, "audit_status", None), "value", "") or "").replace("_", " ")
+    li = f'<li style="margin:0 0 6px;color:{INK};font-size:13.5px;line-height:1.5">'
+    items = "".join(f"{li}{_esc(x)}</li>" for x in lines) or (
+        f'<li style="color:{MUTED};font-size:13.5px">No open claims.</li>'
+    )
+    head = (
+        '<div style="color:#8a5a00;font-size:11px;letter-spacing:.18em;'
+        'text-transform:uppercase;font-weight:700;margin-bottom:6px">'
+        "Verify before circulation</div>"
+    )
+    line = (
+        f'<div style="color:{INK};font-size:13px;margin-bottom:8px">'
+        f"Verification: <b>{_esc(status)}</b> &nbsp;·&nbsp; Audit: <b>{_esc(audit)}</b>. "
+        f"The MD has not been emailed.</div>"
+    )
+    return (
+        '\n  <tr><td style="padding:18px 24px 0">'
+        '<div style="background:#fff7e8;border:1px solid #f0d9a8;border-radius:8px;'
+        'padding:14px 18px">'
+        f'{head}{line}<ul style="margin:0;padding-left:18px">{items}</ul></div></td></tr>'
+    )
+
+
+#: Every brief email must carry these, in this order, or it is not the card the operator
+#: approved (7 Sep 2026). A missing piece, a leaked template token or a placeholder value is
+#: a format failure — caught here, before the send, never discovered in an inbox.
+REQUIRED_HTML = (
+    "1440 Sports · Intelligence",
+    "Brief N°",
+    "The call",
+    "At a glance",
+    "Read the full case",
+    "The 2-page brief is attached",
+    "1440 Intelligence Engine",
+)
+REQUIRED_TEXT = ("THE CALL", "AT A GLANCE", "Read the full case:", "The 2-page brief is attached.")
+FORBIDDEN = ("Shadow mode", "[SHADOW]", "${", "{{", "}}", ">None<", ">?<", "?/100", "None/100")
+
+
+def audit_card(html: str, text: str, settings=None) -> list[str]:
+    """Violations in a brief email's body — empty means the format is intact."""
+    problems: list[str] = []
+    html = html or ""
+    text = text or ""
+    if not html.strip():
+        problems.append("no HTML card at all")
+    last = -1
+    for needle in REQUIRED_HTML:
+        pos = html.find(needle)
+        if pos < 0:
+            problems.append(f"card is missing: {needle!r}")
+        elif pos < last:
+            problems.append(f"card section out of order: {needle!r}")
+        else:
+            last = pos
+    for needle in REQUIRED_TEXT:
+        if needle not in text:
+            problems.append(f"plain text is missing: {needle!r}")
+    for bad in FORBIDDEN:
+        if bad in html or bad in text:
+            problems.append(f"body contains {bad!r}")
+    base = (getattr(settings, "app_base_url", "") or "").rstrip("/")
+    if base and f'href="{base}/' not in html:
+        problems.append(f"card link does not point at {base}")
+    if re.search(r'href="https?://[^"]*/\d+"', html):
+        problems.append("card link ends in a number")
+    return problems
+
+
+def brief_html(brief, settings, review: bool = False) -> str:
     """A brand-styled card. Inline styles only — email clients strip <style> blocks."""
     d = brief.brief_data or {}
     company = d.get("company", "?")
@@ -200,6 +293,7 @@ def brief_html(brief, settings) -> str:
     <div style="color:{MUTED};font-size:12.5px;margin-top:14px">
      The 2-page brief is attached as a PDF.</div>
   </td></tr>
+{review_panel_html(brief) if review else ""}
   <tr><td style="padding:16px 24px 0;color:{MUTED};font-size:11px;letter-spacing:.1em;
    text-transform:uppercase">1440 Intelligence Engine</td></tr>
 </table>

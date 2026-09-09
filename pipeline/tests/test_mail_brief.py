@@ -81,3 +81,33 @@ def test_the_default_link_target_is_an_address_that_exists():
     base = Settings().app_base_url
     assert base == "https://1440-intelligence.netlify.app"
     assert "1440sports.com" not in base
+
+
+def test_the_format_guard_passes_the_real_card_and_catches_a_broken_one():
+    """Operator, 9 Sep 2026: "we need an audit guard around that to make sure the format is
+    not lost". The guard checks the pieces of the approved card, in order, and refuses
+    placeholders, template leaks, mode markers and numeric links."""
+    brief = _brief()
+    settings = _settings("https://1440-intelligence.netlify.app")
+    html = mail_brief.brief_html(brief, settings)
+    text = mail_brief.executive_take(brief, settings)
+    assert mail_brief.audit_card(html, text, settings) == []
+    # the review variant is the same card plus the panel, and still passes
+    review = mail_brief.brief_html(brief, settings, review=True)
+    assert "Verify before circulation" in review
+    assert mail_brief.audit_card(review, text, settings) == []
+
+    broken = html.replace("At a glance", "").replace("Read the full case", "Read more")
+    problems = mail_brief.audit_card(broken, text, settings)
+    assert any("At a glance" in p for p in problems) and any(
+        "Read the full case" in p for p in problems
+    )
+    assert "card is missing" in problems[0]
+    assert mail_brief.audit_card("", text, settings)[0] == "no HTML card at all"
+    leaked = html.replace("Fluidstack", "${company}")
+    assert any("${" in p for p in mail_brief.audit_card(leaked, text, settings))
+    numeric = html.replace("/fluidstack", "/127")
+    assert any("ends in a number" in p for p in mail_brief.audit_card(numeric, text, settings))
+    assert any(
+        "Shadow mode" in p for p in mail_brief.audit_card(html, text + "\nShadow mode: x", settings)
+    )

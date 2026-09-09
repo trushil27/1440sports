@@ -254,10 +254,35 @@ def executive_take(brief: Brief, settings: Settings) -> str:
     return _take(brief, settings)
 
 
-def brief_body_html(brief: Brief, settings: Settings) -> str:
+def guarded(msg: Outgoing, settings: Settings) -> Outgoing:
+    """The format guard (operator, 9 Sep 2026: "we need an audit guard around that").
+
+    A brief email whose body fails ``mail_brief.audit_card`` is not sent as it is. The subject
+    is marked, the violations are listed at the top of the plain text, and the broken HTML is
+    dropped so the structured plain text is what arrives — a readable email that says exactly
+    what went wrong, never a garbled one that says nothing."""
+    from intel.mail_brief import audit_card
+
+    problems = audit_card(msg.body_html or "", msg.body_text or "", settings)
+    if not problems:
+        return msg
+    note = "FORMAT GUARD: this email did not pass the card check:\n" + "\n".join(
+        f"- {x}" for x in problems
+    )
+    return Outgoing(
+        to=msg.to,
+        cc=msg.cc,
+        subject=f"[FORMAT GUARD] {msg.subject}",
+        body_text=f"{note}\n\n{msg.body_text}",
+        body_html=None,
+        attachments=msg.attachments,
+    )
+
+
+def brief_body_html(brief: Brief, settings: Settings, review: bool = False) -> str:
     from intel.mail_brief import brief_html
 
-    return brief_html(brief, settings)
+    return brief_html(brief, settings, review=review)
 
 
 def _ledger_summary(brief: Brief) -> str:
@@ -451,6 +476,7 @@ def distribute(
             body_html=brief_body_html(brief, settings),
             attachments=_attachment(brief),
         )
+        msg = guarded(msg, settings)
         if md and settings.execution_mode == "production":
             kinds = [(md, SendKind.md_brief), (op, SendKind.operator_copy)]
         else:
@@ -463,18 +489,26 @@ def distribute(
         if brief.verification_status == VerificationStatus.needs_review
         else f"audit {brief.audit_status.value}"
     )
-    msg = Outgoing(
-        to=[op],
-        subject=f"[REVIEW] {md_subject(brief)} — {reason}",
-        body_text=(
-            f"{executive_take(brief, settings)}\n\n"
-            f"Verification: {brief.verification_status.value}\n"
-            f"Open claims:\n{_ledger_summary(brief)}\n\n"
-            f"Audit: {brief.audit_status.value} ({brief.audit_attempts} attempt(s))\n"
-            f"{_audit_summary(brief)}\n\n"
-            "The MD has NOT been emailed."
+    # The same card the MD would get — plus what still needs a human eye. 8-9 Sep 2026 the
+    # operator received this branch as plain text twice ("format again was in bad shape"):
+    # the card had only been wired into the fully verified path.
+    msg = guarded(
+        Outgoing(
+            to=[op],
+            subject=f"[REVIEW] {md_subject(brief)} — {reason}",
+            body_text=(
+                f"{executive_take(brief, settings)}\n\n"
+                f"VERIFY BEFORE CIRCULATION\n"
+                f"Verification: {brief.verification_status.value}\n"
+                f"Open claims:\n{_ledger_summary(brief)}\n\n"
+                f"Audit: {brief.audit_status.value} ({brief.audit_attempts} attempt(s))\n"
+                f"{_audit_summary(brief)}\n\n"
+                "The MD has NOT been emailed."
+            ),
+            body_html=brief_body_html(brief, settings, review=True),
+            attachments=_attachment(brief),
         ),
-        attachments=_attachment(brief),
+        settings,
     )
     return out + _deliver(
         session, mailer, msg, brief_id=brief.id, run_id=None, kinds=[(op, SendKind.needs_review)]
