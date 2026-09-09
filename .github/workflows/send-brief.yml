@@ -15,6 +15,11 @@ on:
         description: "Brief number(s), space separated — e.g. 241, or 241 240"
         required: true
         type: string
+      recipient:
+        description: "Who receives it"
+        type: choice
+        options: [operator, md]
+        default: operator
       dry_run:
         description: "Write the .eml to the run's artifact instead of sending it"
         type: boolean
@@ -39,8 +44,10 @@ jobs:
     env:
       DATABASE_URL: postgresql://postgres:pg@localhost:5432/intel
       OPERATOR_EMAIL: ${{ secrets.OPERATOR_EMAIL }}
-      # No MD_EMAIL and no ANTHROPIC_API_KEY: neither is needed, and their absence is the
-      # guarantee that this workflow cannot mail the MD or spend anything on the model.
+      # No ANTHROPIC_API_KEY: this workflow cannot spend anything on the model. MD_EMAIL is
+      # passed ONLY when the operator chooses "md" as the recipient (9 Sep 2026: "share that
+      # email … to Ricky"); the operator is copied on every such send.
+      MD_EMAIL: ${{ inputs.recipient == 'md' && secrets.MD_EMAIL || '' }}
       EXECUTION_MODE: ${{ inputs.dry_run && 'dry_run' || 'shadow' }}
       GRAPH_TENANT_ID: ${{ secrets.GRAPH_TENANT_ID }}
       GRAPH_CLIENT_ID: ${{ secrets.GRAPH_CLIENT_ID }}
@@ -74,7 +81,7 @@ jobs:
           python -m intel.seed
           python -m intel.backfill
       - name: Send
-        run: python -m intel.resend ${{ inputs.numbers }}
+        run: python -m intel.resend ${{ inputs.numbers }} --to "${{ inputs.recipient }}" --cc-operator
       - name: Keep the PDFs and outbox as an artifact
         if: always()
         uses: actions/upload-artifact@v4

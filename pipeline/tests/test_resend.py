@@ -82,3 +82,29 @@ def test_an_unknown_number_says_so_rather_than_sending_something_else(
     settings, _ = _issued(session, migrated_database, tmp_path)
     with pytest.raises(LookupError, match="no brief numbered 999"):
         resend.resend(session, 999, settings, DryRunMailer(Path(settings.outbox_dir)))
+
+
+def test_a_brief_can_be_sent_to_the_md_with_the_operator_copied_and_the_open_points_kept(
+    session, migrated_database, tmp_path
+):
+    """Operator, 9 Sep 2026: "share that email of Etched with nice body to Ricky". The MD gets
+    the plain subject and the same card; what is still unverified travels with it."""
+    from intel.models import VerificationStatus
+
+    settings, _ = _issued(session, migrated_database, tmp_path)
+    number = _number(session)
+    brief = resend.brief_by_number(session, number)
+    brief.verification_status = VerificationStatus.needs_review
+    session.flush()
+    msg = resend.message_for(brief, settings, to="md", cc_operator=True)
+    assert msg.to == ["md@example.com"] and msg.cc == ["desk@example.com"]
+    assert not msg.subject.startswith("[REVIEW]") and msg.subject.startswith(
+        "1440 Intelligence Brief"
+    )
+    assert "Open points before circulation" in msg.body_html
+    line = resend.resend(
+        session, number, settings, DryRunMailer(Path(settings.outbox_dir)), "md", True
+    )
+    assert "md@example.com" in line
+    with pytest.raises(RuntimeError, match="unknown recipient"):
+        resend.resolve_recipient("ricky", settings)

@@ -45,10 +45,31 @@ def brief_by_number(session: Session, number: int) -> Brief | None:
     )
 
 
-def message_for(brief: Brief, settings: Settings) -> Outgoing:
-    """The same email the daily job sends, addressed to the operator only — with the
-    verify-before-circulation panel when the brief is not yet MD-eligible, and through the
-    same format guard."""
+def resolve_recipient(to: str | None, settings: Settings) -> str:
+    """'operator' (default) or 'md' by name, or an address. The MD's address is only ever
+    the configured one — never typed into a command by hand."""
+    key = (to or "operator").strip().lower()
+    if key == "operator":
+        if not settings.operator_email:
+            raise RuntimeError("OPERATOR_EMAIL is not set — there is nowhere to send it")
+        return settings.operator_email
+    if key == "md":
+        if not settings.md_email:
+            raise RuntimeError("MD_EMAIL is not configured for this send")
+        return settings.md_email
+    if "@" not in key:
+        raise RuntimeError(f"unknown recipient {to!r}: use operator, md, or an address")
+    return to.strip()
+
+
+def message_for(
+    brief: Brief, settings: Settings, to: str | None = None, cc_operator: bool = False
+) -> Outgoing:
+    """The same email the daily job sends — the card, the open-points panel when the brief is
+    not yet fully verified, the PDF — through the same format guard. Addressed to the
+    operator unless told otherwise (operator, 9 Sep 2026: "share that email … to Ricky").
+    The open points travel with it whoever the reader is: what is unverified is never
+    hidden by changing the audience."""
     from intel.models import AuditStatus, VerificationStatus
     from intel.send import guarded
 
@@ -56,12 +77,19 @@ def message_for(brief: Brief, settings: Settings) -> Outgoing:
         AuditStatus.passed,
         AuditStatus.pass_after_retry,
     )
+    recipient = resolve_recipient(to, settings)
     subject = md_subject(brief)
-    if review:
-        subject = f"[REVIEW] {subject}"
+    if review and recipient == settings.operator_email:
+        subject = f"[REVIEW] {subject}"  # the operator's tag; a reader gets the plain subject
+    cc = (
+        [settings.operator_email]
+        if cc_operator and settings.operator_email and recipient != settings.operator_email
+        else []
+    )
     return guarded(
         Outgoing(
-            to=[settings.operator_email or ""],
+            to=[recipient],
+            cc=cc,
             subject=subject,
             body_text=executive_take(brief, settings),
             body_html=brief_body_html(brief, settings, review=review),
@@ -71,13 +99,19 @@ def message_for(brief: Brief, settings: Settings) -> Outgoing:
     )
 
 
-def resend(session: Session, number: int, settings: Settings, mailer) -> str:
+def resend(
+    session: Session,
+    number: int,
+    settings: Settings,
+    mailer,
+    to: str | None = None,
+    cc_operator: bool = False,
+) -> str:
     brief = brief_by_number(session, number)
     if brief is None:
         raise LookupError(f"no brief numbered {number} in the desk's memory")
-    if not settings.operator_email:
-        raise RuntimeError("OPERATOR_EMAIL is not set — there is nowhere to send it")
-    msg = message_for(brief, settings)
+    msg = message_for(brief, settings, to=to, cc_operator=cc_operator)
+    kind = SendKind.md_brief if msg.to[0] == settings.md_email else SendKind.operator_copy
     # Deliberately NOT going through send._deliver: that skips anything already sent once,
     # which is the right rule for the daily job and the wrong one for an explicit resend.
     message_id = mailer.send(msg)
@@ -88,7 +122,7 @@ def resend(session: Session, number: int, settings: Settings, mailer) -> str:
         select(Send).where(
             Send.brief_id == brief.id,
             Send.recipient == msg.to[0],
-            Send.kind == SendKind.operator_copy,
+            Send.kind == kind,
         )
     )
     if existing is not None:
@@ -103,7 +137,7 @@ def resend(session: Session, number: int, settings: Settings, mailer) -> str:
             brief_id=brief.id,
             run_id=None,
             recipient=msg.to[0],
-            kind=SendKind.operator_copy,
+            kind=kind,
             channel=SendChannel.outlook,
             subject=msg.subject,
             message_id=message_id,
@@ -117,6 +151,10 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m intel.resend", description=__doc__)
     parser.add_argument("numbers", nargs="+", type=int, help="brief numbers to send")
     parser.add_argument("--dry-run", action="store_true", help="write .eml to the outbox instead")
+    parser.add_argument("--to", default="operator", help="operator (default), md, or an address")
+    parser.add_argument(
+        "--cc-operator", action="store_true", help="copy the operator when sending elsewhere"
+    )
     args = parser.parse_args(sys.argv[1:] if argv is None else argv)
     settings = get_settings()
     if args.dry_run:
@@ -126,7 +164,7 @@ def main(argv: list[str] | None = None) -> int:
     with session_scope(settings.database_url) as session:
         for number in args.numbers:
             try:
-                print(resend(session, number, settings, mailer))
+                print(resend(session, number, settings, mailer, args.to, args.cc_operator))
             except (LookupError, RuntimeError) as exc:
                 print(f"N° {number}: {exc}", file=sys.stderr)
                 failed += 1
