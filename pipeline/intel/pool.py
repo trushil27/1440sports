@@ -158,6 +158,8 @@ def blocked_rows(cases_dir: Path | str) -> list[dict[str, Any]]:
 def import_pool(session: Session, cases_dir: Path | str) -> dict[str, Any]:
     """Runner-ups become thin historical rows — the same shape as a sweep import — unless
     the desk already carries the company. Idempotent."""
+    from sqlalchemy import func
+
     from intel.backfill import _next_negative_number, _surfaced_at, _upsert_surfaced
     from intel.dedup import trigger_key
     from intel.models import AuditStatus, ExecutionMode, Series, VerificationStatus
@@ -165,6 +167,7 @@ def import_pool(session: Session, cases_dir: Path | str) -> dict[str, Any]:
     from intel.score import source_tier
 
     created = skipped = 0
+    runs_by_date: dict[str, Run] = {}
     for rec in load_pools(cases_dir):
         if rec.get("decision") != "runner_up":
             continue
@@ -178,17 +181,27 @@ def import_pool(session: Session, cases_dir: Path | str) -> dict[str, Any]:
             skipped += 1
             continue
         day = dt.date.fromisoformat(rec["date"])
-        run = Run(
-            run_date=day,
-            attempt=99,
-            started_at=_surfaced_at(day),
-            finished_at=_surfaced_at(day),
-            status=RunStatus.success,
-            execution_mode=ExecutionMode.production,
-            summary={"source": "pool", "backfill": True, "pool_date": rec["date"]},
-        )
-        session.add(run)
-        session.flush()
+        # One run per pool date, and its attempt number is the next free one for that date —
+        # (run_date, attempt) is unique. The first version used a fixed attempt for every
+        # runner-up, so a day with two of them failed the whole backfill (9 Sep 2026: the
+        # resend workflow died on it, and the morning run would have too).
+        run = runs_by_date.get(rec["date"])
+        if run is None:
+            last = session.scalar(
+                select(func.coalesce(func.max(Run.attempt), 0)).where(Run.run_date == day)
+            )
+            run = Run(
+                run_date=day,
+                attempt=int(last or 0) + 1,
+                started_at=_surfaced_at(day),
+                finished_at=_surfaced_at(day),
+                status=RunStatus.success,
+                execution_mode=ExecutionMode.production,
+                summary={"source": "pool", "backfill": True, "pool_date": rec["date"]},
+            )
+            session.add(run)
+            session.flush()
+            runs_by_date[rec["date"]] = run
         series = Series(rec["series"]) if rec.get("series") in ("F1", "FE") else None
         trig = rec.get("trigger")
         cand = Candidate(

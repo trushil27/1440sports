@@ -5,6 +5,7 @@ the app still if they are relevant." (operator, 8 Sep 2026)"""
 
 from __future__ import annotations
 
+import datetime as dt
 import json
 
 from sqlalchemy import select
@@ -153,3 +154,39 @@ def test_the_scan_is_tried_twice_before_the_day_fails_and_not_when_the_mailbox_d
     except ScanFailed:
         pass
     assert len(calls) == 1  # the mailbox delivered: no second paid attempt
+
+
+def test_two_runner_ups_on_one_day_import_under_one_run(session, migrated_database, tmp_path):
+    """9 Sep 2026: the importer gave every runner-up its own run with the same fixed attempt
+    number, and (run_date, attempt) is unique — the second one on a day failed the whole
+    backfill, which is what every start of the desk runs first."""
+    from intel.seed import load_seeds as _seeds
+
+    _seeds(session)
+    cases = tmp_path / "cases" / "2026-09-09"
+    cases.mkdir(parents=True)
+    (cases / "pool.json").write_text(
+        json.dumps(
+            {
+                "date": "2026-09-09",
+                "candidates": [
+                    {"company": "Alpha Grid", "decision": "runner_up", "score": 78, "rank": 2},
+                    {"company": "Beta Cells", "decision": "runner_up", "score": 74, "rank": 3},
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    assert pool.import_pool(session, tmp_path / "cases") == {
+        "source": "pool",
+        "created": 2,
+        "skipped": 0,
+    }
+    runs = session.scalars(select(Run).where(Run.run_date == dt.date(2026, 9, 9))).all()
+    assert len(runs) == 1 and runs[0].attempt == 1
+    # importing again on the same memory changes nothing, and a fresh date takes attempt 1 too
+    assert pool.import_pool(session, tmp_path / "cases") == {
+        "source": "pool",
+        "created": 0,
+        "skipped": 2,
+    }
