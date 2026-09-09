@@ -1,0 +1,1098 @@
+{
+ "run": {
+  "id": 193,
+  "date": "2026-09-09",
+  "status": "success",
+  "mode": "shadow",
+  "summary": {
+   "usage": {
+    "calls": {
+     "writer": 4,
+     "scanner": 3,
+     "verifier": 23
+    },
+    "tokens": {
+     "input": 18804,
+     "output": 153342,
+     "cache_read": 2631322,
+     "cache_write": 368861
+    },
+    "estimated_usd": 3.019
+   },
+   "sources": {
+    "n8n": 0,
+    "status": "read",
+    "offered": [
+     "Mistral AI (routine)",
+     "Base Power (routine)",
+     "Sila (routine)",
+     "Antora Energy (routine)",
+     "Bridgestone (n8n)"
+    ],
+    "routine": 0,
+    "scanner": 10,
+    "n8n_mails": 2,
+    "candidates": 0,
+    "mails_read": 40,
+    "to_research": [],
+    "already_known": [
+     "Mistral AI",
+     "Base Power",
+     "Sila",
+     "Antora Energy",
+     "Bridgestone"
+    ],
+    "routine_mails": 2
+   },
+   "decisions": {
+    "stale": 2,
+    "selected": 1,
+    "not_selected": 3,
+    "below_threshold": 2,
+    "dedup_suppressed": 1,
+    "verification_blocked": 1
+   },
+   "candidates": 10,
+   "verification": [
+    {
+     "audit": "pass_after_retry",
+     "status": "needs_review",
+     "company": "Mistral",
+     "stage_a": {
+      "verified": 5,
+      "unverified": 1
+     },
+     "stage_b": {
+      "verified": 5,
+      "unverified": 2,
+      "contradicted": 1
+     },
+     "written": true,
+     "blocking": [
+      "PSG Equity. The round"
+     ],
+     "brief_id": 257,
+     "candidate_id": 272,
+     "verification": "blocked",
+     "audit_attempts": 2
+    },
+    {
+     "pdf": "storage/briefs/2026-09-09/etched.pdf",
+     "web": "storage/briefs/2026-09-09/etched.web.html",
+     "audit": "pass_after_retry",
+     "status": "needs_review",
+     "company": "Etched",
+     "stage_a": {
+      "verified": 3,
+      "unverified": 2
+     },
+     "stage_b": {
+      "verified": 7,
+      "unverified": 1
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 258,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 273,
+     "verification": "needs_review",
+     "audit_attempts": 2
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 93,
+     "reason": "contradicted load-bearing claim in the written brief: PSG Equity. The round",
+     "company": "Mistral",
+     "decision": "verification_blocked",
+     "signal_date": "2026-09-08"
+    },
+    {
+     "rank": 2,
+     "score": 83,
+     "reason": "top ranking score",
+     "company": "Etched",
+     "decision": "selected",
+     "signal_date": "2026-08-18"
+    },
+    {
+     "rank": 3,
+     "score": 82,
+     "reason": "eligible but outranked",
+     "company": "Castelion",
+     "decision": "not_selected",
+     "signal_date": "2026-08-19"
+    },
+    {
+     "rank": 4,
+     "score": 74,
+     "reason": "eligible but outranked",
+     "company": "OLIX",
+     "decision": "not_selected",
+     "signal_date": "2026-09-02"
+    },
+    {
+     "rank": 5,
+     "score": null,
+     "reason": "trigger 2026-05-15 (day) is 117 days old; window is 90",
+     "company": "Kalshi",
+     "decision": "stale",
+     "signal_date": "2026-05-15"
+    },
+    {
+     "rank": 6,
+     "score": null,
+     "reason": "dedup: Antora Energy surfaced on 2026-09-05 with the same trigger (funding_round); window 30d",
+     "company": "Antora Energy",
+     "decision": "dedup_suppressed",
+     "signal_date": "2026-08-26"
+    },
+    {
+     "rank": 7,
+     "score": 71,
+     "reason": "eligible but outranked",
+     "company": "Ramp",
+     "decision": "not_selected",
+     "signal_date": "2026-06-15"
+    },
+    {
+     "rank": 8,
+     "score": null,
+     "reason": "trigger 2026-02-15 (day) is 206 days old; window is 90",
+     "company": "Wayve",
+     "decision": "stale",
+     "signal_date": "2026-02-15"
+    },
+    {
+     "rank": 9,
+     "score": 64,
+     "reason": "ranking score 64 < threshold 70",
+     "company": "River",
+     "decision": "below_threshold",
+     "signal_date": "2026-08-05"
+    },
+    {
+     "rank": 10,
+     "score": 56,
+     "reason": "ranking score 47 < threshold 70",
+     "company": "Rillet",
+     "decision": "below_threshold",
+     "signal_date": "2026-08-19"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Mistral",
+   "series": "F1",
+   "decision": "verification_blocked",
+   "reason": "contradicted load-bearing claim in the written brief: PSG Equity. The round",
+   "score_total": 93,
+   "score_breakdown": {
+    "cap": null,
+    "base": 93,
+    "total": 93,
+    "timing": 19,
+    "ops_fit": 18,
+    "ranking": 93,
+    "urgency": 17,
+    "capacity": 20,
+    "brand_fit": 19,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 4,
+     "on_camera": 3,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 19
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.hpcwire.com/aiwire/2026/09/08/mistral-raises-e3b-to-expand-ai-research-and-infrastructure/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified against 5-name alumni database"
+    },
+    "scanner_score": 93,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 93,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "MoneyGram Haas F1 Team",
+   "source_url": "https://www.hpcwire.com/aiwire/2026/09/08/mistral-raises-e3b-to-expand-ai-research-and-infrastructure/",
+   "trigger_date": "2026-09-08",
+   "trigger_reason": "EUR3B Series D at >EUR21B valuation, largest-ever European tech raise"
+  },
+  {
+   "rank": 2,
+   "company": "Etched",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 83,
+   "score_breakdown": {
+    "cap": null,
+    "base": 83,
+    "total": 83,
+    "timing": 16,
+    "ops_fit": 16,
+    "ranking": 83,
+    "urgency": 15,
+    "capacity": 19,
+    "brand_fit": 17,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 3,
+     "product_to_need": 7,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 17
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified against 5-name alumni database"
+    },
+    "scanner_score": 83,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 83,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Audi F1 Team",
+   "source_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+   "trigger_date": "2026-08-18",
+   "trigger_reason": "$700M raise, valuation doubles to $21B in a month"
+  },
+  {
+   "rank": 3,
+   "company": "Castelion",
+   "series": "F1",
+   "decision": "not_selected",
+   "reason": "eligible but outranked",
+   "score_total": 82,
+   "score_breakdown": {
+    "cap": null,
+    "base": 82,
+    "total": 82,
+    "timing": 16,
+    "ops_fit": 14,
+    "ranking": 82,
+    "urgency": 15,
+    "capacity": 19,
+    "brand_fit": 18,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 18
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://techstartups.com/2026/08/19/venture-capital-startup-funding-roundup-august-19-2026-andreessen-horowitz-battery-ventures-iconiq-jpmorgan-chase-prosus-more/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified against 5-name alumni database"
+    },
+    "scanner_score": 82,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 82,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://techstartups.com/2026/08/19/venture-capital-startup-funding-roundup-august-19-2026-andreessen-horowitz-battery-ventures-iconiq-jpmorgan-chase-prosus-more/",
+   "trigger_date": "2026-08-19",
+   "trigger_reason": ">$1.5B total financing (equity+debt) for hypersonics scale-up"
+  },
+  {
+   "rank": 4,
+   "company": "OLIX",
+   "series": "F1",
+   "decision": "not_selected",
+   "reason": "eligible but outranked",
+   "score_total": 74,
+   "score_breakdown": {
+    "cap": null,
+    "base": 74,
+    "total": 74,
+    "timing": 15,
+    "ops_fit": 14,
+    "ranking": 74,
+    "urgency": 13,
+    "capacity": 17,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.datacenterdynamics.com/en/news/chip-startup-olix-raises-312m-at-33bn-valuation-backed-by-uk-govt-sovereign-ai-venture-fund/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified against 5-name alumni database"
+    },
+    "scanner_score": 74,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 74,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Visa Cash App Racing Bulls",
+   "source_url": "https://www.datacenterdynamics.com/en/news/chip-startup-olix-raises-312m-at-33bn-valuation-backed-by-uk-govt-sovereign-ai-venture-fund/",
+   "trigger_date": "2026-09-02",
+   "trigger_reason": "$312M Series B at $3.3B valuation, UK sovereign AI fund-backed"
+  },
+  {
+   "rank": 5,
+   "company": "Kalshi",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-05-15 (day) is 117 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Oracle Red Bull Racing",
+   "source_url": "https://fintech.global/tag/series-e-funding/",
+   "trigger_date": "2026-05-15",
+   "trigger_reason": "$1B raised at ~$11B valuation, institutional expansion"
+  },
+  {
+   "rank": 6,
+   "company": "Antora Energy",
+   "series": "FE",
+   "decision": "dedup_suppressed",
+   "reason": "dedup: Antora Energy surfaced on 2026-09-05 with the same trigger (funding_round); window 30d",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Jaguar TCS Racing",
+   "source_url": "https://www.batterypoweronline.com/news/follow-the-money-home-batteries-electric-aviation-iron-air-batteries/",
+   "trigger_date": "2026-08-26",
+   "trigger_reason": "$550M oversubscribed Series C for thermal battery scale-up"
+  },
+  {
+   "rank": 7,
+   "company": "Ramp",
+   "series": "F1",
+   "decision": "not_selected",
+   "reason": "eligible but outranked",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 11,
+    "ops_fit": 13,
+    "ranking": 71,
+    "urgency": 13,
+    "capacity": 20,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 5,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://fintechly.com/capital/fintech-funding-roundup-deals-from-june-2026/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified against 5-name alumni database"
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "BWT Alpine",
+   "source_url": "https://fintechly.com/capital/fintech-funding-roundup-deals-from-june-2026/",
+   "trigger_date": "2026-06-15",
+   "trigger_reason": "$750M raise at $44B valuation, AI token-spend expansion"
+  },
+  {
+   "rank": 8,
+   "company": "Wayve",
+   "series": "FE",
+   "decision": "stale",
+   "reason": "trigger 2026-02-15 (day) is 206 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Envision Racing",
+   "source_url": "https://news.crunchbase.com/venture/modest-gains-for-electric-vehicle-funding-wayve/",
+   "trigger_date": "2026-02-15",
+   "trigger_reason": "$1.2B raise at $8.6B valuation for autonomous driving on EVs"
+  },
+  {
+   "rank": 9,
+   "company": "River",
+   "series": "FE",
+   "decision": "below_threshold",
+   "reason": "ranking score 64 < threshold 70",
+   "score_total": 64,
+   "score_breakdown": {
+    "cap": null,
+    "base": 64,
+    "total": 64,
+    "timing": 14,
+    "ops_fit": 13,
+    "ranking": 64,
+    "urgency": 12,
+    "capacity": 12,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 3,
+     "product_to_need": 5,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://techcrunch.com/2026/08/05/indian-ev-two-wheeler-startup-river-raises-120m-after-scaling-with-one-model/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified against 5-name alumni database"
+    },
+    "scanner_score": 64,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 64,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Mahindra Racing",
+   "source_url": "https://techcrunch.com/2026/08/05/indian-ev-two-wheeler-startup-river-raises-120m-after-scaling-with-one-model/",
+   "trigger_date": "2026-08-05",
+   "trigger_reason": "$120M Series C to scale EV production, revenue up 330%"
+  },
+  {
+   "rank": 10,
+   "company": "Rillet",
+   "series": "F1",
+   "decision": "below_threshold",
+   "reason": "ranking score 47 < threshold 70",
+   "score_total": 56,
+   "score_breakdown": {
+    "cap": null,
+    "base": 56,
+    "total": 56,
+    "timing": 14,
+    "ops_fit": 9,
+    "ranking": 47,
+    "urgency": 10,
+    "capacity": 12,
+    "brand_fit": 11,
+    "alumni_boost": 0,
+    "of_gate_applied": false,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 1,
+     "product_to_need": 4,
+     "slot_availability": 2
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": false,
+     "brand_fit": 11
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://techstartups.com/2026/08/19/venture-capital-startup-funding-roundup-august-19-2026-andreessen-horowitz-battery-ventures-iconiq-jpmorgan-chase-prosus-more/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified against 5-name alumni database"
+    },
+    "scanner_score": 47,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 56,
+    "scanner_vs_recomputed_delta": -9
+   },
+   "recommended_team": "Atlassian Williams Racing",
+   "source_url": "https://techstartups.com/2026/08/19/venture-capital-startup-funding-roundup-august-19-2026-andreessen-horowitz-battery-ventures-iconiq-jpmorgan-chase-prosus-more/",
+   "trigger_date": "2026-08-19",
+   "trigger_reason": "$100M Series C at $1B valuation, third raise in a year"
+  }
+ ],
+ "brief": {
+  "number": 245,
+  "verification_status": "needs_review",
+  "audit_status": "pass_after_retry",
+  "audit_attempts": 2,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "storage/briefs/2026-09-09/etched.web.html",
+  "brief_data": {
+   "hq": null,
+   "deck": "Etched's valuation doubled to $21B within a month on a $700M round closed 18 Aug 2026, with its first customer inference rack already delivered. Rack-scale inference silicon is moving from lab to production deployment. A trackside compute demonstration lane is opening as AI infrastructure players enter motorsport.",
+   "risks": [
+    {
+     "label": "VALUATION VOLATILITY",
+     "detail": "A month-old valuation spike could reverse before deal close, raising counterparty risk.",
+     "counter": "Structure with milestone-based payments tied to hardware delivery, not valuation marks."
+    },
+    {
+     "label": "RIVAL SILICON VENDOR",
+     "detail": "A competing inference-chip maker could lock the same trackside compute lane first.",
+     "counter": "Move within the 8-12 week horizon before a rival secures grid inventory."
+    }
+   ],
+   "score": 83,
+   "ticker": "$21B valuation (Aug 2026)",
+   "company": "Etched",
+   "gridfit": [
+    {
+     "team": "Audi Revolut F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "signals": [
+    "funding_event",
+    "product_launch",
+    "category_whitespace",
+    "catalyst"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/"
+   ],
+   "extended": {
+    "ask": "Request a 25-minute call with Etched's commercial-partnerships team to confirm the named decision-maker and scope a three-year technical-alliance term sheet ahead of the Austin and Mexico City race weekends.",
+    "value": [
+     {
+      "text": "An Etched inference rack would sit inside Audi's factory simulation cluster and pit-wall strategy engine, processing race analytics and scenario modelling in real time during race weekends.",
+      "label": "Operational workstream"
+     },
+     {
+      "text": "A live F1 deployment gives Etched a reference customer with extreme reliability and latency requirements, useful in enterprise sales conversations with other performance-sensitive buyers.",
+      "label": "Commercial lift"
+     },
+     {
+      "text": "Race-weekend broadcast packages and factory-tour content built around the inference rack create technical-credibility media assets Etched cannot generate through data-centre customers alone.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Audi provides branding across garage and factory access, plus a genuine production environment to stress-test rack-scale inference silicon under live, high-stakes conditions.",
+      "label": "What Audi gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Etched's valuation doubled to $21B within a month on a $700M round announced 18 Aug 2026 — a rare compression of a funding cycle that signals investor conviction ahead of any F1 conversation.",
+      "label": "Valuation reset"
+     },
+     {
+      "text": "The company has already shipped its first customer inference rack, converting rack-scale inference silicon from architecture promise into deployed, revenue-generating hardware — the credibility marker sponsorship conversations need.",
+      "label": "Proof point delivered"
+     },
+     {
+      "text": "The next eight to twelve weeks span the run of races through the United States Grand Prix in Austin and the Mexico City Grand Prix, both live compute-narrative stages before the 2026 season closes.",
+      "label": "Calendar window"
+     },
+     {
+      "text": "Other AI-silicon and inference vendors are already courting grid seats; a rival locking Audi's compute lane, or another factory team's open technical slot, closes the window Etched is currently first to occupy.",
+      "label": "Competitive clock"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Audi's F1 programme has ElevenLabs for voice AI but no named rack-scale inference-compute partner, leaving strategy simulation, pit-wall modelling and race analytics unclaimed by any technical alliance worth an estimated eight-figure annual sponsorship line.",
+      "label": "Open compute lane"
+     },
+     {
+      "text": "Audi's German engineering identity and Volkswagen Group's broader compute and AI ambitions make an inference-silicon alliance a natural technology-brand extension rather than a generic logo placement.",
+      "label": "Engineering-brand overlap"
+     },
+     {
+      "text": "As a debut-season grid entrant, Audi is actively building factory simulation infrastructure and a technical-partner roster, giving Etched a receptive, not-yet-saturated activation surface across race weekends and factory operations.",
+      "label": "Activation platform"
+     },
+     {
+      "text": "Audi's factory build-out means it can genuinely deploy rack-scale inference hardware in simulation and strategy workflows, not merely display Etched's branding — a distinction that matters for a hardware company proving real-world performance.",
+      "label": "Consumption capacity"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Mercedes-AMG Petronas",
+      "reason": "Cloud and AI infrastructure lane already closed by its long-standing AWS partnership."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Compute and analytics lane already occupied by Oracle's title-level technology partnership."
+     }
+    ]
+   },
+   "date_long": "09 SEP 2026",
+   "discovery": "scan",
+   "team_label": "AUDI",
+   "value_mode": "A",
+   "bottom_line": "Etched just doubled to a $21B valuation with a live inference rack shipped — proof, not promise. Audi's debut-season compute lane beyond ElevenLabs is the cleanest landing spot on the grid; move inside the 8-12 week window.",
+   "footer_date": "9 SEP 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Funding surge, no locked deal yet",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 19,
+     "note": "$700M raise, strong balance sheet",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 17,
+     "note": "Compute-AI narrative fits engineering brand",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 15,
+     "note": "Rival vendors circling same lane",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 16,
+     "note": "Fills Audi's AI-compute gap",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Etched's valuation doubled to $21B in under a month, confirmed 18 Aug 2026 alongside a $700M raise — one of the steepest valuation climbs in AI silicon this year. The company has already shipped its first customer inference rack, moving from architecture promise to deployed hardware. This is the <font name='Poppins-Bold' size='9.5'>BRAND RECKONING</font> moment: Etched must prove rack-scale inference silicon performs under real-world, high-visibility conditions before rivals capture the same trackside compute narrative.",
+   "the_case_p2": "AI infrastructure vendors are converging on F1 as a live compute-performance stage, with rivals already embedding chips and cloud partners across the grid. Audi's compute stack currently centers on ElevenLabs' voice AI, leaving rack-scale inference silicon unclaimed on that entry. The slot that matches Etched's architecture is open at Audi, mid-way through its debut F1 season and still building its technical-partner roster.",
+   "track_label": "",
+   "brief_number": "245",
+   "claims_total": 10,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "New funding round (unspecified series label), $700M, announced 18 Aug 2026",
+     "value": "$700M",
+     "claim_id": 1993,
+     "verified": true,
+     "source_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/"
+    },
+    {
+     "fact": "Valuation doubled to $21B within a month; first customer inference rack already delivered",
+     "value": "$21B",
+     "claim_id": 1994,
+     "verified": true,
+     "source_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/"
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "8-12 WKS",
+   "industry_meta": "Semiconductors - AI Inference Chips - United States",
+   "value_content": "Etched's rack-scale inference silicon maps to Audi's race-weekend compute stack — strategy simulation, pit-wall decision modelling and live race analytics that currently run on generic cloud infrastructure. A trackside inference-rack deployment becomes a live demonstration surface for Etched's hardware under real-time, high-stakes load. Deployment surface: pit-wall strategy engine, factory simulation cluster, garage telemetry processing, broadcast-facing performance-analytics graphics.",
+   "value_section": true,
+   "why_team_para": "Audi's F1 programme has bolted on ElevenLabs for voice AI but carries no rack-scale inference-compute partner, leaving trackside AI processing — strategy simulation, pit-wall modelling, race analytics — outside any named technical alliance. Audi's German engineering identity and Volkswagen Group's compute ambitions make an AI-silicon alliance a natural extension of its brand-technology narrative, not a bolt-on sponsorship. As a debut-season grid entrant, Audi has open technical-partner inventory that longer-established teams have already allocated.",
+   "deal_arch_para": "A three-year technical-alliance partnership, entry-to-major tier at an estimated $8-12M annually, anchored to compute-branding across race weekends including the United States and Mexico City Grands Prix and Audi's factory simulation centre. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font> minimum secures hardware-refresh cycles through Etched's next silicon generation.",
+   "footer_company": "ETCHED",
+   "why_team_label": "WHY AUDI",
+   "claims_verified": 7,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The $700M round and $21B valuation reset landed 18 Aug 2026, with the first customer rack already live — a compute-credibility window that closes once a rival inference-silicon vendor locks a grid seat during the remaining 2026 calendar.",
+   "confidence_level": "HIGH",
+   "decision_maker_bio": "Source does not identify a named executive; Etched's commercial-partnerships lead has not been publicly confirmed. Outreach should route through investor-relations or business-development contacts pending confirmation of the appropriate decision-maker.",
+   "decision_maker_name": "Not named in source",
+   "decision_maker_role": "Executive Leadership (title undisclosed)",
+   "opening_angle_intro": "Etched's valuation doubled to $21B in a month, and its first inference rack is already shipping.",
+   "opening_angle_quote": "&ldquo;Etched just doubled to a $21B valuation in a month with its first inference rack live — Audi's compute stack still runs on ElevenLabs alone. Can we book 25 minutes?&rdquo;",
+   "value_section_label": "VALUE TO AUDI",
+   "verification_status": "needs_review",
+   "decision_maker_verified": false,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "New funding round (unspecified series label), $700M, announced 18 Aug 2026",
+   "cited_source_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+     "excerpt": "Etched on Tuesday announced that it has raised another $700 million at a $21 billion valuation, led by Jane Street after the famed quant fund tested and bought the startup's AI hardware.",
+     "notes": "The cited TechCrunch article, published Aug 18, 2026 (byline Julie Bort), directly confirms the $700M funding round announced on that date.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Not named in source, Executive Leadership (title undisclosed) at Etched",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": null,
+     "excerpt": null,
+     "notes": "No source was cited and the claim names no specific individual or title, leaving nothing concrete to verify against a Tier 1 source.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Valuation doubled to $21B within a month; first customer inference rack already delivered",
+   "cited_source_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+     "excerpt": "Now investors have doubled its valuation to $21 billion, up nearly $11 billion, in a month.",
+     "notes": "TechCrunch (Julie Bort) directly confirms the valuation doubling to $21B within a month and quotes Jane Street saying it now has its own rack running in its datacenter, matching the claim.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Etched's valuation doubled to $21B within a month on a $700M round closed 18 Aug 2026, with its first customer inference rack already delivered.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+     "excerpt": "Etched on Tuesday announced that it has raised another $700 million at a $21 billion valuation, led by Jane Street after the famed quant fund tested and bought the startup's AI hardware.",
+     "notes": "TechCrunch (Julie Bort) confirms the $700M round, $21B valuation doubling within a month from $10.3B, dated August 18 2026, and Jane Street's quote that it has its own rack running in its datacenter.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Rack-scale inference silicon maps to trackside AI compute demonstrations",
+   "cited_source_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": null,
+     "excerpt": null,
+     "notes": "The cited TechCrunch article discusses Etched's valuation and Jane Street funding round only, with no mention of trackside, racing, or motorsport AI compute demonstrations, and no independent search results connect Etched to any such activity.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Etched's valuation doubled to $21B in under a month, confirmed 18 Aug 2026 alongside a $700M raise — one of the steepest valuation climbs in AI silicon this year.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+     "excerpt": "Etched on Tuesday announced that it has raised another $700 million at a $21 billion valuation, led by Jane Street... Now investors have doubled its valuation to $21 billion, up nearly $11 billion, in a month.",
+     "notes": "TechCrunch's named report dated Aug 18, 2026 directly confirms the $700M raise, $21B valuation, and the doubling within roughly a month, corroborated by multiple other outlets.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "US-based, manufacturing partners in Taiwan",
+   "cited_source_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": null,
+     "excerpt": null,
+     "notes": "The cited TechCrunch article does not mention Taiwan or any manufacturing partner, and no Tier 1 source could be found to corroborate the claim (only non-Tier-1 blog/Medium posts reference TSMC).",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "WHY NOW The $700M round and $21B valuation reset landed 18 Aug 2026, with the first customer rack already live — a compute-credibility window that closes once a rival inference-silicon vendor locks a grid seat during the remaining 2026 calendar.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+     "excerpt": "Etched on Tuesday announced that it has raised another $700 million at a $21 billion valuation, led by Jane Street after the famed quant fund tested and bought the startup’s AI hardware.",
+     "notes": "TechCrunch (Aug 18, 2026) confirms the $700M round, $21B valuation, and Jane Street's own rack running in its datacenter, matching the claim's figures and date.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$700M raise, valuation doubles to $21B in a month",
+   "cited_source_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+     "excerpt": "Etched on Tuesday announced that it has raised another $700 million at a $21 billion valuation, led by Jane Street after the famed quant fund tested and bought the startup's AI hardware.",
+     "notes": "TechCrunch (Julie Bort) directly reports the $700M raise and the valuation doubling to $21B within a month, matching the claim exactly.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Etched just doubled to a $21B valuation with a live inference rack shipped — proof, not promise.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+     "excerpt": "Now investors have doubled its valuation to $21 billion, up nearly $11 billion, in a month.",
+     "notes": "TechCrunch (named byline Julie Bort) confirms the valuation doubled to $21B in a month and quotes Jane Street confirming a live rack is now running in its datacenter.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Etched's valuation doubled to $21B within a month on a $700M round announced 18 Aug 2026 — a rare compression of a funding cycle that signals investor conviction ahead of any F1 conversation.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+     "excerpt": "Etched on Tuesday announced that it has raised another $700 million at a $21 billion valuation, led by Jane Street after the famed quant fund tested and bought the startup's AI hardware.",
+     "notes": "TechCrunch and Etched's own GlobeNewswire press release both confirm the $700M round at a $21B valuation announced on August 18, 2026, doubling from the $10.3B valuation set just a month earlier.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States Grand Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Mexico City Grand Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (no title sponsor in current public listing)",
+     "excerpt": "round 20: Mexico City GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}
