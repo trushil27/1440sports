@@ -170,6 +170,10 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      # A failure before the pipeline ran (memory rebuild, install) used to be silent.
+      - name: Tell the operator if the job died before the pipeline could
+        if: failure() && steps.gate.outputs.run == 'yes'
+        run: python -m intel.notify "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
       - name: Keep the run's storage as an artifact (PDFs, outbox, logs) for 30 days
         if: always() && steps.gate.outputs.run == 'yes'
         uses: actions/upload-artifact@v4

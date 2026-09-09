@@ -130,11 +130,9 @@ def test_needs_review_goes_to_the_operator_with_verify_before_circulation(
     )
     assert out.verification_status == "needs_review"
     assert [m.to for m in mailer.sent] == [[OP]]
-    assert (
-        "[REVIEW]" in mailer.sent[0].subject
-        and "VERIFY BEFORE CIRCULATION" in mailer.sent[0].subject
-    )
-    assert "The MD has NOT been emailed" in mailer.sent[0].body_text
+    assert mailer.sent[0].subject.startswith("[REVIEW] 1440 Intelligence Brief N°")
+    assert "OPEN POINTS BEFORE CIRCULATION" in mailer.sent[0].body_text
+    assert "The MD has" not in mailer.sent[0].body_text  # operator, 9 Sep 2026
     assert _sends(session) == [(OP, "needs_review", "sent")]
 
 
@@ -345,8 +343,9 @@ def test_a_needs_review_brief_still_gets_the_card_plus_the_review_panel(
     msg = mailer.sent[-1]
     assert msg.subject.startswith("[REVIEW] 1440 Intelligence Brief N°")
     assert msg.body_html and "1440 Sports · Intelligence" in msg.body_html
-    assert "Verify before circulation" in msg.body_html and "[unverified]" in msg.body_html
-    assert "THE CALL" in msg.body_text and "VERIFY BEFORE CIRCULATION" in msg.body_text
+    assert "Open points before circulation" in msg.body_html and "still to verify" in msg.body_html
+    assert "The MD has" not in msg.body_html
+    assert "THE CALL" in msg.body_text and "OPEN POINTS BEFORE CIRCULATION" in msg.body_text
     assert not msg.subject.startswith("[FORMAT GUARD]")
 
 

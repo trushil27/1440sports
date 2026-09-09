@@ -58,7 +58,7 @@ def message_for(brief: Brief, settings: Settings) -> Outgoing:
     )
     subject = md_subject(brief)
     if review:
-        subject = f"[REVIEW] {subject} — VERIFY BEFORE CIRCULATION"
+        subject = f"[REVIEW] {subject}"
     return guarded(
         Outgoing(
             to=[settings.operator_email or ""],

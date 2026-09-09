@@ -57,7 +57,7 @@ def _facts(d: dict[str, Any]) -> list[tuple[str, str]]:
     rows: list[tuple[str, str]] = []
     for label, value in (
         ("Series", d.get("series_label")),
-        ("Recommended team", d.get("team_label")),
+        ("Recommended team", team_display(d.get("team_label"), d.get("series_label"))),
         ("Decision-maker", _decision_maker(d)),
         ("Action horizon", d.get("horizon_label")),
         ("Confidence", d.get("confidence_level")),
@@ -67,11 +67,49 @@ def _facts(d: dict[str, Any]) -> list[tuple[str, str]]:
     return rows
 
 
+def _placeholder(value: Any) -> bool:
+    """A scanner's "could not find it" written as a value — never shown as a fact."""
+    from intel.verify import is_negative_finding, is_placeholder
+
+    v = str(value or "")
+    return bool(v) and (is_placeholder(v) or is_negative_finding(v))
+
+
 def _decision_maker(d: dict[str, Any]) -> str | None:
+    """The named person, or nothing. N° 245 (9 Sep 2026) showed "Not named in source —
+    Executive Leadership (title undisclosed)" as the decision-maker: the scanner's
+    placeholder had travelled all the way into the card. A missing name is missing."""
     name, role = d.get("decision_maker_name"), d.get("decision_maker_role")
-    if not name:
+    if not name or _placeholder(name):
         return None
+    if role and _placeholder(role):
+        role = None
     return f"{name} — {role}" if role else str(name)
+
+
+def team_display(label: Any, series: Any = None) -> str | None:
+    """The team's 2026 entry name for a label the writer used ("AUDI" → "Audi Revolut F1
+    Team"), from the seeded team profiles; the label itself when nothing matches."""
+    if not label:
+        return None
+    raw = str(label).strip()
+    key = re.sub(r"[^a-z0-9]", "", raw.lower())
+    try:
+        from intel.seed import load_team_profiles
+
+        profiles = load_team_profiles()
+    except Exception:  # noqa: BLE001 — a missing seed must not break an email
+        return raw
+    hits = []
+    for prof in profiles:
+        if series and prof.get("series") and str(prof["series"]).upper() != str(series).upper():
+            continue
+        names = [prof.get("team"), prof.get("display_name"), prof.get("teams_json_name")]
+        norms = [re.sub(r"[^a-z0-9]", "", str(n).lower()) for n in names if n]
+        if any(n == key or n.startswith(key) or key.startswith(n) for n in norms):
+            hits.append(prof.get("display_name") or prof.get("team"))
+    hits = list(dict.fromkeys(h for h in hits if h))
+    return hits[0] if len(hits) == 1 else raw
 
 
 def _sections(d: dict[str, Any]) -> list[tuple[str, str]]:
@@ -97,7 +135,7 @@ def executive_take(brief, settings) -> str:
     d = brief.brief_data or {}
     company = d.get("company", "?")
     score, tier = d.get("score", "?"), (d.get("timing_label") or "").strip()
-    head = f"{company} — {score}/100" + (f" · {tier}" if tier else "")
+    head = f"{company} — {score}/100" + (f" · {tier}" if tier else "")  # text: already spaced
     lines = [head, "=" * len(head), ""]
     verdict = _verdict(d)
     if verdict:
@@ -123,44 +161,85 @@ def _esc(s: Any) -> str:
     return html.escape(str(s), quote=True)
 
 
-def review_lines(brief) -> list[str]:
-    """The open claims and audit findings, one line each — what "verify before circulation"
-    actually means for this brief. Empty when everything is verified and the audit passed."""
+def review_points(brief) -> list[tuple[str, str, str]]:
+    """What still needs a human eye: (status, claim, why) for every load-bearing claim the
+    ledger did not verify, then any audit finding. Empty when nothing is open."""
     from intel.models import VerificationResult
 
-    lines: list[str] = []
+    points: list[tuple[str, str, str]] = []
     for c in getattr(brief, "claims", None) or []:
         if not c.load_bearing or not c.verifications:
             continue
         v = sorted(c.verifications, key=lambda x: (x.checked_at, x.id))[-1]
-        if v.status != VerificationResult.verified:
-            lines.append(f"[{v.status.value}] {c.text}" + (f" — {v.notes}" if v.notes else ""))
+        if v.status == VerificationResult.verified:
+            continue
+        if _placeholder(c.text):
+            # a ledger built before stage B learned to skip placeholders (N° 245)
+            points.append(
+                (
+                    "open",
+                    "Decision-maker not yet named",
+                    "Confirm the sponsorship owner on the company's own leadership page.",
+                )
+            )
+            continue
+        points.append((v.status.value.replace("_", " "), c.text, v.notes or ""))
     for v in getattr(brief, "audit_violations", None) or []:
-        lines.append(f"audit rule {v.get('rule')}: {v.get('message') or v.get('note') or ''}")
-    return lines
+        points.append(("audit", f"rule {v.get('rule')}", v.get("message") or v.get("note") or ""))
+    return points
+
+
+def review_lines(brief) -> list[str]:
+    """The same points as plain text, one per line."""
+    return [
+        f"{status.upper()}: {claim}" + (f" — {why}" if why else "")
+        for status, claim, why in review_points(brief)
+    ]
+
+
+def review_headline(brief) -> str:
+    """One line: how many points, and how the audit ended."""
+    points = review_points(brief)
+    open_claims = sum(1 for st, _, _ in points if st != "audit")
+    audit = (getattr(getattr(brief, "audit_status", None), "value", "") or "").replace("_", " ")
+    parts = []
+    parts.append(
+        f"{open_claims} claim{'s' if open_claims != 1 else ''} still to verify"
+        if open_claims
+        else "every load-bearing claim verified"
+    )
+    if audit:
+        parts.append(f"audit {audit}")
+    return " · ".join(parts)
 
 
 def review_panel_html(brief) -> str:
-    """The same card, plus what still needs a human eye. Only for a brief that is not yet
-    MD-eligible; the fully verified card carries no such panel."""
-    lines = review_lines(brief)
-    status = (getattr(getattr(brief, "verification_status", None), "value", "") or "").replace(
-        "_", " "
-    )
-    audit = (getattr(getattr(brief, "audit_status", None), "value", "") or "").replace("_", " ")
-    li = f'<li style="margin:0 0 6px;color:{INK};font-size:13.5px;line-height:1.5">'
-    items = "".join(f"{li}{_esc(x)}</li>" for x in lines) or (
-        f'<li style="color:{MUTED};font-size:13.5px">No open claims.</li>'
+    """The card, plus the open points — for a brief that is not yet ready to circulate."""
+    points = review_points(brief)
+    items = (
+        "".join(
+            f'<li style="margin:0 0 8px;font-size:13.5px;line-height:1.5;color:{INK}">'
+            f'<span style="color:#8a5a00;font-size:10.5px;letter-spacing:.14em;'
+            f'text-transform:uppercase;font-weight:700">{_esc(status)}</span> '
+            f"{_esc(claim)}"
+            + (
+                f'<div style="color:{MUTED};font-size:12.5px;margin-top:2px">{_esc(why)}</div>'
+                if why
+                else ""
+            )
+            + "</li>"
+            for status, claim, why in points
+        )
+        or f'<li style="color:{MUTED};font-size:13.5px">Nothing open.</li>'
     )
     head = (
         '<div style="color:#8a5a00;font-size:11px;letter-spacing:.18em;'
-        'text-transform:uppercase;font-weight:700;margin-bottom:6px">'
-        "Verify before circulation</div>"
+        'text-transform:uppercase;font-weight:700;margin-bottom:4px">'
+        "Open points before circulation</div>"
     )
     line = (
-        f'<div style="color:{INK};font-size:13px;margin-bottom:8px">'
-        f"Verification: <b>{_esc(status)}</b> &nbsp;·&nbsp; Audit: <b>{_esc(audit)}</b>. "
-        f"The MD has not been emailed.</div>"
+        f'<div style="color:{MUTED};font-size:12.5px;margin-bottom:10px">'
+        f"{_esc(review_headline(brief))}</div>"
     )
     return (
         '\n  <tr><td style="padding:18px 24px 0">'
@@ -183,7 +262,23 @@ REQUIRED_HTML = (
     "1440 Intelligence Engine",
 )
 REQUIRED_TEXT = ("THE CALL", "AT A GLANCE", "Read the full case:", "The 2-page brief is attached.")
-FORBIDDEN = ("Shadow mode", "[SHADOW]", "${", "{{", "}}", ">None<", ">?<", "?/100", "None/100")
+FORBIDDEN = (
+    "Shadow mode",
+    "[SHADOW]",
+    "${",
+    "{{",
+    "}}",
+    ">None<",
+    ">?<",
+    "?/100",
+    "None/100",
+    "Not named in source",
+    "title undisclosed",
+    "unnamed in source",
+    "The MD has",
+)
+#: A score glued to its tier ("83/100HOT") — the chip lost its spacing in the mail client.
+_GLUED_TIER = re.compile(r"/100[A-Za-z]")
 
 
 def audit_card(html: str, text: str, settings=None) -> list[str]:
@@ -213,6 +308,8 @@ def audit_card(html: str, text: str, settings=None) -> list[str]:
         problems.append(f"card link does not point at {base}")
     if re.search(r'href="https?://[^"]*/\d+"', html):
         problems.append("card link ends in a number")
+    if _GLUED_TIER.search(re.sub(r"<[^>]+>", "", html)) or _GLUED_TIER.search(text):
+        problems.append("score and tier are run together")
     return problems
 
 
@@ -240,10 +337,12 @@ def brief_html(brief, settings, review: bool = False) -> str:
         f'<div style="color:{INK};font-size:15px;line-height:1.55">{_esc(text)}</div></div>'
         for label, text in _sections(d)
     )
+    # A literal separator, not a margin: Outlook drops inline margins and N° 245 read
+    # "83/100HOT" (9 Sep 2026).
     tier_chip = (
-        f'<span style="display:inline-block;background:rgba(255,255,255,.14);color:#fff;'
-        f"font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;"
-        f'border-radius:5px;padding:4px 9px;margin-left:10px">{_esc(tier)}</span>'
+        f'&nbsp;&nbsp;<span style="display:inline-block;background:rgba(255,255,255,.14);'
+        f"color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;"
+        f'font-weight:700;border-radius:5px;padding:4px 9px">{_esc(tier)}</span>'
         if tier
         else ""
     )

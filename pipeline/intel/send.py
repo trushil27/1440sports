@@ -492,18 +492,18 @@ def distribute(
     # The same card the MD would get — plus what still needs a human eye. 8-9 Sep 2026 the
     # operator received this branch as plain text twice ("format again was in bad shape"):
     # the card had only been wired into the fully verified path.
+    from intel.mail_brief import review_headline, review_lines
+
+    del reason  # the panel says what is open; the subject stays the brief's own
     msg = guarded(
         Outgoing(
             to=[op],
-            subject=f"[REVIEW] {md_subject(brief)} — {reason}",
+            subject=f"[REVIEW] {md_subject(brief)}",
             body_text=(
                 f"{executive_take(brief, settings)}\n\n"
-                f"VERIFY BEFORE CIRCULATION\n"
-                f"Verification: {brief.verification_status.value}\n"
-                f"Open claims:\n{_ledger_summary(brief)}\n\n"
-                f"Audit: {brief.audit_status.value} ({brief.audit_attempts} attempt(s))\n"
-                f"{_audit_summary(brief)}\n\n"
-                "The MD has NOT been emailed."
+                "OPEN POINTS BEFORE CIRCULATION\n"
+                f"{review_headline(brief)}\n"
+                + "\n".join(f"- {line}" for line in review_lines(brief))
             ),
             body_html=brief_body_html(brief, settings, review=True),
             attachments=_attachment(brief),

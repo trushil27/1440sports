@@ -205,8 +205,12 @@ def claims_from_brief(written: Any) -> list[ClaimDraft]:
 
     out: list[ClaimDraft] = []
     name = getattr(written, "decision_maker_name", None)
-    if name:
+    # A writer that could not name anyone writes "Not named in source"; that is not a person
+    # and not a claim (N° 245, 9 Sep 2026: it reached the ledger, the email and the PDF).
+    if name and not is_placeholder(name) and not is_negative_finding(name):
         role = getattr(written, "decision_maker_role", None) or ""
+        if is_placeholder(role) or is_negative_finding(role):
+            role = ""
         out.append(
             ClaimDraft(
                 f"{name}, {role} at {written.company}" if role else f"{name} at {written.company}",

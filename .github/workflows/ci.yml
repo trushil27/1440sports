@@ -50,6 +50,14 @@ jobs:
       - name: Pipeline tests
         run: pytest pipeline/tests
 
+      # The morning, rehearsed: rebuild the repo's memory from scratch, export the app, and
+      # compose the latest brief's email through the format guard. A push that breaks any of
+      # that fails here, not at 05:40 tomorrow (9 Sep 2026).
+      - name: Morning rehearsal (memory rebuild → export → email through the guard)
+        env:
+          PYTHONPATH: pipeline
+        run: python -m intel.rehearsal
+
       - name: API tests
         run: pytest api/tests
 

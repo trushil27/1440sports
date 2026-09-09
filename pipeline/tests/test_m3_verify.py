@@ -354,3 +354,23 @@ def test_a_placeholder_person_yields_no_decision_maker_claim():
     # a real person still produces the claim
     sig.person, sig.role = "Gabriel Le Roux", "CEO & Co-founder"
     assert any("Gabriel Le Roux" in c.text for c in verify.claims_from_signal(sig))
+
+
+def test_a_placeholder_decision_maker_never_becomes_a_written_claim():
+    """N° 245 (9 Sep 2026): the writer's "Not named in source" reached the ledger as a
+    person claim, then the email and the PDF. A placeholder is not a person."""
+    from types import SimpleNamespace
+
+    from intel.verify import ClaimType, claims_from_brief
+
+    written = SimpleNamespace(
+        company="Etched",
+        decision_maker_name="Not named in source",
+        decision_maker_role="Executive Leadership (title undisclosed)",
+    )
+    assert not [c for c in claims_from_brief(written) if c.claim_type == ClaimType.person_role]
+    named = SimpleNamespace(
+        company="Etched", decision_maker_name="Gavin Uberti", decision_maker_role="CEO"
+    )
+    people = [c for c in claims_from_brief(named) if c.claim_type == ClaimType.person_role]
+    assert len(people) == 1 and people[0].text == "Gavin Uberti, CEO at Etched"

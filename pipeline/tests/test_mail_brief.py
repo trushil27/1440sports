@@ -94,7 +94,7 @@ def test_the_format_guard_passes_the_real_card_and_catches_a_broken_one():
     assert mail_brief.audit_card(html, text, settings) == []
     # the review variant is the same card plus the panel, and still passes
     review = mail_brief.brief_html(brief, settings, review=True)
-    assert "Verify before circulation" in review
+    assert "Open points before circulation" in review
     assert mail_brief.audit_card(review, text, settings) == []
 
     broken = html.replace("At a glance", "").replace("Read the full case", "Read more")
@@ -111,3 +111,56 @@ def test_the_format_guard_passes_the_real_card_and_catches_a_broken_one():
     assert any(
         "Shadow mode" in p for p in mail_brief.audit_card(html, text + "\nShadow mode: x", settings)
     )
+
+
+def test_placeholders_never_print_as_people_and_labels_read_as_names():
+    """N° 245 (9 Sep 2026) showed "Not named in source — Executive Leadership (title
+    undisclosed)" as the decision-maker, "AUDI" as the team and "83/100HOT" as the score."""
+    brief = _brief()
+    d = dict(brief.brief_data)
+    d.update(
+        {
+            "decision_maker_name": "Not named in source",
+            "decision_maker_role": "Executive Leadership (title undisclosed)",
+            "team_label": "AUDI",
+            "series_label": "F1",
+            "score": 83,
+            "timing_label": "HOT",
+        }
+    )
+    brief.brief_data = d
+    settings = _settings("https://1440-intelligence.netlify.app")
+    html = mail_brief.brief_html(brief, settings)
+    text = mail_brief.executive_take(brief, settings)
+    assert "Not named in source" not in html and "Decision-maker" not in html  # omitted, not faked
+    assert "Audi Revolut F1 Team" in html and ">AUDI<" not in html
+    assert "83/100HOT" not in html.replace("&nbsp;", " ") and "83/100 · HOT" in text
+    assert mail_brief.audit_card(html, text, settings) == []
+    # and the guard would have caught the old output
+    old = html.replace("Audi Revolut F1 Team", "AUDI") + "<td>Not named in source</td>"
+    problems = mail_brief.audit_card(old, text.replace("83/100 · HOT", "83/100HOT"), settings)
+    assert any("Not named in source" in p for p in problems)
+    assert any("run together" in p for p in problems)
+    assert mail_brief.team_display("Jaguar", "FE") == "Jaguar TCS Racing"
+    assert mail_brief.team_display("Nobody Racing", "F1") == "Nobody Racing"
+
+
+def test_an_old_placeholder_claim_in_the_ledger_reads_as_the_true_state():
+    from types import SimpleNamespace
+
+    from intel.models import VerificationResult
+
+    v = SimpleNamespace(status=VerificationResult.unverified, notes="no source", checked_at=1, id=1)
+    claim = SimpleNamespace(
+        load_bearing=True, verifications=[v], text="Not named in source, CEO (unnamed) at Etched"
+    )
+    brief = SimpleNamespace(claims=[claim], audit_violations=[], audit_status=None)
+    points = mail_brief.review_points(brief)
+    assert points == [
+        (
+            "open",
+            "Decision-maker not yet named",
+            "Confirm the sponsorship owner on the company's own leadership page.",
+        )
+    ]
+    assert "Not named" not in "".join(mail_brief.review_lines(brief))

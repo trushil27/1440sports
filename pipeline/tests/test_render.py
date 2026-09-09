@@ -136,3 +136,19 @@ def test_value_mode_rules_from_phase_218():
     assert render.value_mode_for(13, "Industrial software") == "B"
     assert render.value_mode_for(8, "Consumer fitness app") == "C"
     assert render.value_mode_for(16, "Fintech · Payments") == "A"  # OF ≥ 14 wins over industry
+
+
+def test_a_placeholder_decision_maker_is_scrubbed_before_rendering():
+    from intel.render import _scrub_placeholders
+
+    ctx = _scrub_placeholders(
+        {
+            "decision_maker_name": "Not named in source",
+            "decision_maker_role": "CEO (unnamed in source)",
+            "decision_maker_verified": True,
+        }
+    )
+    assert ctx["decision_maker_name"] == "Not yet named" and ctx["decision_maker_verified"] is False
+    assert "leadership page" in ctx["decision_maker_role"]
+    ok = _scrub_placeholders({"decision_maker_name": "Scott Wu", "decision_maker_role": "CEO"})
+    assert ok["decision_maker_name"] == "Scott Wu" and ok["decision_maker_role"] == "CEO"

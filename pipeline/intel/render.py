@@ -183,6 +183,26 @@ def sources_from_ledger(claims: list[Claim], limit: int = 8) -> list[str]:
     return out[:limit]
 
 
+def _scrub_placeholders(ctx: dict) -> dict:
+    """A scanner's "Not named in source" must never print as a person. N° 245 (9 Sep 2026)
+    carried it into the PDF's decision-maker box. The box says what is true instead."""
+    from intel.verify import is_negative_finding, is_placeholder
+
+    def bad(v) -> bool:
+        return bool(v) and (is_placeholder(str(v)) or is_negative_finding(str(v)))
+
+    out = dict(ctx)
+    if bad(out.get("decision_maker_name")):
+        out["decision_maker_name"] = "Not yet named"
+        out["decision_maker_role"] = (
+            "Confirm the sponsorship owner on the company's own leadership page"
+        )
+        out["decision_maker_verified"] = False
+    elif bad(out.get("decision_maker_role")):
+        out["decision_maker_role"] = "Title not yet confirmed"
+    return out
+
+
 def decision_maker_verified(claims: list[Claim]) -> bool:
     for c in claims:
         if c.claim_type == ClaimType.person_role and c.section == "decision_maker":
@@ -378,7 +398,7 @@ def render_html(data: BriefData, font_stack: str = "brand") -> str:
         font_stack=font_stack,
         page_font="Lora" if font_stack == "brand" else 'Georgia, "Liberation Serif", serif',
     )
-    return _env().get_template("brief.html.j2").render(**ctx)
+    return _env().get_template("brief.html.j2").render(**_scrub_placeholders(ctx))
 
 
 def _logo_data_uri(path: Path | None = None) -> str:
@@ -408,7 +428,7 @@ def render_web_html(data: BriefData) -> str:
         logo_src=_logo_data_uri(),
         logo_src_dark=_logo_data_uri(LOGO_DARK),
     )
-    return _env().get_template("brief_web.html.j2").render(**ctx)
+    return _env().get_template("brief_web.html.j2").render(**_scrub_placeholders(ctx))
 
 
 def render_web(data: BriefData, out_path: Path) -> Path:
