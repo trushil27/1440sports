@@ -1,0 +1,1190 @@
+{
+ "run": {
+  "id": 195,
+  "date": "2026-09-10",
+  "status": "success",
+  "mode": "shadow",
+  "summary": {
+   "usage": {
+    "calls": {
+     "writer": 2,
+     "scanner": 2,
+     "verifier": 13
+    },
+    "tokens": {
+     "input": 6465,
+     "output": 121409,
+     "cache_read": 2117118,
+     "cache_write": 295477
+    },
+    "estimated_usd": 2.389
+   },
+   "sources": {
+    "n8n": 0,
+    "status": "read",
+    "offered": [
+     "Omterra (Siemens Energy) (routine)",
+     "Moove (routine)",
+     "Wonderful (routine)",
+     "Also (routine)",
+     "SambaNova Systems (n8n)"
+    ],
+    "routine": 1,
+    "scanned": [
+     "Wonderful"
+    ],
+    "scanner": 10,
+    "kept_thin": [],
+    "n8n_mails": 4,
+    "candidates": 1,
+    "mails_read": 40,
+    "to_research": [],
+    "already_known": [
+     "Omterra (Siemens Energy)",
+     "Moove",
+     "Also",
+     "SambaNova Systems"
+    ],
+    "routine_mails": 2
+   },
+   "decisions": {
+    "stale": 2,
+    "selected": 1,
+    "not_selected": 2,
+    "below_threshold": 5,
+    "dedup_suppressed": 1
+   },
+   "candidates": 11,
+   "verification": [
+    {
+     "pdf": "storage/briefs/2026-09-10/wonderful.pdf",
+     "web": "storage/briefs/2026-09-10/wonderful.web.html",
+     "audit": "failed",
+     "status": "needs_review",
+     "company": "Wonderful",
+     "stage_a": {
+      "verified": 6,
+      "unverified": 2
+     },
+     "stage_b": {
+      "verified": 6,
+      "unverified": 1
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 260,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 294,
+     "verification": "needs_review",
+     "audit_attempts": 2
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": null,
+     "reason": "dedup: Cognition AI surfaced on 2026-09-08 with the same trigger (funding_round); window 30d",
+     "company": "Cognition AI (Devin)",
+     "decision": "dedup_suppressed",
+     "signal_date": "2026-09-08"
+    },
+    {
+     "rank": 2,
+     "score": 76,
+     "reason": "eligible but outranked",
+     "company": "Fireworks AI",
+     "decision": "not_selected",
+     "signal_date": "2026-07-14"
+    },
+    {
+     "rank": 3,
+     "score": 74,
+     "reason": "eligible but outranked",
+     "company": "Walden Robotics",
+     "decision": "not_selected",
+     "signal_date": "2026-08-03"
+    },
+    {
+     "rank": 4,
+     "score": 67,
+     "reason": "ranking score 67 < threshold 70",
+     "company": "Baseten",
+     "decision": "below_threshold",
+     "signal_date": "2026-06-26"
+    },
+    {
+     "rank": 5,
+     "score": 65,
+     "reason": "ranking score 65 < threshold 70",
+     "company": "Rillet",
+     "decision": "below_threshold",
+     "signal_date": "2026-08-19"
+    },
+    {
+     "rank": 6,
+     "score": 65,
+     "reason": "ranking score 65 < threshold 70",
+     "company": "Chai Discovery",
+     "decision": "below_threshold",
+     "signal_date": "2026-07-14"
+    },
+    {
+     "rank": 7,
+     "score": 61,
+     "reason": "ranking score 61 < threshold 70",
+     "company": "Peregrine Technologies",
+     "decision": "below_threshold",
+     "signal_date": "2026-06-26"
+    },
+    {
+     "rank": 8,
+     "score": null,
+     "reason": "trigger 2026-05-22 (day) is 111 days old; window is 90",
+     "company": "Replit",
+     "decision": "stale",
+     "signal_date": "2026-05-22"
+    },
+    {
+     "rank": 9,
+     "score": null,
+     "reason": "trigger 2026-05-19 (day) is 114 days old; window is 90",
+     "company": "Eridu",
+     "decision": "stale",
+     "signal_date": "2026-05-19"
+    },
+    {
+     "rank": 10,
+     "score": 43,
+     "reason": "ranking score 33 < threshold 70",
+     "company": "Quantifind",
+     "decision": "below_threshold",
+     "signal_date": "2026-06-26"
+    },
+    {
+     "rank": 11,
+     "score": 78,
+     "reason": "top ranking score",
+     "company": "Wonderful",
+     "decision": "selected",
+     "signal_date": "2026-09-02"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Cognition AI (Devin)",
+   "series": "F1",
+   "decision": "dedup_suppressed",
+   "reason": "dedup: Cognition AI surfaced on 2026-09-08 with the same trigger (funding_round); window 30d",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "BWT Alpine",
+   "source_url": "https://en.cryptonomist.ch/2026/09/08/cognition-series-e-funding/",
+   "trigger_date": "2026-09-08",
+   "trigger_reason": "Series E, $2B at $48B valuation, 8 Sep 2026"
+  },
+  {
+   "rank": 2,
+   "company": "Fireworks AI",
+   "series": "FE",
+   "decision": "not_selected",
+   "reason": "eligible but outranked",
+   "score_total": 76,
+   "score_breakdown": {
+    "cap": null,
+    "base": 76,
+    "total": 76,
+    "timing": 15,
+    "ops_fit": 15,
+    "ranking": 76,
+    "urgency": 13,
+    "capacity": 18,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-defense-fintech-robotics/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 76,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 76,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Envision Racing",
+   "source_url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-defense-fintech-robotics/",
+   "trigger_date": "2026-07-14",
+   "trigger_reason": "Series D, $1.505B raised, week of 14 Jul 2026"
+  },
+  {
+   "rank": 3,
+   "company": "Walden Robotics",
+   "series": "FE",
+   "decision": "not_selected",
+   "reason": "eligible but outranked",
+   "score_total": 74,
+   "score_breakdown": {
+    "cap": null,
+    "base": 74,
+    "total": 74,
+    "timing": 14,
+    "ops_fit": 16,
+    "ranking": 74,
+    "urgency": 13,
+    "capacity": 15,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 3,
+     "product_to_need": 7,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://aifundingtracker.com/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 74,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 74,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Jaguar TCS Racing",
+   "source_url": "https://aifundingtracker.com/",
+   "trigger_date": "2026-08-03",
+   "trigger_reason": "Seed, $300M at $1.1B valuation, Toyota Research Institute spinout"
+  },
+  {
+   "rank": 4,
+   "company": "Baseten",
+   "series": "F1",
+   "decision": "below_threshold",
+   "reason": "ranking score 67 < threshold 70",
+   "score_total": 67,
+   "score_breakdown": {
+    "cap": null,
+    "base": 67,
+    "total": 67,
+    "timing": 7,
+    "ops_fit": 16,
+    "ranking": 67,
+    "urgency": 9,
+    "capacity": 19,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-marketing-robotics-baseten/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 67,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 67,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Audi F1 Team",
+   "source_url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-marketing-robotics-baseten/",
+   "trigger_date": "2026-06-26",
+   "trigger_reason": "Series F, $1.5B raised at $13B/$11B tranche valuations"
+  },
+  {
+   "rank": 5,
+   "company": "Rillet",
+   "series": "F1",
+   "decision": "below_threshold",
+   "reason": "ranking score 65 < threshold 70",
+   "score_total": 65,
+   "score_breakdown": {
+    "cap": null,
+    "base": 65,
+    "total": 65,
+    "timing": 16,
+    "ops_fit": 13,
+    "ranking": 65,
+    "urgency": 11,
+    "capacity": 12,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 5,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://techcrunch.com/2026/08/19/rillet-raises-100m-series-c-at-1b-valuation-2-years-after-emerging-from-stealth/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 65,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 65,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "MoneyGram Haas F1 Team",
+   "source_url": "https://techcrunch.com/2026/08/19/rillet-raises-100m-series-c-at-1b-valuation-2-years-after-emerging-from-stealth/",
+   "trigger_date": "2026-08-19",
+   "trigger_reason": "Series C, $100M at $1B valuation, 19 Aug 2026"
+  },
+  {
+   "rank": 6,
+   "company": "Chai Discovery",
+   "series": "F1",
+   "decision": "below_threshold",
+   "reason": "ranking score 65 < threshold 70",
+   "score_total": 65,
+   "score_breakdown": {
+    "cap": null,
+    "base": 65,
+    "total": 65,
+    "timing": 15,
+    "ops_fit": 12,
+    "ranking": 65,
+    "urgency": 10,
+    "capacity": 16,
+    "brand_fit": 12,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 5,
+     "slot_availability": 2
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 12
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-defense-fintech-robotics/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 65,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 65,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Scuderia Ferrari",
+   "source_url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-defense-fintech-robotics/",
+   "trigger_date": "2026-07-14",
+   "trigger_reason": "Series C, $400M at $3.8B valuation, week of 14 Jul 2026"
+  },
+  {
+   "rank": 7,
+   "company": "Peregrine Technologies",
+   "series": "FE",
+   "decision": "below_threshold",
+   "reason": "ranking score 61 < threshold 70",
+   "score_total": 61,
+   "score_breakdown": {
+    "cap": null,
+    "base": 61,
+    "total": 61,
+    "timing": 6,
+    "ops_fit": 15,
+    "ranking": 61,
+    "urgency": 8,
+    "capacity": 18,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 7,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-marketing-robotics-baseten/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 61,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 61,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "NEOM McLaren Electric Racing",
+   "source_url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-marketing-robotics-baseten/",
+   "trigger_date": "2026-06-26",
+   "trigger_reason": "Series D, $250M at $6.8B valuation, week of 26 Jun 2026"
+  },
+  {
+   "rank": 8,
+   "company": "Replit",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-05-22 (day) is 111 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Visa Cash App Racing Bulls",
+   "source_url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-robotics-ecommerce-quince/",
+   "trigger_date": "2026-05-22",
+   "trigger_reason": "Series D, $400M at $9B valuation (up from $3B), 22 May 2026"
+  },
+  {
+   "rank": 9,
+   "company": "Eridu",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-05-19 (day) is 114 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-robotics-ecommerce-quince/",
+   "trigger_date": "2026-05-19",
+   "trigger_reason": "Series A, $200M, stealth exit, ~19 May 2026"
+  },
+  {
+   "rank": 10,
+   "company": "Quantifind",
+   "series": "F1",
+   "decision": "below_threshold",
+   "reason": "ranking score 33 < threshold 70",
+   "score_total": 43,
+   "score_breakdown": {
+    "cap": null,
+    "base": 43,
+    "total": 43,
+    "timing": 7,
+    "ops_fit": 10,
+    "ranking": 33,
+    "urgency": 7,
+    "capacity": 10,
+    "brand_fit": 9,
+    "alumni_boost": 0,
+    "of_gate_applied": false,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 4,
+     "slot_availability": 2
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": false,
+     "brand_fit": 9
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-marketing-robotics-baseten/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "none"
+    },
+    "scanner_score": 33,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 43,
+    "scanner_vs_recomputed_delta": -10
+   },
+   "recommended_team": "Oracle Red Bull Racing",
+   "source_url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-marketing-robotics-baseten/",
+   "trigger_date": "2026-06-26",
+   "trigger_reason": "Growth financing, $200M, led by Summit Partners, week of 26 Jun 2026"
+  },
+  {
+   "rank": 11,
+   "company": "Wonderful",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 78,
+   "score_breakdown": {
+    "cap": null,
+    "base": 78,
+    "total": 78,
+    "timing": 15,
+    "ops_fit": 14,
+    "ranking": 78,
+    "urgency": 15,
+    "capacity": 19,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "No match — none of the five alumni-database executives map to Wonderful or to Salesforce's investing arm"
+    },
+    "scanner_score": 78,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 78,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "AUDI",
+   "source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+   "trigger_date": "2026-09-02",
+   "trigger_reason": "$550M Series C close at $5B valuation, more than doubling $2B Series B mark in under 6 months"
+  }
+ ],
+ "brief": {
+  "number": 246,
+  "verification_status": "needs_review",
+  "audit_status": "failed",
+  "audit_attempts": 2,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "storage/briefs/2026-09-10/wonderful.web.html",
+  "brief_data": {
+   "hq": "Amsterdam/Tel Aviv",
+   "deck": "Wonderful closed a $550M Series C on 2 September 2026, lifting its valuation from $2B to $5B in under six months. Salesforce joined as a first-time investor alongside Insight Partners. The AI-agent orchestration platform now operates across 35+ markets, entering enterprise-scale rollout as an 'AI operating system.'",
+   "risks": [
+    {
+     "label": "NO SPORTS-MARKETING TRACK RECORD",
+     "detail": "Wonderful has never run a brand-sponsorship program, so ROI modeling for motorsport spend is unproven internally.",
+     "counter": "Position the deal as a founder-led enterprise-trust play, not a consumer campaign, matching its enterprise-sales motion."
+    },
+    {
+     "label": "CAPITAL COULD TARGET RIVAL CATEGORY FIRST",
+     "detail": "Competing orchestration vendors with fresh capital could claim the open AI category on another grid first.",
+     "counter": "Audi's existing ElevenLabs relationship gives Wonderful a faster path into an active technical conversation."
+    }
+   ],
+   "score": 78,
+   "ticker": "$5B valuation (Series C, Sept 2026)",
+   "company": "Wonderful",
+   "gridfit": [
+    {
+     "team": "Audi Revolut F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "signals": [
+    "funding_event",
+    "category_whitespace",
+    "expansion",
+    "catalyst"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+    "https://www.calcalistech.com/ctechnews/article/i3481b92n",
+    "https://www.bvp.com/news/the-trailblazer-in-enterprise-ai-wonderfuls-550m-series-c"
+   ],
+   "extended": {
+    "ask": "Request a 25-minute call with Audi's partnerships team to test whether the AI-orchestration category fits its 2027 technical-partner roadmap ahead of its full works-entry season.",
+    "value": [
+     {
+      "text": "Wonderful's orchestration layer would coordinate Audi's simulation outputs, strategy modeling and factory data pipelines into a single automated workflow, sitting alongside the existing ElevenLabs voice interface.",
+      "label": "Operational workstream"
+     },
+     {
+      "text": "Paddock enterprise-briefing access gives Wonderful direct introductions to Audi's B2B supplier and manufacturing partner network, a warm pipeline for its enterprise-sales team.",
+      "label": "Commercial lift"
+     },
+     {
+      "text": "Race-weekend content — war-room footage, factory technology days — gives Wonderful its first brand-authority content library for enterprise buyers who have never seen it marketed.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Audi provides paddock hospitality, broadcast presence at flagship rounds and technical-alliance credibility that Wonderful cannot yet buy through traditional enterprise-marketing channels.",
+      "label": "What Audi gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Wonderful closed a $550M Series C on 2 September 2026, led by Insight Partners with first-time investor Salesforce, lifting valuation from $2B (March 2026 Series B) to $5B in under six months.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The war chest gives Wonderful discretionary capital for a first brand-authority platform before its enterprise-sales motion needs paid marketing infrastructure — motorsport sponsorship is a rare next spend category at this stage.",
+      "label": "Budget moment"
+     },
+     {
+      "text": "The Las Vegas Grand Prix in November 2026 falls inside the 8-12 week deal horizon from this signal, giving a concrete broadcast and paddock activation date to anchor a first announcement.",
+      "label": "Calendar window"
+     },
+     {
+      "text": "No enterprise AI-orchestration company holds a grid sponsorship today, but well-capitalized rivals in the same funding cycle could move first if Wonderful does not act inside this window.",
+      "label": "Competitive clock"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Audi's technical partner roster includes ElevenLabs for voice AI but no broader agent-orchestration or workflow-AI partner, leaving that category entirely open on the team's grid.",
+      "label": "Open lane"
+     },
+     {
+      "text": "Audi's enterprise-buyer audience in engineering, manufacturing and B2B software overlaps with Wonderful's target enterprise customer base, giving paddock exposure direct relevance to Wonderful's sales pipeline.",
+      "label": "Market overlap"
+     },
+     {
+      "text": "Audi's factory-to-track operation, engineering war-room and hospitality suites give Wonderful a live demonstration environment beyond a logo placement.",
+      "label": "Activation platform"
+     },
+     {
+      "text": "Audi's build-out toward a full works F1 entry means expanding engineering and data operations that can genuinely run an orchestration platform, not just display its brand.",
+      "label": "Consumption capacity"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Mercedes",
+      "reason": "AWS already occupies the cloud/AI-analytics partner lane across Mercedes' race operations."
+     },
+     {
+      "team": "McLaren",
+      "reason": "Google Cloud already supplies McLaren's AI and cloud-analytics partnership, closing that lane."
+     }
+    ]
+   },
+   "date_long": "10 SEP 2026",
+   "discovery": "scan",
+   "team_label": "AUDI",
+   "value_mode": "A",
+   "bottom_line": "Wonderful just more than doubled its valuation to $5B in under six months with a fresh $550M war chest — Audi's AI-partner roster stops at ElevenLabs, leaving the orchestration-layer slot open and matched to Wonderful's category, timing and capacity.",
+   "footer_date": "10 SEP 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Days-old raise, pre-marketing spend cycle.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 19,
+     "note": "$550M war chest, no marketing spend yet.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "Enterprise AI narrative, unproven in motorsport.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 15,
+     "note": "Category open but rivals also well-funded.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 14,
+     "note": "Fills Audi's AI-partner gap beyond ElevenLabs.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Wonderful's valuation more than doubled — from $2B at its March 2026 Series B to $5B at its 2 September 2026 Series C — inside six months, with Insight Partners leading a $550M round joined by Salesforce, Index Ventures, IVP, Vine Ventures, 9Yards and Bessemer. This is the <font name='Poppins-Bold' size='9.5'>BRAND RECKONING</font> moment for an AI-agent orchestration startup: capital is no longer the constraint, market credibility is. With 650 employees across 35+ markets, Wonderful must prove enterprise trust at global scale — a brand platform becomes the next asset it has to buy.",
+   "the_case_p2": "No enterprise AI-agent orchestration company currently holds a grid sponsorship across F1 or Formula E, per active sponsor records — the category sits entirely open on the current grid. Cloud and workflow-automation vendors have moved into paddock deals elsewhere in tech, narrowing the runway before a rival orchestration platform claims the lane first. The open slot that matches Wonderful's category sits at Audi.",
+   "track_label": "",
+   "brief_number": "246",
+   "claims_total": 14,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$550M Series C at $5B valuation, closed Sept 2, 2026",
+     "value": "$550M",
+     "claim_id": 1993,
+     "verified": true,
+     "source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/"
+    },
+    {
+     "fact": "Series C funding close; valuation more than doubled from $2B (Series B, March 2026) to $5B in under six months",
+     "value": "$2B",
+     "claim_id": 1995,
+     "verified": true,
+     "source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/"
+    },
+    {
+     "fact": "Wonderful just more than doubled its valuation to $5B in under six months with a fresh $550M war chest — Au…",
+     "value": "$5B",
+     "claim_id": 2003,
+     "verified": false,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "8-12 WKS",
+   "industry_meta": "Enterprise Software - AI Agent Orchestration/OS - Amsterdam/Tel Aviv",
+   "value_content": "Wonderful's agent-orchestration layer maps to Audi's engineering-ops stack: coordinating simulation workflows, strategy-model outputs and factory-floor data pipelines into a single automated decision layer. Deployment surface: race-engineering war-room dashboards, factory telemetry coordination, and pit-wall strategy tooling that synthesizes simulation and live-session data. The platform sits alongside ElevenLabs' voice interface, giving Audi's technical stack both a conversational layer and an orchestration layer.",
+   "value_section": true,
+   "why_team_para": "Audi's current partner roster includes ElevenLabs for voice AI but no broader AI-orchestration or agent-workflow partner — leaving the category that Wonderful occupies entirely open on the team's technical partner grid. As Audi scales its factory-to-track engineering pipeline ahead of its full works-team F1 entry, an orchestration layer coordinating simulation, strategy and factory workflows fills a documented gap in Audi's AI stack, positioned as the natural next partner beyond voice AI.",
+   "deal_arch_para": "A <font name='Poppins-Bold' size='9.5'>THREE YEARS</font> entry-tier technical partnership, structured at roughly $8-12M annually, positions Wonderful as Audi's AI-orchestration partner through the 2027-2029 seasons. Activation anchors: Las Vegas Grand Prix digital showcase, Munich factory technology days, and paddock enterprise-briefing suites at flagship European rounds. Renewal checkpoints align with Audi's full works-team F1 entry, option to scale into a broader technical alliance.",
+   "footer_company": "WONDERFUL",
+   "why_team_label": "WHY AUDI",
+   "claims_verified": 11,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Wonderful's Series C closed 2 September 2026, giving it fresh capital heading into Q4 enterprise renewal cycles. The Las Vegas Grand Prix in November 2026 offers the next major F1 broadcast window inside the 8-12 week deal horizon, before rival orchestration platforms can claim the open AI category.",
+   "confidence_level": "MEDIUM",
+   "decision_maker_bio": "Bar Winkler co-founded Wonderful and leads it as CEO, having scaled the AI-agent orchestration platform from Series B to a $5B valuation in under six months. Winkler now oversees enterprise expansion across 35+ markets and a 650-person global team.",
+   "decision_maker_name": "Bar Winkler",
+   "decision_maker_role": "CEO & Co-founder",
+   "opening_angle_intro": "Wonderful just more than doubled its valuation to $5B while Audi's AI slot beyond voice sits open.",
+   "opening_angle_quote": "&ldquo;Wonderful closed a $550M round at a $5B valuation on September 2 — before that capital chases a motorsport platform elsewhere, can we book 25 minutes?&rdquo;",
+   "value_section_label": "VALUE TO AUDI",
+   "verification_status": "needs_review",
+   "decision_maker_verified": false,
+   "all_proof_points_verified": false
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Bar Winkler, CEO & Co-founder at Wonderful",
+   "cited_source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "excerpt": null,
+     "notes": "The cited TechCrunch article does not name Bar Winkler at all (it only quotes CTO/co-founder Roey Lalazar), and while other non-Tier-1 sources like Bessemer's investor blog and Crunchbase corroborate the CEO/co-founder claim, none of these meet the Tier 1 bar required to independently verify it.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Bar Winkler, CEO & Co-founder at Wonderful",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.bvp.com/news/the-trailblazer-in-enterprise-ai-wonderfuls-550m-series-c",
+     "excerpt": "Bar Winkler (Chief Executive Officer) and Roey Lalazar (Chief Technology Officer) founded Wonderful to build an AI OS for enterprises.",
+     "notes": "Bessemer Venture Partners' press coverage of Wonderful's Series C confirms Bar Winkler is CEO and Co-founder of Wonderful.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$550M Series C at $5B valuation, closed Sept 2, 2026",
+   "cited_source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "excerpt": "Israeli-Dutch AI startup Wonderful has raised $550 million in a Series C funding round that gives it a price tag of $5 billion",
+     "notes": "TechCrunch article dated Sept 2, 2026 directly confirms the $550M Series C at $5B valuation.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Wonderful closed a $550M Series C on 2 September 2026, lifting its valuation from $2B to $5B in under six months.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "excerpt": "Israeli-Dutch AI startup Wonderful has raised $550 million in a Series C funding round that gives it a price tag of $5 billion, more than doubling the $2 billion valuation the company gained when it last raised funding nearly six months ago.",
+     "notes": "TechCrunch, a Tier 1 outlet with a named byline, confirms the $550M Series C, $5B valuation (up from $2B in under six months), and the September 2, 2026 date matches the article's publication date and URL.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Insight Partners (lead), Salesforce (first-time investor), Index Ventures, IVP, Vine Ventures, 9Yards, Bessemer Venture Partners",
+   "cited_source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "excerpt": "Insight Partners returned to lead this round, too, and existing investors Index Ventures, IVP, Vine Ventures, 9Yards, and Bessemer Venture Partners are participating once again. Salesforce is investing in the company for the first time in this round.",
+     "notes": "TechCrunch, a Tier 1 outlet, directly names all listed investors and confirms Salesforce as a first-time investor and Insight Partners as lead in Wonderful's Series C.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Wonderful's valuation more than doubled — from $2B at its March 2026 Series B to $5B at its 2 September 2026 Series C — inside six months, with Insight Partners leading a $550M round joined by Salesforce, Index Ventures, IVP, Vine Ventures, 9Yards and Bessemer.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "excerpt": "Israeli-Dutch AI startup Wonderful has raised $550 million in a Series C funding round that gives it a price tag of $5 billion, more than doubling the $2 billion valuation the company gained when it last raised funding nearly six months ago. Insight Partners returned to lead this round, too, and existing investors Index Ventures, IVP, Vine Ventures, 9Yards, and Bessemer Venture Partners are participating once again. Salesforce is investing in the company for the first time in this round.",
+     "notes": "TechCrunch confirms the valuation jump from $2B to $5B in under six months, the $550M Series C led by Insight Partners, and the exact investor list including Salesforce as a new participant.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Series C funding close; valuation more than doubled from $2B (Series B, March 2026) to $5B in under six months",
+   "cited_source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "excerpt": "Israeli-Dutch AI startup Wonderful has raised $550 million in a Series C funding round that gives it a price tag of $5 billion, more than doubling the $2 billion valuation the company gained when it last raised funding nearly six months ago.",
+     "notes": "TechCrunch, a Tier 1 source with a named byline (Ram Iyer), directly confirms the Series C close and the valuation jump from $2B to $5B in under six months.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Wonderful just more than doubled its valuation to $5B in under six months with a fresh $550M war chest — Audi's AI-partner roster stops at ElevenLabs, leaving the orchestration-layer slot open and matched to Wonderful's category, timing and capacity.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "excerpt": "Israeli-Dutch AI startup Wonderful has raised $550 million in a Series C funding round that gives it a price tag of $5 billion, more than doubling the $2 billion valuation the company gained when it last raised funding nearly six months ago.",
+     "notes": "The funding figures are verified by a Tier 1 TechCrunch article, but no source supports the specific claim that Audi's AI-partner roster stops at ElevenLabs or that this leaves an orchestration-layer slot matched to Wonderful, making that portion of the compound claim unverified.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No direct enterprise AI-OS/agent-orchestration sponsor currently documented on F1/FE grid per active_sponsor_db",
+   "cited_source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": null,
+     "excerpt": null,
+     "notes": "The cited TechCrunch article discusses Wonderful's funding round and valuation only, with no mention of F1, Formula E, sponsorship, racing, or grid partnerships, and no other source was found that documents or contradicts this absence-of-sponsorship claim.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Wonderful closed a $550M Series C on 2 September 2026, led by Insight Partners with first-time investor Salesforce, lifting valuation from $2B (March 2026 Series B) to $5B in under six months.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "excerpt": "Israeli-Dutch AI startup Wonderful has raised $550 million in a Series C funding round that gives it a price tag of $5 billion, more than doubling the $2 billion valuation the company gained when it last raised funding nearly six months ago.",
+     "notes": "TechCrunch confirms the $550M Series C at $5B valuation led by Insight Partners with first-time investor Salesforce, up from $2B six months earlier.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Fresh $550M war chest and 'AI operating system' narrative (coordinating agents/workflows enterprise-wide) maps to team engineering-ops orchestration story; company is pre-brand-marketing stage, so this is a capacity/timing bet more than a proven motorsport-narrative fit",
+   "cited_source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "excerpt": "Wonderful now offers a platform, dubbed “Wonderful AI OS,” which it says can coordinate and connect agents, workflows, and AI applications with companies’ data, context, and existing integrations.",
+     "notes": "The cited TechCrunch article confirms the $550M raise and the 'AI Operating System' narrative of coordinating agents/workflows enterprise-wide, which is the factual core of the claim; the motorsport-fit framing is the brief's own analytical interpretation, not a separately verifiable news fact.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The Las Vegas Grand Prix in November 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Not explicitly detailed in source; dual-HQ Amsterdam/Israel, expanded to 35+ markets, 650 employees globally",
+   "cited_source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://www.calcalistech.com/ctechnews/article/i3481b92n",
+     "excerpt": "Since its previous funding round in March 2026, Wonderful has expanded into more than 35 markets worldwide and now employs approximately 650 people, about half of them in Israel.",
+     "notes": "Multiple independent credible sources (CTech/Calcalist, Tech.eu, Dealroom, Dutch Startup) confirm the 35+ markets and 650 global employees figures along with the Amsterdam headquarters and substantial Israel presence, even though the cited TechCrunch article itself omits these specific details.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "deal_arch_para",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas Grand Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$550M Series C close at $5B valuation, more than doubling $2B Series B mark in under 6 months",
+   "cited_source_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+     "excerpt": "Israeli-Dutch AI startup Wonderful has raised $550 million in a Series C funding round that gives it a price tag of $5 billion, more than doubling the $2 billion valuation the company gained when it last raised funding nearly six months ago.",
+     "notes": "TechCrunch, a Tier 1 source with a named byline (Ram Iyer), directly confirms the $550M Series C at a $5B valuation, more than doubling the prior $2B Series B mark reached under six months earlier.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  }
+ ]
+}
