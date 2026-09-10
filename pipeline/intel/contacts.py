@@ -28,9 +28,16 @@ genuinely have no CMO, and inventing one would be the worst thing the desk could
 
 from __future__ import annotations
 
+import datetime as dt
 import json
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, Protocol
+
+from sqlalchemy import select
+from sqlalchemy.orm import Session
+
+from intel.models import Contact
 
 CONTACTS_FILE = Path(__file__).resolve().parents[2] / "data" / "contacts.json"
 
@@ -112,3 +119,71 @@ def attach(entries: list[dict[str, Any]], contacts: dict[str, dict[str, Any]]) -
             e["contact_primary"] = first
         n += 1
     return n
+
+
+# ---------------------------------------------------------------------------------------
+# The database side (build brief §8 People panel, §11.7): contact records fetched from a
+# provider and stored per person + company. Rules regardless of provider: never scrape
+# LinkedIn, never guess email patterns, display only what the provider returns, store the
+# provider and the retrieved date on every record, honour opt-outs, keep a UK GDPR
+# legitimate-interest basis on the record. The provider is a paid service that needs approval
+# (§0.5, §11.7); until then ``NullProvider`` is wired and the People panel shows the verified
+# role only. This section was dropped when the file was rewritten around ``contacts.json``
+# (7 Sep 2026) and the API's People routes went red in CI; restored 10 Sep 2026.
+# ---------------------------------------------------------------------------------------
+
+
+@dataclass
+class ContactRecord:
+    person_name: str
+    title: str | None
+    linkedin_url: str | None
+    email: str | None
+    phone: str | None
+    provider: str
+    provider_record_id: str | None
+
+
+class ContactProvider(Protocol):
+    name: str
+
+    def lookup(self, person_name: str, company: str) -> ContactRecord | None: ...
+
+
+class NullProvider:
+    name = "none"
+
+    def lookup(self, person_name: str, company: str) -> ContactRecord | None:
+        return None
+
+
+def provider_for(name: str | None) -> ContactProvider:
+    # "apollo" → ApolloProvider once approved and an API key is configured (§11.7).
+    return NullProvider()
+
+
+def find_contact(session: Session, person_name: str, company: str) -> Contact | None:
+    from intel.normalise import company_norm
+
+    return session.scalar(
+        select(Contact)
+        .where(
+            Contact.company_norm == company_norm(company), Contact.person_name.ilike(person_name)
+        )
+        .order_by(Contact.id.desc())
+    )
+
+
+def store_contact(session: Session, rec: ContactRecord, company: str) -> Contact:
+    from intel.normalise import company_norm
+
+    row = find_contact(session, rec.person_name, company)
+    if row is None:
+        row = Contact(person_name=rec.person_name, company_norm=company_norm(company))
+        session.add(row)
+    row.title = rec.title
+    row.linkedin_url, row.email, row.phone = rec.linkedin_url, rec.email, rec.phone
+    row.source_provider, row.provider_record_id = rec.provider, rec.provider_record_id
+    row.retrieved_at = dt.datetime.now(dt.UTC)
+    session.flush()
+    return row
