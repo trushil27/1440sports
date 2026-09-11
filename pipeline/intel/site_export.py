@@ -26,6 +26,7 @@ from intel.config import Settings, get_settings
 from intel.models import Brief, CalendarEvent, Sponsor, VerificationStatus
 from intel.normalise import company_norm
 from intel.seed import load_team_profiles
+from intel.triggers import TYPES as TRIGGER_TYPES
 
 SITE_SRC = Path(__file__).parent / "site" / "app.html"
 DATA_TOKEN = "__DATA_JSON__"
@@ -658,6 +659,13 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
 
     profiles = load_profiles()
     profile_rows = attach_profiles(entries, profiles)
+    # What kind of moment each signal is (funding round, spin-off, new CEO / CMO, an
+    # executive from a sponsor …) — the outreach sequence is chosen by it (operator, 11 Sep).
+    from intel import outreach as outreach_mod
+    from intel.triggers import attach as attach_triggers
+
+    sponsor_brands = sorted({s.brand for s in session.scalars(select(Sponsor)).all() if s.brand})
+    trigger_counts = attach_triggers(entries, sponsor_brands)
     entries.sort(key=lambda e: (e["date"], e.get("trigger_date") or ""), reverse=True)
     # Where each unbuilt signal sits in the automatic build queue (newest first — the same
     # order intel.rebuild_queue.backlog works through), so the app can say when it lands.
@@ -713,6 +721,8 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
         "checks_meta": {**checks_summary(checks), "rows_checked": checked_rows},
         "contacts_meta": {**contacts_summary(contacts), "rows_with_contacts": contact_rows},
         "profiles_meta": {**profiles_summary(profiles), "rows_with_profile": profile_rows},
+        "trigger_meta": {"counts": trigger_counts, "labels": dict(TRIGGER_TYPES)},
+        "outreach": outreach_mod.export_payload(),
         "review_meta": {
             "reviewed_at": "2026-09-05",
             "screened": sum(1 for e in entries if e["review"]["status"] == "screened_out"),

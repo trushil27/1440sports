@@ -194,6 +194,18 @@ Decisions taken so far are in the build-brief thread: repo = this one; Railway +
 threshold 70 as config; run every day; Graph app-permission send (delegated fallback);
 PWA + passkey login; Lora/Poppins vendored (a `june` font stack reproduces the old PDFs).
 
+**Outreach (11 Sep 2026, MD: "outreach sequence per trigger … weekly cadence with reply and
+meeting rates tracked; spot these for the signals"):** `intel/triggers.py` types every signal
+(exec_move › new_cmo › new_ceo › spin_off › listing › funding_round › expansion) from its
+verified trigger text; `intel/outreach.py` holds a playbook per type (day 0/3/7/14/21/28:
+email, LinkedIn, email, email, call, email), the log `data/outreach_log.json` (start / touch /
+reply / meeting / outcome), reply + meeting rates by type and by ISO week, and the Monday
+report (`.github/workflows/weekly-outreach.yml`, zero model cost). App: Outreach page + a
+sequence panel on every signal + trigger filter. `docs/OUTREACH.md`. The scanner prompt now asks
+for leadership triggers (new CEO/CMO, ex-sponsor hires in `alumni_match`) as first-class signals.
+**No-signal mornings** leave `cases/<date>/no_signal.json` (`intel/no_signal.py`) so the gate holds
+later firings that day (11 Sep: three scans for one answer, ~$3.60).
+
 ## The two-tier product
 
 1. **The 2-page brief** (the daily signal): should we move, why now, which team, opening angle. The thing Ricky loves.

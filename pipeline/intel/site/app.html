@@ -284,6 +284,7 @@
     <a href="#/signals/FE" data-nav="FE"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Formula E<span class="count" id="cFE"></span></a>
     <a href="#/signals/all" data-nav="all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg>All signals<span class="count" id="cAll"></span></a>
     <a href="#/screened" data-nav="screened"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 8l8 8M16 8l-8 8"/></svg>Screened out<span class="count" id="cScreened"></span></a>
+    <a href="#/outreach" data-nav="outreach"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>Outreach<span class="count" id="cOutreach"></span></a>
     <div class="group">Grid</div>
     <a href="#/sponsors/F1" data-nav="sF1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Sponsors · F1</a>
     <a href="#/sponsors/FE" data-nav="sFE"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Sponsors · FE</a>
@@ -384,6 +385,7 @@
     if (b.review.status === 'keep_flagged') out.push('<span class="badge warn" title="' + esc(b.review.reason || '') + '">Check</span>');
     if (b.deal_update) out.push(`<span class="badge navy">Now partner · ${esc(teamDisplay(b.deal_update.team))}</span>`);
     if (b.stage) out.push(`<span class="badge ${/^(Series [C-H]|Spin-out|Pre-IPO|IPO|Growth round)$/.test(b.stage) ? 'info' : 'mute'}" title="Stage of the capital event behind this signal">${esc(b.stage)}</span>`);
+    if (b.trigger_type && b.trigger_type !== 'other' && b.trigger_type !== 'funding_round') out.push(`<span class="badge mute" title="Trigger type — it chooses the outreach sequence">${esc(b.trigger_label || b.trigger_type)}</span>`);
     if (b.check) {
       if (!b.deal_update && (b.check.motorsport_status || '') === 'EXISTING_PARTNER') out.push('<span class="badge navy">Existing partner</span>');
       if ((b.check.corrections && b.check.corrections.length) || b.check.person_status === 'CHANGED') out.push('<span class="badge warn">Corrected</span>');
@@ -462,7 +464,7 @@
     return `
       <div class="head"><div><div class="eyebrow">Signals</div><h1>${title}</h1><p class="sub">${rows.length} signals, newest first.${inferred ? ` ${inferred} older rows had no series recorded; theirs is inferred from the text and marked.` : ''}${flagged ? ` ${flagged} carry a "Check" tag: kept, but a detail needs a human look before they are pitched.` : ''}</p></div>
       </div>
-      <div class="toolbar"><input id="q" type="search" placeholder="Search company, team, trigger…"><select id="tier"><option value="">All tiers</option><option>HOT TOP TIER</option><option>HOT</option><option>WARM</option></select><span class="seg"><button data-hist="all" class="on">All</button><button data-hist="live">Engine briefs</button><button data-hist="hist">Historical</button></span></div>
+      <div class="toolbar"><input id="q" type="search" placeholder="Search company, team, trigger…"><select id="tier"><option value="">All tiers</option><option>HOT TOP TIER</option><option>HOT</option><option>WARM</option></select><select id="ttype" title="Trigger type"><option value="">All triggers</option>${Object.entries((D.trigger_meta || {}).labels || {}).map(([k, v]) => `<option value="${esc(k)}">${esc(v)}</option>`).join('')}</select><span class="seg"><button data-hist="all" class="on">All</button><button data-hist="live">Engine briefs</button><button data-hist="hist">Historical</button></span></div>
       <div id="list">${table(rows)}</div>
       ${screenedBlock(series)}`;
   }
@@ -494,11 +496,11 @@
     const head = `<div class="head"><div><div class="eyebrow">${esc(b.label)} · ${fmtDate(b.date)} · ${esc(b.series || '')}${b.series_inferred ? ' (inferred)' : ''}</div><h1>${esc(b.company)}</h1><div class="badges">${tag(b)}</div></div>
       <div class="actions"><a class="btn" href="${back}">← Back</a>${b.pdf_url ? `<a class="btn gold" href="${esc(b.pdf_url)}" target="_blank" rel="noopener">2-page PDF</a>` : ''}${b.page_html ? '' : `<button type="button" class="btn gold" data-rebuild="${b.number}">Build the full case</button>`}</div></div>`;
     if (b.page_html) {
-      return head + contactsPanel(b) + `<div class="reader"><iframe title="Brief ${esc(b.label)} — ${esc(b.company)}" srcdoc="${esc(b.page_html)}"></iframe></div>`;
+      return head + contactsPanel(b) + outreachPanel(b) + `<div class="reader"><iframe title="Brief ${esc(b.label)} — ${esc(b.company)}" srcdoc="${esc(b.page_html)}"></iframe></div>`;
     }
     const checkNote = b.review.status === 'keep_flagged' ? `<div class="note"><b>Check before pitching.</b> ${esc(b.review.reason || '')}</div>` : '';
     const dealNote = b.deal_update ? `<div class="note info"><b>Update.</b> ${esc(b.company)} is now a ${esc(b.deal_update.status)} partner of ${esc(teamDisplay(b.deal_update.team))}${b.deal_update.season ? ' (' + esc(b.deal_update.season) + ' roster)' : ''}${b.deal_update.notes ? ' — ' + esc(b.deal_update.notes) : ''}. The lane this signal pointed at is no longer open; treat the row as a closed case.</div>` : '';
-    return head + contactsPanel(b) + `<div class="detail">
+    return head + contactsPanel(b) + outreachPanel(b) + `<div class="detail">
       ${dealNote}${checkNote}
       ${b.check ? checkPanel(b) : (b.historical ? '<div class="note info">Historical signal imported from the previous system — a headline and a source, not yet checked. Build the full case to get the Crusoe-standard brief: live verification of every claim, the 13-rule audit, the 2-page PDF and this long-form page.</div>' : '')}
       <p>${esc(b.deck || b.take || 'No summary was stored for this signal.')}</p>
@@ -695,6 +697,59 @@
     });
   }
 
+  // ---- outreach: a sequence per trigger, a weekly cadence, and the numbers ----
+  const OR = () => D.outreach || { playbooks: {}, sequences: [], metrics: { by_type: {}, total: {}, weekly: [] }, due: [] };
+  const pct = (x) => (x == null ? '—' : Math.round(x * 100) + '%');
+  const stepName = (s) => (s || '').replace(/_/g, ' ');
+  function seqFor(b) { return OR().sequences.filter((s) => String(s.brief_number) === String(b.number)).sort((a, c) => (c.started || '').localeCompare(a.started || ''))[0]; }
+  function outreachPanel(b) {
+    if (b.review.status === 'screened_out' || b.deal_update) return '';
+    const kind = b.trigger_type || 'other';
+    const pb = OR().playbooks[kind];
+    if (!pb) return '';
+    const seq = seqFor(b);
+    const start = seq ? seq.started : (D.generated_at || '').slice(0, 10);
+    const steps = (seq ? seq.touches : pb.steps.map((s) => ({ ...s, date: addDays(start, s.day), status: 'planned' })));
+    const status = seq ? `<span class="badge ${seq.outcome === 'meeting' || seq.outcome === 'won' ? 'ok' : (seq.outcome === 'replied' ? 'info' : 'mute')}">${esc(seq.outcome)}</span>${seq.replied_on ? ` · replied ${fmtDate(seq.replied_on)}` : ''}${seq.meeting_on ? ` · meeting ${fmtDate(seq.meeting_on)}` : ''}` : '<span class="badge mute">not started</span>';
+    return `<div class="people outreach">
+      <div class="rule"><span>Outreach sequence · ${esc(pb.label)}</span><span class="cnt">${steps.length}</span></div>
+      <p class="sub"><b>${esc(pb.name)}.</b> ${esc(pb.premise)} ${status}</p>
+      <div class="tablewrap"><table class="seq"><thead><tr><th>When</th><th>Step</th><th>Channel</th><th>What it says</th><th>Status</th></tr></thead><tbody>
+      ${steps.map((s) => `<tr><td class="date">${fmtDate(s.date)}${seq ? '' : '<span class="sm">if started today</span>'}</td><td>${esc(stepName(s.step))}</td><td>${esc(s.channel)}</td><td class="why">${esc(s.purpose || '')}</td><td>${s.status === 'sent' ? `<span class="badge ok">sent ${fmtDate(s.sent_on)}</span>` : '<span class="badge mute">planned</span>'}</td></tr>`).join('')}
+      </tbody></table></div>
+      ${seq ? '' : `<div class="sm nocmo">Start it from the repo: <code>python -m intel.outreach start ${esc(b.number)}</code> — then log each touch, the reply and the meeting; the Outreach page shows the rates.</div>`}
+    </div>`;
+  }
+  function addDays(iso, n) { const d = new Date(iso + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); }
+  function outreachView() {
+    const o = OR(); const m = o.metrics || {}; const t = m.total || {}; const types = m.by_type || {};
+    const labels = (D.trigger_meta || {}).labels || {};
+    const open = (o.sequences || []).filter((s) => s.outcome === 'open' || s.outcome === 'replied');
+    const rate = (r) => `<tr><td class="co">${esc(r.label)}</td><td class="num">${r.sequences}</td><td class="num">${r.contacted}</td><td class="num">${r.replies}</td><td class="num">${pct(r.reply_rate)}</td><td class="num">${r.meetings}</td><td class="num">${pct(r.meeting_rate)}</td><td class="num">${r.won || 0}</td></tr>`;
+    const byType = Object.keys(labels).filter((k) => types[k]).map((k) => rate(types[k])).join('');
+    const weekly = (m.weekly || []).map((w) => `<tr><td class="date">${esc(w.week)}<span class="sm">from ${fmtDate(w.from)}</span></td><td class="num">${w.started}</td><td class="num">${w.touches}</td><td class="num">${w.replies}</td><td class="num">${w.meetings}</td></tr>`).join('');
+    const due = (o.due || []).map((x) => `<tr class="row" data-go="#/brief/${x.brief_number}"><td class="date">${fmtDate(x.date)}${x.overdue ? ' <span class="badge warn">overdue</span>' : ''}</td><td class="co">${esc(x.company)}<span class="sm">N° ${esc(x.brief_number)} · ${esc(labels[x.trigger_type] || x.trigger_type || '')}</span></td><td>${esc(stepName(x.step))} · ${esc(x.channel)}</td><td>${esc(x.person || '—')}</td><td class="why">${esc(x.purpose || '')}</td></tr>`).join('');
+    const seqs = (o.sequences || []).slice().sort((a, c) => (c.started || '').localeCompare(a.started || '')).map((s) => { const sent = (s.touches || []).filter((x) => x.status === 'sent').length; return `<tr class="row" data-go="#/brief/${s.brief_number}"><td class="date">${fmtDate(s.started)}</td><td class="co">${esc(s.company)}<span class="sm">N° ${esc(s.brief_number)} · ${esc(teamDisplay(s.team) || '')}</span></td><td>${esc(s.person || '—')}</td><td>${esc(labels[s.trigger_type] || s.trigger_type || '')}</td><td class="num">${sent}/${(s.touches || []).length}</td><td><span class="badge ${s.outcome === 'meeting' || s.outcome === 'won' ? 'ok' : (s.outcome === 'replied' ? 'info' : (s.outcome === 'declined' ? 'warn' : 'mute'))}">${esc(s.outcome)}</span>${s.replied_on ? `<span class="sm">replied ${fmtDate(s.replied_on)}</span>` : ''}${s.meeting_on ? `<span class="sm">meeting ${fmtDate(s.meeting_on)}</span>` : ''}</td></tr>`; }).join('');
+    const books = Object.keys(labels).map((k) => { const pb = o.playbooks[k]; if (!pb) return ''; return `<details class="scr"><summary><b>${esc(pb.label)}</b> — ${esc(pb.name)}</summary><p class="sub">${esc(pb.premise)}</p><div class="tablewrap"><table class="seq"><tbody>${pb.steps.map((s) => `<tr><td class="date">day ${s.day}</td><td>${esc(stepName(s.step))}</td><td>${esc(s.channel)}</td><td class="why">${esc(s.purpose)}</td></tr>`).join('')}</tbody></table></div></details>`; }).join('');
+    return `<div class="head"><div><div class="eyebrow">Outreach · week ${esc(o.week || '')}</div><h1>Outreach</h1><p class="sub">One sequence per trigger type, one touch a week for four weeks, every reply and meeting logged. The rates below come from the log, not from estimates.</p></div></div>
+      <div class="tiles">
+        <div class="tile"><div class="k">Sequences</div><div class="n">${t.sequences || 0}</div><div class="t">${t.contacted || 0} contacted</div></div>
+        <div class="tile"><div class="k">Reply rate</div><div class="n">${pct(t.reply_rate)}</div><div class="t">${t.replies || 0} replies</div></div>
+        <div class="tile"><div class="k">Meeting rate</div><div class="n">${pct(t.meeting_rate)}</div><div class="t">${t.meetings || 0} meetings · ${t.won || 0} won</div></div>
+      </div>
+      <div class="rule"><span>Due this week</span><span class="cnt">${(o.due || []).length}</span></div>
+      ${due ? `<div class="tablewrap"><table><thead><tr><th>Date</th><th>Company</th><th>Touch</th><th>To</th><th>What it says</th></tr></thead><tbody>${due}</tbody></table></div>` : '<p class="sub">Nothing due. Start a sequence from any signal page.</p>'}
+      <div class="rule"><span>By trigger</span></div>
+      ${byType ? `<div class="tablewrap"><table><thead><tr><th>Trigger</th><th>Seq</th><th>Contacted</th><th>Replies</th><th>Reply rate</th><th>Meetings</th><th>Meeting rate</th><th>Won</th></tr></thead><tbody>${byType}</tbody></table></div>` : '<p class="sub">No sequences started yet.</p>'}
+      <div class="rule"><span>Last 8 weeks</span></div>
+      <div class="tablewrap"><table><thead><tr><th>Week</th><th>Started</th><th>Touches</th><th>Replies</th><th>Meetings</th></tr></thead><tbody>${weekly}</tbody></table></div>
+      <div class="rule"><span>Sequences</span><span class="cnt">${(o.sequences || []).length}</span></div>
+      ${seqs ? `<div class="tablewrap"><table><thead><tr><th>Started</th><th>Company</th><th>To</th><th>Trigger</th><th>Touches</th><th>Status</th></tr></thead><tbody>${seqs}</tbody></table></div>` : ''}
+      <div class="rule"><span>The sequences</span></div>
+      <div id="scrList">${books}</div>
+      <p class="sub">Log from the repo: <code>python -m intel.outreach start N°</code> · <code>touch &lt;seq&gt; open|connect|follow_up|value_add|call|close_loop</code> · <code>reply &lt;seq&gt;</code> · <code>meeting &lt;seq&gt;</code> · <code>outcome &lt;seq&gt; won|declined|parked</code>. A Monday email carries this page's numbers and the week's touches.</p>`;
+  }
+
   // ---- router ----
   function route() {
     const hash = location.hash || '#/home';
@@ -706,6 +761,7 @@
     else if (parts[0] === 'sponsors') { main.innerHTML = sponsorsView(parts[1] || 'F1'); nav = 's' + (parts[1] || 'F1'); bindSponsors(); }
     else if (parts[0] === 'calendar') { main.innerHTML = calendarView(); nav = 'calendar'; }
     else if (parts[0] === 'screened') { main.innerHTML = screenedView(); nav = 'screened'; bindScreened(); }
+    else if (parts[0] === 'outreach') { main.innerHTML = outreachView(); nav = 'outreach'; }
     else { main.innerHTML = homeView(); }
     document.querySelectorAll('.side a[data-nav]').forEach((a) => a.classList.toggle('active', a.dataset.nav === nav));
     $('#side').classList.remove('open');
@@ -719,10 +775,12 @@
     const apply = () => {
       const q = ($('#q').value || '').toLowerCase();
       const tier = $('#tier').value;
-      const rows = base.filter((b) => (!q || [b.company, b.team, b.trigger, b.industry, b.person].join(' ').toLowerCase().includes(q)) && (!tier || (b.tier || '') === tier) && (hist === 'all' || (hist === 'hist' ? b.historical : !b.historical)));
+      const ttype = $('#ttype') ? $('#ttype').value : '';
+      const rows = base.filter((b) => (!q || [b.company, b.team, b.trigger, b.industry, b.person].join(' ').toLowerCase().includes(q)) && (!tier || (b.tier || '') === tier) && (!ttype || (b.trigger_type || 'other') === ttype) && (hist === 'all' || (hist === 'hist' ? b.historical : !b.historical)));
       $('#list').innerHTML = table(rows); bindRows();
     };
     $('#q').addEventListener('input', apply); $('#tier').addEventListener('change', apply);
+    if ($('#ttype')) $('#ttype').addEventListener('change', apply);
     document.querySelectorAll('[data-hist]').forEach((b) => b.addEventListener('click', () => { hist = b.dataset.hist; document.querySelectorAll('[data-hist]').forEach((x) => x.classList.toggle('on', x === b)); apply(); }));
   }
   function bindSponsors() {
@@ -741,7 +799,7 @@
   }
 
   function boot() {
-    $('#cF1').textContent = bySeries('F1').length; $('#cFE').textContent = bySeries('FE').length; $('#cAll').textContent = live().length; $('#cScreened').textContent = screened('all').length;
+    $('#cF1').textContent = bySeries('F1').length; $('#cFE').textContent = bySeries('FE').length; $('#cAll').textContent = live().length; $('#cScreened').textContent = screened('all').length; $('#cOutreach').textContent = OR().sequences.filter((s) => s.outcome === 'open' || s.outcome === 'replied').length || '';
     const modeEl = $('#mode'); if (modeEl) modeEl.remove();
     window.addEventListener('hashchange', route); route();
   }

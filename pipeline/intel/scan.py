@@ -294,7 +294,12 @@ def sourcing_priority(today: dt.date, days: int) -> str:
         f"{today.isoformat()}. These are the companies with new money and a new brand to "
         f"build, and the point is to be among the first to approach them — not the fiftieth. "
         f"Name the stage in key_facts.funding (e.g. 'Series D, $250m, 3 Sep 2026'). Fill the "
-        f"rest of the list with the best older or earlier-stage triggers only after that."
+        f"rest of the list with the best older or earlier-stage triggers only after that. "
+        f"LEADERSHIP TRIGGERS count as first-class signals in the same window: a newly "
+        f"appointed CEO, CMO, chief commercial or chief brand officer at a company that fits "
+        f"the profile (say so in key_facts.trigger with the appointment date), and any senior "
+        f"hire who previously worked at a company that sponsored an F1 or Formula E team (name "
+        f"the person, the prior company and the deal in key_facts.alumni_match)."
     )
 
 

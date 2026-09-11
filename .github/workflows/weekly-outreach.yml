@@ -1,0 +1,53 @@
+# Monday morning: the outreach numbers and this week's touches, to the operator.
+#
+# Reply and meeting rates per trigger type come from data/outreach_log.json (the outcomes
+# loop); "due this week" is the planned cadence for every open sequence. No model API key,
+# no database: it reads the repo and sends one email through the same Graph mailer as the
+# daily job. The MD is never a recipient here.
+name: Weekly outreach report
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"   # Monday 07:00 UTC (08:00 London in summer, 07:00 in winter)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print the report in the log instead of emailing it"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPERATOR_EMAIL: ${{ secrets.OPERATOR_EMAIL }}
+      EXECUTION_MODE: ${{ inputs.dry_run && 'dry_run' || 'shadow' }}
+      GRAPH_TENANT_ID: ${{ secrets.GRAPH_TENANT_ID }}
+      GRAPH_CLIENT_ID: ${{ secrets.GRAPH_CLIENT_ID }}
+      GRAPH_CLIENT_SECRET: ${{ secrets.GRAPH_CLIENT_SECRET }}
+      GRAPH_SENDER: ${{ secrets.GRAPH_SENDER }}
+      GRAPH_REFRESH_TOKEN: ${{ secrets.GRAPH_REFRESH_TOKEN }}
+      OUTBOX_DIR: storage/outbox
+      PYTHONPATH: pipeline
+      TZ: Europe/London
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: pip install -q -e pipeline
+      - name: Report
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python -m intel.outreach report
+          else
+            python -m intel.outreach report --email
+          fi
