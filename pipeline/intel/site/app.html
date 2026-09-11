@@ -220,6 +220,7 @@
   .catcard li span:last-child { color: var(--muted); text-align: right; }
 
   /* verification panel */
+  table.watch td { vertical-align: top; } table.watch td.co { min-width: 220px; } table.watch td.why { min-width: 260px; } table.watch .icp { display: block; font-weight: 500; } table.watch .sm { display: block; margin-top: 4px; }
   .vpanel { border: 1px solid var(--hair); border-radius: 12px; background: var(--panel-2); padding: 14px 18px; margin: 0 0 18px; font-family: var(--sans); font-size: 13.5px; }
   .vpanel .vhead { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
   .vpanel .vhead .k { font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--label); font-weight: 600; }
@@ -734,13 +735,12 @@
     const ACTION = { start_sequence: ['ok', 'Start sequence'], sponsor_side: ['info', 'Sponsor-side'], watch: ['mute', 'Watch'], in_pursuit: ['navy', 'In pursuit'], screen_out: ['warn', 'Not ICP'] };
     const wrows = (o.watch || []);
     const wm = o.watch_meta || {};
-    const watchTable = (rows) => rows.length ? `<div class="tablewrap"><table class="watch"><thead><tr><th>Action</th><th>Trigger</th><th>Who / what</th><th>Sponsor link</th><th>ICP · fit</th><th>Date</th></tr></thead><tbody>
-      ${rows.map((r) => { const a = ACTION[r.action] || ['mute', r.action]; const who = r.person ? `<b>${esc(r.person)}</b><span class="sm">${esc(r.from_company ? (r.from_role ? r.from_role + ', ' : '') + r.from_company + ' → ' : '')}${esc(r.to_company || 'in transition')}${r.to_role ? ' · ' + esc(r.to_role) : ''}</span>` : `<b>${esc(r.company || '')}</b><span class="sm">${esc(r.to_role || '')}</span>`; const src = (r.sources || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(' '); return `<tr>
+    const watchTable = (rows) => rows.length ? `<div class="tablewrap"><table class="watch"><thead><tr><th>Action</th><th>Trigger</th><th>Who / what</th><th>The desk's call</th><th>Date</th></tr></thead><tbody>
+      ${rows.map((r) => { const a = ACTION[r.action] || ['mute', r.action]; const move = r.from_company ? `${r.from_role ? esc(r.from_role) + ', ' : ''}${esc(r.from_company)} → ` : ''; const who = r.person ? `<b>${esc(r.person)}</b><span class="sm">${move}${esc(r.to_company || 'in transition')}${r.to_role ? ' · ' + esc(r.to_role) : ''}</span>` : `<b>${esc(r.company || '')}</b><span class="sm">${esc(r.to_role || '')}</span>`; const link = r.sponsor_link && r.sponsor_link !== 'none' && r.sponsor_link !== 'none found' ? `<span class="sm"><b>Sponsor link.</b> ${esc(r.sponsor_link)}</span>` : ''; const src = (r.sources || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(' '); return `<tr>
         <td><span class="badge ${a[0]}">${esc(a[1])}</span>${r.tier ? `<span class="sm">${esc(r.tier)} tier</span>` : ''}</td>
         <td>${esc(r.trigger_label || '')}</td>
-        <td class="co">${who}</td>
-        <td class="why">${esc(r.sponsor_link || '')}</td>
-        <td class="why"><b>${esc(r.icp || '')}</b><span class="sm">${esc(r.series_fit || '')}${r.team_lane ? ' · ' + esc(r.team_lane) : ''}</span>${r.window_note ? `<span class="sm">${esc(r.window_note)}</span>` : ''}${src ? `<span class="sm">${src}</span>` : ''}</td>
+        <td class="co">${who}${link}</td>
+        <td class="why"><span class="icp">${esc(r.icp || '')}</span><span class="sm">${esc(r.series_fit || '')}${r.team_lane ? ' · ' + esc(r.team_lane) : ''}</span>${r.window_note ? `<span class="sm">${esc(r.window_note)}</span>` : ''}${src ? `<span class="sm">${src}</span>` : ''}</td>
         <td class="date">${fmtDate(r.date)}${r.days != null ? `<span class="sm">${r.days < 0 ? 'in ' + (-r.days) + 'd' : r.days + 'd ago'}${r.in_window ? ' · in window' : ''}</span>` : ''}<span class="sm">${esc(r.status || '')}</span></td>
       </tr>`; }).join('')}
       </tbody></table></div>` : '<p class="sub">Nothing on the watch yet.</p>';
