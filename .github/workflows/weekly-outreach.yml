@@ -45,7 +45,8 @@ jobs:
       - name: Install
         run: pip install -q -e pipeline
       - name: Sweep EDGAR for the week's officer changes and registration statements
-        run: python -m intel.edgar_watch --days 7 || echo "edgar_watch: sweep failed (see log)"
+        run: |
+          python -m intel.edgar_watch --days 7 || echo "edgar_watch sweep failed (see log)"
       - name: Report
         run: |
           if [ "${{ inputs.dry_run }}" = "true" ]; then
