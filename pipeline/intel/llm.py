@@ -142,8 +142,14 @@ def complete_text(
         if u is not None:
             usage.append(u)
         LEDGER.append(
-            {"label": label, "model": model, "usage": u, "stop": stop, "blocks": blocks,
-             "chars": len(text)}
+            {
+                "label": label,
+                "model": model,
+                "usage": u,
+                "stop": stop,
+                "blocks": blocks,
+                "chars": len(text),
+            }
         )
         if stop == "pause_turn":
             if segments > MAX_CONTINUATIONS:
