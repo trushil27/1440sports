@@ -39,14 +39,53 @@ INBOX_FILE = Path(__file__).resolve().parents[2] / "data" / "trigger_inbox.json"
 
 #: Each query is one EFTS full-text search; the label becomes the inbox row's trigger type.
 QUERIES: list[tuple[str, str, str]] = [
-    ("new_cmo", "8-K", '"Item 5.02" "Chief Marketing Officer"'),
-    ("new_cmo", "8-K", '"Item 5.02" "Chief Commercial Officer"'),
-    ("new_cmo", "8-K", '"Item 5.02" "Chief Revenue Officer"'),
-    ("new_ceo", "8-K", '"Item 5.02" "Chief Executive Officer"'),
+    # Appointment language, not signature blocks: "as Chief X Officer" appears when someone
+    # is appointed or promoted; "Name, Chief Executive Officer" under a signature does not.
+    ("new_cmo", "8-K", '"Item 5.02" "as Chief Marketing Officer"'),
+    ("new_cmo", "8-K", '"Item 5.02" "as Chief Commercial Officer"'),
+    ("new_cmo", "8-K", '"Item 5.02" "as Chief Revenue Officer"'),
+    ("new_ceo", "8-K", '"Item 5.02" "as Chief Executive Officer"'),
     ("listing", "S-1", ""),
     ("listing", "F-1", ""),
     ("spin_off", "10-12B", ""),
 ]
+
+#: SIC industry codes that fit the desk's profile (tech, electrical, industrial, energy,
+#: automotive, semiconductors, software, telecoms, crypto/fintech services) and those that
+#: never will (banks, REITs, insurers, pharma, biotech, mining, shells). Everything else is
+#: "unknown" and still shown, after the in-profile hits.
+SIC_IN: tuple[tuple[int, int], ...] = (
+    (3500, 3599),  # industrial and commercial machinery, computers
+    (3600, 3699),  # electronic and electrical equipment (incl. semiconductors, batteries)
+    (3700, 3799),  # transportation equipment (auto parts, aerospace)
+    (3800, 3899),  # instruments
+    (4800, 4899),  # communications
+    (4900, 4999),  # electric, gas, utilities
+    (7370, 7379),  # computer programming, software, data processing
+    (7380, 7389),  # business services (incl. many fintech / crypto filers)
+    (8700, 8748),  # engineering, research, management services
+)
+SIC_OUT: tuple[tuple[int, int], ...] = (
+    (100, 999),  # agriculture
+    (1000, 1499),  # mining
+    (2830, 2839),  # pharma
+    (5000, 5999),  # wholesale, retail
+    (6000, 6799),  # banks, insurance, REITs, finance shells
+    (6798, 6799),
+    (7000, 7099),  # hotels
+    (8000, 8099),  # health services
+    (8731, 8731),  # biotech research
+)
+
+
+def profile(sic: int | None) -> str:
+    if sic is None:
+        return "unknown"
+    if any(a <= sic <= b for a, b in SIC_OUT):
+        return "out"
+    if any(a <= sic <= b for a, b in SIC_IN):
+        return "in"
+    return "unknown"
 
 
 def efts_url(query: str, form: str, start: dt.date, end: dt.date) -> str:
@@ -71,12 +110,18 @@ def fetch_json(url: str, timeout: float = 30.0) -> dict[str, Any]:
 
 
 def parse_hits(kind: str, form: str, data: dict[str, Any]) -> list[dict[str, Any]]:
-    """The rows the desk needs from an EFTS response: company, CIK, form, date, link."""
+    """The rows the desk needs from an EFTS response: company, CIK, form, date, link, profile.
+
+    Amendments (S-1/A, F-1/A, 8-K/A) are skipped: the original filing is the trigger."""
     rows = []
     for h in (data.get("hits") or {}).get("hits") or []:
         f = h.get("_source") or {}
+        filed_form = f.get("form") or form
+        if filed_form.endswith("/A"):
+            continue
         names = f.get("display_names") or []
         ciks = f.get("ciks") or []
+        sics = f.get("sics") or []
         adsh = (h.get("_id") or "").split(":")[0]
         cik = str(ciks[0]).lstrip("0") if ciks else ""
         folder = adsh.replace("-", "")
@@ -85,14 +130,21 @@ def parse_hits(kind: str, form: str, data: dict[str, Any]) -> list[dict[str, Any
             if cik and adsh
             else ""
         )
+        try:
+            sic = int(sics[0]) if sics else None
+        except (TypeError, ValueError):
+            sic = None
         rows.append(
             {
                 "id": f"{form}:{adsh}",
                 "type": kind,
-                "form": f.get("form") or form,
+                "form": filed_form,
                 "filed": f.get("file_date"),
                 "company": names[0] if names else "",
                 "cik": cik,
+                "sic": sic,
+                "profile": profile(sic),
+                "state": (f.get("biz_states") or [None])[0],
                 "description": f.get("file_description") or "",
                 "url": link,
                 "judged": False,
@@ -118,8 +170,12 @@ def sweep(days: int = 2, today: dt.date | None = None, fetch=fetch_json) -> list
             seen.add(row["id"])
             row["matched"] = query or form
             out.append(row)
-    out.sort(key=lambda r: (r.get("filed") or "", r.get("company") or ""), reverse=True)
+    out.sort(key=lambda r: r.get("filed") or "", reverse=True)
+    out.sort(key=lambda r: _PROFILE_RANK.get(r.get("profile"), 1))  # stable: band, then newest
     return out
+
+
+_PROFILE_RANK = {"in": 0, "unknown": 1, "out": 2}
 
 
 def load_inbox(path: Path | str | None = None) -> dict[str, Any]:
@@ -145,7 +201,8 @@ def merge(
             have[h["id"]] = h
             added += 1
     rows = [h for h in have.values() if (h.get("filed") or "") >= cutoff]
-    rows.sort(key=lambda r: (r.get("filed") or "", r.get("company") or ""), reverse=True)
+    rows.sort(key=lambda r: r.get("filed") or "", reverse=True)
+    rows.sort(key=lambda r: _PROFILE_RANK.get(r.get("profile"), 1))
     inbox["hits"] = rows
     inbox.setdefault("_meta", {})["swept_at"] = today.isoformat()
     return added
@@ -158,9 +215,20 @@ def save_inbox(inbox: dict[str, Any], path: Path | str | None = None) -> Path:
     return p
 
 
-def unjudged(inbox: dict[str, Any] | None = None) -> list[dict[str, Any]]:
+def unjudged(
+    inbox: dict[str, Any] | None = None, profiles: tuple[str, ...] = ("in", "unknown")
+) -> list[dict[str, Any]]:
+    """Hits the desk has not judged, in-profile first and newest first within each band;
+    off-profile filers (banks, biotech, mining …) stay in the file but out of the list."""
     inbox = inbox if inbox is not None else load_inbox()
-    return [h for h in inbox.get("hits") or [] if not h.get("judged")]
+    rows = [
+        h
+        for h in inbox.get("hits") or []
+        if not h.get("judged") and (h.get("profile") or "unknown") in profiles
+    ]
+    rows.sort(key=lambda r: r.get("filed") or "", reverse=True)
+    rows.sort(key=lambda r: _PROFILE_RANK.get(r.get("profile"), 1))
+    return rows
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -172,15 +240,20 @@ def main(argv: list[str] | None = None) -> int:
     hits = sweep(args.days)
     if args.print:
         for h in hits:
-            print(f"{h['filed']}  {h['form']:<7} {h['type']:<9} {h['company']}  {h['url']}")
+            print(
+                f"{h['filed']}  {h['form']:<7} {h['type']:<9} {h['profile']:<7} "
+                f"{h['company']}  {h['url']}"
+            )
         print(f"{len(hits)} hit(s)")
         return 0
     inbox = load_inbox(args.inbox)
     added = merge(inbox, hits)
     save_inbox(inbox, args.inbox)
+    counts = {k: sum(1 for h in hits if h.get("profile") == k) for k in ("in", "unknown", "out")}
     print(
-        f"edgar_watch: {len(hits)} hit(s) in the last {args.days} day(s), {added} new; "
-        f"{len(unjudged(inbox))} to judge"
+        f"edgar_watch: {len(hits)} hit(s) in the last {args.days} day(s) "
+        f"(in profile {counts['in']}, unknown {counts['unknown']}, off profile {counts['out']}), "
+        f"{added} new; {len(unjudged(inbox))} to judge"
     )
     return 0
 

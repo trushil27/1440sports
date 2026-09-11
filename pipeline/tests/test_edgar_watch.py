@@ -7,7 +7,7 @@ import datetime as dt
 from intel import edgar_watch
 
 
-def _efts(company: str, adsh: str, form: str, filed: str, cik: str = "1805077"):
+def _efts(company: str, adsh: str, form: str, filed: str, cik: str = "1805077", sic: str = "3690"):
     return {
         "hits": {
             "hits": [
@@ -15,6 +15,8 @@ def _efts(company: str, adsh: str, form: str, filed: str, cik: str = "1805077"):
                     "_id": f"{adsh}:{adsh}.htm",
                     "_source": {
                         "ciks": [cik.zfill(10)],
+                        "sics": [sic],
+                        "biz_states": ["NJ"],
                         "display_names": [f"{company}  (EOSE)  (CIK {cik})"],
                         "file_date": filed,
                         "form": form,
@@ -28,11 +30,11 @@ def _efts(company: str, adsh: str, form: str, filed: str, cik: str = "1805077"):
 
 def test_the_query_urls_are_what_efts_expects():
     url = edgar_watch.efts_url(
-        '"Item 5.02" "Chief Marketing Officer"', "8-K", dt.date(2026, 9, 9), dt.date(2026, 9, 11)
+        '"Item 5.02" "as Chief Marketing Officer"', "8-K", dt.date(2026, 9, 9), dt.date(2026, 9, 11)
     )
     assert url.startswith("https://efts.sec.gov/LATEST/search-index?")
     assert "forms=8-K" in url and "startdt=2026-09-09" in url and "enddt=2026-09-11" in url
-    assert "q=%22Item+5.02%22" in url
+    assert "q=%22Item+5.02%22+%22as+Chief+Marketing+Officer%22" in url
     assert "q=" not in edgar_watch.efts_url("", "S-1", dt.date(2026, 9, 9), dt.date(2026, 9, 11))
 
 
@@ -41,11 +43,11 @@ def test_a_sweep_parses_hits_dedupes_and_survives_a_failed_query(tmp_path):
 
     def fake(url):
         calls.append(url)
-        if "Chief+Marketing+Officer" in url:
+        if "as+Chief+Marketing+Officer" in url:
             return _efts(
                 "Eos Energy Enterprises, Inc.", "0001628280-26-058890", "8-K", "2026-08-25"
             )
-        if "Chief+Commercial+Officer" in url:
+        if "as+Chief+Commercial+Officer" in url:
             return _efts(
                 "Eos Energy Enterprises, Inc.", "0001628280-26-058890", "8-K", "2026-08-25"
             )  # same filing
@@ -53,7 +55,7 @@ def test_a_sweep_parses_hits_dedupes_and_survives_a_failed_query(tmp_path):
             return _efts(
                 "Blockchain.com Inc.", "0001234567-26-000001", "S-1", "2026-09-10", cik="1234567"
             )
-        if "Chief+Executive+Officer" in url:
+        if "as+Chief+Executive+Officer" in url:
             raise OSError("blocked")
         return {"hits": {"hits": []}}
 
@@ -64,6 +66,10 @@ def test_a_sweep_parses_hits_dedupes_and_survives_a_failed_query(tmp_path):
     ]
     eos = hits[1]
     assert eos["type"] == "new_cmo" and eos["form"] == "8-K" and eos["cik"] == "1805077"
+    assert eos["sic"] == 3690 and eos["profile"] == "in" and eos["state"] == "NJ"
+    assert edgar_watch.profile(6022) == "out" and edgar_watch.profile(2834) == "out"
+    assert edgar_watch.profile(7372) == "in" and edgar_watch.profile(None) == "unknown"
+    assert edgar_watch.profile(4911) == "in" and edgar_watch.profile(1040) == "out"
     assert (
         eos["url"]
         == "https://www.sec.gov/Archives/edgar/data/1805077/000162828026058890/0001628280-26-058890-index.htm"

@@ -821,12 +821,15 @@ def _filings_inbox() -> dict[str, _Any]:
     from intel.edgar_watch import load_inbox, unjudged
 
     inbox = load_inbox()
-    rows = unjudged(inbox)
+    rows = unjudged(inbox)  # in-profile and unknown-industry hits; banks, biotech etc. stay out
+    all_open = unjudged(inbox, profiles=("in", "unknown", "out"))
     return {
         "swept_at": (inbox.get("_meta") or {}).get("swept_at"),
-        "unjudged": rows[:50],
+        "unjudged": rows[:60],
         "total": len(inbox.get("hits") or []),
         "to_judge": len(rows),
+        "off_profile": len(all_open) - len(rows),
+        "in_profile": sum(1 for h in rows if h.get("profile") == "in"),
     }
 
 
