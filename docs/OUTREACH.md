@@ -60,6 +60,23 @@ Rates: `reply_rate = replies / sequences with ≥1 sent touch`, `meeting_rate = 
 contacted`, by trigger type and in total, plus the last eight ISO weeks (started, touches,
 replies, meetings) and "due this week" (planned touches up to Sunday; overdue flagged).
 
+## The trigger watch and the filings inbox
+
+- `data/trigger_watch.json` is the desk's judged list: named people and events with the
+  sponsor link, the ICP call, series fit, team lane, action (`start_sequence`,
+  `sponsor_side`, `watch`, `in_pursuit`, `screen_out`) and sources. Filled and re-swept by
+  the desk in session; shown first on the Outreach page and in the Monday report.
+- `data/trigger_inbox.json` is automatic: `intel.edgar_watch` runs in the daily job and pulls
+  from SEC EDGAR full-text search every Form 8-K of the last two days whose Item 5.02 names a
+  chief marketing, commercial, revenue or executive officer, plus new S-1 / F-1 / 10-12B
+  registration statements. Listed companies only (a private company files nothing; the
+  routine, the scanner and the press wires cover those). Each hit waits as "to judge" until
+  the desk moves it into the watch or sets `judged: true`. No model, no key, no cost.
+- What is *not* automatic, stated plainly: private-company CMO moves and departures
+  (Binance, Crypto.com) come from press coverage, the routine's `<SIGNALS>` block and the
+  scanner; a paid people-data feed (PitchBook, Crunchbase, ZoomInfo) would add same-day
+  capture there and can be wired into the same inbox.
+
 ## Where it shows
 
 - **App → Outreach**: rates by trigger, the 8-week series, this week's touches, every

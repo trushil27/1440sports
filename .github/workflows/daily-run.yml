@@ -163,9 +163,13 @@ jobs:
           # A morning that scanned and found nothing is recorded too, so the later firings
           # hold instead of paying for the same scan again (11 Sep 2026: three scans, one answer).
           python -m intel.no_signal --runs storage/briefs/runs --cases pipeline/intel/cases
+          # Executive changes (8-K Item 5.02) and new registration statements filed with the
+          # SEC in the last two days, into data/trigger_inbox.json for the desk to judge.
+          # Free, no model; a failed query is logged and skipped.
+          python -m intel.edgar_watch --days 2 || echo "edgar_watch: sweep failed (see log)"
           git config user.name "1440 desk"
           git config user.email "noreply@1440sports.com"
-          git add pipeline/intel/cases
+          git add pipeline/intel/cases data/trigger_inbox.json
           if git diff --cached --quiet; then
             echo "no new case to save"
           else

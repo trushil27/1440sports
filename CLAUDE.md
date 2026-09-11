@@ -205,6 +205,14 @@ sequence panel on every signal + trigger filter. `docs/OUTREACH.md`. The scanner
 for leadership triggers (new CEO/CMO, ex-sponsor hires in `alumni_match`) as first-class signals.
 **No-signal mornings** leave `cases/<date>/no_signal.json` (`intel/no_signal.py`) so the gate holds
 later firings that day (11 Sep: three scans for one answer, ~$3.60).
+**Trigger watch + filings inbox (11 Sep 2026):** `data/trigger_watch.json` = the desk's judged list of
+named people/events (ex-sponsor executives, new CEO/CMO, listings, rounds) with ICP call, action and
+sources — filled in session, shown first on the Outreach page and in the Monday report;
+`intel/edgar_watch.py` = free daily pull from SEC EDGAR full-text search (8-K Item 5.02 officer
+changes, S-1/F-1/10-12B) into `data/trigger_inbox.json` for the desk to judge (daily job step; listed
+companies only). On-request briefs under 70 (Eos N° 249, honest 62) set `"threshold"` in the case spec.
+Worked examples of the trigger classes: N° 248 Druva → Cadillac (new commercial chief, F1, 71) and
+N° 249 Eos Energy → Andretti FE (new CCO, 62).
 
 ## The two-tier product
 

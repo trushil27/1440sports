@@ -3,5 +3,140 @@
   "what": "Outreach sequences started from desk signals, with every touch, reply and meeting logged — the outcomes loop. Rates are computed from this file.",
   "how": "python -m intel.outreach start <N°> | touch <id> <step> | reply <id> | meeting <id> | outcome <id> won|declined|parked | report [--email]"
  },
- "sequences": []
+ "sequences": [
+  {
+   "id": "248-2026-09-11",
+   "brief_number": 248,
+   "company": "Druva",
+   "person": "Anthony Anzevino",
+   "role": "Chief Commercial and Partner Officer, Druva",
+   "team": "Cadillac F1 Team",
+   "series": "F1",
+   "trigger": "new chief commercial officer",
+   "trigger_type": "new_cmo",
+   "playbook": "The buyer just arrived",
+   "started": "2026-09-11",
+   "touches": [
+    {
+     "step": "open",
+     "day": 0,
+     "channel": "email",
+     "purpose": "Welcome to the role; the team and the open lane; the 25-minute ask.",
+     "date": "2026-09-11",
+     "status": "planned"
+    },
+    {
+     "step": "connect",
+     "day": 3,
+     "channel": "linkedin",
+     "purpose": "LinkedIn connect with a one-line note on the team.",
+     "date": "2026-09-14",
+     "status": "planned"
+    },
+    {
+     "step": "follow_up",
+     "day": 7,
+     "channel": "email",
+     "purpose": "Follow up with the calendar window and the season's first activation moment.",
+     "date": "2026-09-18",
+     "status": "planned"
+    },
+    {
+     "step": "value_add",
+     "day": 14,
+     "channel": "email",
+     "purpose": "Send the case page: value to the team, deal architecture, precedent.",
+     "date": "2026-09-25",
+     "status": "planned"
+    },
+    {
+     "step": "call",
+     "day": 21,
+     "channel": "phone",
+     "purpose": "Call; offer a 25-minute walk-through of the lane before their plan is set.",
+     "date": "2026-10-02",
+     "status": "planned"
+    },
+    {
+     "step": "close_loop",
+     "day": 28,
+     "channel": "email",
+     "purpose": "Close the loop; ask for their planning cycle and the right month to return.",
+     "date": "2026-10-09",
+     "status": "planned"
+    }
+   ],
+   "replied_on": null,
+   "meeting_on": null,
+   "outcome": "open",
+   "notes": []
+  },
+  {
+   "id": "249-2026-09-11",
+   "brief_number": 249,
+   "company": "Eos Energy Enterprises",
+   "person": "Michelle Buczkowski",
+   "role": "Chief Commercial Officer, Eos Energy Enterprises",
+   "team": "Andretti Formula E",
+   "series": "FE",
+   "trigger": "new chief commercial officer",
+   "trigger_type": "new_cmo",
+   "playbook": "The buyer just arrived",
+   "started": "2026-09-11",
+   "touches": [
+    {
+     "step": "open",
+     "day": 0,
+     "channel": "email",
+     "purpose": "Welcome to the role; the team and the open lane; the 25-minute ask.",
+     "date": "2026-09-11",
+     "status": "planned"
+    },
+    {
+     "step": "connect",
+     "day": 3,
+     "channel": "linkedin",
+     "purpose": "LinkedIn connect with a one-line note on the team.",
+     "date": "2026-09-14",
+     "status": "planned"
+    },
+    {
+     "step": "follow_up",
+     "day": 7,
+     "channel": "email",
+     "purpose": "Follow up with the calendar window and the season's first activation moment.",
+     "date": "2026-09-18",
+     "status": "planned"
+    },
+    {
+     "step": "value_add",
+     "day": 14,
+     "channel": "email",
+     "purpose": "Send the case page: value to the team, deal architecture, precedent.",
+     "date": "2026-09-25",
+     "status": "planned"
+    },
+    {
+     "step": "call",
+     "day": 21,
+     "channel": "phone",
+     "purpose": "Call; offer a 25-minute walk-through of the lane before their plan is set.",
+     "date": "2026-10-02",
+     "status": "planned"
+    },
+    {
+     "step": "close_loop",
+     "day": 28,
+     "channel": "email",
+     "purpose": "Close the loop; ask for their planning cycle and the right month to return.",
+     "date": "2026-10-09",
+     "status": "planned"
+    }
+   ],
+   "replied_on": null,
+   "meeting_on": null,
+   "outcome": "open",
+   "notes": []
+  }
+ ]
 }

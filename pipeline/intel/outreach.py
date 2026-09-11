@@ -642,6 +642,16 @@ def report_text(log: dict[str, _Any], today: _dt.date | None = None) -> str:
             f"- [{r.get('action')}] {r['trigger_label']}: {who}{r.get('company')} · "
             f"{r.get('to_role') or ''} · {r.get('date')} ({r.get('days')}d) · ICP: {r.get('icp')}"
         )
+    inbox = _filings_inbox()
+    lines.append("")
+    lines.append(
+        f"SEC FILINGS TO JUDGE — {inbox['to_judge']} (8-K officer changes, S-1 / F-1 / 10-12B; "
+        f"swept {inbox.get('swept_at') or 'never'})"
+    )
+    for h in inbox["unjudged"][:25]:
+        lines.append(f"- {h.get('filed')} {h.get('form')} · {h.get('company')} · {h.get('url')}")
+    if not inbox["unjudged"]:
+        lines.append("- nothing waiting")
     lines.append("")
     lines.append(
         "Start one: python -m intel.outreach start <N°>   (or the Outreach page in the app)"
@@ -667,6 +677,7 @@ def export_payload(
         "metrics": metrics(log, today=today),
         "due": due(log, today),
         "watch": rows,
+        "inbox": _filings_inbox(),
         "watch_meta": {
             **watch_summary(rows),
             "swept_at": (load_watch().get("_meta") or {}).get("swept_at"),
@@ -803,6 +814,20 @@ def watch_rows(
         rows.append(row)
     rows.sort(key=lambda r: (order.get(r.get("action"), 9), -(r.get("days") or 0)))
     return rows
+
+
+def _filings_inbox() -> dict[str, _Any]:
+    """EDGAR hits the desk has not judged yet (intel.edgar_watch), for the app and the report."""
+    from intel.edgar_watch import load_inbox, unjudged
+
+    inbox = load_inbox()
+    rows = unjudged(inbox)
+    return {
+        "swept_at": (inbox.get("_meta") or {}).get("swept_at"),
+        "unjudged": rows[:50],
+        "total": len(inbox.get("hits") or []),
+        "to_judge": len(rows),
+    }
 
 
 def watch_summary(rows: list[dict[str, _Any]]) -> dict[str, _Any]:

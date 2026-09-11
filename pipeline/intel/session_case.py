@@ -251,6 +251,9 @@ def build(
         # The MD's 90-day trigger window (6 Sep 2026), as the daily workflow sets it.
         freshness_days_track1=int(spec.get("freshness_days") or 90),
         freshness_fallback_days=int(spec.get("freshness_days") or 90),
+        # An on-request brief the MD asked for can carry an honest score under 70 (11 Sep
+        # 2026: Eos at 62). The spec says so explicitly; the daily run's threshold is untouched.
+        md_threshold=int(spec.get("threshold") or 70),
     )
     verifier = SpecVerifier(spec)
     writer = SpecWriter(spec)

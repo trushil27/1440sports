@@ -1,0 +1,673 @@
+{
+ "run": {
+  "id": 198,
+  "date": "2026-09-11",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "usage": {
+    "calls": {},
+    "tokens": {
+     "input": 0,
+     "output": 0,
+     "cache_read": 0,
+     "cache_write": 0
+    },
+    "estimated_usd": 0.0
+   },
+   "rebuild": true,
+   "sources": {
+    "n8n": 0,
+    "status": "no mailbox configured — scanner only",
+    "routine": 0,
+    "scanner": 1,
+    "candidates": 0,
+    "to_research": []
+   },
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-gh7ruw3e/2026-09-11/druva.pdf",
+     "web": "/tmp/case-pdf-gh7ruw3e/2026-09-11/druva.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Druva",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 8
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 263,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 297,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "top ranking score",
+     "company": "Druva",
+     "decision": "selected",
+     "signal_date": "2026-07-28"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Druva",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 15,
+    "ops_fit": 14,
+    "ranking": 71,
+    "urgency": 12,
+    "capacity": 15,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 1,
+     "product_to_need": 6,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+   "trigger_date": "2026-07-28",
+   "trigger_reason": "new chief commercial officer"
+  }
+ ],
+ "brief": {
+  "number": 248,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-gh7ruw3e/2026-09-11/druva.web.html",
+  "brief_data": {
+   "hq": "Santa Clara, California (R&D in Pune)",
+   "deck": "Druva, the cloud-native data-resilience platform built on AWS and a Leader in Gartner's 2026 Magic Quadrant for Backup and Data Protection for a second year, appointed Anthony Anzevino Chief Commercial and Partner Officer on 28 July 2026 to run global sales, commercial strategy and routes to market.",
+   "risks": [
+    {
+     "label": "PRIVATE, NO NEW MONEY",
+     "detail": "The last priced round was April 2021 and the last ARR milestone August 2023; the budget rests on the run-rate, not a raise.",
+     "counter": "The trigger is the buyer, not the balance sheet: size the entry to the ARR base and part-pay in services."
+    },
+    {
+     "label": "RUBRIK PRECEDENT CUTS BOTH WAYS",
+     "detail": "A direct rival on a bigger team can make a second data-resilience brand look like a follower.",
+     "counter": "The debut-team, real-workstream story is a different pitch from a logo on a front-runner."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private (>$2B, Series H Apr 2021; $475M raised)",
+   "company": "Druva",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "TAKEN",
+     "detail": "Microsoft",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "TAKEN",
+     "detail": "Oracle",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "label": "TAKEN",
+     "detail": "IBM",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "new_commercial_lead",
+    "category_precedent",
+    "category_open"
+   ],
+   "sources": [
+    "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+    "https://www.druva.com/why-druva/about/press-releases/druva-secures-147-million-investment-to-extend-market-leadership",
+    "https://www.druva.com/about/press-releases/druva-surpasses-200m-saas-arr",
+    "https://www.cadillacf1team.com/partners"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Anthony Anzevino, with Ranga Rajagopalan copied, before the United States GP: confirm the 2027 partner plan, size an Official Data Resilience Partner entry against Cadillac's roster, and agree whether Austin or Las Vegas is the announcement stage.",
+    "value": [
+     {
+      "text": "Backup and recovery for Microsoft 365, Google Workspace, Salesforce and cloud workloads across the team and its new data hub; immutable, air-gapped copies; ransomware-recovery drills run with the team's IT before the season. The team gets resilience it would otherwise have to buy; Druva gets a reference customer that races on television.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "Druva sells to CIOs, CISOs and managed-service providers; that audience fills a hospitality suite at Austin and Las Vegas and brings channel partners the team's other technology sponsors want to meet.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "Co-produced engineering content on protecting a race team's data, a joint story with Core Scientific's data hub, and a customer case study for Druva's enterprise sales.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Data Resilience Partner designation, sidepod or halo placement, naming of the team's recovery environment, hospitality at the US rounds, and driver and engineering access for Druva's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 28 July 2026 Druva appointed Anthony Anzevino Chief Commercial and Partner Officer, responsible for global sales, commercial strategy and routes to market. He joins from Kaseya, where he was Chief Revenue Officer, after more than 20 years at Commvault, Veeam, AWS, VMware and Dell EMC. The release frames the hire around demand for Druva AI Resilience and the company's second consecutive year as a Gartner Magic Quadrant Leader.",
+      "label": "Trigger"
+     },
+     {
+      "text": "A new commercial chief sets the partner and go-to-market plan in his first quarter; a proposal that arrives inside that window is judged as part of the plan rather than against it. The CMO, Ranga Rajagopalan, owns brand spend, so the conversation is a two-seat one from the start.",
+      "label": "The first hundred days"
+     },
+     {
+      "text": "Druva has raised $475M, most recently $147M in a Series H led by CDPQ in April 2021 at a valuation above $2B, and passed $200M of SaaS annual recurring revenue in August 2023 with more than 5,000 customers. No newer round or ARR milestone has been published, which is why capacity scores 15 rather than higher.",
+      "label": "The business behind it"
+     },
+     {
+      "text": "The United States GP in Austin in late October and the Las Vegas GP in November are the two American rounds left in 2026; teams close 2027 partner rosters in the fourth quarter. A deal agreed before Austin can be announced in the US and activated in full for 2027.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Cadillac's inaugural partners are IFS (enterprise software), TWG AI (primary and exclusive AI partner), Core Scientific (Official Data Center Partner, building the team's primary US data hub in Indianapolis), 3M, Tenneco, América Móvil and Tommy Hilfiger. No partner covers backup, recovery or cyber-resilience, and the team table lists that category as open.",
+      "label": "An open lane on a greenfield roster"
+     },
+     {
+      "text": "A debut team is building its data estate from scratch: engineering data, simulation output, the collaboration and business systems of a new company, and a new data hub. That estate needs immutable backup and rehearsed recovery before the first race weekend, which is what Druva sells.",
+      "label": "Something real to protect"
+     },
+     {
+      "text": "A Santa Clara company on the American team, with enterprise buyers and channel partners to host at Austin and Las Vegas, and a Core Scientific data hub in Indianapolis that Druva's AWS-native platform would sit alongside.",
+      "label": "The American story"
+     },
+     {
+      "text": "Rubrik's seat at McLaren shows the category buys F1; Cadillac is the team where a second data-resilience brand is protecting something rather than following a rival.",
+      "label": "Precedent without conflict"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Rubrik, Druva's direct rival, joined the roster for 2026."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "NetApp holds storage and data infrastructure; SentinelOne has departed but the data lane is occupied."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "CrowdStrike holds cybersecurity; AWS, TeamViewer and SAP fill the technology roster."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Open but not chosen: VAST's data platform and Keeper's identity security sit next to the lane, and the story is less clean than a greenfield roster."
+     },
+     {
+      "team": "MoneyGram Haas F1 Team",
+      "reason": "Open but not chosen: Mphasis's data, cyber and AI services crowd the story."
+     },
+     {
+      "team": "Oracle Red Bull Racing · BWT Alpine",
+      "reason": "Oracle and Microsoft hold the cloud and data lanes."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "HP and IBM cover compute and enterprise technology."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Open but not chosen: no American, data-estate story to match Cadillac's."
+     }
+    ]
+   },
+   "date_long": "11 SEP 2026",
+   "discovery": "scan",
+   "historical": true,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "A",
+   "bottom_line": "A >$2B, $200M-ARR data-resilience platform with a new commercial chief in his first hundred days, a rival already on the grid, and a debut American team with an open resilience lane and two US rounds inside the window.",
+   "footer_date": "11 SEP 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "New commercial chief from 28 Jul; Austin and Las Vegas inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": ">$2B valuation, $475M raised, $200M+ ARR; no new money since 2021.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "B2B data brand; Rubrik precedent on the grid; American story.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "First-hundred-days plan; no listing or launch date.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 14,
+     "note": "MODE A: backup and cyber recovery for a new team's estate.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Druva was founded in 2008, is headquartered in Santa Clara with R&D in Pune, and has raised $475M, the last $147M in a Series H led by CDPQ in April 2021 at a valuation above $2B. It passed $200M of SaaS annual recurring revenue in August 2023, with more than 5,000 customers and over six billion backups a year. On 28 July 2026 it hired Anthony Anzevino from Kaseya, where he was Chief Revenue Officer, as Chief Commercial and Partner Officer; his career runs through Commvault, Veeam, AWS, VMware and Dell EMC.",
+   "the_case_p2": "A new commercial owner writes his plan in the first quarter, and Druva's category has already been priced on the grid: Rubrik, its direct rival, joined McLaren for 2026. A sponsorship at Druva is now a two-seat conversation, the commercial chief who arrived in July and a chief marketing officer who came up through Commvault and Dell EMC. The audience is American enterprise IT, and the two United States races close the season.",
+   "track_label": "",
+   "brief_number": "248",
+   "claims_total": 15,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$475M raised in total; the last round a $147M Series H in April 2021 led by CDPQ at a valuation above $2B",
+     "value": "$475M",
+     "claim_id": 2031,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience"
+    },
+    {
+     "fact": "Surpassed $200M of SaaS annual recurring revenue in August 2023, the last public milestone; more than 5,000…",
+     "value": "$200M",
+     "claim_id": 2033,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience"
+    },
+    {
+     "fact": "A >$2B, $200M-ARR data-resilience platform with a new commercial chief in his first hundred days, a rival a…",
+     "value": "$2B",
+     "claim_id": 2042,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Data Resilience · Cloud Backup & Cyber Recovery SaaS",
+   "value_content": "MODE A - operational. Druva's platform backs up and recovers Microsoft 365, Google Workspace, Salesforce and cloud workloads with immutable copies; a new team's estate, from the Indianapolis data hub to the factory's engineering data, needs exactly that, with ransomware-recovery drills before the first race weekend. In return: Official Data Resilience Partner, engineering-content rights, and Austin and Las Vegas hospitality for Druva's enterprise buyers and channel partners.",
+   "value_section": true,
+   "why_team_para": "Cadillac's inaugural roster is greenfield: IFS runs enterprise software, TWG AI is the exclusive AI partner, Core Scientific builds the team's primary US data hub in Indianapolis, and no partner covers backup, recovery or cyber-resilience; the lane is open in the team table. A new team building a data estate from scratch, with an American audience at Austin and Las Vegas, is where a US data-resilience company protects something real rather than lending a logo.",
+   "deal_arch_para": "Entry as Official Data Resilience Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the new commercial chief's plan and the team's build-out. Estimated $2-4M a year, part-payable in platform services. Scope: sidepod or halo placement, naming of the team's recovery environment, US-race hospitality, and content on protecting a race team's data.",
+   "footer_company": "DRUVA",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Anzevino started on 28 July; the first hundred days of a new commercial chief set the partner and marketing plan for 2027. The United States GP in Austin (late October) and the Las Vegas GP (November) are the two American rounds left in 2026, and teams close 2027 rosters in the fourth quarter.",
+   "confidence_level": "MEDIUM",
+   "historical_label": "N° 248",
+   "decision_maker_bio": "Anzevino joined on 28 July 2026 from Kaseya, where he was Chief Revenue Officer, to run global sales, commercial strategy and routes to market. Path: Ranga Rajagopalan, Chief Marketing Officer, who owns brand spend; Jaspreet Singh, Founder and CEO; Stephen Manley, Chief Technology Officer, as the technical counterpart.",
+   "decision_maker_name": "Anthony Anzevino",
+   "decision_maker_role": "Chief Commercial and Partner Officer, Druva",
+   "opening_angle_intro": "Lead with the category precedent.",
+   "opening_angle_quote": "&ldquo;Anthony, Rubrik took a seat at McLaren this year; Cadillac is building its data estate from scratch and has no resilience partner. 25 minutes before Austin to see whether that lane is Druva's?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Anthony Anzevino, Chief Commercial and Partner Officer at Druva",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+     "excerpt": "Druva release (Business Wire, 28 Jul 2026): Anthony Anzevino appointed Chief Commercial and Partner Officer, overseeing global sales, commercial strategy and routes to market; he joins from Kaseya, where he was Chief Revenue Officer, after more than 20 years at Commvault, Veeam, AWS, VMware and Dell EMC. Quote from Co-Founder and CEO Jaspreet Singh. The release cites Druva's Leader position in the 2026 Gartner Magic Quadrant for Backup and Data Protection Platforms for a second consecutive year and the launch of Druva AI Resilience.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Anthony Anzevino, Chief Commercial and Partner Officer, Druva at Druva",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+     "excerpt": "Druva release (Business Wire, 28 Jul 2026): Anthony Anzevino appointed Chief Commercial and Partner Officer, overseeing global sales, commercial strategy and routes to market; he joins from Kaseya, where he was Chief Revenue Officer, after more than 20 years at Commvault, Veeam, AWS, VMware and Dell EMC. Quote from Co-Founder and CEO Jaspreet Singh. The release cites Druva's Leader position in the 2026 Gartner Magic Quadrant for Backup and Data Protection Platforms for a second consecutive year and the launch of Druva AI Resilience.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$475M raised in total; the last round a $147M Series H in April 2021 led by CDPQ at a valuation above $2B",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.druva.com/why-druva/about/press-releases/druva-secures-147-million-investment-to-extend-market-leadership",
+     "excerpt": "Druva release (April 2021; TechCrunch, SecurityWeek, TechTarget same day): $147 million Series H led by Caisse de dépôt et placement du Québec (CDPQ) with Neuberger Berman, Viking Global Investors and Atreides Management, taking total funding to $475 million at a valuation above $2 billion. Founded 2008; headquartered in California (Sunnyvale at the time; 2051 Mission College Boulevard, Santa Clara per company listings in 2026) with R&D in Pune. No later priced round found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Druva was founded in 2008, is headquartered in Santa Clara with R&D in Pune, and has raised $475M, the last $147M in a Series H led by CDPQ in April 2021 at a valuation above $2B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.druva.com/why-druva/about/press-releases/druva-secures-147-million-investment-to-extend-market-leadership",
+     "excerpt": "Druva release (April 2021; TechCrunch, SecurityWeek, TechTarget same day): $147 million Series H led by Caisse de dépôt et placement du Québec (CDPQ) with Neuberger Berman, Viking Global Investors and Atreides Management, taking total funding to $475 million at a valuation above $2 billion. Founded 2008; headquartered in California (Sunnyvale at the time; 2051 Mission College Boulevard, Santa Clara per company listings in 2026) with R&D in Pune. No later priced round found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "CDPQ (lead, Series H), Neuberger Berman, Viking Global Investors, Atreides Management",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.druva.com/why-druva/about/press-releases/druva-secures-147-million-investment-to-extend-market-leadership",
+     "excerpt": "Druva release (April 2021; TechCrunch, SecurityWeek, TechTarget same day): $147 million Series H led by Caisse de dépôt et placement du Québec (CDPQ) with Neuberger Berman, Viking Global Investors and Atreides Management, taking total funding to $475 million at a valuation above $2 billion. Founded 2008; headquartered in California (Sunnyvale at the time; 2051 Mission College Boulevard, Santa Clara per company listings in 2026) with R&D in Pune. No later priced round found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "It passed $200M of SaaS annual recurring revenue in August 2023, with more than 5,000 customers and over six billion backups a year.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.druva.com/about/press-releases/druva-surpasses-200m-saas-arr",
+     "excerpt": "Druva release (Business Wire, 30 Aug 2023): surpassed $200 million in SaaS annual recurring revenue, the first 100 percent SaaS data-resiliency platform to do so; more than 5,000 customers, over six billion backups a year, 30% year-over-year customer growth. The Data Resiliency Cloud is a cloud-native backup-as-a-service platform built on AWS. No newer ARR milestone has been published as of 11 Sep 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Surpassed $200M of SaaS annual recurring revenue in August 2023, the last public milestone; more than 5,000 customers and over six billion backups a year",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.druva.com/about/press-releases/druva-surpasses-200m-saas-arr",
+     "excerpt": "Druva release (Business Wire, 30 Aug 2023): surpassed $200 million in SaaS annual recurring revenue, the first 100 percent SaaS data-resiliency platform to do so; more than 5,000 customers, over six billion backups a year, 30% year-over-year customer growth. The Data Resiliency Cloud is a cloud-native backup-as-a-service platform built on AWS. No newer ARR milestone has been published as of 11 Sep 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "A >$2B, $200M-ARR data-resilience platform with a new commercial chief in his first hundred days, a rival already on the grid, and a debut American team with an open resilience lane and two US rounds inside the window.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.druva.com/why-druva/about/press-releases/druva-secures-147-million-investment-to-extend-market-leadership",
+     "excerpt": "Druva release (April 2021; TechCrunch, SecurityWeek, TechTarget same day): $147 million Series H led by Caisse de dépôt et placement du Québec (CDPQ) with Neuberger Berman, Viking Global Investors and Atreides Management, taking total funding to $475 million at a valuation above $2 billion. Founded 2008; headquartered in California (Sunnyvale at the time; 2051 Mission College Boulevard, Santa Clara per company listings in 2026) with R&D in Pune. No later priced round found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Appointed Anthony Anzevino Chief Commercial and Partner Officer on 28 Jul 2026, from Kaseya where he was Chief Revenue Officer, to run global sales, commercial strategy and routes to market",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+     "excerpt": "Druva release (Business Wire, 28 Jul 2026): Anthony Anzevino appointed Chief Commercial and Partner Officer, overseeing global sales, commercial strategy and routes to market; he joins from Kaseya, where he was Chief Revenue Officer, after more than 20 years at Commvault, Veeam, AWS, VMware and Dell EMC. Quote from Co-Founder and CEO Jaspreet Singh. The release cites Druva's Leader position in the 2026 Gartner Magic Quadrant for Backup and Data Protection Platforms for a second consecutive year and the launch of Druva AI Resilience.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "Druva has raised $475M, most recently $147M in a Series H led by CDPQ in April 2021 at a valuation above $2B, and passed $200M of SaaS annual recurring revenue in August 2023 with more than 5,000 customers.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.druva.com/why-druva/about/press-releases/druva-secures-147-million-investment-to-extend-market-leadership",
+     "excerpt": "Druva release (April 2021; TechCrunch, SecurityWeek, TechTarget same day): $147 million Series H led by Caisse de dépôt et placement du Québec (CDPQ) with Neuberger Berman, Viking Global Investors and Atreides Management, taking total funding to $475 million at a valuation above $2 billion. Founded 2008; headquartered in California (Sunnyvale at the time; 2051 Mission College Boulevard, Santa Clara per company listings in 2026) with R&D in Pune. No later priced round found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Rubrik, a direct rival, joined the McLaren F1 Team roster for 2026; NetApp holds storage at Aston Martin Aramco; CrowdStrike holds cybersecurity at Mercedes; VAST and Keeper sit on the Williams data and identity lanes",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "seeds/sponsors.json + data/teams.json (spec/active_sponsor_db.md)",
+     "excerpt": "Sponsor and team tables: Rubrik joined the McLaren F1 Team roster for 2026. Aston Martin Aramco — NetApp (storage), Cognizant; SentinelOne departed. Mercedes-AMG Petronas — CrowdStrike, AWS, TeamViewer, SAP. Atlassian Williams — VAST (data platform), Keeper (identity security), Airia, Brillio; backup / recovery listed as open but adjacent to VAST and Keeper. MoneyGram Haas — Mphasis (data / cyber / AI services), Ruckus; backup / recovery and cybersecurity listed open. Cadillac F1 Team — IFS, TWG AI, Core Scientific, Tenneco, América Móvil, Tommy Hilfiger, Jim Beam; open categories: backup / recovery / data-resilience, cybersecurity, observability. Oracle Red Bull Racing — Oracle. BWT Alpine — Microsoft. Scuderia Ferrari — HP, IBM. Visa Cash App Racing Bulls — Visa, Cash App; enterprise software open.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Cadillac's inaugural roster carries IFS, TWG AI and Core Scientific, which builds the team's primary US data hub in Indianapolis, and no backup, recovery or cyber-resilience partner; the team table lists the lane as open",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.cadillacf1team.com/partners",
+     "excerpt": "Cadillac Formula 1 Team partners page and Core Scientific IR release: Core Scientific is Official Data Center Partner, developing the team's primary US data hub in Indianapolis and supporting hybrid-cloud, high-density infrastructure for simulation, analytics and digital manufacturing; TWG AI is primary and exclusive AI partner; IFS is technology partner for enterprise software; 3M official material science partner; Tenneco, América Móvil and Tommy Hilfiger complete the inaugural roster. No cybersecurity, backup or data-resilience partner is listed.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in Santa Clara, California, with R&D in Pune; founded in 2008",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.druva.com/why-druva/about/press-releases/druva-secures-147-million-investment-to-extend-market-leadership",
+     "excerpt": "Druva release (April 2021; TechCrunch, SecurityWeek, TechTarget same day): $147 million Series H led by Caisse de dépôt et placement du Québec (CDPQ) with Neuberger Berman, Viking Global Investors and Atreides Management, taking total funding to $475 million at a valuation above $2 billion. Founded 2008; headquartered in California (Sunnyvale at the time; 2051 Mission College Boulevard, Santa Clara per company listings in 2026) with R&D in Pune. No later priced round found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "new chief commercial officer",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience",
+     "excerpt": "Druva release (Business Wire, 28 Jul 2026): Anthony Anzevino appointed Chief Commercial and Partner Officer, overseeing global sales, commercial strategy and routes to market; he joins from Kaseya, where he was Chief Revenue Officer, after more than 20 years at Commvault, Veeam, AWS, VMware and Dell EMC. Quote from Co-Founder and CEO Jaspreet Singh. The release cites Druva's Leader position in the 2026 Gartner Magic Quadrant for Backup and Data Protection Platforms for a second consecutive year and the launch of Druva AI Resilience.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  }
+ ]
+}
