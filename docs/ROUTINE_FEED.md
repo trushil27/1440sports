@@ -73,3 +73,27 @@ The desk reads those emails, drops anything it already holds (by normalised comp
 anything on the blocklist, and leaves the rest for a full case build under `docs/CASE_SPEC.md`.
 The routine's score is a hint only — every claim is re-verified before a case is written,
 exactly as the n8n rows were.
+
+## Executive moves and appointments (added 11 Sep 2026)
+
+The desk now types every signal by its trigger and runs a different outreach sequence for
+each (see `docs/OUTREACH.md`). The routine should feed **people triggers**, not only rounds.
+In the same `<SIGNALS>` block, include, in the last 60 days:
+
+- **New CEO, CMO, CCO, chief brand or chief commercial officer** at a company in the profile
+  (tech, electrification, energy, industrial, blockchain; deal-capable). Put the appointment
+  in `trigger` exactly as announced — e.g. `"Appointed Jane Doe as Chief Marketing Officer,
+  effective 5 Oct 2026"` — with the press-release URL as `source_url` and the person + role
+  in `person` / `role`. The desk classifies "appoint/names/joins + CMO/CEO" automatically.
+- **Executives leaving or joining companies that sponsor an F1 or Formula E team** (the sponsor
+  table in the app lists them). Name the prior company and the deal in `trigger` — e.g.
+  `"Hired Sam Lee, formerly OKX global head of brand and partnerships (OKX–McLaren), as
+  CMO"` — so the desk can match the sponsor brand and treat it as shared history. A senior
+  marketer who has left a sponsor and not yet landed is worth a line too (`team`: "watch").
+- **Pre-IPO and M&A moments**: confidential or public IPO filings, intention-to-float
+  announcements, SPAC completions, spin-off closings — the date of the filing or completion
+  is the `trigger_date`.
+
+Rounds stay in; this is in addition. The Formula E lean holds: Gen4 launches in Season 13
+(December 2026), so electrification, energy, mobility software and blockchain / fintech
+names with a European or US-race story rank first.

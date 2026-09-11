@@ -154,3 +154,50 @@ def test_the_export_payload_has_playbooks_numbers_and_due_touches(tmp_path):
     p = outreach.export_payload(log, dt.date(2026, 9, 11))
     assert p["week"] == "2026-W37" and set(p["playbooks"]) == set(triggers.TYPES)
     assert p["metrics"]["total"]["sequences"] == 0 and p["due"] == []
+
+
+def test_the_trigger_watch_is_typed_aged_and_action_first(tmp_path):
+    watch = {
+        "_meta": {"swept_at": "2026-09-11"},
+        "items": [
+            {
+                "id": "a",
+                "type": "new_cmo",
+                "person": "A",
+                "to_company": "Acme",
+                "date": "2026-08-24",
+                "action": "start_sequence",
+            },
+            {
+                "id": "b",
+                "type": "exec_move",
+                "person": "B",
+                "from_company": "Old",
+                "to_company": None,
+                "date": "2026-05-15",
+                "action": "watch",
+            },
+            {
+                "id": "c",
+                "type": "listing",
+                "to_company": "Chain",
+                "date": "bad",
+                "action": "screen_out",
+            },
+        ],
+    }
+    rows = outreach.watch_rows(watch, dt.date(2026, 9, 11))
+    assert [r["id"] for r in rows] == ["a", "b", "c"]  # actionable first
+    assert rows[0]["days"] == 18 and rows[0]["in_window"] is True
+    assert rows[1]["company"] == "Old" and rows[1]["in_window"] is False
+    assert rows[2]["days"] is None and rows[2]["trigger_label"] == "Listing / IPO"
+    s = outreach.watch_summary(rows)
+    assert s["start_sequence"] == 1 and s["total"] == 3
+
+
+def test_the_real_watch_file_is_well_formed():
+    rows = outreach.watch_rows(today=dt.date(2026, 9, 11))
+    assert rows, "the trigger watch should not be empty"
+    for r in rows:
+        assert r["type"] in triggers.TYPES and r["action"] in outreach.WATCH_ACTIONS, r["id"]
+        assert r["sources"] and r["icp"] and r["status"] in ("verified", "reported"), r["id"]

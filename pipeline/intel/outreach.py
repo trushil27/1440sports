@@ -632,6 +632,16 @@ def report_text(log: dict[str, _Any], today: _dt.date | None = None) -> str:
         )
     if not open_seqs:
         lines.append("- none")
+    rows = watch_rows(today=today)
+    todo = [r for r in rows if r.get("action") == "start_sequence"]
+    lines.append("")
+    lines.append(f"TRIGGER WATCH — {len(rows)} items, {len(todo)} to start")
+    for r in rows:
+        who = f"{r['person']} → " if r.get("person") else ""
+        lines.append(
+            f"- [{r.get('action')}] {r['trigger_label']}: {who}{r.get('company')} · "
+            f"{r.get('to_role') or ''} · {r.get('date')} ({r.get('days')}d) · ICP: {r.get('icp')}"
+        )
     lines.append("")
     lines.append(
         "Start one: python -m intel.outreach start <N°>   (or the Outreach page in the app)"
@@ -649,12 +659,18 @@ def export_payload(
     """What the app shows: playbooks, sequences, the numbers, and this week's touches."""
     log = log if log is not None else load_log()
     today = today or _dt.date.today()
+    rows = watch_rows(today=today)
     return {
         "week": _week(today.isoformat()),
         "playbooks": playbooks(),
         "sequences": log.get("sequences") or [],
         "metrics": metrics(log, today=today),
         "due": due(log, today),
+        "watch": rows,
+        "watch_meta": {
+            **watch_summary(rows),
+            "swept_at": (load_watch().get("_meta") or {}).get("swept_at"),
+        },
     }
 
 
@@ -750,6 +766,51 @@ def main(argv: list[str] | None = None) -> int:
             for st in pb["steps"]:
                 print(f"  day {st['day']:>2}  {st['step']:<11} {st['channel']:<9} {st['purpose']}")
     return 0
+
+
+# ---- the trigger watch: named people and events, with the desk's judgment ---------------
+
+WATCH_FILE = Path(__file__).resolve().parents[2] / "data" / "trigger_watch.json"
+WATCH_ACTIONS = ("start_sequence", "sponsor_side", "watch", "in_pursuit", "screen_out")
+
+
+def load_watch(path: Path | str | None = None) -> dict[str, _Any]:
+    p = Path(path) if path else WATCH_FILE
+    if not p.exists():
+        return {"_meta": {}, "items": []}
+    return _json.loads(p.read_text(encoding="utf-8"))
+
+
+def watch_rows(
+    watch: dict[str, _Any] | None = None, today: _dt.date | None = None
+) -> list[dict[str, _Any]]:
+    """The watch items as the app shows them: typed, labelled, aged, action first."""
+    watch = watch if watch is not None else load_watch()
+    today = today or _dt.date.today()
+    order = {a: i for i, a in enumerate(WATCH_ACTIONS)}
+    rows = []
+    for it in watch.get("items") or []:
+        row = dict(it)
+        row["trigger_label"] = trigger_label(it.get("type"))
+        try:
+            d = _dt.date.fromisoformat(it.get("date") or "")
+            row["days"] = (today - d).days
+            row["in_window"] = 0 <= row["days"] <= 90
+        except ValueError:
+            row["days"] = None
+            row["in_window"] = None
+        row["company"] = it.get("to_company") or it.get("from_company")
+        rows.append(row)
+    rows.sort(key=lambda r: (order.get(r.get("action"), 9), -(r.get("days") or 0)))
+    return rows
+
+
+def watch_summary(rows: list[dict[str, _Any]]) -> dict[str, _Any]:
+    out = {a: 0 for a in WATCH_ACTIONS}
+    for r in rows:
+        out[r.get("action") or "watch"] = out.get(r.get("action") or "watch", 0) + 1
+    out["total"] = len(rows)
+    return out
 
 
 if __name__ == "__main__":  # pragma: no cover

@@ -1,0 +1,329 @@
+{
+ "_meta": {
+  "what": "The trigger watch: named people and events the desk should act on — executives leaving or joining companies that sponsor F1 / Formula E, new CEOs and marketing / commercial owners at companies in the ICP, and pre-IPO, listing and M&A moments at tech and blockchain names that fit the grid. Each row carries the ICP judgment, the series fit, the action and the sources. Filled by the desk (operator, 11 Sep 2026: 'you need to decide if they are our ICP … you need to do this proactively').",
+  "how": "Live sweep on 11 Sep 2026 from press releases, SEC filings and Tier-1 trade press via search summaries (many primary domains are egress-blocked in the desk's sandbox — treat VERIFIED as 'verify the link before circulation'). Actions: start_sequence (open the outreach sequence for this trigger type), sponsor_side (an existing partner's people moved — a renewal or activation conversation, not a cold pitch), watch (not yet actionable: in transition, outside the 90-day window, or the capital event has not completed), screen_out (not the ICP).",
+  "swept_at": "2026-09-11"
+ },
+ "items": [
+  {
+   "id": "kelman-amd-2026",
+   "type": "exec_move",
+   "person": "Ariel Kelman",
+   "from_company": "Salesforce",
+   "from_role": "President and Chief Marketing Officer",
+   "to_company": "AMD",
+   "to_role": "Senior Vice President and Chief Marketing Officer",
+   "date": "2026-02-09",
+   "sponsor_link": "Salesforce is an F1 global partner and a McLaren team partner (2022–2023 deals); Kelman ran Salesforce's global marketing. AMD is itself a Mercedes-AMG Petronas F1 partner (EPYC compute for CFD).",
+   "tier": "strict",
+   "icp": "yes — public mega-cap already on the grid; the value is the person, not a new logo",
+   "series_fit": "F1",
+   "team_lane": "Mercedes-AMG Petronas (existing AMD partnership) — renewal and activation; any move by AMD to a second team or series would be led by him",
+   "action": "sponsor_side",
+   "status": "verified",
+   "window_note": "Appointment is outside the 90-day window; recorded as a strict-tier alumnus for the outreach warmth, not as a fresh trigger.",
+   "sources": [
+    "https://ir.amd.com/news-events/press-releases/detail/1277/amd-hires-ariel-kelman-as-chief-marketing-officer",
+    "https://www.mercedesamgf1.com/partners/amd"
+   ]
+  },
+  {
+   "id": "kennedy-ellis-workday-2026",
+   "type": "new_cmo",
+   "person": "Sarah Kennedy Ellis",
+   "from_company": "Google (Google Cloud and Google Workspace global marketing)",
+   "from_role": "Vice President, Global Marketing, Google Cloud",
+   "to_company": "Workday",
+   "to_role": "Chief Marketing Officer (effective 5 October 2026)",
+   "date": "2026-10-05",
+   "sponsor_link": "Workday is an Official Partner of the McLaren F1 Team (multi-year, from March 2023; 1440 activated the deal). Google Cloud is Formula E's technology partner and a McLaren partner, so she arrives from a sponsor to a sponsor.",
+   "tier": "medium",
+   "icp": "yes — a 1440 client relationship; the new marketing owner of an existing F1 partnership",
+   "series_fit": "F1 (FE through her Google Cloud history)",
+   "team_lane": "McLaren Mastercard F1 Team — the Workday partnership's renewal and 2027 activation plan sit with her from day one",
+   "action": "sponsor_side",
+   "status": "verified",
+   "window_note": "Starts 5 Oct 2026: the first-hundred-days sequence applies from that date.",
+   "sources": [
+    "https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Names-Sarah-Kennedy-Ellis-Chief-Marketing-Officer/default.aspx",
+    "https://www.mclaren.com/racing/partners/workday/mclaren-racing-announces-multi-year-partnership-with-workday/"
+   ]
+  },
+  {
+   "id": "conlan-binance-2026",
+   "type": "exec_move",
+   "person": "Rachel Conlan",
+   "from_company": "Binance",
+   "from_role": "Chief Marketing Officer (left 15 June 2026; adviser through the transition)",
+   "to_company": null,
+   "to_role": "in transition — next role not announced",
+   "date": "2026-06-15",
+   "sponsor_link": "Before Binance she was OKX's global head of brand and partnerships for a year — the seat that ran OKX's McLaren F1 partnership. At Binance she ran a three-year brand build.",
+   "tier": "medium",
+   "icp": "the person is; the company she lands at decides",
+   "series_fit": "either",
+   "team_lane": "to be set by her next company",
+   "action": "watch",
+   "status": "verified",
+   "window_note": "Watch for the landing: the day she joins a company in the ICP, that company becomes an exec_move trigger with shared history.",
+   "sources": [
+    "https://www.coindesk.com/business/2026/05/12/binance-s-chief-marketing-officer-rachel-conlan-is-leaving-the-exchange"
+   ]
+  },
+  {
+   "id": "kalifowitz-cryptocom-2026",
+   "type": "exec_move",
+   "person": "Steven Kalifowitz",
+   "from_company": "Crypto.com",
+   "from_role": "Chief Marketing Officer, ~6 years (stepped down 30 June 2026; adviser to the CEO)",
+   "to_company": null,
+   "to_role": "in transition — next role not announced",
+   "date": "2026-06-30",
+   "sponsor_link": "Ran the marketing organisation behind Crypto.com's F1 global partnership and its wider billion-dollar sports portfolio.",
+   "tier": "strict",
+   "icp": "the person is — a strict-tier alumnus the moment he takes a seat at a company that can buy",
+   "series_fit": "either",
+   "team_lane": "to be set by his next company",
+   "action": "watch",
+   "status": "verified",
+   "window_note": "Watch for the landing; the warmest possible opening when it comes.",
+   "sources": [
+    "https://www.coindesk.com/business/2026/05/05/crypto-com-s-high-rolling-head-of-marketing-taps-out-after-almost-six-years",
+    "https://ministryofsport.com/crypto-com-marketing-chief-steven-kalifowitz-to-step-down-after-billion-dollar-tenure/"
+   ]
+  },
+  {
+   "id": "murphy-jfrog-2026",
+   "type": "exec_move",
+   "person": "Genefa Murphy",
+   "from_company": "Udemy",
+   "from_role": "Chief Marketing Officer (July 2023 – late 2025)",
+   "to_company": "JFrog",
+   "to_role": "Chief Marketing Officer (from 5 January 2026)",
+   "date": "2026-01-05",
+   "sponsor_link": "Udemy–McLaren multi-series partnership (F1, FE, IndyCar, Extreme E), launched November 2023; 1440 facilitated. The worked example of this trigger class.",
+   "tier": "strict",
+   "icp": "yes — NASDAQ: FROG; scored 87 (75 base + 12 alumni boost)",
+   "series_fit": "F1",
+   "team_lane": "McLaren software-supply-chain lane (open category in the team table)",
+   "action": "in_pursuit",
+   "status": "verified",
+   "window_note": "Already on the desk's blocklist as an active pursuit — listed here so the pattern is visible, not for a new sequence.",
+   "sources": [
+    "https://jfrog.com/press-room/jfrog-appoints-new-cmo-to-accelerate-its-ai-growth-phase/"
+   ]
+  },
+  {
+   "id": "buczkowski-eos-2026",
+   "type": "new_cmo",
+   "person": "Michelle Buczkowski",
+   "from_company": "Eos Energy Enterprises (internal — Chief Administration Officer)",
+   "from_role": "Chief Administration Officer",
+   "to_company": "Eos Energy Enterprises",
+   "to_role": "Chief Commercial Officer (effective 24 August 2026; sales, business development, marketing and communications report to her)",
+   "date": "2026-08-24",
+   "sponsor_link": "none found",
+   "tier": null,
+   "icp": "check — NASDAQ: EOSE, zinc long-duration storage, 2026 revenue guided to $300–350M (Q2 revenue $68.8M, +351%), but loss-making with the guidance cut in August; capacity for a three-year deal is the question",
+   "series_fit": "FE",
+   "team_lane": "Energy-storage lane: Andretti Formula E (US team, Nissan powertrain from Season 13) or DS Penske; the Austin and Miami rounds in early 2027 are the home stages",
+   "action": "start_sequence",
+   "status": "verified",
+   "window_note": "18 days old — inside the window. Confirm capacity on the first call before sizing anything.",
+   "sources": [
+    "https://www.globenewswire.com/news-release/2026/08/25/3350885/0/en/eos-energy-enterprises-appoints-michelle-buczkowski-as-chief-commercial-officer.html",
+    "https://investors.eose.com/news-releases/news-release-details/eos-energy-enterprises-reports-second-quarter-2026-financial"
+   ]
+  },
+  {
+   "id": "anzevino-druva-2026",
+   "type": "new_cmo",
+   "person": "Anthony Anzevino",
+   "from_company": "Kaseya",
+   "from_role": "Chief Revenue Officer",
+   "to_company": "Druva",
+   "to_role": "Chief Commercial and Partner Officer (28 July 2026)",
+   "date": "2026-07-28",
+   "sponsor_link": "none found (his prior stops — Commvault, Veeam, AWS, VMware, Dell EMC — include two current grid brands, AWS and Dell, but no deal involvement is on record)",
+   "tier": null,
+   "icp": "yes — data-resilience SaaS, reported $2B valuation, $475M raised, Santa Clara; the buyer of a sponsorship in a company with no CMO named",
+   "series_fit": "F1",
+   "team_lane": "Backup / recovery / data-resilience is an open category at Williams, Haas and Cadillac in the team table",
+   "action": "start_sequence",
+   "status": "verified",
+   "window_note": "45 days old — inside the window; a new commercial owner writing his plan.",
+   "sources": [
+    "https://www.businesswire.com/news/home/20260728420777/en/Druva-Appoints-Anthony-Anzevino-as-Chief-Commercial-and-Partner-Officer-Amid-Growing-Demand-for-AI-Resilience"
+   ]
+  },
+  {
+   "id": "swaroop-chargepoint-2026",
+   "type": "new_cmo",
+   "person": "Jyothi Swaroop",
+   "from_company": null,
+   "from_role": null,
+   "to_company": "ChargePoint",
+   "to_role": "Chief Marketing and Growth Officer (21 May 2026)",
+   "date": "2026-05-21",
+   "sponsor_link": "none found",
+   "tier": null,
+   "icp": "check — NYSE: CHPT, EV charging, small-cap and loss-making; the category fits Formula E exactly, the balance sheet may not",
+   "series_fit": "FE",
+   "team_lane": "Charging / e-mobility lane; ChargePoint's new EVP Europe (John Saffrett, ex-Ayvens) is the regional counterpart",
+   "action": "watch",
+   "status": "verified",
+   "window_note": "113 days old — outside the window; re-open on ChargePoint's next capital event or a Formula E charging tender.",
+   "sources": [
+    "https://www.chargepoint.com/about/news/chargepoint-appoints-jyothi-swaroop-chief-marketing-and-growth-officer-accelerate-global",
+    "https://www.chargepoint.com/about/news/chargepoint-accelerates-european-growth-strategy-appointment-john-saffrett-evp-and"
+   ]
+  },
+  {
+   "id": "sumner-westinghouse-2026",
+   "type": "new_ceo",
+   "person": "Dan Sumner",
+   "from_company": null,
+   "from_role": null,
+   "to_company": "Westinghouse Electric Company",
+   "to_role": "President and Chief Executive Officer",
+   "date": "2026-08-01",
+   "sponsor_link": "none found",
+   "tier": null,
+   "icp": "check — nuclear engineering group owned by Brookfield and Cameco; industrial energy at scale, but a nuclear brand on a Formula E car is a positioning call for the MD",
+   "series_fit": "either",
+   "team_lane": "Energy lane; no team chosen",
+   "action": "watch",
+   "status": "reported",
+   "window_note": "Appointment date reported as August 2026 by executive-move trackers; confirm on the company's release before any approach.",
+   "sources": [
+    "https://chiefexecutivescouncil.org/ceos-on-the-move-august-2026/"
+   ]
+  },
+  {
+   "id": "napoli-lucid-2026",
+   "type": "new_ceo",
+   "person": "Silvio Napoli",
+   "from_company": "Schindler (former CEO)",
+   "from_role": "Chief Executive Officer",
+   "to_company": "Lucid Group",
+   "to_role": "Chief Executive Officer",
+   "date": "2026-06-01",
+   "sponsor_link": "none",
+   "tier": null,
+   "icp": "no — an EV manufacturer enters Formula E as a team, not a sponsor; and Lucid is not on the grid",
+   "series_fit": "none",
+   "team_lane": null,
+   "action": "screen_out",
+   "status": "reported",
+   "window_note": "Listed so the judgment is visible; the exact effective date was not confirmed.",
+   "sources": [
+    "https://www.prnewswire.com/news-releases/silvio-napoli-assumes-role-as-ceo-of-lucid-following-completion-of-leadership-transition-302786702.html"
+   ]
+  },
+  {
+   "id": "polymarket-2026",
+   "type": "funding_round",
+   "person": null,
+   "from_company": null,
+   "from_role": null,
+   "to_company": "Polymarket",
+   "to_role": null,
+   "date": "2026-08-31",
+   "sponsor_link": "none found on the grid; crypto exchanges (OKX, Crypto.com, Kraken, Bybit) are the precedent for blockchain brands on F1 cars",
+   "tier": null,
+   "icp": "check — $1B round at a $21B valuation led by 1789 Capital (31 Aug 2026); a consumer prediction market, so brand-fit and regulatory questions come first",
+   "series_fit": "F1",
+   "team_lane": "Crypto / fintech lane — check the team table for exchange conflicts (Williams: Kraken; McLaren: OKX; Red Bull: Bybit; Aston Martin: Crypto.com)",
+   "action": "start_sequence",
+   "status": "reported",
+   "window_note": "11 days old. Reported by CryptoRank's August fundraising report; confirm on a Tier-1 outlet before the first email.",
+   "sources": [
+    "https://cryptorank.io/insights/reports/crypto-fundraising-in-august-2026"
+   ]
+  },
+  {
+   "id": "blockchaincom-ipo-2026",
+   "type": "listing",
+   "person": null,
+   "from_company": null,
+   "from_role": null,
+   "to_company": "Blockchain.com",
+   "to_role": null,
+   "date": "2026-05-21",
+   "sponsor_link": "none found",
+   "tier": null,
+   "icp": "yes if the listing proceeds — 95M wallets, 43M verified users, last valued at about $7B (2023); founded in London",
+   "series_fit": "either (London roots; London E-Prix 29–30 May 2027)",
+   "team_lane": "Crypto lane on a team without an exchange partner",
+   "action": "watch",
+   "status": "verified",
+   "window_note": "Confidential SEC filing on 21 May 2026; the public filing or pricing is the trigger to act on — a brand goes public-market and needs to be known in the same quarter.",
+   "sources": [
+    "https://www.coindesk.com/business/2026/05/21/blockchain-com-files-confidential-paperwork-with-sec-for-u-s-ipo"
+   ]
+  },
+  {
+   "id": "bitpanda-ipo-2026",
+   "type": "listing",
+   "person": null,
+   "from_company": null,
+   "from_role": null,
+   "to_company": "Bitpanda",
+   "to_role": null,
+   "date": "2026-01-13",
+   "sponsor_link": "none found",
+   "tier": null,
+   "icp": "yes if it lists — Vienna-based European exchange targeting a Frankfurt IPO at €4–5B (Bloomberg, Jan 2026); no completion found by 11 Sep 2026",
+   "series_fit": "FE (Berlin E-Prix 8–9 May 2027 as the home round) or F1",
+   "team_lane": "Crypto / fintech lane at a European team",
+   "action": "watch",
+   "status": "reported",
+   "window_note": "Act on the intention-to-float announcement; until then a watch item.",
+   "sources": [
+    "https://www.bloomberg.com/news/articles/2026-01-13/bitpanda-said-to-gear-up-for-frankfurt-ipo-in-first-half-of-2026"
+   ]
+  },
+  {
+   "id": "consensys-ipo-2026",
+   "type": "listing",
+   "person": null,
+   "from_company": null,
+   "from_role": null,
+   "to_company": "Consensys",
+   "to_role": null,
+   "date": "2026-02-28",
+   "sponsor_link": "none found",
+   "tier": null,
+   "icp": "yes if it files — MetaMask's parent, working with JPMorgan and Goldman Sachs on a listing that has slipped to autumn 2026 at the earliest",
+   "series_fit": "either",
+   "team_lane": "Crypto / infrastructure lane",
+   "action": "watch",
+   "status": "reported",
+   "window_note": "The draft S-1 is the trigger.",
+   "sources": [
+    "https://www.dlnews.com/articles/markets/six-blockbuster-crypto-ipos-to-watch-in-2026/"
+   ]
+  },
+  {
+   "id": "zf-ept-2026",
+   "type": "spin_off",
+   "person": null,
+   "from_company": "ZF Friedrichshafen",
+   "from_role": null,
+   "to_company": "ZF Electrified Powertrain Technology (separation)",
+   "to_role": null,
+   "date": "2026-12-31",
+   "sponsor_link": "none found",
+   "tier": null,
+   "icp": "yes on completion — German e-drive hardware, born big",
+   "series_fit": "FE",
+   "team_lane": "Powertrain-adjacent technology lane at a German team (Porsche, Opel GSE, Lola Yamaha ABT) — subject to the conflict check once the structure is public",
+   "action": "watch",
+   "status": "reported",
+   "window_note": "Transaction expected to close in the second half of 2026; re-run on closing. Also on the catalyst radar.",
+   "sources": [
+    "https://www.sustainable-bus.com/news/zf-results-2025/"
+   ]
+  }
+ ]
+}
