@@ -39,6 +39,41 @@ def test_todays_real_repo_state_is_readable():
     assert day_status.live_case_for(dt.date(2026, 9, 6), CASES) is not None
 
 
+def test_a_morning_that_found_nothing_also_closes_the_day(tmp_path):
+    """11 Sep 2026: the 04:40 run scanned and found 0 eligible; the 05:40 and 09:20 firings
+    scanned again because nothing was saved. The run record now leaves a marker."""
+    from intel import no_signal
+
+    runs = tmp_path / "runs"
+    runs.mkdir()
+    (runs / "2026-09-11-run197.json").write_text(
+        json.dumps(
+            {
+                "status": "no_signal",
+                "brief_id": None,
+                "summary": {"candidates": 11, "decisions": {"below_threshold": 5}},
+            }
+        ),
+        encoding="utf-8",
+    )
+    day = dt.date(2026, 9, 11)
+    marker = no_signal.write_marker(day, runs, tmp_path)
+    assert marker == tmp_path / "2026-09-11" / "no_signal.json"
+    assert day_status.no_signal_for(day, tmp_path) == marker
+    out = tmp_path / "out"
+    day_status.main(["--date", "2026-09-11", "--cases", str(tmp_path), "--github-output", str(out)])
+    text = out.read_text(encoding="utf-8")
+    assert "done=true" in text and "hold=true" in text
+    # a run that DID issue a brief leaves no marker: the case record is the answer
+    (runs / "2026-09-12-run198.json").write_text(
+        json.dumps({"status": "success", "brief_id": 5, "summary": {}}), encoding="utf-8"
+    )
+    assert no_signal.write_marker(dt.date(2026, 9, 12), runs, tmp_path) is None
+    # and once a case exists for the day, the marker is not written over it
+    _record(tmp_path / "2026-09-11", "acme", 302)
+    assert no_signal.write_marker(day, runs, tmp_path) is None
+
+
 def test_the_gate_runs_without_any_third_party_package():
     """The workflow calls this BEFORE pip install, so it must be stdlib-only. A stray
     `from intel.config import …` here would make every scheduled run fail at the gate."""

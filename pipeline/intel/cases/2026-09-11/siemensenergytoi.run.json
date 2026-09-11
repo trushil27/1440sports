@@ -1,0 +1,776 @@
+{
+ "run": {
+  "id": 197,
+  "date": "2026-09-11",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "usage": {
+    "calls": {},
+    "tokens": {
+     "input": 0,
+     "output": 0,
+     "cache_read": 0,
+     "cache_write": 0
+    },
+    "estimated_usd": 0.0
+   },
+   "rebuild": true,
+   "sources": {
+    "n8n": 0,
+    "status": "no mailbox configured — scanner only",
+    "routine": 0,
+    "scanner": 1,
+    "candidates": 0,
+    "to_research": []
+   },
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-hdnzdveo/2026-09-11/siemensenergytransformationofindustry.pdf",
+     "web": "/tmp/case-pdf-hdnzdveo/2026-09-11/siemensenergytransformationofindustry.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Siemens Energy Transformation of Industry",
+     "stage_a": {
+      "verified": 10
+     },
+     "stage_b": {
+      "verified": 13
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 262,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 296,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "FE rotation day (Tue/Fri)",
+     "company": "Siemens Energy Transformation of Industry",
+     "decision": "selected",
+     "signal_date": "2026-08-25"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Siemens Energy Transformation of Industry",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "FE rotation day (Tue/Fri)",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 15,
+    "ops_fit": 12,
+    "ranking": 71,
+    "urgency": 13,
+    "capacity": 16,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 4,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Opel GSE Formula E Team",
+   "source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "trigger_date": "2026-08-25",
+   "trigger_reason": "spin-off"
+  }
+ ],
+ "brief": {
+  "number": 247,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-hdnzdveo/2026-09-11/siemensenergytransformationofindustry.web.html",
+  "brief_data": {
+   "hq": "Germany (Siemens Energy group, Munich)",
+   "deck": "Siemens Energy is carving out Transformation of Industry, its 17,000-person, €5.7B-revenue business in compressors, steam turbines, motors, drives and electrolysers, into a standalone company, announced 25 August 2026, with outside investors or a listing to follow and the Omterra brand at launch.",
+   "risks": [
+    {
+     "label": "OWNERSHIP IN FLUX",
+     "detail": "A new owner or an IPO process could freeze discretionary spend before the standalone has its own budget.",
+     "counter": "Agree a founding-partner term sheet with current management, sized to survive a new board."
+    },
+    {
+     "label": "ABB ADJACENCY",
+     "detail": "ABB is the championship's electrification title partner and a Siemens Energy competitor in parts of its market.",
+     "counter": "A team-level partnership is a different tier and category; check the championship's exclusivity list first."
+    }
+   ],
+   "score": 71,
+   "ticker": "Standalone in preparation (parent Siemens Energy AG, ETR: ENR)",
+   "company": "Siemens Energy Transformation of Industry",
+   "gridfit": [
+    {
+     "team": "Opel GSE Formula E Team",
+     "label": "PRIME LANE",
+     "detail": "documented open category: energy / industrial",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mahindra Racing",
+     "label": "TAKEN",
+     "detail": "Mahindra & Mahindra",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "spin_off",
+    "brand_launch",
+    "category_open"
+   ],
+   "sources": [
+    "https://www.weforum.org/people/anne-laure-de-chammard/",
+    "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+    "https://www.siemens-energy.com/us/en/home/press-releases/omterra-brand-announcement.html",
+    "https://www.siemens-energy.com/global/en/home/press-releases/earnings-release-q3-fy-2026.html",
+    "https://www.bloomberg.com/news/articles/2026-08-24/siemens-energy-taps-goldman-sachs-for-steam-turbine-stake-sale"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Anne-Laure de Chammard before the ownership process concludes, to agree whether a founding-partner position on the Opel GSE Formula E Team belongs in the standalone's launch plan, and to size it for Seasons 13-15.",
+    "value": [
+     {
+      "text": "A founding-partner position on a new works entry gives the Omterra-branded standalone its first public identity moment: livery, launch event and the Berlin E-Prix as a home stage, at the moment the company most needs to be known by customers, employees and investors.",
+      "label": "Brand launch (Mode B)"
+     },
+     {
+      "text": "The buyers of compressors, steam turbines, motors and electrolysers are industrial and energy companies; the Berlin, London, Madrid and Zandvoort paddocks are a place to host them, and the prospective owners, in the launch year.",
+      "label": "Customer and investor hospitality"
+     },
+     {
+      "text": "Motors, drives and power distribution for the Rüsselsheim workshop and the trackside energy setup, supplied and branded by the partner: a visible, honest use of its products without claiming a role in the race car.",
+      "label": "Hardware the team can use"
+     },
+     {
+      "text": "Founding Industrial Technology Partner designation, sidepod or rear-wing placement, naming of the team's energy and workshop infrastructure, Berlin and London hospitality, and engineering content on industrial electrification for the partner's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 25 August 2026 Siemens Energy announced that it is preparing the legal and operational separation of Transformation of Industry into a standalone company. The unit employs around 17,000 people and generated €5.7B of revenue in fiscal 2025. Siemens Energy intends to deconsolidate it while keeping a meaningful minority stake, with options from external investors to a capital-markets transaction. No timeline has been given.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The business will launch under Omterra, the name Siemens Energy announced on 14 July 2026 because its licence to the Siemens brand from the 2020 spin-off is time-limited; the rebrand begins later in 2026 and rolls out in stages. A standalone industrial company with a name nobody has heard of needs a stage, and the people who will run it are choosing that stage now.",
+      "label": "A brand with nothing on it yet"
+     },
+     {
+      "text": "Bloomberg reported on 24 August that Goldman Sachs is advising on a stake sale and that CVC, EQT, Bain, Brookfield and KKR are weighing bids at a valuation above €10B. That is reported, not confirmed. It means the window to shape the launch plan with current management, before a new board sets the first budget, is measured in months.",
+      "label": "The owners are being chosen"
+     },
+     {
+      "text": "Season 13 opens with the Jeddah E-Prix on 18-19 December 2026, so team launches and liveries land in the autumn. The Berlin E-Prix on 8-9 May 2027 is the home round for a German works team and a German industrial brand; London on 29-30 May and Zandvoort on 18-19 June follow inside the launch year.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Opel enters Formula E in Season 13 as the Opel GSE Formula E Team, a Rüsselsheim-based works entry with its own manufacturer licence, taking the grid to 12 teams and 24 cars. The team is being built from scratch under Team Principal Jörg Schrott. The only partner announced by 11 September 2026 is Sparco, for racewear. Title rights, technology, energy and industrial categories are all open.",
+      "label": "A team with every category open"
+     },
+     {
+      "text": "A German industrial-electrification company launching its own name and a German manufacturer launching its own team, in the same season, share a story a founding partnership can tell from the first livery reveal to the Berlin home round.",
+      "label": "Two German launches in one season"
+     },
+     {
+      "text": "Opel helps Stellantis develop the GEN4 powertrain shared by the group's factory teams. The engineers, suppliers and industrial customers around a works programme are the buyers of motors, drives and electrification systems, which is what Transformation of Industry sells.",
+      "label": "The right engineering audience"
+     },
+     {
+      "text": "The sponsor table shows no energy, industrial or technology partner at Opel. The teams that do carry one, or a competitor, are ruled out below by name.",
+      "label": "Clean of conflicts"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Porsche Formula E Team",
+      "reason": "AVEVA (Schneider Electric) locks industrial software and TDK is official technology partner; Schneider competes with Siemens Energy in electrification."
+     },
+     {
+      "team": "Envision Racing",
+      "reason": "Envision Group is itself a wind-turbine and energy-technology company, a Siemens Gamesa competitor; Paysafe takes title from Season 13."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Shell holds the energy lane; a German base (ABT) but an occupied category."
+     },
+     {
+      "team": "Andretti Formula E",
+      "reason": "TWG AI and Quest Global cover technology and engineering; the story is American, and Nissan supplies the powertrain."
+     },
+     {
+      "team": "Mahindra Racing",
+      "reason": "Mahindra & Mahindra and Tech Mahindra are the industrial and technology identity of the team."
+     },
+     {
+      "team": "Jaguar TCS Racing",
+      "reason": "TCS title and Castrol; a British story with no German launch angle."
+     },
+     {
+      "team": "DS Penske",
+      "reason": "TotalEnergies holds the energy lane; Mouser, TTI, Molex and KYOCERA AVX cover electronics."
+     },
+     {
+      "team": "Nissan Formula E Team · Citroën Racing · Cupra Kiro",
+      "reason": "Open but not chosen: none carries the German launch-season story that makes Opel the deliberate fit."
+     }
+    ]
+   },
+   "date_long": "11 SEP 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Opel GSE Formula E Team",
+   "value_mode": "B",
+   "bottom_line": "A €5.7B industrial-electrification business becoming a standalone company with a new name, new owners and a German launch audience, matched to a German works team entering Formula E in the same season: early enough to be a founding partner rather than the fiftieth agency through the door.",
+   "footer_date": "11 SEP 2026",
+   "score_cells": [
+    {
+     "num": 15,
+     "note": "Separation announced 25 Aug; brand launch later in 2026; Season 13 opens in December.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 16,
+     "note": "€5.7B revenue business; but the first standalone budget is not yet set.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 15,
+     "note": "Industrial electrification, German, a new name to launch; B2B audience.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Ownership decision and brand rollout inside months; no fixed listing date.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 12,
+     "note": "MODE B: launch story and hospitality; no car-side workstream.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "On 25 August Siemens Energy said it is preparing the separation of Transformation of Industry, the business area making industrial steam turbines, compressors, generators, motors, drives and hydrogen electrolysers. It employs around 17,000 people and generated €5.7B of revenue in fiscal 2025; in the quarter to June, orders rose 31.5% to €1.81B and revenue 11.5% to €1.53B. Siemens Energy intends to deconsolidate the unit while keeping a meaningful minority stake, from external investors to a capital-markets transaction. Bloomberg reports Goldman Sachs advising and CVC, EQT, Bain, Brookfield and KKR weighing bids above €10B.",
+   "the_case_p2": "A business becoming a company has one job in its first year: tell the market who it is. This one starts under the Omterra name, created because the licence to the Siemens brand from the 2020 spin-off is time-limited, then meets owners who judge it on growth. Industrial electrification is its story, and Formula E is the world championship built on that story. Germany is where its factories and its launch audience sit.",
+   "track_label": "",
+   "brief_number": "247",
+   "claims_total": 18,
+   "gridfit_note": "11 of 38 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "Transformation of Industry employs around 17,000 people and generated €5.7B of revenue in fiscal 2025 (Siem…",
+     "value": "€5.7B",
+     "claim_id": 2008,
+     "verified": true,
+     "source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html"
+    },
+    {
+     "fact": "Siemens Energy intends to deconsolidate the business while keeping a meaningful minority stake, with option…",
+     "value": "€10B",
+     "claim_id": 2009,
+     "verified": true,
+     "source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html"
+    },
+    {
+     "fact": "in the quarter to June, orders rose 31.5% to €1.81B and revenue 11.5% to €1.53B.",
+     "value": "31.5%",
+     "claim_id": 2020,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "WARM",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Industrial Electrification · Compressors, Steam Turbines, Motors, Drives & Electrolysers",
+   "value_content": "MODE B - commercial and brand. Transformation of Industry sells motors, drives, compressors and electrolysers to industrial buyers; the Berlin, London, Madrid and Zandvoort paddocks are a hospitality platform for those customers and for the investors choosing its owners. For Opel: a founding technology partner with an industrial-decarbonisation story, launch co-branding, and hardware for the Rüsselsheim workshop and trackside energy setup.",
+   "value_section": true,
+   "why_team_para": "Opel enters Formula E in Season 13 with its own manufacturer licence and a team built from scratch in Rüsselsheim under Jörg Schrott; the only partner announced so far is Sparco for racewear, so every commercial category is open. A German industrial-electrification brand launching in the same season as a German works team gives both a founding-partner story with a Berlin home round. The Stellantis GEN4 powertrain the team helps develop is the audience the company sells to.",
+   "deal_arch_para": "Entry as Founding Industrial Technology Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, spanning the brand launch, the ownership change and a probable listing. Estimated €2-4M a year. Scope: sidepod or rear-wing placement, naming of the team's energy and workshop infrastructure, Berlin and London hospitality, and engineering content.",
+   "footer_company": "SIEMENS ENERGY TRANSFORMATION OF INDUSTRY",
+   "why_team_label": "WHY OPEL GSE FORMULA E TEAM",
+   "claims_verified": 18,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The separation was announced on 25 August; the brand launches later this year and the ownership decision follows. A launch partner has to be agreed before its first budget is set. Season 13 opens at the Jeddah E-Prix on 18-19 December; the Berlin E-Prix, the home round, follows on 8-9 May 2027.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "De Chammard sits on Siemens Energy's Executive Board with responsibility for Transformation of Industry, the business being separated; a launch partnership is hers to sponsor. Path: Christian Bruch, President and CEO, and Maria Ferraro, CFO, who set its first budget. No chief marketing officer is named on the leadership page.",
+   "decision_maker_name": "Anne-Laure de Chammard",
+   "decision_maker_role": "Member of the Executive Board, Transformation of Industry, Siemens Energy",
+   "opening_angle_intro": "Lead with the launch, not the logo.",
+   "opening_angle_quote": "&ldquo;Anne-Laure, Transformation of Industry becomes a company with a new name and, soon, new owners. Opel launches a German works team the same season. 25 minutes before the ownership process closes, to see how the two launches fit?&rdquo;",
+   "value_section_label": "VALUE TO OPEL GSE FORMULA E TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Anne-Laure de Chammard, Member of the Executive Board, Transformation of Industry at Siemens Energy Transformation of Industry",
+   "cited_source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.weforum.org/people/anne-laure-de-chammard/",
+     "excerpt": "World Economic Forum profile: Anne-Laure de Chammard is Group Executive Vice President and Executive Board Member of Siemens Energy, leading the Transformation of Industry business area. Siemens Energy's Executive Board (company site, Wikipedia): Christian Bruch, President and CEO; Maria Ferraro, CFO; Karim Amin (Gas Services); Tim Holt (Grid Technologies); Anne-Laure de Chammard (Transformation of Industry); Vinod Philip (global functions). No chief marketing officer is named.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Anne-Laure de Chammard, Member of the Executive Board, Transformation of Industry, Siemens Energy at Siemens Energy Transformation of Industry",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.weforum.org/people/anne-laure-de-chammard/",
+     "excerpt": "World Economic Forum profile: Anne-Laure de Chammard is Group Executive Vice President and Executive Board Member of Siemens Energy, leading the Transformation of Industry business area. Siemens Energy's Executive Board (company site, Wikipedia): Christian Bruch, President and CEO; Maria Ferraro, CFO; Karim Amin (Gas Services); Tim Holt (Grid Technologies); Anne-Laure de Chammard (Transformation of Industry); Vinod Philip (global functions). No chief marketing officer is named.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Transformation of Industry employs around 17,000 people and generated €5.7B of revenue in fiscal 2025 (Siemens Energy release, 25 Aug 2026); in the quarter to June 2026 orders rose 31.5% to €1.81B and revenue 11.5% to €1.53B (Q3 FY26 earnings release, 5 Aug 2026)",
+   "cited_source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "excerpt": "Siemens Energy press release, 25 Aug 2026: the company is starting preparations for the legal and operational separation of its Transformation of Industry business area (around 17,000 employees, €5.7 billion revenue in fiscal 2025; industrial steam turbines, compressors, generators, motors, hydrogen electrolysers, maritime and subsea technologies) into a standalone company. It will initially operate under Siemens Energy's future Omterra brand once launched. In a second step Siemens Energy intends to explore a new ownership structure, from bringing in external investors to a potential capital markets transaction, with the objective of deconsolidating the business while retaining a meaningful minority stake. Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia. No timeline given. Corroborated by Bloomberg (25 Aug 2026) and Yahoo Finance/OilPrice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "Siemens Energy is carving out Transformation of Industry, its 17,000-person, €5.7B-revenue business in compressors, steam turbines, motors, drives and electrolysers, into a standalone company, announced 25 August 2026, with outside investors or a listing to follow and the Omterra brand at launch.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "excerpt": "Siemens Energy press release, 25 Aug 2026: the company is starting preparations for the legal and operational separation of its Transformation of Industry business area (around 17,000 employees, €5.7 billion revenue in fiscal 2025; industrial steam turbines, compressors, generators, motors, hydrogen electrolysers, maritime and subsea technologies) into a standalone company. It will initially operate under Siemens Energy's future Omterra brand once launched. In a second step Siemens Energy intends to explore a new ownership structure, from bringing in external investors to a potential capital markets transaction, with the objective of deconsolidating the business while retaining a meaningful minority stake. Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia. No timeline given. Corroborated by Bloomberg (25 Aug 2026) and Yahoo Finance/OilPrice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Siemens Energy intends to deconsolidate the business while keeping a meaningful minority stake, with options from external investors to a capital-markets transaction; Bloomberg reports Goldman Sachs advising and CVC, EQT, Bain, Brookfield and KKR weighing bids at a valuation above €10B — reported, not confirmed",
+   "cited_source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "excerpt": "Siemens Energy press release, 25 Aug 2026: the company is starting preparations for the legal and operational separation of its Transformation of Industry business area (around 17,000 employees, €5.7 billion revenue in fiscal 2025; industrial steam turbines, compressors, generators, motors, hydrogen electrolysers, maritime and subsea technologies) into a standalone company. It will initially operate under Siemens Energy's future Omterra brand once launched. In a second step Siemens Energy intends to explore a new ownership structure, from bringing in external investors to a potential capital markets transaction, with the objective of deconsolidating the business while retaining a meaningful minority stake. Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia. No timeline given. Corroborated by Bloomberg (25 Aug 2026) and Yahoo Finance/OilPrice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "It employs around 17,000 people and generated €5.7B of revenue in fiscal 2025;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "excerpt": "Siemens Energy press release, 25 Aug 2026: the company is starting preparations for the legal and operational separation of its Transformation of Industry business area (around 17,000 employees, €5.7 billion revenue in fiscal 2025; industrial steam turbines, compressors, generators, motors, hydrogen electrolysers, maritime and subsea technologies) into a standalone company. It will initially operate under Siemens Energy's future Omterra brand once launched. In a second step Siemens Energy intends to explore a new ownership structure, from bringing in external investors to a potential capital markets transaction, with the objective of deconsolidating the business while retaining a meaningful minority stake. Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia. No timeline given. Corroborated by Bloomberg (25 Aug 2026) and Yahoo Finance/OilPrice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "€5.7B in fiscal 2025 (company-announced)",
+   "cited_source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "excerpt": "Siemens Energy press release, 25 Aug 2026: the company is starting preparations for the legal and operational separation of its Transformation of Industry business area (around 17,000 employees, €5.7 billion revenue in fiscal 2025; industrial steam turbines, compressors, generators, motors, hydrogen electrolysers, maritime and subsea technologies) into a standalone company. It will initially operate under Siemens Energy's future Omterra brand once launched. In a second step Siemens Energy intends to explore a new ownership structure, from bringing in external investors to a potential capital markets transaction, with the objective of deconsolidating the business while retaining a meaningful minority stake. Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia. No timeline given. Corroborated by Bloomberg (25 Aug 2026) and Yahoo Finance/OilPrice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "in the quarter to June, orders rose 31.5% to €1.81B and revenue 11.5% to €1.53B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/earnings-release-q3-fy-2026.html",
+     "excerpt": "Siemens Energy Q3 FY2026 earnings release (5 Aug 2026, quarter April-June 2026): Transformation of Industry orders up 31.5% to €1.81 billion and revenue up 11.5% to €1.53 billion, led by the Compression new-units business and large orders from the Americas; fiscal 2026 outlook for the unit 5-7% comparable revenue growth at an 11-13% margin before special items. Group: record orders €17.9 billion, revenue €11.4 billion.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Separation of Transformation of Industry into a standalone company announced 25 Aug 2026; it will operate under the Omterra brand at launch",
+   "cited_source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "excerpt": "Siemens Energy press release, 25 Aug 2026: the company is starting preparations for the legal and operational separation of its Transformation of Industry business area (around 17,000 employees, €5.7 billion revenue in fiscal 2025; industrial steam turbines, compressors, generators, motors, hydrogen electrolysers, maritime and subsea technologies) into a standalone company. It will initially operate under Siemens Energy's future Omterra brand once launched. In a second step Siemens Energy intends to explore a new ownership structure, from bringing in external investors to a potential capital markets transaction, with the objective of deconsolidating the business while retaining a meaningful minority stake. Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia. No timeline given. Corroborated by Bloomberg (25 Aug 2026) and Yahoo Finance/OilPrice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Bloomberg reports Goldman Sachs advising and CVC, EQT, Bain, Brookfield and KKR weighing bids above €10B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-24/siemens-energy-taps-goldman-sachs-for-steam-turbine-stake-sale",
+     "excerpt": "Bloomberg, 24 Aug 2026: Siemens Energy has tapped Goldman Sachs to advise on a stake sale of the Transformation of Industry division; CVC Capital Partners, EQT, Bain Capital, Brookfield and KKR are among buyout firms considering bids for a majority stake, in a deal that could value the division at more than €10 billion. Reported, not company-confirmed; the 25 Aug release names no bidders or valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "ABB is Formula E's championship title partner in electrification; Siemens (a separate company that licenses the name) sits on Red Bull Racing and Racing Bulls in F1; Schneider Electric's AVEVA holds industrial software at the Porsche Formula E Team",
+   "cited_source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/us/en/home/press-releases/omterra-brand-announcement.html",
+     "excerpt": "Siemens Energy press release, 14 Jul 2026: Siemens Energy and Siemens Gamesa will become Omterra. The move follows the time-limited licence agreement for the Siemens brand after the 2020 spin-off (a revenue-linked royalty of roughly €300 million in the most recent year, agreement running to 2030); the rebrand begins later in 2026 and is implemented in stages. Corroborated by POWER Magazine and Energy Digital.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A €5.7B industrial-electrification business becoming a standalone company with a new name, new owners and a German launch audience, matched to a German works team entering Formula E in the same season: early enough to be a founding partner rather than the fiftieth agency through the door.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "excerpt": "Siemens Energy press release, 25 Aug 2026: the company is starting preparations for the legal and operational separation of its Transformation of Industry business area (around 17,000 employees, €5.7 billion revenue in fiscal 2025; industrial steam turbines, compressors, generators, motors, hydrogen electrolysers, maritime and subsea technologies) into a standalone company. It will initially operate under Siemens Energy's future Omterra brand once launched. In a second step Siemens Energy intends to explore a new ownership structure, from bringing in external investors to a potential capital markets transaction, with the objective of deconsolidating the business while retaining a meaningful minority stake. Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia. No timeline given. Corroborated by Bloomberg (25 Aug 2026) and Yahoo Finance/OilPrice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Opel enters Formula E in Season 13 with its own manufacturer licence and only Sparco announced as a partner; a German industrial-electrification brand launching in the same season as a German works team, with the Berlin E-Prix on 8-9 May 2027 as the home round",
+   "cited_source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/us/en/home/press-releases/omterra-brand-announcement.html",
+     "excerpt": "Siemens Energy press release, 14 Jul 2026: Siemens Energy and Siemens Gamesa will become Omterra. The move follows the time-limited licence agreement for the Siemens brand after the 2020 spin-off (a revenue-linked royalty of roughly €300 million in the most recent year, agreement running to 2030); the rebrand begins later in 2026 and is implemented in stages. Corroborated by POWER Magazine and Energy Digital.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "revenue",
+   "load_bearing": false,
+   "text": "The unit employs around 17,000 people and generated €5.7B of revenue in fiscal 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "excerpt": "Siemens Energy press release, 25 Aug 2026: the company is starting preparations for the legal and operational separation of its Transformation of Industry business area (around 17,000 employees, €5.7 billion revenue in fiscal 2025; industrial steam turbines, compressors, generators, motors, hydrogen electrolysers, maritime and subsea technologies) into a standalone company. It will initially operate under Siemens Energy's future Omterra brand once launched. In a second step Siemens Energy intends to explore a new ownership structure, from bringing in external investors to a potential capital markets transaction, with the objective of deconsolidating the business while retaining a meaningful minority stake. Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia. No timeline given. Corroborated by Bloomberg (25 Aug 2026) and Yahoo Finance/OilPrice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia (company release)",
+   "cited_source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "excerpt": "Siemens Energy press release, 25 Aug 2026: the company is starting preparations for the legal and operational separation of its Transformation of Industry business area (around 17,000 employees, €5.7 billion revenue in fiscal 2025; industrial steam turbines, compressors, generators, motors, hydrogen electrolysers, maritime and subsea technologies) into a standalone company. It will initially operate under Siemens Energy's future Omterra brand once launched. In a second step Siemens Energy intends to explore a new ownership structure, from bringing in external investors to a potential capital markets transaction, with the objective of deconsolidating the business while retaining a meaningful minority stake. Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia. No timeline given. Corroborated by Bloomberg (25 Aug 2026) and Yahoo Finance/OilPrice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Bloomberg reported on 24 August that Goldman Sachs is advising on a stake sale and that CVC, EQT, Bain, Brookfield and KKR are weighing bids at a valuation above €10B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-24/siemens-energy-taps-goldman-sachs-for-steam-turbine-stake-sale",
+     "excerpt": "Bloomberg, 24 Aug 2026: Siemens Energy has tapped Goldman Sachs to advise on a stake sale of the Transformation of Industry division; CVC Capital Partners, EQT, Bain Capital, Brookfield and KKR are among buyout firms considering bids for a majority stake, in a deal that could value the division at more than €10 billion. Reported, not company-confirmed; the 25 Aug release names no bidders or valuation.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "spin-off",
+   "cited_source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+     "excerpt": "Siemens Energy press release, 25 Aug 2026: the company is starting preparations for the legal and operational separation of its Transformation of Industry business area (around 17,000 employees, €5.7 billion revenue in fiscal 2025; industrial steam turbines, compressors, generators, motors, hydrogen electrolysers, maritime and subsea technologies) into a standalone company. It will initially operate under Siemens Energy's future Omterra brand once launched. In a second step Siemens Energy intends to explore a new ownership structure, from bringing in external investors to a potential capital markets transaction, with the objective of deconsolidating the business while retaining a meaningful minority stake. Major manufacturing in Germany and facilities across Europe, the United States, India, China, Brazil and Saudi Arabia. No timeline given. Corroborated by Bloomberg (25 Aug 2026) and Yahoo Finance/OilPrice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-11"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Jeddah E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Berlin E-Prix on 8-9 May 2027",
+   "cited_source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-starting-preparations-for-business-area-transf.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: double-header race 1",
+     "excerpt": "round 8: Berlin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Berlin E-Prix, the home round, follows on 8-9 May 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: double-header race 1",
+     "excerpt": "round 8: Berlin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Jeddah E-Prix on 18-19 December 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The Berlin E-Prix on 8-9 May 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: double-header race 1",
+     "excerpt": "round 8: Berlin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Berlin E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455; spec §3.4 | note: Tempelhof, double-header race 1",
+     "excerpt": "round 7: Berlin E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

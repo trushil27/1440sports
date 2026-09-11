@@ -51,6 +51,21 @@ def live_case_for(day: dt.date, cases_dir: Path | str | None = None) -> Path | N
     return None
 
 
+def no_signal_for(day: dt.date, cases_dir: Path | str | None = None) -> Path | None:
+    """The marker a run leaves when it scanned and found nothing (intel.no_signal), or None.
+
+    A no-signal morning is still a morning that ran: without this, every later firing that
+    day repeated the whole scan (11 Sep 2026: three scans, ~$3.60, one honest answer)."""
+    marker = Path(cases_dir or CASES_DIR) / day.isoformat() / "no_signal.json"
+    if not marker.is_file():
+        return None
+    try:
+        data = json.loads(marker.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    return marker if data.get("status") == "no_signal" else None
+
+
 def london_now() -> dt.datetime:
     """Stdlib only, deliberately: this runs in the workflow's gate step BEFORE pip install,
     so it must not reach for intel.config (pydantic) or anything else third-party."""
@@ -93,10 +108,13 @@ def main(argv: list[str] | None = None) -> int:
     now = london_now()
     day = args.date or now.date()
     record = live_case_for(day, args.cases)
-    done = record is not None
+    quiet = None if record is not None else no_signal_for(day, args.cases)
+    done = record is not None or quiet is not None
     early = args.date is None and too_early(now, args.earliest_hour)
-    if done:
+    if record is not None:
         print(f"{day}: today's signal is already saved ({record.name})")
+    elif quiet is not None:
+        print(f"{day}: today's run already scanned and found no eligible signal — holding")
     elif early:
         print(f"{day}: {now:%H:%M} London is before {args.earliest_hour:02d}:00 — holding")
     else:

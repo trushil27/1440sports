@@ -122,7 +122,7 @@ jobs:
             PYTHONPATH=pipeline python3 -m intel.day_status --github-output /tmp/day_status
             if grep -q "hold=true" /tmp/day_status; then
               echo "run=no" >> "$GITHUB_OUTPUT"
-              echo "holding: today is already done, or it is before 05:00 London"
+              echo "holding: today is already done (signal saved, or the run found none), or it is before 05:00 London"
             else
               echo "run=yes" >> "$GITHUB_OUTPUT"
               echo "no signal saved for today yet (local $(TZ=Europe/London date +%H:%M)) — running"
@@ -160,6 +160,9 @@ jobs:
         if: steps.gate.outputs.run == 'yes'
         run: |
           python -m intel.case_record --sync --out pipeline/intel/cases
+          # A morning that scanned and found nothing is recorded too, so the later firings
+          # hold instead of paying for the same scan again (11 Sep 2026: three scans, one answer).
+          python -m intel.no_signal --runs storage/briefs/runs --cases pipeline/intel/cases
           git config user.name "1440 desk"
           git config user.email "noreply@1440sports.com"
           git add pipeline/intel/cases
