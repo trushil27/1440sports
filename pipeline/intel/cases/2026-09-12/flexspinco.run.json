@@ -1,0 +1,966 @@
+{
+ "run": {
+  "id": 200,
+  "date": "2026-09-12",
+  "status": "success",
+  "mode": "shadow",
+  "summary": {
+   "usage": {
+    "calls": {
+     "writer": 2,
+     "scanner": 2,
+     "verifier": 9
+    },
+    "tokens": {
+     "input": 17083,
+     "output": 122092,
+     "cache_read": 1792377,
+     "cache_write": 205049
+    },
+    "estimated_usd": 2.126
+   },
+   "sources": {
+    "n8n": 0,
+    "status": "read",
+    "offered": [
+     "Omterra (Siemens Energy) (routine)",
+     "Mistral AI (routine)",
+     "Base Power (routine)",
+     "ALSO (routine)",
+     "Moove (routine)",
+     "Antora Energy (routine)",
+     "Flex SpinCo (Cloud and Power Infrastructure) (routine)",
+     "Joulent (n8n)"
+    ],
+    "routine": 1,
+    "scanned": [
+     "Flex SpinCo (Cloud and Power Infrastructure)"
+    ],
+    "scanner": 10,
+    "kept_thin": [],
+    "n8n_mails": 10,
+    "candidates": 1,
+    "mails_read": 40,
+    "to_research": [],
+    "already_known": [
+     "Omterra (Siemens Energy)",
+     "Mistral AI",
+     "Base Power",
+     "ALSO",
+     "Moove",
+     "Antora Energy",
+     "Joulent"
+    ],
+    "routine_mails": 2
+   },
+   "decisions": {
+    "stale": 5,
+    "selected": 1,
+    "blocklisted": 1,
+    "below_threshold": 4
+   },
+   "candidates": 11,
+   "verification": [
+    {
+     "pdf": "storage/briefs/2026-09-12/flexspinco.pdf",
+     "web": "storage/briefs/2026-09-12/flexspinco.web.html",
+     "audit": "failed",
+     "status": "needs_review",
+     "company": "Flex SpinCo (Cloud and Power Infrastructure)",
+     "stage_a": {
+      "verified": 6,
+      "unverified": 2
+     },
+     "stage_b": {
+      "verified": 3
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 265,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 309,
+     "verification": "needs_review",
+     "audit_attempts": 2
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": null,
+     "reason": "blocklist: active pursuit (n8n HARD_BLOCK (May 2026 export) — reconcile against the live Sheets blocklist in M6)",
+     "company": "Mistral AI",
+     "decision": "blocklisted",
+     "signal_date": "2026-09-08"
+    },
+    {
+     "rank": 2,
+     "score": null,
+     "reason": "trigger 2026-04-22 (day) is 143 days old; window is 90",
+     "company": "Slate Auto",
+     "decision": "stale",
+     "signal_date": "2026-04-22"
+    },
+    {
+     "rank": 3,
+     "score": null,
+     "reason": "trigger 2026-02-12 (day) is 212 days old; window is 90",
+     "company": "Anthropic",
+     "decision": "stale",
+     "signal_date": "2026-02-12"
+    },
+    {
+     "rank": 4,
+     "score": 66,
+     "reason": "ranking score 66 < threshold 70",
+     "company": "DayOne",
+     "decision": "below_threshold",
+     "signal_date": "2026-06-30"
+    },
+    {
+     "rank": 5,
+     "score": 65,
+     "reason": "ranking score 65 < threshold 70",
+     "company": "Fireworks AI",
+     "decision": "below_threshold",
+     "signal_date": "2026-07-14"
+    },
+    {
+     "rank": 6,
+     "score": 61,
+     "reason": "ranking score 61 < threshold 70",
+     "company": "Nscale",
+     "decision": "below_threshold",
+     "signal_date": "2026-06-30"
+    },
+    {
+     "rank": 7,
+     "score": null,
+     "reason": "trigger 2026-01-23 (day) is 232 days old; window is 90",
+     "company": "Baseten",
+     "decision": "stale",
+     "signal_date": "2026-01-23"
+    },
+    {
+     "rank": 8,
+     "score": 59,
+     "reason": "ranking score 49 < threshold 70",
+     "company": "Joulent",
+     "decision": "below_threshold",
+     "signal_date": "2026-07-02"
+    },
+    {
+     "rank": 9,
+     "score": null,
+     "reason": "trigger 2026-01-21 (day) is 234 days old; window is 90",
+     "company": "OpenEvidence",
+     "decision": "stale",
+     "signal_date": "2026-01-21"
+    },
+    {
+     "rank": 10,
+     "score": null,
+     "reason": "trigger 2026-01-28 (day) is 227 days old; window is 90",
+     "company": "Flapping Airplanes",
+     "decision": "stale",
+     "signal_date": "2026-01-28"
+    },
+    {
+     "rank": 11,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "Flex SpinCo (Cloud and Power Infrastructure)",
+     "decision": "selected",
+     "signal_date": "2026-07-29"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Mistral AI",
+   "series": "F1",
+   "decision": "blocklisted",
+   "reason": "blocklist: active pursuit (n8n HARD_BLOCK (May 2026 export) — reconcile against the live Sheets blocklist in M6)",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Audi F1 Team",
+   "source_url": "https://www.hpcwire.com/aiwire/2026/09/08/mistral-raises-e3b-to-expand-ai-research-and-infrastructure/",
+   "trigger_date": "2026-09-08",
+   "trigger_reason": "EUR3bn Series D at EUR21bn+ valuation, 4 days old"
+  },
+  {
+   "rank": 2,
+   "company": "Slate Auto",
+   "series": "FE",
+   "decision": "stale",
+   "reason": "trigger 2026-04-22 (day) is 143 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Citroen Racing",
+   "source_url": "https://netzeroinsights.com/resources/the-latest-climate-tech-deals-and-funds-30/",
+   "trigger_date": "2026-04-22",
+   "trigger_reason": "$650M Series C to scale EV production ahead of 2026 deliveries"
+  },
+  {
+   "rank": 3,
+   "company": "Anthropic",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-02-12 (day) is 212 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Scuderia Ferrari",
+   "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+   "trigger_date": "2026-02-12",
+   "trigger_reason": "$30B Series G at $380B valuation; largest AI round of the year"
+  },
+  {
+   "rank": 4,
+   "company": "DayOne",
+   "series": "FE",
+   "decision": "below_threshold",
+   "reason": "ranking score 66 < threshold 70",
+   "score_total": 66,
+   "score_breakdown": {
+    "cap": null,
+    "base": 66,
+    "total": 66,
+    "timing": 8,
+    "ops_fit": 14,
+    "ranking": 66,
+    "urgency": 11,
+    "capacity": 18,
+    "brand_fit": 15,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 3,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 15
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.winssolutions.org/climate-tech-vc-funding-h1-2026/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified"
+    },
+    "scanner_score": 66,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 66,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Lola Yamaha ABT Formula E Team",
+   "source_url": "https://www.winssolutions.org/climate-tech-vc-funding-h1-2026/",
+   "trigger_date": "2026-06-30",
+   "trigger_reason": "$4.5B Series C, largest low-carbon data center round of H1 2026"
+  },
+  {
+   "rank": 5,
+   "company": "Fireworks AI",
+   "series": "F1",
+   "decision": "below_threshold",
+   "reason": "ranking score 65 < threshold 70",
+   "score_total": 65,
+   "score_breakdown": {
+    "cap": null,
+    "base": 65,
+    "total": 65,
+    "timing": 12,
+    "ops_fit": 13,
+    "ranking": 65,
+    "urgency": 12,
+    "capacity": 15,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-defense-fintech-robotics/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified"
+    },
+    "scanner_score": 65,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 65,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Visa Cash App Racing Bulls",
+   "source_url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-defense-fintech-robotics/",
+   "trigger_date": "2026-07-14",
+   "trigger_reason": "$1.505B Series D, largest funding round of its week"
+  },
+  {
+   "rank": 6,
+   "company": "Nscale",
+   "series": "FE",
+   "decision": "below_threshold",
+   "reason": "ranking score 61 < threshold 70",
+   "score_total": 61,
+   "score_breakdown": {
+    "cap": null,
+    "base": 61,
+    "total": 61,
+    "timing": 8,
+    "ops_fit": 13,
+    "ranking": 61,
+    "urgency": 10,
+    "capacity": 16,
+    "brand_fit": 14,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 6,
+     "slot_availability": 3
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 14
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.winssolutions.org/climate-tech-vc-funding-h1-2026/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified"
+    },
+    "scanner_score": 61,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 61,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Mahindra Racing",
+   "source_url": "https://www.winssolutions.org/climate-tech-vc-funding-h1-2026/",
+   "trigger_date": "2026-06-30",
+   "trigger_reason": "$2B Series C for data-center/compute operator in H1 2026"
+  },
+  {
+   "rank": 7,
+   "company": "Baseten",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-01-23 (day) is 232 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "MoneyGram Haas F1 Team",
+   "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+   "trigger_date": "2026-01-23",
+   "trigger_reason": "$300M Series E at $5B valuation for AI infrastructure startup"
+  },
+  {
+   "rank": 8,
+   "company": "Joulent",
+   "series": "F1",
+   "decision": "below_threshold",
+   "reason": "ranking score 49 < threshold 70",
+   "score_total": 59,
+   "score_breakdown": {
+    "cap": null,
+    "base": 59,
+    "total": 59,
+    "timing": 11,
+    "ops_fit": 10,
+    "ranking": 49,
+    "urgency": 10,
+    "capacity": 17,
+    "brand_fit": 11,
+    "alumni_boost": 0,
+    "of_gate_applied": false,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 4,
+     "slot_availability": 2
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": false,
+     "brand_fit": 11
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-energy-biotech-joulent/",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None identified"
+    },
+    "scanner_score": 49,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 59,
+    "scanner_vs_recomputed_delta": -10
+   },
+   "recommended_team": "BWT Alpine",
+   "source_url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-energy-biotech-joulent/",
+   "trigger_date": "2026-07-02",
+   "trigger_reason": "$1.75B strategic financing, week's biggest US funding round"
+  },
+  {
+   "rank": 9,
+   "company": "OpenEvidence",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-01-21 (day) is 234 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+   "trigger_date": "2026-01-21",
+   "trigger_reason": "$250M Series D at $12B+ valuation for medical AI chatbot"
+  },
+  {
+   "rank": 10,
+   "company": "Flapping Airplanes",
+   "series": "F1",
+   "decision": "stale",
+   "reason": "trigger 2026-01-28 (day) is 227 days old; window is 90",
+   "score_total": null,
+   "score_breakdown": null,
+   "gate_results": null,
+   "recommended_team": "Atlassian Williams Racing",
+   "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+   "trigger_date": "2026-01-28",
+   "trigger_reason": "$180M seed at $1.5B valuation for AI research lab"
+  },
+  {
+   "rank": 11,
+   "company": "Flex SpinCo (Cloud and Power Infrastructure)",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 12,
+    "ops_fit": 18,
+    "ranking": 70,
+    "urgency": 16,
+    "capacity": 8,
+    "brand_fit": 16,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 4,
+     "on_camera": 3,
+     "product_to_need": 7,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 16
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+     "pass": true,
+     "tier": 2
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": "None - no match against the 5-name alumni database (Schlampp, Franklin, Humphries, Murphy, Steele)"
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Audi F1 Team",
+   "source_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+   "trigger_date": "2026-07-29",
+   "trigger_reason": "Full SpinCo leadership team named ahead of targeted Q1 2027 spin-off close"
+  }
+ ],
+ "brief": {
+  "number": 250,
+  "verification_status": "needs_review",
+  "audit_status": "failed",
+  "audit_attempts": 2,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "storage/briefs/2026-09-12/flexspinco.web.html",
+  "brief_data": {
+   "hq": "Austin, TX",
+   "deck": "Flex Ltd. named leadership for its Cloud and Power Infrastructure spin-off on 29 July 2026 -- CEO Revathi Advaithi, CFO Kevin Krumm, COO Hooi Tan, CTO Chris Butler -- ahead of a Q1 CY2027 spin-off close. The new company inherits a grid-to-chip power and thermal management stack for AI data centers, built across 22 engineering centers.",
+   "risks": [
+    {
+     "label": "CAPACITY UNVERIFIED",
+     "detail": "SpinCo's standalone revenue and budget authority remain undisclosed pre-spin.",
+     "counter": "Structure entry-tier deal with financial confirmation gate before Q1 2027 close."
+    },
+    {
+     "label": "TIMELINE SLIPPAGE",
+     "detail": "Spin-off close could slip past Q1 CY2027 target, delaying brand-budget authority.",
+     "counter": "Anchor contract signature to post-close date, protecting both sides from pre-spin uncertainty."
+    }
+   ],
+   "score": 70,
+   "ticker": "NASDAQ: FLEX (parent; SpinCo unlisted pre-spin)",
+   "company": "Flex SpinCo (Cloud and Power Infrastructure)",
+   "gridfit": [
+    {
+     "team": "Audi Revolut F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies, Schneider Electric",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "Honda, NetApp",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "TAKEN",
+     "detail": "Ford",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "signals": [
+    "new_leadership",
+    "category_whitespace",
+    "catalyst",
+    "expansion"
+   ],
+   "sources": [
+    "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+    "https://investors.flex.com/news/news-details/2026/Flex-Announces-Intention-to-Spin-Off-its-Cloud-and-Power-Infrastructure-Segment-into-a-New-Independent-Publicly-Traded-Company/default.aspx"
+   ],
+   "extended": {
+    "ask": "The first conversation should settle whether SpinCo's board has budget authority to commit before the Q1 2027 close, and whether a three-year entry-tier deal can be structured contingent on that close -- request 25 minutes with Advaithi's team.",
+    "value": [
+     {
+      "text": "SpinCo's engineers would work directly on PU dyno cooling, factory grid infrastructure and energy-recovery-system thermal management as Audi scales its power-unit build toward 2026 racing.",
+      "label": "Operational Workstream"
+     },
+     {
+      "text": "A category-defining alliance gives SpinCo paddock-level introductions to other F1 power and energy suppliers and OEM procurement teams, opening cross-sell conversations beyond Audi itself.",
+      "label": "Commercial Lift"
+     },
+     {
+      "text": "Factory-floor and dyno-cooling footage, trackside energy-management dashboards and race-weekend thermal-monitoring feeds give SpinCo a content pipeline that demonstrates its AI-data-center engineering under motorsport-grade stress.",
+      "label": "Content & Ecosystem"
+     },
+     {
+      "text": "Audi provides SpinCo brand exposure across a global grid, paddock access to OEM and hyperscaler-adjacent sponsor networks, and a proving ground that doubles as investor-facing collateral ahead of its own Q1 2027 debut.",
+      "label": "What Audi Gives Back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "Flex named SpinCo's full executive bench -- CEO Revathi Advaithi, CFO Kevin Krumm, COO Hooi Tan, CTO Chris Butler -- on 29 July 2026, formally starting the countdown to a Q1 CY2027 spin-off close.",
+      "label": "The Trigger"
+     },
+     {
+      "text": "A newly independent company inheriting a grid-to-chip power and thermal stack for AI data centers needs a market identity distinct from its parent before its debut -- motorsport sponsorship is a compressed way to build that identity fast.",
+      "label": "The Brand-Authority Moment"
+     },
+     {
+      "text": "The 16-24 week decision horizon runs through Audi's 2026 build phase and into early-season 2027 announcements, giving SpinCo a chance to land a partnership before its own board finalizes external-facing brand strategy post-close.",
+      "label": "The Calendar Window"
+     },
+     {
+      "text": "No competitor in the power-and-thermal-infrastructure category has entered F1 sponsorship in the categories tracked, but the lane will not stay open once Audi's technical-partner roster fills ahead of its 2026 season debut.",
+      "label": "The Competitive Clock"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Audi is building its power unit and technical-partner roster from zero for its 2026 F1 entry, with no incumbent grid-to-chip power and thermal management partner on the books.",
+      "label": "The Open Lane"
+     },
+     {
+      "text": "Audi's infrastructure story -- an OEM standing up a new power unit in-house -- mirrors SpinCo's own narrative of engineering grid-to-chip systems from scratch, giving both organizations a shared growth-stage positioning to sell jointly.",
+      "label": "The Market Overlap"
+     },
+     {
+      "text": "Audi's factory build gives SpinCo a live engineering environment -- dyno cooling, energy recovery, grid infrastructure -- to demonstrate its stack under race-relevant load, not just a logo placement.",
+      "label": "The Activation Platform"
+     },
+     {
+      "text": "Audi's from-scratch build means procurement decisions on power and thermal systems are still open, unlike incumbent teams locked into legacy supplier contracts -- SpinCo's stack can be specified into the program rather than bolted onto it.",
+      "label": "Why Audi Can Consume It"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Mercedes",
+      "reason": "Petronas already anchors the energy and lubricants category through its long-term technical partnership."
+     },
+     {
+      "team": "Ferrari",
+      "reason": "Shell's technical partnership covers fuel, energy and thermal-fluid systems under a long-standing works deal."
+     },
+     {
+      "team": "Red Bull Racing",
+      "reason": "ExxonMobil's technical fuels and lubricants partnership occupies the equivalent energy-systems lane."
+     }
+    ]
+   },
+   "date_long": "12 SEP 2026",
+   "discovery": "scan",
+   "team_label": "AUDI",
+   "value_mode": "A",
+   "bottom_line": "Flex's SpinCo just got a named CEO and a Q1 2027 clock; Audi is the only grid on the calendar building a power unit with no grid-to-chip thermal partner on the books -- move before SpinCo's own board sets external-brand strategy.",
+   "footer_date": "12 SEP 2026",
+   "score_cells": [
+    {
+     "num": 12,
+     "note": "Capacity signal not fully confirmed",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 8,
+     "note": "SpinCo revenue/valuation undisclosed pre-spin",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 16,
+     "note": "Grid-to-chip stack matches PU needs",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 16,
+     "note": "16-24 week window before board sets strategy",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 18,
+     "note": "Direct power/thermal/cooling engineering overlap with PU build",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Flex Ltd. named leadership for its Cloud and Power Infrastructure spin-off on 29 July 2026, targeting a Q1 CY2027 close. Parent Flex trades on NASDAQ as a multi-billion-dollar manufacturer, though SpinCo's standalone revenue remains undisclosed -- a capacity signal not yet independently confirmed. For a company engineering grid-to-chip power and thermal systems for AI data centers, this spin-off is the <font name='Poppins-Bold' size='9.5'>BRAND RECKONING</font> moment: SpinCo must build an independent market identity before its debut, and motorsport is a proven stage for infrastructure brands doing exactly that.",
+   "the_case_p2": "No competitor in this power-and-thermal-infrastructure category has entered F1 sponsorship in the categories tracked. Grid power management, energy recovery and cooling remain open lanes as teams build 2026-regulation power-unit programs from scratch. The slot that matches SpinCo's grid-to-chip stack architecturally is open at Audi, where a new power-unit program is being built from the ground up.",
+   "track_label": "",
+   "brief_number": "250",
+   "claims_total": 11,
+   "gridfit_note": "49 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "16-24 WKS",
+   "industry_meta": "Manufacturing/AI Infrastructure - Power & Thermal Management for Data Centers - Austin, TX",
+   "value_content": "SpinCo's grid-to-chip power and thermal stack maps directly onto Audi's power-unit build: factory cooling for the PU test bench, grid infrastructure for the engine facility, and energy-recovery-system engineering for the car itself. Deployment surface: factory power infrastructure, trackside energy management units, PU dyno cooling systems, and garage thermal monitoring feeding race-weekend strategy calls -- a live proving ground for AI-data-center thermal engineering applied to the highest-stress environment in motorsport.",
+   "value_section": true,
+   "why_team_para": "Audi enters F1 in 2026 building its power unit and technical-partner roster from zero -- there is no incumbent grid-to-chip power and thermal management partner on the books. SpinCo's engineering stack, spanning energy recovery, cooling and grid infrastructure, matches the exact systems Audi's factory must stand up in-house. A category-defining technical alliance here would anchor Audi's infrastructure story for its debut seasons, when the brand still has capacity to define the term.",
+   "deal_arch_para": "A <font name='Poppins-Bold' size='9.5'>THREE YEARS</font> entry-tier technical partnership, structured around Audi's power-unit ramp, gives SpinCo grid-to-chip branding across factory, pit-wall and trackside energy systems at a proposed entry-tier annual rate. Anchor moments: the United States Grand Prix in SpinCo's home city of Austin, and the Las Vegas Grand Prix, both natural stages for an AI-infrastructure power brand.",
+   "footer_company": "FLEX SPINCO",
+   "why_team_label": "WHY AUDI",
+   "claims_verified": 9,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;SpinCo's Q1 CY2027 close lands inside Audi's first full season build window, as the factory scales its from-scratch power-unit program ahead of the 2027 campaign. The 16-24 week decision horizon closes before SpinCo's board finalizes its own external-partner and brand strategy post-spin.",
+   "confidence_level": "MEDIUM",
+   "decision_maker_bio": "Revathi Advaithi is set to lead SpinCo as CEO following the spin-off's Q1 CY2027 close. She currently serves as CEO of Flex Ltd., the NASDAQ-listed parent, where she has overseen the company's manufacturing and infrastructure portfolio ahead of this planned separation.",
+   "decision_maker_name": "Revathi Advaithi",
+   "decision_maker_role": "Incoming CEO, SpinCo (Flex Cloud & Power Infrastructure spin-off)",
+   "opening_angle_intro": "Flex just named the CEO of a power-infrastructure spin-off built for AI data centers and F1-grade cooling.",
+   "opening_angle_quote": "&ldquo;Audi is building a power unit from scratch with no grid-to-chip thermal partner on the books, and SpinCo's stack was engineered for exactly this load profile -- can we book 25 minutes?&rdquo;",
+   "value_section_label": "VALUE TO AUDI",
+   "verification_status": "needs_review",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": false
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Revathi Advaithi, Incoming CEO, SpinCo (Flex Cloud & Power Infrastructure spin-off) at Flex SpinCo (Cloud and Power Infrastructure)",
+   "cited_source_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+     "excerpt": "Revathi Advaithi, Chief Executive Officer ... SpinCo Leadership",
+     "notes": "The Flex investor relations press release explicitly lists Revathi Advaithi as Chief Executive Officer of SpinCo, the planned Cloud and Power Infrastructure spin-off.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Revathi Advaithi, Incoming CEO, SpinCo (Flex Cloud & Power Infrastructure spin-off) at Flex SpinCo (Cloud and Power Infrastructure)",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Intention-to-Spin-Off-its-Cloud-and-Power-Infrastructure-Segment-into-a-New-Independent-Publicly-Traded-Company/default.aspx",
+     "excerpt": "Revathi Advaithi will become CEO of SpinCo.",
+     "notes": "Flex's official investor press release confirms Revathi Advaithi will serve as CEO of the Cloud and Power Infrastructure SpinCo.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "N/A - public-company spin-off, not a funding round",
+   "cited_source_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+     "excerpt": "Flex (Nasdaq: FLEX) today announced key leadership roles for both Flex and \"SpinCo,\" the planned independent, publicly traded company comprising its Cloud and Power Infrastructure segment following the expected spin-off in the first calendar quarter of 2027",
+     "notes": "The cited Flex investor press release confirms SpinCo is a planned public-company spin-off of Flex's Cloud and Power Infrastructure segment, not a funding round, matching the claim's N/A designation.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "deal_arch_para",
+   "type": "event",
+   "load_bearing": true,
+   "text": "United States Grand Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "N/A - parent is Flex Ltd. (NASDAQ: FLEX); no third-party investor round disclosed",
+   "cited_source_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+     "excerpt": "Flex (Nasdaq: FLEX) today announced key leadership roles for both Flex and \"SpinCo,\" the planned independent, publicly traded company comprising its Cloud and Power Infrastructure segment following the expected spin-off in the first calendar quarter of 2027",
+     "notes": "The press release confirms SpinCo is a planned spin-off of Flex Ltd. (NASDAQ: FLEX) into an independent publicly traded company, with no mention anywhere of a third-party investor or funding round.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "deal_arch_para",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas Grand Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "revenue",
+   "load_bearing": true,
+   "text": "SpinCo-specific revenue/valuation figure not disclosed in Tier 1 sources reviewed; parent Flex Ltd. is a NASDAQ-listed multi-billion-dollar manufacturer, but this does not verify SpinCo's standalone scale",
+   "cited_source_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+     "excerpt": "Flex (Nasdaq: FLEX) today announced key leadership roles for both Flex and \"SpinCo,\" the planned independent, publicly traded company comprising its Cloud and Power Infrastructure segment following the expected spin-off in the first calendar quarter of 2027",
+     "notes": "The cited press release contains no SpinCo-specific revenue or valuation figures (only leadership announcements), and independent market data confirms Flex Ltd. is a NASDAQ-listed multi-billion-dollar company (market cap in the tens of billions), matching the claim's assertion that parent scale does not verify SpinCo's standalone financials.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Flex announced key leadership roles for SpinCo (CEO Revathi Advaithi, CFO Kevin Krumm, COO Hooi Tan, CTO Chris Butler, Non-Exec Chairman Bill Watkins) on July 29, 2026, ahead of the spin-off targeted to close Q1 calendar 2027",
+   "cited_source_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+     "excerpt": "AUSTIN, Texas, July 29, 2026 /PRNewswire/ -- Flex (Nasdaq: FLEX) today announced key leadership roles for both Flex and \"SpinCo,\" the planned independent, publicly traded company comprising its Cloud and Power Infrastructure segment following the expected spin-off in the first calendar quarter of 2027... SpinCo Leadership Bill Watkins, Non-Executive Chairman of the Board of Directors Revathi Advaithi, Chief Executive Officer Kevin Krumm, Chief Financial Officer... Hooi Tan, Chief Operating Officer Chris Butler, Chief Technology Strategy Officer",
+     "notes": "The Flex investor relations press release dated July 29, 2026 directly confirms all named SpinCo leadership roles and the Q1 calendar 2027 spin-off timeline.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "SpinCo's grid-to-chip power and thermal management stack for AI data centers maps directly onto F1 power-unit energy recovery, cooling and factory-infrastructure needs. CAVEAT: Gate 3 (Capacity) is NOT conclusively passed -- no Tier 1 source reviewed states an explicit revenue or valuation figure for SpinCo specifically, so this score carries a capacity-verification caveat rather than a hard pass.",
+   "cited_source_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": null,
+     "excerpt": null,
+     "notes": "The cited Flex press release only announces SpinCo leadership appointments and generically mentions solving 'power, heat, and scale challenges' for AI data centers, with no mention of F1, power units, energy recovery, or motorsport-related infrastructure, and no independent Tier 1 source was found linking SpinCo's technology stack to Formula 1 power-unit needs.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "HQ Austin, Texas; Flex operates across 30 countries with 22 engineering and manufacturing centers feeding into SpinCo",
+   "cited_source_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+   "verifications": [
+    {
+     "status": "unverified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+     "excerpt": "With a global footprint spanning 30 countries, Flex delivers advanced manufacturing and supply chain solutions...",
+     "notes": "The cited press release confirms the Austin, Texas HQ and the 30-country footprint for Flex, but makes no mention of '22 engineering and manufacturing centers feeding into SpinCo,' so that specific figure remains unsupported by any Tier 1 source found.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "Full SpinCo leadership team named ahead of targeted Q1 2027 spin-off close",
+   "cited_source_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "llm_source_fetch",
+     "evidence_url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+     "excerpt": "Flex (Nasdaq: FLEX) today announced key leadership roles for both Flex and \"SpinCo,\" the planned independent, publicly traded company comprising its Cloud and Power Infrastructure segment following the expected spin-off in the first calendar quarter of 2027 (Spin-Off).",
+     "notes": "The Flex investor relations press release lists the full SpinCo leadership team (Chairman, CEO, CFO, CCO, presidents, COO, CTO) and explicitly ties the announcement to the expected Q1 2027 spin-off close.",
+     "model": "claude-sonnet-5"
+    }
+   ]
+  }
+ ]
+}
