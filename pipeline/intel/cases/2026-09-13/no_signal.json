@@ -1,0 +1,84 @@
+{
+ "date": "2026-09-13",
+ "status": "no_signal",
+ "candidates": 2,
+ "decisions": {
+  "below_threshold": 1,
+  "gate_failed": 1
+ },
+ "sources": {
+  "scanner": 0,
+  "routine": 2,
+  "n8n": 0,
+  "candidates": 2,
+  "to_research": [],
+  "mails_read": 40,
+  "routine_mails": 4,
+  "n8n_mails": 6,
+  "offered": [
+   "Base Power (routine)",
+   "Antora Energy (routine)",
+   "Sila (routine)",
+   "River Mobility (routine)",
+   "Cognition (routine)",
+   "Strava (n8n)",
+   "Omterra (Siemens Energy) (routine)",
+   "Mistral AI (routine)",
+   "ALSO (routine)",
+   "Moove (routine)",
+   "Flex SpinCo (Cloud and Power Infrastructure) (routine)",
+   "Joulent (n8n)"
+  ],
+  "already_known": [
+   "Base Power",
+   "Antora Energy",
+   "Sila",
+   "Strava",
+   "Omterra (Siemens Energy)",
+   "Mistral AI",
+   "ALSO",
+   "Moove",
+   "Flex SpinCo (Cloud and Power Infrastructure)",
+   "Joulent"
+  ],
+  "status": "read",
+  "scanned": [
+   "River Mobility"
+  ],
+  "kept_thin": [
+   "Cognition: no matching scored record"
+  ]
+ },
+ "usage": {
+  "tokens": {
+   "input": 2643,
+   "output": 31467,
+   "cache_read": 524459,
+   "cache_write": 59291
+  },
+  "calls": {
+   "scanner": 4
+  },
+  "estimated_usd": 0.573
+ },
+ "candidate_list": [
+  {
+   "rank": 1,
+   "company": "River Mobility",
+   "signal_date": "2026-08-05",
+   "decision": "below_threshold",
+   "reason": "ranking score 52 < threshold 70",
+   "score": 52
+  },
+  {
+   "rank": 2,
+   "company": "Cognition",
+   "signal_date": "2026-09-08",
+   "decision": "gate_failed",
+   "reason": "no score_breakdown from scanner",
+   "score": null
+  }
+ ],
+ "recorded_at": "2026-09-13T05:04:28+00:00",
+ "note": "The morning run scanned and found no eligible signal; the gate holds further firings for the day. Tick 'force' on the Daily run workflow to scan again."
+}
