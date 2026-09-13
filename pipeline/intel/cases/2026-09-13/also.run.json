@@ -1,0 +1,729 @@
+{
+ "run": {
+  "id": 201,
+  "date": "2026-09-13",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "usage": {
+    "calls": {},
+    "tokens": {
+     "input": 0,
+     "output": 0,
+     "cache_read": 0,
+     "cache_write": 0
+    },
+    "estimated_usd": 0.0
+   },
+   "rebuild": true,
+   "sources": {
+    "n8n": 0,
+    "status": "no mailbox configured — scanner only",
+    "routine": 0,
+    "scanner": 1,
+    "candidates": 0,
+    "to_research": []
+   },
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-hsnrh4lp/2026-09-13/also.pdf",
+     "web": "/tmp/case-pdf-hsnrh4lp/2026-09-13/also.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Also",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 12
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 266,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 310,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 73,
+     "reason": "top ranking score",
+     "company": "Also",
+     "decision": "selected",
+     "signal_date": "2026-08-19"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Also",
+   "series": "FE",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 73,
+   "score_breakdown": {
+    "cap": null,
+    "base": 73,
+    "total": 73,
+    "timing": 16,
+    "ops_fit": 13,
+    "ranking": 73,
+    "urgency": 12,
+    "capacity": 15,
+    "brand_fit": 17,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 2,
+     "product_to_need": 5,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 17
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 73,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 73,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Jaguar TCS Racing",
+   "source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+   "trigger_date": "2026-08-19",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 251,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-hsnrh4lp/2026-09-13/also.web.html",
+  "brief_data": {
+   "hq": "Palo Alto, California (Seattle office and retail hub)",
+   "deck": "Also, the small-EV company Rivian spun out in March 2025, closed a $150M Series D led by Prysm Capital on 19 August 2026 at a valuation above $1B, taking it to $455M raised, and is putting the money into autonomous vehicles for city streets.",
+   "risks": [
+    {
+     "label": "NOTHING FOR THE CAR",
+     "detail": "Also's series-hybrid drive, its removable pack and its consumer regen have no application to a GEN4 car; this is not an engineering partnership.",
+     "counter": "Sell the paddock and the audience, not the powertrain. The Specialized deal at Audi is the same shape and it was bought."
+    },
+    {
+     "label": "SECOND TO SPECIALIZED",
+     "detail": "A rival claimed the category in Formula 1 first, so Also can look like the follower.",
+     "counter": "Formula E is the unclaimed series and the one that races in Also's cities; first there beats second in F1."
+    }
+   ],
+   "score": 73,
+   "ticker": "Private (above $1B; $150M Series D, Aug 2026)",
+   "company": "Also",
+   "gridfit": [
+    {
+     "team": "Jaguar TCS Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Andretti Formula E",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Citroën Racing",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    },
+    {
+     "team": "Cupra Kiro",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "category_open"
+   ],
+   "sources": [
+    "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+    "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Chris Yu before the Jeddah opener to test whether an Official Mobility Partner position at Jaguar TCS Racing belongs in Also's 2027 plan, and to size it against the Specialized benchmark at Audi.",
+    "value": [
+     {
+      "text": "Street circuits are long, narrow and closed to vehicles, and crews move constantly between garage, pit lane and hospitality. A TM-B fleet covers that movement and the drivers' track rides. The 808 Wh removable battery doubles as a USB-C power bank, which is a real trackside utility rather than a talking point. The TM-Q quad handles paddock logistics.",
+      "label": "Operational, in the paddock (Mode A)"
+     },
+     {
+      "text": "Formula E holds PAS 2060-certified carbon neutrality and pushes operational sustainability, not just the racing. Replacing paddock combustion with small EVs is measurable and on-brand for the series as well as the team.",
+      "label": "On-message for the championship"
+     },
+     {
+      "text": "Drivers on the bikes on camera at city races is the content unit the category buys, and Formula E's audience is the youngest and most urban in motorsport. That is the same buyer Also sells a design-led e-bike to.",
+      "label": "Audience and content"
+     },
+     {
+      "text": "Official Mobility Partner designation, sidepod placement, team and crew kit presence, hospitality at London and Berlin, and driver access for Also's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 19 August 2026 Also closed a $150M Series D led by Prysm Capital, with Eclipse, Greenoaks and MVP Ventures returning, at a valuation above $1B. That takes the company to $455M raised since Rivian spun it out in March 2025 with $105M. The money funds autonomous development across multiple form factors for moving goods and passengers through urban environments.",
+      "label": "Trigger"
+     },
+     {
+      "text": "This follows the $200M round at a $1B valuation in March 2026 with DoorDash as strategic investor, which the desk recorded as N° 214 and pointed at Formula 1. Two rounds inside five months, and a shift from a single consumer product to an autonomy platform, is a company deciding what it wants to be known for.",
+      "label": "A second capital event in five months"
+     },
+     {
+      "text": "Specialized became the official bicycle and e-bike partner of the Audi Revolut F1 Team in May 2026, supplying Tarmac road bikes and the Vado 3 urban e-bike for team track rides across two seasons. In the same month Porsche discontinued its eBike Performance business. One buyer entered motorsport; one incumbent left the category. The window is now.",
+      "label": "The category just got a price"
+     },
+     {
+      "text": "Season 13 opens with the Jeddah E-Prix on 18-19 December 2026. The European rounds follow in the spring: Berlin 8-9 May, Monaco 15-16 May, London 29-30 May and Madrid 26-27 June 2027. Teams close their partner rosters before a season starts, so a deal agreed this autumn activates from round one.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Jaguar TCS Racing carries TCS as title partner with Castrol, Wolfspeed, OpenText, Dow, Schaeffler, Chase, Michelin and Reflo. Every one of those is a component, software, energy or services brand. No bicycle, e-bike or mobility partner appears on the team, and none appears anywhere else on the Formula E grid either.",
+      "label": "An open lane on an engineering roster"
+     },
+     {
+      "text": "Jaguar is a premium marque rebuilding itself around electric design. A design-led small EV sits naturally beside it in a way it would not beside a volume manufacturer, and both are selling the same idea: that electrification is a design choice rather than a compromise.",
+      "label": "The right brand company"
+     },
+     {
+      "text": "Formula E races on street circuits in city centres. Its Season 13 calendar runs through Berlin, Monaco, London, Madrid, Miami, Tokyo and Shanghai, which is the map a small-EV company sells into. The London E-Prix on 29-30 May 2027 is Jaguar's home round and the natural announcement stage.",
+      "label": "The cities"
+     },
+     {
+      "text": "The teams that are ruled out are named below with the reason for each. The two that matter: Porsche has just exited the e-bike category, and Lola Yamaha ABT carries a two-wheeler manufacturer.",
+      "label": "Clean of conflicts"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Porsche Formula E Team",
+      "reason": "Porsche ran its own e-bike business until discontinuing Porsche eBike Performance in May 2026; TDK holds the technology lane."
+     },
+     {
+      "team": "Lola Yamaha ABT Formula E Team",
+      "reason": "Yamaha is a two-wheeler manufacturer in its own right: a direct category conflict."
+     },
+     {
+      "team": "Envision Racing",
+      "reason": "Paysafe takes title from Season 13 and Envision Group is the team's identity; the consumer slot is spoken for."
+     },
+     {
+      "team": "DS Penske · Citroën Racing · Opel GSE Formula E Team",
+      "reason": "Stellantis entries; a small-EV brand alongside a car maker's own consumer-vehicle story needs the group's sign-off before it is a conversation."
+     },
+     {
+      "team": "Mahindra Racing",
+      "reason": "Mahindra & Mahindra and Tech Mahindra define the team, and the parent is itself a vehicle manufacturer."
+     },
+     {
+      "team": "Andretti Formula E",
+      "reason": "TWG AI and Quest Global fill the technology lane and the story is American; the desk already has two energy prospects aimed there."
+     },
+     {
+      "team": "Nissan Formula E Team",
+      "reason": "A Japanese manufacturer identity with a Tokyo finale; no overlap with Also's launch markets."
+     },
+     {
+      "team": "Cupra Kiro",
+      "reason": "Open but not chosen: Cupra is a car brand with its own urban positioning, and the team lacks Jaguar's design equity."
+     }
+    ]
+   },
+   "date_long": "13 SEP 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Jaguar TCS Racing",
+   "value_mode": "A",
+   "bottom_line": "A company valued above $1B, 25 days past a $150M round, whose president built the product line at the brand that just took the bike lane in Formula 1 — and a Formula E grid where nobody has claimed that lane. The paddock use is real; the race car is untouched, and this brief says so.",
+   "footer_date": "13 SEP 2026",
+   "score_cells": [
+    {
+     "num": 16,
+     "note": "Series D 19 Aug; Season 13 opens 18-19 December.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 15,
+     "note": "$455M raised, above $1B; hardware firm funding autonomy.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 17,
+     "note": "Urban electric mobility meets city-centre electric racing.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 12,
+     "note": "No listing or launch deadline; roster timing only.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 13,
+     "note": "MODE A in the paddock; nothing reaches the race car.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Also was spun out of Rivian in March 2025 by RJ Scaringe and Chris Yu, Rivian's former head of future programs and before that chief technology officer at Specialized. It has raised $455M in under two years. The $150M Series D announced on 19 August 2026, led by Prysm Capital with Eclipse, Greenoaks and MVP Ventures returning, funds autonomous development across several form factors for moving goods and passengers through cities.",
+   "the_case_p2": "The category has just been priced on a grid. Specialized became Audi's official bicycle and e-bike partner in Formula 1 in May 2026, supplying bikes for team track rides, and Porsche closed its own e-bike division the same month. Nothing of that kind sits anywhere on the Formula E grid, and the championship races where Also sells.",
+   "track_label": "",
+   "brief_number": "251",
+   "claims_total": 15,
+   "gridfit_note": "11 of 38 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$150M Series D led by Prysm Capital, announced 19 Aug 2026, valuing Also above $1B and taking it to $455M r…",
+     "value": "$150M",
+     "claim_id": 2085,
+     "verified": true,
+     "source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/"
+    },
+    {
+     "fact": "Prysm Capital (lead); Eclipse, Greenoaks and MVP Ventures returning; DoorDash a strategic investor in the e…",
+     "value": "$200M",
+     "claim_id": 2086,
+     "verified": true,
+     "source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/"
+    },
+    {
+     "fact": "It has raised $455M in under two years.",
+     "value": "$455M",
+     "claim_id": 2094,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "A company valued above $1B, 25 days past a $150M round, whose president built the product line at the brand…",
+     "value": "$1B",
+     "claim_id": 2096,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "FE",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Micromobility · Small Electric Vehicles & Autonomy",
+   "value_content": "MODE A - operational, in the paddock rather than on the car. A TM-B fleet for crew movement across street circuits and driver track rides, the 808 Wh removable battery doubling as a USB-C power bank for trackside kit, and the TM-Q quad for paddock logistics. In return: Official Mobility Partner designation, livery and kit presence, London and Berlin hospitality, and drivers on the bikes on camera.",
+   "value_section": true,
+   "why_team_para": "Jaguar TCS Racing carries TCS as title partner, with Castrol, Wolfspeed, OpenText, Dow, Schaeffler, Chase and Michelin behind it: an engineering roster with no bicycle, e-bike or mobility brand anywhere on it. Jaguar is a premium marque rebuilding itself around electric design, which is the company a design-led e-bike wants to stand beside, and the London E-Prix on 29-30 May 2027 is the team's home round.",
+   "deal_arch_para": "Entry as Official Mobility Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, so the term covers the autonomy programme reaching product. Estimated $1.5-3M a year, part-payable in vehicles and service. Scope: sidepod placement, team and crew bikes at every round, naming of the paddock mobility fleet, London and Berlin hospitality, and content on city electrification.",
+   "footer_company": "ALSO",
+   "why_team_label": "WHY JAGUAR TCS RACING",
+   "claims_verified": 15,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series D closed on 19 August and the money is going into autonomy. Season 13 opens at the Jeddah E-Prix on 18-19 December; Berlin, Monaco, London and Madrid follow in May and June 2027, and teams close their rosters before the season starts.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Yu co-founded Also with RJ Scaringe and runs it as president; he was Rivian's head of future programs and, before that, chief technology officer at Specialized, the company that took the bike lane at Audi. Path: Scaringe, co-founder and chairman. No chief marketing officer is named.",
+   "decision_maker_name": "Chris Yu",
+   "decision_maker_role": "Co-Founder & President, Also",
+   "opening_angle_intro": "Lead with the Specialized precedent.",
+   "opening_angle_quote": "&ldquo;Chris, you built the product at Specialized, and Specialized just took the bike lane at Audi. Formula E races in your cities and nobody has claimed that lane there. 25 minutes before the season opens?&rdquo;",
+   "value_section_label": "VALUE TO JAGUAR TCS RACING",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Chris Yu, Co-Founder & President at Also",
+   "cited_source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+     "excerpt": "Also was spun out of Rivian in March 2025 with $105 million led by Eclipse, co-founded by Rivian founder and chief executive RJ Scaringe, who remains chairman, and Chris Yu, who serves as president. Yu was previously Rivian's vice president of future programs and, before that, chief technology officer at Specialized Bicycle Components. The company is headquartered in Palo Alto and opened a Seattle office and retail hub (GeekWire, 2026). No chief marketing officer is named in any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Chris Yu, Co-Founder & President, Also at Also",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+     "excerpt": "Also was spun out of Rivian in March 2025 with $105 million led by Eclipse, co-founded by Rivian founder and chief executive RJ Scaringe, who remains chairman, and Chris Yu, who serves as president. Yu was previously Rivian's vice president of future programs and, before that, chief technology officer at Specialized Bicycle Components. The company is headquartered in Palo Alto and opened a Seattle office and retail hub (GeekWire, 2026). No chief marketing officer is named in any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$150M Series D led by Prysm Capital, announced 19 Aug 2026, valuing Also above $1B and taking it to $455M raised since the March 2025 spin-out from Rivian",
+   "cited_source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Also, the small-EV company Rivian spun out in March 2025, closed a $150M Series D led by Prysm Capital on 19 August 2026 at a valuation above $1B, taking it to $455M raised, and is putting the money into autonomous vehicles for city streets.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Prysm Capital (lead); Eclipse, Greenoaks and MVP Ventures returning; DoorDash a strategic investor in the earlier $200M round",
+   "cited_source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It has raised $455M in under two years.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "$150M Series D announced 19 Aug 2026 to accelerate autonomous development across multiple form factors for moving goods and passengers through urban environments",
+   "cited_source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The $150M Series D announced on 19 August 2026, led by Prysm Capital with Eclipse, Greenoaks and MVP Ventures returning, funds autonomous development across several form factors for moving goods and passengers through cities.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Specialized became official bicycle and e-bike partner of the Audi Revolut F1 Team in May 2026, supplying Tarmac road bikes and the Vado 3 urban e-bike for team track rides; Porsche closed its eBike Performance division in May 2026. No bicycle, e-bike or micromobility brand appears on any Formula E roster in the sponsor table",
+   "cited_source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+     "excerpt": "Also was spun out of Rivian in March 2025 with $105 million led by Eclipse, co-founded by Rivian founder and chief executive RJ Scaringe, who remains chairman, and Chris Yu, who serves as president. Yu was previously Rivian's vice president of future programs and, before that, chief technology officer at Specialized Bicycle Components. The company is headquartered in Palo Alto and opened a Seattle office and retail hub (GeekWire, 2026). No chief marketing officer is named in any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A company valued above $1B, 25 days past a $150M round, whose president built the product line at the brand that just took the bike lane in Formula 1 — and a Formula E grid where nobody has claimed that lane.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Formula E races on street circuits in the cities Also sells into, and Jaguar TCS Racing carries no mobility partner; Also's president was chief technology officer at Specialized before Rivian",
+   "cited_source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+     "excerpt": "Also was spun out of Rivian in March 2025 with $105 million led by Eclipse, co-founded by Rivian founder and chief executive RJ Scaringe, who remains chairman, and Chris Yu, who serves as president. Yu was previously Rivian's vice president of future programs and, before that, chief technology officer at Specialized Bicycle Components. The company is headquartered in Palo Alto and opened a Seattle office and retail hub (GeekWire, 2026). No chief marketing officer is named in any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 19 August 2026 Also closed a $150M Series D led by Prysm Capital, with Eclipse, Greenoaks and MVP Ventures returning, at a valuation above $1B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in Palo Alto with a Seattle office and retail hub; spun out of Rivian in March 2025 with $105M",
+   "cited_source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+     "excerpt": "Also was spun out of Rivian in March 2025 with $105 million led by Eclipse, co-founded by Rivian founder and chief executive RJ Scaringe, who remains chairman, and Chris Yu, who serves as president. Yu was previously Rivian's vice president of future programs and, before that, chief technology officer at Specialized Bicycle Components. The company is headquartered in Palo Alto and opened a Seattle office and retail hub (GeekWire, 2026). No chief marketing officer is named in any listing found.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "That takes the company to $455M raised since Rivian spun it out in March 2025 with $105M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "This follows the $200M round at a $1B valuation in March 2026 with DoorDash as strategic investor, which the desk recorded as N° 214 and pointed at Formula 1.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+     "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-13"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Jeddah E-Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "why_team_para",
+   "type": "event",
+   "load_bearing": true,
+   "text": "London E-Prix on 29-30 May 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Brands Hatch — new home, double-header race 1",
+     "excerpt": "round 12: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Jeddah E-Prix on 18-19 December 2026",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com/en/news/755455 | note: double-header, race 1",
+     "excerpt": "round 4: Jeddah E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The London E-Prix on 29-30 May 2027",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "fiaformulae.com Season 13 calendar (announced 23 Jun 2026) | note: Brands Hatch — new home, double-header race 1",
+     "excerpt": "round 12: London E-Prix",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,391 @@
+{
+ "run_date": "2026-09-13",
+ "signal_date": "2026-08-19",
+ "stem": "also",
+ "number": 251,
+ "session_model": "claude-session-2026-09-13",
+ "signal": {
+  "company": "Also",
+  "signal_date": "2026-08-19",
+  "score": 73,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Chris Yu",
+  "role": "Co-Founder & President",
+  "horizon_weeks": "6-10",
+  "source_url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+  "industry_meta": "Micromobility · Small Electric Vehicles & Autonomy · Palo Alto, California",
+  "recommended_team": "Jaguar TCS Racing",
+  "recommended_series": "FE",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$150M Series D led by Prysm Capital, announced 19 Aug 2026, valuing Also above $1B and taking it to $455M raised since the March 2025 spin-out from Rivian",
+   "investors": "Prysm Capital (lead); Eclipse, Greenoaks and MVP Ventures returning; DoorDash a strategic investor in the earlier $200M round",
+   "revenue": null,
+   "trigger": "$150M Series D announced 19 Aug 2026 to accelerate autonomous development across multiple form factors for moving goods and passengers through urban environments",
+   "competitor_signal": "Specialized became official bicycle and e-bike partner of the Audi Revolut F1 Team in May 2026, supplying Tarmac road bikes and the Vado 3 urban e-bike for team track rides; Porsche closed its eBike Performance division in May 2026. No bicycle, e-bike or micromobility brand appears on any Formula E roster in the sponsor table",
+   "strategic_hook": "Formula E races on street circuits in the cities Also sells into, and Jaguar TCS Racing carries no mobility partner; Also's president was chief technology officer at Specialized before Rivian",
+   "us_presence": "Headquartered in Palo Alto with a Seattle office and retail hub; spun out of Rivian in March 2025 with $105M",
+   "alumni_match": null,
+   "taxonomy_category": "C1",
+   "ops_fit_note": "MODE A in the paddock, not on the car: a TM-B fleet for crew movement on street circuits and driver track rides, the 808 Wh removable battery doubling as a USB-C power bank for trackside kit, and the TM-Q quad for paddock logistics",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 15,
+   "brand_fit": 17,
+   "urgency": 12,
+   "ops_fit": 13,
+   "ops_fit_subscores": {
+    "product_to_need": 5,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "$150m",
+    "150m",
+    "series d",
+    "19 aug",
+    "19 august",
+    "prysm",
+    "eclipse",
+    "greenoaks",
+    "mvp ventures",
+    "$1b",
+    "above $1b",
+    "$455m",
+    "455m",
+    "autonomous",
+    "form factors",
+    "goods and passengers",
+    "urban environments",
+    "c1",
+    "funding round",
+    "raised a $150 million series d"
+   ],
+   "url": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+   "excerpt": "TechCrunch, SiliconANGLE and Just-Auto, 19 Aug 2026: Also, the Rivian micromobility spin-out, raised a $150 million Series D led by Prysm Capital with existing backers Eclipse, Greenoaks and MVP Ventures. The round values Also above $1 billion and takes total funding to $455 million since it was founded less than two years ago. The capital accelerates development of the company's autonomous driving technology and the simultaneous progression of multiple autonomous form factors for moving goods and passengers across urban environments. Taxonomy C1 (consumer mobility hardware).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "chris yu",
+    "scaringe",
+    "president",
+    "future programs",
+    "chief technology officer",
+    "specialized",
+    "no chief marketing",
+    "palo alto",
+    "seattle",
+    "march 2025",
+    "spun out",
+    "$105m",
+    "105m"
+   ],
+   "url": "https://micromobility.io/news/also---rivians-big-bet-on-micromobility-with-chris-yu-co-founder-president-of-also",
+   "excerpt": "Also was spun out of Rivian in March 2025 with $105 million led by Eclipse, co-founded by Rivian founder and chief executive RJ Scaringe, who remains chairman, and Chris Yu, who serves as president. Yu was previously Rivian's vice president of future programs and, before that, chief technology officer at Specialized Bicycle Components. The company is headquartered in Palo Alto and opened a Seattle office and retail hub (GeekWire, 2026). No chief marketing officer is named in any listing found.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$200m",
+    "200m",
+    "doordash",
+    "31 march",
+    "march 2026",
+    "series c",
+    "strategic investor"
+   ],
+   "url": "https://www.bloomberg.com/news/articles/2026-03-31/rivian-bike-spinoff-lands-1-billion-valuation-doordash-partnership",
+   "excerpt": "Bloomberg, 31 Mar 2026: Also raised $200 million at a $1 billion valuation with DoorDash as a strategic investor and commercial partner. This is the round the desk already recorded as N° 214; the August Series D is a separate, later trigger.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "tm-b",
+    "tm-q",
+    "808 wh",
+    "808wh",
+    "usb-c",
+    "power bank",
+    "$4,500",
+    "4,500",
+    "software-defined",
+    "series hybrid",
+    "regenerative",
+    "portal",
+    "delivery quad"
+   ],
+   "url": "https://ridealso.com/products/tm-b",
+   "excerpt": "Also product materials and reviews (Engadget, New Atlas, CyclingElectric, TechCrunch Oct 2025): the TM-B is a $4,500 modular e-bike with a software-defined, series-hybrid drive unit — pedalling feeds a generator rather than driving the wheel mechanically. Removable smart batteries of 538 Wh and 808 Wh double as USB-C power banks when off the bike; a five-inch Portal touchscreen handles navigation; regenerative braking and up to ten times assist. The TM-Q is the commercial electric delivery quad built on the same platform.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "audi",
+    "vado",
+    "tarmac",
+    "may 2026",
+    "official bicycle",
+    "track rides",
+    "porsche",
+    "ebike performance",
+    "closed",
+    "discontinued",
+    "bike lane"
+   ],
+   "url": "https://cyclingflash.com/news/specialized-enters-formula-1-as-bike-partner-of-audi-revolut-f1-team",
+   "excerpt": "CyclingFlash and TopGear, May 2026: Specialized became the official bicycle and e-bike partner of the Audi Revolut F1 Team, supplying Tarmac road race bikes and the Vado 3 urban electric bike with an 840 Wh battery for team track rides across the 2026 and 2027 seasons. Separately, Electrek and Pinkbike (May 2026): Porsche discontinued Porsche eBike Performance GmbH, the business built from the Greyp and Fazua acquisitions, citing changed market conditions for e-bike drive systems.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "jaguar",
+    "tcs",
+    "castrol",
+    "wolfspeed",
+    "opentext",
+    "dow",
+    "schaeffler",
+    "chase",
+    "michelin",
+    "no mobility",
+    "no bicycle",
+    "envision",
+    "paysafe",
+    "yamaha",
+    "mahindra",
+    "andretti",
+    "twg ai",
+    "nissan",
+    "stellantis",
+    "cupra",
+    "porsche formula e",
+    "tdk",
+    "shell",
+    "totalenergies",
+    "sponsor table"
+   ],
+   "url": "seeds/sponsors.json + seeds/team_profiles.json (spec/active_sponsor_db.md + data/teams.json; jaguar.com/jdx/jaguar-racing/our-partners)",
+   "excerpt": "Sponsor and team tables plus the Jaguar Racing partners page: Jaguar TCS Racing — TCS title, Castrol, Wolfspeed, OpenText, Dow, Schaeffler (official supplier, e-mobility), Chase (financial services), Michelin, Reflo; no bicycle, e-bike or mobility partner. Porsche Formula E Team — Porsche parent, TDK technology partner. Lola Yamaha ABT — Yamaha, a two-wheeler manufacturer, plus Shell. Envision Racing — Envision Group parent, Paysafe title from Season 13. Andretti Formula E — TWG AI, Quest Global, Crowe UK, Reflo. Nissan Formula E Team — Nissan parent. DS Penske, Citroën Racing and Opel GSE — Stellantis entries; TotalEnergies holds energy at DS Penske. Mahindra Racing — Mahindra & Mahindra, Tech Mahindra. Cupra Kiro — Cupra, Kiro. No bicycle, e-bike or micromobility brand appears anywhere on the Formula E grid.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "jeddah",
+    "berlin",
+    "monaco",
+    "london",
+    "madrid",
+    "18-19 dec",
+    "18-19 december",
+    "29-30 may",
+    "season 13 opens"
+   ],
+   "url": "seeds/calendar_fe.json (fiaformulae.com Season 13 calendar, announced 23 Jun 2026)",
+   "excerpt": "Season 13 (2026/27) calendar table: Jeddah E-Prix double-header 18-19 December 2026 opens the season; Berlin 8-9 May 2027; Monaco 15-16 May 2027; London 29-30 May 2027; Madrid 26-27 June 2027; Tokyo finale 24-25 July 2027.",
+   "method": "calendar"
+  },
+  {
+   "needles": [
+    "600kw",
+    "600 kw",
+    "gen4",
+    "pas 2060",
+    "carbon neutral",
+    "street circuits",
+    "city centre"
+   ],
+   "url": "https://www.fiaformulae.com/en/sustainability/net-zero",
+   "excerpt": "Formula E (fiaformulae.com): Season 12 achieved PAS 2060-certified carbon neutrality, the first sport globally to do so, and the championship races on street circuits in city centres. The GEN4 car arriving for Season 13 has a peak output of 600 kW (815 bhp), an architecture with no series-hybrid element and a battery two orders of magnitude larger than a micromobility pack.",
+   "method": "manual"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Also",
+  "industry_meta": "Micromobility · Small Electric Vehicles & Autonomy",
+  "hq": "Palo Alto, California (Seattle office and retail hub)",
+  "ticker": "Private (above $1B; $150M Series D, Aug 2026)",
+  "deck": "Also, the small-EV company Rivian spun out in March 2025, closed a $150M Series D led by Prysm Capital on 19 August 2026 at a valuation above $1B, taking it to $455M raised, and is putting the money into autonomous vehicles for city streets.",
+  "score": 73,
+  "timing_label": "HOT",
+  "series_label": "FE",
+  "team_label": "Jaguar TCS Racing",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Also was spun out of Rivian in March 2025 by RJ Scaringe and Chris Yu, Rivian's former head of future programs and before that chief technology officer at Specialized. It has raised $455M in under two years. The $150M Series D announced on 19 August 2026, led by Prysm Capital with Eclipse, Greenoaks and MVP Ventures returning, funds autonomous development across several form factors for moving goods and passengers through cities.",
+  "the_case_p2": "The category has just been priced on a grid. Specialized became Audi's official bicycle and e-bike partner in Formula 1 in May 2026, supplying bikes for team track rides, and Porsche closed its own e-bike division the same month. Nothing of that kind sits anywhere on the Formula E grid, and the championship races where Also sells.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The Series D closed on 19 August and the money is going into autonomy. Season 13 opens at the Jeddah E-Prix on 18-19 December; Berlin, Monaco, London and Madrid follow in May and June 2027, and teams close their rosters before the season starts.",
+  "why_team_label": "WHY JAGUAR TCS RACING",
+  "why_team_para": "Jaguar TCS Racing carries TCS as title partner, with Castrol, Wolfspeed, OpenText, Dow, Schaeffler, Chase and Michelin behind it: an engineering roster with no bicycle, e-bike or mobility brand anywhere on it. Jaguar is a premium marque rebuilding itself around electric design, which is the company a design-led e-bike wants to stand beside, and the London E-Prix on 29-30 May 2027 is the team's home round.",
+  "value_section": true,
+  "value_section_label": "VALUE TO JAGUAR TCS RACING",
+  "value_mode": "A",
+  "value_content": "MODE A - operational, in the paddock rather than on the car. A TM-B fleet for crew movement across street circuits and driver track rides, the 808 Wh removable battery doubling as a USB-C power bank for trackside kit, and the TM-Q quad for paddock logistics. In return: Official Mobility Partner designation, livery and kit presence, London and Berlin hospitality, and drivers on the bikes on camera.",
+  "deal_arch_para": "Entry as Official Mobility Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, Seasons 13-15, so the term covers the autonomy programme reaching product. Estimated $1.5-3M a year, part-payable in vehicles and service. Scope: sidepod placement, team and crew bikes at every round, naming of the paddock mobility fleet, London and Berlin hospitality, and content on city electrification.",
+  "decision_maker_name": "Chris Yu",
+  "decision_maker_role": "Co-Founder & President, Also",
+  "decision_maker_bio": "Yu co-founded Also with RJ Scaringe and runs it as president; he was Rivian's head of future programs and, before that, chief technology officer at Specialized, the company that took the bike lane at Audi. Path: Scaringe, co-founder and chairman. No chief marketing officer is named.",
+  "opening_angle_intro": "Lead with the Specialized precedent.",
+  "opening_angle_quote": "&ldquo;Chris, you built the product at Specialized, and Specialized just took the bike lane at Audi. Formula E races in your cities and nobody has claimed that lane there. 25 minutes before the season opens?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Series D 19 Aug; Season 13 opens 18-19 December."
+   ],
+   [
+    "CAPACITY",
+    "15",
+    "/ 20",
+    "$455M raised, above $1B; hardware firm funding autonomy."
+   ],
+   [
+    "BRAND FIT",
+    "17",
+    "/ 20",
+    "Urban electric mobility meets city-centre electric racing."
+   ],
+   [
+    "URGENCY",
+    "12",
+    "/ 20",
+    "No listing or launch deadline; roster timing only."
+   ],
+   [
+    "OPS FIT",
+    "13",
+    "/ 20",
+    "MODE A in the paddock; nothing reaches the race car."
+   ]
+  ],
+  "risks": [
+   [
+    "NOTHING FOR THE CAR",
+    "Also's series-hybrid drive, its removable pack and its consumer regen have no application to a GEN4 car; this is not an engineering partnership.",
+    "Sell the paddock and the audience, not the powertrain. The Specialized deal at Audi is the same shape and it was bought."
+   ],
+   [
+    "SECOND TO SPECIALIZED",
+    "A rival claimed the category in Formula 1 first, so Also can look like the follower.",
+    "Formula E is the unclaimed series and the one that races in Also's cities; first there beats second in F1."
+   ]
+  ],
+  "bottom_line": "A company valued above $1B, 25 days past a $150M round, whose president built the product line at the brand that just took the bike lane in Formula 1 — and a Formula E grid where nobody has claimed that lane. The paddock use is real; the race car is untouched, and this brief says so.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "category_open"
+  ],
+  "footer_company": "ALSO",
+  "footer_date": "13 SEP 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 19 August 2026 Also closed a $150M Series D led by Prysm Capital, with Eclipse, Greenoaks and MVP Ventures returning, at a valuation above $1B. That takes the company to $455M raised since Rivian spun it out in March 2025 with $105M. The money funds autonomous development across multiple form factors for moving goods and passengers through urban environments."
+    },
+    {
+     "label": "A second capital event in five months",
+     "text": "This follows the $200M round at a $1B valuation in March 2026 with DoorDash as strategic investor, which the desk recorded as N° 214 and pointed at Formula 1. Two rounds inside five months, and a shift from a single consumer product to an autonomy platform, is a company deciding what it wants to be known for."
+    },
+    {
+     "label": "The category just got a price",
+     "text": "Specialized became the official bicycle and e-bike partner of the Audi Revolut F1 Team in May 2026, supplying Tarmac road bikes and the Vado 3 urban e-bike for team track rides across two seasons. In the same month Porsche discontinued its eBike Performance business. One buyer entered motorsport; one incumbent left the category. The window is now."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Season 13 opens with the Jeddah E-Prix on 18-19 December 2026. The European rounds follow in the spring: Berlin 8-9 May, Monaco 15-16 May, London 29-30 May and Madrid 26-27 June 2027. Teams close their partner rosters before a season starts, so a deal agreed this autumn activates from round one."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "An open lane on an engineering roster",
+     "text": "Jaguar TCS Racing carries TCS as title partner with Castrol, Wolfspeed, OpenText, Dow, Schaeffler, Chase, Michelin and Reflo. Every one of those is a component, software, energy or services brand. No bicycle, e-bike or mobility partner appears on the team, and none appears anywhere else on the Formula E grid either."
+    },
+    {
+     "label": "The right brand company",
+     "text": "Jaguar is a premium marque rebuilding itself around electric design. A design-led small EV sits naturally beside it in a way it would not beside a volume manufacturer, and both are selling the same idea: that electrification is a design choice rather than a compromise."
+    },
+    {
+     "label": "The cities",
+     "text": "Formula E races on street circuits in city centres. Its Season 13 calendar runs through Berlin, Monaco, London, Madrid, Miami, Tokyo and Shanghai, which is the map a small-EV company sells into. The London E-Prix on 29-30 May 2027 is Jaguar's home round and the natural announcement stage."
+    },
+    {
+     "label": "Clean of conflicts",
+     "text": "The teams that are ruled out are named below with the reason for each. The two that matter: Porsche has just exited the e-bike category, and Lola Yamaha ABT carries a two-wheeler manufacturer."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational, in the paddock (Mode A)",
+     "text": "Street circuits are long, narrow and closed to vehicles, and crews move constantly between garage, pit lane and hospitality. A TM-B fleet covers that movement and the drivers' track rides. The 808 Wh removable battery doubles as a USB-C power bank, which is a real trackside utility rather than a talking point. The TM-Q quad handles paddock logistics."
+    },
+    {
+     "label": "On-message for the championship",
+     "text": "Formula E holds PAS 2060-certified carbon neutrality and pushes operational sustainability, not just the racing. Replacing paddock combustion with small EVs is measurable and on-brand for the series as well as the team."
+    },
+    {
+     "label": "Audience and content",
+     "text": "Drivers on the bikes on camera at city races is the content unit the category buys, and Formula E's audience is the youngest and most urban in motorsport. That is the same buyer Also sells a design-led e-bike to."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Mobility Partner designation, sidepod placement, team and crew kit presence, hospitality at London and Berlin, and driver access for Also's channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Porsche Formula E Team",
+     "reason": "Porsche ran its own e-bike business until discontinuing Porsche eBike Performance in May 2026; TDK holds the technology lane."
+    },
+    {
+     "team": "Lola Yamaha ABT Formula E Team",
+     "reason": "Yamaha is a two-wheeler manufacturer in its own right: a direct category conflict."
+    },
+    {
+     "team": "Envision Racing",
+     "reason": "Paysafe takes title from Season 13 and Envision Group is the team's identity; the consumer slot is spoken for."
+    },
+    {
+     "team": "DS Penske · Citroën Racing · Opel GSE Formula E Team",
+     "reason": "Stellantis entries; a small-EV brand alongside a car maker's own consumer-vehicle story needs the group's sign-off before it is a conversation."
+    },
+    {
+     "team": "Mahindra Racing",
+     "reason": "Mahindra & Mahindra and Tech Mahindra define the team, and the parent is itself a vehicle manufacturer."
+    },
+    {
+     "team": "Andretti Formula E",
+     "reason": "TWG AI and Quest Global fill the technology lane and the story is American; the desk already has two energy prospects aimed there."
+    },
+    {
+     "team": "Nissan Formula E Team",
+     "reason": "A Japanese manufacturer identity with a Tokyo finale; no overlap with Also's launch markets."
+    },
+    {
+     "team": "Cupra Kiro",
+     "reason": "Open but not chosen: Cupra is a car brand with its own urban positioning, and the team lacks Jaguar's design equity."
+    }
+   ],
+   "ask": "A 25-minute call with Chris Yu before the Jeddah opener to test whether an Official Mobility Partner position at Jaguar TCS Racing belongs in Also's 2027 plan, and to size it against the Specialized benchmark at Audi."
+  }
+ },
+ "note": "# Also → Jaguar TCS Racing — verification log (N° 251, 13 Sep 2026)\n\nToday's signal, built on the operator's ask (\"Run today's signal. Compare the ALSO spin out for FE and tell if the use case study or tech integration for that is useful\"). The 06:00 automatic run produced no signal: two candidates, River Mobility at 52 and Cognition failing the score gate. Built in-session with `python -m intel.session_case` at no model-API cost.\n\n**Sandbox limitation, stated plainly:** techcrunch.com, bloomberg.com, ridealso.com, jaguar.com and fiaformulae.com are egress-blocked by the proxy. Each claim was checked against the search summary of the primary page named as the evidence URL, corroborated by at least one secondary outlet. Treat every VERIFIED line as REPORTED until a person opens the link. Confidence MEDIUM.\n\n## The question the operator asked: is the tech integration useful?\n\n**Not on the car, and the brief says so in the first risk.** Also's TM-B uses a software-defined, series-hybrid drive in which pedalling feeds a generator rather than turning the wheel; its packs are 538 Wh and 808 Wh; its regen is a consumer feature. A GEN4 Formula E car is direct-drive, peaks at 600 kW and carries a pack two orders of magnitude larger. No engineering transfers. Any brief claiming a car-side technical integration would be inventing one, which is why OPS FIT is scored 13 and not higher.\n\n**Yes in the paddock, and there is a live precedent.** Specialized became Audi's official bicycle and e-bike partner in F1 in May 2026 supplying bikes for team track rides — the same shape of deal, bought by a team this year. Formula E's street circuits make crew movement a genuine operational problem, the removable 808 Wh pack is a real trackside power source, and the TM-Q quad is paddock logistics. The championship's PAS 2060 carbon-neutral certification makes small EVs on-message rather than decorative.\n\n**FE beats F1 for this company on brand, which is the change from N° 214.** The desk's May case put Also at Visa Cash App Racing Bulls in F1 at 70. Formula E races on street circuits in the cities Also sells into and has no bicycle, e-bike or micromobility brand anywhere on the grid, whereas in F1 the category is already claimed by Specialized at Audi. Same company, later trigger, better series: 73.\n\n## Decision path\n\nChris Yu, Co-Founder & President (micromobility.io interview; TechCrunch; Crunchbase). Path: RJ Scaringe, co-founder and chairman, also Rivian's CEO. No chief marketing officer is named in any listing found. `leadership_ties`: none found — Yu's Specialized tenure is a category precedent, not a sponsorship-deal tie, and the brief treats it as such.\n\n## Things not claimed\n\n- **No revenue figure**: none is public.\n- **No European headcount or office claim**: coverage mentioning a Ghent commercial team could not be corroborated in a second source, so it is left out entirely.\n- **Deal size ($1.5-3M a year) is an ESTIMATE**, labelled as such.\n- The Stellantis and Mahindra rule-outs are stated as group-identity judgments, not as documented category locks.\n"
+}
