@@ -1,0 +1,87 @@
+{
+ "date": "2026-09-14",
+ "status": "no_signal",
+ "candidates": 3,
+ "decisions": {
+  "below_threshold": 2,
+  "gate_failed": 1
+ },
+ "sources": {
+  "scanner": 0,
+  "routine": 3,
+  "n8n": 1,
+  "candidates": 3,
+  "to_research": [
+   "Paysafe"
+  ],
+  "mails_read": 33,
+  "routine_mails": 4,
+  "n8n_mails": 8,
+  "offered": [
+   "Base Power (routine)",
+   "Antora Energy (routine)",
+   "ALSO (routine)",
+   "Motive (routine)",
+   "Paysafe (n8n)",
+   "Sila (routine)",
+   "River Mobility (routine)",
+   "Cognition (routine)",
+   "Strava (n8n)"
+  ],
+  "already_known": [
+   "Base Power",
+   "Antora Energy",
+   "ALSO",
+   "Sila",
+   "Strava"
+  ],
+  "status": "read",
+  "scanned": [
+   "Motive",
+   "River Mobility"
+  ],
+  "kept_thin": [
+   "Cognition: no matching scored record"
+  ]
+ },
+ "usage": {
+  "tokens": {
+   "input": 2773,
+   "output": 39225,
+   "cache_read": 829173,
+   "cache_write": 71854
+  },
+  "calls": {
+   "scanner": 5
+  },
+  "estimated_usd": 0.743
+ },
+ "candidate_list": [
+  {
+   "rank": 1,
+   "company": "Motive",
+   "signal_date": "2026-09-10",
+   "decision": "below_threshold",
+   "reason": "ranking score 65 < threshold 70",
+   "score": 65
+  },
+  {
+   "rank": 2,
+   "company": "River Mobility",
+   "signal_date": "2026-08-05",
+   "decision": "below_threshold",
+   "reason": "ranking score 46 < threshold 70",
+   "score": 46
+  },
+  {
+   "rank": 3,
+   "company": "Cognition",
+   "signal_date": "2026-09-08",
+   "decision": "gate_failed",
+   "reason": "no score_breakdown from scanner",
+   "score": null
+  }
+ ],
+ "recorded_at": "2026-09-14T05:09:31+00:00",
+ "note": "The morning run scanned and found no eligible signal; the gate holds further firings for the day. Tick 'force' on the Daily run workflow to scan again."
+}
