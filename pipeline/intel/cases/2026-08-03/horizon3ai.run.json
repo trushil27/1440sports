@@ -1,19 +1,37 @@
 {
  "run": {
-  "id": 130,
+  "id": 201,
   "date": "2026-08-03",
   "status": "success",
   "mode": "dry_run",
   "summary": {
+   "usage": {
+    "calls": {},
+    "tokens": {
+     "input": 0,
+     "output": 0,
+     "cache_read": 0,
+     "cache_write": 0
+    },
+    "estimated_usd": 0.0
+   },
    "rebuild": true,
+   "sources": {
+    "n8n": 0,
+    "status": "no mailbox configured — scanner only",
+    "routine": 0,
+    "scanner": 1,
+    "candidates": 0,
+    "to_research": []
+   },
    "decisions": {
     "selected": 1
    },
    "candidates": 1,
    "verification": [
     {
-     "pdf": "/tmp/case-pdf-unwfkpzr/2026-08-03/horizon3ai.pdf",
-     "web": "/tmp/case-pdf-unwfkpzr/2026-08-03/horizon3ai.web.html",
+     "pdf": "/tmp/case-pdf-rqsk9emn/2026-08-03/horizon3ai.pdf",
+     "web": "/tmp/case-pdf-rqsk9emn/2026-08-03/horizon3ai.web.html",
      "audit": "pass",
      "status": "verified",
      "company": "Horizon3.ai",
@@ -25,10 +43,10 @@
      },
      "written": true,
      "blocking": [],
-     "brief_id": 194,
+     "brief_id": 266,
      "rendered": true,
      "highlights": 3,
-     "candidate_id": 198,
+     "candidate_id": 310,
      "verification": "verified",
      "audit_attempts": 1
     }
@@ -115,7 +133,7 @@
   "audit_attempts": 1,
   "pages": 2,
   "mode": "A",
-  "web_html_path": "/tmp/case-pdf-unwfkpzr/2026-08-03/horizon3ai.web.html",
+  "web_html_path": "/tmp/case-pdf-rqsk9emn/2026-08-03/horizon3ai.web.html",
   "brief_data": {
    "hq": "San Francisco (offices in Amsterdam, Australia, Singapore)",
    "deck": "Horizon3, the San Francisco security company whose NodeZero platform attacks customers' networks the way an adversary would, announced a $250M Series E at a valuation above $2B on 3 August, co-led by NightDragon and NEA, tripling the $650M price of its June 2025 Series D in little over a year.",
@@ -143,24 +161,24 @@
      "recommended": true
     },
     {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Okta, Rubrik",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "label": "TAKEN",
+     "detail": "Cato Networks, SEALSQ",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
      "team": "Mercedes-AMG Petronas F1 Team",
      "label": "TAKEN",
      "detail": "CrowdStrike",
      "status": "conflict",
-     "recommended": false
-    },
-    {
-     "team": "Atlassian Williams Racing",
-     "label": "TAKEN",
-     "detail": "Keeper",
-     "status": "conflict",
-     "recommended": false
-    },
-    {
-     "team": "Oracle Red Bull Racing",
-     "label": "OPEN",
-     "detail": "no rival in this category lane",
-     "status": "open",
      "recommended": false
     }
    ],
@@ -310,32 +328,32 @@
      "label": "OPS FIT"
     }
    ],
-   "the_case_p1": "The oversubscribed round brought in Acrew, Blue Cloud Ventures, Demeter, Singapore's EDBI, PSG, SAIC and Sapphire, with Craft, Prosperity7, Qualcomm Ventures, Ridge and SignalFire returning. The company reports 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them Fortune 10; TechCrunch puts ARR near $100M (reported). Founders Snehal Antani and Anthony Pillitiere met at Joint Special Operations Command; Antani was later CTO of Splunk. The money funds international expansion, with offices opened in Amsterdam in June, Australia and Singapore, and a partner network.",
+   "the_case_p1": "The oversubscribed round brought in Acrew, Blue Cloud Ventures, Demeter, Singapore's EDBI, PSG, SAIC and Sapphire, with Craft, Prosperity7, Qualcomm Ventures, Ridge and SignalFire returning. The company reports 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them Fortune 10; TechCrunch puts ARR near $100M (reported). Founders Snehal Antani and Anthony Pillitiere met at Joint Special Operations Command, where Antani was first CTO from 2018 after three years as CTO of Splunk. The money funds international expansion, with offices opened in Amsterdam in June, Australia and Singapore, and a partner network.",
    "the_case_p2": "Cybersecurity is the most-sold technology category on the grid: CrowdStrike at Mercedes, Bitdefender at Ferrari, Keeper at Williams, Okta and Rubrik at McLaren, Cato Networks at Alpine, and Red Bull's 1Password. Every one sells defence. Horizon3 sells the attack, continuously, and its new CMO Andres Botero ran marketing at Rubrik in the period its McLaren partnership was being built. A category leader with no seat, and a marketer who has watched one taken.",
    "track_label": "",
    "brief_number": "154",
    "claims_total": 15,
-   "gridfit_note": "49 of 346 partner rows categorised",
+   "gridfit_note": "55 of 346 partner rows categorised",
    "hot_top_tier": false,
    "proof_points": [
     {
      "fact": "$250M Series E at a valuation above $2B, announced 3 Aug 2026, co-led by NightDragon and NEA; triples the $…",
      "value": "$250M",
-     "claim_id": 638,
+     "claim_id": 2082,
      "verified": true,
      "source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
     },
     {
      "fact": "ARR approaching $100M with 120% year-on-year ARR growth (company release; TechCrunch, reported)",
      "value": "$100M",
-     "claim_id": 640,
+     "claim_id": 2084,
      "verified": true,
      "source_url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
     },
     {
      "fact": "The company reports 120% year-on-year ARR growth and more than 7,000 organisations protected, four of them…",
      "value": "120%",
-     "claim_id": 648,
+     "claim_id": 2092,
      "verified": true,
      "source_url": null
     }
