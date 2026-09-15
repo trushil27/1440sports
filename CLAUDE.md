@@ -248,8 +248,11 @@ added (Groq, TWG AI, Meta AI, Cognition, CoreWeave, ARM, ElevenLabs, IBM, Dynatr
 Two runner lessons: the sponsor-table pair parser reads 'Official Thinking Partner with Claude' as a brand/team pair
 (reword, don't fight it); dating a case tomorrow makes the 06:00 gate hold, so an on-request morning brief costs no scan.
 **Suniva** screened (project finance, merger not closed, 49); **Félix** watched (near miss, 64; MoneyGram-at-Haas precedent).
-**Open pipeline fix:** a contradicted load-bearing claim in the daily run discards the candidate; it should trigger one
-corrected rewrite (would have shipped Positron at 81 on 15 Sep).
+**Done 15 Sep:** a contradicted load-bearing claim in the WRITTEN brief (stage B) now triggers one corrected rewrite —
+the verifier's contradictions go back to the writer as `contradicted_claim` violation lines in the RETRY MODE block, the
+first draft's stage-B claims leave the ledger, and the rewrite is verified on its own text (`run_daily.produce_brief`;
+`LedgerResult.blocking_detail`). Still contradicted → blocked as before; never a third call. Stage-A key-fact
+contradictions still block (the scanner's facts, not the writer's). Would have shipped Positron at 81 on 15 Sep.
 
 
 ## The two-tier product

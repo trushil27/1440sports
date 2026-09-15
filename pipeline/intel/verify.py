@@ -661,6 +661,8 @@ class LedgerResult:
     counts: dict[str, int]
     blocking: list[str]  # texts of contradicted load-bearing claims
     review: list[str]  # texts of unverified load-bearing claims
+    # "<claim> — <why the verifier contradicted it>": what a corrected rewrite is told to fix
+    blocking_detail: list[str] = field(default_factory=list)
 
 
 def decide(pairs: list[tuple[Claim, Verification]]) -> VerificationStatus:
@@ -727,4 +729,9 @@ def run_ledger(
             if c.load_bearing and v.status == VerificationResult.contradicted
         ],
         [c.text for c, v in pairs if c.load_bearing and v.status == VerificationResult.unverified],
+        [
+            f"{c.text} — {v.notes or v.evidence_excerpt or 'contradicted by the verifier'}"
+            for c, v in pairs
+            if c.load_bearing and v.status == VerificationResult.contradicted
+        ],
     )

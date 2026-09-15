@@ -186,6 +186,69 @@ def test_phantom_race_written_into_the_brief_blocks_at_stage_b(
     assert session.scalar(select(SurfacedLog)) is None
 
 
+def test_contradicted_claim_in_the_written_brief_gets_one_corrected_rewrite(
+    session, migrated_database, tmp_path
+):
+    # 15 Sep 2026: the 06:00 run scored Positron 81 and discarded the brief because the writer
+    # wrote "tripled" for a ~5x re-rating. A contradiction in the WRITTEN text now goes back to
+    # the writer once, as violation lines; the corrected draft is verified on its own ledger.
+    load_seeds(session)
+    haunted = dict(
+        RAMP_WRITTEN,
+        why_now_callout=(
+            "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The $750M raise has just "
+            "closed and the F1 London race August 2026 is the activation window."
+        ),
+    )
+    stages = _stages([_block(haunted), _block(RAMP_WRITTEN)])
+    out = run_daily.run_day(
+        RUN_DATE,
+        _settings(migrated_database, tmp_path),
+        lambda _d: [_ramp_signal()],
+        session,
+        stages=stages,
+    )
+    detail = json.dumps(out.summary, default=str)
+    assert out.status == "success", detail
+    assert out.verification_status == "verified" and out.audit_status == "pass_after_retry", detail
+    brief = session.get(Brief, out.brief_id)
+    assert brief.audit_attempts == 2 and brief.page_count == 2
+    assert len(stages.writer.calls) == 2
+    _, retry_user = stages.writer.calls[1]
+    assert "=== RETRY MODE - CORRECTING PREVIOUS DRAFT ===" in retry_user
+    assert "- [CRITICAL] contradicted_claim:" in retry_user and "London" in retry_user
+    # the phantom race is gone from the ledger; the corrected text is what was verified
+    assert not any("London" in c.text for c in brief.claims)
+    assert any(v["code"] == "contradiction_rewrite" for v in brief.audit_violations)
+    assert session.scalar(select(SurfacedLog)).brief_id == brief.id
+
+
+def test_a_rewrite_that_is_still_contradicted_blocks_as_before(
+    session, migrated_database, tmp_path
+):
+    load_seeds(session)
+    haunted = dict(
+        RAMP_WRITTEN,
+        why_now_callout=(
+            "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The $750M raise has just "
+            "closed and the F1 London race August 2026 is the activation window."
+        ),
+    )
+    stages = _stages([_block(haunted), _block(haunted)])
+    out = run_daily.run_day(
+        RUN_DATE,
+        _settings(migrated_database, tmp_path),
+        lambda _d: [_ramp_signal()],
+        session,
+        stages=stages,
+    )
+    assert out.status == "no_signal"
+    assert len(stages.writer.calls) == 2  # exactly one rewrite, never a third
+    cand = session.scalar(select(Candidate))
+    assert cand.decision == CandidateDecision.verification_blocked
+    assert "London" in cand.decision_reason
+
+
 def test_without_a_writer_the_brief_stays_pending_for_the_operator(
     session, migrated_database, tmp_path
 ):

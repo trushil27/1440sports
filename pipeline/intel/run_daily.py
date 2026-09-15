@@ -393,6 +393,79 @@ def produce_brief(
     result = verify.run_ledger(session, brief, drafts, sig.company, run_date, verifier)
     log.update(stage_b=result.counts, verification=result.status.value, blocking=result.blocking)
     progress(f"{sig.company}: stage B {result.status.value} {result.counts}")
+
+    if result.status == VerificationStatus.blocked:
+        # One corrected rewrite, not a discard (operator, 15 Sep 2026: the 06:00 run scored
+        # Positron 81 and threw the brief away because the writer wrote "tripled" for a ~5x
+        # re-rating). The verifier's contradictions go back to the writer as violation lines
+        # in the same RETRY MODE block the audit uses; the first draft's stage-B claims leave
+        # the ledger so the status is decided on the corrected text. Stage-A key facts stay:
+        # a contradicted key fact is the scanner's problem and still blocks upstream.
+        lines = "\n".join(
+            f"- [CRITICAL] contradicted_claim: {d}"
+            for d in (result.blocking_detail or result.blocking)
+        )
+        attempts += 1
+        progress(
+            f"{sig.company}: stage B contradicted {len(result.blocking)} claim(s); "
+            f"one corrected rewrite (attempt {attempts})"
+        )
+        try:
+            written, _raw = brief_mod.write_brief(
+                sig, number, run_date, mode, stages.writer, settings, lines
+            )
+        except ParseError as exc:
+            brief.audit_attempts = attempts
+            log.update(rewrite={"blocking": result.blocking, "outcome": f"unparseable: {exc}"})
+            return log
+        audit_res = audit.audit_brief(written, run_date)
+        progress(
+            f"{sig.company}: audit after rewrite {audit_res.route} "
+            f"({len(audit_res.violations)} violations)"
+        )
+        for claim in result.claims:
+            for v in list(claim.verifications):
+                session.delete(v)
+            session.delete(claim)
+        session.flush()
+        brief.audit_attempts = attempts
+        brief.brief_data = written.model_dump()
+        brief.audit_violations = [
+            {
+                "rule": v.rule,
+                "code": v.code,
+                "severity": v.severity,
+                "field": v.field,
+                "message": v.message,
+            }
+            for v in audit_res.violations
+        ] + [
+            {
+                "rule": 0,
+                "code": "contradiction_rewrite",
+                "severity": "critical",
+                "field": None,
+                "message": lines,
+            }
+        ]
+        brief.audit_status = (
+            AuditStatus.pass_after_retry if audit_res.route == "pass" else AuditStatus.failed
+        )
+        log.update(
+            audit=brief.audit_status.value,
+            audit_attempts=attempts,
+            rewrite={"blocking": result.blocking, "outcome": "rewritten"},
+        )
+        drafts = verify.merge_claims(
+            verify.claims_from_brief(written), stages.extractor.extract(written)
+        )
+        progress(f"{sig.company}: stage-B verification of {len(drafts)} claims in the rewrite")
+        result = verify.run_ledger(session, brief, drafts, sig.company, run_date, verifier)
+        log.update(
+            stage_b=result.counts, verification=result.status.value, blocking=result.blocking
+        )
+        progress(f"{sig.company}: stage B {result.status.value} {result.counts}")
+
     if result.status == VerificationStatus.blocked:
         return log
 
