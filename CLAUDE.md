@@ -260,9 +260,11 @@ date: honest 75, Uberti → Wachen → Rose path, Sohu/TSMC 4nm sourced, the 'tr
 claims dropped; Audi profile enriched (Hinwil/Neuburg/Bicester, Binotto, open AI/compute lane). Held for the operator's
 say-so. **DAZN (15 Sep):** rights-holder, not a sponsor case (62); 14 Sep reshuffle — Adam Knappy CMO & Customer Officer,
 Alex Gersh CFO (ex-Sportradar), Darren Waterman Chief Business Officer — is a relationship to open, watch row.
-**Runner-ups hidden (15 Sep 2026, MD: "organised, tidy, verified facts"):** the daily run's pool rows (`cases/<date>/
-pool.json`, imported as historical briefs labelled `Runner-up, <date>`) no longer appear in the app — `site_export._is_runner_up`
-drops them at export unless a full case has been built for them. They stay in memory for dedup and the gate.
+**Pool rows relabelled (15 Sep 2026, MD: "change the name, not runners-up in the list … if relevant for F1 or FE,
+build the case"):** the daily run's pool rows (`cases/<date>/pool.json`, `intel.pool`) import as historical briefs
+labelled `Candidate, <date>` (was "Runner-up"); they stay in the app as thin rows until each becomes a full case
+(session_case) or a reasoned screen-out (`<stem>.screened.json`). The three shown on 15 Sep were Walden Robotics
+(10 Sep pool), OLIX and Castelion (9 Sep pool) — each judged for F1/FE relevance in session (verdicts below).
 **MD send plan (15 Sep 2026, MD: "sent to Ricky one a day after they are passing all the verification gates … plan
 that on a daily basis"):** `data/send_plan.json` = the queue (brief numbers in order, `hold` flag, note) + the durable
 log of every MD send; `intel/send_plan.py` picks the first queued brief that passes every gate (`brief_status_for_md`,

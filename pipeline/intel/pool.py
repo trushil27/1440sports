@@ -247,7 +247,7 @@ def import_pool(session: Session, cases_dir: Path | str) -> dict[str, Any]:
                 "deck": trig,
                 "historical": True,
                 "historical_source": f"pool ({rec.get('source', 'scanner')})",
-                "historical_label": f"Runner-up, {rec['date']}",
+                "historical_label": f"Candidate, {rec['date']}",
                 "signal_date": rec.get("trigger_date") or rec["date"],
             },
         )

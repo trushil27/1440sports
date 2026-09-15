@@ -87,19 +87,20 @@ def test_runner_ups_are_written_with_the_case_and_come_back_as_thin_rows(
     row = session.scalar(select(Brief).join(Candidate).where(Candidate.company_norm == "acmegrid"))
     assert row is not None and row.historical and row.brief_number < 0
     assert row.verification_status.value == "needs_review"
-    assert row.brief_data["historical_label"] == f"Runner-up, {RUN_DATE.isoformat()}"
+    assert row.brief_data["historical_label"] == f"Candidate, {RUN_DATE.isoformat()}"
     assert row.candidate.decision == CandidateDecision.not_selected
     assert pool.import_pool(session, cases) == {"source": "pool", "created": 0, "skipped": 1}
 
-    # 15 Sep 2026 (operator: "organised, tidy, verified facts"): the runner-up stays in memory
-    # but the app does not show an unverified thin row — Ramp is exported, Acme Grid is not.
+    # 15 Sep 2026 (operator): the candidate stays in the app as a thin row under an honest
+    # label — "Candidate, <date>", never "Runner-up" — until it becomes a case or a screen-out.
     from intel import site_export
 
     session.flush()
     payload = site_export.export_data(session, settings)
-    companies = {e["company"] for e in payload["briefs"]}
-    assert "Ramp" in companies and "Acme Grid" not in companies
-    assert not any(str(e.get("label") or "").startswith("Runner-up") for e in payload["briefs"])
+    by_company = {e["company"]: e for e in payload["briefs"]}
+    assert "Ramp" in by_company and "Acme Grid" in by_company
+    assert by_company["Acme Grid"]["label"] == f"Candidate, {RUN_DATE.isoformat()}"
+    assert not any("Runner-up" in str(e.get("label") or "") for e in payload["briefs"])
 
 
 def test_a_blocked_candidate_becomes_a_screen_out_with_its_reason(tmp_path):
