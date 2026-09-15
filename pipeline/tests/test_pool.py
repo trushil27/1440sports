@@ -91,6 +91,16 @@ def test_runner_ups_are_written_with_the_case_and_come_back_as_thin_rows(
     assert row.candidate.decision == CandidateDecision.not_selected
     assert pool.import_pool(session, cases) == {"source": "pool", "created": 0, "skipped": 1}
 
+    # 15 Sep 2026 (operator: "organised, tidy, verified facts"): the runner-up stays in memory
+    # but the app does not show an unverified thin row — Ramp is exported, Acme Grid is not.
+    from intel import site_export
+
+    session.flush()
+    payload = site_export.export_data(session, settings)
+    companies = {e["company"] for e in payload["briefs"]}
+    assert "Ramp" in companies and "Acme Grid" not in companies
+    assert not any(str(e.get("label") or "").startswith("Runner-up") for e in payload["briefs"])
+
 
 def test_a_blocked_candidate_becomes_a_screen_out_with_its_reason(tmp_path):
     cases = tmp_path / "cases" / "2026-09-08"

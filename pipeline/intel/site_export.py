@@ -473,6 +473,16 @@ def orphan_screen_rows(
     return rows
 
 
+def _is_runner_up(brief: Brief) -> bool:
+    """A pool import (``intel.pool``): historical, labelled ``Runner-up, <date>``, no page."""
+    d = brief.brief_data or {}
+    return bool(
+        brief.historical
+        and str(d.get("historical_label") or "").startswith("Runner-up")
+        and not brief.web_html_path
+    )
+
+
 def merge_same_company(entries: list[dict[str, Any]]) -> None:
     """One row per company in the working lists (the MD saw SambaNova twice: a thin n8n row
     and the repo's own brief). The richest entry stays — a full engine page first, then a
@@ -607,6 +617,11 @@ def export_data(session: Session, settings: Settings | None = None) -> dict[str,
         .order_by(Brief.run_date.desc(), Brief.id.desc())
     ).all()
     review = load_review()
+    # The day's runner-ups (intel.pool) stay in the desk's memory for dedup and the gate, but
+    # they are unverified thin rows and do not belong in the app: it shows verified cases
+    # and reasoned screen-outs only (operator, 15 Sep 2026: "organised, tidy, verified
+    # facts"). A runner-up that later gets a full case appears as that case.
+    briefs = [b for b in briefs if not _is_runner_up(b)]
     entries = [brief_entry(b, include_page=True, review=review) for b in briefs]
     # duplicates fold into the row they duplicate; screened rows leave the main lists
     kept = {e["key"] for e in entries if e["review"]["status"] in ("keep", "keep_flagged")}

@@ -260,6 +260,9 @@ date: honest 75, Uberti → Wachen → Rose path, Sohu/TSMC 4nm sourced, the 'tr
 claims dropped; Audi profile enriched (Hinwil/Neuburg/Bicester, Binotto, open AI/compute lane). Held for the operator's
 say-so. **DAZN (15 Sep):** rights-holder, not a sponsor case (62); 14 Sep reshuffle — Adam Knappy CMO & Customer Officer,
 Alex Gersh CFO (ex-Sportradar), Darren Waterman Chief Business Officer — is a relationship to open, watch row.
+**Runner-ups hidden (15 Sep 2026, MD: "organised, tidy, verified facts"):** the daily run's pool rows (`cases/<date>/
+pool.json`, imported as historical briefs labelled `Runner-up, <date>`) no longer appear in the app — `site_export._is_runner_up`
+drops them at export unless a full case has been built for them. They stay in memory for dedup and the gate.
 
 
 
