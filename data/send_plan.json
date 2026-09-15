@@ -1,0 +1,77 @@
+{
+ "_meta": {
+  "what": "MD send plan: one verified brief a day, in queue order (intel.send_plan)",
+  "rule": "one send to the MD per London day; only briefs that pass every gate (verified, audit pass, 2 pages, PDF, not held, not already sent)",
+  "slot_london": "07:00",
+  "how": "python -m intel.send_plan --list | --add N --note … | --hold N | --release N | --remove N | --dry-run | --send. The daily-send workflow runs --send at 07:00 London; the Send-a-brief button and intel.resend record into 'sent' as well.",
+  "started": "2026-09-15"
+ },
+ "queue": [
+  {
+   "number": 253,
+   "company": "Positron AI",
+   "hold": true,
+   "note": "→ TGR Haas (76), dated 16 Sep. Sent by the scheduled session at 06:52 London on 16 Sep through send-brief (which records here); held in the plan so the 07:05 workflow cannot send it twice. From 17 Sep the workflow owns the morning send.",
+   "added": "2026-09-15"
+  },
+  {
+   "number": 245,
+   "company": "Etched",
+   "hold": true,
+   "note": "Re-issued 15 Sep with a named path and sourced facts (75). The 9 Sep version went to the MD on 9 Sep. Held until the operator releases it (python -m intel.send_plan --release 245).",
+   "added": "2026-09-15"
+  }
+ ],
+ "sent": [
+  {
+   "number": 245,
+   "company": "Etched",
+   "to": "md",
+   "date": "2026-09-09",
+   "time_london": "16:34",
+   "time_utc": "2026-09-09T15:34:06Z",
+   "message_id": "<LOBP265MB9138118338DCFE320250820DE2B02@LOBP265MB9138.GBRP265.PROD.OUTLOOK.COM>",
+   "by": "send-brief run 6 (operator's ask, 9 Sep) — reconstructed from Sent Items on 15 Sep; the 9 Sep version, not the 15 Sep re-issue"
+  },
+  {
+   "number": 246,
+   "company": "Wonderful",
+   "to": "md",
+   "date": "2026-09-10",
+   "time_london": "07:56",
+   "time_utc": "2026-09-10T06:56:46Z",
+   "message_id": null,
+   "by": "send-brief run 7 (operator's ask) — reconstructed from the workflow history on 15 Sep; message id not captured"
+  },
+  {
+   "number": 247,
+   "company": "Siemens Energy Transformation of Industry",
+   "to": "md",
+   "date": "2026-09-11",
+   "time_london": "10:41",
+   "time_utc": "2026-09-11T09:41:00Z",
+   "message_id": null,
+   "by": "send-brief run 8 (operator's ask) — reconstructed from the workflow history on 15 Sep; message id not captured"
+  },
+  {
+   "number": 251,
+   "company": "Also",
+   "to": "md",
+   "date": "2026-09-13",
+   "time_london": "16:25",
+   "time_utc": "2026-09-13T15:24:53Z",
+   "message_id": null,
+   "by": "send-brief run 12 (operator's ask) — reconstructed from the workflow history on 15 Sep; message id not captured"
+  },
+  {
+   "number": 154,
+   "company": "Horizon3.ai",
+   "to": "md",
+   "date": "2026-09-14",
+   "time_london": "22:31",
+   "time_utc": "2026-09-14T21:31:45Z",
+   "message_id": "<LOBP265MB9138965F2D744DBE91084B80E2BB2@LOBP265MB9138.GBRP265.PROD.OUTLOOK.COM>",
+   "by": "send-brief run 13 (operator's ask, re-verified first)"
+  }
+ ]
+}

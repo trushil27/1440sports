@@ -26,7 +26,7 @@ on:
         default: false
 
 permissions:
-  contents: read
+  contents: write   # an MD send is recorded in data/send_plan.json and committed
 
 jobs:
   send:
@@ -82,6 +82,16 @@ jobs:
           python -m intel.backfill
       - name: Send
         run: python -m intel.resend ${{ inputs.numbers }} --to "${{ inputs.recipient }}" --cc-operator
+      - name: Record an MD send in the repo (intel.send_plan)
+        if: inputs.recipient == 'md' && inputs.dry_run != true
+        run: |
+          git config user.name "1440 desk"
+          git config user.email "desk@1440sports.com"
+          if ! git diff --quiet -- data/send_plan.json; then
+            git add data/send_plan.json
+            git commit -m "MD send plan: N° ${{ inputs.numbers }} sent $(TZ=Europe/London date +%Y-%m-%d) (button)"
+            git pull --rebase origin main && git push origin HEAD:main
+          fi
       - name: Keep the PDFs and outbox as an artifact
         if: always()
         uses: actions/upload-artifact@v4

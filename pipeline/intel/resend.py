@@ -144,6 +144,14 @@ def resend(
             status=status,
         )
     company = (brief.brief_data or {}).get("company") or brief.candidate.company_raw
+    if kind == SendKind.md_brief and status == SendStatus.sent:
+        # The repo is the durable record of what went to the MD (the CI database is
+        # thrown away after each run): intel.send_plan keeps the log and the one-a-day rule.
+        from intel import send_plan
+
+        send_plan.record_send(
+            number, company, "md", message_id, by=f"resend:{sys.argv[0].rsplit('/', 1)[-1]}"
+        )
     return f"N° {number} {company} → {msg.to[0]} ({message_id})"
 
 

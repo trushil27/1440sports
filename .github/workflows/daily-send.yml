@@ -1,0 +1,130 @@
+# One verified brief to the MD a day, at 07:00 London, from data/send_plan.json.
+#
+# Operator, 15 Sep 2026: "These should also be sent to Ricky one a day after they are passing
+# all the verification gates. So we need to plan that as well on a daily basis."
+#
+# The plan file is the queue and the log. intel.send_plan takes the first queued brief that
+# passes every gate (verified, audit pass, exactly 2 pages, PDF rendered, not held, not already
+# sent) and sends it to the configured MD address with the operator copied — unless anything
+# already went to the MD today, in which case it holds. The delivery is written back into the
+# plan and committed, so the repo answers "was this sent?" without a mailbox search.
+#
+# Mailer and renderer only: no scanner, verifier or writer, so this costs nothing on the model
+# API. Two cron slots cover BST and GMT; the London-hour gate below picks the right one.
+name: Daily send to the MD
+
+on:
+  schedule:
+    - cron: "5 6 * * *"   # 07:05 London in summer
+    - cron: "5 7 * * *"   # 07:05 London in winter
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Send now even if it is not 07:xx London (the one-a-day rule still applies)"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Report what would go, send nothing"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: md-send
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: pg
+          POSTGRES_DB: intel
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      DATABASE_URL: postgresql://postgres:pg@localhost:5432/intel
+      OPERATOR_EMAIL: ${{ secrets.OPERATOR_EMAIL }}
+      MD_EMAIL: ${{ secrets.MD_EMAIL }}
+      EXECUTION_MODE: shadow
+      GRAPH_TENANT_ID: ${{ secrets.GRAPH_TENANT_ID }}
+      GRAPH_CLIENT_ID: ${{ secrets.GRAPH_CLIENT_ID }}
+      GRAPH_CLIENT_SECRET: ${{ secrets.GRAPH_CLIENT_SECRET }}
+      GRAPH_SENDER: ${{ secrets.GRAPH_SENDER }}
+      GRAPH_REFRESH_TOKEN: ${{ secrets.GRAPH_REFRESH_TOKEN }}
+      APP_BASE_URL: ${{ vars.APP_BASE_URL || (secrets.NETLIFY_AUTH_TOKEN && format('https://{0}.netlify.app', vars.NETLIFY_SITE_NAME || '1440-intelligence')) || 'https://trushil27.github.io/1440sports/' }}
+      PDF_STORAGE_DIR: storage/briefs
+      OUTBOX_DIR: storage/outbox
+      PYTHONPATH: pipeline
+      TZ: Europe/London
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Is it the 07:00 London slot?
+        id: gate
+        run: |
+          hour=$(TZ=Europe/London date +%H)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"; echo "forced at $(TZ=Europe/London date)"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"; echo "dry run at $(TZ=Europe/London date)"
+          elif [ "$hour" = "07" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"; echo "07:xx London — running"
+          else
+            echo "go=false" >> "$GITHUB_OUTPUT"; echo "holding: $(TZ=Europe/London date +%H:%M) London is not the slot"
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.go == 'true'
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: System libraries for WeasyPrint
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libcairo2 fonts-liberation
+      - name: Install
+        if: steps.gate.outputs.go == 'true'
+        run: pip install -q -e "pipeline[render]"
+      - name: Rebuild the desk's memory from the repo
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          python -m alembic -c db/alembic.ini upgrade head
+          python -m intel.seed
+          python -m intel.backfill
+      - name: Send the next eligible brief (or hold)
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python -m intel.send_plan --dry-run
+          else
+            python -m intel.send_plan --send
+          fi
+          python -m intel.send_plan --list
+      - name: Record the send in the repo
+        if: steps.gate.outputs.go == 'true' && inputs.dry_run != true
+        run: |
+          git config user.name "1440 desk"
+          git config user.email "desk@1440sports.com"
+          if ! git diff --quiet -- data/send_plan.json; then
+            git add data/send_plan.json
+            git commit -m "MD send plan: $(TZ=Europe/London date +%Y-%m-%d) delivery recorded"
+            git push origin HEAD:main
+          else
+            echo "nothing sent, nothing to record"
+          fi
+      - name: Keep the outbox as an artifact
+        if: always() && steps.gate.outputs.go == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-send-${{ github.run_id }}
+          path: storage
+          retention-days: 7
+          if-no-files-found: ignore

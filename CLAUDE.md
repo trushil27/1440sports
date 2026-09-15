@@ -263,6 +263,14 @@ Alex Gersh CFO (ex-Sportradar), Darren Waterman Chief Business Officer — is a 
 **Runner-ups hidden (15 Sep 2026, MD: "organised, tidy, verified facts"):** the daily run's pool rows (`cases/<date>/
 pool.json`, imported as historical briefs labelled `Runner-up, <date>`) no longer appear in the app — `site_export._is_runner_up`
 drops them at export unless a full case has been built for them. They stay in memory for dedup and the gate.
+**MD send plan (15 Sep 2026, MD: "sent to Ricky one a day after they are passing all the verification gates … plan
+that on a daily basis"):** `data/send_plan.json` = the queue (brief numbers in order, `hold` flag, note) + the durable
+log of every MD send; `intel/send_plan.py` picks the first queued brief that passes every gate (`brief_status_for_md`,
+2 pages, PDF, not held, not already sent) and sends it with the operator copied, holding if anything already went to
+the MD that London day; `.github/workflows/daily-send.yml` runs it at 07:05 London (two crons for BST/GMT, hour gate)
+and commits the log; `intel.resend` records every MD send (button or session) into the same log, and send-brief.yml
+commits it. CLI: `--list --add N --hold N --release N --remove N --dry-run --send`. Log reconstructed back to 9 Sep.
+Rhythm: build a case the day before (session_case, zero cost), queue it, it goes at 07:00 if it passes.
 
 
 
