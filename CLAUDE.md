@@ -253,6 +253,14 @@ the verifier's contradictions go back to the writer as `contradicted_claim` viol
 first draft's stage-B claims leave the ledger, and the rewrite is verified on its own text (`run_daily.produce_brief`;
 `LedgerResult.blocking_detail`). Still contradicted → blocked as before; never a third call. Stage-A key-fact
 contradictions still block (the scanner's facts, not the writer's). Would have shipped Positron at 81 on 15 Sep.
+**N° 245 Etched (re-issued 15 Sep 2026, NOT sent):** the 9 Sep live-run brief (83, decision-maker 'Not named in source',
+two unverified claims, empty key facts) WAS sent to the MD on 9 Sep at 16:34 London on the operator's ask (send-brief run 6;
+Sent Items confirms To: the MD, operator cc'd, open-points panel included). Rebuilt via session_case on the same number and
+date: honest 75, Uberti → Wachen → Rose path, Sohu/TSMC 4nm sourced, the 'trackside demonstration' and 'Taiwan partners'
+claims dropped; Audi profile enriched (Hinwil/Neuburg/Bicester, Binotto, open AI/compute lane). Held for the operator's
+say-so. **DAZN (15 Sep):** rights-holder, not a sponsor case (62); 14 Sep reshuffle — Adam Knappy CMO & Customer Officer,
+Alex Gersh CFO (ex-Sportradar), Darren Waterman Chief Business Officer — is a relationship to open, watch row.
+
 
 
 ## The two-tier product

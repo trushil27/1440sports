@@ -1,0 +1,462 @@
+{
+ "run_date": "2026-09-09",
+ "signal_date": "2026-08-18",
+ "stem": "etched",
+ "number": 245,
+ "session_model": "claude-session-2026-09-15",
+ "signal": {
+  "company": "Etched",
+  "signal_date": "2026-08-18",
+  "score": 75,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Gavin Uberti",
+  "role": "Co-founder and Chief Executive Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html",
+  "industry_meta": "AI Inference Silicon · Transformer ASICs & Data-Centre Compute · San Jose, California",
+  "recommended_team": "Audi Revolut F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$700M at a $21B valuation announced 18 Aug 2026, led by Jane Street, which is also the first paying customer; doubles the $10.3B of the $300M Series C led by Sequoia in July 2026, which followed a $500M Stripes-led raise at $5B in December 2025",
+   "investors": "Jane Street (lead, Aug 2026); Kleiner Perkins, Sequoia, Andreessen Horowitz, Tiger Global, Bain Capital Ventures, Neo, Primary, Stripes, Positive Sum, Blackstone; SK Hynix and Diffusion Capital in the July Series C",
+   "revenue": "",
+   "trigger": "funding round: $700M at a $21B valuation led by Jane Street, announced 18 Aug 2026, with the first Sohu rack delivered to Jane Street in July",
+   "competitor_signal": "Groq, an inference-chip rival, is a McLaren F1 Team partner; Anthropic is Atlassian Williams Racing's multi-year AI partner, whose Claude model is branded on the car from the 3 Feb 2026 reveal; TWG AI is Cadillac's primary and exclusive AI partner; Oracle runs an AI strategy agent for Red Bull; eight AI partnerships were signed in Formula 1 in the six months to May 2026",
+   "strategic_hook": "Audi Revolut F1 Team, a debut works entry, carries no AI inference, compute or chip partner (ElevenLabs covers voice AI only), and a chip company with one named customer needs a technology story a first-season works team is buying",
+   "us_presence": "Headquartered in San Jose, California; founded 2022 by Thiel Fellows who left Harvard; Sohu fabricated on TSMC's 4-nanometre process; more than $1B in customer contracts across frontier AI labs and clouds",
+   "alumni_match": "",
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A, narrowly: Sohu runs transformer inference only, so the workstream is the team's language-model layer (race-engineering assistants, telemetry and document summarisation, simulator and strategy agents built on transformers) on a rack at Hinwil and trackside",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 16,
+   "capacity": 20,
+   "brand_fit": 13,
+   "urgency": 15,
+   "ops_fit": 11,
+   "ops_fit_subscores": {
+    "product_to_need": 4,
+    "slot_availability": 4,
+    "on_camera": 1,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "$700m",
+    "700m",
+    "$21b",
+    "21b",
+    "jane street",
+    "first rack",
+    "first paying customer",
+    "first customer",
+    "$1b",
+    "1b in",
+    "in customer contracts",
+    "contracts",
+    "kleiner",
+    "tiger global",
+    "bain capital",
+    "blackstone",
+    "neo,",
+    "primary,",
+    "positive sum",
+    "18 aug",
+    "18 august",
+    "tsmc",
+    "4-nanometre",
+    "4nm",
+    "sohu",
+    "transformer",
+    "funding round",
+    "trigger",
+    "deploying",
+    "in july",
+    "backlog",
+    "racks shipping",
+    "customer running it",
+    "customer's hands"
+   ],
+   "url": "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html",
+   "excerpt": "Etched press release (GlobeNewswire), 18 Aug 2026 — also TechCrunch, Quartz, TechTimes the same day: $700M raised at a $21B valuation in a round led by Jane Street with Kleiner Perkins, Sequoia, Andreessen Horowitz, Tiger Global, Bain Capital Ventures, Neo, Primary, Stripes, Positive Sum and Blackstone. Jane Street is the company's first customer: Etched shipped its first rack to Jane Street in July 2026 and the firm is deploying it into its workloads ('We tested the chip and are pleased with the early results'). Etched has secured more than $1B in customer contracts across public and private frontier AI companies and clouds. Sohu is a transformer-inference ASIC made on TSMC's 4-nanometre process.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "doubled",
+    "in a month",
+    "a month after",
+    "$10.3b",
+    "10.3b",
+    "july's",
+    "two price marks",
+    "four times",
+    "eight months"
+   ],
+   "url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+   "excerpt": "TechCrunch, 18 Aug 2026: Etched's valuation doubled to $21B roughly a month after its $300M Series C at $10.3B; from $5B in December to $10.3B in July to $21B in August.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "series c",
+    "$300m",
+    "300m",
+    "sequoia",
+    "sk hynix",
+    "diffusion",
+    "23 jul",
+    "july 2026",
+    "in july led"
+   ],
+   "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+   "excerpt": "TechCrunch, 23 Jul 2026: Etched closed a $300M Series C at a $10.3B valuation led by Sequoia, with Andreessen Horowitz, SK Hynix, Jane Street and Diffusion Capital participating.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$500m",
+    "500m",
+    "stripes",
+    "$5b",
+    "5b in december",
+    "december 2025",
+    "30 jun"
+   ],
+   "url": "https://finance.yahoo.com/news/ai-chip-startup-etched-raises-160625909.html",
+   "excerpt": "Yahoo Finance / Bloomberg, 30 Jun 2026, and DCD: Etched raised $500M in a Stripes-led round valuing it at $5B, completed in December 2025 and disclosed on 30 Jun 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "uberti",
+    "zhu",
+    "wachen",
+    "mark rose",
+    "harvard",
+    "thiel",
+    "2022",
+    "san jose",
+    "no marketing",
+    "chief operating officer",
+    "chief technology officer",
+    "co-founded",
+    "decision-maker",
+    "decision maker",
+    "founders"
+   ],
+   "url": "https://en.wikipedia.org/wiki/Etched_(company)",
+   "excerpt": "Wikipedia (Etched), Craft.co executives page and CNBC (25 Jun 2024): founded in 2022 and headquartered in San Jose, California, by Gavin Uberti, Chris Zhu and Robert Wachen — Harvard dropouts and Thiel Fellows; Series A of $120M in June 2024 to fabricate at TSMC. Executives: Uberti (Co-founder and CEO), Wachen (Co-founder and COO), Zhu (Co-founder), Mark Rose (CTO), and VPs of production, platform, software and ASIC architecture. No chief marketing, revenue or commercial officer is listed as of 15 Sep 2026 (search summaries; etched.com egress-blocked).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "twg ai",
+    "exclusive ai partner",
+    "primary and exclusive",
+    "cadillac's is exclusive"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260204298262/en/TWG-AI-Joins-the-Cadillac-Formula-1-Team-as-Primary-and-Exclusive-AI-Partner",
+   "excerpt": "Business Wire, 4 Feb 2026: TWG AI joined the Cadillac Formula 1 Team as primary and exclusive AI partner in a multi-year agreement.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "anthropic",
+    "claude",
+    "official thinking partner",
+    "on a williams",
+    "williams (anthropic)",
+    "3 feb"
+   ],
+   "url": "https://www.williamsf1.com/articles/0f1eece4-e632-49c9-a767-148159bbbf87/anthropic-atlassian-williams-f1-team-multi-year-partnership-claude-official-thinking-partner",
+   "excerpt": "Atlassian Williams F1 Team and Anthropic, 2026 (also Variety, Yahoo Finance): multi-year partnership naming Claude the team's official thinking partner, integrated across race strategy, car development and operations, with Claude branding on cars, drivers and kit from the 3 Feb 2026 car reveal.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "eight ai partnerships",
+    "six months",
+    "strategy agent",
+    "oracle's strategy",
+    "reuters",
+    "sells a model"
+   ],
+   "url": "https://sports.yahoo.com/articles/motor-racing-formula-one-evolves-093211953.html",
+   "excerpt": "Reuters via Yahoo Sports, 4 May 2026: eight new AI partnerships were signed in Formula 1 in the preceding six months — Anthropic's Claude at Williams, Oracle's AI strategy agent with Red Bull, CoreWeave with Aston Martin, TWG AI as Cadillac's exclusive AI partner.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "groq",
+    "on a mclaren",
+    "is a mclaren",
+    "mclaren (groq)",
+    "amd",
+    "snapdragon",
+    "meta ai",
+    "cognition",
+    "coreweave",
+    "elevenlabs",
+    "ninjaone",
+    "extreme networks",
+    "jigspace",
+    "no ai inference",
+    "no inference",
+    "lane is taken",
+    "voice ai",
+    "technical roster",
+    "revolut"
+   ],
+   "url": "pipeline/intel/seeds/sponsors.json",
+   "excerpt": "Sponsor table (2026, active/joined): McLaren — Groq; Cadillac — TWG AI (primary and exclusive); Mercedes — AMD, Snapdragon, Meta AI; Aston Martin — Cognition, CoreWeave, ARM; Oracle Red Bull Racing — Oracle (title); Atlassian Williams Racing — Anthropic; Audi F1 Team (Audi Revolut F1 Team) — Revolut (title), NinjaOne, Extreme Networks, JigSpace, ElevenLabs (voice AI), Libertex, NEXO, bp/Castrol, adidas, Specialized and others; no AI inference, compute or chip partner. MoneyGram Haas (TGR Haas) and BWT Alpine also carry no AI partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "hinwil",
+    "neuburg",
+    "bicester",
+    "binotto",
+    "wheatley",
+    "james key",
+    "dreyer",
+    "hülkenberg",
+    "bortoleto",
+    "debut works",
+    "first season",
+    "works entry",
+    "works team",
+    "debut season",
+    "two rounds"
+   ],
+   "url": "https://www.formula1.com/en/latest/article/audi-announce-team-boss-wheatley-to-leave-with-immediate-effect.1WqcMA6UUNOuruqoQcPb3Q",
+   "excerpt": "formula1.com and The Washington Post (20 Mar 2026), Race Sundays team profile: Audi Revolut F1 Team debuted as a full works team in 2026 after taking over Sauber; chassis at Hinwil, power unit at Neuburg, technology centre at Bicester. Team principal Jonathan Wheatley left two rounds into the season; Mattia Binotto leads as Head of the F1 Project and team principal; James Key oversees the chassis, Stefan Dreyer is power-unit CTO; drivers Nico Hülkenberg and Gabriel Bortoleto.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$5-8m",
+    "5-8m",
+    "estimated",
+    "part-payable",
+    "below the premium tier",
+    "premium tier"
+   ],
+   "url": "https://f1versus.com/news/formula-1-team-sponsors-for-the-2026-season/",
+   "excerpt": "F1 Versus (2026, REPORTED) values team-level technology partnerships in the low-to-mid single-digit millions to $20-30M for a title. 1440's $5-8M a year for an Official Inference Partner entry at a debut works team is an ESTIMATE, part-payable in hardware.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "mexico city",
+    "united states gp",
+    "late october",
+    "fourth quarter",
+    "2027 rosters",
+    "2027 roster",
+    "this quarter",
+    "before austin"
+   ],
+   "url": "pipeline/intel/seeds/calendar_2026.json",
+   "excerpt": "2026 F1 calendar (seeds/calendar_2026.json): round 19 US GP (Austin), round 20 Mexico City GP, round 21 São Paulo GP, round 22 Las Vegas GP, round 23 Qatar GP, round 24 Abu Dhabi GP close the season in October-December; teams close the following year's partner rosters in the fourth quarter.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Etched",
+  "industry_meta": "AI Inference Silicon · Transformer ASICs & Data-Centre Compute",
+  "hq": "San Jose, California",
+  "ticker": "Private ($21B; $700M round, Aug 2026)",
+  "deck": "Etched, the San Jose company whose Sohu chip runs only transformer inference, raised $700M at a $21B valuation on 18 August, led by Jane Street, which is also its first paying customer, doubling July's $10.3B price a month after it was set.",
+  "score": 75,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Audi Revolut F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "The round brought in Kleiner Perkins, Sequoia, Andreessen Horowitz, Tiger Global, Bain Capital Ventures and Blackstone behind Jane Street, which took delivery of the first Sohu rack in July and is deploying it into its own workloads; the company reports more than $1B in customer contracts across frontier AI labs and clouds. It follows a $300M Series C at $10.3B in July led by Sequoia. A $500M Stripes-led raise at $5B closed in December 2025. Sohu is built on TSMC's 4-nanometre process; founders Gavin Uberti, Chris Zhu and Robert Wachen started the company in 2022.",
+  "the_case_p2": "Inference silicon has already bought a Formula 1 seat: Groq is on a McLaren, and eight AI partnerships were signed on the grid in the six months to May, with Anthropic at Williams, Oracle's strategy agent at Red Bull and TWG AI exclusive at Cadillac. Every one of those sells a model or a cloud; Etched sells the chip underneath, and it has a customer running it.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;Two price marks in a month, a first rack in a customer's hands and a $1B backlog to deliver: the company has to be known before the racks are. Teams close 2027 rosters in the fourth quarter; Austin in late October, Mexico City and Las Vegas sit inside the window.",
+  "why_team_label": "WHY AUDI REVOLUT F1 TEAM",
+  "why_team_para": "Audi Revolut F1 Team is a debut works entry under Mattia Binotto, and its technical roster carries NinjaOne, Extreme Networks and ElevenLabs for voice AI, but no inference or compute partner: the lane is taken at Cadillac (TWG AI, exclusive), McLaren (Groq), Mercedes (AMD, Snapdragon, Meta AI), Aston Martin (Cognition, CoreWeave), Red Bull (Oracle) and Williams (Anthropic). A German engineering brand in its first season buys technology stories; a chip company with one customer needs one.",
+  "value_section": true,
+  "value_section_label": "VALUE TO AUDI REVOLUT F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A, narrowly. Sohu runs transformer inference only, so the workstream is the team's language-model layer: race-engineering assistants, telemetry and document summarisation, and simulator and strategy agents built on transformers, on a rack at Hinwil and trackside. In return: Official Inference Partner designation, sidepod and garage presence, Austin and Las Vegas hospitality, and an engineering content series.",
+  "deal_arch_para": "Entry as Official Inference Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, through Sohu's first production generation and its successor. Estimated $5-8M a year, part-payable in Sohu racks the team would otherwise lease as cloud inference. Scope: sidepod placement, naming of the team's inference cluster, Austin, Mexico City and Las Vegas hospitality, and a content series on the cost of a token.",
+  "decision_maker_name": "Gavin Uberti",
+  "decision_maker_role": "Co-founder and Chief Executive Officer, Etched",
+  "decision_maker_bio": "Uberti co-founded Etched in 2022 with Chris Zhu and Robert Wachen, Thiel Fellows who left Harvard to build it, and runs a company with no marketing or commercial officer listed. Path: Robert Wachen, co-founder and Chief Operating Officer; Mark Rose, Chief Technology Officer.",
+  "opening_angle_intro": "Lead with the customer, not the valuation.",
+  "opening_angle_quote": "&ldquo;Gavin, Jane Street is running your rack and Groq is on a McLaren. Audi is a works team in its first season with no inference partner, and the 2027 roster closes this quarter. 25 minutes before Austin?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "16",
+    "/ 20",
+    "Round 18 Aug; Austin and Las Vegas inside the window."
+   ],
+   [
+    "CAPACITY",
+    "20",
+    "/ 20",
+    "$700M at $21B; $1B in customer contracts."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "B2B silicon; one named customer carries the story."
+   ],
+   [
+    "URGENCY",
+    "15",
+    "/ 20",
+    "Racks shipping and a $1B backlog to deliver; no listing."
+   ],
+   [
+    "OPS FIT",
+    "11",
+    "/ 20",
+    "Transformer-only chip: the language-model layer, not the whole stack."
+   ]
+  ],
+  "risks": [
+   [
+    "TRANSFORMER-ONLY SILICON",
+    "Sohu runs one model family; a team's strategy and vision models need not be transformers, so the workstream is the language-model layer, not the pit wall.",
+    "Sell that layer honestly and let Jane Street's deployment carry the proof."
+   ],
+   [
+    "A PRICE THAT DOUBLED IN A MONTH",
+    "Four times the valuation in eight months on one named paying customer; a re-rating that fast can reverse and freeze spend.",
+    "Anchor on the $1B of contracts and the shipped rack, not the mark."
+   ]
+  ],
+  "bottom_line": "$700M at $21B with the first rack in a customer's hands and $1B of contracts to deliver, an inference-chip rival already on a McLaren, and a debut works team with no inference partner. A chip that runs one model family and a company with no marketing chief hold it at 75.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "category_open"
+  ],
+  "footer_company": "ETCHED",
+  "footer_date": "9 SEP 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 18 August 2026 Etched announced $700M at a $21B valuation, led by Jane Street with Kleiner Perkins, Sequoia, Andreessen Horowitz, Tiger Global, Bain Capital Ventures, Neo, Primary, Stripes, Positive Sum and Blackstone. Jane Street is also the first paying customer: the first Sohu rack shipped to it in July and is being deployed into its workloads."
+    },
+    {
+     "label": "Three prices in eight months",
+     "text": "$5B in December 2025 (a $500M Stripes-led raise, disclosed on 30 June), $10.3B in July (the $300M Series C led by Sequoia, with SK Hynix and Diffusion Capital), $21B in August. The company reports more than $1B in customer contracts across frontier AI labs and clouds. A backlog that size has to be delivered on a chip nobody outside Jane Street has run, which is exactly when a brand needs to be known."
+    },
+    {
+     "label": "The category has already bought F1",
+     "text": "Eight AI partnerships were signed in Formula 1 in the six months to May 2026: Anthropic at Williams, Oracle's strategy agent at Red Bull, CoreWeave at Aston Martin, TWG AI exclusive at Cadillac, and Groq, an inference-chip rival, at McLaren. The buyers Etched sells to, frontier labs and clouds, are the people in F1's suites."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Teams close 2027 partner rosters in the fourth quarter. The United States GP in Austin in late October, Mexico City and Las Vegas in November sit inside the window; a deal agreed before Austin can be announced at any of them."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "A debut works team with the lane open",
+     "text": "The AI lane is the most-sold technology category on the 2026 grid and it is taken almost everywhere: TWG AI is Cadillac's primary and exclusive AI partner; Groq is at McLaren; AMD, Snapdragon and Meta AI at Mercedes; Cognition, CoreWeave and ARM at Aston Martin; Oracle at Red Bull; Anthropic at Williams. Audi's technical roster runs to NinjaOne, Extreme Networks, JigSpace and ElevenLabs for voice AI, and stops there: no inference, compute or chip partner."
+    },
+    {
+     "label": "A team buying technology stories",
+     "text": "Audi entered as a full works team in 2026 after taking over Sauber, with the chassis at Hinwil, the power unit at Neuburg and a technology centre at Bicester; Mattia Binotto leads after Jonathan Wheatley left two rounds into the season, with James Key on the chassis and Stefan Dreyer on the power unit. A first-season German engineering programme is assembling its technical identity now, and a chip company with one named customer needs exactly that stage."
+    },
+    {
+     "label": "Why not Haas or Alpine",
+     "text": "Both are open in this lane. Haas is the American privateer and the natural home for a commodity-versus-premium story (the desk's Positron case points there); Alpine has no US home race and a roster built around consumer brands. Audi is the works team whose whole 2026 narrative is engineering credibility, which is what Etched's silicon sells."
+    },
+    {
+     "label": "Where it activates",
+     "text": "Austin in late October, Mexico City and Las Vegas in November: three North American rounds inside the window for a San Jose company whose customers are American labs and clouds."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A, narrowly)",
+     "text": "Sohu runs transformer inference only, so the honest workstream is the team's language-model layer rather than the whole pit wall: race-engineering assistants, telemetry and document summarisation, and simulator and strategy agents built on transformer models, running on a Sohu rack at Hinwil and in the trackside IT footprint. Year one runs on the rack generation Jane Street is deploying."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A $21B partner at partner tier in a debut works team's first commercial year, bringing frontier-lab, cloud and quantitative-finance buyers to Austin, Mexico City and Las Vegas hospitality."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "An engineering content series on the cost of a token, co-produced with the team's performance group, plus a reference deployment Etched can show every prospective customer: a works Formula 1 team running its language-model layer on Sohu."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Inference Partner designation, sidepod and garage placement, naming of the team's inference cluster, Austin, Mexico City and Las Vegas hospitality, and driver and engineering access for Etched's channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "TWG AI is primary and exclusive AI partner; Core Scientific holds the data-centre lane."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Groq, a direct inference-chip rival, is a partner."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "AMD, Snapdragon and Meta AI occupy the chip and AI lanes."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "Cognition, CoreWeave and ARM occupy AI, GPU cloud and chip design."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and runs the team's AI strategy agent."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Anthropic is the multi-year AI partner."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "IBM and HP crowd enterprise technology and AI."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Dynatrace and Confluent crowd the data-infrastructure lane."
+    },
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "Open but not chosen: the desk's Positron case points there and the underdog story fits that company better; still a live alternative."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Open but not chosen: no US home race, a consumer-led roster; the named fallback."
+    }
+   ],
+   "ask": "A 25-minute call with Gavin Uberti before the United States GP to test appetite for a 2027 start, agree that the workstream is the language-model layer on the rack generation Jane Street is deploying, and size an Official Inference Partner entry at Audi Revolut F1 Team, part-paid in hardware, with a North American announcement."
+  }
+ },
+ "note": "# Etched → Audi Revolut F1 Team — verification log (N° 245, issued for 9 Sep 2026; corrected re-issue built 15 Sep 2026)\n\n**Why this exists.** The 9 Sep live run wrote N° 245 with an unnamed decision-maker ('Not named in source — Executive Leadership (title undisclosed)'), two unverified claims (a 'trackside compute demonstration' that no source connects to Etched, and 'manufacturing partners in Taiwan' without a Tier-1 source) and empty key facts; it was sent to the MD that afternoon at the operator's request with those open points listed in the email. This re-issue keeps the number and the date, replaces the copy with sourced facts and a named decision path, and drops the two unverifiable claims. Built at no model cost; NOT sent (operator, 15 Sep 2026: 'Do not send it yet').\n\n**Sandbox limitation, stated plainly:** globenewswire.com, techcrunch.com, williamsf1.com, formula1.com and etched.com are egress-blocked; every claim was checked against search summaries of the named page, corroborated across at least two outlets. Treat VERIFIED as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## Ledger (summary)\n\n| Claim | Status |\n|---|---|\n| $700M at $21B, 18 Aug 2026, Jane Street lead; investor list; first rack shipped July; >$1B contracts | VERIFIED (company release; TechCrunch; Quartz) |\n| $300M Series C at $10.3B, Jul 2026, Sequoia lead; SK Hynix, Diffusion | VERIFIED (TechCrunch 23 Jul) |\n| $500M Stripes round at $5B, Dec 2025, disclosed 30 Jun 2026 | VERIFIED (Yahoo/Bloomberg; DCD) |\n| Sohu transformer-only ASIC on TSMC 4nm | VERIFIED (company release) — the 9 Sep 'Taiwan manufacturing partners' claim is replaced by this sourced one |\n| Founders, HQ San Jose, founded 2022, Thiel Fellows; Uberti CEO, Wachen COO, Rose CTO; no CMO/CCO | VERIFIED (Wikipedia; Craft; CNBC 2024) |\n| Groq at McLaren; TWG AI exclusive at Cadillac; Anthropic at Williams; AI lane occupancy; Audi roster | VERIFIED (sponsor table; Business Wire; williamsf1.com) |\n| Eight AI partnerships in six months to May 2026 | VERIFIED (Reuters via Yahoo Sports) |\n| Audi works debut 2026; Hinwil/Neuburg/Bicester; Binotto after Wheatley; Key, Dreyer; drivers | VERIFIED (formula1.com; Washington Post 20 Mar 2026; Race Sundays) |\n| $5-8M a year | ESTIMATE |\n| Austin, Mexico City, Las Vegas on the calendar | VERIFIED (calendar table) |\n\n## Decision path\n\nGavin Uberti, Co-founder and Chief Executive Officer, is the decision-maker: no marketing, revenue or commercial officer is listed. Path: Robert Wachen (Co-founder and Chief Operating Officer), Mark Rose (Chief Technology Officer, the technical counterpart). The 9 Sep version named nobody; this one does, from the company's own listings via search summary.\n\n## Leadership ties\n\nUberti, Zhu, Wachen, Rose: **none found** after checking.\n\n## Score\n\nTiming 16, capacity 20, brand fit 13, urgency 15, ops fit 11 = 75 (the 9 Sep run's 83 rested on an ops fit of 16 for a 'trackside compute demonstration' that has no source; a transformer-only chip is honestly the language-model layer, not the whole stack). OF gate passes (brand fit ≥ 12); no threshold override needed.\n\n## Not claimed\n\n- No 'trackside demonstration' or motorsport activity by Etched: none exists.\n- Employee count (~340, secondary) is not used. Revenue is not stated.\n- 'Volkswagen Group compute ambitions' (9 Sep copy) is dropped: unsourced.\n- The 9 Sep email's 'Confidence HIGH' card label was the run's; this record says MEDIUM."
+}

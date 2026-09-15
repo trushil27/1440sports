@@ -476,8 +476,8 @@
    "icp": "YES, F1 — but the case on file is not shippable as it stands. N° 245 (9 Sep, live run, Audi) carries verification 'needs_review', audit pass_after_retry, empty key facts and a decision-maker line reading 'Not named in source — Executive Leadership (title undisclosed)'. That fails the named-decision-path gate; it was never sent (shadow mode). The company is strong: $700M at a $21B valuation on 18 Aug 2026 led by Jane Street — also its first paying customer, with the first Sohu rack shipped in July — plus Kleiner Perkins, Sequoia, a16z, Tiger Global, Bain Capital Ventures, Blackstone and others; more than $1B in customer contracts (company release, GlobeNewswire; TechCrunch; Quartz). That doubled the $10.3B of the $300M Series C in July (Sequoia lead) which itself doubled the $5B of the $500M Stripes round (Dec 2025). Sohu is a transformer-only inference ASIC on TSMC 4nm. Leadership: Uberti CEO, Zhu co-founder, Wachen co-founder and COO, Mark Rose CTO, VPs of production/platform/software/ASIC — no marketing or commercial executive, so the decision-maker is the CEO with Wachen as the operating path. Honest pillars if rebuilt: timing 16 (28 days), capacity 20, brand fit 13, urgency 15 (racks shipping; $1B backlog to deliver), ops fit 13 (inference on the team floor, hardware in production) = 77.",
    "series_fit": "F1 (infrastructure buyers; Groq precedent). Not FE for the same reason as Positron.",
    "team_lane": "AI/compute lane: taken at Cadillac (TWG AI exclusive), McLaren (Groq), Mercedes (AMD/Snapdragon/Meta AI), Aston Martin (Cognition/CoreWeave/ARM), Red Bull (Oracle), Williams (Anthropic). Open: Audi (ElevenLabs is voice AI — crowding, not conflict; the run's choice), TGR Haas (N° 253 Positron points there — not a placement, still open), Alpine.",
-   "action": "build",
-   "status": "rebuild_pending",
+   "action": "hold",
+   "status": "rebuilt_unsent",
    "window_note": "Rebuild N° 245 through intel.session_case with a verified named path and sourced evidence before it goes anywhere near the MD; 62 days of the window remain.",
    "sources": [
     "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html",
@@ -485,7 +485,8 @@
     "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
     "https://craft.co/etched/executives"
    ],
-   "checked_at": "2026-09-15"
+   "checked_at": "2026-09-15",
+   "case": "N° 245 re-issued 15 Sep 2026 (75, MODE A, Audi Revolut F1 Team) with a named decision path and sourced facts; NOT sent. The 9 Sep version (83, unnamed decision-maker, two unverified claims) went to the MD on 9 Sep at 16:34 London with its open points listed."
   },
   {
    "id": "dazn-2026",

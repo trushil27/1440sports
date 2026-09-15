@@ -90,16 +90,30 @@
   "team": "Audi F1 Team",
   "teams_json_name": "Audi",
   "series": "F1",
-  "identity": "German engineering, new entrant",
+  "identity": "German works team in its debut 2026 season (ex-Sauber): chassis at Hinwil, power unit at Neuburg, technology centre at Bicester",
   "title_sponsor": "Revolut (Audi Revolut F1 Team)",
   "open_categories": [
-   "enterprise software"
+   "ai inference / compute",
+   "cybersecurity",
+   "data infrastructure",
+   "enterprise software",
+   "observability"
   ],
-  "note": null,
-  "competitor_locks": [],
+  "note": "Team principal Mattia Binotto (Head of the F1 Project) after Jonathan Wheatley left two rounds into 2026; James Key chassis, Stefan Dreyer power-unit CTO; drivers Hülkenberg and Bortoleto. No AI inference, compute or chip partner on the 2026 roster (verified 15 Sep 2026).",
+  "competitor_locks": [
+   "voice AI (ElevenLabs)",
+   "IT management (NinjaOne)",
+   "networking (Extreme Networks)",
+   "fintech / banking (Revolut title; Libertex, NEXO)",
+   "spatial / AR software (JigSpace)",
+   "fuels and lubricants (bp/Castrol)",
+   "apparel (adidas)",
+   "bicycles (Specialized)"
+  ],
   "source": "data/teams.json",
   "display_name": "Audi Revolut F1 Team",
-  "display_name_source": "2026 entry name (title partner in data/teams.json); sponsor-table key unchanged"
+  "display_name_source": "2026 entry name (title partner in data/teams.json); sponsor-table key unchanged",
+  "enriched_at": "2026-09-15"
  },
  {
   "team": "MoneyGram Haas F1 Team",
