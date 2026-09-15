@@ -1,0 +1,798 @@
+{
+ "run": {
+  "id": 203,
+  "date": "2026-09-16",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "usage": {
+    "calls": {},
+    "tokens": {
+     "input": 0,
+     "output": 0,
+     "cache_read": 0,
+     "cache_write": 0
+    },
+    "estimated_usd": 0.0
+   },
+   "rebuild": true,
+   "sources": {
+    "n8n": 0,
+    "status": "no mailbox configured — scanner only",
+    "routine": 0,
+    "scanner": 1,
+    "candidates": 0,
+    "to_research": []
+   },
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-5vm9ih42/2026-09-16/positronai.pdf",
+     "web": "/tmp/case-pdf-5vm9ih42/2026-09-16/positronai.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Positron AI",
+     "stage_a": {
+      "verified": 9
+     },
+     "stage_b": {
+      "verified": 14
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 268,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 312,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 76,
+     "reason": "top ranking score",
+     "company": "Positron AI",
+     "decision": "selected",
+     "signal_date": "2026-09-10"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Positron AI",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 76,
+   "score_breakdown": {
+    "cap": null,
+    "base": 76,
+    "total": 76,
+    "timing": 18,
+    "ops_fit": 12,
+    "ranking": 76,
+    "urgency": 14,
+    "capacity": 19,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 1,
+     "product_to_need": 5,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 76,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 76,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "TGR Haas F1 Team",
+   "source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "trigger_date": "2026-09-10",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 253,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-5vm9ih42/2026-09-16/positronai.web.html",
+  "brief_data": {
+   "hq": "Reno, Nevada",
+   "deck": "Positron, the Reno inference-chip company that claims to beat Nvidia on tokens per watt with commodity memory, closed an $875M Series C at a $5B valuation on 10 September, co-led by NEA, Atreides, Valor, Andra, SemiAnalysis Capital and Jim Clark: five times its February price.",
+   "risks": [
+    {
+     "label": "SILICON STILL IN THE LAB",
+     "detail": "Asimov is a 2027 part and Atlas is the current system; a partnership announced before the chip ships risks promising what a lab still holds.",
+     "counter": "Anchor year one on Atlas, in production at Oracle today, and time the Asimov story to the 2027 launch."
+    },
+    {
+     "label": "A CROWDED, EXCLUSIVE LANE",
+     "detail": "Six teams already carry an AI partner and Cadillac's is exclusive; a rival could take Haas or Alpine before the fourth quarter.",
+     "counter": "Move before Austin; Alpine is the named fallback."
+    }
+   ],
+   "score": 76,
+   "ticker": "Private ($5B; $875M Series C, Sep 2026)",
+   "company": "Positron AI",
+   "gridfit": [
+    {
+     "team": "TGR Haas F1 Team",
+     "label": "PRIME LANE",
+     "detail": "documented open category: ai inference / compute",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "TAKEN",
+     "detail": "AMD, Meta AI, Snapdragon",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Dell Technologies, Google Cloud, Groq",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "ARM, Cognition, CoreWeave",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "category_open"
+   ],
+   "sources": [
+    "https://www.businesswire.com/news/home/20250203502454/en/AI-Hardware-Industry-Veteran-Mitesh-Agrawal-Joins-Positron-as-CEO",
+    "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+    "https://www.businesswire.com/news/home/20260204298262/en/TWG-AI-Joins-the-Cadillac-Formula-1-Team-as-Primary-and-Exclusive-AI-Partner",
+    "https://www.businesswire.com/news/home/20260204250472/en/Positron-AI-Raises-$230-Million-Series-B-at-Over-$1-Billion-Valuation-to-Scale-Energy-Efficient-AI-Inference",
+    "https://www.businesswire.com/news/home/20250728912387/en/Positron-AI-Secures-$51.6-Million-in-Oversubscribed-Series-A-to-Accelerate-Inference-Optimized-Hardware"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Mitesh Agrawal before the United States GP to test appetite for a 2027 start, agree that year one runs on Atlas with the Asimov story timed to the 2027 launch, and size an Official AI Inference Partner entry at TGR Haas F1 Team, part-paid in hardware, with a Las Vegas announcement.",
+    "value": [
+     {
+      "text": "Atlas inference racks installed on the team's own floor at Banbury and in the trackside IT footprint, running strategy-model inference, computer-vision workloads and simulator-support services where power and space are constrained, on hardware the company claims delivers 3.5x the performance per watt of the incumbent. Year one runs on Atlas, which is in production at Oracle Cloud today; Titan follows in 2027.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A $5B partner entering at partner tier in the first year of the Toyota era, bringing the neocloud, hyperscaler and enterprise-infrastructure audience to Austin and Las Vegas hospitality, the buyers the team's technology partners want to meet.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "An engineering content series on the cost of a token, co-produced with the team's performance group, plus a reference deployment Positron can show every prospective customer: a Formula 1 team running inference at a third of the power.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official AI Inference Partner designation, sidepod and garage placement, naming of the team's inference cluster, Austin and Las Vegas hospitality, and driver and engineering access for Positron's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 10 September 2026 Positron AI announced an $875M Series C at a $5B post-money valuation: a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, SemiAnalysis Capital and Jim Clark, plus a Series C-1 of up to $500M anchored by NEA and Jim Clark, with Qatar Investment Authority, Cisco Investments and Naver Ventures joining. That is about five times the above-$1B valuation of the $230M Series B on 4 February.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026, production in the second half of 2027, a 2-megawatt engineering data centre and the Titan system that combines four to eight Asimov chips in one node. A company fifteen months from its defining product has exactly the window a multi-year partnership fills: the name has to be known before the silicon is.",
+      "label": "A launch to build a brand for"
+     },
+     {
+      "text": "Eight AI partnerships were signed in Formula 1 in the six months to May 2026: Anthropic at Williams, Oracle's strategy agent at Red Bull, CoreWeave at Aston Martin, TWG AI exclusive at Cadillac, and Groq, an inference-chip rival, at McLaren. The buyers Positron sells to, neocloud and enterprise infrastructure leaders, are the people in F1's suites.",
+      "label": "The category has already bought F1"
+     },
+     {
+      "text": "Teams close 2027 partner rosters in the fourth quarter. The United States GP in Austin in late October and the Las Vegas GP in November, a home-state race for a Reno company, both sit inside the window; a deal agreed before Austin can be announced in Nevada.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "The AI lane is the most-sold technology category on the 2026 grid, and it is taken almost everywhere: TWG AI is Cadillac's primary and exclusive AI partner; Groq is at McLaren; AMD, Snapdragon and Meta AI at Mercedes; Cognition, CoreWeave and ARM at Aston Martin; Oracle at Red Bull; Anthropic at Williams; ElevenLabs at Audi; IBM and HP crowd Ferrari; Dynatrace and Confluent crowd Racing Bulls. TGR Haas F1 Team carries none of it.",
+      "label": "The one American team without an AI partner"
+     },
+     {
+      "text": "Haas is the privateer that has competed on the grid's leanest budget, and in July 2026 trade coverage described it rewriting its marketing playbook after years of car-first spend. Positron's whole case to a data-centre buyer is more tokens per watt for less money on commodity memory. The two stories are the same sentence.",
+      "label": "A team whose story is the pitch"
+     },
+     {
+      "text": "Toyota Gazoo Racing took the title from 2026 and its technical partnership includes the team's first personal simulator at the Banbury base. Simulation, strategy models and vision workloads are inference; a partner that supplies that inference at a third of the power is a supplier the engineering side will use, not only a logo.",
+      "label": "Toyota's simulator and the compute behind it"
+     },
+     {
+      "text": "Austin in late October and Las Vegas in November are the two US rounds left in 2026, and Las Vegas is Positron's home state. Haas's US identity and Positron's Reno headquarters make the announcement stage obvious.",
+      "label": "Where it activates"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "TWG AI is primary and exclusive AI partner; Core Scientific holds the data-centre lane."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Groq, a direct inference-chip rival, is a partner."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "AMD, Snapdragon and Meta AI occupy the chip and AI lanes."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Cognition, CoreWeave and ARM occupy AI, GPU cloud and chip design."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Oracle is title partner and runs the team's AI strategy agent."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Anthropic is the multi-year Official Thinking Partner."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "ElevenLabs crowds the AI lane."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "IBM and HP crowd enterprise technology and AI."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Dynatrace and Confluent crowd the data-infrastructure lane."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Open but not chosen: no American story and no US home race; the named fallback if Haas is taken first."
+     }
+    ]
+   },
+   "date_long": "16 SEP 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "TGR Haas F1 Team",
+   "value_mode": "A",
+   "bottom_line": "$875M at $5B five days ago, a product launch fifteen months out, an inference-chip rival already on a McLaren, and the one American team with no AI partner, with Las Vegas as a home race. A sales-led company with no marketing chief and silicon still in the lab hold it at 76.",
+   "footer_date": "16 SEP 2026",
+   "score_cells": [
+    {
+     "num": 18,
+     "note": "Round 10 Sep; Austin and Las Vegas inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 19,
+     "note": "$875M at $5B; five times February's price.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "B2B silicon; the tokens-per-watt story carries it.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 14,
+     "note": "Asimov tape-out end-2026, Titan 2027; no listing.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 12,
+     "note": "MODE A: on-floor inference racks; Asimov still in the lab.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "The round is a $375M Series C at a $3.5B pre-money. A Series C-1 of up to $500M is anchored by NEA and Jim Clark, with Qatar Investment Authority, Cisco Investments and Naver Ventures joining. It follows a $230M Series B at above $1B on 4 February. A $51.6M Series A closed in July 2025. Atlas, the current system, runs in 50+ racks at Oracle Cloud Infrastructure, with Jump Trading and i3d.net in production and Cloudflare a named customer. Asimov tapes out on TSMC N3P at the end of 2026 for production in 2027.",
+   "the_case_p2": "Inference silicon has already bought a Formula 1 seat: Groq is on a McLaren, and eight AI partnerships were signed on the grid in the six months to May, with Anthropic at Williams, Oracle's strategy agent at Red Bull and TWG AI exclusive at Cadillac. Every one of those sells intelligence; Positron sells the power bill behind it, and the claim is 3.5x the performance per watt of the incumbent.",
+   "track_label": "",
+   "brief_number": "253",
+   "claims_total": 17,
+   "gridfit_note": "85 of 347 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$875M Series C at a $5B post-money valuation announced 10 Sep 2026: a $375M Series C at a $3.5B pre-money c…",
+     "value": "$875M",
+     "claim_id": 2130,
+     "verified": true,
+     "source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html"
+    },
+    {
+     "fact": "The round is a $375M Series C at a $3.5B pre-money.",
+     "value": "$375M",
+     "claim_id": 2140,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "A Series C-1 of up to $500M is anchored by NEA and Jim Clark, with Qatar Investment Authority, Cisco Invest…",
+     "value": "$500M",
+     "claim_id": 2141,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "It follows a $230M Series B at above $1B on 4 February.",
+     "value": "$230M",
+     "claim_id": 2142,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "A $51.6M Series A closed in July 2025.",
+     "value": "$51.6M",
+     "claim_id": 2143,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "AI Inference Silicon · Data-Centre Compute",
+   "value_content": "MODE A. Atlas racks on the team's own floor: strategy-model and computer-vision inference at the factory and trackside, where power and space are constrained, on hardware claiming 3.5x the performance per watt of the incumbent. In return: Official AI Inference Partner designation, sidepod and garage presence, Austin and Las Vegas hospitality for the buyers Positron sells to, and an engineering content series.",
+   "value_section": true,
+   "why_team_para": "TGR Haas F1 Team is the American privateer, with its UK base in Banbury, and it carries no AI, compute or chip partner: the lane is taken at Cadillac (TWG AI, exclusive), McLaren (Groq), Mercedes (AMD, Snapdragon, Meta AI), Aston Martin (Cognition, CoreWeave), Red Bull (Oracle) and Williams (Anthropic). Haas's commercial story is doing more with less, which is Positron's pitch to the letter, and Toyota Gazoo Racing's title from 2026 brings a simulator programme that needs compute.",
+   "deal_arch_para": "Entry as Official AI Inference Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning Asimov's tape-out, Titan's launch and a full product cycle. Estimated $4-7M a year, part-payable in Atlas and Titan systems the team would otherwise buy. Scope: sidepod placement, naming of the team's inference cluster, Austin and Las Vegas hospitality, and a content series on the cost of a token.",
+   "footer_company": "POSITRON AI",
+   "why_team_label": "WHY TGR HAAS F1 TEAM",
+   "claims_verified": 17,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The money landed on 10 September and it funds a launch: Asimov tapes out at the end of the year and Titan ships in 2027, a brand to build before the product lands. Teams close 2027 rosters in the fourth quarter; Austin and Las Vegas, Positron's home-state race, sit inside the window.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Agrawal joined as chief executive in February 2025 from Lambda, where he was chief operating officer, and runs a sales-led company with no chief marketing officer listed. Path: Thomas Sohmers, founder and Chief Technology Officer; Michael Cho, Chief Financial Officer; Seung Wook Oh, Chief Operating Officer.",
+   "decision_maker_name": "Mitesh Agrawal",
+   "decision_maker_role": "Chief Executive Officer, Positron AI",
+   "opening_angle_intro": "Lead with the power bill, not the chip.",
+   "opening_angle_quote": "&ldquo;Mitesh, Groq is on a McLaren and Anthropic is on a Williams; the one American team with no AI partner runs on doing more with less, and Las Vegas is your home race. 25 minutes before Austin?&rdquo;",
+   "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Mitesh Agrawal, Chief Executive Officer at Positron AI",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20250203502454/en/AI-Hardware-Industry-Veteran-Mitesh-Agrawal-Joins-Positron-as-CEO",
+     "excerpt": "Business Wire, 3 Feb 2025: Mitesh Agrawal, former Chief Operating Officer of Lambda, joined Positron as Chief Executive Officer. The company's own framing of its go-to-market ('driving sales ahead of product', Frontlines podcast) is sales-led; no chief marketing or chief commercial officer appears among the executives listed by CB Insights (nine executives) as of 15 Sep 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Mitesh Agrawal, Chief Executive Officer, Positron AI at Positron AI",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20250203502454/en/AI-Hardware-Industry-Veteran-Mitesh-Agrawal-Joins-Positron-as-CEO",
+     "excerpt": "Business Wire, 3 Feb 2025: Mitesh Agrawal, former Chief Operating Officer of Lambda, joined Positron as Chief Executive Officer. The company's own framing of its go-to-market ('driving sales ahead of product', Frontlines podcast) is sales-led; no chief marketing or chief commercial officer appears among the executives listed by CB Insights (nine executives) as of 15 Sep 2026.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$875M Series C at a $5B post-money valuation announced 10 Sep 2026: a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, SemiAnalysis Capital and Jim Clark, plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; about five times the above-$1B valuation of the $230M Series B of 4 Feb 2026",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Positron, the Reno inference-chip company that claims to beat Nvidia on tokens per watt with commodity memory, closed an $875M Series C at a $5B valuation on 10 September, co-led by NEA, Atreides, Valor, Andra, SemiAnalysis Capital and Jim Clark: five times its February price.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "NEA, Atreides Management, Valor Equity Partners, Andra Capital, SemiAnalysis Capital and Jim Clark (co-leads); Qatar Investment Authority, Cisco Investments and Naver Ventures; Arm and QIA in the Series B (reported, Bloomberg)",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "The round is a $375M Series C at a $3.5B pre-money.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round: $875M Series C at a $5B valuation, announced 10 Sep 2026",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A Series C-1 of up to $500M is anchored by NEA and Jim Clark, with Qatar Investment Authority, Cisco Investments and Naver Ventures joining.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Groq, an inference-chip rival, is a McLaren F1 Team partner; Anthropic is Atlassian Williams Racing's multi-year AI partner, its Claude model named the team's official thinking partner and branded on the car from the 3 Feb 2026 reveal; TWG AI is Cadillac's primary and exclusive AI partner; Oracle runs an AI strategy agent for Red Bull; eight AI partnerships were signed in Formula 1 in the six months to May 2026",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260204298262/en/TWG-AI-Joins-the-Cadillac-Formula-1-Team-as-Primary-and-Exclusive-AI-Partner",
+     "excerpt": "Business Wire, 4 Feb 2026: TWG AI joined the Cadillac Formula 1 Team as primary and exclusive AI partner in a multi-year agreement.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "It follows a $230M Series B at above $1B on 4 February.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260204250472/en/Positron-AI-Raises-$230-Million-Series-B-at-Over-$1-Billion-Valuation-to-Scale-Energy-Efficient-AI-Inference",
+     "excerpt": "Business Wire, 4 Feb 2026 (Bloomberg the same day: 'AI Chip Startup Positron Raises $230 Million From Arm, Qatar to Compete With Nvidia'): $230M Series B at a valuation above $1B to scale energy-efficient AI inference; Arm and Qatar Investment Authority among the investors (REPORTED via Bloomberg).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "TGR Haas F1 Team carries no AI, compute or chip partner; the American privateer's commercial story is doing more with less, and the Las Vegas GP is a home-state race for a Reno company",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "A $51.6M Series A closed in July 2025.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20250728912387/en/Positron-AI-Secures-$51.6-Million-in-Oversubscribed-Series-A-to-Accelerate-Inference-Optimized-Hardware",
+     "excerpt": "Business Wire, 28 Jul 2025: Positron AI closed an oversubscribed $51.6M Series A to accelerate inference-optimised hardware.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in Reno, Nevada; Atlas deployed in 50+ racks at Oracle Cloud Infrastructure; MENA expansion under regional lead Husni Khuffash",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$875M at $5B five days ago, a product launch fifteen months out, an inference-chip rival already on a McLaren, and the one American team with no AI partner, with Las Vegas as a home race.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "Anthropic at Williams",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "sponsor_db",
+     "evidence_url": "spec/active_sponsor_db.md",
+     "excerpt": "Anthropic → Atlassian Williams Racing (team_major, joined)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "event",
+   "load_bearing": true,
+   "text": "Las Vegas GP",
+   "cited_source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 10 September 2026 Positron AI announced an $875M Series C at a $5B post-money valuation: a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, SemiAnalysis Capital and Jim Clark, plus a Series C-1 of up to $500M anchored by NEA and Jim Clark, with Qatar Investment Authority, Cisco Investments and Naver Ventures joining.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "That is about five times the above-$1B valuation of the $230M Series B on 4 February.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "A $5B partner entering at partner tier in the first year of the Toyota era, bringing the neocloud, hyperscaler and enterprise-infrastructure audience to Austin and Las Vegas hospitality, the buyers the team's technology partners want to meet.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+     "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

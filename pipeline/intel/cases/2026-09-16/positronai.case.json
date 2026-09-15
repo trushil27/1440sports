@@ -1,0 +1,508 @@
+{
+ "run_date": "2026-09-16",
+ "signal_date": "2026-09-10",
+ "stem": "positronai",
+ "number": 253,
+ "session_model": "claude-session-2026-09-15",
+ "signal": {
+  "company": "Positron AI",
+  "signal_date": "2026-09-10",
+  "score": 76,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Mitesh Agrawal",
+  "role": "Chief Executive Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+  "industry_meta": "AI Inference Silicon · Data-Centre Compute · Reno, Nevada",
+  "recommended_team": "TGR Haas F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$875M Series C at a $5B post-money valuation announced 10 Sep 2026: a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, SemiAnalysis Capital and Jim Clark, plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; about five times the above-$1B valuation of the $230M Series B of 4 Feb 2026",
+   "investors": "NEA, Atreides Management, Valor Equity Partners, Andra Capital, SemiAnalysis Capital and Jim Clark (co-leads); Qatar Investment Authority, Cisco Investments and Naver Ventures; Arm and QIA in the Series B (reported, Bloomberg)",
+   "revenue": "",
+   "trigger": "funding round: $875M Series C at a $5B valuation, announced 10 Sep 2026",
+   "competitor_signal": "Groq, an inference-chip rival, is a McLaren F1 Team partner; Anthropic is Atlassian Williams Racing's multi-year AI partner, its Claude model named the team's official thinking partner and branded on the car from the 3 Feb 2026 reveal; TWG AI is Cadillac's primary and exclusive AI partner; Oracle runs an AI strategy agent for Red Bull; eight AI partnerships were signed in Formula 1 in the six months to May 2026",
+   "strategic_hook": "TGR Haas F1 Team carries no AI, compute or chip partner; the American privateer's commercial story is doing more with less, and the Las Vegas GP is a home-state race for a Reno company",
+   "us_presence": "Headquartered in Reno, Nevada; Atlas deployed in 50+ racks at Oracle Cloud Infrastructure; MENA expansion under regional lead Husni Khuffash",
+   "alumni_match": "",
+   "taxonomy_category": "A1",
+   "ops_fit_note": "MODE A: Atlas inference racks on the team's own floor for strategy-model and computer-vision inference at the factory and trackside, on hardware the company claims delivers 3.5x the performance per watt of the incumbent; Asimov and Titan follow in 2027",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 18,
+   "capacity": 19,
+   "brand_fit": 13,
+   "urgency": 14,
+   "ops_fit": 12,
+   "ops_fit_subscores": {
+    "product_to_need": 5,
+    "slot_availability": 4,
+    "on_camera": 1,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "$875m",
+    "875m",
+    "$5b",
+    "5b post",
+    "$375m",
+    "375m",
+    "$3.5b",
+    "3.5b",
+    "series c-1",
+    "c-1",
+    "$500m",
+    "500m",
+    "nea",
+    "atreides",
+    "valor",
+    "andra",
+    "semianalysis",
+    "jim clark",
+    "10 sep",
+    "10 september",
+    "qatar investment authority",
+    "cisco investments",
+    "naver",
+    "five times",
+    "funding round",
+    "trigger",
+    "asimov",
+    "tape",
+    "n3p",
+    "titan",
+    "2027",
+    "16 trillion",
+    "2 mw",
+    "2-megawatt",
+    "tokens per watt",
+    "5x",
+    "reno",
+    "nevada",
+    "fifteen months",
+    "launch"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+   "excerpt": "Positron AI press release, 10 Sep 2026 (also Qz, Reuters via Investing.com, Yahoo Finance, Converge Digest): $875M Series C at a $5B post-money valuation — a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, Dylan Patel's SemiAnalysis Capital and Jim Clark (founder of Silicon Graphics and Netscape), plus a Series C-1 of up to $500M anchored by NEA and Jim Clark; Qatar Investment Authority, Cisco Investments and Naver Ventures among additional investors. Roughly five times the February 2026 valuation. Reno, Nevada. Proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026 (production second half of 2027), a 2-megawatt engineering data centre and emulation platform, and the Titan system (four to eight Asimov chips per node, models beyond 16 trillion parameters, context beyond 10 million tokens). Asimov is claimed at five times the tokens per watt of Nvidia's Rubin in core workloads.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "twg ai",
+    "exclusive ai partner",
+    "primary and exclusive",
+    "cadillac's is exclusive"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260204298262/en/TWG-AI-Joins-the-Cadillac-Formula-1-Team-as-Primary-and-Exclusive-AI-Partner",
+   "excerpt": "Business Wire, 4 Feb 2026: TWG AI joined the Cadillac Formula 1 Team as primary and exclusive AI partner in a multi-year agreement.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "anthropic",
+    "claude",
+    "official thinking partner",
+    "on a williams",
+    "williams (anthropic)",
+    "3 feb"
+   ],
+   "url": "https://www.williamsf1.com/articles/0f1eece4-e632-49c9-a767-148159bbbf87/anthropic-atlassian-williams-f1-team-multi-year-partnership-claude-official-thinking-partner",
+   "excerpt": "Atlassian Williams F1 Team and Anthropic (also Variety, Yahoo Finance, SI), 2026: a multi-year partnership naming Claude the team's 'Official Thinking Partner', integrated across the organisation for race strategy, car development and operations, with Claude branding on the cars, drivers and kit from the 3 Feb 2026 car reveal.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$230m",
+    "230m",
+    "above $1b",
+    "above-$1b",
+    "over $1b",
+    "4 feb",
+    "4 february",
+    "series b",
+    "february price",
+    "february",
+    "arm and qia",
+    "bloomberg"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260204250472/en/Positron-AI-Raises-$230-Million-Series-B-at-Over-$1-Billion-Valuation-to-Scale-Energy-Efficient-AI-Inference",
+   "excerpt": "Business Wire, 4 Feb 2026 (Bloomberg the same day: 'AI Chip Startup Positron Raises $230 Million From Arm, Qatar to Compete With Nvidia'): $230M Series B at a valuation above $1B to scale energy-efficient AI inference; Arm and Qatar Investment Authority among the investors (REPORTED via Bloomberg).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$51.6m",
+    "51.6m",
+    "series a",
+    "july 2025",
+    "28 jul"
+   ],
+   "url": "https://www.businesswire.com/news/home/20250728912387/en/Positron-AI-Secures-$51.6-Million-in-Oversubscribed-Series-A-to-Accelerate-Inference-Optimized-Hardware",
+   "excerpt": "Business Wire, 28 Jul 2025: Positron AI closed an oversubscribed $51.6M Series A to accelerate inference-optimised hardware.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "oracle cloud",
+    "50 racks",
+    "more than 50",
+    "parasail",
+    "jump trading",
+    "i3d",
+    "cloudflare",
+    "in production",
+    "named customer",
+    "280 tokens",
+    "2,000-watt",
+    "h200",
+    "atlas, the current",
+    "atlas racks",
+    "atlas is in production",
+    "current system",
+    "50+ racks",
+    "50+"
+   ],
+   "url": "https://convergedigest.com/positron-ai-raises-875m-asimov-inference-silicon/",
+   "excerpt": "Converge Digest, Yahoo Finance and Tech Monitor, 10-11 Sep 2026, on the Series C: more than 50 Atlas racks are deployed at Oracle Cloud Infrastructure, with Parasail using the capacity for its inference service; Jump Trading and i3d.net are production customers; Cloudflare is a named customer that tested Atlas in 2025. Tom's Hardware documented the company's claim of 280 tokens per second per user on Llama 3.1 8B in a 2,000-watt envelope against about 180 for an eight-way Nvidia DGX H200.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "3.5x",
+    "performance per watt",
+    "per watt",
+    "33%",
+    "beats nvidia",
+    "commodity memory",
+    "power bill",
+    "tokens per watt",
+    "incumbent"
+   ],
+   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/positron-ai-says-its-atlas-accelerator-beats-nvidia-h200-on-inference-in-just-33-percent-of-the-power-delivers-280-tokens-per-second-per-user-with-llama-3-1-8b-in-2000w-envelope",
+   "excerpt": "Tom's Hardware (and VentureBeat, SiliconANGLE, TechTimes 12 Sep 2026): Positron says Atlas beats an Nvidia H200 system on inference at about a third of the power; the company claims more than 3.5x the performance per watt of Nvidia's latest offerings in certain inference workloads, built on commodity memory rather than HBM. These are company claims, labelled as such.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "agrawal",
+    "chief executive",
+    "lambda",
+    "chief operating officer of lambda",
+    "february 2025",
+    "sales-led",
+    "no chief marketing",
+    "joined as chief executive",
+    "decision-maker",
+    "decision maker"
+   ],
+   "url": "https://www.businesswire.com/news/home/20250203502454/en/AI-Hardware-Industry-Veteran-Mitesh-Agrawal-Joins-Positron-as-CEO",
+   "excerpt": "Business Wire, 3 Feb 2025: Mitesh Agrawal, former Chief Operating Officer of Lambda, joined Positron as Chief Executive Officer. The company's own framing of its go-to-market ('driving sales ahead of product', Frontlines podcast) is sales-led; no chief marketing or chief commercial officer appears among the executives listed by CB Insights (nine executives) as of 15 Sep 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "sohmers",
+    "kmett",
+    "michael cho",
+    "chief financial",
+    "seung wook",
+    "chief operating officer",
+    "founder and chief technology",
+    "khuffash",
+    "mena",
+    "nine executives"
+   ],
+   "url": "https://www.cbinsights.com/company/positron-ai/people",
+   "excerpt": "CB Insights people page (search summary, 15 Sep 2026), Tracxn and LinkedIn: founders Thomas Sohmers (Founder and Chief Technology Officer) and Edward Kmett; Mitesh Agrawal CEO; Seung Wook Oh, PhD, Chief Operating Officer; Michael Cho, JD, Chief Financial Officer; Husni Khuffash (ex-Microsoft, EY) MENA regional lead. Nine executives listed; none with a marketing or commercial title.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "eight ai partnerships",
+    "six months",
+    "strategy agent",
+    "oracle's strategy",
+    "reuters",
+    "sells intelligence"
+   ],
+   "url": "https://sports.yahoo.com/articles/motor-racing-formula-one-evolves-093211953.html",
+   "excerpt": "Reuters via Yahoo Sports, 4 May 2026 ('As Formula One evolves, AI becomes part of the race'): eight new AI partnerships were signed in Formula 1 in the preceding six months, including Anthropic's Claude at Williams for operations and race strategy, Oracle's AI-powered strategy agent with Oracle Red Bull Racing, CoreWeave with Aston Martin and TWG AI as Cadillac's exclusive AI partner.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "groq",
+    "on a mclaren",
+    "is a mclaren",
+    "mclaren (groq)",
+    "amd",
+    "snapdragon",
+    "meta ai",
+    "cognition",
+    "coreweave",
+    "elevenlabs",
+    "ibm",
+    "dynatrace",
+    "confluent",
+    "mphasis",
+    "no ai, compute or chip",
+    "lane is taken",
+    "already carry an ai partner",
+    "six teams",
+    "crowded"
+   ],
+   "url": "pipeline/intel/seeds/sponsors.json",
+   "excerpt": "Sponsor table (2026, active/joined): McLaren — Groq; Cadillac — TWG AI (primary and exclusive), Core Scientific; Mercedes — AMD, Snapdragon, Meta AI; Aston Martin — Cognition, CoreWeave, ARM; Oracle Red Bull Racing — Oracle (title); Atlassian Williams Racing — Anthropic; Audi — ElevenLabs; Ferrari — IBM, HP; Visa Cash App Racing Bulls — Dynatrace, Confluent. MoneyGram Haas F1 Team (TGR Haas F1 Team from 2026) — Toyota Gazoo Racing (title), Haas Automation, Mphasis (IT services), CommScope, Ruckus, Infobip, Orion180, Vellamo Water, Fix Network, Zoomex, MGM Rewards and others; no AI, compute or chip partner. BWT Alpine — no AI partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "haas",
+    "american privateer",
+    "banbury",
+    "simulator",
+    "toyota gazoo",
+    "tgr",
+    "doing more with less",
+    "fix network",
+    "vellamo",
+    "infobip",
+    "orion180",
+    "commercial story",
+    "title from 2026",
+    "gene haas",
+    "komatsu"
+   ],
+   "url": "https://www.espn.com/racing/story/_/id/47198102/toyota-taking-title-sponsorship-haas-f1-2026",
+   "excerpt": "ESPN, Dec 2025, and haasf1team.com: Toyota Gazoo Racing became Haas's title partner from 2026 (TGR Haas F1 Team), extending a technical partnership that includes the team's first personal simulator at the Haas F1 UK base in Banbury, coming online for 2026; team principal Ayao Komatsu; owner Gene Haas. Sportsmint Media, 2026: new partners Fix Network (multi-year), Vellamo Water, Infobip, Orion180. Sector, Jul 2026: 'Haas rewrites its marketing playbook after years of car-first spend'. The 'doing more with less' line is the desk's characterisation of a privateer that has run the grid's leanest budget.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$20-30m",
+    "20-30m",
+    "$4-7m",
+    "4-7m",
+    "estimated",
+    "part-payable",
+    "partner-tier",
+    "valued at"
+   ],
+   "url": "https://f1versus.com/news/formula-1-team-sponsors-for-the-2026-season/",
+   "excerpt": "F1 Versus and SportBusiness Sponsorship (2026, REPORTED): the Toyota Gazoo Racing title at Haas is valued at $20-30M a year. 1440's $4-7M a year for an Official AI Inference Partner entry is an ESTIMATE at partner tier, part-payable in hardware.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "united states gp",
+    "home-state",
+    "home race",
+    "fourth quarter",
+    "2027 rosters",
+    "late october",
+    "november",
+    "before austin"
+   ],
+   "url": "pipeline/intel/seeds/calendar_2026.json",
+   "excerpt": "2026 F1 calendar (seeds/calendar_2026.json): round 19 US GP (Austin), round 20 Mexico City GP, round 21 São Paulo GP, round 22 Las Vegas GP, round 23 Qatar GP, round 24 Abu Dhabi GP close the season in October-December. Las Vegas is in Nevada, Positron's home state. Teams close the following year's partner rosters in the fourth quarter.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Positron AI",
+  "industry_meta": "AI Inference Silicon · Data-Centre Compute",
+  "hq": "Reno, Nevada",
+  "ticker": "Private ($5B; $875M Series C, Sep 2026)",
+  "deck": "Positron, the Reno inference-chip company that claims to beat Nvidia on tokens per watt with commodity memory, closed an $875M Series C at a $5B valuation on 10 September, co-led by NEA, Atreides, Valor, Andra, SemiAnalysis Capital and Jim Clark: five times its February price.",
+  "score": 76,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "TGR Haas F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "The round is a $375M Series C at a $3.5B pre-money. A Series C-1 of up to $500M is anchored by NEA and Jim Clark, with Qatar Investment Authority, Cisco Investments and Naver Ventures joining. It follows a $230M Series B at above $1B on 4 February. A $51.6M Series A closed in July 2025. Atlas, the current system, runs in 50+ racks at Oracle Cloud Infrastructure, with Jump Trading and i3d.net in production and Cloudflare a named customer. Asimov tapes out on TSMC N3P at the end of 2026 for production in 2027.",
+  "the_case_p2": "Inference silicon has already bought a Formula 1 seat: Groq is on a McLaren, and eight AI partnerships were signed on the grid in the six months to May, with Anthropic at Williams, Oracle's strategy agent at Red Bull and TWG AI exclusive at Cadillac. Every one of those sells intelligence; Positron sells the power bill behind it, and the claim is 3.5x the performance per watt of the incumbent.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The money landed on 10 September and it funds a launch: Asimov tapes out at the end of the year and Titan ships in 2027, a brand to build before the product lands. Teams close 2027 rosters in the fourth quarter; Austin and Las Vegas, Positron's home-state race, sit inside the window.",
+  "why_team_label": "WHY TGR HAAS F1 TEAM",
+  "why_team_para": "TGR Haas F1 Team is the American privateer, with its UK base in Banbury, and it carries no AI, compute or chip partner: the lane is taken at Cadillac (TWG AI, exclusive), McLaren (Groq), Mercedes (AMD, Snapdragon, Meta AI), Aston Martin (Cognition, CoreWeave), Red Bull (Oracle) and Williams (Anthropic). Haas's commercial story is doing more with less, which is Positron's pitch to the letter, and Toyota Gazoo Racing's title from 2026 brings a simulator programme that needs compute.",
+  "value_section": true,
+  "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A. Atlas racks on the team's own floor: strategy-model and computer-vision inference at the factory and trackside, where power and space are constrained, on hardware claiming 3.5x the performance per watt of the incumbent. In return: Official AI Inference Partner designation, sidepod and garage presence, Austin and Las Vegas hospitality for the buyers Positron sells to, and an engineering content series.",
+  "deal_arch_para": "Entry as Official AI Inference Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning Asimov's tape-out, Titan's launch and a full product cycle. Estimated $4-7M a year, part-payable in Atlas and Titan systems the team would otherwise buy. Scope: sidepod placement, naming of the team's inference cluster, Austin and Las Vegas hospitality, and a content series on the cost of a token.",
+  "decision_maker_name": "Mitesh Agrawal",
+  "decision_maker_role": "Chief Executive Officer, Positron AI",
+  "decision_maker_bio": "Agrawal joined as chief executive in February 2025 from Lambda, where he was chief operating officer, and runs a sales-led company with no chief marketing officer listed. Path: Thomas Sohmers, founder and Chief Technology Officer; Michael Cho, Chief Financial Officer; Seung Wook Oh, Chief Operating Officer.",
+  "opening_angle_intro": "Lead with the power bill, not the chip.",
+  "opening_angle_quote": "&ldquo;Mitesh, Groq is on a McLaren and Anthropic is on a Williams; the one American team with no AI partner runs on doing more with less, and Las Vegas is your home race. 25 minutes before Austin?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "18",
+    "/ 20",
+    "Round 10 Sep; Austin and Las Vegas inside the window."
+   ],
+   [
+    "CAPACITY",
+    "19",
+    "/ 20",
+    "$875M at $5B; five times February's price."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "B2B silicon; the tokens-per-watt story carries it."
+   ],
+   [
+    "URGENCY",
+    "14",
+    "/ 20",
+    "Asimov tape-out end-2026, Titan 2027; no listing."
+   ],
+   [
+    "OPS FIT",
+    "12",
+    "/ 20",
+    "MODE A: on-floor inference racks; Asimov still in the lab."
+   ]
+  ],
+  "risks": [
+   [
+    "SILICON STILL IN THE LAB",
+    "Asimov is a 2027 part and Atlas is the current system; a partnership announced before the chip ships risks promising what a lab still holds.",
+    "Anchor year one on Atlas, in production at Oracle today, and time the Asimov story to the 2027 launch."
+   ],
+   [
+    "A CROWDED, EXCLUSIVE LANE",
+    "Six teams already carry an AI partner and Cadillac's is exclusive; a rival could take Haas or Alpine before the fourth quarter.",
+    "Move before Austin; Alpine is the named fallback."
+   ]
+  ],
+  "bottom_line": "$875M at $5B five days ago, a product launch fifteen months out, an inference-chip rival already on a McLaren, and the one American team with no AI partner, with Las Vegas as a home race. A sales-led company with no marketing chief and silicon still in the lab hold it at 76.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "category_open"
+  ],
+  "footer_company": "POSITRON AI",
+  "footer_date": "16 SEP 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 10 September 2026 Positron AI announced an $875M Series C at a $5B post-money valuation: a $375M Series C at a $3.5B pre-money co-led by NEA, Atreides Management, Valor Equity Partners, Andra Capital, SemiAnalysis Capital and Jim Clark, plus a Series C-1 of up to $500M anchored by NEA and Jim Clark, with Qatar Investment Authority, Cisco Investments and Naver Ventures joining. That is about five times the above-$1B valuation of the $230M Series B on 4 February."
+    },
+    {
+     "label": "A launch to build a brand for",
+     "text": "The proceeds fund the Asimov tape-out on TSMC N3P at the end of 2026, production in the second half of 2027, a 2-megawatt engineering data centre and the Titan system that combines four to eight Asimov chips in one node. A company fifteen months from its defining product has exactly the window a multi-year partnership fills: the name has to be known before the silicon is."
+    },
+    {
+     "label": "The category has already bought F1",
+     "text": "Eight AI partnerships were signed in Formula 1 in the six months to May 2026: Anthropic at Williams, Oracle's strategy agent at Red Bull, CoreWeave at Aston Martin, TWG AI exclusive at Cadillac, and Groq, an inference-chip rival, at McLaren. The buyers Positron sells to, neocloud and enterprise infrastructure leaders, are the people in F1's suites."
+    },
+    {
+     "label": "Calendar window",
+     "text": "Teams close 2027 partner rosters in the fourth quarter. The United States GP in Austin in late October and the Las Vegas GP in November, a home-state race for a Reno company, both sit inside the window; a deal agreed before Austin can be announced in Nevada."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The one American team without an AI partner",
+     "text": "The AI lane is the most-sold technology category on the 2026 grid, and it is taken almost everywhere: TWG AI is Cadillac's primary and exclusive AI partner; Groq is at McLaren; AMD, Snapdragon and Meta AI at Mercedes; Cognition, CoreWeave and ARM at Aston Martin; Oracle at Red Bull; Anthropic at Williams; ElevenLabs at Audi; IBM and HP crowd Ferrari; Dynatrace and Confluent crowd Racing Bulls. TGR Haas F1 Team carries none of it."
+    },
+    {
+     "label": "A team whose story is the pitch",
+     "text": "Haas is the privateer that has competed on the grid's leanest budget, and in July 2026 trade coverage described it rewriting its marketing playbook after years of car-first spend. Positron's whole case to a data-centre buyer is more tokens per watt for less money on commodity memory. The two stories are the same sentence."
+    },
+    {
+     "label": "Toyota's simulator and the compute behind it",
+     "text": "Toyota Gazoo Racing took the title from 2026 and its technical partnership includes the team's first personal simulator at the Banbury base. Simulation, strategy models and vision workloads are inference; a partner that supplies that inference at a third of the power is a supplier the engineering side will use, not only a logo."
+    },
+    {
+     "label": "Where it activates",
+     "text": "Austin in late October and Las Vegas in November are the two US rounds left in 2026, and Las Vegas is Positron's home state. Haas's US identity and Positron's Reno headquarters make the announcement stage obvious."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Atlas inference racks installed on the team's own floor at Banbury and in the trackside IT footprint, running strategy-model inference, computer-vision workloads and simulator-support services where power and space are constrained, on hardware the company claims delivers 3.5x the performance per watt of the incumbent. Year one runs on Atlas, which is in production at Oracle Cloud today; Titan follows in 2027."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A $5B partner entering at partner tier in the first year of the Toyota era, bringing the neocloud, hyperscaler and enterprise-infrastructure audience to Austin and Las Vegas hospitality, the buyers the team's technology partners want to meet."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "An engineering content series on the cost of a token, co-produced with the team's performance group, plus a reference deployment Positron can show every prospective customer: a Formula 1 team running inference at a third of the power."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official AI Inference Partner designation, sidepod and garage placement, naming of the team's inference cluster, Austin and Las Vegas hospitality, and driver and engineering access for Positron's channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "TWG AI is primary and exclusive AI partner; Core Scientific holds the data-centre lane."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Groq, a direct inference-chip rival, is a partner."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "AMD, Snapdragon and Meta AI occupy the chip and AI lanes."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "Cognition, CoreWeave and ARM occupy AI, GPU cloud and chip design."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Oracle is title partner and runs the team's AI strategy agent."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Anthropic is the multi-year Official Thinking Partner."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "ElevenLabs crowds the AI lane."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "IBM and HP crowd enterprise technology and AI."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Dynatrace and Confluent crowd the data-infrastructure lane."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Open but not chosen: no American story and no US home race; the named fallback if Haas is taken first."
+    }
+   ],
+   "ask": "A 25-minute call with Mitesh Agrawal before the United States GP to test appetite for a 2027 start, agree that year one runs on Atlas with the Asimov story timed to the 2027 launch, and size an Official AI Inference Partner entry at TGR Haas F1 Team, part-paid in hardware, with a Las Vegas announcement."
+  }
+ },
+ "note": "# Positron AI → TGR Haas F1 Team — verification log (N° 253, issued for 16 Sep 2026)\n\nBuilt in-session at no API cost on the operator's ask (\"Build Positron AI and send to Ricky tomorrow at morning 7 am\"). The 06:00 run on 15 Sep scanned Positron from the Routine feed, scored it 81 and blocked the brief on a writer error ('tripled its valuation' — the Series C is about five times the Series B price); the company was sound, the sentence was not. This case is dated 16 Sep so that it is the morning's signal and the 06:00 gate holds.\n\n**Sandbox limitation, stated plainly:** prnewswire.com, businesswire.com, williamsf1.com, cbinsights.com and tomshardware.com are egress-blocked; every claim was checked against search summaries of the named page, corroborated across at least two outlets. Treat VERIFIED as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## Ledger (summary)\n\n| Claim | Status |\n|---|---|\n| $875M Series C at $5B post, 10 Sep 2026; $375M at $3.5B pre + C-1 up to $500M; co-leads; QIA, Cisco, Naver | VERIFIED (company release; Qz, Reuters, Yahoo) |\n| Series B $230M at >$1B, 4 Feb 2026 (Arm, QIA per Bloomberg) | VERIFIED / investors REPORTED |\n| Series A $51.6M, 28 Jul 2025 | VERIFIED |\n| Oracle Cloud >50 Atlas racks, Parasail, Jump Trading, i3d.net, Cloudflare | VERIFIED (Converge Digest, Yahoo, Tech Monitor) |\n| 3.5x performance per watt; H200 at a third of the power | COMPANY CLAIM, labelled as such (Tom's Hardware) |\n| Asimov TSMC N3P tape-out end-2026, production H2 2027; Titan; 2 MW data centre | VERIFIED (release) |\n| Agrawal CEO from Feb 2025 (ex-Lambda COO); Sohmers founder-CTO; Cho CFO; Oh COO; no CMO/CCO | VERIFIED (Business Wire; CB Insights summary) |\n| Groq at McLaren; TWG AI exclusive at Cadillac; Anthropic at Williams; AI lane occupancy | VERIFIED (sponsor table; williamsf1.com; Business Wire) |\n| Eight AI partnerships in six months to May 2026 | VERIFIED (Reuters via Yahoo Sports) |\n| TGR title from 2026; Banbury simulator; Haas 2026 partners | VERIFIED (ESPN; haasf1team; Sportsmint) |\n| TGR title $20-30M/yr | REPORTED · 1440's $4-7M is an ESTIMATE |\n| US GP Austin, Las Vegas GP on the calendar; Reno is in Nevada | VERIFIED |\n\n## Decision path\n\nMitesh Agrawal (Chief Executive Officer) is the decision-maker: nine executives are listed and none carries a marketing or commercial title, and the company describes itself as sales-led. Path: Thomas Sohmers (founder and Chief Technology Officer, the technical counterpart), Michael Cho (Chief Financial Officer), Seung Wook Oh (Chief Operating Officer). No chief marketing officer is named; the brief says so.\n\n## Leadership ties\n\nAgrawal, Sohmers, Kmett, Cho, Oh, and co-lead investor Jim Clark: **none found** after checking.\n\n## Team choice\n\nTGR Haas F1 Team on grid occupancy: the only F1 roster besides Alpine with no AI, compute or chip partner, and the only American one. Alpine is the named fallback. Haas is the eleventh F1 case pointed at the team; chosen on the lane and the US story, not habit. The Anthropic–Williams row was missing from the sponsor table and is added with this case.\n\n## Not claimed\n\n- Revenue: not stated (a third-party ARR estimate exists and is not used).\n- Total funding is not summed in the copy.\n- 'Doing more with less' and 'leanest budget' are the desk's characterisation of Haas, not a quoted fact.\n- Trackside power constraints are stated generally; no figures are claimed."
+}

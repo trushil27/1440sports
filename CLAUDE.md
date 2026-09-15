@@ -240,6 +240,17 @@ Michelin at Jaguar — Michelin's only Jaguar link is the I-PACE eTROPHY (2018-1
 S9. Removed, rebuilt, republished; the MD holds the 13 Sep PDF. **Proofpoint (checked 15 Sep):** watch row, not a
 case — Thoma Bravo private since 2021, >$2B ARR, Hornetsecurity $1.8B (Dec 2025), CMO Joyce Kim from 1 Dec 2025,
 but the only in-window event is a July 2026 amend-and-extend of $5B+ loans to 2030; re-open on an S-1.
+**N° 253 Positron AI → TGR Haas F1 Team (76/100, MODE A, dated 16 Sep 2026, built 15 Sep on request):** the 06:00
+run had scored it 81 and discarded it on a writer slip ('tripled' — the $875M Series C at $5B is ~5x the Series B); the
+company was sound. Buyer = CEO Mitesh Agrawal (no CMO/CCO among nine executives); Haas chosen on the only open AI/compute
+lane besides Alpine plus the Las Vegas home-state race. Anthropic→Williams row added (was missing); AI-lane category rows
+added (Groq, TWG AI, Meta AI, Cognition, CoreWeave, ARM, ElevenLabs, IBM, Dynatrace, Confluent, Mphasis, Core Scientific).
+Two runner lessons: the sponsor-table pair parser reads 'Official Thinking Partner with Claude' as a brand/team pair
+(reword, don't fight it); dating a case tomorrow makes the 06:00 gate hold, so an on-request morning brief costs no scan.
+**Suniva** screened (project finance, merger not closed, 49); **Félix** watched (near miss, 64; MoneyGram-at-Haas precedent).
+**Open pipeline fix:** a contradicted load-bearing claim in the daily run discards the candidate; it should trigger one
+corrected rewrite (would have shipped Positron at 81 on 15 Sep).
+
 
 ## The two-tier product
 
