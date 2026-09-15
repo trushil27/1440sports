@@ -1,0 +1,694 @@
+{
+ "run": {
+  "id": 204,
+  "date": "2026-09-17",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "usage": {
+    "calls": {},
+    "tokens": {
+     "input": 0,
+     "output": 0,
+     "cache_read": 0,
+     "cache_write": 0
+    },
+    "estimated_usd": 0.0
+   },
+   "rebuild": true,
+   "sources": {
+    "n8n": 0,
+    "status": "no mailbox configured — scanner only",
+    "routine": 0,
+    "scanner": 1,
+    "candidates": 0,
+    "to_research": []
+   },
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-vg5s_gtd/2026-09-17/waldenrobotics.pdf",
+     "web": "/tmp/case-pdf-vg5s_gtd/2026-09-17/waldenrobotics.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Walden Robotics",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 10
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 269,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 304,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 70,
+     "reason": "top ranking score",
+     "company": "Walden Robotics",
+     "decision": "selected",
+     "signal_date": "2026-07-15"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Walden Robotics",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 70,
+   "score_breakdown": {
+    "cap": null,
+    "base": 70,
+    "total": 70,
+    "timing": 14,
+    "ops_fit": 14,
+    "ranking": 70,
+    "urgency": 13,
+    "capacity": 16,
+    "brand_fit": 13,
+    "alumni_boost": 0,
+    "of_gate_applied": true,
+    "ops_fit_subscores": {
+     "lock_in": 2,
+     "on_camera": 3,
+     "product_to_need": 5,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": true,
+     "brand_fit": 13
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 70,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 70,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "TGR Haas F1 Team",
+   "source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+   "trigger_date": "2026-07-15",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 254,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "A",
+  "web_html_path": "/tmp/case-pdf-vg5s_gtd/2026-09-17/waldenrobotics.web.html",
+  "brief_data": {
+   "hq": "Cambridge, Massachusetts",
+   "deck": "Walden Robotics, the Toyota Research Institute spin-out whose wheeled, two-armed robots have worked a Toyota plant floor since February, came out of stealth on 15 July with a $300M seed at a $1.1B valuation, co-led by Toyota and Deviation Capital, with Nvidia, Boeing and Samsung Ventures behind it.",
+   "risks": [
+    {
+     "label": "A SEED-STAGE MARKETING BUDGET",
+     "detail": "The $300M funds robots and deployments; no chief marketing officer or marketing function owns a sponsorship.",
+     "counter": "Enter at partner tier, part-paid in deployments; sell it as a reference customer and a recruiting stage."
+    },
+    {
+     "label": "TOYOTA'S PORTFOLIO, NOT ITS BRAND",
+     "detail": "Toyota is an investor, not the owner; a Walden logo on a TGR-titled car needs TGR's comfort.",
+     "counter": "Open through the investor; Williams is the fallback if TGR declines."
+    }
+   ],
+   "score": 70,
+   "ticker": "Private ($1.1B; $300M seed, Jul 2026)",
+   "company": "Walden Robotics",
+   "gridfit": [
+    {
+     "team": "TGR Haas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": true
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "label": "TAKEN",
+     "detail": "Siemens",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "label": "TAKEN",
+     "detail": "Siemens",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "label": "OPEN",
+     "detail": "no rival in this category lane",
+     "status": "open",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_open",
+    "investor_link"
+   ],
+   "sources": [
+    "https://www.bostonglobe.com/2026/07/15/business/walden-robotics-cambridge-toyota-humanoid/",
+    "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+    "https://global.toyota/en/newsroom/corporate/41645635.html"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Russ Tedrake before the United States GP, opened alongside the Toyota investor relationship, to test appetite for a 2027 start, agree a winter-build pilot at Kannapolis as year one, and size an Official Robotics Partner entry at TGR Haas F1 Team, part-paid in deployments, with a US announcement.",
+    "value": [
+     {
+      "text": "Walden robots deployed on the Kannapolis and Banbury floors: tending the team's CNC machines, tool setting, kitting parts for the car build and loading and unloading between stations, the same tasks they run in shifts alongside human teams at Toyota. The pilot-to-production cycle at Toyota was under two months, which fits inside a winter build. The team gets capacity in a workforce-constrained shop; Walden gets its first non-automotive-OEM reference deployment in a factory the whole industry watches.",
+      "label": "Operational workstream (Mode A)"
+     },
+     {
+      "text": "A $1.1B partner entering at partner tier in the first year of the Toyota era, with Nvidia, Boeing, Samsung and CoreWeave on its cap table and manufacturers as its customers: Austin and Las Vegas hospitality that brings the automotive, aerospace and semiconductor buyers the team's other technology partners want to meet.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A factory-floor content series on robots building a race car, co-produced with the team's operations group, plus the recruiting stage a company hiring against a $300M seed needs: MIT and Toyota Research Institute engineers watching their robots on a Formula 1 floor.",
+      "label": "Content and ecosystem"
+     },
+     {
+      "text": "Official Robotics Partner designation, sidepod and garage placement, naming of the Kannapolis robot cell, Austin and Las Vegas hospitality, and driver and engineering access for Walden's channels.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 15 July 2026 Walden Robotics came out of stealth with a $300M seed at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital, with Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures as strategic investors and Menlo Ventures, NextView, Squarepoint Capital and others alongside. The Boston Globe called it one of the Boston area's biggest robotics deals ever.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The company spun out of Toyota Research Institute in January 2026 and had robots doing production work at a Toyota plant in North America by February, moving from first pilot to real work in under two months. Its own line is that the hard problem in robotics is now deployment, not research. A company selling deployments to manufacturers needs a stage where manufacturers, engineers and recruits are watching, and a Formula 1 factory is one.",
+      "label": "A deployment company, not a lab"
+     },
+     {
+      "text": "The seed is 64 days old on the issue date, inside the desk's 90-day window but not fresh, which is why timing scores 14 and not 18. What keeps it live is the calendar: 2027 partner rosters close in the fourth quarter, and the winter build from December to February is exactly when a factory-floor pilot can run without touching a race weekend.",
+      "label": "Two months old, still inside the window"
+     },
+     {
+      "text": "The United States GP in Austin in late October and the Las Vegas GP in November are the two US rounds left in 2026. A deal agreed before Austin can be announced in the United States and put robots on the Kannapolis floor for the 2027 car build.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Toyota Gazoo Racing replaced MoneyGram as Haas's title partner from 2026, on top of the technical partnership signed in October 2024 that covers vehicle development, wind-tunnel testing, carbon-fibre parts and a simulator at Banbury, under the banner People, Product, Pipeline. Toyota co-led Walden's seed through Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures, and Tedrake spent a decade inside Toyota Research Institute. No other team on the grid has a path this short.",
+      "label": "The introduction runs through the investor"
+     },
+     {
+      "text": "Haas is owned by Gene Haas, founder of Haas Automation, the largest CNC machine-tool builder in North America, and the team's CNC shop is central to operations at Kannapolis. Machine tending, tool setting and parts kitting are the tasks Walden's robots already do in shifts at Toyota. The workstream is not a metaphor: the robots would tend the machines the owner's company builds.",
+      "label": "A team that already builds with machines"
+     },
+     {
+      "text": "No robotics brand sits on any F1 roster in 2026. Formula E is closed: ABB, a global robotics and automation group, has been the championship's title partner since 2018, so a rival robotics brand has no home there, which is why the 10 September pool pointer at Jaguar TCS Racing is wrong. In F1, Siemens holds the industrial-automation lane at Oracle Red Bull Racing and Visa Cash App Racing Bulls, and every carmaker-aligned team is awkward for a Toyota-backed company. Haas and Williams are the independents, and only Haas carries the Toyota name.",
+      "label": "The only lane on either grid"
+     },
+     {
+      "text": "Austin in late October and Las Vegas in November, with the Kannapolis factory an hour from Charlotte for a US press moment, and the Banbury base for the European season.",
+      "label": "Where it activates"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Every Formula E team",
+      "reason": "ABB, a robotics and automation group, is the championship's title partner since 2018; a rival robotics brand has no lane in the series. The 10 September pool pointer at Jaguar TCS Racing is withdrawn."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Siemens holds the industrial-automation lane."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Siemens holds the industrial-automation lane."
+     },
+     {
+      "team": "Cadillac F1 Team",
+      "reason": "GM-aligned; a Toyota-backed company on a General Motors entry."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "A carmaker's works team; awkward for a Toyota portfolio company."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "A carmaker's works team; awkward for a Toyota portfolio company."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "A carmaker's works team; awkward for a Toyota portfolio company."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Renault-owned; awkward for a Toyota portfolio company."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Honda power from 2026 and CoreWeave, a Walden investor, already on the roster; a carmaker alignment a Toyota-backed company would not cross."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "A carmaker in its own right; awkward for a Toyota portfolio company."
+     },
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Open and independent but no Toyota link; the named fallback if Toyota Gazoo Racing declines."
+     }
+    ]
+   },
+   "date_long": "17 SEP 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "TGR Haas F1 Team",
+   "value_mode": "A",
+   "bottom_line": "$300M at $1.1B on 15 July, robots at work in a Toyota plant since February, the Toyota-titled team with its own CNC shop, and no robotics brand on the grid. No marketing chief and a two-month-old trigger hold it at 70.",
+   "footer_date": "17 SEP 2026",
+   "score_cells": [
+    {
+     "num": 14,
+     "note": "Seed 15 Jul; Austin, Las Vegas and the winter build in window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 16,
+     "note": "$300M at $1.1B; a seed for deployments, not marketing.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 13,
+     "note": "Factory robots are motorsport-native; the Toyota tie carries it.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 13,
+     "note": "Hiring and credibility; no launch or listing date.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 14,
+     "note": "MODE A: machine tending and kitting at Kannapolis, Banbury.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "The company was founded in January 2026 out of Toyota Research Institute by Russ Tedrake, the MIT professor who ran TRI's large-behavior-model work. Its robots have two arms and a sensor head on a wheeled base, no legs, and run on Large Behavior Models that learn a task through practice. At a Toyota plant in North America they went from first pilot to production in under two months and now run shifts alongside human teams: machine tending, tool setting, parts kitting, loading and unloading. Strategic partners span automotive, aerospace, semiconductors, electronics and logistics.",
+   "the_case_p2": "No robotics brand sits on the 2026 F1 grid, and the one team titled by Walden's lead investor runs its own CNC shop: Haas is owned by Gene Haas, founder of Haas Automation, the largest CNC machine-tool builder in North America. Machine tending is the task Walden's robots already do at Toyota. The lane is open and the workstream is literal.",
+   "track_label": "",
+   "brief_number": "254",
+   "claims_total": 12,
+   "gridfit_note": "85 of 347 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$300M seed at a $1.1B valuation announced 15 Jul 2026, co-led by Toyota (Toyota Motor Corporation, Toyota I…",
+     "value": "$300M",
+     "claim_id": 2161,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today"
+    },
+    {
+     "fact": "funding round: valued at $1.1B on 15 Jul 2026 by a $300M seed, out of stealth six months after spinning out…",
+     "value": "$1.1B",
+     "claim_id": 2163,
+     "verified": true,
+     "source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today"
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "General-Purpose Robotics · Factory Automation",
+   "value_content": "MODE A. Walden robots on the Kannapolis and Banbury floors doing what they do at Toyota: tending the team's CNC machines, tool setting, kitting parts for the car build and loading between stations, on a pilot-to-production cycle Toyota ran in under two months. In return: Official Robotics Partner designation, sidepod and garage presence, Austin and Las Vegas hospitality for the manufacturers Walden sells to, and a content series.",
+   "value_section": true,
+   "why_team_para": "Toyota Gazoo Racing took the title at Haas from 2026 after a 2024 technical partnership, and Toyota co-led Walden's seed: the introduction runs through the investor. Haas is the American privateer, based in Kannapolis and Banbury, with a CNC shop at the centre of its operations. Formula E is closed to the category: ABB, a robotics and automation group, has been its title partner since 2018. Carmaker-aligned teams are awkward for a Toyota-backed company; Williams is the only other independent.",
+   "deal_arch_para": "Entry as Official Robotics Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the first deployments beyond Toyota and two car builds. Estimated $3-5M a year, part-payable in robot deployments the team would otherwise staff. Scope: sidepod placement, naming of the Kannapolis robot cell, Austin and Las Vegas hospitality, and a factory content series.",
+   "footer_company": "WALDEN ROBOTICS",
+   "why_team_label": "WHY TGR HAAS F1 TEAM",
+   "claims_verified": 12,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The seed closed on 15 July and the deployments it funds are the story; a company hiring against a $300M cheque needs a stage engineers watch. Teams close 2027 rosters in the fourth quarter, Austin and Las Vegas sit inside the window, and the winter build is when a factory pilot runs.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Tedrake is an MIT professor who spent a decade at Toyota Research Institute, latterly senior vice president of large behavior models. No chief marketing officer is listed. Path: Adrien Gaidon, co-founder and Chief Strategy Officer; Ben Burchfiel, co-founder and Chief Technology Officer; Dave Johnson, Chief Product Officer.",
+   "decision_maker_name": "Russ Tedrake",
+   "decision_maker_role": "Co-founder and Chief Executive Officer, Walden Robotics",
+   "opening_angle_intro": "Lead with the CNC shop, not the logo.",
+   "opening_angle_quote": "&ldquo;Russ, your lead investor's racing arm puts its name on the one F1 team that runs its own CNC shop, your robots already tend Toyota's machines, and nobody on the grid has a robotics partner. 25 minutes before Austin?&rdquo;",
+   "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Russ Tedrake, Co-founder and Chief Executive Officer at Walden Robotics",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bostonglobe.com/2026/07/15/business/walden-robotics-cambridge-toyota-humanoid/",
+     "excerpt": "Boston Globe, 15 Jul 2026 ('Stealthy Toyota spinout gets one of Boston area's biggest robotics deals ever') and Bloomberg the same day: Russ Tedrake, co-founder and chief executive, is an MIT professor (the university's Toyota Professor of Electrical Engineering and Computer Science) who spent a decade at Toyota Research Institute, latterly as senior vice president of large behavior models, before spinning the company out of the lab in January 2026. Cambridge, Massachusetts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Russ Tedrake, Co-founder and Chief Executive Officer, Walden Robotics at Walden Robotics",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bostonglobe.com/2026/07/15/business/walden-robotics-cambridge-toyota-humanoid/",
+     "excerpt": "Boston Globe, 15 Jul 2026 ('Stealthy Toyota spinout gets one of Boston area's biggest robotics deals ever') and Bloomberg the same day: Russ Tedrake, co-founder and chief executive, is an MIT professor (the university's Toyota Professor of Electrical Engineering and Computer Science) who spent a decade at Toyota Research Institute, latterly as senior vice president of large behavior models, before spinning the company out of the lab in January 2026. Cambridge, Massachusetts.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$300M seed at a $1.1B valuation announced 15 Jul 2026, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Walden Robotics, the Toyota Research Institute spin-out whose wheeled, two-armed robots have worked a Toyota plant floor since February, came out of stealth on 15 July with a $300M seed at a $1.1B valuation, co-led by Toyota and Deviation Capital, with Nvidia, Boeing and Samsung Ventures behind it.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Toyota and Deviation Capital (co-leads); Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures as strategic investors; Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "a company hiring against a $300M cheque needs a stage engineers watch.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round: valued at $1.1B on 15 Jul 2026 by a $300M seed, out of stealth six months after spinning out of Toyota Research Institute in January 2026",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$300M at $1.1B on 15 July, robots at work in a Toyota plant since February, the Toyota-titled team with its own CNC shop, and no robotics brand on the grid.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "No robotics brand on the 2026 F1 grid (sponsor table); ABB, a robotics and automation group, has been Formula E's title partner since 2018; Siemens holds the industrial-automation lane at Oracle Red Bull Racing and Visa Cash App Racing Bulls",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://global.toyota/en/newsroom/corporate/41645635.html",
+     "excerpt": "Toyota global newsroom, Oct 2024, haasf1team.com and ESPN, Dec 2025: Toyota Gazoo Racing and Haas agreed a multi-year technical partnership in October 2024 - vehicle development, data analysis, wind-tunnel testing and carbon-fibre parts, with a simulator installed at the Banbury base for 2026 - under the banner 'People, Product, Pipeline' (developing drivers, engineers and mechanics). From 2026 TGR replaced MoneyGram as title partner and the entry is TGR Haas F1 Team. TGR Europe's base is in Cologne.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 15 July 2026 Walden Robotics came out of stealth with a $300M seed at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital, with Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures as strategic investors and Menlo Ventures, NextView, Squarepoint Capital and others alongside.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Toyota Gazoo Racing holds the title at Haas from 2026 and Toyota co-led Walden's seed; Haas runs its own CNC shop at Kannapolis, founder Gene Haas being the founder of Haas Automation, the largest CNC machine-tool builder in North America",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "A $1.1B partner entering at partner tier in the first year of the Toyota era, with Nvidia, Boeing, Samsung and CoreWeave on its cap table and manufacturers as its customers: Austin and Las Vegas hospitality that brings the automotive, aerospace and semiconductor buyers the team's other technology partners want to meet.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in Cambridge, Massachusetts; robots in production at a Toyota plant in North America since February 2026",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "A factory-floor content series on robots building a race car, co-produced with the team's operations group, plus the recruiting stage a company hiring against a $300M seed needs: MIT and Toyota Research Institute engineers watching their robots on a Formula 1 floor.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+     "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "The United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Las Vegas GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3 | note: (promoted by LVCVA, Heineken silver activations)",
+     "excerpt": "round 22: Las Vegas GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

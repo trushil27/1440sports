@@ -1,0 +1,453 @@
+{
+ "run_date": "2026-09-17",
+ "signal_date": "2026-07-15",
+ "stem": "waldenrobotics",
+ "number": 254,
+ "session_model": "claude-session-2026-09-15",
+ "signal": {
+  "company": "Walden Robotics",
+  "signal_date": "2026-07-15",
+  "score": 70,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Russ Tedrake",
+  "role": "Co-founder and Chief Executive Officer",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+  "industry_meta": "General-Purpose Robotics · Factory Automation · Cambridge, Massachusetts",
+  "recommended_team": "TGR Haas F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$300M seed at a $1.1B valuation announced 15 Jul 2026, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital",
+   "investors": "Toyota and Deviation Capital (co-leads); Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures as strategic investors; Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures",
+   "revenue": "",
+   "trigger": "funding round: valued at $1.1B on 15 Jul 2026 by a $300M seed, out of stealth six months after spinning out of Toyota Research Institute in January 2026",
+   "competitor_signal": "No robotics brand on the 2026 F1 grid (sponsor table); ABB, a robotics and automation group, has been Formula E's title partner since 2018; Siemens holds the industrial-automation lane at Oracle Red Bull Racing and Visa Cash App Racing Bulls",
+   "strategic_hook": "Toyota Gazoo Racing holds the title at Haas from 2026 and Toyota co-led Walden's seed; Haas runs its own CNC shop at Kannapolis, founder Gene Haas being the founder of Haas Automation, the largest CNC machine-tool builder in North America",
+   "us_presence": "Headquartered in Cambridge, Massachusetts; robots in production at a Toyota plant in North America since February 2026",
+   "alumni_match": "",
+   "taxonomy_category": "A2",
+   "ops_fit_note": "MODE A: robots on the Kannapolis and Banbury floors doing what they do at Toyota - machine tending, tool setting, parts kitting",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 14,
+   "capacity": 16,
+   "brand_fit": 13,
+   "urgency": 13,
+   "ops_fit": 14,
+   "ops_fit_subscores": {
+    "product_to_need": 5,
+    "slot_availability": 4,
+    "on_camera": 3,
+    "lock_in": 2
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "$300m",
+    "300m",
+    "$1.1b",
+    "1.1b",
+    "15 jul",
+    "15 july",
+    "toyota",
+    "deviation",
+    "nvidia",
+    "boeing",
+    "ae ventures",
+    "samsung",
+    "prologis",
+    "coreweave",
+    "calibrate",
+    "colle",
+    "shine capital",
+    "nextview",
+    "squarepoint",
+    "one madison",
+    "kas venture",
+    "menlo",
+    "funding round",
+    "trigger",
+    "seed",
+    "stealth",
+    "january",
+    "toyota research institute",
+    "cambridge",
+    "north america",
+    "since february",
+    "february 2026",
+    "under two months",
+    "in production",
+    "large behavior",
+    "lbm",
+    "wheels",
+    "a2"
+   ],
+   "url": "https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today",
+   "excerpt": "Walden Robotics release, Business Wire, 15 Jul 2026 (also Yahoo Finance, Bloomberg, Boston Globe, TechCrunch-tier coverage the same day): Walden Robotics launched out of stealth with $300M in seed funding at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital; strategic investors Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures; financial investors Calibrate Ventures, Colle Capital, Shine Capital, NextView Ventures, Squarepoint Capital, One Madison Group, KAS Venture Partners and Menlo Ventures, among others. Founded in January 2026 out of Toyota Research Institute by robotics and AI researchers from TRI, MIT, Stanford and Amazon; headquartered in Cambridge, Massachusetts. Since February its general-purpose robots (two arms and a sensor head on a wheeled or fixed base, no legs) have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months. The robots run on Large Behavior Models (LBMs), the model class the team helped pioneer, and learn new tasks through practice.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "tedrake",
+    "chief executive",
+    "mit",
+    "toyota professor",
+    "senior vice president",
+    "decade",
+    "spun the company out",
+    "spinning the company out",
+    "boston area",
+    "biggest robotics"
+   ],
+   "url": "https://www.bostonglobe.com/2026/07/15/business/walden-robotics-cambridge-toyota-humanoid/",
+   "excerpt": "Boston Globe, 15 Jul 2026 ('Stealthy Toyota spinout gets one of Boston area's biggest robotics deals ever') and Bloomberg the same day: Russ Tedrake, co-founder and chief executive, is an MIT professor (the university's Toyota Professor of Electrical Engineering and Computer Science) who spent a decade at Toyota Research Institute, latterly as senior vice president of large behavior models, before spinning the company out of the lab in January 2026. Cambridge, Massachusetts.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "burchfiel",
+    "chief technology",
+    "gaidon",
+    "chief strategy",
+    "stanford",
+    "led the ml",
+    "machine learning",
+    "dave johnson",
+    "chief product",
+    "draper",
+    "dexai",
+    "marchese",
+    "amazon robotics",
+    "romano",
+    "berkshire grey",
+    "kiva",
+    "no chief marketing",
+    "no marketing",
+    "commercial title",
+    "founders only"
+   ],
+   "url": "https://www.therobotreport.com/walden-robotics-launches-1-1b-valuation-general-purpose-robots/",
+   "excerpt": "The Robot Report, 15 Jul 2026, waldenrobotics.com/company and LinkedIn (search summaries, 15 Sep 2026): co-founder and Chief Technology Officer Ben Burchfiel; co-founder and Chief Strategy Officer Adrien Gaidon (led the ML organisation at Toyota Research Institute, adjunct professor at Stanford); Chief Product Officer Dave Johnson (Draper Labs, Dexai Robotics); founding head of hardware Andy Marchese (a decade at Amazon Robotics); head of software Joe Romano (Berkshire Grey, Kiva Systems). The company page lists CEO, CTO, COO, CPO, CSO, Principal Architect and Head of AI roles; no chief marketing officer, chief commercial officer or head of partnerships appears. The decision path is founders only.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "machine tending",
+    "tool setting",
+    "kitting",
+    "assembly",
+    "loading and unloading",
+    "cleaning",
+    "shifts",
+    "alongside human",
+    "automotive, aerospace",
+    "semiconductors",
+    "logistics",
+    "life sciences",
+    "multiple industries",
+    "strategic partners in"
+   ],
+   "url": "https://www.dcvelocity.com/material-handling/robotics/walden-robotics-launches-humanoid-robots-for-manufacturing-and-logistics",
+   "excerpt": "DC Velocity, i-SCOOP and ASSEMBLY, Jul 2026 (search summaries): launch materials highlight machine tending, tool setting, parts kitting and assembly - loading and unloading car parts, cleaning machinery and kitting for assembly - with the North American Toyota factory deployment running shifts alongside human teams. Walden began working with customers across multiple industries at launch, with strategic partners in automotive, aerospace, semiconductors, electronics, logistics and life sciences.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "kannapolis",
+    "banbury",
+    "maranello",
+    "cnc shop",
+    "cnc machine",
+    "haas automation",
+    "gene haas",
+    "largest cnc",
+    "machine-tool",
+    "machine tool",
+    "european base",
+    "design office",
+    "american privateer",
+    "own cnc"
+   ],
+   "url": "https://www.haasf1team.com/news/inside-hq-exploring-our-us-base",
+   "excerpt": "haasf1team.com ('Inside the HQ: Exploring our US base'; 'United States'): the team's headquarters is in Kannapolis, North Carolina, with a European base in Banbury, Oxfordshire, that turns the cars around between races, and a design office in Maranello. Founder Gene Haas is the founder of Haas Automation, the largest CNC machine-tool builder in North America, and the team's CNC shop is central to operations on site in the US. Haas is the American privateer on the grid.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "toyota gazoo",
+    "tgr",
+    "title from 2026",
+    "title partner",
+    "technical partnership",
+    "october 2024",
+    "people, product, pipeline",
+    "people-product-pipeline",
+    "simulator",
+    "wind tunnel",
+    "carbon",
+    "cologne",
+    "engineers and mechanics",
+    "moneygram"
+   ],
+   "url": "https://global.toyota/en/newsroom/corporate/41645635.html",
+   "excerpt": "Toyota global newsroom, Oct 2024, haasf1team.com and ESPN, Dec 2025: Toyota Gazoo Racing and Haas agreed a multi-year technical partnership in October 2024 - vehicle development, data analysis, wind-tunnel testing and carbon-fibre parts, with a simulator installed at the Banbury base for 2026 - under the banner 'People, Product, Pipeline' (developing drivers, engineers and mechanics). From 2026 TGR replaced MoneyGram as title partner and the entry is TGR Haas F1 Team. TGR Europe's base is in Cologne.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "no robotics brand",
+    "robotics brand",
+    "abb",
+    "since 2018",
+    "siemens",
+    "industrial-automation lane",
+    "industrial automation",
+    "coreweave is",
+    "aston martin",
+    "sponsor table",
+    "grid occupancy",
+    "lane is open",
+    "open lane",
+    "gm",
+    "general motors",
+    "renault",
+    "honda",
+    "carmaker"
+   ],
+   "url": "pipeline/intel/seeds/sponsors.json",
+   "excerpt": "Sponsor table (2026, active/joined) and team profiles: no robotics or humanoid brand on any of the eleven F1 rosters. ABB is the title partner of the Formula E championship since 2018 (the ABB FIA Formula E World Championship) and is a global robotics and automation group, which closes FE to a rival robotics brand. Siemens (industrial software and automation) is a partner of Oracle Red Bull Racing and Visa Cash App Racing Bulls. CoreWeave, a Walden investor, is a partner of Aston Martin Aramco F1 Team. Toyota Gazoo Racing is the title partner at Haas. Carmaker alignment on the 2026 grid: Cadillac (GM), Mercedes, Ferrari, Audi, Alpine (Renault), Aston Martin (Honda power from 2026), McLaren; Williams and Haas are the independents.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "$20-30m",
+    "20-30m",
+    "$3-5m",
+    "3-5m",
+    "estimated",
+    "part-payable",
+    "part-paid",
+    "partner tier",
+    "partner-tier",
+    "valued at"
+   ],
+   "url": "https://f1versus.com/news/formula-1-team-sponsors-for-the-2026-season/",
+   "excerpt": "F1 Versus and SportBusiness Sponsorship (2026, REPORTED): the Toyota Gazoo Racing title at Haas is valued at $20-30M a year. 1440's $3-5M a year for an Official Robotics Partner entry is an ESTIMATE at partner tier, part-payable in robot deployments.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "austin",
+    "las vegas",
+    "united states gp",
+    "fourth quarter",
+    "2027 rosters",
+    "late october",
+    "november",
+    "before austin",
+    "off-season",
+    "winter build"
+   ],
+   "url": "pipeline/intel/seeds/calendar_2026.json",
+   "excerpt": "2026 F1 calendar (seeds/calendar_2026.json): round 19 United States GP (Austin), round 20 Mexico City GP, round 21 São Paulo GP, round 22 Las Vegas GP, round 23 Qatar GP, round 24 Abu Dhabi GP close the season in October-December. Teams close the following year's partner rosters in the fourth quarter; the winter build for the 2027 car runs December to February, which is when a factory-floor pilot can run without touching a race weekend.",
+   "method": "calendar"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Walden Robotics",
+  "industry_meta": "General-Purpose Robotics · Factory Automation",
+  "hq": "Cambridge, Massachusetts",
+  "ticker": "Private ($1.1B; $300M seed, Jul 2026)",
+  "deck": "Walden Robotics, the Toyota Research Institute spin-out whose wheeled, two-armed robots have worked a Toyota plant floor since February, came out of stealth on 15 July with a $300M seed at a $1.1B valuation, co-led by Toyota and Deviation Capital, with Nvidia, Boeing and Samsung Ventures behind it.",
+  "score": 70,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "TGR Haas F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "The company was founded in January 2026 out of Toyota Research Institute by Russ Tedrake, the MIT professor who ran TRI's large-behavior-model work. Its robots have two arms and a sensor head on a wheeled base, no legs, and run on Large Behavior Models that learn a task through practice. At a Toyota plant in North America they went from first pilot to production in under two months and now run shifts alongside human teams: machine tending, tool setting, parts kitting, loading and unloading. Strategic partners span automotive, aerospace, semiconductors, electronics and logistics.",
+  "the_case_p2": "No robotics brand sits on the 2026 F1 grid, and the one team titled by Walden's lead investor runs its own CNC shop: Haas is owned by Gene Haas, founder of Haas Automation, the largest CNC machine-tool builder in North America. Machine tending is the task Walden's robots already do at Toyota. The lane is open and the workstream is literal.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The seed closed on 15 July and the deployments it funds are the story; a company hiring against a $300M cheque needs a stage engineers watch. Teams close 2027 rosters in the fourth quarter, Austin and Las Vegas sit inside the window, and the winter build is when a factory pilot runs.",
+  "why_team_label": "WHY TGR HAAS F1 TEAM",
+  "why_team_para": "Toyota Gazoo Racing took the title at Haas from 2026 after a 2024 technical partnership, and Toyota co-led Walden's seed: the introduction runs through the investor. Haas is the American privateer, based in Kannapolis and Banbury, with a CNC shop at the centre of its operations. Formula E is closed to the category: ABB, a robotics and automation group, has been its title partner since 2018. Carmaker-aligned teams are awkward for a Toyota-backed company; Williams is the only other independent.",
+  "value_section": true,
+  "value_section_label": "VALUE TO TGR HAAS F1 TEAM",
+  "value_mode": "A",
+  "value_content": "MODE A. Walden robots on the Kannapolis and Banbury floors doing what they do at Toyota: tending the team's CNC machines, tool setting, kitting parts for the car build and loading between stations, on a pilot-to-production cycle Toyota ran in under two months. In return: Official Robotics Partner designation, sidepod and garage presence, Austin and Las Vegas hospitality for the manufacturers Walden sells to, and a content series.",
+  "deal_arch_para": "Entry as Official Robotics Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, spanning the first deployments beyond Toyota and two car builds. Estimated $3-5M a year, part-payable in robot deployments the team would otherwise staff. Scope: sidepod placement, naming of the Kannapolis robot cell, Austin and Las Vegas hospitality, and a factory content series.",
+  "decision_maker_name": "Russ Tedrake",
+  "decision_maker_role": "Co-founder and Chief Executive Officer, Walden Robotics",
+  "decision_maker_bio": "Tedrake is an MIT professor who spent a decade at Toyota Research Institute, latterly senior vice president of large behavior models. No chief marketing officer is listed. Path: Adrien Gaidon, co-founder and Chief Strategy Officer; Ben Burchfiel, co-founder and Chief Technology Officer; Dave Johnson, Chief Product Officer.",
+  "opening_angle_intro": "Lead with the CNC shop, not the logo.",
+  "opening_angle_quote": "&ldquo;Russ, your lead investor's racing arm puts its name on the one F1 team that runs its own CNC shop, your robots already tend Toyota's machines, and nobody on the grid has a robotics partner. 25 minutes before Austin?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "14",
+    "/ 20",
+    "Seed 15 Jul; Austin, Las Vegas and the winter build in window."
+   ],
+   [
+    "CAPACITY",
+    "16",
+    "/ 20",
+    "$300M at $1.1B; a seed for deployments, not marketing."
+   ],
+   [
+    "BRAND FIT",
+    "13",
+    "/ 20",
+    "Factory robots are motorsport-native; the Toyota tie carries it."
+   ],
+   [
+    "URGENCY",
+    "13",
+    "/ 20",
+    "Hiring and credibility; no launch or listing date."
+   ],
+   [
+    "OPS FIT",
+    "14",
+    "/ 20",
+    "MODE A: machine tending and kitting at Kannapolis, Banbury."
+   ]
+  ],
+  "risks": [
+   [
+    "A SEED-STAGE MARKETING BUDGET",
+    "The $300M funds robots and deployments; no chief marketing officer or marketing function owns a sponsorship.",
+    "Enter at partner tier, part-paid in deployments; sell it as a reference customer and a recruiting stage."
+   ],
+   [
+    "TOYOTA'S PORTFOLIO, NOT ITS BRAND",
+    "Toyota is an investor, not the owner; a Walden logo on a TGR-titled car needs TGR's comfort.",
+    "Open through the investor; Williams is the fallback if TGR declines."
+   ]
+  ],
+  "bottom_line": "$300M at $1.1B on 15 July, robots at work in a Toyota plant since February, the Toyota-titled team with its own CNC shop, and no robotics brand on the grid. No marketing chief and a two-month-old trigger hold it at 70.",
+  "signals": [
+   "funding_event",
+   "category_open",
+   "investor_link"
+  ],
+  "footer_company": "WALDEN ROBOTICS",
+  "footer_date": "17 SEP 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 15 July 2026 Walden Robotics came out of stealth with a $300M seed at a $1.1B valuation, co-led by Toyota (Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures) and Deviation Capital, with Nvidia, Boeing, AE Ventures, Samsung Ventures, Prologis Ventures and CoreWeave Ventures as strategic investors and Menlo Ventures, NextView, Squarepoint Capital and others alongside. The Boston Globe called it one of the Boston area's biggest robotics deals ever."
+    },
+    {
+     "label": "A deployment company, not a lab",
+     "text": "The company spun out of Toyota Research Institute in January 2026 and had robots doing production work at a Toyota plant in North America by February, moving from first pilot to real work in under two months. Its own line is that the hard problem in robotics is now deployment, not research. A company selling deployments to manufacturers needs a stage where manufacturers, engineers and recruits are watching, and a Formula 1 factory is one."
+    },
+    {
+     "label": "Two months old, still inside the window",
+     "text": "The seed is 64 days old on the issue date, inside the desk's 90-day window but not fresh, which is why timing scores 14 and not 18. What keeps it live is the calendar: 2027 partner rosters close in the fourth quarter, and the winter build from December to February is exactly when a factory-floor pilot can run without touching a race weekend."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The United States GP in Austin in late October and the Las Vegas GP in November are the two US rounds left in 2026. A deal agreed before Austin can be announced in the United States and put robots on the Kannapolis floor for the 2027 car build."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The introduction runs through the investor",
+     "text": "Toyota Gazoo Racing replaced MoneyGram as Haas's title partner from 2026, on top of the technical partnership signed in October 2024 that covers vehicle development, wind-tunnel testing, carbon-fibre parts and a simulator at Banbury, under the banner People, Product, Pipeline. Toyota co-led Walden's seed through Toyota Motor Corporation, Toyota Invention Partners and Toyota Ventures, and Tedrake spent a decade inside Toyota Research Institute. No other team on the grid has a path this short."
+    },
+    {
+     "label": "A team that already builds with machines",
+     "text": "Haas is owned by Gene Haas, founder of Haas Automation, the largest CNC machine-tool builder in North America, and the team's CNC shop is central to operations at Kannapolis. Machine tending, tool setting and parts kitting are the tasks Walden's robots already do in shifts at Toyota. The workstream is not a metaphor: the robots would tend the machines the owner's company builds."
+    },
+    {
+     "label": "The only lane on either grid",
+     "text": "No robotics brand sits on any F1 roster in 2026. Formula E is closed: ABB, a global robotics and automation group, has been the championship's title partner since 2018, so a rival robotics brand has no home there, which is why the 10 September pool pointer at Jaguar TCS Racing is wrong. In F1, Siemens holds the industrial-automation lane at Oracle Red Bull Racing and Visa Cash App Racing Bulls, and every carmaker-aligned team is awkward for a Toyota-backed company. Haas and Williams are the independents, and only Haas carries the Toyota name."
+    },
+    {
+     "label": "Where it activates",
+     "text": "Austin in late October and Las Vegas in November, with the Kannapolis factory an hour from Charlotte for a US press moment, and the Banbury base for the European season."
+    }
+   ],
+   "value": [
+    {
+     "label": "Operational workstream (Mode A)",
+     "text": "Walden robots deployed on the Kannapolis and Banbury floors: tending the team's CNC machines, tool setting, kitting parts for the car build and loading and unloading between stations, the same tasks they run in shifts alongside human teams at Toyota. The pilot-to-production cycle at Toyota was under two months, which fits inside a winter build. The team gets capacity in a workforce-constrained shop; Walden gets its first non-automotive-OEM reference deployment in a factory the whole industry watches."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A $1.1B partner entering at partner tier in the first year of the Toyota era, with Nvidia, Boeing, Samsung and CoreWeave on its cap table and manufacturers as its customers: Austin and Las Vegas hospitality that brings the automotive, aerospace and semiconductor buyers the team's other technology partners want to meet."
+    },
+    {
+     "label": "Content and ecosystem",
+     "text": "A factory-floor content series on robots building a race car, co-produced with the team's operations group, plus the recruiting stage a company hiring against a $300M seed needs: MIT and Toyota Research Institute engineers watching their robots on a Formula 1 floor."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Robotics Partner designation, sidepod and garage placement, naming of the Kannapolis robot cell, Austin and Las Vegas hospitality, and driver and engineering access for Walden's channels."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Every Formula E team",
+     "reason": "ABB, a robotics and automation group, is the championship's title partner since 2018; a rival robotics brand has no lane in the series. The 10 September pool pointer at Jaguar TCS Racing is withdrawn."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Siemens holds the industrial-automation lane."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Siemens holds the industrial-automation lane."
+    },
+    {
+     "team": "Cadillac F1 Team",
+     "reason": "GM-aligned; a Toyota-backed company on a General Motors entry."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "A carmaker's works team; awkward for a Toyota portfolio company."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "A carmaker's works team; awkward for a Toyota portfolio company."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "A carmaker's works team; awkward for a Toyota portfolio company."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Renault-owned; awkward for a Toyota portfolio company."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "Honda power from 2026 and CoreWeave, a Walden investor, already on the roster; a carmaker alignment a Toyota-backed company would not cross."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "A carmaker in its own right; awkward for a Toyota portfolio company."
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Open and independent but no Toyota link; the named fallback if Toyota Gazoo Racing declines."
+    }
+   ],
+   "ask": "A 25-minute call with Russ Tedrake before the United States GP, opened alongside the Toyota investor relationship, to test appetite for a 2027 start, agree a winter-build pilot at Kannapolis as year one, and size an Official Robotics Partner entry at TGR Haas F1 Team, part-paid in deployments, with a US announcement."
+  }
+ },
+ "note": "# Walden Robotics → TGR Haas F1 Team — verification log (N° 254, issued for 17 Sep 2026)\n\nBuilt in-session at no API cost after the operator asked for the three pool rows shown on 15 Sep (Walden Robotics, OLIX, Castelion) to be judged for F1 or FE relevance and built where relevant. The 10 Sep run had Walden at 74 as a runner-up pointed at Jaguar TCS Racing; that pointer is wrong (ABB, a robotics group, is Formula E's title partner) and the honest score is 70. Dated 17 Sep so it is the morning's signal; queued in data/send_plan.json.\n\n**Sandbox limitation, stated plainly:** waldenrobotics.com, businesswire.com, bostonglobe.com, therobotreport.com, thenextweb.com and techstartups.com are egress-blocked; every claim was checked against search summaries of the named page, corroborated across at least two outlets. Treat VERIFIED as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## Ledger (summary)\n\n| Claim | Status |\n|---|---|\n| $300M seed at $1.1B, 15 Jul 2026; Toyota (TMC, Toyota Invention Partners, Toyota Ventures) + Deviation Capital co-leads; strategic and financial investor list | VERIFIED (company release via Business Wire / Yahoo Finance; Bloomberg; Boston Globe) |\n| Spun out of Toyota Research Institute Jan 2026; Cambridge, MA | VERIFIED |\n| Robots in production at a Toyota plant in North America since Feb 2026; pilot to production in under two months; shifts alongside human teams | VERIFIED (release; DC Velocity; ASSEMBLY) — the plant is not named by the company and is not named here |\n| Tasks: machine tending, tool setting, parts kitting, assembly, loading/unloading, cleaning | VERIFIED (launch materials via DC Velocity, i-SCOOP) |\n| Form factor: two arms, sensor head, wheeled or fixed base; Large Behavior Models | VERIFIED |\n| Tedrake: co-founder/CEO, MIT Toyota Professor of EECS, a decade at TRI, SVP large behavior models | VERIFIED (Boston Globe, Bloomberg summaries) |\n| Burchfiel CTO; Gaidon CSO (ex-TRI ML lead, Stanford adjunct); Dave Johnson CPO; no CMO/CCO | VERIFIED (Robot Report; company page and LinkedIn summaries) |\n| Strategic partners across automotive, aerospace, semiconductors, electronics, logistics, life sciences | VERIFIED (launch coverage) — customer names are not given by the company and are not claimed |\n| No robotics brand on the 2026 F1 grid; ABB FE title since 2018; Siemens at Red Bull/Racing Bulls; CoreWeave at Aston Martin | VERIFIED (sponsor table) |\n| TGR title from 2026; Oct 2024 technical partnership; People, Product, Pipeline; Banbury simulator | VERIFIED (Toyota newsroom; haasf1team.com; ESPN) |\n| Kannapolis HQ, Banbury European base, Maranello design office; Gene Haas / Haas Automation; CNC shop central | VERIFIED (haasf1team.com summaries) |\n| TGR title $20-30M/yr | REPORTED · 1440's $3-5M is an ESTIMATE |\n| Austin, Las Vegas on the calendar; Q4 roster close; winter build | VERIFIED / desk knowledge |\n\n## Decision path\n\nRuss Tedrake (co-founder and Chief Executive Officer) is the decision-maker: the company page lists CEO, CTO, COO, CPO, CSO, Principal Architect and Head of AI roles and no marketing, commercial or partnerships title; the brief says so. Path: Adrien Gaidon (co-founder and Chief Strategy Officer — the partnership owner by title), Ben Burchfiel (co-founder and Chief Technology Officer — technical counterpart), Dave Johnson (Chief Product Officer). The COO is listed as a role on the company page; the name was not confirmed from a source the desk could reach and is not given.\n\n## Leadership ties\n\nTedrake, Burchfiel, Gaidon, Johnson, Marchese, Romano: **none found** in F1 or Formula E after checking. Toyota Research Institute is Toyota's research arm, not Toyota Gazoo Racing; the tie is corporate, through the investor, and the brief says so.\n\n## Team choice\n\nTGR Haas F1 Team on the investor link and grid occupancy: the only team titled by Walden's lead investor, an owner whose company builds CNC machines, and no robotics brand on any F1 roster. Formula E is closed by ABB's title. Williams is the named fallback (independent, open lane, no Toyota link). Haas is the twelfth F1 case pointed at the team; chosen on the Toyota tie and the CNC shop, not habit.\n\n## Not claimed\n\n- Revenue and customer names: not stated by the company; not used.\n- The Toyota plant is 'in North America' in the company's words; no plant is named.\n- Headcount: not confirmed; not used.\n- 'Workforce-constrained shop' and 'the whole industry watches' are the desk's characterisation, in the extended page only.\n- Shift length: one summary says eight-hour shifts, another multi-hour; the brief says 'shifts'."
+}

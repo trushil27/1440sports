@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1440 Intelligence Brief — Walden Robotics</title>
+<style>
+  /* ===== 1440 Sports brand system — June-2026 production format (Ramp N° 007/017) ===== */
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Variable.ttf'); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Lora-Italic-Variable.ttf'); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Poppins'; src: url('file:///home/user/1440sports/pipeline/intel/assets/fonts/Poppins-Light.ttf'); font-weight: 300; }
+  :root { --serif: 'Lora', Georgia, serif; --sans: 'Poppins', Arial, sans-serif; }
+  :root {
+    --navy: #191a48;        /* logo navy */
+    --gold: #d1ae7a;        /* logo gold */
+    --ink: #1a1c2e;
+    --muted: #6b6e84;
+    --hair: #e2e0ea;
+    --paper: #ffffff;
+    --panel: #f5f4f8;
+  }
+  @page {
+    size: A4;
+    margin: 10mm 12mm 9mm 12mm;
+    @bottom-left   { content: "1440 SPORTS · LONDON · VERIFY BEFORE CIRCULATION"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-center { content: "WALDEN ROBOTICS · 17 SEP 2026"; font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+    @bottom-right  { content: counter(page) " / " counter(pages); font-family: Lora; font-size: 7pt; color: #9a98aa; letter-spacing: .12em; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: var(--serif); color: var(--ink); margin: 0; font-size: 9pt; line-height: 1.36; background: var(--paper); }
+  .wrap { max-width: 100%; }
+
+  /* masthead */
+  .mast { display: flex; justify-content: space-between; align-items: center; padding-bottom: 7px; border-bottom: 2px solid var(--navy); }
+  .mast img { height: 21px; }
+  .mast .meta { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--muted); text-transform: uppercase; }
+  .ribbon { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin: 9px 0 0; font-weight: 700; }
+
+  h1 { font-size: 29pt; font-weight: 400; letter-spacing: -.5px; color: var(--navy); margin: 3px 0 1px; }
+  .classline { font-size: 8.6pt; color: var(--muted); font-style: italic; margin-bottom: 7px; }
+  .lede { font-size: 9.8pt; line-height: 1.4; color: var(--ink); margin: 0 0 9px; }
+  .lede b, .hl { color: var(--navy); font-family: var(--sans); font-size: 8.6pt; letter-spacing: .02em; }
+
+  /* score + chips strip */
+  .strip { display: flex; gap: 10px; align-items: stretch; margin: 3px 0 9px; }
+  .scorebox { background: var(--navy); color: #fff; border-radius: 7px; padding: 11px 15px 9px; min-width: 118px; display: flex; flex-direction: column; justify-content: center; }
+  .scorebox .num { font-size: 39pt; line-height: .9; font-weight: 700; }
+  .scorebox .den { font-family: var(--sans); font-size: 6.4pt; letter-spacing: .19em; color: var(--gold); text-transform: uppercase; margin-top: 5px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; flex: 1; }
+  .chip { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; display: flex; flex-direction: column; justify-content: center; }
+  .chip .k { font-family: var(--sans); font-size: 6pt; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+  .chip .v { font-family: var(--sans); font-size: 9.2pt; font-weight: 700; color: var(--navy); margin-top: 3px; line-height: 1.12; }
+
+  h2 { font-family: var(--sans); font-size: 7.2pt; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); border-bottom: 1px solid var(--hair); padding-bottom: 2px; margin: 8px 0 4px; font-weight: 700; }
+  p { margin: 0 0 5px; }
+  .twocol { display: flex; gap: 16px; }
+  .twocol > div { flex: 1; }
+
+  .dm { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 10px; }
+  .dm .name { font-size: 11pt; color: var(--navy); }
+  .dm .role { font-family: var(--sans); font-size: 6.8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+  .dm .role .vtag { color: #2f7d4f; font-weight: 700; }
+  .dm .role .utag { color: #9a6b1f; font-weight: 700; }
+  .dm .bio { font-size: 8.2pt; line-height: 1.3; }
+  .quote { background: var(--panel); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 8px 11px; font-style: italic; font-size: 9.2pt; color: var(--navy); line-height: 1.34; }
+  .intro { font-size: 8.4pt; color: var(--ink); margin-bottom: 5px; }
+
+  .scoregrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .sc { border: 1px solid var(--hair); border-radius: 6px; padding: 5px 7px; }
+  .sc .pill { font-family: var(--sans); font-size: 6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+  .sc .val { font-family: var(--sans); font-size: 11.5pt; font-weight: 700; color: var(--navy); }
+  .sc .val span { font-size: 7pt; color: var(--muted); font-weight: 400; }
+  .sc .why { font-size: 7.1pt; color: #4a4c63; margin-top: 2px; line-height: 1.26; }
+
+  .risk { margin-bottom: 4px; font-size: 8.4pt; line-height: 1.32; }
+  .risk .rt { font-family: var(--sans); font-weight: 700; font-size: 7.4pt; letter-spacing: .05em; color: var(--navy); text-transform: uppercase; }
+  .risk .rc { color: var(--navy); }
+  .risk .rc b { color: var(--gold); }
+
+  /* page-1 proof points (from the claims ledger) */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 2px; }
+  .pf { border: 1px solid var(--hair); border-radius: 6px; padding: 7px 9px; background: var(--panel); }
+  .pf .pfv { font-size: 12.5pt; font-weight: 700; color: var(--navy); line-height: 1.05; }
+  .pf .pfv .dag { color: #9a6b1f; font-size: 8pt; vertical-align: super; }
+  .pf .pfk { font-family: var(--sans); font-size: 6.6pt; color: var(--muted); letter-spacing: .03em; margin-top: 4px; line-height: 1.22; }
+
+  /* page-1 grid-fit (category whitespace, computed from the sponsors table) */
+  .gf { margin-top: 2px; }
+  .gfrow { display: grid; grid-template-columns: 118px 74px 1fr; align-items: center; gap: 9px; padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .gfrow:last-child { border-bottom: 0; }
+  .gft { font-size: 8.8pt; color: var(--navy); font-weight: 700; }
+  .gft .gfstar { font-family: var(--sans); font-size: 5.8pt; font-weight: 700; letter-spacing: .1em; color: var(--gold); display: block; margin-top: 1px; }
+  .gflab { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .1em; text-align: center; padding: 3px 0; border-radius: 4px; text-transform: uppercase; }
+  .gflab.prime { background: var(--navy); color: var(--gold); border: 1px solid var(--navy); }
+  .gflab.open { background: #eaf4ec; color: #2f7d4f; border: 1px solid #cfe6d6; }
+  .gflab.crowded { background: #fbf3e6; color: #9a6b1f; border: 1px solid #efe0c4; }
+  .gflab.conflict { background: #f7eaea; color: #9a2f2f; border: 1px solid #ecd2d2; }
+  .gfrow.rec { background: #fbf8f1; border-radius: 6px; }
+  .gfd { font-size: 7.4pt; color: #4a4c63; line-height: 1.22; }
+  .panelnote { font-family: var(--sans); font-size: 6.2pt; color: var(--muted); letter-spacing: .03em; margin: 2px 0 0; font-style: normal; }
+  .panelnote.warn { color: #9a6b1f; }
+
+  .bottomline { margin: 10px 0 0; background: var(--navy); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 9px 13px; color: #fff; }
+  .bottomline .bl-k { font-family: var(--sans); font-size: 6.4pt; font-weight: 700; letter-spacing: .18em; color: var(--gold); text-transform: uppercase; }
+  .bottomline .bl-t { font-size: 9.6pt; line-height: 1.36; margin-top: 3px; color: #f3f1ea; }
+  .bottomline .hl { color: var(--gold); }
+
+  .flags { margin: 5px 0 0; }
+  .flag { display: inline-block; font-family: var(--sans); background: #f0eef6; color: var(--navy); border: 1px solid var(--hair); border-radius: 3px; padding: 2px 6px; font-size: 6.4pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 4px 4px 0; }
+  .sources { font-size: 6.8pt; color: var(--muted); margin: 4px 0 0; padding-left: 14px; }
+  .sources li { margin-bottom: 1px; }
+  .page2 { page-break-before: always; }
+  .mode { font-family: var(--sans); font-size: 6.6pt; letter-spacing: .06em; color: var(--muted); }
+  .mode b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== PAGE 1 ===================== -->
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 254</span>
+  </div>
+  <div class="ribbon">Intelligence Brief / N° 254 &nbsp;·&nbsp; HOT</div>
+
+  <h1>Walden Robotics</h1>
+  <div class="classline">General-Purpose Robotics · Factory Automation · Cambridge, Massachusetts · Private ($1.1B; $300M seed, Jul 2026)</div>
+
+  <div class="lede">Walden Robotics, the Toyota Research Institute spin-out whose wheeled, two-armed robots have worked a Toyota plant floor since February, came out of stealth on 15 July with a $300M seed at a $1.1B valuation, co-led by Toyota and Deviation Capital, with Nvidia, Boeing and Samsung Ventures behind it.</div>
+
+  <div class="strip">
+    <div class="scorebox"><div class="num">70</div><div class="den">Opportunity / 100</div></div>
+    <div class="chips">
+      <div class="chip"><div class="k">Timing Window</div><div class="v">HOT</div></div>
+      <div class="chip"><div class="k">Series</div><div class="v">F1</div></div>
+      <div class="chip"><div class="k">Recommended Team</div><div class="v">TGR Haas F1 Team</div></div>
+      <div class="chip"><div class="k">Action Horizon</div><div class="v">6-10 WKS</div></div>
+    </div>
+  </div>
+
+  <h2>The Case</h2>
+  <p>The company was founded in January 2026 out of Toyota Research Institute by Russ Tedrake, the MIT professor who ran TRI's large-behavior-model work. Its robots have two arms and a sensor head on a wheeled base, no legs, and run on Large Behavior Models that learn a task through practice. At a Toyota plant in North America they went from first pilot to production in under two months and now run shifts alongside human teams: machine tending, tool setting, parts kitting, loading and unloading. Strategic partners span automotive, aerospace, semiconductors, electronics and logistics.</p>
+<p>No robotics brand sits on the 2026 F1 grid, and the one team titled by Walden's lead investor runs its own CNC shop: Haas is owned by Gene Haas, founder of Haas Automation, the largest CNC machine-tool builder in North America. Machine tending is the task Walden's robots already do at Toyota. The lane is open and the workstream is literal.</p>
+  <h2>Why Now</h2>
+  <p>The seed closed on 15 July and the deployments it funds are the story; a company hiring against a $300M cheque needs a stage engineers watch. Teams close 2027 rosters in the fourth quarter, Austin and Las Vegas sit inside the window, and the winter build is when a factory pilot runs.</p>
+
+  <h2>Proof Points
+<span class="panelnote">— every figure verified to a primary source (see p.2)</span>
+  </h2>
+  <div class="proof">
+    <div class="pf"><div class="pfv">$300M</div><div class="pfk">$300M seed at a $1.1B valuation announced 15 Jul 2026, co-led by Toyota (Toyota Motor Corporation, Toyota I…</div></div>
+    <div class="pf"><div class="pfv">$1.1B</div><div class="pfk">funding round: valued at $1.1B on 15 Jul 2026 by a $300M seed, out of stealth six months after spinning out…</div></div>
+  </div>
+
+  <h2>Grid Fit <span class="panelnote">— category-whitespace check across the F1 grid (sponsor table; 85 of 347 partner rows categorised)</span></h2>
+  <div class="gf">
+    <div class="gfrow rec">
+      <div class="gft">TGR Haas F1 Team<span class="gfstar">◆ RECOMMENDED</span></div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Oracle Red Bull Racing</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Siemens</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Visa Cash App Racing Bulls</div>
+      <div class="gflab conflict">TAKEN</div>
+      <div class="gfd">Siemens</div>
+    </div>
+    <div class="gfrow ">
+      <div class="gft">Mercedes-AMG Petronas F1 Team</div>
+      <div class="gflab open">OPEN</div>
+      <div class="gfd">no rival in this category lane</div>
+    </div>
+  </div>
+
+  <div class="bottomline">
+    <div class="bl-k">Bottom Line</div>
+    <div class="bl-t">$300M at $1.1B on 15 July, robots at work in a Toyota plant since February, the Toyota-titled team with its own CNC shop, and no robotics brand on the grid. No marketing chief and a two-month-old trigger hold it at 70.</div>
+  </div>
+
+  <div class="flags">
+<span class="flag">funding event</span><span class="flag">category open</span><span class="flag">investor link</span>    <span class="flag">discovery: scan</span>
+  </div>
+
+  <!-- ===================== PAGE 2 ===================== -->
+  <div class="page2"></div>
+  <div class="mast">
+    <img src="file:///home/user/1440sports/pipeline/intel/assets/1440_logo.png" alt="1440 Sports">
+    <span class="meta">Intelligence Brief · Confidential · N° 254</span>
+  </div>
+
+  <h2>WHY TGR HAAS F1 TEAM</h2>
+  <p>Toyota Gazoo Racing took the title at Haas from 2026 after a 2024 technical partnership, and Toyota co-led Walden's seed: the introduction runs through the investor. Haas is the American privateer, based in Kannapolis and Banbury, with a CNC shop at the centre of its operations. Formula E is closed to the category: ABB, a robotics and automation group, has been its title partner since 2018. Carmaker-aligned teams are awkward for a Toyota-backed company; Williams is the only other independent.</p>
+
+  <h2>VALUE TO TGR HAAS F1 TEAM &nbsp;<span class="mode">— <b>MODE A</b> (tech in the car / championship)</span></h2>
+  <p>MODE A. Walden robots on the Kannapolis and Banbury floors doing what they do at Toyota: tending the team's CNC machines, tool setting, kitting parts for the car build and loading between stations, on a pilot-to-production cycle Toyota ran in under two months. In return: Official Robotics Partner designation, sidepod and garage presence, Austin and Las Vegas hospitality for the manufacturers Walden sells to, and a content series.</p>
+
+  <h2>Deal Architecture</h2>
+  <p>Entry as Official Robotics Partner. <b class="hl">THREE YEARS</b>, 2027-2029, spanning the first deployments beyond Toyota and two car builds. Estimated $3-5M a year, part-payable in robot deployments the team would otherwise staff. Scope: sidepod placement, naming of the Kannapolis robot cell, Austin and Las Vegas hospitality, and a factory content series.</p>
+
+  <div class="twocol">
+    <div>
+      <h2>Primary Decision-Maker</h2>
+      <div class="dm">
+        <div class="name">Russ Tedrake</div>
+        <div class="role">Co-founder and Chief Executive Officer, Walden Robotics · <span class="vtag">verified</span></div>
+        <div class="bio">Tedrake is an MIT professor who spent a decade at Toyota Research Institute, latterly senior vice president of large behavior models. No chief marketing officer is listed. Path: Adrien Gaidon, co-founder and Chief Strategy Officer; Ben Burchfiel, co-founder and Chief Technology Officer; Dave Johnson, Chief Product Officer.</div>
+      </div>
+    </div>
+    <div>
+      <h2>Opening Angle</h2>
+<div class="intro">Lead with the CNC shop, not the logo.</div>      <div class="quote">“Russ, your lead investor's racing arm puts its name on the one F1 team that runs its own CNC shop, your robots already tend Toyota's machines, and nobody on the grid has a robotics partner. 25 minutes before Austin?”</div>
+    </div>
+  </div>
+
+  <h2>Score Composition</h2>
+  <div class="scoregrid">
+    <div class="sc">
+      <div class="pill">TIMING</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">Seed 15 Jul; Austin, Las Vegas and the winter build in window.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">CAPACITY</div>
+      <div class="val">16 <span>/ 20</span></div>
+      <div class="why">$300M at $1.1B; a seed for deployments, not marketing.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">BRAND FIT</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">Factory robots are motorsport-native; the Toyota tie carries it.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">URGENCY</div>
+      <div class="val">13 <span>/ 20</span></div>
+      <div class="why">Hiring and credibility; no launch or listing date.</div>
+    </div>
+    <div class="sc">
+      <div class="pill">OPS FIT</div>
+      <div class="val">14 <span>/ 20</span></div>
+      <div class="why">MODE A: machine tending and kitting at Kannapolis, Banbury.</div>
+    </div>
+  </div>
+
+  <h2>Risks &amp; Counters</h2>
+  <div class="risk"><span class="rt">A SEED-STAGE MARKETING BUDGET</span> &nbsp;<span class="rc">The $300M funds robots and deployments; no chief marketing officer or marketing function owns a sponsorship. <b>Counter:</b> Enter at partner tier, part-paid in deployments; sell it as a reference customer and a recruiting stage.</span></div>
+  <div class="risk"><span class="rt">TOYOTA&#39;S PORTFOLIO, NOT ITS BRAND</span> &nbsp;<span class="rc">Toyota is an investor, not the owner; a Walden logo on a TGR-titled car needs TGR's comfort. <b>Counter:</b> Open through the investor; Williams is the fallback if TGR declines.</span></div>
+
+  <h2>Sources <span class="panelnote">— 12 of 12 load-bearing claims verified</span></h2>
+  <ul class="sources">
+<li>https://www.bostonglobe.com/2026/07/15/business/walden-robotics-cambridge-toyota-humanoid/</li><li>https://www.businesswire.com/news/home/20260715089377/en/Walden-Robotics-Launches-with-$300-Million-to-Put-General-Purpose-Robots-to-Work-Today</li><li>https://global.toyota/en/newsroom/corporate/41645635.html</li>  </ul>
+</div>
+</body>
+</html>

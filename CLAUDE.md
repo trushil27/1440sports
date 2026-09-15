@@ -263,8 +263,14 @@ Alex Gersh CFO (ex-Sportradar), Darren Waterman Chief Business Officer — is a 
 **Pool rows relabelled (15 Sep 2026, MD: "change the name, not runners-up in the list … if relevant for F1 or FE,
 build the case"):** the daily run's pool rows (`cases/<date>/pool.json`, `intel.pool`) import as historical briefs
 labelled `Candidate, <date>` (was "Runner-up"); they stay in the app as thin rows until each becomes a full case
-(session_case) or a reasoned screen-out (`<stem>.screened.json`). The three shown on 15 Sep were Walden Robotics
-(10 Sep pool), OLIX and Castelion (9 Sep pool) — each judged for F1/FE relevance in session (verdicts below).
+(session_case) or a reasoned screen-out (`<stem>.screened.json`, applied to `data/history_review.json` by
+`python -m intel.merge_cases --apply-only`). The three shown on 15 Sep, judged the same day: **Walden Robotics →
+N° 254 TGR Haas F1 Team (70/100, MODE A, dated 17 Sep 2026, queued in the send plan)** — Toyota co-led its $300M
+seed at $1.1B (15 Jul), TGR titles Haas, the robots already tend machines at a Toyota plant and Haas runs its own CNC
+shop; FE is closed (ABB, a robotics group, is the championship title partner — the pool's Jaguar pointer was wrong);
+buyer = CEO Russ Tedrake, no CMO. **OLIX = duplicate of N° 153 OLIX Computing → Williams (3 Aug, same Series B)**;
+N° 153 predates the Anthropic → Williams row — open question noted in the screen-out. **Castelion screened**
+(hypersonic missiles, $1B Series C at $13B on 19 Aug — not a sponsor category on either grid).
 **MD send plan (15 Sep 2026, MD: "sent to Ricky one a day after they are passing all the verification gates … plan
 that on a daily basis"):** `data/send_plan.json` = the queue (brief numbers in order, `hold` flag, note) + the durable
 log of every MD send; `intel/send_plan.py` picks the first queued brief that passes every gate (`brief_status_for_md`,

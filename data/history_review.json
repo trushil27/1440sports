@@ -1004,6 +1004,33 @@
     "https://craft.co/suniva/executives"
    ],
    "screened_at": "2026-09-15"
+  },
+  "2026-09-09|Castelion": {
+   "status": "screened_out",
+   "reason": "not a sponsor category: Checked on 15 Sep 2026 after the operator asked for every pool row to be judged for F1 or FE relevance (the 9 Sep run had it at 82, pointed at Cadillac). The trigger is real and large: on 19 Aug 2026 Castelion announced a $1B Series C at a $13B valuation - $800M of equity jointly anchored by JPMorganChase's Strategic Investment Group, Andreessen Horowitz and Carlyle-managed funds, with Lightspeed, Lavrock, Altimeter, General Catalyst, Interlagos and T. Rowe Price Associates, plus a $250M committed revolving credit facility. Co-founder and CEO Bryon Hargis; El Segundo, California. The money scales production of Blackbeard, its low-cost hypersonic strike missile, and extends the portfolio to longer-range strike weapons and defensive systems. That is the problem, not the size: Castelion is a weapons manufacturer whose customer is the US Department of Defense. No weapons maker sits on the 2026 F1 or Formula E grid (sponsor table), Formula E's championship positioning excludes the category outright, and an F1 team taking a missile brand would be a first the desk cannot recommend to a client. There is also no audience logic - a defence prime sells to one buyer, not to the people in a paddock - and no operational workstream a team could use. Not a screen-out on facts or freshness; a screen-out on category. Re-open only if the company launches a civil product line (launch services, propulsion, materials) with its own brand.",
+   "reason_code": "case_screen",
+   "sources": [
+    "https://www.castelion.com/news/series-c/",
+    "https://www.carlyle.com/media-room/news-release-archive/castelion-raises-1-billion-series-c-scale-production-low-cost",
+    "https://www.prnewswire.com/news-releases/castelion-raises-1-billion-series-c-to-scale-production-of-low-cost-hypersonic-weapons-302855711.html",
+    "https://qz.com/castelion-hypersonic-missile-series-c-billion-082026",
+    "pipeline/intel/seeds/sponsors.json"
+   ],
+   "screened_at": "2026-09-15"
+  },
+  "2026-09-09|OLIX": {
+   "status": "duplicate_of",
+   "of": "2026-08-03|OLIX Computing",
+   "reason": "Checked on 15 Sep 2026 after the operator asked for every pool row to be judged for F1 or FE relevance. The 9 Sep run re-surfaced OLIX's $312M Series B at a $3.3B valuation (announced 3 Aug 2026, led by Fundomo, with Arm, Hudson River Trading and Reed Hastings; the UK Sovereign AI venture fund among the backers) as a fresh 74 pointed at Visa Cash App Racing Bulls. It is not fresh: the same company and the same trigger are already a full verified case in the desk - N° 153 OLIX Computing → Atlassian Williams Racing (70/100), issued for 3 Aug 2026 - so this row folds into that case rather than standing as a second signal. Two things learned on 15 Sep belong with N° 153's outreach rather than in a new score: OLIX's first accelerator, DX-1, is not due to reach initial customers until the second half of 2027 (nothing to install or show before then), and Matt Briers (nine years CFO of Wise) joined as CFO with the raise while no marketing or commercial executive is listed. N° 153 was built before the Anthropic → Williams row was added to the sponsor table on 15 Sep; whether an inference-chip partner can sit beside an AI-model partner at Williams is a question for that case, noted here so it is not lost.",
+   "reason_code": "case_screen",
+   "sources": [
+    "pipeline/intel/cases/2026-08-03/olixcomputing.case.json",
+    "https://www.datacenterdynamics.com/en/news/chip-startup-olix-raises-312m-at-33bn-valuation-backed-by-uk-govt-sovereign-ai-venture-fund/",
+    "https://sifted.eu/articles/james-dacombes-olix-raises-at-3-3bn-valuation",
+    "https://tech.eu/2026/08/03/uk-chip-startup-olix-raises-ps312m-at-ps33bn-valuation/",
+    "https://thenextweb.com/news/olix-312m-series-b-3-3bn-uk-optical-ai-chip-nvidia-rival"
+   ],
+   "screened_at": "2026-09-15"
   }
  }
 }
