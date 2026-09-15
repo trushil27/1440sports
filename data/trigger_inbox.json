@@ -1,9 +1,39 @@
 {
  "_meta": {
   "what": "EDGAR filings to judge (intel.edgar_watch)",
-  "swept_at": "2026-09-14"
+  "swept_at": "2026-09-15"
  },
  "hits": [
+  {
+   "id": "8-K:0001683168-26-007105",
+   "type": "new_ceo",
+   "form": "8-K",
+   "filed": "2026-09-14",
+   "company": "INSEEGO CORP.  (INSG)  (CIK 0001022652)",
+   "cik": "1022652",
+   "sic": 3669,
+   "profile": "in",
+   "state": "CA",
+   "description": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1022652/000168316826007105/0001683168-26-007105-index.htm",
+   "judged": false,
+   "matched": "\"Item 5.02\" \"as Chief Executive Officer\""
+  },
+  {
+   "id": "F-1:0001493152-26-042440",
+   "type": "listing",
+   "form": "F-1",
+   "filed": "2026-09-14",
+   "company": "Einride AB  (ENRD, ENRDW)  (CIK 0002095096)",
+   "cik": "2095096",
+   "sic": 7373,
+   "profile": "in",
+   "state": null,
+   "description": "F-1",
+   "url": "https://www.sec.gov/Archives/edgar/data/2095096/000149315226042440/0001493152-26-042440-index.htm",
+   "judged": false,
+   "matched": "F-1"
+  },
   {
    "id": "8-K:0001213900-26-099368",
    "type": "new_ceo",
@@ -110,6 +140,66 @@
    "matched": "S-1"
   },
   {
+   "id": "8-K:0001397187-26-000129",
+   "type": "new_ceo",
+   "form": "8-K",
+   "filed": "2026-09-14",
+   "company": "lululemon athletica inc.  (LULU)  (CIK 0001397187)",
+   "cik": "1397187",
+   "sic": 2300,
+   "profile": "unknown",
+   "state": "A1",
+   "description": "APPOINTMENT OF HEIDI O'NEILL TO BOD & AMENDED BYLAWS",
+   "url": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000129/0001397187-26-000129-index.htm",
+   "judged": false,
+   "matched": "\"Item 5.02\" \"as Chief Executive Officer\""
+  },
+  {
+   "id": "8-K:0001493152-26-042563",
+   "type": "new_ceo",
+   "form": "8-K",
+   "filed": "2026-09-14",
+   "company": "Rainmaker Worldwide Inc.  (RAKR)  (CIK 0001872292)",
+   "cik": "1872292",
+   "sic": 2086,
+   "profile": "unknown",
+   "state": "NV",
+   "description": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1872292/000149315226042563/0001493152-26-042563-index.htm",
+   "judged": false,
+   "matched": "\"Item 5.02\" \"as Chief Executive Officer\""
+  },
+  {
+   "id": "S-1:0001493152-26-042591",
+   "type": "listing",
+   "form": "S-1",
+   "filed": "2026-09-14",
+   "company": "Syra Health Corp  (SYRA)  (CIK 0001922335)",
+   "cik": "1922335",
+   "sic": 7361,
+   "profile": "unknown",
+   "state": "IN",
+   "description": "S-1",
+   "url": "https://www.sec.gov/Archives/edgar/data/1922335/000149315226042591/0001493152-26-042591-index.htm",
+   "judged": false,
+   "matched": "S-1"
+  },
+  {
+   "id": "S-1:0001104659-26-107563",
+   "type": "listing",
+   "form": "S-1",
+   "filed": "2026-09-14",
+   "company": "MFB Bancorp, Inc.  (CIK 0002152813)",
+   "cik": "2152813",
+   "sic": null,
+   "profile": "unknown",
+   "state": "IL",
+   "description": "S-1",
+   "url": "https://www.sec.gov/Archives/edgar/data/2152813/000110465926107563/0001104659-26-107563-index.htm",
+   "judged": false,
+   "matched": "S-1"
+  },
+  {
    "id": "8-K:0001493152-26-042429",
    "type": "new_ceo",
    "form": "8-K",
@@ -198,6 +288,36 @@
    "url": "https://www.sec.gov/Archives/edgar/data/2152644/000119312526388025/0001193125-26-388025-index.htm",
    "judged": false,
    "matched": "S-1"
+  },
+  {
+   "id": "8-K:0001058090-26-000088",
+   "type": "new_ceo",
+   "form": "8-K",
+   "filed": "2026-09-14",
+   "company": "CHIPOTLE MEXICAN GRILL INC  (CMG)  (CIK 0001058090)",
+   "cik": "1058090",
+   "sic": 5812,
+   "profile": "out",
+   "state": "CA",
+   "description": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000088/0001058090-26-000088-index.htm",
+   "judged": false,
+   "matched": "\"Item 5.02\" \"as Chief Executive Officer\""
+  },
+  {
+   "id": "8-K:0001213900-26-099700",
+   "type": "new_ceo",
+   "form": "8-K",
+   "filed": "2026-09-14",
+   "company": "Inmune Bio, Inc.  (INMB)  (CIK 0001711754)",
+   "cik": "1711754",
+   "sic": 2836,
+   "profile": "out",
+   "state": "FL",
+   "description": "CURRENT REPORT",
+   "url": "https://www.sec.gov/Archives/edgar/data/1711754/000121390026099700/0001213900-26-099700-index.htm",
+   "judged": false,
+   "matched": "\"Item 5.02\" \"as Chief Executive Officer\""
   },
   {
    "id": "8-K:0001213900-26-099283",

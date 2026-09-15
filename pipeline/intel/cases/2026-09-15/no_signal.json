@@ -1,0 +1,154 @@
+{
+ "date": "2026-09-15",
+ "status": "no_signal",
+ "candidates": 12,
+ "decisions": {
+  "blocklisted": 2,
+  "dedup_suppressed": 1,
+  "verification_blocked": 2,
+  "below_threshold": 7
+ },
+ "sources": {
+  "scanner": 9,
+  "routine": 3,
+  "n8n": 1,
+  "candidates": 3,
+  "to_research": [
+   "Horizon3"
+  ],
+  "mails_read": 40,
+  "routine_mails": 2,
+  "n8n_mails": 4,
+  "offered": [
+   "Nexeon (routine)",
+   "Positron AI (routine)",
+   "Suniva (routine)",
+   "Félix (routine)",
+   "Horizon3 (n8n)"
+  ],
+  "already_known": [
+   "Nexeon"
+  ],
+  "status": "read",
+  "scanned": [
+   "Positron AI",
+   "Suniva",
+   "Félix"
+  ],
+  "kept_thin": []
+ },
+ "usage": {
+  "tokens": {
+   "input": 132122,
+   "output": 183027,
+   "cache_read": 3019329,
+   "cache_write": 429288
+  },
+  "calls": {
+   "scanner": 4,
+   "verifier": 24,
+   "writer": 4
+  },
+  "estimated_usd": 3.772
+ },
+ "candidate_list": [
+  {
+   "rank": 1,
+   "company": "Mistral AI",
+   "signal_date": "2026-09-08",
+   "decision": "blocklisted",
+   "reason": "blocklist: active pursuit (n8n HARD_BLOCK (May 2026 export) — reconcile against the live Sheets blocklist in M6)",
+   "score": null
+  },
+  {
+   "rank": 2,
+   "company": "Base Power",
+   "signal_date": "2026-08-03",
+   "decision": "dedup_suppressed",
+   "reason": "dedup: Base Power surfaced on 2026-09-05 with the same trigger (funding_round); window 30d",
+   "score": null
+  },
+  {
+   "rank": 3,
+   "company": "Fireworks AI",
+   "signal_date": "2026-07-23",
+   "decision": "verification_blocked",
+   "reason": "contradicted load-bearing claim in the written brief: Fireworks AI closed a $1.505bn Series D on 23 July 2026, lifting its post-money valuation to $17.5bn. | Fireworks AI's $1.505bn Series D, closed 23 July 2026 at a $17.5bn post-money valuation, ranks among 2026's largest infrastructure raises and pulled in Nvidia as a strategic backer alongside Atreides Management, Index Ventures and TCV. | TCV. The round",
+   "score": 76
+  },
+  {
+   "rank": 4,
+   "company": "Peregrine Technologies",
+   "signal_date": "2026-06-26",
+   "decision": "below_threshold",
+   "reason": "ranking score 65 < threshold 70",
+   "score": 65
+  },
+  {
+   "rank": 5,
+   "company": "Cerebras Systems Inc",
+   "signal_date": "2026-08-25",
+   "decision": "blocklisted",
+   "reason": "blocklist: active pursuit (n8n HARD_BLOCK (May 2026 export) — reconcile against the live Sheets blocklist in M6)",
+   "score": null
+  },
+  {
+   "rank": 6,
+   "company": "General Intuition",
+   "signal_date": "2026-06-26",
+   "decision": "below_threshold",
+   "reason": "ranking score 63 < threshold 70",
+   "score": 63
+  },
+  {
+   "rank": 7,
+   "company": "Wonder",
+   "signal_date": "2026-07-17",
+   "decision": "below_threshold",
+   "reason": "ranking score 61 < threshold 70",
+   "score": 61
+  },
+  {
+   "rank": 8,
+   "company": "Walden Robotics",
+   "signal_date": "2026-07-17",
+   "decision": "below_threshold",
+   "reason": "ranking score 58 < threshold 70",
+   "score": 58
+  },
+  {
+   "rank": 9,
+   "company": "Chai Discovery",
+   "signal_date": "2026-07-17",
+   "decision": "below_threshold",
+   "reason": "ranking score 45 < threshold 70",
+   "score": 55
+  },
+  {
+   "rank": 10,
+   "company": "Positron AI",
+   "signal_date": "2026-09-10",
+   "decision": "verification_blocked",
+   "reason": "contradicted load-bearing claim in the written brief: Positron AI just tripled its valuation to $5B with a fresh $875M raise and zero motorsport presence.",
+   "score": 81
+  },
+  {
+   "rank": 11,
+   "company": "Suniva",
+   "signal_date": "2026-09-09",
+   "decision": "below_threshold",
+   "reason": "ranking score 36 < threshold 70",
+   "score": 44
+  },
+  {
+   "rank": 12,
+   "company": "Félix (Félix Pago)",
+   "signal_date": "2026-09-01",
+   "decision": "below_threshold",
+   "reason": "ranking score 66 < threshold 70",
+   "score": 66
+  }
+ ],
+ "recorded_at": "2026-09-15T05:39:10+00:00",
+ "note": "The morning run scanned and found no eligible signal; the gate holds further firings for the day. Tick 'force' on the Daily run workflow to scan again."
+}
