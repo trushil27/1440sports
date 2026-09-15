@@ -23,6 +23,11 @@ Chris Yu, Co-Founder & President (micromobility.io interview; TechCrunch; Crunch
 - **Deal size ($1.5-3M a year) is an ESTIMATE**, labelled as such.
 - The Stellantis and Mahindra rule-outs are stated as group-identity judgments, not as documented category locks.
 
+
+## Correction, 15 Sep 2026
+
+The first render (sent to the MD 13 Sep) listed Michelin among Jaguar TCS Racing's partners. On re-check Michelin's only Jaguar link is the I-PACE eTROPHY support series (2018-19); Hankook has been Formula E's sole tyre supplier since Season 9 and no source names Michelin as a Jaguar TCS Racing partner. Removed. Chase is confirmed as Official Financial Services Partner (chase.com, 2026). Everything else in the roster sentence stands.
+
 ## Ledger as built (N° 251, 20 verified)
 
 | Section | Type | Load-bearing | Status | Claim |

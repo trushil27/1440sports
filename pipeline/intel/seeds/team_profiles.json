@@ -171,62 +171,109 @@
   "team": "Porsche Formula E Team",
   "teams_json_name": "Porsche",
   "series": "FE",
-  "identity": "premium German performance",
-  "title_sponsor": "TAG Heuer exited after 6 seasons; team rebranded with TDK as official technology partner",
+  "identity": "Porsche works team; GEN4 manufacturer; plans a second factory entry from S13 (not yet named)",
+  "title_sponsor": "None from S12 — TAG Heuer stepped back to Global Partner of Porsche Motorsport (roll bar / rear placement)",
   "open_categories": [
-   "title rights (naming)"
+   "title rights (naming)",
+   "fintech / payments",
+   "telecoms / connectivity",
+   "energy / charging",
+   "enterprise software (ERP, cloud)",
+   "consumer electronics / mobile"
   ],
-  "note": null,
+  "note": "S12 partners per Porsche newsroom (2025). Porsche will power its own two teams plus customer Cupra Kiro in S13. The second Porsche factory team has no name or partners announced as of 15 Sep 2026.",
   "competitor_locks": [
-   "industrial software / digital twin (AVEVA/Schneider)"
+   "cybersecurity / SASE (Cato Networks)",
+   "data infrastructure / storage (NetApp)",
+   "simulation software (Synopsys, ex-ANSYS)",
+   "lubricants (Mobil 1)",
+   "adhesives (LOCTITE)",
+   "apparel (PUMA)",
+   "watches (TAG Heuer)",
+   "electronic components (TDK, official technology partner)"
   ],
   "source": "data/teams.json",
   "title_slot_status": "naming open; technology category TAKEN by AVEVA",
-  "display_name": "Porsche Formula E Team"
+  "display_name": "Porsche Formula E Team",
+  "enriched_at": "2026-09-15"
  },
  {
   "team": "Jaguar TCS Racing",
   "teams_json_name": "Jaguar TCS Racing",
   "series": "FE",
-  "identity": "British, sustainability + IT services",
+  "identity": "JLR works team (Gaydon / Kidlington); premium electric-design marque; London home round",
   "title_sponsor": "TCS (Tata Consultancy Services)",
-  "open_categories": [],
-  "note": null,
+  "open_categories": [
+   "cybersecurity",
+   "telecoms / connectivity",
+   "energy / charging",
+   "mobility / micromobility",
+   "consumer tech"
+  ],
+  "note": "Roster per the Jaguar partners page and 2025/26 livery release. Michelin is NOT a partner (its Jaguar link was the I-PACE eTROPHY, 2018-19; Hankook is FE's sole tyre since S9) — N° 251 corrected 15 Sep 2026.",
   "competitor_locks": [
-   "financial services (Chase)"
+   "IT services (TCS title)",
+   "lubricants (Castrol, since 2019)",
+   "semiconductors / power electronics (Wolfspeed)",
+   "enterprise software / information management (OpenText)",
+   "materials (Dow)",
+   "bearings / e-mobility (Schaeffler, official supplier)",
+   "financial services / cards (Chase, official financial services partner)",
+   "apparel (Reflo)",
+   "racewear (Alpinestars)"
   ],
   "source": "data/teams.json",
-  "display_name": "Jaguar TCS Racing"
+  "display_name": "Jaguar TCS Racing",
+  "enriched_at": "2026-09-15"
  },
  {
   "team": "Nissan Formula E Team",
   "teams_json_name": "Nissan",
   "series": "FE",
-  "identity": "Japanese EV pioneer",
-  "title_sponsor": "—",
+  "identity": "Nissan works team (Yokohama / Le Mans); Saudi commercial anchor via Petromin",
+  "title_sponsor": "None — Nissan is the works brand; no title partner",
   "open_categories": [
+   "title rights (naming)",
+   "cybersecurity",
    "enterprise software",
-   "EV tech"
+   "fintech / payments",
+   "telecoms / connectivity",
+   "lubricants (Castrol row unverified)"
   ],
-  "note": null,
-  "competitor_locks": [],
+  "note": "S12 partners per the Nissan press kit: Electromin, Coral, Marelli, Reflo, Dynisma; Alpine Tech renewed for S12. Supplies its GEN4 powertrain to Andretti from S13 (Jul 2026). Drivers S13: Rowland, Maloney.",
+  "competitor_locks": [
+   "EV charging / energy (Electromin, Petromin — four-year deal from Oct 2024)",
+   "automotive electronics (Marelli)",
+   "driving simulators (Dynisma)",
+   "apparel (Reflo)"
+  ],
   "source": "data/teams.json",
-  "display_name": "Nissan Formula E Team"
+  "display_name": "Nissan Formula E Team",
+  "enriched_at": "2026-09-15"
  },
  {
   "team": "DS Penske",
   "teams_json_name": "DS Penske",
   "series": "FE",
-  "identity": "Franco-American",
-  "title_sponsor": "—",
+  "identity": "Penske Autosport (US) running the DS Automobiles works programme — an American-owned entry",
+  "title_sponsor": "None — DS is the marque, Penske the operator",
   "open_categories": [
-   "enterprise software"
+   "title rights (naming)",
+   "cybersecurity",
+   "enterprise software",
+   "fintech / payments",
+   "telecoms / connectivity",
+   "data infrastructure"
   ],
-  "note": null,
-  "competitor_locks": [],
+  "note": "Mouser-led components group renewed for S12 (Business Wire 4 Dec 2025). S13 is the first season without a DS powertrain since 2015/16 (Formula E); confirm the entry's powertrain and name before pointing a case at it.",
+  "competitor_locks": [
+   "electronic components distribution (Mouser, TTI, Molex, KYOCERA AVX)",
+   "energy / fuels / lubricants (TotalEnergies)"
+  ],
   "source": "data/teams.json",
   "status": "DS announced (Mar 2026) it will EXIT FE at end of season — Penske entry future uncertain; do not target until resolved",
-  "display_name": "DS Penske"
+  "display_name": "DS Penske",
+  "enriched_at": "2026-09-15"
  },
  {
   "team": "Andretti Formula E",
@@ -264,53 +311,97 @@
   "team": "Mahindra Racing",
   "teams_json_name": "Mahindra Racing",
   "series": "FE",
-  "identity": "Indian EV, founding FE team",
-  "title_sponsor": "Mahindra",
+  "identity": "Mahindra works team (Banbury); committed as a GEN4 manufacturer; Indian corporate audience",
+  "title_sponsor": "None — Mahindra is the works brand",
   "open_categories": [
-   "enterprise software"
+   "cybersecurity",
+   "enterprise software (Tech Mahindra is IT services — crowding, not a product lock)",
+   "fintech / payments",
+   "telecoms / connectivity",
+   "semiconductors / electrical",
+   "industrial"
   ],
-  "note": null,
-  "competitor_locks": [],
+  "note": "Valvoline and Umicore per S12 launch coverage; mahindraracing.com/partners egress-blocked — re-check the full list when reachable.",
+  "competitor_locks": [
+   "lubricants / e-fluids (Valvoline, official partner)",
+   "battery materials (Umicore, official technology partner)",
+   "IT services (Tech Mahindra)"
+  ],
   "source": "data/teams.json",
-  "display_name": "Mahindra Racing"
+  "display_name": "Mahindra Racing",
+  "enriched_at": "2026-09-15"
  },
  {
   "team": "Cupra Kiro",
   "teams_json_name": "Cupra Kiro",
   "series": "FE",
-  "identity": "Stellantis performance brand",
-  "title_sponsor": "Cupra",
-  "open_categories": [],
-  "note": null,
-  "competitor_locks": [],
+  "identity": "US-owned (The Forest Road Company, LA; David Kaplan, Bennett Rosenthal) with an investor group including Idris Elba; entertainment-led commercial model",
+  "title_sponsor": "Cupra co-title, extended into GEN4 (S13+)",
+  "open_categories": [
+   "cybersecurity",
+   "enterprise software",
+   "fintech / payments",
+   "telecoms / connectivity",
+   "energy / charging",
+   "consumer tech",
+   "media / entertainment (the team sells one-off liveries: Marvel 2025, Amazon MGM 2026)"
+  ],
+  "note": "Ex-ERT team bought by Forest Road Oct 2024; expanded investor group Feb 2025 (Elba, Ressler, Berg, Neff). Porsche customer powertrain confirmed for S13 (Jul 2026).",
+  "competitor_locks": [
+   "automotive marque (Cupra co-title)",
+   "powertrain (Porsche customer)"
+  ],
   "source": "data/teams.json",
-  "display_name": "Cupra Kiro"
+  "display_name": "Cupra Kiro",
+  "enriched_at": "2026-09-15"
  },
  {
   "team": "Lola Yamaha ABT Formula E Team",
   "teams_json_name": "Lola Yamaha ABT",
   "series": "FE",
-  "identity": "heritage marques, new powertrain",
-  "title_sponsor": "—",
+  "identity": "Lola Cars (Silverstone) with Yamaha powertrain technology; ABT runs the team through S12 only",
+  "title_sponsor": "None — no title partner announced",
   "open_categories": [
-   "enterprise software"
+   "title rights (naming)",
+   "cybersecurity",
+   "enterprise software",
+   "fintech / payments",
+   "telecoms / connectivity",
+   "energy / charging"
   ],
-  "note": null,
-  "competitor_locks": [],
+  "note": "Lola splits from ABT after S12 and runs the entry in-house at Silverstone from S13 (RACER 27 Jan 2026); S13 team name and partners TBC. TP Mark Preston (S12). Lola–Yamaha technical partnership runs beyond 2027.",
+  "competitor_locks": [
+   "apparel (Castore)",
+   "racewear (OMP)",
+   "fuels / lubricants (Shell)",
+   "beverages (Living Things)"
+  ],
   "source": "data/teams.json",
-  "display_name": "Lola Yamaha ABT Formula E Team"
+  "display_name": "Lola Yamaha ABT Formula E Team",
+  "enriched_at": "2026-09-15"
  },
  {
   "team": "Citroën Racing",
   "teams_json_name": "Citroën Racing",
   "series": "FE",
-  "identity": "replaced Maserati MSG for 2025-26",
-  "title_sponsor": "Citroën",
-  "open_categories": [],
-  "note": null,
-  "competitor_locks": [],
+  "identity": "Citroën works brand on the Monaco-based MSG Racing operation (ex-Maserati MSG); Stellantis Motorsport powertrain",
+  "title_sponsor": "None — Citroën is the works brand",
+  "open_categories": [
+   "title rights (naming)",
+   "cybersecurity",
+   "enterprise software",
+   "fintech / payments",
+   "telecoms / connectivity",
+   "energy / charging",
+   "industrial"
+  ],
+  "note": "Debut S12. Only Point S (Shanghai one-off) found as a commercial partner; citroen-racing.com egress-blocked — the roster is thin, which is an opportunity, not a gap in our data.",
+  "competitor_locks": [
+   "tyre retail / service network (Point S, one-off race sponsor)"
+  ],
   "source": "data/teams.json",
-  "display_name": "Citroën Racing"
+  "display_name": "Citroën Racing",
+  "enriched_at": "2026-09-15"
  },
  {
   "team": "Opel GSE Formula E Team",
@@ -321,13 +412,17 @@
   "open_categories": [
    "title rights (naming)",
    "technology",
-   "energy / industrial"
+   "energy / industrial",
+   "cybersecurity",
+   "enterprise software",
+   "fintech / payments"
   ],
-  "note": "Entry announced 20 Mar 2026 (Formula E CEO Jeff Dodds + Opel CEO Florian Huettl); grid grows to 12 teams / 24 cars. Only partner announced by 11 Sep 2026: Sparco (racewear, 8 Jul 2026). Drivers: Mitch Evans, Théo Pourchaire; test/development driver Sophia Flörsch. Sources: fiaformulae.com/en/news/1011745 (20 Mar 2026); media.stellantis.com Opel press (Sparco, 8 Jul 2026); autosport.com (Evans)",
+  "note": "Works entry from S13 based in Rüsselsheim and Satory; TP Jörg Schrott; Corsa GSE launch 2026. No commercial partners announced as of 15 Sep 2026.",
   "competitor_locks": [
    "racewear / safety (Sparco)"
   ],
   "source": "data/teams.json",
-  "display_name": "Opel GSE Formula E Team"
+  "display_name": "Opel GSE Formula E Team",
+  "enriched_at": "2026-09-15"
  }
 ]

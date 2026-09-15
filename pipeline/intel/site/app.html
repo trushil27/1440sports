@@ -718,7 +718,6 @@
       <div class="tablewrap"><table class="seq"><thead><tr><th>When</th><th>Step</th><th>Channel</th><th>What it says</th><th>Status</th></tr></thead><tbody>
       ${steps.map((s) => `<tr><td class="date">${fmtDate(s.date)}${seq ? '' : '<span class="sm">if started today</span>'}</td><td>${esc(stepName(s.step))}</td><td>${esc(s.channel)}</td><td class="why">${esc(s.purpose || '')}</td><td>${s.status === 'sent' ? `<span class="badge ok">sent ${fmtDate(s.sent_on)}</span>` : '<span class="badge mute">planned</span>'}</td></tr>`).join('')}
       </tbody></table></div>
-      ${seq ? '' : `<div class="sm nocmo">Start it from the repo: <code>python -m intel.outreach start ${esc(b.number)}</code> — then log each touch, the reply and the meeting; the Outreach page shows the rates.</div>`}
     </div>`;
   }
   function addDays(iso, n) { const d = new Date(iso + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); }

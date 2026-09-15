@@ -228,7 +228,18 @@ risk one. **Team concentration (MD, 15 Sep):** 17 of 26 shown FE cases point at 
 F1 has the same shape (Cadillac 13, Haas 10, Williams 9 of 50). Cause is data, not the fitter: the other FE
 team profiles carry thin `open_categories` (`["enterprise software"]` or `[]`) and 10 FE sponsor rows have no
 team, so builders cannot make the case for Porsche, Nissan, DS Penske, Mahindra, Cupra Kiro, Lola Yamaha ABT
-or Opel. Fix = enrich those profiles and rosters (open TODO).
+or Opel. **Done 15 Sep 2026:** `seeds/sponsors.json` +27 FE rows (Porsche S12 roster incl. Cato Networks/NetApp/
+TDK; Nissan Electromin–Petromin four-year deal + S12 press-kit partners; Mahindra Valvoline/Umicore; Cupra Kiro
+Porsche powertrain + one-off entertainment liveries; Lola Living Things + ABT leaving after S12; Citroën Point S;
+Jaguar Wolfspeed/OpenText/Dow/Schaeffler/Chase/Reflo/Alpinestars), +39 FE category rows, 9 FE profiles with
+identity / title / open lanes / locks / S13 notes (Lola in-house from S13, Porsche second factory team unnamed,
+Andretti on Nissan power, DS Penske without a DS powertrain). The 10 team-less FE rows are championship partners —
+correct, not a defect. Team sites (jaguar.com, mahindraracing.com, lola-fe.com, nissannews, porsche newsroom) are
+egress-blocked: rows are sourced to search summaries, `verified_at` 2026-09-15. **N° 251 corrected:** it named
+Michelin at Jaguar — Michelin's only Jaguar link is the I-PACE eTROPHY (2018-19); Hankook is FE's sole tyre since
+S9. Removed, rebuilt, republished; the MD holds the 13 Sep PDF. **Proofpoint (checked 15 Sep):** watch row, not a
+case — Thoma Bravo private since 2021, >$2B ARR, Hornetsecurity $1.8B (Dec 2025), CMO Joyce Kim from 1 Dec 2025,
+but the only in-window event is a July 2026 amend-and-extend of $5B+ loans to 2030; re-open on an S-1.
 
 ## The two-tier product
 
