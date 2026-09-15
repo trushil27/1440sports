@@ -1,0 +1,835 @@
+{
+ "run": {
+  "id": 202,
+  "date": "2026-09-15",
+  "status": "success",
+  "mode": "dry_run",
+  "summary": {
+   "usage": {
+    "calls": {},
+    "tokens": {
+     "input": 0,
+     "output": 0,
+     "cache_read": 0,
+     "cache_write": 0
+    },
+    "estimated_usd": 0.0
+   },
+   "rebuild": true,
+   "sources": {
+    "n8n": 0,
+    "status": "no mailbox configured — scanner only",
+    "routine": 0,
+    "scanner": 1,
+    "candidates": 0,
+    "to_research": []
+   },
+   "decisions": {
+    "selected": 1
+   },
+   "candidates": 1,
+   "verification": [
+    {
+     "pdf": "/tmp/case-pdf-tnrd77l6/2026-09-15/polymarket.pdf",
+     "web": "/tmp/case-pdf-tnrd77l6/2026-09-15/polymarket.web.html",
+     "audit": "pass",
+     "status": "verified",
+     "company": "Polymarket",
+     "stage_a": {
+      "verified": 8
+     },
+     "stage_b": {
+      "verified": 17
+     },
+     "written": true,
+     "blocking": [],
+     "brief_id": 267,
+     "rendered": true,
+     "highlights": 3,
+     "candidate_id": 311,
+     "verification": "verified",
+     "audit_attempts": 1
+    }
+   ],
+   "candidate_list": [
+    {
+     "rank": 1,
+     "score": 71,
+     "reason": "top ranking score",
+     "company": "Polymarket",
+     "decision": "selected",
+     "signal_date": "2026-08-31"
+    }
+   ]
+  }
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "company": "Polymarket",
+   "series": "F1",
+   "decision": "selected",
+   "reason": "top ranking score",
+   "score_total": 71,
+   "score_breakdown": {
+    "cap": null,
+    "base": 71,
+    "total": 71,
+    "timing": 18,
+    "ops_fit": 9,
+    "ranking": 62,
+    "urgency": 15,
+    "capacity": 18,
+    "brand_fit": 11,
+    "alumni_boost": 0,
+    "of_gate_applied": false,
+    "ops_fit_subscores": {
+     "lock_in": 1,
+     "on_camera": 2,
+     "product_to_need": 2,
+     "slot_availability": 4
+    }
+   },
+   "gate_results": {
+    "of_gate": {
+     "applied": false,
+     "brand_fit": 11
+    },
+    "preflight": {
+     "outcome": "CLEAN",
+     "identity_check": [],
+     "team_slot_check": [],
+     "category_density": "not evaluated",
+     "category_lock_check": "not evaluated (no per-sponsor category data)"
+    },
+    "gate0_source": {
+     "url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+     "pass": true,
+     "tier": 1
+    },
+    "gate6_alumni": {
+     "boost": 0,
+     "match": null,
+     "scanner_alumni_match": null
+    },
+    "scanner_score": 71,
+    "gate5_saturation": {
+     "cap": null,
+     "existing_sponsor": false
+    },
+    "recomputed_total": 71,
+    "scanner_vs_recomputed_delta": 0
+   },
+   "recommended_team": "Cadillac F1 Team",
+   "source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+   "trigger_date": "2026-08-31",
+   "trigger_reason": "funding round"
+  }
+ ],
+ "brief": {
+  "number": 252,
+  "verification_status": "verified",
+  "audit_status": "pass",
+  "audit_attempts": 1,
+  "pages": 2,
+  "mode": "B",
+  "web_html_path": "/tmp/case-pdf-tnrd77l6/2026-09-15/polymarket.web.html",
+  "brief_data": {
+   "hq": "New York, New York",
+   "deck": "Polymarket, the prediction market that turns news and sport into tradeable odds, has a $1B round at a $21B valuation led by 1789 Capital, reported by Bloomberg on 31 August and 40% above April's $15B price, and named its first CFO ten days later.",
+   "risks": [
+    {
+     "label": "THE OWNER AND THE INVESTOR",
+     "detail": "TWG Global's Mark Walter is under a DOJ and SEC investigation he denies; 1789 Capital, co-founded by Donald Trump Jr., leads the round while a House Oversight insider-trading probe is open.",
+     "counter": "Put both on the table in the first call and contract reputational exit rights both ways."
+    },
+    {
+     "label": "REGULATORS AND THE CATEGORY",
+     "detail": "Polymarket US is enjoined in Nevada with cease-and-desists in four more states, and F1 holds Betway and FanDuel as Official Betting Operators: is a prediction market a separable category?",
+     "counter": "F1's betting deals are regional and non-exclusive; MLB and the NHL run both categories side by side. Clear the definition with Cadillac's counsel first."
+    }
+   ],
+   "score": 71,
+   "ticker": "Private ($21B; $1B round, Aug 2026)",
+   "company": "Polymarket",
+   "gridfit": [
+    {
+     "team": "Cadillac F1 Team",
+     "label": "PRIME LANE",
+     "detail": "greenfield entry — partner roster being built from zero",
+     "status": "prime",
+     "recommended": true
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "label": "TAKEN",
+     "detail": "Allwyn, FxPro, Gemini",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "label": "TAKEN",
+     "detail": "Circle, CoinPayments, Coinbase",
+     "status": "conflict",
+     "recommended": false
+    },
+    {
+     "team": "Atlassian Williams Racing",
+     "label": "TAKEN",
+     "detail": "Betway, Jackpot City Casino, Kraken",
+     "status": "conflict",
+     "recommended": false
+    }
+   ],
+   "rebuilt": true,
+   "signals": [
+    "funding_event",
+    "category_precedent",
+    "category_open",
+    "leadership_change"
+   ],
+   "sources": [
+    "https://sbcamericas.com/2026/02/20/polymarket-hires-ari-borod-fanatics/",
+    "https://www.mlb.com/press-release/press-release-mlb-names-polymarket-exclusive-prediction-market-exchange-partner-and-signs-agreement-with-cftc-to-establish-integrity-framework",
+    "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+    "https://sbcamericas.com/2026/01/20/nevada-regulator-sues-polymarket-sports/",
+    "https://ir.theice.com/press/news-details/2025/ICE-Announces-Strategic-Investment-in-Polymarket/default.aspx",
+    "https://www.bloomberg.com/news/articles/2026-04-20/polymarket-in-talks-for-new-investment-at-15-billion-valuation",
+    "https://corp.formula1.com/formula-1-announces-betway-as-sports-first-official-betting-operator-in-multi-year-deal/"
+   ],
+   "extended": {
+    "ask": "A 25-minute call with Ari Borod before the United States GP to establish whether a prediction market is a separable category under Formula 1's Betway and FanDuel agreements, to put the Walter investigation and the House Oversight probe on the table in both directions, and to size an Official Prediction Market Partner entry at Cadillac for 2027-2029, Las Vegas excluded until Nevada is resolved.",
+    "value": [
+     {
+      "text": "Polymarket's Formula 1 markets — race winner, pole position, fastest lap, championship standings, safety cars and red flags — become a free-to-play Cadillac predictions game inside the team app and website, with market-implied win probabilities in race-week content and live odds in team-channel graphics. This is a halo with working mechanics; it does not touch the car, and the brief says so.",
+      "label": "Fan-engagement layer (Mode B)"
+     },
+     {
+      "text": "A $21B partner at the reported premium tier in year one of the team's commercial build, plus a partner whose business is live events and whose audience is young, American and mobile-first — the demographic Cadillac's other B2C partners, Jim Beam and Tommy Hilfiger, are buying.",
+      "label": "Commercial lift for the team"
+     },
+     {
+      "text": "A live-odds content series across the season, Polymarket's event-probability data (distributed globally by Intercontinental Exchange) as a storytelling device for strategy calls and championship swings, and driver and engineer appearances in Polymarket's own channels.",
+      "label": "Content and data"
+     },
+     {
+      "text": "Official Prediction Market Partner designation, livery and garage placement, naming of the Cadillac predictions game, Austin and Miami hospitality, and driver and engineering access for Polymarket's content and its sports-rights partners.",
+      "label": "What the team gives back"
+     }
+    ],
+    "why_now": [
+     {
+      "text": "On 31 August 2026 Bloomberg reported a $1B funding round for Polymarket at a $21B post-money valuation, led by 1789 Capital, which is contributing about $300M and will hold a combined stake of roughly $500M. The valuation is 40% above April's $15B price. 1789 Capital was co-founded by Donald Trump Jr.",
+      "label": "Trigger"
+     },
+     {
+      "text": "The April 2026 raise at $15B, undisclosed until August, brought in DE Shaw and G Squared with SV Angel, Dragonfly and Valor adding capital (reported). Before that, in October 2025, Intercontinental Exchange committed up to $2B at about $8B pre-money and became the global distributor of Polymarket's event-driven data. Three price marks in eleven months: $9B, $15B, $21B.",
+      "label": "The round before, and the exchange that owns the NYSE"
+     },
+     {
+      "text": "Ari Borod arrived in February 2026 from Fanatics, where he was chief business officer, as President of Sports Business Development. Travis VanderZanden, founder of Bird, joined on 12 August as Chief Growth Officer with the marketing function under him, alongside compliance and risk hires from Robinhood, Coinbase and Nasdaq. Warren Jenson became the first Chief Financial Officer on 10 September. That is the shape of a company preparing to be measured.",
+      "label": "A commercial organisation built in seven months"
+     },
+     {
+      "text": "The NFL season and the November midterms are the volume events the August marketing rebuild was hired for. In Formula 1 the season closes through the United States GP in Austin in late October, Mexico City, São Paulo, Las Vegas in November, Qatar and Abu Dhabi, and teams close 2027 partner rosters in the fourth quarter. Austin is the announcement stage; Las Vegas is not, because Polymarket US is enjoined in Nevada.",
+      "label": "Calendar window"
+     }
+    ],
+    "why_team": [
+     {
+      "text": "Every other team carries a brand that conflicts with or crowds this category. Williams carries Betway and Jackpot City Casino, Alpine Modo Casino, McLaren OKX and Allwyn, Aston Martin Coinbase and Public, Red Bull Gate.io and Ava Trade, Mercedes Nasdaq, Ferrari BingX, Audi Revolut and Libertex with Stake departed within the year, Haas MGM Rewards and Zoomex, Racing Bulls XM Trading. Cadillac's debut roster is TWG AI, Core Scientific, IFS, Claro, Jim Beam, Tenneco and Tommy Hilfiger, and none of them sits anywhere near betting, casino, exchange or trading.",
+      "label": "The only clean roster"
+     },
+     {
+      "text": "TWG Motorsports, a subsidiary of TWG Global, holds the controlling stake in the team with General Motors as partner. TWG Global also controls the Los Angeles Dodgers, a club in the league that made Polymarket its exclusive prediction-market exchange in March, so the category is already understood inside the owner group. The caveat is on page two as risk one: TWG Global's founder Mark Walter is under a Department of Justice and SEC investigation into alleged fraud at his insurance companies, which TWG denies, and the group has said the team is not for sale.",
+      "label": "The owner group, stated with the caveat"
+     },
+     {
+      "text": "Cadillac hired Lauren Teixeira as Chief Commercial Officer and Willem Dinger as Chief Partnerships Officer in November 2025, reporting to Tyler Epp, the former president of the Miami Grand Prix. Dinger has described the target as a fewer, bigger, better partnership ecosystem, and Teixeira has said the team is not looking for a title partner. The partner tiers reported for Cadillac are $40-50M a year for a primary partner and $20-30M for a premium one: a $21B company with $1B of new capital can pay the premium tier without it being the largest cheque it wrote this year.",
+      "label": "A commercial team built to sell this"
+     },
+     {
+      "text": "Austin in late October and Miami in May are the two US rounds where Polymarket US can operate and host; Las Vegas is excluded while the Nevada injunction stands. An American debut team with a young, mobile-first audience is the right stage for a product whose fans already trade race-winner, pole and safety-car markets on the platform.",
+      "label": "Where it activates"
+     }
+    ],
+    "ruled_out": [
+     {
+      "team": "Atlassian Williams Racing",
+      "reason": "Betway and Jackpot City Casino hold the betting and gaming lane; Kraken holds crypto exchange."
+     },
+     {
+      "team": "BWT Alpine F1 Team",
+      "reason": "Modo Casino holds the gaming lane."
+     },
+     {
+      "team": "McLaren Mastercard F1 Team",
+      "reason": "Allwyn is a lottery operator and OKX a crypto exchange; Gemini and Hedera crowd the lane further."
+     },
+     {
+      "team": "Aston Martin Aramco F1 Team",
+      "reason": "Public is a retail trading app; Coinbase, Circle and Pepperstone crowd the lane."
+     },
+     {
+      "team": "Oracle Red Bull Racing",
+      "reason": "Gate.io is a crypto exchange and Ava Trade a broker; the trading lane is occupied."
+     },
+     {
+      "team": "Mercedes-AMG Petronas F1 Team",
+      "reason": "Nasdaq sits on the roster, and Polymarket's largest strategic investor is Nasdaq's rival, Intercontinental Exchange."
+     },
+     {
+      "team": "Scuderia Ferrari HP",
+      "reason": "BingX is a crypto exchange and Vantage a broker; VGW Play, a social casino, departed within the year."
+     },
+     {
+      "team": "Audi Revolut F1 Team",
+      "reason": "Stake departed within the last 12 months and Libertex and NEXO remain; Revolut holds title."
+     },
+     {
+      "team": "TGR Haas F1 Team",
+      "reason": "MGM Rewards is a casino loyalty brand and Zoomex a crypto exchange."
+     },
+     {
+      "team": "Visa Cash App Racing Bulls",
+      "reason": "Open on betting but not chosen: XM Trading crowds the trading lane, and Visa's rules on event-contract merchants would need clearing first. The runner-up if Cadillac's ownership question makes a board hesitate."
+     }
+    ]
+   },
+   "date_long": "15 SEP 2026",
+   "discovery": "scan",
+   "historical": false,
+   "team_label": "Cadillac F1 Team",
+   "value_mode": "B",
+   "bottom_line": "$1B at $21B, a first CFO, a sports-rights buyer that took MLB, the NHL and the Yankees inside a year, and a grid that sold betting twice and prediction markets never, with one clean American roster. Politics, regulators and a halo-only workstream hold it at 71; brand fit is under the engine's 12-point gate, so the desk ranks it 62. Built on request.",
+   "footer_date": "15 SEP 2026",
+   "score_cells": [
+    {
+     "num": 18,
+     "note": "Round 31 Aug; first CFO 10 Sep; Austin inside the window.",
+     "denom": "/ 20",
+     "label": "TIMING"
+    },
+    {
+     "num": 18,
+     "note": "$1B raised at $21B; ICE up to $2B; fees only since March.",
+     "denom": "/ 20",
+     "label": "CAPACITY"
+    },
+    {
+     "num": 11,
+     "note": "Young US live-sport audience; gambling-adjacent, political, Nevada out.",
+     "denom": "/ 20",
+     "label": "BRAND FIT"
+    },
+    {
+     "num": 15,
+     "note": "NFL and midterm volume, US build-out, Kalshi taking rightsholders.",
+     "denom": "/ 20",
+     "label": "URGENCY"
+    },
+    {
+     "num": 9,
+     "note": "MODE B: fan-engagement halo; nothing for the car.",
+     "denom": "/ 20",
+     "label": "OPS FIT"
+    }
+   ],
+   "the_case_p1": "Intercontinental Exchange committed up to $2B in October 2025, making the owner of the New York Stock Exchange the distributor of Polymarket's event data; an April raise at $15B then brought in DE Shaw and G Squared (reported). Volume crossed $10B in a month for the first time in March 2026, and trading fees arrived on 30 March. Ari Borod, Fanatics' former chief business officer, joined in February as President of Sports Business Development; Warren Jenson, once Amazon's finance chief, became the first CFO on 10 September.",
+   "the_case_p2": "Rightsholders now sell this category on its own. MLB made Polymarket its exclusive prediction-market exchange in March, a deal reported at up to $300M; the NHL took both Polymarket and Kalshi; the Yankees and Rangers signed at club level; Kalshi became the US Open's prediction-market partner on 31 August. Formula 1 sold betting-operator rights to Betway and FanDuel this year and left prediction markets unsold.",
+   "track_label": "",
+   "brief_number": "252",
+   "claims_total": 16,
+   "gridfit_note": "78 of 346 partner rows categorised",
+   "hot_top_tier": false,
+   "proof_points": [
+    {
+     "fact": "$1B round at a $21B post-money valuation led by 1789 Capital, reported by Bloomberg on 31 Aug 2026, with 17…",
+     "value": "$1B",
+     "claim_id": 2105,
+     "verified": true,
+     "source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion"
+    },
+    {
+     "fact": "DE Shaw and G Squared joined in the April 2026 raise at $15B (reported); 1789 Capital led the Aug 2026 roun…",
+     "value": "$15B",
+     "claim_id": 2106,
+     "verified": true,
+     "source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion"
+    },
+    {
+     "fact": "Intercontinental Exchange committed up to $2B in October 2025, making the owner of the New York Stock Excha…",
+     "value": "$2B",
+     "claim_id": 2114,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "Volume crossed $10B in a month for the first time in March 2026, and trading fees arrived on 30 March.",
+     "value": "$10B",
+     "claim_id": 2116,
+     "verified": true,
+     "source_url": null
+    },
+    {
+     "fact": "MLB made Polymarket its exclusive prediction-market exchange in March, a deal reported at up to $300M;",
+     "value": "$300M",
+     "claim_id": 2117,
+     "verified": true,
+     "source_url": null
+    }
+   ],
+   "series_label": "F1",
+   "timing_label": "HOT",
+   "horizon_label": "6-10 WKS",
+   "industry_meta": "Prediction Markets · Sports Rights & Crypto-Native Trading",
+   "value_content": "MODE B, halo with mechanics. Polymarket's Formula 1 markets (race winner, pole, fastest lap, safety car) become a free-to-play Cadillac predictions game in the team app and market-implied win probabilities in race-week content. Commercially: a $21B partner at the reported premium tier, a young US audience, Austin and Miami hospitality. Nothing reaches the car.",
+   "value_section": true,
+   "why_team_para": "Cadillac F1 Team is the one roster with no betting, casino, exchange or trading brand: Williams carries Betway and Jackpot City, Alpine Modo Casino, McLaren OKX and Allwyn, Aston Martin Coinbase and Public. Its owner group, TWG Global, also controls the Los Angeles Dodgers, whose league made Polymarket its exclusive exchange. American, debut season, and a stated preference for fewer, bigger partners.",
+   "deal_arch_para": "Entry as Official Prediction Market Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, running through the 2028 US election, historically its peak-volume event. Estimated $15-25M a year against a reported premium tier of $20-30M. Scope: livery and garage placement, the predictions game, Austin and Miami hospitality. Las Vegas excluded until Nevada lifts its injunction.",
+   "footer_company": "POLYMARKET",
+   "why_team_label": "WHY CADILLAC F1 TEAM",
+   "claims_verified": 16,
+   "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The money landed on 31 August and the first CFO on 10 September; the NFL season and the November midterms are the volume events the marketing rebuild was hired for. Teams close 2027 rosters in the fourth quarter, and the United States GP in Austin in late October is the announcement stage.",
+   "confidence_level": "MEDIUM",
+   "historical_label": null,
+   "decision_maker_bio": "Borod runs Polymarket's sports partnerships, joining in February 2026 from Fanatics, where he was chief business officer. Path: Travis VanderZanden, Chief Growth Officer (marketing); Warren Jenson, Chief Financial Officer; Shayne Coplan, founder and Chief Executive Officer.",
+   "decision_maker_name": "Ari Borod",
+   "decision_maker_role": "President of Sports Business Development, Polymarket",
+   "opening_angle_intro": "Lead with the category, not the car.",
+   "opening_angle_quote": "&ldquo;Ari, you took MLB and the Yankees this season. Formula 1 sold its betting rights and left prediction markets unsold; one clean American roster is being built for 2027. 25 minutes before Austin?&rdquo;",
+   "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+   "verification_status": "verified",
+   "decision_maker_verified": true,
+   "all_proof_points_verified": true
+  }
+ },
+ "ledger": [
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Ari Borod, President of Sports Business Development at Polymarket",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://sbcamericas.com/2026/02/20/polymarket-hires-ari-borod-fanatics/",
+     "excerpt": "SBC Americas, 20 Feb 2026; Gambling Insider; NEXT.io; Crunchbase profile: Ari Borod joined Polymarket as President of Sports Business Development, based in New York, after four years as Chief Business Officer of Fanatics (Aug 2022 to Jan 2026); earlier roles at The Action Network, FanDuel Group and the law firm Gibson Dunn. Fanatics sued to enforce a non-compete and the parties settled. Front Office Sports (Yankees deal) describes him as leading Polymarket's major sports partnerships.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "decision_maker",
+   "type": "person_role",
+   "load_bearing": true,
+   "text": "Ari Borod, President of Sports Business Development, Polymarket at Polymarket",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://sbcamericas.com/2026/02/20/polymarket-hires-ari-borod-fanatics/",
+     "excerpt": "SBC Americas, 20 Feb 2026; Gambling Insider; NEXT.io; Crunchbase profile: Ari Borod joined Polymarket as President of Sports Business Development, based in New York, after four years as Chief Business Officer of Fanatics (Aug 2022 to Jan 2026); earlier roles at The Action Network, FanDuel Group and the law firm Gibson Dunn. Fanatics sued to enforce a non-compete and the parties settled. Front Office Sports (Yankees deal) describes him as leading Polymarket's major sports partnerships.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1B round at a $21B post-money valuation led by 1789 Capital, reported by Bloomberg on 31 Aug 2026, with 1789 contributing about $300M; up 40% from the $15B valuation of the April 2026 raise",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mlb.com/press-release/press-release-mlb-names-polymarket-exclusive-prediction-market-exchange-partner-and-signs-agreement-with-cftc-to-establish-integrity-framework",
+     "excerpt": "MLB press release, 19 Mar 2026 (also CNBC, Fortune, Front Office Sports the same day): Major League Baseball named Polymarket its exclusive Official Prediction Market Exchange in a multi-year agreement. Polymarket and its brokers receive exclusive access to MLB marks and logos inside their products, Official League Data through Sportradar, and brand exposure across MLB's digital ecosystem and at league events; the parties agreed an integrity framework restricting markets such as individual pitches, and Commissioner Manfred signed a memorandum of understanding with CFTC Chairman Selig. Front Office Sports reports the deal at up to $300 million (REPORTED; MLB did not disclose terms).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "deck",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Polymarket, the prediction market that turns news and sport into tradeable odds, has a $1B round at a $21B valuation led by 1789 Capital, reported by Bloomberg on 31 August and 40% above April's $15B price, and named its first CFO ten days later.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+     "excerpt": "Bloomberg, 31 Aug 2026 (carried by Yahoo Finance, Investing.com and CryptoRank the same day): 1789 Capital is leading a $1 billion funding round for Polymarket at a $21 billion post-money valuation, contributing about $300 million and taking its combined stake to roughly $500 million once the round closes; the valuation is 40% above the $15 billion price of the April round. 1789 Capital was co-founded by Donald Trump Jr.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "DE Shaw and G Squared joined in the April 2026 raise at $15B (reported); 1789 Capital led the Aug 2026 round; Intercontinental Exchange committed up to $2B in Oct 2025 at about $8B pre-money (reported); SV Angel, Dragonfly and Valor Equity Partners returning",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+     "excerpt": "Bloomberg, 31 Aug 2026 (carried by Yahoo Finance, Investing.com and CryptoRank the same day): 1789 Capital is leading a $1 billion funding round for Polymarket at a $21 billion post-money valuation, contributing about $300 million and taking its combined stake to roughly $500 million once the round closes; the valuation is 40% above the $15 billion price of the April round. 1789 Capital was co-founded by Donald Trump Jr.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Intercontinental Exchange committed up to $2B in October 2025, making the owner of the New York Stock Exchange the distributor of Polymarket's event data;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ir.theice.com/press/news-details/2025/ICE-Announces-Strategic-Investment-in-Polymarket/default.aspx",
+     "excerpt": "Intercontinental Exchange press release, 7 Oct 2025 (also Fortune, Forbes): ICE, parent of the New York Stock Exchange, will invest up to $2 billion in Polymarket at a valuation of approximately $8 billion pre-investment, and becomes a global distributor of Polymarket's event-driven data as sentiment indicators; the two agreed to partner on future tokenisation initiatives. Polymarket confirmed a $9 billion post-money valuation (REPORTED).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round: $1B at a $21B valuation led by 1789 Capital, reported 31 Aug 2026; Warren Jenson named first Chief Financial Officer on 10 Sep 2026",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+     "excerpt": "Bloomberg, 31 Aug 2026 (carried by Yahoo Finance, Investing.com and CryptoRank the same day): 1789 Capital is leading a $1 billion funding round for Polymarket at a $21 billion post-money valuation, contributing about $300 million and taking its combined stake to roughly $500 million once the round closes; the valuation is 40% above the $15 billion price of the April round. 1789 Capital was co-founded by Donald Trump Jr.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "an April raise at $15B then brought in DE Shaw and G Squared (reported).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-04-20/polymarket-in-talks-for-new-investment-at-15-billion-valuation",
+     "excerpt": "Bloomberg, 20 Apr 2026, and Finance Magnates / Qz, 4-6 Aug 2026: Polymarket closed a round at a $15 billion valuation in April 2026 that brought in D.E. Shaw and G Squared as new investors, with SV Angel, Dragonfly and Valor Equity Partners adding capital; the total was about $1 billion including Intercontinental Exchange's $600 million commitment. The round was not publicly disclosed until August (REPORTED).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "sponsorship",
+   "load_bearing": true,
+   "text": "MLB named Polymarket its exclusive Official Prediction Market Exchange on 19 Mar 2026, a deal reported at up to $300M; the NHL named Polymarket and Kalshi official prediction market partners in Oct 2025; Kalshi became Official Prediction Market Partner of the US Open on 31 Aug 2026. Formula 1 named Betway (5 Mar 2026, regional and non-exclusive) and FanDuel (30 Apr 2026, US and Canada) Official Betting Operators; no prediction market holds a Formula 1 or team designation in the sponsor table",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mlb.com/press-release/press-release-mlb-names-polymarket-exclusive-prediction-market-exchange-partner-and-signs-agreement-with-cftc-to-establish-integrity-framework",
+     "excerpt": "MLB press release, 19 Mar 2026 (also CNBC, Fortune, Front Office Sports the same day): Major League Baseball named Polymarket its exclusive Official Prediction Market Exchange in a multi-year agreement. Polymarket and its brokers receive exclusive access to MLB marks and logos inside their products, Official League Data through Sportradar, and brand exposure across MLB's digital ecosystem and at league events; the parties agreed an integrity framework restricting markets such as individual pitches, and Commissioner Manfred signed a memorandum of understanding with CFTC Chairman Selig. Front Office Sports reports the deal at up to $300 million (REPORTED; MLB did not disclose terms).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p1",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "Volume crossed $10B in a month for the first time in March 2026, and trading fees arrived on 30 March.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://corp.formula1.com/formula-1-announces-betway-as-sports-first-official-betting-operator-in-multi-year-deal/",
+     "excerpt": "Formula One World Championship Limited, 5 Mar 2026, and SportsPro / Insider Sport, 5-6 Mar 2026: Formula 1 named Betway its first Official Betting Operator in a multi-year deal covering Europe, the Middle East and Africa, Canada and Mexico. The structure is non-exclusive and regional — F1 said it would sign further regional partners, the US first — and it is the first series-level betting relationship; such deals had previously been left to teams and promoters. No prediction-market partner has been announced by Formula 1 (search of corp.formula1.com and the F1 partners page, 15 Sep 2026).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Formula 1 sold betting-operator rights twice this year and left the prediction-market category unsold; Cadillac F1 Team carries no betting, casino, exchange or trading partner, and its owner group TWG Global also controls the Los Angeles Dodgers, a club in the league that made Polymarket its exclusive exchange",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mlb.com/press-release/press-release-mlb-names-polymarket-exclusive-prediction-market-exchange-partner-and-signs-agreement-with-cftc-to-establish-integrity-framework",
+     "excerpt": "MLB press release, 19 Mar 2026 (also CNBC, Fortune, Front Office Sports the same day): Major League Baseball named Polymarket its exclusive Official Prediction Market Exchange in a multi-year agreement. Polymarket and its brokers receive exclusive access to MLB marks and logos inside their products, Official League Data through Sportradar, and brand exposure across MLB's digital ecosystem and at league events; the parties agreed an integrity framework restricting markets such as individual pitches, and Commissioner Manfred signed a memorandum of understanding with CFTC Chairman Selig. Front Office Sports reports the deal at up to $300 million (REPORTED; MLB did not disclose terms).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "the_case_p2",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "MLB made Polymarket its exclusive prediction-market exchange in March, a deal reported at up to $300M;",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mlb.com/press-release/press-release-mlb-names-polymarket-exclusive-prediction-market-exchange-partner-and-signs-agreement-with-cftc-to-establish-integrity-framework",
+     "excerpt": "MLB press release, 19 Mar 2026 (also CNBC, Fortune, Front Office Sports the same day): Major League Baseball named Polymarket its exclusive Official Prediction Market Exchange in a multi-year agreement. Polymarket and its brokers receive exclusive access to MLB marks and logos inside their products, Official League Data through Sportradar, and brand exposure across MLB's digital ecosystem and at league events; the parties agreed an integrity framework restricting markets such as individual pitches, and Commissioner Manfred signed a memorandum of understanding with CFTC Chairman Selig. Front Office Sports reports the deal at up to $300 million (REPORTED; MLB did not disclose terms).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "key_facts",
+   "type": "other",
+   "load_bearing": true,
+   "text": "Headquartered in New York; the US exchange Polymarket US (QCX LLC) is a CFTC-designated contract market relaunched after the CFTC's 25 Nov 2025 amended order; geo-blocked in Nevada under a preliminary injunction granted on 29 May 2026",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://sbcamericas.com/2026/01/20/nevada-regulator-sues-polymarket-sports/",
+     "excerpt": "SBC Americas, 20 Jan 2026; Yogonet, 3 Feb 2026; Flushdraw and Front Office Sports, May-Jun 2026: the Nevada Gaming Control Board brought a civil enforcement action arguing Polymarket's sports markets are unlicensed sports wagering; on Friday 29 May 2026 Judge Jason Woodbury of the First Judicial District Court granted a preliminary injunction against QCX LLC doing business as Polymarket US, and Polymarket geo-blocked Nevada residents. Cease-and-desist orders were issued in January 2026 by Tennessee's Sports Wagering Council, the Arizona Department of Gaming, Illinois and Connecticut.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "bottom_line",
+   "type": "funding",
+   "load_bearing": true,
+   "text": "$1B at $21B, a first CFO, a sports-rights buyer that took MLB, the NHL and the Yankees inside a year, and a grid that sold betting twice and prediction markets never, with one clean American roster.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mlb.com/press-release/press-release-mlb-names-polymarket-exclusive-prediction-market-exchange-partner-and-signs-agreement-with-cftc-to-establish-integrity-framework",
+     "excerpt": "MLB press release, 19 Mar 2026 (also CNBC, Fortune, Front Office Sports the same day): Major League Baseball named Polymarket its exclusive Official Prediction Market Exchange in a multi-year agreement. Polymarket and its brokers receive exclusive access to MLB marks and logos inside their products, Official League Data through Sportradar, and brand exposure across MLB's digital ecosystem and at league events; the parties agreed an integrity framework restricting markets such as individual pitches, and Commissioner Manfred signed a memorandum of understanding with CFTC Chairman Selig. Front Office Sports reports the deal at up to $300 million (REPORTED; MLB did not disclose terms).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "trigger",
+   "type": "date",
+   "load_bearing": true,
+   "text": "funding round",
+   "cited_source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+     "excerpt": "Bloomberg, 31 Aug 2026 (carried by Yahoo Finance, Investing.com and CryptoRank the same day): 1789 Capital is leading a $1 billion funding round for Polymarket at a $21 billion post-money valuation, contributing about $300 million and taking its combined stake to roughly $500 million once the round closes; the valuation is 40% above the $15 billion price of the April round. 1789 Capital was co-founded by Donald Trump Jr.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "value_content",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Commercially: a $21B partner at the reported premium tier, a young US audience, Austin and Miami hospitality.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+     "excerpt": "Bloomberg, 31 Aug 2026 (carried by Yahoo Finance, Investing.com and CryptoRank the same day): 1789 Capital is leading a $1 billion funding round for Polymarket at a $21 billion post-money valuation, contributing about $300 million and taking its combined stake to roughly $500 million once the round closes; the valuation is 40% above the $15 billion price of the April round. 1789 Capital was co-founded by Donald Trump Jr.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "On 31 August 2026 Bloomberg reported a $1B funding round for Polymarket at a $21B post-money valuation, led by 1789 Capital, which is contributing about $300M and will hold a combined stake of roughly $500M.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.mlb.com/press-release/press-release-mlb-names-polymarket-exclusive-prediction-market-exchange-partner-and-signs-agreement-with-cftc-to-establish-integrity-framework",
+     "excerpt": "MLB press release, 19 Mar 2026 (also CNBC, Fortune, Front Office Sports the same day): Major League Baseball named Polymarket its exclusive Official Prediction Market Exchange in a multi-year agreement. Polymarket and its brokers receive exclusive access to MLB marks and logos inside their products, Official League Data through Sportradar, and brand exposure across MLB's digital ecosystem and at league events; the parties agreed an integrity framework restricting markets such as individual pitches, and Commissioner Manfred signed a memorandum of understanding with CFTC Chairman Selig. Front Office Sports reports the deal at up to $300 million (REPORTED; MLB did not disclose terms).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The valuation is 40% above April's $15B price.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+     "excerpt": "Bloomberg, 31 Aug 2026 (carried by Yahoo Finance, Investing.com and CryptoRank the same day): 1789 Capital is leading a $1 billion funding round for Polymarket at a $21 billion post-money valuation, contributing about $300 million and taking its combined stake to roughly $500 million once the round closes; the valuation is 40% above the $15 billion price of the April round. 1789 Capital was co-founded by Donald Trump Jr.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The April 2026 raise at $15B, undisclosed until August, brought in DE Shaw and G Squared with SV Angel, Dragonfly and Valor adding capital (reported).",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-04-20/polymarket-in-talks-for-new-investment-at-15-billion-valuation",
+     "excerpt": "Bloomberg, 20 Apr 2026, and Finance Magnates / Qz, 4-6 Aug 2026: Polymarket closed a round at a $15 billion valuation in April 2026 that brought in D.E. Shaw and G Squared as new investors, with SV Angel, Dragonfly and Valor Equity Partners adding capital; the total was about $1 billion including Intercontinental Exchange's $600 million commitment. The round was not publicly disclosed until August (REPORTED).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Before that, in October 2025, Intercontinental Exchange committed up to $2B at about $8B pre-money and became the global distributor of Polymarket's event-driven data.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://ir.theice.com/press/news-details/2025/ICE-Announces-Strategic-Investment-in-Polymarket/default.aspx",
+     "excerpt": "Intercontinental Exchange press release, 7 Oct 2025 (also Fortune, Forbes): ICE, parent of the New York Stock Exchange, will invest up to $2 billion in Polymarket at a valuation of approximately $8 billion pre-investment, and becomes a global distributor of Polymarket's event-driven data as sentiment indicators; the two agreed to partner on future tokenisation initiatives. Polymarket confirmed a $9 billion post-money valuation (REPORTED).",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "Three price marks in eleven months: $9B, $15B, $21B.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+     "excerpt": "Bloomberg, 31 Aug 2026 (carried by Yahoo Finance, Investing.com and CryptoRank the same day): 1789 Capital is leading a $1 billion funding round for Polymarket at a $21 billion post-money valuation, contributing about $300 million and taking its combined stake to roughly $500 million once the round closes; the valuation is 40% above the $15 billion price of the April round. 1789 Capital was co-founded by Donald Trump Jr.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "The partner tiers reported for Cadillac are $40-50M a year for a primary partner and $20-30M for a premium one: a $21B company with $1B of new capital can pay the premium tier without it being the largest cheque it wrote this year.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+     "excerpt": "Bloomberg, 31 Aug 2026 (carried by Yahoo Finance, Investing.com and CryptoRank the same day): 1789 Capital is leading a $1 billion funding round for Polymarket at a $21 billion post-money valuation, contributing about $300 million and taking its combined stake to roughly $500 million once the round closes; the valuation is 40% above the $15 billion price of the April round. 1789 Capital was co-founded by Donald Trump Jr.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "funding",
+   "load_bearing": false,
+   "text": "A $21B partner at the reported premium tier in year one of the team's commercial build, plus a partner whose business is live events and whose audience is young, American and mobile-first — the demographic Cadillac's other B2C partners, Jim Beam and Tommy Hilfiger, are buying.",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "manual",
+     "evidence_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+     "excerpt": "Bloomberg, 31 Aug 2026 (carried by Yahoo Finance, Investing.com and CryptoRank the same day): 1789 Capital is leading a $1 billion funding round for Polymarket at a $21 billion post-money valuation, contributing about $300 million and taking its combined stake to roughly $500 million once the round closes; the valuation is 40% above the $15 billion price of the April round. 1789 Capital was co-founded by Donald Trump Jr.",
+     "notes": "checked in-session against the cited source (search summary; direct fetch may be egress-blocked)",
+     "model": "claude-session-2026-09-15"
+    }
+   ]
+  },
+  {
+   "section": "why_now_callout",
+   "type": "event",
+   "load_bearing": true,
+   "text": "United States GP",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 1: Australian GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  },
+  {
+   "section": "extended",
+   "type": "event",
+   "load_bearing": false,
+   "text": "Miami Grand Prix",
+   "cited_source_url": null,
+   "verifications": [
+    {
+     "status": "verified",
+     "method": "calendar",
+     "evidence_url": "spec/active_sponsor_db.md §1.3",
+     "excerpt": "round 6: Miami GP (round exists; dates not yet verified — calendar is provisional)",
+     "notes": null,
+     "model": null
+    }
+   ]
+  }
+ ]
+}

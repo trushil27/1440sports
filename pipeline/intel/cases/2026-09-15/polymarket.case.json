@@ -1,0 +1,766 @@
+{
+ "run_date": "2026-09-15",
+ "signal_date": "2026-08-31",
+ "stem": "polymarket",
+ "number": 252,
+ "session_model": "claude-session-2026-09-15",
+ "signal": {
+  "company": "Polymarket",
+  "signal_date": "2026-08-31",
+  "score": 71,
+  "tier": "HOT",
+  "track": 1,
+  "person": "Ari Borod",
+  "role": "President of Sports Business Development",
+  "horizon_weeks": "6-10",
+  "source_url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+  "industry_meta": "Prediction Markets · Sports Rights & Crypto-Native Trading · New York, New York",
+  "recommended_team": "Cadillac F1 Team",
+  "recommended_series": "F1",
+  "timing_label": "HOT",
+  "trigger_reason": "funding round",
+  "key_facts": {
+   "funding": "$1B round at a $21B post-money valuation led by 1789 Capital, reported by Bloomberg on 31 Aug 2026, with 1789 contributing about $300M; up 40% from the $15B valuation of the April 2026 raise",
+   "investors": "DE Shaw and G Squared joined in the April 2026 raise at $15B (reported); 1789 Capital led the Aug 2026 round; Intercontinental Exchange committed up to $2B in Oct 2025 at about $8B pre-money (reported); SV Angel, Dragonfly and Valor Equity Partners returning",
+   "revenue": "",
+   "trigger": "funding round: $1B at a $21B valuation led by 1789 Capital, reported 31 Aug 2026; Warren Jenson named first Chief Financial Officer on 10 Sep 2026",
+   "competitor_signal": "MLB named Polymarket its exclusive Official Prediction Market Exchange on 19 Mar 2026, a deal reported at up to $300M; the NHL named Polymarket and Kalshi official prediction market partners in Oct 2025; Kalshi became Official Prediction Market Partner of the US Open on 31 Aug 2026. Formula 1 named Betway (5 Mar 2026, regional and non-exclusive) and FanDuel (30 Apr 2026, US and Canada) Official Betting Operators; no prediction market holds a Formula 1 or team designation in the sponsor table",
+   "strategic_hook": "Formula 1 sold betting-operator rights twice this year and left the prediction-market category unsold; Cadillac F1 Team carries no betting, casino, exchange or trading partner, and its owner group TWG Global also controls the Los Angeles Dodgers, a club in the league that made Polymarket its exclusive exchange",
+   "us_presence": "Headquartered in New York; the US exchange Polymarket US (QCX LLC) is a CFTC-designated contract market relaunched after the CFTC's 25 Nov 2025 amended order; geo-blocked in Nevada under a preliminary injunction granted on 29 May 2026",
+   "alumni_match": "",
+   "taxonomy_category": "C1",
+   "ops_fit_note": "MODE B: a fan-engagement halo. Polymarket's Formula 1 markets (race winner, pole, fastest lap, safety car) become a free-to-play Cadillac predictions game and market-implied probabilities in team content; nothing reaches the car",
+   "quota_filler": null
+  },
+  "score_breakdown": {
+   "timing": 18,
+   "capacity": 18,
+   "brand_fit": 11,
+   "urgency": 15,
+   "ops_fit": 9,
+   "ops_fit_subscores": {
+    "product_to_need": 2,
+    "slot_availability": 4,
+    "on_camera": 2,
+    "lock_in": 1
+   },
+   "urgency_or_alumni": null,
+   "legacy_scale": false
+  },
+  "of_gate_passed": true,
+  "confidence_level": "MEDIUM"
+ },
+ "evidence": [
+  {
+   "needles": [
+    "mlb",
+    "major league baseball",
+    "official prediction market exchange",
+    "19 mar",
+    "19 march",
+    "up to $300m",
+    "$300m",
+    "300m",
+    "sportradar",
+    "manfred",
+    "integrity framework",
+    "exclusive exchange",
+    "exclusive prediction"
+   ],
+   "url": "https://www.mlb.com/press-release/press-release-mlb-names-polymarket-exclusive-prediction-market-exchange-partner-and-signs-agreement-with-cftc-to-establish-integrity-framework",
+   "excerpt": "MLB press release, 19 Mar 2026 (also CNBC, Fortune, Front Office Sports the same day): Major League Baseball named Polymarket its exclusive Official Prediction Market Exchange in a multi-year agreement. Polymarket and its brokers receive exclusive access to MLB marks and logos inside their products, Official League Data through Sportradar, and brand exposure across MLB's digital ecosystem and at league events; the parties agreed an integrity framework restricting markets such as individual pitches, and Commissioner Manfred signed a memorandum of understanding with CFTC Chairman Selig. Front Office Sports reports the deal at up to $300 million (REPORTED; MLB did not disclose terms).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$1b",
+    "1b round",
+    "$21b",
+    "21b",
+    "1789",
+    "31 aug",
+    "31 august",
+    "40%",
+    "post-money",
+    "combined stake",
+    "$500m",
+    "funding round",
+    "trigger",
+    "bloomberg"
+   ],
+   "url": "https://www.bloomberg.com/news/articles/2026-08-31/polymarket-funding-round-led-by-1789-values-firm-at-21-billion",
+   "excerpt": "Bloomberg, 31 Aug 2026 (carried by Yahoo Finance, Investing.com and CryptoRank the same day): 1789 Capital is leading a $1 billion funding round for Polymarket at a $21 billion post-money valuation, contributing about $300 million and taking its combined stake to roughly $500 million once the round closes; the valuation is 40% above the $15 billion price of the April round. 1789 Capital was co-founded by Donald Trump Jr.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$15b",
+    "15b",
+    "april round",
+    "april 2026 round",
+    "in april",
+    "d.e. shaw",
+    "de shaw",
+    "g squared",
+    "sv angel",
+    "dragonfly",
+    "valor"
+   ],
+   "url": "https://www.bloomberg.com/news/articles/2026-04-20/polymarket-in-talks-for-new-investment-at-15-billion-valuation",
+   "excerpt": "Bloomberg, 20 Apr 2026, and Finance Magnates / Qz, 4-6 Aug 2026: Polymarket closed a round at a $15 billion valuation in April 2026 that brought in D.E. Shaw and G Squared as new investors, with SV Angel, Dragonfly and Valor Equity Partners adding capital; the total was about $1 billion including Intercontinental Exchange's $600 million commitment. The round was not publicly disclosed until August (REPORTED).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "intercontinental exchange",
+    "ice ",
+    "ice's",
+    "$2b",
+    "2b",
+    "up to $2 billion",
+    "new york stock exchange",
+    "event data",
+    "event-driven data",
+    "october 2025",
+    "oct 2025",
+    "$8b",
+    "8b pre",
+    "$9b",
+    "distributor"
+   ],
+   "url": "https://ir.theice.com/press/news-details/2025/ICE-Announces-Strategic-Investment-in-Polymarket/default.aspx",
+   "excerpt": "Intercontinental Exchange press release, 7 Oct 2025 (also Fortune, Forbes): ICE, parent of the New York Stock Exchange, will invest up to $2 billion in Polymarket at a valuation of approximately $8 billion pre-investment, and becomes a global distributor of Polymarket's event-driven data as sentiment indicators; the two agreed to partner on future tokenisation initiatives. Polymarket confirmed a $9 billion post-money valuation (REPORTED).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "jenson",
+    "first cfo",
+    "first chief financial officer",
+    "chief financial officer",
+    "10 sep",
+    "10 september",
+    "ten days later",
+    "amazon"
+   ],
+   "url": "https://www.coindesk.com/markets/2026/09/10/polymarket-names-former-amazon-finance-chief-warren-jenson-as-its-first-cfo",
+   "excerpt": "CoinDesk, Qz and CP24, 10 Sep 2026: Polymarket named Warren Jenson its first Chief Financial Officer. Jenson, 69, was finance chief at Amazon, Electronic Arts, Delta Air Lines and Nielsen and sits on the boards of Dropbox and Ripple; he reports to CEO Shayne Coplan and will lead the finance organisation, set financial and capital strategy and build infrastructure for the next phase of growth.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "vanderzanden",
+    "chief growth officer",
+    "owns marketing",
+    "oversee the company's marketing",
+    "marketing rebuild",
+    "marketing function",
+    "12 aug",
+    "11 aug",
+    "nfl season",
+    "midterm",
+    "mcgrath",
+    "oblazny",
+    "bautista",
+    "paul jordan",
+    "creators",
+    "counterfeit",
+    "promotional practices",
+    "robinhood",
+    "compliance"
+   ],
+   "url": "https://www.cnbc.com/2026/08/11/polymarket-revamps-marketing-expands-us-hiring-ahead-of-fall-events.html",
+   "excerpt": "CNBC, 11 Aug 2026, and The Block, 12 Aug 2026: Polymarket is restructuring its marketing operation and adding senior executives ahead of an expected surge in trading around the NFL season in September and the November midterm elections. Travis VanderZanden, founder of Bird and formerly head of driver growth at Uber and CRO at Yammer, joined as Chief Growth Officer and also oversees the marketing function (announced by CEO Shayne Coplan on 12 Aug). Compliance hires: Megan McGrath (ex-Robinhood) as chief compliance officer of the US exchange, Natalie Oblazny (ex-Coinbase) regulatory affairs, Shana Bautista (ex-FBI, Coinbase) global head of investigations, Paul Jordan (ex-Nasdaq) chief risk officer for Polymarket US. The marketing restructuring followed scrutiny of promotional practices in which creators recorded simulated trades on counterfeit versions of the site aimed at US audiences.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "borod",
+    "president of sports business development",
+    "sports business development",
+    "sports partnerships",
+    "fanatics",
+    "chief business officer",
+    "fanduel group",
+    "action network",
+    "gibson dunn",
+    "february 2026",
+    "feb 2026",
+    "in february",
+    "non-compete",
+    "settled",
+    "decision-maker",
+    "decision maker"
+   ],
+   "url": "https://sbcamericas.com/2026/02/20/polymarket-hires-ari-borod-fanatics/",
+   "excerpt": "SBC Americas, 20 Feb 2026; Gambling Insider; NEXT.io; Crunchbase profile: Ari Borod joined Polymarket as President of Sports Business Development, based in New York, after four years as Chief Business Officer of Fanatics (Aug 2022 to Jan 2026); earlier roles at The Action Network, FanDuel Group and the law firm Gibson Dunn. Fanatics sued to enforce a non-compete and the parties settled. Front Office Sports (Yankees deal) describes him as leading Polymarket's major sports partnerships.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "coplan",
+    "founder and chief executive",
+    "founder and ceo",
+    "chief executive officer",
+    "shayne"
+   ],
+   "url": "https://www.linkedin.com/posts/shaynecoplan_thrilled-to-announce-that-warren-jenson-is-activity-7503834910101671939-wBmA",
+   "excerpt": "Shayne Coplan is Polymarket's founder and Chief Executive Officer (his own announcement of the Jenson appointment, Sep 2026; CoinDesk 10 Sep 2026; House Oversight Committee letter addressed to him as Chief Executive Officer, 22 May 2026).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "nhl",
+    "national hockey league",
+    "kalshi and polymarket",
+    "polymarket and kalshi",
+    "both polymarket",
+    "took both",
+    "dasherboard"
+   ],
+   "url": "https://www.nhl.com/news/nhl-announces-landmark-multiyear-partnerships-with-kalshi-polymarket",
+   "excerpt": "NHL.com, 23 Oct 2025 (also ESPN, Yahoo Sports): the NHL announced multi-year US marketing agreements making Kalshi and Polymarket its official prediction market partners, the first such deals by a major US league; both receive official NHL data, rights to NHL marks and logos, and brand exposure via digitally enhanced dasherboards and virtual signage on broadcasts.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "yankees",
+    "yankee stadium",
+    "yes network",
+    "bundesliga",
+    "liga mx",
+    "mls",
+    "serie a",
+    "laliga",
+    "club level"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/polymarket-becomes-an-official-prediction-market-partner-of-the-new-york-yankees-302844285.html",
+   "excerpt": "PR Newswire (also Sportcal, Gaming Intelligence, Front Office Sports), 2026 season: Polymarket became an Official Prediction Market Partner of the New York Yankees for the remainder of the 2026 MLB season, with LED signage throughout Yankee Stadium and rotating home-plate signage on YES Network and Prime Video broadcasts. Coverage lists Polymarket's recent league deals with MLS, Serie A, LaLiga, Bundesliga and Liga MX.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "rangers",
+    "new york rangers",
+    "8 jan",
+    "january 2026"
+   ],
+   "url": "https://sbcamericas.com/2026/01/08/ny-rangers-polymarket-sponsorship-deal/",
+   "excerpt": "SBC Americas, 8 Jan 2026: the New York Rangers named Polymarket the team's official prediction market partner, Polymarket's first major professional team partnership, following the league-wide NHL agreement.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "us open",
+    "usta",
+    "kalshi became",
+    "31 august",
+    "31 aug"
+   ],
+   "url": "https://www.usopen.org/en_US/news/articles/2026-08-31/kalshi_named_the_official_prediction_market_partner_of_the_us_open.html",
+   "excerpt": "usopen.org, 31 Aug 2026: Kalshi was named the Official Prediction Market Partner of the US Open (USTA) — a rightsholder selling the prediction-market category as its own designation.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "betway",
+    "official betting operator",
+    "official betting operators",
+    "5 mar",
+    "march 2026",
+    "non-exclusive",
+    "regional",
+    "europe, the middle east",
+    "canada and mexico",
+    "betting-operator rights",
+    "betting rights",
+    "sold betting",
+    "left prediction markets unsold",
+    "prediction-market category unsold",
+    "unsold"
+   ],
+   "url": "https://corp.formula1.com/formula-1-announces-betway-as-sports-first-official-betting-operator-in-multi-year-deal/",
+   "excerpt": "Formula One World Championship Limited, 5 Mar 2026, and SportsPro / Insider Sport, 5-6 Mar 2026: Formula 1 named Betway its first Official Betting Operator in a multi-year deal covering Europe, the Middle East and Africa, Canada and Mexico. The structure is non-exclusive and regional — F1 said it would sign further regional partners, the US first — and it is the first series-level betting relationship; such deals had previously been left to teams and promoters. No prediction-market partner has been announced by Formula 1 (search of corp.formula1.com and the F1 partners page, 15 Sep 2026).",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "fanduel",
+    "30 apr",
+    "30 april",
+    "us and canada",
+    "first us betting",
+    "miami grand prix"
+   ],
+   "url": "https://corp.formula1.com/formula-1-announces-fanduel-as-new-official-betting-operator-in-multi-year-deal/",
+   "excerpt": "Formula One World Championship Limited and PR Newswire, 30 Apr 2026: FanDuel was named an Official Betting Operator of Formula 1 in a multi-year deal, F1's first with a betting operator in the United States (US and Canada), announced ahead of the Miami Grand Prix; FanDuel odds are integrated into F1's Betting Guide and editorial content. Named as 'an' Official Betting Operator, not the exclusive one.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "jackpot city",
+    "modo casino",
+    "okx",
+    "allwyn",
+    "coinbase and public",
+    "pepperstone",
+    "gate.io",
+    "ava trade",
+    "nasdaq",
+    "bingx",
+    "vantage",
+    "stake",
+    "libertex",
+    "nexo",
+    "mgm rewards",
+    "zoomex",
+    "xm trading",
+    "kraken",
+    "betting, casino, exchange or trading",
+    "no betting",
+    "clean of the category",
+    "williams carries",
+    "casino brand",
+    "trading lane",
+    "crowds"
+   ],
+   "url": "pipeline/intel/seeds/sponsors.json",
+   "excerpt": "Sponsor table (seeds/sponsors.json, 2026 rows, active/joined unless stated): Atlassian Williams Racing — Betway, Jackpot City Casino, Kraken; BWT Alpine — Modo Casino; McLaren — OKX, Allwyn, FxPro, Gemini, Hedera; Aston Martin Aramco — Coinbase, Public, Pepperstone, Circle, CoinPayments; Oracle Red Bull Racing — Gate.io, Ava Trade; Mercedes-AMG Petronas — Nasdaq, Nu, UBS; Scuderia Ferrari — BingX, Vantage (VGW Play departed); Audi — Revolut (title), Libertex, NEXO (Stake departed within 12 months); MoneyGram Haas (TGR Haas) — MGM Rewards, Zoomex, FIX Network; Visa Cash App Racing Bulls — Visa and Cash App (title), XM Trading. Cadillac F1 Team — no betting, casino, exchange or trading partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "twg ai",
+    "core scientific",
+    "ifs",
+    "claro",
+    "jim beam",
+    "tenneco",
+    "tommy hilfiger",
+    "debut roster",
+    "debut season",
+    "cadillac's roster",
+    "inaugural",
+    "no cybersecurity"
+   ],
+   "url": "https://www.cadillacf1team.com/partners",
+   "excerpt": "Cadillac F1 Team partners page (search summary, 14-15 Sep 2026) and the sponsor table: TWG AI (primary and exclusive AI partner, 4 Feb 2026), Core Scientific (data centre, 10 Mar 2026), IFS (technology), Claro / América Móvil, Jim Beam (spirits, 17 Sep 2025), Tenneco (technical), Tommy Hilfiger (apparel), plus Pirelli and Alpinestars. No betting, casino, exchange, trading or prediction-market partner.",
+   "method": "sponsor_db"
+  },
+  {
+   "needles": [
+    "teixeira",
+    "dinger",
+    "tyler epp",
+    "epp",
+    "miami gp",
+    "from the miami",
+    "unilever",
+    "fewer, bigger",
+    "fewer bigger",
+    "chief partnerships officer",
+    "chief commercial officer",
+    "not looking for a title",
+    "commercial team"
+   ],
+   "url": "https://www.forbes.com/sites/maurybrown/2025/11/17/cadillac-f1-announces-two-critical-marketing-and-sponsorship-exec-hires/",
+   "excerpt": "Forbes, 17 Nov 2025; Sportcal; BlackBook Motorsport, Nov-Dec 2025: Cadillac F1 appointed Lauren Teixeira Chief Commercial Officer (previously Head of Business Operations at F1 Academy and Director of Paddock Club & Industry Relations at the Formula 1 Miami Grand Prix) and Willem Dinger Chief Partnerships Officer (ten years at Unilever, latterly head of sports partnerships), both reporting to Tyler Epp, Global Head of Commercial Strategy and former president of the Miami Grand Prix. Dinger: the team is building a 'fewer, bigger, better partnership ecosystem'. Teixeira, Dec 2025: 'we're not looking for a title partner'.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$40-50m",
+    "$40–50m",
+    "40-50m",
+    "$20-30m",
+    "$20–30m",
+    "20-30m",
+    "premium tier",
+    "primary partner",
+    "$15-25m",
+    "$15–25m",
+    "15-25m",
+    "estimated",
+    "technical supplier",
+    "$500,000",
+    "a year"
+   ],
+   "url": "https://rtrsports.com/en/blog/cadillac-f1-sponsorship/",
+   "excerpt": "RTR Sports (agency analysis, 2026): Cadillac's partner tiers are reported as two or three primary partners at $40-50 million a year, three to five premium partners at $20-30 million, and technical supplier roles from $500,000 (REPORTED, not a Cadillac rate card). 1440's $15-25M a year is an ESTIMATE placed at and below the reported premium tier for a first-year category entry.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "twg global",
+    "twg motorsports",
+    "twg motorsport",
+    "mark walter",
+    "walter",
+    "dodgers",
+    "controlling",
+    "owner group",
+    "doj",
+    "department of justice",
+    "sec investigation",
+    "investigation",
+    "not for sale",
+    "no fraud",
+    "guggenheim",
+    "fbi",
+    "self-loans",
+    "denies"
+   ],
+   "url": "https://sports.yahoo.com/articles/owns-cadillac-f1-racing-team-201600321.html",
+   "excerpt": "Yahoo Sports (ownership explainer), ESPN and The Race (Aug 2026), Qz (26 Aug 2026), Motorsport.com (21 Aug 2026): TWG Motorsports, a subsidiary of TWG Global, holds the controlling stake in the Cadillac F1 team, with General Motors a partner and shareholder. TWG Global was founded in 2024 by Mark Walter, its CEO and co-chairman (Thomas Tull co-chairman); TWG Global holds controlling interests in the Los Angeles Dodgers, Chelsea, the Los Angeles Lakers, the Los Angeles Sparks and the PWHL. Walter is under a US Department of Justice and SEC investigation into alleged fraud involving funds at his insurance companies (Guggenheim Partners, Delaware Life and Clear Spring received grand-jury subpoenas in February; reports describe undisclosed 'self-loans' of $16-20 billion). TWG Global denies fraud ('there has been no fraud') and TWG Motorsports stated before the Dutch Grand Prix that it is not considering a sale of the Cadillac team.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "nevada",
+    "injunction",
+    "29 may",
+    "woodbury",
+    "geo-block",
+    "geo-blocked",
+    "qcx llc",
+    "polymarket us",
+    "tennessee",
+    "arizona",
+    "illinois",
+    "connecticut",
+    "cease-and-desist",
+    "cease and desist",
+    "four more states",
+    "las vegas is excluded",
+    "excluded until"
+   ],
+   "url": "https://sbcamericas.com/2026/01/20/nevada-regulator-sues-polymarket-sports/",
+   "excerpt": "SBC Americas, 20 Jan 2026; Yogonet, 3 Feb 2026; Flushdraw and Front Office Sports, May-Jun 2026: the Nevada Gaming Control Board brought a civil enforcement action arguing Polymarket's sports markets are unlicensed sports wagering; on Friday 29 May 2026 Judge Jason Woodbury of the First Judicial District Court granted a preliminary injunction against QCX LLC doing business as Polymarket US, and Polymarket geo-blocked Nevada residents. Cease-and-desist orders were issued in January 2026 by Tennessee's Sports Wagering Council, the Arizona Department of Gaming, Illinois and Connecticut.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "house oversight",
+    "oversight committee",
+    "comer",
+    "22 may",
+    "insider trading",
+    "new york times",
+    "80 polymarket",
+    "5 june",
+    "congressional",
+    "probe"
+   ],
+   "url": "https://www.cnbc.com/2026/05/22/kalshi-polymarket-comer-insider-trading-probe-congress.html",
+   "excerpt": "CNBC and the House Committee on Oversight and Government Reform, 22 May 2026 (WSJ, CoinDesk, The Hill): Chairman James Comer opened an investigation into insider trading on Polymarket and Kalshi, writing to CEO Shayne Coplan for documents on identity verification of domestic and foreign account holders, geographic restrictions and monitoring of suspicious trading, after a New York Times investigation found more than 80 Polymarket users placed suspiciously timed bets, including hours before undisclosed US and Israeli military operations against Iran. Response deadline 5 June 2026.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "qcex",
+    "$112m",
+    "112m",
+    "designated contract market",
+    "25 nov",
+    "november 2025",
+    "cftc",
+    "amended order",
+    "2022",
+    "relaunch"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/polymarket-acquires-cftc-licensed-exchange-and-clearinghouse-qcex-for-112-million-302509626.html",
+   "excerpt": "PR Newswire, Jul 2025, and Yahoo Finance, Nov 2025: Polymarket acquired the CFTC-licensed exchange and clearinghouse QCEX for $112 million (Jul 2025), now QCX LLC, a Designated Contract Market; on 25 Nov 2025 the CFTC issued an Amended Order of Designation recognising Polymarket as an intermediated trading platform under QCX, enabling the US relaunch. Polymarket had been barred from serving US users under a 2022 CFTC settlement.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "$10.57b",
+    "10.57b",
+    "$10b",
+    "10b",
+    "crossed $10b",
+    "march 2026",
+    "in march",
+    "$425m",
+    "425m",
+    "28 feb",
+    "$7b",
+    "7b",
+    "478,000",
+    "3.02b",
+    "monthly volume",
+    "volume"
+   ],
+   "url": "https://www.theblock.co/data/decentralized-finance/prediction-markets/polymarket-and-kalshi-volume-monthly",
+   "excerpt": "The Block data dashboard; BitKE, Apr 2026; KuCoin, Mar 2026: Polymarket recorded $10.57 billion of trading volume in March 2026, the first month above $10 billion and about 2.5 times the October 2024 election peak; February 2026 exceeded $7 billion with a single-day record of $425 million on 28 Feb 2026 (above the $371 million set during the 2024 US election). October 2025: $3.02 billion with about 478,000 active traders.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "trading fees",
+    "fees arrived",
+    "fee structure",
+    "30 mar",
+    "30 march",
+    "taker",
+    "maker rebate",
+    "3 apr",
+    "fees only since"
+   ],
+   "url": "https://help.polymarket.com/en/articles/13364478-trading-fees",
+   "excerpt": "Polymarket Help Center (Trading Fees) and KuCoin / Phemex coverage: Polymarket charged no trading fees until 2026; Fee Structure V2 took effect on 30 Mar 2026 with taker fees by category (sports 0.03, later 0.05; crypto 0.07; politics and finance 0.04) and maker rebates funded from them; the US exchange schedule (3 Apr 2026) applies a uniform 0.05 taker fee. Coverage reported a target of about $1 million a day in fee revenue. Revenue is not disclosed.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "race winner",
+    "race-winner",
+    "pole",
+    "fastest lap",
+    "safety car",
+    "red flag",
+    "formula 1 section",
+    "f1 markets",
+    "formula 1 markets",
+    "polymarket.com/sports/formula1",
+    "predictions game",
+    "market-implied",
+    "fan-engagement",
+    "halo"
+   ],
+   "url": "https://polymarket.com/sports/formula1",
+   "excerpt": "polymarket.com/sports/formula1 and /sports/f1/props (search summaries, Sep 2026; Deadspin and Betting.net guides): Polymarket runs a dedicated Formula 1 section with markets on race winner, pole position, fastest lap, championship standings and props including safety cars and red flags. Neither Polymarket nor Kalshi holds an official Formula 1 or F1-team designation.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "united states gp",
+    "us gp",
+    "austin",
+    "las vegas gp",
+    "las vegas",
+    "miami",
+    "late october",
+    "in october",
+    "november",
+    "fourth quarter",
+    "2027 rosters",
+    "2027-2029",
+    "2027 partner",
+    "before austin",
+    "announcement stage"
+   ],
+   "url": "pipeline/intel/seeds/calendar_2026.json",
+   "excerpt": "2026 F1 calendar (seeds/calendar_2026.json, spec §1.3): round 19 US GP (Austin), round 20 Mexico City GP, round 21 São Paulo GP, round 22 Las Vegas GP, round 23 Qatar GP, round 24 Abu Dhabi GP close the season in October-December; the Miami GP is the season's first North American round in May. Teams close the following year's partner rosters in the fourth quarter.",
+   "method": "calendar"
+  },
+  {
+   "needles": [
+    "trump",
+    "donald trump jr",
+    "co-founded by donald"
+   ],
+   "url": "https://finance.yahoo.com/markets/crypto/articles/polymarket-valuation-hits-21bn-trump-065100486.html",
+   "excerpt": "Yahoo Finance, 1 Sep 2026: 'Polymarket valuation hits $21bn as Trump Jr's firm leads $1bn round' — 1789 Capital, the venture firm co-founded by Donald Trump Jr., leads the round.",
+   "method": "manual"
+  },
+  {
+   "needles": [
+    "2024 election",
+    "2024 us election",
+    "election cycle",
+    "2028",
+    "peak-volume",
+    "volume records"
+   ],
+   "url": "https://www.kucoin.com/news/flash/polymarket-sets-new-daily-and-monthly-trading-volume-records-in-february-2026",
+   "excerpt": "KuCoin, Mar 2026: Polymarket's previous daily volume high of $371 million was set during the 2024 US election; the February 2026 record of $425 million surpassed it. US elections are the platform's historic peak-volume events.",
+   "method": "manual"
+  }
+ ],
+ "brief": {
+  "brief_number": "",
+  "track_label": "",
+  "company": "Polymarket",
+  "industry_meta": "Prediction Markets · Sports Rights & Crypto-Native Trading",
+  "hq": "New York, New York",
+  "ticker": "Private ($21B; $1B round, Aug 2026)",
+  "deck": "Polymarket, the prediction market that turns news and sport into tradeable odds, has a $1B round at a $21B valuation led by 1789 Capital, reported by Bloomberg on 31 August and 40% above April's $15B price, and named its first CFO ten days later.",
+  "score": 71,
+  "timing_label": "HOT",
+  "series_label": "F1",
+  "team_label": "Cadillac F1 Team",
+  "horizon_label": "6-10 WKS",
+  "hot_top_tier": false,
+  "confidence_level": "MEDIUM",
+  "the_case_p1": "Intercontinental Exchange committed up to $2B in October 2025, making the owner of the New York Stock Exchange the distributor of Polymarket's event data; an April raise at $15B then brought in DE Shaw and G Squared (reported). Volume crossed $10B in a month for the first time in March 2026, and trading fees arrived on 30 March. Ari Borod, Fanatics' former chief business officer, joined in February as President of Sports Business Development; Warren Jenson, once Amazon's finance chief, became the first CFO on 10 September.",
+  "the_case_p2": "Rightsholders now sell this category on its own. MLB made Polymarket its exclusive prediction-market exchange in March, a deal reported at up to $300M; the NHL took both Polymarket and Kalshi; the Yankees and Rangers signed at club level; Kalshi became the US Open's prediction-market partner on 31 August. Formula 1 sold betting-operator rights to Betway and FanDuel this year and left prediction markets unsold.",
+  "why_now_callout": "<font name='Poppins-Bold' size='9'>WHY NOW</font>&nbsp;&nbsp;The money landed on 31 August and the first CFO on 10 September; the NFL season and the November midterms are the volume events the marketing rebuild was hired for. Teams close 2027 rosters in the fourth quarter, and the United States GP in Austin in late October is the announcement stage.",
+  "why_team_label": "WHY CADILLAC F1 TEAM",
+  "why_team_para": "Cadillac F1 Team is the one roster with no betting, casino, exchange or trading brand: Williams carries Betway and Jackpot City, Alpine Modo Casino, McLaren OKX and Allwyn, Aston Martin Coinbase and Public. Its owner group, TWG Global, also controls the Los Angeles Dodgers, whose league made Polymarket its exclusive exchange. American, debut season, and a stated preference for fewer, bigger partners.",
+  "value_section": true,
+  "value_section_label": "VALUE TO CADILLAC F1 TEAM",
+  "value_mode": "B",
+  "value_content": "MODE B, halo with mechanics. Polymarket's Formula 1 markets (race winner, pole, fastest lap, safety car) become a free-to-play Cadillac predictions game in the team app and market-implied win probabilities in race-week content. Commercially: a $21B partner at the reported premium tier, a young US audience, Austin and Miami hospitality. Nothing reaches the car.",
+  "deal_arch_para": "Entry as Official Prediction Market Partner. <font name='Poppins-Bold' size='9.5'>THREE YEARS</font>, 2027-2029, running through the 2028 US election, historically its peak-volume event. Estimated $15-25M a year against a reported premium tier of $20-30M. Scope: livery and garage placement, the predictions game, Austin and Miami hospitality. Las Vegas excluded until Nevada lifts its injunction.",
+  "decision_maker_name": "Ari Borod",
+  "decision_maker_role": "President of Sports Business Development, Polymarket",
+  "decision_maker_bio": "Borod runs Polymarket's sports partnerships, joining in February 2026 from Fanatics, where he was chief business officer. Path: Travis VanderZanden, Chief Growth Officer (marketing); Warren Jenson, Chief Financial Officer; Shayne Coplan, founder and Chief Executive Officer.",
+  "opening_angle_intro": "Lead with the category, not the car.",
+  "opening_angle_quote": "&ldquo;Ari, you took MLB and the Yankees this season. Formula 1 sold its betting rights and left prediction markets unsold; one clean American roster is being built for 2027. 25 minutes before Austin?&rdquo;",
+  "score_cells": [
+   [
+    "TIMING",
+    "18",
+    "/ 20",
+    "Round 31 Aug; first CFO 10 Sep; Austin inside the window."
+   ],
+   [
+    "CAPACITY",
+    "18",
+    "/ 20",
+    "$1B raised at $21B; ICE up to $2B; fees only since March."
+   ],
+   [
+    "BRAND FIT",
+    "11",
+    "/ 20",
+    "Young US live-sport audience; gambling-adjacent, political, Nevada out."
+   ],
+   [
+    "URGENCY",
+    "15",
+    "/ 20",
+    "NFL and midterm volume, US build-out, Kalshi taking rightsholders."
+   ],
+   [
+    "OPS FIT",
+    "9",
+    "/ 20",
+    "MODE B: fan-engagement halo; nothing for the car."
+   ]
+  ],
+  "risks": [
+   [
+    "THE OWNER AND THE INVESTOR",
+    "TWG Global's Mark Walter is under a DOJ and SEC investigation he denies; 1789 Capital, co-founded by Donald Trump Jr., leads the round while a House Oversight insider-trading probe is open.",
+    "Put both on the table in the first call and contract reputational exit rights both ways."
+   ],
+   [
+    "REGULATORS AND THE CATEGORY",
+    "Polymarket US is enjoined in Nevada with cease-and-desists in four more states, and F1 holds Betway and FanDuel as Official Betting Operators: is a prediction market a separable category?",
+    "F1's betting deals are regional and non-exclusive; MLB and the NHL run both categories side by side. Clear the definition with Cadillac's counsel first."
+   ]
+  ],
+  "bottom_line": "$1B at $21B, a first CFO, a sports-rights buyer that took MLB, the NHL and the Yankees inside a year, and a grid that sold betting twice and prediction markets never, with one clean American roster. Politics, regulators and a halo-only workstream hold it at 71; brand fit is under the engine's 12-point gate, so the desk ranks it 62. Built on request.",
+  "signals": [
+   "funding_event",
+   "category_precedent",
+   "category_open",
+   "leadership_change"
+  ],
+  "footer_company": "POLYMARKET",
+  "footer_date": "15 SEP 2026",
+  "extended": {
+   "why_now": [
+    {
+     "label": "Trigger",
+     "text": "On 31 August 2026 Bloomberg reported a $1B funding round for Polymarket at a $21B post-money valuation, led by 1789 Capital, which is contributing about $300M and will hold a combined stake of roughly $500M. The valuation is 40% above April's $15B price. 1789 Capital was co-founded by Donald Trump Jr."
+    },
+    {
+     "label": "The round before, and the exchange that owns the NYSE",
+     "text": "The April 2026 raise at $15B, undisclosed until August, brought in DE Shaw and G Squared with SV Angel, Dragonfly and Valor adding capital (reported). Before that, in October 2025, Intercontinental Exchange committed up to $2B at about $8B pre-money and became the global distributor of Polymarket's event-driven data. Three price marks in eleven months: $9B, $15B, $21B."
+    },
+    {
+     "label": "A commercial organisation built in seven months",
+     "text": "Ari Borod arrived in February 2026 from Fanatics, where he was chief business officer, as President of Sports Business Development. Travis VanderZanden, founder of Bird, joined on 12 August as Chief Growth Officer with the marketing function under him, alongside compliance and risk hires from Robinhood, Coinbase and Nasdaq. Warren Jenson became the first Chief Financial Officer on 10 September. That is the shape of a company preparing to be measured."
+    },
+    {
+     "label": "Calendar window",
+     "text": "The NFL season and the November midterms are the volume events the August marketing rebuild was hired for. In Formula 1 the season closes through the United States GP in Austin in late October, Mexico City, São Paulo, Las Vegas in November, Qatar and Abu Dhabi, and teams close 2027 partner rosters in the fourth quarter. Austin is the announcement stage; Las Vegas is not, because Polymarket US is enjoined in Nevada."
+    }
+   ],
+   "why_team": [
+    {
+     "label": "The only clean roster",
+     "text": "Every other team carries a brand that conflicts with or crowds this category. Williams carries Betway and Jackpot City Casino, Alpine Modo Casino, McLaren OKX and Allwyn, Aston Martin Coinbase and Public, Red Bull Gate.io and Ava Trade, Mercedes Nasdaq, Ferrari BingX, Audi Revolut and Libertex with Stake departed within the year, Haas MGM Rewards and Zoomex, Racing Bulls XM Trading. Cadillac's debut roster is TWG AI, Core Scientific, IFS, Claro, Jim Beam, Tenneco and Tommy Hilfiger, and none of them sits anywhere near betting, casino, exchange or trading."
+    },
+    {
+     "label": "The owner group, stated with the caveat",
+     "text": "TWG Motorsports, a subsidiary of TWG Global, holds the controlling stake in the team with General Motors as partner. TWG Global also controls the Los Angeles Dodgers, a club in the league that made Polymarket its exclusive prediction-market exchange in March, so the category is already understood inside the owner group. The caveat is on page two as risk one: TWG Global's founder Mark Walter is under a Department of Justice and SEC investigation into alleged fraud at his insurance companies, which TWG denies, and the group has said the team is not for sale."
+    },
+    {
+     "label": "A commercial team built to sell this",
+     "text": "Cadillac hired Lauren Teixeira as Chief Commercial Officer and Willem Dinger as Chief Partnerships Officer in November 2025, reporting to Tyler Epp, the former president of the Miami Grand Prix. Dinger has described the target as a fewer, bigger, better partnership ecosystem, and Teixeira has said the team is not looking for a title partner. The partner tiers reported for Cadillac are $40-50M a year for a primary partner and $20-30M for a premium one: a $21B company with $1B of new capital can pay the premium tier without it being the largest cheque it wrote this year."
+    },
+    {
+     "label": "Where it activates",
+     "text": "Austin in late October and Miami in May are the two US rounds where Polymarket US can operate and host; Las Vegas is excluded while the Nevada injunction stands. An American debut team with a young, mobile-first audience is the right stage for a product whose fans already trade race-winner, pole and safety-car markets on the platform."
+    }
+   ],
+   "value": [
+    {
+     "label": "Fan-engagement layer (Mode B)",
+     "text": "Polymarket's Formula 1 markets — race winner, pole position, fastest lap, championship standings, safety cars and red flags — become a free-to-play Cadillac predictions game inside the team app and website, with market-implied win probabilities in race-week content and live odds in team-channel graphics. This is a halo with working mechanics; it does not touch the car, and the brief says so."
+    },
+    {
+     "label": "Commercial lift for the team",
+     "text": "A $21B partner at the reported premium tier in year one of the team's commercial build, plus a partner whose business is live events and whose audience is young, American and mobile-first — the demographic Cadillac's other B2C partners, Jim Beam and Tommy Hilfiger, are buying."
+    },
+    {
+     "label": "Content and data",
+     "text": "A live-odds content series across the season, Polymarket's event-probability data (distributed globally by Intercontinental Exchange) as a storytelling device for strategy calls and championship swings, and driver and engineer appearances in Polymarket's own channels."
+    },
+    {
+     "label": "What the team gives back",
+     "text": "Official Prediction Market Partner designation, livery and garage placement, naming of the Cadillac predictions game, Austin and Miami hospitality, and driver and engineering access for Polymarket's content and its sports-rights partners."
+    }
+   ],
+   "ruled_out": [
+    {
+     "team": "Atlassian Williams Racing",
+     "reason": "Betway and Jackpot City Casino hold the betting and gaming lane; Kraken holds crypto exchange."
+    },
+    {
+     "team": "BWT Alpine F1 Team",
+     "reason": "Modo Casino holds the gaming lane."
+    },
+    {
+     "team": "McLaren Mastercard F1 Team",
+     "reason": "Allwyn is a lottery operator and OKX a crypto exchange; Gemini and Hedera crowd the lane further."
+    },
+    {
+     "team": "Aston Martin Aramco F1 Team",
+     "reason": "Public is a retail trading app; Coinbase, Circle and Pepperstone crowd the lane."
+    },
+    {
+     "team": "Oracle Red Bull Racing",
+     "reason": "Gate.io is a crypto exchange and Ava Trade a broker; the trading lane is occupied."
+    },
+    {
+     "team": "Mercedes-AMG Petronas F1 Team",
+     "reason": "Nasdaq sits on the roster, and Polymarket's largest strategic investor is Nasdaq's rival, Intercontinental Exchange."
+    },
+    {
+     "team": "Scuderia Ferrari HP",
+     "reason": "BingX is a crypto exchange and Vantage a broker; VGW Play, a social casino, departed within the year."
+    },
+    {
+     "team": "Audi Revolut F1 Team",
+     "reason": "Stake departed within the last 12 months and Libertex and NEXO remain; Revolut holds title."
+    },
+    {
+     "team": "TGR Haas F1 Team",
+     "reason": "MGM Rewards is a casino loyalty brand and Zoomex a crypto exchange."
+    },
+    {
+     "team": "Visa Cash App Racing Bulls",
+     "reason": "Open on betting but not chosen: XM Trading crowds the trading lane, and Visa's rules on event-contract merchants would need clearing first. The runner-up if Cadillac's ownership question makes a board hesitate."
+    }
+   ],
+   "ask": "A 25-minute call with Ari Borod before the United States GP to establish whether a prediction market is a separable category under Formula 1's Betway and FanDuel agreements, to put the Walter investigation and the House Oversight probe on the table in both directions, and to size an Official Prediction Market Partner entry at Cadillac for 2027-2029, Las Vegas excluded until Nevada is resolved."
+  }
+ },
+ "note": "# Polymarket → Cadillac F1 Team — verification log (N° 252, 15 Sep 2026)\n\nBuilt in-session at no API cost on the operator's ask (\"Build the polymarket case\"), with Claude as scanner, verifier and writer through the pipeline's injectable stages; the calendar table, sponsor table, 13-rule audit and 2-page render ran as code. The trigger had sat on the trigger watch since 11 Sep as CryptoRank-reported; it is now confirmed on Bloomberg.\n\n**Sandbox limitation, stated plainly:** bloomberg.com, mlb.com, corp.formula1.com, cnbc.com, coindesk.com, polymarket.com, theice.com and cadillacf1team.com are egress-blocked. Every claim was checked against search summaries of the page named as evidence, corroborated across at least two outlets. Treat VERIFIED lines as REPORTED until a person opens the link. Confidence MEDIUM; footer VERIFY BEFORE CIRCULATION.\n\n## Ledger (summary)\n\n| Claim | Status | Evidence |\n|---|---|---|\n| $1B at $21B post-money, 1789 Capital lead (~$300M), 31 Aug 2026, +40% on April's $15B | VERIFIED (Bloomberg; Yahoo, Investing.com) | Bloomberg 31 Aug |\n| April 2026 round at $15B; D.E. Shaw, G Squared; ~$1B incl. ICE $600M | REPORTED (Bloomberg 20 Apr talks; Finance Magnates/Qz Aug) | |\n| ICE up to $2B, ~$8B pre, data distribution, Oct 2025 | VERIFIED (ICE release; Fortune) | |\n| Warren Jenson first CFO, 10 Sep 2026 | VERIFIED (CoinDesk, Qz, CP24) | |\n| VanderZanden CGO, owns marketing, 12 Aug; compliance hires; promo-practice scrutiny | VERIFIED (CNBC 11 Aug; The Block 12 Aug) | |\n| Ari Borod President of Sports Business Development, ex-Fanatics CBO, Feb 2026, non-compete settled | VERIFIED (SBC Americas; Crunchbase; Gambling Insider) | |\n| MLB exclusive Official Prediction Market Exchange, 19 Mar 2026 | VERIFIED (MLB release) · value up to $300M REPORTED (FOS) | |\n| NHL (Oct 2025), Rangers (8 Jan 2026), Yankees (2026 season), Kalshi–US Open (31 Aug 2026) | VERIFIED | |\n| F1: Betway 5 Mar 2026 (EMEA/Canada/Mexico, non-exclusive); FanDuel 30 Apr 2026 (US/Canada) | VERIFIED (corp.formula1.com; SportsPro) | |\n| Grid occupancy of betting/casino/exchange/trading lanes; Cadillac clean | VERIFIED (sponsor table) | |\n| Cadillac roster; Teixeira/Dinger/Epp; 'fewer, bigger, better'; not seeking title | VERIFIED (Forbes 17 Nov 2025; BlackBook) | |\n| Cadillac tiers $40-50M / $20-30M | REPORTED (RTR Sports analysis) · our $15-25M is an ESTIMATE | |\n| TWG Motorsports controls Cadillac; TWG Global controls the Dodgers; Walter DOJ/SEC investigation; TWG denies; not for sale | VERIFIED (Yahoo/ESPN; Qz 26 Aug; The Race; Motorsport.com 21 Aug) | |\n| Nevada preliminary injunction 29 May 2026; C&Ds TN/AZ/IL/CT | VERIFIED (SBC Americas; Yogonet; Flushdraw) | |\n| House Oversight letter 22 May 2026 | VERIFIED (oversight.house.gov; CNBC) | |\n| QCEX $112M (Jul 2025); CFTC amended order 25 Nov 2025 | VERIFIED (PR Newswire; Yahoo) | |\n| March 2026 volume $10.57B; Feb $425M daily record | VERIFIED (The Block data; BitKE; KuCoin) | |\n| Fees from 30 Mar 2026; revenue undisclosed | VERIFIED (Polymarket Help Center) | |\n| US GP Austin, Las Vegas GP, Miami GP on the calendar | VERIFIED (calendar table) | |\n\n## Decision path\n\nAri Borod (President of Sports Business Development) is the buyer: he has run every sports deal since February. Path: Travis VanderZanden (Chief Growth Officer, marketing reports to him), Warren Jenson (Chief Financial Officer, first, 10 Sep), Shayne Coplan (founder and Chief Executive Officer). No chief marketing officer is named; marketing sits under the CGO.\n\n## Leadership ties\n\nCoplan, VanderZanden, Jenson, Borod: **none found** after checking. Borod's earlier employment at FanDuel Group — now an F1 Official Betting Operator — is an ecosystem familiarity, not a motorsport deal tie, and is not claimed as one.\n\n## Team choice and the concentration point\n\nCadillac is the fourteenth F1 case pointed at the team. It is chosen on grid occupancy, not habit: it is the only roster without a betting, casino, exchange or trading brand. Visa Cash App Racing Bulls is the named runner-up (XM Trading crowds the trading lane; Visa's merchant rules on event contracts would need clearing). The Walter investigation is risk one, not a footnote, and the TWG–Dodgers–MLB link is stated with that caveat attached.\n\n## Screen-outs and things not claimed\n\n- Total funding is not summed. Revenue is not stated (fees only since 30 Mar 2026; a reported ~$1M/day target is not carried into the copy).\n- LeBron James 'teasing' a partnership (CNBC 5 Sep) is not claimed as a deal.\n- The \"eight states\" figure seen in secondary guides is not used; the copy names Nevada (injunction) and four cease-and-desist states.\n- The $21B / $1B figures are Bloomberg's; the round is described as reported, not closed.\n- MLB deal value (up to $300M) and Cadillac tiers are labelled reported; the $15-25M is labelled an estimate.\n- The bigger buy — an Official Prediction Market Partner of Formula 1 itself, on the Kalshi–US Open model — is outside this desk's team-side remit and is noted in the ask as the category-definition question to clear with FOM's agreements.\n\n## Score and the gate\n\nFive pillars: timing 18, capacity 18, brand fit 11, urgency 15, ops fit 9 = 71. The engine's OF gate (brand fit ≥ 12 for operational fit to count) is not met, so the ranking score is 62 and the daily run would not have selected it. Brand fit was not moved to 12 to pass the gate: the drag is real (gambling-adjacent, politically owned round, Nevada injunction). Built on the operator's request with `threshold: 60` in the spec, the Eos N° 249 precedent; the brief says so in its bottom line.",
+ "threshold": 60
+}
