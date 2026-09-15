@@ -569,6 +569,28 @@ def run_day(
         )
     else:
         progress(f"inbox: {inbox_note.get('status')}")
+    # The fourth source (15 Sep 2026): CB Insights' structured rounds and people, when the
+    # credentials are set. Its leads get the same single-company scan as the mailbox's, with
+    # the structured facts as the hint, under their own cap; the ledger checks them like any.
+    from intel import cbi as cbi_mod
+
+    cbi_signals, cbi_note = cbi_mod.collect(session, settings, run_date)
+    if cbi_signals and not scanner:
+        cbi_signals, cbi_scan = inbox.enrich(
+            cbi_signals, run_date, settings, cap=settings.cbi_scan_max
+        )
+        cbi_note["scanned"] = cbi_scan["scanned"]
+        cbi_note["kept_thin"] = cbi_scan["kept_thin"]
+    inbox_note["cbi"] = cbi_note
+    if cbi_note.get("status") == "read":
+        progress(
+            f"cbi: {cbi_note.get('orgs', 0)} org(s) in the window, {cbi_note.get('rows', 0)} "
+            f"with a trigger, {cbi_note.get('new_in_inbox', 0)} new in the inbox; offered "
+            f"{cbi_note.get('offered', [])}; credits used {cbi_note.get('credits_used')}"
+        )
+    else:
+        progress(f"cbi: {cbi_note.get('status')}")
+    inbox_signals = list(inbox_signals) + list(cbi_signals)
     scan_error: str | None = None
     try:
         signals = _scan_with_retry(scanner, run_date, settings, inbox_signals)

@@ -48,7 +48,17 @@ QUERIES: list[tuple[str, str, str]] = [
     ("listing", "S-1", ""),
     ("listing", "F-1", ""),
     ("spin_off", "10-12B", ""),
+    # Private rounds, for free (15 Sep 2026, while the CB Insights key is pending): a US
+    # private placement is reported on Form D within 15 days of the first sale, with the
+    # amount sold and the executive officers and directors named. The sweep keeps filers
+    # that sold FORM_D_MIN_USD or more and are not pooled investment funds.
+    ("funding_round", "D", ""),
 ]
+
+#: Form D: the smallest amount sold that is a signal for the desk (a mid-tier F1/FE deal
+#: needs a raise in this range or above), and the most XMLs fetched per sweep.
+FORM_D_MIN_USD = 25_000_000
+FORM_D_MAX_FETCHES = 150
 
 #: SIC industry codes that fit the desk's profile (tech, electrical, industrial, energy,
 #: automotive, semiconductors, software, telecoms, crypto/fintech services) and those that
@@ -109,6 +119,125 @@ def fetch_json(url: str, timeout: float = 30.0) -> dict[str, Any]:
         return json.loads(resp.read().decode("utf-8"))
 
 
+def fetch_text(url: str, timeout: float = 30.0) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:  # noqa: S310 - fixed SEC host
+        return resp.read().decode("utf-8", "replace")
+
+
+def form_d_url(row: dict[str, Any]) -> str:
+    """The Form D primary document (XML) next to the filing index."""
+    return row["url"].rsplit("/", 1)[0] + "/primary_doc.xml" if row.get("url") else ""
+
+
+def parse_form_d(xml_text: str) -> dict[str, Any]:
+    """Issuer, industry group, amounts, first-sale date and the related persons from Form D."""
+    import xml.etree.ElementTree as ET
+
+    root = ET.fromstring(xml_text)
+
+    def text(path: str) -> str:
+        el = root.find(path)
+        return (el.text or "").strip() if el is not None and el.text else ""
+
+    def num(path: str) -> float | None:
+        try:
+            return float(text(path).replace(",", "")) if text(path) else None
+        except ValueError:
+            return None
+
+    persons = []
+    for p in root.iter("relatedPersonInfo"):
+        name = " ".join(
+            x.strip()
+            for x in (
+                (p.findtext("relatedPersonName/firstName") or ""),
+                (p.findtext("relatedPersonName/lastName") or ""),
+            )
+            if x.strip()
+        )
+        rels = [r.text.strip() for r in p.iter("relationship") if r.text]
+        title = (p.findtext("relationshipClarification") or "").strip()
+        if name:
+            persons.append({"name": name, "relationships": rels, "title": title})
+    return {
+        "issuer": text("primaryIssuer/entityName"),
+        "entity_type": text("primaryIssuer/entityType"),
+        "state": text("primaryIssuer/issuerAddress/stateOrCountry"),
+        "industry_group": text("offeringData/industryGroup/industryGroupType"),
+        "securities": [t.text.strip() for t in root.iter("isEquityType") if t.text]
+        + [t.text.strip() for t in root.iter("isDebtType") if t.text],
+        "offering_total_usd": num("offeringData/offeringSalesAmounts/totalOfferingAmount"),
+        "amount_sold_usd": num("offeringData/offeringSalesAmounts/totalAmountSold"),
+        "first_sale": text("offeringData/typeOfFiling/dateOfFirstSale/value"),
+        "is_amendment": text("offeringData/typeOfFiling/newOrAmendment/isAmendment"),
+        "related_persons": persons[:12],
+    }
+
+
+def enrich_form_d(
+    rows: list[dict[str, Any]],
+    fetch_page=fetch_text,
+    min_usd: float = FORM_D_MIN_USD,
+    max_fetches: int = FORM_D_MAX_FETCHES,
+) -> list[dict[str, Any]]:
+    """Keep the Form D filers worth a look: amount sold at or above ``min_usd``, not a fund,
+    not an amendment. Each kept row carries the amounts and the named officers/directors."""
+    kept = []
+    fetched = 0
+    for row in rows:
+        if row.get("form") != "D":
+            kept.append(row)
+            continue
+        if row.get("profile") == "out" or fetched >= max_fetches:
+            continue
+        fetched += 1
+        try:
+            d = parse_form_d(fetch_page(form_d_url(row)))
+        except Exception as exc:  # noqa: BLE001 - one bad XML must not kill the sweep
+            print(f"edgar_watch: Form D {row.get('company')}: {exc}", file=sys.stderr)
+            continue
+        if "pooled investment" in (d["industry_group"] or "").lower():
+            continue
+        if (d["is_amendment"] or "").lower() == "true":
+            continue
+        sold = d["amount_sold_usd"] or 0
+        if sold < min_usd:
+            continue
+        officers = [
+            p for p in d["related_persons"] if any("Officer" in r for r in p["relationships"])
+        ]
+        row.update(
+            {
+                "company": d["issuer"] or row.get("company"),
+                "state": d["state"] or row.get("state"),
+                "industry_group": d["industry_group"],
+                "amount_sold_usd": sold,
+                "offering_total_usd": d["offering_total_usd"],
+                "first_sale": d["first_sale"],
+                "officers": officers[:8],
+                "directors": [
+                    p
+                    for p in d["related_persons"]
+                    if "Director" in p["relationships"] and p not in officers
+                ][:8],
+                "description": (
+                    f"Form D: ${sold / 1e6:,.0f}M sold"
+                    + (
+                        f" of ${d['offering_total_usd'] / 1e6:,.0f}M offered"
+                        if d["offering_total_usd"]
+                        else ""
+                    )
+                    + (f"; first sale {d['first_sale']}" if d["first_sale"] else "")
+                    + (f"; {d['industry_group']}" if d["industry_group"] else "")
+                ),
+                "matched": f"Form D, ≥ ${min_usd / 1e6:,.0f}M sold",
+            }
+        )
+        kept.append(row)
+    return kept
+
+
 def parse_hits(kind: str, form: str, data: dict[str, Any]) -> list[dict[str, Any]]:
     """The rows the desk needs from an EFTS response: company, CIK, form, date, link, profile.
 
@@ -153,23 +282,35 @@ def parse_hits(kind: str, form: str, data: dict[str, Any]) -> list[dict[str, Any
     return rows
 
 
-def sweep(days: int = 2, today: dt.date | None = None, fetch=fetch_json) -> list[dict[str, Any]]:
+def sweep(
+    days: int = 2,
+    today: dt.date | None = None,
+    fetch=fetch_json,
+    fetch_page=fetch_text,
+    form_d: bool = True,
+) -> list[dict[str, Any]]:
     today = today or dt.date.today()
     start = today - dt.timedelta(days=days)
     seen: set[str] = set()
     out: list[dict[str, Any]] = []
     for kind, form, query in QUERIES:
+        if form == "D" and not form_d:
+            continue
         try:
             data = fetch(efts_url(query, form, start, today))
         except Exception as exc:  # noqa: BLE001 - one failed query must not kill the sweep
             print(f"edgar_watch: {form} {query!r}: {exc}", file=sys.stderr)
             continue
+        rows = []
         for row in parse_hits(kind, form, data):
             if row["id"] in seen:
                 continue
             seen.add(row["id"])
             row["matched"] = query or form
-            out.append(row)
+            rows.append(row)
+        if form == "D":
+            rows = enrich_form_d(rows, fetch_page)
+        out.extend(rows)
     out.sort(key=lambda r: r.get("filed") or "", reverse=True)
     out.sort(key=lambda r: _PROFILE_RANK.get(r.get("profile"), 1))  # stable: band, then newest
     return out

@@ -652,6 +652,21 @@ def report_text(log: dict[str, _Any], today: _dt.date | None = None) -> str:
         lines.append(f"- {h.get('filed')} {h.get('form')} · {h.get('company')} · {h.get('url')}")
     if not inbox["unjudged"]:
         lines.append("- nothing waiting")
+    cbi = _cbi_inbox()
+    lines.append("")
+    lines.append(
+        f"CB INSIGHTS CANDIDATES TO JUDGE — {cbi['to_judge']} (rounds at $1B+ in the last week, "
+        f"new CEO / CMO starts; swept {cbi.get('swept_at') or 'never — key not set'})"
+    )
+    for h in cbi["unjudged"][:25]:
+        t = (h.get("triggers") or [{}])[0]
+        buyer = ((h.get("decision_path") or {}).get("buyer") or {}).get("name") or "no buyer listed"
+        lines.append(
+            f"- {h.get('trigger_date')} {h.get('trigger_type')} · {h.get('company')} · "
+            f"{t.get('text')} · buyer {buyer}"
+        )
+    if not cbi["unjudged"]:
+        lines.append("- nothing waiting")
     lines.append("")
     lines.append(
         "Start one: python -m intel.outreach start <N°>   (or the Outreach page in the app)"
@@ -678,6 +693,7 @@ def export_payload(
         "due": due(log, today),
         "watch": rows,
         "inbox": _filings_inbox(),
+        "cbi": _cbi_inbox(),
         "watch_meta": {
             **watch_summary(rows),
             "swept_at": (load_watch().get("_meta") or {}).get("swept_at"),
@@ -830,6 +846,21 @@ def _filings_inbox() -> dict[str, _Any]:
         "to_judge": len(rows),
         "off_profile": len(all_open) - len(rows),
         "in_profile": sum(1 for h in rows if h.get("profile") == "in"),
+    }
+
+
+def _cbi_inbox() -> dict[str, _Any]:
+    """CB Insights rows the desk has not judged yet (intel.cbi), for the app and the report."""
+    from intel.cbi import load_inbox, unjudged
+
+    inbox = load_inbox()
+    rows = unjudged(inbox)
+    return {
+        "swept_at": (inbox.get("_meta") or {}).get("swept_at"),
+        "unjudged": rows[:60],
+        "total": len(inbox.get("hits") or []),
+        "to_judge": len(rows),
+        "with_ties": sum(1 for h in rows if h.get("leadership_ties")),
     }
 
 

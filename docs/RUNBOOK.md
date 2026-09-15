@@ -36,7 +36,12 @@ One-time set-up — GitHub → Settings → Secrets and variables → Actions �
 Optional variables (the *Variables* tab): `EXECUTION_MODE` (shadow → production),
 `REBUILD_BACKLOG_PER_RUN` (default 6), `DESK_API_URL`, `APP_BASE_URL`. Optional secrets
 `NETLIFY_AUTH_TOKEN` + `NETLIFY_SITE_ID` if the app is also hosted on Netlify (its form is the
-no-sign-in queue for *Build the full case* when no desk service is deployed).
+no-sign-in queue for *Build the full case* when no desk service is deployed), and
+`CBI_CLIENT_ID` + `CBI_CLIENT_SECRET` once CB Insights issues them (`intel.cbi`: structured rounds
+and people as a fourth source; `CBI_CREDIT_CAP` variable, default 40 charged calls a run;
+`CBI_COUNTRY_IDS` to narrow the search, e.g. US + UK + EU IDs from the CB Insights address
+reference). Until then the free SEC Form D sweep in `intel.edgar_watch` covers US private
+rounds of $25M+ with the officers named.
 
 ## 1. Variables (no defaults for secrets)
 

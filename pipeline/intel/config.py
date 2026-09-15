@@ -94,6 +94,28 @@ class Settings(BaseModel):
     scan_candidates_max: int = 12
     timezone: str = "Europe/London"
 
+    # --- structured sources (intel.cbi) -------------------------------------------
+    # CB Insights API v2: off until both credentials are set. Every call except the
+    # organisation lookup charges credits, so a per-run cap bounds the spend.
+    cbi_client_id: str | None = None
+    cbi_client_secret: str | None = None
+    cbi_credit_cap: int = Field(default=40, description="Charged calls per run (org-weighted).")
+    cbi_lookback_days: int = Field(default=7, description="Rounds this recent are triggers.")
+    cbi_min_valuation_musd: float = Field(
+        default=1000.0, description="Capacity gate for the firmographics search, in $M."
+    )
+    cbi_country_ids: list[int] = Field(
+        default_factory=list,
+        description="CB Insights country IDs to restrict the search to; empty = worldwide.",
+    )
+    cbi_scan_max: int = Field(
+        default=3,
+        description=(
+            "CB Insights leads new to the desk that get a single-company scan each morning, "
+            "with the structured facts passed as the hint (about $0.12 each). 0 = off."
+        ),
+    )
+
     # --- distribution (brief §7) ----------------------------------------------
     execution_mode: str = Field(
         default="shadow",

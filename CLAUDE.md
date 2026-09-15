@@ -271,6 +271,20 @@ shop; FE is closed (ABB, a robotics group, is the championship title partner —
 buyer = CEO Russ Tedrake, no CMO. **OLIX = duplicate of N° 153 OLIX Computing → Williams (3 Aug, same Series B)**;
 N° 153 predates the Anthropic → Williams row — open question noted in the screen-out. **Castelion screened**
 (hypersonic missiles, $1B Series C at $13B on 19 Aug — not a sponsor category on either grid).
+**Structured sources (15 Sep 2026, MD: "trying to get API from CB Insights and PitchBook to get better signals"):**
+`intel/cbi.py` = CB Insights API v2 client + sweep (firmographics with the gates as query filters: last round
+in the past `CBI_LOOKBACK_DAYS`, valuation ≥ `CBI_MIN_VALUATION_MUSD`; fundings with date/amount/valuation/lead
+and new investors/source URLs; management with titles + start dates → decision path, `new_cmo`/`new_ceo`
+triggers inside 90 days, and leadership ties = any work history at a team or a sponsor-table brand). Rows go to
+`data/cbi_inbox.json` (Outreach page panel + Monday report); funding rows also enter the 06:00 pool as leads
+with the structured facts as the scanner's hint (`inbox.enrich`, own cap `CBI_SCAN_MAX`) and are verified like
+any candidate. Off until `CBI_CLIENT_ID` + `CBI_CLIENT_SECRET` are set as GitHub secrets; credits are capped per
+run (`CBI_CREDIT_CAP`); the name lookup is free; generative endpoints (scouting reports, ChatCBI) are not used.
+Country IDs come from CB Insights' address reference (`CBI_COUNTRY_IDS`), not hard-coded. Built blind: api.cbinsights.com
+and sec.gov are egress-blocked from the sandbox, so the client is tested on canned responses — first live run will
+show any field-name mismatch in the run log (`cbi:` line). **Free meanwhile:** `edgar_watch` now also sweeps **Form D**
+(US private placements, primary_doc.xml parsed: amount sold ≥ $25M, not a pooled fund, not an amendment; officers
+and directors named) into `data/trigger_inbox.json` as `funding_round` rows. PitchBook: no spec received; not built.
 **MD send plan (15 Sep 2026, MD: "sent to Ricky one a day after they are passing all the verification gates … plan
 that on a daily basis"):** `data/send_plan.json` = the queue (brief numbers in order, `hold` flag, note) + the durable
 log of every MD send; `intel/send_plan.py` picks the first queued brief that passes every gate (`brief_status_for_md`,

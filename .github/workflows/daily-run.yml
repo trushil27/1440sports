@@ -84,6 +84,10 @@ jobs:
       GRAPH_REFRESH_TOKEN: ${{ secrets.GRAPH_REFRESH_TOKEN }}
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      # CB Insights API v2 (intel.cbi): structured rounds + people as a fourth source. Off
+      # until both are set; every call but the name lookup charges credits (CBI_CREDIT_CAP).
+      CBI_CLIENT_ID: ${{ secrets.CBI_CLIENT_ID }}
+      CBI_CLIENT_SECRET: ${{ secrets.CBI_CLIENT_SECRET }}
       NETLIFY_SITE_NAME: ${{ vars.NETLIFY_SITE_NAME || '1440-intelligence' }}
       GITHUB_TOKEN: ${{ github.token }}
       PAGES_REPO: ${{ github.repository }}
@@ -167,9 +171,12 @@ jobs:
           # SEC in the last two days, into data/trigger_inbox.json for the desk to judge.
           # Free, no model; a failed query is logged and skipped.
           python -m intel.edgar_watch --days 2 || echo "edgar_watch: sweep failed (see log)"
+          # CB Insights: rounds at $1B+ in the last week + new CEO/CMO starts, with the
+          # decision path and leadership ties, into data/cbi_inbox.json. Off without the key.
+          python -m intel.cbi || echo "cbi: sweep failed (see log)"
           git config user.name "1440 desk"
           git config user.email "noreply@1440sports.com"
-          git add pipeline/intel/cases data/trigger_inbox.json
+          git add pipeline/intel/cases data/trigger_inbox.json data/cbi_inbox.json
           if git diff --cached --quiet; then
             echo "no new case to save"
           else
